@@ -34,23 +34,37 @@
 
   <properties>
     <auto-value.version>1.7.3</auto-value.version>
-    <!-- Keep all versions below consistent with the io.netty version. -->
     <netty.version>2.0.26.Final</netty.version>
-    <gax.version>1.65.1</gax.version>
-    <grpc.version>1.37.0</grpc.version>
-    <protobuf.version>3.15.2</protobuf.version>
   </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.google.cloud</groupId>
+        <artifactId>google-cloud-shared-dependencies</artifactId>
+        <version>2.4.0</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
   <dependencies>
     <dependency>
       <groupId>com.google.api</groupId>
       <artifactId>gax</artifactId>
-      <version>${gax.version}</version>
     </dependency>
     <dependency>
       <groupId>com.google.api</groupId>
       <artifactId>gax-grpc</artifactId>
-      <version>${gax.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.grpc</groupId>
+      <artifactId>grpc-all</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.google.protobuf</groupId>
+      <artifactId>protobuf-java</artifactId>
     </dependency>
     <dependency>
       <groupId>com.google.auto.value</groupId>
@@ -100,18 +114,6 @@
       <groupId>com.google.api</groupId>
       <artifactId>gax-grpc</artifactId>
       <classifier>testlib</classifier>
-      <version>${gax.version}</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <!--
-      Without this dependency, gax will add io.grpc:grpc-context:jar:1.22.1 to
-      the classpath instead of io.grpc:grpc-context:jar:1.25.0, and tests will
-      fail due to changes to io.grpc.Deadline.
-      -->
-      <groupId>io.grpc</groupId>
-      <artifactId>grpc-context</artifactId>
-      <version>${grpc.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -134,7 +136,7 @@
       <plugin>
         <groupId>com.github.os72</groupId>
         <artifactId>protoc-jar-maven-plugin</artifactId>
-        <version>3.11.1</version>
+        <version>3.11.4</version>
         <executions>
           <execution>
             <id>generate-test-protos</id>
@@ -146,12 +148,7 @@
         </executions>
 
         <configuration>
-          <!-- RC is required here for protoc. Prior to this version, it
-          requires a flag to enable presence prior to this (even though presence
-          was introduced in 3.12.2). The maven plugin doesn't support passing
-          arbitrary flags to protoc. A little more detail here:
-          https://github.com/os72/protoc-jar-maven-plugin/issues/98 -->
-          <protocArtifact>com.google.protobuf:protoc:3.15.0-rc-1
+          <protocArtifact>com.google.protobuf:protoc:3.19.0
           </protocArtifact>
           <inputDirectories>
             <include>src/test/resources/protos</include>

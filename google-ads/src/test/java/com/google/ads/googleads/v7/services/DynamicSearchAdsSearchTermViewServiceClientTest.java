@@ -41,11 +41,11 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class DynamicSearchAdsSearchTermViewServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
-  private DynamicSearchAdsSearchTermViewServiceClient client;
   private static MockDynamicSearchAdsSearchTermViewService
       mockDynamicSearchAdsSearchTermViewService;
+  private static MockServiceHelper mockServiceHelper;
   private LocalChannelProvider channelProvider;
+  private DynamicSearchAdsSearchTermViewServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -92,6 +92,13 @@ public class DynamicSearchAdsSearchTermViewServiceClientTest {
                         "[LANDING_PAGE_FINGERPRINT]",
                         "[PAGE_URL_FINGERPRINT]")
                     .toString())
+            .setSearchTerm("searchTerm-710473164")
+            .setHeadline("headline-1115058732")
+            .setLandingPage("landingPage497102150")
+            .setPageUrl("pageUrl-803558304")
+            .setHasNegativeKeyword(true)
+            .setHasMatchingKeyword(true)
+            .setHasNegativeUrl(true)
             .build();
     mockDynamicSearchAdsSearchTermViewService.addResponse(expectedResponse);
 
@@ -154,6 +161,13 @@ public class DynamicSearchAdsSearchTermViewServiceClientTest {
                         "[LANDING_PAGE_FINGERPRINT]",
                         "[PAGE_URL_FINGERPRINT]")
                     .toString())
+            .setSearchTerm("searchTerm-710473164")
+            .setHeadline("headline-1115058732")
+            .setLandingPage("landingPage497102150")
+            .setPageUrl("pageUrl-803558304")
+            .setHasNegativeKeyword(true)
+            .setHasMatchingKeyword(true)
+            .setHasNegativeUrl(true)
             .build();
     mockDynamicSearchAdsSearchTermViewService.addResponse(expectedResponse);
 

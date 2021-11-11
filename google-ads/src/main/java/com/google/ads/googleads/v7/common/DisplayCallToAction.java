@@ -232,8 +232,8 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object urlCollectionId_;
   /**
    * <pre>
-   * Identifies the url collection in the ad.url_collections field. If not set
-   * the url defaults to final_url.
+   * Identifies the URL collection in the `ad.url_collections` field. If not
+   * set, the URL defaults to `final_url`.
    * </pre>
    *
    * <code>string url_collection_id = 7;</code>
@@ -245,8 +245,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Identifies the url collection in the ad.url_collections field. If not set
-   * the url defaults to final_url.
+   * Identifies the URL collection in the `ad.url_collections` field. If not
+   * set, the URL defaults to `final_url`.
    * </pre>
    *
    * <code>string url_collection_id = 7;</code>
@@ -267,8 +267,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Identifies the url collection in the ad.url_collections field. If not set
-   * the url defaults to final_url.
+   * Identifies the URL collection in the `ad.url_collections` field. If not
+   * set, the URL defaults to `final_url`.
    * </pre>
    *
    * <code>string url_collection_id = 7;</code>
@@ -885,8 +885,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object urlCollectionId_ = "";
     /**
      * <pre>
-     * Identifies the url collection in the ad.url_collections field. If not set
-     * the url defaults to final_url.
+     * Identifies the URL collection in the `ad.url_collections` field. If not
+     * set, the URL defaults to `final_url`.
      * </pre>
      *
      * <code>string url_collection_id = 7;</code>
@@ -897,8 +897,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Identifies the url collection in the ad.url_collections field. If not set
-     * the url defaults to final_url.
+     * Identifies the URL collection in the `ad.url_collections` field. If not
+     * set, the URL defaults to `final_url`.
      * </pre>
      *
      * <code>string url_collection_id = 7;</code>
@@ -918,8 +918,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Identifies the url collection in the ad.url_collections field. If not set
-     * the url defaults to final_url.
+     * Identifies the URL collection in the `ad.url_collections` field. If not
+     * set, the URL defaults to `final_url`.
      * </pre>
      *
      * <code>string url_collection_id = 7;</code>
@@ -940,8 +940,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Identifies the url collection in the ad.url_collections field. If not set
-     * the url defaults to final_url.
+     * Identifies the URL collection in the `ad.url_collections` field. If not
+     * set, the URL defaults to `final_url`.
      * </pre>
      *
      * <code>string url_collection_id = 7;</code>
@@ -960,8 +960,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Identifies the url collection in the ad.url_collections field. If not set
-     * the url defaults to final_url.
+     * Identifies the URL collection in the `ad.url_collections` field. If not
+     * set, the URL defaults to `final_url`.
      * </pre>
      *
      * <code>string url_collection_id = 7;</code>
@@ -975,8 +975,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Identifies the url collection in the ad.url_collections field. If not set
-     * the url defaults to final_url.
+     * Identifies the URL collection in the `ad.url_collections` field. If not
+     * set, the URL defaults to `final_url`.
      * </pre>
      *
      * <code>string url_collection_id = 7;</code>

@@ -18,34 +18,28 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v8.common.HotelCalloutFeedItem;
-import com.google.ads.googleads.v8.enums.ExtensionTypeEnum.ExtensionType;
-import com.google.ads.googleads.v8.errors.GoogleAdsError;
-import com.google.ads.googleads.v8.errors.GoogleAdsException;
-import com.google.ads.googleads.v8.resources.AdGroupExtensionSetting;
-import com.google.ads.googleads.v8.resources.CampaignExtensionSetting;
-import com.google.ads.googleads.v8.resources.CustomerExtensionSetting;
-import com.google.ads.googleads.v8.resources.ExtensionFeedItem;
-import com.google.ads.googleads.v8.services.AdGroupExtensionSettingOperation;
-import com.google.ads.googleads.v8.services.AdGroupExtensionSettingServiceClient;
-import com.google.ads.googleads.v8.services.CampaignExtensionSettingOperation;
-import com.google.ads.googleads.v8.services.CampaignExtensionSettingServiceClient;
-import com.google.ads.googleads.v8.services.CustomerExtensionSettingOperation;
-import com.google.ads.googleads.v8.services.CustomerExtensionSettingServiceClient;
-import com.google.ads.googleads.v8.services.ExtensionFeedItemOperation;
-import com.google.ads.googleads.v8.services.ExtensionFeedItemServiceClient;
-import com.google.ads.googleads.v8.services.MutateAdGroupExtensionSettingsResponse;
-import com.google.ads.googleads.v8.services.MutateCampaignExtensionSettingsResponse;
-import com.google.ads.googleads.v8.services.MutateCustomerExtensionSettingsResponse;
-import com.google.ads.googleads.v8.services.MutateExtensionFeedItemsResponse;
-import com.google.ads.googleads.v8.utils.ResourceNames;
-import com.google.common.collect.ImmutableList;
+import com.google.ads.googleads.v9.common.HotelCalloutAsset;
+import com.google.ads.googleads.v9.enums.AssetFieldTypeEnum.AssetFieldType;
+import com.google.ads.googleads.v9.errors.GoogleAdsError;
+import com.google.ads.googleads.v9.errors.GoogleAdsException;
+import com.google.ads.googleads.v9.resources.Asset;
+import com.google.ads.googleads.v9.resources.CustomerAsset;
+import com.google.ads.googleads.v9.services.AssetOperation;
+import com.google.ads.googleads.v9.services.AssetServiceClient;
+import com.google.ads.googleads.v9.services.CustomerAssetOperation;
+import com.google.ads.googleads.v9.services.CustomerAssetServiceClient;
+import com.google.ads.googleads.v9.services.MutateAssetResult;
+import com.google.ads.googleads.v9.services.MutateAssetsResponse;
+import com.google.ads.googleads.v9.services.MutateCustomerAssetResult;
+import com.google.ads.googleads.v9.services.MutateCustomerAssetsResponse;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
- * Adds a hotel callout extension to a specific account, campaign within the account, and ad group
- * within the campaign.
+ * Adds a hotel callout extension to a specific account.
  */
 public class AddHotelCallout {
 
@@ -53,17 +47,8 @@ public class AddHotelCallout {
     @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
     private Long customerId;
 
-    @Parameter(names = ArgumentNames.CAMPAIGN_ID, required = true)
-    private Long campaignId;
-
-    @Parameter(names = ArgumentNames.AD_GROUP_ID, required = true)
-    private Long adGroupId;
-
-    @Parameter(names = ArgumentNames.CALLOUT_TEXT, required = true)
-    private String calloutText;
-
     // See supported languages at:
-    // https://developers.google.com/hotels/hotel-ads/api-reference/language-codes.
+    // https://developers.google.com/hotels/hotel-ads/api-reference/language-codes
     @Parameter(names = ArgumentNames.LANGUAGE_CODE, required = true)
     private String languageCode;
   }
@@ -75,9 +60,6 @@ public class AddHotelCallout {
       // Either pass the required parameters for this example on the command line, or insert them
       // into the code here. See the parameter class definition above for descriptions.
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
-      params.campaignId = Long.parseLong("INSERT_CAMPAIGN_ID_HERE");
-      params.adGroupId = Long.parseLong("INSERT_AD_GROUP_ID_HERE");
-      params.calloutText = "INSERT_CALLOUT_TEXT_HERE";
       params.languageCode = "INSERT_LANGUAGE_CODE_HERE";
     }
 
@@ -94,14 +76,7 @@ public class AddHotelCallout {
     }
 
     try {
-      new AddHotelCallout()
-          .runExample(
-              googleAdsClient,
-              params.customerId,
-              params.campaignId,
-              params.adGroupId,
-              params.calloutText,
-              params.languageCode);
+      new AddHotelCallout().runExample(googleAdsClient, params.customerId, params.languageCode);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -119,148 +94,81 @@ public class AddHotelCallout {
   }
 
   /** Runs the example. */
-  private void runExample(
-      GoogleAdsClient googleAdsClient,
-      long customerId,
-      long campaignId,
-      long adGroupId,
-      String calloutText,
-      String languageCode) {
-    // Creates the extension feed item.
-    String extensionFeedItemResourceName =
-        addExtensionFeedItem(googleAdsClient, customerId, calloutText, languageCode);
-
-    // Adds the extension feed item to the account.
-    addExtensionToAccount(googleAdsClient, customerId, extensionFeedItemResourceName);
-
-    // Adds the extension feed item to the campaign.
-    addExtensionToCampaign(googleAdsClient, customerId, campaignId, extensionFeedItemResourceName);
-
-    // Adds the extension feed item to the ad group.
-    addExtensionToAdGroup(googleAdsClient, customerId, adGroupId, extensionFeedItemResourceName);
+  private void runExample(GoogleAdsClient googleAdsClient, long customerId, String languageCode) {
+    // Creates assets for the hotel callout extensions.
+    List<String> assetResourceNames = addExtensionAsset(googleAdsClient, customerId, languageCode);
+    // Adds the extensions at the account level, so these will serve in all eligible campaigns.
+    linkAssetToAccount(googleAdsClient, customerId, assetResourceNames);
   }
 
-  /** Creates a new extension feed item for the callout. */
-  private String addExtensionFeedItem(
-      GoogleAdsClient googleAdsClient, long customerId, String calloutText, String languageCode) {
-    // Creates the callout with text and language of choice.
-    HotelCalloutFeedItem hotelCallout =
-        HotelCalloutFeedItem.newBuilder()
-            .setText(calloutText)
+  /** Creates a new asset for the callout. */
+  private List<String> addExtensionAsset(
+      GoogleAdsClient googleAdsClient, long customerId, String languageCode) {
+    List<HotelCalloutAsset> hotelCalloutAssets = new ArrayList<>();
+    // Creates the callouts with text and specified language.
+    hotelCalloutAssets.add(
+        HotelCalloutAsset.newBuilder().setText("Activities").setLanguageCode(languageCode).build());
+    hotelCalloutAssets.add(
+        HotelCalloutAsset.newBuilder()
+            .setText("Facilities")
             .setLanguageCode(languageCode)
-            .build();
+            .build());
 
-    // Attaches the callout to a feed item.
-    ExtensionFeedItem feedItem =
-        ExtensionFeedItem.newBuilder().setHotelCalloutFeedItem(hotelCallout).build();
+    // Wraps the HotelCalloutAsset in an Asset and creates an AssetOperation to add the Asset.
+    List<AssetOperation> operations =
+        hotelCalloutAssets.stream()
+            .map(callout -> Asset.newBuilder().setHotelCalloutAsset(callout).build())
+            .map(asset -> AssetOperation.newBuilder().setCreate(asset).build())
+            .collect(Collectors.toList());
 
-    // Creates the feed item operation.
-    ExtensionFeedItemOperation feedItemOperation =
-        ExtensionFeedItemOperation.newBuilder().setCreate(feedItem).build();
-
-    // Issues the create request to create the feed item.
-    try (ExtensionFeedItemServiceClient extensionFeedItemServiceClient =
-        googleAdsClient.getLatestVersion().createExtensionFeedItemServiceClient()) {
-      MutateExtensionFeedItemsResponse response =
-          extensionFeedItemServiceClient.mutateExtensionFeedItems(
-              Long.toString(customerId), ImmutableList.of(feedItemOperation));
-      String extensionFeedItemResourceName = response.getResults(0).getResourceName();
-      System.out.printf(
-          "Added a extension feed item with resource name: '%s'.%n", extensionFeedItemResourceName);
-      return extensionFeedItemResourceName;
+    // Issues the create request to create the assets.
+    try (AssetServiceClient assetClient =
+        googleAdsClient.getLatestVersion().createAssetServiceClient()) {
+      MutateAssetsResponse response =
+          assetClient.mutateAssets(String.valueOf(customerId), operations);
+      List<String> resourceNames =
+          response.getResultsList().stream()
+              .map(MutateAssetResult::getResourceName)
+              .collect(Collectors.toList());
+      // Prints some information about the result.
+      for (String resName : resourceNames) {
+        System.out.printf("Created hotel call out asset with resource name %s.%n", resName);
+      }
+      return resourceNames;
     }
   }
 
-  /** Adds extension feed item to the account. */
-  private void addExtensionToAccount(
-      GoogleAdsClient googleAdsClient, long customerId, String extensionFeedItemResourceName) {
-    // Creates the customer extension setting, sets it to HOTEL_CALLOUT, and attaches the feed item.
-    CustomerExtensionSetting customerExtensionSetting =
-        CustomerExtensionSetting.newBuilder()
-            .setExtensionType(ExtensionType.HOTEL_CALLOUT)
-            .addExtensionFeedItems(extensionFeedItemResourceName)
-            .build();
-
-    // Creates the customer extension setting operation.
-    CustomerExtensionSettingOperation op =
-        CustomerExtensionSettingOperation.newBuilder().setCreate(customerExtensionSetting).build();
-
-    // Issues the create request to add the callout.
-    try (CustomerExtensionSettingServiceClient customerExtensionServiceClient =
-        googleAdsClient.getLatestVersion().createCustomerExtensionSettingServiceClient()) {
-      MutateCustomerExtensionSettingsResponse response =
-          customerExtensionServiceClient.mutateCustomerExtensionSettings(
-              Long.toString(customerId), ImmutableList.of(op));
-
-      String customerExtensionResourceName = response.getResults(0).getResourceName();
-      System.out.printf(
-          "Added a account extension with resource name: '%s'.%n", customerExtensionResourceName);
-    }
-  }
-
-  /** Adds the extension feed item to the Campaign. */
-  private void addExtensionToCampaign(
-      GoogleAdsClient googleAdsClient,
-      long customerId,
-      long campaignId,
-      String extensionFeedItemResourceName) {
-    String campaignResourceName = ResourceNames.campaign(customerId, campaignId);
-
-    // Creates the campaign extension setting, sets it to HOTEL_CALLOUT, and attaches the feed item.
-    CampaignExtensionSetting campaignExtensionSetting =
-        CampaignExtensionSetting.newBuilder()
-            .setExtensionType(ExtensionType.HOTEL_CALLOUT)
-            .setCampaign(campaignResourceName)
-            .addExtensionFeedItems(extensionFeedItemResourceName)
-            .build();
-
-    // Creates the campaign extension setting operation.
-    CampaignExtensionSettingOperation op =
-        CampaignExtensionSettingOperation.newBuilder().setCreate(campaignExtensionSetting).build();
+  /** Links Asset at the Customer level to serve in all eligible campaigns. */
+  private void linkAssetToAccount(
+      GoogleAdsClient googleAdsClient, long customerId, List<String> assetResourceNames) {
+    // Creates a CustomerAsset link for each Asset resource name provided, then converts this into a
+    // CustomerAssetOperation to create the Asset.
+    List<CustomerAssetOperation> customerAssetsOperations =
+        assetResourceNames.stream()
+            .map(
+                asset ->
+                    CustomerAsset.newBuilder()
+                        .setAsset(asset)
+                        .setFieldType(AssetFieldType.HOTEL_CALLOUT)
+                        .build())
+            .map(
+                customerAsset ->
+                    CustomerAssetOperation.newBuilder().setCreate(customerAsset).build())
+            .collect(Collectors.toList());
 
     // Issues the create request to add the callout.
-    try (CampaignExtensionSettingServiceClient campaignExtensionServiceClient =
-        googleAdsClient.getLatestVersion().createCampaignExtensionSettingServiceClient()) {
-      MutateCampaignExtensionSettingsResponse response =
-          campaignExtensionServiceClient.mutateCampaignExtensionSettings(
-              Long.toString(customerId), ImmutableList.of(op));
-
-      String campaignExtensionResourceName = response.getResults(0).getResourceName();
-      System.out.printf(
-          "Added a campaign extension with resource name: '%s'.%n", campaignExtensionResourceName);
-    }
-  }
-
-  /** Adds the extension feed item to the ad group. */
-  private void addExtensionToAdGroup(
-      GoogleAdsClient googleAdsClient,
-      long customerId,
-      long adGroupId,
-      String extensionFeedItemResourceName) {
-    String adGroupResourceName = ResourceNames.adGroup(customerId, adGroupId);
-
-    // Creates the ad group extension setting, sets it to HOTEL_CALLOUT, and attaches the feed item.
-    AdGroupExtensionSetting adGroupExtensionSetting =
-        AdGroupExtensionSetting.newBuilder()
-            .setExtensionType(ExtensionType.HOTEL_CALLOUT)
-            .setAdGroup(adGroupResourceName)
-            .addExtensionFeedItems(extensionFeedItemResourceName)
-            .build();
-
-    // Creates the ad group extension setting operation.
-    AdGroupExtensionSettingOperation op =
-        AdGroupExtensionSettingOperation.newBuilder().setCreate(adGroupExtensionSetting).build();
-
-    // Issues the create request to add the callout.
-    try (AdGroupExtensionSettingServiceClient adGroupExtensionServiceClient =
-        googleAdsClient.getLatestVersion().createAdGroupExtensionSettingServiceClient()) {
-      MutateAdGroupExtensionSettingsResponse response =
-          adGroupExtensionServiceClient.mutateAdGroupExtensionSettings(
-              Long.toString(customerId), ImmutableList.of(op));
-
-      String adGroupExtensionResourceName = response.getResults(0).getResourceName();
-      System.out.printf(
-          "Added an ad group extension with resource name: '%s'.%n", adGroupExtensionResourceName);
+    try (CustomerAssetServiceClient customerAssetClient =
+        googleAdsClient.getLatestVersion().createCustomerAssetServiceClient()) {
+      MutateCustomerAssetsResponse response =
+          customerAssetClient.mutateCustomerAssets(
+              String.valueOf(customerId), customerAssetsOperations);
+      List<String> resourceNames =
+          response.getResultsList().stream()
+              .map(MutateCustomerAssetResult::getResourceName)
+              .collect(Collectors.toList());
+      for (String resName : resourceNames) {
+        System.out.printf("Added a account extension with resource name: '%s'.%n", resName);
+      }
     }
   }
 }

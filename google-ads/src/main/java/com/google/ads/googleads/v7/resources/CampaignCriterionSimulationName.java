@@ -357,13 +357,13 @@ public class CampaignCriterionSimulationName implements ResourceName {
     }
 
     private Builder(CampaignCriterionSimulationName campaignCriterionSimulationName) {
-      customerId = campaignCriterionSimulationName.customerId;
-      campaignId = campaignCriterionSimulationName.campaignId;
-      criterionId = campaignCriterionSimulationName.criterionId;
-      type = campaignCriterionSimulationName.type;
-      modificationMethod = campaignCriterionSimulationName.modificationMethod;
-      startDate = campaignCriterionSimulationName.startDate;
-      endDate = campaignCriterionSimulationName.endDate;
+      this.customerId = campaignCriterionSimulationName.customerId;
+      this.campaignId = campaignCriterionSimulationName.campaignId;
+      this.criterionId = campaignCriterionSimulationName.criterionId;
+      this.type = campaignCriterionSimulationName.type;
+      this.modificationMethod = campaignCriterionSimulationName.modificationMethod;
+      this.startDate = campaignCriterionSimulationName.startDate;
+      this.endDate = campaignCriterionSimulationName.endDate;
     }
 
     public CampaignCriterionSimulationName build() {

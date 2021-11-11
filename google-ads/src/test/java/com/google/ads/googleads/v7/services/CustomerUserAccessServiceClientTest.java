@@ -41,10 +41,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class CustomerUserAccessServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
-  private CustomerUserAccessServiceClient client;
   private static MockCustomerUserAccessService mockCustomerUserAccessService;
+  private static MockServiceHelper mockServiceHelper;
   private LocalChannelProvider channelProvider;
+  private CustomerUserAccessServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -84,6 +84,9 @@ public class CustomerUserAccessServiceClientTest {
         CustomerUserAccess.newBuilder()
             .setResourceName(CustomerUserAccessName.of("[CUSTOMER_ID]", "[USER_ID]").toString())
             .setUserId(-147132913)
+            .setEmailAddress("emailAddress-1070931784")
+            .setAccessCreationDateTime("accessCreationDateTime1086481694")
+            .setInviterUserEmailAddress("inviterUserEmailAddress367430860")
             .build();
     mockCustomerUserAccessService.addResponse(expectedResponse);
 
@@ -124,6 +127,9 @@ public class CustomerUserAccessServiceClientTest {
         CustomerUserAccess.newBuilder()
             .setResourceName(CustomerUserAccessName.of("[CUSTOMER_ID]", "[USER_ID]").toString())
             .setUserId(-147132913)
+            .setEmailAddress("emailAddress-1070931784")
+            .setAccessCreationDateTime("accessCreationDateTime1086481694")
+            .setInviterUserEmailAddress("inviterUserEmailAddress367430860")
             .build();
     mockCustomerUserAccessService.addResponse(expectedResponse);
 

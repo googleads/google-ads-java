@@ -18,6 +18,7 @@ package com.google.ads.googleads.v7.services;
 
 import com.google.ads.googleads.v7.resources.CampaignBidModifier;
 import com.google.ads.googleads.v7.resources.CampaignBidModifierName;
+import com.google.ads.googleads.v7.resources.CampaignName;
 import com.google.api.gax.core.NoCredentialsProvider;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.testing.LocalChannelProvider;
@@ -43,10 +44,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class CampaignBidModifierServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
-  private CampaignBidModifierServiceClient client;
   private static MockCampaignBidModifierService mockCampaignBidModifierService;
+  private static MockServiceHelper mockServiceHelper;
   private LocalChannelProvider channelProvider;
+  private CampaignBidModifierServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -87,6 +88,9 @@ public class CampaignBidModifierServiceClientTest {
             .setResourceName(
                 CampaignBidModifierName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[CRITERION_ID]")
                     .toString())
+            .setCampaign(CampaignName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]").toString())
+            .setCriterionId(-326773895)
+            .setBidModifier(1362363353)
             .build();
     mockCampaignBidModifierService.addResponse(expectedResponse);
 
@@ -130,6 +134,9 @@ public class CampaignBidModifierServiceClientTest {
             .setResourceName(
                 CampaignBidModifierName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[CRITERION_ID]")
                     .toString())
+            .setCampaign(CampaignName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]").toString())
+            .setCriterionId(-326773895)
+            .setBidModifier(1362363353)
             .build();
     mockCampaignBidModifierService.addResponse(expectedResponse);
 

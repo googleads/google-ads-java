@@ -41,10 +41,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class FeedPlaceholderViewServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
   private static MockFeedPlaceholderViewService mockFeedPlaceholderViewService;
-  private FeedPlaceholderViewServiceClient client;
+  private static MockServiceHelper mockServiceHelper;
   private LocalChannelProvider channelProvider;
+  private FeedPlaceholderViewServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {

@@ -20,6 +20,7 @@ import com.google.ads.googleads.v7.common.MatchingFunction;
 import com.google.ads.googleads.v7.enums.PlaceholderTypeEnum;
 import com.google.ads.googleads.v7.resources.CustomerFeed;
 import com.google.ads.googleads.v7.resources.CustomerFeedName;
+import com.google.ads.googleads.v7.resources.FeedName;
 import com.google.api.gax.core.NoCredentialsProvider;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.testing.LocalChannelProvider;
@@ -45,10 +46,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class CustomerFeedServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
-  private CustomerFeedServiceClient client;
   private static MockCustomerFeedService mockCustomerFeedService;
+  private static MockServiceHelper mockServiceHelper;
   private LocalChannelProvider channelProvider;
+  private CustomerFeedServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -86,6 +87,7 @@ public class CustomerFeedServiceClientTest {
     CustomerFeed expectedResponse =
         CustomerFeed.newBuilder()
             .setResourceName(CustomerFeedName.of("[CUSTOMER_ID]", "[FEED_ID]").toString())
+            .setFeed(FeedName.of("[CUSTOMER_ID]", "[FEED_ID]").toString())
             .addAllPlaceholderTypes(new ArrayList<PlaceholderTypeEnum.PlaceholderType>())
             .setMatchingFunction(MatchingFunction.newBuilder().build())
             .build();
@@ -126,6 +128,7 @@ public class CustomerFeedServiceClientTest {
     CustomerFeed expectedResponse =
         CustomerFeed.newBuilder()
             .setResourceName(CustomerFeedName.of("[CUSTOMER_ID]", "[FEED_ID]").toString())
+            .setFeed(FeedName.of("[CUSTOMER_ID]", "[FEED_ID]").toString())
             .addAllPlaceholderTypes(new ArrayList<PlaceholderTypeEnum.PlaceholderType>())
             .setMatchingFunction(MatchingFunction.newBuilder().build())
             .build();

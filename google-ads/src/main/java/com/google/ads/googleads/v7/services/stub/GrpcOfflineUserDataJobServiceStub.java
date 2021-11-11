@@ -29,7 +29,6 @@ import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
 import com.google.api.gax.rpc.OperationCallable;
-import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.common.collect.ImmutableMap;
 import com.google.longrunning.Operation;
@@ -166,13 +165,10 @@ public class GrpcOfflineUserDataJobServiceStub extends OfflineUserDataJobService
                 .<CreateOfflineUserDataJobRequest, CreateOfflineUserDataJobResponse>newBuilder()
                 .setMethodDescriptor(createOfflineUserDataJobMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<CreateOfflineUserDataJobRequest>() {
-                      @Override
-                      public Map<String, String> extract(CreateOfflineUserDataJobRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("customer_id", String.valueOf(request.getCustomerId()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("customer_id", String.valueOf(request.getCustomerId()));
+                      return params.build();
                     })
                 .build();
     GrpcCallSettings<GetOfflineUserDataJobRequest, OfflineUserDataJob>
@@ -180,13 +176,10 @@ public class GrpcOfflineUserDataJobServiceStub extends OfflineUserDataJobService
             GrpcCallSettings.<GetOfflineUserDataJobRequest, OfflineUserDataJob>newBuilder()
                 .setMethodDescriptor(getOfflineUserDataJobMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<GetOfflineUserDataJobRequest>() {
-                      @Override
-                      public Map<String, String> extract(GetOfflineUserDataJobRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("resource_name", String.valueOf(request.getResourceName()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("resource_name", String.valueOf(request.getResourceName()));
+                      return params.build();
                     })
                 .build();
     GrpcCallSettings<
@@ -197,14 +190,10 @@ public class GrpcOfflineUserDataJobServiceStub extends OfflineUserDataJobService
                     newBuilder()
                 .setMethodDescriptor(addOfflineUserDataJobOperationsMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<AddOfflineUserDataJobOperationsRequest>() {
-                      @Override
-                      public Map<String, String> extract(
-                          AddOfflineUserDataJobOperationsRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("resource_name", String.valueOf(request.getResourceName()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("resource_name", String.valueOf(request.getResourceName()));
+                      return params.build();
                     })
                 .build();
     GrpcCallSettings<RunOfflineUserDataJobRequest, Operation>
@@ -212,13 +201,10 @@ public class GrpcOfflineUserDataJobServiceStub extends OfflineUserDataJobService
             GrpcCallSettings.<RunOfflineUserDataJobRequest, Operation>newBuilder()
                 .setMethodDescriptor(runOfflineUserDataJobMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<RunOfflineUserDataJobRequest>() {
-                      @Override
-                      public Map<String, String> extract(RunOfflineUserDataJobRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("resource_name", String.valueOf(request.getResourceName()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("resource_name", String.valueOf(request.getResourceName()));
+                      return params.build();
                     })
                 .build();
 
@@ -289,7 +275,13 @@ public class GrpcOfflineUserDataJobServiceStub extends OfflineUserDataJobService
 
   @Override
   public final void close() {
-    shutdown();
+    try {
+      backgroundResources.close();
+    } catch (RuntimeException e) {
+      throw e;
+    } catch (Exception e) {
+      throw new IllegalStateException("Failed to close resource", e);
+    }
   }
 
   @Override

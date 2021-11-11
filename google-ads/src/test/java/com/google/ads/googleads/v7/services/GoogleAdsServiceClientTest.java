@@ -49,10 +49,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class GoogleAdsServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
   private static MockGoogleAdsService mockGoogleAdsService;
-  private GoogleAdsServiceClient client;
+  private static MockServiceHelper mockServiceHelper;
   private LocalChannelProvider channelProvider;
+  private GoogleAdsServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {

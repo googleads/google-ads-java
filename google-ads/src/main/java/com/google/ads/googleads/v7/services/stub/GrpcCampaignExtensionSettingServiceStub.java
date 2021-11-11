@@ -25,7 +25,6 @@ import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
-import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.common.collect.ImmutableMap;
 import com.google.longrunning.stub.GrpcOperationsStub;
@@ -134,14 +133,10 @@ public class GrpcCampaignExtensionSettingServiceStub extends CampaignExtensionSe
                 .<GetCampaignExtensionSettingRequest, CampaignExtensionSetting>newBuilder()
                 .setMethodDescriptor(getCampaignExtensionSettingMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<GetCampaignExtensionSettingRequest>() {
-                      @Override
-                      public Map<String, String> extract(
-                          GetCampaignExtensionSettingRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("resource_name", String.valueOf(request.getResourceName()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("resource_name", String.valueOf(request.getResourceName()));
+                      return params.build();
                     })
                 .build();
     GrpcCallSettings<
@@ -152,14 +147,10 @@ public class GrpcCampaignExtensionSettingServiceStub extends CampaignExtensionSe
                     newBuilder()
                 .setMethodDescriptor(mutateCampaignExtensionSettingsMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<MutateCampaignExtensionSettingsRequest>() {
-                      @Override
-                      public Map<String, String> extract(
-                          MutateCampaignExtensionSettingsRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("customer_id", String.valueOf(request.getCustomerId()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("customer_id", String.valueOf(request.getCustomerId()));
+                      return params.build();
                     })
                 .build();
 
@@ -197,7 +188,13 @@ public class GrpcCampaignExtensionSettingServiceStub extends CampaignExtensionSe
 
   @Override
   public final void close() {
-    shutdown();
+    try {
+      backgroundResources.close();
+    } catch (RuntimeException e) {
+      throw e;
+    } catch (Exception e) {
+      throw new IllegalStateException("Failed to close resource", e);
+    }
   }
 
   @Override

@@ -206,9 +206,9 @@ public class ProductBiddingCategoryConstantName implements ResourceName {
     }
 
     private Builder(ProductBiddingCategoryConstantName productBiddingCategoryConstantName) {
-      countryCode = productBiddingCategoryConstantName.countryCode;
-      level = productBiddingCategoryConstantName.level;
-      id = productBiddingCategoryConstantName.id;
+      this.countryCode = productBiddingCategoryConstantName.countryCode;
+      this.level = productBiddingCategoryConstantName.level;
+      this.id = productBiddingCategoryConstantName.id;
     }
 
     public ProductBiddingCategoryConstantName build() {

@@ -324,12 +324,12 @@ public class AdGroupSimulationName implements ResourceName {
     }
 
     private Builder(AdGroupSimulationName adGroupSimulationName) {
-      customerId = adGroupSimulationName.customerId;
-      adGroupId = adGroupSimulationName.adGroupId;
-      type = adGroupSimulationName.type;
-      modificationMethod = adGroupSimulationName.modificationMethod;
-      startDate = adGroupSimulationName.startDate;
-      endDate = adGroupSimulationName.endDate;
+      this.customerId = adGroupSimulationName.customerId;
+      this.adGroupId = adGroupSimulationName.adGroupId;
+      this.type = adGroupSimulationName.type;
+      this.modificationMethod = adGroupSimulationName.modificationMethod;
+      this.startDate = adGroupSimulationName.startDate;
+      this.endDate = adGroupSimulationName.endDate;
     }
 
     public AdGroupSimulationName build() {

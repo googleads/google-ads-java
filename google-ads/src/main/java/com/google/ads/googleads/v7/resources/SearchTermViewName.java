@@ -253,10 +253,10 @@ public class SearchTermViewName implements ResourceName {
     }
 
     private Builder(SearchTermViewName searchTermViewName) {
-      customerId = searchTermViewName.customerId;
-      campaignId = searchTermViewName.campaignId;
-      adGroupId = searchTermViewName.adGroupId;
-      query = searchTermViewName.query;
+      this.customerId = searchTermViewName.customerId;
+      this.campaignId = searchTermViewName.campaignId;
+      this.adGroupId = searchTermViewName.adGroupId;
+      this.query = searchTermViewName.query;
     }
 
     public SearchTermViewName build() {

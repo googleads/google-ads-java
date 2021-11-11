@@ -216,9 +216,9 @@ public class GenderViewName implements ResourceName {
     }
 
     private Builder(GenderViewName genderViewName) {
-      customerId = genderViewName.customerId;
-      adGroupId = genderViewName.adGroupId;
-      criterionId = genderViewName.criterionId;
+      this.customerId = genderViewName.customerId;
+      this.adGroupId = genderViewName.adGroupId;
+      this.criterionId = genderViewName.criterionId;
     }
 
     public GenderViewName build() {

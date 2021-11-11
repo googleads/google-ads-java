@@ -33,7 +33,6 @@ import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
 import com.google.api.gax.rpc.OperationCallable;
-import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.common.collect.ImmutableMap;
 import com.google.longrunning.Operation;
@@ -166,26 +165,20 @@ public class GrpcBatchJobServiceStub extends BatchJobServiceStub {
             GrpcCallSettings.<MutateBatchJobRequest, MutateBatchJobResponse>newBuilder()
                 .setMethodDescriptor(mutateBatchJobMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<MutateBatchJobRequest>() {
-                      @Override
-                      public Map<String, String> extract(MutateBatchJobRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("customer_id", String.valueOf(request.getCustomerId()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("customer_id", String.valueOf(request.getCustomerId()));
+                      return params.build();
                     })
                 .build();
     GrpcCallSettings<GetBatchJobRequest, BatchJob> getBatchJobTransportSettings =
         GrpcCallSettings.<GetBatchJobRequest, BatchJob>newBuilder()
             .setMethodDescriptor(getBatchJobMethodDescriptor)
             .setParamsExtractor(
-                new RequestParamsExtractor<GetBatchJobRequest>() {
-                  @Override
-                  public Map<String, String> extract(GetBatchJobRequest request) {
-                    ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                    params.put("resource_name", String.valueOf(request.getResourceName()));
-                    return params.build();
-                  }
+                request -> {
+                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                  params.put("resource_name", String.valueOf(request.getResourceName()));
+                  return params.build();
                 })
             .build();
     GrpcCallSettings<ListBatchJobResultsRequest, ListBatchJobResultsResponse>
@@ -193,26 +186,20 @@ public class GrpcBatchJobServiceStub extends BatchJobServiceStub {
             GrpcCallSettings.<ListBatchJobResultsRequest, ListBatchJobResultsResponse>newBuilder()
                 .setMethodDescriptor(listBatchJobResultsMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<ListBatchJobResultsRequest>() {
-                      @Override
-                      public Map<String, String> extract(ListBatchJobResultsRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("resource_name", String.valueOf(request.getResourceName()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("resource_name", String.valueOf(request.getResourceName()));
+                      return params.build();
                     })
                 .build();
     GrpcCallSettings<RunBatchJobRequest, Operation> runBatchJobTransportSettings =
         GrpcCallSettings.<RunBatchJobRequest, Operation>newBuilder()
             .setMethodDescriptor(runBatchJobMethodDescriptor)
             .setParamsExtractor(
-                new RequestParamsExtractor<RunBatchJobRequest>() {
-                  @Override
-                  public Map<String, String> extract(RunBatchJobRequest request) {
-                    ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                    params.put("resource_name", String.valueOf(request.getResourceName()));
-                    return params.build();
-                  }
+                request -> {
+                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                  params.put("resource_name", String.valueOf(request.getResourceName()));
+                  return params.build();
                 })
             .build();
     GrpcCallSettings<AddBatchJobOperationsRequest, AddBatchJobOperationsResponse>
@@ -221,13 +208,10 @@ public class GrpcBatchJobServiceStub extends BatchJobServiceStub {
                 .<AddBatchJobOperationsRequest, AddBatchJobOperationsResponse>newBuilder()
                 .setMethodDescriptor(addBatchJobOperationsMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<AddBatchJobOperationsRequest>() {
-                      @Override
-                      public Map<String, String> extract(AddBatchJobOperationsRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("resource_name", String.valueOf(request.getResourceName()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("resource_name", String.valueOf(request.getResourceName()));
+                      return params.build();
                     })
                 .build();
 
@@ -311,7 +295,13 @@ public class GrpcBatchJobServiceStub extends BatchJobServiceStub {
 
   @Override
   public final void close() {
-    shutdown();
+    try {
+      backgroundResources.close();
+    } catch (RuntimeException e) {
+      throw e;
+    } catch (Exception e) {
+      throw new IllegalStateException("Failed to close resource", e);
+    }
   }
 
   @Override

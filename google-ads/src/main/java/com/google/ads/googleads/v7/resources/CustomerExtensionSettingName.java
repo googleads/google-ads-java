@@ -188,8 +188,8 @@ public class CustomerExtensionSettingName implements ResourceName {
     }
 
     private Builder(CustomerExtensionSettingName customerExtensionSettingName) {
-      customerId = customerExtensionSettingName.customerId;
-      extensionType = customerExtensionSettingName.extensionType;
+      this.customerId = customerExtensionSettingName.customerId;
+      this.extensionType = customerExtensionSettingName.extensionType;
     }
 
     public CustomerExtensionSettingName build() {

@@ -75,9 +75,9 @@ import org.threeten.bp.Duration;
  * <p>The default instance has everything set to sensible defaults:
  *
  * <ul>
- *   <li>The default service address (googleads.googleapis.com) and default port (443) are used.
- *   <li>Credentials are acquired automatically through Application Default Credentials.
- *   <li>Retries are configured for idempotent methods but not for non-idempotent methods.
+ *   <li> The default service address (googleads.googleapis.com) and default port (443) are used.
+ *   <li> Credentials are acquired automatically through Application Default Credentials.
+ *   <li> Retries are configured for idempotent methods but not for non-idempotent methods.
  * </ul>
  *
  * <p>The builder of this class is recursive, so contained classes are themselves builders. When
@@ -128,19 +128,16 @@ public class CampaignExperimentServiceStubSettings
   private final UnaryCallSettings<EndCampaignExperimentRequest, Empty>
       endCampaignExperimentSettings;
   private final PagedCallSettings<
-          ListCampaignExperimentAsyncErrorsRequest,
-          ListCampaignExperimentAsyncErrorsResponse,
+          ListCampaignExperimentAsyncErrorsRequest, ListCampaignExperimentAsyncErrorsResponse,
           ListCampaignExperimentAsyncErrorsPagedResponse>
       listCampaignExperimentAsyncErrorsSettings;
 
   private static final PagedListDescriptor<
-          ListCampaignExperimentAsyncErrorsRequest,
-          ListCampaignExperimentAsyncErrorsResponse,
+          ListCampaignExperimentAsyncErrorsRequest, ListCampaignExperimentAsyncErrorsResponse,
           Status>
       LIST_CAMPAIGN_EXPERIMENT_ASYNC_ERRORS_PAGE_STR_DESC =
           new PagedListDescriptor<
-              ListCampaignExperimentAsyncErrorsRequest,
-              ListCampaignExperimentAsyncErrorsResponse,
+              ListCampaignExperimentAsyncErrorsRequest, ListCampaignExperimentAsyncErrorsResponse,
               Status>() {
             @Override
             public String emptyToken() {
@@ -183,13 +180,11 @@ public class CampaignExperimentServiceStubSettings
           };
 
   private static final PagedListResponseFactory<
-          ListCampaignExperimentAsyncErrorsRequest,
-          ListCampaignExperimentAsyncErrorsResponse,
+          ListCampaignExperimentAsyncErrorsRequest, ListCampaignExperimentAsyncErrorsResponse,
           ListCampaignExperimentAsyncErrorsPagedResponse>
       LIST_CAMPAIGN_EXPERIMENT_ASYNC_ERRORS_PAGE_STR_FACT =
           new PagedListResponseFactory<
-              ListCampaignExperimentAsyncErrorsRequest,
-              ListCampaignExperimentAsyncErrorsResponse,
+              ListCampaignExperimentAsyncErrorsRequest, ListCampaignExperimentAsyncErrorsResponse,
               ListCampaignExperimentAsyncErrorsPagedResponse>() {
             @Override
             public ApiFuture<ListCampaignExperimentAsyncErrorsPagedResponse> getFuturePagedResponse(
@@ -202,8 +197,7 @@ public class CampaignExperimentServiceStubSettings
                 ApiFuture<ListCampaignExperimentAsyncErrorsResponse> futureResponse) {
               PageContext<
                       ListCampaignExperimentAsyncErrorsRequest,
-                      ListCampaignExperimentAsyncErrorsResponse,
-                      Status>
+                      ListCampaignExperimentAsyncErrorsResponse, Status>
                   pageContext =
                       PageContext.create(
                           callable,
@@ -265,8 +259,7 @@ public class CampaignExperimentServiceStubSettings
 
   /** Returns the object with the settings used for calls to listCampaignExperimentAsyncErrors. */
   public PagedCallSettings<
-          ListCampaignExperimentAsyncErrorsRequest,
-          ListCampaignExperimentAsyncErrorsResponse,
+          ListCampaignExperimentAsyncErrorsRequest, ListCampaignExperimentAsyncErrorsResponse,
           ListCampaignExperimentAsyncErrorsPagedResponse>
       listCampaignExperimentAsyncErrorsSettings() {
     return listCampaignExperimentAsyncErrorsSettings;
@@ -294,6 +287,11 @@ public class CampaignExperimentServiceStubSettings
     return "googleads.googleapis.com:443";
   }
 
+  /** Returns the default mTLS service endpoint. */
+  public static String getDefaultMtlsEndpoint() {
+    return "googleads.mtls.googleapis.com:443";
+  }
+
   /** Returns the default service scopes. */
   public static List<String> getDefaultServiceScopes() {
     return DEFAULT_SERVICE_SCOPES;
@@ -301,7 +299,9 @@ public class CampaignExperimentServiceStubSettings
 
   /** Returns a builder for the default credentials for this service. */
   public static GoogleCredentialsProvider.Builder defaultCredentialsProviderBuilder() {
-    return GoogleCredentialsProvider.newBuilder().setScopesToApply(DEFAULT_SERVICE_SCOPES);
+    return GoogleCredentialsProvider.newBuilder()
+        .setScopesToApply(DEFAULT_SERVICE_SCOPES)
+        .setUseJwtAccessWithScope(true);
   }
 
   /** Returns a builder for the default ChannelProvider for this service. */
@@ -380,8 +380,7 @@ public class CampaignExperimentServiceStubSettings
     private final UnaryCallSettings.Builder<EndCampaignExperimentRequest, Empty>
         endCampaignExperimentSettings;
     private final PagedCallSettings.Builder<
-            ListCampaignExperimentAsyncErrorsRequest,
-            ListCampaignExperimentAsyncErrorsResponse,
+            ListCampaignExperimentAsyncErrorsRequest, ListCampaignExperimentAsyncErrorsResponse,
             ListCampaignExperimentAsyncErrorsPagedResponse>
         listCampaignExperimentAsyncErrorsSettings;
     private static final ImmutableMap<String, ImmutableSet<StatusCode.Code>>
@@ -481,6 +480,8 @@ public class CampaignExperimentServiceStubSettings
       builder.setCredentialsProvider(defaultCredentialsProviderBuilder().build());
       builder.setInternalHeaderProvider(defaultApiClientHeaderProviderBuilder().build());
       builder.setEndpoint(getDefaultEndpoint());
+      builder.setMtlsEndpoint(getDefaultMtlsEndpoint());
+      builder.setSwitchToMtlsEndpointAllowed(true);
 
       return initDefaults(builder);
     }
@@ -574,14 +575,13 @@ public class CampaignExperimentServiceStubSettings
       return builder;
     }
 
-    // NEXT_MAJOR_VER: remove 'throws Exception'.
     /**
      * Applies the given settings updater function to all of the unary API methods in this service.
      *
      * <p>Note: This method does not support applying settings to streaming methods.
      */
     public Builder applyToAllUnaryMethods(
-        ApiFunction<UnaryCallSettings.Builder<?, ?>, Void> settingsUpdater) throws Exception {
+        ApiFunction<UnaryCallSettings.Builder<?, ?>, Void> settingsUpdater) {
       super.applyToAllUnaryMethods(unaryMethodSettingsBuilders, settingsUpdater);
       return this;
     }
@@ -647,8 +647,7 @@ public class CampaignExperimentServiceStubSettings
 
     /** Returns the builder for the settings used for calls to listCampaignExperimentAsyncErrors. */
     public PagedCallSettings.Builder<
-            ListCampaignExperimentAsyncErrorsRequest,
-            ListCampaignExperimentAsyncErrorsResponse,
+            ListCampaignExperimentAsyncErrorsRequest, ListCampaignExperimentAsyncErrorsResponse,
             ListCampaignExperimentAsyncErrorsPagedResponse>
         listCampaignExperimentAsyncErrorsSettings() {
       return listCampaignExperimentAsyncErrorsSettings;

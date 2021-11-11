@@ -187,8 +187,8 @@ public class ConversionActionName implements ResourceName {
     }
 
     private Builder(ConversionActionName conversionActionName) {
-      customerId = conversionActionName.customerId;
-      conversionActionId = conversionActionName.conversionActionId;
+      this.customerId = conversionActionName.customerId;
+      this.conversionActionId = conversionActionName.conversionActionId;
     }
 
     public ConversionActionName build() {

@@ -168,6 +168,14 @@ private static final long serialVersionUID = 0L;
      * <code>NEGATIVE_KEYWORD_HAS_CPC_BID = 8;</code>
      */
     NEGATIVE_KEYWORD_HAS_CPC_BID(8),
+    /**
+     * <pre>
+     * New broad match modifier (BMM) KpAdGroupKeywords are not allowed.
+     * </pre>
+     *
+     * <code>NEW_BMM_KEYWORDS_NOT_ALLOWED = 9;</code>
+     */
+    NEW_BMM_KEYWORDS_NOT_ALLOWED(9),
     UNRECOGNIZED(-1),
     ;
 
@@ -244,6 +252,14 @@ private static final long serialVersionUID = 0L;
      * <code>NEGATIVE_KEYWORD_HAS_CPC_BID = 8;</code>
      */
     public static final int NEGATIVE_KEYWORD_HAS_CPC_BID_VALUE = 8;
+    /**
+     * <pre>
+     * New broad match modifier (BMM) KpAdGroupKeywords are not allowed.
+     * </pre>
+     *
+     * <code>NEW_BMM_KEYWORDS_NOT_ALLOWED = 9;</code>
+     */
+    public static final int NEW_BMM_KEYWORDS_NOT_ALLOWED_VALUE = 9;
 
 
     public final int getNumber() {
@@ -279,6 +295,7 @@ private static final long serialVersionUID = 0L;
         case 6: return KEYWORD_HAS_TOO_MANY_WORDS;
         case 7: return INVALID_KEYWORD_TEXT;
         case 8: return NEGATIVE_KEYWORD_HAS_CPC_BID;
+        case 9: return NEW_BMM_KEYWORDS_NOT_ALLOWED;
         default: return null;
       }
     }

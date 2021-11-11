@@ -256,10 +256,10 @@ public class ChangeEventName implements ResourceName {
     }
 
     private Builder(ChangeEventName changeEventName) {
-      customerId = changeEventName.customerId;
-      timestampMicros = changeEventName.timestampMicros;
-      commandIndex = changeEventName.commandIndex;
-      mutateIndex = changeEventName.mutateIndex;
+      this.customerId = changeEventName.customerId;
+      this.timestampMicros = changeEventName.timestampMicros;
+      this.commandIndex = changeEventName.commandIndex;
+      this.mutateIndex = changeEventName.mutateIndex;
     }
 
     public ChangeEventName build() {

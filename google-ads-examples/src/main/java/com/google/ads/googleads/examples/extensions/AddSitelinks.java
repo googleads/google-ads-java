@@ -18,27 +18,27 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v8.common.AdScheduleInfo;
-import com.google.ads.googleads.v8.common.KeywordInfo;
-import com.google.ads.googleads.v8.common.SitelinkFeedItem;
-import com.google.ads.googleads.v8.enums.DayOfWeekEnum.DayOfWeek;
-import com.google.ads.googleads.v8.enums.ExtensionTypeEnum.ExtensionType;
-import com.google.ads.googleads.v8.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice;
-import com.google.ads.googleads.v8.enums.KeywordMatchTypeEnum.KeywordMatchType;
-import com.google.ads.googleads.v8.enums.MinuteOfHourEnum.MinuteOfHour;
-import com.google.ads.googleads.v8.errors.GoogleAdsError;
-import com.google.ads.googleads.v8.errors.GoogleAdsException;
-import com.google.ads.googleads.v8.resources.CampaignExtensionSetting;
-import com.google.ads.googleads.v8.resources.ExtensionFeedItem;
-import com.google.ads.googleads.v8.services.CampaignExtensionSettingOperation;
-import com.google.ads.googleads.v8.services.CampaignExtensionSettingServiceClient;
-import com.google.ads.googleads.v8.services.ExtensionFeedItemOperation;
-import com.google.ads.googleads.v8.services.ExtensionFeedItemServiceClient;
-import com.google.ads.googleads.v8.services.MutateCampaignExtensionSettingResult;
-import com.google.ads.googleads.v8.services.MutateCampaignExtensionSettingsResponse;
-import com.google.ads.googleads.v8.services.MutateExtensionFeedItemResult;
-import com.google.ads.googleads.v8.services.MutateExtensionFeedItemsResponse;
-import com.google.ads.googleads.v8.utils.ResourceNames;
+import com.google.ads.googleads.v9.common.AdScheduleInfo;
+import com.google.ads.googleads.v9.common.KeywordInfo;
+import com.google.ads.googleads.v9.common.SitelinkFeedItem;
+import com.google.ads.googleads.v9.enums.DayOfWeekEnum.DayOfWeek;
+import com.google.ads.googleads.v9.enums.ExtensionTypeEnum.ExtensionType;
+import com.google.ads.googleads.v9.enums.FeedItemTargetDeviceEnum.FeedItemTargetDevice;
+import com.google.ads.googleads.v9.enums.KeywordMatchTypeEnum.KeywordMatchType;
+import com.google.ads.googleads.v9.enums.MinuteOfHourEnum.MinuteOfHour;
+import com.google.ads.googleads.v9.errors.GoogleAdsError;
+import com.google.ads.googleads.v9.errors.GoogleAdsException;
+import com.google.ads.googleads.v9.resources.CampaignExtensionSetting;
+import com.google.ads.googleads.v9.resources.ExtensionFeedItem;
+import com.google.ads.googleads.v9.services.CampaignExtensionSettingOperation;
+import com.google.ads.googleads.v9.services.CampaignExtensionSettingServiceClient;
+import com.google.ads.googleads.v9.services.ExtensionFeedItemOperation;
+import com.google.ads.googleads.v9.services.ExtensionFeedItemServiceClient;
+import com.google.ads.googleads.v9.services.MutateCampaignExtensionSettingResult;
+import com.google.ads.googleads.v9.services.MutateCampaignExtensionSettingsResponse;
+import com.google.ads.googleads.v9.services.MutateExtensionFeedItemResult;
+import com.google.ads.googleads.v9.services.MutateExtensionFeedItemsResponse;
+import com.google.ads.googleads.v9.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -47,6 +47,10 @@ import java.util.List;
 import org.joda.time.DateTime;
 
 /** Adds sitelinks to a campaign. To create a campaign, run AddCampaigns.java. */
+// DEPRECATION WARNING!
+// THIS USAGE IS DEPRECATED AND WILL BE REMOVED IN AN UPCOMING API VERSION
+// All extensions should migrate to Assets. See AddSitelinksUsingAssets.java
+@Deprecated
 public class AddSitelinks {
 
   private static class AddSitelinksParams extends CodeSampleParams {

@@ -199,8 +199,9 @@ public class KeywordPlanCampaignKeywordName implements ResourceName {
     }
 
     private Builder(KeywordPlanCampaignKeywordName keywordPlanCampaignKeywordName) {
-      customerId = keywordPlanCampaignKeywordName.customerId;
-      keywordPlanCampaignKeywordId = keywordPlanCampaignKeywordName.keywordPlanCampaignKeywordId;
+      this.customerId = keywordPlanCampaignKeywordName.customerId;
+      this.keywordPlanCampaignKeywordId =
+          keywordPlanCampaignKeywordName.keywordPlanCampaignKeywordId;
     }
 
     public KeywordPlanCampaignKeywordName build() {

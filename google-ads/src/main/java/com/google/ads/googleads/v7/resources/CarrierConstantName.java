@@ -158,7 +158,7 @@ public class CarrierConstantName implements ResourceName {
     }
 
     private Builder(CarrierConstantName carrierConstantName) {
-      criterionId = carrierConstantName.criterionId;
+      this.criterionId = carrierConstantName.criterionId;
     }
 
     public CarrierConstantName build() {

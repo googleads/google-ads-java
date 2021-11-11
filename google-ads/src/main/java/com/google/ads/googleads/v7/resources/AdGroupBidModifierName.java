@@ -216,9 +216,9 @@ public class AdGroupBidModifierName implements ResourceName {
     }
 
     private Builder(AdGroupBidModifierName adGroupBidModifierName) {
-      customerId = adGroupBidModifierName.customerId;
-      adGroupId = adGroupBidModifierName.adGroupId;
-      criterionId = adGroupBidModifierName.criterionId;
+      this.customerId = adGroupBidModifierName.customerId;
+      this.adGroupId = adGroupBidModifierName.adGroupId;
+      this.criterionId = adGroupBidModifierName.criterionId;
     }
 
     public AdGroupBidModifierName build() {

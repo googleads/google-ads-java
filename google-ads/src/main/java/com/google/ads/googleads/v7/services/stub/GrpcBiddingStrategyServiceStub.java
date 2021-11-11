@@ -25,7 +25,6 @@ import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
-import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.common.collect.ImmutableMap;
 import com.google.longrunning.stub.GrpcOperationsStub;
@@ -123,13 +122,10 @@ public class GrpcBiddingStrategyServiceStub extends BiddingStrategyServiceStub {
             GrpcCallSettings.<GetBiddingStrategyRequest, BiddingStrategy>newBuilder()
                 .setMethodDescriptor(getBiddingStrategyMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<GetBiddingStrategyRequest>() {
-                      @Override
-                      public Map<String, String> extract(GetBiddingStrategyRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("resource_name", String.valueOf(request.getResourceName()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("resource_name", String.valueOf(request.getResourceName()));
+                      return params.build();
                     })
                 .build();
     GrpcCallSettings<MutateBiddingStrategiesRequest, MutateBiddingStrategiesResponse>
@@ -138,13 +134,10 @@ public class GrpcBiddingStrategyServiceStub extends BiddingStrategyServiceStub {
                 .<MutateBiddingStrategiesRequest, MutateBiddingStrategiesResponse>newBuilder()
                 .setMethodDescriptor(mutateBiddingStrategiesMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<MutateBiddingStrategiesRequest>() {
-                      @Override
-                      public Map<String, String> extract(MutateBiddingStrategiesRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("customer_id", String.valueOf(request.getCustomerId()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("customer_id", String.valueOf(request.getCustomerId()));
+                      return params.build();
                     })
                 .build();
 
@@ -180,7 +173,13 @@ public class GrpcBiddingStrategyServiceStub extends BiddingStrategyServiceStub {
 
   @Override
   public final void close() {
-    shutdown();
+    try {
+      backgroundResources.close();
+    } catch (RuntimeException e) {
+      throw e;
+    } catch (Exception e) {
+      throw new IllegalStateException("Failed to close resource", e);
+    }
   }
 
   @Override

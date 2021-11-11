@@ -245,10 +245,10 @@ public class AdGroupAdLabelName implements ResourceName {
     }
 
     private Builder(AdGroupAdLabelName adGroupAdLabelName) {
-      customerId = adGroupAdLabelName.customerId;
-      adGroupId = adGroupAdLabelName.adGroupId;
-      adId = adGroupAdLabelName.adId;
-      labelId = adGroupAdLabelName.labelId;
+      this.customerId = adGroupAdLabelName.customerId;
+      this.adGroupId = adGroupAdLabelName.adGroupId;
+      this.adId = adGroupAdLabelName.adId;
+      this.labelId = adGroupAdLabelName.labelId;
     }
 
     public AdGroupAdLabelName build() {

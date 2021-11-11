@@ -41,10 +41,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class CurrencyConstantServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
-  private CurrencyConstantServiceClient client;
   private static MockCurrencyConstantService mockCurrencyConstantService;
+  private static MockServiceHelper mockServiceHelper;
   private LocalChannelProvider channelProvider;
+  private CurrencyConstantServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -83,6 +83,10 @@ public class CurrencyConstantServiceClientTest {
     CurrencyConstant expectedResponse =
         CurrencyConstant.newBuilder()
             .setResourceName(CurrencyConstantName.of("[CODE]").toString())
+            .setCode("code3059181")
+            .setName(CurrencyConstantName.of("[CODE]").toString())
+            .setSymbol("symbol-887523944")
+            .setBillableUnitMicros(1611838444)
             .build();
     mockCurrencyConstantService.addResponse(expectedResponse);
 
@@ -121,6 +125,10 @@ public class CurrencyConstantServiceClientTest {
     CurrencyConstant expectedResponse =
         CurrencyConstant.newBuilder()
             .setResourceName(CurrencyConstantName.of("[CODE]").toString())
+            .setCode("code3059181")
+            .setName(CurrencyConstantName.of("[CODE]").toString())
+            .setSymbol("symbol-887523944")
+            .setBillableUnitMicros(1611838444)
             .build();
     mockCurrencyConstantService.addResponse(expectedResponse);
 

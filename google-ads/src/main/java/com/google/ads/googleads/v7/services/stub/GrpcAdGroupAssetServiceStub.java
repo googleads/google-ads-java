@@ -25,7 +25,6 @@ import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
-import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.common.collect.ImmutableMap;
 import com.google.longrunning.stub.GrpcOperationsStub;
@@ -119,13 +118,10 @@ public class GrpcAdGroupAssetServiceStub extends AdGroupAssetServiceStub {
         GrpcCallSettings.<GetAdGroupAssetRequest, AdGroupAsset>newBuilder()
             .setMethodDescriptor(getAdGroupAssetMethodDescriptor)
             .setParamsExtractor(
-                new RequestParamsExtractor<GetAdGroupAssetRequest>() {
-                  @Override
-                  public Map<String, String> extract(GetAdGroupAssetRequest request) {
-                    ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                    params.put("resource_name", String.valueOf(request.getResourceName()));
-                    return params.build();
-                  }
+                request -> {
+                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                  params.put("resource_name", String.valueOf(request.getResourceName()));
+                  return params.build();
                 })
             .build();
     GrpcCallSettings<MutateAdGroupAssetsRequest, MutateAdGroupAssetsResponse>
@@ -133,13 +129,10 @@ public class GrpcAdGroupAssetServiceStub extends AdGroupAssetServiceStub {
             GrpcCallSettings.<MutateAdGroupAssetsRequest, MutateAdGroupAssetsResponse>newBuilder()
                 .setMethodDescriptor(mutateAdGroupAssetsMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<MutateAdGroupAssetsRequest>() {
-                      @Override
-                      public Map<String, String> extract(MutateAdGroupAssetsRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("customer_id", String.valueOf(request.getCustomerId()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("customer_id", String.valueOf(request.getCustomerId()));
+                      return params.build();
                     })
                 .build();
 
@@ -173,7 +166,13 @@ public class GrpcAdGroupAssetServiceStub extends AdGroupAssetServiceStub {
 
   @Override
   public final void close() {
-    shutdown();
+    try {
+      backgroundResources.close();
+    } catch (RuntimeException e) {
+      throw e;
+    } catch (Exception e) {
+      throw new IllegalStateException("Failed to close resource", e);
+    }
   }
 
   @Override

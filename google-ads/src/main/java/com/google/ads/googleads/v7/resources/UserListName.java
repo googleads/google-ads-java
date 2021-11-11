@@ -182,8 +182,8 @@ public class UserListName implements ResourceName {
     }
 
     private Builder(UserListName userListName) {
-      customerId = userListName.customerId;
-      userListId = userListName.userListId;
+      this.customerId = userListName.customerId;
+      this.userListId = userListName.userListId;
     }
 
     public UserListName build() {

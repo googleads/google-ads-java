@@ -187,8 +187,8 @@ public class BiddingStrategyName implements ResourceName {
     }
 
     private Builder(BiddingStrategyName biddingStrategyName) {
-      customerId = biddingStrategyName.customerId;
-      biddingStrategyId = biddingStrategyName.biddingStrategyId;
+      this.customerId = biddingStrategyName.customerId;
+      this.biddingStrategyId = biddingStrategyName.biddingStrategyId;
     }
 
     public BiddingStrategyName build() {

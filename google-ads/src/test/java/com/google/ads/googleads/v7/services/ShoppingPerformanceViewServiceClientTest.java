@@ -42,9 +42,9 @@ import org.junit.Test;
 @Generated("by gapic-generator-java")
 public class ShoppingPerformanceViewServiceClientTest {
   private static MockServiceHelper mockServiceHelper;
-  private ShoppingPerformanceViewServiceClient client;
   private static MockShoppingPerformanceViewService mockShoppingPerformanceViewService;
   private LocalChannelProvider channelProvider;
+  private ShoppingPerformanceViewServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {

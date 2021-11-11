@@ -187,8 +187,8 @@ public class BillingSetupName implements ResourceName {
     }
 
     private Builder(BillingSetupName billingSetupName) {
-      customerId = billingSetupName.customerId;
-      billingSetupId = billingSetupName.billingSetupId;
+      this.customerId = billingSetupName.customerId;
+      this.billingSetupId = billingSetupName.billingSetupId;
     }
 
     public BillingSetupName build() {

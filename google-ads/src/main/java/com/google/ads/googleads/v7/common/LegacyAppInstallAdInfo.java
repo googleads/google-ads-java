@@ -125,7 +125,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object appId_;
   /**
    * <pre>
-   * The id of the mobile app.
+   * The ID of the mobile app.
    * </pre>
    *
    * <code>string app_id = 6;</code>
@@ -137,7 +137,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The id of the mobile app.
+   * The ID of the mobile app.
    * </pre>
    *
    * <code>string app_id = 6;</code>
@@ -158,7 +158,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The id of the mobile app.
+   * The ID of the mobile app.
    * </pre>
    *
    * <code>string app_id = 6;</code>
@@ -796,7 +796,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object appId_ = "";
     /**
      * <pre>
-     * The id of the mobile app.
+     * The ID of the mobile app.
      * </pre>
      *
      * <code>string app_id = 6;</code>
@@ -807,7 +807,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The id of the mobile app.
+     * The ID of the mobile app.
      * </pre>
      *
      * <code>string app_id = 6;</code>
@@ -827,7 +827,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The id of the mobile app.
+     * The ID of the mobile app.
      * </pre>
      *
      * <code>string app_id = 6;</code>
@@ -848,7 +848,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The id of the mobile app.
+     * The ID of the mobile app.
      * </pre>
      *
      * <code>string app_id = 6;</code>
@@ -867,7 +867,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The id of the mobile app.
+     * The ID of the mobile app.
      * </pre>
      *
      * <code>string app_id = 6;</code>
@@ -881,7 +881,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The id of the mobile app.
+     * The ID of the mobile app.
      * </pre>
      *
      * <code>string app_id = 6;</code>

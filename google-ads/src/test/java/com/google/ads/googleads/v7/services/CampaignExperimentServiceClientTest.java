@@ -18,8 +18,10 @@ package com.google.ads.googleads.v7.services;
 
 import static com.google.ads.googleads.v7.services.CampaignExperimentServiceClient.ListCampaignExperimentAsyncErrorsPagedResponse;
 
+import com.google.ads.googleads.v7.resources.CampaignDraftName;
 import com.google.ads.googleads.v7.resources.CampaignExperiment;
 import com.google.ads.googleads.v7.resources.CampaignExperimentName;
+import com.google.ads.googleads.v7.resources.CampaignName;
 import com.google.api.gax.core.NoCredentialsProvider;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.testing.LocalChannelProvider;
@@ -51,10 +53,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class CampaignExperimentServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
   private static MockCampaignExperimentService mockCampaignExperimentService;
-  private CampaignExperimentServiceClient client;
+  private static MockServiceHelper mockServiceHelper;
   private LocalChannelProvider channelProvider;
+  private CampaignExperimentServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -94,6 +96,18 @@ public class CampaignExperimentServiceClientTest {
         CampaignExperiment.newBuilder()
             .setResourceName(
                 CampaignExperimentName.of("[CUSTOMER_ID]", "[CAMPAIGN_EXPERIMENT_ID]").toString())
+            .setId(3355)
+            .setCampaignDraft(
+                CampaignDraftName.of("[CUSTOMER_ID]", "[BASE_CAMPAIGN_ID]", "[DRAFT_ID]")
+                    .toString())
+            .setName(
+                CampaignExperimentName.of("[CUSTOMER_ID]", "[CAMPAIGN_EXPERIMENT_ID]").toString())
+            .setDescription("description-1724546052")
+            .setTrafficSplitPercent(1828954462)
+            .setExperimentCampaign(CampaignName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]").toString())
+            .setLongRunningOperation("longRunningOperation-234653436")
+            .setStartDate("startDate-2129778896")
+            .setEndDate("endDate-1607727319")
             .build();
     mockCampaignExperimentService.addResponse(expectedResponse);
 
@@ -136,6 +150,18 @@ public class CampaignExperimentServiceClientTest {
         CampaignExperiment.newBuilder()
             .setResourceName(
                 CampaignExperimentName.of("[CUSTOMER_ID]", "[CAMPAIGN_EXPERIMENT_ID]").toString())
+            .setId(3355)
+            .setCampaignDraft(
+                CampaignDraftName.of("[CUSTOMER_ID]", "[BASE_CAMPAIGN_ID]", "[DRAFT_ID]")
+                    .toString())
+            .setName(
+                CampaignExperimentName.of("[CUSTOMER_ID]", "[CAMPAIGN_EXPERIMENT_ID]").toString())
+            .setDescription("description-1724546052")
+            .setTrafficSplitPercent(1828954462)
+            .setExperimentCampaign(CampaignName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]").toString())
+            .setLongRunningOperation("longRunningOperation-234653436")
+            .setStartDate("startDate-2129778896")
+            .setEndDate("endDate-1607727319")
             .build();
     mockCampaignExperimentService.addResponse(expectedResponse);
 

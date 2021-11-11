@@ -214,6 +214,10 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Transaction amount in micros. Required.
+   * Transaction amount in micros needs to be greater than 1000.
+   * If item Attributes are provided, it represents the total value of the
+   * items, after multiplying the unit price per item by the quantity provided
+   * in the ItemAttributes.
    * </pre>
    *
    * <code>double transaction_amount_micros = 9;</code>
@@ -226,6 +230,10 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Transaction amount in micros. Required.
+   * Transaction amount in micros needs to be greater than 1000.
+   * If item Attributes are provided, it represents the total value of the
+   * items, after multiplying the unit price per item by the quantity provided
+   * in the ItemAttributes.
    * </pre>
    *
    * <code>double transaction_amount_micros = 9;</code>
@@ -1133,6 +1141,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Transaction amount in micros. Required.
+     * Transaction amount in micros needs to be greater than 1000.
+     * If item Attributes are provided, it represents the total value of the
+     * items, after multiplying the unit price per item by the quantity provided
+     * in the ItemAttributes.
      * </pre>
      *
      * <code>double transaction_amount_micros = 9;</code>
@@ -1145,6 +1157,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Transaction amount in micros. Required.
+     * Transaction amount in micros needs to be greater than 1000.
+     * If item Attributes are provided, it represents the total value of the
+     * items, after multiplying the unit price per item by the quantity provided
+     * in the ItemAttributes.
      * </pre>
      *
      * <code>double transaction_amount_micros = 9;</code>
@@ -1157,6 +1173,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Transaction amount in micros. Required.
+     * Transaction amount in micros needs to be greater than 1000.
+     * If item Attributes are provided, it represents the total value of the
+     * items, after multiplying the unit price per item by the quantity provided
+     * in the ItemAttributes.
      * </pre>
      *
      * <code>double transaction_amount_micros = 9;</code>
@@ -1172,6 +1192,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Transaction amount in micros. Required.
+     * Transaction amount in micros needs to be greater than 1000.
+     * If item Attributes are provided, it represents the total value of the
+     * items, after multiplying the unit price per item by the quantity provided
+     * in the ItemAttributes.
      * </pre>
      *
      * <code>double transaction_amount_micros = 9;</code>

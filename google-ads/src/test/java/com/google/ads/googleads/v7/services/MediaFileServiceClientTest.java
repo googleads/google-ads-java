@@ -45,8 +45,8 @@ import org.junit.Test;
 public class MediaFileServiceClientTest {
   private static MockMediaFileService mockMediaFileService;
   private static MockServiceHelper mockServiceHelper;
-  private MediaFileServiceClient client;
   private LocalChannelProvider channelProvider;
+  private MediaFileServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -84,6 +84,10 @@ public class MediaFileServiceClientTest {
     MediaFile expectedResponse =
         MediaFile.newBuilder()
             .setResourceName(MediaFileName.of("[CUSTOMER_ID]", "[MEDIA_FILE_ID]").toString())
+            .setId(3355)
+            .setSourceUrl("sourceUrl-1698419884")
+            .setName(MediaFileName.of("[CUSTOMER_ID]", "[MEDIA_FILE_ID]").toString())
+            .setFileSize(-1316310812)
             .build();
     mockMediaFileService.addResponse(expectedResponse);
 
@@ -122,6 +126,10 @@ public class MediaFileServiceClientTest {
     MediaFile expectedResponse =
         MediaFile.newBuilder()
             .setResourceName(MediaFileName.of("[CUSTOMER_ID]", "[MEDIA_FILE_ID]").toString())
+            .setId(3355)
+            .setSourceUrl("sourceUrl-1698419884")
+            .setName(MediaFileName.of("[CUSTOMER_ID]", "[MEDIA_FILE_ID]").toString())
+            .setFileSize(-1316310812)
             .build();
     mockMediaFileService.addResponse(expectedResponse);
 

@@ -25,7 +25,6 @@ import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
-import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.common.collect.ImmutableMap;
 import com.google.longrunning.stub.GrpcOperationsStub;
@@ -111,26 +110,20 @@ public class GrpcFeedServiceStub extends FeedServiceStub {
         GrpcCallSettings.<GetFeedRequest, Feed>newBuilder()
             .setMethodDescriptor(getFeedMethodDescriptor)
             .setParamsExtractor(
-                new RequestParamsExtractor<GetFeedRequest>() {
-                  @Override
-                  public Map<String, String> extract(GetFeedRequest request) {
-                    ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                    params.put("resource_name", String.valueOf(request.getResourceName()));
-                    return params.build();
-                  }
+                request -> {
+                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                  params.put("resource_name", String.valueOf(request.getResourceName()));
+                  return params.build();
                 })
             .build();
     GrpcCallSettings<MutateFeedsRequest, MutateFeedsResponse> mutateFeedsTransportSettings =
         GrpcCallSettings.<MutateFeedsRequest, MutateFeedsResponse>newBuilder()
             .setMethodDescriptor(mutateFeedsMethodDescriptor)
             .setParamsExtractor(
-                new RequestParamsExtractor<MutateFeedsRequest>() {
-                  @Override
-                  public Map<String, String> extract(MutateFeedsRequest request) {
-                    ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                    params.put("customer_id", String.valueOf(request.getCustomerId()));
-                    return params.build();
-                  }
+                request -> {
+                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                  params.put("customer_id", String.valueOf(request.getCustomerId()));
+                  return params.build();
                 })
             .build();
 
@@ -161,7 +154,13 @@ public class GrpcFeedServiceStub extends FeedServiceStub {
 
   @Override
   public final void close() {
-    shutdown();
+    try {
+      backgroundResources.close();
+    } catch (RuntimeException e) {
+      throw e;
+    } catch (Exception e) {
+      throw new IllegalStateException("Failed to close resource", e);
+    }
   }
 
   @Override

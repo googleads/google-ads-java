@@ -43,8 +43,8 @@ import org.junit.Test;
 public class GenderViewServiceClientTest {
   private static MockGenderViewService mockGenderViewService;
   private static MockServiceHelper mockServiceHelper;
-  private GenderViewServiceClient client;
   private LocalChannelProvider channelProvider;
+  private GenderViewServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {

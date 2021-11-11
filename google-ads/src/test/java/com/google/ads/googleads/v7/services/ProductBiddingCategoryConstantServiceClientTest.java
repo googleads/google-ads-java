@@ -41,11 +41,11 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class ProductBiddingCategoryConstantServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
   private static MockProductBiddingCategoryConstantService
       mockProductBiddingCategoryConstantService;
-  private ProductBiddingCategoryConstantServiceClient client;
+  private static MockServiceHelper mockServiceHelper;
   private LocalChannelProvider channelProvider;
+  private ProductBiddingCategoryConstantServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -86,6 +86,13 @@ public class ProductBiddingCategoryConstantServiceClientTest {
             .setResourceName(
                 ProductBiddingCategoryConstantName.of("[COUNTRY_CODE]", "[LEVEL]", "[ID]")
                     .toString())
+            .setId(3355)
+            .setCountryCode("countryCode-1477067101")
+            .setProductBiddingCategoryConstantParent(
+                ProductBiddingCategoryConstantName.of("[COUNTRY_CODE]", "[LEVEL]", "[ID]")
+                    .toString())
+            .setLanguageCode("languageCode-2092349083")
+            .setLocalizedName("localizedName696548518")
             .build();
     mockProductBiddingCategoryConstantService.addResponse(expectedResponse);
 
@@ -130,6 +137,13 @@ public class ProductBiddingCategoryConstantServiceClientTest {
             .setResourceName(
                 ProductBiddingCategoryConstantName.of("[COUNTRY_CODE]", "[LEVEL]", "[ID]")
                     .toString())
+            .setId(3355)
+            .setCountryCode("countryCode-1477067101")
+            .setProductBiddingCategoryConstantParent(
+                ProductBiddingCategoryConstantName.of("[COUNTRY_CODE]", "[LEVEL]", "[ID]")
+                    .toString())
+            .setLanguageCode("languageCode-2092349083")
+            .setLocalizedName("localizedName696548518")
             .build();
     mockProductBiddingCategoryConstantService.addResponse(expectedResponse);
 

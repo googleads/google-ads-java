@@ -18,6 +18,7 @@ package com.google.ads.googleads.v7.services;
 
 import com.google.ads.googleads.v7.resources.CustomerManagerLink;
 import com.google.ads.googleads.v7.resources.CustomerManagerLinkName;
+import com.google.ads.googleads.v7.resources.CustomerName;
 import com.google.api.gax.core.NoCredentialsProvider;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.testing.LocalChannelProvider;
@@ -44,8 +45,8 @@ import org.junit.Test;
 public class CustomerManagerLinkServiceClientTest {
   private static MockCustomerManagerLinkService mockCustomerManagerLinkService;
   private static MockServiceHelper mockServiceHelper;
-  private CustomerManagerLinkServiceClient client;
   private LocalChannelProvider channelProvider;
+  private CustomerManagerLinkServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -87,6 +88,8 @@ public class CustomerManagerLinkServiceClientTest {
                 CustomerManagerLinkName.of(
                         "[CUSTOMER_ID]", "[MANAGER_CUSTOMER_ID]", "[MANAGER_LINK_ID]")
                     .toString())
+            .setManagerCustomer(CustomerName.of("[CUSTOMER_ID]").toString())
+            .setManagerLinkId(614908142)
             .build();
     mockCustomerManagerLinkService.addResponse(expectedResponse);
 
@@ -131,6 +134,8 @@ public class CustomerManagerLinkServiceClientTest {
                 CustomerManagerLinkName.of(
                         "[CUSTOMER_ID]", "[MANAGER_CUSTOMER_ID]", "[MANAGER_LINK_ID]")
                     .toString())
+            .setManagerCustomer(CustomerName.of("[CUSTOMER_ID]").toString())
+            .setManagerLinkId(614908142)
             .build();
     mockCustomerManagerLinkService.addResponse(expectedResponse);
 

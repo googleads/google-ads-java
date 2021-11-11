@@ -216,9 +216,9 @@ public class WebpageViewName implements ResourceName {
     }
 
     private Builder(WebpageViewName webpageViewName) {
-      customerId = webpageViewName.customerId;
-      adGroupId = webpageViewName.adGroupId;
-      criterionId = webpageViewName.criterionId;
+      this.customerId = webpageViewName.customerId;
+      this.adGroupId = webpageViewName.adGroupId;
+      this.criterionId = webpageViewName.criterionId;
     }
 
     public WebpageViewName build() {

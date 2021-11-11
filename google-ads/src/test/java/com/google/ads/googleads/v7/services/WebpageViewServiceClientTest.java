@@ -43,8 +43,8 @@ import org.junit.Test;
 public class WebpageViewServiceClientTest {
   private static MockServiceHelper mockServiceHelper;
   private static MockWebpageViewService mockWebpageViewService;
-  private WebpageViewServiceClient client;
   private LocalChannelProvider channelProvider;
+  private WebpageViewServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {

@@ -216,9 +216,9 @@ public class FeedMappingName implements ResourceName {
     }
 
     private Builder(FeedMappingName feedMappingName) {
-      customerId = feedMappingName.customerId;
-      feedId = feedMappingName.feedId;
-      feedMappingId = feedMappingName.feedMappingId;
+      this.customerId = feedMappingName.customerId;
+      this.feedId = feedMappingName.feedId;
+      this.feedMappingId = feedMappingName.feedMappingId;
     }
 
     public FeedMappingName build() {

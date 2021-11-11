@@ -3796,7 +3796,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the change event.
    * Change event resource names have the form:
-   * `customers/{customer_id}/changeEvent/{timestamp_micros}~{command_index}~{mutate_index}`
+   * `customers/{customer_id}/changeEvents/{timestamp_micros}~{command_index}~{mutate_index}`
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -3819,7 +3819,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Output only. The resource name of the change event.
    * Change event resource names have the form:
-   * `customers/{customer_id}/changeEvent/{timestamp_micros}~{command_index}~{mutate_index}`
+   * `customers/{customer_id}/changeEvents/{timestamp_micros}~{command_index}~{mutate_index}`
    * </pre>
    *
    * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -4933,7 +4933,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the change event.
      * Change event resource names have the form:
-     * `customers/{customer_id}/changeEvent/{timestamp_micros}~{command_index}~{mutate_index}`
+     * `customers/{customer_id}/changeEvents/{timestamp_micros}~{command_index}~{mutate_index}`
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -4955,7 +4955,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the change event.
      * Change event resource names have the form:
-     * `customers/{customer_id}/changeEvent/{timestamp_micros}~{command_index}~{mutate_index}`
+     * `customers/{customer_id}/changeEvents/{timestamp_micros}~{command_index}~{mutate_index}`
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -4978,7 +4978,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the change event.
      * Change event resource names have the form:
-     * `customers/{customer_id}/changeEvent/{timestamp_micros}~{command_index}~{mutate_index}`
+     * `customers/{customer_id}/changeEvents/{timestamp_micros}~{command_index}~{mutate_index}`
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -4999,7 +4999,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the change event.
      * Change event resource names have the form:
-     * `customers/{customer_id}/changeEvent/{timestamp_micros}~{command_index}~{mutate_index}`
+     * `customers/{customer_id}/changeEvents/{timestamp_micros}~{command_index}~{mutate_index}`
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -5015,7 +5015,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. The resource name of the change event.
      * Change event resource names have the form:
-     * `customers/{customer_id}/changeEvent/{timestamp_micros}~{command_index}~{mutate_index}`
+     * `customers/{customer_id}/changeEvents/{timestamp_micros}~{command_index}~{mutate_index}`
      * </pre>
      *
      * <code>string resource_name = 1 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>

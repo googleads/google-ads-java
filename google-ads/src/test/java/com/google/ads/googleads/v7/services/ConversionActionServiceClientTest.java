@@ -19,6 +19,7 @@ package com.google.ads.googleads.v7.services;
 import com.google.ads.googleads.v7.common.TagSnippet;
 import com.google.ads.googleads.v7.resources.ConversionAction;
 import com.google.ads.googleads.v7.resources.ConversionActionName;
+import com.google.ads.googleads.v7.resources.CustomerName;
 import com.google.api.gax.core.NoCredentialsProvider;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.testing.LocalChannelProvider;
@@ -44,10 +45,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class ConversionActionServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
-  private ConversionActionServiceClient client;
-  private LocalChannelProvider channelProvider;
   private static MockConversionActionService mockConversionActionService;
+  private static MockServiceHelper mockServiceHelper;
+  private LocalChannelProvider channelProvider;
+  private ConversionActionServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -87,10 +88,18 @@ public class ConversionActionServiceClientTest {
         ConversionAction.newBuilder()
             .setResourceName(
                 ConversionActionName.of("[CUSTOMER_ID]", "[CONVERSION_ACTION_ID]").toString())
+            .setId(3355)
+            .setName(ConversionActionName.of("[CUSTOMER_ID]", "[CONVERSION_ACTION_ID]").toString())
+            .setOwnerCustomer(CustomerName.of("[CUSTOMER_ID]").toString())
+            .setIncludeInConversionsMetric(true)
+            .setClickThroughLookbackWindowDays(-1040290530)
+            .setViewThroughLookbackWindowDays(990677281)
             .setValueSettings(ConversionAction.ValueSettings.newBuilder().build())
             .setAttributionModelSettings(
                 ConversionAction.AttributionModelSettings.newBuilder().build())
             .addAllTagSnippets(new ArrayList<TagSnippet>())
+            .setPhoneCallDurationSeconds(917713540)
+            .setAppId("appId93028124")
             .setFirebaseSettings(ConversionAction.FirebaseSettings.newBuilder().build())
             .setThirdPartyAppAnalyticsSettings(
                 ConversionAction.ThirdPartyAppAnalyticsSettings.newBuilder().build())
@@ -135,10 +144,18 @@ public class ConversionActionServiceClientTest {
         ConversionAction.newBuilder()
             .setResourceName(
                 ConversionActionName.of("[CUSTOMER_ID]", "[CONVERSION_ACTION_ID]").toString())
+            .setId(3355)
+            .setName(ConversionActionName.of("[CUSTOMER_ID]", "[CONVERSION_ACTION_ID]").toString())
+            .setOwnerCustomer(CustomerName.of("[CUSTOMER_ID]").toString())
+            .setIncludeInConversionsMetric(true)
+            .setClickThroughLookbackWindowDays(-1040290530)
+            .setViewThroughLookbackWindowDays(990677281)
             .setValueSettings(ConversionAction.ValueSettings.newBuilder().build())
             .setAttributionModelSettings(
                 ConversionAction.AttributionModelSettings.newBuilder().build())
             .addAllTagSnippets(new ArrayList<TagSnippet>())
+            .setPhoneCallDurationSeconds(917713540)
+            .setAppId("appId93028124")
             .setFirebaseSettings(ConversionAction.FirebaseSettings.newBuilder().build())
             .setThirdPartyAppAnalyticsSettings(
                 ConversionAction.ThirdPartyAppAnalyticsSettings.newBuilder().build())

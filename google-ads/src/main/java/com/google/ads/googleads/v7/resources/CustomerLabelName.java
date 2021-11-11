@@ -181,8 +181,8 @@ public class CustomerLabelName implements ResourceName {
     }
 
     private Builder(CustomerLabelName customerLabelName) {
-      customerId = customerLabelName.customerId;
-      labelId = customerLabelName.labelId;
+      this.customerId = customerLabelName.customerId;
+      this.labelId = customerLabelName.labelId;
     }
 
     public CustomerLabelName build() {

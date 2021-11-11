@@ -20,6 +20,7 @@ import static com.google.ads.googleads.v7.services.CampaignDraftServiceClient.Li
 
 import com.google.ads.googleads.v7.resources.CampaignDraft;
 import com.google.ads.googleads.v7.resources.CampaignDraftName;
+import com.google.ads.googleads.v7.resources.CampaignName;
 import com.google.api.gax.core.NoCredentialsProvider;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.testing.LocalChannelProvider;
@@ -53,8 +54,8 @@ import org.junit.Test;
 public class CampaignDraftServiceClientTest {
   private static MockCampaignDraftService mockCampaignDraftService;
   private static MockServiceHelper mockServiceHelper;
-  private CampaignDraftServiceClient client;
   private LocalChannelProvider channelProvider;
+  private CampaignDraftServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -94,6 +95,14 @@ public class CampaignDraftServiceClientTest {
             .setResourceName(
                 CampaignDraftName.of("[CUSTOMER_ID]", "[BASE_CAMPAIGN_ID]", "[DRAFT_ID]")
                     .toString())
+            .setDraftId(-841643911)
+            .setBaseCampaign(CampaignName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]").toString())
+            .setName(
+                CampaignDraftName.of("[CUSTOMER_ID]", "[BASE_CAMPAIGN_ID]", "[DRAFT_ID]")
+                    .toString())
+            .setDraftCampaign(CampaignName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]").toString())
+            .setHasExperimentRunning(true)
+            .setLongRunningOperation("longRunningOperation-234653436")
             .build();
     mockCampaignDraftService.addResponse(expectedResponse);
 
@@ -136,6 +145,14 @@ public class CampaignDraftServiceClientTest {
             .setResourceName(
                 CampaignDraftName.of("[CUSTOMER_ID]", "[BASE_CAMPAIGN_ID]", "[DRAFT_ID]")
                     .toString())
+            .setDraftId(-841643911)
+            .setBaseCampaign(CampaignName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]").toString())
+            .setName(
+                CampaignDraftName.of("[CUSTOMER_ID]", "[BASE_CAMPAIGN_ID]", "[DRAFT_ID]")
+                    .toString())
+            .setDraftCampaign(CampaignName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]").toString())
+            .setHasExperimentRunning(true)
+            .setLongRunningOperation("longRunningOperation-234653436")
             .build();
     mockCampaignDraftService.addResponse(expectedResponse);
 

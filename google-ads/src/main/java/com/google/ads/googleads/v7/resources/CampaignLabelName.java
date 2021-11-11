@@ -215,9 +215,9 @@ public class CampaignLabelName implements ResourceName {
     }
 
     private Builder(CampaignLabelName campaignLabelName) {
-      customerId = campaignLabelName.customerId;
-      campaignId = campaignLabelName.campaignId;
-      labelId = campaignLabelName.labelId;
+      this.customerId = campaignLabelName.customerId;
+      this.campaignId = campaignLabelName.campaignId;
+      this.labelId = campaignLabelName.labelId;
     }
 
     public CampaignLabelName build() {

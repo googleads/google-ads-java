@@ -42,9 +42,9 @@ import org.junit.Test;
 @Generated("by gapic-generator-java")
 public class TopicViewServiceClientTest {
   private static MockServiceHelper mockServiceHelper;
-  private TopicViewServiceClient client;
   private static MockTopicViewService mockTopicViewService;
   private LocalChannelProvider channelProvider;
+  private TopicViewServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {

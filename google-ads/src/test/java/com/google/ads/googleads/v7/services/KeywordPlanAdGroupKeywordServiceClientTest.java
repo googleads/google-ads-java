@@ -18,6 +18,7 @@ package com.google.ads.googleads.v7.services;
 
 import com.google.ads.googleads.v7.resources.KeywordPlanAdGroupKeyword;
 import com.google.ads.googleads.v7.resources.KeywordPlanAdGroupKeywordName;
+import com.google.ads.googleads.v7.resources.KeywordPlanAdGroupName;
 import com.google.api.gax.core.NoCredentialsProvider;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.testing.LocalChannelProvider;
@@ -45,8 +46,8 @@ import org.junit.Test;
 public class KeywordPlanAdGroupKeywordServiceClientTest {
   private static MockKeywordPlanAdGroupKeywordService mockKeywordPlanAdGroupKeywordService;
   private static MockServiceHelper mockServiceHelper;
-  private KeywordPlanAdGroupKeywordServiceClient client;
   private LocalChannelProvider channelProvider;
+  private KeywordPlanAdGroupKeywordServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -88,6 +89,12 @@ public class KeywordPlanAdGroupKeywordServiceClientTest {
                 KeywordPlanAdGroupKeywordName.of(
                         "[CUSTOMER_ID]", "[KEYWORD_PLAN_AD_GROUP_KEYWORD_ID]")
                     .toString())
+            .setKeywordPlanAdGroup(
+                KeywordPlanAdGroupName.of("[CUSTOMER_ID]", "[KEYWORD_PLAN_AD_GROUP_ID]").toString())
+            .setId(3355)
+            .setText("text3556653")
+            .setCpcBidMicros(909381114)
+            .setNegative(true)
             .build();
     mockKeywordPlanAdGroupKeywordService.addResponse(expectedResponse);
 
@@ -132,6 +139,12 @@ public class KeywordPlanAdGroupKeywordServiceClientTest {
                 KeywordPlanAdGroupKeywordName.of(
                         "[CUSTOMER_ID]", "[KEYWORD_PLAN_AD_GROUP_KEYWORD_ID]")
                     .toString())
+            .setKeywordPlanAdGroup(
+                KeywordPlanAdGroupName.of("[CUSTOMER_ID]", "[KEYWORD_PLAN_AD_GROUP_ID]").toString())
+            .setId(3355)
+            .setText("text3556653")
+            .setCpcBidMicros(909381114)
+            .setNegative(true)
             .build();
     mockKeywordPlanAdGroupKeywordService.addResponse(expectedResponse);
 

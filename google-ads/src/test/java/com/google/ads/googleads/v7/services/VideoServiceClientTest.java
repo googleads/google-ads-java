@@ -41,10 +41,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class VideoServiceClientTest {
-  private static MockVideoService mockVideoService;
   private static MockServiceHelper mockServiceHelper;
-  private VideoServiceClient client;
+  private static MockVideoService mockVideoService;
   private LocalChannelProvider channelProvider;
+  private VideoServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -82,6 +82,10 @@ public class VideoServiceClientTest {
     Video expectedResponse =
         Video.newBuilder()
             .setResourceName(VideoName.of("[CUSTOMER_ID]", "[VIDEO_ID]").toString())
+            .setId("id3355")
+            .setChannelId("channelId1461735806")
+            .setDurationMillis(1817418577)
+            .setTitle("title110371416")
             .build();
     mockVideoService.addResponse(expectedResponse);
 
@@ -120,6 +124,10 @@ public class VideoServiceClientTest {
     Video expectedResponse =
         Video.newBuilder()
             .setResourceName(VideoName.of("[CUSTOMER_ID]", "[VIDEO_ID]").toString())
+            .setId("id3355")
+            .setChannelId("channelId1461735806")
+            .setDurationMillis(1817418577)
+            .setTitle("title110371416")
             .build();
     mockVideoService.addResponse(expectedResponse);
 

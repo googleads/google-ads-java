@@ -30,8 +30,8 @@ public final class AssetLinkErrorProto {
     java.lang.String[] descriptorData = {
       "\n5google/ads/googleads/v8/errors/asset_l" +
       "ink_error.proto\022\036google.ads.googleads.v8" +
-      ".errors\032\034google/api/annotations.proto\"\232\005" +
-      "\n\022AssetLinkErrorEnum\"\203\005\n\016AssetLinkError\022" +
+      ".errors\032\034google/api/annotations.proto\"\302\005" +
+      "\n\022AssetLinkErrorEnum\"\253\005\n\016AssetLinkError\022" +
       "\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\027\n\023PINNING" +
       "_UNSUPPORTED\020\002\022\032\n\026UNSUPPORTED_FIELD_TYPE" +
       "\020\003\022+\n\'FIELD_TYPE_INCOMPATIBLE_WITH_ASSET" +
@@ -47,7 +47,8 @@ public final class AssetLinkErrorProto {
       "INKS_WITH_FALLBACK_FOR_VALID_COMBINATION" +
       "\020\014\022\031\n\025YOUTUBE_VIDEO_REMOVED\020\r\022\032\n\026YOUTUBE" +
       "_VIDEO_TOO_LONG\020\016\022\033\n\027YOUTUBE_VIDEO_TOO_S" +
-      "HORT\020\017\022\022\n\016INVALID_STATUS\020\021B\356\001\n\"com.googl" +
+      "HORT\020\017\022\022\n\016INVALID_STATUS\020\021\022&\n\"YOUTUBE_VI" +
+      "DEO_DURATION_NOT_DEFINED\020\022B\356\001\n\"com.googl" +
       "e.ads.googleads.v8.errorsB\023AssetLinkErro" +
       "rProtoP\001ZDgoogle.golang.org/genproto/goo" +
       "gleapis/ads/googleads/v8/errors;errors\242\002" +

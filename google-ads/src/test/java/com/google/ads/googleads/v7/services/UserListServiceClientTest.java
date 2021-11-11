@@ -45,8 +45,8 @@ import org.junit.Test;
 public class UserListServiceClientTest {
   private static MockServiceHelper mockServiceHelper;
   private static MockUserListService mockUserListService;
-  private UserListServiceClient client;
   private LocalChannelProvider channelProvider;
+  private UserListServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -84,6 +84,17 @@ public class UserListServiceClientTest {
     UserList expectedResponse =
         UserList.newBuilder()
             .setResourceName(UserListName.of("[CUSTOMER_ID]", "[USER_LIST_ID]").toString())
+            .setId(3355)
+            .setReadOnly(true)
+            .setName(UserListName.of("[CUSTOMER_ID]", "[USER_LIST_ID]").toString())
+            .setDescription("description-1724546052")
+            .setIntegrationCode("integrationCode1802866145")
+            .setMembershipLifeSpan(-1773195900)
+            .setSizeForDisplay(-42289138)
+            .setSizeForSearch(1116581084)
+            .setEligibleForSearch(true)
+            .setEligibleForDisplay(true)
+            .setMatchRatePercentage(-1873464097)
             .build();
     mockUserListService.addResponse(expectedResponse);
 
@@ -122,6 +133,17 @@ public class UserListServiceClientTest {
     UserList expectedResponse =
         UserList.newBuilder()
             .setResourceName(UserListName.of("[CUSTOMER_ID]", "[USER_LIST_ID]").toString())
+            .setId(3355)
+            .setReadOnly(true)
+            .setName(UserListName.of("[CUSTOMER_ID]", "[USER_LIST_ID]").toString())
+            .setDescription("description-1724546052")
+            .setIntegrationCode("integrationCode1802866145")
+            .setMembershipLifeSpan(-1773195900)
+            .setSizeForDisplay(-42289138)
+            .setSizeForSearch(1116581084)
+            .setEligibleForSearch(true)
+            .setEligibleForDisplay(true)
+            .setMatchRatePercentage(-1873464097)
             .build();
     mockUserListService.addResponse(expectedResponse);
 

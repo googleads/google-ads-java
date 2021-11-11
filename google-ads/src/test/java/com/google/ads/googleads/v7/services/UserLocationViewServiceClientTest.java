@@ -42,9 +42,9 @@ import org.junit.Test;
 @Generated("by gapic-generator-java")
 public class UserLocationViewServiceClientTest {
   private static MockServiceHelper mockServiceHelper;
-  private UserLocationViewServiceClient client;
   private static MockUserLocationViewService mockUserLocationViewService;
   private LocalChannelProvider channelProvider;
+  private UserLocationViewServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -86,6 +86,8 @@ public class UserLocationViewServiceClientTest {
                 UserLocationViewName.of(
                         "[CUSTOMER_ID]", "[COUNTRY_CRITERION_ID]", "[IS_TARGETING_LOCATION]")
                     .toString())
+            .setCountryCriterionId(-1427674750)
+            .setTargetingLocation(true)
             .build();
     mockUserLocationViewService.addResponse(expectedResponse);
 
@@ -131,6 +133,8 @@ public class UserLocationViewServiceClientTest {
                 UserLocationViewName.of(
                         "[CUSTOMER_ID]", "[COUNTRY_CRITERION_ID]", "[IS_TARGETING_LOCATION]")
                     .toString())
+            .setCountryCriterionId(-1427674750)
+            .setTargetingLocation(true)
             .build();
     mockUserLocationViewService.addResponse(expectedResponse);
 

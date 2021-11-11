@@ -43,8 +43,8 @@ import org.junit.Test;
 public class LanguageConstantServiceClientTest {
   private static MockLanguageConstantService mockLanguageConstantService;
   private static MockServiceHelper mockServiceHelper;
-  private LanguageConstantServiceClient client;
   private LocalChannelProvider channelProvider;
+  private LanguageConstantServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -83,6 +83,10 @@ public class LanguageConstantServiceClientTest {
     LanguageConstant expectedResponse =
         LanguageConstant.newBuilder()
             .setResourceName(LanguageConstantName.of("[CRITERION_ID]").toString())
+            .setId(3355)
+            .setCode("code3059181")
+            .setName(LanguageConstantName.of("[CRITERION_ID]").toString())
+            .setTargetable(true)
             .build();
     mockLanguageConstantService.addResponse(expectedResponse);
 
@@ -121,6 +125,10 @@ public class LanguageConstantServiceClientTest {
     LanguageConstant expectedResponse =
         LanguageConstant.newBuilder()
             .setResourceName(LanguageConstantName.of("[CRITERION_ID]").toString())
+            .setId(3355)
+            .setCode("code3059181")
+            .setName(LanguageConstantName.of("[CRITERION_ID]").toString())
+            .setTargetable(true)
             .build();
     mockLanguageConstantService.addResponse(expectedResponse);
 

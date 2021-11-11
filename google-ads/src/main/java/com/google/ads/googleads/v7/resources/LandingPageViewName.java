@@ -194,8 +194,8 @@ public class LandingPageViewName implements ResourceName {
     }
 
     private Builder(LandingPageViewName landingPageViewName) {
-      customerId = landingPageViewName.customerId;
-      unexpandedFinalUrlFingerprint = landingPageViewName.unexpandedFinalUrlFingerprint;
+      this.customerId = landingPageViewName.customerId;
+      this.unexpandedFinalUrlFingerprint = landingPageViewName.unexpandedFinalUrlFingerprint;
     }
 
     public LandingPageViewName build() {

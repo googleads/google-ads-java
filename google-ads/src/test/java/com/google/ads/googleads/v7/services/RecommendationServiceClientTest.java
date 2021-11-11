@@ -16,6 +16,9 @@
 
 package com.google.ads.googleads.v7.services;
 
+import com.google.ads.googleads.v7.resources.AdGroupName;
+import com.google.ads.googleads.v7.resources.CampaignBudgetName;
+import com.google.ads.googleads.v7.resources.CampaignName;
 import com.google.ads.googleads.v7.resources.Recommendation;
 import com.google.ads.googleads.v7.resources.RecommendationName;
 import com.google.api.gax.core.NoCredentialsProvider;
@@ -45,8 +48,8 @@ import org.junit.Test;
 public class RecommendationServiceClientTest {
   private static MockRecommendationService mockRecommendationService;
   private static MockServiceHelper mockServiceHelper;
-  private RecommendationServiceClient client;
   private LocalChannelProvider channelProvider;
+  private RecommendationServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -87,6 +90,11 @@ public class RecommendationServiceClientTest {
             .setResourceName(
                 RecommendationName.of("[CUSTOMER_ID]", "[RECOMMENDATION_ID]").toString())
             .setImpact(Recommendation.RecommendationImpact.newBuilder().build())
+            .setCampaignBudget(
+                CampaignBudgetName.of("[CUSTOMER_ID]", "[CAMPAIGN_BUDGET_ID]").toString())
+            .setCampaign(CampaignName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]").toString())
+            .setAdGroup(AdGroupName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]").toString())
+            .setDismissed(true)
             .build();
     mockRecommendationService.addResponse(expectedResponse);
 
@@ -128,6 +136,11 @@ public class RecommendationServiceClientTest {
             .setResourceName(
                 RecommendationName.of("[CUSTOMER_ID]", "[RECOMMENDATION_ID]").toString())
             .setImpact(Recommendation.RecommendationImpact.newBuilder().build())
+            .setCampaignBudget(
+                CampaignBudgetName.of("[CUSTOMER_ID]", "[CAMPAIGN_BUDGET_ID]").toString())
+            .setCampaign(CampaignName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]").toString())
+            .setAdGroup(AdGroupName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]").toString())
+            .setDismissed(true)
             .build();
     mockRecommendationService.addResponse(expectedResponse);
 

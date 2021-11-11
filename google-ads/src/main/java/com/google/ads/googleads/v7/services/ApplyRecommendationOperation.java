@@ -3162,7 +3162,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Average ROAS (revenue per unit of spend) to use for Target ROAS bidding
      * strategy. The value is between 0.01 and 1000.0, inclusive. This is a
-     * required field.
+     * required field, unless new_campaign_budget_amount_micros is set.
      * </pre>
      *
      * <code>double target_roas = 1;</code>
@@ -3173,7 +3173,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Average ROAS (revenue per unit of spend) to use for Target ROAS bidding
      * strategy. The value is between 0.01 and 1000.0, inclusive. This is a
-     * required field.
+     * required field, unless new_campaign_budget_amount_micros is set.
      * </pre>
      *
      * <code>double target_roas = 1;</code>
@@ -3299,7 +3299,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Average ROAS (revenue per unit of spend) to use for Target ROAS bidding
      * strategy. The value is between 0.01 and 1000.0, inclusive. This is a
-     * required field.
+     * required field, unless new_campaign_budget_amount_micros is set.
      * </pre>
      *
      * <code>double target_roas = 1;</code>
@@ -3313,7 +3313,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Average ROAS (revenue per unit of spend) to use for Target ROAS bidding
      * strategy. The value is between 0.01 and 1000.0, inclusive. This is a
-     * required field.
+     * required field, unless new_campaign_budget_amount_micros is set.
      * </pre>
      *
      * <code>double target_roas = 1;</code>
@@ -3702,7 +3702,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Average ROAS (revenue per unit of spend) to use for Target ROAS bidding
        * strategy. The value is between 0.01 and 1000.0, inclusive. This is a
-       * required field.
+       * required field, unless new_campaign_budget_amount_micros is set.
        * </pre>
        *
        * <code>double target_roas = 1;</code>
@@ -3716,7 +3716,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Average ROAS (revenue per unit of spend) to use for Target ROAS bidding
        * strategy. The value is between 0.01 and 1000.0, inclusive. This is a
-       * required field.
+       * required field, unless new_campaign_budget_amount_micros is set.
        * </pre>
        *
        * <code>double target_roas = 1;</code>
@@ -3730,7 +3730,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Average ROAS (revenue per unit of spend) to use for Target ROAS bidding
        * strategy. The value is between 0.01 and 1000.0, inclusive. This is a
-       * required field.
+       * required field, unless new_campaign_budget_amount_micros is set.
        * </pre>
        *
        * <code>double target_roas = 1;</code>
@@ -3747,7 +3747,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Average ROAS (revenue per unit of spend) to use for Target ROAS bidding
        * strategy. The value is between 0.01 and 1000.0, inclusive. This is a
-       * required field.
+       * required field, unless new_campaign_budget_amount_micros is set.
        * </pre>
        *
        * <code>double target_roas = 1;</code>

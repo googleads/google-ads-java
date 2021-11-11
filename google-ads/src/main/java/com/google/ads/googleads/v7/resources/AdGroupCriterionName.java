@@ -216,9 +216,9 @@ public class AdGroupCriterionName implements ResourceName {
     }
 
     private Builder(AdGroupCriterionName adGroupCriterionName) {
-      customerId = adGroupCriterionName.customerId;
-      adGroupId = adGroupCriterionName.adGroupId;
-      criterionId = adGroupCriterionName.criterionId;
+      this.customerId = adGroupCriterionName.customerId;
+      this.adGroupId = adGroupCriterionName.adGroupId;
+      this.criterionId = adGroupCriterionName.criterionId;
     }
 
     public AdGroupCriterionName build() {

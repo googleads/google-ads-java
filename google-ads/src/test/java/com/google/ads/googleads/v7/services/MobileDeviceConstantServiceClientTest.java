@@ -41,10 +41,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class MobileDeviceConstantServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
   private static MockMobileDeviceConstantService mockMobileDeviceConstantService;
-  private MobileDeviceConstantServiceClient client;
+  private static MockServiceHelper mockServiceHelper;
   private LocalChannelProvider channelProvider;
+  private MobileDeviceConstantServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -83,6 +83,10 @@ public class MobileDeviceConstantServiceClientTest {
     MobileDeviceConstant expectedResponse =
         MobileDeviceConstant.newBuilder()
             .setResourceName(MobileDeviceConstantName.of("[CRITERION_ID]").toString())
+            .setId(3355)
+            .setName(MobileDeviceConstantName.of("[CRITERION_ID]").toString())
+            .setManufacturerName("manufacturerName75153916")
+            .setOperatingSystemName("operatingSystemName2122745211")
             .build();
     mockMobileDeviceConstantService.addResponse(expectedResponse);
 
@@ -122,6 +126,10 @@ public class MobileDeviceConstantServiceClientTest {
     MobileDeviceConstant expectedResponse =
         MobileDeviceConstant.newBuilder()
             .setResourceName(MobileDeviceConstantName.of("[CRITERION_ID]").toString())
+            .setId(3355)
+            .setName(MobileDeviceConstantName.of("[CRITERION_ID]").toString())
+            .setManufacturerName("manufacturerName75153916")
+            .setOperatingSystemName("operatingSystemName2122745211")
             .build();
     mockMobileDeviceConstantService.addResponse(expectedResponse);
 

@@ -256,10 +256,10 @@ public class DomainCategoryName implements ResourceName {
     }
 
     private Builder(DomainCategoryName domainCategoryName) {
-      customerId = domainCategoryName.customerId;
-      campaignId = domainCategoryName.campaignId;
-      base64Category = domainCategoryName.base64Category;
-      languageCode = domainCategoryName.languageCode;
+      this.customerId = domainCategoryName.customerId;
+      this.campaignId = domainCategoryName.campaignId;
+      this.base64Category = domainCategoryName.base64Category;
+      this.languageCode = domainCategoryName.languageCode;
     }
 
     public DomainCategoryName build() {

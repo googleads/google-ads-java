@@ -216,9 +216,9 @@ public class LocationViewName implements ResourceName {
     }
 
     private Builder(LocationViewName locationViewName) {
-      customerId = locationViewName.customerId;
-      campaignId = locationViewName.campaignId;
-      criterionId = locationViewName.criterionId;
+      this.customerId = locationViewName.customerId;
+      this.campaignId = locationViewName.campaignId;
+      this.criterionId = locationViewName.criterionId;
     }
 
     public LocationViewName build() {

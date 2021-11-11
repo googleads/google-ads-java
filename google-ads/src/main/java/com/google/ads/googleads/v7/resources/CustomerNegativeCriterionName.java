@@ -184,8 +184,8 @@ public class CustomerNegativeCriterionName implements ResourceName {
     }
 
     private Builder(CustomerNegativeCriterionName customerNegativeCriterionName) {
-      customerId = customerNegativeCriterionName.customerId;
-      criterionId = customerNegativeCriterionName.criterionId;
+      this.customerId = customerNegativeCriterionName.customerId;
+      this.criterionId = customerNegativeCriterionName.criterionId;
     }
 
     public CustomerNegativeCriterionName build() {

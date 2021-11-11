@@ -43,8 +43,8 @@ import org.junit.Test;
 public class IncomeRangeViewServiceClientTest {
   private static MockIncomeRangeViewService mockIncomeRangeViewService;
   private static MockServiceHelper mockServiceHelper;
-  private IncomeRangeViewServiceClient client;
   private LocalChannelProvider channelProvider;
+  private IncomeRangeViewServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {

@@ -158,7 +158,7 @@ public class MobileDeviceConstantName implements ResourceName {
     }
 
     private Builder(MobileDeviceConstantName mobileDeviceConstantName) {
-      criterionId = mobileDeviceConstantName.criterionId;
+      this.criterionId = mobileDeviceConstantName.criterionId;
     }
 
     public MobileDeviceConstantName build() {

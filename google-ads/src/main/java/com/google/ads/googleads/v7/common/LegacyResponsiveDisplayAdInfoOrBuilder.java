@@ -128,8 +128,8 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * Advertiser's consent to allow flexible color. When true, the ad may be
    * served with different color if necessary. When false, the ad will be served
    * with the specified colors or a neutral color.
-   * The default value is true.
-   * Must be true if main_color and accent_color are not set.
+   * The default value is `true`.
+   * Must be true if `main_color` and `accent_color` are not set.
    * </pre>
    *
    * <code>bool allow_flexible_color = 20;</code>
@@ -141,8 +141,8 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * Advertiser's consent to allow flexible color. When true, the ad may be
    * served with different color if necessary. When false, the ad will be served
    * with the specified colors or a neutral color.
-   * The default value is true.
-   * Must be true if main_color and accent_color are not set.
+   * The default value is `true`.
+   * Must be true if `main_color` and `accent_color` are not set.
    * </pre>
    *
    * <code>bool allow_flexible_color = 20;</code>
@@ -153,7 +153,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
   /**
    * <pre>
    * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
-   * If one of main_color and accent_color is set, the other is required as
+   * If one of `main_color` and `accent_color` is set, the other is required as
    * well.
    * </pre>
    *
@@ -164,7 +164,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
   /**
    * <pre>
    * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
-   * If one of main_color and accent_color is set, the other is required as
+   * If one of `main_color` and `accent_color` is set, the other is required as
    * well.
    * </pre>
    *
@@ -175,7 +175,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
   /**
    * <pre>
    * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
-   * If one of main_color and accent_color is set, the other is required as
+   * If one of `main_color` and `accent_color` is set, the other is required as
    * well.
    * </pre>
    *
@@ -188,7 +188,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
   /**
    * <pre>
    * The main color of the ad in hexadecimal, e.g. #ffffff for white.
-   * If one of main_color and accent_color is set, the other is required as
+   * If one of `main_color` and `accent_color` is set, the other is required as
    * well.
    * </pre>
    *
@@ -199,7 +199,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
   /**
    * <pre>
    * The main color of the ad in hexadecimal, e.g. #ffffff for white.
-   * If one of main_color and accent_color is set, the other is required as
+   * If one of `main_color` and `accent_color` is set, the other is required as
    * well.
    * </pre>
    *
@@ -210,7 +210,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
   /**
    * <pre>
    * The main color of the ad in hexadecimal, e.g. #ffffff for white.
-   * If one of main_color and accent_color is set, the other is required as
+   * If one of `main_color` and `accent_color` is set, the other is required as
    * well.
    * </pre>
    *
@@ -415,7 +415,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
 
   /**
    * <pre>
-   * Promotion text used for dyanmic formats of responsive ads. For example
+   * Promotion text used for dynamic formats of responsive ads. For example
    * 'Free two-day shipping'.
    * </pre>
    *
@@ -425,7 +425,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
   boolean hasPromoText();
   /**
    * <pre>
-   * Promotion text used for dyanmic formats of responsive ads. For example
+   * Promotion text used for dynamic formats of responsive ads. For example
    * 'Free two-day shipping'.
    * </pre>
    *
@@ -435,7 +435,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
   java.lang.String getPromoText();
   /**
    * <pre>
-   * Promotion text used for dyanmic formats of responsive ads. For example
+   * Promotion text used for dynamic formats of responsive ads. For example
    * 'Free two-day shipping'.
    * </pre>
    *

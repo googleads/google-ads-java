@@ -41,10 +41,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class AgeRangeViewServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
   private static MockAgeRangeViewService mockAgeRangeViewService;
-  private AgeRangeViewServiceClient client;
+  private static MockServiceHelper mockServiceHelper;
   private LocalChannelProvider channelProvider;
+  private AgeRangeViewServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {

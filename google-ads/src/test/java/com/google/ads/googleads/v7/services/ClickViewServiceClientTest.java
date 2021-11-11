@@ -18,9 +18,12 @@ package com.google.ads.googleads.v7.services;
 
 import com.google.ads.googleads.v7.common.ClickLocation;
 import com.google.ads.googleads.v7.common.KeywordInfo;
+import com.google.ads.googleads.v7.resources.AdGroupAdName;
 import com.google.ads.googleads.v7.resources.AdGroupCriterionName;
 import com.google.ads.googleads.v7.resources.ClickView;
 import com.google.ads.googleads.v7.resources.ClickViewName;
+import com.google.ads.googleads.v7.resources.GeoTargetConstantName;
+import com.google.ads.googleads.v7.resources.UserListName;
 import com.google.api.gax.core.NoCredentialsProvider;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.testing.LocalChannelProvider;
@@ -44,10 +47,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class ClickViewServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
-  private ClickViewServiceClient client;
   private static MockClickViewService mockClickViewService;
+  private static MockServiceHelper mockServiceHelper;
   private LocalChannelProvider channelProvider;
+  private ClickViewServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -85,8 +88,13 @@ public class ClickViewServiceClientTest {
     ClickView expectedResponse =
         ClickView.newBuilder()
             .setResourceName(ClickViewName.of("[CUSTOMER_ID]", "[DATE]", "[GCLID]").toString())
+            .setGclid("gclid98179115")
             .setAreaOfInterest(ClickLocation.newBuilder().build())
             .setLocationOfPresence(ClickLocation.newBuilder().build())
+            .setPageNumber(-1156954375)
+            .setAdGroupAd(AdGroupAdName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[AD_ID]").toString())
+            .setCampaignLocationTarget(GeoTargetConstantName.of("[CRITERION_ID]").toString())
+            .setUserList(UserListName.of("[CUSTOMER_ID]", "[USER_LIST_ID]").toString())
             .setKeyword(
                 AdGroupCriterionName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]")
                     .toString())
@@ -129,8 +137,13 @@ public class ClickViewServiceClientTest {
     ClickView expectedResponse =
         ClickView.newBuilder()
             .setResourceName(ClickViewName.of("[CUSTOMER_ID]", "[DATE]", "[GCLID]").toString())
+            .setGclid("gclid98179115")
             .setAreaOfInterest(ClickLocation.newBuilder().build())
             .setLocationOfPresence(ClickLocation.newBuilder().build())
+            .setPageNumber(-1156954375)
+            .setAdGroupAd(AdGroupAdName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[AD_ID]").toString())
+            .setCampaignLocationTarget(GeoTargetConstantName.of("[CRITERION_ID]").toString())
+            .setUserList(UserListName.of("[CUSTOMER_ID]", "[USER_LIST_ID]").toString())
             .setKeyword(
                 AdGroupCriterionName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]")
                     .toString())

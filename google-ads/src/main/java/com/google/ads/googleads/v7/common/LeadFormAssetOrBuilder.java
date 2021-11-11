@@ -346,7 +346,7 @@ public interface LeadFormAssetOrBuilder extends
 
   /**
    * <pre>
-   * Desired intent for the lead form, e.g. more volume or higher intent.
+   * Desired intent for the lead form, e.g. more volume or more qualified.
    * </pre>
    *
    * <code>.google.ads.googleads.v7.enums.LeadFormDesiredIntentEnum.LeadFormDesiredIntent desired_intent = 21;</code>
@@ -355,7 +355,7 @@ public interface LeadFormAssetOrBuilder extends
   int getDesiredIntentValue();
   /**
    * <pre>
-   * Desired intent for the lead form, e.g. more volume or higher intent.
+   * Desired intent for the lead form, e.g. more volume or more qualified.
    * </pre>
    *
    * <code>.google.ads.googleads.v7.enums.LeadFormDesiredIntentEnum.LeadFormDesiredIntent desired_intent = 21;</code>

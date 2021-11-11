@@ -802,7 +802,7 @@ private static final long serialVersionUID = 0L;
   private int desiredIntent_;
   /**
    * <pre>
-   * Desired intent for the lead form, e.g. more volume or higher intent.
+   * Desired intent for the lead form, e.g. more volume or more qualified.
    * </pre>
    *
    * <code>.google.ads.googleads.v7.enums.LeadFormDesiredIntentEnum.LeadFormDesiredIntent desired_intent = 21;</code>
@@ -813,7 +813,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Desired intent for the lead form, e.g. more volume or higher intent.
+   * Desired intent for the lead form, e.g. more volume or more qualified.
    * </pre>
    *
    * <code>.google.ads.googleads.v7.enums.LeadFormDesiredIntentEnum.LeadFormDesiredIntent desired_intent = 21;</code>
@@ -3163,7 +3163,7 @@ private static final long serialVersionUID = 0L;
     private int desiredIntent_ = 0;
     /**
      * <pre>
-     * Desired intent for the lead form, e.g. more volume or higher intent.
+     * Desired intent for the lead form, e.g. more volume or more qualified.
      * </pre>
      *
      * <code>.google.ads.googleads.v7.enums.LeadFormDesiredIntentEnum.LeadFormDesiredIntent desired_intent = 21;</code>
@@ -3174,7 +3174,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Desired intent for the lead form, e.g. more volume or higher intent.
+     * Desired intent for the lead form, e.g. more volume or more qualified.
      * </pre>
      *
      * <code>.google.ads.googleads.v7.enums.LeadFormDesiredIntentEnum.LeadFormDesiredIntent desired_intent = 21;</code>
@@ -3189,7 +3189,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Desired intent for the lead form, e.g. more volume or higher intent.
+     * Desired intent for the lead form, e.g. more volume or more qualified.
      * </pre>
      *
      * <code>.google.ads.googleads.v7.enums.LeadFormDesiredIntentEnum.LeadFormDesiredIntent desired_intent = 21;</code>
@@ -3203,7 +3203,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Desired intent for the lead form, e.g. more volume or higher intent.
+     * Desired intent for the lead form, e.g. more volume or more qualified.
      * </pre>
      *
      * <code>.google.ads.googleads.v7.enums.LeadFormDesiredIntentEnum.LeadFormDesiredIntent desired_intent = 21;</code>
@@ -3221,7 +3221,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Desired intent for the lead form, e.g. more volume or higher intent.
+     * Desired intent for the lead form, e.g. more volume or more qualified.
      * </pre>
      *
      * <code>.google.ads.googleads.v7.enums.LeadFormDesiredIntentEnum.LeadFormDesiredIntent desired_intent = 21;</code>

@@ -43,8 +43,8 @@ import org.junit.Test;
 public class ParentalStatusViewServiceClientTest {
   private static MockParentalStatusViewService mockParentalStatusViewService;
   private static MockServiceHelper mockServiceHelper;
-  private ParentalStatusViewServiceClient client;
   private LocalChannelProvider channelProvider;
+  private ParentalStatusViewServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {

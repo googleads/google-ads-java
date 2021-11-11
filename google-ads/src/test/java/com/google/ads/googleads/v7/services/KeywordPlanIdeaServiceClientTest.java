@@ -46,10 +46,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class KeywordPlanIdeaServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
-  private KeywordPlanIdeaServiceClient client;
   private static MockKeywordPlanIdeaService mockKeywordPlanIdeaService;
+  private static MockServiceHelper mockServiceHelper;
   private LocalChannelProvider channelProvider;
+  private KeywordPlanIdeaServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -96,6 +96,7 @@ public class KeywordPlanIdeaServiceClientTest {
     GenerateKeywordIdeasRequest request =
         GenerateKeywordIdeasRequest.newBuilder()
             .setCustomerId("customerId-1581184615")
+            .setLanguage("language-1613589672")
             .addAllGeoTargetConstants(new ArrayList<String>())
             .setIncludeAdultKeywords(true)
             .setPageToken("pageToken873572522")
@@ -150,6 +151,7 @@ public class KeywordPlanIdeaServiceClientTest {
       GenerateKeywordIdeasRequest request =
           GenerateKeywordIdeasRequest.newBuilder()
               .setCustomerId("customerId-1581184615")
+              .setLanguage("language-1613589672")
               .addAllGeoTargetConstants(new ArrayList<String>())
               .setIncludeAdultKeywords(true)
               .setPageToken("pageToken873572522")

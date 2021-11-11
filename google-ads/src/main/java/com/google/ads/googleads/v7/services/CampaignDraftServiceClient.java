@@ -20,7 +20,6 @@ import com.google.ads.googleads.v7.resources.CampaignDraft;
 import com.google.ads.googleads.v7.resources.CampaignDraftName;
 import com.google.ads.googleads.v7.services.stub.CampaignDraftServiceStub;
 import com.google.ads.googleads.v7.services.stub.CampaignDraftServiceStubSettings;
-import com.google.api.core.ApiFunction;
 import com.google.api.core.ApiFuture;
 import com.google.api.core.ApiFutures;
 import com.google.api.core.BetaApi;
@@ -66,13 +65,13 @@ import javax.annotation.Generated;
  * methods:
  *
  * <ol>
- *   <li>A "flattened" method. With this type of method, the fields of the request type have been
+ *   <li> A "flattened" method. With this type of method, the fields of the request type have been
  *       converted into function parameters. It may be the case that not all fields are available as
  *       parameters, and not every API method will have a flattened method entry point.
- *   <li>A "request object" method. This type of method only takes one parameter, a request object,
+ *   <li> A "request object" method. This type of method only takes one parameter, a request object,
  *       which must be constructed before the call. Not every API method will have a request object
  *       method.
- *   <li>A "callable" method. This type of method takes no parameters and returns an immutable API
+ *   <li> A "callable" method. This type of method takes no parameters and returns an immutable API
  *       callable object, which can be used to initiate calls to the service.
  * </ol>
  *
@@ -742,11 +741,8 @@ public class CampaignDraftServiceClient implements BackgroundResource {
 
   public static class ListCampaignDraftAsyncErrorsPagedResponse
       extends AbstractPagedListResponse<
-          ListCampaignDraftAsyncErrorsRequest,
-          ListCampaignDraftAsyncErrorsResponse,
-          Status,
-          ListCampaignDraftAsyncErrorsPage,
-          ListCampaignDraftAsyncErrorsFixedSizeCollection> {
+          ListCampaignDraftAsyncErrorsRequest, ListCampaignDraftAsyncErrorsResponse, Status,
+          ListCampaignDraftAsyncErrorsPage, ListCampaignDraftAsyncErrorsFixedSizeCollection> {
 
     public static ApiFuture<ListCampaignDraftAsyncErrorsPagedResponse> createAsync(
         PageContext<
@@ -758,14 +754,7 @@ public class CampaignDraftServiceClient implements BackgroundResource {
               .createPageAsync(context, futureResponse);
       return ApiFutures.transform(
           futurePage,
-          new ApiFunction<
-              ListCampaignDraftAsyncErrorsPage, ListCampaignDraftAsyncErrorsPagedResponse>() {
-            @Override
-            public ListCampaignDraftAsyncErrorsPagedResponse apply(
-                ListCampaignDraftAsyncErrorsPage input) {
-              return new ListCampaignDraftAsyncErrorsPagedResponse(input);
-            }
-          },
+          input -> new ListCampaignDraftAsyncErrorsPagedResponse(input),
           MoreExecutors.directExecutor());
     }
 
@@ -776,9 +765,7 @@ public class CampaignDraftServiceClient implements BackgroundResource {
 
   public static class ListCampaignDraftAsyncErrorsPage
       extends AbstractPage<
-          ListCampaignDraftAsyncErrorsRequest,
-          ListCampaignDraftAsyncErrorsResponse,
-          Status,
+          ListCampaignDraftAsyncErrorsRequest, ListCampaignDraftAsyncErrorsResponse, Status,
           ListCampaignDraftAsyncErrorsPage> {
 
     private ListCampaignDraftAsyncErrorsPage(
@@ -814,11 +801,8 @@ public class CampaignDraftServiceClient implements BackgroundResource {
 
   public static class ListCampaignDraftAsyncErrorsFixedSizeCollection
       extends AbstractFixedSizeCollection<
-          ListCampaignDraftAsyncErrorsRequest,
-          ListCampaignDraftAsyncErrorsResponse,
-          Status,
-          ListCampaignDraftAsyncErrorsPage,
-          ListCampaignDraftAsyncErrorsFixedSizeCollection> {
+          ListCampaignDraftAsyncErrorsRequest, ListCampaignDraftAsyncErrorsResponse, Status,
+          ListCampaignDraftAsyncErrorsPage, ListCampaignDraftAsyncErrorsFixedSizeCollection> {
 
     private ListCampaignDraftAsyncErrorsFixedSizeCollection(
         List<ListCampaignDraftAsyncErrorsPage> pages, int collectionSize) {

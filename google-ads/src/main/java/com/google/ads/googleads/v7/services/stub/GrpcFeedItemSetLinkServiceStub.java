@@ -25,7 +25,6 @@ import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
-import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.common.collect.ImmutableMap;
 import com.google.longrunning.stub.GrpcOperationsStub;
@@ -123,13 +122,10 @@ public class GrpcFeedItemSetLinkServiceStub extends FeedItemSetLinkServiceStub {
             GrpcCallSettings.<GetFeedItemSetLinkRequest, FeedItemSetLink>newBuilder()
                 .setMethodDescriptor(getFeedItemSetLinkMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<GetFeedItemSetLinkRequest>() {
-                      @Override
-                      public Map<String, String> extract(GetFeedItemSetLinkRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("resource_name", String.valueOf(request.getResourceName()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("resource_name", String.valueOf(request.getResourceName()));
+                      return params.build();
                     })
                 .build();
     GrpcCallSettings<MutateFeedItemSetLinksRequest, MutateFeedItemSetLinksResponse>
@@ -138,13 +134,10 @@ public class GrpcFeedItemSetLinkServiceStub extends FeedItemSetLinkServiceStub {
                 .<MutateFeedItemSetLinksRequest, MutateFeedItemSetLinksResponse>newBuilder()
                 .setMethodDescriptor(mutateFeedItemSetLinksMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<MutateFeedItemSetLinksRequest>() {
-                      @Override
-                      public Map<String, String> extract(MutateFeedItemSetLinksRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("customer_id", String.valueOf(request.getCustomerId()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("customer_id", String.valueOf(request.getCustomerId()));
+                      return params.build();
                     })
                 .build();
 
@@ -180,7 +173,13 @@ public class GrpcFeedItemSetLinkServiceStub extends FeedItemSetLinkServiceStub {
 
   @Override
   public final void close() {
-    shutdown();
+    try {
+      backgroundResources.close();
+    } catch (RuntimeException e) {
+      throw e;
+    } catch (Exception e) {
+      throw new IllegalStateException("Failed to close resource", e);
+    }
   }
 
   @Override

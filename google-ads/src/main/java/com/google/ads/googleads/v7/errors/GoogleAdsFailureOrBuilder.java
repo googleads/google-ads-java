@@ -53,7 +53,7 @@ public interface GoogleAdsFailureOrBuilder extends
 
   /**
    * <pre>
-   * The unique id of the request that is used for debugging purposes.
+   * The unique ID of the request that is used for debugging purposes.
    * </pre>
    *
    * <code>string request_id = 2;</code>
@@ -62,7 +62,7 @@ public interface GoogleAdsFailureOrBuilder extends
   java.lang.String getRequestId();
   /**
    * <pre>
-   * The unique id of the request that is used for debugging purposes.
+   * The unique ID of the request that is used for debugging purposes.
    * </pre>
    *
    * <code>string request_id = 2;</code>

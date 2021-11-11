@@ -20,6 +20,7 @@ import com.google.ads.googleads.v7.common.AdScheduleInfo;
 import com.google.ads.googleads.v7.common.KeywordInfo;
 import com.google.ads.googleads.v7.resources.ExtensionFeedItem;
 import com.google.ads.googleads.v7.resources.ExtensionFeedItemName;
+import com.google.ads.googleads.v7.resources.GeoTargetConstantName;
 import com.google.api.gax.core.NoCredentialsProvider;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.testing.LocalChannelProvider;
@@ -47,8 +48,8 @@ import org.junit.Test;
 public class ExtensionFeedItemServiceClientTest {
   private static MockExtensionFeedItemService mockExtensionFeedItemService;
   private static MockServiceHelper mockServiceHelper;
-  private ExtensionFeedItemServiceClient client;
   private LocalChannelProvider channelProvider;
+  private ExtensionFeedItemServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -87,7 +88,11 @@ public class ExtensionFeedItemServiceClientTest {
     ExtensionFeedItem expectedResponse =
         ExtensionFeedItem.newBuilder()
             .setResourceName(ExtensionFeedItemName.of("[CUSTOMER_ID]", "[FEED_ITEM_ID]").toString())
+            .setId(3355)
+            .setStartDateTime("startDateTime1919866397")
+            .setEndDateTime("endDateTime255463830")
             .addAllAdSchedules(new ArrayList<AdScheduleInfo>())
+            .setTargetedGeoTargetConstant(GeoTargetConstantName.of("[CRITERION_ID]").toString())
             .setTargetedKeyword(KeywordInfo.newBuilder().build())
             .build();
     mockExtensionFeedItemService.addResponse(expectedResponse);
@@ -130,7 +135,11 @@ public class ExtensionFeedItemServiceClientTest {
     ExtensionFeedItem expectedResponse =
         ExtensionFeedItem.newBuilder()
             .setResourceName(ExtensionFeedItemName.of("[CUSTOMER_ID]", "[FEED_ITEM_ID]").toString())
+            .setId(3355)
+            .setStartDateTime("startDateTime1919866397")
+            .setEndDateTime("endDateTime255463830")
             .addAllAdSchedules(new ArrayList<AdScheduleInfo>())
+            .setTargetedGeoTargetConstant(GeoTargetConstantName.of("[CRITERION_ID]").toString())
             .setTargetedKeyword(KeywordInfo.newBuilder().build())
             .build();
     mockExtensionFeedItemService.addResponse(expectedResponse);

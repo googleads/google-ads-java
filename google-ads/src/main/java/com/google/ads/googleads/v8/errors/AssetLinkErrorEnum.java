@@ -242,6 +242,14 @@ private static final long serialVersionUID = 0L;
      * <code>INVALID_STATUS = 17;</code>
      */
     INVALID_STATUS(17),
+    /**
+     * <pre>
+     * The YouTube video referenced in the provided asset has unknown duration.
+     * </pre>
+     *
+     * <code>YOUTUBE_VIDEO_DURATION_NOT_DEFINED = 18;</code>
+     */
+    YOUTUBE_VIDEO_DURATION_NOT_DEFINED(18),
     UNRECOGNIZED(-1),
     ;
 
@@ -394,6 +402,14 @@ private static final long serialVersionUID = 0L;
      * <code>INVALID_STATUS = 17;</code>
      */
     public static final int INVALID_STATUS_VALUE = 17;
+    /**
+     * <pre>
+     * The YouTube video referenced in the provided asset has unknown duration.
+     * </pre>
+     *
+     * <code>YOUTUBE_VIDEO_DURATION_NOT_DEFINED = 18;</code>
+     */
+    public static final int YOUTUBE_VIDEO_DURATION_NOT_DEFINED_VALUE = 18;
 
 
     public final int getNumber() {
@@ -437,6 +453,7 @@ private static final long serialVersionUID = 0L;
         case 14: return YOUTUBE_VIDEO_TOO_LONG;
         case 15: return YOUTUBE_VIDEO_TOO_SHORT;
         case 17: return INVALID_STATUS;
+        case 18: return YOUTUBE_VIDEO_DURATION_NOT_DEFINED;
         default: return null;
       }
     }

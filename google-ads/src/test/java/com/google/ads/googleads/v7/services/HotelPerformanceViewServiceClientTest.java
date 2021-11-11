@@ -43,8 +43,8 @@ import org.junit.Test;
 public class HotelPerformanceViewServiceClientTest {
   private static MockHotelPerformanceViewService mockHotelPerformanceViewService;
   private static MockServiceHelper mockServiceHelper;
-  private HotelPerformanceViewServiceClient client;
   private LocalChannelProvider channelProvider;
+  private HotelPerformanceViewServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {

@@ -18,6 +18,7 @@ package com.google.ads.googleads.v7.services;
 
 import com.google.ads.googleads.v7.resources.AdGroupExtensionSetting;
 import com.google.ads.googleads.v7.resources.AdGroupExtensionSettingName;
+import com.google.ads.googleads.v7.resources.AdGroupName;
 import com.google.api.gax.core.NoCredentialsProvider;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.testing.LocalChannelProvider;
@@ -43,10 +44,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class AdGroupExtensionSettingServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
-  private AdGroupExtensionSettingServiceClient client;
   private static MockAdGroupExtensionSettingService mockAdGroupExtensionSettingService;
+  private static MockServiceHelper mockServiceHelper;
   private LocalChannelProvider channelProvider;
+  private AdGroupExtensionSettingServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -87,6 +88,7 @@ public class AdGroupExtensionSettingServiceClientTest {
             .setResourceName(
                 AdGroupExtensionSettingName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[EXTENSION_TYPE]")
                     .toString())
+            .setAdGroup(AdGroupName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]").toString())
             .addAllExtensionFeedItems(new ArrayList<String>())
             .build();
     mockAdGroupExtensionSettingService.addResponse(expectedResponse);
@@ -131,6 +133,7 @@ public class AdGroupExtensionSettingServiceClientTest {
             .setResourceName(
                 AdGroupExtensionSettingName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[EXTENSION_TYPE]")
                     .toString())
+            .setAdGroup(AdGroupName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]").toString())
             .addAllExtensionFeedItems(new ArrayList<String>())
             .build();
     mockAdGroupExtensionSettingService.addResponse(expectedResponse);

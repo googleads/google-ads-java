@@ -119,7 +119,7 @@ private static final long serialVersionUID = 0L;
     LOW_INTENT(2),
     /**
      * <pre>
-     * Only leads with a high level of intent are desired.
+     * Deliver leads that are more qualified.
      * </pre>
      *
      * <code>HIGH_INTENT = 3;</code>
@@ -154,7 +154,7 @@ private static final long serialVersionUID = 0L;
     public static final int LOW_INTENT_VALUE = 2;
     /**
      * <pre>
-     * Only leads with a high level of intent are desired.
+     * Deliver leads that are more qualified.
      * </pre>
      *
      * <code>HIGH_INTENT = 3;</code>

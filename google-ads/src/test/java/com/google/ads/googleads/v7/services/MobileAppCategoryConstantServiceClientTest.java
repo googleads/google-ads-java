@@ -41,10 +41,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class MobileAppCategoryConstantServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
   private static MockMobileAppCategoryConstantService mockMobileAppCategoryConstantService;
-  private MobileAppCategoryConstantServiceClient client;
+  private static MockServiceHelper mockServiceHelper;
   private LocalChannelProvider channelProvider;
+  private MobileAppCategoryConstantServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -84,6 +84,8 @@ public class MobileAppCategoryConstantServiceClientTest {
         MobileAppCategoryConstant.newBuilder()
             .setResourceName(
                 MobileAppCategoryConstantName.of("[MOBILE_APP_CATEGORY_ID]").toString())
+            .setId(3355)
+            .setName(MobileAppCategoryConstantName.of("[MOBILE_APP_CATEGORY_ID]").toString())
             .build();
     mockMobileAppCategoryConstantService.addResponse(expectedResponse);
 
@@ -126,6 +128,8 @@ public class MobileAppCategoryConstantServiceClientTest {
         MobileAppCategoryConstant.newBuilder()
             .setResourceName(
                 MobileAppCategoryConstantName.of("[MOBILE_APP_CATEGORY_ID]").toString())
+            .setId(3355)
+            .setName(MobileAppCategoryConstantName.of("[MOBILE_APP_CATEGORY_ID]").toString())
             .build();
     mockMobileAppCategoryConstantService.addResponse(expectedResponse);
 

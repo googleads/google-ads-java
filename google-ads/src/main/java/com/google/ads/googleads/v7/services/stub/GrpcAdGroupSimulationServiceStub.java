@@ -23,7 +23,6 @@ import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
-import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.common.collect.ImmutableMap;
 import com.google.longrunning.stub.GrpcOperationsStub;
@@ -106,13 +105,10 @@ public class GrpcAdGroupSimulationServiceStub extends AdGroupSimulationServiceSt
             GrpcCallSettings.<GetAdGroupSimulationRequest, AdGroupSimulation>newBuilder()
                 .setMethodDescriptor(getAdGroupSimulationMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<GetAdGroupSimulationRequest>() {
-                      @Override
-                      public Map<String, String> extract(GetAdGroupSimulationRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("resource_name", String.valueOf(request.getResourceName()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("resource_name", String.valueOf(request.getResourceName()));
+                      return params.build();
                     })
                 .build();
 
@@ -138,7 +134,13 @@ public class GrpcAdGroupSimulationServiceStub extends AdGroupSimulationServiceSt
 
   @Override
   public final void close() {
-    shutdown();
+    try {
+      backgroundResources.close();
+    } catch (RuntimeException e) {
+      throw e;
+    } catch (Exception e) {
+      throw new IllegalStateException("Failed to close resource", e);
+    }
   }
 
   @Override

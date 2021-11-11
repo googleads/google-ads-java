@@ -170,7 +170,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object requestId_;
   /**
    * <pre>
-   * The unique id of the request that is used for debugging purposes.
+   * The unique ID of the request that is used for debugging purposes.
    * </pre>
    *
    * <code>string request_id = 2;</code>
@@ -191,7 +191,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The unique id of the request that is used for debugging purposes.
+   * The unique ID of the request that is used for debugging purposes.
    * </pre>
    *
    * <code>string request_id = 2;</code>
@@ -891,7 +891,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object requestId_ = "";
     /**
      * <pre>
-     * The unique id of the request that is used for debugging purposes.
+     * The unique ID of the request that is used for debugging purposes.
      * </pre>
      *
      * <code>string request_id = 2;</code>
@@ -911,7 +911,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The unique id of the request that is used for debugging purposes.
+     * The unique ID of the request that is used for debugging purposes.
      * </pre>
      *
      * <code>string request_id = 2;</code>
@@ -932,7 +932,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The unique id of the request that is used for debugging purposes.
+     * The unique ID of the request that is used for debugging purposes.
      * </pre>
      *
      * <code>string request_id = 2;</code>
@@ -951,7 +951,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The unique id of the request that is used for debugging purposes.
+     * The unique ID of the request that is used for debugging purposes.
      * </pre>
      *
      * <code>string request_id = 2;</code>
@@ -965,7 +965,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The unique id of the request that is used for debugging purposes.
+     * The unique ID of the request that is used for debugging purposes.
      * </pre>
      *
      * <code>string request_id = 2;</code>

@@ -43,8 +43,8 @@ import org.junit.Test;
 public class DistanceViewServiceClientTest {
   private static MockDistanceViewService mockDistanceViewService;
   private static MockServiceHelper mockServiceHelper;
-  private DistanceViewServiceClient client;
   private LocalChannelProvider channelProvider;
+  private DistanceViewServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -84,6 +84,7 @@ public class DistanceViewServiceClientTest {
             .setResourceName(
                 DistanceViewName.of("[CUSTOMER_ID]", "[PLACEHOLDER_CHAIN_ID]", "[DISTANCE_BUCKET]")
                     .toString())
+            .setMetricSystem(true)
             .build();
     mockDistanceViewService.addResponse(expectedResponse);
 
@@ -126,6 +127,7 @@ public class DistanceViewServiceClientTest {
             .setResourceName(
                 DistanceViewName.of("[CUSTOMER_ID]", "[PLACEHOLDER_CHAIN_ID]", "[DISTANCE_BUCKET]")
                     .toString())
+            .setMetricSystem(true)
             .build();
     mockDistanceViewService.addResponse(expectedResponse);
 

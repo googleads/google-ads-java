@@ -181,8 +181,8 @@ public class AssetName implements ResourceName {
     }
 
     private Builder(AssetName assetName) {
-      customerId = assetName.customerId;
-      assetId = assetName.assetId;
+      this.customerId = assetName.customerId;
+      this.assetId = assetName.assetId;
     }
 
     public AssetName build() {

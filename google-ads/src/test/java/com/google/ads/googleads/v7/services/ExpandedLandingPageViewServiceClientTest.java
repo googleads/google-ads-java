@@ -41,10 +41,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class ExpandedLandingPageViewServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
-  private ExpandedLandingPageViewServiceClient client;
-  private LocalChannelProvider channelProvider;
   private static MockExpandedLandingPageViewService mockExpandedLandingPageViewService;
+  private static MockServiceHelper mockServiceHelper;
+  private LocalChannelProvider channelProvider;
+  private ExpandedLandingPageViewServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -85,6 +85,7 @@ public class ExpandedLandingPageViewServiceClientTest {
             .setResourceName(
                 ExpandedLandingPageViewName.of("[CUSTOMER_ID]", "[EXPANDED_FINAL_URL_FINGERPRINT]")
                     .toString())
+            .setExpandedFinalUrl("expandedFinalUrl-323823630")
             .build();
     mockExpandedLandingPageViewService.addResponse(expectedResponse);
 
@@ -128,6 +129,7 @@ public class ExpandedLandingPageViewServiceClientTest {
             .setResourceName(
                 ExpandedLandingPageViewName.of("[CUSTOMER_ID]", "[EXPANDED_FINAL_URL_FINGERPRINT]")
                     .toString())
+            .setExpandedFinalUrl("expandedFinalUrl-323823630")
             .build();
     mockExpandedLandingPageViewService.addResponse(expectedResponse);
 

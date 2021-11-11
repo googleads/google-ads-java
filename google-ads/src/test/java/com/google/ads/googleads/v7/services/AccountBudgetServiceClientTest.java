@@ -18,6 +18,7 @@ package com.google.ads.googleads.v7.services;
 
 import com.google.ads.googleads.v7.resources.AccountBudget;
 import com.google.ads.googleads.v7.resources.AccountBudgetName;
+import com.google.ads.googleads.v7.resources.BillingSetupName;
 import com.google.api.gax.core.NoCredentialsProvider;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.testing.LocalChannelProvider;
@@ -43,8 +44,8 @@ import org.junit.Test;
 public class AccountBudgetServiceClientTest {
   private static MockAccountBudgetService mockAccountBudgetService;
   private static MockServiceHelper mockServiceHelper;
-  private AccountBudgetServiceClient client;
   private LocalChannelProvider channelProvider;
+  private AccountBudgetServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -83,8 +84,15 @@ public class AccountBudgetServiceClientTest {
         AccountBudget.newBuilder()
             .setResourceName(
                 AccountBudgetName.of("[CUSTOMER_ID]", "[ACCOUNT_BUDGET_ID]").toString())
+            .setId(3355)
+            .setBillingSetup(BillingSetupName.of("[CUSTOMER_ID]", "[BILLING_SETUP_ID]").toString())
+            .setName(AccountBudgetName.of("[CUSTOMER_ID]", "[ACCOUNT_BUDGET_ID]").toString())
+            .setProposedStartDateTime("proposedStartDateTime1948242007")
+            .setApprovedStartDateTime("approvedStartDateTime-479625050")
             .setTotalAdjustmentsMicros(1469082819)
             .setAmountServedMicros(1848146642)
+            .setPurchaseOrderNumber("purchaseOrderNumber-125746058")
+            .setNotes("notes105008833")
             .setPendingProposal(AccountBudget.PendingAccountBudgetProposal.newBuilder().build())
             .build();
     mockAccountBudgetService.addResponse(expectedResponse);
@@ -125,8 +133,15 @@ public class AccountBudgetServiceClientTest {
         AccountBudget.newBuilder()
             .setResourceName(
                 AccountBudgetName.of("[CUSTOMER_ID]", "[ACCOUNT_BUDGET_ID]").toString())
+            .setId(3355)
+            .setBillingSetup(BillingSetupName.of("[CUSTOMER_ID]", "[BILLING_SETUP_ID]").toString())
+            .setName(AccountBudgetName.of("[CUSTOMER_ID]", "[ACCOUNT_BUDGET_ID]").toString())
+            .setProposedStartDateTime("proposedStartDateTime1948242007")
+            .setApprovedStartDateTime("approvedStartDateTime-479625050")
             .setTotalAdjustmentsMicros(1469082819)
             .setAmountServedMicros(1848146642)
+            .setPurchaseOrderNumber("purchaseOrderNumber-125746058")
+            .setNotes("notes105008833")
             .setPendingProposal(AccountBudget.PendingAccountBudgetProposal.newBuilder().build())
             .build();
     mockAccountBudgetService.addResponse(expectedResponse);

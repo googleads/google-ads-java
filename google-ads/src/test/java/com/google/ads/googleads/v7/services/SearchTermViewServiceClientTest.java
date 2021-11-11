@@ -16,6 +16,7 @@
 
 package com.google.ads.googleads.v7.services;
 
+import com.google.ads.googleads.v7.resources.AdGroupName;
 import com.google.ads.googleads.v7.resources.SearchTermView;
 import com.google.ads.googleads.v7.resources.SearchTermViewName;
 import com.google.api.gax.core.NoCredentialsProvider;
@@ -43,8 +44,8 @@ import org.junit.Test;
 public class SearchTermViewServiceClientTest {
   private static MockSearchTermViewService mockSearchTermViewService;
   private static MockServiceHelper mockServiceHelper;
-  private SearchTermViewServiceClient client;
   private LocalChannelProvider channelProvider;
+  private SearchTermViewServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -85,6 +86,8 @@ public class SearchTermViewServiceClientTest {
             .setResourceName(
                 SearchTermViewName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[AD_GROUP_ID]", "[QUERY]")
                     .toString())
+            .setSearchTerm("searchTerm-710473164")
+            .setAdGroup(AdGroupName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]").toString())
             .build();
     mockSearchTermViewService.addResponse(expectedResponse);
 
@@ -127,6 +130,8 @@ public class SearchTermViewServiceClientTest {
             .setResourceName(
                 SearchTermViewName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[AD_GROUP_ID]", "[QUERY]")
                     .toString())
+            .setSearchTerm("searchTerm-710473164")
+            .setAdGroup(AdGroupName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]").toString())
             .build();
     mockSearchTermViewService.addResponse(expectedResponse);
 

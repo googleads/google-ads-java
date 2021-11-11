@@ -16,6 +16,7 @@
 
 package com.google.ads.googleads.v7.services;
 
+import com.google.ads.googleads.v7.resources.CampaignName;
 import com.google.ads.googleads.v7.resources.DomainCategory;
 import com.google.ads.googleads.v7.resources.DomainCategoryName;
 import com.google.api.gax.core.NoCredentialsProvider;
@@ -41,10 +42,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class DomainCategoryServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
-  private DomainCategoryServiceClient client;
   private static MockDomainCategoryService mockDomainCategoryService;
+  private static MockServiceHelper mockServiceHelper;
   private LocalChannelProvider channelProvider;
+  private DomainCategoryServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -86,6 +87,14 @@ public class DomainCategoryServiceClientTest {
                 DomainCategoryName.of(
                         "[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[BASE64_CATEGORY]", "[LANGUAGE_CODE]")
                     .toString())
+            .setCampaign(CampaignName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]").toString())
+            .setCategory("category50511102")
+            .setLanguageCode("languageCode-2092349083")
+            .setDomain("domain-1326197564")
+            .setCoverageFraction(-1811111303)
+            .setCategoryRank(338802381)
+            .setHasChildren(true)
+            .setRecommendedCpcBidMicros(1202568286)
             .build();
     mockDomainCategoryService.addResponse(expectedResponse);
 
@@ -131,6 +140,14 @@ public class DomainCategoryServiceClientTest {
                 DomainCategoryName.of(
                         "[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[BASE64_CATEGORY]", "[LANGUAGE_CODE]")
                     .toString())
+            .setCampaign(CampaignName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]").toString())
+            .setCategory("category50511102")
+            .setLanguageCode("languageCode-2092349083")
+            .setDomain("domain-1326197564")
+            .setCoverageFraction(-1811111303)
+            .setCategoryRank(338802381)
+            .setHasChildren(true)
+            .setRecommendedCpcBidMicros(1202568286)
             .build();
     mockDomainCategoryService.addResponse(expectedResponse);
 

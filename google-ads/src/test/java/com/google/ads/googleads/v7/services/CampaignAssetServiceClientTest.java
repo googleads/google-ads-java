@@ -16,8 +16,10 @@
 
 package com.google.ads.googleads.v7.services;
 
+import com.google.ads.googleads.v7.resources.AssetName;
 import com.google.ads.googleads.v7.resources.CampaignAsset;
 import com.google.ads.googleads.v7.resources.CampaignAssetName;
+import com.google.ads.googleads.v7.resources.CampaignName;
 import com.google.api.gax.core.NoCredentialsProvider;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.testing.LocalChannelProvider;
@@ -45,8 +47,8 @@ import org.junit.Test;
 public class CampaignAssetServiceClientTest {
   private static MockCampaignAssetService mockCampaignAssetService;
   private static MockServiceHelper mockServiceHelper;
-  private CampaignAssetServiceClient client;
   private LocalChannelProvider channelProvider;
+  private CampaignAssetServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -86,6 +88,8 @@ public class CampaignAssetServiceClientTest {
             .setResourceName(
                 CampaignAssetName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[ASSET_ID]", "[FIELD_TYPE]")
                     .toString())
+            .setCampaign(CampaignName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]").toString())
+            .setAsset(AssetName.of("[CUSTOMER_ID]", "[ASSET_ID]").toString())
             .build();
     mockCampaignAssetService.addResponse(expectedResponse);
 
@@ -128,6 +132,8 @@ public class CampaignAssetServiceClientTest {
             .setResourceName(
                 CampaignAssetName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[ASSET_ID]", "[FIELD_TYPE]")
                     .toString())
+            .setCampaign(CampaignName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]").toString())
+            .setAsset(AssetName.of("[CUSTOMER_ID]", "[ASSET_ID]").toString())
             .build();
     mockCampaignAssetService.addResponse(expectedResponse);
 

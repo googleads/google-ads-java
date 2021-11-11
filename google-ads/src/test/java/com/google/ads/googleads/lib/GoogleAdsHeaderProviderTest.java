@@ -20,6 +20,8 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
@@ -100,6 +102,20 @@ public class GoogleAdsHeaderProviderTest {
     GoogleAdsHeaderProvider provider =
         GoogleAdsHeaderProvider.newBuilder().setDeveloperToken("test").build();
     assertTrue(provider.getHeaders().containsKey("x-goog-api-client"));
+  }
 
+  @Test
+  public void includes_clientLibraryVersion() {
+    GoogleAdsHeaderProvider provider =
+        GoogleAdsHeaderProvider.newBuilder().setDeveloperToken("test").build();
+    Pattern pattern = Pattern.compile("gccl/([0-9]+\\.[0-9]+\\.[0-9]+)");
+    String headerValue = provider.getHeaders().get("x-goog-api-client");
+    Matcher matcher = pattern.matcher(headerValue);
+    assertTrue("Unable to regex match gccl in header " + headerValue, matcher.find());
+    for (char c : matcher.group(1).toCharArray()) {
+      assertTrue(
+          "Version must only consist of numbers and .s: " + c + " : " + matcher.group(1),
+          c == '.' || Character.isDigit(c));
+    }
   }
 }

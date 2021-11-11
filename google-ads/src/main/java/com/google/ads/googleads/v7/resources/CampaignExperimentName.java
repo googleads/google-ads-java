@@ -190,8 +190,8 @@ public class CampaignExperimentName implements ResourceName {
     }
 
     private Builder(CampaignExperimentName campaignExperimentName) {
-      customerId = campaignExperimentName.customerId;
-      campaignExperimentId = campaignExperimentName.campaignExperimentId;
+      this.customerId = campaignExperimentName.customerId;
+      this.campaignExperimentId = campaignExperimentName.campaignExperimentId;
     }
 
     public CampaignExperimentName build() {

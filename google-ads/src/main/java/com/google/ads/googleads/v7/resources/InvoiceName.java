@@ -181,8 +181,8 @@ public class InvoiceName implements ResourceName {
     }
 
     private Builder(InvoiceName invoiceName) {
-      customerId = invoiceName.customerId;
-      invoiceId = invoiceName.invoiceId;
+      this.customerId = invoiceName.customerId;
+      this.invoiceId = invoiceName.invoiceId;
     }
 
     public InvoiceName build() {

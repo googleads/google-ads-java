@@ -256,10 +256,10 @@ public class AdParameterName implements ResourceName {
     }
 
     private Builder(AdParameterName adParameterName) {
-      customerId = adParameterName.customerId;
-      adGroupId = adParameterName.adGroupId;
-      criterionId = adParameterName.criterionId;
-      parameterIndex = adParameterName.parameterIndex;
+      this.customerId = adParameterName.customerId;
+      this.adGroupId = adParameterName.adGroupId;
+      this.criterionId = adParameterName.criterionId;
+      this.parameterIndex = adParameterName.parameterIndex;
     }
 
     public AdParameterName build() {

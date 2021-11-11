@@ -41,10 +41,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class AdGroupCriterionSimulationServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
-  private AdGroupCriterionSimulationServiceClient client;
-  private LocalChannelProvider channelProvider;
   private static MockAdGroupCriterionSimulationService mockAdGroupCriterionSimulationService;
+  private static MockServiceHelper mockServiceHelper;
+  private LocalChannelProvider channelProvider;
+  private AdGroupCriterionSimulationServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -92,6 +92,10 @@ public class AdGroupCriterionSimulationServiceClientTest {
                         "[START_DATE]",
                         "[END_DATE]")
                     .toString())
+            .setAdGroupId(-85224585)
+            .setCriterionId(-326773895)
+            .setStartDate("startDate-2129778896")
+            .setEndDate("endDate-1607727319")
             .build();
     mockAdGroupCriterionSimulationService.addResponse(expectedResponse);
 
@@ -156,6 +160,10 @@ public class AdGroupCriterionSimulationServiceClientTest {
                         "[START_DATE]",
                         "[END_DATE]")
                     .toString())
+            .setAdGroupId(-85224585)
+            .setCriterionId(-326773895)
+            .setStartDate("startDate-2129778896")
+            .setEndDate("endDate-1607727319")
             .build();
     mockAdGroupCriterionSimulationService.addResponse(expectedResponse);
 

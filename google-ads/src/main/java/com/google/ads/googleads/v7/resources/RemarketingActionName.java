@@ -190,8 +190,8 @@ public class RemarketingActionName implements ResourceName {
     }
 
     private Builder(RemarketingActionName remarketingActionName) {
-      customerId = remarketingActionName.customerId;
-      remarketingActionId = remarketingActionName.remarketingActionId;
+      this.customerId = remarketingActionName.customerId;
+      this.remarketingActionId = remarketingActionName.remarketingActionId;
     }
 
     public RemarketingActionName build() {

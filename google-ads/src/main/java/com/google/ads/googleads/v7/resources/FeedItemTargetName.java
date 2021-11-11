@@ -294,11 +294,11 @@ public class FeedItemTargetName implements ResourceName {
     }
 
     private Builder(FeedItemTargetName feedItemTargetName) {
-      customerId = feedItemTargetName.customerId;
-      feedId = feedItemTargetName.feedId;
-      feedItemId = feedItemTargetName.feedItemId;
-      feedItemTargetType = feedItemTargetName.feedItemTargetType;
-      feedItemTargetId = feedItemTargetName.feedItemTargetId;
+      this.customerId = feedItemTargetName.customerId;
+      this.feedId = feedItemTargetName.feedId;
+      this.feedItemId = feedItemTargetName.feedItemId;
+      this.feedItemTargetType = feedItemTargetName.feedItemTargetType;
+      this.feedItemTargetId = feedItemTargetName.feedItemTargetId;
     }
 
     public FeedItemTargetName build() {

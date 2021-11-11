@@ -18,6 +18,8 @@ package com.google.ads.googleads.v7.services;
 
 import com.google.ads.googleads.v7.resources.AdGroupLabel;
 import com.google.ads.googleads.v7.resources.AdGroupLabelName;
+import com.google.ads.googleads.v7.resources.AdGroupName;
+import com.google.ads.googleads.v7.resources.LabelName;
 import com.google.api.gax.core.NoCredentialsProvider;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.testing.LocalChannelProvider;
@@ -43,10 +45,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class AdGroupLabelServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
   private static MockAdGroupLabelService mockAdGroupLabelService;
-  private AdGroupLabelServiceClient client;
+  private static MockServiceHelper mockServiceHelper;
   private LocalChannelProvider channelProvider;
+  private AdGroupLabelServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -85,6 +87,8 @@ public class AdGroupLabelServiceClientTest {
         AdGroupLabel.newBuilder()
             .setResourceName(
                 AdGroupLabelName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[LABEL_ID]").toString())
+            .setAdGroup(AdGroupName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]").toString())
+            .setLabel(LabelName.of("[CUSTOMER_ID]", "[LABEL_ID]").toString())
             .build();
     mockAdGroupLabelService.addResponse(expectedResponse);
 
@@ -126,6 +130,8 @@ public class AdGroupLabelServiceClientTest {
         AdGroupLabel.newBuilder()
             .setResourceName(
                 AdGroupLabelName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[LABEL_ID]").toString())
+            .setAdGroup(AdGroupName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]").toString())
+            .setLabel(LabelName.of("[CUSTOMER_ID]", "[LABEL_ID]").toString())
             .build();
     mockAdGroupLabelService.addResponse(expectedResponse);
 

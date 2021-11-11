@@ -43,8 +43,8 @@ import org.junit.Test;
 public class GroupPlacementViewServiceClientTest {
   private static MockGroupPlacementViewService mockGroupPlacementViewService;
   private static MockServiceHelper mockServiceHelper;
-  private GroupPlacementViewServiceClient client;
   private LocalChannelProvider channelProvider;
+  private GroupPlacementViewServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -85,6 +85,9 @@ public class GroupPlacementViewServiceClientTest {
             .setResourceName(
                 GroupPlacementViewName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[BASE64_PLACEMENT]")
                     .toString())
+            .setPlacement("placement1792938725")
+            .setDisplayName("displayName1714148973")
+            .setTargetUrl("targetUrl-815585762")
             .build();
     mockGroupPlacementViewService.addResponse(expectedResponse);
 
@@ -128,6 +131,9 @@ public class GroupPlacementViewServiceClientTest {
             .setResourceName(
                 GroupPlacementViewName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[BASE64_PLACEMENT]")
                     .toString())
+            .setPlacement("placement1792938725")
+            .setDisplayName("displayName1714148973")
+            .setTargetUrl("targetUrl-815585762")
             .build();
     mockGroupPlacementViewService.addResponse(expectedResponse);
 

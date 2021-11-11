@@ -18,6 +18,7 @@ package com.google.ads.googleads.v7.services;
 
 import com.google.ads.googleads.v7.resources.KeywordPlanAdGroup;
 import com.google.ads.googleads.v7.resources.KeywordPlanAdGroupName;
+import com.google.ads.googleads.v7.resources.KeywordPlanCampaignName;
 import com.google.api.gax.core.NoCredentialsProvider;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.testing.LocalChannelProvider;
@@ -43,10 +44,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class KeywordPlanAdGroupServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
-  private KeywordPlanAdGroupServiceClient client;
   private static MockKeywordPlanAdGroupService mockKeywordPlanAdGroupService;
+  private static MockServiceHelper mockServiceHelper;
   private LocalChannelProvider channelProvider;
+  private KeywordPlanAdGroupServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -86,6 +87,13 @@ public class KeywordPlanAdGroupServiceClientTest {
         KeywordPlanAdGroup.newBuilder()
             .setResourceName(
                 KeywordPlanAdGroupName.of("[CUSTOMER_ID]", "[KEYWORD_PLAN_AD_GROUP_ID]").toString())
+            .setKeywordPlanCampaign(
+                KeywordPlanCampaignName.of("[CUSTOMER_ID]", "[KEYWORD_PLAN_CAMPAIGN_ID]")
+                    .toString())
+            .setId(3355)
+            .setName(
+                KeywordPlanAdGroupName.of("[CUSTOMER_ID]", "[KEYWORD_PLAN_AD_GROUP_ID]").toString())
+            .setCpcBidMicros(909381114)
             .build();
     mockKeywordPlanAdGroupService.addResponse(expectedResponse);
 
@@ -128,6 +136,13 @@ public class KeywordPlanAdGroupServiceClientTest {
         KeywordPlanAdGroup.newBuilder()
             .setResourceName(
                 KeywordPlanAdGroupName.of("[CUSTOMER_ID]", "[KEYWORD_PLAN_AD_GROUP_ID]").toString())
+            .setKeywordPlanCampaign(
+                KeywordPlanCampaignName.of("[CUSTOMER_ID]", "[KEYWORD_PLAN_CAMPAIGN_ID]")
+                    .toString())
+            .setId(3355)
+            .setName(
+                KeywordPlanAdGroupName.of("[CUSTOMER_ID]", "[KEYWORD_PLAN_AD_GROUP_ID]").toString())
+            .setCpcBidMicros(909381114)
             .build();
     mockKeywordPlanAdGroupService.addResponse(expectedResponse);
 

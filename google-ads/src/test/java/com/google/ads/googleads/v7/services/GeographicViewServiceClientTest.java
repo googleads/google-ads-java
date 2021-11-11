@@ -41,10 +41,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class GeographicViewServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
   private static MockGeographicViewService mockGeographicViewService;
-  private GeographicViewServiceClient client;
+  private static MockServiceHelper mockServiceHelper;
   private LocalChannelProvider channelProvider;
+  private GeographicViewServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -85,6 +85,7 @@ public class GeographicViewServiceClientTest {
             .setResourceName(
                 GeographicViewName.of("[CUSTOMER_ID]", "[COUNTRY_CRITERION_ID]", "[LOCATION_TYPE]")
                     .toString())
+            .setCountryCriterionId(-1427674750)
             .build();
     mockGeographicViewService.addResponse(expectedResponse);
 
@@ -127,6 +128,7 @@ public class GeographicViewServiceClientTest {
             .setResourceName(
                 GeographicViewName.of("[CUSTOMER_ID]", "[COUNTRY_CRITERION_ID]", "[LOCATION_TYPE]")
                     .toString())
+            .setCountryCriterionId(-1427674750)
             .build();
     mockGeographicViewService.addResponse(expectedResponse);
 

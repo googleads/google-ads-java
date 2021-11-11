@@ -107,7 +107,7 @@ public interface ResponsiveSearchAdInfoOrBuilder extends
 
   /**
    * <pre>
-   * First part of text that may appear appended to the url displayed in the ad.
+   * First part of text that can be appended to the URL in the ad.
    * </pre>
    *
    * <code>string path1 = 5;</code>
@@ -116,7 +116,7 @@ public interface ResponsiveSearchAdInfoOrBuilder extends
   boolean hasPath1();
   /**
    * <pre>
-   * First part of text that may appear appended to the url displayed in the ad.
+   * First part of text that can be appended to the URL in the ad.
    * </pre>
    *
    * <code>string path1 = 5;</code>
@@ -125,7 +125,7 @@ public interface ResponsiveSearchAdInfoOrBuilder extends
   java.lang.String getPath1();
   /**
    * <pre>
-   * First part of text that may appear appended to the url displayed in the ad.
+   * First part of text that can be appended to the URL in the ad.
    * </pre>
    *
    * <code>string path1 = 5;</code>
@@ -136,8 +136,8 @@ public interface ResponsiveSearchAdInfoOrBuilder extends
 
   /**
    * <pre>
-   * Second part of text that may appear appended to the url displayed in the
-   * ad. This field can only be set when path1 is also set.
+   * Second part of text that can be appended to the URL in the ad. This field
+   * can only be set when `path1` is also set.
    * </pre>
    *
    * <code>string path2 = 6;</code>
@@ -146,8 +146,8 @@ public interface ResponsiveSearchAdInfoOrBuilder extends
   boolean hasPath2();
   /**
    * <pre>
-   * Second part of text that may appear appended to the url displayed in the
-   * ad. This field can only be set when path1 is also set.
+   * Second part of text that can be appended to the URL in the ad. This field
+   * can only be set when `path1` is also set.
    * </pre>
    *
    * <code>string path2 = 6;</code>
@@ -156,8 +156,8 @@ public interface ResponsiveSearchAdInfoOrBuilder extends
   java.lang.String getPath2();
   /**
    * <pre>
-   * Second part of text that may appear appended to the url displayed in the
-   * ad. This field can only be set when path1 is also set.
+   * Second part of text that can be appended to the URL in the ad. This field
+   * can only be set when `path1` is also set.
    * </pre>
    *
    * <code>string path2 = 6;</code>
