@@ -1,3 +1,8 @@
+16.0.0 - 2021-11-11
+-------------------
+- Added support and examples for Google Ads API v9.0.
+- Various improvements to Gradle build config.
+
 15.0.0 - 2021-08-12
 -------------------
 - Added and updated examples for Google Ads API v8.1.
