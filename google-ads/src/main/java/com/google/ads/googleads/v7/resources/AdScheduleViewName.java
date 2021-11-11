@@ -216,9 +216,9 @@ public class AdScheduleViewName implements ResourceName {
     }
 
     private Builder(AdScheduleViewName adScheduleViewName) {
-      customerId = adScheduleViewName.customerId;
-      campaignId = adScheduleViewName.campaignId;
-      criterionId = adScheduleViewName.criterionId;
+      this.customerId = adScheduleViewName.customerId;
+      this.campaignId = adScheduleViewName.campaignId;
+      this.criterionId = adScheduleViewName.criterionId;
     }
 
     public AdScheduleViewName build() {

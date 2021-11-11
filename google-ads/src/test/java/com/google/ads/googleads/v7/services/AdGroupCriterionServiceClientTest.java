@@ -19,6 +19,7 @@ package com.google.ads.googleads.v7.services;
 import com.google.ads.googleads.v7.common.CustomParameter;
 import com.google.ads.googleads.v7.resources.AdGroupCriterion;
 import com.google.ads.googleads.v7.resources.AdGroupCriterionName;
+import com.google.ads.googleads.v7.resources.AdGroupName;
 import com.google.api.gax.core.NoCredentialsProvider;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.testing.LocalChannelProvider;
@@ -44,10 +45,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class AdGroupCriterionServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
   private static MockAdGroupCriterionService mockAdGroupCriterionService;
-  private AdGroupCriterionServiceClient client;
+  private static MockServiceHelper mockServiceHelper;
   private LocalChannelProvider channelProvider;
+  private AdGroupCriterionServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -88,13 +89,27 @@ public class AdGroupCriterionServiceClientTest {
             .setResourceName(
                 AdGroupCriterionName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]")
                     .toString())
+            .setCriterionId(-326773895)
             .setDisplayName("displayName1714148973")
             .setQualityInfo(AdGroupCriterion.QualityInfo.newBuilder().build())
+            .setAdGroup(AdGroupName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]").toString())
+            .setNegative(true)
             .addAllDisapprovalReasons(new ArrayList<String>())
             .addAllLabels(new ArrayList<String>())
+            .setBidModifier(1362363353)
+            .setCpcBidMicros(909381114)
+            .setCpmBidMicros(-2094758992)
+            .setCpvBidMicros(-933014521)
+            .setPercentCpcBidMicros(2098488628)
+            .setEffectiveCpcBidMicros(-1373966446)
+            .setEffectiveCpmBidMicros(-83139256)
+            .setEffectiveCpvBidMicros(1078605215)
+            .setEffectivePercentCpcBidMicros(-584306996)
             .setPositionEstimates(AdGroupCriterion.PositionEstimates.newBuilder().build())
             .addAllFinalUrls(new ArrayList<String>())
             .addAllFinalMobileUrls(new ArrayList<String>())
+            .setFinalUrlSuffix("finalUrlSuffix-59294518")
+            .setTrackingUrlTemplate("trackingUrlTemplate-939780142")
             .addAllUrlCustomParameters(new ArrayList<CustomParameter>())
             .build();
     mockAdGroupCriterionService.addResponse(expectedResponse);
@@ -138,13 +153,27 @@ public class AdGroupCriterionServiceClientTest {
             .setResourceName(
                 AdGroupCriterionName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]")
                     .toString())
+            .setCriterionId(-326773895)
             .setDisplayName("displayName1714148973")
             .setQualityInfo(AdGroupCriterion.QualityInfo.newBuilder().build())
+            .setAdGroup(AdGroupName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]").toString())
+            .setNegative(true)
             .addAllDisapprovalReasons(new ArrayList<String>())
             .addAllLabels(new ArrayList<String>())
+            .setBidModifier(1362363353)
+            .setCpcBidMicros(909381114)
+            .setCpmBidMicros(-2094758992)
+            .setCpvBidMicros(-933014521)
+            .setPercentCpcBidMicros(2098488628)
+            .setEffectiveCpcBidMicros(-1373966446)
+            .setEffectiveCpmBidMicros(-83139256)
+            .setEffectiveCpvBidMicros(1078605215)
+            .setEffectivePercentCpcBidMicros(-584306996)
             .setPositionEstimates(AdGroupCriterion.PositionEstimates.newBuilder().build())
             .addAllFinalUrls(new ArrayList<String>())
             .addAllFinalMobileUrls(new ArrayList<String>())
+            .setFinalUrlSuffix("finalUrlSuffix-59294518")
+            .setTrackingUrlTemplate("trackingUrlTemplate-939780142")
             .addAllUrlCustomParameters(new ArrayList<CustomParameter>())
             .build();
     mockAdGroupCriterionService.addResponse(expectedResponse);

@@ -257,10 +257,10 @@ public class PaidOrganicSearchTermViewName implements ResourceName {
     }
 
     private Builder(PaidOrganicSearchTermViewName paidOrganicSearchTermViewName) {
-      customerId = paidOrganicSearchTermViewName.customerId;
-      campaignId = paidOrganicSearchTermViewName.campaignId;
-      adGroupId = paidOrganicSearchTermViewName.adGroupId;
-      base64SearchTerm = paidOrganicSearchTermViewName.base64SearchTerm;
+      this.customerId = paidOrganicSearchTermViewName.customerId;
+      this.campaignId = paidOrganicSearchTermViewName.campaignId;
+      this.adGroupId = paidOrganicSearchTermViewName.adGroupId;
+      this.base64SearchTerm = paidOrganicSearchTermViewName.base64SearchTerm;
     }
 
     public PaidOrganicSearchTermViewName build() {

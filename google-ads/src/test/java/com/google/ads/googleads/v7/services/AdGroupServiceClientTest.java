@@ -22,6 +22,7 @@ import com.google.ads.googleads.v7.common.TargetingSetting;
 import com.google.ads.googleads.v7.enums.AssetFieldTypeEnum;
 import com.google.ads.googleads.v7.resources.AdGroup;
 import com.google.ads.googleads.v7.resources.AdGroupName;
+import com.google.ads.googleads.v7.resources.CampaignName;
 import com.google.api.gax.core.NoCredentialsProvider;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.testing.LocalChannelProvider;
@@ -47,10 +48,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class AdGroupServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
-  private AdGroupServiceClient client;
-  private LocalChannelProvider channelProvider;
   private static MockAdGroupService mockAdGroupService;
+  private static MockServiceHelper mockServiceHelper;
+  private LocalChannelProvider channelProvider;
+  private AdGroupServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -88,9 +89,24 @@ public class AdGroupServiceClientTest {
     AdGroup expectedResponse =
         AdGroup.newBuilder()
             .setResourceName(AdGroupName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]").toString())
+            .setId(3355)
+            .setName(AdGroupName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]").toString())
+            .setBaseAdGroup(AdGroupName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]").toString())
+            .setTrackingUrlTemplate("trackingUrlTemplate-939780142")
             .addAllUrlCustomParameters(new ArrayList<CustomParameter>())
+            .setCampaign(CampaignName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]").toString())
+            .setCpcBidMicros(909381114)
+            .setCpmBidMicros(-2094758992)
+            .setTargetCpaMicros(-733096280)
+            .setCpvBidMicros(-933014521)
+            .setTargetCpmMicros(-1294208740)
+            .setTargetRoas(-2084628195)
+            .setPercentCpcBidMicros(2098488628)
             .setExplorerAutoOptimizerSetting(ExplorerAutoOptimizerSetting.newBuilder().build())
+            .setFinalUrlSuffix("finalUrlSuffix-59294518")
             .setTargetingSetting(TargetingSetting.newBuilder().build())
+            .setEffectiveTargetCpaMicros(-248222192)
+            .setEffectiveTargetRoas(-1717215611)
             .addAllLabels(new ArrayList<String>())
             .addAllExcludedParentAssetFieldTypes(new ArrayList<AssetFieldTypeEnum.AssetFieldType>())
             .build();
@@ -131,9 +147,24 @@ public class AdGroupServiceClientTest {
     AdGroup expectedResponse =
         AdGroup.newBuilder()
             .setResourceName(AdGroupName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]").toString())
+            .setId(3355)
+            .setName(AdGroupName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]").toString())
+            .setBaseAdGroup(AdGroupName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]").toString())
+            .setTrackingUrlTemplate("trackingUrlTemplate-939780142")
             .addAllUrlCustomParameters(new ArrayList<CustomParameter>())
+            .setCampaign(CampaignName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]").toString())
+            .setCpcBidMicros(909381114)
+            .setCpmBidMicros(-2094758992)
+            .setTargetCpaMicros(-733096280)
+            .setCpvBidMicros(-933014521)
+            .setTargetCpmMicros(-1294208740)
+            .setTargetRoas(-2084628195)
+            .setPercentCpcBidMicros(2098488628)
             .setExplorerAutoOptimizerSetting(ExplorerAutoOptimizerSetting.newBuilder().build())
+            .setFinalUrlSuffix("finalUrlSuffix-59294518")
             .setTargetingSetting(TargetingSetting.newBuilder().build())
+            .setEffectiveTargetCpaMicros(-248222192)
+            .setEffectiveTargetRoas(-1717215611)
             .addAllLabels(new ArrayList<String>())
             .addAllExcludedParentAssetFieldTypes(new ArrayList<AssetFieldTypeEnum.AssetFieldType>())
             .build();

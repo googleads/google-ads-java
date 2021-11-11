@@ -43,8 +43,8 @@ import org.junit.Test;
 public class LocationViewServiceClientTest {
   private static MockLocationViewService mockLocationViewService;
   private static MockServiceHelper mockServiceHelper;
-  private LocationViewServiceClient client;
   private LocalChannelProvider channelProvider;
+  private LocationViewServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {

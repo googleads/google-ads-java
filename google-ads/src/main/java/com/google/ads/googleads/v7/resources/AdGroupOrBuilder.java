@@ -339,7 +339,11 @@ public interface AdGroupOrBuilder extends
 
   /**
    * <pre>
-   * The target CPA (cost-per-acquisition).
+   * The target CPA (cost-per-acquisition). If the ad group's campaign
+   * bidding strategy is TargetCpa or MaximizeConversions (with its target_cpa
+   * field set), then this field overrides the target CPA specified in the
+   * campaign's bidding strategy.
+   * Otherwise, this value is ignored.
    * </pre>
    *
    * <code>int64 target_cpa_micros = 41;</code>
@@ -348,7 +352,11 @@ public interface AdGroupOrBuilder extends
   boolean hasTargetCpaMicros();
   /**
    * <pre>
-   * The target CPA (cost-per-acquisition).
+   * The target CPA (cost-per-acquisition). If the ad group's campaign
+   * bidding strategy is TargetCpa or MaximizeConversions (with its target_cpa
+   * field set), then this field overrides the target CPA specified in the
+   * campaign's bidding strategy.
+   * Otherwise, this value is ignored.
    * </pre>
    *
    * <code>int64 target_cpa_micros = 41;</code>
@@ -399,8 +407,9 @@ public interface AdGroupOrBuilder extends
   /**
    * <pre>
    * The target ROAS (return-on-ad-spend) override. If the ad group's campaign
-   * bidding strategy is a standard Target ROAS strategy, then this field
-   * overrides the target ROAS specified in the campaign's bidding strategy.
+   * bidding strategy is TargetRoas or MaximizeConversionValue (with its
+   * target_roas field set), then this field overrides the target ROAS specified
+   * in the campaign's bidding strategy.
    * Otherwise, this value is ignored.
    * </pre>
    *
@@ -411,8 +420,9 @@ public interface AdGroupOrBuilder extends
   /**
    * <pre>
    * The target ROAS (return-on-ad-spend) override. If the ad group's campaign
-   * bidding strategy is a standard Target ROAS strategy, then this field
-   * overrides the target ROAS specified in the campaign's bidding strategy.
+   * bidding strategy is TargetRoas or MaximizeConversionValue (with its
+   * target_roas field set), then this field overrides the target ROAS specified
+   * in the campaign's bidding strategy.
    * Otherwise, this value is ignored.
    * </pre>
    *

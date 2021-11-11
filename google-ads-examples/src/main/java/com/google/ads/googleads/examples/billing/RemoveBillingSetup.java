@@ -17,12 +17,12 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v8.errors.GoogleAdsError;
-import com.google.ads.googleads.v8.errors.GoogleAdsException;
-import com.google.ads.googleads.v8.services.BillingSetupOperation;
-import com.google.ads.googleads.v8.services.BillingSetupServiceClient;
-import com.google.ads.googleads.v8.services.MutateBillingSetupResponse;
-import com.google.ads.googleads.v8.utils.ResourceNames;
+import com.google.ads.googleads.v9.errors.GoogleAdsError;
+import com.google.ads.googleads.v9.errors.GoogleAdsException;
+import com.google.ads.googleads.v9.services.BillingSetupOperation;
+import com.google.ads.googleads.v9.services.BillingSetupServiceClient;
+import com.google.ads.googleads.v9.services.MutateBillingSetupResponse;
+import com.google.ads.googleads.v9.utils.ResourceNames;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 

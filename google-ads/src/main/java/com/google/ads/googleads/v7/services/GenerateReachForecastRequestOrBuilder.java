@@ -165,6 +165,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * exposed to the ad) for the reported reach metrics [1-10].
    * This won't affect the targeting, but just the reporting.
    * If not specified, a default of 1 is applied.
+   * This field cannot be combined with the effective_frequency_limit field.
    * </pre>
    *
    * <code>int32 min_effective_frequency = 11;</code>
@@ -177,6 +178,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * exposed to the ad) for the reported reach metrics [1-10].
    * This won't affect the targeting, but just the reporting.
    * If not specified, a default of 1 is applied.
+   * This field cannot be combined with the effective_frequency_limit field.
    * </pre>
    *
    * <code>int32 min_effective_frequency = 11;</code>
@@ -190,8 +192,6 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * This is planned targeting: execution details might vary based on the
    * advertising product, please consult an implementation specialist.
    * See specific metrics for details on how targeting affects them.
-   * In some cases, targeting may be overridden using the
-   * PlannedProduct.advanced_product_targeting field.
    * </pre>
    *
    * <code>.google.ads.googleads.v7.services.Targeting targeting = 6;</code>
@@ -204,8 +204,6 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * This is planned targeting: execution details might vary based on the
    * advertising product, please consult an implementation specialist.
    * See specific metrics for details on how targeting affects them.
-   * In some cases, targeting may be overridden using the
-   * PlannedProduct.advanced_product_targeting field.
    * </pre>
    *
    * <code>.google.ads.googleads.v7.services.Targeting targeting = 6;</code>
@@ -218,8 +216,6 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * This is planned targeting: execution details might vary based on the
    * advertising product, please consult an implementation specialist.
    * See specific metrics for details on how targeting affects them.
-   * In some cases, targeting may be overridden using the
-   * PlannedProduct.advanced_product_targeting field.
    * </pre>
    *
    * <code>.google.ads.googleads.v7.services.Targeting targeting = 6;</code>

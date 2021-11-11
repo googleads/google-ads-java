@@ -182,8 +182,8 @@ public class CustomerUserAccessName implements ResourceName {
     }
 
     private Builder(CustomerUserAccessName customerUserAccessName) {
-      customerId = customerUserAccessName.customerId;
-      userId = customerUserAccessName.userId;
+      this.customerId = customerUserAccessName.customerId;
+      this.userId = customerUserAccessName.userId;
     }
 
     public CustomerUserAccessName build() {

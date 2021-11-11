@@ -31,21 +31,22 @@ public final class KeywordPlanAdGroupKeywordErrorProto {
       "\nHgoogle/ads/googleads/v7/errors/keyword" +
       "_plan_ad_group_keyword_error.proto\022\036goog" +
       "le.ads.googleads.v7.errors\032\034google/api/a" +
-      "nnotations.proto\"\262\002\n\"KeywordPlanAdGroupK" +
-      "eywordErrorEnum\"\213\002\n\036KeywordPlanAdGroupKe" +
+      "nnotations.proto\"\324\002\n\"KeywordPlanAdGroupK" +
+      "eywordErrorEnum\"\255\002\n\036KeywordPlanAdGroupKe" +
       "ywordError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001" +
       "\022\036\n\032INVALID_KEYWORD_MATCH_TYPE\020\002\022\025\n\021DUPL" +
       "ICATE_KEYWORD\020\003\022\031\n\025KEYWORD_TEXT_TOO_LONG" +
       "\020\004\022\035\n\031KEYWORD_HAS_INVALID_CHARS\020\005\022\036\n\032KEY" +
       "WORD_HAS_TOO_MANY_WORDS\020\006\022\030\n\024INVALID_KEY" +
       "WORD_TEXT\020\007\022 \n\034NEGATIVE_KEYWORD_HAS_CPC_" +
-      "BID\020\010B\376\001\n\"com.google.ads.googleads.v7.er" +
-      "rorsB#KeywordPlanAdGroupKeywordErrorProt" +
-      "oP\001ZDgoogle.golang.org/genproto/googleap" +
-      "is/ads/googleads/v7/errors;errors\242\002\003GAA\252" +
-      "\002\036Google.Ads.GoogleAds.V7.Errors\312\002\036Googl" +
-      "e\\Ads\\GoogleAds\\V7\\Errors\352\002\"Google::Ads:" +
-      ":GoogleAds::V7::Errorsb\006proto3"
+      "BID\020\010\022 \n\034NEW_BMM_KEYWORDS_NOT_ALLOWED\020\tB" +
+      "\376\001\n\"com.google.ads.googleads.v7.errorsB#" +
+      "KeywordPlanAdGroupKeywordErrorProtoP\001ZDg" +
+      "oogle.golang.org/genproto/googleapis/ads" +
+      "/googleads/v7/errors;errors\242\002\003GAA\252\002\036Goog" +
+      "le.Ads.GoogleAds.V7.Errors\312\002\036Google\\Ads\\" +
+      "GoogleAds\\V7\\Errors\352\002\"Google::Ads::Googl" +
+      "eAds::V7::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

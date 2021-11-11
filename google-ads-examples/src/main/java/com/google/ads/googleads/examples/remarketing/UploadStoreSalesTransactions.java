@@ -18,27 +18,27 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v8.common.OfflineUserAddressInfo;
-import com.google.ads.googleads.v8.common.StoreSalesMetadata;
-import com.google.ads.googleads.v8.common.StoreSalesThirdPartyMetadata;
-import com.google.ads.googleads.v8.common.TransactionAttribute;
-import com.google.ads.googleads.v8.common.UserData;
-import com.google.ads.googleads.v8.common.UserIdentifier;
-import com.google.ads.googleads.v8.enums.OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus;
-import com.google.ads.googleads.v8.enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType;
-import com.google.ads.googleads.v8.errors.GoogleAdsError;
-import com.google.ads.googleads.v8.errors.GoogleAdsException;
-import com.google.ads.googleads.v8.errors.GoogleAdsFailure;
-import com.google.ads.googleads.v8.resources.OfflineUserDataJob;
-import com.google.ads.googleads.v8.services.AddOfflineUserDataJobOperationsRequest;
-import com.google.ads.googleads.v8.services.AddOfflineUserDataJobOperationsResponse;
-import com.google.ads.googleads.v8.services.CreateOfflineUserDataJobResponse;
-import com.google.ads.googleads.v8.services.GoogleAdsRow;
-import com.google.ads.googleads.v8.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v8.services.OfflineUserDataJobOperation;
-import com.google.ads.googleads.v8.services.OfflineUserDataJobServiceClient;
-import com.google.ads.googleads.v8.utils.ErrorUtils;
-import com.google.ads.googleads.v8.utils.ResourceNames;
+import com.google.ads.googleads.v9.common.OfflineUserAddressInfo;
+import com.google.ads.googleads.v9.common.StoreSalesMetadata;
+import com.google.ads.googleads.v9.common.StoreSalesThirdPartyMetadata;
+import com.google.ads.googleads.v9.common.TransactionAttribute;
+import com.google.ads.googleads.v9.common.UserData;
+import com.google.ads.googleads.v9.common.UserIdentifier;
+import com.google.ads.googleads.v9.enums.OfflineUserDataJobStatusEnum.OfflineUserDataJobStatus;
+import com.google.ads.googleads.v9.enums.OfflineUserDataJobTypeEnum.OfflineUserDataJobType;
+import com.google.ads.googleads.v9.errors.GoogleAdsError;
+import com.google.ads.googleads.v9.errors.GoogleAdsException;
+import com.google.ads.googleads.v9.errors.GoogleAdsFailure;
+import com.google.ads.googleads.v9.resources.OfflineUserDataJob;
+import com.google.ads.googleads.v9.services.AddOfflineUserDataJobOperationsRequest;
+import com.google.ads.googleads.v9.services.AddOfflineUserDataJobOperationsResponse;
+import com.google.ads.googleads.v9.services.CreateOfflineUserDataJobResponse;
+import com.google.ads.googleads.v9.services.GoogleAdsRow;
+import com.google.ads.googleads.v9.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v9.services.OfflineUserDataJobOperation;
+import com.google.ads.googleads.v9.services.OfflineUserDataJobServiceClient;
+import com.google.ads.googleads.v9.utils.ErrorUtils;
+import com.google.ads.googleads.v9.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -458,14 +458,18 @@ public class UploadStoreSalesTransactions {
             languageCode,
             quantity);
 
+    // [START enable_warnings_1]
     // Issues a request to add the operations to the offline user data job.
     AddOfflineUserDataJobOperationsResponse response =
         offlineUserDataJobServiceClient.addOfflineUserDataJobOperations(
             AddOfflineUserDataJobOperationsRequest.newBuilder()
                 .setResourceName(offlineUserDataJobResourceName)
                 .setEnablePartialFailure(true)
+                // Enables warnings (optional).
+                .setEnableWarnings(true)
                 .addAllOperations(userDataJobOperations)
                 .build());
+    // [END enable_warnings_1]
 
     // Prints the status message if any partial failure error is returned.
     // NOTE: The details of each partial failure error are not printed here, you can refer to
@@ -483,6 +487,17 @@ public class UploadStoreSalesTransactions {
           ErrorUtils.getInstance().getFailedOperationIndices(googleAdsFailure).size(),
           userDataJobOperations.size(),
           response.getPartialFailureError().getMessage());
+
+      // Checks if any warnings occurred and displays details.
+      if (response.hasWarning()) {
+        // Converts the Any in response back to a GoogleAdsFailure object.
+        GoogleAdsFailure warningsFailure = ErrorUtils.getInstance()
+            .getGoogleAdsFailure(response.getWarning());
+        // Prints some information about the warnings encountered.
+        System.out.println(
+            System.out.printf(
+                "Encountered %d warning(s).%n", warningsFailure.getErrorsCount()));
+      }
     } else {
       System.out.printf(
           "Successfully added %d operations to the offline user data job.%n",

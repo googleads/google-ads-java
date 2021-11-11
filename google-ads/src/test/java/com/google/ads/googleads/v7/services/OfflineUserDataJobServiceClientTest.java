@@ -50,8 +50,8 @@ import org.junit.Test;
 public class OfflineUserDataJobServiceClientTest {
   private static MockOfflineUserDataJobService mockOfflineUserDataJobService;
   private static MockServiceHelper mockServiceHelper;
-  private OfflineUserDataJobServiceClient client;
   private LocalChannelProvider channelProvider;
+  private OfflineUserDataJobServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -135,6 +135,8 @@ public class OfflineUserDataJobServiceClientTest {
             .setResourceName(
                 OfflineUserDataJobName.of("[CUSTOMER_ID]", "[OFFLINE_USER_DATA_UPDATE_ID]")
                     .toString())
+            .setId(3355)
+            .setExternalId(-1153075697)
             .build();
     mockOfflineUserDataJobService.addResponse(expectedResponse);
 
@@ -178,6 +180,8 @@ public class OfflineUserDataJobServiceClientTest {
             .setResourceName(
                 OfflineUserDataJobName.of("[CUSTOMER_ID]", "[OFFLINE_USER_DATA_UPDATE_ID]")
                     .toString())
+            .setId(3355)
+            .setExternalId(-1153075697)
             .build();
     mockOfflineUserDataJobService.addResponse(expectedResponse);
 

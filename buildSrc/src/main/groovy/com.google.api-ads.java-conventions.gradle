@@ -43,6 +43,14 @@ java {
   withJavadocJar()
 }
 
+jar {
+  manifest {
+    attributes(
+        'Implementation-Title': 'Google Ads API - client library for Java',
+        'Implementation-Version': archiveVersion)
+  }
+}
+
 javadoc {
   options.addStringOption('Xdoclint:none', '-quiet')
 }
@@ -139,11 +147,13 @@ tasks.withType(JavaCompile) {
 }
 
 dependencies {
+  implementation platform('com.google.cloud:google-cloud-shared-dependencies:2.4.0')
   implementation 'com.google.guava:guava:30.0-android'
   implementation 'com.google.auto.service:auto-service:1.0-rc2'
-  implementation 'com.google.api:gax:1.65.1'
-  implementation 'com.google.api:gax-grpc:1.65.1'
-  implementation 'com.google.protobuf:protobuf-java:3.14.0'
+  implementation 'com.google.api:gax'
+  implementation 'com.google.api:gax-grpc'
+  implementation 'com.google.protobuf:protobuf-java'
+  implementation 'io.grpc:grpc-all'
   annotationProcessor 'com.google.auto.service:auto-service:1.0-rc2'
   testImplementation 'junit:junit:4.13.1'
 }

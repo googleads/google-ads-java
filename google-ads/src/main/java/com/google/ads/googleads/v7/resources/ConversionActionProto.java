@@ -30,15 +30,15 @@ public final class ConversionActionProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v7_resources_ConversionAction_ValueSettings_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_google_ads_googleads_v7_resources_ConversionAction_FirebaseSettings_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_google_ads_googleads_v7_resources_ConversionAction_FirebaseSettings_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_google_ads_googleads_v7_resources_ConversionAction_ThirdPartyAppAnalyticsSettings_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v7_resources_ConversionAction_ThirdPartyAppAnalyticsSettings_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v7_resources_ConversionAction_FirebaseSettings_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v7_resources_ConversionAction_FirebaseSettings_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -111,12 +111,12 @@ public final class ConversionActionProto {
       "ult_currency_code\030\005 \001(\tH\001\210\001\001\022%\n\030always_u" +
       "se_default_value\030\006 \001(\010H\002\210\001\001B\020\n\016_default_" +
       "valueB\030\n\026_default_currency_codeB\033\n\031_alwa" +
-      "ys_use_default_value\032l\n\020FirebaseSettings" +
-      "\022\034\n\nevent_name\030\003 \001(\tB\003\340A\003H\000\210\001\001\022\034\n\nprojec" +
-      "t_id\030\004 \001(\tB\003\340A\003H\001\210\001\001B\r\n\013_event_nameB\r\n\013_" +
-      "project_id\032i\n\036ThirdPartyAppAnalyticsSett" +
-      "ings\022\034\n\nevent_name\030\002 \001(\tB\003\340A\003H\000\210\001\001\022\032\n\rpr" +
-      "ovider_name\030\003 \001(\tB\003\340A\003B\r\n\013_event_name:p\352" +
+      "ys_use_default_value\032i\n\036ThirdPartyAppAna" +
+      "lyticsSettings\022\034\n\nevent_name\030\002 \001(\tB\003\340A\003H" +
+      "\000\210\001\001\022\032\n\rprovider_name\030\003 \001(\tB\003\340A\003B\r\n\013_eve" +
+      "nt_name\032l\n\020FirebaseSettings\022\034\n\nevent_nam" +
+      "e\030\003 \001(\tB\003\340A\003H\000\210\001\001\022\034\n\nproject_id\030\004 \001(\tB\003\340" +
+      "A\003H\001\210\001\001B\r\n\013_event_nameB\r\n\013_project_id:p\352" +
       "Am\n)googleads.googleapis.com/ConversionA" +
       "ction\022@customers/{customer_id}/conversio" +
       "nActions/{conversion_action_id}B\005\n\003_idB\007" +
@@ -166,18 +166,18 @@ public final class ConversionActionProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v7_resources_ConversionAction_ValueSettings_descriptor,
         new java.lang.String[] { "DefaultValue", "DefaultCurrencyCode", "AlwaysUseDefaultValue", "DefaultValue", "DefaultCurrencyCode", "AlwaysUseDefaultValue", });
-    internal_static_google_ads_googleads_v7_resources_ConversionAction_FirebaseSettings_descriptor =
-      internal_static_google_ads_googleads_v7_resources_ConversionAction_descriptor.getNestedTypes().get(2);
-    internal_static_google_ads_googleads_v7_resources_ConversionAction_FirebaseSettings_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_google_ads_googleads_v7_resources_ConversionAction_FirebaseSettings_descriptor,
-        new java.lang.String[] { "EventName", "ProjectId", "EventName", "ProjectId", });
     internal_static_google_ads_googleads_v7_resources_ConversionAction_ThirdPartyAppAnalyticsSettings_descriptor =
-      internal_static_google_ads_googleads_v7_resources_ConversionAction_descriptor.getNestedTypes().get(3);
+      internal_static_google_ads_googleads_v7_resources_ConversionAction_descriptor.getNestedTypes().get(2);
     internal_static_google_ads_googleads_v7_resources_ConversionAction_ThirdPartyAppAnalyticsSettings_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v7_resources_ConversionAction_ThirdPartyAppAnalyticsSettings_descriptor,
         new java.lang.String[] { "EventName", "ProviderName", "EventName", });
+    internal_static_google_ads_googleads_v7_resources_ConversionAction_FirebaseSettings_descriptor =
+      internal_static_google_ads_googleads_v7_resources_ConversionAction_descriptor.getNestedTypes().get(3);
+    internal_static_google_ads_googleads_v7_resources_ConversionAction_FirebaseSettings_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v7_resources_ConversionAction_FirebaseSettings_descriptor,
+        new java.lang.String[] { "EventName", "ProjectId", "EventName", "ProjectId", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);

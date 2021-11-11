@@ -159,7 +159,7 @@ public class MobileAppCategoryConstantName implements ResourceName {
     }
 
     private Builder(MobileAppCategoryConstantName mobileAppCategoryConstantName) {
-      mobileAppCategoryId = mobileAppCategoryConstantName.mobileAppCategoryId;
+      this.mobileAppCategoryId = mobileAppCategoryConstantName.mobileAppCategoryId;
     }
 
     public MobileAppCategoryConstantName build() {

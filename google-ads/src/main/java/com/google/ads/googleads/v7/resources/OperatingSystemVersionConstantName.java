@@ -159,7 +159,7 @@ public class OperatingSystemVersionConstantName implements ResourceName {
     }
 
     private Builder(OperatingSystemVersionConstantName operatingSystemVersionConstantName) {
-      criterionId = operatingSystemVersionConstantName.criterionId;
+      this.criterionId = operatingSystemVersionConstantName.criterionId;
     }
 
     public OperatingSystemVersionConstantName build() {

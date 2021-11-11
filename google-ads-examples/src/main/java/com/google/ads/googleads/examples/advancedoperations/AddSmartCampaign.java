@@ -20,43 +20,45 @@ import com.google.ads.googleads.examples.utils.CodeSampleHelper;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.utils.FieldMasks;
-import com.google.ads.googleads.v8.common.AdScheduleInfo;
-import com.google.ads.googleads.v8.common.AdTextAsset;
-import com.google.ads.googleads.v8.common.KeywordThemeInfo;
-import com.google.ads.googleads.v8.common.LocationInfo;
-import com.google.ads.googleads.v8.common.SmartCampaignAdInfo;
-import com.google.ads.googleads.v8.enums.AdGroupTypeEnum.AdGroupType;
-import com.google.ads.googleads.v8.enums.AdTypeEnum.AdType;
-import com.google.ads.googleads.v8.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType;
-import com.google.ads.googleads.v8.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
-import com.google.ads.googleads.v8.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
-import com.google.ads.googleads.v8.enums.BudgetTypeEnum.BudgetType;
-import com.google.ads.googleads.v8.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v8.enums.CriterionTypeEnum.CriterionType;
-import com.google.ads.googleads.v8.enums.DayOfWeekEnum.DayOfWeek;
-import com.google.ads.googleads.v8.enums.MinuteOfHourEnum.MinuteOfHour;
-import com.google.ads.googleads.v8.errors.GoogleAdsError;
-import com.google.ads.googleads.v8.errors.GoogleAdsException;
-import com.google.ads.googleads.v8.resources.Ad;
-import com.google.ads.googleads.v8.resources.KeywordThemeConstant;
-import com.google.ads.googleads.v8.resources.SmartCampaignSetting;
-import com.google.ads.googleads.v8.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v8.services.KeywordThemeConstantServiceClient;
-import com.google.ads.googleads.v8.services.MutateGoogleAdsResponse;
-import com.google.ads.googleads.v8.services.MutateOperation;
-import com.google.ads.googleads.v8.services.MutateOperationResponse;
-import com.google.ads.googleads.v8.services.SmartCampaignSuggestServiceClient;
-import com.google.ads.googleads.v8.services.SmartCampaignSuggestionInfo;
-import com.google.ads.googleads.v8.services.SmartCampaignSuggestionInfo.BusinessContext;
-import com.google.ads.googleads.v8.services.SmartCampaignSuggestionInfo.LocationList;
-import com.google.ads.googleads.v8.services.SuggestKeywordThemeConstantsRequest;
-import com.google.ads.googleads.v8.services.SuggestKeywordThemeConstantsResponse;
-import com.google.ads.googleads.v8.services.SuggestSmartCampaignAdRequest;
-import com.google.ads.googleads.v8.services.SuggestSmartCampaignAdResponse;
-import com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsRequest;
-import com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse;
-import com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption;
-import com.google.ads.googleads.v8.utils.ResourceNames;
+import com.google.ads.googleads.v9.common.AdScheduleInfo;
+import com.google.ads.googleads.v9.common.AdTextAsset;
+import com.google.ads.googleads.v9.common.KeywordThemeInfo;
+import com.google.ads.googleads.v9.common.LocationInfo;
+import com.google.ads.googleads.v9.common.SmartCampaignAdInfo;
+import com.google.ads.googleads.v9.enums.AdGroupTypeEnum.AdGroupType;
+import com.google.ads.googleads.v9.enums.AdTypeEnum.AdType;
+import com.google.ads.googleads.v9.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType;
+import com.google.ads.googleads.v9.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
+import com.google.ads.googleads.v9.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
+import com.google.ads.googleads.v9.enums.BudgetTypeEnum.BudgetType;
+import com.google.ads.googleads.v9.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v9.enums.CriterionTypeEnum.CriterionType;
+import com.google.ads.googleads.v9.enums.DayOfWeekEnum.DayOfWeek;
+import com.google.ads.googleads.v9.enums.MinuteOfHourEnum.MinuteOfHour;
+import com.google.ads.googleads.v9.errors.GoogleAdsError;
+import com.google.ads.googleads.v9.errors.GoogleAdsException;
+import com.google.ads.googleads.v9.resources.Ad;
+import com.google.ads.googleads.v9.resources.KeywordThemeConstant;
+import com.google.ads.googleads.v9.resources.SmartCampaignSetting;
+import com.google.ads.googleads.v9.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v9.services.KeywordThemeConstantServiceClient;
+import com.google.ads.googleads.v9.services.MutateGoogleAdsResponse;
+import com.google.ads.googleads.v9.services.MutateOperation;
+import com.google.ads.googleads.v9.services.MutateOperationResponse;
+import com.google.ads.googleads.v9.services.SmartCampaignSuggestServiceClient;
+import com.google.ads.googleads.v9.services.SmartCampaignSuggestionInfo;
+import com.google.ads.googleads.v9.services.SmartCampaignSuggestionInfo.BusinessContext;
+import com.google.ads.googleads.v9.services.SmartCampaignSuggestionInfo.LocationList;
+import com.google.ads.googleads.v9.services.SuggestKeywordThemeConstantsRequest;
+import com.google.ads.googleads.v9.services.SuggestKeywordThemeConstantsResponse;
+import com.google.ads.googleads.v9.services.SuggestKeywordThemesRequest;
+import com.google.ads.googleads.v9.services.SuggestKeywordThemesResponse;
+import com.google.ads.googleads.v9.services.SuggestSmartCampaignAdRequest;
+import com.google.ads.googleads.v9.services.SuggestSmartCampaignAdResponse;
+import com.google.ads.googleads.v9.services.SuggestSmartCampaignBudgetOptionsRequest;
+import com.google.ads.googleads.v9.services.SuggestSmartCampaignBudgetOptionsResponse;
+import com.google.ads.googleads.v9.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption;
+import com.google.ads.googleads.v9.utils.ResourceNames;
 import com.google.protobuf.Descriptors.OneofDescriptor;
 import com.google.protobuf.Message;
 import java.io.FileNotFoundException;
@@ -69,8 +71,6 @@ import java.util.stream.Collectors;
 
 /** Demonstrates how to create a Smart Campaign. */
 public class AddSmartCampaign {
-
-  private static final String DEFAULT_KEYWORD = "travel";
   private static final long GEO_TARGET_CONSTANT = 1023191;
   private static final String COUNTRY_CODE = "US";
   private static final String LANGUAGE_CODE = "en";
@@ -79,6 +79,8 @@ public class AddSmartCampaign {
   private static final long BUDGET_TEMPORARY_ID = -1;
   private static final long SMART_CAMPAIGN_TEMPORARY_ID = -2;
   private static final long AD_GROUP_TEMPORARY_ID = -3;
+  private static final int NUM_REQUIRED_HEADLINES = 3;
+  private static final int NUM_REQUIRED_DESCRIPTIONS = 2;
 
   private static class AddSmartCampaignParams extends CodeSampleParams {
 
@@ -91,10 +93,21 @@ public class AddSmartCampaign {
     @Parameter(
         names = ArgumentNames.KEYWORD_TEXT,
         description =
-            "A keyword text used to generate a set of keyword themes, which are used to improve"
-                + " the budget suggestion and performance of the Smart campaign. Default value is"
-                + " 'travel'.")
-    private String keyword = DEFAULT_KEYWORD;
+            "A keyword text used to retrieve keyword theme constant suggestions from the"
+                + " KeywordThemeConstantService. These keyword theme suggestions are generated"
+                + " using auto-completion data for the given text and may help improve the"
+                + " performance of the Smart campaign.")
+    private String keyword;
+
+    @Parameter(
+        names = ArgumentNames.FREEFORM_KEYWORD_TEXT,
+        description =
+            "A keyword text used to create a freeform keyword theme, which is entirely"
+                + " user-specified and not derived from any suggestion service. Using free-form"
+                + " keyword themes is typically not recommended because they are less effective"
+                + " than suggested keyword themes, however they are useful in situations where a"
+                + " very specific term needs to be targeted.")
+    private String freeFormKeywordText;
 
     @Parameter(
         names = ArgumentNames.BUSINESS_LOCATION_ID,
@@ -119,7 +132,11 @@ public class AddSmartCampaign {
       // Either pass the required parameters for this example on the command line, or insert them
       // into the code here. See the parameter class definition above for descriptions.
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
-      params.keyword = "INSERT_KEYWORD HERE";
+
+      // Optionally specifies a seed keyword.
+      params.keyword = null;
+      // Optionally specifies a keyword that should be included as-is.
+      params.freeFormKeywordText = null;
 
       // Must specify one of location ID or business name.
       params.locationId = Long.valueOf("INSERT_BUSINESS_LOCATION_ID_HERE");
@@ -144,6 +161,7 @@ public class AddSmartCampaign {
               googleAdsClient,
               params.customerId,
               params.keyword,
+              params.freeFormKeywordText,
               params.locationId,
               params.businessName);
     } catch (GoogleAdsException gae) {
@@ -166,22 +184,45 @@ public class AddSmartCampaign {
       GoogleAdsClient googleAdsClient,
       long customerId,
       String keyword,
+      String freeFormKeywordText,
       Long locationId,
       String businessName) {
     if (locationId == null && businessName == null) {
       throw new RuntimeException("Must provider either --locationId or --businessName");
     }
+    // [START add_smart_campaign_12]
+    // Gets the SmartCampaignSuggestionInfo object which acts as the basis for many of the
+    // entities necessary to create a Smart campaign. It will be reused a number of times to
+    // retrieve suggestions for keyword themes, budget amount, ad creatives, and campaign criteria.
+    SmartCampaignSuggestionInfo suggestionInfo =
+        getSmartCampaignSuggestionInfo(googleAdsClient, locationId, businessName);
 
-    // Generates some suggested keyword theme constants based on the --keywordText parameter.
+    // Generates a list of keyword themes using the SuggestKeywordThemes method on the
+    // SmartCampaignSuggestService. It is strongly recommended that you use this strategy for
+    // generating keyword themes.
     List<KeywordThemeConstant> keywordThemeConstants =
-        getKeywordThemeConstants(googleAdsClient, keyword);
+        getKeywordThemeSuggestions(googleAdsClient, customerId, suggestionInfo);
+
+    // Optionally retrieves auto-complete suggestions for the given keyword text and adds them to
+    // the list of keyWordThemeConstants.
+    if (keyword != null) {
+      keywordThemeConstants.addAll(getKeywordTextAutoCompletions(googleAdsClient, keyword));
+    }
 
     // Converts the KeywordThemeConstants to KeywordThemeInfos.
     List<KeywordThemeInfo> keywordThemeInfos = getKeywordThemeInfos(keywordThemeConstants);
 
-    SmartCampaignSuggestionInfo suggestionInfo =
-        getSmartCampaignSuggestionInfo(
-            googleAdsClient, locationId, businessName, keywordThemeInfos);
+    // Optionally includes any freeform keywords in verbatim.
+    if (freeFormKeywordText != null) {
+      keywordThemeInfos.add(
+          KeywordThemeInfo.newBuilder().setFreeFormKeywordTheme(freeFormKeywordText).build());
+    }
+
+    // Includes the keyword suggestions in the overall SuggestionInfo object.
+    // [START add_smart_campaign_13]
+    suggestionInfo = suggestionInfo.toBuilder().addAllKeywordThemes(keywordThemeInfos).build();
+    // [END add_smart_campaign_13]
+    // [END add_smart_campaign_12]
 
     // Generates a suggested daily budget.
     long suggestedDailyBudgetMicros =
@@ -206,15 +247,43 @@ public class AddSmartCampaign {
     sendMutateRequest(googleAdsClient, customerId, operations);
   }
 
-  /** Retrieves KeywordThemeConstants for the given criteria. */
+  /** Retrieves KeywordThemeConstants suggestions with the suggestKeywordThemes service. */
+  // [START add_smart_campaign_11]
+  private List<KeywordThemeConstant> getKeywordThemeSuggestions(
+      GoogleAdsClient googleAdsClient,
+      long customerId,
+      SmartCampaignSuggestionInfo suggestionInfo) {
+    // Creates the service client.
+    try (SmartCampaignSuggestServiceClient client =
+        googleAdsClient.getLatestVersion().createSmartCampaignSuggestServiceClient()) {
+      // Sends the request.
+      SuggestKeywordThemesResponse response =
+          client.suggestKeywordThemes(
+              SuggestKeywordThemesRequest.newBuilder()
+                  .setSuggestionInfo(suggestionInfo)
+                  .setCustomerId(String.valueOf(customerId))
+                  .build());
+      // Prints some information about the result.
+      System.out.printf(
+          "Retrieved %d keyword theme constant suggestions from the SuggestKeywordThemes method.%n",
+          response.getKeywordThemesCount());
+      return new ArrayList(response.getKeywordThemesList());
+    }
+  }
+  // [END add_smart_campaign_11]
+
+  /**
+   * Retrieves KeywordThemeConstants that are derived from autocomplete data for the given keyword
+   * text.
+   */
   // [START add_smart_campaign]
-  private List<KeywordThemeConstant> getKeywordThemeConstants(
-      GoogleAdsClient googleAdsClient, String keyword) {
+  private List<KeywordThemeConstant> getKeywordTextAutoCompletions(
+      GoogleAdsClient googleAdsClient, String keywordText) {
     try (KeywordThemeConstantServiceClient client =
         googleAdsClient.getLatestVersion().createKeywordThemeConstantServiceClient()) {
       SuggestKeywordThemeConstantsRequest request =
           SuggestKeywordThemeConstantsRequest.newBuilder()
-              .setQueryText(keyword)
+              .setQueryText(keywordText)
               .setCountryCode(COUNTRY_CODE)
               .setLanguageCode(LANGUAGE_CODE)
               .build();
@@ -238,10 +307,7 @@ public class AddSmartCampaign {
    */
   // [START add_smart_campaign_9]
   private SmartCampaignSuggestionInfo getSmartCampaignSuggestionInfo(
-      GoogleAdsClient googleAdsClient,
-      Long locationId,
-      String businessName,
-      List<KeywordThemeInfo> keywordThemeInfos) {
+      GoogleAdsClient googleAdsClient, Long locationId, String businessName) {
     SmartCampaignSuggestionInfo.Builder suggestionInfoBuilder =
         SmartCampaignSuggestionInfo.newBuilder()
             // Adds the URL of the campaign's landing page.
@@ -280,8 +346,6 @@ public class AddSmartCampaign {
                                 ResourceNames.geoTargetConstant(GEO_TARGET_CONSTANT))
                             .build())
                     .build())
-            // Adds the KeywordThemeInfo objects.
-            .addAllKeywordThemes(keywordThemeInfos)
             // Adds a schedule detailing which days of the week the business is open.
             // This schedule describes a schedule in which the business is open on
             // Mondays from 9am to 5pm.
@@ -533,6 +597,24 @@ public class AddSmartCampaign {
                 .filter(d -> d.hasText())
                 .collect(Collectors.toList()));
 
+    // Adds additional headlines + descriptions if we didn't get enough back from the suggestion
+    // service.
+    if (adSuggestions.getHeadlinesCount() < NUM_REQUIRED_HEADLINES) {
+      for (int i = 0; i < NUM_REQUIRED_HEADLINES - adSuggestions.getHeadlinesCount(); ++i) {
+        adBuilder
+            .getSmartCampaignAdBuilder()
+            .addHeadlines(AdTextAsset.newBuilder().setText("Placeholder headline " + i).build());
+      }
+    }
+    if (adSuggestions.getDescriptionsCount() < NUM_REQUIRED_DESCRIPTIONS) {
+      for (int i = 0; i < NUM_REQUIRED_DESCRIPTIONS - adSuggestions.getDescriptionsCount(); ++i) {
+        adBuilder
+            .getSmartCampaignAdBuilder()
+            .addDescriptions(
+                AdTextAsset.newBuilder().setText("Placeholder description " + i).build());
+      }
+    }
+
     opBuilder
         .getAdGroupAdOperationBuilder()
         .getCreateBuilder()
@@ -544,7 +626,7 @@ public class AddSmartCampaign {
 
   // [START add_smart_campaign_8]
   /**
-   * Creates {@link com.google.ads.googleads.v8.resources.CampaignCriterion} operations for add each
+   * Creates {@link com.google.ads.googleads.v9.resources.CampaignCriterion} operations for add each
    * {@link KeywordThemeInfo}.
    */
   private Collection<? extends MutateOperation> createCampaignCriterionOperations(
@@ -609,6 +691,6 @@ public class AddSmartCampaign {
     return keywordThemeConstants.stream()
         .map(
             k -> KeywordThemeInfo.newBuilder().setKeywordThemeConstant(k.getResourceName()).build())
-        .collect(Collectors.toList());
+        .collect(Collectors.toCollection(ArrayList::new));
   }
 }

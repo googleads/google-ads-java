@@ -205,9 +205,9 @@ public class ClickViewName implements ResourceName {
     }
 
     private Builder(ClickViewName clickViewName) {
-      customerId = clickViewName.customerId;
-      date = clickViewName.date;
-      gclid = clickViewName.gclid;
+      this.customerId = clickViewName.customerId;
+      this.date = clickViewName.date;
+      this.gclid = clickViewName.gclid;
     }
 
     public ClickViewName build() {

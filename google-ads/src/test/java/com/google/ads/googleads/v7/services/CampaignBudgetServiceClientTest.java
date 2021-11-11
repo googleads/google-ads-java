@@ -43,10 +43,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class CampaignBudgetServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
   private static MockCampaignBudgetService mockCampaignBudgetService;
-  private CampaignBudgetServiceClient client;
+  private static MockServiceHelper mockServiceHelper;
   private LocalChannelProvider channelProvider;
+  private CampaignBudgetServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -86,6 +86,18 @@ public class CampaignBudgetServiceClientTest {
         CampaignBudget.newBuilder()
             .setResourceName(
                 CampaignBudgetName.of("[CUSTOMER_ID]", "[CAMPAIGN_BUDGET_ID]").toString())
+            .setId(3355)
+            .setName(CampaignBudgetName.of("[CUSTOMER_ID]", "[CAMPAIGN_BUDGET_ID]").toString())
+            .setAmountMicros(64599030)
+            .setTotalAmountMicros(795564603)
+            .setExplicitlyShared(true)
+            .setReferenceCount(1214713627)
+            .setHasRecommendedBudget(true)
+            .setRecommendedBudgetAmountMicros(-332010528)
+            .setRecommendedBudgetEstimatedChangeWeeklyClicks(1719888019)
+            .setRecommendedBudgetEstimatedChangeWeeklyCostMicros(-1264508103)
+            .setRecommendedBudgetEstimatedChangeWeeklyInteractions(-290892983)
+            .setRecommendedBudgetEstimatedChangeWeeklyViews(1181313222)
             .build();
     mockCampaignBudgetService.addResponse(expectedResponse);
 
@@ -127,6 +139,18 @@ public class CampaignBudgetServiceClientTest {
         CampaignBudget.newBuilder()
             .setResourceName(
                 CampaignBudgetName.of("[CUSTOMER_ID]", "[CAMPAIGN_BUDGET_ID]").toString())
+            .setId(3355)
+            .setName(CampaignBudgetName.of("[CUSTOMER_ID]", "[CAMPAIGN_BUDGET_ID]").toString())
+            .setAmountMicros(64599030)
+            .setTotalAmountMicros(795564603)
+            .setExplicitlyShared(true)
+            .setReferenceCount(1214713627)
+            .setHasRecommendedBudget(true)
+            .setRecommendedBudgetAmountMicros(-332010528)
+            .setRecommendedBudgetEstimatedChangeWeeklyClicks(1719888019)
+            .setRecommendedBudgetEstimatedChangeWeeklyCostMicros(-1264508103)
+            .setRecommendedBudgetEstimatedChangeWeeklyInteractions(-290892983)
+            .setRecommendedBudgetEstimatedChangeWeeklyViews(1181313222)
             .build();
     mockCampaignBudgetService.addResponse(expectedResponse);
 

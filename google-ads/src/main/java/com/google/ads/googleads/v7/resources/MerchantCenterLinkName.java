@@ -187,8 +187,8 @@ public class MerchantCenterLinkName implements ResourceName {
     }
 
     private Builder(MerchantCenterLinkName merchantCenterLinkName) {
-      customerId = merchantCenterLinkName.customerId;
-      merchantCenterId = merchantCenterLinkName.merchantCenterId;
+      this.customerId = merchantCenterLinkName.customerId;
+      this.merchantCenterId = merchantCenterLinkName.merchantCenterId;
     }
 
     public MerchantCenterLinkName build() {

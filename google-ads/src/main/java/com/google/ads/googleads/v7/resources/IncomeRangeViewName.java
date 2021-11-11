@@ -216,9 +216,9 @@ public class IncomeRangeViewName implements ResourceName {
     }
 
     private Builder(IncomeRangeViewName incomeRangeViewName) {
-      customerId = incomeRangeViewName.customerId;
-      adGroupId = incomeRangeViewName.adGroupId;
-      criterionId = incomeRangeViewName.criterionId;
+      this.customerId = incomeRangeViewName.customerId;
+      this.adGroupId = incomeRangeViewName.adGroupId;
+      this.criterionId = incomeRangeViewName.criterionId;
     }
 
     public IncomeRangeViewName build() {

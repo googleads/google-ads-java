@@ -43,9 +43,9 @@ import org.junit.Test;
 @Generated("by gapic-generator-java")
 public class TopicConstantServiceClientTest {
   private static MockServiceHelper mockServiceHelper;
-  private TopicConstantServiceClient client;
   private static MockTopicConstantService mockTopicConstantService;
   private LocalChannelProvider channelProvider;
+  private TopicConstantServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -83,6 +83,8 @@ public class TopicConstantServiceClientTest {
     TopicConstant expectedResponse =
         TopicConstant.newBuilder()
             .setResourceName(TopicConstantName.of("[TOPIC_ID]").toString())
+            .setId(3355)
+            .setTopicConstantParent(TopicConstantName.of("[TOPIC_ID]").toString())
             .addAllPath(new ArrayList<String>())
             .build();
     mockTopicConstantService.addResponse(expectedResponse);
@@ -122,6 +124,8 @@ public class TopicConstantServiceClientTest {
     TopicConstant expectedResponse =
         TopicConstant.newBuilder()
             .setResourceName(TopicConstantName.of("[TOPIC_ID]").toString())
+            .setId(3355)
+            .setTopicConstantParent(TopicConstantName.of("[TOPIC_ID]").toString())
             .addAllPath(new ArrayList<String>())
             .build();
     mockTopicConstantService.addResponse(expectedResponse);

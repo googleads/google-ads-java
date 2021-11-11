@@ -45,10 +45,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class GoogleAdsFieldServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
   private static MockGoogleAdsFieldService mockGoogleAdsFieldService;
-  private GoogleAdsFieldServiceClient client;
+  private static MockServiceHelper mockServiceHelper;
   private LocalChannelProvider channelProvider;
+  private GoogleAdsFieldServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -87,11 +87,17 @@ public class GoogleAdsFieldServiceClientTest {
     GoogleAdsField expectedResponse =
         GoogleAdsField.newBuilder()
             .setResourceName(GoogleAdsFieldName.of("[GOOGLE_ADS_FIELD]").toString())
+            .setName(GoogleAdsFieldName.of("[GOOGLE_ADS_FIELD]").toString())
+            .setSelectable(true)
+            .setFilterable(true)
+            .setSortable(true)
             .addAllSelectableWith(new ArrayList<String>())
             .addAllAttributeResources(new ArrayList<String>())
             .addAllMetrics(new ArrayList<String>())
             .addAllSegments(new ArrayList<String>())
             .addAllEnumValues(new ArrayList<String>())
+            .setTypeUrl("typeUrl-853099563")
+            .setIsRepeated(true)
             .build();
     mockGoogleAdsFieldService.addResponse(expectedResponse);
 
@@ -130,11 +136,17 @@ public class GoogleAdsFieldServiceClientTest {
     GoogleAdsField expectedResponse =
         GoogleAdsField.newBuilder()
             .setResourceName(GoogleAdsFieldName.of("[GOOGLE_ADS_FIELD]").toString())
+            .setName(GoogleAdsFieldName.of("[GOOGLE_ADS_FIELD]").toString())
+            .setSelectable(true)
+            .setFilterable(true)
+            .setSortable(true)
             .addAllSelectableWith(new ArrayList<String>())
             .addAllAttributeResources(new ArrayList<String>())
             .addAllMetrics(new ArrayList<String>())
             .addAllSegments(new ArrayList<String>())
             .addAllEnumValues(new ArrayList<String>())
+            .setTypeUrl("typeUrl-853099563")
+            .setIsRepeated(true)
             .build();
     mockGoogleAdsFieldService.addResponse(expectedResponse);
 

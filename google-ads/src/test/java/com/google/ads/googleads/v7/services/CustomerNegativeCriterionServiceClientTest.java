@@ -45,8 +45,8 @@ import org.junit.Test;
 public class CustomerNegativeCriterionServiceClientTest {
   private static MockCustomerNegativeCriterionService mockCustomerNegativeCriterionService;
   private static MockServiceHelper mockServiceHelper;
-  private CustomerNegativeCriterionServiceClient client;
   private LocalChannelProvider channelProvider;
+  private CustomerNegativeCriterionServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -86,6 +86,7 @@ public class CustomerNegativeCriterionServiceClientTest {
         CustomerNegativeCriterion.newBuilder()
             .setResourceName(
                 CustomerNegativeCriterionName.of("[CUSTOMER_ID]", "[CRITERION_ID]").toString())
+            .setId(3355)
             .build();
     mockCustomerNegativeCriterionService.addResponse(expectedResponse);
 
@@ -128,6 +129,7 @@ public class CustomerNegativeCriterionServiceClientTest {
         CustomerNegativeCriterion.newBuilder()
             .setResourceName(
                 CustomerNegativeCriterionName.of("[CUSTOMER_ID]", "[CRITERION_ID]").toString())
+            .setId(3355)
             .build();
     mockCustomerNegativeCriterionService.addResponse(expectedResponse);
 

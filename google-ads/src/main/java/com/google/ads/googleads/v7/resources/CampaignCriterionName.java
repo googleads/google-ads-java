@@ -216,9 +216,9 @@ public class CampaignCriterionName implements ResourceName {
     }
 
     private Builder(CampaignCriterionName campaignCriterionName) {
-      customerId = campaignCriterionName.customerId;
-      campaignId = campaignCriterionName.campaignId;
-      criterionId = campaignCriterionName.criterionId;
+      this.customerId = campaignCriterionName.customerId;
+      this.campaignId = campaignCriterionName.campaignId;
+      this.criterionId = campaignCriterionName.criterionId;
     }
 
     public CampaignCriterionName build() {

@@ -16,6 +16,7 @@
 
 package com.google.ads.googleads.v7.services;
 
+import com.google.ads.googleads.v7.resources.AdGroupCriterionName;
 import com.google.ads.googleads.v7.resources.AdParameter;
 import com.google.ads.googleads.v7.resources.AdParameterName;
 import com.google.api.gax.core.NoCredentialsProvider;
@@ -45,8 +46,8 @@ import org.junit.Test;
 public class AdParameterServiceClientTest {
   private static MockAdParameterService mockAdParameterService;
   private static MockServiceHelper mockServiceHelper;
-  private AdParameterServiceClient client;
   private LocalChannelProvider channelProvider;
+  private AdParameterServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -87,6 +88,11 @@ public class AdParameterServiceClientTest {
                 AdParameterName.of(
                         "[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]", "[PARAMETER_INDEX]")
                     .toString())
+            .setAdGroupCriterion(
+                AdGroupCriterionName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]")
+                    .toString())
+            .setParameterIndex(763436220)
+            .setInsertionText("insertionText-195528580")
             .build();
     mockAdParameterService.addResponse(expectedResponse);
 
@@ -131,6 +137,11 @@ public class AdParameterServiceClientTest {
                 AdParameterName.of(
                         "[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]", "[PARAMETER_INDEX]")
                     .toString())
+            .setAdGroupCriterion(
+                AdGroupCriterionName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]")
+                    .toString())
+            .setParameterIndex(763436220)
+            .setInsertionText("insertionText-195528580")
             .build();
     mockAdParameterService.addResponse(expectedResponse);
 

@@ -45,10 +45,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class AdGroupAssetServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
   private static MockAdGroupAssetService mockAdGroupAssetService;
-  private AdGroupAssetServiceClient client;
+  private static MockServiceHelper mockServiceHelper;
   private LocalChannelProvider channelProvider;
+  private AdGroupAssetServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {

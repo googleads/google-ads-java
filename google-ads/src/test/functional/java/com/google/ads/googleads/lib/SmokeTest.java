@@ -17,12 +17,12 @@ package com.google.ads.googleads.lib;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
-import com.google.ads.googleads.v8.resources.CustomerName;
-import com.google.ads.googleads.v8.services.CustomerServiceClient;
-import com.google.ads.googleads.v8.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v8.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v8.services.ListAccessibleCustomersRequest;
-import com.google.ads.googleads.v8.services.ListAccessibleCustomersResponse;
+import com.google.ads.googleads.v9.resources.CustomerName;
+import com.google.ads.googleads.v9.services.CustomerServiceClient;
+import com.google.ads.googleads.v9.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v9.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v9.services.ListAccessibleCustomersRequest;
+import com.google.ads.googleads.v9.services.ListAccessibleCustomersResponse;
 import com.google.api.gax.grpc.GrpcCallContext;
 import java.io.IOException;
 import java.util.List;

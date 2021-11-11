@@ -215,9 +215,9 @@ public class FeedItemName implements ResourceName {
     }
 
     private Builder(FeedItemName feedItemName) {
-      customerId = feedItemName.customerId;
-      feedId = feedItemName.feedId;
-      feedItemId = feedItemName.feedItemId;
+      this.customerId = feedItemName.customerId;
+      this.feedId = feedItemName.feedId;
+      this.feedItemId = feedItemName.feedItemId;
     }
 
     public FeedItemName build() {

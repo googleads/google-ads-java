@@ -228,9 +228,9 @@ public class UserLocationViewName implements ResourceName {
     }
 
     private Builder(UserLocationViewName userLocationViewName) {
-      customerId = userLocationViewName.customerId;
-      countryCriterionId = userLocationViewName.countryCriterionId;
-      isTargetingLocation = userLocationViewName.isTargetingLocation;
+      this.customerId = userLocationViewName.customerId;
+      this.countryCriterionId = userLocationViewName.countryCriterionId;
+      this.isTargetingLocation = userLocationViewName.isTargetingLocation;
     }
 
     public UserLocationViewName build() {

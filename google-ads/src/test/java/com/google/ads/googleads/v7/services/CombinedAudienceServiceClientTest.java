@@ -43,8 +43,8 @@ import org.junit.Test;
 public class CombinedAudienceServiceClientTest {
   private static MockCombinedAudienceService mockCombinedAudienceService;
   private static MockServiceHelper mockServiceHelper;
-  private CombinedAudienceServiceClient client;
   private LocalChannelProvider channelProvider;
+  private CombinedAudienceServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {

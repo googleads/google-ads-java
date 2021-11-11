@@ -41,10 +41,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class AccountLinkServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
-  private AccountLinkServiceClient client;
   private static MockAccountLinkService mockAccountLinkService;
+  private static MockServiceHelper mockServiceHelper;
   private LocalChannelProvider channelProvider;
+  private AccountLinkServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -82,6 +82,7 @@ public class AccountLinkServiceClientTest {
     AccountLink expectedResponse =
         AccountLink.newBuilder()
             .setResourceName(AccountLinkName.of("[CUSTOMER_ID]", "[ACCOUNT_LINK_ID]").toString())
+            .setAccountLinkId(-1043416210)
             .build();
     mockAccountLinkService.addResponse(expectedResponse);
 
@@ -120,6 +121,7 @@ public class AccountLinkServiceClientTest {
     AccountLink expectedResponse =
         AccountLink.newBuilder()
             .setResourceName(AccountLinkName.of("[CUSTOMER_ID]", "[ACCOUNT_LINK_ID]").toString())
+            .setAccountLinkId(-1043416210)
             .build();
     mockAccountLinkService.addResponse(expectedResponse);
 

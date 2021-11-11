@@ -44,10 +44,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class CustomerAssetServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
   private static MockCustomerAssetService mockCustomerAssetService;
-  private CustomerAssetServiceClient client;
+  private static MockServiceHelper mockServiceHelper;
   private LocalChannelProvider channelProvider;
+  private CustomerAssetServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {

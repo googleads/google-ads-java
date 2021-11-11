@@ -7,7 +7,7 @@ package com.google.ads.googleads.v7.resources;
  * <pre>
  * A mobile operating system version or a range of versions, depending on
  * `operator_type`. List of available mobile platforms at
- * https://developers.google.com/adwords/api/docs/appendix/codes-formats#mobile-platforms
+ * https://developers.google.com/google-ads/api/reference/data/codes-formats#mobile-platforms
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v7.resources.OperatingSystemVersionConstant}
@@ -574,7 +574,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * A mobile operating system version or a range of versions, depending on
    * `operator_type`. List of available mobile platforms at
-   * https://developers.google.com/adwords/api/docs/appendix/codes-formats#mobile-platforms
+   * https://developers.google.com/google-ads/api/reference/data/codes-formats#mobile-platforms
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v7.resources.OperatingSystemVersionConstant}

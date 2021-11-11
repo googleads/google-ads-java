@@ -158,7 +158,7 @@ public class GeoTargetConstantName implements ResourceName {
     }
 
     private Builder(GeoTargetConstantName geoTargetConstantName) {
-      criterionId = geoTargetConstantName.criterionId;
+      this.criterionId = geoTargetConstantName.criterionId;
     }
 
     public GeoTargetConstantName build() {

@@ -190,8 +190,8 @@ public class KeywordPlanAdGroupName implements ResourceName {
     }
 
     private Builder(KeywordPlanAdGroupName keywordPlanAdGroupName) {
-      customerId = keywordPlanAdGroupName.customerId;
-      keywordPlanAdGroupId = keywordPlanAdGroupName.keywordPlanAdGroupId;
+      this.customerId = keywordPlanAdGroupName.customerId;
+      this.keywordPlanAdGroupId = keywordPlanAdGroupName.keywordPlanAdGroupId;
     }
 
     public KeywordPlanAdGroupName build() {

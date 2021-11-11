@@ -220,9 +220,9 @@ public class AdGroupExtensionSettingName implements ResourceName {
     }
 
     private Builder(AdGroupExtensionSettingName adGroupExtensionSettingName) {
-      customerId = adGroupExtensionSettingName.customerId;
-      adGroupId = adGroupExtensionSettingName.adGroupId;
-      extensionType = adGroupExtensionSettingName.extensionType;
+      this.customerId = adGroupExtensionSettingName.customerId;
+      this.adGroupId = adGroupExtensionSettingName.adGroupId;
+      this.extensionType = adGroupExtensionSettingName.extensionType;
     }
 
     public AdGroupExtensionSettingName build() {

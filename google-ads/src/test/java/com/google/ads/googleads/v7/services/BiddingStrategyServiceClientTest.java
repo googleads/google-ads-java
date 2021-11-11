@@ -43,10 +43,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class BiddingStrategyServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
   private static MockBiddingStrategyService mockBiddingStrategyService;
-  private BiddingStrategyServiceClient client;
+  private static MockServiceHelper mockServiceHelper;
   private LocalChannelProvider channelProvider;
+  private BiddingStrategyServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -86,6 +86,11 @@ public class BiddingStrategyServiceClientTest {
         BiddingStrategy.newBuilder()
             .setResourceName(
                 BiddingStrategyName.of("[CUSTOMER_ID]", "[BIDDING_STRATEGY_ID]").toString())
+            .setId(3355)
+            .setName(BiddingStrategyName.of("[CUSTOMER_ID]", "[BIDDING_STRATEGY_ID]").toString())
+            .setEffectiveCurrencyCode("effectiveCurrencyCode-2136417051")
+            .setCampaignCount(-1320441568)
+            .setNonRemovedCampaignCount(789221521)
             .build();
     mockBiddingStrategyService.addResponse(expectedResponse);
 
@@ -127,6 +132,11 @@ public class BiddingStrategyServiceClientTest {
         BiddingStrategy.newBuilder()
             .setResourceName(
                 BiddingStrategyName.of("[CUSTOMER_ID]", "[BIDDING_STRATEGY_ID]").toString())
+            .setId(3355)
+            .setName(BiddingStrategyName.of("[CUSTOMER_ID]", "[BIDDING_STRATEGY_ID]").toString())
+            .setEffectiveCurrencyCode("effectiveCurrencyCode-2136417051")
+            .setCampaignCount(-1320441568)
+            .setNonRemovedCampaignCount(789221521)
             .build();
     mockBiddingStrategyService.addResponse(expectedResponse);
 

@@ -182,8 +182,8 @@ public class LifeEventName implements ResourceName {
     }
 
     private Builder(LifeEventName lifeEventName) {
-      customerId = lifeEventName.customerId;
-      lifeEventId = lifeEventName.lifeEventId;
+      this.customerId = lifeEventName.customerId;
+      this.lifeEventId = lifeEventName.lifeEventId;
     }
 
     public LifeEventName build() {

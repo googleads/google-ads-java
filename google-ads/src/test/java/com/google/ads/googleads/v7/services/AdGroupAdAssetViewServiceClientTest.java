@@ -19,6 +19,8 @@ package com.google.ads.googleads.v7.services;
 import com.google.ads.googleads.v7.resources.AdGroupAdAssetPolicySummary;
 import com.google.ads.googleads.v7.resources.AdGroupAdAssetView;
 import com.google.ads.googleads.v7.resources.AdGroupAdAssetViewName;
+import com.google.ads.googleads.v7.resources.AdGroupAdName;
+import com.google.ads.googleads.v7.resources.AssetName;
 import com.google.api.gax.core.NoCredentialsProvider;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.testing.LocalChannelProvider;
@@ -44,8 +46,8 @@ import org.junit.Test;
 public class AdGroupAdAssetViewServiceClientTest {
   private static MockAdGroupAdAssetViewService mockAdGroupAdAssetViewService;
   private static MockServiceHelper mockServiceHelper;
-  private AdGroupAdAssetViewServiceClient client;
   private LocalChannelProvider channelProvider;
+  private AdGroupAdAssetViewServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -87,6 +89,9 @@ public class AdGroupAdAssetViewServiceClientTest {
                 AdGroupAdAssetViewName.of(
                         "[CUSTOMER_ID]", "[AD_GROUP_ID]", "[AD_ID]", "[ASSET_ID]", "[FIELD_TYPE]")
                     .toString())
+            .setAdGroupAd(AdGroupAdName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[AD_ID]").toString())
+            .setAsset(AssetName.of("[CUSTOMER_ID]", "[ASSET_ID]").toString())
+            .setEnabled(true)
             .setPolicySummary(AdGroupAdAssetPolicySummary.newBuilder().build())
             .build();
     mockAdGroupAdAssetViewService.addResponse(expectedResponse);
@@ -134,6 +139,9 @@ public class AdGroupAdAssetViewServiceClientTest {
                 AdGroupAdAssetViewName.of(
                         "[CUSTOMER_ID]", "[AD_GROUP_ID]", "[AD_ID]", "[ASSET_ID]", "[FIELD_TYPE]")
                     .toString())
+            .setAdGroupAd(AdGroupAdName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[AD_ID]").toString())
+            .setAsset(AssetName.of("[CUSTOMER_ID]", "[ASSET_ID]").toString())
+            .setEnabled(true)
             .setPolicySummary(AdGroupAdAssetPolicySummary.newBuilder().build())
             .build();
     mockAdGroupAdAssetViewService.addResponse(expectedResponse);

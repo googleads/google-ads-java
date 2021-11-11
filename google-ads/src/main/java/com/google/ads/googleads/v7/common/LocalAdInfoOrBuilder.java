@@ -328,8 +328,7 @@ public interface LocalAdInfoOrBuilder extends
 
   /**
    * <pre>
-   * First part of optional text that may appear appended to the url displayed
-   * in the ad.
+   * First part of optional text that can be appended to the URL in the ad.
    * </pre>
    *
    * <code>string path1 = 9;</code>
@@ -338,8 +337,7 @@ public interface LocalAdInfoOrBuilder extends
   boolean hasPath1();
   /**
    * <pre>
-   * First part of optional text that may appear appended to the url displayed
-   * in the ad.
+   * First part of optional text that can be appended to the URL in the ad.
    * </pre>
    *
    * <code>string path1 = 9;</code>
@@ -348,8 +346,7 @@ public interface LocalAdInfoOrBuilder extends
   java.lang.String getPath1();
   /**
    * <pre>
-   * First part of optional text that may appear appended to the url displayed
-   * in the ad.
+   * First part of optional text that can be appended to the URL in the ad.
    * </pre>
    *
    * <code>string path1 = 9;</code>
@@ -360,8 +357,8 @@ public interface LocalAdInfoOrBuilder extends
 
   /**
    * <pre>
-   * Second part of optional text that may appear appended to the url displayed
-   * in the ad. This field can only be set when path1 is also set.
+   * Second part of optional text that can be appended to the URL in the ad.
+   * This field can only be set when `path1` is also set.
    * </pre>
    *
    * <code>string path2 = 10;</code>
@@ -370,8 +367,8 @@ public interface LocalAdInfoOrBuilder extends
   boolean hasPath2();
   /**
    * <pre>
-   * Second part of optional text that may appear appended to the url displayed
-   * in the ad. This field can only be set when path1 is also set.
+   * Second part of optional text that can be appended to the URL in the ad.
+   * This field can only be set when `path1` is also set.
    * </pre>
    *
    * <code>string path2 = 10;</code>
@@ -380,8 +377,8 @@ public interface LocalAdInfoOrBuilder extends
   java.lang.String getPath2();
   /**
    * <pre>
-   * Second part of optional text that may appear appended to the url displayed
-   * in the ad. This field can only be set when path1 is also set.
+   * Second part of optional text that can be appended to the URL in the ad.
+   * This field can only be set when `path1` is also set.
    * </pre>
    *
    * <code>string path2 = 10;</code>

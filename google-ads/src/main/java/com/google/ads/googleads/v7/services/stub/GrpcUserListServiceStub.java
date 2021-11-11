@@ -25,7 +25,6 @@ import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
-import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.common.collect.ImmutableMap;
 import com.google.longrunning.stub.GrpcOperationsStub;
@@ -115,13 +114,10 @@ public class GrpcUserListServiceStub extends UserListServiceStub {
         GrpcCallSettings.<GetUserListRequest, UserList>newBuilder()
             .setMethodDescriptor(getUserListMethodDescriptor)
             .setParamsExtractor(
-                new RequestParamsExtractor<GetUserListRequest>() {
-                  @Override
-                  public Map<String, String> extract(GetUserListRequest request) {
-                    ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                    params.put("resource_name", String.valueOf(request.getResourceName()));
-                    return params.build();
-                  }
+                request -> {
+                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                  params.put("resource_name", String.valueOf(request.getResourceName()));
+                  return params.build();
                 })
             .build();
     GrpcCallSettings<MutateUserListsRequest, MutateUserListsResponse>
@@ -129,13 +125,10 @@ public class GrpcUserListServiceStub extends UserListServiceStub {
             GrpcCallSettings.<MutateUserListsRequest, MutateUserListsResponse>newBuilder()
                 .setMethodDescriptor(mutateUserListsMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<MutateUserListsRequest>() {
-                      @Override
-                      public Map<String, String> extract(MutateUserListsRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("customer_id", String.valueOf(request.getCustomerId()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("customer_id", String.valueOf(request.getCustomerId()));
+                      return params.build();
                     })
                 .build();
 
@@ -166,7 +159,13 @@ public class GrpcUserListServiceStub extends UserListServiceStub {
 
   @Override
   public final void close() {
-    shutdown();
+    try {
+      backgroundResources.close();
+    } catch (RuntimeException e) {
+      throw e;
+    } catch (Exception e) {
+      throw new IllegalStateException("Failed to close resource", e);
+    }
   }
 
   @Override

@@ -11,8 +11,8 @@ public interface ListPlannableLocationsResponseOrBuilder extends
    * <pre>
    * The list of locations available for planning (Countries, DMAs,
    * sub-countries).
-   * For locations like Countries, DMAs see
-   * https://developers.google.com/adwords/api/docs/appendix/geotargeting for
+   * For locations like Countries and DMAs see
+   * https://developers.google.com/google-ads/api/reference/data/geotargets for
    * more information.
    * </pre>
    *
@@ -24,8 +24,8 @@ public interface ListPlannableLocationsResponseOrBuilder extends
    * <pre>
    * The list of locations available for planning (Countries, DMAs,
    * sub-countries).
-   * For locations like Countries, DMAs see
-   * https://developers.google.com/adwords/api/docs/appendix/geotargeting for
+   * For locations like Countries and DMAs see
+   * https://developers.google.com/google-ads/api/reference/data/geotargets for
    * more information.
    * </pre>
    *
@@ -36,8 +36,8 @@ public interface ListPlannableLocationsResponseOrBuilder extends
    * <pre>
    * The list of locations available for planning (Countries, DMAs,
    * sub-countries).
-   * For locations like Countries, DMAs see
-   * https://developers.google.com/adwords/api/docs/appendix/geotargeting for
+   * For locations like Countries and DMAs see
+   * https://developers.google.com/google-ads/api/reference/data/geotargets for
    * more information.
    * </pre>
    *
@@ -48,8 +48,8 @@ public interface ListPlannableLocationsResponseOrBuilder extends
    * <pre>
    * The list of locations available for planning (Countries, DMAs,
    * sub-countries).
-   * For locations like Countries, DMAs see
-   * https://developers.google.com/adwords/api/docs/appendix/geotargeting for
+   * For locations like Countries and DMAs see
+   * https://developers.google.com/google-ads/api/reference/data/geotargets for
    * more information.
    * </pre>
    *
@@ -61,8 +61,8 @@ public interface ListPlannableLocationsResponseOrBuilder extends
    * <pre>
    * The list of locations available for planning (Countries, DMAs,
    * sub-countries).
-   * For locations like Countries, DMAs see
-   * https://developers.google.com/adwords/api/docs/appendix/geotargeting for
+   * For locations like Countries and DMAs see
+   * https://developers.google.com/google-ads/api/reference/data/geotargets for
    * more information.
    * </pre>
    *

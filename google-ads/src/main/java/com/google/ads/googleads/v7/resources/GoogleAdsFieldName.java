@@ -158,7 +158,7 @@ public class GoogleAdsFieldName implements ResourceName {
     }
 
     private Builder(GoogleAdsFieldName googleAdsFieldName) {
-      googleAdsField = googleAdsFieldName.googleAdsField;
+      this.googleAdsField = googleAdsFieldName.googleAdsField;
     }
 
     public GoogleAdsFieldName build() {

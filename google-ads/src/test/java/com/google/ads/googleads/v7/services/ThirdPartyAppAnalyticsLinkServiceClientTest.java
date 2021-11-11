@@ -42,9 +42,9 @@ import org.junit.Test;
 @Generated("by gapic-generator-java")
 public class ThirdPartyAppAnalyticsLinkServiceClientTest {
   private static MockServiceHelper mockServiceHelper;
-  private ThirdPartyAppAnalyticsLinkServiceClient client;
   private static MockThirdPartyAppAnalyticsLinkService mockThirdPartyAppAnalyticsLinkService;
   private LocalChannelProvider channelProvider;
+  private ThirdPartyAppAnalyticsLinkServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -84,6 +84,7 @@ public class ThirdPartyAppAnalyticsLinkServiceClientTest {
         ThirdPartyAppAnalyticsLink.newBuilder()
             .setResourceName(
                 ThirdPartyAppAnalyticsLinkName.of("[CUSTOMER_ID]", "[CUSTOMER_LINK_ID]").toString())
+            .setShareableLinkId("shareableLinkId908885454")
             .build();
     mockThirdPartyAppAnalyticsLinkService.addResponse(expectedResponse);
 

@@ -43,8 +43,8 @@ import org.junit.Test;
 public class KeywordViewServiceClientTest {
   private static MockKeywordViewService mockKeywordViewService;
   private static MockServiceHelper mockServiceHelper;
-  private KeywordViewServiceClient client;
   private LocalChannelProvider channelProvider;
+  private KeywordViewServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {

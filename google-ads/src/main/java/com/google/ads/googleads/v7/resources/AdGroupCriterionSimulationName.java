@@ -357,13 +357,13 @@ public class AdGroupCriterionSimulationName implements ResourceName {
     }
 
     private Builder(AdGroupCriterionSimulationName adGroupCriterionSimulationName) {
-      customerId = adGroupCriterionSimulationName.customerId;
-      adGroupId = adGroupCriterionSimulationName.adGroupId;
-      criterionId = adGroupCriterionSimulationName.criterionId;
-      type = adGroupCriterionSimulationName.type;
-      modificationMethod = adGroupCriterionSimulationName.modificationMethod;
-      startDate = adGroupCriterionSimulationName.startDate;
-      endDate = adGroupCriterionSimulationName.endDate;
+      this.customerId = adGroupCriterionSimulationName.customerId;
+      this.adGroupId = adGroupCriterionSimulationName.adGroupId;
+      this.criterionId = adGroupCriterionSimulationName.criterionId;
+      this.type = adGroupCriterionSimulationName.type;
+      this.modificationMethod = adGroupCriterionSimulationName.modificationMethod;
+      this.startDate = adGroupCriterionSimulationName.startDate;
+      this.endDate = adGroupCriterionSimulationName.endDate;
     }
 
     public AdGroupCriterionSimulationName build() {

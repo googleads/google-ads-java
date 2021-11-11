@@ -44,10 +44,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class RemarketingActionServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
   private static MockRemarketingActionService mockRemarketingActionService;
-  private RemarketingActionServiceClient client;
+  private static MockServiceHelper mockServiceHelper;
   private LocalChannelProvider channelProvider;
+  private RemarketingActionServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -86,6 +86,9 @@ public class RemarketingActionServiceClientTest {
     RemarketingAction expectedResponse =
         RemarketingAction.newBuilder()
             .setResourceName(
+                RemarketingActionName.of("[CUSTOMER_ID]", "[REMARKETING_ACTION_ID]").toString())
+            .setId(3355)
+            .setName(
                 RemarketingActionName.of("[CUSTOMER_ID]", "[REMARKETING_ACTION_ID]").toString())
             .addAllTagSnippets(new ArrayList<TagSnippet>())
             .build();
@@ -129,6 +132,9 @@ public class RemarketingActionServiceClientTest {
     RemarketingAction expectedResponse =
         RemarketingAction.newBuilder()
             .setResourceName(
+                RemarketingActionName.of("[CUSTOMER_ID]", "[REMARKETING_ACTION_ID]").toString())
+            .setId(3355)
+            .setName(
                 RemarketingActionName.of("[CUSTOMER_ID]", "[REMARKETING_ACTION_ID]").toString())
             .addAllTagSnippets(new ArrayList<TagSnippet>())
             .build();

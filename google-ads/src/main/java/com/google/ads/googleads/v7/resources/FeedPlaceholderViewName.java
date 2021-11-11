@@ -187,8 +187,8 @@ public class FeedPlaceholderViewName implements ResourceName {
     }
 
     private Builder(FeedPlaceholderViewName feedPlaceholderViewName) {
-      customerId = feedPlaceholderViewName.customerId;
-      placeholderType = feedPlaceholderViewName.placeholderType;
+      this.customerId = feedPlaceholderViewName.customerId;
+      this.placeholderType = feedPlaceholderViewName.placeholderType;
     }
 
     public FeedPlaceholderViewName build() {

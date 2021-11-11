@@ -40,10 +40,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class UserDataServiceClientTest {
-  private static MockUserDataService mockUserDataService;
   private static MockServiceHelper mockServiceHelper;
-  private UserDataServiceClient client;
+  private static MockUserDataService mockUserDataService;
   private LocalChannelProvider channelProvider;
+  private UserDataServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -78,7 +78,11 @@ public class UserDataServiceClientTest {
 
   @Test
   public void uploadUserDataTest() throws Exception {
-    UploadUserDataResponse expectedResponse = UploadUserDataResponse.newBuilder().build();
+    UploadUserDataResponse expectedResponse =
+        UploadUserDataResponse.newBuilder()
+            .setUploadDateTime("uploadDateTime1259344060")
+            .setReceivedOperationsCount(912867738)
+            .build();
     mockUserDataService.addResponse(expectedResponse);
 
     UploadUserDataRequest request =

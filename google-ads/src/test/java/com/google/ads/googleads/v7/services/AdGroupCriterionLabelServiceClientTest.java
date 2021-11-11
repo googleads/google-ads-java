@@ -18,6 +18,8 @@ package com.google.ads.googleads.v7.services;
 
 import com.google.ads.googleads.v7.resources.AdGroupCriterionLabel;
 import com.google.ads.googleads.v7.resources.AdGroupCriterionLabelName;
+import com.google.ads.googleads.v7.resources.AdGroupCriterionName;
+import com.google.ads.googleads.v7.resources.LabelName;
 import com.google.api.gax.core.NoCredentialsProvider;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.testing.LocalChannelProvider;
@@ -43,10 +45,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class AdGroupCriterionLabelServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
   private static MockAdGroupCriterionLabelService mockAdGroupCriterionLabelService;
-  private AdGroupCriterionLabelServiceClient client;
+  private static MockServiceHelper mockServiceHelper;
   private LocalChannelProvider channelProvider;
+  private AdGroupCriterionLabelServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -88,6 +90,10 @@ public class AdGroupCriterionLabelServiceClientTest {
                 AdGroupCriterionLabelName.of(
                         "[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]", "[LABEL_ID]")
                     .toString())
+            .setAdGroupCriterion(
+                AdGroupCriterionName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]")
+                    .toString())
+            .setLabel(LabelName.of("[CUSTOMER_ID]", "[LABEL_ID]").toString())
             .build();
     mockAdGroupCriterionLabelService.addResponse(expectedResponse);
 
@@ -134,6 +140,10 @@ public class AdGroupCriterionLabelServiceClientTest {
                 AdGroupCriterionLabelName.of(
                         "[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]", "[LABEL_ID]")
                     .toString())
+            .setAdGroupCriterion(
+                AdGroupCriterionName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[CRITERION_ID]")
+                    .toString())
+            .setLabel(LabelName.of("[CUSTOMER_ID]", "[LABEL_ID]").toString())
             .build();
     mockAdGroupCriterionLabelService.addResponse(expectedResponse);
 

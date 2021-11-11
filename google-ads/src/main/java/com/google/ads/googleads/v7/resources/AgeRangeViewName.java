@@ -216,9 +216,9 @@ public class AgeRangeViewName implements ResourceName {
     }
 
     private Builder(AgeRangeViewName ageRangeViewName) {
-      customerId = ageRangeViewName.customerId;
-      adGroupId = ageRangeViewName.adGroupId;
-      criterionId = ageRangeViewName.criterionId;
+      this.customerId = ageRangeViewName.customerId;
+      this.adGroupId = ageRangeViewName.adGroupId;
+      this.criterionId = ageRangeViewName.criterionId;
     }
 
     public AgeRangeViewName build() {

@@ -1941,6 +1941,851 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface ThirdPartyAppAnalyticsSettingsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Output only. The event name of a third-party app analytics conversion.
+     * </pre>
+     *
+     * <code>string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the eventName field is set.
+     */
+    boolean hasEventName();
+    /**
+     * <pre>
+     * Output only. The event name of a third-party app analytics conversion.
+     * </pre>
+     *
+     * <code>string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The eventName.
+     */
+    java.lang.String getEventName();
+    /**
+     * <pre>
+     * Output only. The event name of a third-party app analytics conversion.
+     * </pre>
+     *
+     * <code>string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The bytes for eventName.
+     */
+    com.google.protobuf.ByteString
+        getEventNameBytes();
+
+    /**
+     * <pre>
+     * Output only. Name of the third-party app analytics provider.
+     * </pre>
+     *
+     * <code>string provider_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The providerName.
+     */
+    java.lang.String getProviderName();
+    /**
+     * <pre>
+     * Output only. Name of the third-party app analytics provider.
+     * </pre>
+     *
+     * <code>string provider_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The bytes for providerName.
+     */
+    com.google.protobuf.ByteString
+        getProviderNameBytes();
+  }
+  /**
+   * <pre>
+   * Settings related to a third party app analytics conversion action.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings}
+   */
+  public static final class ThirdPartyAppAnalyticsSettings extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings)
+      ThirdPartyAppAnalyticsSettingsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ThirdPartyAppAnalyticsSettings.newBuilder() to construct.
+    private ThirdPartyAppAnalyticsSettings(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ThirdPartyAppAnalyticsSettings() {
+      eventName_ = "";
+      providerName_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ThirdPartyAppAnalyticsSettings();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ThirdPartyAppAnalyticsSettings(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              eventName_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              providerName_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v7.resources.ConversionActionProto.internal_static_google_ads_googleads_v7_resources_ConversionAction_ThirdPartyAppAnalyticsSettings_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v7.resources.ConversionActionProto.internal_static_google_ads_googleads_v7_resources_ConversionAction_ThirdPartyAppAnalyticsSettings_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings.class, com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int EVENT_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object eventName_;
+    /**
+     * <pre>
+     * Output only. The event name of a third-party app analytics conversion.
+     * </pre>
+     *
+     * <code>string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the eventName field is set.
+     */
+    @java.lang.Override
+    public boolean hasEventName() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Output only. The event name of a third-party app analytics conversion.
+     * </pre>
+     *
+     * <code>string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The eventName.
+     */
+    @java.lang.Override
+    public java.lang.String getEventName() {
+      java.lang.Object ref = eventName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        eventName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The event name of a third-party app analytics conversion.
+     * </pre>
+     *
+     * <code>string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The bytes for eventName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEventNameBytes() {
+      java.lang.Object ref = eventName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        eventName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROVIDER_NAME_FIELD_NUMBER = 3;
+    private volatile java.lang.Object providerName_;
+    /**
+     * <pre>
+     * Output only. Name of the third-party app analytics provider.
+     * </pre>
+     *
+     * <code>string provider_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The providerName.
+     */
+    @java.lang.Override
+    public java.lang.String getProviderName() {
+      java.lang.Object ref = providerName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        providerName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. Name of the third-party app analytics provider.
+     * </pre>
+     *
+     * <code>string provider_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The bytes for providerName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProviderNameBytes() {
+      java.lang.Object ref = providerName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        providerName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, eventName_);
+      }
+      if (!getProviderNameBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, providerName_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, eventName_);
+      }
+      if (!getProviderNameBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, providerName_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings other = (com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings) obj;
+
+      if (hasEventName() != other.hasEventName()) return false;
+      if (hasEventName()) {
+        if (!getEventName()
+            .equals(other.getEventName())) return false;
+      }
+      if (!getProviderName()
+          .equals(other.getProviderName())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasEventName()) {
+        hash = (37 * hash) + EVENT_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getEventName().hashCode();
+      }
+      hash = (37 * hash) + PROVIDER_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getProviderName().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Settings related to a third party app analytics conversion action.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings)
+        com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettingsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v7.resources.ConversionActionProto.internal_static_google_ads_googleads_v7_resources_ConversionAction_ThirdPartyAppAnalyticsSettings_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v7.resources.ConversionActionProto.internal_static_google_ads_googleads_v7_resources_ConversionAction_ThirdPartyAppAnalyticsSettings_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings.class, com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        eventName_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        providerName_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v7.resources.ConversionActionProto.internal_static_google_ads_googleads_v7_resources_ConversionAction_ThirdPartyAppAnalyticsSettings_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings getDefaultInstanceForType() {
+        return com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings build() {
+        com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings buildPartial() {
+        com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings result = new com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.eventName_ = eventName_;
+        result.providerName_ = providerName_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings) {
+          return mergeFrom((com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings other) {
+        if (other == com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings.getDefaultInstance()) return this;
+        if (other.hasEventName()) {
+          bitField0_ |= 0x00000001;
+          eventName_ = other.eventName_;
+          onChanged();
+        }
+        if (!other.getProviderName().isEmpty()) {
+          providerName_ = other.providerName_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object eventName_ = "";
+      /**
+       * <pre>
+       * Output only. The event name of a third-party app analytics conversion.
+       * </pre>
+       *
+       * <code>string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the eventName field is set.
+       */
+      public boolean hasEventName() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Output only. The event name of a third-party app analytics conversion.
+       * </pre>
+       *
+       * <code>string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The eventName.
+       */
+      public java.lang.String getEventName() {
+        java.lang.Object ref = eventName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          eventName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. The event name of a third-party app analytics conversion.
+       * </pre>
+       *
+       * <code>string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The bytes for eventName.
+       */
+      public com.google.protobuf.ByteString
+          getEventNameBytes() {
+        java.lang.Object ref = eventName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          eventName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. The event name of a third-party app analytics conversion.
+       * </pre>
+       *
+       * <code>string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The eventName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEventName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        eventName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The event name of a third-party app analytics conversion.
+       * </pre>
+       *
+       * <code>string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEventName() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        eventName_ = getDefaultInstance().getEventName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. The event name of a third-party app analytics conversion.
+       * </pre>
+       *
+       * <code>string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The bytes for eventName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEventNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        bitField0_ |= 0x00000001;
+        eventName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object providerName_ = "";
+      /**
+       * <pre>
+       * Output only. Name of the third-party app analytics provider.
+       * </pre>
+       *
+       * <code>string provider_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The providerName.
+       */
+      public java.lang.String getProviderName() {
+        java.lang.Object ref = providerName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          providerName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. Name of the third-party app analytics provider.
+       * </pre>
+       *
+       * <code>string provider_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The bytes for providerName.
+       */
+      public com.google.protobuf.ByteString
+          getProviderNameBytes() {
+        java.lang.Object ref = providerName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          providerName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. Name of the third-party app analytics provider.
+       * </pre>
+       *
+       * <code>string provider_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The providerName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProviderName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        providerName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Name of the third-party app analytics provider.
+       * </pre>
+       *
+       * <code>string provider_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProviderName() {
+        
+        providerName_ = getDefaultInstance().getProviderName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Name of the third-party app analytics provider.
+       * </pre>
+       *
+       * <code>string provider_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The bytes for providerName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProviderNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        providerName_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings)
+    private static final com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings();
+    }
+
+    public static com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ThirdPartyAppAnalyticsSettings>
+        PARSER = new com.google.protobuf.AbstractParser<ThirdPartyAppAnalyticsSettings>() {
+      @java.lang.Override
+      public ThirdPartyAppAnalyticsSettings parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ThirdPartyAppAnalyticsSettings(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ThirdPartyAppAnalyticsSettings> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ThirdPartyAppAnalyticsSettings> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface FirebaseSettingsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:google.ads.googleads.v7.resources.ConversionAction.FirebaseSettings)
       com.google.protobuf.MessageOrBuilder {
@@ -2822,851 +3667,6 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public com.google.ads.googleads.v7.resources.ConversionAction.FirebaseSettings getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface ThirdPartyAppAnalyticsSettingsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * Output only. The event name of a third-party app analytics conversion.
-     * </pre>
-     *
-     * <code>string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @return Whether the eventName field is set.
-     */
-    boolean hasEventName();
-    /**
-     * <pre>
-     * Output only. The event name of a third-party app analytics conversion.
-     * </pre>
-     *
-     * <code>string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @return The eventName.
-     */
-    java.lang.String getEventName();
-    /**
-     * <pre>
-     * Output only. The event name of a third-party app analytics conversion.
-     * </pre>
-     *
-     * <code>string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @return The bytes for eventName.
-     */
-    com.google.protobuf.ByteString
-        getEventNameBytes();
-
-    /**
-     * <pre>
-     * Output only. Name of the third-party app analytics provider.
-     * </pre>
-     *
-     * <code>string provider_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @return The providerName.
-     */
-    java.lang.String getProviderName();
-    /**
-     * <pre>
-     * Output only. Name of the third-party app analytics provider.
-     * </pre>
-     *
-     * <code>string provider_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @return The bytes for providerName.
-     */
-    com.google.protobuf.ByteString
-        getProviderNameBytes();
-  }
-  /**
-   * <pre>
-   * Settings related to a third party app analytics conversion action.
-   * </pre>
-   *
-   * Protobuf type {@code google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings}
-   */
-  public static final class ThirdPartyAppAnalyticsSettings extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings)
-      ThirdPartyAppAnalyticsSettingsOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ThirdPartyAppAnalyticsSettings.newBuilder() to construct.
-    private ThirdPartyAppAnalyticsSettings(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private ThirdPartyAppAnalyticsSettings() {
-      eventName_ = "";
-      providerName_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ThirdPartyAppAnalyticsSettings();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private ThirdPartyAppAnalyticsSettings(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              eventName_ = s;
-              break;
-            }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              providerName_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.google.ads.googleads.v7.resources.ConversionActionProto.internal_static_google_ads_googleads_v7_resources_ConversionAction_ThirdPartyAppAnalyticsSettings_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.google.ads.googleads.v7.resources.ConversionActionProto.internal_static_google_ads_googleads_v7_resources_ConversionAction_ThirdPartyAppAnalyticsSettings_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings.class, com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings.Builder.class);
-    }
-
-    private int bitField0_;
-    public static final int EVENT_NAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object eventName_;
-    /**
-     * <pre>
-     * Output only. The event name of a third-party app analytics conversion.
-     * </pre>
-     *
-     * <code>string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @return Whether the eventName field is set.
-     */
-    @java.lang.Override
-    public boolean hasEventName() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <pre>
-     * Output only. The event name of a third-party app analytics conversion.
-     * </pre>
-     *
-     * <code>string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @return The eventName.
-     */
-    @java.lang.Override
-    public java.lang.String getEventName() {
-      java.lang.Object ref = eventName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        eventName_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Output only. The event name of a third-party app analytics conversion.
-     * </pre>
-     *
-     * <code>string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @return The bytes for eventName.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getEventNameBytes() {
-      java.lang.Object ref = eventName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        eventName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int PROVIDER_NAME_FIELD_NUMBER = 3;
-    private volatile java.lang.Object providerName_;
-    /**
-     * <pre>
-     * Output only. Name of the third-party app analytics provider.
-     * </pre>
-     *
-     * <code>string provider_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @return The providerName.
-     */
-    @java.lang.Override
-    public java.lang.String getProviderName() {
-      java.lang.Object ref = providerName_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        providerName_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Output only. Name of the third-party app analytics provider.
-     * </pre>
-     *
-     * <code>string provider_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @return The bytes for providerName.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getProviderNameBytes() {
-      java.lang.Object ref = providerName_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        providerName_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, eventName_);
-      }
-      if (!getProviderNameBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, providerName_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, eventName_);
-      }
-      if (!getProviderNameBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, providerName_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings)) {
-        return super.equals(obj);
-      }
-      com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings other = (com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings) obj;
-
-      if (hasEventName() != other.hasEventName()) return false;
-      if (hasEventName()) {
-        if (!getEventName()
-            .equals(other.getEventName())) return false;
-      }
-      if (!getProviderName()
-          .equals(other.getProviderName())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasEventName()) {
-        hash = (37 * hash) + EVENT_NAME_FIELD_NUMBER;
-        hash = (53 * hash) + getEventName().hashCode();
-      }
-      hash = (37 * hash) + PROVIDER_NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getProviderName().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * Settings related to a third party app analytics conversion action.
-     * </pre>
-     *
-     * Protobuf type {@code google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings)
-        com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettingsOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.google.ads.googleads.v7.resources.ConversionActionProto.internal_static_google_ads_googleads_v7_resources_ConversionAction_ThirdPartyAppAnalyticsSettings_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.google.ads.googleads.v7.resources.ConversionActionProto.internal_static_google_ads_googleads_v7_resources_ConversionAction_ThirdPartyAppAnalyticsSettings_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings.class, com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings.Builder.class);
-      }
-
-      // Construct using com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        eventName_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
-        providerName_ = "";
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.google.ads.googleads.v7.resources.ConversionActionProto.internal_static_google_ads_googleads_v7_resources_ConversionAction_ThirdPartyAppAnalyticsSettings_descriptor;
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings getDefaultInstanceForType() {
-        return com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings build() {
-        com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings buildPartial() {
-        com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings result = new com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.eventName_ = eventName_;
-        result.providerName_ = providerName_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings) {
-          return mergeFrom((com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings other) {
-        if (other == com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings.getDefaultInstance()) return this;
-        if (other.hasEventName()) {
-          bitField0_ |= 0x00000001;
-          eventName_ = other.eventName_;
-          onChanged();
-        }
-        if (!other.getProviderName().isEmpty()) {
-          providerName_ = other.providerName_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object eventName_ = "";
-      /**
-       * <pre>
-       * Output only. The event name of a third-party app analytics conversion.
-       * </pre>
-       *
-       * <code>string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-       * @return Whether the eventName field is set.
-       */
-      public boolean hasEventName() {
-        return ((bitField0_ & 0x00000001) != 0);
-      }
-      /**
-       * <pre>
-       * Output only. The event name of a third-party app analytics conversion.
-       * </pre>
-       *
-       * <code>string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-       * @return The eventName.
-       */
-      public java.lang.String getEventName() {
-        java.lang.Object ref = eventName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          eventName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Output only. The event name of a third-party app analytics conversion.
-       * </pre>
-       *
-       * <code>string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-       * @return The bytes for eventName.
-       */
-      public com.google.protobuf.ByteString
-          getEventNameBytes() {
-        java.lang.Object ref = eventName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          eventName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Output only. The event name of a third-party app analytics conversion.
-       * </pre>
-       *
-       * <code>string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-       * @param value The eventName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEventName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        eventName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Output only. The event name of a third-party app analytics conversion.
-       * </pre>
-       *
-       * <code>string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearEventName() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        eventName_ = getDefaultInstance().getEventName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Output only. The event name of a third-party app analytics conversion.
-       * </pre>
-       *
-       * <code>string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-       * @param value The bytes for eventName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setEventNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        bitField0_ |= 0x00000001;
-        eventName_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object providerName_ = "";
-      /**
-       * <pre>
-       * Output only. Name of the third-party app analytics provider.
-       * </pre>
-       *
-       * <code>string provider_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-       * @return The providerName.
-       */
-      public java.lang.String getProviderName() {
-        java.lang.Object ref = providerName_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          providerName_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Output only. Name of the third-party app analytics provider.
-       * </pre>
-       *
-       * <code>string provider_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-       * @return The bytes for providerName.
-       */
-      public com.google.protobuf.ByteString
-          getProviderNameBytes() {
-        java.lang.Object ref = providerName_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          providerName_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Output only. Name of the third-party app analytics provider.
-       * </pre>
-       *
-       * <code>string provider_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-       * @param value The providerName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProviderName(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        providerName_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Output only. Name of the third-party app analytics provider.
-       * </pre>
-       *
-       * <code>string provider_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearProviderName() {
-        
-        providerName_ = getDefaultInstance().getProviderName();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Output only. Name of the third-party app analytics provider.
-       * </pre>
-       *
-       * <code>string provider_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-       * @param value The bytes for providerName to set.
-       * @return This builder for chaining.
-       */
-      public Builder setProviderNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        providerName_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings)
-    }
-
-    // @@protoc_insertion_point(class_scope:google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings)
-    private static final com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings();
-    }
-
-    public static com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<ThirdPartyAppAnalyticsSettings>
-        PARSER = new com.google.protobuf.AbstractParser<ThirdPartyAppAnalyticsSettings>() {
-      @java.lang.Override
-      public ThirdPartyAppAnalyticsSettings parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ThirdPartyAppAnalyticsSettings(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<ThirdPartyAppAnalyticsSettings> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ThirdPartyAppAnalyticsSettings> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.ads.googleads.v7.resources.ConversionAction.ThirdPartyAppAnalyticsSettings getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 

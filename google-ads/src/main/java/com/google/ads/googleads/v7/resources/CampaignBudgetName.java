@@ -187,8 +187,8 @@ public class CampaignBudgetName implements ResourceName {
     }
 
     private Builder(CampaignBudgetName campaignBudgetName) {
-      customerId = campaignBudgetName.customerId;
-      campaignBudgetId = campaignBudgetName.campaignBudgetId;
+      this.customerId = campaignBudgetName.customerId;
+      this.campaignBudgetId = campaignBudgetName.campaignBudgetId;
     }
 
     public CampaignBudgetName build() {

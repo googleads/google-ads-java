@@ -21,6 +21,7 @@ import com.google.ads.googleads.v7.resources.FeedItem;
 import com.google.ads.googleads.v7.resources.FeedItemAttributeValue;
 import com.google.ads.googleads.v7.resources.FeedItemName;
 import com.google.ads.googleads.v7.resources.FeedItemPlaceholderPolicyInfo;
+import com.google.ads.googleads.v7.resources.FeedName;
 import com.google.api.gax.core.NoCredentialsProvider;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.testing.LocalChannelProvider;
@@ -46,10 +47,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class FeedItemServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
-  private FeedItemServiceClient client;
-  private LocalChannelProvider channelProvider;
   private static MockFeedItemService mockFeedItemService;
+  private static MockServiceHelper mockServiceHelper;
+  private LocalChannelProvider channelProvider;
+  private FeedItemServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -88,6 +89,10 @@ public class FeedItemServiceClientTest {
         FeedItem.newBuilder()
             .setResourceName(
                 FeedItemName.of("[CUSTOMER_ID]", "[FEED_ID]", "[FEED_ITEM_ID]").toString())
+            .setFeed(FeedName.of("[CUSTOMER_ID]", "[FEED_ID]").toString())
+            .setId(3355)
+            .setStartDateTime("startDateTime1919866397")
+            .setEndDateTime("endDateTime255463830")
             .addAllAttributeValues(new ArrayList<FeedItemAttributeValue>())
             .addAllUrlCustomParameters(new ArrayList<CustomParameter>())
             .addAllPolicyInfos(new ArrayList<FeedItemPlaceholderPolicyInfo>())
@@ -130,6 +135,10 @@ public class FeedItemServiceClientTest {
         FeedItem.newBuilder()
             .setResourceName(
                 FeedItemName.of("[CUSTOMER_ID]", "[FEED_ID]", "[FEED_ITEM_ID]").toString())
+            .setFeed(FeedName.of("[CUSTOMER_ID]", "[FEED_ID]").toString())
+            .setId(3355)
+            .setStartDateTime("startDateTime1919866397")
+            .setEndDateTime("endDateTime255463830")
             .addAllAttributeValues(new ArrayList<FeedItemAttributeValue>())
             .addAllUrlCustomParameters(new ArrayList<CustomParameter>())
             .addAllPolicyInfos(new ArrayList<FeedItemPlaceholderPolicyInfo>())

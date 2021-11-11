@@ -45,8 +45,8 @@ import org.junit.Test;
 public class LifeEventServiceClientTest {
   private static MockLifeEventService mockLifeEventService;
   private static MockServiceHelper mockServiceHelper;
-  private LifeEventServiceClient client;
   private LocalChannelProvider channelProvider;
+  private LifeEventServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {

@@ -29,7 +29,7 @@ public interface DisplayUploadAdInfoOrBuilder extends
   /**
    * <pre>
    * A media bundle asset to be used in the ad. For information about the
-   * media bundle for HTML5_UPLOAD_AD see
+   * media bundle for HTML5_UPLOAD_AD, see
    * https://support.google.com/google-ads/answer/1722096
    * Media bundles that are part of dynamic product types use a special format
    * that needs to be created through the Google Web Designer. See
@@ -44,7 +44,7 @@ public interface DisplayUploadAdInfoOrBuilder extends
   /**
    * <pre>
    * A media bundle asset to be used in the ad. For information about the
-   * media bundle for HTML5_UPLOAD_AD see
+   * media bundle for HTML5_UPLOAD_AD, see
    * https://support.google.com/google-ads/answer/1722096
    * Media bundles that are part of dynamic product types use a special format
    * that needs to be created through the Google Web Designer. See
@@ -59,7 +59,7 @@ public interface DisplayUploadAdInfoOrBuilder extends
   /**
    * <pre>
    * A media bundle asset to be used in the ad. For information about the
-   * media bundle for HTML5_UPLOAD_AD see
+   * media bundle for HTML5_UPLOAD_AD, see
    * https://support.google.com/google-ads/answer/1722096
    * Media bundles that are part of dynamic product types use a special format
    * that needs to be created through the Google Web Designer. See

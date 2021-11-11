@@ -224,9 +224,9 @@ public class GeographicViewName implements ResourceName {
     }
 
     private Builder(GeographicViewName geographicViewName) {
-      customerId = geographicViewName.customerId;
-      countryCriterionId = geographicViewName.countryCriterionId;
-      locationType = geographicViewName.locationType;
+      this.customerId = geographicViewName.customerId;
+      this.countryCriterionId = geographicViewName.countryCriterionId;
+      this.locationType = geographicViewName.locationType;
     }
 
     public GeographicViewName build() {

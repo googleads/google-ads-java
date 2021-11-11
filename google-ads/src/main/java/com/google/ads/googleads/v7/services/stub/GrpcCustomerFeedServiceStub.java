@@ -25,7 +25,6 @@ import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
-import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.common.collect.ImmutableMap;
 import com.google.longrunning.stub.GrpcOperationsStub;
@@ -119,13 +118,10 @@ public class GrpcCustomerFeedServiceStub extends CustomerFeedServiceStub {
         GrpcCallSettings.<GetCustomerFeedRequest, CustomerFeed>newBuilder()
             .setMethodDescriptor(getCustomerFeedMethodDescriptor)
             .setParamsExtractor(
-                new RequestParamsExtractor<GetCustomerFeedRequest>() {
-                  @Override
-                  public Map<String, String> extract(GetCustomerFeedRequest request) {
-                    ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                    params.put("resource_name", String.valueOf(request.getResourceName()));
-                    return params.build();
-                  }
+                request -> {
+                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                  params.put("resource_name", String.valueOf(request.getResourceName()));
+                  return params.build();
                 })
             .build();
     GrpcCallSettings<MutateCustomerFeedsRequest, MutateCustomerFeedsResponse>
@@ -133,13 +129,10 @@ public class GrpcCustomerFeedServiceStub extends CustomerFeedServiceStub {
             GrpcCallSettings.<MutateCustomerFeedsRequest, MutateCustomerFeedsResponse>newBuilder()
                 .setMethodDescriptor(mutateCustomerFeedsMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<MutateCustomerFeedsRequest>() {
-                      @Override
-                      public Map<String, String> extract(MutateCustomerFeedsRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("customer_id", String.valueOf(request.getCustomerId()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("customer_id", String.valueOf(request.getCustomerId()));
+                      return params.build();
                     })
                 .build();
 
@@ -173,7 +166,13 @@ public class GrpcCustomerFeedServiceStub extends CustomerFeedServiceStub {
 
   @Override
   public final void close() {
-    shutdown();
+    try {
+      backgroundResources.close();
+    } catch (RuntimeException e) {
+      throw e;
+    } catch (Exception e) {
+      throw new IllegalStateException("Failed to close resource", e);
+    }
   }
 
   @Override

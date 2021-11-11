@@ -20,6 +20,8 @@ import com.google.ads.googleads.v7.common.MatchingFunction;
 import com.google.ads.googleads.v7.enums.PlaceholderTypeEnum;
 import com.google.ads.googleads.v7.resources.AdGroupFeed;
 import com.google.ads.googleads.v7.resources.AdGroupFeedName;
+import com.google.ads.googleads.v7.resources.AdGroupName;
+import com.google.ads.googleads.v7.resources.FeedName;
 import com.google.api.gax.core.NoCredentialsProvider;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.testing.LocalChannelProvider;
@@ -47,8 +49,8 @@ import org.junit.Test;
 public class AdGroupFeedServiceClientTest {
   private static MockAdGroupFeedService mockAdGroupFeedService;
   private static MockServiceHelper mockServiceHelper;
-  private AdGroupFeedServiceClient client;
   private LocalChannelProvider channelProvider;
+  private AdGroupFeedServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -87,6 +89,8 @@ public class AdGroupFeedServiceClientTest {
         AdGroupFeed.newBuilder()
             .setResourceName(
                 AdGroupFeedName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[FEED_ID]").toString())
+            .setFeed(FeedName.of("[CUSTOMER_ID]", "[FEED_ID]").toString())
+            .setAdGroup(AdGroupName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]").toString())
             .addAllPlaceholderTypes(new ArrayList<PlaceholderTypeEnum.PlaceholderType>())
             .setMatchingFunction(MatchingFunction.newBuilder().build())
             .build();
@@ -130,6 +134,8 @@ public class AdGroupFeedServiceClientTest {
         AdGroupFeed.newBuilder()
             .setResourceName(
                 AdGroupFeedName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]", "[FEED_ID]").toString())
+            .setFeed(FeedName.of("[CUSTOMER_ID]", "[FEED_ID]").toString())
+            .setAdGroup(AdGroupName.of("[CUSTOMER_ID]", "[AD_GROUP_ID]").toString())
             .addAllPlaceholderTypes(new ArrayList<PlaceholderTypeEnum.PlaceholderType>())
             .setMatchingFunction(MatchingFunction.newBuilder().build())
             .build();

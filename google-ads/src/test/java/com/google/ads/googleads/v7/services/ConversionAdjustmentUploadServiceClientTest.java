@@ -43,8 +43,8 @@ import org.junit.Test;
 public class ConversionAdjustmentUploadServiceClientTest {
   private static MockConversionAdjustmentUploadService mockConversionAdjustmentUploadService;
   private static MockServiceHelper mockServiceHelper;
-  private ConversionAdjustmentUploadServiceClient client;
   private LocalChannelProvider channelProvider;
+  private ConversionAdjustmentUploadServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {

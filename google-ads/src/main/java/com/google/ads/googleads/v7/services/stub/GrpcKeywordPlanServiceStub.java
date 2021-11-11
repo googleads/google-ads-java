@@ -33,7 +33,6 @@ import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
-import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.common.collect.ImmutableMap;
 import com.google.longrunning.stub.GrpcOperationsStub;
@@ -189,13 +188,10 @@ public class GrpcKeywordPlanServiceStub extends KeywordPlanServiceStub {
         GrpcCallSettings.<GetKeywordPlanRequest, KeywordPlan>newBuilder()
             .setMethodDescriptor(getKeywordPlanMethodDescriptor)
             .setParamsExtractor(
-                new RequestParamsExtractor<GetKeywordPlanRequest>() {
-                  @Override
-                  public Map<String, String> extract(GetKeywordPlanRequest request) {
-                    ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                    params.put("resource_name", String.valueOf(request.getResourceName()));
-                    return params.build();
-                  }
+                request -> {
+                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                  params.put("resource_name", String.valueOf(request.getResourceName()));
+                  return params.build();
                 })
             .build();
     GrpcCallSettings<MutateKeywordPlansRequest, MutateKeywordPlansResponse>
@@ -203,13 +199,10 @@ public class GrpcKeywordPlanServiceStub extends KeywordPlanServiceStub {
             GrpcCallSettings.<MutateKeywordPlansRequest, MutateKeywordPlansResponse>newBuilder()
                 .setMethodDescriptor(mutateKeywordPlansMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<MutateKeywordPlansRequest>() {
-                      @Override
-                      public Map<String, String> extract(MutateKeywordPlansRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("customer_id", String.valueOf(request.getCustomerId()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("customer_id", String.valueOf(request.getCustomerId()));
+                      return params.build();
                     })
                 .build();
     GrpcCallSettings<GenerateForecastCurveRequest, GenerateForecastCurveResponse>
@@ -218,13 +211,10 @@ public class GrpcKeywordPlanServiceStub extends KeywordPlanServiceStub {
                 .<GenerateForecastCurveRequest, GenerateForecastCurveResponse>newBuilder()
                 .setMethodDescriptor(generateForecastCurveMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<GenerateForecastCurveRequest>() {
-                      @Override
-                      public Map<String, String> extract(GenerateForecastCurveRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("keyword_plan", String.valueOf(request.getKeywordPlan()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("keyword_plan", String.valueOf(request.getKeywordPlan()));
+                      return params.build();
                     })
                 .build();
     GrpcCallSettings<GenerateForecastTimeSeriesRequest, GenerateForecastTimeSeriesResponse>
@@ -233,14 +223,10 @@ public class GrpcKeywordPlanServiceStub extends KeywordPlanServiceStub {
                 .<GenerateForecastTimeSeriesRequest, GenerateForecastTimeSeriesResponse>newBuilder()
                 .setMethodDescriptor(generateForecastTimeSeriesMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<GenerateForecastTimeSeriesRequest>() {
-                      @Override
-                      public Map<String, String> extract(
-                          GenerateForecastTimeSeriesRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("keyword_plan", String.valueOf(request.getKeywordPlan()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("keyword_plan", String.valueOf(request.getKeywordPlan()));
+                      return params.build();
                     })
                 .build();
     GrpcCallSettings<GenerateForecastMetricsRequest, GenerateForecastMetricsResponse>
@@ -249,13 +235,10 @@ public class GrpcKeywordPlanServiceStub extends KeywordPlanServiceStub {
                 .<GenerateForecastMetricsRequest, GenerateForecastMetricsResponse>newBuilder()
                 .setMethodDescriptor(generateForecastMetricsMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<GenerateForecastMetricsRequest>() {
-                      @Override
-                      public Map<String, String> extract(GenerateForecastMetricsRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("keyword_plan", String.valueOf(request.getKeywordPlan()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("keyword_plan", String.valueOf(request.getKeywordPlan()));
+                      return params.build();
                     })
                 .build();
     GrpcCallSettings<GenerateHistoricalMetricsRequest, GenerateHistoricalMetricsResponse>
@@ -264,13 +247,10 @@ public class GrpcKeywordPlanServiceStub extends KeywordPlanServiceStub {
                 .<GenerateHistoricalMetricsRequest, GenerateHistoricalMetricsResponse>newBuilder()
                 .setMethodDescriptor(generateHistoricalMetricsMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<GenerateHistoricalMetricsRequest>() {
-                      @Override
-                      public Map<String, String> extract(GenerateHistoricalMetricsRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("keyword_plan", String.valueOf(request.getKeywordPlan()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("keyword_plan", String.valueOf(request.getKeywordPlan()));
+                      return params.build();
                     })
                 .build();
 
@@ -348,7 +328,13 @@ public class GrpcKeywordPlanServiceStub extends KeywordPlanServiceStub {
 
   @Override
   public final void close() {
-    shutdown();
+    try {
+      backgroundResources.close();
+    } catch (RuntimeException e) {
+      throw e;
+    } catch (Exception e) {
+      throw new IllegalStateException("Failed to close resource", e);
+    }
   }
 
   @Override

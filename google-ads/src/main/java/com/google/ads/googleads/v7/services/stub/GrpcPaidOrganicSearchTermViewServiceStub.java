@@ -23,7 +23,6 @@ import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
-import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.common.collect.ImmutableMap;
 import com.google.longrunning.stub.GrpcOperationsStub;
@@ -112,14 +111,10 @@ public class GrpcPaidOrganicSearchTermViewServiceStub extends PaidOrganicSearchT
                 .<GetPaidOrganicSearchTermViewRequest, PaidOrganicSearchTermView>newBuilder()
                 .setMethodDescriptor(getPaidOrganicSearchTermViewMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<GetPaidOrganicSearchTermViewRequest>() {
-                      @Override
-                      public Map<String, String> extract(
-                          GetPaidOrganicSearchTermViewRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("resource_name", String.valueOf(request.getResourceName()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("resource_name", String.valueOf(request.getResourceName()));
+                      return params.build();
                     })
                 .build();
 
@@ -145,7 +140,13 @@ public class GrpcPaidOrganicSearchTermViewServiceStub extends PaidOrganicSearchT
 
   @Override
   public final void close() {
-    shutdown();
+    try {
+      backgroundResources.close();
+    } catch (RuntimeException e) {
+      throw e;
+    } catch (Exception e) {
+      throw new IllegalStateException("Failed to close resource", e);
+    }
   }
 
   @Override

@@ -41,10 +41,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class CarrierConstantServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
   private static MockCarrierConstantService mockCarrierConstantService;
-  private CarrierConstantServiceClient client;
+  private static MockServiceHelper mockServiceHelper;
   private LocalChannelProvider channelProvider;
+  private CarrierConstantServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -83,6 +83,9 @@ public class CarrierConstantServiceClientTest {
     CarrierConstant expectedResponse =
         CarrierConstant.newBuilder()
             .setResourceName(CarrierConstantName.of("[CRITERION_ID]").toString())
+            .setId(3355)
+            .setName(CarrierConstantName.of("[CRITERION_ID]").toString())
+            .setCountryCode("countryCode-1477067101")
             .build();
     mockCarrierConstantService.addResponse(expectedResponse);
 
@@ -121,6 +124,9 @@ public class CarrierConstantServiceClientTest {
     CarrierConstant expectedResponse =
         CarrierConstant.newBuilder()
             .setResourceName(CarrierConstantName.of("[CRITERION_ID]").toString())
+            .setId(3355)
+            .setName(CarrierConstantName.of("[CRITERION_ID]").toString())
+            .setCountryCode("countryCode-1477067101")
             .build();
     mockCarrierConstantService.addResponse(expectedResponse);
 

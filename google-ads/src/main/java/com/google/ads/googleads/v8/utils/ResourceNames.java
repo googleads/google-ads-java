@@ -149,6 +149,8 @@ import com.google.ads.googleads.v8.resources.UserListName;
 import com.google.ads.googleads.v8.resources.UserLocationViewName;
 import com.google.ads.googleads.v8.resources.VideoName;
 import com.google.ads.googleads.v8.resources.WebpageViewName;
+import com.google.ads.googleads.v9.resources.BiddingDataExclusionName;
+import com.google.ads.googleads.v9.resources.BiddingSeasonalityAdjustmentName;
 
 /**
  * Utilities for generating resource names. Offers several advantages over the utilities in the
@@ -345,6 +347,18 @@ public class ResourceNames {
   /** Returns the Asset Field Type View resource name for the specified components. */
   public static String assetFieldTypeView(long customerId, AssetFieldType fieldType) {
     return AssetFieldTypeViewName.format(String.valueOf(customerId), fieldType.toString());
+  }
+
+  /** Returns the Bidding Data Exclusion resource name for the specified components. */
+  public static String biddingDataExclusion(long customerId, long seasonalityEventId) {
+    return BiddingDataExclusionName.format(
+        String.valueOf(customerId), String.valueOf(seasonalityEventId));
+  }
+
+  /** Returns the Bidding Seasonality Adjustment resource name for the specified components. */
+  public static String biddingSeasonalityAdjustment(long customerId, long seasonalityEventId) {
+    return BiddingSeasonalityAdjustmentName.format(
+        String.valueOf(customerId), String.valueOf(seasonalityEventId));
   }
 
   /** Returns the bidding strategy resource name for the specified components. */

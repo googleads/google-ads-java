@@ -41,10 +41,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class ManagedPlacementViewServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
   private static MockManagedPlacementViewService mockManagedPlacementViewService;
-  private ManagedPlacementViewServiceClient client;
+  private static MockServiceHelper mockServiceHelper;
   private LocalChannelProvider channelProvider;
+  private ManagedPlacementViewServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {

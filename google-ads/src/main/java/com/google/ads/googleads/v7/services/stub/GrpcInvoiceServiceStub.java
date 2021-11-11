@@ -23,7 +23,6 @@ import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
-import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.common.collect.ImmutableMap;
 import com.google.longrunning.stub.GrpcOperationsStub;
@@ -102,13 +101,10 @@ public class GrpcInvoiceServiceStub extends InvoiceServiceStub {
         GrpcCallSettings.<ListInvoicesRequest, ListInvoicesResponse>newBuilder()
             .setMethodDescriptor(listInvoicesMethodDescriptor)
             .setParamsExtractor(
-                new RequestParamsExtractor<ListInvoicesRequest>() {
-                  @Override
-                  public Map<String, String> extract(ListInvoicesRequest request) {
-                    ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                    params.put("customer_id", String.valueOf(request.getCustomerId()));
-                    return params.build();
-                  }
+                request -> {
+                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                  params.put("customer_id", String.valueOf(request.getCustomerId()));
+                  return params.build();
                 })
             .build();
 
@@ -131,7 +127,13 @@ public class GrpcInvoiceServiceStub extends InvoiceServiceStub {
 
   @Override
   public final void close() {
-    shutdown();
+    try {
+      backgroundResources.close();
+    } catch (RuntimeException e) {
+      throw e;
+    } catch (Exception e) {
+      throw new IllegalStateException("Failed to close resource", e);
+    }
   }
 
   @Override

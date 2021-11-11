@@ -18,6 +18,7 @@ package com.google.ads.googleads.v7.services;
 
 import com.google.ads.googleads.v7.resources.CampaignCriterion;
 import com.google.ads.googleads.v7.resources.CampaignCriterionName;
+import com.google.ads.googleads.v7.resources.CampaignName;
 import com.google.api.gax.core.NoCredentialsProvider;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.testing.LocalChannelProvider;
@@ -43,10 +44,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class CampaignCriterionServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
-  private CampaignCriterionServiceClient client;
   private static MockCampaignCriterionService mockCampaignCriterionService;
+  private static MockServiceHelper mockServiceHelper;
   private LocalChannelProvider channelProvider;
+  private CampaignCriterionServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -87,7 +88,11 @@ public class CampaignCriterionServiceClientTest {
             .setResourceName(
                 CampaignCriterionName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[CRITERION_ID]")
                     .toString())
+            .setCampaign(CampaignName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]").toString())
+            .setCriterionId(-326773895)
             .setDisplayName("displayName1714148973")
+            .setBidModifier(1362363353)
+            .setNegative(true)
             .build();
     mockCampaignCriterionService.addResponse(expectedResponse);
 
@@ -131,7 +136,11 @@ public class CampaignCriterionServiceClientTest {
             .setResourceName(
                 CampaignCriterionName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]", "[CRITERION_ID]")
                     .toString())
+            .setCampaign(CampaignName.of("[CUSTOMER_ID]", "[CAMPAIGN_ID]").toString())
+            .setCriterionId(-326773895)
             .setDisplayName("displayName1714148973")
+            .setBidModifier(1362363353)
+            .setNegative(true)
             .build();
     mockCampaignCriterionService.addResponse(expectedResponse);
 

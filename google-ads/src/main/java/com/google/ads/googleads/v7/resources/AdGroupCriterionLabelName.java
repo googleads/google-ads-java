@@ -257,10 +257,10 @@ public class AdGroupCriterionLabelName implements ResourceName {
     }
 
     private Builder(AdGroupCriterionLabelName adGroupCriterionLabelName) {
-      customerId = adGroupCriterionLabelName.customerId;
-      adGroupId = adGroupCriterionLabelName.adGroupId;
-      criterionId = adGroupCriterionLabelName.criterionId;
-      labelId = adGroupCriterionLabelName.labelId;
+      this.customerId = adGroupCriterionLabelName.customerId;
+      this.adGroupId = adGroupCriterionLabelName.adGroupId;
+      this.criterionId = adGroupCriterionLabelName.criterionId;
+      this.labelId = adGroupCriterionLabelName.labelId;
     }
 
     public AdGroupCriterionLabelName build() {

@@ -325,12 +325,12 @@ public class BiddingStrategySimulationName implements ResourceName {
     }
 
     private Builder(BiddingStrategySimulationName biddingStrategySimulationName) {
-      customerId = biddingStrategySimulationName.customerId;
-      biddingStrategyId = biddingStrategySimulationName.biddingStrategyId;
-      type = biddingStrategySimulationName.type;
-      modificationMethod = biddingStrategySimulationName.modificationMethod;
-      startDate = biddingStrategySimulationName.startDate;
-      endDate = biddingStrategySimulationName.endDate;
+      this.customerId = biddingStrategySimulationName.customerId;
+      this.biddingStrategyId = biddingStrategySimulationName.biddingStrategyId;
+      this.type = biddingStrategySimulationName.type;
+      this.modificationMethod = biddingStrategySimulationName.modificationMethod;
+      this.startDate = biddingStrategySimulationName.startDate;
+      this.endDate = biddingStrategySimulationName.endDate;
     }
 
     public BiddingStrategySimulationName build() {

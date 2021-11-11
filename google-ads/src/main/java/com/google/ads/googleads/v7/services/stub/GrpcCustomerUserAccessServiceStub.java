@@ -25,7 +25,6 @@ import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
-import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.common.collect.ImmutableMap;
 import com.google.longrunning.stub.GrpcOperationsStub;
@@ -124,13 +123,10 @@ public class GrpcCustomerUserAccessServiceStub extends CustomerUserAccessService
             GrpcCallSettings.<GetCustomerUserAccessRequest, CustomerUserAccess>newBuilder()
                 .setMethodDescriptor(getCustomerUserAccessMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<GetCustomerUserAccessRequest>() {
-                      @Override
-                      public Map<String, String> extract(GetCustomerUserAccessRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("resource_name", String.valueOf(request.getResourceName()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("resource_name", String.valueOf(request.getResourceName()));
+                      return params.build();
                     })
                 .build();
     GrpcCallSettings<MutateCustomerUserAccessRequest, MutateCustomerUserAccessResponse>
@@ -139,13 +135,10 @@ public class GrpcCustomerUserAccessServiceStub extends CustomerUserAccessService
                 .<MutateCustomerUserAccessRequest, MutateCustomerUserAccessResponse>newBuilder()
                 .setMethodDescriptor(mutateCustomerUserAccessMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<MutateCustomerUserAccessRequest>() {
-                      @Override
-                      public Map<String, String> extract(MutateCustomerUserAccessRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("customer_id", String.valueOf(request.getCustomerId()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("customer_id", String.valueOf(request.getCustomerId()));
+                      return params.build();
                     })
                 .build();
 
@@ -182,7 +175,13 @@ public class GrpcCustomerUserAccessServiceStub extends CustomerUserAccessService
 
   @Override
   public final void close() {
-    shutdown();
+    try {
+      backgroundResources.close();
+    } catch (RuntimeException e) {
+      throw e;
+    } catch (Exception e) {
+      throw new IllegalStateException("Failed to close resource", e);
+    }
   }
 
   @Override

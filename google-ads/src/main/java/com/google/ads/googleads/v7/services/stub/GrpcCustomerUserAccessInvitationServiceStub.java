@@ -25,7 +25,6 @@ import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
-import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.common.collect.ImmutableMap;
 import com.google.longrunning.stub.GrpcOperationsStub;
@@ -138,14 +137,10 @@ public class GrpcCustomerUserAccessInvitationServiceStub
                 .<GetCustomerUserAccessInvitationRequest, CustomerUserAccessInvitation>newBuilder()
                 .setMethodDescriptor(getCustomerUserAccessInvitationMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<GetCustomerUserAccessInvitationRequest>() {
-                      @Override
-                      public Map<String, String> extract(
-                          GetCustomerUserAccessInvitationRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("resource_name", String.valueOf(request.getResourceName()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("resource_name", String.valueOf(request.getResourceName()));
+                      return params.build();
                     })
                 .build();
     GrpcCallSettings<
@@ -157,14 +152,10 @@ public class GrpcCustomerUserAccessInvitationServiceStub
                     newBuilder()
                 .setMethodDescriptor(mutateCustomerUserAccessInvitationMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<MutateCustomerUserAccessInvitationRequest>() {
-                      @Override
-                      public Map<String, String> extract(
-                          MutateCustomerUserAccessInvitationRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("customer_id", String.valueOf(request.getCustomerId()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("customer_id", String.valueOf(request.getCustomerId()));
+                      return params.build();
                     })
                 .build();
 
@@ -202,7 +193,13 @@ public class GrpcCustomerUserAccessInvitationServiceStub
 
   @Override
   public final void close() {
-    shutdown();
+    try {
+      backgroundResources.close();
+    } catch (RuntimeException e) {
+      throw e;
+    } catch (Exception e) {
+      throw new IllegalStateException("Failed to close resource", e);
+    }
   }
 
   @Override

@@ -45,10 +45,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class FeedServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
-  private FeedServiceClient client;
   private static MockFeedService mockFeedService;
+  private static MockServiceHelper mockServiceHelper;
   private LocalChannelProvider channelProvider;
+  private FeedServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -86,6 +86,8 @@ public class FeedServiceClientTest {
     Feed expectedResponse =
         Feed.newBuilder()
             .setResourceName(FeedName.of("[CUSTOMER_ID]", "[FEED_ID]").toString())
+            .setId(3355)
+            .setName(FeedName.of("[CUSTOMER_ID]", "[FEED_ID]").toString())
             .addAllAttributes(new ArrayList<FeedAttribute>())
             .addAllAttributeOperations(new ArrayList<FeedAttributeOperation>())
             .build();
@@ -126,6 +128,8 @@ public class FeedServiceClientTest {
     Feed expectedResponse =
         Feed.newBuilder()
             .setResourceName(FeedName.of("[CUSTOMER_ID]", "[FEED_ID]").toString())
+            .setId(3355)
+            .setName(FeedName.of("[CUSTOMER_ID]", "[FEED_ID]").toString())
             .addAllAttributes(new ArrayList<FeedAttribute>())
             .addAllAttributeOperations(new ArrayList<FeedAttributeOperation>())
             .build();

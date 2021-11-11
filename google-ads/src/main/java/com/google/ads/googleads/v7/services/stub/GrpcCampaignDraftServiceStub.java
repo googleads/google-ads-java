@@ -31,7 +31,6 @@ import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
 import com.google.api.gax.rpc.OperationCallable;
-import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.common.collect.ImmutableMap;
 import com.google.longrunning.Operation;
@@ -162,13 +161,10 @@ public class GrpcCampaignDraftServiceStub extends CampaignDraftServiceStub {
         GrpcCallSettings.<GetCampaignDraftRequest, CampaignDraft>newBuilder()
             .setMethodDescriptor(getCampaignDraftMethodDescriptor)
             .setParamsExtractor(
-                new RequestParamsExtractor<GetCampaignDraftRequest>() {
-                  @Override
-                  public Map<String, String> extract(GetCampaignDraftRequest request) {
-                    ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                    params.put("resource_name", String.valueOf(request.getResourceName()));
-                    return params.build();
-                  }
+                request -> {
+                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                  params.put("resource_name", String.valueOf(request.getResourceName()));
+                  return params.build();
                 })
             .build();
     GrpcCallSettings<MutateCampaignDraftsRequest, MutateCampaignDraftsResponse>
@@ -176,26 +172,20 @@ public class GrpcCampaignDraftServiceStub extends CampaignDraftServiceStub {
             GrpcCallSettings.<MutateCampaignDraftsRequest, MutateCampaignDraftsResponse>newBuilder()
                 .setMethodDescriptor(mutateCampaignDraftsMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<MutateCampaignDraftsRequest>() {
-                      @Override
-                      public Map<String, String> extract(MutateCampaignDraftsRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("customer_id", String.valueOf(request.getCustomerId()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("customer_id", String.valueOf(request.getCustomerId()));
+                      return params.build();
                     })
                 .build();
     GrpcCallSettings<PromoteCampaignDraftRequest, Operation> promoteCampaignDraftTransportSettings =
         GrpcCallSettings.<PromoteCampaignDraftRequest, Operation>newBuilder()
             .setMethodDescriptor(promoteCampaignDraftMethodDescriptor)
             .setParamsExtractor(
-                new RequestParamsExtractor<PromoteCampaignDraftRequest>() {
-                  @Override
-                  public Map<String, String> extract(PromoteCampaignDraftRequest request) {
-                    ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                    params.put("campaign_draft", String.valueOf(request.getCampaignDraft()));
-                    return params.build();
-                  }
+                request -> {
+                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                  params.put("campaign_draft", String.valueOf(request.getCampaignDraft()));
+                  return params.build();
                 })
             .build();
     GrpcCallSettings<ListCampaignDraftAsyncErrorsRequest, ListCampaignDraftAsyncErrorsResponse>
@@ -205,14 +195,10 @@ public class GrpcCampaignDraftServiceStub extends CampaignDraftServiceStub {
                     newBuilder()
                 .setMethodDescriptor(listCampaignDraftAsyncErrorsMethodDescriptor)
                 .setParamsExtractor(
-                    new RequestParamsExtractor<ListCampaignDraftAsyncErrorsRequest>() {
-                      @Override
-                      public Map<String, String> extract(
-                          ListCampaignDraftAsyncErrorsRequest request) {
-                        ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                        params.put("resource_name", String.valueOf(request.getResourceName()));
-                        return params.build();
-                      }
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("resource_name", String.valueOf(request.getResourceName()));
+                      return params.build();
                     })
                 .build();
 
@@ -291,7 +277,13 @@ public class GrpcCampaignDraftServiceStub extends CampaignDraftServiceStub {
 
   @Override
   public final void close() {
-    shutdown();
+    try {
+      backgroundResources.close();
+    } catch (RuntimeException e) {
+      throw e;
+    } catch (Exception e) {
+      throw new IllegalStateException("Failed to close resource", e);
+    }
   }
 
   @Override

@@ -216,9 +216,9 @@ public class ProductGroupViewName implements ResourceName {
     }
 
     private Builder(ProductGroupViewName productGroupViewName) {
-      customerId = productGroupViewName.customerId;
-      adgroupId = productGroupViewName.adgroupId;
-      criterionId = productGroupViewName.criterionId;
+      this.customerId = productGroupViewName.customerId;
+      this.adgroupId = productGroupViewName.adgroupId;
+      this.criterionId = productGroupViewName.criterionId;
     }
 
     public ProductGroupViewName build() {

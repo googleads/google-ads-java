@@ -158,7 +158,7 @@ public class CurrencyConstantName implements ResourceName {
     }
 
     private Builder(CurrencyConstantName currencyConstantName) {
-      code = currencyConstantName.code;
+      this.code = currencyConstantName.code;
     }
 
     public CurrencyConstantName build() {

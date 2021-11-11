@@ -43,8 +43,8 @@ import org.junit.Test;
 public class ProductGroupViewServiceClientTest {
   private static MockProductGroupViewService mockProductGroupViewService;
   private static MockServiceHelper mockServiceHelper;
-  private ProductGroupViewServiceClient client;
   private LocalChannelProvider channelProvider;
+  private ProductGroupViewServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {

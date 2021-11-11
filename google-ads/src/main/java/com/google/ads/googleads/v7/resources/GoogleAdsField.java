@@ -550,12 +550,9 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.LazyStringList metrics_;
   /**
    * <pre>
-   * Output only. At and beyond version V1 this field lists the names of all metrics that are
-   * selectable with the described artifact when it is used in the FROM clause.
+   * Output only. This field lists the names of all metrics that are selectable with the
+   * described artifact when it is used in the FROM clause.
    * It is only set for artifacts whose category is RESOURCE.
-   * Before version V1 this field lists the names of all metrics that are
-   * selectable with the described artifact. It is only set for artifacts whose
-   * category is either RESOURCE or SEGMENT
    * </pre>
    *
    * <code>repeated string metrics = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -567,12 +564,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. At and beyond version V1 this field lists the names of all metrics that are
-   * selectable with the described artifact when it is used in the FROM clause.
+   * Output only. This field lists the names of all metrics that are selectable with the
+   * described artifact when it is used in the FROM clause.
    * It is only set for artifacts whose category is RESOURCE.
-   * Before version V1 this field lists the names of all metrics that are
-   * selectable with the described artifact. It is only set for artifacts whose
-   * category is either RESOURCE or SEGMENT
    * </pre>
    *
    * <code>repeated string metrics = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -583,12 +577,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. At and beyond version V1 this field lists the names of all metrics that are
-   * selectable with the described artifact when it is used in the FROM clause.
+   * Output only. This field lists the names of all metrics that are selectable with the
+   * described artifact when it is used in the FROM clause.
    * It is only set for artifacts whose category is RESOURCE.
-   * Before version V1 this field lists the names of all metrics that are
-   * selectable with the described artifact. It is only set for artifacts whose
-   * category is either RESOURCE or SEGMENT
    * </pre>
    *
    * <code>repeated string metrics = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -600,12 +591,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. At and beyond version V1 this field lists the names of all metrics that are
-   * selectable with the described artifact when it is used in the FROM clause.
+   * Output only. This field lists the names of all metrics that are selectable with the
+   * described artifact when it is used in the FROM clause.
    * It is only set for artifacts whose category is RESOURCE.
-   * Before version V1 this field lists the names of all metrics that are
-   * selectable with the described artifact. It is only set for artifacts whose
-   * category is either RESOURCE or SEGMENT
    * </pre>
    *
    * <code>repeated string metrics = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -621,14 +609,10 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.LazyStringList segments_;
   /**
    * <pre>
-   * Output only. At and beyond version V1 this field lists the names of all artifacts,
-   * whether a segment or another resource, that segment metrics when included
-   * in search queries and when the described artifact is used in the FROM
-   * clause. It is only set for artifacts whose category is RESOURCE.
-   * Before version V1 this field lists the names of all artifacts, whether a
-   * segment or another resource, that segment metrics when included in search
-   * queries. It is only set for artifacts of category RESOURCE, SEGMENT or
-   * METRIC.
+   * Output only. This field lists the names of all artifacts, whether a segment or another
+   * resource, that segment metrics when included in search queries and when the
+   * described artifact is used in the FROM clause. It is only set for artifacts
+   * whose category is RESOURCE.
    * </pre>
    *
    * <code>repeated string segments = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -640,14 +624,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. At and beyond version V1 this field lists the names of all artifacts,
-   * whether a segment or another resource, that segment metrics when included
-   * in search queries and when the described artifact is used in the FROM
-   * clause. It is only set for artifacts whose category is RESOURCE.
-   * Before version V1 this field lists the names of all artifacts, whether a
-   * segment or another resource, that segment metrics when included in search
-   * queries. It is only set for artifacts of category RESOURCE, SEGMENT or
-   * METRIC.
+   * Output only. This field lists the names of all artifacts, whether a segment or another
+   * resource, that segment metrics when included in search queries and when the
+   * described artifact is used in the FROM clause. It is only set for artifacts
+   * whose category is RESOURCE.
    * </pre>
    *
    * <code>repeated string segments = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -658,14 +638,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. At and beyond version V1 this field lists the names of all artifacts,
-   * whether a segment or another resource, that segment metrics when included
-   * in search queries and when the described artifact is used in the FROM
-   * clause. It is only set for artifacts whose category is RESOURCE.
-   * Before version V1 this field lists the names of all artifacts, whether a
-   * segment or another resource, that segment metrics when included in search
-   * queries. It is only set for artifacts of category RESOURCE, SEGMENT or
-   * METRIC.
+   * Output only. This field lists the names of all artifacts, whether a segment or another
+   * resource, that segment metrics when included in search queries and when the
+   * described artifact is used in the FROM clause. It is only set for artifacts
+   * whose category is RESOURCE.
    * </pre>
    *
    * <code>repeated string segments = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -677,14 +653,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. At and beyond version V1 this field lists the names of all artifacts,
-   * whether a segment or another resource, that segment metrics when included
-   * in search queries and when the described artifact is used in the FROM
-   * clause. It is only set for artifacts whose category is RESOURCE.
-   * Before version V1 this field lists the names of all artifacts, whether a
-   * segment or another resource, that segment metrics when included in search
-   * queries. It is only set for artifacts of category RESOURCE, SEGMENT or
-   * METRIC.
+   * Output only. This field lists the names of all artifacts, whether a segment or another
+   * resource, that segment metrics when included in search queries and when the
+   * described artifact is used in the FROM clause. It is only set for artifacts
+   * whose category is RESOURCE.
    * </pre>
    *
    * <code>repeated string segments = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2334,12 +2306,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. At and beyond version V1 this field lists the names of all metrics that are
-     * selectable with the described artifact when it is used in the FROM clause.
+     * Output only. This field lists the names of all metrics that are selectable with the
+     * described artifact when it is used in the FROM clause.
      * It is only set for artifacts whose category is RESOURCE.
-     * Before version V1 this field lists the names of all metrics that are
-     * selectable with the described artifact. It is only set for artifacts whose
-     * category is either RESOURCE or SEGMENT
      * </pre>
      *
      * <code>repeated string metrics = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2351,12 +2320,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. At and beyond version V1 this field lists the names of all metrics that are
-     * selectable with the described artifact when it is used in the FROM clause.
+     * Output only. This field lists the names of all metrics that are selectable with the
+     * described artifact when it is used in the FROM clause.
      * It is only set for artifacts whose category is RESOURCE.
-     * Before version V1 this field lists the names of all metrics that are
-     * selectable with the described artifact. It is only set for artifacts whose
-     * category is either RESOURCE or SEGMENT
      * </pre>
      *
      * <code>repeated string metrics = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2367,12 +2333,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. At and beyond version V1 this field lists the names of all metrics that are
-     * selectable with the described artifact when it is used in the FROM clause.
+     * Output only. This field lists the names of all metrics that are selectable with the
+     * described artifact when it is used in the FROM clause.
      * It is only set for artifacts whose category is RESOURCE.
-     * Before version V1 this field lists the names of all metrics that are
-     * selectable with the described artifact. It is only set for artifacts whose
-     * category is either RESOURCE or SEGMENT
      * </pre>
      *
      * <code>repeated string metrics = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2384,12 +2347,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. At and beyond version V1 this field lists the names of all metrics that are
-     * selectable with the described artifact when it is used in the FROM clause.
+     * Output only. This field lists the names of all metrics that are selectable with the
+     * described artifact when it is used in the FROM clause.
      * It is only set for artifacts whose category is RESOURCE.
-     * Before version V1 this field lists the names of all metrics that are
-     * selectable with the described artifact. It is only set for artifacts whose
-     * category is either RESOURCE or SEGMENT
      * </pre>
      *
      * <code>repeated string metrics = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2402,12 +2362,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. At and beyond version V1 this field lists the names of all metrics that are
-     * selectable with the described artifact when it is used in the FROM clause.
+     * Output only. This field lists the names of all metrics that are selectable with the
+     * described artifact when it is used in the FROM clause.
      * It is only set for artifacts whose category is RESOURCE.
-     * Before version V1 this field lists the names of all metrics that are
-     * selectable with the described artifact. It is only set for artifacts whose
-     * category is either RESOURCE or SEGMENT
      * </pre>
      *
      * <code>repeated string metrics = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2427,12 +2384,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. At and beyond version V1 this field lists the names of all metrics that are
-     * selectable with the described artifact when it is used in the FROM clause.
+     * Output only. This field lists the names of all metrics that are selectable with the
+     * described artifact when it is used in the FROM clause.
      * It is only set for artifacts whose category is RESOURCE.
-     * Before version V1 this field lists the names of all metrics that are
-     * selectable with the described artifact. It is only set for artifacts whose
-     * category is either RESOURCE or SEGMENT
      * </pre>
      *
      * <code>repeated string metrics = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2451,12 +2405,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. At and beyond version V1 this field lists the names of all metrics that are
-     * selectable with the described artifact when it is used in the FROM clause.
+     * Output only. This field lists the names of all metrics that are selectable with the
+     * described artifact when it is used in the FROM clause.
      * It is only set for artifacts whose category is RESOURCE.
-     * Before version V1 this field lists the names of all metrics that are
-     * selectable with the described artifact. It is only set for artifacts whose
-     * category is either RESOURCE or SEGMENT
      * </pre>
      *
      * <code>repeated string metrics = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2473,12 +2424,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. At and beyond version V1 this field lists the names of all metrics that are
-     * selectable with the described artifact when it is used in the FROM clause.
+     * Output only. This field lists the names of all metrics that are selectable with the
+     * described artifact when it is used in the FROM clause.
      * It is only set for artifacts whose category is RESOURCE.
-     * Before version V1 this field lists the names of all metrics that are
-     * selectable with the described artifact. It is only set for artifacts whose
-     * category is either RESOURCE or SEGMENT
      * </pre>
      *
      * <code>repeated string metrics = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2492,12 +2440,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. At and beyond version V1 this field lists the names of all metrics that are
-     * selectable with the described artifact when it is used in the FROM clause.
+     * Output only. This field lists the names of all metrics that are selectable with the
+     * described artifact when it is used in the FROM clause.
      * It is only set for artifacts whose category is RESOURCE.
-     * Before version V1 this field lists the names of all metrics that are
-     * selectable with the described artifact. It is only set for artifacts whose
-     * category is either RESOURCE or SEGMENT
      * </pre>
      *
      * <code>repeated string metrics = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2525,14 +2470,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. At and beyond version V1 this field lists the names of all artifacts,
-     * whether a segment or another resource, that segment metrics when included
-     * in search queries and when the described artifact is used in the FROM
-     * clause. It is only set for artifacts whose category is RESOURCE.
-     * Before version V1 this field lists the names of all artifacts, whether a
-     * segment or another resource, that segment metrics when included in search
-     * queries. It is only set for artifacts of category RESOURCE, SEGMENT or
-     * METRIC.
+     * Output only. This field lists the names of all artifacts, whether a segment or another
+     * resource, that segment metrics when included in search queries and when the
+     * described artifact is used in the FROM clause. It is only set for artifacts
+     * whose category is RESOURCE.
      * </pre>
      *
      * <code>repeated string segments = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2544,14 +2485,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. At and beyond version V1 this field lists the names of all artifacts,
-     * whether a segment or another resource, that segment metrics when included
-     * in search queries and when the described artifact is used in the FROM
-     * clause. It is only set for artifacts whose category is RESOURCE.
-     * Before version V1 this field lists the names of all artifacts, whether a
-     * segment or another resource, that segment metrics when included in search
-     * queries. It is only set for artifacts of category RESOURCE, SEGMENT or
-     * METRIC.
+     * Output only. This field lists the names of all artifacts, whether a segment or another
+     * resource, that segment metrics when included in search queries and when the
+     * described artifact is used in the FROM clause. It is only set for artifacts
+     * whose category is RESOURCE.
      * </pre>
      *
      * <code>repeated string segments = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2562,14 +2499,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. At and beyond version V1 this field lists the names of all artifacts,
-     * whether a segment or another resource, that segment metrics when included
-     * in search queries and when the described artifact is used in the FROM
-     * clause. It is only set for artifacts whose category is RESOURCE.
-     * Before version V1 this field lists the names of all artifacts, whether a
-     * segment or another resource, that segment metrics when included in search
-     * queries. It is only set for artifacts of category RESOURCE, SEGMENT or
-     * METRIC.
+     * Output only. This field lists the names of all artifacts, whether a segment or another
+     * resource, that segment metrics when included in search queries and when the
+     * described artifact is used in the FROM clause. It is only set for artifacts
+     * whose category is RESOURCE.
      * </pre>
      *
      * <code>repeated string segments = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2581,14 +2514,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. At and beyond version V1 this field lists the names of all artifacts,
-     * whether a segment or another resource, that segment metrics when included
-     * in search queries and when the described artifact is used in the FROM
-     * clause. It is only set for artifacts whose category is RESOURCE.
-     * Before version V1 this field lists the names of all artifacts, whether a
-     * segment or another resource, that segment metrics when included in search
-     * queries. It is only set for artifacts of category RESOURCE, SEGMENT or
-     * METRIC.
+     * Output only. This field lists the names of all artifacts, whether a segment or another
+     * resource, that segment metrics when included in search queries and when the
+     * described artifact is used in the FROM clause. It is only set for artifacts
+     * whose category is RESOURCE.
      * </pre>
      *
      * <code>repeated string segments = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2601,14 +2530,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. At and beyond version V1 this field lists the names of all artifacts,
-     * whether a segment or another resource, that segment metrics when included
-     * in search queries and when the described artifact is used in the FROM
-     * clause. It is only set for artifacts whose category is RESOURCE.
-     * Before version V1 this field lists the names of all artifacts, whether a
-     * segment or another resource, that segment metrics when included in search
-     * queries. It is only set for artifacts of category RESOURCE, SEGMENT or
-     * METRIC.
+     * Output only. This field lists the names of all artifacts, whether a segment or another
+     * resource, that segment metrics when included in search queries and when the
+     * described artifact is used in the FROM clause. It is only set for artifacts
+     * whose category is RESOURCE.
      * </pre>
      *
      * <code>repeated string segments = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2628,14 +2553,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. At and beyond version V1 this field lists the names of all artifacts,
-     * whether a segment or another resource, that segment metrics when included
-     * in search queries and when the described artifact is used in the FROM
-     * clause. It is only set for artifacts whose category is RESOURCE.
-     * Before version V1 this field lists the names of all artifacts, whether a
-     * segment or another resource, that segment metrics when included in search
-     * queries. It is only set for artifacts of category RESOURCE, SEGMENT or
-     * METRIC.
+     * Output only. This field lists the names of all artifacts, whether a segment or another
+     * resource, that segment metrics when included in search queries and when the
+     * described artifact is used in the FROM clause. It is only set for artifacts
+     * whose category is RESOURCE.
      * </pre>
      *
      * <code>repeated string segments = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2654,14 +2575,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. At and beyond version V1 this field lists the names of all artifacts,
-     * whether a segment or another resource, that segment metrics when included
-     * in search queries and when the described artifact is used in the FROM
-     * clause. It is only set for artifacts whose category is RESOURCE.
-     * Before version V1 this field lists the names of all artifacts, whether a
-     * segment or another resource, that segment metrics when included in search
-     * queries. It is only set for artifacts of category RESOURCE, SEGMENT or
-     * METRIC.
+     * Output only. This field lists the names of all artifacts, whether a segment or another
+     * resource, that segment metrics when included in search queries and when the
+     * described artifact is used in the FROM clause. It is only set for artifacts
+     * whose category is RESOURCE.
      * </pre>
      *
      * <code>repeated string segments = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2678,14 +2595,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. At and beyond version V1 this field lists the names of all artifacts,
-     * whether a segment or another resource, that segment metrics when included
-     * in search queries and when the described artifact is used in the FROM
-     * clause. It is only set for artifacts whose category is RESOURCE.
-     * Before version V1 this field lists the names of all artifacts, whether a
-     * segment or another resource, that segment metrics when included in search
-     * queries. It is only set for artifacts of category RESOURCE, SEGMENT or
-     * METRIC.
+     * Output only. This field lists the names of all artifacts, whether a segment or another
+     * resource, that segment metrics when included in search queries and when the
+     * described artifact is used in the FROM clause. It is only set for artifacts
+     * whose category is RESOURCE.
      * </pre>
      *
      * <code>repeated string segments = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2699,14 +2612,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. At and beyond version V1 this field lists the names of all artifacts,
-     * whether a segment or another resource, that segment metrics when included
-     * in search queries and when the described artifact is used in the FROM
-     * clause. It is only set for artifacts whose category is RESOURCE.
-     * Before version V1 this field lists the names of all artifacts, whether a
-     * segment or another resource, that segment metrics when included in search
-     * queries. It is only set for artifacts of category RESOURCE, SEGMENT or
-     * METRIC.
+     * Output only. This field lists the names of all artifacts, whether a segment or another
+     * resource, that segment metrics when included in search queries and when the
+     * described artifact is used in the FROM clause. It is only set for artifacts
+     * whose category is RESOURCE.
      * </pre>
      *
      * <code>repeated string segments = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

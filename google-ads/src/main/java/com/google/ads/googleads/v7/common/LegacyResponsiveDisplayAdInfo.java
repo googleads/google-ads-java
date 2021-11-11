@@ -429,8 +429,8 @@ private static final long serialVersionUID = 0L;
    * Advertiser's consent to allow flexible color. When true, the ad may be
    * served with different color if necessary. When false, the ad will be served
    * with the specified colors or a neutral color.
-   * The default value is true.
-   * Must be true if main_color and accent_color are not set.
+   * The default value is `true`.
+   * Must be true if `main_color` and `accent_color` are not set.
    * </pre>
    *
    * <code>bool allow_flexible_color = 20;</code>
@@ -445,8 +445,8 @@ private static final long serialVersionUID = 0L;
    * Advertiser's consent to allow flexible color. When true, the ad may be
    * served with different color if necessary. When false, the ad will be served
    * with the specified colors or a neutral color.
-   * The default value is true.
-   * Must be true if main_color and accent_color are not set.
+   * The default value is `true`.
+   * Must be true if `main_color` and `accent_color` are not set.
    * </pre>
    *
    * <code>bool allow_flexible_color = 20;</code>
@@ -462,7 +462,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
-   * If one of main_color and accent_color is set, the other is required as
+   * If one of `main_color` and `accent_color` is set, the other is required as
    * well.
    * </pre>
    *
@@ -476,7 +476,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
-   * If one of main_color and accent_color is set, the other is required as
+   * If one of `main_color` and `accent_color` is set, the other is required as
    * well.
    * </pre>
    *
@@ -499,7 +499,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
-   * If one of main_color and accent_color is set, the other is required as
+   * If one of `main_color` and `accent_color` is set, the other is required as
    * well.
    * </pre>
    *
@@ -526,7 +526,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The main color of the ad in hexadecimal, e.g. #ffffff for white.
-   * If one of main_color and accent_color is set, the other is required as
+   * If one of `main_color` and `accent_color` is set, the other is required as
    * well.
    * </pre>
    *
@@ -540,7 +540,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The main color of the ad in hexadecimal, e.g. #ffffff for white.
-   * If one of main_color and accent_color is set, the other is required as
+   * If one of `main_color` and `accent_color` is set, the other is required as
    * well.
    * </pre>
    *
@@ -563,7 +563,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The main color of the ad in hexadecimal, e.g. #ffffff for white.
-   * If one of main_color and accent_color is set, the other is required as
+   * If one of `main_color` and `accent_color` is set, the other is required as
    * well.
    * </pre>
    *
@@ -964,7 +964,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object promoText_;
   /**
    * <pre>
-   * Promotion text used for dyanmic formats of responsive ads. For example
+   * Promotion text used for dynamic formats of responsive ads. For example
    * 'Free two-day shipping'.
    * </pre>
    *
@@ -977,7 +977,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Promotion text used for dyanmic formats of responsive ads. For example
+   * Promotion text used for dynamic formats of responsive ads. For example
    * 'Free two-day shipping'.
    * </pre>
    *
@@ -999,7 +999,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Promotion text used for dyanmic formats of responsive ads. For example
+   * Promotion text used for dynamic formats of responsive ads. For example
    * 'Free two-day shipping'.
    * </pre>
    *
@@ -2129,8 +2129,8 @@ private static final long serialVersionUID = 0L;
      * Advertiser's consent to allow flexible color. When true, the ad may be
      * served with different color if necessary. When false, the ad will be served
      * with the specified colors or a neutral color.
-     * The default value is true.
-     * Must be true if main_color and accent_color are not set.
+     * The default value is `true`.
+     * Must be true if `main_color` and `accent_color` are not set.
      * </pre>
      *
      * <code>bool allow_flexible_color = 20;</code>
@@ -2145,8 +2145,8 @@ private static final long serialVersionUID = 0L;
      * Advertiser's consent to allow flexible color. When true, the ad may be
      * served with different color if necessary. When false, the ad will be served
      * with the specified colors or a neutral color.
-     * The default value is true.
-     * Must be true if main_color and accent_color are not set.
+     * The default value is `true`.
+     * Must be true if `main_color` and `accent_color` are not set.
      * </pre>
      *
      * <code>bool allow_flexible_color = 20;</code>
@@ -2161,8 +2161,8 @@ private static final long serialVersionUID = 0L;
      * Advertiser's consent to allow flexible color. When true, the ad may be
      * served with different color if necessary. When false, the ad will be served
      * with the specified colors or a neutral color.
-     * The default value is true.
-     * Must be true if main_color and accent_color are not set.
+     * The default value is `true`.
+     * Must be true if `main_color` and `accent_color` are not set.
      * </pre>
      *
      * <code>bool allow_flexible_color = 20;</code>
@@ -2180,8 +2180,8 @@ private static final long serialVersionUID = 0L;
      * Advertiser's consent to allow flexible color. When true, the ad may be
      * served with different color if necessary. When false, the ad will be served
      * with the specified colors or a neutral color.
-     * The default value is true.
-     * Must be true if main_color and accent_color are not set.
+     * The default value is `true`.
+     * Must be true if `main_color` and `accent_color` are not set.
      * </pre>
      *
      * <code>bool allow_flexible_color = 20;</code>
@@ -2198,7 +2198,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
-     * If one of main_color and accent_color is set, the other is required as
+     * If one of `main_color` and `accent_color` is set, the other is required as
      * well.
      * </pre>
      *
@@ -2211,7 +2211,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
-     * If one of main_color and accent_color is set, the other is required as
+     * If one of `main_color` and `accent_color` is set, the other is required as
      * well.
      * </pre>
      *
@@ -2233,7 +2233,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
-     * If one of main_color and accent_color is set, the other is required as
+     * If one of `main_color` and `accent_color` is set, the other is required as
      * well.
      * </pre>
      *
@@ -2256,7 +2256,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
-     * If one of main_color and accent_color is set, the other is required as
+     * If one of `main_color` and `accent_color` is set, the other is required as
      * well.
      * </pre>
      *
@@ -2277,7 +2277,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
-     * If one of main_color and accent_color is set, the other is required as
+     * If one of `main_color` and `accent_color` is set, the other is required as
      * well.
      * </pre>
      *
@@ -2293,7 +2293,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
-     * If one of main_color and accent_color is set, the other is required as
+     * If one of `main_color` and `accent_color` is set, the other is required as
      * well.
      * </pre>
      *
@@ -2317,7 +2317,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The main color of the ad in hexadecimal, e.g. #ffffff for white.
-     * If one of main_color and accent_color is set, the other is required as
+     * If one of `main_color` and `accent_color` is set, the other is required as
      * well.
      * </pre>
      *
@@ -2330,7 +2330,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The main color of the ad in hexadecimal, e.g. #ffffff for white.
-     * If one of main_color and accent_color is set, the other is required as
+     * If one of `main_color` and `accent_color` is set, the other is required as
      * well.
      * </pre>
      *
@@ -2352,7 +2352,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The main color of the ad in hexadecimal, e.g. #ffffff for white.
-     * If one of main_color and accent_color is set, the other is required as
+     * If one of `main_color` and `accent_color` is set, the other is required as
      * well.
      * </pre>
      *
@@ -2375,7 +2375,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The main color of the ad in hexadecimal, e.g. #ffffff for white.
-     * If one of main_color and accent_color is set, the other is required as
+     * If one of `main_color` and `accent_color` is set, the other is required as
      * well.
      * </pre>
      *
@@ -2396,7 +2396,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The main color of the ad in hexadecimal, e.g. #ffffff for white.
-     * If one of main_color and accent_color is set, the other is required as
+     * If one of `main_color` and `accent_color` is set, the other is required as
      * well.
      * </pre>
      *
@@ -2412,7 +2412,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The main color of the ad in hexadecimal, e.g. #ffffff for white.
-     * If one of main_color and accent_color is set, the other is required as
+     * If one of `main_color` and `accent_color` is set, the other is required as
      * well.
      * </pre>
      *
@@ -3151,7 +3151,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object promoText_ = "";
     /**
      * <pre>
-     * Promotion text used for dyanmic formats of responsive ads. For example
+     * Promotion text used for dynamic formats of responsive ads. For example
      * 'Free two-day shipping'.
      * </pre>
      *
@@ -3163,7 +3163,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Promotion text used for dyanmic formats of responsive ads. For example
+     * Promotion text used for dynamic formats of responsive ads. For example
      * 'Free two-day shipping'.
      * </pre>
      *
@@ -3184,7 +3184,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Promotion text used for dyanmic formats of responsive ads. For example
+     * Promotion text used for dynamic formats of responsive ads. For example
      * 'Free two-day shipping'.
      * </pre>
      *
@@ -3206,7 +3206,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Promotion text used for dyanmic formats of responsive ads. For example
+     * Promotion text used for dynamic formats of responsive ads. For example
      * 'Free two-day shipping'.
      * </pre>
      *
@@ -3226,7 +3226,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Promotion text used for dyanmic formats of responsive ads. For example
+     * Promotion text used for dynamic formats of responsive ads. For example
      * 'Free two-day shipping'.
      * </pre>
      *
@@ -3241,7 +3241,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Promotion text used for dyanmic formats of responsive ads. For example
+     * Promotion text used for dynamic formats of responsive ads. For example
      * 'Free two-day shipping'.
      * </pre>
      *

@@ -188,8 +188,8 @@ public class ThirdPartyAppAnalyticsLinkName implements ResourceName {
     }
 
     private Builder(ThirdPartyAppAnalyticsLinkName thirdPartyAppAnalyticsLinkName) {
-      customerId = thirdPartyAppAnalyticsLinkName.customerId;
-      customerLinkId = thirdPartyAppAnalyticsLinkName.customerLinkId;
+      this.customerId = thirdPartyAppAnalyticsLinkName.customerId;
+      this.customerLinkId = thirdPartyAppAnalyticsLinkName.customerLinkId;
     }
 
     public ThirdPartyAppAnalyticsLinkName build() {

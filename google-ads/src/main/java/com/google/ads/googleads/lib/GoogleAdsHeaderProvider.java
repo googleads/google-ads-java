@@ -23,15 +23,18 @@ import com.google.auto.value.AutoValue;
 import com.google.auto.value.extension.memoized.Memoized;
 import com.google.common.collect.ImmutableMap;
 import javax.annotation.Nullable;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
- * A provider for setting the Google Ads API specific headers. Currently this is the developer token
- * and the login customer ID.
+ * A provider for setting the Google Ads API specific headers.
  *
  * <p>Credentials are not provided by this header set, rather these are handled by gRPC.
  */
 @AutoValue
 public abstract class GoogleAdsHeaderProvider implements HeaderProvider {
+
+  private static final Logger logger = LoggerFactory.getLogger(GoogleAdsHeaderProvider.class);
 
   /** Returns a new builder for {@link GoogleAdsHeaderProvider} with only default values set. */
   public static Builder newBuilder() {
@@ -69,9 +72,16 @@ public abstract class GoogleAdsHeaderProvider implements HeaderProvider {
                 "gapic", GaxProperties.getLibraryVersion(GoogleAdsServiceStubSettings.class))
             .setTransportToken(
                 GaxGrpcProperties.getGrpcTokenName(), GaxGrpcProperties.getGrpcVersion())
+            .setClientLibToken("gccl", getLibraryVersion())
             .build();
     builder.putAll(apiClient.getHeaders());
     return builder.build();
+  }
+
+  private static String getLibraryVersion() {
+    String implementationVersion = GoogleAdsHeaderProvider.class.getPackage()
+        .getImplementationVersion();
+    return implementationVersion == null ? "0.0.0" : implementationVersion;
   }
 
   @AutoValue.Builder

@@ -41,10 +41,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class ConversionUploadServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
-  private ConversionUploadServiceClient client;
-  private LocalChannelProvider channelProvider;
   private static MockConversionUploadService mockConversionUploadService;
+  private static MockServiceHelper mockServiceHelper;
+  private LocalChannelProvider channelProvider;
+  private ConversionUploadServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {

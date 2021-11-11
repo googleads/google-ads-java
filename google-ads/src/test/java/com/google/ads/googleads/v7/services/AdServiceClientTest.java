@@ -46,10 +46,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class AdServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
-  private AdServiceClient client;
   private static MockAdService mockAdService;
+  private static MockServiceHelper mockServiceHelper;
   private LocalChannelProvider channelProvider;
+  private AdServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
@@ -87,11 +87,17 @@ public class AdServiceClientTest {
     Ad expectedResponse =
         Ad.newBuilder()
             .setResourceName(AdName.of("[CUSTOMER_ID]", "[AD_ID]").toString())
+            .setId(3355)
             .addAllFinalUrls(new ArrayList<String>())
             .addAllFinalAppUrls(new ArrayList<FinalAppUrl>())
             .addAllFinalMobileUrls(new ArrayList<String>())
+            .setTrackingUrlTemplate("trackingUrlTemplate-939780142")
+            .setFinalUrlSuffix("finalUrlSuffix-59294518")
             .addAllUrlCustomParameters(new ArrayList<CustomParameter>())
+            .setDisplayUrl("displayUrl-914528947")
+            .setAddedByGoogleAds(true)
             .addAllUrlCollections(new ArrayList<UrlCollection>())
+            .setName(AdName.of("[CUSTOMER_ID]", "[AD_ID]").toString())
             .build();
     mockAdService.addResponse(expectedResponse);
 
@@ -130,11 +136,17 @@ public class AdServiceClientTest {
     Ad expectedResponse =
         Ad.newBuilder()
             .setResourceName(AdName.of("[CUSTOMER_ID]", "[AD_ID]").toString())
+            .setId(3355)
             .addAllFinalUrls(new ArrayList<String>())
             .addAllFinalAppUrls(new ArrayList<FinalAppUrl>())
             .addAllFinalMobileUrls(new ArrayList<String>())
+            .setTrackingUrlTemplate("trackingUrlTemplate-939780142")
+            .setFinalUrlSuffix("finalUrlSuffix-59294518")
             .addAllUrlCustomParameters(new ArrayList<CustomParameter>())
+            .setDisplayUrl("displayUrl-914528947")
+            .setAddedByGoogleAds(true)
             .addAllUrlCollections(new ArrayList<UrlCollection>())
+            .setName(AdName.of("[CUSTOMER_ID]", "[AD_ID]").toString())
             .build();
     mockAdService.addResponse(expectedResponse);
 

@@ -94,9 +94,11 @@ private static final long serialVersionUID = 0L;
   private long targetCpa_;
   /**
    * <pre>
-   * The target cost per acquisition (CPA) option. This is the average amount
-   * that you would like to spend per acquisition.
-   * This field is read-only.
+   * The target cost-per-action (CPA) option. This is the average amount that
+   * you would like to spend per conversion action. If set, the bid strategy
+   * will get as many conversions as possible at or below the target
+   * cost-per-action. If the target CPA is not set, the bid strategy will
+   * aim to achieve the lowest possible CPA given the budget.
    * </pre>
    *
    * <code>int64 target_cpa = 1;</code>
@@ -418,9 +420,11 @@ private static final long serialVersionUID = 0L;
     private long targetCpa_ ;
     /**
      * <pre>
-     * The target cost per acquisition (CPA) option. This is the average amount
-     * that you would like to spend per acquisition.
-     * This field is read-only.
+     * The target cost-per-action (CPA) option. This is the average amount that
+     * you would like to spend per conversion action. If set, the bid strategy
+     * will get as many conversions as possible at or below the target
+     * cost-per-action. If the target CPA is not set, the bid strategy will
+     * aim to achieve the lowest possible CPA given the budget.
      * </pre>
      *
      * <code>int64 target_cpa = 1;</code>
@@ -432,9 +436,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The target cost per acquisition (CPA) option. This is the average amount
-     * that you would like to spend per acquisition.
-     * This field is read-only.
+     * The target cost-per-action (CPA) option. This is the average amount that
+     * you would like to spend per conversion action. If set, the bid strategy
+     * will get as many conversions as possible at or below the target
+     * cost-per-action. If the target CPA is not set, the bid strategy will
+     * aim to achieve the lowest possible CPA given the budget.
      * </pre>
      *
      * <code>int64 target_cpa = 1;</code>
@@ -449,9 +455,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The target cost per acquisition (CPA) option. This is the average amount
-     * that you would like to spend per acquisition.
-     * This field is read-only.
+     * The target cost-per-action (CPA) option. This is the average amount that
+     * you would like to spend per conversion action. If set, the bid strategy
+     * will get as many conversions as possible at or below the target
+     * cost-per-action. If the target CPA is not set, the bid strategy will
+     * aim to achieve the lowest possible CPA given the budget.
      * </pre>
      *
      * <code>int64 target_cpa = 1;</code>
