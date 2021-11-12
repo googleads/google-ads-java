@@ -96,13 +96,13 @@ public class AddHotelCallout {
   /** Runs the example. */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, String languageCode) {
     // Creates assets for the hotel callout extensions.
-    List<String> assetResourceNames = addExtensionAsset(googleAdsClient, customerId, languageCode);
+    List<String> assetResourceNames = addExtensionAssets(googleAdsClient, customerId, languageCode);
     // Adds the extensions at the account level, so these will serve in all eligible campaigns.
-    linkAssetToAccount(googleAdsClient, customerId, assetResourceNames);
+    linkAssetsToAccount(googleAdsClient, customerId, assetResourceNames);
   }
 
   /** Creates a new asset for the callout. */
-  private List<String> addExtensionAsset(
+  private List<String> addExtensionAssets(
       GoogleAdsClient googleAdsClient, long customerId, String languageCode) {
     List<HotelCalloutAsset> hotelCalloutAssets = new ArrayList<>();
     // Creates the callouts with text and specified language.
@@ -139,7 +139,7 @@ public class AddHotelCallout {
   }
 
   /** Links Asset at the Customer level to serve in all eligible campaigns. */
-  private void linkAssetToAccount(
+  private void linkAssetsToAccount(
       GoogleAdsClient googleAdsClient, long customerId, List<String> assetResourceNames) {
     // Creates a CustomerAsset link for each Asset resource name provided, then converts this into a
     // CustomerAssetOperation to create the Asset.

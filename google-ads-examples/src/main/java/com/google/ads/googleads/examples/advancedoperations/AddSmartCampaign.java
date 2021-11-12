@@ -32,7 +32,6 @@ import com.google.ads.googleads.v9.enums.AdvertisingChannelTypeEnum.AdvertisingC
 import com.google.ads.googleads.v9.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
 import com.google.ads.googleads.v9.enums.BudgetTypeEnum.BudgetType;
 import com.google.ads.googleads.v9.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v9.enums.CriterionTypeEnum.CriterionType;
 import com.google.ads.googleads.v9.enums.DayOfWeekEnum.DayOfWeek;
 import com.google.ads.googleads.v9.enums.MinuteOfHourEnum.MinuteOfHour;
 import com.google.ads.googleads.v9.errors.GoogleAdsError;
@@ -68,6 +67,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /** Demonstrates how to create a Smart Campaign. */
 public class AddSmartCampaign {
@@ -213,15 +213,15 @@ public class AddSmartCampaign {
     List<KeywordThemeInfo> keywordThemeInfos = getKeywordThemeInfos(keywordThemeConstants);
 
     // Optionally includes any freeform keywords in verbatim.
+    // [START add_smart_campaign_13]
     if (freeFormKeywordText != null) {
       keywordThemeInfos.add(
           KeywordThemeInfo.newBuilder().setFreeFormKeywordTheme(freeFormKeywordText).build());
     }
+    // [END add_smart_campaign_13]
 
     // Includes the keyword suggestions in the overall SuggestionInfo object.
-    // [START add_smart_campaign_13]
     suggestionInfo = suggestionInfo.toBuilder().addAllKeywordThemes(keywordThemeInfos).build();
-    // [END add_smart_campaign_13]
     // [END add_smart_campaign_12]
 
     // Generates a suggested daily budget.
@@ -241,7 +241,8 @@ public class AddSmartCampaign {
                 createSmartCampaignSettingOperation(customerId, locationId, businessName),
                 createAdGroupOperation(customerId),
                 createAdGroupAdOperation(customerId, adSuggestions)));
-    operations.addAll(createCampaignCriterionOperations(customerId, keywordThemeInfos));
+    operations.addAll(
+        createCampaignCriterionOperations(customerId, keywordThemeInfos, suggestionInfo));
 
     // Issues a mutate request to add the various entities required for a smart campaign.
     sendMutateRequest(googleAdsClient, customerId, operations);
@@ -599,15 +600,17 @@ public class AddSmartCampaign {
 
     // Adds additional headlines + descriptions if we didn't get enough back from the suggestion
     // service.
-    if (adSuggestions.getHeadlinesCount() < NUM_REQUIRED_HEADLINES) {
-      for (int i = 0; i < NUM_REQUIRED_HEADLINES - adSuggestions.getHeadlinesCount(); ++i) {
+    int numHeadlines = adBuilder.getSmartCampaignAdBuilder().getHeadlinesCount();
+    if (numHeadlines < NUM_REQUIRED_HEADLINES) {
+      for (int i = 0; i < NUM_REQUIRED_HEADLINES - numHeadlines; ++i) {
         adBuilder
             .getSmartCampaignAdBuilder()
             .addHeadlines(AdTextAsset.newBuilder().setText("Placeholder headline " + i).build());
       }
     }
     if (adSuggestions.getDescriptionsCount() < NUM_REQUIRED_DESCRIPTIONS) {
-      for (int i = 0; i < NUM_REQUIRED_DESCRIPTIONS - adSuggestions.getDescriptionsCount(); ++i) {
+      int numDescriptions = adBuilder.getSmartCampaignAdBuilder().getDescriptionsCount();
+      for (int i = 0; i < NUM_REQUIRED_DESCRIPTIONS - numDescriptions; ++i) {
         adBuilder
             .getSmartCampaignAdBuilder()
             .addDescriptions(
@@ -630,19 +633,38 @@ public class AddSmartCampaign {
    * {@link KeywordThemeInfo}.
    */
   private Collection<? extends MutateOperation> createCampaignCriterionOperations(
-      long customerId, List<KeywordThemeInfo> keywordThemeInfos) {
-    return keywordThemeInfos.stream()
-        .map(
-            keywordTheme -> {
-              MutateOperation.Builder builder = MutateOperation.newBuilder();
-              builder
-                  .getCampaignCriterionOperationBuilder()
-                  .getCreateBuilder()
-                  .setCampaign(ResourceNames.campaign(customerId, SMART_CAMPAIGN_TEMPORARY_ID))
-                  .setType(CriterionType.KEYWORD_THEME)
-                  .setKeywordTheme(keywordTheme);
-              return builder.build();
-            })
+      long customerId,
+      List<KeywordThemeInfo> keywordThemeInfos,
+      SmartCampaignSuggestionInfo suggestionInfo) {
+    List<MutateOperation> keywordThemeOperations =
+        keywordThemeInfos.stream()
+            .map(
+                keywordTheme -> {
+                  MutateOperation.Builder builder = MutateOperation.newBuilder();
+                  builder
+                      .getCampaignCriterionOperationBuilder()
+                      .getCreateBuilder()
+                      .setCampaign(ResourceNames.campaign(customerId, SMART_CAMPAIGN_TEMPORARY_ID))
+                      .setKeywordTheme(keywordTheme);
+                  return builder.build();
+                })
+            .collect(Collectors.toList());
+
+    List<MutateOperation> locationOperations =
+        suggestionInfo.getLocationList().getLocationsList().stream()
+            .map(
+                location -> {
+                  MutateOperation.Builder builder = MutateOperation.newBuilder();
+                  builder
+                      .getCampaignCriterionOperationBuilder()
+                      .getCreateBuilder()
+                      .setCampaign(ResourceNames.campaign(customerId, SMART_CAMPAIGN_TEMPORARY_ID))
+                      .setLocation(location);
+                  return builder.build();
+                })
+            .collect(Collectors.toList());
+
+    return Stream.concat(keywordThemeOperations.stream(), locationOperations.stream())
         .collect(Collectors.toList());
   }
   // [END add_smart_campaign_8]
