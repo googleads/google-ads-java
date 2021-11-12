@@ -649,7 +649,6 @@ public class AddSmartCampaign {
                       .getCampaignCriterionOperationBuilder()
                       .getCreateBuilder()
                       .setCampaign(ResourceNames.campaign(customerId, SMART_CAMPAIGN_TEMPORARY_ID))
-                      .setType(CriterionType.KEYWORD_THEME)
                       .setKeywordTheme(keywordTheme);
                   return builder.build();
                 })
