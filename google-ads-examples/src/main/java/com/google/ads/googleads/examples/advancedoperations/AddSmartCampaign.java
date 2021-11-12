@@ -600,21 +600,17 @@ public class AddSmartCampaign {
 
     // Adds additional headlines + descriptions if we didn't get enough back from the suggestion
     // service.
-    if (adSuggestions.getHeadlinesCount() < NUM_REQUIRED_HEADLINES) {
-      for (int i = 0;
-          i < NUM_REQUIRED_HEADLINES - adBuilder.getSmartCampaignAdBuilder().getHeadlinesCount();
-          ++i) {
+    int numHeadlines = adBuilder.getSmartCampaignAdBuilder().getHeadlinesCount();
+    if (numHeadlines < NUM_REQUIRED_HEADLINES) {
+      for (int i = 0; i < NUM_REQUIRED_HEADLINES - numHeadlines; ++i) {
         adBuilder
             .getSmartCampaignAdBuilder()
             .addHeadlines(AdTextAsset.newBuilder().setText("Placeholder headline " + i).build());
       }
     }
     if (adSuggestions.getDescriptionsCount() < NUM_REQUIRED_DESCRIPTIONS) {
-      for (int i = 0;
-          i
-              < NUM_REQUIRED_DESCRIPTIONS
-                  - adBuilder.getSmartCampaignAdBuilder().getDescriptionsCount();
-          ++i) {
+      int numDescriptions = adBuilder.getSmartCampaignAdBuilder().getDescriptionsCount();
+      for (int i = 0; i < NUM_REQUIRED_DESCRIPTIONS - numDescriptions; ++i) {
         adBuilder
             .getSmartCampaignAdBuilder()
             .addDescriptions(
