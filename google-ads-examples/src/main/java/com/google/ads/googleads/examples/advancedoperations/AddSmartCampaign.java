@@ -32,7 +32,6 @@ import com.google.ads.googleads.v9.enums.AdvertisingChannelTypeEnum.AdvertisingC
 import com.google.ads.googleads.v9.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
 import com.google.ads.googleads.v9.enums.BudgetTypeEnum.BudgetType;
 import com.google.ads.googleads.v9.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v9.enums.CriterionTypeEnum.CriterionType;
 import com.google.ads.googleads.v9.enums.DayOfWeekEnum.DayOfWeek;
 import com.google.ads.googleads.v9.enums.MinuteOfHourEnum.MinuteOfHour;
 import com.google.ads.googleads.v9.errors.GoogleAdsError;
@@ -242,7 +241,8 @@ public class AddSmartCampaign {
                 createSmartCampaignSettingOperation(customerId, locationId, businessName),
                 createAdGroupOperation(customerId),
                 createAdGroupAdOperation(customerId, adSuggestions)));
-    operations.addAll(createCampaignCriterionOperations(customerId, keywordThemeInfos));
+    operations.addAll(
+        createCampaignCriterionOperations(customerId, keywordThemeInfos, suggestionInfo));
 
     // Issues a mutate request to add the various entities required for a smart campaign.
     sendMutateRequest(googleAdsClient, customerId, operations);
