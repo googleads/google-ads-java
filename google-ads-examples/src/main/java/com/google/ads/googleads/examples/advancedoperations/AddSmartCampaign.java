@@ -115,7 +115,7 @@ public class AddSmartCampaign {
             "The ID of a Google My Business (GMB) location. This is required if a business name is"
                 + " not provided. It can be retrieved using the GMB API, for details see:"
                 + " https://developers.google.com/my-business/reference/rest/v4/accounts.locations")
-    private Long locationId;
+    private String locationId;
 
     @Parameter(
         names = ArgumentNames.BUSINESS_NAME,
@@ -139,7 +139,7 @@ public class AddSmartCampaign {
       params.freeFormKeywordText = null;
 
       // Must specify one of location ID or business name.
-      params.locationId = Long.valueOf("INSERT_BUSINESS_LOCATION_ID_HERE");
+      params.locationId = "INSERT_BUSINESS_LOCATION_ID_HERE";
       params.businessName = "INSERT_BUSINESS_NAME";
     }
 
@@ -185,17 +185,24 @@ public class AddSmartCampaign {
       long customerId,
       String keyword,
       String freeFormKeywordText,
-      Long locationId,
+      String locationId,
       String businessName) {
     if (locationId == null && businessName == null) {
       throw new RuntimeException("Must provider either --locationId or --businessName");
     }
+
+    // [START add_smart_campaign_14]
+    // Converts the location ID to unsigned long (potentially contains IDs with the most significant
+    // bit set).
+    long locationIdParsed = Long.parseUnsignedLong(locationId);
+    // [END add_smart_campaign_14]
+
     // [START add_smart_campaign_12]
     // Gets the SmartCampaignSuggestionInfo object which acts as the basis for many of the
     // entities necessary to create a Smart campaign. It will be reused a number of times to
     // retrieve suggestions for keyword themes, budget amount, ad creatives, and campaign criteria.
     SmartCampaignSuggestionInfo suggestionInfo =
-        getSmartCampaignSuggestionInfo(googleAdsClient, locationId, businessName);
+        getSmartCampaignSuggestionInfo(googleAdsClient, locationIdParsed, businessName);
 
     // Generates a list of keyword themes using the SuggestKeywordThemes method on the
     // SmartCampaignSuggestService. It is strongly recommended that you use this strategy for
@@ -238,7 +245,7 @@ public class AddSmartCampaign {
             Arrays.asList(
                 createCampaignBudgetOperation(customerId, suggestedDailyBudgetMicros),
                 createSmartCampaignOperation(customerId),
-                createSmartCampaignSettingOperation(customerId, locationId, businessName),
+                createSmartCampaignSettingOperation(customerId, locationIdParsed, businessName),
                 createAdGroupOperation(customerId),
                 createAdGroupAdOperation(customerId, adSuggestions)));
     operations.addAll(
