@@ -31,7 +31,7 @@ information about slf4j.
   </Appenders>
   <Loggers>
     <Logger name="com.google.ads.googleads.lib.request.summary" level="info"/>
-    <Logger name="com.google.ads.googleads.lib.request.detail" level="all"/>
+    <Logger name="com.google.ads.googleads.lib.request.detail" level="info"/>
     <Root level="off">
       <AppenderRef ref="CONSOLE"/>
     </Root>
