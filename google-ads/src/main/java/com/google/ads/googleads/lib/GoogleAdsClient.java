@@ -22,7 +22,6 @@ import com.google.api.gax.grpc.InstantiatingGrpcChannelProvider;
 import com.google.api.gax.rpc.TransportChannelProvider;
 import com.google.auth.Credentials;
 import com.google.auth.oauth2.GoogleCredentials;
-import com.google.auth.oauth2.OAuth2Credentials;
 import com.google.auth.oauth2.ServiceAccountCredentials;
 import com.google.auth.oauth2.UserCredentials;
 import com.google.auto.value.AutoValue;
@@ -549,10 +548,6 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
         // action is needed.
       }
 
-      // Refreshes the OAuth credentials if necessary. This also ensures that the credentials are
-      // valid, avoiding https://github.com/googleads/google-ads-java/issues/169
-      refreshCredentialsIfNecessary();
-
       // Provides the credentials to the primer to preemptively get these ready for usage.
       Primer.getInstance().ifPresent(p -> p.primeCredentialsAsync(getCredentials()));
       // Proceeds with creating the client library instance.
@@ -579,19 +574,6 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
               + "must be 0 < loginCustomerId < 9,999,999,999, provided: "
               + loginCustomerId);
       return provider;
-    }
-
-    /** Attempts to refresh the OAuth credentials if necessary. */
-    private void refreshCredentialsIfNecessary() {
-      Credentials credentials = getCredentials();
-      if (credentials instanceof OAuth2Credentials) {
-        OAuth2Credentials oAuth2Credentials = (OAuth2Credentials) credentials;
-        try {
-          oAuth2Credentials.refreshIfExpired();
-        } catch (IOException e) {
-          throw new OAuthException(e);
-        }
-      }
     }
 
     @VisibleForTesting
