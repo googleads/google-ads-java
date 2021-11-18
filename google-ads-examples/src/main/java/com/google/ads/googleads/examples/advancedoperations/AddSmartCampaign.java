@@ -191,11 +191,11 @@ public class AddSmartCampaign {
       throw new RuntimeException("Must provider either --locationId or --businessName");
     }
 
-    // [START smart_campaign_14]
+    // [START add_smart_campaign_14]
     // Converts the location ID to unsigned long (potentially contains IDs with the most significant
     // bit set).
     long locationIdParsed = Long.parseUnsignedLong(locationId);
-    // [END smart_campaign_14]
+    // [END add_smart_campaign_14]
 
     // [START add_smart_campaign_12]
     // Gets the SmartCampaignSuggestionInfo object which acts as the basis for many of the
