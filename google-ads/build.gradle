@@ -74,6 +74,7 @@ dependencies {
   testImplementation 'com.google.api:gax-grpc::testlib'
   testImplementation 'io.grpc:grpc-context:1.30.0'
   testImplementation 'com.google.truth:truth:0.27'
+  implementation 'com.google.auto.value:auto-value-annotations:1.7.3'
   testImplementation 'com.google.auto.value:auto-value-annotations:1.7.3'
   shadeTest 'junit:junit:4.13.1'
 }
@@ -214,6 +215,9 @@ task copyThirdPartySources(type: Copy) {
       .resolutionResult
       .allDependencies
       .stream()
+      // Avoids failing the build with cryptic errors when a bad dependency is
+      // added.
+      .filter { it.hasProperty("selected") != null}
       // Avoids attempting to download sources for projects in the build.
       .filter { !(it.selected.id instanceof ProjectComponentIdentifier) }
       // Avoids attempting to download sources for Maven BOMs.
