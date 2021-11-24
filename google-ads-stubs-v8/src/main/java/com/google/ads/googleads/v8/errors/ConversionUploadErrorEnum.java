@@ -165,8 +165,8 @@ private static final long serialVersionUID = 0L;
     GCLID_NOT_FOUND(7),
     /**
      * <pre>
-     * The click associated with the given gclid is owned by a customer
-     * account that the uploading customer does not manage.
+     * The click associated with the given gclid is owned by a customer account
+     * that the uploading customer does not manage.
      * </pre>
      *
      * <code>UNAUTHORIZED_CUSTOMER = 8;</code>
@@ -319,7 +319,7 @@ private static final long serialVersionUID = 0L;
     CUSTOM_VARIABLE_VALUE_CONTAINS_PII(29),
     /**
      * <pre>
-     * The click associated with the given GCLID isn't from the account where
+     * The click associated with the given gclid isn't from the account where
      * conversion tracking is set up.
      * </pre>
      *
@@ -464,8 +464,8 @@ private static final long serialVersionUID = 0L;
     public static final int GCLID_NOT_FOUND_VALUE = 7;
     /**
      * <pre>
-     * The click associated with the given gclid is owned by a customer
-     * account that the uploading customer does not manage.
+     * The click associated with the given gclid is owned by a customer account
+     * that the uploading customer does not manage.
      * </pre>
      *
      * <code>UNAUTHORIZED_CUSTOMER = 8;</code>
@@ -618,7 +618,7 @@ private static final long serialVersionUID = 0L;
     public static final int CUSTOM_VARIABLE_VALUE_CONTAINS_PII_VALUE = 29;
     /**
      * <pre>
-     * The click associated with the given GCLID isn't from the account where
+     * The click associated with the given gclid isn't from the account where
      * conversion tracking is set up.
      * </pre>
      *

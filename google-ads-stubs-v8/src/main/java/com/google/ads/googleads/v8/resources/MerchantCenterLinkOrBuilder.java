@@ -37,7 +37,7 @@ public interface MerchantCenterLinkOrBuilder extends
    * This field is readonly.
    * </pre>
    *
-   * <code>int64 id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -47,7 +47,7 @@ public interface MerchantCenterLinkOrBuilder extends
    * This field is readonly.
    * </pre>
    *
-   * <code>int64 id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   long getId();
@@ -58,7 +58,7 @@ public interface MerchantCenterLinkOrBuilder extends
    * This field is readonly.
    * </pre>
    *
-   * <code>string merchant_center_account_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string merchant_center_account_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the merchantCenterAccountName field is set.
    */
   boolean hasMerchantCenterAccountName();
@@ -68,7 +68,7 @@ public interface MerchantCenterLinkOrBuilder extends
    * This field is readonly.
    * </pre>
    *
-   * <code>string merchant_center_account_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string merchant_center_account_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The merchantCenterAccountName.
    */
   java.lang.String getMerchantCenterAccountName();
@@ -78,7 +78,7 @@ public interface MerchantCenterLinkOrBuilder extends
    * This field is readonly.
    * </pre>
    *
-   * <code>string merchant_center_account_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string merchant_center_account_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for merchantCenterAccountName.
    */
   com.google.protobuf.ByteString

@@ -194,7 +194,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>string search_term = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string search_term = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the searchTerm field is set.
    */
   @java.lang.Override
@@ -207,7 +207,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>string search_term = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string search_term = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The searchTerm.
    */
   @java.lang.Override
@@ -229,7 +229,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>string search_term = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string search_term = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for searchTerm.
    */
   @java.lang.Override
@@ -255,7 +255,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>string headline = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string headline = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the headline field is set.
    */
   @java.lang.Override
@@ -268,7 +268,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>string headline = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string headline = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The headline.
    */
   @java.lang.Override
@@ -290,7 +290,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>string headline = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string headline = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for headline.
    */
   @java.lang.Override
@@ -316,7 +316,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>string landing_page = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string landing_page = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the landingPage field is set.
    */
   @java.lang.Override
@@ -329,7 +329,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>string landing_page = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string landing_page = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The landingPage.
    */
   @java.lang.Override
@@ -351,7 +351,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>string landing_page = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string landing_page = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for landingPage.
    */
   @java.lang.Override
@@ -377,7 +377,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>string page_url = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string page_url = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the pageUrl field is set.
    */
   @java.lang.Override
@@ -390,7 +390,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>string page_url = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string page_url = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The pageUrl.
    */
   @java.lang.Override
@@ -412,7 +412,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>string page_url = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string page_url = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for pageUrl.
    */
   @java.lang.Override
@@ -438,7 +438,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>bool has_negative_keyword = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool has_negative_keyword = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the hasNegativeKeyword field is set.
    */
   @java.lang.Override
@@ -451,7 +451,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>bool has_negative_keyword = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool has_negative_keyword = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The hasNegativeKeyword.
    */
   @java.lang.Override
@@ -467,7 +467,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>bool has_matching_keyword = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool has_matching_keyword = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the hasMatchingKeyword field is set.
    */
   @java.lang.Override
@@ -480,7 +480,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>bool has_matching_keyword = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool has_matching_keyword = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The hasMatchingKeyword.
    */
   @java.lang.Override
@@ -496,7 +496,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>bool has_negative_url = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool has_negative_url = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the hasNegativeUrl field is set.
    */
   @java.lang.Override
@@ -509,7 +509,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>bool has_negative_url = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool has_negative_url = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The hasNegativeUrl.
    */
   @java.lang.Override
@@ -531,7 +531,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
@@ -564,7 +564,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
@@ -1122,7 +1122,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string search_term = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string search_term = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the searchTerm field is set.
      */
     public boolean hasSearchTerm() {
@@ -1134,7 +1134,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string search_term = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string search_term = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The searchTerm.
      */
     public java.lang.String getSearchTerm() {
@@ -1155,7 +1155,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string search_term = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string search_term = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for searchTerm.
      */
     public com.google.protobuf.ByteString
@@ -1177,7 +1177,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string search_term = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string search_term = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The searchTerm to set.
      * @return This builder for chaining.
      */
@@ -1197,7 +1197,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string search_term = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string search_term = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearSearchTerm() {
@@ -1212,7 +1212,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string search_term = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string search_term = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for searchTerm to set.
      * @return This builder for chaining.
      */
@@ -1235,7 +1235,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string headline = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string headline = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the headline field is set.
      */
     public boolean hasHeadline() {
@@ -1247,7 +1247,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string headline = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string headline = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The headline.
      */
     public java.lang.String getHeadline() {
@@ -1268,7 +1268,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string headline = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string headline = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for headline.
      */
     public com.google.protobuf.ByteString
@@ -1290,7 +1290,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string headline = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string headline = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The headline to set.
      * @return This builder for chaining.
      */
@@ -1310,7 +1310,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string headline = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string headline = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearHeadline() {
@@ -1325,7 +1325,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string headline = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string headline = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for headline to set.
      * @return This builder for chaining.
      */
@@ -1348,7 +1348,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string landing_page = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string landing_page = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the landingPage field is set.
      */
     public boolean hasLandingPage() {
@@ -1360,7 +1360,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string landing_page = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string landing_page = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The landingPage.
      */
     public java.lang.String getLandingPage() {
@@ -1381,7 +1381,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string landing_page = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string landing_page = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for landingPage.
      */
     public com.google.protobuf.ByteString
@@ -1403,7 +1403,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string landing_page = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string landing_page = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The landingPage to set.
      * @return This builder for chaining.
      */
@@ -1423,7 +1423,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string landing_page = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string landing_page = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearLandingPage() {
@@ -1438,7 +1438,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string landing_page = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string landing_page = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for landingPage to set.
      * @return This builder for chaining.
      */
@@ -1461,7 +1461,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string page_url = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string page_url = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the pageUrl field is set.
      */
     public boolean hasPageUrl() {
@@ -1473,7 +1473,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string page_url = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string page_url = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The pageUrl.
      */
     public java.lang.String getPageUrl() {
@@ -1494,7 +1494,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string page_url = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string page_url = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for pageUrl.
      */
     public com.google.protobuf.ByteString
@@ -1516,7 +1516,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string page_url = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string page_url = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The pageUrl to set.
      * @return This builder for chaining.
      */
@@ -1536,7 +1536,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string page_url = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string page_url = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearPageUrl() {
@@ -1551,7 +1551,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string page_url = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string page_url = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for pageUrl to set.
      * @return This builder for chaining.
      */
@@ -1574,7 +1574,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>bool has_negative_keyword = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool has_negative_keyword = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the hasNegativeKeyword field is set.
      */
     @java.lang.Override
@@ -1587,7 +1587,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>bool has_negative_keyword = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool has_negative_keyword = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The hasNegativeKeyword.
      */
     @java.lang.Override
@@ -1600,7 +1600,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>bool has_negative_keyword = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool has_negative_keyword = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The hasNegativeKeyword to set.
      * @return This builder for chaining.
      */
@@ -1616,7 +1616,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>bool has_negative_keyword = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool has_negative_keyword = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearHasNegativeKeyword() {
@@ -1633,7 +1633,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>bool has_matching_keyword = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool has_matching_keyword = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the hasMatchingKeyword field is set.
      */
     @java.lang.Override
@@ -1646,7 +1646,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>bool has_matching_keyword = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool has_matching_keyword = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The hasMatchingKeyword.
      */
     @java.lang.Override
@@ -1659,7 +1659,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>bool has_matching_keyword = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool has_matching_keyword = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The hasMatchingKeyword to set.
      * @return This builder for chaining.
      */
@@ -1675,7 +1675,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>bool has_matching_keyword = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool has_matching_keyword = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearHasMatchingKeyword() {
@@ -1692,7 +1692,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>bool has_negative_url = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool has_negative_url = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the hasNegativeUrl field is set.
      */
     @java.lang.Override
@@ -1705,7 +1705,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>bool has_negative_url = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool has_negative_url = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The hasNegativeUrl.
      */
     @java.lang.Override
@@ -1718,7 +1718,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>bool has_negative_url = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool has_negative_url = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The hasNegativeUrl to set.
      * @return This builder for chaining.
      */
@@ -1734,7 +1734,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>bool has_negative_url = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool has_negative_url = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearHasNegativeUrl() {

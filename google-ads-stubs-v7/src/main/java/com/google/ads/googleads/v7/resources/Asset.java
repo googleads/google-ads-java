@@ -435,7 +435,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of the asset.
    * </pre>
    *
-   * <code>int64 id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   @java.lang.Override
@@ -447,7 +447,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of the asset.
    * </pre>
    *
-   * <code>int64 id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   @java.lang.Override
@@ -462,7 +462,7 @@ private static final long serialVersionUID = 0L;
    * Optional name of the asset.
    * </pre>
    *
-   * <code>string name = 12;</code>
+   * <code>optional string name = 12;</code>
    * @return Whether the name field is set.
    */
   @java.lang.Override
@@ -474,7 +474,7 @@ private static final long serialVersionUID = 0L;
    * Optional name of the asset.
    * </pre>
    *
-   * <code>string name = 12;</code>
+   * <code>optional string name = 12;</code>
    * @return The name.
    */
   @java.lang.Override
@@ -495,7 +495,7 @@ private static final long serialVersionUID = 0L;
    * Optional name of the asset.
    * </pre>
    *
-   * <code>string name = 12;</code>
+   * <code>optional string name = 12;</code>
    * @return The bytes for name.
    */
   @java.lang.Override
@@ -649,7 +649,7 @@ private static final long serialVersionUID = 0L;
    * URL template for constructing a tracking URL.
    * </pre>
    *
-   * <code>string tracking_url_template = 17;</code>
+   * <code>optional string tracking_url_template = 17;</code>
    * @return Whether the trackingUrlTemplate field is set.
    */
   @java.lang.Override
@@ -661,7 +661,7 @@ private static final long serialVersionUID = 0L;
    * URL template for constructing a tracking URL.
    * </pre>
    *
-   * <code>string tracking_url_template = 17;</code>
+   * <code>optional string tracking_url_template = 17;</code>
    * @return The trackingUrlTemplate.
    */
   @java.lang.Override
@@ -682,7 +682,7 @@ private static final long serialVersionUID = 0L;
    * URL template for constructing a tracking URL.
    * </pre>
    *
-   * <code>string tracking_url_template = 17;</code>
+   * <code>optional string tracking_url_template = 17;</code>
    * @return The bytes for trackingUrlTemplate.
    */
   @java.lang.Override
@@ -773,7 +773,7 @@ private static final long serialVersionUID = 0L;
    * tracking.
    * </pre>
    *
-   * <code>string final_url_suffix = 19;</code>
+   * <code>optional string final_url_suffix = 19;</code>
    * @return Whether the finalUrlSuffix field is set.
    */
   @java.lang.Override
@@ -786,7 +786,7 @@ private static final long serialVersionUID = 0L;
    * tracking.
    * </pre>
    *
-   * <code>string final_url_suffix = 19;</code>
+   * <code>optional string final_url_suffix = 19;</code>
    * @return The finalUrlSuffix.
    */
   @java.lang.Override
@@ -808,7 +808,7 @@ private static final long serialVersionUID = 0L;
    * tracking.
    * </pre>
    *
-   * <code>string final_url_suffix = 19;</code>
+   * <code>optional string final_url_suffix = 19;</code>
    * @return The bytes for finalUrlSuffix.
    */
   @java.lang.Override
@@ -1308,7 +1308,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (type_ != com.google.ads.googleads.v7.enums.AssetTypeEnum.AssetType.UNSPECIFIED.getNumber()) {
@@ -1377,7 +1377,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (type_ != com.google.ads.googleads.v7.enums.AssetTypeEnum.AssetType.UNSPECIFIED.getNumber()) {
@@ -2284,7 +2284,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the asset.
      * </pre>
      *
-     * <code>int64 id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the id field is set.
      */
     @java.lang.Override
@@ -2296,7 +2296,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the asset.
      * </pre>
      *
-     * <code>int64 id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The id.
      */
     @java.lang.Override
@@ -2308,7 +2308,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the asset.
      * </pre>
      *
-     * <code>int64 id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
@@ -2323,7 +2323,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the asset.
      * </pre>
      *
-     * <code>int64 id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {
@@ -2339,7 +2339,7 @@ private static final long serialVersionUID = 0L;
      * Optional name of the asset.
      * </pre>
      *
-     * <code>string name = 12;</code>
+     * <code>optional string name = 12;</code>
      * @return Whether the name field is set.
      */
     public boolean hasName() {
@@ -2350,7 +2350,7 @@ private static final long serialVersionUID = 0L;
      * Optional name of the asset.
      * </pre>
      *
-     * <code>string name = 12;</code>
+     * <code>optional string name = 12;</code>
      * @return The name.
      */
     public java.lang.String getName() {
@@ -2370,7 +2370,7 @@ private static final long serialVersionUID = 0L;
      * Optional name of the asset.
      * </pre>
      *
-     * <code>string name = 12;</code>
+     * <code>optional string name = 12;</code>
      * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
@@ -2391,7 +2391,7 @@ private static final long serialVersionUID = 0L;
      * Optional name of the asset.
      * </pre>
      *
-     * <code>string name = 12;</code>
+     * <code>optional string name = 12;</code>
      * @param value The name to set.
      * @return This builder for chaining.
      */
@@ -2410,7 +2410,7 @@ private static final long serialVersionUID = 0L;
      * Optional name of the asset.
      * </pre>
      *
-     * <code>string name = 12;</code>
+     * <code>optional string name = 12;</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
@@ -2424,7 +2424,7 @@ private static final long serialVersionUID = 0L;
      * Optional name of the asset.
      * </pre>
      *
-     * <code>string name = 12;</code>
+     * <code>optional string name = 12;</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
@@ -2812,7 +2812,7 @@ private static final long serialVersionUID = 0L;
      * URL template for constructing a tracking URL.
      * </pre>
      *
-     * <code>string tracking_url_template = 17;</code>
+     * <code>optional string tracking_url_template = 17;</code>
      * @return Whether the trackingUrlTemplate field is set.
      */
     public boolean hasTrackingUrlTemplate() {
@@ -2823,7 +2823,7 @@ private static final long serialVersionUID = 0L;
      * URL template for constructing a tracking URL.
      * </pre>
      *
-     * <code>string tracking_url_template = 17;</code>
+     * <code>optional string tracking_url_template = 17;</code>
      * @return The trackingUrlTemplate.
      */
     public java.lang.String getTrackingUrlTemplate() {
@@ -2843,7 +2843,7 @@ private static final long serialVersionUID = 0L;
      * URL template for constructing a tracking URL.
      * </pre>
      *
-     * <code>string tracking_url_template = 17;</code>
+     * <code>optional string tracking_url_template = 17;</code>
      * @return The bytes for trackingUrlTemplate.
      */
     public com.google.protobuf.ByteString
@@ -2864,7 +2864,7 @@ private static final long serialVersionUID = 0L;
      * URL template for constructing a tracking URL.
      * </pre>
      *
-     * <code>string tracking_url_template = 17;</code>
+     * <code>optional string tracking_url_template = 17;</code>
      * @param value The trackingUrlTemplate to set.
      * @return This builder for chaining.
      */
@@ -2883,7 +2883,7 @@ private static final long serialVersionUID = 0L;
      * URL template for constructing a tracking URL.
      * </pre>
      *
-     * <code>string tracking_url_template = 17;</code>
+     * <code>optional string tracking_url_template = 17;</code>
      * @return This builder for chaining.
      */
     public Builder clearTrackingUrlTemplate() {
@@ -2897,7 +2897,7 @@ private static final long serialVersionUID = 0L;
      * URL template for constructing a tracking URL.
      * </pre>
      *
-     * <code>string tracking_url_template = 17;</code>
+     * <code>optional string tracking_url_template = 17;</code>
      * @param value The bytes for trackingUrlTemplate to set.
      * @return This builder for chaining.
      */
@@ -3250,7 +3250,7 @@ private static final long serialVersionUID = 0L;
      * tracking.
      * </pre>
      *
-     * <code>string final_url_suffix = 19;</code>
+     * <code>optional string final_url_suffix = 19;</code>
      * @return Whether the finalUrlSuffix field is set.
      */
     public boolean hasFinalUrlSuffix() {
@@ -3262,7 +3262,7 @@ private static final long serialVersionUID = 0L;
      * tracking.
      * </pre>
      *
-     * <code>string final_url_suffix = 19;</code>
+     * <code>optional string final_url_suffix = 19;</code>
      * @return The finalUrlSuffix.
      */
     public java.lang.String getFinalUrlSuffix() {
@@ -3283,7 +3283,7 @@ private static final long serialVersionUID = 0L;
      * tracking.
      * </pre>
      *
-     * <code>string final_url_suffix = 19;</code>
+     * <code>optional string final_url_suffix = 19;</code>
      * @return The bytes for finalUrlSuffix.
      */
     public com.google.protobuf.ByteString
@@ -3305,7 +3305,7 @@ private static final long serialVersionUID = 0L;
      * tracking.
      * </pre>
      *
-     * <code>string final_url_suffix = 19;</code>
+     * <code>optional string final_url_suffix = 19;</code>
      * @param value The finalUrlSuffix to set.
      * @return This builder for chaining.
      */
@@ -3325,7 +3325,7 @@ private static final long serialVersionUID = 0L;
      * tracking.
      * </pre>
      *
-     * <code>string final_url_suffix = 19;</code>
+     * <code>optional string final_url_suffix = 19;</code>
      * @return This builder for chaining.
      */
     public Builder clearFinalUrlSuffix() {
@@ -3340,7 +3340,7 @@ private static final long serialVersionUID = 0L;
      * tracking.
      * </pre>
      *
-     * <code>string final_url_suffix = 19;</code>
+     * <code>optional string final_url_suffix = 19;</code>
      * @param value The bytes for finalUrlSuffix to set.
      * @return This builder for chaining.
      */

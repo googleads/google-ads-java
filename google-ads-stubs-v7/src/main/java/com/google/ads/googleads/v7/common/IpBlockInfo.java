@@ -104,7 +104,7 @@ private static final long serialVersionUID = 0L;
    * The IP address of this IP block.
    * </pre>
    *
-   * <code>string ip_address = 2;</code>
+   * <code>optional string ip_address = 2;</code>
    * @return Whether the ipAddress field is set.
    */
   @java.lang.Override
@@ -116,7 +116,7 @@ private static final long serialVersionUID = 0L;
    * The IP address of this IP block.
    * </pre>
    *
-   * <code>string ip_address = 2;</code>
+   * <code>optional string ip_address = 2;</code>
    * @return The ipAddress.
    */
   @java.lang.Override
@@ -137,7 +137,7 @@ private static final long serialVersionUID = 0L;
    * The IP address of this IP block.
    * </pre>
    *
-   * <code>string ip_address = 2;</code>
+   * <code>optional string ip_address = 2;</code>
    * @return The bytes for ipAddress.
    */
   @java.lang.Override
@@ -484,7 +484,7 @@ private static final long serialVersionUID = 0L;
      * The IP address of this IP block.
      * </pre>
      *
-     * <code>string ip_address = 2;</code>
+     * <code>optional string ip_address = 2;</code>
      * @return Whether the ipAddress field is set.
      */
     public boolean hasIpAddress() {
@@ -495,7 +495,7 @@ private static final long serialVersionUID = 0L;
      * The IP address of this IP block.
      * </pre>
      *
-     * <code>string ip_address = 2;</code>
+     * <code>optional string ip_address = 2;</code>
      * @return The ipAddress.
      */
     public java.lang.String getIpAddress() {
@@ -515,7 +515,7 @@ private static final long serialVersionUID = 0L;
      * The IP address of this IP block.
      * </pre>
      *
-     * <code>string ip_address = 2;</code>
+     * <code>optional string ip_address = 2;</code>
      * @return The bytes for ipAddress.
      */
     public com.google.protobuf.ByteString
@@ -536,7 +536,7 @@ private static final long serialVersionUID = 0L;
      * The IP address of this IP block.
      * </pre>
      *
-     * <code>string ip_address = 2;</code>
+     * <code>optional string ip_address = 2;</code>
      * @param value The ipAddress to set.
      * @return This builder for chaining.
      */
@@ -555,7 +555,7 @@ private static final long serialVersionUID = 0L;
      * The IP address of this IP block.
      * </pre>
      *
-     * <code>string ip_address = 2;</code>
+     * <code>optional string ip_address = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearIpAddress() {
@@ -569,7 +569,7 @@ private static final long serialVersionUID = 0L;
      * The IP address of this IP block.
      * </pre>
      *
-     * <code>string ip_address = 2;</code>
+     * <code>optional string ip_address = 2;</code>
      * @param value The bytes for ipAddress to set.
      * @return This builder for chaining.
      */

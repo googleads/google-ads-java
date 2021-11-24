@@ -36,7 +36,7 @@ public interface CustomerClientLinkOrBuilder extends
    * Immutable. The client customer linked to this customer.
    * </pre>
    *
-   * <code>string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the clientCustomer field is set.
    */
   boolean hasClientCustomer();
@@ -45,7 +45,7 @@ public interface CustomerClientLinkOrBuilder extends
    * Immutable. The client customer linked to this customer.
    * </pre>
    *
-   * <code>string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The clientCustomer.
    */
   java.lang.String getClientCustomer();
@@ -54,7 +54,7 @@ public interface CustomerClientLinkOrBuilder extends
    * Immutable. The client customer linked to this customer.
    * </pre>
    *
-   * <code>string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for clientCustomer.
    */
   com.google.protobuf.ByteString
@@ -65,7 +65,7 @@ public interface CustomerClientLinkOrBuilder extends
    * Output only. This is uniquely identifies a customer client link. Read only.
    * </pre>
    *
-   * <code>int64 manager_link_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 manager_link_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the managerLinkId field is set.
    */
   boolean hasManagerLinkId();
@@ -74,7 +74,7 @@ public interface CustomerClientLinkOrBuilder extends
    * Output only. This is uniquely identifies a customer client link. Read only.
    * </pre>
    *
-   * <code>int64 manager_link_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 manager_link_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The managerLinkId.
    */
   long getManagerLinkId();
@@ -105,7 +105,7 @@ public interface CustomerClientLinkOrBuilder extends
    * Default value is false
    * </pre>
    *
-   * <code>bool hidden = 9;</code>
+   * <code>optional bool hidden = 9;</code>
    * @return Whether the hidden field is set.
    */
   boolean hasHidden();
@@ -116,7 +116,7 @@ public interface CustomerClientLinkOrBuilder extends
    * Default value is false
    * </pre>
    *
-   * <code>bool hidden = 9;</code>
+   * <code>optional bool hidden = 9;</code>
    * @return The hidden.
    */
   boolean getHidden();

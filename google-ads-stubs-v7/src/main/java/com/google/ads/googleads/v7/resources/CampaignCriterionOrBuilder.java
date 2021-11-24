@@ -36,7 +36,7 @@ public interface CampaignCriterionOrBuilder extends
    * Immutable. The campaign to which the criterion belongs.
    * </pre>
    *
-   * <code>string campaign = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the campaign field is set.
    */
   boolean hasCampaign();
@@ -45,7 +45,7 @@ public interface CampaignCriterionOrBuilder extends
    * Immutable. The campaign to which the criterion belongs.
    * </pre>
    *
-   * <code>string campaign = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The campaign.
    */
   java.lang.String getCampaign();
@@ -54,7 +54,7 @@ public interface CampaignCriterionOrBuilder extends
    * Immutable. The campaign to which the criterion belongs.
    * </pre>
    *
-   * <code>string campaign = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for campaign.
    */
   com.google.protobuf.ByteString
@@ -66,7 +66,7 @@ public interface CampaignCriterionOrBuilder extends
    * This field is ignored during mutate.
    * </pre>
    *
-   * <code>int64 criterion_id = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 criterion_id = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the criterionId field is set.
    */
   boolean hasCriterionId();
@@ -76,7 +76,7 @@ public interface CampaignCriterionOrBuilder extends
    * This field is ignored during mutate.
    * </pre>
    *
-   * <code>int64 criterion_id = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 criterion_id = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The criterionId.
    */
   long getCriterionId();
@@ -110,7 +110,7 @@ public interface CampaignCriterionOrBuilder extends
    * Use 0 to opt out of a Device type.
    * </pre>
    *
-   * <code>float bid_modifier = 39;</code>
+   * <code>optional float bid_modifier = 39;</code>
    * @return Whether the bidModifier field is set.
    */
   boolean hasBidModifier();
@@ -121,7 +121,7 @@ public interface CampaignCriterionOrBuilder extends
    * Use 0 to opt out of a Device type.
    * </pre>
    *
-   * <code>float bid_modifier = 39;</code>
+   * <code>optional float bid_modifier = 39;</code>
    * @return The bidModifier.
    */
   float getBidModifier();
@@ -131,7 +131,7 @@ public interface CampaignCriterionOrBuilder extends
    * Immutable. Whether to target (`false`) or exclude (`true`) the criterion.
    * </pre>
    *
-   * <code>bool negative = 40 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional bool negative = 40 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the negative field is set.
    */
   boolean hasNegative();
@@ -140,7 +140,7 @@ public interface CampaignCriterionOrBuilder extends
    * Immutable. Whether to target (`false`) or exclude (`true`) the criterion.
    * </pre>
    *
-   * <code>bool negative = 40 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional bool negative = 40 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The negative.
    */
   boolean getNegative();

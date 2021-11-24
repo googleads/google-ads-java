@@ -12,7 +12,7 @@ public interface AddressInfoOrBuilder extends
    * Postal code.
    * </pre>
    *
-   * <code>string postal_code = 8;</code>
+   * <code>optional string postal_code = 8;</code>
    * @return Whether the postalCode field is set.
    */
   boolean hasPostalCode();
@@ -21,7 +21,7 @@ public interface AddressInfoOrBuilder extends
    * Postal code.
    * </pre>
    *
-   * <code>string postal_code = 8;</code>
+   * <code>optional string postal_code = 8;</code>
    * @return The postalCode.
    */
   java.lang.String getPostalCode();
@@ -30,7 +30,7 @@ public interface AddressInfoOrBuilder extends
    * Postal code.
    * </pre>
    *
-   * <code>string postal_code = 8;</code>
+   * <code>optional string postal_code = 8;</code>
    * @return The bytes for postalCode.
    */
   com.google.protobuf.ByteString
@@ -41,7 +41,7 @@ public interface AddressInfoOrBuilder extends
    * Province or state code.
    * </pre>
    *
-   * <code>string province_code = 9;</code>
+   * <code>optional string province_code = 9;</code>
    * @return Whether the provinceCode field is set.
    */
   boolean hasProvinceCode();
@@ -50,7 +50,7 @@ public interface AddressInfoOrBuilder extends
    * Province or state code.
    * </pre>
    *
-   * <code>string province_code = 9;</code>
+   * <code>optional string province_code = 9;</code>
    * @return The provinceCode.
    */
   java.lang.String getProvinceCode();
@@ -59,7 +59,7 @@ public interface AddressInfoOrBuilder extends
    * Province or state code.
    * </pre>
    *
-   * <code>string province_code = 9;</code>
+   * <code>optional string province_code = 9;</code>
    * @return The bytes for provinceCode.
    */
   com.google.protobuf.ByteString
@@ -70,7 +70,7 @@ public interface AddressInfoOrBuilder extends
    * Country code.
    * </pre>
    *
-   * <code>string country_code = 10;</code>
+   * <code>optional string country_code = 10;</code>
    * @return Whether the countryCode field is set.
    */
   boolean hasCountryCode();
@@ -79,7 +79,7 @@ public interface AddressInfoOrBuilder extends
    * Country code.
    * </pre>
    *
-   * <code>string country_code = 10;</code>
+   * <code>optional string country_code = 10;</code>
    * @return The countryCode.
    */
   java.lang.String getCountryCode();
@@ -88,7 +88,7 @@ public interface AddressInfoOrBuilder extends
    * Country code.
    * </pre>
    *
-   * <code>string country_code = 10;</code>
+   * <code>optional string country_code = 10;</code>
    * @return The bytes for countryCode.
    */
   com.google.protobuf.ByteString
@@ -99,7 +99,7 @@ public interface AddressInfoOrBuilder extends
    * Province or state name.
    * </pre>
    *
-   * <code>string province_name = 11;</code>
+   * <code>optional string province_name = 11;</code>
    * @return Whether the provinceName field is set.
    */
   boolean hasProvinceName();
@@ -108,7 +108,7 @@ public interface AddressInfoOrBuilder extends
    * Province or state name.
    * </pre>
    *
-   * <code>string province_name = 11;</code>
+   * <code>optional string province_name = 11;</code>
    * @return The provinceName.
    */
   java.lang.String getProvinceName();
@@ -117,7 +117,7 @@ public interface AddressInfoOrBuilder extends
    * Province or state name.
    * </pre>
    *
-   * <code>string province_name = 11;</code>
+   * <code>optional string province_name = 11;</code>
    * @return The bytes for provinceName.
    */
   com.google.protobuf.ByteString
@@ -128,7 +128,7 @@ public interface AddressInfoOrBuilder extends
    * Street address line 1.
    * </pre>
    *
-   * <code>string street_address = 12;</code>
+   * <code>optional string street_address = 12;</code>
    * @return Whether the streetAddress field is set.
    */
   boolean hasStreetAddress();
@@ -137,7 +137,7 @@ public interface AddressInfoOrBuilder extends
    * Street address line 1.
    * </pre>
    *
-   * <code>string street_address = 12;</code>
+   * <code>optional string street_address = 12;</code>
    * @return The streetAddress.
    */
   java.lang.String getStreetAddress();
@@ -146,7 +146,7 @@ public interface AddressInfoOrBuilder extends
    * Street address line 1.
    * </pre>
    *
-   * <code>string street_address = 12;</code>
+   * <code>optional string street_address = 12;</code>
    * @return The bytes for streetAddress.
    */
   com.google.protobuf.ByteString
@@ -159,7 +159,7 @@ public interface AddressInfoOrBuilder extends
    * empty.
    * </pre>
    *
-   * <code>string street_address2 = 13;</code>
+   * <code>optional string street_address2 = 13;</code>
    * @return Whether the streetAddress2 field is set.
    */
   boolean hasStreetAddress2();
@@ -170,7 +170,7 @@ public interface AddressInfoOrBuilder extends
    * empty.
    * </pre>
    *
-   * <code>string street_address2 = 13;</code>
+   * <code>optional string street_address2 = 13;</code>
    * @return The streetAddress2.
    */
   java.lang.String getStreetAddress2();
@@ -181,7 +181,7 @@ public interface AddressInfoOrBuilder extends
    * empty.
    * </pre>
    *
-   * <code>string street_address2 = 13;</code>
+   * <code>optional string street_address2 = 13;</code>
    * @return The bytes for streetAddress2.
    */
   com.google.protobuf.ByteString
@@ -192,7 +192,7 @@ public interface AddressInfoOrBuilder extends
    * Name of the city.
    * </pre>
    *
-   * <code>string city_name = 14;</code>
+   * <code>optional string city_name = 14;</code>
    * @return Whether the cityName field is set.
    */
   boolean hasCityName();
@@ -201,7 +201,7 @@ public interface AddressInfoOrBuilder extends
    * Name of the city.
    * </pre>
    *
-   * <code>string city_name = 14;</code>
+   * <code>optional string city_name = 14;</code>
    * @return The cityName.
    */
   java.lang.String getCityName();
@@ -210,7 +210,7 @@ public interface AddressInfoOrBuilder extends
    * Name of the city.
    * </pre>
    *
-   * <code>string city_name = 14;</code>
+   * <code>optional string city_name = 14;</code>
    * @return The bytes for cityName.
    */
   com.google.protobuf.ByteString

@@ -12,7 +12,7 @@ public interface TextAssetOrBuilder extends
    * Text content of the text asset.
    * </pre>
    *
-   * <code>string text = 2;</code>
+   * <code>optional string text = 2;</code>
    * @return Whether the text field is set.
    */
   boolean hasText();
@@ -21,7 +21,7 @@ public interface TextAssetOrBuilder extends
    * Text content of the text asset.
    * </pre>
    *
-   * <code>string text = 2;</code>
+   * <code>optional string text = 2;</code>
    * @return The text.
    */
   java.lang.String getText();
@@ -30,7 +30,7 @@ public interface TextAssetOrBuilder extends
    * Text content of the text asset.
    * </pre>
    *
-   * <code>string text = 2;</code>
+   * <code>optional string text = 2;</code>
    * @return The bytes for text.
    */
   com.google.protobuf.ByteString

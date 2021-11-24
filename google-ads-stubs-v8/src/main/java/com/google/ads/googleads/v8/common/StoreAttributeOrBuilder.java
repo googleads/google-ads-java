@@ -13,7 +13,7 @@ public interface StoreAttributeOrBuilder extends
    * https://support.google.com/business/answer/3370250#storecode
    * </pre>
    *
-   * <code>string store_code = 2;</code>
+   * <code>optional string store_code = 2;</code>
    * @return Whether the storeCode field is set.
    */
   boolean hasStoreCode();
@@ -23,7 +23,7 @@ public interface StoreAttributeOrBuilder extends
    * https://support.google.com/business/answer/3370250#storecode
    * </pre>
    *
-   * <code>string store_code = 2;</code>
+   * <code>optional string store_code = 2;</code>
    * @return The storeCode.
    */
   java.lang.String getStoreCode();
@@ -33,7 +33,7 @@ public interface StoreAttributeOrBuilder extends
    * https://support.google.com/business/answer/3370250#storecode
    * </pre>
    *
-   * <code>string store_code = 2;</code>
+   * <code>optional string store_code = 2;</code>
    * @return The bytes for storeCode.
    */
   com.google.protobuf.ByteString

@@ -145,7 +145,7 @@ private static final long serialVersionUID = 0L;
    * Times are reported in the customer's time zone.
    * </pre>
    *
-   * <code>string value = 4;</code>
+   * <code>optional string value = 4;</code>
    * @return Whether the value field is set.
    */
   @java.lang.Override
@@ -159,7 +159,7 @@ private static final long serialVersionUID = 0L;
    * Times are reported in the customer's time zone.
    * </pre>
    *
-   * <code>string value = 4;</code>
+   * <code>optional string value = 4;</code>
    * @return The value.
    */
   @java.lang.Override
@@ -182,7 +182,7 @@ private static final long serialVersionUID = 0L;
    * Times are reported in the customer's time zone.
    * </pre>
    *
-   * <code>string value = 4;</code>
+   * <code>optional string value = 4;</code>
    * @return The bytes for value.
    */
   @java.lang.Override
@@ -209,7 +209,7 @@ private static final long serialVersionUID = 0L;
    * present.
    * </pre>
    *
-   * <code>int64 offset_in_days = 5;</code>
+   * <code>optional int64 offset_in_days = 5;</code>
    * @return Whether the offsetInDays field is set.
    */
   @java.lang.Override
@@ -223,7 +223,7 @@ private static final long serialVersionUID = 0L;
    * present.
    * </pre>
    *
-   * <code>int64 offset_in_days = 5;</code>
+   * <code>optional int64 offset_in_days = 5;</code>
    * @return The offsetInDays.
    */
   @java.lang.Override
@@ -684,7 +684,7 @@ private static final long serialVersionUID = 0L;
      * Times are reported in the customer's time zone.
      * </pre>
      *
-     * <code>string value = 4;</code>
+     * <code>optional string value = 4;</code>
      * @return Whether the value field is set.
      */
     public boolean hasValue() {
@@ -697,7 +697,7 @@ private static final long serialVersionUID = 0L;
      * Times are reported in the customer's time zone.
      * </pre>
      *
-     * <code>string value = 4;</code>
+     * <code>optional string value = 4;</code>
      * @return The value.
      */
     public java.lang.String getValue() {
@@ -719,7 +719,7 @@ private static final long serialVersionUID = 0L;
      * Times are reported in the customer's time zone.
      * </pre>
      *
-     * <code>string value = 4;</code>
+     * <code>optional string value = 4;</code>
      * @return The bytes for value.
      */
     public com.google.protobuf.ByteString
@@ -742,7 +742,7 @@ private static final long serialVersionUID = 0L;
      * Times are reported in the customer's time zone.
      * </pre>
      *
-     * <code>string value = 4;</code>
+     * <code>optional string value = 4;</code>
      * @param value The value to set.
      * @return This builder for chaining.
      */
@@ -763,7 +763,7 @@ private static final long serialVersionUID = 0L;
      * Times are reported in the customer's time zone.
      * </pre>
      *
-     * <code>string value = 4;</code>
+     * <code>optional string value = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearValue() {
@@ -779,7 +779,7 @@ private static final long serialVersionUID = 0L;
      * Times are reported in the customer's time zone.
      * </pre>
      *
-     * <code>string value = 4;</code>
+     * <code>optional string value = 4;</code>
      * @param value The bytes for value to set.
      * @return This builder for chaining.
      */
@@ -803,7 +803,7 @@ private static final long serialVersionUID = 0L;
      * present.
      * </pre>
      *
-     * <code>int64 offset_in_days = 5;</code>
+     * <code>optional int64 offset_in_days = 5;</code>
      * @return Whether the offsetInDays field is set.
      */
     @java.lang.Override
@@ -817,7 +817,7 @@ private static final long serialVersionUID = 0L;
      * present.
      * </pre>
      *
-     * <code>int64 offset_in_days = 5;</code>
+     * <code>optional int64 offset_in_days = 5;</code>
      * @return The offsetInDays.
      */
     @java.lang.Override
@@ -831,7 +831,7 @@ private static final long serialVersionUID = 0L;
      * present.
      * </pre>
      *
-     * <code>int64 offset_in_days = 5;</code>
+     * <code>optional int64 offset_in_days = 5;</code>
      * @param value The offsetInDays to set.
      * @return This builder for chaining.
      */
@@ -848,7 +848,7 @@ private static final long serialVersionUID = 0L;
      * present.
      * </pre>
      *
-     * <code>int64 offset_in_days = 5;</code>
+     * <code>optional int64 offset_in_days = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearOffsetInDays() {

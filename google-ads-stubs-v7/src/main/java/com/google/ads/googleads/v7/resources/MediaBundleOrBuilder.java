@@ -12,7 +12,7 @@ public interface MediaBundleOrBuilder extends
    * Immutable. Raw zipped data.
    * </pre>
    *
-   * <code>bytes data = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional bytes data = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the data field is set.
    */
   boolean hasData();
@@ -21,7 +21,7 @@ public interface MediaBundleOrBuilder extends
    * Immutable. Raw zipped data.
    * </pre>
    *
-   * <code>bytes data = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional bytes data = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The data.
    */
   com.google.protobuf.ByteString getData();
@@ -33,7 +33,7 @@ public interface MediaBundleOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>string url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the url field is set.
    */
   boolean hasUrl();
@@ -44,7 +44,7 @@ public interface MediaBundleOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>string url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The url.
    */
   java.lang.String getUrl();
@@ -55,7 +55,7 @@ public interface MediaBundleOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>string url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for url.
    */
   com.google.protobuf.ByteString

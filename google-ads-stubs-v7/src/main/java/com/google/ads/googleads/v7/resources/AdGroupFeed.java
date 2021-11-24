@@ -211,7 +211,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The feed being linked to the ad group.
    * </pre>
    *
-   * <code>string feed = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string feed = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the feed field is set.
    */
   @java.lang.Override
@@ -223,7 +223,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The feed being linked to the ad group.
    * </pre>
    *
-   * <code>string feed = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string feed = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The feed.
    */
   @java.lang.Override
@@ -244,7 +244,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The feed being linked to the ad group.
    * </pre>
    *
-   * <code>string feed = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string feed = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for feed.
    */
   @java.lang.Override
@@ -269,7 +269,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The ad group being linked to the feed.
    * </pre>
    *
-   * <code>string ad_group = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the adGroup field is set.
    */
   @java.lang.Override
@@ -281,7 +281,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The ad group being linked to the feed.
    * </pre>
    *
-   * <code>string ad_group = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The adGroup.
    */
   @java.lang.Override
@@ -302,7 +302,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The ad group being linked to the feed.
    * </pre>
    *
-   * <code>string ad_group = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for adGroup.
    */
   @java.lang.Override
@@ -491,7 +491,7 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     getSerializedSize();
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (getPlaceholderTypesList().size() > 0) {
@@ -522,7 +522,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     {
@@ -1038,7 +1038,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The feed being linked to the ad group.
      * </pre>
      *
-     * <code>string feed = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string feed = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the feed field is set.
      */
     public boolean hasFeed() {
@@ -1049,7 +1049,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The feed being linked to the ad group.
      * </pre>
      *
-     * <code>string feed = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string feed = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return The feed.
      */
     public java.lang.String getFeed() {
@@ -1069,7 +1069,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The feed being linked to the ad group.
      * </pre>
      *
-     * <code>string feed = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string feed = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for feed.
      */
     public com.google.protobuf.ByteString
@@ -1090,7 +1090,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The feed being linked to the ad group.
      * </pre>
      *
-     * <code>string feed = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string feed = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @param value The feed to set.
      * @return This builder for chaining.
      */
@@ -1109,7 +1109,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The feed being linked to the ad group.
      * </pre>
      *
-     * <code>string feed = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string feed = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearFeed() {
@@ -1123,7 +1123,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The feed being linked to the ad group.
      * </pre>
      *
-     * <code>string feed = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string feed = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for feed to set.
      * @return This builder for chaining.
      */
@@ -1145,7 +1145,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The ad group being linked to the feed.
      * </pre>
      *
-     * <code>string ad_group = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the adGroup field is set.
      */
     public boolean hasAdGroup() {
@@ -1156,7 +1156,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The ad group being linked to the feed.
      * </pre>
      *
-     * <code>string ad_group = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return The adGroup.
      */
     public java.lang.String getAdGroup() {
@@ -1176,7 +1176,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The ad group being linked to the feed.
      * </pre>
      *
-     * <code>string ad_group = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for adGroup.
      */
     public com.google.protobuf.ByteString
@@ -1197,7 +1197,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The ad group being linked to the feed.
      * </pre>
      *
-     * <code>string ad_group = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @param value The adGroup to set.
      * @return This builder for chaining.
      */
@@ -1216,7 +1216,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The ad group being linked to the feed.
      * </pre>
      *
-     * <code>string ad_group = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearAdGroup() {
@@ -1230,7 +1230,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The ad group being linked to the feed.
      * </pre>
      *
-     * <code>string ad_group = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for adGroup to set.
      * @return This builder for chaining.
      */

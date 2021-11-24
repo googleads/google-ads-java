@@ -37,7 +37,7 @@ public interface DetailPlacementViewOrBuilder extends
    * application ID, or a YouTube video ID.
    * </pre>
    *
-   * <code>string placement = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string placement = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the placement field is set.
    */
   boolean hasPlacement();
@@ -47,7 +47,7 @@ public interface DetailPlacementViewOrBuilder extends
    * application ID, or a YouTube video ID.
    * </pre>
    *
-   * <code>string placement = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string placement = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The placement.
    */
   java.lang.String getPlacement();
@@ -57,7 +57,7 @@ public interface DetailPlacementViewOrBuilder extends
    * application ID, or a YouTube video ID.
    * </pre>
    *
-   * <code>string placement = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string placement = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for placement.
    */
   com.google.protobuf.ByteString
@@ -69,7 +69,7 @@ public interface DetailPlacementViewOrBuilder extends
    * videos, and translated mobile app name for mobile apps.
    * </pre>
    *
-   * <code>string display_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string display_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the displayName field is set.
    */
   boolean hasDisplayName();
@@ -79,7 +79,7 @@ public interface DetailPlacementViewOrBuilder extends
    * videos, and translated mobile app name for mobile apps.
    * </pre>
    *
-   * <code>string display_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string display_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The displayName.
    */
   java.lang.String getDisplayName();
@@ -89,7 +89,7 @@ public interface DetailPlacementViewOrBuilder extends
    * videos, and translated mobile app name for mobile apps.
    * </pre>
    *
-   * <code>string display_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string display_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for displayName.
    */
   com.google.protobuf.ByteString
@@ -101,7 +101,7 @@ public interface DetailPlacementViewOrBuilder extends
    * app store, or a YouTube channel URL.
    * </pre>
    *
-   * <code>string group_placement_target_url = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string group_placement_target_url = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the groupPlacementTargetUrl field is set.
    */
   boolean hasGroupPlacementTargetUrl();
@@ -111,7 +111,7 @@ public interface DetailPlacementViewOrBuilder extends
    * app store, or a YouTube channel URL.
    * </pre>
    *
-   * <code>string group_placement_target_url = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string group_placement_target_url = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The groupPlacementTargetUrl.
    */
   java.lang.String getGroupPlacementTargetUrl();
@@ -121,7 +121,7 @@ public interface DetailPlacementViewOrBuilder extends
    * app store, or a YouTube channel URL.
    * </pre>
    *
-   * <code>string group_placement_target_url = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string group_placement_target_url = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for groupPlacementTargetUrl.
    */
   com.google.protobuf.ByteString
@@ -133,7 +133,7 @@ public interface DetailPlacementViewOrBuilder extends
    * store, or a YouTube video URL.
    * </pre>
    *
-   * <code>string target_url = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string target_url = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the targetUrl field is set.
    */
   boolean hasTargetUrl();
@@ -143,7 +143,7 @@ public interface DetailPlacementViewOrBuilder extends
    * store, or a YouTube video URL.
    * </pre>
    *
-   * <code>string target_url = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string target_url = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The targetUrl.
    */
   java.lang.String getTargetUrl();
@@ -153,7 +153,7 @@ public interface DetailPlacementViewOrBuilder extends
    * store, or a YouTube video URL.
    * </pre>
    *
-   * <code>string target_url = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string target_url = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for targetUrl.
    */
   com.google.protobuf.ByteString

@@ -647,7 +647,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of the ad.
    * </pre>
    *
-   * <code>int64 id = 40 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 40 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   @java.lang.Override
@@ -659,7 +659,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of the ad.
    * </pre>
    *
-   * <code>int64 id = 40 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 40 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   @java.lang.Override
@@ -849,7 +849,7 @@ private static final long serialVersionUID = 0L;
    * The URL template for constructing a tracking URL.
    * </pre>
    *
-   * <code>string tracking_url_template = 43;</code>
+   * <code>optional string tracking_url_template = 43;</code>
    * @return Whether the trackingUrlTemplate field is set.
    */
   @java.lang.Override
@@ -861,7 +861,7 @@ private static final long serialVersionUID = 0L;
    * The URL template for constructing a tracking URL.
    * </pre>
    *
-   * <code>string tracking_url_template = 43;</code>
+   * <code>optional string tracking_url_template = 43;</code>
    * @return The trackingUrlTemplate.
    */
   @java.lang.Override
@@ -882,7 +882,7 @@ private static final long serialVersionUID = 0L;
    * The URL template for constructing a tracking URL.
    * </pre>
    *
-   * <code>string tracking_url_template = 43;</code>
+   * <code>optional string tracking_url_template = 43;</code>
    * @return The bytes for trackingUrlTemplate.
    */
   @java.lang.Override
@@ -907,7 +907,7 @@ private static final long serialVersionUID = 0L;
    * The suffix to use when constructing a final URL.
    * </pre>
    *
-   * <code>string final_url_suffix = 44;</code>
+   * <code>optional string final_url_suffix = 44;</code>
    * @return Whether the finalUrlSuffix field is set.
    */
   @java.lang.Override
@@ -919,7 +919,7 @@ private static final long serialVersionUID = 0L;
    * The suffix to use when constructing a final URL.
    * </pre>
    *
-   * <code>string final_url_suffix = 44;</code>
+   * <code>optional string final_url_suffix = 44;</code>
    * @return The finalUrlSuffix.
    */
   @java.lang.Override
@@ -940,7 +940,7 @@ private static final long serialVersionUID = 0L;
    * The suffix to use when constructing a final URL.
    * </pre>
    *
-   * <code>string final_url_suffix = 44;</code>
+   * <code>optional string final_url_suffix = 44;</code>
    * @return The bytes for finalUrlSuffix.
    */
   @java.lang.Override
@@ -1035,7 +1035,7 @@ private static final long serialVersionUID = 0L;
    * The URL that appears in the ad description for some ad formats.
    * </pre>
    *
-   * <code>string display_url = 45;</code>
+   * <code>optional string display_url = 45;</code>
    * @return Whether the displayUrl field is set.
    */
   @java.lang.Override
@@ -1047,7 +1047,7 @@ private static final long serialVersionUID = 0L;
    * The URL that appears in the ad description for some ad formats.
    * </pre>
    *
-   * <code>string display_url = 45;</code>
+   * <code>optional string display_url = 45;</code>
    * @return The displayUrl.
    */
   @java.lang.Override
@@ -1068,7 +1068,7 @@ private static final long serialVersionUID = 0L;
    * The URL that appears in the ad description for some ad formats.
    * </pre>
    *
-   * <code>string display_url = 45;</code>
+   * <code>optional string display_url = 45;</code>
    * @return The bytes for displayUrl.
    */
   @java.lang.Override
@@ -1123,7 +1123,7 @@ private static final long serialVersionUID = 0L;
    * performing.
    * </pre>
    *
-   * <code>bool added_by_google_ads = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool added_by_google_ads = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the addedByGoogleAds field is set.
    */
   @java.lang.Override
@@ -1138,7 +1138,7 @@ private static final long serialVersionUID = 0L;
    * performing.
    * </pre>
    *
-   * <code>bool added_by_google_ads = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool added_by_google_ads = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The addedByGoogleAds.
    */
   @java.lang.Override
@@ -1258,7 +1258,7 @@ private static final long serialVersionUID = 0L;
    * ShoppingComparisonListingAd and VideoAd.
    * </pre>
    *
-   * <code>string name = 47 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string name = 47 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the name field is set.
    */
   @java.lang.Override
@@ -1273,7 +1273,7 @@ private static final long serialVersionUID = 0L;
    * ShoppingComparisonListingAd and VideoAd.
    * </pre>
    *
-   * <code>string name = 47 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string name = 47 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The name.
    */
   @java.lang.Override
@@ -1297,7 +1297,7 @@ private static final long serialVersionUID = 0L;
    * ShoppingComparisonListingAd and VideoAd.
    * </pre>
    *
-   * <code>string name = 47 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string name = 47 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The bytes for name.
    */
   @java.lang.Override
@@ -2345,7 +2345,7 @@ private static final long serialVersionUID = 0L;
     if (adDataCase_ == 36) {
       output.writeMessage(36, (com.google.ads.googleads.v8.common.ShoppingComparisonListingAdInfo) adData_);
     }
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 37, resourceName_);
     }
     if (adDataCase_ == 39) {
@@ -2486,7 +2486,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(36, (com.google.ads.googleads.v8.common.ShoppingComparisonListingAdInfo) adData_);
     }
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(37, resourceName_);
     }
     if (adDataCase_ == 39) {
@@ -3696,7 +3696,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the ad.
      * </pre>
      *
-     * <code>int64 id = 40 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 40 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the id field is set.
      */
     @java.lang.Override
@@ -3708,7 +3708,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the ad.
      * </pre>
      *
-     * <code>int64 id = 40 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 40 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The id.
      */
     @java.lang.Override
@@ -3720,7 +3720,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the ad.
      * </pre>
      *
-     * <code>int64 id = 40 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 40 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
@@ -3735,7 +3735,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the ad.
      * </pre>
      *
-     * <code>int64 id = 40 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 40 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {
@@ -4391,7 +4391,7 @@ private static final long serialVersionUID = 0L;
      * The URL template for constructing a tracking URL.
      * </pre>
      *
-     * <code>string tracking_url_template = 43;</code>
+     * <code>optional string tracking_url_template = 43;</code>
      * @return Whether the trackingUrlTemplate field is set.
      */
     public boolean hasTrackingUrlTemplate() {
@@ -4402,7 +4402,7 @@ private static final long serialVersionUID = 0L;
      * The URL template for constructing a tracking URL.
      * </pre>
      *
-     * <code>string tracking_url_template = 43;</code>
+     * <code>optional string tracking_url_template = 43;</code>
      * @return The trackingUrlTemplate.
      */
     public java.lang.String getTrackingUrlTemplate() {
@@ -4422,7 +4422,7 @@ private static final long serialVersionUID = 0L;
      * The URL template for constructing a tracking URL.
      * </pre>
      *
-     * <code>string tracking_url_template = 43;</code>
+     * <code>optional string tracking_url_template = 43;</code>
      * @return The bytes for trackingUrlTemplate.
      */
     public com.google.protobuf.ByteString
@@ -4443,7 +4443,7 @@ private static final long serialVersionUID = 0L;
      * The URL template for constructing a tracking URL.
      * </pre>
      *
-     * <code>string tracking_url_template = 43;</code>
+     * <code>optional string tracking_url_template = 43;</code>
      * @param value The trackingUrlTemplate to set.
      * @return This builder for chaining.
      */
@@ -4462,7 +4462,7 @@ private static final long serialVersionUID = 0L;
      * The URL template for constructing a tracking URL.
      * </pre>
      *
-     * <code>string tracking_url_template = 43;</code>
+     * <code>optional string tracking_url_template = 43;</code>
      * @return This builder for chaining.
      */
     public Builder clearTrackingUrlTemplate() {
@@ -4476,7 +4476,7 @@ private static final long serialVersionUID = 0L;
      * The URL template for constructing a tracking URL.
      * </pre>
      *
-     * <code>string tracking_url_template = 43;</code>
+     * <code>optional string tracking_url_template = 43;</code>
      * @param value The bytes for trackingUrlTemplate to set.
      * @return This builder for chaining.
      */
@@ -4498,7 +4498,7 @@ private static final long serialVersionUID = 0L;
      * The suffix to use when constructing a final URL.
      * </pre>
      *
-     * <code>string final_url_suffix = 44;</code>
+     * <code>optional string final_url_suffix = 44;</code>
      * @return Whether the finalUrlSuffix field is set.
      */
     public boolean hasFinalUrlSuffix() {
@@ -4509,7 +4509,7 @@ private static final long serialVersionUID = 0L;
      * The suffix to use when constructing a final URL.
      * </pre>
      *
-     * <code>string final_url_suffix = 44;</code>
+     * <code>optional string final_url_suffix = 44;</code>
      * @return The finalUrlSuffix.
      */
     public java.lang.String getFinalUrlSuffix() {
@@ -4529,7 +4529,7 @@ private static final long serialVersionUID = 0L;
      * The suffix to use when constructing a final URL.
      * </pre>
      *
-     * <code>string final_url_suffix = 44;</code>
+     * <code>optional string final_url_suffix = 44;</code>
      * @return The bytes for finalUrlSuffix.
      */
     public com.google.protobuf.ByteString
@@ -4550,7 +4550,7 @@ private static final long serialVersionUID = 0L;
      * The suffix to use when constructing a final URL.
      * </pre>
      *
-     * <code>string final_url_suffix = 44;</code>
+     * <code>optional string final_url_suffix = 44;</code>
      * @param value The finalUrlSuffix to set.
      * @return This builder for chaining.
      */
@@ -4569,7 +4569,7 @@ private static final long serialVersionUID = 0L;
      * The suffix to use when constructing a final URL.
      * </pre>
      *
-     * <code>string final_url_suffix = 44;</code>
+     * <code>optional string final_url_suffix = 44;</code>
      * @return This builder for chaining.
      */
     public Builder clearFinalUrlSuffix() {
@@ -4583,7 +4583,7 @@ private static final long serialVersionUID = 0L;
      * The suffix to use when constructing a final URL.
      * </pre>
      *
-     * <code>string final_url_suffix = 44;</code>
+     * <code>optional string final_url_suffix = 44;</code>
      * @param value The bytes for finalUrlSuffix to set.
      * @return This builder for chaining.
      */
@@ -4953,7 +4953,7 @@ private static final long serialVersionUID = 0L;
      * The URL that appears in the ad description for some ad formats.
      * </pre>
      *
-     * <code>string display_url = 45;</code>
+     * <code>optional string display_url = 45;</code>
      * @return Whether the displayUrl field is set.
      */
     public boolean hasDisplayUrl() {
@@ -4964,7 +4964,7 @@ private static final long serialVersionUID = 0L;
      * The URL that appears in the ad description for some ad formats.
      * </pre>
      *
-     * <code>string display_url = 45;</code>
+     * <code>optional string display_url = 45;</code>
      * @return The displayUrl.
      */
     public java.lang.String getDisplayUrl() {
@@ -4984,7 +4984,7 @@ private static final long serialVersionUID = 0L;
      * The URL that appears in the ad description for some ad formats.
      * </pre>
      *
-     * <code>string display_url = 45;</code>
+     * <code>optional string display_url = 45;</code>
      * @return The bytes for displayUrl.
      */
     public com.google.protobuf.ByteString
@@ -5005,7 +5005,7 @@ private static final long serialVersionUID = 0L;
      * The URL that appears in the ad description for some ad formats.
      * </pre>
      *
-     * <code>string display_url = 45;</code>
+     * <code>optional string display_url = 45;</code>
      * @param value The displayUrl to set.
      * @return This builder for chaining.
      */
@@ -5024,7 +5024,7 @@ private static final long serialVersionUID = 0L;
      * The URL that appears in the ad description for some ad formats.
      * </pre>
      *
-     * <code>string display_url = 45;</code>
+     * <code>optional string display_url = 45;</code>
      * @return This builder for chaining.
      */
     public Builder clearDisplayUrl() {
@@ -5038,7 +5038,7 @@ private static final long serialVersionUID = 0L;
      * The URL that appears in the ad description for some ad formats.
      * </pre>
      *
-     * <code>string display_url = 45;</code>
+     * <code>optional string display_url = 45;</code>
      * @param value The bytes for displayUrl to set.
      * @return This builder for chaining.
      */
@@ -5137,7 +5137,7 @@ private static final long serialVersionUID = 0L;
      * performing.
      * </pre>
      *
-     * <code>bool added_by_google_ads = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool added_by_google_ads = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the addedByGoogleAds field is set.
      */
     @java.lang.Override
@@ -5152,7 +5152,7 @@ private static final long serialVersionUID = 0L;
      * performing.
      * </pre>
      *
-     * <code>bool added_by_google_ads = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool added_by_google_ads = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The addedByGoogleAds.
      */
     @java.lang.Override
@@ -5167,7 +5167,7 @@ private static final long serialVersionUID = 0L;
      * performing.
      * </pre>
      *
-     * <code>bool added_by_google_ads = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool added_by_google_ads = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The addedByGoogleAds to set.
      * @return This builder for chaining.
      */
@@ -5185,7 +5185,7 @@ private static final long serialVersionUID = 0L;
      * performing.
      * </pre>
      *
-     * <code>bool added_by_google_ads = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool added_by_google_ads = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearAddedByGoogleAds() {
@@ -5633,7 +5633,7 @@ private static final long serialVersionUID = 0L;
      * ShoppingComparisonListingAd and VideoAd.
      * </pre>
      *
-     * <code>string name = 47 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string name = 47 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the name field is set.
      */
     public boolean hasName() {
@@ -5647,7 +5647,7 @@ private static final long serialVersionUID = 0L;
      * ShoppingComparisonListingAd and VideoAd.
      * </pre>
      *
-     * <code>string name = 47 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string name = 47 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The name.
      */
     public java.lang.String getName() {
@@ -5670,7 +5670,7 @@ private static final long serialVersionUID = 0L;
      * ShoppingComparisonListingAd and VideoAd.
      * </pre>
      *
-     * <code>string name = 47 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string name = 47 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
@@ -5694,7 +5694,7 @@ private static final long serialVersionUID = 0L;
      * ShoppingComparisonListingAd and VideoAd.
      * </pre>
      *
-     * <code>string name = 47 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string name = 47 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @param value The name to set.
      * @return This builder for chaining.
      */
@@ -5716,7 +5716,7 @@ private static final long serialVersionUID = 0L;
      * ShoppingComparisonListingAd and VideoAd.
      * </pre>
      *
-     * <code>string name = 47 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string name = 47 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
@@ -5733,7 +5733,7 @@ private static final long serialVersionUID = 0L;
      * ShoppingComparisonListingAd and VideoAd.
      * </pre>
      *
-     * <code>string name = 47 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string name = 47 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */

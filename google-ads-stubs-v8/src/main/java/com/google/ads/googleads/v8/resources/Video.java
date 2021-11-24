@@ -176,7 +176,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of the video.
    * </pre>
    *
-   * <code>string id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   @java.lang.Override
@@ -188,7 +188,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of the video.
    * </pre>
    *
-   * <code>string id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   @java.lang.Override
@@ -209,7 +209,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of the video.
    * </pre>
    *
-   * <code>string id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for id.
    */
   @java.lang.Override
@@ -234,7 +234,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The owner channel id of the video.
    * </pre>
    *
-   * <code>string channel_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string channel_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the channelId field is set.
    */
   @java.lang.Override
@@ -246,7 +246,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The owner channel id of the video.
    * </pre>
    *
-   * <code>string channel_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string channel_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The channelId.
    */
   @java.lang.Override
@@ -267,7 +267,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The owner channel id of the video.
    * </pre>
    *
-   * <code>string channel_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string channel_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for channelId.
    */
   @java.lang.Override
@@ -292,7 +292,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The duration of the video in milliseconds.
    * </pre>
    *
-   * <code>int64 duration_millis = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 duration_millis = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the durationMillis field is set.
    */
   @java.lang.Override
@@ -304,7 +304,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The duration of the video in milliseconds.
    * </pre>
    *
-   * <code>int64 duration_millis = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 duration_millis = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The durationMillis.
    */
   @java.lang.Override
@@ -319,7 +319,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The title of the video.
    * </pre>
    *
-   * <code>string title = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string title = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the title field is set.
    */
   @java.lang.Override
@@ -331,7 +331,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The title of the video.
    * </pre>
    *
-   * <code>string title = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string title = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The title.
    */
   @java.lang.Override
@@ -352,7 +352,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The title of the video.
    * </pre>
    *
-   * <code>string title = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string title = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for title.
    */
   @java.lang.Override
@@ -384,7 +384,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
@@ -408,7 +408,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
@@ -896,7 +896,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the video.
      * </pre>
      *
-     * <code>string id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the id field is set.
      */
     public boolean hasId() {
@@ -907,7 +907,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the video.
      * </pre>
      *
-     * <code>string id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The id.
      */
     public java.lang.String getId() {
@@ -927,7 +927,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the video.
      * </pre>
      *
-     * <code>string id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for id.
      */
     public com.google.protobuf.ByteString
@@ -948,7 +948,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the video.
      * </pre>
      *
-     * <code>string id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
@@ -967,7 +967,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the video.
      * </pre>
      *
-     * <code>string id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {
@@ -981,7 +981,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the video.
      * </pre>
      *
-     * <code>string id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for id to set.
      * @return This builder for chaining.
      */
@@ -1003,7 +1003,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The owner channel id of the video.
      * </pre>
      *
-     * <code>string channel_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string channel_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the channelId field is set.
      */
     public boolean hasChannelId() {
@@ -1014,7 +1014,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The owner channel id of the video.
      * </pre>
      *
-     * <code>string channel_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string channel_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The channelId.
      */
     public java.lang.String getChannelId() {
@@ -1034,7 +1034,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The owner channel id of the video.
      * </pre>
      *
-     * <code>string channel_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string channel_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for channelId.
      */
     public com.google.protobuf.ByteString
@@ -1055,7 +1055,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The owner channel id of the video.
      * </pre>
      *
-     * <code>string channel_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string channel_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The channelId to set.
      * @return This builder for chaining.
      */
@@ -1074,7 +1074,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The owner channel id of the video.
      * </pre>
      *
-     * <code>string channel_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string channel_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearChannelId() {
@@ -1088,7 +1088,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The owner channel id of the video.
      * </pre>
      *
-     * <code>string channel_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string channel_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for channelId to set.
      * @return This builder for chaining.
      */
@@ -1110,7 +1110,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The duration of the video in milliseconds.
      * </pre>
      *
-     * <code>int64 duration_millis = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 duration_millis = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the durationMillis field is set.
      */
     @java.lang.Override
@@ -1122,7 +1122,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The duration of the video in milliseconds.
      * </pre>
      *
-     * <code>int64 duration_millis = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 duration_millis = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The durationMillis.
      */
     @java.lang.Override
@@ -1134,7 +1134,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The duration of the video in milliseconds.
      * </pre>
      *
-     * <code>int64 duration_millis = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 duration_millis = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The durationMillis to set.
      * @return This builder for chaining.
      */
@@ -1149,7 +1149,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The duration of the video in milliseconds.
      * </pre>
      *
-     * <code>int64 duration_millis = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 duration_millis = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearDurationMillis() {
@@ -1165,7 +1165,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The title of the video.
      * </pre>
      *
-     * <code>string title = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string title = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the title field is set.
      */
     public boolean hasTitle() {
@@ -1176,7 +1176,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The title of the video.
      * </pre>
      *
-     * <code>string title = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string title = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The title.
      */
     public java.lang.String getTitle() {
@@ -1196,7 +1196,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The title of the video.
      * </pre>
      *
-     * <code>string title = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string title = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for title.
      */
     public com.google.protobuf.ByteString
@@ -1217,7 +1217,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The title of the video.
      * </pre>
      *
-     * <code>string title = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string title = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The title to set.
      * @return This builder for chaining.
      */
@@ -1236,7 +1236,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The title of the video.
      * </pre>
      *
-     * <code>string title = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string title = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearTitle() {
@@ -1250,7 +1250,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The title of the video.
      * </pre>
      *
-     * <code>string title = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string title = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for title to set.
      * @return This builder for chaining.
      */

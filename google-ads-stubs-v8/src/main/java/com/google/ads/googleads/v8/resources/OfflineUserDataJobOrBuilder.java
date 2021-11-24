@@ -36,7 +36,7 @@ public interface OfflineUserDataJobOrBuilder extends
    * Output only. ID of this offline user data job.
    * </pre>
    *
-   * <code>int64 id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -45,7 +45,7 @@ public interface OfflineUserDataJobOrBuilder extends
    * Output only. ID of this offline user data job.
    * </pre>
    *
-   * <code>int64 id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   long getId();
@@ -55,7 +55,7 @@ public interface OfflineUserDataJobOrBuilder extends
    * Immutable. User specified job ID.
    * </pre>
    *
-   * <code>int64 external_id = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional int64 external_id = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the externalId field is set.
    */
   boolean hasExternalId();
@@ -64,7 +64,7 @@ public interface OfflineUserDataJobOrBuilder extends
    * Immutable. User specified job ID.
    * </pre>
    *
-   * <code>int64 external_id = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional int64 external_id = 10 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The externalId.
    */
   long getExternalId();

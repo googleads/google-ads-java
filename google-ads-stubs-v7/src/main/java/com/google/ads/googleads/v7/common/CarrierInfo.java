@@ -100,7 +100,7 @@ private static final long serialVersionUID = 0L;
    * The Carrier constant resource name.
    * </pre>
    *
-   * <code>string carrier_constant = 2;</code>
+   * <code>optional string carrier_constant = 2;</code>
    * @return Whether the carrierConstant field is set.
    */
   @java.lang.Override
@@ -112,7 +112,7 @@ private static final long serialVersionUID = 0L;
    * The Carrier constant resource name.
    * </pre>
    *
-   * <code>string carrier_constant = 2;</code>
+   * <code>optional string carrier_constant = 2;</code>
    * @return The carrierConstant.
    */
   @java.lang.Override
@@ -133,7 +133,7 @@ private static final long serialVersionUID = 0L;
    * The Carrier constant resource name.
    * </pre>
    *
-   * <code>string carrier_constant = 2;</code>
+   * <code>optional string carrier_constant = 2;</code>
    * @return The bytes for carrierConstant.
    */
   @java.lang.Override
@@ -476,7 +476,7 @@ private static final long serialVersionUID = 0L;
      * The Carrier constant resource name.
      * </pre>
      *
-     * <code>string carrier_constant = 2;</code>
+     * <code>optional string carrier_constant = 2;</code>
      * @return Whether the carrierConstant field is set.
      */
     public boolean hasCarrierConstant() {
@@ -487,7 +487,7 @@ private static final long serialVersionUID = 0L;
      * The Carrier constant resource name.
      * </pre>
      *
-     * <code>string carrier_constant = 2;</code>
+     * <code>optional string carrier_constant = 2;</code>
      * @return The carrierConstant.
      */
     public java.lang.String getCarrierConstant() {
@@ -507,7 +507,7 @@ private static final long serialVersionUID = 0L;
      * The Carrier constant resource name.
      * </pre>
      *
-     * <code>string carrier_constant = 2;</code>
+     * <code>optional string carrier_constant = 2;</code>
      * @return The bytes for carrierConstant.
      */
     public com.google.protobuf.ByteString
@@ -528,7 +528,7 @@ private static final long serialVersionUID = 0L;
      * The Carrier constant resource name.
      * </pre>
      *
-     * <code>string carrier_constant = 2;</code>
+     * <code>optional string carrier_constant = 2;</code>
      * @param value The carrierConstant to set.
      * @return This builder for chaining.
      */
@@ -547,7 +547,7 @@ private static final long serialVersionUID = 0L;
      * The Carrier constant resource name.
      * </pre>
      *
-     * <code>string carrier_constant = 2;</code>
+     * <code>optional string carrier_constant = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearCarrierConstant() {
@@ -561,7 +561,7 @@ private static final long serialVersionUID = 0L;
      * The Carrier constant resource name.
      * </pre>
      *
-     * <code>string carrier_constant = 2;</code>
+     * <code>optional string carrier_constant = 2;</code>
      * @param value The bytes for carrierConstant to set.
      * @return This builder for chaining.
      */

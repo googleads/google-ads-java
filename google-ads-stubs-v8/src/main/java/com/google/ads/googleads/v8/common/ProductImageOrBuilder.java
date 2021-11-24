@@ -14,7 +14,7 @@ public interface ProductImageOrBuilder extends
    * must be 1:1 (+-1%).
    * </pre>
    *
-   * <code>string product_image = 4;</code>
+   * <code>optional string product_image = 4;</code>
    * @return Whether the productImage field is set.
    */
   boolean hasProductImage();
@@ -25,7 +25,7 @@ public interface ProductImageOrBuilder extends
    * must be 1:1 (+-1%).
    * </pre>
    *
-   * <code>string product_image = 4;</code>
+   * <code>optional string product_image = 4;</code>
    * @return The productImage.
    */
   java.lang.String getProductImage();
@@ -36,7 +36,7 @@ public interface ProductImageOrBuilder extends
    * must be 1:1 (+-1%).
    * </pre>
    *
-   * <code>string product_image = 4;</code>
+   * <code>optional string product_image = 4;</code>
    * @return The bytes for productImage.
    */
   com.google.protobuf.ByteString
@@ -47,7 +47,7 @@ public interface ProductImageOrBuilder extends
    * Description of the product.
    * </pre>
    *
-   * <code>string description = 5;</code>
+   * <code>optional string description = 5;</code>
    * @return Whether the description field is set.
    */
   boolean hasDescription();
@@ -56,7 +56,7 @@ public interface ProductImageOrBuilder extends
    * Description of the product.
    * </pre>
    *
-   * <code>string description = 5;</code>
+   * <code>optional string description = 5;</code>
    * @return The description.
    */
   java.lang.String getDescription();
@@ -65,7 +65,7 @@ public interface ProductImageOrBuilder extends
    * Description of the product.
    * </pre>
    *
-   * <code>string description = 5;</code>
+   * <code>optional string description = 5;</code>
    * @return The bytes for description.
    */
   com.google.protobuf.ByteString

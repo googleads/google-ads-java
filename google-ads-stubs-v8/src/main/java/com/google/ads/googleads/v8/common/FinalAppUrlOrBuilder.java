@@ -37,7 +37,7 @@ public interface FinalAppUrlOrBuilder extends
    * Example: "exampleapp://productid_1234". Required.
    * </pre>
    *
-   * <code>string url = 3;</code>
+   * <code>optional string url = 3;</code>
    * @return Whether the url field is set.
    */
   boolean hasUrl();
@@ -52,7 +52,7 @@ public interface FinalAppUrlOrBuilder extends
    * Example: "exampleapp://productid_1234". Required.
    * </pre>
    *
-   * <code>string url = 3;</code>
+   * <code>optional string url = 3;</code>
    * @return The url.
    */
   java.lang.String getUrl();
@@ -67,7 +67,7 @@ public interface FinalAppUrlOrBuilder extends
    * Example: "exampleapp://productid_1234". Required.
    * </pre>
    *
-   * <code>string url = 3;</code>
+   * <code>optional string url = 3;</code>
    * @return The bytes for url.
    */
   com.google.protobuf.ByteString

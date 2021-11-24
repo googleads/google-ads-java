@@ -32,7 +32,7 @@ public interface CustomInterestMemberOrBuilder extends
    * member_type is URL.
    * </pre>
    *
-   * <code>string parameter = 3;</code>
+   * <code>optional string parameter = 3;</code>
    * @return Whether the parameter field is set.
    */
   boolean hasParameter();
@@ -42,7 +42,7 @@ public interface CustomInterestMemberOrBuilder extends
    * member_type is URL.
    * </pre>
    *
-   * <code>string parameter = 3;</code>
+   * <code>optional string parameter = 3;</code>
    * @return The parameter.
    */
   java.lang.String getParameter();
@@ -52,7 +52,7 @@ public interface CustomInterestMemberOrBuilder extends
    * member_type is URL.
    * </pre>
    *
-   * <code>string parameter = 3;</code>
+   * <code>optional string parameter = 3;</code>
    * @return The bytes for parameter.
    */
   com.google.protobuf.ByteString

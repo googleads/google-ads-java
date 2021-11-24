@@ -12,7 +12,7 @@ public interface KeywordPlanWeeklyForecastOrBuilder extends
    * The start date, in yyyy-mm-dd format. This date is inclusive.
    * </pre>
    *
-   * <code>string start_date = 1;</code>
+   * <code>optional string start_date = 1;</code>
    * @return Whether the startDate field is set.
    */
   boolean hasStartDate();
@@ -21,7 +21,7 @@ public interface KeywordPlanWeeklyForecastOrBuilder extends
    * The start date, in yyyy-mm-dd format. This date is inclusive.
    * </pre>
    *
-   * <code>string start_date = 1;</code>
+   * <code>optional string start_date = 1;</code>
    * @return The startDate.
    */
   java.lang.String getStartDate();
@@ -30,7 +30,7 @@ public interface KeywordPlanWeeklyForecastOrBuilder extends
    * The start date, in yyyy-mm-dd format. This date is inclusive.
    * </pre>
    *
-   * <code>string start_date = 1;</code>
+   * <code>optional string start_date = 1;</code>
    * @return The bytes for startDate.
    */
   com.google.protobuf.ByteString

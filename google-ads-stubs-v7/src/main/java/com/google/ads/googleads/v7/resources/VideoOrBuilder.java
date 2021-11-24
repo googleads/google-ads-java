@@ -36,7 +36,7 @@ public interface VideoOrBuilder extends
    * Output only. The ID of the video.
    * </pre>
    *
-   * <code>string id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -45,7 +45,7 @@ public interface VideoOrBuilder extends
    * Output only. The ID of the video.
    * </pre>
    *
-   * <code>string id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   java.lang.String getId();
@@ -54,7 +54,7 @@ public interface VideoOrBuilder extends
    * Output only. The ID of the video.
    * </pre>
    *
-   * <code>string id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for id.
    */
   com.google.protobuf.ByteString
@@ -65,7 +65,7 @@ public interface VideoOrBuilder extends
    * Output only. The owner channel id of the video.
    * </pre>
    *
-   * <code>string channel_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string channel_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the channelId field is set.
    */
   boolean hasChannelId();
@@ -74,7 +74,7 @@ public interface VideoOrBuilder extends
    * Output only. The owner channel id of the video.
    * </pre>
    *
-   * <code>string channel_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string channel_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The channelId.
    */
   java.lang.String getChannelId();
@@ -83,7 +83,7 @@ public interface VideoOrBuilder extends
    * Output only. The owner channel id of the video.
    * </pre>
    *
-   * <code>string channel_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string channel_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for channelId.
    */
   com.google.protobuf.ByteString
@@ -94,7 +94,7 @@ public interface VideoOrBuilder extends
    * Output only. The duration of the video in milliseconds.
    * </pre>
    *
-   * <code>int64 duration_millis = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 duration_millis = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the durationMillis field is set.
    */
   boolean hasDurationMillis();
@@ -103,7 +103,7 @@ public interface VideoOrBuilder extends
    * Output only. The duration of the video in milliseconds.
    * </pre>
    *
-   * <code>int64 duration_millis = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 duration_millis = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The durationMillis.
    */
   long getDurationMillis();
@@ -113,7 +113,7 @@ public interface VideoOrBuilder extends
    * Output only. The title of the video.
    * </pre>
    *
-   * <code>string title = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string title = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the title field is set.
    */
   boolean hasTitle();
@@ -122,7 +122,7 @@ public interface VideoOrBuilder extends
    * Output only. The title of the video.
    * </pre>
    *
-   * <code>string title = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string title = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The title.
    */
   java.lang.String getTitle();
@@ -131,7 +131,7 @@ public interface VideoOrBuilder extends
    * Output only. The title of the video.
    * </pre>
    *
-   * <code>string title = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string title = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for title.
    */
   com.google.protobuf.ByteString

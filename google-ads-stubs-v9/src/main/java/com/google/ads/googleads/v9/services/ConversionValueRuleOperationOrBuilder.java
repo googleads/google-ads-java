@@ -66,7 +66,7 @@ public interface ConversionValueRuleOperationOrBuilder extends
 
   /**
    * <pre>
-   * Update operation: The conversion action is expected to have a valid
+   * Update operation: The conversion value rule is expected to have a valid
    * resource name.
    * </pre>
    *
@@ -76,7 +76,7 @@ public interface ConversionValueRuleOperationOrBuilder extends
   boolean hasUpdate();
   /**
    * <pre>
-   * Update operation: The conversion action is expected to have a valid
+   * Update operation: The conversion value rule is expected to have a valid
    * resource name.
    * </pre>
    *
@@ -86,7 +86,7 @@ public interface ConversionValueRuleOperationOrBuilder extends
   com.google.ads.googleads.v9.resources.ConversionValueRule getUpdate();
   /**
    * <pre>
-   * Update operation: The conversion action is expected to have a valid
+   * Update operation: The conversion value rule is expected to have a valid
    * resource name.
    * </pre>
    *
@@ -96,8 +96,8 @@ public interface ConversionValueRuleOperationOrBuilder extends
 
   /**
    * <pre>
-   * Remove operation: A resource name for the removed conversion action is
-   * expected, in this format:
+   * Remove operation: A resource name for the removed conversion value rule
+   * is expected, in this format:
    * `customers/{customer_id}/conversionValueRules/{conversion_value_rule_id}`
    * </pre>
    *
@@ -107,8 +107,8 @@ public interface ConversionValueRuleOperationOrBuilder extends
   boolean hasRemove();
   /**
    * <pre>
-   * Remove operation: A resource name for the removed conversion action is
-   * expected, in this format:
+   * Remove operation: A resource name for the removed conversion value rule
+   * is expected, in this format:
    * `customers/{customer_id}/conversionValueRules/{conversion_value_rule_id}`
    * </pre>
    *
@@ -118,8 +118,8 @@ public interface ConversionValueRuleOperationOrBuilder extends
   java.lang.String getRemove();
   /**
    * <pre>
-   * Remove operation: A resource name for the removed conversion action is
-   * expected, in this format:
+   * Remove operation: A resource name for the removed conversion value rule
+   * is expected, in this format:
    * `customers/{customer_id}/conversionValueRules/{conversion_value_rule_id}`
    * </pre>
    *

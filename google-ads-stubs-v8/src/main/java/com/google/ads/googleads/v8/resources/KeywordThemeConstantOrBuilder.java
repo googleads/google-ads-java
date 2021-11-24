@@ -38,7 +38,7 @@ public interface KeywordThemeConstantOrBuilder extends
    * localized.
    * </pre>
    *
-   * <code>string country_code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string country_code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the countryCode field is set.
    */
   boolean hasCountryCode();
@@ -49,7 +49,7 @@ public interface KeywordThemeConstantOrBuilder extends
    * localized.
    * </pre>
    *
-   * <code>string country_code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string country_code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The countryCode.
    */
   java.lang.String getCountryCode();
@@ -60,7 +60,7 @@ public interface KeywordThemeConstantOrBuilder extends
    * localized.
    * </pre>
    *
-   * <code>string country_code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string country_code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for countryCode.
    */
   com.google.protobuf.ByteString
@@ -73,7 +73,7 @@ public interface KeywordThemeConstantOrBuilder extends
    * localized.
    * </pre>
    *
-   * <code>string language_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string language_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the languageCode field is set.
    */
   boolean hasLanguageCode();
@@ -84,7 +84,7 @@ public interface KeywordThemeConstantOrBuilder extends
    * localized.
    * </pre>
    *
-   * <code>string language_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string language_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The languageCode.
    */
   java.lang.String getLanguageCode();
@@ -95,7 +95,7 @@ public interface KeywordThemeConstantOrBuilder extends
    * localized.
    * </pre>
    *
-   * <code>string language_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string language_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for languageCode.
    */
   com.google.protobuf.ByteString
@@ -106,7 +106,7 @@ public interface KeywordThemeConstantOrBuilder extends
    * Output only. The display name of the keyword theme or sub keyword theme.
    * </pre>
    *
-   * <code>string display_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string display_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the displayName field is set.
    */
   boolean hasDisplayName();
@@ -115,7 +115,7 @@ public interface KeywordThemeConstantOrBuilder extends
    * Output only. The display name of the keyword theme or sub keyword theme.
    * </pre>
    *
-   * <code>string display_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string display_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The displayName.
    */
   java.lang.String getDisplayName();
@@ -124,7 +124,7 @@ public interface KeywordThemeConstantOrBuilder extends
    * Output only. The display name of the keyword theme or sub keyword theme.
    * </pre>
    *
-   * <code>string display_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string display_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for displayName.
    */
   com.google.protobuf.ByteString

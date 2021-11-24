@@ -111,7 +111,7 @@ private static final long serialVersionUID = 0L;
    * System.
    * </pre>
    *
-   * <code>bool call_reporting_enabled = 10;</code>
+   * <code>optional bool call_reporting_enabled = 10;</code>
    * @return Whether the callReportingEnabled field is set.
    */
   @java.lang.Override
@@ -124,7 +124,7 @@ private static final long serialVersionUID = 0L;
    * System.
    * </pre>
    *
-   * <code>bool call_reporting_enabled = 10;</code>
+   * <code>optional bool call_reporting_enabled = 10;</code>
    * @return The callReportingEnabled.
    */
   @java.lang.Override
@@ -139,7 +139,7 @@ private static final long serialVersionUID = 0L;
    * Whether to enable call conversion reporting.
    * </pre>
    *
-   * <code>bool call_conversion_reporting_enabled = 11;</code>
+   * <code>optional bool call_conversion_reporting_enabled = 11;</code>
    * @return Whether the callConversionReportingEnabled field is set.
    */
   @java.lang.Override
@@ -151,7 +151,7 @@ private static final long serialVersionUID = 0L;
    * Whether to enable call conversion reporting.
    * </pre>
    *
-   * <code>bool call_conversion_reporting_enabled = 11;</code>
+   * <code>optional bool call_conversion_reporting_enabled = 11;</code>
    * @return The callConversionReportingEnabled.
    */
   @java.lang.Override
@@ -168,7 +168,7 @@ private static final long serialVersionUID = 0L;
    * call_conversion_reporting_enabled is set to true.
    * </pre>
    *
-   * <code>string call_conversion_action = 12 [(.google.api.resource_reference) = { ... }</code>
+   * <code>optional string call_conversion_action = 12 [(.google.api.resource_reference) = { ... }</code>
    * @return Whether the callConversionAction field is set.
    */
   @java.lang.Override
@@ -182,7 +182,7 @@ private static final long serialVersionUID = 0L;
    * call_conversion_reporting_enabled is set to true.
    * </pre>
    *
-   * <code>string call_conversion_action = 12 [(.google.api.resource_reference) = { ... }</code>
+   * <code>optional string call_conversion_action = 12 [(.google.api.resource_reference) = { ... }</code>
    * @return The callConversionAction.
    */
   @java.lang.Override
@@ -205,7 +205,7 @@ private static final long serialVersionUID = 0L;
    * call_conversion_reporting_enabled is set to true.
    * </pre>
    *
-   * <code>string call_conversion_action = 12 [(.google.api.resource_reference) = { ... }</code>
+   * <code>optional string call_conversion_action = 12 [(.google.api.resource_reference) = { ... }</code>
    * @return The bytes for callConversionAction.
    */
   @java.lang.Override
@@ -601,7 +601,7 @@ private static final long serialVersionUID = 0L;
      * System.
      * </pre>
      *
-     * <code>bool call_reporting_enabled = 10;</code>
+     * <code>optional bool call_reporting_enabled = 10;</code>
      * @return Whether the callReportingEnabled field is set.
      */
     @java.lang.Override
@@ -614,7 +614,7 @@ private static final long serialVersionUID = 0L;
      * System.
      * </pre>
      *
-     * <code>bool call_reporting_enabled = 10;</code>
+     * <code>optional bool call_reporting_enabled = 10;</code>
      * @return The callReportingEnabled.
      */
     @java.lang.Override
@@ -627,7 +627,7 @@ private static final long serialVersionUID = 0L;
      * System.
      * </pre>
      *
-     * <code>bool call_reporting_enabled = 10;</code>
+     * <code>optional bool call_reporting_enabled = 10;</code>
      * @param value The callReportingEnabled to set.
      * @return This builder for chaining.
      */
@@ -643,7 +643,7 @@ private static final long serialVersionUID = 0L;
      * System.
      * </pre>
      *
-     * <code>bool call_reporting_enabled = 10;</code>
+     * <code>optional bool call_reporting_enabled = 10;</code>
      * @return This builder for chaining.
      */
     public Builder clearCallReportingEnabled() {
@@ -659,7 +659,7 @@ private static final long serialVersionUID = 0L;
      * Whether to enable call conversion reporting.
      * </pre>
      *
-     * <code>bool call_conversion_reporting_enabled = 11;</code>
+     * <code>optional bool call_conversion_reporting_enabled = 11;</code>
      * @return Whether the callConversionReportingEnabled field is set.
      */
     @java.lang.Override
@@ -671,7 +671,7 @@ private static final long serialVersionUID = 0L;
      * Whether to enable call conversion reporting.
      * </pre>
      *
-     * <code>bool call_conversion_reporting_enabled = 11;</code>
+     * <code>optional bool call_conversion_reporting_enabled = 11;</code>
      * @return The callConversionReportingEnabled.
      */
     @java.lang.Override
@@ -683,7 +683,7 @@ private static final long serialVersionUID = 0L;
      * Whether to enable call conversion reporting.
      * </pre>
      *
-     * <code>bool call_conversion_reporting_enabled = 11;</code>
+     * <code>optional bool call_conversion_reporting_enabled = 11;</code>
      * @param value The callConversionReportingEnabled to set.
      * @return This builder for chaining.
      */
@@ -698,7 +698,7 @@ private static final long serialVersionUID = 0L;
      * Whether to enable call conversion reporting.
      * </pre>
      *
-     * <code>bool call_conversion_reporting_enabled = 11;</code>
+     * <code>optional bool call_conversion_reporting_enabled = 11;</code>
      * @return This builder for chaining.
      */
     public Builder clearCallConversionReportingEnabled() {
@@ -716,7 +716,7 @@ private static final long serialVersionUID = 0L;
      * call_conversion_reporting_enabled is set to true.
      * </pre>
      *
-     * <code>string call_conversion_action = 12 [(.google.api.resource_reference) = { ... }</code>
+     * <code>optional string call_conversion_action = 12 [(.google.api.resource_reference) = { ... }</code>
      * @return Whether the callConversionAction field is set.
      */
     public boolean hasCallConversionAction() {
@@ -729,7 +729,7 @@ private static final long serialVersionUID = 0L;
      * call_conversion_reporting_enabled is set to true.
      * </pre>
      *
-     * <code>string call_conversion_action = 12 [(.google.api.resource_reference) = { ... }</code>
+     * <code>optional string call_conversion_action = 12 [(.google.api.resource_reference) = { ... }</code>
      * @return The callConversionAction.
      */
     public java.lang.String getCallConversionAction() {
@@ -751,7 +751,7 @@ private static final long serialVersionUID = 0L;
      * call_conversion_reporting_enabled is set to true.
      * </pre>
      *
-     * <code>string call_conversion_action = 12 [(.google.api.resource_reference) = { ... }</code>
+     * <code>optional string call_conversion_action = 12 [(.google.api.resource_reference) = { ... }</code>
      * @return The bytes for callConversionAction.
      */
     public com.google.protobuf.ByteString
@@ -774,7 +774,7 @@ private static final long serialVersionUID = 0L;
      * call_conversion_reporting_enabled is set to true.
      * </pre>
      *
-     * <code>string call_conversion_action = 12 [(.google.api.resource_reference) = { ... }</code>
+     * <code>optional string call_conversion_action = 12 [(.google.api.resource_reference) = { ... }</code>
      * @param value The callConversionAction to set.
      * @return This builder for chaining.
      */
@@ -795,7 +795,7 @@ private static final long serialVersionUID = 0L;
      * call_conversion_reporting_enabled is set to true.
      * </pre>
      *
-     * <code>string call_conversion_action = 12 [(.google.api.resource_reference) = { ... }</code>
+     * <code>optional string call_conversion_action = 12 [(.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearCallConversionAction() {
@@ -811,7 +811,7 @@ private static final long serialVersionUID = 0L;
      * call_conversion_reporting_enabled is set to true.
      * </pre>
      *
-     * <code>string call_conversion_action = 12 [(.google.api.resource_reference) = { ... }</code>
+     * <code>optional string call_conversion_action = 12 [(.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for callConversionAction to set.
      * @return This builder for chaining.
      */

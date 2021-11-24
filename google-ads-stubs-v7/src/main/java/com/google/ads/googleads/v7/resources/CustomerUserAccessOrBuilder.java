@@ -48,7 +48,7 @@ public interface CustomerUserAccessOrBuilder extends
    * Read only field
    * </pre>
    *
-   * <code>string email_address = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string email_address = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the emailAddress field is set.
    */
   boolean hasEmailAddress();
@@ -58,7 +58,7 @@ public interface CustomerUserAccessOrBuilder extends
    * Read only field
    * </pre>
    *
-   * <code>string email_address = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string email_address = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The emailAddress.
    */
   java.lang.String getEmailAddress();
@@ -68,7 +68,7 @@ public interface CustomerUserAccessOrBuilder extends
    * Read only field
    * </pre>
    *
-   * <code>string email_address = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string email_address = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for emailAddress.
    */
   com.google.protobuf.ByteString
@@ -101,7 +101,7 @@ public interface CustomerUserAccessOrBuilder extends
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
    *
-   * <code>string access_creation_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string access_creation_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the accessCreationDateTime field is set.
    */
   boolean hasAccessCreationDateTime();
@@ -113,7 +113,7 @@ public interface CustomerUserAccessOrBuilder extends
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
    *
-   * <code>string access_creation_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string access_creation_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The accessCreationDateTime.
    */
   java.lang.String getAccessCreationDateTime();
@@ -125,7 +125,7 @@ public interface CustomerUserAccessOrBuilder extends
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
    *
-   * <code>string access_creation_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string access_creation_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for accessCreationDateTime.
    */
   com.google.protobuf.ByteString
@@ -137,7 +137,7 @@ public interface CustomerUserAccessOrBuilder extends
    * Read only field
    * </pre>
    *
-   * <code>string inviter_user_email_address = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string inviter_user_email_address = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the inviterUserEmailAddress field is set.
    */
   boolean hasInviterUserEmailAddress();
@@ -147,7 +147,7 @@ public interface CustomerUserAccessOrBuilder extends
    * Read only field
    * </pre>
    *
-   * <code>string inviter_user_email_address = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string inviter_user_email_address = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The inviterUserEmailAddress.
    */
   java.lang.String getInviterUserEmailAddress();
@@ -157,7 +157,7 @@ public interface CustomerUserAccessOrBuilder extends
    * Read only field
    * </pre>
    *
-   * <code>string inviter_user_email_address = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string inviter_user_email_address = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for inviterUserEmailAddress.
    */
   com.google.protobuf.ByteString

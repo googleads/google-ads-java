@@ -14,7 +14,7 @@ public interface VideoTrueViewInStreamAdInfoOrBuilder extends
    * Required for TrueView for action campaigns, optional otherwise.
    * </pre>
    *
-   * <code>string action_button_label = 4;</code>
+   * <code>optional string action_button_label = 4;</code>
    * @return Whether the actionButtonLabel field is set.
    */
   boolean hasActionButtonLabel();
@@ -25,7 +25,7 @@ public interface VideoTrueViewInStreamAdInfoOrBuilder extends
    * Required for TrueView for action campaigns, optional otherwise.
    * </pre>
    *
-   * <code>string action_button_label = 4;</code>
+   * <code>optional string action_button_label = 4;</code>
    * @return The actionButtonLabel.
    */
   java.lang.String getActionButtonLabel();
@@ -36,7 +36,7 @@ public interface VideoTrueViewInStreamAdInfoOrBuilder extends
    * Required for TrueView for action campaigns, optional otherwise.
    * </pre>
    *
-   * <code>string action_button_label = 4;</code>
+   * <code>optional string action_button_label = 4;</code>
    * @return The bytes for actionButtonLabel.
    */
   com.google.protobuf.ByteString
@@ -48,7 +48,7 @@ public interface VideoTrueViewInStreamAdInfoOrBuilder extends
    * context and encourage clicking on the button.
    * </pre>
    *
-   * <code>string action_headline = 5;</code>
+   * <code>optional string action_headline = 5;</code>
    * @return Whether the actionHeadline field is set.
    */
   boolean hasActionHeadline();
@@ -58,7 +58,7 @@ public interface VideoTrueViewInStreamAdInfoOrBuilder extends
    * context and encourage clicking on the button.
    * </pre>
    *
-   * <code>string action_headline = 5;</code>
+   * <code>optional string action_headline = 5;</code>
    * @return The actionHeadline.
    */
   java.lang.String getActionHeadline();
@@ -68,7 +68,7 @@ public interface VideoTrueViewInStreamAdInfoOrBuilder extends
    * context and encourage clicking on the button.
    * </pre>
    *
-   * <code>string action_headline = 5;</code>
+   * <code>optional string action_headline = 5;</code>
    * @return The bytes for actionHeadline.
    */
   com.google.protobuf.ByteString
@@ -79,7 +79,7 @@ public interface VideoTrueViewInStreamAdInfoOrBuilder extends
    * The MediaFile resource name of the companion banner used with the ad.
    * </pre>
    *
-   * <code>string companion_banner = 6;</code>
+   * <code>optional string companion_banner = 6;</code>
    * @return Whether the companionBanner field is set.
    */
   boolean hasCompanionBanner();
@@ -88,7 +88,7 @@ public interface VideoTrueViewInStreamAdInfoOrBuilder extends
    * The MediaFile resource name of the companion banner used with the ad.
    * </pre>
    *
-   * <code>string companion_banner = 6;</code>
+   * <code>optional string companion_banner = 6;</code>
    * @return The companionBanner.
    */
   java.lang.String getCompanionBanner();
@@ -97,7 +97,7 @@ public interface VideoTrueViewInStreamAdInfoOrBuilder extends
    * The MediaFile resource name of the companion banner used with the ad.
    * </pre>
    *
-   * <code>string companion_banner = 6;</code>
+   * <code>optional string companion_banner = 6;</code>
    * @return The bytes for companionBanner.
    */
   com.google.protobuf.ByteString

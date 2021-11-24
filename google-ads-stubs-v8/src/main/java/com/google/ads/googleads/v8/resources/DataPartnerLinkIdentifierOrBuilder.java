@@ -15,7 +15,7 @@ public interface DataPartnerLinkIdentifierOrBuilder extends
    * the link.
    * </pre>
    *
-   * <code>int64 data_partner_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional int64 data_partner_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the dataPartnerId field is set.
    */
   boolean hasDataPartnerId();
@@ -27,7 +27,7 @@ public interface DataPartnerLinkIdentifierOrBuilder extends
    * the link.
    * </pre>
    *
-   * <code>int64 data_partner_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional int64 data_partner_id = 1 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The dataPartnerId.
    */
   long getDataPartnerId();

@@ -201,7 +201,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ad group ad to which the asset is linked.
    * </pre>
    *
-   * <code>string ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the adGroupAd field is set.
    */
   @java.lang.Override
@@ -213,7 +213,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ad group ad to which the asset is linked.
    * </pre>
    *
-   * <code>string ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The adGroupAd.
    */
   @java.lang.Override
@@ -234,7 +234,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ad group ad to which the asset is linked.
    * </pre>
    *
-   * <code>string ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for adGroupAd.
    */
   @java.lang.Override
@@ -259,7 +259,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The asset which is linked to the ad group ad.
    * </pre>
    *
-   * <code>string asset = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string asset = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the asset field is set.
    */
   @java.lang.Override
@@ -271,7 +271,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The asset which is linked to the ad group ad.
    * </pre>
    *
-   * <code>string asset = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string asset = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The asset.
    */
   @java.lang.Override
@@ -292,7 +292,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The asset which is linked to the ad group ad.
    * </pre>
    *
-   * <code>string asset = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string asset = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for asset.
    */
   @java.lang.Override
@@ -347,7 +347,7 @@ private static final long serialVersionUID = 0L;
    * latest version of the ad.
    * </pre>
    *
-   * <code>bool enabled = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool enabled = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the enabled field is set.
    */
   @java.lang.Override
@@ -362,7 +362,7 @@ private static final long serialVersionUID = 0L;
    * latest version of the ad.
    * </pre>
    *
-   * <code>bool enabled = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool enabled = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enabled.
    */
   @java.lang.Override
@@ -449,7 +449,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (fieldType_ != com.google.ads.googleads.v8.enums.AssetFieldTypeEnum.AssetFieldType.UNSPECIFIED.getNumber()) {
@@ -479,7 +479,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (fieldType_ != com.google.ads.googleads.v8.enums.AssetFieldTypeEnum.AssetFieldType.UNSPECIFIED.getNumber()) {
@@ -1008,7 +1008,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ad group ad to which the asset is linked.
      * </pre>
      *
-     * <code>string ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the adGroupAd field is set.
      */
     public boolean hasAdGroupAd() {
@@ -1019,7 +1019,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ad group ad to which the asset is linked.
      * </pre>
      *
-     * <code>string ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The adGroupAd.
      */
     public java.lang.String getAdGroupAd() {
@@ -1039,7 +1039,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ad group ad to which the asset is linked.
      * </pre>
      *
-     * <code>string ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for adGroupAd.
      */
     public com.google.protobuf.ByteString
@@ -1060,7 +1060,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ad group ad to which the asset is linked.
      * </pre>
      *
-     * <code>string ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The adGroupAd to set.
      * @return This builder for chaining.
      */
@@ -1079,7 +1079,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ad group ad to which the asset is linked.
      * </pre>
      *
-     * <code>string ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearAdGroupAd() {
@@ -1093,7 +1093,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ad group ad to which the asset is linked.
      * </pre>
      *
-     * <code>string ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for adGroupAd to set.
      * @return This builder for chaining.
      */
@@ -1115,7 +1115,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The asset which is linked to the ad group ad.
      * </pre>
      *
-     * <code>string asset = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string asset = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the asset field is set.
      */
     public boolean hasAsset() {
@@ -1126,7 +1126,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The asset which is linked to the ad group ad.
      * </pre>
      *
-     * <code>string asset = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string asset = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The asset.
      */
     public java.lang.String getAsset() {
@@ -1146,7 +1146,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The asset which is linked to the ad group ad.
      * </pre>
      *
-     * <code>string asset = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string asset = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for asset.
      */
     public com.google.protobuf.ByteString
@@ -1167,7 +1167,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The asset which is linked to the ad group ad.
      * </pre>
      *
-     * <code>string asset = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string asset = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The asset to set.
      * @return This builder for chaining.
      */
@@ -1186,7 +1186,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The asset which is linked to the ad group ad.
      * </pre>
      *
-     * <code>string asset = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string asset = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearAsset() {
@@ -1200,7 +1200,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The asset which is linked to the ad group ad.
      * </pre>
      *
-     * <code>string asset = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string asset = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for asset to set.
      * @return This builder for chaining.
      */
@@ -1299,7 +1299,7 @@ private static final long serialVersionUID = 0L;
      * latest version of the ad.
      * </pre>
      *
-     * <code>bool enabled = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool enabled = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the enabled field is set.
      */
     @java.lang.Override
@@ -1314,7 +1314,7 @@ private static final long serialVersionUID = 0L;
      * latest version of the ad.
      * </pre>
      *
-     * <code>bool enabled = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool enabled = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enabled.
      */
     @java.lang.Override
@@ -1329,7 +1329,7 @@ private static final long serialVersionUID = 0L;
      * latest version of the ad.
      * </pre>
      *
-     * <code>bool enabled = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool enabled = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The enabled to set.
      * @return This builder for chaining.
      */
@@ -1347,7 +1347,7 @@ private static final long serialVersionUID = 0L;
      * latest version of the ad.
      * </pre>
      *
-     * <code>bool enabled = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool enabled = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearEnabled() {

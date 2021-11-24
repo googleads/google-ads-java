@@ -114,7 +114,7 @@ private static final long serialVersionUID = 0L;
    * This string must not be empty.
    * </pre>
    *
-   * <code>string header = 3;</code>
+   * <code>optional string header = 3;</code>
    * @return Whether the header field is set.
    */
   @java.lang.Override
@@ -127,7 +127,7 @@ private static final long serialVersionUID = 0L;
    * This string must not be empty.
    * </pre>
    *
-   * <code>string header = 3;</code>
+   * <code>optional string header = 3;</code>
    * @return The header.
    */
   @java.lang.Override
@@ -149,7 +149,7 @@ private static final long serialVersionUID = 0L;
    * This string must not be empty.
    * </pre>
    *
-   * <code>string header = 3;</code>
+   * <code>optional string header = 3;</code>
    * @return The bytes for header.
    */
   @java.lang.Override
@@ -582,7 +582,7 @@ private static final long serialVersionUID = 0L;
      * This string must not be empty.
      * </pre>
      *
-     * <code>string header = 3;</code>
+     * <code>optional string header = 3;</code>
      * @return Whether the header field is set.
      */
     public boolean hasHeader() {
@@ -594,7 +594,7 @@ private static final long serialVersionUID = 0L;
      * This string must not be empty.
      * </pre>
      *
-     * <code>string header = 3;</code>
+     * <code>optional string header = 3;</code>
      * @return The header.
      */
     public java.lang.String getHeader() {
@@ -615,7 +615,7 @@ private static final long serialVersionUID = 0L;
      * This string must not be empty.
      * </pre>
      *
-     * <code>string header = 3;</code>
+     * <code>optional string header = 3;</code>
      * @return The bytes for header.
      */
     public com.google.protobuf.ByteString
@@ -637,7 +637,7 @@ private static final long serialVersionUID = 0L;
      * This string must not be empty.
      * </pre>
      *
-     * <code>string header = 3;</code>
+     * <code>optional string header = 3;</code>
      * @param value The header to set.
      * @return This builder for chaining.
      */
@@ -657,7 +657,7 @@ private static final long serialVersionUID = 0L;
      * This string must not be empty.
      * </pre>
      *
-     * <code>string header = 3;</code>
+     * <code>optional string header = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearHeader() {
@@ -672,7 +672,7 @@ private static final long serialVersionUID = 0L;
      * This string must not be empty.
      * </pre>
      *
-     * <code>string header = 3;</code>
+     * <code>optional string header = 3;</code>
      * @param value The bytes for header to set.
      * @return This builder for chaining.
      */

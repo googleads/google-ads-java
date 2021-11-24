@@ -55,7 +55,7 @@ public interface AdGroupAdOrBuilder extends
    * Immutable. The ad group to which the ad belongs.
    * </pre>
    *
-   * <code>string ad_group = 9 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group = 9 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the adGroup field is set.
    */
   boolean hasAdGroup();
@@ -64,7 +64,7 @@ public interface AdGroupAdOrBuilder extends
    * Immutable. The ad group to which the ad belongs.
    * </pre>
    *
-   * <code>string ad_group = 9 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group = 9 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The adGroup.
    */
   java.lang.String getAdGroup();
@@ -73,7 +73,7 @@ public interface AdGroupAdOrBuilder extends
    * Immutable. The ad group to which the ad belongs.
    * </pre>
    *
-   * <code>string ad_group = 9 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group = 9 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for adGroup.
    */
   com.google.protobuf.ByteString

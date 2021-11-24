@@ -13,7 +13,7 @@ public interface KeywordPlanWeeklyTimeSeriesForecastOrBuilder extends
    * `customers/{customer_id}/keywordPlanCampaigns/{keyword_plan_campaign_id}`
    * </pre>
    *
-   * <code>string keyword_plan_campaign = 1;</code>
+   * <code>optional string keyword_plan_campaign = 1;</code>
    * @return Whether the keywordPlanCampaign field is set.
    */
   boolean hasKeywordPlanCampaign();
@@ -23,7 +23,7 @@ public interface KeywordPlanWeeklyTimeSeriesForecastOrBuilder extends
    * `customers/{customer_id}/keywordPlanCampaigns/{keyword_plan_campaign_id}`
    * </pre>
    *
-   * <code>string keyword_plan_campaign = 1;</code>
+   * <code>optional string keyword_plan_campaign = 1;</code>
    * @return The keywordPlanCampaign.
    */
   java.lang.String getKeywordPlanCampaign();
@@ -33,7 +33,7 @@ public interface KeywordPlanWeeklyTimeSeriesForecastOrBuilder extends
    * `customers/{customer_id}/keywordPlanCampaigns/{keyword_plan_campaign_id}`
    * </pre>
    *
-   * <code>string keyword_plan_campaign = 1;</code>
+   * <code>optional string keyword_plan_campaign = 1;</code>
    * @return The bytes for keywordPlanCampaign.
    */
   com.google.protobuf.ByteString

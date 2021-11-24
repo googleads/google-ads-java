@@ -12,7 +12,7 @@ public interface AdMediaBundleAssetOrBuilder extends
    * The Asset resource name of this media bundle.
    * </pre>
    *
-   * <code>string asset = 2;</code>
+   * <code>optional string asset = 2;</code>
    * @return Whether the asset field is set.
    */
   boolean hasAsset();
@@ -21,7 +21,7 @@ public interface AdMediaBundleAssetOrBuilder extends
    * The Asset resource name of this media bundle.
    * </pre>
    *
-   * <code>string asset = 2;</code>
+   * <code>optional string asset = 2;</code>
    * @return The asset.
    */
   java.lang.String getAsset();
@@ -30,7 +30,7 @@ public interface AdMediaBundleAssetOrBuilder extends
    * The Asset resource name of this media bundle.
    * </pre>
    *
-   * <code>string asset = 2;</code>
+   * <code>optional string asset = 2;</code>
    * @return The bytes for asset.
    */
   com.google.protobuf.ByteString

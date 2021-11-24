@@ -36,7 +36,7 @@ public interface CurrencyConstantOrBuilder extends
    * Output only. ISO 4217 three-letter currency code, e.g. "USD"
    * </pre>
    *
-   * <code>string code = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string code = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the code field is set.
    */
   boolean hasCode();
@@ -45,7 +45,7 @@ public interface CurrencyConstantOrBuilder extends
    * Output only. ISO 4217 three-letter currency code, e.g. "USD"
    * </pre>
    *
-   * <code>string code = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string code = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The code.
    */
   java.lang.String getCode();
@@ -54,7 +54,7 @@ public interface CurrencyConstantOrBuilder extends
    * Output only. ISO 4217 three-letter currency code, e.g. "USD"
    * </pre>
    *
-   * <code>string code = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string code = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for code.
    */
   com.google.protobuf.ByteString
@@ -65,7 +65,7 @@ public interface CurrencyConstantOrBuilder extends
    * Output only. Full English name of the currency.
    * </pre>
    *
-   * <code>string name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the name field is set.
    */
   boolean hasName();
@@ -74,7 +74,7 @@ public interface CurrencyConstantOrBuilder extends
    * Output only. Full English name of the currency.
    * </pre>
    *
-   * <code>string name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The name.
    */
   java.lang.String getName();
@@ -83,7 +83,7 @@ public interface CurrencyConstantOrBuilder extends
    * Output only. Full English name of the currency.
    * </pre>
    *
-   * <code>string name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
@@ -94,7 +94,7 @@ public interface CurrencyConstantOrBuilder extends
    * Output only. Standard symbol for describing this currency, e.g. '$' for US Dollars.
    * </pre>
    *
-   * <code>string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the symbol field is set.
    */
   boolean hasSymbol();
@@ -103,7 +103,7 @@ public interface CurrencyConstantOrBuilder extends
    * Output only. Standard symbol for describing this currency, e.g. '$' for US Dollars.
    * </pre>
    *
-   * <code>string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The symbol.
    */
   java.lang.String getSymbol();
@@ -112,7 +112,7 @@ public interface CurrencyConstantOrBuilder extends
    * Output only. Standard symbol for describing this currency, e.g. '$' for US Dollars.
    * </pre>
    *
-   * <code>string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for symbol.
    */
   com.google.protobuf.ByteString
@@ -124,7 +124,7 @@ public interface CurrencyConstantOrBuilder extends
    * this value.
    * </pre>
    *
-   * <code>int64 billable_unit_micros = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 billable_unit_micros = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the billableUnitMicros field is set.
    */
   boolean hasBillableUnitMicros();
@@ -134,7 +134,7 @@ public interface CurrencyConstantOrBuilder extends
    * this value.
    * </pre>
    *
-   * <code>int64 billable_unit_micros = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 billable_unit_micros = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The billableUnitMicros.
    */
   long getBillableUnitMicros();

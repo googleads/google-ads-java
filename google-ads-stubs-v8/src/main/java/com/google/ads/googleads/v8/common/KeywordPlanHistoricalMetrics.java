@@ -137,7 +137,7 @@ private static final long serialVersionUID = 0L;
    * for the past 12 months.
    * </pre>
    *
-   * <code>int64 avg_monthly_searches = 7;</code>
+   * <code>optional int64 avg_monthly_searches = 7;</code>
    * @return Whether the avgMonthlySearches field is set.
    */
   @java.lang.Override
@@ -150,7 +150,7 @@ private static final long serialVersionUID = 0L;
    * for the past 12 months.
    * </pre>
    *
-   * <code>int64 avg_monthly_searches = 7;</code>
+   * <code>optional int64 avg_monthly_searches = 7;</code>
    * @return The avgMonthlySearches.
    */
   @java.lang.Override
@@ -256,7 +256,7 @@ private static final long serialVersionUID = 0L;
    * data is available, null is returned.
    * </pre>
    *
-   * <code>int64 competition_index = 8;</code>
+   * <code>optional int64 competition_index = 8;</code>
    * @return Whether the competitionIndex field is set.
    */
   @java.lang.Override
@@ -272,7 +272,7 @@ private static final long serialVersionUID = 0L;
    * data is available, null is returned.
    * </pre>
    *
-   * <code>int64 competition_index = 8;</code>
+   * <code>optional int64 competition_index = 8;</code>
    * @return The competitionIndex.
    */
   @java.lang.Override
@@ -287,7 +287,7 @@ private static final long serialVersionUID = 0L;
    * Top of page bid low range (20th percentile) in micros for the keyword.
    * </pre>
    *
-   * <code>int64 low_top_of_page_bid_micros = 9;</code>
+   * <code>optional int64 low_top_of_page_bid_micros = 9;</code>
    * @return Whether the lowTopOfPageBidMicros field is set.
    */
   @java.lang.Override
@@ -299,7 +299,7 @@ private static final long serialVersionUID = 0L;
    * Top of page bid low range (20th percentile) in micros for the keyword.
    * </pre>
    *
-   * <code>int64 low_top_of_page_bid_micros = 9;</code>
+   * <code>optional int64 low_top_of_page_bid_micros = 9;</code>
    * @return The lowTopOfPageBidMicros.
    */
   @java.lang.Override
@@ -314,7 +314,7 @@ private static final long serialVersionUID = 0L;
    * Top of page bid high range (80th percentile) in micros for the keyword.
    * </pre>
    *
-   * <code>int64 high_top_of_page_bid_micros = 10;</code>
+   * <code>optional int64 high_top_of_page_bid_micros = 10;</code>
    * @return Whether the highTopOfPageBidMicros field is set.
    */
   @java.lang.Override
@@ -326,7 +326,7 @@ private static final long serialVersionUID = 0L;
    * Top of page bid high range (80th percentile) in micros for the keyword.
    * </pre>
    *
-   * <code>int64 high_top_of_page_bid_micros = 10;</code>
+   * <code>optional int64 high_top_of_page_bid_micros = 10;</code>
    * @return The highTopOfPageBidMicros.
    */
   @java.lang.Override
@@ -812,7 +812,7 @@ private static final long serialVersionUID = 0L;
      * for the past 12 months.
      * </pre>
      *
-     * <code>int64 avg_monthly_searches = 7;</code>
+     * <code>optional int64 avg_monthly_searches = 7;</code>
      * @return Whether the avgMonthlySearches field is set.
      */
     @java.lang.Override
@@ -825,7 +825,7 @@ private static final long serialVersionUID = 0L;
      * for the past 12 months.
      * </pre>
      *
-     * <code>int64 avg_monthly_searches = 7;</code>
+     * <code>optional int64 avg_monthly_searches = 7;</code>
      * @return The avgMonthlySearches.
      */
     @java.lang.Override
@@ -838,7 +838,7 @@ private static final long serialVersionUID = 0L;
      * for the past 12 months.
      * </pre>
      *
-     * <code>int64 avg_monthly_searches = 7;</code>
+     * <code>optional int64 avg_monthly_searches = 7;</code>
      * @param value The avgMonthlySearches to set.
      * @return This builder for chaining.
      */
@@ -854,7 +854,7 @@ private static final long serialVersionUID = 0L;
      * for the past 12 months.
      * </pre>
      *
-     * <code>int64 avg_monthly_searches = 7;</code>
+     * <code>optional int64 avg_monthly_searches = 7;</code>
      * @return This builder for chaining.
      */
     public Builder clearAvgMonthlySearches() {
@@ -1260,7 +1260,7 @@ private static final long serialVersionUID = 0L;
      * data is available, null is returned.
      * </pre>
      *
-     * <code>int64 competition_index = 8;</code>
+     * <code>optional int64 competition_index = 8;</code>
      * @return Whether the competitionIndex field is set.
      */
     @java.lang.Override
@@ -1276,7 +1276,7 @@ private static final long serialVersionUID = 0L;
      * data is available, null is returned.
      * </pre>
      *
-     * <code>int64 competition_index = 8;</code>
+     * <code>optional int64 competition_index = 8;</code>
      * @return The competitionIndex.
      */
     @java.lang.Override
@@ -1292,7 +1292,7 @@ private static final long serialVersionUID = 0L;
      * data is available, null is returned.
      * </pre>
      *
-     * <code>int64 competition_index = 8;</code>
+     * <code>optional int64 competition_index = 8;</code>
      * @param value The competitionIndex to set.
      * @return This builder for chaining.
      */
@@ -1311,7 +1311,7 @@ private static final long serialVersionUID = 0L;
      * data is available, null is returned.
      * </pre>
      *
-     * <code>int64 competition_index = 8;</code>
+     * <code>optional int64 competition_index = 8;</code>
      * @return This builder for chaining.
      */
     public Builder clearCompetitionIndex() {
@@ -1327,7 +1327,7 @@ private static final long serialVersionUID = 0L;
      * Top of page bid low range (20th percentile) in micros for the keyword.
      * </pre>
      *
-     * <code>int64 low_top_of_page_bid_micros = 9;</code>
+     * <code>optional int64 low_top_of_page_bid_micros = 9;</code>
      * @return Whether the lowTopOfPageBidMicros field is set.
      */
     @java.lang.Override
@@ -1339,7 +1339,7 @@ private static final long serialVersionUID = 0L;
      * Top of page bid low range (20th percentile) in micros for the keyword.
      * </pre>
      *
-     * <code>int64 low_top_of_page_bid_micros = 9;</code>
+     * <code>optional int64 low_top_of_page_bid_micros = 9;</code>
      * @return The lowTopOfPageBidMicros.
      */
     @java.lang.Override
@@ -1351,7 +1351,7 @@ private static final long serialVersionUID = 0L;
      * Top of page bid low range (20th percentile) in micros for the keyword.
      * </pre>
      *
-     * <code>int64 low_top_of_page_bid_micros = 9;</code>
+     * <code>optional int64 low_top_of_page_bid_micros = 9;</code>
      * @param value The lowTopOfPageBidMicros to set.
      * @return This builder for chaining.
      */
@@ -1366,7 +1366,7 @@ private static final long serialVersionUID = 0L;
      * Top of page bid low range (20th percentile) in micros for the keyword.
      * </pre>
      *
-     * <code>int64 low_top_of_page_bid_micros = 9;</code>
+     * <code>optional int64 low_top_of_page_bid_micros = 9;</code>
      * @return This builder for chaining.
      */
     public Builder clearLowTopOfPageBidMicros() {
@@ -1382,7 +1382,7 @@ private static final long serialVersionUID = 0L;
      * Top of page bid high range (80th percentile) in micros for the keyword.
      * </pre>
      *
-     * <code>int64 high_top_of_page_bid_micros = 10;</code>
+     * <code>optional int64 high_top_of_page_bid_micros = 10;</code>
      * @return Whether the highTopOfPageBidMicros field is set.
      */
     @java.lang.Override
@@ -1394,7 +1394,7 @@ private static final long serialVersionUID = 0L;
      * Top of page bid high range (80th percentile) in micros for the keyword.
      * </pre>
      *
-     * <code>int64 high_top_of_page_bid_micros = 10;</code>
+     * <code>optional int64 high_top_of_page_bid_micros = 10;</code>
      * @return The highTopOfPageBidMicros.
      */
     @java.lang.Override
@@ -1406,7 +1406,7 @@ private static final long serialVersionUID = 0L;
      * Top of page bid high range (80th percentile) in micros for the keyword.
      * </pre>
      *
-     * <code>int64 high_top_of_page_bid_micros = 10;</code>
+     * <code>optional int64 high_top_of_page_bid_micros = 10;</code>
      * @param value The highTopOfPageBidMicros to set.
      * @return This builder for chaining.
      */
@@ -1421,7 +1421,7 @@ private static final long serialVersionUID = 0L;
      * Top of page bid high range (80th percentile) in micros for the keyword.
      * </pre>
      *
-     * <code>int64 high_top_of_page_bid_micros = 10;</code>
+     * <code>optional int64 high_top_of_page_bid_micros = 10;</code>
      * @return This builder for chaining.
      */
     public Builder clearHighTopOfPageBidMicros() {

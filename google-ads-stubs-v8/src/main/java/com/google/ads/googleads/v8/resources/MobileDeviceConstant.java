@@ -183,7 +183,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of the mobile device constant.
    * </pre>
    *
-   * <code>int64 id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   @java.lang.Override
@@ -195,7 +195,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of the mobile device constant.
    * </pre>
    *
-   * <code>int64 id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   @java.lang.Override
@@ -210,7 +210,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The name of the mobile device.
    * </pre>
    *
-   * <code>string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the name field is set.
    */
   @java.lang.Override
@@ -222,7 +222,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The name of the mobile device.
    * </pre>
    *
-   * <code>string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The name.
    */
   @java.lang.Override
@@ -243,7 +243,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The name of the mobile device.
    * </pre>
    *
-   * <code>string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for name.
    */
   @java.lang.Override
@@ -268,7 +268,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The manufacturer of the mobile device.
    * </pre>
    *
-   * <code>string manufacturer_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string manufacturer_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the manufacturerName field is set.
    */
   @java.lang.Override
@@ -280,7 +280,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The manufacturer of the mobile device.
    * </pre>
    *
-   * <code>string manufacturer_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string manufacturer_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The manufacturerName.
    */
   @java.lang.Override
@@ -301,7 +301,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The manufacturer of the mobile device.
    * </pre>
    *
-   * <code>string manufacturer_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string manufacturer_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for manufacturerName.
    */
   @java.lang.Override
@@ -326,7 +326,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The operating system of the mobile device.
    * </pre>
    *
-   * <code>string operating_system_name = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string operating_system_name = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the operatingSystemName field is set.
    */
   @java.lang.Override
@@ -338,7 +338,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The operating system of the mobile device.
    * </pre>
    *
-   * <code>string operating_system_name = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string operating_system_name = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The operatingSystemName.
    */
   @java.lang.Override
@@ -359,7 +359,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The operating system of the mobile device.
    * </pre>
    *
-   * <code>string operating_system_name = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string operating_system_name = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for operatingSystemName.
    */
   @java.lang.Override
@@ -418,7 +418,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (type_ != com.google.ads.googleads.v8.enums.MobileDeviceTypeEnum.MobileDeviceType.UNSPECIFIED.getNumber()) {
@@ -445,7 +445,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (type_ != com.google.ads.googleads.v8.enums.MobileDeviceTypeEnum.MobileDeviceType.UNSPECIFIED.getNumber()) {
@@ -946,7 +946,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the mobile device constant.
      * </pre>
      *
-     * <code>int64 id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the id field is set.
      */
     @java.lang.Override
@@ -958,7 +958,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the mobile device constant.
      * </pre>
      *
-     * <code>int64 id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The id.
      */
     @java.lang.Override
@@ -970,7 +970,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the mobile device constant.
      * </pre>
      *
-     * <code>int64 id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
@@ -985,7 +985,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the mobile device constant.
      * </pre>
      *
-     * <code>int64 id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {
@@ -1001,7 +1001,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The name of the mobile device.
      * </pre>
      *
-     * <code>string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the name field is set.
      */
     public boolean hasName() {
@@ -1012,7 +1012,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The name of the mobile device.
      * </pre>
      *
-     * <code>string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The name.
      */
     public java.lang.String getName() {
@@ -1032,7 +1032,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The name of the mobile device.
      * </pre>
      *
-     * <code>string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
@@ -1053,7 +1053,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The name of the mobile device.
      * </pre>
      *
-     * <code>string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The name to set.
      * @return This builder for chaining.
      */
@@ -1072,7 +1072,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The name of the mobile device.
      * </pre>
      *
-     * <code>string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
@@ -1086,7 +1086,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The name of the mobile device.
      * </pre>
      *
-     * <code>string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
@@ -1108,7 +1108,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The manufacturer of the mobile device.
      * </pre>
      *
-     * <code>string manufacturer_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string manufacturer_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the manufacturerName field is set.
      */
     public boolean hasManufacturerName() {
@@ -1119,7 +1119,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The manufacturer of the mobile device.
      * </pre>
      *
-     * <code>string manufacturer_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string manufacturer_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The manufacturerName.
      */
     public java.lang.String getManufacturerName() {
@@ -1139,7 +1139,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The manufacturer of the mobile device.
      * </pre>
      *
-     * <code>string manufacturer_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string manufacturer_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for manufacturerName.
      */
     public com.google.protobuf.ByteString
@@ -1160,7 +1160,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The manufacturer of the mobile device.
      * </pre>
      *
-     * <code>string manufacturer_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string manufacturer_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The manufacturerName to set.
      * @return This builder for chaining.
      */
@@ -1179,7 +1179,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The manufacturer of the mobile device.
      * </pre>
      *
-     * <code>string manufacturer_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string manufacturer_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearManufacturerName() {
@@ -1193,7 +1193,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The manufacturer of the mobile device.
      * </pre>
      *
-     * <code>string manufacturer_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string manufacturer_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for manufacturerName to set.
      * @return This builder for chaining.
      */
@@ -1215,7 +1215,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The operating system of the mobile device.
      * </pre>
      *
-     * <code>string operating_system_name = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string operating_system_name = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the operatingSystemName field is set.
      */
     public boolean hasOperatingSystemName() {
@@ -1226,7 +1226,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The operating system of the mobile device.
      * </pre>
      *
-     * <code>string operating_system_name = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string operating_system_name = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The operatingSystemName.
      */
     public java.lang.String getOperatingSystemName() {
@@ -1246,7 +1246,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The operating system of the mobile device.
      * </pre>
      *
-     * <code>string operating_system_name = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string operating_system_name = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for operatingSystemName.
      */
     public com.google.protobuf.ByteString
@@ -1267,7 +1267,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The operating system of the mobile device.
      * </pre>
      *
-     * <code>string operating_system_name = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string operating_system_name = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The operatingSystemName to set.
      * @return This builder for chaining.
      */
@@ -1286,7 +1286,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The operating system of the mobile device.
      * </pre>
      *
-     * <code>string operating_system_name = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string operating_system_name = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearOperatingSystemName() {
@@ -1300,7 +1300,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The operating system of the mobile device.
      * </pre>
      *
-     * <code>string operating_system_name = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string operating_system_name = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for operatingSystemName to set.
      * @return This builder for chaining.
      */

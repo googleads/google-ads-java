@@ -114,7 +114,7 @@ private static final long serialVersionUID = 0L;
    * Webhook url specified by advertiser to send the lead.
    * </pre>
    *
-   * <code>string advertiser_webhook_url = 4;</code>
+   * <code>optional string advertiser_webhook_url = 4;</code>
    * @return Whether the advertiserWebhookUrl field is set.
    */
   @java.lang.Override
@@ -126,7 +126,7 @@ private static final long serialVersionUID = 0L;
    * Webhook url specified by advertiser to send the lead.
    * </pre>
    *
-   * <code>string advertiser_webhook_url = 4;</code>
+   * <code>optional string advertiser_webhook_url = 4;</code>
    * @return The advertiserWebhookUrl.
    */
   @java.lang.Override
@@ -147,7 +147,7 @@ private static final long serialVersionUID = 0L;
    * Webhook url specified by advertiser to send the lead.
    * </pre>
    *
-   * <code>string advertiser_webhook_url = 4;</code>
+   * <code>optional string advertiser_webhook_url = 4;</code>
    * @return The bytes for advertiserWebhookUrl.
    */
   @java.lang.Override
@@ -172,7 +172,7 @@ private static final long serialVersionUID = 0L;
    * Anti-spoofing secret set by the advertiser as part of the webhook payload.
    * </pre>
    *
-   * <code>string google_secret = 5;</code>
+   * <code>optional string google_secret = 5;</code>
    * @return Whether the googleSecret field is set.
    */
   @java.lang.Override
@@ -184,7 +184,7 @@ private static final long serialVersionUID = 0L;
    * Anti-spoofing secret set by the advertiser as part of the webhook payload.
    * </pre>
    *
-   * <code>string google_secret = 5;</code>
+   * <code>optional string google_secret = 5;</code>
    * @return The googleSecret.
    */
   @java.lang.Override
@@ -205,7 +205,7 @@ private static final long serialVersionUID = 0L;
    * Anti-spoofing secret set by the advertiser as part of the webhook payload.
    * </pre>
    *
-   * <code>string google_secret = 5;</code>
+   * <code>optional string google_secret = 5;</code>
    * @return The bytes for googleSecret.
    */
   @java.lang.Override
@@ -230,7 +230,7 @@ private static final long serialVersionUID = 0L;
    * The schema version that this delivery instance will use.
    * </pre>
    *
-   * <code>int64 payload_schema_version = 6;</code>
+   * <code>optional int64 payload_schema_version = 6;</code>
    * @return Whether the payloadSchemaVersion field is set.
    */
   @java.lang.Override
@@ -242,7 +242,7 @@ private static final long serialVersionUID = 0L;
    * The schema version that this delivery instance will use.
    * </pre>
    *
-   * <code>int64 payload_schema_version = 6;</code>
+   * <code>optional int64 payload_schema_version = 6;</code>
    * @return The payloadSchemaVersion.
    */
   @java.lang.Override
@@ -629,7 +629,7 @@ private static final long serialVersionUID = 0L;
      * Webhook url specified by advertiser to send the lead.
      * </pre>
      *
-     * <code>string advertiser_webhook_url = 4;</code>
+     * <code>optional string advertiser_webhook_url = 4;</code>
      * @return Whether the advertiserWebhookUrl field is set.
      */
     public boolean hasAdvertiserWebhookUrl() {
@@ -640,7 +640,7 @@ private static final long serialVersionUID = 0L;
      * Webhook url specified by advertiser to send the lead.
      * </pre>
      *
-     * <code>string advertiser_webhook_url = 4;</code>
+     * <code>optional string advertiser_webhook_url = 4;</code>
      * @return The advertiserWebhookUrl.
      */
     public java.lang.String getAdvertiserWebhookUrl() {
@@ -660,7 +660,7 @@ private static final long serialVersionUID = 0L;
      * Webhook url specified by advertiser to send the lead.
      * </pre>
      *
-     * <code>string advertiser_webhook_url = 4;</code>
+     * <code>optional string advertiser_webhook_url = 4;</code>
      * @return The bytes for advertiserWebhookUrl.
      */
     public com.google.protobuf.ByteString
@@ -681,7 +681,7 @@ private static final long serialVersionUID = 0L;
      * Webhook url specified by advertiser to send the lead.
      * </pre>
      *
-     * <code>string advertiser_webhook_url = 4;</code>
+     * <code>optional string advertiser_webhook_url = 4;</code>
      * @param value The advertiserWebhookUrl to set.
      * @return This builder for chaining.
      */
@@ -700,7 +700,7 @@ private static final long serialVersionUID = 0L;
      * Webhook url specified by advertiser to send the lead.
      * </pre>
      *
-     * <code>string advertiser_webhook_url = 4;</code>
+     * <code>optional string advertiser_webhook_url = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearAdvertiserWebhookUrl() {
@@ -714,7 +714,7 @@ private static final long serialVersionUID = 0L;
      * Webhook url specified by advertiser to send the lead.
      * </pre>
      *
-     * <code>string advertiser_webhook_url = 4;</code>
+     * <code>optional string advertiser_webhook_url = 4;</code>
      * @param value The bytes for advertiserWebhookUrl to set.
      * @return This builder for chaining.
      */
@@ -736,7 +736,7 @@ private static final long serialVersionUID = 0L;
      * Anti-spoofing secret set by the advertiser as part of the webhook payload.
      * </pre>
      *
-     * <code>string google_secret = 5;</code>
+     * <code>optional string google_secret = 5;</code>
      * @return Whether the googleSecret field is set.
      */
     public boolean hasGoogleSecret() {
@@ -747,7 +747,7 @@ private static final long serialVersionUID = 0L;
      * Anti-spoofing secret set by the advertiser as part of the webhook payload.
      * </pre>
      *
-     * <code>string google_secret = 5;</code>
+     * <code>optional string google_secret = 5;</code>
      * @return The googleSecret.
      */
     public java.lang.String getGoogleSecret() {
@@ -767,7 +767,7 @@ private static final long serialVersionUID = 0L;
      * Anti-spoofing secret set by the advertiser as part of the webhook payload.
      * </pre>
      *
-     * <code>string google_secret = 5;</code>
+     * <code>optional string google_secret = 5;</code>
      * @return The bytes for googleSecret.
      */
     public com.google.protobuf.ByteString
@@ -788,7 +788,7 @@ private static final long serialVersionUID = 0L;
      * Anti-spoofing secret set by the advertiser as part of the webhook payload.
      * </pre>
      *
-     * <code>string google_secret = 5;</code>
+     * <code>optional string google_secret = 5;</code>
      * @param value The googleSecret to set.
      * @return This builder for chaining.
      */
@@ -807,7 +807,7 @@ private static final long serialVersionUID = 0L;
      * Anti-spoofing secret set by the advertiser as part of the webhook payload.
      * </pre>
      *
-     * <code>string google_secret = 5;</code>
+     * <code>optional string google_secret = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearGoogleSecret() {
@@ -821,7 +821,7 @@ private static final long serialVersionUID = 0L;
      * Anti-spoofing secret set by the advertiser as part of the webhook payload.
      * </pre>
      *
-     * <code>string google_secret = 5;</code>
+     * <code>optional string google_secret = 5;</code>
      * @param value The bytes for googleSecret to set.
      * @return This builder for chaining.
      */
@@ -843,7 +843,7 @@ private static final long serialVersionUID = 0L;
      * The schema version that this delivery instance will use.
      * </pre>
      *
-     * <code>int64 payload_schema_version = 6;</code>
+     * <code>optional int64 payload_schema_version = 6;</code>
      * @return Whether the payloadSchemaVersion field is set.
      */
     @java.lang.Override
@@ -855,7 +855,7 @@ private static final long serialVersionUID = 0L;
      * The schema version that this delivery instance will use.
      * </pre>
      *
-     * <code>int64 payload_schema_version = 6;</code>
+     * <code>optional int64 payload_schema_version = 6;</code>
      * @return The payloadSchemaVersion.
      */
     @java.lang.Override
@@ -867,7 +867,7 @@ private static final long serialVersionUID = 0L;
      * The schema version that this delivery instance will use.
      * </pre>
      *
-     * <code>int64 payload_schema_version = 6;</code>
+     * <code>optional int64 payload_schema_version = 6;</code>
      * @param value The payloadSchemaVersion to set.
      * @return This builder for chaining.
      */
@@ -882,7 +882,7 @@ private static final long serialVersionUID = 0L;
      * The schema version that this delivery instance will use.
      * </pre>
      *
-     * <code>int64 payload_schema_version = 6;</code>
+     * <code>optional int64 payload_schema_version = 6;</code>
      * @return This builder for chaining.
      */
     public Builder clearPayloadSchemaVersion() {

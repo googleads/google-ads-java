@@ -12,7 +12,7 @@ public interface KeywordPlanMaxCpcBidForecastOrBuilder extends
    * The max cpc bid in micros.
    * </pre>
    *
-   * <code>int64 max_cpc_bid_micros = 3;</code>
+   * <code>optional int64 max_cpc_bid_micros = 3;</code>
    * @return Whether the maxCpcBidMicros field is set.
    */
   boolean hasMaxCpcBidMicros();
@@ -21,7 +21,7 @@ public interface KeywordPlanMaxCpcBidForecastOrBuilder extends
    * The max cpc bid in micros.
    * </pre>
    *
-   * <code>int64 max_cpc_bid_micros = 3;</code>
+   * <code>optional int64 max_cpc_bid_micros = 3;</code>
    * @return The maxCpcBidMicros.
    */
   long getMaxCpcBidMicros();

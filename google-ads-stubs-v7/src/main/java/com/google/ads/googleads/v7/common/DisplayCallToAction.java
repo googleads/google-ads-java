@@ -116,7 +116,7 @@ private static final long serialVersionUID = 0L;
    * Text for the display-call-to-action.
    * </pre>
    *
-   * <code>string text = 5;</code>
+   * <code>optional string text = 5;</code>
    * @return Whether the text field is set.
    */
   @java.lang.Override
@@ -128,7 +128,7 @@ private static final long serialVersionUID = 0L;
    * Text for the display-call-to-action.
    * </pre>
    *
-   * <code>string text = 5;</code>
+   * <code>optional string text = 5;</code>
    * @return The text.
    */
   @java.lang.Override
@@ -149,7 +149,7 @@ private static final long serialVersionUID = 0L;
    * Text for the display-call-to-action.
    * </pre>
    *
-   * <code>string text = 5;</code>
+   * <code>optional string text = 5;</code>
    * @return The bytes for text.
    */
   @java.lang.Override
@@ -175,7 +175,7 @@ private static final long serialVersionUID = 0L;
    * white.
    * </pre>
    *
-   * <code>string text_color = 6;</code>
+   * <code>optional string text_color = 6;</code>
    * @return Whether the textColor field is set.
    */
   @java.lang.Override
@@ -188,7 +188,7 @@ private static final long serialVersionUID = 0L;
    * white.
    * </pre>
    *
-   * <code>string text_color = 6;</code>
+   * <code>optional string text_color = 6;</code>
    * @return The textColor.
    */
   @java.lang.Override
@@ -210,7 +210,7 @@ private static final long serialVersionUID = 0L;
    * white.
    * </pre>
    *
-   * <code>string text_color = 6;</code>
+   * <code>optional string text_color = 6;</code>
    * @return The bytes for textColor.
    */
   @java.lang.Override
@@ -236,7 +236,7 @@ private static final long serialVersionUID = 0L;
    * set, the URL defaults to `final_url`.
    * </pre>
    *
-   * <code>string url_collection_id = 7;</code>
+   * <code>optional string url_collection_id = 7;</code>
    * @return Whether the urlCollectionId field is set.
    */
   @java.lang.Override
@@ -249,7 +249,7 @@ private static final long serialVersionUID = 0L;
    * set, the URL defaults to `final_url`.
    * </pre>
    *
-   * <code>string url_collection_id = 7;</code>
+   * <code>optional string url_collection_id = 7;</code>
    * @return The urlCollectionId.
    */
   @java.lang.Override
@@ -271,7 +271,7 @@ private static final long serialVersionUID = 0L;
    * set, the URL defaults to `final_url`.
    * </pre>
    *
-   * <code>string url_collection_id = 7;</code>
+   * <code>optional string url_collection_id = 7;</code>
    * @return The bytes for urlCollectionId.
    */
   @java.lang.Override
@@ -668,7 +668,7 @@ private static final long serialVersionUID = 0L;
      * Text for the display-call-to-action.
      * </pre>
      *
-     * <code>string text = 5;</code>
+     * <code>optional string text = 5;</code>
      * @return Whether the text field is set.
      */
     public boolean hasText() {
@@ -679,7 +679,7 @@ private static final long serialVersionUID = 0L;
      * Text for the display-call-to-action.
      * </pre>
      *
-     * <code>string text = 5;</code>
+     * <code>optional string text = 5;</code>
      * @return The text.
      */
     public java.lang.String getText() {
@@ -699,7 +699,7 @@ private static final long serialVersionUID = 0L;
      * Text for the display-call-to-action.
      * </pre>
      *
-     * <code>string text = 5;</code>
+     * <code>optional string text = 5;</code>
      * @return The bytes for text.
      */
     public com.google.protobuf.ByteString
@@ -720,7 +720,7 @@ private static final long serialVersionUID = 0L;
      * Text for the display-call-to-action.
      * </pre>
      *
-     * <code>string text = 5;</code>
+     * <code>optional string text = 5;</code>
      * @param value The text to set.
      * @return This builder for chaining.
      */
@@ -739,7 +739,7 @@ private static final long serialVersionUID = 0L;
      * Text for the display-call-to-action.
      * </pre>
      *
-     * <code>string text = 5;</code>
+     * <code>optional string text = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearText() {
@@ -753,7 +753,7 @@ private static final long serialVersionUID = 0L;
      * Text for the display-call-to-action.
      * </pre>
      *
-     * <code>string text = 5;</code>
+     * <code>optional string text = 5;</code>
      * @param value The bytes for text to set.
      * @return This builder for chaining.
      */
@@ -776,7 +776,7 @@ private static final long serialVersionUID = 0L;
      * white.
      * </pre>
      *
-     * <code>string text_color = 6;</code>
+     * <code>optional string text_color = 6;</code>
      * @return Whether the textColor field is set.
      */
     public boolean hasTextColor() {
@@ -788,7 +788,7 @@ private static final long serialVersionUID = 0L;
      * white.
      * </pre>
      *
-     * <code>string text_color = 6;</code>
+     * <code>optional string text_color = 6;</code>
      * @return The textColor.
      */
     public java.lang.String getTextColor() {
@@ -809,7 +809,7 @@ private static final long serialVersionUID = 0L;
      * white.
      * </pre>
      *
-     * <code>string text_color = 6;</code>
+     * <code>optional string text_color = 6;</code>
      * @return The bytes for textColor.
      */
     public com.google.protobuf.ByteString
@@ -831,7 +831,7 @@ private static final long serialVersionUID = 0L;
      * white.
      * </pre>
      *
-     * <code>string text_color = 6;</code>
+     * <code>optional string text_color = 6;</code>
      * @param value The textColor to set.
      * @return This builder for chaining.
      */
@@ -851,7 +851,7 @@ private static final long serialVersionUID = 0L;
      * white.
      * </pre>
      *
-     * <code>string text_color = 6;</code>
+     * <code>optional string text_color = 6;</code>
      * @return This builder for chaining.
      */
     public Builder clearTextColor() {
@@ -866,7 +866,7 @@ private static final long serialVersionUID = 0L;
      * white.
      * </pre>
      *
-     * <code>string text_color = 6;</code>
+     * <code>optional string text_color = 6;</code>
      * @param value The bytes for textColor to set.
      * @return This builder for chaining.
      */
@@ -889,7 +889,7 @@ private static final long serialVersionUID = 0L;
      * set, the URL defaults to `final_url`.
      * </pre>
      *
-     * <code>string url_collection_id = 7;</code>
+     * <code>optional string url_collection_id = 7;</code>
      * @return Whether the urlCollectionId field is set.
      */
     public boolean hasUrlCollectionId() {
@@ -901,7 +901,7 @@ private static final long serialVersionUID = 0L;
      * set, the URL defaults to `final_url`.
      * </pre>
      *
-     * <code>string url_collection_id = 7;</code>
+     * <code>optional string url_collection_id = 7;</code>
      * @return The urlCollectionId.
      */
     public java.lang.String getUrlCollectionId() {
@@ -922,7 +922,7 @@ private static final long serialVersionUID = 0L;
      * set, the URL defaults to `final_url`.
      * </pre>
      *
-     * <code>string url_collection_id = 7;</code>
+     * <code>optional string url_collection_id = 7;</code>
      * @return The bytes for urlCollectionId.
      */
     public com.google.protobuf.ByteString
@@ -944,7 +944,7 @@ private static final long serialVersionUID = 0L;
      * set, the URL defaults to `final_url`.
      * </pre>
      *
-     * <code>string url_collection_id = 7;</code>
+     * <code>optional string url_collection_id = 7;</code>
      * @param value The urlCollectionId to set.
      * @return This builder for chaining.
      */
@@ -964,7 +964,7 @@ private static final long serialVersionUID = 0L;
      * set, the URL defaults to `final_url`.
      * </pre>
      *
-     * <code>string url_collection_id = 7;</code>
+     * <code>optional string url_collection_id = 7;</code>
      * @return This builder for chaining.
      */
     public Builder clearUrlCollectionId() {
@@ -979,7 +979,7 @@ private static final long serialVersionUID = 0L;
      * set, the URL defaults to `final_url`.
      * </pre>
      *
-     * <code>string url_collection_id = 7;</code>
+     * <code>optional string url_collection_id = 7;</code>
      * @param value The bytes for urlCollectionId to set.
      * @return This builder for chaining.
      */

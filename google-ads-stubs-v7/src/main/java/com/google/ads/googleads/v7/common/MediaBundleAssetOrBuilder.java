@@ -15,7 +15,7 @@ public interface MediaBundleAssetOrBuilder extends
    * MediaBundleAsset. This field is mutate only.
    * </pre>
    *
-   * <code>bytes data = 2;</code>
+   * <code>optional bytes data = 2;</code>
    * @return Whether the data field is set.
    */
   boolean hasData();
@@ -27,7 +27,7 @@ public interface MediaBundleAssetOrBuilder extends
    * MediaBundleAsset. This field is mutate only.
    * </pre>
    *
-   * <code>bytes data = 2;</code>
+   * <code>optional bytes data = 2;</code>
    * @return The data.
    */
   com.google.protobuf.ByteString getData();

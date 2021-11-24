@@ -114,7 +114,7 @@ private static final long serialVersionUID = 0L;
    * this article: https://support.google.com/merchants/answer/6324436
    * </pre>
    *
-   * <code>int64 id = 4;</code>
+   * <code>optional int64 id = 4;</code>
    * @return Whether the id field is set.
    */
   @java.lang.Override
@@ -128,7 +128,7 @@ private static final long serialVersionUID = 0L;
    * this article: https://support.google.com/merchants/answer/6324436
    * </pre>
    *
-   * <code>int64 id = 4;</code>
+   * <code>optional int64 id = 4;</code>
    * @return The id.
    */
   @java.lang.Override
@@ -144,7 +144,7 @@ private static final long serialVersionUID = 0L;
    * match the campaign.shopping_setting.sales_country field.
    * </pre>
    *
-   * <code>string country_code = 5;</code>
+   * <code>optional string country_code = 5;</code>
    * @return Whether the countryCode field is set.
    */
   @java.lang.Override
@@ -157,7 +157,7 @@ private static final long serialVersionUID = 0L;
    * match the campaign.shopping_setting.sales_country field.
    * </pre>
    *
-   * <code>string country_code = 5;</code>
+   * <code>optional string country_code = 5;</code>
    * @return The countryCode.
    */
   @java.lang.Override
@@ -179,7 +179,7 @@ private static final long serialVersionUID = 0L;
    * match the campaign.shopping_setting.sales_country field.
    * </pre>
    *
-   * <code>string country_code = 5;</code>
+   * <code>optional string country_code = 5;</code>
    * @return The bytes for countryCode.
    */
   @java.lang.Override
@@ -593,7 +593,7 @@ private static final long serialVersionUID = 0L;
      * this article: https://support.google.com/merchants/answer/6324436
      * </pre>
      *
-     * <code>int64 id = 4;</code>
+     * <code>optional int64 id = 4;</code>
      * @return Whether the id field is set.
      */
     @java.lang.Override
@@ -607,7 +607,7 @@ private static final long serialVersionUID = 0L;
      * this article: https://support.google.com/merchants/answer/6324436
      * </pre>
      *
-     * <code>int64 id = 4;</code>
+     * <code>optional int64 id = 4;</code>
      * @return The id.
      */
     @java.lang.Override
@@ -621,7 +621,7 @@ private static final long serialVersionUID = 0L;
      * this article: https://support.google.com/merchants/answer/6324436
      * </pre>
      *
-     * <code>int64 id = 4;</code>
+     * <code>optional int64 id = 4;</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
@@ -638,7 +638,7 @@ private static final long serialVersionUID = 0L;
      * this article: https://support.google.com/merchants/answer/6324436
      * </pre>
      *
-     * <code>int64 id = 4;</code>
+     * <code>optional int64 id = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {
@@ -655,7 +655,7 @@ private static final long serialVersionUID = 0L;
      * match the campaign.shopping_setting.sales_country field.
      * </pre>
      *
-     * <code>string country_code = 5;</code>
+     * <code>optional string country_code = 5;</code>
      * @return Whether the countryCode field is set.
      */
     public boolean hasCountryCode() {
@@ -667,7 +667,7 @@ private static final long serialVersionUID = 0L;
      * match the campaign.shopping_setting.sales_country field.
      * </pre>
      *
-     * <code>string country_code = 5;</code>
+     * <code>optional string country_code = 5;</code>
      * @return The countryCode.
      */
     public java.lang.String getCountryCode() {
@@ -688,7 +688,7 @@ private static final long serialVersionUID = 0L;
      * match the campaign.shopping_setting.sales_country field.
      * </pre>
      *
-     * <code>string country_code = 5;</code>
+     * <code>optional string country_code = 5;</code>
      * @return The bytes for countryCode.
      */
     public com.google.protobuf.ByteString
@@ -710,7 +710,7 @@ private static final long serialVersionUID = 0L;
      * match the campaign.shopping_setting.sales_country field.
      * </pre>
      *
-     * <code>string country_code = 5;</code>
+     * <code>optional string country_code = 5;</code>
      * @param value The countryCode to set.
      * @return This builder for chaining.
      */
@@ -730,7 +730,7 @@ private static final long serialVersionUID = 0L;
      * match the campaign.shopping_setting.sales_country field.
      * </pre>
      *
-     * <code>string country_code = 5;</code>
+     * <code>optional string country_code = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearCountryCode() {
@@ -745,7 +745,7 @@ private static final long serialVersionUID = 0L;
      * match the campaign.shopping_setting.sales_country field.
      * </pre>
      *
-     * <code>string country_code = 5;</code>
+     * <code>optional string country_code = 5;</code>
      * @param value The bytes for countryCode to set.
      * @return This builder for chaining.
      */

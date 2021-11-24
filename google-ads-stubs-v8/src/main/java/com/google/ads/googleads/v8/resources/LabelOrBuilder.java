@@ -36,7 +36,7 @@ public interface LabelOrBuilder extends
    * Output only. Id of the label. Read only.
    * </pre>
    *
-   * <code>int64 id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -45,7 +45,7 @@ public interface LabelOrBuilder extends
    * Output only. Id of the label. Read only.
    * </pre>
    *
-   * <code>int64 id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   long getId();
@@ -57,7 +57,7 @@ public interface LabelOrBuilder extends
    * The length of this string should be between 1 and 80, inclusive.
    * </pre>
    *
-   * <code>string name = 7;</code>
+   * <code>optional string name = 7;</code>
    * @return Whether the name field is set.
    */
   boolean hasName();
@@ -68,7 +68,7 @@ public interface LabelOrBuilder extends
    * The length of this string should be between 1 and 80, inclusive.
    * </pre>
    *
-   * <code>string name = 7;</code>
+   * <code>optional string name = 7;</code>
    * @return The name.
    */
   java.lang.String getName();
@@ -79,7 +79,7 @@ public interface LabelOrBuilder extends
    * The length of this string should be between 1 and 80, inclusive.
    * </pre>
    *
-   * <code>string name = 7;</code>
+   * <code>optional string name = 7;</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString

@@ -36,7 +36,7 @@ public interface FeedItemTargetOrBuilder extends
    * Immutable. The feed item to which this feed item target belongs.
    * </pre>
    *
-   * <code>string feed_item = 12 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string feed_item = 12 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the feedItem field is set.
    */
   boolean hasFeedItem();
@@ -45,7 +45,7 @@ public interface FeedItemTargetOrBuilder extends
    * Immutable. The feed item to which this feed item target belongs.
    * </pre>
    *
-   * <code>string feed_item = 12 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string feed_item = 12 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The feedItem.
    */
   java.lang.String getFeedItem();
@@ -54,7 +54,7 @@ public interface FeedItemTargetOrBuilder extends
    * Immutable. The feed item to which this feed item target belongs.
    * </pre>
    *
-   * <code>string feed_item = 12 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string feed_item = 12 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for feedItem.
    */
   com.google.protobuf.ByteString
@@ -84,7 +84,7 @@ public interface FeedItemTargetOrBuilder extends
    * Output only. The ID of the targeted resource. This field is read-only.
    * </pre>
    *
-   * <code>int64 feed_item_target_id = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 feed_item_target_id = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the feedItemTargetId field is set.
    */
   boolean hasFeedItemTargetId();
@@ -93,7 +93,7 @@ public interface FeedItemTargetOrBuilder extends
    * Output only. The ID of the targeted resource. This field is read-only.
    * </pre>
    *
-   * <code>int64 feed_item_target_id = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 feed_item_target_id = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The feedItemTargetId.
    */
   long getFeedItemTargetId();

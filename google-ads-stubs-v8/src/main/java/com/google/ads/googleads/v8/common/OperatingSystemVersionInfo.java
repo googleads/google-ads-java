@@ -100,7 +100,7 @@ private static final long serialVersionUID = 0L;
    * The operating system version constant resource name.
    * </pre>
    *
-   * <code>string operating_system_version_constant = 2;</code>
+   * <code>optional string operating_system_version_constant = 2;</code>
    * @return Whether the operatingSystemVersionConstant field is set.
    */
   @java.lang.Override
@@ -112,7 +112,7 @@ private static final long serialVersionUID = 0L;
    * The operating system version constant resource name.
    * </pre>
    *
-   * <code>string operating_system_version_constant = 2;</code>
+   * <code>optional string operating_system_version_constant = 2;</code>
    * @return The operatingSystemVersionConstant.
    */
   @java.lang.Override
@@ -133,7 +133,7 @@ private static final long serialVersionUID = 0L;
    * The operating system version constant resource name.
    * </pre>
    *
-   * <code>string operating_system_version_constant = 2;</code>
+   * <code>optional string operating_system_version_constant = 2;</code>
    * @return The bytes for operatingSystemVersionConstant.
    */
   @java.lang.Override
@@ -476,7 +476,7 @@ private static final long serialVersionUID = 0L;
      * The operating system version constant resource name.
      * </pre>
      *
-     * <code>string operating_system_version_constant = 2;</code>
+     * <code>optional string operating_system_version_constant = 2;</code>
      * @return Whether the operatingSystemVersionConstant field is set.
      */
     public boolean hasOperatingSystemVersionConstant() {
@@ -487,7 +487,7 @@ private static final long serialVersionUID = 0L;
      * The operating system version constant resource name.
      * </pre>
      *
-     * <code>string operating_system_version_constant = 2;</code>
+     * <code>optional string operating_system_version_constant = 2;</code>
      * @return The operatingSystemVersionConstant.
      */
     public java.lang.String getOperatingSystemVersionConstant() {
@@ -507,7 +507,7 @@ private static final long serialVersionUID = 0L;
      * The operating system version constant resource name.
      * </pre>
      *
-     * <code>string operating_system_version_constant = 2;</code>
+     * <code>optional string operating_system_version_constant = 2;</code>
      * @return The bytes for operatingSystemVersionConstant.
      */
     public com.google.protobuf.ByteString
@@ -528,7 +528,7 @@ private static final long serialVersionUID = 0L;
      * The operating system version constant resource name.
      * </pre>
      *
-     * <code>string operating_system_version_constant = 2;</code>
+     * <code>optional string operating_system_version_constant = 2;</code>
      * @param value The operatingSystemVersionConstant to set.
      * @return This builder for chaining.
      */
@@ -547,7 +547,7 @@ private static final long serialVersionUID = 0L;
      * The operating system version constant resource name.
      * </pre>
      *
-     * <code>string operating_system_version_constant = 2;</code>
+     * <code>optional string operating_system_version_constant = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearOperatingSystemVersionConstant() {
@@ -561,7 +561,7 @@ private static final long serialVersionUID = 0L;
      * The operating system version constant resource name.
      * </pre>
      *
-     * <code>string operating_system_version_constant = 2;</code>
+     * <code>optional string operating_system_version_constant = 2;</code>
      * @param value The bytes for operatingSystemVersionConstant to set.
      * @return This builder for chaining.
      */

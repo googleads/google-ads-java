@@ -13,7 +13,7 @@ public interface ShoppingComparisonListingAdInfoOrBuilder extends
    * and 45 characters.
    * </pre>
    *
-   * <code>string headline = 2;</code>
+   * <code>optional string headline = 2;</code>
    * @return Whether the headline field is set.
    */
   boolean hasHeadline();
@@ -23,7 +23,7 @@ public interface ShoppingComparisonListingAdInfoOrBuilder extends
    * and 45 characters.
    * </pre>
    *
-   * <code>string headline = 2;</code>
+   * <code>optional string headline = 2;</code>
    * @return The headline.
    */
   java.lang.String getHeadline();
@@ -33,7 +33,7 @@ public interface ShoppingComparisonListingAdInfoOrBuilder extends
    * and 45 characters.
    * </pre>
    *
-   * <code>string headline = 2;</code>
+   * <code>optional string headline = 2;</code>
    * @return The bytes for headline.
    */
   com.google.protobuf.ByteString

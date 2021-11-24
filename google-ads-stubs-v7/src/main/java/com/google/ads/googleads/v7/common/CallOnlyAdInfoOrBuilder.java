@@ -12,7 +12,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * The country code in the ad.
    * </pre>
    *
-   * <code>string country_code = 13;</code>
+   * <code>optional string country_code = 13;</code>
    * @return Whether the countryCode field is set.
    */
   boolean hasCountryCode();
@@ -21,7 +21,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * The country code in the ad.
    * </pre>
    *
-   * <code>string country_code = 13;</code>
+   * <code>optional string country_code = 13;</code>
    * @return The countryCode.
    */
   java.lang.String getCountryCode();
@@ -30,7 +30,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * The country code in the ad.
    * </pre>
    *
-   * <code>string country_code = 13;</code>
+   * <code>optional string country_code = 13;</code>
    * @return The bytes for countryCode.
    */
   com.google.protobuf.ByteString
@@ -41,7 +41,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * The phone number in the ad.
    * </pre>
    *
-   * <code>string phone_number = 14;</code>
+   * <code>optional string phone_number = 14;</code>
    * @return Whether the phoneNumber field is set.
    */
   boolean hasPhoneNumber();
@@ -50,7 +50,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * The phone number in the ad.
    * </pre>
    *
-   * <code>string phone_number = 14;</code>
+   * <code>optional string phone_number = 14;</code>
    * @return The phoneNumber.
    */
   java.lang.String getPhoneNumber();
@@ -59,7 +59,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * The phone number in the ad.
    * </pre>
    *
-   * <code>string phone_number = 14;</code>
+   * <code>optional string phone_number = 14;</code>
    * @return The bytes for phoneNumber.
    */
   com.google.protobuf.ByteString
@@ -70,7 +70,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * The business name in the ad.
    * </pre>
    *
-   * <code>string business_name = 15;</code>
+   * <code>optional string business_name = 15;</code>
    * @return Whether the businessName field is set.
    */
   boolean hasBusinessName();
@@ -79,7 +79,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * The business name in the ad.
    * </pre>
    *
-   * <code>string business_name = 15;</code>
+   * <code>optional string business_name = 15;</code>
    * @return The businessName.
    */
   java.lang.String getBusinessName();
@@ -88,7 +88,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * The business name in the ad.
    * </pre>
    *
-   * <code>string business_name = 15;</code>
+   * <code>optional string business_name = 15;</code>
    * @return The bytes for businessName.
    */
   com.google.protobuf.ByteString
@@ -99,7 +99,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * First headline in the ad.
    * </pre>
    *
-   * <code>string headline1 = 16;</code>
+   * <code>optional string headline1 = 16;</code>
    * @return Whether the headline1 field is set.
    */
   boolean hasHeadline1();
@@ -108,7 +108,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * First headline in the ad.
    * </pre>
    *
-   * <code>string headline1 = 16;</code>
+   * <code>optional string headline1 = 16;</code>
    * @return The headline1.
    */
   java.lang.String getHeadline1();
@@ -117,7 +117,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * First headline in the ad.
    * </pre>
    *
-   * <code>string headline1 = 16;</code>
+   * <code>optional string headline1 = 16;</code>
    * @return The bytes for headline1.
    */
   com.google.protobuf.ByteString
@@ -128,7 +128,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * Second headline in the ad.
    * </pre>
    *
-   * <code>string headline2 = 17;</code>
+   * <code>optional string headline2 = 17;</code>
    * @return Whether the headline2 field is set.
    */
   boolean hasHeadline2();
@@ -137,7 +137,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * Second headline in the ad.
    * </pre>
    *
-   * <code>string headline2 = 17;</code>
+   * <code>optional string headline2 = 17;</code>
    * @return The headline2.
    */
   java.lang.String getHeadline2();
@@ -146,7 +146,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * Second headline in the ad.
    * </pre>
    *
-   * <code>string headline2 = 17;</code>
+   * <code>optional string headline2 = 17;</code>
    * @return The bytes for headline2.
    */
   com.google.protobuf.ByteString
@@ -157,7 +157,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * The first line of the ad's description.
    * </pre>
    *
-   * <code>string description1 = 18;</code>
+   * <code>optional string description1 = 18;</code>
    * @return Whether the description1 field is set.
    */
   boolean hasDescription1();
@@ -166,7 +166,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * The first line of the ad's description.
    * </pre>
    *
-   * <code>string description1 = 18;</code>
+   * <code>optional string description1 = 18;</code>
    * @return The description1.
    */
   java.lang.String getDescription1();
@@ -175,7 +175,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * The first line of the ad's description.
    * </pre>
    *
-   * <code>string description1 = 18;</code>
+   * <code>optional string description1 = 18;</code>
    * @return The bytes for description1.
    */
   com.google.protobuf.ByteString
@@ -186,7 +186,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * The second line of the ad's description.
    * </pre>
    *
-   * <code>string description2 = 19;</code>
+   * <code>optional string description2 = 19;</code>
    * @return Whether the description2 field is set.
    */
   boolean hasDescription2();
@@ -195,7 +195,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * The second line of the ad's description.
    * </pre>
    *
-   * <code>string description2 = 19;</code>
+   * <code>optional string description2 = 19;</code>
    * @return The description2.
    */
   java.lang.String getDescription2();
@@ -204,7 +204,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * The second line of the ad's description.
    * </pre>
    *
-   * <code>string description2 = 19;</code>
+   * <code>optional string description2 = 19;</code>
    * @return The bytes for description2.
    */
   com.google.protobuf.ByteString
@@ -216,7 +216,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * tracking also enables call conversions.
    * </pre>
    *
-   * <code>bool call_tracked = 20;</code>
+   * <code>optional bool call_tracked = 20;</code>
    * @return Whether the callTracked field is set.
    */
   boolean hasCallTracked();
@@ -226,7 +226,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * tracking also enables call conversions.
    * </pre>
    *
-   * <code>bool call_tracked = 20;</code>
+   * <code>optional bool call_tracked = 20;</code>
    * @return The callTracked.
    */
   boolean getCallTracked();
@@ -239,7 +239,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * If `call_tracked` is `false`, this field is ignored.
    * </pre>
    *
-   * <code>bool disable_call_conversion = 21;</code>
+   * <code>optional bool disable_call_conversion = 21;</code>
    * @return Whether the disableCallConversion field is set.
    */
   boolean hasDisableCallConversion();
@@ -251,7 +251,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * If `call_tracked` is `false`, this field is ignored.
    * </pre>
    *
-   * <code>bool disable_call_conversion = 21;</code>
+   * <code>optional bool disable_call_conversion = 21;</code>
    * @return The disableCallConversion.
    */
   boolean getDisableCallConversion();
@@ -261,7 +261,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * The URL to be used for phone number verification.
    * </pre>
    *
-   * <code>string phone_number_verification_url = 22;</code>
+   * <code>optional string phone_number_verification_url = 22;</code>
    * @return Whether the phoneNumberVerificationUrl field is set.
    */
   boolean hasPhoneNumberVerificationUrl();
@@ -270,7 +270,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * The URL to be used for phone number verification.
    * </pre>
    *
-   * <code>string phone_number_verification_url = 22;</code>
+   * <code>optional string phone_number_verification_url = 22;</code>
    * @return The phoneNumberVerificationUrl.
    */
   java.lang.String getPhoneNumberVerificationUrl();
@@ -279,7 +279,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * The URL to be used for phone number verification.
    * </pre>
    *
-   * <code>string phone_number_verification_url = 22;</code>
+   * <code>optional string phone_number_verification_url = 22;</code>
    * @return The bytes for phoneNumberVerificationUrl.
    */
   com.google.protobuf.ByteString
@@ -292,7 +292,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * `call_tracked` is set to `true`. Otherwise this field is ignored.
    * </pre>
    *
-   * <code>string conversion_action = 23;</code>
+   * <code>optional string conversion_action = 23;</code>
    * @return Whether the conversionAction field is set.
    */
   boolean hasConversionAction();
@@ -303,7 +303,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * `call_tracked` is set to `true`. Otherwise this field is ignored.
    * </pre>
    *
-   * <code>string conversion_action = 23;</code>
+   * <code>optional string conversion_action = 23;</code>
    * @return The conversionAction.
    */
   java.lang.String getConversionAction();
@@ -314,7 +314,7 @@ public interface CallOnlyAdInfoOrBuilder extends
    * `call_tracked` is set to `true`. Otherwise this field is ignored.
    * </pre>
    *
-   * <code>string conversion_action = 23;</code>
+   * <code>optional string conversion_action = 23;</code>
    * @return The bytes for conversionAction.
    */
   com.google.protobuf.ByteString

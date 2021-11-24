@@ -106,7 +106,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. Raw zipped data.
    * </pre>
    *
-   * <code>bytes data = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional bytes data = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the data field is set.
    */
   @java.lang.Override
@@ -118,7 +118,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. Raw zipped data.
    * </pre>
    *
-   * <code>bytes data = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional bytes data = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The data.
    */
   @java.lang.Override
@@ -135,7 +135,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>string url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the url field is set.
    */
   @java.lang.Override
@@ -149,7 +149,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>string url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The url.
    */
   @java.lang.Override
@@ -172,7 +172,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>string url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for url.
    */
   @java.lang.Override
@@ -540,7 +540,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. Raw zipped data.
      * </pre>
      *
-     * <code>bytes data = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional bytes data = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the data field is set.
      */
     @java.lang.Override
@@ -552,7 +552,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. Raw zipped data.
      * </pre>
      *
-     * <code>bytes data = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional bytes data = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The data.
      */
     @java.lang.Override
@@ -564,7 +564,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. Raw zipped data.
      * </pre>
      *
-     * <code>bytes data = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional bytes data = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @param value The data to set.
      * @return This builder for chaining.
      */
@@ -582,7 +582,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. Raw zipped data.
      * </pre>
      *
-     * <code>bytes data = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional bytes data = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return This builder for chaining.
      */
     public Builder clearData() {
@@ -600,7 +600,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the url field is set.
      */
     public boolean hasUrl() {
@@ -613,7 +613,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The url.
      */
     public java.lang.String getUrl() {
@@ -635,7 +635,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for url.
      */
     public com.google.protobuf.ByteString
@@ -658,7 +658,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The url to set.
      * @return This builder for chaining.
      */
@@ -679,7 +679,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearUrl() {
@@ -695,7 +695,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for url to set.
      * @return This builder for chaining.
      */

@@ -12,7 +12,7 @@ public interface CustomIntentInfoOrBuilder extends
    * The CustomInterest resource name.
    * </pre>
    *
-   * <code>string custom_intent = 2;</code>
+   * <code>optional string custom_intent = 2;</code>
    * @return Whether the customIntent field is set.
    */
   boolean hasCustomIntent();
@@ -21,7 +21,7 @@ public interface CustomIntentInfoOrBuilder extends
    * The CustomInterest resource name.
    * </pre>
    *
-   * <code>string custom_intent = 2;</code>
+   * <code>optional string custom_intent = 2;</code>
    * @return The customIntent.
    */
   java.lang.String getCustomIntent();
@@ -30,7 +30,7 @@ public interface CustomIntentInfoOrBuilder extends
    * The CustomInterest resource name.
    * </pre>
    *
-   * <code>string custom_intent = 2;</code>
+   * <code>optional string custom_intent = 2;</code>
    * @return The bytes for customIntent.
    */
   com.google.protobuf.ByteString

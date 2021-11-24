@@ -18,7 +18,7 @@ public interface TargetSpendOrBuilder extends
    * for details.
    * </pre>
    *
-   * <code>int64 target_spend_micros = 3 [deprecated = true];</code>
+   * <code>optional int64 target_spend_micros = 3 [deprecated = true];</code>
    * @return Whether the targetSpendMicros field is set.
    */
   @java.lang.Deprecated boolean hasTargetSpendMicros();
@@ -33,7 +33,7 @@ public interface TargetSpendOrBuilder extends
    * for details.
    * </pre>
    *
-   * <code>int64 target_spend_micros = 3 [deprecated = true];</code>
+   * <code>optional int64 target_spend_micros = 3 [deprecated = true];</code>
    * @return The targetSpendMicros.
    */
   @java.lang.Deprecated long getTargetSpendMicros();
@@ -44,7 +44,7 @@ public interface TargetSpendOrBuilder extends
    * The limit applies to all keywords managed by the strategy.
    * </pre>
    *
-   * <code>int64 cpc_bid_ceiling_micros = 4;</code>
+   * <code>optional int64 cpc_bid_ceiling_micros = 4;</code>
    * @return Whether the cpcBidCeilingMicros field is set.
    */
   boolean hasCpcBidCeilingMicros();
@@ -54,7 +54,7 @@ public interface TargetSpendOrBuilder extends
    * The limit applies to all keywords managed by the strategy.
    * </pre>
    *
-   * <code>int64 cpc_bid_ceiling_micros = 4;</code>
+   * <code>optional int64 cpc_bid_ceiling_micros = 4;</code>
    * @return The cpcBidCeilingMicros.
    */
   long getCpcBidCeilingMicros();

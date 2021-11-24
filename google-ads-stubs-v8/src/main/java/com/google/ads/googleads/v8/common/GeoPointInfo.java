@@ -103,7 +103,7 @@ private static final long serialVersionUID = 0L;
    * Micro degrees for the longitude.
    * </pre>
    *
-   * <code>int32 longitude_in_micro_degrees = 3;</code>
+   * <code>optional int32 longitude_in_micro_degrees = 3;</code>
    * @return Whether the longitudeInMicroDegrees field is set.
    */
   @java.lang.Override
@@ -115,7 +115,7 @@ private static final long serialVersionUID = 0L;
    * Micro degrees for the longitude.
    * </pre>
    *
-   * <code>int32 longitude_in_micro_degrees = 3;</code>
+   * <code>optional int32 longitude_in_micro_degrees = 3;</code>
    * @return The longitudeInMicroDegrees.
    */
   @java.lang.Override
@@ -130,7 +130,7 @@ private static final long serialVersionUID = 0L;
    * Micro degrees for the latitude.
    * </pre>
    *
-   * <code>int32 latitude_in_micro_degrees = 4;</code>
+   * <code>optional int32 latitude_in_micro_degrees = 4;</code>
    * @return Whether the latitudeInMicroDegrees field is set.
    */
   @java.lang.Override
@@ -142,7 +142,7 @@ private static final long serialVersionUID = 0L;
    * Micro degrees for the latitude.
    * </pre>
    *
-   * <code>int32 latitude_in_micro_degrees = 4;</code>
+   * <code>optional int32 latitude_in_micro_degrees = 4;</code>
    * @return The latitudeInMicroDegrees.
    */
   @java.lang.Override
@@ -499,7 +499,7 @@ private static final long serialVersionUID = 0L;
      * Micro degrees for the longitude.
      * </pre>
      *
-     * <code>int32 longitude_in_micro_degrees = 3;</code>
+     * <code>optional int32 longitude_in_micro_degrees = 3;</code>
      * @return Whether the longitudeInMicroDegrees field is set.
      */
     @java.lang.Override
@@ -511,7 +511,7 @@ private static final long serialVersionUID = 0L;
      * Micro degrees for the longitude.
      * </pre>
      *
-     * <code>int32 longitude_in_micro_degrees = 3;</code>
+     * <code>optional int32 longitude_in_micro_degrees = 3;</code>
      * @return The longitudeInMicroDegrees.
      */
     @java.lang.Override
@@ -523,7 +523,7 @@ private static final long serialVersionUID = 0L;
      * Micro degrees for the longitude.
      * </pre>
      *
-     * <code>int32 longitude_in_micro_degrees = 3;</code>
+     * <code>optional int32 longitude_in_micro_degrees = 3;</code>
      * @param value The longitudeInMicroDegrees to set.
      * @return This builder for chaining.
      */
@@ -538,7 +538,7 @@ private static final long serialVersionUID = 0L;
      * Micro degrees for the longitude.
      * </pre>
      *
-     * <code>int32 longitude_in_micro_degrees = 3;</code>
+     * <code>optional int32 longitude_in_micro_degrees = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearLongitudeInMicroDegrees() {
@@ -554,7 +554,7 @@ private static final long serialVersionUID = 0L;
      * Micro degrees for the latitude.
      * </pre>
      *
-     * <code>int32 latitude_in_micro_degrees = 4;</code>
+     * <code>optional int32 latitude_in_micro_degrees = 4;</code>
      * @return Whether the latitudeInMicroDegrees field is set.
      */
     @java.lang.Override
@@ -566,7 +566,7 @@ private static final long serialVersionUID = 0L;
      * Micro degrees for the latitude.
      * </pre>
      *
-     * <code>int32 latitude_in_micro_degrees = 4;</code>
+     * <code>optional int32 latitude_in_micro_degrees = 4;</code>
      * @return The latitudeInMicroDegrees.
      */
     @java.lang.Override
@@ -578,7 +578,7 @@ private static final long serialVersionUID = 0L;
      * Micro degrees for the latitude.
      * </pre>
      *
-     * <code>int32 latitude_in_micro_degrees = 4;</code>
+     * <code>optional int32 latitude_in_micro_degrees = 4;</code>
      * @param value The latitudeInMicroDegrees to set.
      * @return This builder for chaining.
      */
@@ -593,7 +593,7 @@ private static final long serialVersionUID = 0L;
      * Micro degrees for the latitude.
      * </pre>
      *
-     * <code>int32 latitude_in_micro_degrees = 4;</code>
+     * <code>optional int32 latitude_in_micro_degrees = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearLatitudeInMicroDegrees() {

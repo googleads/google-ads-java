@@ -41,7 +41,7 @@ public interface GmailAdInfoOrBuilder extends
    * be between 3:1 and 5:1 (+-1%).
    * </pre>
    *
-   * <code>string header_image = 10;</code>
+   * <code>optional string header_image = 10;</code>
    * @return Whether the headerImage field is set.
    */
   boolean hasHeaderImage();
@@ -52,7 +52,7 @@ public interface GmailAdInfoOrBuilder extends
    * be between 3:1 and 5:1 (+-1%).
    * </pre>
    *
-   * <code>string header_image = 10;</code>
+   * <code>optional string header_image = 10;</code>
    * @return The headerImage.
    */
   java.lang.String getHeaderImage();
@@ -63,7 +63,7 @@ public interface GmailAdInfoOrBuilder extends
    * be between 3:1 and 5:1 (+-1%).
    * </pre>
    *
-   * <code>string header_image = 10;</code>
+   * <code>optional string header_image = 10;</code>
    * @return The bytes for headerImage.
    */
   com.google.protobuf.ByteString
@@ -77,7 +77,7 @@ public interface GmailAdInfoOrBuilder extends
    * minimum size of 300x300 pixels and aspect ratio of 1:1 (+-1%)
    * </pre>
    *
-   * <code>string marketing_image = 11;</code>
+   * <code>optional string marketing_image = 11;</code>
    * @return Whether the marketingImage field is set.
    */
   boolean hasMarketingImage();
@@ -89,7 +89,7 @@ public interface GmailAdInfoOrBuilder extends
    * minimum size of 300x300 pixels and aspect ratio of 1:1 (+-1%)
    * </pre>
    *
-   * <code>string marketing_image = 11;</code>
+   * <code>optional string marketing_image = 11;</code>
    * @return The marketingImage.
    */
   java.lang.String getMarketingImage();
@@ -101,7 +101,7 @@ public interface GmailAdInfoOrBuilder extends
    * minimum size of 300x300 pixels and aspect ratio of 1:1 (+-1%)
    * </pre>
    *
-   * <code>string marketing_image = 11;</code>
+   * <code>optional string marketing_image = 11;</code>
    * @return The bytes for marketingImage.
    */
   com.google.protobuf.ByteString
@@ -112,7 +112,7 @@ public interface GmailAdInfoOrBuilder extends
    * Headline of the marketing image.
    * </pre>
    *
-   * <code>string marketing_image_headline = 12;</code>
+   * <code>optional string marketing_image_headline = 12;</code>
    * @return Whether the marketingImageHeadline field is set.
    */
   boolean hasMarketingImageHeadline();
@@ -121,7 +121,7 @@ public interface GmailAdInfoOrBuilder extends
    * Headline of the marketing image.
    * </pre>
    *
-   * <code>string marketing_image_headline = 12;</code>
+   * <code>optional string marketing_image_headline = 12;</code>
    * @return The marketingImageHeadline.
    */
   java.lang.String getMarketingImageHeadline();
@@ -130,7 +130,7 @@ public interface GmailAdInfoOrBuilder extends
    * Headline of the marketing image.
    * </pre>
    *
-   * <code>string marketing_image_headline = 12;</code>
+   * <code>optional string marketing_image_headline = 12;</code>
    * @return The bytes for marketingImageHeadline.
    */
   com.google.protobuf.ByteString
@@ -141,7 +141,7 @@ public interface GmailAdInfoOrBuilder extends
    * Description of the marketing image.
    * </pre>
    *
-   * <code>string marketing_image_description = 13;</code>
+   * <code>optional string marketing_image_description = 13;</code>
    * @return Whether the marketingImageDescription field is set.
    */
   boolean hasMarketingImageDescription();
@@ -150,7 +150,7 @@ public interface GmailAdInfoOrBuilder extends
    * Description of the marketing image.
    * </pre>
    *
-   * <code>string marketing_image_description = 13;</code>
+   * <code>optional string marketing_image_description = 13;</code>
    * @return The marketingImageDescription.
    */
   java.lang.String getMarketingImageDescription();
@@ -159,7 +159,7 @@ public interface GmailAdInfoOrBuilder extends
    * Description of the marketing image.
    * </pre>
    *
-   * <code>string marketing_image_description = 13;</code>
+   * <code>optional string marketing_image_description = 13;</code>
    * @return The bytes for marketingImageDescription.
    */
   com.google.protobuf.ByteString

@@ -248,7 +248,7 @@ private static final long serialVersionUID = 0L;
     INVALID_BUSINESS_ACCOUNT(18),
     /**
      * <pre>
-     * Business account cannot access Google My Business account.
+     * Business account cannot access Business Profile.
      * </pre>
      *
      * <code>BUSINESS_ACCOUNT_CANNOT_ACCESS_LOCATION_ACCOUNT = 19;</code>
@@ -272,7 +272,7 @@ private static final long serialVersionUID = 0L;
     DUPLICATE_SYSTEM_FEED(21),
     /**
      * <pre>
-     * An error occurred accessing GMB account.
+     * An error occurred accessing Business Profile.
      * </pre>
      *
      * <code>GMB_ACCESS_ERROR = 22;</code>
@@ -444,7 +444,7 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_BUSINESS_ACCOUNT_VALUE = 18;
     /**
      * <pre>
-     * Business account cannot access Google My Business account.
+     * Business account cannot access Business Profile.
      * </pre>
      *
      * <code>BUSINESS_ACCOUNT_CANNOT_ACCESS_LOCATION_ACCOUNT = 19;</code>
@@ -468,7 +468,7 @@ private static final long serialVersionUID = 0L;
     public static final int DUPLICATE_SYSTEM_FEED_VALUE = 21;
     /**
      * <pre>
-     * An error occurred accessing GMB account.
+     * An error occurred accessing Business Profile.
      * </pre>
      *
      * <code>GMB_ACCESS_ERROR = 22;</code>

@@ -128,7 +128,7 @@ private static final long serialVersionUID = 0L;
    * The city location criterion associated with the impression.
    * </pre>
    *
-   * <code>string city = 6;</code>
+   * <code>optional string city = 6;</code>
    * @return Whether the city field is set.
    */
   @java.lang.Override
@@ -140,7 +140,7 @@ private static final long serialVersionUID = 0L;
    * The city location criterion associated with the impression.
    * </pre>
    *
-   * <code>string city = 6;</code>
+   * <code>optional string city = 6;</code>
    * @return The city.
    */
   @java.lang.Override
@@ -161,7 +161,7 @@ private static final long serialVersionUID = 0L;
    * The city location criterion associated with the impression.
    * </pre>
    *
-   * <code>string city = 6;</code>
+   * <code>optional string city = 6;</code>
    * @return The bytes for city.
    */
   @java.lang.Override
@@ -186,7 +186,7 @@ private static final long serialVersionUID = 0L;
    * The country location criterion associated with the impression.
    * </pre>
    *
-   * <code>string country = 7;</code>
+   * <code>optional string country = 7;</code>
    * @return Whether the country field is set.
    */
   @java.lang.Override
@@ -198,7 +198,7 @@ private static final long serialVersionUID = 0L;
    * The country location criterion associated with the impression.
    * </pre>
    *
-   * <code>string country = 7;</code>
+   * <code>optional string country = 7;</code>
    * @return The country.
    */
   @java.lang.Override
@@ -219,7 +219,7 @@ private static final long serialVersionUID = 0L;
    * The country location criterion associated with the impression.
    * </pre>
    *
-   * <code>string country = 7;</code>
+   * <code>optional string country = 7;</code>
    * @return The bytes for country.
    */
   @java.lang.Override
@@ -244,7 +244,7 @@ private static final long serialVersionUID = 0L;
    * The metro location criterion associated with the impression.
    * </pre>
    *
-   * <code>string metro = 8;</code>
+   * <code>optional string metro = 8;</code>
    * @return Whether the metro field is set.
    */
   @java.lang.Override
@@ -256,7 +256,7 @@ private static final long serialVersionUID = 0L;
    * The metro location criterion associated with the impression.
    * </pre>
    *
-   * <code>string metro = 8;</code>
+   * <code>optional string metro = 8;</code>
    * @return The metro.
    */
   @java.lang.Override
@@ -277,7 +277,7 @@ private static final long serialVersionUID = 0L;
    * The metro location criterion associated with the impression.
    * </pre>
    *
-   * <code>string metro = 8;</code>
+   * <code>optional string metro = 8;</code>
    * @return The bytes for metro.
    */
   @java.lang.Override
@@ -302,7 +302,7 @@ private static final long serialVersionUID = 0L;
    * The most specific location criterion associated with the impression.
    * </pre>
    *
-   * <code>string most_specific = 9;</code>
+   * <code>optional string most_specific = 9;</code>
    * @return Whether the mostSpecific field is set.
    */
   @java.lang.Override
@@ -314,7 +314,7 @@ private static final long serialVersionUID = 0L;
    * The most specific location criterion associated with the impression.
    * </pre>
    *
-   * <code>string most_specific = 9;</code>
+   * <code>optional string most_specific = 9;</code>
    * @return The mostSpecific.
    */
   @java.lang.Override
@@ -335,7 +335,7 @@ private static final long serialVersionUID = 0L;
    * The most specific location criterion associated with the impression.
    * </pre>
    *
-   * <code>string most_specific = 9;</code>
+   * <code>optional string most_specific = 9;</code>
    * @return The bytes for mostSpecific.
    */
   @java.lang.Override
@@ -360,7 +360,7 @@ private static final long serialVersionUID = 0L;
    * The region location criterion associated with the impression.
    * </pre>
    *
-   * <code>string region = 10;</code>
+   * <code>optional string region = 10;</code>
    * @return Whether the region field is set.
    */
   @java.lang.Override
@@ -372,7 +372,7 @@ private static final long serialVersionUID = 0L;
    * The region location criterion associated with the impression.
    * </pre>
    *
-   * <code>string region = 10;</code>
+   * <code>optional string region = 10;</code>
    * @return The region.
    */
   @java.lang.Override
@@ -393,7 +393,7 @@ private static final long serialVersionUID = 0L;
    * The region location criterion associated with the impression.
    * </pre>
    *
-   * <code>string region = 10;</code>
+   * <code>optional string region = 10;</code>
    * @return The bytes for region.
    */
   @java.lang.Override
@@ -840,7 +840,7 @@ private static final long serialVersionUID = 0L;
      * The city location criterion associated with the impression.
      * </pre>
      *
-     * <code>string city = 6;</code>
+     * <code>optional string city = 6;</code>
      * @return Whether the city field is set.
      */
     public boolean hasCity() {
@@ -851,7 +851,7 @@ private static final long serialVersionUID = 0L;
      * The city location criterion associated with the impression.
      * </pre>
      *
-     * <code>string city = 6;</code>
+     * <code>optional string city = 6;</code>
      * @return The city.
      */
     public java.lang.String getCity() {
@@ -871,7 +871,7 @@ private static final long serialVersionUID = 0L;
      * The city location criterion associated with the impression.
      * </pre>
      *
-     * <code>string city = 6;</code>
+     * <code>optional string city = 6;</code>
      * @return The bytes for city.
      */
     public com.google.protobuf.ByteString
@@ -892,7 +892,7 @@ private static final long serialVersionUID = 0L;
      * The city location criterion associated with the impression.
      * </pre>
      *
-     * <code>string city = 6;</code>
+     * <code>optional string city = 6;</code>
      * @param value The city to set.
      * @return This builder for chaining.
      */
@@ -911,7 +911,7 @@ private static final long serialVersionUID = 0L;
      * The city location criterion associated with the impression.
      * </pre>
      *
-     * <code>string city = 6;</code>
+     * <code>optional string city = 6;</code>
      * @return This builder for chaining.
      */
     public Builder clearCity() {
@@ -925,7 +925,7 @@ private static final long serialVersionUID = 0L;
      * The city location criterion associated with the impression.
      * </pre>
      *
-     * <code>string city = 6;</code>
+     * <code>optional string city = 6;</code>
      * @param value The bytes for city to set.
      * @return This builder for chaining.
      */
@@ -947,7 +947,7 @@ private static final long serialVersionUID = 0L;
      * The country location criterion associated with the impression.
      * </pre>
      *
-     * <code>string country = 7;</code>
+     * <code>optional string country = 7;</code>
      * @return Whether the country field is set.
      */
     public boolean hasCountry() {
@@ -958,7 +958,7 @@ private static final long serialVersionUID = 0L;
      * The country location criterion associated with the impression.
      * </pre>
      *
-     * <code>string country = 7;</code>
+     * <code>optional string country = 7;</code>
      * @return The country.
      */
     public java.lang.String getCountry() {
@@ -978,7 +978,7 @@ private static final long serialVersionUID = 0L;
      * The country location criterion associated with the impression.
      * </pre>
      *
-     * <code>string country = 7;</code>
+     * <code>optional string country = 7;</code>
      * @return The bytes for country.
      */
     public com.google.protobuf.ByteString
@@ -999,7 +999,7 @@ private static final long serialVersionUID = 0L;
      * The country location criterion associated with the impression.
      * </pre>
      *
-     * <code>string country = 7;</code>
+     * <code>optional string country = 7;</code>
      * @param value The country to set.
      * @return This builder for chaining.
      */
@@ -1018,7 +1018,7 @@ private static final long serialVersionUID = 0L;
      * The country location criterion associated with the impression.
      * </pre>
      *
-     * <code>string country = 7;</code>
+     * <code>optional string country = 7;</code>
      * @return This builder for chaining.
      */
     public Builder clearCountry() {
@@ -1032,7 +1032,7 @@ private static final long serialVersionUID = 0L;
      * The country location criterion associated with the impression.
      * </pre>
      *
-     * <code>string country = 7;</code>
+     * <code>optional string country = 7;</code>
      * @param value The bytes for country to set.
      * @return This builder for chaining.
      */
@@ -1054,7 +1054,7 @@ private static final long serialVersionUID = 0L;
      * The metro location criterion associated with the impression.
      * </pre>
      *
-     * <code>string metro = 8;</code>
+     * <code>optional string metro = 8;</code>
      * @return Whether the metro field is set.
      */
     public boolean hasMetro() {
@@ -1065,7 +1065,7 @@ private static final long serialVersionUID = 0L;
      * The metro location criterion associated with the impression.
      * </pre>
      *
-     * <code>string metro = 8;</code>
+     * <code>optional string metro = 8;</code>
      * @return The metro.
      */
     public java.lang.String getMetro() {
@@ -1085,7 +1085,7 @@ private static final long serialVersionUID = 0L;
      * The metro location criterion associated with the impression.
      * </pre>
      *
-     * <code>string metro = 8;</code>
+     * <code>optional string metro = 8;</code>
      * @return The bytes for metro.
      */
     public com.google.protobuf.ByteString
@@ -1106,7 +1106,7 @@ private static final long serialVersionUID = 0L;
      * The metro location criterion associated with the impression.
      * </pre>
      *
-     * <code>string metro = 8;</code>
+     * <code>optional string metro = 8;</code>
      * @param value The metro to set.
      * @return This builder for chaining.
      */
@@ -1125,7 +1125,7 @@ private static final long serialVersionUID = 0L;
      * The metro location criterion associated with the impression.
      * </pre>
      *
-     * <code>string metro = 8;</code>
+     * <code>optional string metro = 8;</code>
      * @return This builder for chaining.
      */
     public Builder clearMetro() {
@@ -1139,7 +1139,7 @@ private static final long serialVersionUID = 0L;
      * The metro location criterion associated with the impression.
      * </pre>
      *
-     * <code>string metro = 8;</code>
+     * <code>optional string metro = 8;</code>
      * @param value The bytes for metro to set.
      * @return This builder for chaining.
      */
@@ -1161,7 +1161,7 @@ private static final long serialVersionUID = 0L;
      * The most specific location criterion associated with the impression.
      * </pre>
      *
-     * <code>string most_specific = 9;</code>
+     * <code>optional string most_specific = 9;</code>
      * @return Whether the mostSpecific field is set.
      */
     public boolean hasMostSpecific() {
@@ -1172,7 +1172,7 @@ private static final long serialVersionUID = 0L;
      * The most specific location criterion associated with the impression.
      * </pre>
      *
-     * <code>string most_specific = 9;</code>
+     * <code>optional string most_specific = 9;</code>
      * @return The mostSpecific.
      */
     public java.lang.String getMostSpecific() {
@@ -1192,7 +1192,7 @@ private static final long serialVersionUID = 0L;
      * The most specific location criterion associated with the impression.
      * </pre>
      *
-     * <code>string most_specific = 9;</code>
+     * <code>optional string most_specific = 9;</code>
      * @return The bytes for mostSpecific.
      */
     public com.google.protobuf.ByteString
@@ -1213,7 +1213,7 @@ private static final long serialVersionUID = 0L;
      * The most specific location criterion associated with the impression.
      * </pre>
      *
-     * <code>string most_specific = 9;</code>
+     * <code>optional string most_specific = 9;</code>
      * @param value The mostSpecific to set.
      * @return This builder for chaining.
      */
@@ -1232,7 +1232,7 @@ private static final long serialVersionUID = 0L;
      * The most specific location criterion associated with the impression.
      * </pre>
      *
-     * <code>string most_specific = 9;</code>
+     * <code>optional string most_specific = 9;</code>
      * @return This builder for chaining.
      */
     public Builder clearMostSpecific() {
@@ -1246,7 +1246,7 @@ private static final long serialVersionUID = 0L;
      * The most specific location criterion associated with the impression.
      * </pre>
      *
-     * <code>string most_specific = 9;</code>
+     * <code>optional string most_specific = 9;</code>
      * @param value The bytes for mostSpecific to set.
      * @return This builder for chaining.
      */
@@ -1268,7 +1268,7 @@ private static final long serialVersionUID = 0L;
      * The region location criterion associated with the impression.
      * </pre>
      *
-     * <code>string region = 10;</code>
+     * <code>optional string region = 10;</code>
      * @return Whether the region field is set.
      */
     public boolean hasRegion() {
@@ -1279,7 +1279,7 @@ private static final long serialVersionUID = 0L;
      * The region location criterion associated with the impression.
      * </pre>
      *
-     * <code>string region = 10;</code>
+     * <code>optional string region = 10;</code>
      * @return The region.
      */
     public java.lang.String getRegion() {
@@ -1299,7 +1299,7 @@ private static final long serialVersionUID = 0L;
      * The region location criterion associated with the impression.
      * </pre>
      *
-     * <code>string region = 10;</code>
+     * <code>optional string region = 10;</code>
      * @return The bytes for region.
      */
     public com.google.protobuf.ByteString
@@ -1320,7 +1320,7 @@ private static final long serialVersionUID = 0L;
      * The region location criterion associated with the impression.
      * </pre>
      *
-     * <code>string region = 10;</code>
+     * <code>optional string region = 10;</code>
      * @param value The region to set.
      * @return This builder for chaining.
      */
@@ -1339,7 +1339,7 @@ private static final long serialVersionUID = 0L;
      * The region location criterion associated with the impression.
      * </pre>
      *
-     * <code>string region = 10;</code>
+     * <code>optional string region = 10;</code>
      * @return This builder for chaining.
      */
     public Builder clearRegion() {
@@ -1353,7 +1353,7 @@ private static final long serialVersionUID = 0L;
      * The region location criterion associated with the impression.
      * </pre>
      *
-     * <code>string region = 10;</code>
+     * <code>optional string region = 10;</code>
      * @param value The bytes for region to set.
      * @return This builder for chaining.
      */

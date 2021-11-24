@@ -727,7 +727,7 @@ private static final long serialVersionUID = 0L;
    * above the organic search results.
    * </pre>
    *
-   * <code>double absolute_top_impression_percentage = 183;</code>
+   * <code>optional double absolute_top_impression_percentage = 183;</code>
    * @return Whether the absoluteTopImpressionPercentage field is set.
    */
   @java.lang.Override
@@ -740,7 +740,7 @@ private static final long serialVersionUID = 0L;
    * above the organic search results.
    * </pre>
    *
-   * <code>double absolute_top_impression_percentage = 183;</code>
+   * <code>optional double absolute_top_impression_percentage = 183;</code>
    * @return The absoluteTopImpressionPercentage.
    */
   @java.lang.Override
@@ -755,7 +755,7 @@ private static final long serialVersionUID = 0L;
    * Average cost of viewable impressions (`active_view_impressions`).
    * </pre>
    *
-   * <code>double active_view_cpm = 184;</code>
+   * <code>optional double active_view_cpm = 184;</code>
    * @return Whether the activeViewCpm field is set.
    */
   @java.lang.Override
@@ -767,7 +767,7 @@ private static final long serialVersionUID = 0L;
    * Average cost of viewable impressions (`active_view_impressions`).
    * </pre>
    *
-   * <code>double active_view_cpm = 184;</code>
+   * <code>optional double active_view_cpm = 184;</code>
    * @return The activeViewCpm.
    */
   @java.lang.Override
@@ -783,7 +783,7 @@ private static final long serialVersionUID = 0L;
    * This metric is reported only for display network.
    * </pre>
    *
-   * <code>double active_view_ctr = 185;</code>
+   * <code>optional double active_view_ctr = 185;</code>
    * @return Whether the activeViewCtr field is set.
    */
   @java.lang.Override
@@ -796,7 +796,7 @@ private static final long serialVersionUID = 0L;
    * This metric is reported only for display network.
    * </pre>
    *
-   * <code>double active_view_ctr = 185;</code>
+   * <code>optional double active_view_ctr = 185;</code>
    * @return The activeViewCtr.
    */
   @java.lang.Override
@@ -812,7 +812,7 @@ private static final long serialVersionUID = 0L;
    * Network site.
    * </pre>
    *
-   * <code>int64 active_view_impressions = 186;</code>
+   * <code>optional int64 active_view_impressions = 186;</code>
    * @return Whether the activeViewImpressions field is set.
    */
   @java.lang.Override
@@ -825,7 +825,7 @@ private static final long serialVersionUID = 0L;
    * Network site.
    * </pre>
    *
-   * <code>int64 active_view_impressions = 186;</code>
+   * <code>optional int64 active_view_impressions = 186;</code>
    * @return The activeViewImpressions.
    */
   @java.lang.Override
@@ -841,7 +841,7 @@ private static final long serialVersionUID = 0L;
    * number of served impressions.
    * </pre>
    *
-   * <code>double active_view_measurability = 187;</code>
+   * <code>optional double active_view_measurability = 187;</code>
    * @return Whether the activeViewMeasurability field is set.
    */
   @java.lang.Override
@@ -854,7 +854,7 @@ private static final long serialVersionUID = 0L;
    * number of served impressions.
    * </pre>
    *
-   * <code>double active_view_measurability = 187;</code>
+   * <code>optional double active_view_measurability = 187;</code>
    * @return The activeViewMeasurability.
    */
   @java.lang.Override
@@ -870,7 +870,7 @@ private static final long serialVersionUID = 0L;
    * View.
    * </pre>
    *
-   * <code>int64 active_view_measurable_cost_micros = 188;</code>
+   * <code>optional int64 active_view_measurable_cost_micros = 188;</code>
    * @return Whether the activeViewMeasurableCostMicros field is set.
    */
   @java.lang.Override
@@ -883,7 +883,7 @@ private static final long serialVersionUID = 0L;
    * View.
    * </pre>
    *
-   * <code>int64 active_view_measurable_cost_micros = 188;</code>
+   * <code>optional int64 active_view_measurable_cost_micros = 188;</code>
    * @return The activeViewMeasurableCostMicros.
    */
   @java.lang.Override
@@ -899,7 +899,7 @@ private static final long serialVersionUID = 0L;
    * where they can be seen.
    * </pre>
    *
-   * <code>int64 active_view_measurable_impressions = 189;</code>
+   * <code>optional int64 active_view_measurable_impressions = 189;</code>
    * @return Whether the activeViewMeasurableImpressions field is set.
    */
   @java.lang.Override
@@ -912,7 +912,7 @@ private static final long serialVersionUID = 0L;
    * where they can be seen.
    * </pre>
    *
-   * <code>int64 active_view_measurable_impressions = 189;</code>
+   * <code>optional int64 active_view_measurable_impressions = 189;</code>
    * @return The activeViewMeasurableImpressions.
    */
   @java.lang.Override
@@ -928,7 +928,7 @@ private static final long serialVersionUID = 0L;
    * (measurable impressions) and was viewable (viewable impressions).
    * </pre>
    *
-   * <code>double active_view_viewability = 190;</code>
+   * <code>optional double active_view_viewability = 190;</code>
    * @return Whether the activeViewViewability field is set.
    */
   @java.lang.Override
@@ -941,7 +941,7 @@ private static final long serialVersionUID = 0L;
    * (measurable impressions) and was viewable (viewable impressions).
    * </pre>
    *
-   * <code>double active_view_viewability = 190;</code>
+   * <code>optional double active_view_viewability = 190;</code>
    * @return The activeViewViewability.
    */
   @java.lang.Override
@@ -957,7 +957,7 @@ private static final long serialVersionUID = 0L;
    * divided by the number of ad interactions.
    * </pre>
    *
-   * <code>double all_conversions_from_interactions_rate = 191;</code>
+   * <code>optional double all_conversions_from_interactions_rate = 191;</code>
    * @return Whether the allConversionsFromInteractionsRate field is set.
    */
   @java.lang.Override
@@ -970,7 +970,7 @@ private static final long serialVersionUID = 0L;
    * divided by the number of ad interactions.
    * </pre>
    *
-   * <code>double all_conversions_from_interactions_rate = 191;</code>
+   * <code>optional double all_conversions_from_interactions_rate = 191;</code>
    * @return The allConversionsFromInteractionsRate.
    */
   @java.lang.Override
@@ -985,7 +985,7 @@ private static final long serialVersionUID = 0L;
    * The value of all conversions.
    * </pre>
    *
-   * <code>double all_conversions_value = 192;</code>
+   * <code>optional double all_conversions_value = 192;</code>
    * @return Whether the allConversionsValue field is set.
    */
   @java.lang.Override
@@ -997,7 +997,7 @@ private static final long serialVersionUID = 0L;
    * The value of all conversions.
    * </pre>
    *
-   * <code>double all_conversions_value = 192;</code>
+   * <code>optional double all_conversions_value = 192;</code>
    * @return The allConversionsValue.
    */
   @java.lang.Override
@@ -1031,7 +1031,7 @@ private static final long serialVersionUID = 0L;
    * of the value of include_in_conversions_metric.
    * </pre>
    *
-   * <code>double all_conversions = 193;</code>
+   * <code>optional double all_conversions = 193;</code>
    * @return Whether the allConversions field is set.
    */
   @java.lang.Override
@@ -1044,7 +1044,7 @@ private static final long serialVersionUID = 0L;
    * of the value of include_in_conversions_metric.
    * </pre>
    *
-   * <code>double all_conversions = 193;</code>
+   * <code>optional double all_conversions = 193;</code>
    * @return The allConversions.
    */
   @java.lang.Override
@@ -1079,7 +1079,7 @@ private static final long serialVersionUID = 0L;
    * (such as clicks for text ads or views for video ads).
    * </pre>
    *
-   * <code>double all_conversions_value_per_cost = 194;</code>
+   * <code>optional double all_conversions_value_per_cost = 194;</code>
    * @return Whether the allConversionsValuePerCost field is set.
    */
   @java.lang.Override
@@ -1092,7 +1092,7 @@ private static final long serialVersionUID = 0L;
    * (such as clicks for text ads or views for video ads).
    * </pre>
    *
-   * <code>double all_conversions_value_per_cost = 194;</code>
+   * <code>optional double all_conversions_value_per_cost = 194;</code>
    * @return The allConversionsValuePerCost.
    */
   @java.lang.Override
@@ -1110,7 +1110,7 @@ private static final long serialVersionUID = 0L;
    * This metric applies to feed items only.
    * </pre>
    *
-   * <code>double all_conversions_from_click_to_call = 195;</code>
+   * <code>optional double all_conversions_from_click_to_call = 195;</code>
    * @return Whether the allConversionsFromClickToCall field is set.
    */
   @java.lang.Override
@@ -1125,7 +1125,7 @@ private static final long serialVersionUID = 0L;
    * This metric applies to feed items only.
    * </pre>
    *
-   * <code>double all_conversions_from_click_to_call = 195;</code>
+   * <code>optional double all_conversions_from_click_to_call = 195;</code>
    * @return The allConversionsFromClickToCall.
    */
   @java.lang.Override
@@ -1142,7 +1142,7 @@ private static final long serialVersionUID = 0L;
    * This metric applies to feed items only.
    * </pre>
    *
-   * <code>double all_conversions_from_directions = 196;</code>
+   * <code>optional double all_conversions_from_directions = 196;</code>
    * @return Whether the allConversionsFromDirections field is set.
    */
   @java.lang.Override
@@ -1156,7 +1156,7 @@ private static final long serialVersionUID = 0L;
    * This metric applies to feed items only.
    * </pre>
    *
-   * <code>double all_conversions_from_directions = 196;</code>
+   * <code>optional double all_conversions_from_directions = 196;</code>
    * @return The allConversionsFromDirections.
    */
   @java.lang.Override
@@ -1172,7 +1172,7 @@ private static final long serialVersionUID = 0L;
    * of interactions.
    * </pre>
    *
-   * <code>double all_conversions_from_interactions_value_per_interaction = 197;</code>
+   * <code>optional double all_conversions_from_interactions_value_per_interaction = 197;</code>
    * @return Whether the allConversionsFromInteractionsValuePerInteraction field is set.
    */
   @java.lang.Override
@@ -1185,7 +1185,7 @@ private static final long serialVersionUID = 0L;
    * of interactions.
    * </pre>
    *
-   * <code>double all_conversions_from_interactions_value_per_interaction = 197;</code>
+   * <code>optional double all_conversions_from_interactions_value_per_interaction = 197;</code>
    * @return The allConversionsFromInteractionsValuePerInteraction.
    */
   @java.lang.Override
@@ -1202,7 +1202,7 @@ private static final long serialVersionUID = 0L;
    * This metric applies to feed items only.
    * </pre>
    *
-   * <code>double all_conversions_from_menu = 198;</code>
+   * <code>optional double all_conversions_from_menu = 198;</code>
    * @return Whether the allConversionsFromMenu field is set.
    */
   @java.lang.Override
@@ -1216,7 +1216,7 @@ private static final long serialVersionUID = 0L;
    * This metric applies to feed items only.
    * </pre>
    *
-   * <code>double all_conversions_from_menu = 198;</code>
+   * <code>optional double all_conversions_from_menu = 198;</code>
    * @return The allConversionsFromMenu.
    */
   @java.lang.Override
@@ -1232,7 +1232,7 @@ private static final long serialVersionUID = 0L;
    * This metric applies to feed items only.
    * </pre>
    *
-   * <code>double all_conversions_from_order = 199;</code>
+   * <code>optional double all_conversions_from_order = 199;</code>
    * @return Whether the allConversionsFromOrder field is set.
    */
   @java.lang.Override
@@ -1245,7 +1245,7 @@ private static final long serialVersionUID = 0L;
    * This metric applies to feed items only.
    * </pre>
    *
-   * <code>double all_conversions_from_order = 199;</code>
+   * <code>optional double all_conversions_from_order = 199;</code>
    * @return The allConversionsFromOrder.
    */
   @java.lang.Override
@@ -1262,7 +1262,7 @@ private static final long serialVersionUID = 0L;
    * This metric applies to feed items only.
    * </pre>
    *
-   * <code>double all_conversions_from_other_engagement = 200;</code>
+   * <code>optional double all_conversions_from_other_engagement = 200;</code>
    * @return Whether the allConversionsFromOtherEngagement field is set.
    */
   @java.lang.Override
@@ -1276,7 +1276,7 @@ private static final long serialVersionUID = 0L;
    * This metric applies to feed items only.
    * </pre>
    *
-   * <code>double all_conversions_from_other_engagement = 200;</code>
+   * <code>optional double all_conversions_from_other_engagement = 200;</code>
    * @return The allConversionsFromOtherEngagement.
    */
   @java.lang.Override
@@ -1292,7 +1292,7 @@ private static final long serialVersionUID = 0L;
    * This metric applies to feed items only.
    * </pre>
    *
-   * <code>double all_conversions_from_store_visit = 201;</code>
+   * <code>optional double all_conversions_from_store_visit = 201;</code>
    * @return Whether the allConversionsFromStoreVisit field is set.
    */
   @java.lang.Override
@@ -1305,7 +1305,7 @@ private static final long serialVersionUID = 0L;
    * This metric applies to feed items only.
    * </pre>
    *
-   * <code>double all_conversions_from_store_visit = 201;</code>
+   * <code>optional double all_conversions_from_store_visit = 201;</code>
    * @return The allConversionsFromStoreVisit.
    */
   @java.lang.Override
@@ -1322,7 +1322,7 @@ private static final long serialVersionUID = 0L;
    * This metric applies to feed items only.
    * </pre>
    *
-   * <code>double all_conversions_from_store_website = 202;</code>
+   * <code>optional double all_conversions_from_store_website = 202;</code>
    * @return Whether the allConversionsFromStoreWebsite field is set.
    */
   @java.lang.Override
@@ -1336,7 +1336,7 @@ private static final long serialVersionUID = 0L;
    * This metric applies to feed items only.
    * </pre>
    *
-   * <code>double all_conversions_from_store_website = 202;</code>
+   * <code>optional double all_conversions_from_store_website = 202;</code>
    * @return The allConversionsFromStoreWebsite.
    */
   @java.lang.Override
@@ -1352,7 +1352,7 @@ private static final long serialVersionUID = 0L;
    * of your ads divided by the total number of interactions.
    * </pre>
    *
-   * <code>double average_cost = 203;</code>
+   * <code>optional double average_cost = 203;</code>
    * @return Whether the averageCost field is set.
    */
   @java.lang.Override
@@ -1365,7 +1365,7 @@ private static final long serialVersionUID = 0L;
    * of your ads divided by the total number of interactions.
    * </pre>
    *
-   * <code>double average_cost = 203;</code>
+   * <code>optional double average_cost = 203;</code>
    * @return The averageCost.
    */
   @java.lang.Override
@@ -1381,7 +1381,7 @@ private static final long serialVersionUID = 0L;
    * received.
    * </pre>
    *
-   * <code>double average_cpc = 204;</code>
+   * <code>optional double average_cpc = 204;</code>
    * @return Whether the averageCpc field is set.
    */
   @java.lang.Override
@@ -1394,7 +1394,7 @@ private static final long serialVersionUID = 0L;
    * received.
    * </pre>
    *
-   * <code>double average_cpc = 204;</code>
+   * <code>optional double average_cpc = 204;</code>
    * @return The averageCpc.
    */
   @java.lang.Override
@@ -1411,7 +1411,7 @@ private static final long serialVersionUID = 0L;
    * of ad engagements.
    * </pre>
    *
-   * <code>double average_cpe = 205;</code>
+   * <code>optional double average_cpe = 205;</code>
    * @return Whether the averageCpe field is set.
    */
   @java.lang.Override
@@ -1425,7 +1425,7 @@ private static final long serialVersionUID = 0L;
    * of ad engagements.
    * </pre>
    *
-   * <code>double average_cpe = 205;</code>
+   * <code>optional double average_cpe = 205;</code>
    * @return The averageCpe.
    */
   @java.lang.Override
@@ -1440,7 +1440,7 @@ private static final long serialVersionUID = 0L;
    * Average cost-per-thousand impressions (CPM).
    * </pre>
    *
-   * <code>double average_cpm = 206;</code>
+   * <code>optional double average_cpm = 206;</code>
    * @return Whether the averageCpm field is set.
    */
   @java.lang.Override
@@ -1452,7 +1452,7 @@ private static final long serialVersionUID = 0L;
    * Average cost-per-thousand impressions (CPM).
    * </pre>
    *
-   * <code>double average_cpm = 206;</code>
+   * <code>optional double average_cpm = 206;</code>
    * @return The averageCpm.
    */
   @java.lang.Override
@@ -1469,7 +1469,7 @@ private static final long serialVersionUID = 0L;
    * the number of views.
    * </pre>
    *
-   * <code>double average_cpv = 207;</code>
+   * <code>optional double average_cpv = 207;</code>
    * @return Whether the averageCpv field is set.
    */
   @java.lang.Override
@@ -1483,7 +1483,7 @@ private static final long serialVersionUID = 0L;
    * the number of views.
    * </pre>
    *
-   * <code>double average_cpv = 207;</code>
+   * <code>optional double average_cpv = 207;</code>
    * @return The averageCpv.
    */
   @java.lang.Override
@@ -1498,7 +1498,7 @@ private static final long serialVersionUID = 0L;
    * Average number of pages viewed per session.
    * </pre>
    *
-   * <code>double average_page_views = 208;</code>
+   * <code>optional double average_page_views = 208;</code>
    * @return Whether the averagePageViews field is set.
    */
   @java.lang.Override
@@ -1510,7 +1510,7 @@ private static final long serialVersionUID = 0L;
    * Average number of pages viewed per session.
    * </pre>
    *
-   * <code>double average_page_views = 208;</code>
+   * <code>optional double average_page_views = 208;</code>
    * @return The averagePageViews.
    */
   @java.lang.Override
@@ -1526,7 +1526,7 @@ private static final long serialVersionUID = 0L;
    * from Google Analytics.
    * </pre>
    *
-   * <code>double average_time_on_site = 209;</code>
+   * <code>optional double average_time_on_site = 209;</code>
    * @return Whether the averageTimeOnSite field is set.
    */
   @java.lang.Override
@@ -1539,7 +1539,7 @@ private static final long serialVersionUID = 0L;
    * from Google Analytics.
    * </pre>
    *
-   * <code>double average_time_on_site = 209;</code>
+   * <code>optional double average_time_on_site = 209;</code>
    * @return The averageTimeOnSite.
    */
   @java.lang.Override
@@ -1554,7 +1554,7 @@ private static final long serialVersionUID = 0L;
    * An indication of how other advertisers are bidding on similar products.
    * </pre>
    *
-   * <code>double benchmark_average_max_cpc = 210;</code>
+   * <code>optional double benchmark_average_max_cpc = 210;</code>
    * @return Whether the benchmarkAverageMaxCpc field is set.
    */
   @java.lang.Override
@@ -1566,7 +1566,7 @@ private static final long serialVersionUID = 0L;
    * An indication of how other advertisers are bidding on similar products.
    * </pre>
    *
-   * <code>double benchmark_average_max_cpc = 210;</code>
+   * <code>optional double benchmark_average_max_cpc = 210;</code>
    * @return The benchmarkAverageMaxCpc.
    */
   @java.lang.Override
@@ -1582,7 +1582,7 @@ private static final long serialVersionUID = 0L;
    * are performing based on how often people who see their ad click on it.
    * </pre>
    *
-   * <code>double benchmark_ctr = 211;</code>
+   * <code>optional double benchmark_ctr = 211;</code>
    * @return Whether the benchmarkCtr field is set.
    */
   @java.lang.Override
@@ -1595,7 +1595,7 @@ private static final long serialVersionUID = 0L;
    * are performing based on how often people who see their ad click on it.
    * </pre>
    *
-   * <code>double benchmark_ctr = 211;</code>
+   * <code>optional double benchmark_ctr = 211;</code>
    * @return The benchmarkCtr.
    */
   @java.lang.Override
@@ -1611,7 +1611,7 @@ private static final long serialVersionUID = 0L;
    * site. Imported from Google Analytics.
    * </pre>
    *
-   * <code>double bounce_rate = 212;</code>
+   * <code>optional double bounce_rate = 212;</code>
    * @return Whether the bounceRate field is set.
    */
   @java.lang.Override
@@ -1624,7 +1624,7 @@ private static final long serialVersionUID = 0L;
    * site. Imported from Google Analytics.
    * </pre>
    *
-   * <code>double bounce_rate = 212;</code>
+   * <code>optional double bounce_rate = 212;</code>
    * @return The bounceRate.
    */
   @java.lang.Override
@@ -1639,7 +1639,7 @@ private static final long serialVersionUID = 0L;
    * The number of clicks.
    * </pre>
    *
-   * <code>int64 clicks = 131;</code>
+   * <code>optional int64 clicks = 131;</code>
    * @return Whether the clicks field is set.
    */
   @java.lang.Override
@@ -1651,7 +1651,7 @@ private static final long serialVersionUID = 0L;
    * The number of clicks.
    * </pre>
    *
-   * <code>int64 clicks = 131;</code>
+   * <code>optional int64 clicks = 131;</code>
    * @return The clicks.
    */
   @java.lang.Override
@@ -1668,7 +1668,7 @@ private static final long serialVersionUID = 0L;
    * https://support.google.com/google-ads/answer/3097241 for details.
    * </pre>
    *
-   * <code>int64 combined_clicks = 156;</code>
+   * <code>optional int64 combined_clicks = 156;</code>
    * @return Whether the combinedClicks field is set.
    */
   @java.lang.Override
@@ -1682,7 +1682,7 @@ private static final long serialVersionUID = 0L;
    * https://support.google.com/google-ads/answer/3097241 for details.
    * </pre>
    *
-   * <code>int64 combined_clicks = 156;</code>
+   * <code>optional int64 combined_clicks = 156;</code>
    * @return The combinedClicks.
    */
   @java.lang.Override
@@ -1700,7 +1700,7 @@ private static final long serialVersionUID = 0L;
    * details.
    * </pre>
    *
-   * <code>double combined_clicks_per_query = 157;</code>
+   * <code>optional double combined_clicks_per_query = 157;</code>
    * @return Whether the combinedClicksPerQuery field is set.
    */
   @java.lang.Override
@@ -1715,7 +1715,7 @@ private static final long serialVersionUID = 0L;
    * details.
    * </pre>
    *
-   * <code>double combined_clicks_per_query = 157;</code>
+   * <code>optional double combined_clicks_per_query = 157;</code>
    * @return The combinedClicksPerQuery.
    */
   @java.lang.Override
@@ -1732,7 +1732,7 @@ private static final long serialVersionUID = 0L;
    * https://support.google.com/google-ads/answer/3097241 for details.
    * </pre>
    *
-   * <code>int64 combined_queries = 158;</code>
+   * <code>optional int64 combined_queries = 158;</code>
    * @return Whether the combinedQueries field is set.
    */
   @java.lang.Override
@@ -1746,7 +1746,7 @@ private static final long serialVersionUID = 0L;
    * https://support.google.com/google-ads/answer/3097241 for details.
    * </pre>
    *
-   * <code>int64 combined_queries = 158;</code>
+   * <code>optional int64 combined_queries = 158;</code>
    * @return The combinedQueries.
    */
   @java.lang.Override
@@ -1764,7 +1764,7 @@ private static final long serialVersionUID = 0L;
    * to 0.9. Any value above 0.9 is reported as 0.9001.
    * </pre>
    *
-   * <code>double content_budget_lost_impression_share = 159;</code>
+   * <code>optional double content_budget_lost_impression_share = 159;</code>
    * @return Whether the contentBudgetLostImpressionShare field is set.
    */
   @java.lang.Override
@@ -1779,7 +1779,7 @@ private static final long serialVersionUID = 0L;
    * to 0.9. Any value above 0.9 is reported as 0.9001.
    * </pre>
    *
-   * <code>double content_budget_lost_impression_share = 159;</code>
+   * <code>optional double content_budget_lost_impression_share = 159;</code>
    * @return The contentBudgetLostImpressionShare.
    */
   @java.lang.Override
@@ -1797,7 +1797,7 @@ private static final long serialVersionUID = 0L;
    * value below 0.1 is reported as 0.0999.
    * </pre>
    *
-   * <code>double content_impression_share = 160;</code>
+   * <code>optional double content_impression_share = 160;</code>
    * @return Whether the contentImpressionShare field is set.
    */
   @java.lang.Override
@@ -1812,7 +1812,7 @@ private static final long serialVersionUID = 0L;
    * value below 0.1 is reported as 0.0999.
    * </pre>
    *
-   * <code>double content_impression_share = 160;</code>
+   * <code>optional double content_impression_share = 160;</code>
    * @return The contentImpressionShare.
    */
   @java.lang.Override
@@ -1831,7 +1831,7 @@ private static final long serialVersionUID = 0L;
    * advertiser). The date/time is in the customer's time zone.
    * </pre>
    *
-   * <code>string conversion_last_received_request_date_time = 161;</code>
+   * <code>optional string conversion_last_received_request_date_time = 161;</code>
    * @return Whether the conversionLastReceivedRequestDateTime field is set.
    */
   @java.lang.Override
@@ -1847,7 +1847,7 @@ private static final long serialVersionUID = 0L;
    * advertiser). The date/time is in the customer's time zone.
    * </pre>
    *
-   * <code>string conversion_last_received_request_date_time = 161;</code>
+   * <code>optional string conversion_last_received_request_date_time = 161;</code>
    * @return The conversionLastReceivedRequestDateTime.
    */
   @java.lang.Override
@@ -1872,7 +1872,7 @@ private static final long serialVersionUID = 0L;
    * advertiser). The date/time is in the customer's time zone.
    * </pre>
    *
-   * <code>string conversion_last_received_request_date_time = 161;</code>
+   * <code>optional string conversion_last_received_request_date_time = 161;</code>
    * @return The bytes for conversionLastReceivedRequestDateTime.
    */
   @java.lang.Override
@@ -1898,7 +1898,7 @@ private static final long serialVersionUID = 0L;
    * is in the customer's time zone.
    * </pre>
    *
-   * <code>string conversion_last_conversion_date = 162;</code>
+   * <code>optional string conversion_last_conversion_date = 162;</code>
    * @return Whether the conversionLastConversionDate field is set.
    */
   @java.lang.Override
@@ -1911,7 +1911,7 @@ private static final long serialVersionUID = 0L;
    * is in the customer's time zone.
    * </pre>
    *
-   * <code>string conversion_last_conversion_date = 162;</code>
+   * <code>optional string conversion_last_conversion_date = 162;</code>
    * @return The conversionLastConversionDate.
    */
   @java.lang.Override
@@ -1933,7 +1933,7 @@ private static final long serialVersionUID = 0L;
    * is in the customer's time zone.
    * </pre>
    *
-   * <code>string conversion_last_conversion_date = 162;</code>
+   * <code>optional string conversion_last_conversion_date = 162;</code>
    * @return The bytes for conversionLastConversionDate.
    */
   @java.lang.Override
@@ -1961,7 +1961,7 @@ private static final long serialVersionUID = 0L;
    * to 0.9. Any value above 0.9 is reported as 0.9001.
    * </pre>
    *
-   * <code>double content_rank_lost_impression_share = 163;</code>
+   * <code>optional double content_rank_lost_impression_share = 163;</code>
    * @return Whether the contentRankLostImpressionShare field is set.
    */
   @java.lang.Override
@@ -1976,7 +1976,7 @@ private static final long serialVersionUID = 0L;
    * to 0.9. Any value above 0.9 is reported as 0.9001.
    * </pre>
    *
-   * <code>double content_rank_lost_impression_share = 163;</code>
+   * <code>optional double content_rank_lost_impression_share = 163;</code>
    * @return The contentRankLostImpressionShare.
    */
   @java.lang.Override
@@ -1995,7 +1995,7 @@ private static final long serialVersionUID = 0L;
    * optimize for these conversions.
    * </pre>
    *
-   * <code>double conversions_from_interactions_rate = 164;</code>
+   * <code>optional double conversions_from_interactions_rate = 164;</code>
    * @return Whether the conversionsFromInteractionsRate field is set.
    */
   @java.lang.Override
@@ -2011,7 +2011,7 @@ private static final long serialVersionUID = 0L;
    * optimize for these conversions.
    * </pre>
    *
-   * <code>double conversions_from_interactions_rate = 164;</code>
+   * <code>optional double conversions_from_interactions_rate = 164;</code>
    * @return The conversionsFromInteractionsRate.
    */
   @java.lang.Override
@@ -2029,7 +2029,7 @@ private static final long serialVersionUID = 0L;
    * conversions.
    * </pre>
    *
-   * <code>double conversions_value = 165;</code>
+   * <code>optional double conversions_value = 165;</code>
    * @return Whether the conversionsValue field is set.
    */
   @java.lang.Override
@@ -2044,7 +2044,7 @@ private static final long serialVersionUID = 0L;
    * conversions.
    * </pre>
    *
-   * <code>double conversions_value = 165;</code>
+   * <code>optional double conversions_value = 165;</code>
    * @return The conversionsValue.
    */
   @java.lang.Override
@@ -2083,7 +2083,7 @@ private static final long serialVersionUID = 0L;
    * will optimize for these conversions.
    * </pre>
    *
-   * <code>double conversions_value_per_cost = 166;</code>
+   * <code>optional double conversions_value_per_cost = 166;</code>
    * @return Whether the conversionsValuePerCost field is set.
    */
   @java.lang.Override
@@ -2098,7 +2098,7 @@ private static final long serialVersionUID = 0L;
    * will optimize for these conversions.
    * </pre>
    *
-   * <code>double conversions_value_per_cost = 166;</code>
+   * <code>optional double conversions_value_per_cost = 166;</code>
    * @return The conversionsValuePerCost.
    */
   @java.lang.Override
@@ -2117,7 +2117,7 @@ private static final long serialVersionUID = 0L;
    * conversions.
    * </pre>
    *
-   * <code>double conversions_from_interactions_value_per_interaction = 167;</code>
+   * <code>optional double conversions_from_interactions_value_per_interaction = 167;</code>
    * @return Whether the conversionsFromInteractionsValuePerInteraction field is set.
    */
   @java.lang.Override
@@ -2133,7 +2133,7 @@ private static final long serialVersionUID = 0L;
    * conversions.
    * </pre>
    *
-   * <code>double conversions_from_interactions_value_per_interaction = 167;</code>
+   * <code>optional double conversions_from_interactions_value_per_interaction = 167;</code>
    * @return The conversionsFromInteractionsValuePerInteraction.
    */
   @java.lang.Override
@@ -2151,7 +2151,7 @@ private static final long serialVersionUID = 0L;
    * conversions.
    * </pre>
    *
-   * <code>double conversions = 168;</code>
+   * <code>optional double conversions = 168;</code>
    * @return Whether the conversions field is set.
    */
   @java.lang.Override
@@ -2166,7 +2166,7 @@ private static final long serialVersionUID = 0L;
    * conversions.
    * </pre>
    *
-   * <code>double conversions = 168;</code>
+   * <code>optional double conversions = 168;</code>
    * @return The conversions.
    */
   @java.lang.Override
@@ -2203,7 +2203,7 @@ private static final long serialVersionUID = 0L;
    * (CPM) costs during this period.
    * </pre>
    *
-   * <code>int64 cost_micros = 169;</code>
+   * <code>optional int64 cost_micros = 169;</code>
    * @return Whether the costMicros field is set.
    */
   @java.lang.Override
@@ -2216,7 +2216,7 @@ private static final long serialVersionUID = 0L;
    * (CPM) costs during this period.
    * </pre>
    *
-   * <code>int64 cost_micros = 169;</code>
+   * <code>optional int64 cost_micros = 169;</code>
    * @return The costMicros.
    */
   @java.lang.Override
@@ -2231,7 +2231,7 @@ private static final long serialVersionUID = 0L;
    * The cost of ad interactions divided by all conversions.
    * </pre>
    *
-   * <code>double cost_per_all_conversions = 170;</code>
+   * <code>optional double cost_per_all_conversions = 170;</code>
    * @return Whether the costPerAllConversions field is set.
    */
   @java.lang.Override
@@ -2243,7 +2243,7 @@ private static final long serialVersionUID = 0L;
    * The cost of ad interactions divided by all conversions.
    * </pre>
    *
-   * <code>double cost_per_all_conversions = 170;</code>
+   * <code>optional double cost_per_all_conversions = 170;</code>
    * @return The costPerAllConversions.
    */
   @java.lang.Override
@@ -2261,7 +2261,7 @@ private static final long serialVersionUID = 0L;
    * optimize for these conversions.
    * </pre>
    *
-   * <code>double cost_per_conversion = 171;</code>
+   * <code>optional double cost_per_conversion = 171;</code>
    * @return Whether the costPerConversion field is set.
    */
   @java.lang.Override
@@ -2276,7 +2276,7 @@ private static final long serialVersionUID = 0L;
    * optimize for these conversions.
    * </pre>
    *
-   * <code>double cost_per_conversion = 171;</code>
+   * <code>optional double cost_per_conversion = 171;</code>
    * @return The costPerConversion.
    */
   @java.lang.Override
@@ -2295,7 +2295,7 @@ private static final long serialVersionUID = 0L;
    * conversions.
    * </pre>
    *
-   * <code>double cost_per_current_model_attributed_conversion = 172;</code>
+   * <code>optional double cost_per_current_model_attributed_conversion = 172;</code>
    * @return Whether the costPerCurrentModelAttributedConversion field is set.
    */
   @java.lang.Override
@@ -2311,7 +2311,7 @@ private static final long serialVersionUID = 0L;
    * conversions.
    * </pre>
    *
-   * <code>double cost_per_current_model_attributed_conversion = 172;</code>
+   * <code>optional double cost_per_current_model_attributed_conversion = 172;</code>
    * @return The costPerCurrentModelAttributedConversion.
    */
   @java.lang.Override
@@ -2328,7 +2328,7 @@ private static final long serialVersionUID = 0L;
    * Cross-device conversions are already included in all_conversions.
    * </pre>
    *
-   * <code>double cross_device_conversions = 173;</code>
+   * <code>optional double cross_device_conversions = 173;</code>
    * @return Whether the crossDeviceConversions field is set.
    */
   @java.lang.Override
@@ -2342,7 +2342,7 @@ private static final long serialVersionUID = 0L;
    * Cross-device conversions are already included in all_conversions.
    * </pre>
    *
-   * <code>double cross_device_conversions = 173;</code>
+   * <code>optional double cross_device_conversions = 173;</code>
    * @return The crossDeviceConversions.
    */
   @java.lang.Override
@@ -2358,7 +2358,7 @@ private static final long serialVersionUID = 0L;
    * of times your ad is shown (Impressions).
    * </pre>
    *
-   * <code>double ctr = 174;</code>
+   * <code>optional double ctr = 174;</code>
    * @return Whether the ctr field is set.
    */
   @java.lang.Override
@@ -2371,7 +2371,7 @@ private static final long serialVersionUID = 0L;
    * of times your ad is shown (Impressions).
    * </pre>
    *
-   * <code>double ctr = 174;</code>
+   * <code>optional double ctr = 174;</code>
    * @return The ctr.
    */
   @java.lang.Override
@@ -2390,7 +2390,7 @@ private static final long serialVersionUID = 0L;
    * conversions.
    * </pre>
    *
-   * <code>double current_model_attributed_conversions = 175;</code>
+   * <code>optional double current_model_attributed_conversions = 175;</code>
    * @return Whether the currentModelAttributedConversions field is set.
    */
   @java.lang.Override
@@ -2406,7 +2406,7 @@ private static final long serialVersionUID = 0L;
    * conversions.
    * </pre>
    *
-   * <code>double current_model_attributed_conversions = 175;</code>
+   * <code>optional double current_model_attributed_conversions = 175;</code>
    * @return The currentModelAttributedConversions.
    */
   @java.lang.Override
@@ -2426,7 +2426,7 @@ private static final long serialVersionUID = 0L;
    * conversions.
    * </pre>
    *
-   * <code>double current_model_attributed_conversions_from_interactions_rate = 176;</code>
+   * <code>optional double current_model_attributed_conversions_from_interactions_rate = 176;</code>
    * @return Whether the currentModelAttributedConversionsFromInteractionsRate field is set.
    */
   @java.lang.Override
@@ -2443,7 +2443,7 @@ private static final long serialVersionUID = 0L;
    * conversions.
    * </pre>
    *
-   * <code>double current_model_attributed_conversions_from_interactions_rate = 176;</code>
+   * <code>optional double current_model_attributed_conversions_from_interactions_rate = 176;</code>
    * @return The currentModelAttributedConversionsFromInteractionsRate.
    */
   @java.lang.Override
@@ -2462,7 +2462,7 @@ private static final long serialVersionUID = 0L;
    * conversions.
    * </pre>
    *
-   * <code>double current_model_attributed_conversions_from_interactions_value_per_interaction = 177;</code>
+   * <code>optional double current_model_attributed_conversions_from_interactions_value_per_interaction = 177;</code>
    * @return Whether the currentModelAttributedConversionsFromInteractionsValuePerInteraction field is set.
    */
   @java.lang.Override
@@ -2478,7 +2478,7 @@ private static final long serialVersionUID = 0L;
    * conversions.
    * </pre>
    *
-   * <code>double current_model_attributed_conversions_from_interactions_value_per_interaction = 177;</code>
+   * <code>optional double current_model_attributed_conversions_from_interactions_value_per_interaction = 177;</code>
    * @return The currentModelAttributedConversionsFromInteractionsValuePerInteraction.
    */
   @java.lang.Override
@@ -2496,7 +2496,7 @@ private static final long serialVersionUID = 0L;
    * optimize for these conversions.
    * </pre>
    *
-   * <code>double current_model_attributed_conversions_value = 178;</code>
+   * <code>optional double current_model_attributed_conversions_value = 178;</code>
    * @return Whether the currentModelAttributedConversionsValue field is set.
    */
   @java.lang.Override
@@ -2511,7 +2511,7 @@ private static final long serialVersionUID = 0L;
    * optimize for these conversions.
    * </pre>
    *
-   * <code>double current_model_attributed_conversions_value = 178;</code>
+   * <code>optional double current_model_attributed_conversions_value = 178;</code>
    * @return The currentModelAttributedConversionsValue.
    */
   @java.lang.Override
@@ -2530,7 +2530,7 @@ private static final long serialVersionUID = 0L;
    * conversions.
    * </pre>
    *
-   * <code>double current_model_attributed_conversions_value_per_cost = 179;</code>
+   * <code>optional double current_model_attributed_conversions_value_per_cost = 179;</code>
    * @return Whether the currentModelAttributedConversionsValuePerCost field is set.
    */
   @java.lang.Override
@@ -2546,7 +2546,7 @@ private static final long serialVersionUID = 0L;
    * conversions.
    * </pre>
    *
-   * <code>double current_model_attributed_conversions_value_per_cost = 179;</code>
+   * <code>optional double current_model_attributed_conversions_value_per_cost = 179;</code>
    * @return The currentModelAttributedConversionsValuePerCost.
    */
   @java.lang.Override
@@ -2562,7 +2562,7 @@ private static final long serialVersionUID = 0L;
    * number of ad expansions divided by the number of times your ad is shown.
    * </pre>
    *
-   * <code>double engagement_rate = 180;</code>
+   * <code>optional double engagement_rate = 180;</code>
    * @return Whether the engagementRate field is set.
    */
   @java.lang.Override
@@ -2575,7 +2575,7 @@ private static final long serialVersionUID = 0L;
    * number of ad expansions divided by the number of times your ad is shown.
    * </pre>
    *
-   * <code>double engagement_rate = 180;</code>
+   * <code>optional double engagement_rate = 180;</code>
    * @return The engagementRate.
    */
   @java.lang.Override
@@ -2592,7 +2592,7 @@ private static final long serialVersionUID = 0L;
    * future, other ad types may support engagement metrics.
    * </pre>
    *
-   * <code>int64 engagements = 181;</code>
+   * <code>optional int64 engagements = 181;</code>
    * @return Whether the engagements field is set.
    */
   @java.lang.Override
@@ -2606,7 +2606,7 @@ private static final long serialVersionUID = 0L;
    * future, other ad types may support engagement metrics.
    * </pre>
    *
-   * <code>int64 engagements = 181;</code>
+   * <code>optional int64 engagements = 181;</code>
    * @return The engagements.
    */
   @java.lang.Override
@@ -2621,7 +2621,7 @@ private static final long serialVersionUID = 0L;
    * Average lead value based on clicks.
    * </pre>
    *
-   * <code>double hotel_average_lead_value_micros = 213;</code>
+   * <code>optional double hotel_average_lead_value_micros = 213;</code>
    * @return Whether the hotelAverageLeadValueMicros field is set.
    */
   @java.lang.Override
@@ -2633,7 +2633,7 @@ private static final long serialVersionUID = 0L;
    * Average lead value based on clicks.
    * </pre>
    *
-   * <code>double hotel_average_lead_value_micros = 213;</code>
+   * <code>optional double hotel_average_lead_value_micros = 213;</code>
    * @return The hotelAverageLeadValueMicros.
    */
   @java.lang.Override
@@ -2649,7 +2649,7 @@ private static final long serialVersionUID = 0L;
    * advertiser and the cheapest price offered by the competing advertiser.
    * </pre>
    *
-   * <code>double hotel_price_difference_percentage = 214;</code>
+   * <code>optional double hotel_price_difference_percentage = 214;</code>
    * @return Whether the hotelPriceDifferencePercentage field is set.
    */
   @java.lang.Override
@@ -2662,7 +2662,7 @@ private static final long serialVersionUID = 0L;
    * advertiser and the cheapest price offered by the competing advertiser.
    * </pre>
    *
-   * <code>double hotel_price_difference_percentage = 214;</code>
+   * <code>optional double hotel_price_difference_percentage = 214;</code>
    * @return The hotelPriceDifferencePercentage.
    */
   @java.lang.Override
@@ -2678,7 +2678,7 @@ private static final long serialVersionUID = 0L;
    * feed performance.
    * </pre>
    *
-   * <code>int64 hotel_eligible_impressions = 215;</code>
+   * <code>optional int64 hotel_eligible_impressions = 215;</code>
    * @return Whether the hotelEligibleImpressions field is set.
    */
   @java.lang.Override
@@ -2691,7 +2691,7 @@ private static final long serialVersionUID = 0L;
    * feed performance.
    * </pre>
    *
-   * <code>int64 hotel_eligible_impressions = 215;</code>
+   * <code>optional int64 hotel_eligible_impressions = 215;</code>
    * @return The hotelEligibleImpressions.
    */
   @java.lang.Override
@@ -2760,7 +2760,7 @@ private static final long serialVersionUID = 0L;
    * The historical quality score.
    * </pre>
    *
-   * <code>int64 historical_quality_score = 216;</code>
+   * <code>optional int64 historical_quality_score = 216;</code>
    * @return Whether the historicalQualityScore field is set.
    */
   @java.lang.Override
@@ -2772,7 +2772,7 @@ private static final long serialVersionUID = 0L;
    * The historical quality score.
    * </pre>
    *
-   * <code>int64 historical_quality_score = 216;</code>
+   * <code>optional int64 historical_quality_score = 216;</code>
    * @return The historicalQualityScore.
    */
   @java.lang.Override
@@ -2814,7 +2814,7 @@ private static final long serialVersionUID = 0L;
    * The number of times the ad was forwarded to someone else as a message.
    * </pre>
    *
-   * <code>int64 gmail_forwards = 217;</code>
+   * <code>optional int64 gmail_forwards = 217;</code>
    * @return Whether the gmailForwards field is set.
    */
   @java.lang.Override
@@ -2826,7 +2826,7 @@ private static final long serialVersionUID = 0L;
    * The number of times the ad was forwarded to someone else as a message.
    * </pre>
    *
-   * <code>int64 gmail_forwards = 217;</code>
+   * <code>optional int64 gmail_forwards = 217;</code>
    * @return The gmailForwards.
    */
   @java.lang.Override
@@ -2842,7 +2842,7 @@ private static final long serialVersionUID = 0L;
    * message.
    * </pre>
    *
-   * <code>int64 gmail_saves = 218;</code>
+   * <code>optional int64 gmail_saves = 218;</code>
    * @return Whether the gmailSaves field is set.
    */
   @java.lang.Override
@@ -2855,7 +2855,7 @@ private static final long serialVersionUID = 0L;
    * message.
    * </pre>
    *
-   * <code>int64 gmail_saves = 218;</code>
+   * <code>optional int64 gmail_saves = 218;</code>
    * @return The gmailSaves.
    */
   @java.lang.Override
@@ -2871,7 +2871,7 @@ private static final long serialVersionUID = 0L;
    * ads.
    * </pre>
    *
-   * <code>int64 gmail_secondary_clicks = 219;</code>
+   * <code>optional int64 gmail_secondary_clicks = 219;</code>
    * @return Whether the gmailSecondaryClicks field is set.
    */
   @java.lang.Override
@@ -2884,7 +2884,7 @@ private static final long serialVersionUID = 0L;
    * ads.
    * </pre>
    *
-   * <code>int64 gmail_secondary_clicks = 219;</code>
+   * <code>optional int64 gmail_secondary_clicks = 219;</code>
    * @return The gmailSecondaryClicks.
    */
   @java.lang.Override
@@ -2900,7 +2900,7 @@ private static final long serialVersionUID = 0L;
    * This metric applies to feed items only.
    * </pre>
    *
-   * <code>int64 impressions_from_store_reach = 220;</code>
+   * <code>optional int64 impressions_from_store_reach = 220;</code>
    * @return Whether the impressionsFromStoreReach field is set.
    */
   @java.lang.Override
@@ -2913,7 +2913,7 @@ private static final long serialVersionUID = 0L;
    * This metric applies to feed items only.
    * </pre>
    *
-   * <code>int64 impressions_from_store_reach = 220;</code>
+   * <code>optional int64 impressions_from_store_reach = 220;</code>
    * @return The impressionsFromStoreReach.
    */
   @java.lang.Override
@@ -2929,7 +2929,7 @@ private static final long serialVersionUID = 0L;
    * website on the Google Network.
    * </pre>
    *
-   * <code>int64 impressions = 221;</code>
+   * <code>optional int64 impressions = 221;</code>
    * @return Whether the impressions field is set.
    */
   @java.lang.Override
@@ -2942,7 +2942,7 @@ private static final long serialVersionUID = 0L;
    * website on the Google Network.
    * </pre>
    *
-   * <code>int64 impressions = 221;</code>
+   * <code>optional int64 impressions = 221;</code>
    * @return The impressions.
    */
   @java.lang.Override
@@ -2959,7 +2959,7 @@ private static final long serialVersionUID = 0L;
    * is shown.
    * </pre>
    *
-   * <code>double interaction_rate = 222;</code>
+   * <code>optional double interaction_rate = 222;</code>
    * @return Whether the interactionRate field is set.
    */
   @java.lang.Override
@@ -2973,7 +2973,7 @@ private static final long serialVersionUID = 0L;
    * is shown.
    * </pre>
    *
-   * <code>double interaction_rate = 222;</code>
+   * <code>optional double interaction_rate = 222;</code>
    * @return The interactionRate.
    */
   @java.lang.Override
@@ -2990,7 +2990,7 @@ private static final long serialVersionUID = 0L;
    * for text and shopping ads, views for video ads, and so on.
    * </pre>
    *
-   * <code>int64 interactions = 223;</code>
+   * <code>optional int64 interactions = 223;</code>
    * @return Whether the interactions field is set.
    */
   @java.lang.Override
@@ -3004,7 +3004,7 @@ private static final long serialVersionUID = 0L;
    * for text and shopping ads, views for video ads, and so on.
    * </pre>
    *
-   * <code>int64 interactions = 223;</code>
+   * <code>optional int64 interactions = 223;</code>
    * @return The interactions.
    */
   @java.lang.Override
@@ -3098,7 +3098,7 @@ private static final long serialVersionUID = 0L;
    * (filtered + non-filtered clicks) during the reporting period.
    * </pre>
    *
-   * <code>double invalid_click_rate = 224;</code>
+   * <code>optional double invalid_click_rate = 224;</code>
    * @return Whether the invalidClickRate field is set.
    */
   @java.lang.Override
@@ -3111,7 +3111,7 @@ private static final long serialVersionUID = 0L;
    * (filtered + non-filtered clicks) during the reporting period.
    * </pre>
    *
-   * <code>double invalid_click_rate = 224;</code>
+   * <code>optional double invalid_click_rate = 224;</code>
    * @return The invalidClickRate.
    */
   @java.lang.Override
@@ -3126,7 +3126,7 @@ private static final long serialVersionUID = 0L;
    * Number of clicks Google considers illegitimate and doesn't charge you for.
    * </pre>
    *
-   * <code>int64 invalid_clicks = 225;</code>
+   * <code>optional int64 invalid_clicks = 225;</code>
    * @return Whether the invalidClicks field is set.
    */
   @java.lang.Override
@@ -3138,7 +3138,7 @@ private static final long serialVersionUID = 0L;
    * Number of clicks Google considers illegitimate and doesn't charge you for.
    * </pre>
    *
-   * <code>int64 invalid_clicks = 225;</code>
+   * <code>optional int64 invalid_clicks = 225;</code>
    * @return The invalidClicks.
    */
   @java.lang.Override
@@ -3154,7 +3154,7 @@ private static final long serialVersionUID = 0L;
    * were message tracking eligible.
    * </pre>
    *
-   * <code>int64 message_chats = 226;</code>
+   * <code>optional int64 message_chats = 226;</code>
    * @return Whether the messageChats field is set.
    */
   @java.lang.Override
@@ -3167,7 +3167,7 @@ private static final long serialVersionUID = 0L;
    * were message tracking eligible.
    * </pre>
    *
-   * <code>int64 message_chats = 226;</code>
+   * <code>optional int64 message_chats = 226;</code>
    * @return The messageChats.
    */
   @java.lang.Override
@@ -3182,7 +3182,7 @@ private static final long serialVersionUID = 0L;
    * Number of Click To Message impressions that were message tracking eligible.
    * </pre>
    *
-   * <code>int64 message_impressions = 227;</code>
+   * <code>optional int64 message_impressions = 227;</code>
    * @return Whether the messageImpressions field is set.
    */
   @java.lang.Override
@@ -3194,7 +3194,7 @@ private static final long serialVersionUID = 0L;
    * Number of Click To Message impressions that were message tracking eligible.
    * </pre>
    *
-   * <code>int64 message_impressions = 227;</code>
+   * <code>optional int64 message_impressions = 227;</code>
    * @return The messageImpressions.
    */
   @java.lang.Override
@@ -3213,7 +3213,7 @@ private static final long serialVersionUID = 0L;
    * Note that this rate can be more than 1.0 for a given message impression.
    * </pre>
    *
-   * <code>double message_chat_rate = 228;</code>
+   * <code>optional double message_chat_rate = 228;</code>
    * @return Whether the messageChatRate field is set.
    */
   @java.lang.Override
@@ -3229,7 +3229,7 @@ private static final long serialVersionUID = 0L;
    * Note that this rate can be more than 1.0 for a given message impression.
    * </pre>
    *
-   * <code>double message_chat_rate = 228;</code>
+   * <code>optional double message_chat_rate = 228;</code>
    * @return The messageChatRate.
    */
   @java.lang.Override
@@ -3244,7 +3244,7 @@ private static final long serialVersionUID = 0L;
    * The percentage of mobile clicks that go to a mobile-friendly page.
    * </pre>
    *
-   * <code>double mobile_friendly_clicks_percentage = 229;</code>
+   * <code>optional double mobile_friendly_clicks_percentage = 229;</code>
    * @return Whether the mobileFriendlyClicksPercentage field is set.
    */
   @java.lang.Override
@@ -3256,7 +3256,7 @@ private static final long serialVersionUID = 0L;
    * The percentage of mobile clicks that go to a mobile-friendly page.
    * </pre>
    *
-   * <code>double mobile_friendly_clicks_percentage = 229;</code>
+   * <code>optional double mobile_friendly_clicks_percentage = 229;</code>
    * @return The mobileFriendlyClicksPercentage.
    */
   @java.lang.Override
@@ -3273,7 +3273,7 @@ private static final long serialVersionUID = 0L;
    * https://support.google.com/google-ads/answer/3097241 for details.
    * </pre>
    *
-   * <code>int64 organic_clicks = 230;</code>
+   * <code>optional int64 organic_clicks = 230;</code>
    * @return Whether the organicClicks field is set.
    */
   @java.lang.Override
@@ -3287,7 +3287,7 @@ private static final long serialVersionUID = 0L;
    * https://support.google.com/google-ads/answer/3097241 for details.
    * </pre>
    *
-   * <code>int64 organic_clicks = 230;</code>
+   * <code>optional int64 organic_clicks = 230;</code>
    * @return The organicClicks.
    */
   @java.lang.Override
@@ -3305,7 +3305,7 @@ private static final long serialVersionUID = 0L;
    * https://support.google.com/google-ads/answer/3097241 for details.
    * </pre>
    *
-   * <code>double organic_clicks_per_query = 231;</code>
+   * <code>optional double organic_clicks_per_query = 231;</code>
    * @return Whether the organicClicksPerQuery field is set.
    */
   @java.lang.Override
@@ -3320,7 +3320,7 @@ private static final long serialVersionUID = 0L;
    * https://support.google.com/google-ads/answer/3097241 for details.
    * </pre>
    *
-   * <code>double organic_clicks_per_query = 231;</code>
+   * <code>optional double organic_clicks_per_query = 231;</code>
    * @return The organicClicksPerQuery.
    */
   @java.lang.Override
@@ -3337,7 +3337,7 @@ private static final long serialVersionUID = 0L;
    * details.
    * </pre>
    *
-   * <code>int64 organic_impressions = 232;</code>
+   * <code>optional int64 organic_impressions = 232;</code>
    * @return Whether the organicImpressions field is set.
    */
   @java.lang.Override
@@ -3351,7 +3351,7 @@ private static final long serialVersionUID = 0L;
    * details.
    * </pre>
    *
-   * <code>int64 organic_impressions = 232;</code>
+   * <code>optional int64 organic_impressions = 232;</code>
    * @return The organicImpressions.
    */
   @java.lang.Override
@@ -3369,7 +3369,7 @@ private static final long serialVersionUID = 0L;
    * page at https://support.google.com/google-ads/answer/3097241 for details.
    * </pre>
    *
-   * <code>double organic_impressions_per_query = 233;</code>
+   * <code>optional double organic_impressions_per_query = 233;</code>
    * @return Whether the organicImpressionsPerQuery field is set.
    */
   @java.lang.Override
@@ -3384,7 +3384,7 @@ private static final long serialVersionUID = 0L;
    * page at https://support.google.com/google-ads/answer/3097241 for details.
    * </pre>
    *
-   * <code>double organic_impressions_per_query = 233;</code>
+   * <code>optional double organic_impressions_per_query = 233;</code>
    * @return The organicImpressionsPerQuery.
    */
   @java.lang.Override
@@ -3401,7 +3401,7 @@ private static final long serialVersionUID = 0L;
    * https://support.google.com/google-ads/answer/3097241 for details.
    * </pre>
    *
-   * <code>int64 organic_queries = 234;</code>
+   * <code>optional int64 organic_queries = 234;</code>
    * @return Whether the organicQueries field is set.
    */
   @java.lang.Override
@@ -3415,7 +3415,7 @@ private static final long serialVersionUID = 0L;
    * https://support.google.com/google-ads/answer/3097241 for details.
    * </pre>
    *
-   * <code>int64 organic_queries = 234;</code>
+   * <code>optional int64 organic_queries = 234;</code>
    * @return The organicQueries.
    */
   @java.lang.Override
@@ -3431,7 +3431,7 @@ private static final long serialVersionUID = 0L;
    * site before). Imported from Google Analytics.
    * </pre>
    *
-   * <code>double percent_new_visitors = 235;</code>
+   * <code>optional double percent_new_visitors = 235;</code>
    * @return Whether the percentNewVisitors field is set.
    */
   @java.lang.Override
@@ -3444,7 +3444,7 @@ private static final long serialVersionUID = 0L;
    * site before). Imported from Google Analytics.
    * </pre>
    *
-   * <code>double percent_new_visitors = 235;</code>
+   * <code>optional double percent_new_visitors = 235;</code>
    * @return The percentNewVisitors.
    */
   @java.lang.Override
@@ -3459,7 +3459,7 @@ private static final long serialVersionUID = 0L;
    * Number of offline phone calls.
    * </pre>
    *
-   * <code>int64 phone_calls = 236;</code>
+   * <code>optional int64 phone_calls = 236;</code>
    * @return Whether the phoneCalls field is set.
    */
   @java.lang.Override
@@ -3471,7 +3471,7 @@ private static final long serialVersionUID = 0L;
    * Number of offline phone calls.
    * </pre>
    *
-   * <code>int64 phone_calls = 236;</code>
+   * <code>optional int64 phone_calls = 236;</code>
    * @return The phoneCalls.
    */
   @java.lang.Override
@@ -3486,7 +3486,7 @@ private static final long serialVersionUID = 0L;
    * Number of offline phone impressions.
    * </pre>
    *
-   * <code>int64 phone_impressions = 237;</code>
+   * <code>optional int64 phone_impressions = 237;</code>
    * @return Whether the phoneImpressions field is set.
    */
   @java.lang.Override
@@ -3498,7 +3498,7 @@ private static final long serialVersionUID = 0L;
    * Number of offline phone impressions.
    * </pre>
    *
-   * <code>int64 phone_impressions = 237;</code>
+   * <code>optional int64 phone_impressions = 237;</code>
    * @return The phoneImpressions.
    */
   @java.lang.Override
@@ -3514,7 +3514,7 @@ private static final long serialVersionUID = 0L;
    * times your phone number is shown (phone_impressions).
    * </pre>
    *
-   * <code>double phone_through_rate = 238;</code>
+   * <code>optional double phone_through_rate = 238;</code>
    * @return Whether the phoneThroughRate field is set.
    */
   @java.lang.Override
@@ -3527,7 +3527,7 @@ private static final long serialVersionUID = 0L;
    * times your phone number is shown (phone_impressions).
    * </pre>
    *
-   * <code>double phone_through_rate = 238;</code>
+   * <code>optional double phone_through_rate = 238;</code>
    * @return The phoneThroughRate.
    */
   @java.lang.Override
@@ -3544,7 +3544,7 @@ private static final long serialVersionUID = 0L;
    * perform on Display Network sites compared to other ads on the same sites.
    * </pre>
    *
-   * <code>double relative_ctr = 239;</code>
+   * <code>optional double relative_ctr = 239;</code>
    * @return Whether the relativeCtr field is set.
    */
   @java.lang.Override
@@ -3558,7 +3558,7 @@ private static final long serialVersionUID = 0L;
    * perform on Display Network sites compared to other ads on the same sites.
    * </pre>
    *
-   * <code>double relative_ctr = 239;</code>
+   * <code>optional double relative_ctr = 239;</code>
    * @return The relativeCtr.
    */
   @java.lang.Override
@@ -3576,7 +3576,7 @@ private static final long serialVersionUID = 0L;
    * for details. Any value below 0.1 is reported as 0.0999.
    * </pre>
    *
-   * <code>double search_absolute_top_impression_share = 136;</code>
+   * <code>optional double search_absolute_top_impression_share = 136;</code>
    * @return Whether the searchAbsoluteTopImpressionShare field is set.
    */
   @java.lang.Override
@@ -3591,7 +3591,7 @@ private static final long serialVersionUID = 0L;
    * for details. Any value below 0.1 is reported as 0.0999.
    * </pre>
    *
-   * <code>double search_absolute_top_impression_share = 136;</code>
+   * <code>optional double search_absolute_top_impression_share = 136;</code>
    * @return The searchAbsoluteTopImpressionShare.
    */
   @java.lang.Override
@@ -3609,7 +3609,7 @@ private static final long serialVersionUID = 0L;
    * 0.9. Any value above 0.9 is reported as 0.9001.
    * </pre>
    *
-   * <code>double search_budget_lost_absolute_top_impression_share = 137;</code>
+   * <code>optional double search_budget_lost_absolute_top_impression_share = 137;</code>
    * @return Whether the searchBudgetLostAbsoluteTopImpressionShare field is set.
    */
   @java.lang.Override
@@ -3624,7 +3624,7 @@ private static final long serialVersionUID = 0L;
    * 0.9. Any value above 0.9 is reported as 0.9001.
    * </pre>
    *
-   * <code>double search_budget_lost_absolute_top_impression_share = 137;</code>
+   * <code>optional double search_budget_lost_absolute_top_impression_share = 137;</code>
    * @return The searchBudgetLostAbsoluteTopImpressionShare.
    */
   @java.lang.Override
@@ -3642,7 +3642,7 @@ private static final long serialVersionUID = 0L;
    * value above 0.9 is reported as 0.9001.
    * </pre>
    *
-   * <code>double search_budget_lost_impression_share = 138;</code>
+   * <code>optional double search_budget_lost_impression_share = 138;</code>
    * @return Whether the searchBudgetLostImpressionShare field is set.
    */
   @java.lang.Override
@@ -3657,7 +3657,7 @@ private static final long serialVersionUID = 0L;
    * value above 0.9 is reported as 0.9001.
    * </pre>
    *
-   * <code>double search_budget_lost_impression_share = 138;</code>
+   * <code>optional double search_budget_lost_impression_share = 138;</code>
    * @return The searchBudgetLostImpressionShare.
    */
   @java.lang.Override
@@ -3675,7 +3675,7 @@ private static final long serialVersionUID = 0L;
    * value above 0.9 is reported as 0.9001.
    * </pre>
    *
-   * <code>double search_budget_lost_top_impression_share = 139;</code>
+   * <code>optional double search_budget_lost_top_impression_share = 139;</code>
    * @return Whether the searchBudgetLostTopImpressionShare field is set.
    */
   @java.lang.Override
@@ -3690,7 +3690,7 @@ private static final long serialVersionUID = 0L;
    * value above 0.9 is reported as 0.9001.
    * </pre>
    *
-   * <code>double search_budget_lost_top_impression_share = 139;</code>
+   * <code>optional double search_budget_lost_top_impression_share = 139;</code>
    * @return The searchBudgetLostTopImpressionShare.
    */
   @java.lang.Override
@@ -3708,7 +3708,7 @@ private static final long serialVersionUID = 0L;
    * below 0.1 is reported as 0.0999.
    * </pre>
    *
-   * <code>double search_click_share = 140;</code>
+   * <code>optional double search_click_share = 140;</code>
    * @return Whether the searchClickShare field is set.
    */
   @java.lang.Override
@@ -3723,7 +3723,7 @@ private static final long serialVersionUID = 0L;
    * below 0.1 is reported as 0.0999.
    * </pre>
    *
-   * <code>double search_click_share = 140;</code>
+   * <code>optional double search_click_share = 140;</code>
    * @return The searchClickShare.
    */
   @java.lang.Override
@@ -3743,7 +3743,7 @@ private static final long serialVersionUID = 0L;
    * is reported as 0.0999.
    * </pre>
    *
-   * <code>double search_exact_match_impression_share = 141;</code>
+   * <code>optional double search_exact_match_impression_share = 141;</code>
    * @return Whether the searchExactMatchImpressionShare field is set.
    */
   @java.lang.Override
@@ -3760,7 +3760,7 @@ private static final long serialVersionUID = 0L;
    * is reported as 0.0999.
    * </pre>
    *
-   * <code>double search_exact_match_impression_share = 141;</code>
+   * <code>optional double search_exact_match_impression_share = 141;</code>
    * @return The searchExactMatchImpressionShare.
    */
   @java.lang.Override
@@ -3778,7 +3778,7 @@ private static final long serialVersionUID = 0L;
    * value below 0.1 is reported as 0.0999.
    * </pre>
    *
-   * <code>double search_impression_share = 142;</code>
+   * <code>optional double search_impression_share = 142;</code>
    * @return Whether the searchImpressionShare field is set.
    */
   @java.lang.Override
@@ -3793,7 +3793,7 @@ private static final long serialVersionUID = 0L;
    * value below 0.1 is reported as 0.0999.
    * </pre>
    *
-   * <code>double search_impression_share = 142;</code>
+   * <code>optional double search_impression_share = 142;</code>
    * @return The searchImpressionShare.
    */
   @java.lang.Override
@@ -3811,7 +3811,7 @@ private static final long serialVersionUID = 0L;
    * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
    * </pre>
    *
-   * <code>double search_rank_lost_absolute_top_impression_share = 143;</code>
+   * <code>optional double search_rank_lost_absolute_top_impression_share = 143;</code>
    * @return Whether the searchRankLostAbsoluteTopImpressionShare field is set.
    */
   @java.lang.Override
@@ -3826,7 +3826,7 @@ private static final long serialVersionUID = 0L;
    * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
    * </pre>
    *
-   * <code>double search_rank_lost_absolute_top_impression_share = 143;</code>
+   * <code>optional double search_rank_lost_absolute_top_impression_share = 143;</code>
    * @return The searchRankLostAbsoluteTopImpressionShare.
    */
   @java.lang.Override
@@ -3844,7 +3844,7 @@ private static final long serialVersionUID = 0L;
    * 0.9. Any value above 0.9 is reported as 0.9001.
    * </pre>
    *
-   * <code>double search_rank_lost_impression_share = 144;</code>
+   * <code>optional double search_rank_lost_impression_share = 144;</code>
    * @return Whether the searchRankLostImpressionShare field is set.
    */
   @java.lang.Override
@@ -3859,7 +3859,7 @@ private static final long serialVersionUID = 0L;
    * 0.9. Any value above 0.9 is reported as 0.9001.
    * </pre>
    *
-   * <code>double search_rank_lost_impression_share = 144;</code>
+   * <code>optional double search_rank_lost_impression_share = 144;</code>
    * @return The searchRankLostImpressionShare.
    */
   @java.lang.Override
@@ -3877,7 +3877,7 @@ private static final long serialVersionUID = 0L;
    * to 0.9. Any value above 0.9 is reported as 0.9001.
    * </pre>
    *
-   * <code>double search_rank_lost_top_impression_share = 145;</code>
+   * <code>optional double search_rank_lost_top_impression_share = 145;</code>
    * @return Whether the searchRankLostTopImpressionShare field is set.
    */
   @java.lang.Override
@@ -3892,7 +3892,7 @@ private static final long serialVersionUID = 0L;
    * to 0.9. Any value above 0.9 is reported as 0.9001.
    * </pre>
    *
-   * <code>double search_rank_lost_top_impression_share = 145;</code>
+   * <code>optional double search_rank_lost_top_impression_share = 145;</code>
    * @return The searchRankLostTopImpressionShare.
    */
   @java.lang.Override
@@ -3911,7 +3911,7 @@ private static final long serialVersionUID = 0L;
    * value below 0.1 is reported as 0.0999.
    * </pre>
    *
-   * <code>double search_top_impression_share = 146;</code>
+   * <code>optional double search_top_impression_share = 146;</code>
    * @return Whether the searchTopImpressionShare field is set.
    */
   @java.lang.Override
@@ -3927,7 +3927,7 @@ private static final long serialVersionUID = 0L;
    * value below 0.1 is reported as 0.0999.
    * </pre>
    *
-   * <code>double search_top_impression_share = 146;</code>
+   * <code>optional double search_top_impression_share = 146;</code>
    * @return The searchTopImpressionShare.
    */
   @java.lang.Override
@@ -3943,7 +3943,7 @@ private static final long serialVersionUID = 0L;
    * The score is a range from 1 to 10, 10 being the fastest.
    * </pre>
    *
-   * <code>int64 speed_score = 147;</code>
+   * <code>optional int64 speed_score = 147;</code>
    * @return Whether the speedScore field is set.
    */
   @java.lang.Override
@@ -3956,7 +3956,7 @@ private static final long serialVersionUID = 0L;
    * The score is a range from 1 to 10, 10 being the fastest.
    * </pre>
    *
-   * <code>int64 speed_score = 147;</code>
+   * <code>optional int64 speed_score = 147;</code>
    * @return The speedScore.
    */
   @java.lang.Override
@@ -3972,7 +3972,7 @@ private static final long serialVersionUID = 0L;
    * organic search results.
    * </pre>
    *
-   * <code>double top_impression_percentage = 148;</code>
+   * <code>optional double top_impression_percentage = 148;</code>
    * @return Whether the topImpressionPercentage field is set.
    */
   @java.lang.Override
@@ -3985,7 +3985,7 @@ private static final long serialVersionUID = 0L;
    * organic search results.
    * </pre>
    *
-   * <code>double top_impression_percentage = 148;</code>
+   * <code>optional double top_impression_percentage = 148;</code>
    * @return The topImpressionPercentage.
    */
   @java.lang.Override
@@ -4001,7 +4001,7 @@ private static final long serialVersionUID = 0L;
    * that reach a valid AMP page.
    * </pre>
    *
-   * <code>double valid_accelerated_mobile_pages_clicks_percentage = 149;</code>
+   * <code>optional double valid_accelerated_mobile_pages_clicks_percentage = 149;</code>
    * @return Whether the validAcceleratedMobilePagesClicksPercentage field is set.
    */
   @java.lang.Override
@@ -4014,7 +4014,7 @@ private static final long serialVersionUID = 0L;
    * that reach a valid AMP page.
    * </pre>
    *
-   * <code>double valid_accelerated_mobile_pages_clicks_percentage = 149;</code>
+   * <code>optional double valid_accelerated_mobile_pages_clicks_percentage = 149;</code>
    * @return The validAcceleratedMobilePagesClicksPercentage.
    */
   @java.lang.Override
@@ -4029,7 +4029,7 @@ private static final long serialVersionUID = 0L;
    * The value of all conversions divided by the number of all conversions.
    * </pre>
    *
-   * <code>double value_per_all_conversions = 150;</code>
+   * <code>optional double value_per_all_conversions = 150;</code>
    * @return Whether the valuePerAllConversions field is set.
    */
   @java.lang.Override
@@ -4041,7 +4041,7 @@ private static final long serialVersionUID = 0L;
    * The value of all conversions divided by the number of all conversions.
    * </pre>
    *
-   * <code>double value_per_all_conversions = 150;</code>
+   * <code>optional double value_per_all_conversions = 150;</code>
    * @return The valuePerAllConversions.
    */
   @java.lang.Override
@@ -4059,7 +4059,7 @@ private static final long serialVersionUID = 0L;
    * at https://support.google.com/google-ads/answer/9549009.
    * </pre>
    *
-   * <code>double value_per_all_conversions_by_conversion_date = 244;</code>
+   * <code>optional double value_per_all_conversions_by_conversion_date = 244;</code>
    * @return Whether the valuePerAllConversionsByConversionDate field is set.
    */
   @java.lang.Override
@@ -4074,7 +4074,7 @@ private static final long serialVersionUID = 0L;
    * at https://support.google.com/google-ads/answer/9549009.
    * </pre>
    *
-   * <code>double value_per_all_conversions_by_conversion_date = 244;</code>
+   * <code>optional double value_per_all_conversions_by_conversion_date = 244;</code>
    * @return The valuePerAllConversionsByConversionDate.
    */
   @java.lang.Override
@@ -4092,7 +4092,7 @@ private static final long serialVersionUID = 0L;
    * will optimize for these conversions.
    * </pre>
    *
-   * <code>double value_per_conversion = 151;</code>
+   * <code>optional double value_per_conversion = 151;</code>
    * @return Whether the valuePerConversion field is set.
    */
   @java.lang.Override
@@ -4107,7 +4107,7 @@ private static final long serialVersionUID = 0L;
    * will optimize for these conversions.
    * </pre>
    *
-   * <code>double value_per_conversion = 151;</code>
+   * <code>optional double value_per_conversion = 151;</code>
    * @return The valuePerConversion.
    */
   @java.lang.Override
@@ -4128,7 +4128,7 @@ private static final long serialVersionUID = 0L;
    * https://support.google.com/google-ads/answer/9549009.
    * </pre>
    *
-   * <code>double value_per_conversions_by_conversion_date = 245;</code>
+   * <code>optional double value_per_conversions_by_conversion_date = 245;</code>
    * @return Whether the valuePerConversionsByConversionDate field is set.
    */
   @java.lang.Override
@@ -4146,7 +4146,7 @@ private static final long serialVersionUID = 0L;
    * https://support.google.com/google-ads/answer/9549009.
    * </pre>
    *
-   * <code>double value_per_conversions_by_conversion_date = 245;</code>
+   * <code>optional double value_per_conversions_by_conversion_date = 245;</code>
    * @return The valuePerConversionsByConversionDate.
    */
   @java.lang.Override
@@ -4165,7 +4165,7 @@ private static final long serialVersionUID = 0L;
    * conversions.
    * </pre>
    *
-   * <code>double value_per_current_model_attributed_conversion = 152;</code>
+   * <code>optional double value_per_current_model_attributed_conversion = 152;</code>
    * @return Whether the valuePerCurrentModelAttributedConversion field is set.
    */
   @java.lang.Override
@@ -4181,7 +4181,7 @@ private static final long serialVersionUID = 0L;
    * conversions.
    * </pre>
    *
-   * <code>double value_per_current_model_attributed_conversion = 152;</code>
+   * <code>optional double value_per_current_model_attributed_conversion = 152;</code>
    * @return The valuePerCurrentModelAttributedConversion.
    */
   @java.lang.Override
@@ -4196,7 +4196,7 @@ private static final long serialVersionUID = 0L;
    * Percentage of impressions where the viewer watched all of your video.
    * </pre>
    *
-   * <code>double video_quartile_p100_rate = 132;</code>
+   * <code>optional double video_quartile_p100_rate = 132;</code>
    * @return Whether the videoQuartileP100Rate field is set.
    */
   @java.lang.Override
@@ -4208,7 +4208,7 @@ private static final long serialVersionUID = 0L;
    * Percentage of impressions where the viewer watched all of your video.
    * </pre>
    *
-   * <code>double video_quartile_p100_rate = 132;</code>
+   * <code>optional double video_quartile_p100_rate = 132;</code>
    * @return The videoQuartileP100Rate.
    */
   @java.lang.Override
@@ -4223,7 +4223,7 @@ private static final long serialVersionUID = 0L;
    * Percentage of impressions where the viewer watched 25% of your video.
    * </pre>
    *
-   * <code>double video_quartile_p25_rate = 133;</code>
+   * <code>optional double video_quartile_p25_rate = 133;</code>
    * @return Whether the videoQuartileP25Rate field is set.
    */
   @java.lang.Override
@@ -4235,7 +4235,7 @@ private static final long serialVersionUID = 0L;
    * Percentage of impressions where the viewer watched 25% of your video.
    * </pre>
    *
-   * <code>double video_quartile_p25_rate = 133;</code>
+   * <code>optional double video_quartile_p25_rate = 133;</code>
    * @return The videoQuartileP25Rate.
    */
   @java.lang.Override
@@ -4250,7 +4250,7 @@ private static final long serialVersionUID = 0L;
    * Percentage of impressions where the viewer watched 50% of your video.
    * </pre>
    *
-   * <code>double video_quartile_p50_rate = 134;</code>
+   * <code>optional double video_quartile_p50_rate = 134;</code>
    * @return Whether the videoQuartileP50Rate field is set.
    */
   @java.lang.Override
@@ -4262,7 +4262,7 @@ private static final long serialVersionUID = 0L;
    * Percentage of impressions where the viewer watched 50% of your video.
    * </pre>
    *
-   * <code>double video_quartile_p50_rate = 134;</code>
+   * <code>optional double video_quartile_p50_rate = 134;</code>
    * @return The videoQuartileP50Rate.
    */
   @java.lang.Override
@@ -4277,7 +4277,7 @@ private static final long serialVersionUID = 0L;
    * Percentage of impressions where the viewer watched 75% of your video.
    * </pre>
    *
-   * <code>double video_quartile_p75_rate = 135;</code>
+   * <code>optional double video_quartile_p75_rate = 135;</code>
    * @return Whether the videoQuartileP75Rate field is set.
    */
   @java.lang.Override
@@ -4289,7 +4289,7 @@ private static final long serialVersionUID = 0L;
    * Percentage of impressions where the viewer watched 75% of your video.
    * </pre>
    *
-   * <code>double video_quartile_p75_rate = 135;</code>
+   * <code>optional double video_quartile_p75_rate = 135;</code>
    * @return The videoQuartileP75Rate.
    */
   @java.lang.Override
@@ -4306,7 +4306,7 @@ private static final long serialVersionUID = 0L;
    * ads.
    * </pre>
    *
-   * <code>double video_view_rate = 153;</code>
+   * <code>optional double video_view_rate = 153;</code>
    * @return Whether the videoViewRate field is set.
    */
   @java.lang.Override
@@ -4320,7 +4320,7 @@ private static final long serialVersionUID = 0L;
    * ads.
    * </pre>
    *
-   * <code>double video_view_rate = 153;</code>
+   * <code>optional double video_view_rate = 153;</code>
    * @return The videoViewRate.
    */
   @java.lang.Override
@@ -4335,7 +4335,7 @@ private static final long serialVersionUID = 0L;
    * The number of times your video ads were viewed.
    * </pre>
    *
-   * <code>int64 video_views = 154;</code>
+   * <code>optional int64 video_views = 154;</code>
    * @return Whether the videoViews field is set.
    */
   @java.lang.Override
@@ -4347,7 +4347,7 @@ private static final long serialVersionUID = 0L;
    * The number of times your video ads were viewed.
    * </pre>
    *
-   * <code>int64 video_views = 154;</code>
+   * <code>optional int64 video_views = 154;</code>
    * @return The videoViews.
    */
   @java.lang.Override
@@ -4365,7 +4365,7 @@ private static final long serialVersionUID = 0L;
    * clicking on) another ad.
    * </pre>
    *
-   * <code>int64 view_through_conversions = 155;</code>
+   * <code>optional int64 view_through_conversions = 155;</code>
    * @return Whether the viewThroughConversions field is set.
    */
   @java.lang.Override
@@ -4380,7 +4380,7 @@ private static final long serialVersionUID = 0L;
    * clicking on) another ad.
    * </pre>
    *
-   * <code>int64 view_through_conversions = 155;</code>
+   * <code>optional int64 view_through_conversions = 155;</code>
    * @return The viewThroughConversions.
    */
   @java.lang.Override
@@ -7840,7 +7840,7 @@ private static final long serialVersionUID = 0L;
      * above the organic search results.
      * </pre>
      *
-     * <code>double absolute_top_impression_percentage = 183;</code>
+     * <code>optional double absolute_top_impression_percentage = 183;</code>
      * @return Whether the absoluteTopImpressionPercentage field is set.
      */
     @java.lang.Override
@@ -7853,7 +7853,7 @@ private static final long serialVersionUID = 0L;
      * above the organic search results.
      * </pre>
      *
-     * <code>double absolute_top_impression_percentage = 183;</code>
+     * <code>optional double absolute_top_impression_percentage = 183;</code>
      * @return The absoluteTopImpressionPercentage.
      */
     @java.lang.Override
@@ -7866,7 +7866,7 @@ private static final long serialVersionUID = 0L;
      * above the organic search results.
      * </pre>
      *
-     * <code>double absolute_top_impression_percentage = 183;</code>
+     * <code>optional double absolute_top_impression_percentage = 183;</code>
      * @param value The absoluteTopImpressionPercentage to set.
      * @return This builder for chaining.
      */
@@ -7882,7 +7882,7 @@ private static final long serialVersionUID = 0L;
      * above the organic search results.
      * </pre>
      *
-     * <code>double absolute_top_impression_percentage = 183;</code>
+     * <code>optional double absolute_top_impression_percentage = 183;</code>
      * @return This builder for chaining.
      */
     public Builder clearAbsoluteTopImpressionPercentage() {
@@ -7898,7 +7898,7 @@ private static final long serialVersionUID = 0L;
      * Average cost of viewable impressions (`active_view_impressions`).
      * </pre>
      *
-     * <code>double active_view_cpm = 184;</code>
+     * <code>optional double active_view_cpm = 184;</code>
      * @return Whether the activeViewCpm field is set.
      */
     @java.lang.Override
@@ -7910,7 +7910,7 @@ private static final long serialVersionUID = 0L;
      * Average cost of viewable impressions (`active_view_impressions`).
      * </pre>
      *
-     * <code>double active_view_cpm = 184;</code>
+     * <code>optional double active_view_cpm = 184;</code>
      * @return The activeViewCpm.
      */
     @java.lang.Override
@@ -7922,7 +7922,7 @@ private static final long serialVersionUID = 0L;
      * Average cost of viewable impressions (`active_view_impressions`).
      * </pre>
      *
-     * <code>double active_view_cpm = 184;</code>
+     * <code>optional double active_view_cpm = 184;</code>
      * @param value The activeViewCpm to set.
      * @return This builder for chaining.
      */
@@ -7937,7 +7937,7 @@ private static final long serialVersionUID = 0L;
      * Average cost of viewable impressions (`active_view_impressions`).
      * </pre>
      *
-     * <code>double active_view_cpm = 184;</code>
+     * <code>optional double active_view_cpm = 184;</code>
      * @return This builder for chaining.
      */
     public Builder clearActiveViewCpm() {
@@ -7954,7 +7954,7 @@ private static final long serialVersionUID = 0L;
      * This metric is reported only for display network.
      * </pre>
      *
-     * <code>double active_view_ctr = 185;</code>
+     * <code>optional double active_view_ctr = 185;</code>
      * @return Whether the activeViewCtr field is set.
      */
     @java.lang.Override
@@ -7967,7 +7967,7 @@ private static final long serialVersionUID = 0L;
      * This metric is reported only for display network.
      * </pre>
      *
-     * <code>double active_view_ctr = 185;</code>
+     * <code>optional double active_view_ctr = 185;</code>
      * @return The activeViewCtr.
      */
     @java.lang.Override
@@ -7980,7 +7980,7 @@ private static final long serialVersionUID = 0L;
      * This metric is reported only for display network.
      * </pre>
      *
-     * <code>double active_view_ctr = 185;</code>
+     * <code>optional double active_view_ctr = 185;</code>
      * @param value The activeViewCtr to set.
      * @return This builder for chaining.
      */
@@ -7996,7 +7996,7 @@ private static final long serialVersionUID = 0L;
      * This metric is reported only for display network.
      * </pre>
      *
-     * <code>double active_view_ctr = 185;</code>
+     * <code>optional double active_view_ctr = 185;</code>
      * @return This builder for chaining.
      */
     public Builder clearActiveViewCtr() {
@@ -8013,7 +8013,7 @@ private static final long serialVersionUID = 0L;
      * Network site.
      * </pre>
      *
-     * <code>int64 active_view_impressions = 186;</code>
+     * <code>optional int64 active_view_impressions = 186;</code>
      * @return Whether the activeViewImpressions field is set.
      */
     @java.lang.Override
@@ -8026,7 +8026,7 @@ private static final long serialVersionUID = 0L;
      * Network site.
      * </pre>
      *
-     * <code>int64 active_view_impressions = 186;</code>
+     * <code>optional int64 active_view_impressions = 186;</code>
      * @return The activeViewImpressions.
      */
     @java.lang.Override
@@ -8039,7 +8039,7 @@ private static final long serialVersionUID = 0L;
      * Network site.
      * </pre>
      *
-     * <code>int64 active_view_impressions = 186;</code>
+     * <code>optional int64 active_view_impressions = 186;</code>
      * @param value The activeViewImpressions to set.
      * @return This builder for chaining.
      */
@@ -8055,7 +8055,7 @@ private static final long serialVersionUID = 0L;
      * Network site.
      * </pre>
      *
-     * <code>int64 active_view_impressions = 186;</code>
+     * <code>optional int64 active_view_impressions = 186;</code>
      * @return This builder for chaining.
      */
     public Builder clearActiveViewImpressions() {
@@ -8072,7 +8072,7 @@ private static final long serialVersionUID = 0L;
      * number of served impressions.
      * </pre>
      *
-     * <code>double active_view_measurability = 187;</code>
+     * <code>optional double active_view_measurability = 187;</code>
      * @return Whether the activeViewMeasurability field is set.
      */
     @java.lang.Override
@@ -8085,7 +8085,7 @@ private static final long serialVersionUID = 0L;
      * number of served impressions.
      * </pre>
      *
-     * <code>double active_view_measurability = 187;</code>
+     * <code>optional double active_view_measurability = 187;</code>
      * @return The activeViewMeasurability.
      */
     @java.lang.Override
@@ -8098,7 +8098,7 @@ private static final long serialVersionUID = 0L;
      * number of served impressions.
      * </pre>
      *
-     * <code>double active_view_measurability = 187;</code>
+     * <code>optional double active_view_measurability = 187;</code>
      * @param value The activeViewMeasurability to set.
      * @return This builder for chaining.
      */
@@ -8114,7 +8114,7 @@ private static final long serialVersionUID = 0L;
      * number of served impressions.
      * </pre>
      *
-     * <code>double active_view_measurability = 187;</code>
+     * <code>optional double active_view_measurability = 187;</code>
      * @return This builder for chaining.
      */
     public Builder clearActiveViewMeasurability() {
@@ -8131,7 +8131,7 @@ private static final long serialVersionUID = 0L;
      * View.
      * </pre>
      *
-     * <code>int64 active_view_measurable_cost_micros = 188;</code>
+     * <code>optional int64 active_view_measurable_cost_micros = 188;</code>
      * @return Whether the activeViewMeasurableCostMicros field is set.
      */
     @java.lang.Override
@@ -8144,7 +8144,7 @@ private static final long serialVersionUID = 0L;
      * View.
      * </pre>
      *
-     * <code>int64 active_view_measurable_cost_micros = 188;</code>
+     * <code>optional int64 active_view_measurable_cost_micros = 188;</code>
      * @return The activeViewMeasurableCostMicros.
      */
     @java.lang.Override
@@ -8157,7 +8157,7 @@ private static final long serialVersionUID = 0L;
      * View.
      * </pre>
      *
-     * <code>int64 active_view_measurable_cost_micros = 188;</code>
+     * <code>optional int64 active_view_measurable_cost_micros = 188;</code>
      * @param value The activeViewMeasurableCostMicros to set.
      * @return This builder for chaining.
      */
@@ -8173,7 +8173,7 @@ private static final long serialVersionUID = 0L;
      * View.
      * </pre>
      *
-     * <code>int64 active_view_measurable_cost_micros = 188;</code>
+     * <code>optional int64 active_view_measurable_cost_micros = 188;</code>
      * @return This builder for chaining.
      */
     public Builder clearActiveViewMeasurableCostMicros() {
@@ -8190,7 +8190,7 @@ private static final long serialVersionUID = 0L;
      * where they can be seen.
      * </pre>
      *
-     * <code>int64 active_view_measurable_impressions = 189;</code>
+     * <code>optional int64 active_view_measurable_impressions = 189;</code>
      * @return Whether the activeViewMeasurableImpressions field is set.
      */
     @java.lang.Override
@@ -8203,7 +8203,7 @@ private static final long serialVersionUID = 0L;
      * where they can be seen.
      * </pre>
      *
-     * <code>int64 active_view_measurable_impressions = 189;</code>
+     * <code>optional int64 active_view_measurable_impressions = 189;</code>
      * @return The activeViewMeasurableImpressions.
      */
     @java.lang.Override
@@ -8216,7 +8216,7 @@ private static final long serialVersionUID = 0L;
      * where they can be seen.
      * </pre>
      *
-     * <code>int64 active_view_measurable_impressions = 189;</code>
+     * <code>optional int64 active_view_measurable_impressions = 189;</code>
      * @param value The activeViewMeasurableImpressions to set.
      * @return This builder for chaining.
      */
@@ -8232,7 +8232,7 @@ private static final long serialVersionUID = 0L;
      * where they can be seen.
      * </pre>
      *
-     * <code>int64 active_view_measurable_impressions = 189;</code>
+     * <code>optional int64 active_view_measurable_impressions = 189;</code>
      * @return This builder for chaining.
      */
     public Builder clearActiveViewMeasurableImpressions() {
@@ -8249,7 +8249,7 @@ private static final long serialVersionUID = 0L;
      * (measurable impressions) and was viewable (viewable impressions).
      * </pre>
      *
-     * <code>double active_view_viewability = 190;</code>
+     * <code>optional double active_view_viewability = 190;</code>
      * @return Whether the activeViewViewability field is set.
      */
     @java.lang.Override
@@ -8262,7 +8262,7 @@ private static final long serialVersionUID = 0L;
      * (measurable impressions) and was viewable (viewable impressions).
      * </pre>
      *
-     * <code>double active_view_viewability = 190;</code>
+     * <code>optional double active_view_viewability = 190;</code>
      * @return The activeViewViewability.
      */
     @java.lang.Override
@@ -8275,7 +8275,7 @@ private static final long serialVersionUID = 0L;
      * (measurable impressions) and was viewable (viewable impressions).
      * </pre>
      *
-     * <code>double active_view_viewability = 190;</code>
+     * <code>optional double active_view_viewability = 190;</code>
      * @param value The activeViewViewability to set.
      * @return This builder for chaining.
      */
@@ -8291,7 +8291,7 @@ private static final long serialVersionUID = 0L;
      * (measurable impressions) and was viewable (viewable impressions).
      * </pre>
      *
-     * <code>double active_view_viewability = 190;</code>
+     * <code>optional double active_view_viewability = 190;</code>
      * @return This builder for chaining.
      */
     public Builder clearActiveViewViewability() {
@@ -8308,7 +8308,7 @@ private static final long serialVersionUID = 0L;
      * divided by the number of ad interactions.
      * </pre>
      *
-     * <code>double all_conversions_from_interactions_rate = 191;</code>
+     * <code>optional double all_conversions_from_interactions_rate = 191;</code>
      * @return Whether the allConversionsFromInteractionsRate field is set.
      */
     @java.lang.Override
@@ -8321,7 +8321,7 @@ private static final long serialVersionUID = 0L;
      * divided by the number of ad interactions.
      * </pre>
      *
-     * <code>double all_conversions_from_interactions_rate = 191;</code>
+     * <code>optional double all_conversions_from_interactions_rate = 191;</code>
      * @return The allConversionsFromInteractionsRate.
      */
     @java.lang.Override
@@ -8334,7 +8334,7 @@ private static final long serialVersionUID = 0L;
      * divided by the number of ad interactions.
      * </pre>
      *
-     * <code>double all_conversions_from_interactions_rate = 191;</code>
+     * <code>optional double all_conversions_from_interactions_rate = 191;</code>
      * @param value The allConversionsFromInteractionsRate to set.
      * @return This builder for chaining.
      */
@@ -8350,7 +8350,7 @@ private static final long serialVersionUID = 0L;
      * divided by the number of ad interactions.
      * </pre>
      *
-     * <code>double all_conversions_from_interactions_rate = 191;</code>
+     * <code>optional double all_conversions_from_interactions_rate = 191;</code>
      * @return This builder for chaining.
      */
     public Builder clearAllConversionsFromInteractionsRate() {
@@ -8366,7 +8366,7 @@ private static final long serialVersionUID = 0L;
      * The value of all conversions.
      * </pre>
      *
-     * <code>double all_conversions_value = 192;</code>
+     * <code>optional double all_conversions_value = 192;</code>
      * @return Whether the allConversionsValue field is set.
      */
     @java.lang.Override
@@ -8378,7 +8378,7 @@ private static final long serialVersionUID = 0L;
      * The value of all conversions.
      * </pre>
      *
-     * <code>double all_conversions_value = 192;</code>
+     * <code>optional double all_conversions_value = 192;</code>
      * @return The allConversionsValue.
      */
     @java.lang.Override
@@ -8390,7 +8390,7 @@ private static final long serialVersionUID = 0L;
      * The value of all conversions.
      * </pre>
      *
-     * <code>double all_conversions_value = 192;</code>
+     * <code>optional double all_conversions_value = 192;</code>
      * @param value The allConversionsValue to set.
      * @return This builder for chaining.
      */
@@ -8405,7 +8405,7 @@ private static final long serialVersionUID = 0L;
      * The value of all conversions.
      * </pre>
      *
-     * <code>double all_conversions_value = 192;</code>
+     * <code>optional double all_conversions_value = 192;</code>
      * @return This builder for chaining.
      */
     public Builder clearAllConversionsValue() {
@@ -8474,7 +8474,7 @@ private static final long serialVersionUID = 0L;
      * of the value of include_in_conversions_metric.
      * </pre>
      *
-     * <code>double all_conversions = 193;</code>
+     * <code>optional double all_conversions = 193;</code>
      * @return Whether the allConversions field is set.
      */
     @java.lang.Override
@@ -8487,7 +8487,7 @@ private static final long serialVersionUID = 0L;
      * of the value of include_in_conversions_metric.
      * </pre>
      *
-     * <code>double all_conversions = 193;</code>
+     * <code>optional double all_conversions = 193;</code>
      * @return The allConversions.
      */
     @java.lang.Override
@@ -8500,7 +8500,7 @@ private static final long serialVersionUID = 0L;
      * of the value of include_in_conversions_metric.
      * </pre>
      *
-     * <code>double all_conversions = 193;</code>
+     * <code>optional double all_conversions = 193;</code>
      * @param value The allConversions to set.
      * @return This builder for chaining.
      */
@@ -8516,7 +8516,7 @@ private static final long serialVersionUID = 0L;
      * of the value of include_in_conversions_metric.
      * </pre>
      *
-     * <code>double all_conversions = 193;</code>
+     * <code>optional double all_conversions = 193;</code>
      * @return This builder for chaining.
      */
     public Builder clearAllConversions() {
@@ -8588,7 +8588,7 @@ private static final long serialVersionUID = 0L;
      * (such as clicks for text ads or views for video ads).
      * </pre>
      *
-     * <code>double all_conversions_value_per_cost = 194;</code>
+     * <code>optional double all_conversions_value_per_cost = 194;</code>
      * @return Whether the allConversionsValuePerCost field is set.
      */
     @java.lang.Override
@@ -8601,7 +8601,7 @@ private static final long serialVersionUID = 0L;
      * (such as clicks for text ads or views for video ads).
      * </pre>
      *
-     * <code>double all_conversions_value_per_cost = 194;</code>
+     * <code>optional double all_conversions_value_per_cost = 194;</code>
      * @return The allConversionsValuePerCost.
      */
     @java.lang.Override
@@ -8614,7 +8614,7 @@ private static final long serialVersionUID = 0L;
      * (such as clicks for text ads or views for video ads).
      * </pre>
      *
-     * <code>double all_conversions_value_per_cost = 194;</code>
+     * <code>optional double all_conversions_value_per_cost = 194;</code>
      * @param value The allConversionsValuePerCost to set.
      * @return This builder for chaining.
      */
@@ -8630,7 +8630,7 @@ private static final long serialVersionUID = 0L;
      * (such as clicks for text ads or views for video ads).
      * </pre>
      *
-     * <code>double all_conversions_value_per_cost = 194;</code>
+     * <code>optional double all_conversions_value_per_cost = 194;</code>
      * @return This builder for chaining.
      */
     public Builder clearAllConversionsValuePerCost() {
@@ -8649,7 +8649,7 @@ private static final long serialVersionUID = 0L;
      * This metric applies to feed items only.
      * </pre>
      *
-     * <code>double all_conversions_from_click_to_call = 195;</code>
+     * <code>optional double all_conversions_from_click_to_call = 195;</code>
      * @return Whether the allConversionsFromClickToCall field is set.
      */
     @java.lang.Override
@@ -8664,7 +8664,7 @@ private static final long serialVersionUID = 0L;
      * This metric applies to feed items only.
      * </pre>
      *
-     * <code>double all_conversions_from_click_to_call = 195;</code>
+     * <code>optional double all_conversions_from_click_to_call = 195;</code>
      * @return The allConversionsFromClickToCall.
      */
     @java.lang.Override
@@ -8679,7 +8679,7 @@ private static final long serialVersionUID = 0L;
      * This metric applies to feed items only.
      * </pre>
      *
-     * <code>double all_conversions_from_click_to_call = 195;</code>
+     * <code>optional double all_conversions_from_click_to_call = 195;</code>
      * @param value The allConversionsFromClickToCall to set.
      * @return This builder for chaining.
      */
@@ -8697,7 +8697,7 @@ private static final long serialVersionUID = 0L;
      * This metric applies to feed items only.
      * </pre>
      *
-     * <code>double all_conversions_from_click_to_call = 195;</code>
+     * <code>optional double all_conversions_from_click_to_call = 195;</code>
      * @return This builder for chaining.
      */
     public Builder clearAllConversionsFromClickToCall() {
@@ -8715,7 +8715,7 @@ private static final long serialVersionUID = 0L;
      * This metric applies to feed items only.
      * </pre>
      *
-     * <code>double all_conversions_from_directions = 196;</code>
+     * <code>optional double all_conversions_from_directions = 196;</code>
      * @return Whether the allConversionsFromDirections field is set.
      */
     @java.lang.Override
@@ -8729,7 +8729,7 @@ private static final long serialVersionUID = 0L;
      * This metric applies to feed items only.
      * </pre>
      *
-     * <code>double all_conversions_from_directions = 196;</code>
+     * <code>optional double all_conversions_from_directions = 196;</code>
      * @return The allConversionsFromDirections.
      */
     @java.lang.Override
@@ -8743,7 +8743,7 @@ private static final long serialVersionUID = 0L;
      * This metric applies to feed items only.
      * </pre>
      *
-     * <code>double all_conversions_from_directions = 196;</code>
+     * <code>optional double all_conversions_from_directions = 196;</code>
      * @param value The allConversionsFromDirections to set.
      * @return This builder for chaining.
      */
@@ -8760,7 +8760,7 @@ private static final long serialVersionUID = 0L;
      * This metric applies to feed items only.
      * </pre>
      *
-     * <code>double all_conversions_from_directions = 196;</code>
+     * <code>optional double all_conversions_from_directions = 196;</code>
      * @return This builder for chaining.
      */
     public Builder clearAllConversionsFromDirections() {
@@ -8777,7 +8777,7 @@ private static final long serialVersionUID = 0L;
      * of interactions.
      * </pre>
      *
-     * <code>double all_conversions_from_interactions_value_per_interaction = 197;</code>
+     * <code>optional double all_conversions_from_interactions_value_per_interaction = 197;</code>
      * @return Whether the allConversionsFromInteractionsValuePerInteraction field is set.
      */
     @java.lang.Override
@@ -8790,7 +8790,7 @@ private static final long serialVersionUID = 0L;
      * of interactions.
      * </pre>
      *
-     * <code>double all_conversions_from_interactions_value_per_interaction = 197;</code>
+     * <code>optional double all_conversions_from_interactions_value_per_interaction = 197;</code>
      * @return The allConversionsFromInteractionsValuePerInteraction.
      */
     @java.lang.Override
@@ -8803,7 +8803,7 @@ private static final long serialVersionUID = 0L;
      * of interactions.
      * </pre>
      *
-     * <code>double all_conversions_from_interactions_value_per_interaction = 197;</code>
+     * <code>optional double all_conversions_from_interactions_value_per_interaction = 197;</code>
      * @param value The allConversionsFromInteractionsValuePerInteraction to set.
      * @return This builder for chaining.
      */
@@ -8819,7 +8819,7 @@ private static final long serialVersionUID = 0L;
      * of interactions.
      * </pre>
      *
-     * <code>double all_conversions_from_interactions_value_per_interaction = 197;</code>
+     * <code>optional double all_conversions_from_interactions_value_per_interaction = 197;</code>
      * @return This builder for chaining.
      */
     public Builder clearAllConversionsFromInteractionsValuePerInteraction() {
@@ -8837,7 +8837,7 @@ private static final long serialVersionUID = 0L;
      * This metric applies to feed items only.
      * </pre>
      *
-     * <code>double all_conversions_from_menu = 198;</code>
+     * <code>optional double all_conversions_from_menu = 198;</code>
      * @return Whether the allConversionsFromMenu field is set.
      */
     @java.lang.Override
@@ -8851,7 +8851,7 @@ private static final long serialVersionUID = 0L;
      * This metric applies to feed items only.
      * </pre>
      *
-     * <code>double all_conversions_from_menu = 198;</code>
+     * <code>optional double all_conversions_from_menu = 198;</code>
      * @return The allConversionsFromMenu.
      */
     @java.lang.Override
@@ -8865,7 +8865,7 @@ private static final long serialVersionUID = 0L;
      * This metric applies to feed items only.
      * </pre>
      *
-     * <code>double all_conversions_from_menu = 198;</code>
+     * <code>optional double all_conversions_from_menu = 198;</code>
      * @param value The allConversionsFromMenu to set.
      * @return This builder for chaining.
      */
@@ -8882,7 +8882,7 @@ private static final long serialVersionUID = 0L;
      * This metric applies to feed items only.
      * </pre>
      *
-     * <code>double all_conversions_from_menu = 198;</code>
+     * <code>optional double all_conversions_from_menu = 198;</code>
      * @return This builder for chaining.
      */
     public Builder clearAllConversionsFromMenu() {
@@ -8899,7 +8899,7 @@ private static final long serialVersionUID = 0L;
      * This metric applies to feed items only.
      * </pre>
      *
-     * <code>double all_conversions_from_order = 199;</code>
+     * <code>optional double all_conversions_from_order = 199;</code>
      * @return Whether the allConversionsFromOrder field is set.
      */
     @java.lang.Override
@@ -8912,7 +8912,7 @@ private static final long serialVersionUID = 0L;
      * This metric applies to feed items only.
      * </pre>
      *
-     * <code>double all_conversions_from_order = 199;</code>
+     * <code>optional double all_conversions_from_order = 199;</code>
      * @return The allConversionsFromOrder.
      */
     @java.lang.Override
@@ -8925,7 +8925,7 @@ private static final long serialVersionUID = 0L;
      * This metric applies to feed items only.
      * </pre>
      *
-     * <code>double all_conversions_from_order = 199;</code>
+     * <code>optional double all_conversions_from_order = 199;</code>
      * @param value The allConversionsFromOrder to set.
      * @return This builder for chaining.
      */
@@ -8941,7 +8941,7 @@ private static final long serialVersionUID = 0L;
      * This metric applies to feed items only.
      * </pre>
      *
-     * <code>double all_conversions_from_order = 199;</code>
+     * <code>optional double all_conversions_from_order = 199;</code>
      * @return This builder for chaining.
      */
     public Builder clearAllConversionsFromOrder() {
@@ -8959,7 +8959,7 @@ private static final long serialVersionUID = 0L;
      * This metric applies to feed items only.
      * </pre>
      *
-     * <code>double all_conversions_from_other_engagement = 200;</code>
+     * <code>optional double all_conversions_from_other_engagement = 200;</code>
      * @return Whether the allConversionsFromOtherEngagement field is set.
      */
     @java.lang.Override
@@ -8973,7 +8973,7 @@ private static final long serialVersionUID = 0L;
      * This metric applies to feed items only.
      * </pre>
      *
-     * <code>double all_conversions_from_other_engagement = 200;</code>
+     * <code>optional double all_conversions_from_other_engagement = 200;</code>
      * @return The allConversionsFromOtherEngagement.
      */
     @java.lang.Override
@@ -8987,7 +8987,7 @@ private static final long serialVersionUID = 0L;
      * This metric applies to feed items only.
      * </pre>
      *
-     * <code>double all_conversions_from_other_engagement = 200;</code>
+     * <code>optional double all_conversions_from_other_engagement = 200;</code>
      * @param value The allConversionsFromOtherEngagement to set.
      * @return This builder for chaining.
      */
@@ -9004,7 +9004,7 @@ private static final long serialVersionUID = 0L;
      * This metric applies to feed items only.
      * </pre>
      *
-     * <code>double all_conversions_from_other_engagement = 200;</code>
+     * <code>optional double all_conversions_from_other_engagement = 200;</code>
      * @return This builder for chaining.
      */
     public Builder clearAllConversionsFromOtherEngagement() {
@@ -9021,7 +9021,7 @@ private static final long serialVersionUID = 0L;
      * This metric applies to feed items only.
      * </pre>
      *
-     * <code>double all_conversions_from_store_visit = 201;</code>
+     * <code>optional double all_conversions_from_store_visit = 201;</code>
      * @return Whether the allConversionsFromStoreVisit field is set.
      */
     @java.lang.Override
@@ -9034,7 +9034,7 @@ private static final long serialVersionUID = 0L;
      * This metric applies to feed items only.
      * </pre>
      *
-     * <code>double all_conversions_from_store_visit = 201;</code>
+     * <code>optional double all_conversions_from_store_visit = 201;</code>
      * @return The allConversionsFromStoreVisit.
      */
     @java.lang.Override
@@ -9047,7 +9047,7 @@ private static final long serialVersionUID = 0L;
      * This metric applies to feed items only.
      * </pre>
      *
-     * <code>double all_conversions_from_store_visit = 201;</code>
+     * <code>optional double all_conversions_from_store_visit = 201;</code>
      * @param value The allConversionsFromStoreVisit to set.
      * @return This builder for chaining.
      */
@@ -9063,7 +9063,7 @@ private static final long serialVersionUID = 0L;
      * This metric applies to feed items only.
      * </pre>
      *
-     * <code>double all_conversions_from_store_visit = 201;</code>
+     * <code>optional double all_conversions_from_store_visit = 201;</code>
      * @return This builder for chaining.
      */
     public Builder clearAllConversionsFromStoreVisit() {
@@ -9081,7 +9081,7 @@ private static final long serialVersionUID = 0L;
      * This metric applies to feed items only.
      * </pre>
      *
-     * <code>double all_conversions_from_store_website = 202;</code>
+     * <code>optional double all_conversions_from_store_website = 202;</code>
      * @return Whether the allConversionsFromStoreWebsite field is set.
      */
     @java.lang.Override
@@ -9095,7 +9095,7 @@ private static final long serialVersionUID = 0L;
      * This metric applies to feed items only.
      * </pre>
      *
-     * <code>double all_conversions_from_store_website = 202;</code>
+     * <code>optional double all_conversions_from_store_website = 202;</code>
      * @return The allConversionsFromStoreWebsite.
      */
     @java.lang.Override
@@ -9109,7 +9109,7 @@ private static final long serialVersionUID = 0L;
      * This metric applies to feed items only.
      * </pre>
      *
-     * <code>double all_conversions_from_store_website = 202;</code>
+     * <code>optional double all_conversions_from_store_website = 202;</code>
      * @param value The allConversionsFromStoreWebsite to set.
      * @return This builder for chaining.
      */
@@ -9126,7 +9126,7 @@ private static final long serialVersionUID = 0L;
      * This metric applies to feed items only.
      * </pre>
      *
-     * <code>double all_conversions_from_store_website = 202;</code>
+     * <code>optional double all_conversions_from_store_website = 202;</code>
      * @return This builder for chaining.
      */
     public Builder clearAllConversionsFromStoreWebsite() {
@@ -9143,7 +9143,7 @@ private static final long serialVersionUID = 0L;
      * of your ads divided by the total number of interactions.
      * </pre>
      *
-     * <code>double average_cost = 203;</code>
+     * <code>optional double average_cost = 203;</code>
      * @return Whether the averageCost field is set.
      */
     @java.lang.Override
@@ -9156,7 +9156,7 @@ private static final long serialVersionUID = 0L;
      * of your ads divided by the total number of interactions.
      * </pre>
      *
-     * <code>double average_cost = 203;</code>
+     * <code>optional double average_cost = 203;</code>
      * @return The averageCost.
      */
     @java.lang.Override
@@ -9169,7 +9169,7 @@ private static final long serialVersionUID = 0L;
      * of your ads divided by the total number of interactions.
      * </pre>
      *
-     * <code>double average_cost = 203;</code>
+     * <code>optional double average_cost = 203;</code>
      * @param value The averageCost to set.
      * @return This builder for chaining.
      */
@@ -9185,7 +9185,7 @@ private static final long serialVersionUID = 0L;
      * of your ads divided by the total number of interactions.
      * </pre>
      *
-     * <code>double average_cost = 203;</code>
+     * <code>optional double average_cost = 203;</code>
      * @return This builder for chaining.
      */
     public Builder clearAverageCost() {
@@ -9202,7 +9202,7 @@ private static final long serialVersionUID = 0L;
      * received.
      * </pre>
      *
-     * <code>double average_cpc = 204;</code>
+     * <code>optional double average_cpc = 204;</code>
      * @return Whether the averageCpc field is set.
      */
     @java.lang.Override
@@ -9215,7 +9215,7 @@ private static final long serialVersionUID = 0L;
      * received.
      * </pre>
      *
-     * <code>double average_cpc = 204;</code>
+     * <code>optional double average_cpc = 204;</code>
      * @return The averageCpc.
      */
     @java.lang.Override
@@ -9228,7 +9228,7 @@ private static final long serialVersionUID = 0L;
      * received.
      * </pre>
      *
-     * <code>double average_cpc = 204;</code>
+     * <code>optional double average_cpc = 204;</code>
      * @param value The averageCpc to set.
      * @return This builder for chaining.
      */
@@ -9244,7 +9244,7 @@ private static final long serialVersionUID = 0L;
      * received.
      * </pre>
      *
-     * <code>double average_cpc = 204;</code>
+     * <code>optional double average_cpc = 204;</code>
      * @return This builder for chaining.
      */
     public Builder clearAverageCpc() {
@@ -9262,7 +9262,7 @@ private static final long serialVersionUID = 0L;
      * of ad engagements.
      * </pre>
      *
-     * <code>double average_cpe = 205;</code>
+     * <code>optional double average_cpe = 205;</code>
      * @return Whether the averageCpe field is set.
      */
     @java.lang.Override
@@ -9276,7 +9276,7 @@ private static final long serialVersionUID = 0L;
      * of ad engagements.
      * </pre>
      *
-     * <code>double average_cpe = 205;</code>
+     * <code>optional double average_cpe = 205;</code>
      * @return The averageCpe.
      */
     @java.lang.Override
@@ -9290,7 +9290,7 @@ private static final long serialVersionUID = 0L;
      * of ad engagements.
      * </pre>
      *
-     * <code>double average_cpe = 205;</code>
+     * <code>optional double average_cpe = 205;</code>
      * @param value The averageCpe to set.
      * @return This builder for chaining.
      */
@@ -9307,7 +9307,7 @@ private static final long serialVersionUID = 0L;
      * of ad engagements.
      * </pre>
      *
-     * <code>double average_cpe = 205;</code>
+     * <code>optional double average_cpe = 205;</code>
      * @return This builder for chaining.
      */
     public Builder clearAverageCpe() {
@@ -9323,7 +9323,7 @@ private static final long serialVersionUID = 0L;
      * Average cost-per-thousand impressions (CPM).
      * </pre>
      *
-     * <code>double average_cpm = 206;</code>
+     * <code>optional double average_cpm = 206;</code>
      * @return Whether the averageCpm field is set.
      */
     @java.lang.Override
@@ -9335,7 +9335,7 @@ private static final long serialVersionUID = 0L;
      * Average cost-per-thousand impressions (CPM).
      * </pre>
      *
-     * <code>double average_cpm = 206;</code>
+     * <code>optional double average_cpm = 206;</code>
      * @return The averageCpm.
      */
     @java.lang.Override
@@ -9347,7 +9347,7 @@ private static final long serialVersionUID = 0L;
      * Average cost-per-thousand impressions (CPM).
      * </pre>
      *
-     * <code>double average_cpm = 206;</code>
+     * <code>optional double average_cpm = 206;</code>
      * @param value The averageCpm to set.
      * @return This builder for chaining.
      */
@@ -9362,7 +9362,7 @@ private static final long serialVersionUID = 0L;
      * Average cost-per-thousand impressions (CPM).
      * </pre>
      *
-     * <code>double average_cpm = 206;</code>
+     * <code>optional double average_cpm = 206;</code>
      * @return This builder for chaining.
      */
     public Builder clearAverageCpm() {
@@ -9380,7 +9380,7 @@ private static final long serialVersionUID = 0L;
      * the number of views.
      * </pre>
      *
-     * <code>double average_cpv = 207;</code>
+     * <code>optional double average_cpv = 207;</code>
      * @return Whether the averageCpv field is set.
      */
     @java.lang.Override
@@ -9394,7 +9394,7 @@ private static final long serialVersionUID = 0L;
      * the number of views.
      * </pre>
      *
-     * <code>double average_cpv = 207;</code>
+     * <code>optional double average_cpv = 207;</code>
      * @return The averageCpv.
      */
     @java.lang.Override
@@ -9408,7 +9408,7 @@ private static final long serialVersionUID = 0L;
      * the number of views.
      * </pre>
      *
-     * <code>double average_cpv = 207;</code>
+     * <code>optional double average_cpv = 207;</code>
      * @param value The averageCpv to set.
      * @return This builder for chaining.
      */
@@ -9425,7 +9425,7 @@ private static final long serialVersionUID = 0L;
      * the number of views.
      * </pre>
      *
-     * <code>double average_cpv = 207;</code>
+     * <code>optional double average_cpv = 207;</code>
      * @return This builder for chaining.
      */
     public Builder clearAverageCpv() {
@@ -9441,7 +9441,7 @@ private static final long serialVersionUID = 0L;
      * Average number of pages viewed per session.
      * </pre>
      *
-     * <code>double average_page_views = 208;</code>
+     * <code>optional double average_page_views = 208;</code>
      * @return Whether the averagePageViews field is set.
      */
     @java.lang.Override
@@ -9453,7 +9453,7 @@ private static final long serialVersionUID = 0L;
      * Average number of pages viewed per session.
      * </pre>
      *
-     * <code>double average_page_views = 208;</code>
+     * <code>optional double average_page_views = 208;</code>
      * @return The averagePageViews.
      */
     @java.lang.Override
@@ -9465,7 +9465,7 @@ private static final long serialVersionUID = 0L;
      * Average number of pages viewed per session.
      * </pre>
      *
-     * <code>double average_page_views = 208;</code>
+     * <code>optional double average_page_views = 208;</code>
      * @param value The averagePageViews to set.
      * @return This builder for chaining.
      */
@@ -9480,7 +9480,7 @@ private static final long serialVersionUID = 0L;
      * Average number of pages viewed per session.
      * </pre>
      *
-     * <code>double average_page_views = 208;</code>
+     * <code>optional double average_page_views = 208;</code>
      * @return This builder for chaining.
      */
     public Builder clearAveragePageViews() {
@@ -9497,7 +9497,7 @@ private static final long serialVersionUID = 0L;
      * from Google Analytics.
      * </pre>
      *
-     * <code>double average_time_on_site = 209;</code>
+     * <code>optional double average_time_on_site = 209;</code>
      * @return Whether the averageTimeOnSite field is set.
      */
     @java.lang.Override
@@ -9510,7 +9510,7 @@ private static final long serialVersionUID = 0L;
      * from Google Analytics.
      * </pre>
      *
-     * <code>double average_time_on_site = 209;</code>
+     * <code>optional double average_time_on_site = 209;</code>
      * @return The averageTimeOnSite.
      */
     @java.lang.Override
@@ -9523,7 +9523,7 @@ private static final long serialVersionUID = 0L;
      * from Google Analytics.
      * </pre>
      *
-     * <code>double average_time_on_site = 209;</code>
+     * <code>optional double average_time_on_site = 209;</code>
      * @param value The averageTimeOnSite to set.
      * @return This builder for chaining.
      */
@@ -9539,7 +9539,7 @@ private static final long serialVersionUID = 0L;
      * from Google Analytics.
      * </pre>
      *
-     * <code>double average_time_on_site = 209;</code>
+     * <code>optional double average_time_on_site = 209;</code>
      * @return This builder for chaining.
      */
     public Builder clearAverageTimeOnSite() {
@@ -9555,7 +9555,7 @@ private static final long serialVersionUID = 0L;
      * An indication of how other advertisers are bidding on similar products.
      * </pre>
      *
-     * <code>double benchmark_average_max_cpc = 210;</code>
+     * <code>optional double benchmark_average_max_cpc = 210;</code>
      * @return Whether the benchmarkAverageMaxCpc field is set.
      */
     @java.lang.Override
@@ -9567,7 +9567,7 @@ private static final long serialVersionUID = 0L;
      * An indication of how other advertisers are bidding on similar products.
      * </pre>
      *
-     * <code>double benchmark_average_max_cpc = 210;</code>
+     * <code>optional double benchmark_average_max_cpc = 210;</code>
      * @return The benchmarkAverageMaxCpc.
      */
     @java.lang.Override
@@ -9579,7 +9579,7 @@ private static final long serialVersionUID = 0L;
      * An indication of how other advertisers are bidding on similar products.
      * </pre>
      *
-     * <code>double benchmark_average_max_cpc = 210;</code>
+     * <code>optional double benchmark_average_max_cpc = 210;</code>
      * @param value The benchmarkAverageMaxCpc to set.
      * @return This builder for chaining.
      */
@@ -9594,7 +9594,7 @@ private static final long serialVersionUID = 0L;
      * An indication of how other advertisers are bidding on similar products.
      * </pre>
      *
-     * <code>double benchmark_average_max_cpc = 210;</code>
+     * <code>optional double benchmark_average_max_cpc = 210;</code>
      * @return This builder for chaining.
      */
     public Builder clearBenchmarkAverageMaxCpc() {
@@ -9611,7 +9611,7 @@ private static final long serialVersionUID = 0L;
      * are performing based on how often people who see their ad click on it.
      * </pre>
      *
-     * <code>double benchmark_ctr = 211;</code>
+     * <code>optional double benchmark_ctr = 211;</code>
      * @return Whether the benchmarkCtr field is set.
      */
     @java.lang.Override
@@ -9624,7 +9624,7 @@ private static final long serialVersionUID = 0L;
      * are performing based on how often people who see their ad click on it.
      * </pre>
      *
-     * <code>double benchmark_ctr = 211;</code>
+     * <code>optional double benchmark_ctr = 211;</code>
      * @return The benchmarkCtr.
      */
     @java.lang.Override
@@ -9637,7 +9637,7 @@ private static final long serialVersionUID = 0L;
      * are performing based on how often people who see their ad click on it.
      * </pre>
      *
-     * <code>double benchmark_ctr = 211;</code>
+     * <code>optional double benchmark_ctr = 211;</code>
      * @param value The benchmarkCtr to set.
      * @return This builder for chaining.
      */
@@ -9653,7 +9653,7 @@ private static final long serialVersionUID = 0L;
      * are performing based on how often people who see their ad click on it.
      * </pre>
      *
-     * <code>double benchmark_ctr = 211;</code>
+     * <code>optional double benchmark_ctr = 211;</code>
      * @return This builder for chaining.
      */
     public Builder clearBenchmarkCtr() {
@@ -9670,7 +9670,7 @@ private static final long serialVersionUID = 0L;
      * site. Imported from Google Analytics.
      * </pre>
      *
-     * <code>double bounce_rate = 212;</code>
+     * <code>optional double bounce_rate = 212;</code>
      * @return Whether the bounceRate field is set.
      */
     @java.lang.Override
@@ -9683,7 +9683,7 @@ private static final long serialVersionUID = 0L;
      * site. Imported from Google Analytics.
      * </pre>
      *
-     * <code>double bounce_rate = 212;</code>
+     * <code>optional double bounce_rate = 212;</code>
      * @return The bounceRate.
      */
     @java.lang.Override
@@ -9696,7 +9696,7 @@ private static final long serialVersionUID = 0L;
      * site. Imported from Google Analytics.
      * </pre>
      *
-     * <code>double bounce_rate = 212;</code>
+     * <code>optional double bounce_rate = 212;</code>
      * @param value The bounceRate to set.
      * @return This builder for chaining.
      */
@@ -9712,7 +9712,7 @@ private static final long serialVersionUID = 0L;
      * site. Imported from Google Analytics.
      * </pre>
      *
-     * <code>double bounce_rate = 212;</code>
+     * <code>optional double bounce_rate = 212;</code>
      * @return This builder for chaining.
      */
     public Builder clearBounceRate() {
@@ -9728,7 +9728,7 @@ private static final long serialVersionUID = 0L;
      * The number of clicks.
      * </pre>
      *
-     * <code>int64 clicks = 131;</code>
+     * <code>optional int64 clicks = 131;</code>
      * @return Whether the clicks field is set.
      */
     @java.lang.Override
@@ -9740,7 +9740,7 @@ private static final long serialVersionUID = 0L;
      * The number of clicks.
      * </pre>
      *
-     * <code>int64 clicks = 131;</code>
+     * <code>optional int64 clicks = 131;</code>
      * @return The clicks.
      */
     @java.lang.Override
@@ -9752,7 +9752,7 @@ private static final long serialVersionUID = 0L;
      * The number of clicks.
      * </pre>
      *
-     * <code>int64 clicks = 131;</code>
+     * <code>optional int64 clicks = 131;</code>
      * @param value The clicks to set.
      * @return This builder for chaining.
      */
@@ -9767,7 +9767,7 @@ private static final long serialVersionUID = 0L;
      * The number of clicks.
      * </pre>
      *
-     * <code>int64 clicks = 131;</code>
+     * <code>optional int64 clicks = 131;</code>
      * @return This builder for chaining.
      */
     public Builder clearClicks() {
@@ -9785,7 +9785,7 @@ private static final long serialVersionUID = 0L;
      * https://support.google.com/google-ads/answer/3097241 for details.
      * </pre>
      *
-     * <code>int64 combined_clicks = 156;</code>
+     * <code>optional int64 combined_clicks = 156;</code>
      * @return Whether the combinedClicks field is set.
      */
     @java.lang.Override
@@ -9799,7 +9799,7 @@ private static final long serialVersionUID = 0L;
      * https://support.google.com/google-ads/answer/3097241 for details.
      * </pre>
      *
-     * <code>int64 combined_clicks = 156;</code>
+     * <code>optional int64 combined_clicks = 156;</code>
      * @return The combinedClicks.
      */
     @java.lang.Override
@@ -9813,7 +9813,7 @@ private static final long serialVersionUID = 0L;
      * https://support.google.com/google-ads/answer/3097241 for details.
      * </pre>
      *
-     * <code>int64 combined_clicks = 156;</code>
+     * <code>optional int64 combined_clicks = 156;</code>
      * @param value The combinedClicks to set.
      * @return This builder for chaining.
      */
@@ -9830,7 +9830,7 @@ private static final long serialVersionUID = 0L;
      * https://support.google.com/google-ads/answer/3097241 for details.
      * </pre>
      *
-     * <code>int64 combined_clicks = 156;</code>
+     * <code>optional int64 combined_clicks = 156;</code>
      * @return This builder for chaining.
      */
     public Builder clearCombinedClicks() {
@@ -9849,7 +9849,7 @@ private static final long serialVersionUID = 0L;
      * details.
      * </pre>
      *
-     * <code>double combined_clicks_per_query = 157;</code>
+     * <code>optional double combined_clicks_per_query = 157;</code>
      * @return Whether the combinedClicksPerQuery field is set.
      */
     @java.lang.Override
@@ -9864,7 +9864,7 @@ private static final long serialVersionUID = 0L;
      * details.
      * </pre>
      *
-     * <code>double combined_clicks_per_query = 157;</code>
+     * <code>optional double combined_clicks_per_query = 157;</code>
      * @return The combinedClicksPerQuery.
      */
     @java.lang.Override
@@ -9879,7 +9879,7 @@ private static final long serialVersionUID = 0L;
      * details.
      * </pre>
      *
-     * <code>double combined_clicks_per_query = 157;</code>
+     * <code>optional double combined_clicks_per_query = 157;</code>
      * @param value The combinedClicksPerQuery to set.
      * @return This builder for chaining.
      */
@@ -9897,7 +9897,7 @@ private static final long serialVersionUID = 0L;
      * details.
      * </pre>
      *
-     * <code>double combined_clicks_per_query = 157;</code>
+     * <code>optional double combined_clicks_per_query = 157;</code>
      * @return This builder for chaining.
      */
     public Builder clearCombinedClicksPerQuery() {
@@ -9915,7 +9915,7 @@ private static final long serialVersionUID = 0L;
      * https://support.google.com/google-ads/answer/3097241 for details.
      * </pre>
      *
-     * <code>int64 combined_queries = 158;</code>
+     * <code>optional int64 combined_queries = 158;</code>
      * @return Whether the combinedQueries field is set.
      */
     @java.lang.Override
@@ -9929,7 +9929,7 @@ private static final long serialVersionUID = 0L;
      * https://support.google.com/google-ads/answer/3097241 for details.
      * </pre>
      *
-     * <code>int64 combined_queries = 158;</code>
+     * <code>optional int64 combined_queries = 158;</code>
      * @return The combinedQueries.
      */
     @java.lang.Override
@@ -9943,7 +9943,7 @@ private static final long serialVersionUID = 0L;
      * https://support.google.com/google-ads/answer/3097241 for details.
      * </pre>
      *
-     * <code>int64 combined_queries = 158;</code>
+     * <code>optional int64 combined_queries = 158;</code>
      * @param value The combinedQueries to set.
      * @return This builder for chaining.
      */
@@ -9960,7 +9960,7 @@ private static final long serialVersionUID = 0L;
      * https://support.google.com/google-ads/answer/3097241 for details.
      * </pre>
      *
-     * <code>int64 combined_queries = 158;</code>
+     * <code>optional int64 combined_queries = 158;</code>
      * @return This builder for chaining.
      */
     public Builder clearCombinedQueries() {
@@ -9979,7 +9979,7 @@ private static final long serialVersionUID = 0L;
      * to 0.9. Any value above 0.9 is reported as 0.9001.
      * </pre>
      *
-     * <code>double content_budget_lost_impression_share = 159;</code>
+     * <code>optional double content_budget_lost_impression_share = 159;</code>
      * @return Whether the contentBudgetLostImpressionShare field is set.
      */
     @java.lang.Override
@@ -9994,7 +9994,7 @@ private static final long serialVersionUID = 0L;
      * to 0.9. Any value above 0.9 is reported as 0.9001.
      * </pre>
      *
-     * <code>double content_budget_lost_impression_share = 159;</code>
+     * <code>optional double content_budget_lost_impression_share = 159;</code>
      * @return The contentBudgetLostImpressionShare.
      */
     @java.lang.Override
@@ -10009,7 +10009,7 @@ private static final long serialVersionUID = 0L;
      * to 0.9. Any value above 0.9 is reported as 0.9001.
      * </pre>
      *
-     * <code>double content_budget_lost_impression_share = 159;</code>
+     * <code>optional double content_budget_lost_impression_share = 159;</code>
      * @param value The contentBudgetLostImpressionShare to set.
      * @return This builder for chaining.
      */
@@ -10027,7 +10027,7 @@ private static final long serialVersionUID = 0L;
      * to 0.9. Any value above 0.9 is reported as 0.9001.
      * </pre>
      *
-     * <code>double content_budget_lost_impression_share = 159;</code>
+     * <code>optional double content_budget_lost_impression_share = 159;</code>
      * @return This builder for chaining.
      */
     public Builder clearContentBudgetLostImpressionShare() {
@@ -10046,7 +10046,7 @@ private static final long serialVersionUID = 0L;
      * value below 0.1 is reported as 0.0999.
      * </pre>
      *
-     * <code>double content_impression_share = 160;</code>
+     * <code>optional double content_impression_share = 160;</code>
      * @return Whether the contentImpressionShare field is set.
      */
     @java.lang.Override
@@ -10061,7 +10061,7 @@ private static final long serialVersionUID = 0L;
      * value below 0.1 is reported as 0.0999.
      * </pre>
      *
-     * <code>double content_impression_share = 160;</code>
+     * <code>optional double content_impression_share = 160;</code>
      * @return The contentImpressionShare.
      */
     @java.lang.Override
@@ -10076,7 +10076,7 @@ private static final long serialVersionUID = 0L;
      * value below 0.1 is reported as 0.0999.
      * </pre>
      *
-     * <code>double content_impression_share = 160;</code>
+     * <code>optional double content_impression_share = 160;</code>
      * @param value The contentImpressionShare to set.
      * @return This builder for chaining.
      */
@@ -10094,7 +10094,7 @@ private static final long serialVersionUID = 0L;
      * value below 0.1 is reported as 0.0999.
      * </pre>
      *
-     * <code>double content_impression_share = 160;</code>
+     * <code>optional double content_impression_share = 160;</code>
      * @return This builder for chaining.
      */
     public Builder clearContentImpressionShare() {
@@ -10114,7 +10114,7 @@ private static final long serialVersionUID = 0L;
      * advertiser). The date/time is in the customer's time zone.
      * </pre>
      *
-     * <code>string conversion_last_received_request_date_time = 161;</code>
+     * <code>optional string conversion_last_received_request_date_time = 161;</code>
      * @return Whether the conversionLastReceivedRequestDateTime field is set.
      */
     public boolean hasConversionLastReceivedRequestDateTime() {
@@ -10129,7 +10129,7 @@ private static final long serialVersionUID = 0L;
      * advertiser). The date/time is in the customer's time zone.
      * </pre>
      *
-     * <code>string conversion_last_received_request_date_time = 161;</code>
+     * <code>optional string conversion_last_received_request_date_time = 161;</code>
      * @return The conversionLastReceivedRequestDateTime.
      */
     public java.lang.String getConversionLastReceivedRequestDateTime() {
@@ -10153,7 +10153,7 @@ private static final long serialVersionUID = 0L;
      * advertiser). The date/time is in the customer's time zone.
      * </pre>
      *
-     * <code>string conversion_last_received_request_date_time = 161;</code>
+     * <code>optional string conversion_last_received_request_date_time = 161;</code>
      * @return The bytes for conversionLastReceivedRequestDateTime.
      */
     public com.google.protobuf.ByteString
@@ -10178,7 +10178,7 @@ private static final long serialVersionUID = 0L;
      * advertiser). The date/time is in the customer's time zone.
      * </pre>
      *
-     * <code>string conversion_last_received_request_date_time = 161;</code>
+     * <code>optional string conversion_last_received_request_date_time = 161;</code>
      * @param value The conversionLastReceivedRequestDateTime to set.
      * @return This builder for chaining.
      */
@@ -10201,7 +10201,7 @@ private static final long serialVersionUID = 0L;
      * advertiser). The date/time is in the customer's time zone.
      * </pre>
      *
-     * <code>string conversion_last_received_request_date_time = 161;</code>
+     * <code>optional string conversion_last_received_request_date_time = 161;</code>
      * @return This builder for chaining.
      */
     public Builder clearConversionLastReceivedRequestDateTime() {
@@ -10219,7 +10219,7 @@ private static final long serialVersionUID = 0L;
      * advertiser). The date/time is in the customer's time zone.
      * </pre>
      *
-     * <code>string conversion_last_received_request_date_time = 161;</code>
+     * <code>optional string conversion_last_received_request_date_time = 161;</code>
      * @param value The bytes for conversionLastReceivedRequestDateTime to set.
      * @return This builder for chaining.
      */
@@ -10242,7 +10242,7 @@ private static final long serialVersionUID = 0L;
      * is in the customer's time zone.
      * </pre>
      *
-     * <code>string conversion_last_conversion_date = 162;</code>
+     * <code>optional string conversion_last_conversion_date = 162;</code>
      * @return Whether the conversionLastConversionDate field is set.
      */
     public boolean hasConversionLastConversionDate() {
@@ -10254,7 +10254,7 @@ private static final long serialVersionUID = 0L;
      * is in the customer's time zone.
      * </pre>
      *
-     * <code>string conversion_last_conversion_date = 162;</code>
+     * <code>optional string conversion_last_conversion_date = 162;</code>
      * @return The conversionLastConversionDate.
      */
     public java.lang.String getConversionLastConversionDate() {
@@ -10275,7 +10275,7 @@ private static final long serialVersionUID = 0L;
      * is in the customer's time zone.
      * </pre>
      *
-     * <code>string conversion_last_conversion_date = 162;</code>
+     * <code>optional string conversion_last_conversion_date = 162;</code>
      * @return The bytes for conversionLastConversionDate.
      */
     public com.google.protobuf.ByteString
@@ -10297,7 +10297,7 @@ private static final long serialVersionUID = 0L;
      * is in the customer's time zone.
      * </pre>
      *
-     * <code>string conversion_last_conversion_date = 162;</code>
+     * <code>optional string conversion_last_conversion_date = 162;</code>
      * @param value The conversionLastConversionDate to set.
      * @return This builder for chaining.
      */
@@ -10317,7 +10317,7 @@ private static final long serialVersionUID = 0L;
      * is in the customer's time zone.
      * </pre>
      *
-     * <code>string conversion_last_conversion_date = 162;</code>
+     * <code>optional string conversion_last_conversion_date = 162;</code>
      * @return This builder for chaining.
      */
     public Builder clearConversionLastConversionDate() {
@@ -10332,7 +10332,7 @@ private static final long serialVersionUID = 0L;
      * is in the customer's time zone.
      * </pre>
      *
-     * <code>string conversion_last_conversion_date = 162;</code>
+     * <code>optional string conversion_last_conversion_date = 162;</code>
      * @param value The bytes for conversionLastConversionDate to set.
      * @return This builder for chaining.
      */
@@ -10357,7 +10357,7 @@ private static final long serialVersionUID = 0L;
      * to 0.9. Any value above 0.9 is reported as 0.9001.
      * </pre>
      *
-     * <code>double content_rank_lost_impression_share = 163;</code>
+     * <code>optional double content_rank_lost_impression_share = 163;</code>
      * @return Whether the contentRankLostImpressionShare field is set.
      */
     @java.lang.Override
@@ -10372,7 +10372,7 @@ private static final long serialVersionUID = 0L;
      * to 0.9. Any value above 0.9 is reported as 0.9001.
      * </pre>
      *
-     * <code>double content_rank_lost_impression_share = 163;</code>
+     * <code>optional double content_rank_lost_impression_share = 163;</code>
      * @return The contentRankLostImpressionShare.
      */
     @java.lang.Override
@@ -10387,7 +10387,7 @@ private static final long serialVersionUID = 0L;
      * to 0.9. Any value above 0.9 is reported as 0.9001.
      * </pre>
      *
-     * <code>double content_rank_lost_impression_share = 163;</code>
+     * <code>optional double content_rank_lost_impression_share = 163;</code>
      * @param value The contentRankLostImpressionShare to set.
      * @return This builder for chaining.
      */
@@ -10405,7 +10405,7 @@ private static final long serialVersionUID = 0L;
      * to 0.9. Any value above 0.9 is reported as 0.9001.
      * </pre>
      *
-     * <code>double content_rank_lost_impression_share = 163;</code>
+     * <code>optional double content_rank_lost_impression_share = 163;</code>
      * @return This builder for chaining.
      */
     public Builder clearContentRankLostImpressionShare() {
@@ -10425,7 +10425,7 @@ private static final long serialVersionUID = 0L;
      * optimize for these conversions.
      * </pre>
      *
-     * <code>double conversions_from_interactions_rate = 164;</code>
+     * <code>optional double conversions_from_interactions_rate = 164;</code>
      * @return Whether the conversionsFromInteractionsRate field is set.
      */
     @java.lang.Override
@@ -10441,7 +10441,7 @@ private static final long serialVersionUID = 0L;
      * optimize for these conversions.
      * </pre>
      *
-     * <code>double conversions_from_interactions_rate = 164;</code>
+     * <code>optional double conversions_from_interactions_rate = 164;</code>
      * @return The conversionsFromInteractionsRate.
      */
     @java.lang.Override
@@ -10457,7 +10457,7 @@ private static final long serialVersionUID = 0L;
      * optimize for these conversions.
      * </pre>
      *
-     * <code>double conversions_from_interactions_rate = 164;</code>
+     * <code>optional double conversions_from_interactions_rate = 164;</code>
      * @param value The conversionsFromInteractionsRate to set.
      * @return This builder for chaining.
      */
@@ -10476,7 +10476,7 @@ private static final long serialVersionUID = 0L;
      * optimize for these conversions.
      * </pre>
      *
-     * <code>double conversions_from_interactions_rate = 164;</code>
+     * <code>optional double conversions_from_interactions_rate = 164;</code>
      * @return This builder for chaining.
      */
     public Builder clearConversionsFromInteractionsRate() {
@@ -10495,7 +10495,7 @@ private static final long serialVersionUID = 0L;
      * conversions.
      * </pre>
      *
-     * <code>double conversions_value = 165;</code>
+     * <code>optional double conversions_value = 165;</code>
      * @return Whether the conversionsValue field is set.
      */
     @java.lang.Override
@@ -10510,7 +10510,7 @@ private static final long serialVersionUID = 0L;
      * conversions.
      * </pre>
      *
-     * <code>double conversions_value = 165;</code>
+     * <code>optional double conversions_value = 165;</code>
      * @return The conversionsValue.
      */
     @java.lang.Override
@@ -10525,7 +10525,7 @@ private static final long serialVersionUID = 0L;
      * conversions.
      * </pre>
      *
-     * <code>double conversions_value = 165;</code>
+     * <code>optional double conversions_value = 165;</code>
      * @param value The conversionsValue to set.
      * @return This builder for chaining.
      */
@@ -10543,7 +10543,7 @@ private static final long serialVersionUID = 0L;
      * conversions.
      * </pre>
      *
-     * <code>double conversions_value = 165;</code>
+     * <code>optional double conversions_value = 165;</code>
      * @return This builder for chaining.
      */
     public Builder clearConversionsValue() {
@@ -10623,7 +10623,7 @@ private static final long serialVersionUID = 0L;
      * will optimize for these conversions.
      * </pre>
      *
-     * <code>double conversions_value_per_cost = 166;</code>
+     * <code>optional double conversions_value_per_cost = 166;</code>
      * @return Whether the conversionsValuePerCost field is set.
      */
     @java.lang.Override
@@ -10638,7 +10638,7 @@ private static final long serialVersionUID = 0L;
      * will optimize for these conversions.
      * </pre>
      *
-     * <code>double conversions_value_per_cost = 166;</code>
+     * <code>optional double conversions_value_per_cost = 166;</code>
      * @return The conversionsValuePerCost.
      */
     @java.lang.Override
@@ -10653,7 +10653,7 @@ private static final long serialVersionUID = 0L;
      * will optimize for these conversions.
      * </pre>
      *
-     * <code>double conversions_value_per_cost = 166;</code>
+     * <code>optional double conversions_value_per_cost = 166;</code>
      * @param value The conversionsValuePerCost to set.
      * @return This builder for chaining.
      */
@@ -10671,7 +10671,7 @@ private static final long serialVersionUID = 0L;
      * will optimize for these conversions.
      * </pre>
      *
-     * <code>double conversions_value_per_cost = 166;</code>
+     * <code>optional double conversions_value_per_cost = 166;</code>
      * @return This builder for chaining.
      */
     public Builder clearConversionsValuePerCost() {
@@ -10691,7 +10691,7 @@ private static final long serialVersionUID = 0L;
      * conversions.
      * </pre>
      *
-     * <code>double conversions_from_interactions_value_per_interaction = 167;</code>
+     * <code>optional double conversions_from_interactions_value_per_interaction = 167;</code>
      * @return Whether the conversionsFromInteractionsValuePerInteraction field is set.
      */
     @java.lang.Override
@@ -10707,7 +10707,7 @@ private static final long serialVersionUID = 0L;
      * conversions.
      * </pre>
      *
-     * <code>double conversions_from_interactions_value_per_interaction = 167;</code>
+     * <code>optional double conversions_from_interactions_value_per_interaction = 167;</code>
      * @return The conversionsFromInteractionsValuePerInteraction.
      */
     @java.lang.Override
@@ -10723,7 +10723,7 @@ private static final long serialVersionUID = 0L;
      * conversions.
      * </pre>
      *
-     * <code>double conversions_from_interactions_value_per_interaction = 167;</code>
+     * <code>optional double conversions_from_interactions_value_per_interaction = 167;</code>
      * @param value The conversionsFromInteractionsValuePerInteraction to set.
      * @return This builder for chaining.
      */
@@ -10742,7 +10742,7 @@ private static final long serialVersionUID = 0L;
      * conversions.
      * </pre>
      *
-     * <code>double conversions_from_interactions_value_per_interaction = 167;</code>
+     * <code>optional double conversions_from_interactions_value_per_interaction = 167;</code>
      * @return This builder for chaining.
      */
     public Builder clearConversionsFromInteractionsValuePerInteraction() {
@@ -10761,7 +10761,7 @@ private static final long serialVersionUID = 0L;
      * conversions.
      * </pre>
      *
-     * <code>double conversions = 168;</code>
+     * <code>optional double conversions = 168;</code>
      * @return Whether the conversions field is set.
      */
     @java.lang.Override
@@ -10776,7 +10776,7 @@ private static final long serialVersionUID = 0L;
      * conversions.
      * </pre>
      *
-     * <code>double conversions = 168;</code>
+     * <code>optional double conversions = 168;</code>
      * @return The conversions.
      */
     @java.lang.Override
@@ -10791,7 +10791,7 @@ private static final long serialVersionUID = 0L;
      * conversions.
      * </pre>
      *
-     * <code>double conversions = 168;</code>
+     * <code>optional double conversions = 168;</code>
      * @param value The conversions to set.
      * @return This builder for chaining.
      */
@@ -10809,7 +10809,7 @@ private static final long serialVersionUID = 0L;
      * conversions.
      * </pre>
      *
-     * <code>double conversions = 168;</code>
+     * <code>optional double conversions = 168;</code>
      * @return This builder for chaining.
      */
     public Builder clearConversions() {
@@ -10887,7 +10887,7 @@ private static final long serialVersionUID = 0L;
      * (CPM) costs during this period.
      * </pre>
      *
-     * <code>int64 cost_micros = 169;</code>
+     * <code>optional int64 cost_micros = 169;</code>
      * @return Whether the costMicros field is set.
      */
     @java.lang.Override
@@ -10900,7 +10900,7 @@ private static final long serialVersionUID = 0L;
      * (CPM) costs during this period.
      * </pre>
      *
-     * <code>int64 cost_micros = 169;</code>
+     * <code>optional int64 cost_micros = 169;</code>
      * @return The costMicros.
      */
     @java.lang.Override
@@ -10913,7 +10913,7 @@ private static final long serialVersionUID = 0L;
      * (CPM) costs during this period.
      * </pre>
      *
-     * <code>int64 cost_micros = 169;</code>
+     * <code>optional int64 cost_micros = 169;</code>
      * @param value The costMicros to set.
      * @return This builder for chaining.
      */
@@ -10929,7 +10929,7 @@ private static final long serialVersionUID = 0L;
      * (CPM) costs during this period.
      * </pre>
      *
-     * <code>int64 cost_micros = 169;</code>
+     * <code>optional int64 cost_micros = 169;</code>
      * @return This builder for chaining.
      */
     public Builder clearCostMicros() {
@@ -10945,7 +10945,7 @@ private static final long serialVersionUID = 0L;
      * The cost of ad interactions divided by all conversions.
      * </pre>
      *
-     * <code>double cost_per_all_conversions = 170;</code>
+     * <code>optional double cost_per_all_conversions = 170;</code>
      * @return Whether the costPerAllConversions field is set.
      */
     @java.lang.Override
@@ -10957,7 +10957,7 @@ private static final long serialVersionUID = 0L;
      * The cost of ad interactions divided by all conversions.
      * </pre>
      *
-     * <code>double cost_per_all_conversions = 170;</code>
+     * <code>optional double cost_per_all_conversions = 170;</code>
      * @return The costPerAllConversions.
      */
     @java.lang.Override
@@ -10969,7 +10969,7 @@ private static final long serialVersionUID = 0L;
      * The cost of ad interactions divided by all conversions.
      * </pre>
      *
-     * <code>double cost_per_all_conversions = 170;</code>
+     * <code>optional double cost_per_all_conversions = 170;</code>
      * @param value The costPerAllConversions to set.
      * @return This builder for chaining.
      */
@@ -10984,7 +10984,7 @@ private static final long serialVersionUID = 0L;
      * The cost of ad interactions divided by all conversions.
      * </pre>
      *
-     * <code>double cost_per_all_conversions = 170;</code>
+     * <code>optional double cost_per_all_conversions = 170;</code>
      * @return This builder for chaining.
      */
     public Builder clearCostPerAllConversions() {
@@ -11003,7 +11003,7 @@ private static final long serialVersionUID = 0L;
      * optimize for these conversions.
      * </pre>
      *
-     * <code>double cost_per_conversion = 171;</code>
+     * <code>optional double cost_per_conversion = 171;</code>
      * @return Whether the costPerConversion field is set.
      */
     @java.lang.Override
@@ -11018,7 +11018,7 @@ private static final long serialVersionUID = 0L;
      * optimize for these conversions.
      * </pre>
      *
-     * <code>double cost_per_conversion = 171;</code>
+     * <code>optional double cost_per_conversion = 171;</code>
      * @return The costPerConversion.
      */
     @java.lang.Override
@@ -11033,7 +11033,7 @@ private static final long serialVersionUID = 0L;
      * optimize for these conversions.
      * </pre>
      *
-     * <code>double cost_per_conversion = 171;</code>
+     * <code>optional double cost_per_conversion = 171;</code>
      * @param value The costPerConversion to set.
      * @return This builder for chaining.
      */
@@ -11051,7 +11051,7 @@ private static final long serialVersionUID = 0L;
      * optimize for these conversions.
      * </pre>
      *
-     * <code>double cost_per_conversion = 171;</code>
+     * <code>optional double cost_per_conversion = 171;</code>
      * @return This builder for chaining.
      */
     public Builder clearCostPerConversion() {
@@ -11071,7 +11071,7 @@ private static final long serialVersionUID = 0L;
      * conversions.
      * </pre>
      *
-     * <code>double cost_per_current_model_attributed_conversion = 172;</code>
+     * <code>optional double cost_per_current_model_attributed_conversion = 172;</code>
      * @return Whether the costPerCurrentModelAttributedConversion field is set.
      */
     @java.lang.Override
@@ -11087,7 +11087,7 @@ private static final long serialVersionUID = 0L;
      * conversions.
      * </pre>
      *
-     * <code>double cost_per_current_model_attributed_conversion = 172;</code>
+     * <code>optional double cost_per_current_model_attributed_conversion = 172;</code>
      * @return The costPerCurrentModelAttributedConversion.
      */
     @java.lang.Override
@@ -11103,7 +11103,7 @@ private static final long serialVersionUID = 0L;
      * conversions.
      * </pre>
      *
-     * <code>double cost_per_current_model_attributed_conversion = 172;</code>
+     * <code>optional double cost_per_current_model_attributed_conversion = 172;</code>
      * @param value The costPerCurrentModelAttributedConversion to set.
      * @return This builder for chaining.
      */
@@ -11122,7 +11122,7 @@ private static final long serialVersionUID = 0L;
      * conversions.
      * </pre>
      *
-     * <code>double cost_per_current_model_attributed_conversion = 172;</code>
+     * <code>optional double cost_per_current_model_attributed_conversion = 172;</code>
      * @return This builder for chaining.
      */
     public Builder clearCostPerCurrentModelAttributedConversion() {
@@ -11140,7 +11140,7 @@ private static final long serialVersionUID = 0L;
      * Cross-device conversions are already included in all_conversions.
      * </pre>
      *
-     * <code>double cross_device_conversions = 173;</code>
+     * <code>optional double cross_device_conversions = 173;</code>
      * @return Whether the crossDeviceConversions field is set.
      */
     @java.lang.Override
@@ -11154,7 +11154,7 @@ private static final long serialVersionUID = 0L;
      * Cross-device conversions are already included in all_conversions.
      * </pre>
      *
-     * <code>double cross_device_conversions = 173;</code>
+     * <code>optional double cross_device_conversions = 173;</code>
      * @return The crossDeviceConversions.
      */
     @java.lang.Override
@@ -11168,7 +11168,7 @@ private static final long serialVersionUID = 0L;
      * Cross-device conversions are already included in all_conversions.
      * </pre>
      *
-     * <code>double cross_device_conversions = 173;</code>
+     * <code>optional double cross_device_conversions = 173;</code>
      * @param value The crossDeviceConversions to set.
      * @return This builder for chaining.
      */
@@ -11185,7 +11185,7 @@ private static final long serialVersionUID = 0L;
      * Cross-device conversions are already included in all_conversions.
      * </pre>
      *
-     * <code>double cross_device_conversions = 173;</code>
+     * <code>optional double cross_device_conversions = 173;</code>
      * @return This builder for chaining.
      */
     public Builder clearCrossDeviceConversions() {
@@ -11202,7 +11202,7 @@ private static final long serialVersionUID = 0L;
      * of times your ad is shown (Impressions).
      * </pre>
      *
-     * <code>double ctr = 174;</code>
+     * <code>optional double ctr = 174;</code>
      * @return Whether the ctr field is set.
      */
     @java.lang.Override
@@ -11215,7 +11215,7 @@ private static final long serialVersionUID = 0L;
      * of times your ad is shown (Impressions).
      * </pre>
      *
-     * <code>double ctr = 174;</code>
+     * <code>optional double ctr = 174;</code>
      * @return The ctr.
      */
     @java.lang.Override
@@ -11228,7 +11228,7 @@ private static final long serialVersionUID = 0L;
      * of times your ad is shown (Impressions).
      * </pre>
      *
-     * <code>double ctr = 174;</code>
+     * <code>optional double ctr = 174;</code>
      * @param value The ctr to set.
      * @return This builder for chaining.
      */
@@ -11244,7 +11244,7 @@ private static final long serialVersionUID = 0L;
      * of times your ad is shown (Impressions).
      * </pre>
      *
-     * <code>double ctr = 174;</code>
+     * <code>optional double ctr = 174;</code>
      * @return This builder for chaining.
      */
     public Builder clearCtr() {
@@ -11264,7 +11264,7 @@ private static final long serialVersionUID = 0L;
      * conversions.
      * </pre>
      *
-     * <code>double current_model_attributed_conversions = 175;</code>
+     * <code>optional double current_model_attributed_conversions = 175;</code>
      * @return Whether the currentModelAttributedConversions field is set.
      */
     @java.lang.Override
@@ -11280,7 +11280,7 @@ private static final long serialVersionUID = 0L;
      * conversions.
      * </pre>
      *
-     * <code>double current_model_attributed_conversions = 175;</code>
+     * <code>optional double current_model_attributed_conversions = 175;</code>
      * @return The currentModelAttributedConversions.
      */
     @java.lang.Override
@@ -11296,7 +11296,7 @@ private static final long serialVersionUID = 0L;
      * conversions.
      * </pre>
      *
-     * <code>double current_model_attributed_conversions = 175;</code>
+     * <code>optional double current_model_attributed_conversions = 175;</code>
      * @param value The currentModelAttributedConversions to set.
      * @return This builder for chaining.
      */
@@ -11315,7 +11315,7 @@ private static final long serialVersionUID = 0L;
      * conversions.
      * </pre>
      *
-     * <code>double current_model_attributed_conversions = 175;</code>
+     * <code>optional double current_model_attributed_conversions = 175;</code>
      * @return This builder for chaining.
      */
     public Builder clearCurrentModelAttributedConversions() {
@@ -11336,7 +11336,7 @@ private static final long serialVersionUID = 0L;
      * conversions.
      * </pre>
      *
-     * <code>double current_model_attributed_conversions_from_interactions_rate = 176;</code>
+     * <code>optional double current_model_attributed_conversions_from_interactions_rate = 176;</code>
      * @return Whether the currentModelAttributedConversionsFromInteractionsRate field is set.
      */
     @java.lang.Override
@@ -11353,7 +11353,7 @@ private static final long serialVersionUID = 0L;
      * conversions.
      * </pre>
      *
-     * <code>double current_model_attributed_conversions_from_interactions_rate = 176;</code>
+     * <code>optional double current_model_attributed_conversions_from_interactions_rate = 176;</code>
      * @return The currentModelAttributedConversionsFromInteractionsRate.
      */
     @java.lang.Override
@@ -11370,7 +11370,7 @@ private static final long serialVersionUID = 0L;
      * conversions.
      * </pre>
      *
-     * <code>double current_model_attributed_conversions_from_interactions_rate = 176;</code>
+     * <code>optional double current_model_attributed_conversions_from_interactions_rate = 176;</code>
      * @param value The currentModelAttributedConversionsFromInteractionsRate to set.
      * @return This builder for chaining.
      */
@@ -11390,7 +11390,7 @@ private static final long serialVersionUID = 0L;
      * conversions.
      * </pre>
      *
-     * <code>double current_model_attributed_conversions_from_interactions_rate = 176;</code>
+     * <code>optional double current_model_attributed_conversions_from_interactions_rate = 176;</code>
      * @return This builder for chaining.
      */
     public Builder clearCurrentModelAttributedConversionsFromInteractionsRate() {
@@ -11410,7 +11410,7 @@ private static final long serialVersionUID = 0L;
      * conversions.
      * </pre>
      *
-     * <code>double current_model_attributed_conversions_from_interactions_value_per_interaction = 177;</code>
+     * <code>optional double current_model_attributed_conversions_from_interactions_value_per_interaction = 177;</code>
      * @return Whether the currentModelAttributedConversionsFromInteractionsValuePerInteraction field is set.
      */
     @java.lang.Override
@@ -11426,7 +11426,7 @@ private static final long serialVersionUID = 0L;
      * conversions.
      * </pre>
      *
-     * <code>double current_model_attributed_conversions_from_interactions_value_per_interaction = 177;</code>
+     * <code>optional double current_model_attributed_conversions_from_interactions_value_per_interaction = 177;</code>
      * @return The currentModelAttributedConversionsFromInteractionsValuePerInteraction.
      */
     @java.lang.Override
@@ -11442,7 +11442,7 @@ private static final long serialVersionUID = 0L;
      * conversions.
      * </pre>
      *
-     * <code>double current_model_attributed_conversions_from_interactions_value_per_interaction = 177;</code>
+     * <code>optional double current_model_attributed_conversions_from_interactions_value_per_interaction = 177;</code>
      * @param value The currentModelAttributedConversionsFromInteractionsValuePerInteraction to set.
      * @return This builder for chaining.
      */
@@ -11461,7 +11461,7 @@ private static final long serialVersionUID = 0L;
      * conversions.
      * </pre>
      *
-     * <code>double current_model_attributed_conversions_from_interactions_value_per_interaction = 177;</code>
+     * <code>optional double current_model_attributed_conversions_from_interactions_value_per_interaction = 177;</code>
      * @return This builder for chaining.
      */
     public Builder clearCurrentModelAttributedConversionsFromInteractionsValuePerInteraction() {
@@ -11480,7 +11480,7 @@ private static final long serialVersionUID = 0L;
      * optimize for these conversions.
      * </pre>
      *
-     * <code>double current_model_attributed_conversions_value = 178;</code>
+     * <code>optional double current_model_attributed_conversions_value = 178;</code>
      * @return Whether the currentModelAttributedConversionsValue field is set.
      */
     @java.lang.Override
@@ -11495,7 +11495,7 @@ private static final long serialVersionUID = 0L;
      * optimize for these conversions.
      * </pre>
      *
-     * <code>double current_model_attributed_conversions_value = 178;</code>
+     * <code>optional double current_model_attributed_conversions_value = 178;</code>
      * @return The currentModelAttributedConversionsValue.
      */
     @java.lang.Override
@@ -11510,7 +11510,7 @@ private static final long serialVersionUID = 0L;
      * optimize for these conversions.
      * </pre>
      *
-     * <code>double current_model_attributed_conversions_value = 178;</code>
+     * <code>optional double current_model_attributed_conversions_value = 178;</code>
      * @param value The currentModelAttributedConversionsValue to set.
      * @return This builder for chaining.
      */
@@ -11528,7 +11528,7 @@ private static final long serialVersionUID = 0L;
      * optimize for these conversions.
      * </pre>
      *
-     * <code>double current_model_attributed_conversions_value = 178;</code>
+     * <code>optional double current_model_attributed_conversions_value = 178;</code>
      * @return This builder for chaining.
      */
     public Builder clearCurrentModelAttributedConversionsValue() {
@@ -11548,7 +11548,7 @@ private static final long serialVersionUID = 0L;
      * conversions.
      * </pre>
      *
-     * <code>double current_model_attributed_conversions_value_per_cost = 179;</code>
+     * <code>optional double current_model_attributed_conversions_value_per_cost = 179;</code>
      * @return Whether the currentModelAttributedConversionsValuePerCost field is set.
      */
     @java.lang.Override
@@ -11564,7 +11564,7 @@ private static final long serialVersionUID = 0L;
      * conversions.
      * </pre>
      *
-     * <code>double current_model_attributed_conversions_value_per_cost = 179;</code>
+     * <code>optional double current_model_attributed_conversions_value_per_cost = 179;</code>
      * @return The currentModelAttributedConversionsValuePerCost.
      */
     @java.lang.Override
@@ -11580,7 +11580,7 @@ private static final long serialVersionUID = 0L;
      * conversions.
      * </pre>
      *
-     * <code>double current_model_attributed_conversions_value_per_cost = 179;</code>
+     * <code>optional double current_model_attributed_conversions_value_per_cost = 179;</code>
      * @param value The currentModelAttributedConversionsValuePerCost to set.
      * @return This builder for chaining.
      */
@@ -11599,7 +11599,7 @@ private static final long serialVersionUID = 0L;
      * conversions.
      * </pre>
      *
-     * <code>double current_model_attributed_conversions_value_per_cost = 179;</code>
+     * <code>optional double current_model_attributed_conversions_value_per_cost = 179;</code>
      * @return This builder for chaining.
      */
     public Builder clearCurrentModelAttributedConversionsValuePerCost() {
@@ -11616,7 +11616,7 @@ private static final long serialVersionUID = 0L;
      * number of ad expansions divided by the number of times your ad is shown.
      * </pre>
      *
-     * <code>double engagement_rate = 180;</code>
+     * <code>optional double engagement_rate = 180;</code>
      * @return Whether the engagementRate field is set.
      */
     @java.lang.Override
@@ -11629,7 +11629,7 @@ private static final long serialVersionUID = 0L;
      * number of ad expansions divided by the number of times your ad is shown.
      * </pre>
      *
-     * <code>double engagement_rate = 180;</code>
+     * <code>optional double engagement_rate = 180;</code>
      * @return The engagementRate.
      */
     @java.lang.Override
@@ -11642,7 +11642,7 @@ private static final long serialVersionUID = 0L;
      * number of ad expansions divided by the number of times your ad is shown.
      * </pre>
      *
-     * <code>double engagement_rate = 180;</code>
+     * <code>optional double engagement_rate = 180;</code>
      * @param value The engagementRate to set.
      * @return This builder for chaining.
      */
@@ -11658,7 +11658,7 @@ private static final long serialVersionUID = 0L;
      * number of ad expansions divided by the number of times your ad is shown.
      * </pre>
      *
-     * <code>double engagement_rate = 180;</code>
+     * <code>optional double engagement_rate = 180;</code>
      * @return This builder for chaining.
      */
     public Builder clearEngagementRate() {
@@ -11676,7 +11676,7 @@ private static final long serialVersionUID = 0L;
      * future, other ad types may support engagement metrics.
      * </pre>
      *
-     * <code>int64 engagements = 181;</code>
+     * <code>optional int64 engagements = 181;</code>
      * @return Whether the engagements field is set.
      */
     @java.lang.Override
@@ -11690,7 +11690,7 @@ private static final long serialVersionUID = 0L;
      * future, other ad types may support engagement metrics.
      * </pre>
      *
-     * <code>int64 engagements = 181;</code>
+     * <code>optional int64 engagements = 181;</code>
      * @return The engagements.
      */
     @java.lang.Override
@@ -11704,7 +11704,7 @@ private static final long serialVersionUID = 0L;
      * future, other ad types may support engagement metrics.
      * </pre>
      *
-     * <code>int64 engagements = 181;</code>
+     * <code>optional int64 engagements = 181;</code>
      * @param value The engagements to set.
      * @return This builder for chaining.
      */
@@ -11721,7 +11721,7 @@ private static final long serialVersionUID = 0L;
      * future, other ad types may support engagement metrics.
      * </pre>
      *
-     * <code>int64 engagements = 181;</code>
+     * <code>optional int64 engagements = 181;</code>
      * @return This builder for chaining.
      */
     public Builder clearEngagements() {
@@ -11737,7 +11737,7 @@ private static final long serialVersionUID = 0L;
      * Average lead value based on clicks.
      * </pre>
      *
-     * <code>double hotel_average_lead_value_micros = 213;</code>
+     * <code>optional double hotel_average_lead_value_micros = 213;</code>
      * @return Whether the hotelAverageLeadValueMicros field is set.
      */
     @java.lang.Override
@@ -11749,7 +11749,7 @@ private static final long serialVersionUID = 0L;
      * Average lead value based on clicks.
      * </pre>
      *
-     * <code>double hotel_average_lead_value_micros = 213;</code>
+     * <code>optional double hotel_average_lead_value_micros = 213;</code>
      * @return The hotelAverageLeadValueMicros.
      */
     @java.lang.Override
@@ -11761,7 +11761,7 @@ private static final long serialVersionUID = 0L;
      * Average lead value based on clicks.
      * </pre>
      *
-     * <code>double hotel_average_lead_value_micros = 213;</code>
+     * <code>optional double hotel_average_lead_value_micros = 213;</code>
      * @param value The hotelAverageLeadValueMicros to set.
      * @return This builder for chaining.
      */
@@ -11776,7 +11776,7 @@ private static final long serialVersionUID = 0L;
      * Average lead value based on clicks.
      * </pre>
      *
-     * <code>double hotel_average_lead_value_micros = 213;</code>
+     * <code>optional double hotel_average_lead_value_micros = 213;</code>
      * @return This builder for chaining.
      */
     public Builder clearHotelAverageLeadValueMicros() {
@@ -11793,7 +11793,7 @@ private static final long serialVersionUID = 0L;
      * advertiser and the cheapest price offered by the competing advertiser.
      * </pre>
      *
-     * <code>double hotel_price_difference_percentage = 214;</code>
+     * <code>optional double hotel_price_difference_percentage = 214;</code>
      * @return Whether the hotelPriceDifferencePercentage field is set.
      */
     @java.lang.Override
@@ -11806,7 +11806,7 @@ private static final long serialVersionUID = 0L;
      * advertiser and the cheapest price offered by the competing advertiser.
      * </pre>
      *
-     * <code>double hotel_price_difference_percentage = 214;</code>
+     * <code>optional double hotel_price_difference_percentage = 214;</code>
      * @return The hotelPriceDifferencePercentage.
      */
     @java.lang.Override
@@ -11819,7 +11819,7 @@ private static final long serialVersionUID = 0L;
      * advertiser and the cheapest price offered by the competing advertiser.
      * </pre>
      *
-     * <code>double hotel_price_difference_percentage = 214;</code>
+     * <code>optional double hotel_price_difference_percentage = 214;</code>
      * @param value The hotelPriceDifferencePercentage to set.
      * @return This builder for chaining.
      */
@@ -11835,7 +11835,7 @@ private static final long serialVersionUID = 0L;
      * advertiser and the cheapest price offered by the competing advertiser.
      * </pre>
      *
-     * <code>double hotel_price_difference_percentage = 214;</code>
+     * <code>optional double hotel_price_difference_percentage = 214;</code>
      * @return This builder for chaining.
      */
     public Builder clearHotelPriceDifferencePercentage() {
@@ -11852,7 +11852,7 @@ private static final long serialVersionUID = 0L;
      * feed performance.
      * </pre>
      *
-     * <code>int64 hotel_eligible_impressions = 215;</code>
+     * <code>optional int64 hotel_eligible_impressions = 215;</code>
      * @return Whether the hotelEligibleImpressions field is set.
      */
     @java.lang.Override
@@ -11865,7 +11865,7 @@ private static final long serialVersionUID = 0L;
      * feed performance.
      * </pre>
      *
-     * <code>int64 hotel_eligible_impressions = 215;</code>
+     * <code>optional int64 hotel_eligible_impressions = 215;</code>
      * @return The hotelEligibleImpressions.
      */
     @java.lang.Override
@@ -11878,7 +11878,7 @@ private static final long serialVersionUID = 0L;
      * feed performance.
      * </pre>
      *
-     * <code>int64 hotel_eligible_impressions = 215;</code>
+     * <code>optional int64 hotel_eligible_impressions = 215;</code>
      * @param value The hotelEligibleImpressions to set.
      * @return This builder for chaining.
      */
@@ -11894,7 +11894,7 @@ private static final long serialVersionUID = 0L;
      * feed performance.
      * </pre>
      *
-     * <code>int64 hotel_eligible_impressions = 215;</code>
+     * <code>optional int64 hotel_eligible_impressions = 215;</code>
      * @return This builder for chaining.
      */
     public Builder clearHotelEligibleImpressions() {
@@ -12058,7 +12058,7 @@ private static final long serialVersionUID = 0L;
      * The historical quality score.
      * </pre>
      *
-     * <code>int64 historical_quality_score = 216;</code>
+     * <code>optional int64 historical_quality_score = 216;</code>
      * @return Whether the historicalQualityScore field is set.
      */
     @java.lang.Override
@@ -12070,7 +12070,7 @@ private static final long serialVersionUID = 0L;
      * The historical quality score.
      * </pre>
      *
-     * <code>int64 historical_quality_score = 216;</code>
+     * <code>optional int64 historical_quality_score = 216;</code>
      * @return The historicalQualityScore.
      */
     @java.lang.Override
@@ -12082,7 +12082,7 @@ private static final long serialVersionUID = 0L;
      * The historical quality score.
      * </pre>
      *
-     * <code>int64 historical_quality_score = 216;</code>
+     * <code>optional int64 historical_quality_score = 216;</code>
      * @param value The historicalQualityScore to set.
      * @return This builder for chaining.
      */
@@ -12097,7 +12097,7 @@ private static final long serialVersionUID = 0L;
      * The historical quality score.
      * </pre>
      *
-     * <code>int64 historical_quality_score = 216;</code>
+     * <code>optional int64 historical_quality_score = 216;</code>
      * @return This builder for chaining.
      */
     public Builder clearHistoricalQualityScore() {
@@ -12187,7 +12187,7 @@ private static final long serialVersionUID = 0L;
      * The number of times the ad was forwarded to someone else as a message.
      * </pre>
      *
-     * <code>int64 gmail_forwards = 217;</code>
+     * <code>optional int64 gmail_forwards = 217;</code>
      * @return Whether the gmailForwards field is set.
      */
     @java.lang.Override
@@ -12199,7 +12199,7 @@ private static final long serialVersionUID = 0L;
      * The number of times the ad was forwarded to someone else as a message.
      * </pre>
      *
-     * <code>int64 gmail_forwards = 217;</code>
+     * <code>optional int64 gmail_forwards = 217;</code>
      * @return The gmailForwards.
      */
     @java.lang.Override
@@ -12211,7 +12211,7 @@ private static final long serialVersionUID = 0L;
      * The number of times the ad was forwarded to someone else as a message.
      * </pre>
      *
-     * <code>int64 gmail_forwards = 217;</code>
+     * <code>optional int64 gmail_forwards = 217;</code>
      * @param value The gmailForwards to set.
      * @return This builder for chaining.
      */
@@ -12226,7 +12226,7 @@ private static final long serialVersionUID = 0L;
      * The number of times the ad was forwarded to someone else as a message.
      * </pre>
      *
-     * <code>int64 gmail_forwards = 217;</code>
+     * <code>optional int64 gmail_forwards = 217;</code>
      * @return This builder for chaining.
      */
     public Builder clearGmailForwards() {
@@ -12243,7 +12243,7 @@ private static final long serialVersionUID = 0L;
      * message.
      * </pre>
      *
-     * <code>int64 gmail_saves = 218;</code>
+     * <code>optional int64 gmail_saves = 218;</code>
      * @return Whether the gmailSaves field is set.
      */
     @java.lang.Override
@@ -12256,7 +12256,7 @@ private static final long serialVersionUID = 0L;
      * message.
      * </pre>
      *
-     * <code>int64 gmail_saves = 218;</code>
+     * <code>optional int64 gmail_saves = 218;</code>
      * @return The gmailSaves.
      */
     @java.lang.Override
@@ -12269,7 +12269,7 @@ private static final long serialVersionUID = 0L;
      * message.
      * </pre>
      *
-     * <code>int64 gmail_saves = 218;</code>
+     * <code>optional int64 gmail_saves = 218;</code>
      * @param value The gmailSaves to set.
      * @return This builder for chaining.
      */
@@ -12285,7 +12285,7 @@ private static final long serialVersionUID = 0L;
      * message.
      * </pre>
      *
-     * <code>int64 gmail_saves = 218;</code>
+     * <code>optional int64 gmail_saves = 218;</code>
      * @return This builder for chaining.
      */
     public Builder clearGmailSaves() {
@@ -12302,7 +12302,7 @@ private static final long serialVersionUID = 0L;
      * ads.
      * </pre>
      *
-     * <code>int64 gmail_secondary_clicks = 219;</code>
+     * <code>optional int64 gmail_secondary_clicks = 219;</code>
      * @return Whether the gmailSecondaryClicks field is set.
      */
     @java.lang.Override
@@ -12315,7 +12315,7 @@ private static final long serialVersionUID = 0L;
      * ads.
      * </pre>
      *
-     * <code>int64 gmail_secondary_clicks = 219;</code>
+     * <code>optional int64 gmail_secondary_clicks = 219;</code>
      * @return The gmailSecondaryClicks.
      */
     @java.lang.Override
@@ -12328,7 +12328,7 @@ private static final long serialVersionUID = 0L;
      * ads.
      * </pre>
      *
-     * <code>int64 gmail_secondary_clicks = 219;</code>
+     * <code>optional int64 gmail_secondary_clicks = 219;</code>
      * @param value The gmailSecondaryClicks to set.
      * @return This builder for chaining.
      */
@@ -12344,7 +12344,7 @@ private static final long serialVersionUID = 0L;
      * ads.
      * </pre>
      *
-     * <code>int64 gmail_secondary_clicks = 219;</code>
+     * <code>optional int64 gmail_secondary_clicks = 219;</code>
      * @return This builder for chaining.
      */
     public Builder clearGmailSecondaryClicks() {
@@ -12361,7 +12361,7 @@ private static final long serialVersionUID = 0L;
      * This metric applies to feed items only.
      * </pre>
      *
-     * <code>int64 impressions_from_store_reach = 220;</code>
+     * <code>optional int64 impressions_from_store_reach = 220;</code>
      * @return Whether the impressionsFromStoreReach field is set.
      */
     @java.lang.Override
@@ -12374,7 +12374,7 @@ private static final long serialVersionUID = 0L;
      * This metric applies to feed items only.
      * </pre>
      *
-     * <code>int64 impressions_from_store_reach = 220;</code>
+     * <code>optional int64 impressions_from_store_reach = 220;</code>
      * @return The impressionsFromStoreReach.
      */
     @java.lang.Override
@@ -12387,7 +12387,7 @@ private static final long serialVersionUID = 0L;
      * This metric applies to feed items only.
      * </pre>
      *
-     * <code>int64 impressions_from_store_reach = 220;</code>
+     * <code>optional int64 impressions_from_store_reach = 220;</code>
      * @param value The impressionsFromStoreReach to set.
      * @return This builder for chaining.
      */
@@ -12403,7 +12403,7 @@ private static final long serialVersionUID = 0L;
      * This metric applies to feed items only.
      * </pre>
      *
-     * <code>int64 impressions_from_store_reach = 220;</code>
+     * <code>optional int64 impressions_from_store_reach = 220;</code>
      * @return This builder for chaining.
      */
     public Builder clearImpressionsFromStoreReach() {
@@ -12420,7 +12420,7 @@ private static final long serialVersionUID = 0L;
      * website on the Google Network.
      * </pre>
      *
-     * <code>int64 impressions = 221;</code>
+     * <code>optional int64 impressions = 221;</code>
      * @return Whether the impressions field is set.
      */
     @java.lang.Override
@@ -12433,7 +12433,7 @@ private static final long serialVersionUID = 0L;
      * website on the Google Network.
      * </pre>
      *
-     * <code>int64 impressions = 221;</code>
+     * <code>optional int64 impressions = 221;</code>
      * @return The impressions.
      */
     @java.lang.Override
@@ -12446,7 +12446,7 @@ private static final long serialVersionUID = 0L;
      * website on the Google Network.
      * </pre>
      *
-     * <code>int64 impressions = 221;</code>
+     * <code>optional int64 impressions = 221;</code>
      * @param value The impressions to set.
      * @return This builder for chaining.
      */
@@ -12462,7 +12462,7 @@ private static final long serialVersionUID = 0L;
      * website on the Google Network.
      * </pre>
      *
-     * <code>int64 impressions = 221;</code>
+     * <code>optional int64 impressions = 221;</code>
      * @return This builder for chaining.
      */
     public Builder clearImpressions() {
@@ -12480,7 +12480,7 @@ private static final long serialVersionUID = 0L;
      * is shown.
      * </pre>
      *
-     * <code>double interaction_rate = 222;</code>
+     * <code>optional double interaction_rate = 222;</code>
      * @return Whether the interactionRate field is set.
      */
     @java.lang.Override
@@ -12494,7 +12494,7 @@ private static final long serialVersionUID = 0L;
      * is shown.
      * </pre>
      *
-     * <code>double interaction_rate = 222;</code>
+     * <code>optional double interaction_rate = 222;</code>
      * @return The interactionRate.
      */
     @java.lang.Override
@@ -12508,7 +12508,7 @@ private static final long serialVersionUID = 0L;
      * is shown.
      * </pre>
      *
-     * <code>double interaction_rate = 222;</code>
+     * <code>optional double interaction_rate = 222;</code>
      * @param value The interactionRate to set.
      * @return This builder for chaining.
      */
@@ -12525,7 +12525,7 @@ private static final long serialVersionUID = 0L;
      * is shown.
      * </pre>
      *
-     * <code>double interaction_rate = 222;</code>
+     * <code>optional double interaction_rate = 222;</code>
      * @return This builder for chaining.
      */
     public Builder clearInteractionRate() {
@@ -12543,7 +12543,7 @@ private static final long serialVersionUID = 0L;
      * for text and shopping ads, views for video ads, and so on.
      * </pre>
      *
-     * <code>int64 interactions = 223;</code>
+     * <code>optional int64 interactions = 223;</code>
      * @return Whether the interactions field is set.
      */
     @java.lang.Override
@@ -12557,7 +12557,7 @@ private static final long serialVersionUID = 0L;
      * for text and shopping ads, views for video ads, and so on.
      * </pre>
      *
-     * <code>int64 interactions = 223;</code>
+     * <code>optional int64 interactions = 223;</code>
      * @return The interactions.
      */
     @java.lang.Override
@@ -12571,7 +12571,7 @@ private static final long serialVersionUID = 0L;
      * for text and shopping ads, views for video ads, and so on.
      * </pre>
      *
-     * <code>int64 interactions = 223;</code>
+     * <code>optional int64 interactions = 223;</code>
      * @param value The interactions to set.
      * @return This builder for chaining.
      */
@@ -12588,7 +12588,7 @@ private static final long serialVersionUID = 0L;
      * for text and shopping ads, views for video ads, and so on.
      * </pre>
      *
-     * <code>int64 interactions = 223;</code>
+     * <code>optional int64 interactions = 223;</code>
      * @return This builder for chaining.
      */
     public Builder clearInteractions() {
@@ -12793,7 +12793,7 @@ private static final long serialVersionUID = 0L;
      * (filtered + non-filtered clicks) during the reporting period.
      * </pre>
      *
-     * <code>double invalid_click_rate = 224;</code>
+     * <code>optional double invalid_click_rate = 224;</code>
      * @return Whether the invalidClickRate field is set.
      */
     @java.lang.Override
@@ -12806,7 +12806,7 @@ private static final long serialVersionUID = 0L;
      * (filtered + non-filtered clicks) during the reporting period.
      * </pre>
      *
-     * <code>double invalid_click_rate = 224;</code>
+     * <code>optional double invalid_click_rate = 224;</code>
      * @return The invalidClickRate.
      */
     @java.lang.Override
@@ -12819,7 +12819,7 @@ private static final long serialVersionUID = 0L;
      * (filtered + non-filtered clicks) during the reporting period.
      * </pre>
      *
-     * <code>double invalid_click_rate = 224;</code>
+     * <code>optional double invalid_click_rate = 224;</code>
      * @param value The invalidClickRate to set.
      * @return This builder for chaining.
      */
@@ -12835,7 +12835,7 @@ private static final long serialVersionUID = 0L;
      * (filtered + non-filtered clicks) during the reporting period.
      * </pre>
      *
-     * <code>double invalid_click_rate = 224;</code>
+     * <code>optional double invalid_click_rate = 224;</code>
      * @return This builder for chaining.
      */
     public Builder clearInvalidClickRate() {
@@ -12851,7 +12851,7 @@ private static final long serialVersionUID = 0L;
      * Number of clicks Google considers illegitimate and doesn't charge you for.
      * </pre>
      *
-     * <code>int64 invalid_clicks = 225;</code>
+     * <code>optional int64 invalid_clicks = 225;</code>
      * @return Whether the invalidClicks field is set.
      */
     @java.lang.Override
@@ -12863,7 +12863,7 @@ private static final long serialVersionUID = 0L;
      * Number of clicks Google considers illegitimate and doesn't charge you for.
      * </pre>
      *
-     * <code>int64 invalid_clicks = 225;</code>
+     * <code>optional int64 invalid_clicks = 225;</code>
      * @return The invalidClicks.
      */
     @java.lang.Override
@@ -12875,7 +12875,7 @@ private static final long serialVersionUID = 0L;
      * Number of clicks Google considers illegitimate and doesn't charge you for.
      * </pre>
      *
-     * <code>int64 invalid_clicks = 225;</code>
+     * <code>optional int64 invalid_clicks = 225;</code>
      * @param value The invalidClicks to set.
      * @return This builder for chaining.
      */
@@ -12890,7 +12890,7 @@ private static final long serialVersionUID = 0L;
      * Number of clicks Google considers illegitimate and doesn't charge you for.
      * </pre>
      *
-     * <code>int64 invalid_clicks = 225;</code>
+     * <code>optional int64 invalid_clicks = 225;</code>
      * @return This builder for chaining.
      */
     public Builder clearInvalidClicks() {
@@ -12907,7 +12907,7 @@ private static final long serialVersionUID = 0L;
      * were message tracking eligible.
      * </pre>
      *
-     * <code>int64 message_chats = 226;</code>
+     * <code>optional int64 message_chats = 226;</code>
      * @return Whether the messageChats field is set.
      */
     @java.lang.Override
@@ -12920,7 +12920,7 @@ private static final long serialVersionUID = 0L;
      * were message tracking eligible.
      * </pre>
      *
-     * <code>int64 message_chats = 226;</code>
+     * <code>optional int64 message_chats = 226;</code>
      * @return The messageChats.
      */
     @java.lang.Override
@@ -12933,7 +12933,7 @@ private static final long serialVersionUID = 0L;
      * were message tracking eligible.
      * </pre>
      *
-     * <code>int64 message_chats = 226;</code>
+     * <code>optional int64 message_chats = 226;</code>
      * @param value The messageChats to set.
      * @return This builder for chaining.
      */
@@ -12949,7 +12949,7 @@ private static final long serialVersionUID = 0L;
      * were message tracking eligible.
      * </pre>
      *
-     * <code>int64 message_chats = 226;</code>
+     * <code>optional int64 message_chats = 226;</code>
      * @return This builder for chaining.
      */
     public Builder clearMessageChats() {
@@ -12965,7 +12965,7 @@ private static final long serialVersionUID = 0L;
      * Number of Click To Message impressions that were message tracking eligible.
      * </pre>
      *
-     * <code>int64 message_impressions = 227;</code>
+     * <code>optional int64 message_impressions = 227;</code>
      * @return Whether the messageImpressions field is set.
      */
     @java.lang.Override
@@ -12977,7 +12977,7 @@ private static final long serialVersionUID = 0L;
      * Number of Click To Message impressions that were message tracking eligible.
      * </pre>
      *
-     * <code>int64 message_impressions = 227;</code>
+     * <code>optional int64 message_impressions = 227;</code>
      * @return The messageImpressions.
      */
     @java.lang.Override
@@ -12989,7 +12989,7 @@ private static final long serialVersionUID = 0L;
      * Number of Click To Message impressions that were message tracking eligible.
      * </pre>
      *
-     * <code>int64 message_impressions = 227;</code>
+     * <code>optional int64 message_impressions = 227;</code>
      * @param value The messageImpressions to set.
      * @return This builder for chaining.
      */
@@ -13004,7 +13004,7 @@ private static final long serialVersionUID = 0L;
      * Number of Click To Message impressions that were message tracking eligible.
      * </pre>
      *
-     * <code>int64 message_impressions = 227;</code>
+     * <code>optional int64 message_impressions = 227;</code>
      * @return This builder for chaining.
      */
     public Builder clearMessageImpressions() {
@@ -13024,7 +13024,7 @@ private static final long serialVersionUID = 0L;
      * Note that this rate can be more than 1.0 for a given message impression.
      * </pre>
      *
-     * <code>double message_chat_rate = 228;</code>
+     * <code>optional double message_chat_rate = 228;</code>
      * @return Whether the messageChatRate field is set.
      */
     @java.lang.Override
@@ -13040,7 +13040,7 @@ private static final long serialVersionUID = 0L;
      * Note that this rate can be more than 1.0 for a given message impression.
      * </pre>
      *
-     * <code>double message_chat_rate = 228;</code>
+     * <code>optional double message_chat_rate = 228;</code>
      * @return The messageChatRate.
      */
     @java.lang.Override
@@ -13056,7 +13056,7 @@ private static final long serialVersionUID = 0L;
      * Note that this rate can be more than 1.0 for a given message impression.
      * </pre>
      *
-     * <code>double message_chat_rate = 228;</code>
+     * <code>optional double message_chat_rate = 228;</code>
      * @param value The messageChatRate to set.
      * @return This builder for chaining.
      */
@@ -13075,7 +13075,7 @@ private static final long serialVersionUID = 0L;
      * Note that this rate can be more than 1.0 for a given message impression.
      * </pre>
      *
-     * <code>double message_chat_rate = 228;</code>
+     * <code>optional double message_chat_rate = 228;</code>
      * @return This builder for chaining.
      */
     public Builder clearMessageChatRate() {
@@ -13091,7 +13091,7 @@ private static final long serialVersionUID = 0L;
      * The percentage of mobile clicks that go to a mobile-friendly page.
      * </pre>
      *
-     * <code>double mobile_friendly_clicks_percentage = 229;</code>
+     * <code>optional double mobile_friendly_clicks_percentage = 229;</code>
      * @return Whether the mobileFriendlyClicksPercentage field is set.
      */
     @java.lang.Override
@@ -13103,7 +13103,7 @@ private static final long serialVersionUID = 0L;
      * The percentage of mobile clicks that go to a mobile-friendly page.
      * </pre>
      *
-     * <code>double mobile_friendly_clicks_percentage = 229;</code>
+     * <code>optional double mobile_friendly_clicks_percentage = 229;</code>
      * @return The mobileFriendlyClicksPercentage.
      */
     @java.lang.Override
@@ -13115,7 +13115,7 @@ private static final long serialVersionUID = 0L;
      * The percentage of mobile clicks that go to a mobile-friendly page.
      * </pre>
      *
-     * <code>double mobile_friendly_clicks_percentage = 229;</code>
+     * <code>optional double mobile_friendly_clicks_percentage = 229;</code>
      * @param value The mobileFriendlyClicksPercentage to set.
      * @return This builder for chaining.
      */
@@ -13130,7 +13130,7 @@ private static final long serialVersionUID = 0L;
      * The percentage of mobile clicks that go to a mobile-friendly page.
      * </pre>
      *
-     * <code>double mobile_friendly_clicks_percentage = 229;</code>
+     * <code>optional double mobile_friendly_clicks_percentage = 229;</code>
      * @return This builder for chaining.
      */
     public Builder clearMobileFriendlyClicksPercentage() {
@@ -13148,7 +13148,7 @@ private static final long serialVersionUID = 0L;
      * https://support.google.com/google-ads/answer/3097241 for details.
      * </pre>
      *
-     * <code>int64 organic_clicks = 230;</code>
+     * <code>optional int64 organic_clicks = 230;</code>
      * @return Whether the organicClicks field is set.
      */
     @java.lang.Override
@@ -13162,7 +13162,7 @@ private static final long serialVersionUID = 0L;
      * https://support.google.com/google-ads/answer/3097241 for details.
      * </pre>
      *
-     * <code>int64 organic_clicks = 230;</code>
+     * <code>optional int64 organic_clicks = 230;</code>
      * @return The organicClicks.
      */
     @java.lang.Override
@@ -13176,7 +13176,7 @@ private static final long serialVersionUID = 0L;
      * https://support.google.com/google-ads/answer/3097241 for details.
      * </pre>
      *
-     * <code>int64 organic_clicks = 230;</code>
+     * <code>optional int64 organic_clicks = 230;</code>
      * @param value The organicClicks to set.
      * @return This builder for chaining.
      */
@@ -13193,7 +13193,7 @@ private static final long serialVersionUID = 0L;
      * https://support.google.com/google-ads/answer/3097241 for details.
      * </pre>
      *
-     * <code>int64 organic_clicks = 230;</code>
+     * <code>optional int64 organic_clicks = 230;</code>
      * @return This builder for chaining.
      */
     public Builder clearOrganicClicks() {
@@ -13212,7 +13212,7 @@ private static final long serialVersionUID = 0L;
      * https://support.google.com/google-ads/answer/3097241 for details.
      * </pre>
      *
-     * <code>double organic_clicks_per_query = 231;</code>
+     * <code>optional double organic_clicks_per_query = 231;</code>
      * @return Whether the organicClicksPerQuery field is set.
      */
     @java.lang.Override
@@ -13227,7 +13227,7 @@ private static final long serialVersionUID = 0L;
      * https://support.google.com/google-ads/answer/3097241 for details.
      * </pre>
      *
-     * <code>double organic_clicks_per_query = 231;</code>
+     * <code>optional double organic_clicks_per_query = 231;</code>
      * @return The organicClicksPerQuery.
      */
     @java.lang.Override
@@ -13242,7 +13242,7 @@ private static final long serialVersionUID = 0L;
      * https://support.google.com/google-ads/answer/3097241 for details.
      * </pre>
      *
-     * <code>double organic_clicks_per_query = 231;</code>
+     * <code>optional double organic_clicks_per_query = 231;</code>
      * @param value The organicClicksPerQuery to set.
      * @return This builder for chaining.
      */
@@ -13260,7 +13260,7 @@ private static final long serialVersionUID = 0L;
      * https://support.google.com/google-ads/answer/3097241 for details.
      * </pre>
      *
-     * <code>double organic_clicks_per_query = 231;</code>
+     * <code>optional double organic_clicks_per_query = 231;</code>
      * @return This builder for chaining.
      */
     public Builder clearOrganicClicksPerQuery() {
@@ -13278,7 +13278,7 @@ private static final long serialVersionUID = 0L;
      * details.
      * </pre>
      *
-     * <code>int64 organic_impressions = 232;</code>
+     * <code>optional int64 organic_impressions = 232;</code>
      * @return Whether the organicImpressions field is set.
      */
     @java.lang.Override
@@ -13292,7 +13292,7 @@ private static final long serialVersionUID = 0L;
      * details.
      * </pre>
      *
-     * <code>int64 organic_impressions = 232;</code>
+     * <code>optional int64 organic_impressions = 232;</code>
      * @return The organicImpressions.
      */
     @java.lang.Override
@@ -13306,7 +13306,7 @@ private static final long serialVersionUID = 0L;
      * details.
      * </pre>
      *
-     * <code>int64 organic_impressions = 232;</code>
+     * <code>optional int64 organic_impressions = 232;</code>
      * @param value The organicImpressions to set.
      * @return This builder for chaining.
      */
@@ -13323,7 +13323,7 @@ private static final long serialVersionUID = 0L;
      * details.
      * </pre>
      *
-     * <code>int64 organic_impressions = 232;</code>
+     * <code>optional int64 organic_impressions = 232;</code>
      * @return This builder for chaining.
      */
     public Builder clearOrganicImpressions() {
@@ -13342,7 +13342,7 @@ private static final long serialVersionUID = 0L;
      * page at https://support.google.com/google-ads/answer/3097241 for details.
      * </pre>
      *
-     * <code>double organic_impressions_per_query = 233;</code>
+     * <code>optional double organic_impressions_per_query = 233;</code>
      * @return Whether the organicImpressionsPerQuery field is set.
      */
     @java.lang.Override
@@ -13357,7 +13357,7 @@ private static final long serialVersionUID = 0L;
      * page at https://support.google.com/google-ads/answer/3097241 for details.
      * </pre>
      *
-     * <code>double organic_impressions_per_query = 233;</code>
+     * <code>optional double organic_impressions_per_query = 233;</code>
      * @return The organicImpressionsPerQuery.
      */
     @java.lang.Override
@@ -13372,7 +13372,7 @@ private static final long serialVersionUID = 0L;
      * page at https://support.google.com/google-ads/answer/3097241 for details.
      * </pre>
      *
-     * <code>double organic_impressions_per_query = 233;</code>
+     * <code>optional double organic_impressions_per_query = 233;</code>
      * @param value The organicImpressionsPerQuery to set.
      * @return This builder for chaining.
      */
@@ -13390,7 +13390,7 @@ private static final long serialVersionUID = 0L;
      * page at https://support.google.com/google-ads/answer/3097241 for details.
      * </pre>
      *
-     * <code>double organic_impressions_per_query = 233;</code>
+     * <code>optional double organic_impressions_per_query = 233;</code>
      * @return This builder for chaining.
      */
     public Builder clearOrganicImpressionsPerQuery() {
@@ -13408,7 +13408,7 @@ private static final long serialVersionUID = 0L;
      * https://support.google.com/google-ads/answer/3097241 for details.
      * </pre>
      *
-     * <code>int64 organic_queries = 234;</code>
+     * <code>optional int64 organic_queries = 234;</code>
      * @return Whether the organicQueries field is set.
      */
     @java.lang.Override
@@ -13422,7 +13422,7 @@ private static final long serialVersionUID = 0L;
      * https://support.google.com/google-ads/answer/3097241 for details.
      * </pre>
      *
-     * <code>int64 organic_queries = 234;</code>
+     * <code>optional int64 organic_queries = 234;</code>
      * @return The organicQueries.
      */
     @java.lang.Override
@@ -13436,7 +13436,7 @@ private static final long serialVersionUID = 0L;
      * https://support.google.com/google-ads/answer/3097241 for details.
      * </pre>
      *
-     * <code>int64 organic_queries = 234;</code>
+     * <code>optional int64 organic_queries = 234;</code>
      * @param value The organicQueries to set.
      * @return This builder for chaining.
      */
@@ -13453,7 +13453,7 @@ private static final long serialVersionUID = 0L;
      * https://support.google.com/google-ads/answer/3097241 for details.
      * </pre>
      *
-     * <code>int64 organic_queries = 234;</code>
+     * <code>optional int64 organic_queries = 234;</code>
      * @return This builder for chaining.
      */
     public Builder clearOrganicQueries() {
@@ -13470,7 +13470,7 @@ private static final long serialVersionUID = 0L;
      * site before). Imported from Google Analytics.
      * </pre>
      *
-     * <code>double percent_new_visitors = 235;</code>
+     * <code>optional double percent_new_visitors = 235;</code>
      * @return Whether the percentNewVisitors field is set.
      */
     @java.lang.Override
@@ -13483,7 +13483,7 @@ private static final long serialVersionUID = 0L;
      * site before). Imported from Google Analytics.
      * </pre>
      *
-     * <code>double percent_new_visitors = 235;</code>
+     * <code>optional double percent_new_visitors = 235;</code>
      * @return The percentNewVisitors.
      */
     @java.lang.Override
@@ -13496,7 +13496,7 @@ private static final long serialVersionUID = 0L;
      * site before). Imported from Google Analytics.
      * </pre>
      *
-     * <code>double percent_new_visitors = 235;</code>
+     * <code>optional double percent_new_visitors = 235;</code>
      * @param value The percentNewVisitors to set.
      * @return This builder for chaining.
      */
@@ -13512,7 +13512,7 @@ private static final long serialVersionUID = 0L;
      * site before). Imported from Google Analytics.
      * </pre>
      *
-     * <code>double percent_new_visitors = 235;</code>
+     * <code>optional double percent_new_visitors = 235;</code>
      * @return This builder for chaining.
      */
     public Builder clearPercentNewVisitors() {
@@ -13528,7 +13528,7 @@ private static final long serialVersionUID = 0L;
      * Number of offline phone calls.
      * </pre>
      *
-     * <code>int64 phone_calls = 236;</code>
+     * <code>optional int64 phone_calls = 236;</code>
      * @return Whether the phoneCalls field is set.
      */
     @java.lang.Override
@@ -13540,7 +13540,7 @@ private static final long serialVersionUID = 0L;
      * Number of offline phone calls.
      * </pre>
      *
-     * <code>int64 phone_calls = 236;</code>
+     * <code>optional int64 phone_calls = 236;</code>
      * @return The phoneCalls.
      */
     @java.lang.Override
@@ -13552,7 +13552,7 @@ private static final long serialVersionUID = 0L;
      * Number of offline phone calls.
      * </pre>
      *
-     * <code>int64 phone_calls = 236;</code>
+     * <code>optional int64 phone_calls = 236;</code>
      * @param value The phoneCalls to set.
      * @return This builder for chaining.
      */
@@ -13567,7 +13567,7 @@ private static final long serialVersionUID = 0L;
      * Number of offline phone calls.
      * </pre>
      *
-     * <code>int64 phone_calls = 236;</code>
+     * <code>optional int64 phone_calls = 236;</code>
      * @return This builder for chaining.
      */
     public Builder clearPhoneCalls() {
@@ -13583,7 +13583,7 @@ private static final long serialVersionUID = 0L;
      * Number of offline phone impressions.
      * </pre>
      *
-     * <code>int64 phone_impressions = 237;</code>
+     * <code>optional int64 phone_impressions = 237;</code>
      * @return Whether the phoneImpressions field is set.
      */
     @java.lang.Override
@@ -13595,7 +13595,7 @@ private static final long serialVersionUID = 0L;
      * Number of offline phone impressions.
      * </pre>
      *
-     * <code>int64 phone_impressions = 237;</code>
+     * <code>optional int64 phone_impressions = 237;</code>
      * @return The phoneImpressions.
      */
     @java.lang.Override
@@ -13607,7 +13607,7 @@ private static final long serialVersionUID = 0L;
      * Number of offline phone impressions.
      * </pre>
      *
-     * <code>int64 phone_impressions = 237;</code>
+     * <code>optional int64 phone_impressions = 237;</code>
      * @param value The phoneImpressions to set.
      * @return This builder for chaining.
      */
@@ -13622,7 +13622,7 @@ private static final long serialVersionUID = 0L;
      * Number of offline phone impressions.
      * </pre>
      *
-     * <code>int64 phone_impressions = 237;</code>
+     * <code>optional int64 phone_impressions = 237;</code>
      * @return This builder for chaining.
      */
     public Builder clearPhoneImpressions() {
@@ -13639,7 +13639,7 @@ private static final long serialVersionUID = 0L;
      * times your phone number is shown (phone_impressions).
      * </pre>
      *
-     * <code>double phone_through_rate = 238;</code>
+     * <code>optional double phone_through_rate = 238;</code>
      * @return Whether the phoneThroughRate field is set.
      */
     @java.lang.Override
@@ -13652,7 +13652,7 @@ private static final long serialVersionUID = 0L;
      * times your phone number is shown (phone_impressions).
      * </pre>
      *
-     * <code>double phone_through_rate = 238;</code>
+     * <code>optional double phone_through_rate = 238;</code>
      * @return The phoneThroughRate.
      */
     @java.lang.Override
@@ -13665,7 +13665,7 @@ private static final long serialVersionUID = 0L;
      * times your phone number is shown (phone_impressions).
      * </pre>
      *
-     * <code>double phone_through_rate = 238;</code>
+     * <code>optional double phone_through_rate = 238;</code>
      * @param value The phoneThroughRate to set.
      * @return This builder for chaining.
      */
@@ -13681,7 +13681,7 @@ private static final long serialVersionUID = 0L;
      * times your phone number is shown (phone_impressions).
      * </pre>
      *
-     * <code>double phone_through_rate = 238;</code>
+     * <code>optional double phone_through_rate = 238;</code>
      * @return This builder for chaining.
      */
     public Builder clearPhoneThroughRate() {
@@ -13699,7 +13699,7 @@ private static final long serialVersionUID = 0L;
      * perform on Display Network sites compared to other ads on the same sites.
      * </pre>
      *
-     * <code>double relative_ctr = 239;</code>
+     * <code>optional double relative_ctr = 239;</code>
      * @return Whether the relativeCtr field is set.
      */
     @java.lang.Override
@@ -13713,7 +13713,7 @@ private static final long serialVersionUID = 0L;
      * perform on Display Network sites compared to other ads on the same sites.
      * </pre>
      *
-     * <code>double relative_ctr = 239;</code>
+     * <code>optional double relative_ctr = 239;</code>
      * @return The relativeCtr.
      */
     @java.lang.Override
@@ -13727,7 +13727,7 @@ private static final long serialVersionUID = 0L;
      * perform on Display Network sites compared to other ads on the same sites.
      * </pre>
      *
-     * <code>double relative_ctr = 239;</code>
+     * <code>optional double relative_ctr = 239;</code>
      * @param value The relativeCtr to set.
      * @return This builder for chaining.
      */
@@ -13744,7 +13744,7 @@ private static final long serialVersionUID = 0L;
      * perform on Display Network sites compared to other ads on the same sites.
      * </pre>
      *
-     * <code>double relative_ctr = 239;</code>
+     * <code>optional double relative_ctr = 239;</code>
      * @return This builder for chaining.
      */
     public Builder clearRelativeCtr() {
@@ -13763,7 +13763,7 @@ private static final long serialVersionUID = 0L;
      * for details. Any value below 0.1 is reported as 0.0999.
      * </pre>
      *
-     * <code>double search_absolute_top_impression_share = 136;</code>
+     * <code>optional double search_absolute_top_impression_share = 136;</code>
      * @return Whether the searchAbsoluteTopImpressionShare field is set.
      */
     @java.lang.Override
@@ -13778,7 +13778,7 @@ private static final long serialVersionUID = 0L;
      * for details. Any value below 0.1 is reported as 0.0999.
      * </pre>
      *
-     * <code>double search_absolute_top_impression_share = 136;</code>
+     * <code>optional double search_absolute_top_impression_share = 136;</code>
      * @return The searchAbsoluteTopImpressionShare.
      */
     @java.lang.Override
@@ -13793,7 +13793,7 @@ private static final long serialVersionUID = 0L;
      * for details. Any value below 0.1 is reported as 0.0999.
      * </pre>
      *
-     * <code>double search_absolute_top_impression_share = 136;</code>
+     * <code>optional double search_absolute_top_impression_share = 136;</code>
      * @param value The searchAbsoluteTopImpressionShare to set.
      * @return This builder for chaining.
      */
@@ -13811,7 +13811,7 @@ private static final long serialVersionUID = 0L;
      * for details. Any value below 0.1 is reported as 0.0999.
      * </pre>
      *
-     * <code>double search_absolute_top_impression_share = 136;</code>
+     * <code>optional double search_absolute_top_impression_share = 136;</code>
      * @return This builder for chaining.
      */
     public Builder clearSearchAbsoluteTopImpressionShare() {
@@ -13830,7 +13830,7 @@ private static final long serialVersionUID = 0L;
      * 0.9. Any value above 0.9 is reported as 0.9001.
      * </pre>
      *
-     * <code>double search_budget_lost_absolute_top_impression_share = 137;</code>
+     * <code>optional double search_budget_lost_absolute_top_impression_share = 137;</code>
      * @return Whether the searchBudgetLostAbsoluteTopImpressionShare field is set.
      */
     @java.lang.Override
@@ -13845,7 +13845,7 @@ private static final long serialVersionUID = 0L;
      * 0.9. Any value above 0.9 is reported as 0.9001.
      * </pre>
      *
-     * <code>double search_budget_lost_absolute_top_impression_share = 137;</code>
+     * <code>optional double search_budget_lost_absolute_top_impression_share = 137;</code>
      * @return The searchBudgetLostAbsoluteTopImpressionShare.
      */
     @java.lang.Override
@@ -13860,7 +13860,7 @@ private static final long serialVersionUID = 0L;
      * 0.9. Any value above 0.9 is reported as 0.9001.
      * </pre>
      *
-     * <code>double search_budget_lost_absolute_top_impression_share = 137;</code>
+     * <code>optional double search_budget_lost_absolute_top_impression_share = 137;</code>
      * @param value The searchBudgetLostAbsoluteTopImpressionShare to set.
      * @return This builder for chaining.
      */
@@ -13878,7 +13878,7 @@ private static final long serialVersionUID = 0L;
      * 0.9. Any value above 0.9 is reported as 0.9001.
      * </pre>
      *
-     * <code>double search_budget_lost_absolute_top_impression_share = 137;</code>
+     * <code>optional double search_budget_lost_absolute_top_impression_share = 137;</code>
      * @return This builder for chaining.
      */
     public Builder clearSearchBudgetLostAbsoluteTopImpressionShare() {
@@ -13897,7 +13897,7 @@ private static final long serialVersionUID = 0L;
      * value above 0.9 is reported as 0.9001.
      * </pre>
      *
-     * <code>double search_budget_lost_impression_share = 138;</code>
+     * <code>optional double search_budget_lost_impression_share = 138;</code>
      * @return Whether the searchBudgetLostImpressionShare field is set.
      */
     @java.lang.Override
@@ -13912,7 +13912,7 @@ private static final long serialVersionUID = 0L;
      * value above 0.9 is reported as 0.9001.
      * </pre>
      *
-     * <code>double search_budget_lost_impression_share = 138;</code>
+     * <code>optional double search_budget_lost_impression_share = 138;</code>
      * @return The searchBudgetLostImpressionShare.
      */
     @java.lang.Override
@@ -13927,7 +13927,7 @@ private static final long serialVersionUID = 0L;
      * value above 0.9 is reported as 0.9001.
      * </pre>
      *
-     * <code>double search_budget_lost_impression_share = 138;</code>
+     * <code>optional double search_budget_lost_impression_share = 138;</code>
      * @param value The searchBudgetLostImpressionShare to set.
      * @return This builder for chaining.
      */
@@ -13945,7 +13945,7 @@ private static final long serialVersionUID = 0L;
      * value above 0.9 is reported as 0.9001.
      * </pre>
      *
-     * <code>double search_budget_lost_impression_share = 138;</code>
+     * <code>optional double search_budget_lost_impression_share = 138;</code>
      * @return This builder for chaining.
      */
     public Builder clearSearchBudgetLostImpressionShare() {
@@ -13964,7 +13964,7 @@ private static final long serialVersionUID = 0L;
      * value above 0.9 is reported as 0.9001.
      * </pre>
      *
-     * <code>double search_budget_lost_top_impression_share = 139;</code>
+     * <code>optional double search_budget_lost_top_impression_share = 139;</code>
      * @return Whether the searchBudgetLostTopImpressionShare field is set.
      */
     @java.lang.Override
@@ -13979,7 +13979,7 @@ private static final long serialVersionUID = 0L;
      * value above 0.9 is reported as 0.9001.
      * </pre>
      *
-     * <code>double search_budget_lost_top_impression_share = 139;</code>
+     * <code>optional double search_budget_lost_top_impression_share = 139;</code>
      * @return The searchBudgetLostTopImpressionShare.
      */
     @java.lang.Override
@@ -13994,7 +13994,7 @@ private static final long serialVersionUID = 0L;
      * value above 0.9 is reported as 0.9001.
      * </pre>
      *
-     * <code>double search_budget_lost_top_impression_share = 139;</code>
+     * <code>optional double search_budget_lost_top_impression_share = 139;</code>
      * @param value The searchBudgetLostTopImpressionShare to set.
      * @return This builder for chaining.
      */
@@ -14012,7 +14012,7 @@ private static final long serialVersionUID = 0L;
      * value above 0.9 is reported as 0.9001.
      * </pre>
      *
-     * <code>double search_budget_lost_top_impression_share = 139;</code>
+     * <code>optional double search_budget_lost_top_impression_share = 139;</code>
      * @return This builder for chaining.
      */
     public Builder clearSearchBudgetLostTopImpressionShare() {
@@ -14031,7 +14031,7 @@ private static final long serialVersionUID = 0L;
      * below 0.1 is reported as 0.0999.
      * </pre>
      *
-     * <code>double search_click_share = 140;</code>
+     * <code>optional double search_click_share = 140;</code>
      * @return Whether the searchClickShare field is set.
      */
     @java.lang.Override
@@ -14046,7 +14046,7 @@ private static final long serialVersionUID = 0L;
      * below 0.1 is reported as 0.0999.
      * </pre>
      *
-     * <code>double search_click_share = 140;</code>
+     * <code>optional double search_click_share = 140;</code>
      * @return The searchClickShare.
      */
     @java.lang.Override
@@ -14061,7 +14061,7 @@ private static final long serialVersionUID = 0L;
      * below 0.1 is reported as 0.0999.
      * </pre>
      *
-     * <code>double search_click_share = 140;</code>
+     * <code>optional double search_click_share = 140;</code>
      * @param value The searchClickShare to set.
      * @return This builder for chaining.
      */
@@ -14079,7 +14079,7 @@ private static final long serialVersionUID = 0L;
      * below 0.1 is reported as 0.0999.
      * </pre>
      *
-     * <code>double search_click_share = 140;</code>
+     * <code>optional double search_click_share = 140;</code>
      * @return This builder for chaining.
      */
     public Builder clearSearchClickShare() {
@@ -14100,7 +14100,7 @@ private static final long serialVersionUID = 0L;
      * is reported as 0.0999.
      * </pre>
      *
-     * <code>double search_exact_match_impression_share = 141;</code>
+     * <code>optional double search_exact_match_impression_share = 141;</code>
      * @return Whether the searchExactMatchImpressionShare field is set.
      */
     @java.lang.Override
@@ -14117,7 +14117,7 @@ private static final long serialVersionUID = 0L;
      * is reported as 0.0999.
      * </pre>
      *
-     * <code>double search_exact_match_impression_share = 141;</code>
+     * <code>optional double search_exact_match_impression_share = 141;</code>
      * @return The searchExactMatchImpressionShare.
      */
     @java.lang.Override
@@ -14134,7 +14134,7 @@ private static final long serialVersionUID = 0L;
      * is reported as 0.0999.
      * </pre>
      *
-     * <code>double search_exact_match_impression_share = 141;</code>
+     * <code>optional double search_exact_match_impression_share = 141;</code>
      * @param value The searchExactMatchImpressionShare to set.
      * @return This builder for chaining.
      */
@@ -14154,7 +14154,7 @@ private static final long serialVersionUID = 0L;
      * is reported as 0.0999.
      * </pre>
      *
-     * <code>double search_exact_match_impression_share = 141;</code>
+     * <code>optional double search_exact_match_impression_share = 141;</code>
      * @return This builder for chaining.
      */
     public Builder clearSearchExactMatchImpressionShare() {
@@ -14173,7 +14173,7 @@ private static final long serialVersionUID = 0L;
      * value below 0.1 is reported as 0.0999.
      * </pre>
      *
-     * <code>double search_impression_share = 142;</code>
+     * <code>optional double search_impression_share = 142;</code>
      * @return Whether the searchImpressionShare field is set.
      */
     @java.lang.Override
@@ -14188,7 +14188,7 @@ private static final long serialVersionUID = 0L;
      * value below 0.1 is reported as 0.0999.
      * </pre>
      *
-     * <code>double search_impression_share = 142;</code>
+     * <code>optional double search_impression_share = 142;</code>
      * @return The searchImpressionShare.
      */
     @java.lang.Override
@@ -14203,7 +14203,7 @@ private static final long serialVersionUID = 0L;
      * value below 0.1 is reported as 0.0999.
      * </pre>
      *
-     * <code>double search_impression_share = 142;</code>
+     * <code>optional double search_impression_share = 142;</code>
      * @param value The searchImpressionShare to set.
      * @return This builder for chaining.
      */
@@ -14221,7 +14221,7 @@ private static final long serialVersionUID = 0L;
      * value below 0.1 is reported as 0.0999.
      * </pre>
      *
-     * <code>double search_impression_share = 142;</code>
+     * <code>optional double search_impression_share = 142;</code>
      * @return This builder for chaining.
      */
     public Builder clearSearchImpressionShare() {
@@ -14240,7 +14240,7 @@ private static final long serialVersionUID = 0L;
      * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
      * </pre>
      *
-     * <code>double search_rank_lost_absolute_top_impression_share = 143;</code>
+     * <code>optional double search_rank_lost_absolute_top_impression_share = 143;</code>
      * @return Whether the searchRankLostAbsoluteTopImpressionShare field is set.
      */
     @java.lang.Override
@@ -14255,7 +14255,7 @@ private static final long serialVersionUID = 0L;
      * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
      * </pre>
      *
-     * <code>double search_rank_lost_absolute_top_impression_share = 143;</code>
+     * <code>optional double search_rank_lost_absolute_top_impression_share = 143;</code>
      * @return The searchRankLostAbsoluteTopImpressionShare.
      */
     @java.lang.Override
@@ -14270,7 +14270,7 @@ private static final long serialVersionUID = 0L;
      * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
      * </pre>
      *
-     * <code>double search_rank_lost_absolute_top_impression_share = 143;</code>
+     * <code>optional double search_rank_lost_absolute_top_impression_share = 143;</code>
      * @param value The searchRankLostAbsoluteTopImpressionShare to set.
      * @return This builder for chaining.
      */
@@ -14288,7 +14288,7 @@ private static final long serialVersionUID = 0L;
      * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
      * </pre>
      *
-     * <code>double search_rank_lost_absolute_top_impression_share = 143;</code>
+     * <code>optional double search_rank_lost_absolute_top_impression_share = 143;</code>
      * @return This builder for chaining.
      */
     public Builder clearSearchRankLostAbsoluteTopImpressionShare() {
@@ -14307,7 +14307,7 @@ private static final long serialVersionUID = 0L;
      * 0.9. Any value above 0.9 is reported as 0.9001.
      * </pre>
      *
-     * <code>double search_rank_lost_impression_share = 144;</code>
+     * <code>optional double search_rank_lost_impression_share = 144;</code>
      * @return Whether the searchRankLostImpressionShare field is set.
      */
     @java.lang.Override
@@ -14322,7 +14322,7 @@ private static final long serialVersionUID = 0L;
      * 0.9. Any value above 0.9 is reported as 0.9001.
      * </pre>
      *
-     * <code>double search_rank_lost_impression_share = 144;</code>
+     * <code>optional double search_rank_lost_impression_share = 144;</code>
      * @return The searchRankLostImpressionShare.
      */
     @java.lang.Override
@@ -14337,7 +14337,7 @@ private static final long serialVersionUID = 0L;
      * 0.9. Any value above 0.9 is reported as 0.9001.
      * </pre>
      *
-     * <code>double search_rank_lost_impression_share = 144;</code>
+     * <code>optional double search_rank_lost_impression_share = 144;</code>
      * @param value The searchRankLostImpressionShare to set.
      * @return This builder for chaining.
      */
@@ -14355,7 +14355,7 @@ private static final long serialVersionUID = 0L;
      * 0.9. Any value above 0.9 is reported as 0.9001.
      * </pre>
      *
-     * <code>double search_rank_lost_impression_share = 144;</code>
+     * <code>optional double search_rank_lost_impression_share = 144;</code>
      * @return This builder for chaining.
      */
     public Builder clearSearchRankLostImpressionShare() {
@@ -14374,7 +14374,7 @@ private static final long serialVersionUID = 0L;
      * to 0.9. Any value above 0.9 is reported as 0.9001.
      * </pre>
      *
-     * <code>double search_rank_lost_top_impression_share = 145;</code>
+     * <code>optional double search_rank_lost_top_impression_share = 145;</code>
      * @return Whether the searchRankLostTopImpressionShare field is set.
      */
     @java.lang.Override
@@ -14389,7 +14389,7 @@ private static final long serialVersionUID = 0L;
      * to 0.9. Any value above 0.9 is reported as 0.9001.
      * </pre>
      *
-     * <code>double search_rank_lost_top_impression_share = 145;</code>
+     * <code>optional double search_rank_lost_top_impression_share = 145;</code>
      * @return The searchRankLostTopImpressionShare.
      */
     @java.lang.Override
@@ -14404,7 +14404,7 @@ private static final long serialVersionUID = 0L;
      * to 0.9. Any value above 0.9 is reported as 0.9001.
      * </pre>
      *
-     * <code>double search_rank_lost_top_impression_share = 145;</code>
+     * <code>optional double search_rank_lost_top_impression_share = 145;</code>
      * @param value The searchRankLostTopImpressionShare to set.
      * @return This builder for chaining.
      */
@@ -14422,7 +14422,7 @@ private static final long serialVersionUID = 0L;
      * to 0.9. Any value above 0.9 is reported as 0.9001.
      * </pre>
      *
-     * <code>double search_rank_lost_top_impression_share = 145;</code>
+     * <code>optional double search_rank_lost_top_impression_share = 145;</code>
      * @return This builder for chaining.
      */
     public Builder clearSearchRankLostTopImpressionShare() {
@@ -14442,7 +14442,7 @@ private static final long serialVersionUID = 0L;
      * value below 0.1 is reported as 0.0999.
      * </pre>
      *
-     * <code>double search_top_impression_share = 146;</code>
+     * <code>optional double search_top_impression_share = 146;</code>
      * @return Whether the searchTopImpressionShare field is set.
      */
     @java.lang.Override
@@ -14458,7 +14458,7 @@ private static final long serialVersionUID = 0L;
      * value below 0.1 is reported as 0.0999.
      * </pre>
      *
-     * <code>double search_top_impression_share = 146;</code>
+     * <code>optional double search_top_impression_share = 146;</code>
      * @return The searchTopImpressionShare.
      */
     @java.lang.Override
@@ -14474,7 +14474,7 @@ private static final long serialVersionUID = 0L;
      * value below 0.1 is reported as 0.0999.
      * </pre>
      *
-     * <code>double search_top_impression_share = 146;</code>
+     * <code>optional double search_top_impression_share = 146;</code>
      * @param value The searchTopImpressionShare to set.
      * @return This builder for chaining.
      */
@@ -14493,7 +14493,7 @@ private static final long serialVersionUID = 0L;
      * value below 0.1 is reported as 0.0999.
      * </pre>
      *
-     * <code>double search_top_impression_share = 146;</code>
+     * <code>optional double search_top_impression_share = 146;</code>
      * @return This builder for chaining.
      */
     public Builder clearSearchTopImpressionShare() {
@@ -14510,7 +14510,7 @@ private static final long serialVersionUID = 0L;
      * The score is a range from 1 to 10, 10 being the fastest.
      * </pre>
      *
-     * <code>int64 speed_score = 147;</code>
+     * <code>optional int64 speed_score = 147;</code>
      * @return Whether the speedScore field is set.
      */
     @java.lang.Override
@@ -14523,7 +14523,7 @@ private static final long serialVersionUID = 0L;
      * The score is a range from 1 to 10, 10 being the fastest.
      * </pre>
      *
-     * <code>int64 speed_score = 147;</code>
+     * <code>optional int64 speed_score = 147;</code>
      * @return The speedScore.
      */
     @java.lang.Override
@@ -14536,7 +14536,7 @@ private static final long serialVersionUID = 0L;
      * The score is a range from 1 to 10, 10 being the fastest.
      * </pre>
      *
-     * <code>int64 speed_score = 147;</code>
+     * <code>optional int64 speed_score = 147;</code>
      * @param value The speedScore to set.
      * @return This builder for chaining.
      */
@@ -14552,7 +14552,7 @@ private static final long serialVersionUID = 0L;
      * The score is a range from 1 to 10, 10 being the fastest.
      * </pre>
      *
-     * <code>int64 speed_score = 147;</code>
+     * <code>optional int64 speed_score = 147;</code>
      * @return This builder for chaining.
      */
     public Builder clearSpeedScore() {
@@ -14569,7 +14569,7 @@ private static final long serialVersionUID = 0L;
      * organic search results.
      * </pre>
      *
-     * <code>double top_impression_percentage = 148;</code>
+     * <code>optional double top_impression_percentage = 148;</code>
      * @return Whether the topImpressionPercentage field is set.
      */
     @java.lang.Override
@@ -14582,7 +14582,7 @@ private static final long serialVersionUID = 0L;
      * organic search results.
      * </pre>
      *
-     * <code>double top_impression_percentage = 148;</code>
+     * <code>optional double top_impression_percentage = 148;</code>
      * @return The topImpressionPercentage.
      */
     @java.lang.Override
@@ -14595,7 +14595,7 @@ private static final long serialVersionUID = 0L;
      * organic search results.
      * </pre>
      *
-     * <code>double top_impression_percentage = 148;</code>
+     * <code>optional double top_impression_percentage = 148;</code>
      * @param value The topImpressionPercentage to set.
      * @return This builder for chaining.
      */
@@ -14611,7 +14611,7 @@ private static final long serialVersionUID = 0L;
      * organic search results.
      * </pre>
      *
-     * <code>double top_impression_percentage = 148;</code>
+     * <code>optional double top_impression_percentage = 148;</code>
      * @return This builder for chaining.
      */
     public Builder clearTopImpressionPercentage() {
@@ -14628,7 +14628,7 @@ private static final long serialVersionUID = 0L;
      * that reach a valid AMP page.
      * </pre>
      *
-     * <code>double valid_accelerated_mobile_pages_clicks_percentage = 149;</code>
+     * <code>optional double valid_accelerated_mobile_pages_clicks_percentage = 149;</code>
      * @return Whether the validAcceleratedMobilePagesClicksPercentage field is set.
      */
     @java.lang.Override
@@ -14641,7 +14641,7 @@ private static final long serialVersionUID = 0L;
      * that reach a valid AMP page.
      * </pre>
      *
-     * <code>double valid_accelerated_mobile_pages_clicks_percentage = 149;</code>
+     * <code>optional double valid_accelerated_mobile_pages_clicks_percentage = 149;</code>
      * @return The validAcceleratedMobilePagesClicksPercentage.
      */
     @java.lang.Override
@@ -14654,7 +14654,7 @@ private static final long serialVersionUID = 0L;
      * that reach a valid AMP page.
      * </pre>
      *
-     * <code>double valid_accelerated_mobile_pages_clicks_percentage = 149;</code>
+     * <code>optional double valid_accelerated_mobile_pages_clicks_percentage = 149;</code>
      * @param value The validAcceleratedMobilePagesClicksPercentage to set.
      * @return This builder for chaining.
      */
@@ -14670,7 +14670,7 @@ private static final long serialVersionUID = 0L;
      * that reach a valid AMP page.
      * </pre>
      *
-     * <code>double valid_accelerated_mobile_pages_clicks_percentage = 149;</code>
+     * <code>optional double valid_accelerated_mobile_pages_clicks_percentage = 149;</code>
      * @return This builder for chaining.
      */
     public Builder clearValidAcceleratedMobilePagesClicksPercentage() {
@@ -14686,7 +14686,7 @@ private static final long serialVersionUID = 0L;
      * The value of all conversions divided by the number of all conversions.
      * </pre>
      *
-     * <code>double value_per_all_conversions = 150;</code>
+     * <code>optional double value_per_all_conversions = 150;</code>
      * @return Whether the valuePerAllConversions field is set.
      */
     @java.lang.Override
@@ -14698,7 +14698,7 @@ private static final long serialVersionUID = 0L;
      * The value of all conversions divided by the number of all conversions.
      * </pre>
      *
-     * <code>double value_per_all_conversions = 150;</code>
+     * <code>optional double value_per_all_conversions = 150;</code>
      * @return The valuePerAllConversions.
      */
     @java.lang.Override
@@ -14710,7 +14710,7 @@ private static final long serialVersionUID = 0L;
      * The value of all conversions divided by the number of all conversions.
      * </pre>
      *
-     * <code>double value_per_all_conversions = 150;</code>
+     * <code>optional double value_per_all_conversions = 150;</code>
      * @param value The valuePerAllConversions to set.
      * @return This builder for chaining.
      */
@@ -14725,7 +14725,7 @@ private static final long serialVersionUID = 0L;
      * The value of all conversions divided by the number of all conversions.
      * </pre>
      *
-     * <code>double value_per_all_conversions = 150;</code>
+     * <code>optional double value_per_all_conversions = 150;</code>
      * @return This builder for chaining.
      */
     public Builder clearValuePerAllConversions() {
@@ -14744,7 +14744,7 @@ private static final long serialVersionUID = 0L;
      * at https://support.google.com/google-ads/answer/9549009.
      * </pre>
      *
-     * <code>double value_per_all_conversions_by_conversion_date = 244;</code>
+     * <code>optional double value_per_all_conversions_by_conversion_date = 244;</code>
      * @return Whether the valuePerAllConversionsByConversionDate field is set.
      */
     @java.lang.Override
@@ -14759,7 +14759,7 @@ private static final long serialVersionUID = 0L;
      * at https://support.google.com/google-ads/answer/9549009.
      * </pre>
      *
-     * <code>double value_per_all_conversions_by_conversion_date = 244;</code>
+     * <code>optional double value_per_all_conversions_by_conversion_date = 244;</code>
      * @return The valuePerAllConversionsByConversionDate.
      */
     @java.lang.Override
@@ -14774,7 +14774,7 @@ private static final long serialVersionUID = 0L;
      * at https://support.google.com/google-ads/answer/9549009.
      * </pre>
      *
-     * <code>double value_per_all_conversions_by_conversion_date = 244;</code>
+     * <code>optional double value_per_all_conversions_by_conversion_date = 244;</code>
      * @param value The valuePerAllConversionsByConversionDate to set.
      * @return This builder for chaining.
      */
@@ -14792,7 +14792,7 @@ private static final long serialVersionUID = 0L;
      * at https://support.google.com/google-ads/answer/9549009.
      * </pre>
      *
-     * <code>double value_per_all_conversions_by_conversion_date = 244;</code>
+     * <code>optional double value_per_all_conversions_by_conversion_date = 244;</code>
      * @return This builder for chaining.
      */
     public Builder clearValuePerAllConversionsByConversionDate() {
@@ -14811,7 +14811,7 @@ private static final long serialVersionUID = 0L;
      * will optimize for these conversions.
      * </pre>
      *
-     * <code>double value_per_conversion = 151;</code>
+     * <code>optional double value_per_conversion = 151;</code>
      * @return Whether the valuePerConversion field is set.
      */
     @java.lang.Override
@@ -14826,7 +14826,7 @@ private static final long serialVersionUID = 0L;
      * will optimize for these conversions.
      * </pre>
      *
-     * <code>double value_per_conversion = 151;</code>
+     * <code>optional double value_per_conversion = 151;</code>
      * @return The valuePerConversion.
      */
     @java.lang.Override
@@ -14841,7 +14841,7 @@ private static final long serialVersionUID = 0L;
      * will optimize for these conversions.
      * </pre>
      *
-     * <code>double value_per_conversion = 151;</code>
+     * <code>optional double value_per_conversion = 151;</code>
      * @param value The valuePerConversion to set.
      * @return This builder for chaining.
      */
@@ -14859,7 +14859,7 @@ private static final long serialVersionUID = 0L;
      * will optimize for these conversions.
      * </pre>
      *
-     * <code>double value_per_conversion = 151;</code>
+     * <code>optional double value_per_conversion = 151;</code>
      * @return This builder for chaining.
      */
     public Builder clearValuePerConversion() {
@@ -14881,7 +14881,7 @@ private static final long serialVersionUID = 0L;
      * https://support.google.com/google-ads/answer/9549009.
      * </pre>
      *
-     * <code>double value_per_conversions_by_conversion_date = 245;</code>
+     * <code>optional double value_per_conversions_by_conversion_date = 245;</code>
      * @return Whether the valuePerConversionsByConversionDate field is set.
      */
     @java.lang.Override
@@ -14899,7 +14899,7 @@ private static final long serialVersionUID = 0L;
      * https://support.google.com/google-ads/answer/9549009.
      * </pre>
      *
-     * <code>double value_per_conversions_by_conversion_date = 245;</code>
+     * <code>optional double value_per_conversions_by_conversion_date = 245;</code>
      * @return The valuePerConversionsByConversionDate.
      */
     @java.lang.Override
@@ -14917,7 +14917,7 @@ private static final long serialVersionUID = 0L;
      * https://support.google.com/google-ads/answer/9549009.
      * </pre>
      *
-     * <code>double value_per_conversions_by_conversion_date = 245;</code>
+     * <code>optional double value_per_conversions_by_conversion_date = 245;</code>
      * @param value The valuePerConversionsByConversionDate to set.
      * @return This builder for chaining.
      */
@@ -14938,7 +14938,7 @@ private static final long serialVersionUID = 0L;
      * https://support.google.com/google-ads/answer/9549009.
      * </pre>
      *
-     * <code>double value_per_conversions_by_conversion_date = 245;</code>
+     * <code>optional double value_per_conversions_by_conversion_date = 245;</code>
      * @return This builder for chaining.
      */
     public Builder clearValuePerConversionsByConversionDate() {
@@ -14958,7 +14958,7 @@ private static final long serialVersionUID = 0L;
      * conversions.
      * </pre>
      *
-     * <code>double value_per_current_model_attributed_conversion = 152;</code>
+     * <code>optional double value_per_current_model_attributed_conversion = 152;</code>
      * @return Whether the valuePerCurrentModelAttributedConversion field is set.
      */
     @java.lang.Override
@@ -14974,7 +14974,7 @@ private static final long serialVersionUID = 0L;
      * conversions.
      * </pre>
      *
-     * <code>double value_per_current_model_attributed_conversion = 152;</code>
+     * <code>optional double value_per_current_model_attributed_conversion = 152;</code>
      * @return The valuePerCurrentModelAttributedConversion.
      */
     @java.lang.Override
@@ -14990,7 +14990,7 @@ private static final long serialVersionUID = 0L;
      * conversions.
      * </pre>
      *
-     * <code>double value_per_current_model_attributed_conversion = 152;</code>
+     * <code>optional double value_per_current_model_attributed_conversion = 152;</code>
      * @param value The valuePerCurrentModelAttributedConversion to set.
      * @return This builder for chaining.
      */
@@ -15009,7 +15009,7 @@ private static final long serialVersionUID = 0L;
      * conversions.
      * </pre>
      *
-     * <code>double value_per_current_model_attributed_conversion = 152;</code>
+     * <code>optional double value_per_current_model_attributed_conversion = 152;</code>
      * @return This builder for chaining.
      */
     public Builder clearValuePerCurrentModelAttributedConversion() {
@@ -15025,7 +15025,7 @@ private static final long serialVersionUID = 0L;
      * Percentage of impressions where the viewer watched all of your video.
      * </pre>
      *
-     * <code>double video_quartile_p100_rate = 132;</code>
+     * <code>optional double video_quartile_p100_rate = 132;</code>
      * @return Whether the videoQuartileP100Rate field is set.
      */
     @java.lang.Override
@@ -15037,7 +15037,7 @@ private static final long serialVersionUID = 0L;
      * Percentage of impressions where the viewer watched all of your video.
      * </pre>
      *
-     * <code>double video_quartile_p100_rate = 132;</code>
+     * <code>optional double video_quartile_p100_rate = 132;</code>
      * @return The videoQuartileP100Rate.
      */
     @java.lang.Override
@@ -15049,7 +15049,7 @@ private static final long serialVersionUID = 0L;
      * Percentage of impressions where the viewer watched all of your video.
      * </pre>
      *
-     * <code>double video_quartile_p100_rate = 132;</code>
+     * <code>optional double video_quartile_p100_rate = 132;</code>
      * @param value The videoQuartileP100Rate to set.
      * @return This builder for chaining.
      */
@@ -15064,7 +15064,7 @@ private static final long serialVersionUID = 0L;
      * Percentage of impressions where the viewer watched all of your video.
      * </pre>
      *
-     * <code>double video_quartile_p100_rate = 132;</code>
+     * <code>optional double video_quartile_p100_rate = 132;</code>
      * @return This builder for chaining.
      */
     public Builder clearVideoQuartileP100Rate() {
@@ -15080,7 +15080,7 @@ private static final long serialVersionUID = 0L;
      * Percentage of impressions where the viewer watched 25% of your video.
      * </pre>
      *
-     * <code>double video_quartile_p25_rate = 133;</code>
+     * <code>optional double video_quartile_p25_rate = 133;</code>
      * @return Whether the videoQuartileP25Rate field is set.
      */
     @java.lang.Override
@@ -15092,7 +15092,7 @@ private static final long serialVersionUID = 0L;
      * Percentage of impressions where the viewer watched 25% of your video.
      * </pre>
      *
-     * <code>double video_quartile_p25_rate = 133;</code>
+     * <code>optional double video_quartile_p25_rate = 133;</code>
      * @return The videoQuartileP25Rate.
      */
     @java.lang.Override
@@ -15104,7 +15104,7 @@ private static final long serialVersionUID = 0L;
      * Percentage of impressions where the viewer watched 25% of your video.
      * </pre>
      *
-     * <code>double video_quartile_p25_rate = 133;</code>
+     * <code>optional double video_quartile_p25_rate = 133;</code>
      * @param value The videoQuartileP25Rate to set.
      * @return This builder for chaining.
      */
@@ -15119,7 +15119,7 @@ private static final long serialVersionUID = 0L;
      * Percentage of impressions where the viewer watched 25% of your video.
      * </pre>
      *
-     * <code>double video_quartile_p25_rate = 133;</code>
+     * <code>optional double video_quartile_p25_rate = 133;</code>
      * @return This builder for chaining.
      */
     public Builder clearVideoQuartileP25Rate() {
@@ -15135,7 +15135,7 @@ private static final long serialVersionUID = 0L;
      * Percentage of impressions where the viewer watched 50% of your video.
      * </pre>
      *
-     * <code>double video_quartile_p50_rate = 134;</code>
+     * <code>optional double video_quartile_p50_rate = 134;</code>
      * @return Whether the videoQuartileP50Rate field is set.
      */
     @java.lang.Override
@@ -15147,7 +15147,7 @@ private static final long serialVersionUID = 0L;
      * Percentage of impressions where the viewer watched 50% of your video.
      * </pre>
      *
-     * <code>double video_quartile_p50_rate = 134;</code>
+     * <code>optional double video_quartile_p50_rate = 134;</code>
      * @return The videoQuartileP50Rate.
      */
     @java.lang.Override
@@ -15159,7 +15159,7 @@ private static final long serialVersionUID = 0L;
      * Percentage of impressions where the viewer watched 50% of your video.
      * </pre>
      *
-     * <code>double video_quartile_p50_rate = 134;</code>
+     * <code>optional double video_quartile_p50_rate = 134;</code>
      * @param value The videoQuartileP50Rate to set.
      * @return This builder for chaining.
      */
@@ -15174,7 +15174,7 @@ private static final long serialVersionUID = 0L;
      * Percentage of impressions where the viewer watched 50% of your video.
      * </pre>
      *
-     * <code>double video_quartile_p50_rate = 134;</code>
+     * <code>optional double video_quartile_p50_rate = 134;</code>
      * @return This builder for chaining.
      */
     public Builder clearVideoQuartileP50Rate() {
@@ -15190,7 +15190,7 @@ private static final long serialVersionUID = 0L;
      * Percentage of impressions where the viewer watched 75% of your video.
      * </pre>
      *
-     * <code>double video_quartile_p75_rate = 135;</code>
+     * <code>optional double video_quartile_p75_rate = 135;</code>
      * @return Whether the videoQuartileP75Rate field is set.
      */
     @java.lang.Override
@@ -15202,7 +15202,7 @@ private static final long serialVersionUID = 0L;
      * Percentage of impressions where the viewer watched 75% of your video.
      * </pre>
      *
-     * <code>double video_quartile_p75_rate = 135;</code>
+     * <code>optional double video_quartile_p75_rate = 135;</code>
      * @return The videoQuartileP75Rate.
      */
     @java.lang.Override
@@ -15214,7 +15214,7 @@ private static final long serialVersionUID = 0L;
      * Percentage of impressions where the viewer watched 75% of your video.
      * </pre>
      *
-     * <code>double video_quartile_p75_rate = 135;</code>
+     * <code>optional double video_quartile_p75_rate = 135;</code>
      * @param value The videoQuartileP75Rate to set.
      * @return This builder for chaining.
      */
@@ -15229,7 +15229,7 @@ private static final long serialVersionUID = 0L;
      * Percentage of impressions where the viewer watched 75% of your video.
      * </pre>
      *
-     * <code>double video_quartile_p75_rate = 135;</code>
+     * <code>optional double video_quartile_p75_rate = 135;</code>
      * @return This builder for chaining.
      */
     public Builder clearVideoQuartileP75Rate() {
@@ -15247,7 +15247,7 @@ private static final long serialVersionUID = 0L;
      * ads.
      * </pre>
      *
-     * <code>double video_view_rate = 153;</code>
+     * <code>optional double video_view_rate = 153;</code>
      * @return Whether the videoViewRate field is set.
      */
     @java.lang.Override
@@ -15261,7 +15261,7 @@ private static final long serialVersionUID = 0L;
      * ads.
      * </pre>
      *
-     * <code>double video_view_rate = 153;</code>
+     * <code>optional double video_view_rate = 153;</code>
      * @return The videoViewRate.
      */
     @java.lang.Override
@@ -15275,7 +15275,7 @@ private static final long serialVersionUID = 0L;
      * ads.
      * </pre>
      *
-     * <code>double video_view_rate = 153;</code>
+     * <code>optional double video_view_rate = 153;</code>
      * @param value The videoViewRate to set.
      * @return This builder for chaining.
      */
@@ -15292,7 +15292,7 @@ private static final long serialVersionUID = 0L;
      * ads.
      * </pre>
      *
-     * <code>double video_view_rate = 153;</code>
+     * <code>optional double video_view_rate = 153;</code>
      * @return This builder for chaining.
      */
     public Builder clearVideoViewRate() {
@@ -15308,7 +15308,7 @@ private static final long serialVersionUID = 0L;
      * The number of times your video ads were viewed.
      * </pre>
      *
-     * <code>int64 video_views = 154;</code>
+     * <code>optional int64 video_views = 154;</code>
      * @return Whether the videoViews field is set.
      */
     @java.lang.Override
@@ -15320,7 +15320,7 @@ private static final long serialVersionUID = 0L;
      * The number of times your video ads were viewed.
      * </pre>
      *
-     * <code>int64 video_views = 154;</code>
+     * <code>optional int64 video_views = 154;</code>
      * @return The videoViews.
      */
     @java.lang.Override
@@ -15332,7 +15332,7 @@ private static final long serialVersionUID = 0L;
      * The number of times your video ads were viewed.
      * </pre>
      *
-     * <code>int64 video_views = 154;</code>
+     * <code>optional int64 video_views = 154;</code>
      * @param value The videoViews to set.
      * @return This builder for chaining.
      */
@@ -15347,7 +15347,7 @@ private static final long serialVersionUID = 0L;
      * The number of times your video ads were viewed.
      * </pre>
      *
-     * <code>int64 video_views = 154;</code>
+     * <code>optional int64 video_views = 154;</code>
      * @return This builder for chaining.
      */
     public Builder clearVideoViews() {
@@ -15366,7 +15366,7 @@ private static final long serialVersionUID = 0L;
      * clicking on) another ad.
      * </pre>
      *
-     * <code>int64 view_through_conversions = 155;</code>
+     * <code>optional int64 view_through_conversions = 155;</code>
      * @return Whether the viewThroughConversions field is set.
      */
     @java.lang.Override
@@ -15381,7 +15381,7 @@ private static final long serialVersionUID = 0L;
      * clicking on) another ad.
      * </pre>
      *
-     * <code>int64 view_through_conversions = 155;</code>
+     * <code>optional int64 view_through_conversions = 155;</code>
      * @return The viewThroughConversions.
      */
     @java.lang.Override
@@ -15396,7 +15396,7 @@ private static final long serialVersionUID = 0L;
      * clicking on) another ad.
      * </pre>
      *
-     * <code>int64 view_through_conversions = 155;</code>
+     * <code>optional int64 view_through_conversions = 155;</code>
      * @param value The viewThroughConversions to set.
      * @return This builder for chaining.
      */
@@ -15414,7 +15414,7 @@ private static final long serialVersionUID = 0L;
      * clicking on) another ad.
      * </pre>
      *
-     * <code>int64 view_through_conversions = 155;</code>
+     * <code>optional int64 view_through_conversions = 155;</code>
      * @return This builder for chaining.
      */
     public Builder clearViewThroughConversions() {

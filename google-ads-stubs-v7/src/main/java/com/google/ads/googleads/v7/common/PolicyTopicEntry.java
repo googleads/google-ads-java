@@ -142,7 +142,7 @@ private static final long serialVersionUID = 0L;
    * at any time.
    * </pre>
    *
-   * <code>string topic = 5;</code>
+   * <code>optional string topic = 5;</code>
    * @return Whether the topic field is set.
    */
   @java.lang.Override
@@ -157,7 +157,7 @@ private static final long serialVersionUID = 0L;
    * at any time.
    * </pre>
    *
-   * <code>string topic = 5;</code>
+   * <code>optional string topic = 5;</code>
    * @return The topic.
    */
   @java.lang.Override
@@ -181,7 +181,7 @@ private static final long serialVersionUID = 0L;
    * at any time.
    * </pre>
    *
-   * <code>string topic = 5;</code>
+   * <code>optional string topic = 5;</code>
    * @return The bytes for topic.
    */
   @java.lang.Override
@@ -816,7 +816,7 @@ private static final long serialVersionUID = 0L;
      * at any time.
      * </pre>
      *
-     * <code>string topic = 5;</code>
+     * <code>optional string topic = 5;</code>
      * @return Whether the topic field is set.
      */
     public boolean hasTopic() {
@@ -830,7 +830,7 @@ private static final long serialVersionUID = 0L;
      * at any time.
      * </pre>
      *
-     * <code>string topic = 5;</code>
+     * <code>optional string topic = 5;</code>
      * @return The topic.
      */
     public java.lang.String getTopic() {
@@ -853,7 +853,7 @@ private static final long serialVersionUID = 0L;
      * at any time.
      * </pre>
      *
-     * <code>string topic = 5;</code>
+     * <code>optional string topic = 5;</code>
      * @return The bytes for topic.
      */
     public com.google.protobuf.ByteString
@@ -877,7 +877,7 @@ private static final long serialVersionUID = 0L;
      * at any time.
      * </pre>
      *
-     * <code>string topic = 5;</code>
+     * <code>optional string topic = 5;</code>
      * @param value The topic to set.
      * @return This builder for chaining.
      */
@@ -899,7 +899,7 @@ private static final long serialVersionUID = 0L;
      * at any time.
      * </pre>
      *
-     * <code>string topic = 5;</code>
+     * <code>optional string topic = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearTopic() {
@@ -916,7 +916,7 @@ private static final long serialVersionUID = 0L;
      * at any time.
      * </pre>
      *
-     * <code>string topic = 5;</code>
+     * <code>optional string topic = 5;</code>
      * @param value The bytes for topic to set.
      * @return This builder for chaining.
      */

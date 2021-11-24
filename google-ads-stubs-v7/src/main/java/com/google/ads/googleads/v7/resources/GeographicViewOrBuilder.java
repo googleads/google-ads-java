@@ -55,7 +55,7 @@ public interface GeographicViewOrBuilder extends
    * Output only. Criterion Id for the country.
    * </pre>
    *
-   * <code>int64 country_criterion_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 country_criterion_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the countryCriterionId field is set.
    */
   boolean hasCountryCriterionId();
@@ -64,7 +64,7 @@ public interface GeographicViewOrBuilder extends
    * Output only. Criterion Id for the country.
    * </pre>
    *
-   * <code>int64 country_criterion_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 country_criterion_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The countryCriterionId.
    */
   long getCountryCriterionId();

@@ -14,7 +14,7 @@ public interface SuggestGeoTargetConstantsRequestOrBuilder extends
    * targets.
    * </pre>
    *
-   * <code>string locale = 6;</code>
+   * <code>optional string locale = 6;</code>
    * @return Whether the locale field is set.
    */
   boolean hasLocale();
@@ -25,7 +25,7 @@ public interface SuggestGeoTargetConstantsRequestOrBuilder extends
    * targets.
    * </pre>
    *
-   * <code>string locale = 6;</code>
+   * <code>optional string locale = 6;</code>
    * @return The locale.
    */
   java.lang.String getLocale();
@@ -36,7 +36,7 @@ public interface SuggestGeoTargetConstantsRequestOrBuilder extends
    * targets.
    * </pre>
    *
-   * <code>string locale = 6;</code>
+   * <code>optional string locale = 6;</code>
    * @return The bytes for locale.
    */
   com.google.protobuf.ByteString
@@ -47,7 +47,7 @@ public interface SuggestGeoTargetConstantsRequestOrBuilder extends
    * Returned geo targets are restricted to this country code.
    * </pre>
    *
-   * <code>string country_code = 7;</code>
+   * <code>optional string country_code = 7;</code>
    * @return Whether the countryCode field is set.
    */
   boolean hasCountryCode();
@@ -56,7 +56,7 @@ public interface SuggestGeoTargetConstantsRequestOrBuilder extends
    * Returned geo targets are restricted to this country code.
    * </pre>
    *
-   * <code>string country_code = 7;</code>
+   * <code>optional string country_code = 7;</code>
    * @return The countryCode.
    */
   java.lang.String getCountryCode();
@@ -65,7 +65,7 @@ public interface SuggestGeoTargetConstantsRequestOrBuilder extends
    * Returned geo targets are restricted to this country code.
    * </pre>
    *
-   * <code>string country_code = 7;</code>
+   * <code>optional string country_code = 7;</code>
    * @return The bytes for countryCode.
    */
   com.google.protobuf.ByteString

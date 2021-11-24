@@ -289,7 +289,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of the media file.
    * </pre>
    *
-   * <code>int64 id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   @java.lang.Override
@@ -301,7 +301,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of the media file.
    * </pre>
    *
-   * <code>int64 id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   @java.lang.Override
@@ -371,7 +371,7 @@ private static final long serialVersionUID = 0L;
    * name). Only used for media of type AUDIO and IMAGE.
    * </pre>
    *
-   * <code>string source_url = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string source_url = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the sourceUrl field is set.
    */
   @java.lang.Override
@@ -384,7 +384,7 @@ private static final long serialVersionUID = 0L;
    * name). Only used for media of type AUDIO and IMAGE.
    * </pre>
    *
-   * <code>string source_url = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string source_url = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The sourceUrl.
    */
   @java.lang.Override
@@ -406,7 +406,7 @@ private static final long serialVersionUID = 0L;
    * name). Only used for media of type AUDIO and IMAGE.
    * </pre>
    *
-   * <code>string source_url = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string source_url = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The bytes for sourceUrl.
    */
   @java.lang.Override
@@ -432,7 +432,7 @@ private static final long serialVersionUID = 0L;
    * identify previously uploaded media.
    * </pre>
    *
-   * <code>string name = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string name = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the name field is set.
    */
   @java.lang.Override
@@ -445,7 +445,7 @@ private static final long serialVersionUID = 0L;
    * identify previously uploaded media.
    * </pre>
    *
-   * <code>string name = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string name = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The name.
    */
   @java.lang.Override
@@ -467,7 +467,7 @@ private static final long serialVersionUID = 0L;
    * identify previously uploaded media.
    * </pre>
    *
-   * <code>string name = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string name = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The bytes for name.
    */
   @java.lang.Override
@@ -492,7 +492,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The size of the media file in bytes.
    * </pre>
    *
-   * <code>int64 file_size = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 file_size = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the fileSize field is set.
    */
   @java.lang.Override
@@ -504,7 +504,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The size of the media file in bytes.
    * </pre>
    *
-   * <code>int64 file_size = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 file_size = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The fileSize.
    */
   @java.lang.Override
@@ -698,7 +698,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (mediatypeCase_ == 3) {
@@ -740,7 +740,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (mediatypeCase_ == 3) {
@@ -1378,7 +1378,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the media file.
      * </pre>
      *
-     * <code>int64 id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the id field is set.
      */
     @java.lang.Override
@@ -1390,7 +1390,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the media file.
      * </pre>
      *
-     * <code>int64 id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The id.
      */
     @java.lang.Override
@@ -1402,7 +1402,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the media file.
      * </pre>
      *
-     * <code>int64 id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
@@ -1417,7 +1417,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the media file.
      * </pre>
      *
-     * <code>int64 id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {
@@ -1582,7 +1582,7 @@ private static final long serialVersionUID = 0L;
      * name). Only used for media of type AUDIO and IMAGE.
      * </pre>
      *
-     * <code>string source_url = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string source_url = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the sourceUrl field is set.
      */
     public boolean hasSourceUrl() {
@@ -1594,7 +1594,7 @@ private static final long serialVersionUID = 0L;
      * name). Only used for media of type AUDIO and IMAGE.
      * </pre>
      *
-     * <code>string source_url = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string source_url = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The sourceUrl.
      */
     public java.lang.String getSourceUrl() {
@@ -1615,7 +1615,7 @@ private static final long serialVersionUID = 0L;
      * name). Only used for media of type AUDIO and IMAGE.
      * </pre>
      *
-     * <code>string source_url = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string source_url = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The bytes for sourceUrl.
      */
     public com.google.protobuf.ByteString
@@ -1637,7 +1637,7 @@ private static final long serialVersionUID = 0L;
      * name). Only used for media of type AUDIO and IMAGE.
      * </pre>
      *
-     * <code>string source_url = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string source_url = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @param value The sourceUrl to set.
      * @return This builder for chaining.
      */
@@ -1657,7 +1657,7 @@ private static final long serialVersionUID = 0L;
      * name). Only used for media of type AUDIO and IMAGE.
      * </pre>
      *
-     * <code>string source_url = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string source_url = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return This builder for chaining.
      */
     public Builder clearSourceUrl() {
@@ -1672,7 +1672,7 @@ private static final long serialVersionUID = 0L;
      * name). Only used for media of type AUDIO and IMAGE.
      * </pre>
      *
-     * <code>string source_url = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string source_url = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @param value The bytes for sourceUrl to set.
      * @return This builder for chaining.
      */
@@ -1695,7 +1695,7 @@ private static final long serialVersionUID = 0L;
      * identify previously uploaded media.
      * </pre>
      *
-     * <code>string name = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string name = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the name field is set.
      */
     public boolean hasName() {
@@ -1707,7 +1707,7 @@ private static final long serialVersionUID = 0L;
      * identify previously uploaded media.
      * </pre>
      *
-     * <code>string name = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string name = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The name.
      */
     public java.lang.String getName() {
@@ -1728,7 +1728,7 @@ private static final long serialVersionUID = 0L;
      * identify previously uploaded media.
      * </pre>
      *
-     * <code>string name = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string name = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
@@ -1750,7 +1750,7 @@ private static final long serialVersionUID = 0L;
      * identify previously uploaded media.
      * </pre>
      *
-     * <code>string name = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string name = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @param value The name to set.
      * @return This builder for chaining.
      */
@@ -1770,7 +1770,7 @@ private static final long serialVersionUID = 0L;
      * identify previously uploaded media.
      * </pre>
      *
-     * <code>string name = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string name = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
@@ -1785,7 +1785,7 @@ private static final long serialVersionUID = 0L;
      * identify previously uploaded media.
      * </pre>
      *
-     * <code>string name = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string name = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
@@ -1807,7 +1807,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The size of the media file in bytes.
      * </pre>
      *
-     * <code>int64 file_size = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 file_size = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the fileSize field is set.
      */
     @java.lang.Override
@@ -1819,7 +1819,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The size of the media file in bytes.
      * </pre>
      *
-     * <code>int64 file_size = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 file_size = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The fileSize.
      */
     @java.lang.Override
@@ -1831,7 +1831,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The size of the media file in bytes.
      * </pre>
      *
-     * <code>int64 file_size = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 file_size = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The fileSize to set.
      * @return This builder for chaining.
      */
@@ -1846,7 +1846,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The size of the media file in bytes.
      * </pre>
      *
-     * <code>int64 file_size = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 file_size = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearFileSize() {

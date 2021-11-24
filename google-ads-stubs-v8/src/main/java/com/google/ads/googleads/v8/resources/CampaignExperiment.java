@@ -225,7 +225,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 id = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   @java.lang.Override
@@ -238,7 +238,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 id = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   @java.lang.Override
@@ -253,7 +253,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The campaign draft with staged changes to the base campaign.
    * </pre>
    *
-   * <code>string campaign_draft = 14 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign_draft = 14 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the campaignDraft field is set.
    */
   @java.lang.Override
@@ -265,7 +265,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The campaign draft with staged changes to the base campaign.
    * </pre>
    *
-   * <code>string campaign_draft = 14 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign_draft = 14 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The campaignDraft.
    */
   @java.lang.Override
@@ -286,7 +286,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The campaign draft with staged changes to the base campaign.
    * </pre>
    *
-   * <code>string campaign_draft = 14 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign_draft = 14 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for campaignDraft.
    */
   @java.lang.Override
@@ -316,7 +316,7 @@ private static final long serialVersionUID = 0L;
    * (code point 0xA) or carriage return (code point 0xD) characters.
    * </pre>
    *
-   * <code>string name = 15;</code>
+   * <code>optional string name = 15;</code>
    * @return Whether the name field is set.
    */
   @java.lang.Override
@@ -333,7 +333,7 @@ private static final long serialVersionUID = 0L;
    * (code point 0xA) or carriage return (code point 0xD) characters.
    * </pre>
    *
-   * <code>string name = 15;</code>
+   * <code>optional string name = 15;</code>
    * @return The name.
    */
   @java.lang.Override
@@ -359,7 +359,7 @@ private static final long serialVersionUID = 0L;
    * (code point 0xA) or carriage return (code point 0xD) characters.
    * </pre>
    *
-   * <code>string name = 15;</code>
+   * <code>optional string name = 15;</code>
    * @return The bytes for name.
    */
   @java.lang.Override
@@ -384,7 +384,7 @@ private static final long serialVersionUID = 0L;
    * The description of the experiment.
    * </pre>
    *
-   * <code>string description = 16;</code>
+   * <code>optional string description = 16;</code>
    * @return Whether the description field is set.
    */
   @java.lang.Override
@@ -396,7 +396,7 @@ private static final long serialVersionUID = 0L;
    * The description of the experiment.
    * </pre>
    *
-   * <code>string description = 16;</code>
+   * <code>optional string description = 16;</code>
    * @return The description.
    */
   @java.lang.Override
@@ -417,7 +417,7 @@ private static final long serialVersionUID = 0L;
    * The description of the experiment.
    * </pre>
    *
-   * <code>string description = 16;</code>
+   * <code>optional string description = 16;</code>
    * @return The bytes for description.
    */
   @java.lang.Override
@@ -444,7 +444,7 @@ private static final long serialVersionUID = 0L;
    * (100 - traffic_split_percent). Required for create.
    * </pre>
    *
-   * <code>int64 traffic_split_percent = 17 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional int64 traffic_split_percent = 17 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the trafficSplitPercent field is set.
    */
   @java.lang.Override
@@ -458,7 +458,7 @@ private static final long serialVersionUID = 0L;
    * (100 - traffic_split_percent). Required for create.
    * </pre>
    *
-   * <code>int64 traffic_split_percent = 17 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional int64 traffic_split_percent = 17 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The trafficSplitPercent.
    */
   @java.lang.Override
@@ -500,7 +500,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The experiment campaign, as opposed to the base campaign.
    * </pre>
    *
-   * <code>string experiment_campaign = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string experiment_campaign = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the experimentCampaign field is set.
    */
   @java.lang.Override
@@ -512,7 +512,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The experiment campaign, as opposed to the base campaign.
    * </pre>
    *
-   * <code>string experiment_campaign = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string experiment_campaign = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The experimentCampaign.
    */
   @java.lang.Override
@@ -533,7 +533,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The experiment campaign, as opposed to the base campaign.
    * </pre>
    *
-   * <code>string experiment_campaign = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string experiment_campaign = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for experimentCampaign.
    */
   @java.lang.Override
@@ -587,7 +587,7 @@ private static final long serialVersionUID = 0L;
    * running operation is returned.
    * </pre>
    *
-   * <code>string long_running_operation = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string long_running_operation = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the longRunningOperation field is set.
    */
   @java.lang.Override
@@ -601,7 +601,7 @@ private static final long serialVersionUID = 0L;
    * running operation is returned.
    * </pre>
    *
-   * <code>string long_running_operation = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string long_running_operation = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The longRunningOperation.
    */
   @java.lang.Override
@@ -624,7 +624,7 @@ private static final long serialVersionUID = 0L;
    * running operation is returned.
    * </pre>
    *
-   * <code>string long_running_operation = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string long_running_operation = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for longRunningOperation.
    */
   @java.lang.Override
@@ -654,7 +654,7 @@ private static final long serialVersionUID = 0L;
    * Example: 2019-03-14
    * </pre>
    *
-   * <code>string start_date = 20;</code>
+   * <code>optional string start_date = 20;</code>
    * @return Whether the startDate field is set.
    */
   @java.lang.Override
@@ -671,7 +671,7 @@ private static final long serialVersionUID = 0L;
    * Example: 2019-03-14
    * </pre>
    *
-   * <code>string start_date = 20;</code>
+   * <code>optional string start_date = 20;</code>
    * @return The startDate.
    */
   @java.lang.Override
@@ -697,7 +697,7 @@ private static final long serialVersionUID = 0L;
    * Example: 2019-03-14
    * </pre>
    *
-   * <code>string start_date = 20;</code>
+   * <code>optional string start_date = 20;</code>
    * @return The bytes for startDate.
    */
   @java.lang.Override
@@ -726,7 +726,7 @@ private static final long serialVersionUID = 0L;
    * Example: 2019-04-18
    * </pre>
    *
-   * <code>string end_date = 21;</code>
+   * <code>optional string end_date = 21;</code>
    * @return Whether the endDate field is set.
    */
   @java.lang.Override
@@ -742,7 +742,7 @@ private static final long serialVersionUID = 0L;
    * Example: 2019-04-18
    * </pre>
    *
-   * <code>string end_date = 21;</code>
+   * <code>optional string end_date = 21;</code>
    * @return The endDate.
    */
   @java.lang.Override
@@ -767,7 +767,7 @@ private static final long serialVersionUID = 0L;
    * Example: 2019-04-18
    * </pre>
    *
-   * <code>string end_date = 21;</code>
+   * <code>optional string end_date = 21;</code>
    * @return The bytes for endDate.
    */
   @java.lang.Override
@@ -799,7 +799,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (trafficSplitType_ != com.google.ads.googleads.v8.enums.CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType.UNSPECIFIED.getNumber()) {
@@ -844,7 +844,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (trafficSplitType_ != com.google.ads.googleads.v8.enums.CampaignExperimentTrafficSplitTypeEnum.CampaignExperimentTrafficSplitType.UNSPECIFIED.getNumber()) {
@@ -1475,7 +1475,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 id = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the id field is set.
      */
     @java.lang.Override
@@ -1488,7 +1488,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 id = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The id.
      */
     @java.lang.Override
@@ -1501,7 +1501,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 id = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
@@ -1517,7 +1517,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 id = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {
@@ -1533,7 +1533,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The campaign draft with staged changes to the base campaign.
      * </pre>
      *
-     * <code>string campaign_draft = 14 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign_draft = 14 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the campaignDraft field is set.
      */
     public boolean hasCampaignDraft() {
@@ -1544,7 +1544,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The campaign draft with staged changes to the base campaign.
      * </pre>
      *
-     * <code>string campaign_draft = 14 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign_draft = 14 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return The campaignDraft.
      */
     public java.lang.String getCampaignDraft() {
@@ -1564,7 +1564,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The campaign draft with staged changes to the base campaign.
      * </pre>
      *
-     * <code>string campaign_draft = 14 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign_draft = 14 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for campaignDraft.
      */
     public com.google.protobuf.ByteString
@@ -1585,7 +1585,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The campaign draft with staged changes to the base campaign.
      * </pre>
      *
-     * <code>string campaign_draft = 14 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign_draft = 14 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @param value The campaignDraft to set.
      * @return This builder for chaining.
      */
@@ -1604,7 +1604,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The campaign draft with staged changes to the base campaign.
      * </pre>
      *
-     * <code>string campaign_draft = 14 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign_draft = 14 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearCampaignDraft() {
@@ -1618,7 +1618,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The campaign draft with staged changes to the base campaign.
      * </pre>
      *
-     * <code>string campaign_draft = 14 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign_draft = 14 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for campaignDraft to set.
      * @return This builder for chaining.
      */
@@ -1645,7 +1645,7 @@ private static final long serialVersionUID = 0L;
      * (code point 0xA) or carriage return (code point 0xD) characters.
      * </pre>
      *
-     * <code>string name = 15;</code>
+     * <code>optional string name = 15;</code>
      * @return Whether the name field is set.
      */
     public boolean hasName() {
@@ -1661,7 +1661,7 @@ private static final long serialVersionUID = 0L;
      * (code point 0xA) or carriage return (code point 0xD) characters.
      * </pre>
      *
-     * <code>string name = 15;</code>
+     * <code>optional string name = 15;</code>
      * @return The name.
      */
     public java.lang.String getName() {
@@ -1686,7 +1686,7 @@ private static final long serialVersionUID = 0L;
      * (code point 0xA) or carriage return (code point 0xD) characters.
      * </pre>
      *
-     * <code>string name = 15;</code>
+     * <code>optional string name = 15;</code>
      * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
@@ -1712,7 +1712,7 @@ private static final long serialVersionUID = 0L;
      * (code point 0xA) or carriage return (code point 0xD) characters.
      * </pre>
      *
-     * <code>string name = 15;</code>
+     * <code>optional string name = 15;</code>
      * @param value The name to set.
      * @return This builder for chaining.
      */
@@ -1736,7 +1736,7 @@ private static final long serialVersionUID = 0L;
      * (code point 0xA) or carriage return (code point 0xD) characters.
      * </pre>
      *
-     * <code>string name = 15;</code>
+     * <code>optional string name = 15;</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
@@ -1755,7 +1755,7 @@ private static final long serialVersionUID = 0L;
      * (code point 0xA) or carriage return (code point 0xD) characters.
      * </pre>
      *
-     * <code>string name = 15;</code>
+     * <code>optional string name = 15;</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
@@ -1777,7 +1777,7 @@ private static final long serialVersionUID = 0L;
      * The description of the experiment.
      * </pre>
      *
-     * <code>string description = 16;</code>
+     * <code>optional string description = 16;</code>
      * @return Whether the description field is set.
      */
     public boolean hasDescription() {
@@ -1788,7 +1788,7 @@ private static final long serialVersionUID = 0L;
      * The description of the experiment.
      * </pre>
      *
-     * <code>string description = 16;</code>
+     * <code>optional string description = 16;</code>
      * @return The description.
      */
     public java.lang.String getDescription() {
@@ -1808,7 +1808,7 @@ private static final long serialVersionUID = 0L;
      * The description of the experiment.
      * </pre>
      *
-     * <code>string description = 16;</code>
+     * <code>optional string description = 16;</code>
      * @return The bytes for description.
      */
     public com.google.protobuf.ByteString
@@ -1829,7 +1829,7 @@ private static final long serialVersionUID = 0L;
      * The description of the experiment.
      * </pre>
      *
-     * <code>string description = 16;</code>
+     * <code>optional string description = 16;</code>
      * @param value The description to set.
      * @return This builder for chaining.
      */
@@ -1848,7 +1848,7 @@ private static final long serialVersionUID = 0L;
      * The description of the experiment.
      * </pre>
      *
-     * <code>string description = 16;</code>
+     * <code>optional string description = 16;</code>
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
@@ -1862,7 +1862,7 @@ private static final long serialVersionUID = 0L;
      * The description of the experiment.
      * </pre>
      *
-     * <code>string description = 16;</code>
+     * <code>optional string description = 16;</code>
      * @param value The bytes for description to set.
      * @return This builder for chaining.
      */
@@ -1886,7 +1886,7 @@ private static final long serialVersionUID = 0L;
      * (100 - traffic_split_percent). Required for create.
      * </pre>
      *
-     * <code>int64 traffic_split_percent = 17 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional int64 traffic_split_percent = 17 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the trafficSplitPercent field is set.
      */
     @java.lang.Override
@@ -1900,7 +1900,7 @@ private static final long serialVersionUID = 0L;
      * (100 - traffic_split_percent). Required for create.
      * </pre>
      *
-     * <code>int64 traffic_split_percent = 17 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional int64 traffic_split_percent = 17 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The trafficSplitPercent.
      */
     @java.lang.Override
@@ -1914,7 +1914,7 @@ private static final long serialVersionUID = 0L;
      * (100 - traffic_split_percent). Required for create.
      * </pre>
      *
-     * <code>int64 traffic_split_percent = 17 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional int64 traffic_split_percent = 17 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @param value The trafficSplitPercent to set.
      * @return This builder for chaining.
      */
@@ -1931,7 +1931,7 @@ private static final long serialVersionUID = 0L;
      * (100 - traffic_split_percent). Required for create.
      * </pre>
      *
-     * <code>int64 traffic_split_percent = 17 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional int64 traffic_split_percent = 17 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return This builder for chaining.
      */
     public Builder clearTrafficSplitPercent() {
@@ -2021,7 +2021,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The experiment campaign, as opposed to the base campaign.
      * </pre>
      *
-     * <code>string experiment_campaign = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string experiment_campaign = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the experimentCampaign field is set.
      */
     public boolean hasExperimentCampaign() {
@@ -2032,7 +2032,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The experiment campaign, as opposed to the base campaign.
      * </pre>
      *
-     * <code>string experiment_campaign = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string experiment_campaign = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The experimentCampaign.
      */
     public java.lang.String getExperimentCampaign() {
@@ -2052,7 +2052,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The experiment campaign, as opposed to the base campaign.
      * </pre>
      *
-     * <code>string experiment_campaign = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string experiment_campaign = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for experimentCampaign.
      */
     public com.google.protobuf.ByteString
@@ -2073,7 +2073,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The experiment campaign, as opposed to the base campaign.
      * </pre>
      *
-     * <code>string experiment_campaign = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string experiment_campaign = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The experimentCampaign to set.
      * @return This builder for chaining.
      */
@@ -2092,7 +2092,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The experiment campaign, as opposed to the base campaign.
      * </pre>
      *
-     * <code>string experiment_campaign = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string experiment_campaign = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearExperimentCampaign() {
@@ -2106,7 +2106,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The experiment campaign, as opposed to the base campaign.
      * </pre>
      *
-     * <code>string experiment_campaign = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string experiment_campaign = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for experimentCampaign to set.
      * @return This builder for chaining.
      */
@@ -2204,7 +2204,7 @@ private static final long serialVersionUID = 0L;
      * running operation is returned.
      * </pre>
      *
-     * <code>string long_running_operation = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string long_running_operation = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the longRunningOperation field is set.
      */
     public boolean hasLongRunningOperation() {
@@ -2217,7 +2217,7 @@ private static final long serialVersionUID = 0L;
      * running operation is returned.
      * </pre>
      *
-     * <code>string long_running_operation = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string long_running_operation = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The longRunningOperation.
      */
     public java.lang.String getLongRunningOperation() {
@@ -2239,7 +2239,7 @@ private static final long serialVersionUID = 0L;
      * running operation is returned.
      * </pre>
      *
-     * <code>string long_running_operation = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string long_running_operation = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for longRunningOperation.
      */
     public com.google.protobuf.ByteString
@@ -2262,7 +2262,7 @@ private static final long serialVersionUID = 0L;
      * running operation is returned.
      * </pre>
      *
-     * <code>string long_running_operation = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string long_running_operation = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The longRunningOperation to set.
      * @return This builder for chaining.
      */
@@ -2283,7 +2283,7 @@ private static final long serialVersionUID = 0L;
      * running operation is returned.
      * </pre>
      *
-     * <code>string long_running_operation = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string long_running_operation = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearLongRunningOperation() {
@@ -2299,7 +2299,7 @@ private static final long serialVersionUID = 0L;
      * running operation is returned.
      * </pre>
      *
-     * <code>string long_running_operation = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string long_running_operation = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for longRunningOperation to set.
      * @return This builder for chaining.
      */
@@ -2326,7 +2326,7 @@ private static final long serialVersionUID = 0L;
      * Example: 2019-03-14
      * </pre>
      *
-     * <code>string start_date = 20;</code>
+     * <code>optional string start_date = 20;</code>
      * @return Whether the startDate field is set.
      */
     public boolean hasStartDate() {
@@ -2342,7 +2342,7 @@ private static final long serialVersionUID = 0L;
      * Example: 2019-03-14
      * </pre>
      *
-     * <code>string start_date = 20;</code>
+     * <code>optional string start_date = 20;</code>
      * @return The startDate.
      */
     public java.lang.String getStartDate() {
@@ -2367,7 +2367,7 @@ private static final long serialVersionUID = 0L;
      * Example: 2019-03-14
      * </pre>
      *
-     * <code>string start_date = 20;</code>
+     * <code>optional string start_date = 20;</code>
      * @return The bytes for startDate.
      */
     public com.google.protobuf.ByteString
@@ -2393,7 +2393,7 @@ private static final long serialVersionUID = 0L;
      * Example: 2019-03-14
      * </pre>
      *
-     * <code>string start_date = 20;</code>
+     * <code>optional string start_date = 20;</code>
      * @param value The startDate to set.
      * @return This builder for chaining.
      */
@@ -2417,7 +2417,7 @@ private static final long serialVersionUID = 0L;
      * Example: 2019-03-14
      * </pre>
      *
-     * <code>string start_date = 20;</code>
+     * <code>optional string start_date = 20;</code>
      * @return This builder for chaining.
      */
     public Builder clearStartDate() {
@@ -2436,7 +2436,7 @@ private static final long serialVersionUID = 0L;
      * Example: 2019-03-14
      * </pre>
      *
-     * <code>string start_date = 20;</code>
+     * <code>optional string start_date = 20;</code>
      * @param value The bytes for startDate to set.
      * @return This builder for chaining.
      */
@@ -2462,7 +2462,7 @@ private static final long serialVersionUID = 0L;
      * Example: 2019-04-18
      * </pre>
      *
-     * <code>string end_date = 21;</code>
+     * <code>optional string end_date = 21;</code>
      * @return Whether the endDate field is set.
      */
     public boolean hasEndDate() {
@@ -2477,7 +2477,7 @@ private static final long serialVersionUID = 0L;
      * Example: 2019-04-18
      * </pre>
      *
-     * <code>string end_date = 21;</code>
+     * <code>optional string end_date = 21;</code>
      * @return The endDate.
      */
     public java.lang.String getEndDate() {
@@ -2501,7 +2501,7 @@ private static final long serialVersionUID = 0L;
      * Example: 2019-04-18
      * </pre>
      *
-     * <code>string end_date = 21;</code>
+     * <code>optional string end_date = 21;</code>
      * @return The bytes for endDate.
      */
     public com.google.protobuf.ByteString
@@ -2526,7 +2526,7 @@ private static final long serialVersionUID = 0L;
      * Example: 2019-04-18
      * </pre>
      *
-     * <code>string end_date = 21;</code>
+     * <code>optional string end_date = 21;</code>
      * @param value The endDate to set.
      * @return This builder for chaining.
      */
@@ -2549,7 +2549,7 @@ private static final long serialVersionUID = 0L;
      * Example: 2019-04-18
      * </pre>
      *
-     * <code>string end_date = 21;</code>
+     * <code>optional string end_date = 21;</code>
      * @return This builder for chaining.
      */
     public Builder clearEndDate() {
@@ -2567,7 +2567,7 @@ private static final long serialVersionUID = 0L;
      * Example: 2019-04-18
      * </pre>
      *
-     * <code>string end_date = 21;</code>
+     * <code>optional string end_date = 21;</code>
      * @param value The bytes for endDate to set.
      * @return This builder for chaining.
      */

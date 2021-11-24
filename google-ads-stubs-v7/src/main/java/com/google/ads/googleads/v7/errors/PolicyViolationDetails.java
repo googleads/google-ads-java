@@ -280,13 +280,13 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getExternalPolicyDescriptionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalPolicyDescription_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, externalPolicyDescription_);
     }
     if (key_ != null) {
       output.writeMessage(4, getKey());
     }
-    if (!getExternalPolicyNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalPolicyName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, externalPolicyName_);
     }
     if (isExemptible_ != false) {
@@ -301,14 +301,14 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getExternalPolicyDescriptionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalPolicyDescription_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, externalPolicyDescription_);
     }
     if (key_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getKey());
     }
-    if (!getExternalPolicyNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(externalPolicyName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, externalPolicyName_);
     }
     if (isExemptible_ != false) {

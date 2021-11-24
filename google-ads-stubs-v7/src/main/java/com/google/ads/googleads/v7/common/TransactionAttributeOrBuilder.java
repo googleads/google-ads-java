@@ -16,7 +16,7 @@ public interface TransactionAttributeOrBuilder extends
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30+03:00"
    * </pre>
    *
-   * <code>string transaction_date_time = 8;</code>
+   * <code>optional string transaction_date_time = 8;</code>
    * @return Whether the transactionDateTime field is set.
    */
   boolean hasTransactionDateTime();
@@ -29,7 +29,7 @@ public interface TransactionAttributeOrBuilder extends
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30+03:00"
    * </pre>
    *
-   * <code>string transaction_date_time = 8;</code>
+   * <code>optional string transaction_date_time = 8;</code>
    * @return The transactionDateTime.
    */
   java.lang.String getTransactionDateTime();
@@ -42,7 +42,7 @@ public interface TransactionAttributeOrBuilder extends
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30+03:00"
    * </pre>
    *
-   * <code>string transaction_date_time = 8;</code>
+   * <code>optional string transaction_date_time = 8;</code>
    * @return The bytes for transactionDateTime.
    */
   com.google.protobuf.ByteString
@@ -57,7 +57,7 @@ public interface TransactionAttributeOrBuilder extends
    * in the ItemAttributes.
    * </pre>
    *
-   * <code>double transaction_amount_micros = 9;</code>
+   * <code>optional double transaction_amount_micros = 9;</code>
    * @return Whether the transactionAmountMicros field is set.
    */
   boolean hasTransactionAmountMicros();
@@ -70,7 +70,7 @@ public interface TransactionAttributeOrBuilder extends
    * in the ItemAttributes.
    * </pre>
    *
-   * <code>double transaction_amount_micros = 9;</code>
+   * <code>optional double transaction_amount_micros = 9;</code>
    * @return The transactionAmountMicros.
    */
   double getTransactionAmountMicros();
@@ -80,7 +80,7 @@ public interface TransactionAttributeOrBuilder extends
    * Transaction currency code. ISO 4217 three-letter code is used. Required.
    * </pre>
    *
-   * <code>string currency_code = 10;</code>
+   * <code>optional string currency_code = 10;</code>
    * @return Whether the currencyCode field is set.
    */
   boolean hasCurrencyCode();
@@ -89,7 +89,7 @@ public interface TransactionAttributeOrBuilder extends
    * Transaction currency code. ISO 4217 three-letter code is used. Required.
    * </pre>
    *
-   * <code>string currency_code = 10;</code>
+   * <code>optional string currency_code = 10;</code>
    * @return The currencyCode.
    */
   java.lang.String getCurrencyCode();
@@ -98,7 +98,7 @@ public interface TransactionAttributeOrBuilder extends
    * Transaction currency code. ISO 4217 three-letter code is used. Required.
    * </pre>
    *
-   * <code>string currency_code = 10;</code>
+   * <code>optional string currency_code = 10;</code>
    * @return The bytes for currencyCode.
    */
   com.google.protobuf.ByteString
@@ -110,7 +110,7 @@ public interface TransactionAttributeOrBuilder extends
    * Required.
    * </pre>
    *
-   * <code>string conversion_action = 11;</code>
+   * <code>optional string conversion_action = 11;</code>
    * @return Whether the conversionAction field is set.
    */
   boolean hasConversionAction();
@@ -120,7 +120,7 @@ public interface TransactionAttributeOrBuilder extends
    * Required.
    * </pre>
    *
-   * <code>string conversion_action = 11;</code>
+   * <code>optional string conversion_action = 11;</code>
    * @return The conversionAction.
    */
   java.lang.String getConversionAction();
@@ -130,7 +130,7 @@ public interface TransactionAttributeOrBuilder extends
    * Required.
    * </pre>
    *
-   * <code>string conversion_action = 11;</code>
+   * <code>optional string conversion_action = 11;</code>
    * @return The bytes for conversionAction.
    */
   com.google.protobuf.ByteString
@@ -142,7 +142,7 @@ public interface TransactionAttributeOrBuilder extends
    * Accessible only to customers on the allow-list.
    * </pre>
    *
-   * <code>string order_id = 12;</code>
+   * <code>optional string order_id = 12;</code>
    * @return Whether the orderId field is set.
    */
   boolean hasOrderId();
@@ -152,7 +152,7 @@ public interface TransactionAttributeOrBuilder extends
    * Accessible only to customers on the allow-list.
    * </pre>
    *
-   * <code>string order_id = 12;</code>
+   * <code>optional string order_id = 12;</code>
    * @return The orderId.
    */
   java.lang.String getOrderId();
@@ -162,7 +162,7 @@ public interface TransactionAttributeOrBuilder extends
    * Accessible only to customers on the allow-list.
    * </pre>
    *
-   * <code>string order_id = 12;</code>
+   * <code>optional string order_id = 12;</code>
    * @return The bytes for orderId.
    */
   com.google.protobuf.ByteString
@@ -204,7 +204,7 @@ public interface TransactionAttributeOrBuilder extends
    * Accessible only to customers on the allow-list.
    * </pre>
    *
-   * <code>string custom_value = 13;</code>
+   * <code>optional string custom_value = 13;</code>
    * @return Whether the customValue field is set.
    */
   boolean hasCustomValue();
@@ -214,7 +214,7 @@ public interface TransactionAttributeOrBuilder extends
    * Accessible only to customers on the allow-list.
    * </pre>
    *
-   * <code>string custom_value = 13;</code>
+   * <code>optional string custom_value = 13;</code>
    * @return The customValue.
    */
   java.lang.String getCustomValue();
@@ -224,7 +224,7 @@ public interface TransactionAttributeOrBuilder extends
    * Accessible only to customers on the allow-list.
    * </pre>
    *
-   * <code>string custom_value = 13;</code>
+   * <code>optional string custom_value = 13;</code>
    * @return The bytes for customValue.
    */
   com.google.protobuf.ByteString

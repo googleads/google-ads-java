@@ -12,7 +12,7 @@ public interface HotelCountryRegionInfoOrBuilder extends
    * The Geo Target Constant resource name.
    * </pre>
    *
-   * <code>string country_region_criterion = 2;</code>
+   * <code>optional string country_region_criterion = 2;</code>
    * @return Whether the countryRegionCriterion field is set.
    */
   boolean hasCountryRegionCriterion();
@@ -21,7 +21,7 @@ public interface HotelCountryRegionInfoOrBuilder extends
    * The Geo Target Constant resource name.
    * </pre>
    *
-   * <code>string country_region_criterion = 2;</code>
+   * <code>optional string country_region_criterion = 2;</code>
    * @return The countryRegionCriterion.
    */
   java.lang.String getCountryRegionCriterion();
@@ -30,7 +30,7 @@ public interface HotelCountryRegionInfoOrBuilder extends
    * The Geo Target Constant resource name.
    * </pre>
    *
-   * <code>string country_region_criterion = 2;</code>
+   * <code>optional string country_region_criterion = 2;</code>
    * @return The bytes for countryRegionCriterion.
    */
   com.google.protobuf.ByteString

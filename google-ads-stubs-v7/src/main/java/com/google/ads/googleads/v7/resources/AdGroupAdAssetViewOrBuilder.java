@@ -40,7 +40,7 @@ public interface AdGroupAdAssetViewOrBuilder extends
    * Output only. The ad group ad to which the asset is linked.
    * </pre>
    *
-   * <code>string ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the adGroupAd field is set.
    */
   boolean hasAdGroupAd();
@@ -49,7 +49,7 @@ public interface AdGroupAdAssetViewOrBuilder extends
    * Output only. The ad group ad to which the asset is linked.
    * </pre>
    *
-   * <code>string ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The adGroupAd.
    */
   java.lang.String getAdGroupAd();
@@ -58,7 +58,7 @@ public interface AdGroupAdAssetViewOrBuilder extends
    * Output only. The ad group ad to which the asset is linked.
    * </pre>
    *
-   * <code>string ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_ad = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for adGroupAd.
    */
   com.google.protobuf.ByteString
@@ -69,7 +69,7 @@ public interface AdGroupAdAssetViewOrBuilder extends
    * Output only. The asset which is linked to the ad group ad.
    * </pre>
    *
-   * <code>string asset = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string asset = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the asset field is set.
    */
   boolean hasAsset();
@@ -78,7 +78,7 @@ public interface AdGroupAdAssetViewOrBuilder extends
    * Output only. The asset which is linked to the ad group ad.
    * </pre>
    *
-   * <code>string asset = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string asset = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The asset.
    */
   java.lang.String getAsset();
@@ -87,7 +87,7 @@ public interface AdGroupAdAssetViewOrBuilder extends
    * Output only. The asset which is linked to the ad group ad.
    * </pre>
    *
-   * <code>string asset = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string asset = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for asset.
    */
   com.google.protobuf.ByteString
@@ -120,7 +120,7 @@ public interface AdGroupAdAssetViewOrBuilder extends
    * latest version of the ad.
    * </pre>
    *
-   * <code>bool enabled = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool enabled = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the enabled field is set.
    */
   boolean hasEnabled();
@@ -132,7 +132,7 @@ public interface AdGroupAdAssetViewOrBuilder extends
    * latest version of the ad.
    * </pre>
    *
-   * <code>bool enabled = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool enabled = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enabled.
    */
   boolean getEnabled();

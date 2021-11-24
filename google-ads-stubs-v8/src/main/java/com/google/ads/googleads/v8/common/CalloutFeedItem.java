@@ -101,7 +101,7 @@ private static final long serialVersionUID = 0L;
    * The length of this string should be between 1 and 25, inclusive.
    * </pre>
    *
-   * <code>string callout_text = 2;</code>
+   * <code>optional string callout_text = 2;</code>
    * @return Whether the calloutText field is set.
    */
   @java.lang.Override
@@ -114,7 +114,7 @@ private static final long serialVersionUID = 0L;
    * The length of this string should be between 1 and 25, inclusive.
    * </pre>
    *
-   * <code>string callout_text = 2;</code>
+   * <code>optional string callout_text = 2;</code>
    * @return The calloutText.
    */
   @java.lang.Override
@@ -136,7 +136,7 @@ private static final long serialVersionUID = 0L;
    * The length of this string should be between 1 and 25, inclusive.
    * </pre>
    *
-   * <code>string callout_text = 2;</code>
+   * <code>optional string callout_text = 2;</code>
    * @return The bytes for calloutText.
    */
   @java.lang.Override
@@ -480,7 +480,7 @@ private static final long serialVersionUID = 0L;
      * The length of this string should be between 1 and 25, inclusive.
      * </pre>
      *
-     * <code>string callout_text = 2;</code>
+     * <code>optional string callout_text = 2;</code>
      * @return Whether the calloutText field is set.
      */
     public boolean hasCalloutText() {
@@ -492,7 +492,7 @@ private static final long serialVersionUID = 0L;
      * The length of this string should be between 1 and 25, inclusive.
      * </pre>
      *
-     * <code>string callout_text = 2;</code>
+     * <code>optional string callout_text = 2;</code>
      * @return The calloutText.
      */
     public java.lang.String getCalloutText() {
@@ -513,7 +513,7 @@ private static final long serialVersionUID = 0L;
      * The length of this string should be between 1 and 25, inclusive.
      * </pre>
      *
-     * <code>string callout_text = 2;</code>
+     * <code>optional string callout_text = 2;</code>
      * @return The bytes for calloutText.
      */
     public com.google.protobuf.ByteString
@@ -535,7 +535,7 @@ private static final long serialVersionUID = 0L;
      * The length of this string should be between 1 and 25, inclusive.
      * </pre>
      *
-     * <code>string callout_text = 2;</code>
+     * <code>optional string callout_text = 2;</code>
      * @param value The calloutText to set.
      * @return This builder for chaining.
      */
@@ -555,7 +555,7 @@ private static final long serialVersionUID = 0L;
      * The length of this string should be between 1 and 25, inclusive.
      * </pre>
      *
-     * <code>string callout_text = 2;</code>
+     * <code>optional string callout_text = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearCalloutText() {
@@ -570,7 +570,7 @@ private static final long serialVersionUID = 0L;
      * The length of this string should be between 1 and 25, inclusive.
      * </pre>
      *
-     * <code>string callout_text = 2;</code>
+     * <code>optional string callout_text = 2;</code>
      * @param value The bytes for calloutText to set.
      * @return This builder for chaining.
      */

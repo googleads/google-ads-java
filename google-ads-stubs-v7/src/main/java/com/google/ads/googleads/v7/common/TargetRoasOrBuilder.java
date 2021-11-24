@@ -13,7 +13,7 @@ public interface TargetRoasOrBuilder extends
    * Value must be between 0.01 and 1000.0, inclusive.
    * </pre>
    *
-   * <code>double target_roas = 4;</code>
+   * <code>optional double target_roas = 4;</code>
    * @return Whether the targetRoas field is set.
    */
   boolean hasTargetRoas();
@@ -23,7 +23,7 @@ public interface TargetRoasOrBuilder extends
    * Value must be between 0.01 and 1000.0, inclusive.
    * </pre>
    *
-   * <code>double target_roas = 4;</code>
+   * <code>optional double target_roas = 4;</code>
    * @return The targetRoas.
    */
   double getTargetRoas();
@@ -35,7 +35,7 @@ public interface TargetRoasOrBuilder extends
    * This should only be set for portfolio bid strategies.
    * </pre>
    *
-   * <code>int64 cpc_bid_ceiling_micros = 5;</code>
+   * <code>optional int64 cpc_bid_ceiling_micros = 5;</code>
    * @return Whether the cpcBidCeilingMicros field is set.
    */
   boolean hasCpcBidCeilingMicros();
@@ -46,7 +46,7 @@ public interface TargetRoasOrBuilder extends
    * This should only be set for portfolio bid strategies.
    * </pre>
    *
-   * <code>int64 cpc_bid_ceiling_micros = 5;</code>
+   * <code>optional int64 cpc_bid_ceiling_micros = 5;</code>
    * @return The cpcBidCeilingMicros.
    */
   long getCpcBidCeilingMicros();
@@ -58,7 +58,7 @@ public interface TargetRoasOrBuilder extends
    * This should only be set for portfolio bid strategies.
    * </pre>
    *
-   * <code>int64 cpc_bid_floor_micros = 6;</code>
+   * <code>optional int64 cpc_bid_floor_micros = 6;</code>
    * @return Whether the cpcBidFloorMicros field is set.
    */
   boolean hasCpcBidFloorMicros();
@@ -69,7 +69,7 @@ public interface TargetRoasOrBuilder extends
    * This should only be set for portfolio bid strategies.
    * </pre>
    *
-   * <code>int64 cpc_bid_floor_micros = 6;</code>
+   * <code>optional int64 cpc_bid_floor_micros = 6;</code>
    * @return The cpcBidFloorMicros.
    */
   long getCpcBidFloorMicros();

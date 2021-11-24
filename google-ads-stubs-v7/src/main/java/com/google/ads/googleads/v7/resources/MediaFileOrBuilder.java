@@ -36,7 +36,7 @@ public interface MediaFileOrBuilder extends
    * Output only. The ID of the media file.
    * </pre>
    *
-   * <code>int64 id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -45,7 +45,7 @@ public interface MediaFileOrBuilder extends
    * Output only. The ID of the media file.
    * </pre>
    *
-   * <code>int64 id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   long getId();
@@ -94,7 +94,7 @@ public interface MediaFileOrBuilder extends
    * name). Only used for media of type AUDIO and IMAGE.
    * </pre>
    *
-   * <code>string source_url = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string source_url = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the sourceUrl field is set.
    */
   boolean hasSourceUrl();
@@ -104,7 +104,7 @@ public interface MediaFileOrBuilder extends
    * name). Only used for media of type AUDIO and IMAGE.
    * </pre>
    *
-   * <code>string source_url = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string source_url = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The sourceUrl.
    */
   java.lang.String getSourceUrl();
@@ -114,7 +114,7 @@ public interface MediaFileOrBuilder extends
    * name). Only used for media of type AUDIO and IMAGE.
    * </pre>
    *
-   * <code>string source_url = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string source_url = 13 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The bytes for sourceUrl.
    */
   com.google.protobuf.ByteString
@@ -126,7 +126,7 @@ public interface MediaFileOrBuilder extends
    * identify previously uploaded media.
    * </pre>
    *
-   * <code>string name = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string name = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the name field is set.
    */
   boolean hasName();
@@ -136,7 +136,7 @@ public interface MediaFileOrBuilder extends
    * identify previously uploaded media.
    * </pre>
    *
-   * <code>string name = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string name = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The name.
    */
   java.lang.String getName();
@@ -146,7 +146,7 @@ public interface MediaFileOrBuilder extends
    * identify previously uploaded media.
    * </pre>
    *
-   * <code>string name = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string name = 14 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
@@ -157,7 +157,7 @@ public interface MediaFileOrBuilder extends
    * Output only. The size of the media file in bytes.
    * </pre>
    *
-   * <code>int64 file_size = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 file_size = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the fileSize field is set.
    */
   boolean hasFileSize();
@@ -166,7 +166,7 @@ public interface MediaFileOrBuilder extends
    * Output only. The size of the media file in bytes.
    * </pre>
    *
-   * <code>int64 file_size = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 file_size = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The fileSize.
    */
   long getFileSize();

@@ -13,7 +13,7 @@ public interface PromotionFeedItemOrBuilder extends
    * This field is required.
    * </pre>
    *
-   * <code>string promotion_target = 16;</code>
+   * <code>optional string promotion_target = 16;</code>
    * @return Whether the promotionTarget field is set.
    */
   boolean hasPromotionTarget();
@@ -23,7 +23,7 @@ public interface PromotionFeedItemOrBuilder extends
    * This field is required.
    * </pre>
    *
-   * <code>string promotion_target = 16;</code>
+   * <code>optional string promotion_target = 16;</code>
    * @return The promotionTarget.
    */
   java.lang.String getPromotionTarget();
@@ -33,7 +33,7 @@ public interface PromotionFeedItemOrBuilder extends
    * This field is required.
    * </pre>
    *
-   * <code>string promotion_target = 16;</code>
+   * <code>optional string promotion_target = 16;</code>
    * @return The bytes for promotionTarget.
    */
   com.google.protobuf.ByteString
@@ -63,7 +63,7 @@ public interface PromotionFeedItemOrBuilder extends
    * Start date of when the promotion is eligible to be redeemed.
    * </pre>
    *
-   * <code>string promotion_start_date = 19;</code>
+   * <code>optional string promotion_start_date = 19;</code>
    * @return Whether the promotionStartDate field is set.
    */
   boolean hasPromotionStartDate();
@@ -72,7 +72,7 @@ public interface PromotionFeedItemOrBuilder extends
    * Start date of when the promotion is eligible to be redeemed.
    * </pre>
    *
-   * <code>string promotion_start_date = 19;</code>
+   * <code>optional string promotion_start_date = 19;</code>
    * @return The promotionStartDate.
    */
   java.lang.String getPromotionStartDate();
@@ -81,7 +81,7 @@ public interface PromotionFeedItemOrBuilder extends
    * Start date of when the promotion is eligible to be redeemed.
    * </pre>
    *
-   * <code>string promotion_start_date = 19;</code>
+   * <code>optional string promotion_start_date = 19;</code>
    * @return The bytes for promotionStartDate.
    */
   com.google.protobuf.ByteString
@@ -92,7 +92,7 @@ public interface PromotionFeedItemOrBuilder extends
    * Last date when the promotion is eligible to be redeemed.
    * </pre>
    *
-   * <code>string promotion_end_date = 20;</code>
+   * <code>optional string promotion_end_date = 20;</code>
    * @return Whether the promotionEndDate field is set.
    */
   boolean hasPromotionEndDate();
@@ -101,7 +101,7 @@ public interface PromotionFeedItemOrBuilder extends
    * Last date when the promotion is eligible to be redeemed.
    * </pre>
    *
-   * <code>string promotion_end_date = 20;</code>
+   * <code>optional string promotion_end_date = 20;</code>
    * @return The promotionEndDate.
    */
   java.lang.String getPromotionEndDate();
@@ -110,7 +110,7 @@ public interface PromotionFeedItemOrBuilder extends
    * Last date when the promotion is eligible to be redeemed.
    * </pre>
    *
-   * <code>string promotion_end_date = 20;</code>
+   * <code>optional string promotion_end_date = 20;</code>
    * @return The bytes for promotionEndDate.
    */
   com.google.protobuf.ByteString
@@ -230,7 +230,7 @@ public interface PromotionFeedItemOrBuilder extends
    * URL template for constructing a tracking URL.
    * </pre>
    *
-   * <code>string tracking_url_template = 23;</code>
+   * <code>optional string tracking_url_template = 23;</code>
    * @return Whether the trackingUrlTemplate field is set.
    */
   boolean hasTrackingUrlTemplate();
@@ -239,7 +239,7 @@ public interface PromotionFeedItemOrBuilder extends
    * URL template for constructing a tracking URL.
    * </pre>
    *
-   * <code>string tracking_url_template = 23;</code>
+   * <code>optional string tracking_url_template = 23;</code>
    * @return The trackingUrlTemplate.
    */
   java.lang.String getTrackingUrlTemplate();
@@ -248,7 +248,7 @@ public interface PromotionFeedItemOrBuilder extends
    * URL template for constructing a tracking URL.
    * </pre>
    *
-   * <code>string tracking_url_template = 23;</code>
+   * <code>optional string tracking_url_template = 23;</code>
    * @return The bytes for trackingUrlTemplate.
    */
   com.google.protobuf.ByteString
@@ -309,7 +309,7 @@ public interface PromotionFeedItemOrBuilder extends
    * tracking.
    * </pre>
    *
-   * <code>string final_url_suffix = 24;</code>
+   * <code>optional string final_url_suffix = 24;</code>
    * @return Whether the finalUrlSuffix field is set.
    */
   boolean hasFinalUrlSuffix();
@@ -319,7 +319,7 @@ public interface PromotionFeedItemOrBuilder extends
    * tracking.
    * </pre>
    *
-   * <code>string final_url_suffix = 24;</code>
+   * <code>optional string final_url_suffix = 24;</code>
    * @return The finalUrlSuffix.
    */
   java.lang.String getFinalUrlSuffix();
@@ -329,7 +329,7 @@ public interface PromotionFeedItemOrBuilder extends
    * tracking.
    * </pre>
    *
-   * <code>string final_url_suffix = 24;</code>
+   * <code>optional string final_url_suffix = 24;</code>
    * @return The bytes for finalUrlSuffix.
    */
   com.google.protobuf.ByteString
@@ -341,7 +341,7 @@ public interface PromotionFeedItemOrBuilder extends
    * Represented as BCP 47 language tag.
    * </pre>
    *
-   * <code>string language_code = 25;</code>
+   * <code>optional string language_code = 25;</code>
    * @return Whether the languageCode field is set.
    */
   boolean hasLanguageCode();
@@ -351,7 +351,7 @@ public interface PromotionFeedItemOrBuilder extends
    * Represented as BCP 47 language tag.
    * </pre>
    *
-   * <code>string language_code = 25;</code>
+   * <code>optional string language_code = 25;</code>
    * @return The languageCode.
    */
   java.lang.String getLanguageCode();
@@ -361,7 +361,7 @@ public interface PromotionFeedItemOrBuilder extends
    * Represented as BCP 47 language tag.
    * </pre>
    *
-   * <code>string language_code = 25;</code>
+   * <code>optional string language_code = 25;</code>
    * @return The bytes for languageCode.
    */
   com.google.protobuf.ByteString

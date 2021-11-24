@@ -187,7 +187,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of this shared set. Read only.
    * </pre>
    *
-   * <code>int64 id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   @java.lang.Override
@@ -199,7 +199,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of this shared set. Read only.
    * </pre>
    *
-   * <code>int64 id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   @java.lang.Override
@@ -247,7 +247,7 @@ private static final long serialVersionUID = 0L;
    * inclusive.
    * </pre>
    *
-   * <code>string name = 9;</code>
+   * <code>optional string name = 9;</code>
    * @return Whether the name field is set.
    */
   @java.lang.Override
@@ -263,7 +263,7 @@ private static final long serialVersionUID = 0L;
    * inclusive.
    * </pre>
    *
-   * <code>string name = 9;</code>
+   * <code>optional string name = 9;</code>
    * @return The name.
    */
   @java.lang.Override
@@ -288,7 +288,7 @@ private static final long serialVersionUID = 0L;
    * inclusive.
    * </pre>
    *
-   * <code>string name = 9;</code>
+   * <code>optional string name = 9;</code>
    * @return The bytes for name.
    */
   @java.lang.Override
@@ -340,7 +340,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The number of shared criteria within this shared set. Read only.
    * </pre>
    *
-   * <code>int64 member_count = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 member_count = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the memberCount field is set.
    */
   @java.lang.Override
@@ -352,7 +352,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The number of shared criteria within this shared set. Read only.
    * </pre>
    *
-   * <code>int64 member_count = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 member_count = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The memberCount.
    */
   @java.lang.Override
@@ -367,7 +367,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The number of campaigns associated with this shared set. Read only.
    * </pre>
    *
-   * <code>int64 reference_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 reference_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the referenceCount field is set.
    */
   @java.lang.Override
@@ -379,7 +379,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The number of campaigns associated with this shared set. Read only.
    * </pre>
    *
-   * <code>int64 reference_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 reference_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The referenceCount.
    */
   @java.lang.Override
@@ -401,7 +401,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (type_ != com.google.ads.googleads.v7.enums.SharedSetTypeEnum.SharedSetType.UNSPECIFIED.getNumber()) {
@@ -431,7 +431,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (type_ != com.google.ads.googleads.v7.enums.SharedSetTypeEnum.SharedSetType.UNSPECIFIED.getNumber()) {
@@ -946,7 +946,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of this shared set. Read only.
      * </pre>
      *
-     * <code>int64 id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the id field is set.
      */
     @java.lang.Override
@@ -958,7 +958,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of this shared set. Read only.
      * </pre>
      *
-     * <code>int64 id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The id.
      */
     @java.lang.Override
@@ -970,7 +970,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of this shared set. Read only.
      * </pre>
      *
-     * <code>int64 id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
@@ -985,7 +985,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of this shared set. Read only.
      * </pre>
      *
-     * <code>int64 id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {
@@ -1084,7 +1084,7 @@ private static final long serialVersionUID = 0L;
      * inclusive.
      * </pre>
      *
-     * <code>string name = 9;</code>
+     * <code>optional string name = 9;</code>
      * @return Whether the name field is set.
      */
     public boolean hasName() {
@@ -1099,7 +1099,7 @@ private static final long serialVersionUID = 0L;
      * inclusive.
      * </pre>
      *
-     * <code>string name = 9;</code>
+     * <code>optional string name = 9;</code>
      * @return The name.
      */
     public java.lang.String getName() {
@@ -1123,7 +1123,7 @@ private static final long serialVersionUID = 0L;
      * inclusive.
      * </pre>
      *
-     * <code>string name = 9;</code>
+     * <code>optional string name = 9;</code>
      * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
@@ -1148,7 +1148,7 @@ private static final long serialVersionUID = 0L;
      * inclusive.
      * </pre>
      *
-     * <code>string name = 9;</code>
+     * <code>optional string name = 9;</code>
      * @param value The name to set.
      * @return This builder for chaining.
      */
@@ -1171,7 +1171,7 @@ private static final long serialVersionUID = 0L;
      * inclusive.
      * </pre>
      *
-     * <code>string name = 9;</code>
+     * <code>optional string name = 9;</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
@@ -1189,7 +1189,7 @@ private static final long serialVersionUID = 0L;
      * inclusive.
      * </pre>
      *
-     * <code>string name = 9;</code>
+     * <code>optional string name = 9;</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
@@ -1285,7 +1285,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The number of shared criteria within this shared set. Read only.
      * </pre>
      *
-     * <code>int64 member_count = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 member_count = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the memberCount field is set.
      */
     @java.lang.Override
@@ -1297,7 +1297,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The number of shared criteria within this shared set. Read only.
      * </pre>
      *
-     * <code>int64 member_count = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 member_count = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The memberCount.
      */
     @java.lang.Override
@@ -1309,7 +1309,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The number of shared criteria within this shared set. Read only.
      * </pre>
      *
-     * <code>int64 member_count = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 member_count = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The memberCount to set.
      * @return This builder for chaining.
      */
@@ -1324,7 +1324,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The number of shared criteria within this shared set. Read only.
      * </pre>
      *
-     * <code>int64 member_count = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 member_count = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearMemberCount() {
@@ -1340,7 +1340,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The number of campaigns associated with this shared set. Read only.
      * </pre>
      *
-     * <code>int64 reference_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 reference_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the referenceCount field is set.
      */
     @java.lang.Override
@@ -1352,7 +1352,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The number of campaigns associated with this shared set. Read only.
      * </pre>
      *
-     * <code>int64 reference_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 reference_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The referenceCount.
      */
     @java.lang.Override
@@ -1364,7 +1364,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The number of campaigns associated with this shared set. Read only.
      * </pre>
      *
-     * <code>int64 reference_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 reference_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The referenceCount to set.
      * @return This builder for chaining.
      */
@@ -1379,7 +1379,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The number of campaigns associated with this shared set. Read only.
      * </pre>
      *
-     * <code>int64 reference_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 reference_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearReferenceCount() {

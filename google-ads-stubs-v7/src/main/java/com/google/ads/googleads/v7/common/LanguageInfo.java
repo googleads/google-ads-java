@@ -100,7 +100,7 @@ private static final long serialVersionUID = 0L;
    * The language constant resource name.
    * </pre>
    *
-   * <code>string language_constant = 2;</code>
+   * <code>optional string language_constant = 2;</code>
    * @return Whether the languageConstant field is set.
    */
   @java.lang.Override
@@ -112,7 +112,7 @@ private static final long serialVersionUID = 0L;
    * The language constant resource name.
    * </pre>
    *
-   * <code>string language_constant = 2;</code>
+   * <code>optional string language_constant = 2;</code>
    * @return The languageConstant.
    */
   @java.lang.Override
@@ -133,7 +133,7 @@ private static final long serialVersionUID = 0L;
    * The language constant resource name.
    * </pre>
    *
-   * <code>string language_constant = 2;</code>
+   * <code>optional string language_constant = 2;</code>
    * @return The bytes for languageConstant.
    */
   @java.lang.Override
@@ -476,7 +476,7 @@ private static final long serialVersionUID = 0L;
      * The language constant resource name.
      * </pre>
      *
-     * <code>string language_constant = 2;</code>
+     * <code>optional string language_constant = 2;</code>
      * @return Whether the languageConstant field is set.
      */
     public boolean hasLanguageConstant() {
@@ -487,7 +487,7 @@ private static final long serialVersionUID = 0L;
      * The language constant resource name.
      * </pre>
      *
-     * <code>string language_constant = 2;</code>
+     * <code>optional string language_constant = 2;</code>
      * @return The languageConstant.
      */
     public java.lang.String getLanguageConstant() {
@@ -507,7 +507,7 @@ private static final long serialVersionUID = 0L;
      * The language constant resource name.
      * </pre>
      *
-     * <code>string language_constant = 2;</code>
+     * <code>optional string language_constant = 2;</code>
      * @return The bytes for languageConstant.
      */
     public com.google.protobuf.ByteString
@@ -528,7 +528,7 @@ private static final long serialVersionUID = 0L;
      * The language constant resource name.
      * </pre>
      *
-     * <code>string language_constant = 2;</code>
+     * <code>optional string language_constant = 2;</code>
      * @param value The languageConstant to set.
      * @return This builder for chaining.
      */
@@ -547,7 +547,7 @@ private static final long serialVersionUID = 0L;
      * The language constant resource name.
      * </pre>
      *
-     * <code>string language_constant = 2;</code>
+     * <code>optional string language_constant = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearLanguageConstant() {
@@ -561,7 +561,7 @@ private static final long serialVersionUID = 0L;
      * The language constant resource name.
      * </pre>
      *
-     * <code>string language_constant = 2;</code>
+     * <code>optional string language_constant = 2;</code>
      * @param value The bytes for languageConstant to set.
      * @return This builder for chaining.
      */

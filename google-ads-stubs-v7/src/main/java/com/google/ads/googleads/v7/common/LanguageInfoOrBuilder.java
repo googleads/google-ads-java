@@ -12,7 +12,7 @@ public interface LanguageInfoOrBuilder extends
    * The language constant resource name.
    * </pre>
    *
-   * <code>string language_constant = 2;</code>
+   * <code>optional string language_constant = 2;</code>
    * @return Whether the languageConstant field is set.
    */
   boolean hasLanguageConstant();
@@ -21,7 +21,7 @@ public interface LanguageInfoOrBuilder extends
    * The language constant resource name.
    * </pre>
    *
-   * <code>string language_constant = 2;</code>
+   * <code>optional string language_constant = 2;</code>
    * @return The languageConstant.
    */
   java.lang.String getLanguageConstant();
@@ -30,7 +30,7 @@ public interface LanguageInfoOrBuilder extends
    * The language constant resource name.
    * </pre>
    *
-   * <code>string language_constant = 2;</code>
+   * <code>optional string language_constant = 2;</code>
    * @return The bytes for languageConstant.
    */
   com.google.protobuf.ByteString

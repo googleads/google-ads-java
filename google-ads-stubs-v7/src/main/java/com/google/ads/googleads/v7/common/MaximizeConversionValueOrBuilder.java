@@ -16,7 +16,7 @@ public interface MaximizeConversionValueOrBuilder extends
    * achieve the highest possible ROAS for the budget.
    * </pre>
    *
-   * <code>double target_roas = 2;</code>
+   * <code>optional double target_roas = 2;</code>
    * @return Whether the targetRoas field is set.
    */
   boolean hasTargetRoas();
@@ -29,7 +29,7 @@ public interface MaximizeConversionValueOrBuilder extends
    * achieve the highest possible ROAS for the budget.
    * </pre>
    *
-   * <code>double target_roas = 2;</code>
+   * <code>optional double target_roas = 2;</code>
    * @return The targetRoas.
    */
   double getTargetRoas();

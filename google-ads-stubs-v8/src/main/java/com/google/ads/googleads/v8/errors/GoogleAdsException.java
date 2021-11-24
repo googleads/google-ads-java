@@ -14,7 +14,7 @@
 
 package com.google.ads.googleads.v8.errors;
 
-import com.google.ads.googleads.lib.BaseGoogleAdsException;
+import com.google.ads.googleads.lib.stubs.exceptions.BaseGoogleAdsException;
 import com.google.api.gax.rpc.ApiException;
 import com.google.protobuf.InvalidProtocolBufferException;
 import io.grpc.Metadata;

@@ -36,7 +36,7 @@ public interface CustomerManagerLinkOrBuilder extends
    * Output only. The manager customer linked to the customer.
    * </pre>
    *
-   * <code>string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the managerCustomer field is set.
    */
   boolean hasManagerCustomer();
@@ -45,7 +45,7 @@ public interface CustomerManagerLinkOrBuilder extends
    * Output only. The manager customer linked to the customer.
    * </pre>
    *
-   * <code>string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The managerCustomer.
    */
   java.lang.String getManagerCustomer();
@@ -54,7 +54,7 @@ public interface CustomerManagerLinkOrBuilder extends
    * Output only. The manager customer linked to the customer.
    * </pre>
    *
-   * <code>string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for managerCustomer.
    */
   com.google.protobuf.ByteString
@@ -65,7 +65,7 @@ public interface CustomerManagerLinkOrBuilder extends
    * Output only. ID of the customer-manager link. This field is read only.
    * </pre>
    *
-   * <code>int64 manager_link_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 manager_link_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the managerLinkId field is set.
    */
   boolean hasManagerLinkId();
@@ -74,7 +74,7 @@ public interface CustomerManagerLinkOrBuilder extends
    * Output only. ID of the customer-manager link. This field is read only.
    * </pre>
    *
-   * <code>int64 manager_link_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 manager_link_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The managerLinkId.
    */
   long getManagerLinkId();

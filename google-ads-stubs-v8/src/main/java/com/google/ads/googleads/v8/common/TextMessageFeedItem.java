@@ -130,7 +130,7 @@ private static final long serialVersionUID = 0L;
    * This field is required.
    * </pre>
    *
-   * <code>string business_name = 6;</code>
+   * <code>optional string business_name = 6;</code>
    * @return Whether the businessName field is set.
    */
   @java.lang.Override
@@ -143,7 +143,7 @@ private static final long serialVersionUID = 0L;
    * This field is required.
    * </pre>
    *
-   * <code>string business_name = 6;</code>
+   * <code>optional string business_name = 6;</code>
    * @return The businessName.
    */
   @java.lang.Override
@@ -165,7 +165,7 @@ private static final long serialVersionUID = 0L;
    * This field is required.
    * </pre>
    *
-   * <code>string business_name = 6;</code>
+   * <code>optional string business_name = 6;</code>
    * @return The bytes for businessName.
    */
   @java.lang.Override
@@ -191,7 +191,7 @@ private static final long serialVersionUID = 0L;
    * This field is required.
    * </pre>
    *
-   * <code>string country_code = 7;</code>
+   * <code>optional string country_code = 7;</code>
    * @return Whether the countryCode field is set.
    */
   @java.lang.Override
@@ -204,7 +204,7 @@ private static final long serialVersionUID = 0L;
    * This field is required.
    * </pre>
    *
-   * <code>string country_code = 7;</code>
+   * <code>optional string country_code = 7;</code>
    * @return The countryCode.
    */
   @java.lang.Override
@@ -226,7 +226,7 @@ private static final long serialVersionUID = 0L;
    * This field is required.
    * </pre>
    *
-   * <code>string country_code = 7;</code>
+   * <code>optional string country_code = 7;</code>
    * @return The bytes for countryCode.
    */
   @java.lang.Override
@@ -251,7 +251,7 @@ private static final long serialVersionUID = 0L;
    * The advertiser's phone number the message will be sent to. Required.
    * </pre>
    *
-   * <code>string phone_number = 8;</code>
+   * <code>optional string phone_number = 8;</code>
    * @return Whether the phoneNumber field is set.
    */
   @java.lang.Override
@@ -263,7 +263,7 @@ private static final long serialVersionUID = 0L;
    * The advertiser's phone number the message will be sent to. Required.
    * </pre>
    *
-   * <code>string phone_number = 8;</code>
+   * <code>optional string phone_number = 8;</code>
    * @return The phoneNumber.
    */
   @java.lang.Override
@@ -284,7 +284,7 @@ private static final long serialVersionUID = 0L;
    * The advertiser's phone number the message will be sent to. Required.
    * </pre>
    *
-   * <code>string phone_number = 8;</code>
+   * <code>optional string phone_number = 8;</code>
    * @return The bytes for phoneNumber.
    */
   @java.lang.Override
@@ -310,7 +310,7 @@ private static final long serialVersionUID = 0L;
    * This field is required.
    * </pre>
    *
-   * <code>string text = 9;</code>
+   * <code>optional string text = 9;</code>
    * @return Whether the text field is set.
    */
   @java.lang.Override
@@ -323,7 +323,7 @@ private static final long serialVersionUID = 0L;
    * This field is required.
    * </pre>
    *
-   * <code>string text = 9;</code>
+   * <code>optional string text = 9;</code>
    * @return The text.
    */
   @java.lang.Override
@@ -345,7 +345,7 @@ private static final long serialVersionUID = 0L;
    * This field is required.
    * </pre>
    *
-   * <code>string text = 9;</code>
+   * <code>optional string text = 9;</code>
    * @return The bytes for text.
    */
   @java.lang.Override
@@ -370,7 +370,7 @@ private static final long serialVersionUID = 0L;
    * The message extension_text populated in the messaging app.
    * </pre>
    *
-   * <code>string extension_text = 10;</code>
+   * <code>optional string extension_text = 10;</code>
    * @return Whether the extensionText field is set.
    */
   @java.lang.Override
@@ -382,7 +382,7 @@ private static final long serialVersionUID = 0L;
    * The message extension_text populated in the messaging app.
    * </pre>
    *
-   * <code>string extension_text = 10;</code>
+   * <code>optional string extension_text = 10;</code>
    * @return The extensionText.
    */
   @java.lang.Override
@@ -403,7 +403,7 @@ private static final long serialVersionUID = 0L;
    * The message extension_text populated in the messaging app.
    * </pre>
    *
-   * <code>string extension_text = 10;</code>
+   * <code>optional string extension_text = 10;</code>
    * @return The bytes for extensionText.
    */
   @java.lang.Override
@@ -852,7 +852,7 @@ private static final long serialVersionUID = 0L;
      * This field is required.
      * </pre>
      *
-     * <code>string business_name = 6;</code>
+     * <code>optional string business_name = 6;</code>
      * @return Whether the businessName field is set.
      */
     public boolean hasBusinessName() {
@@ -864,7 +864,7 @@ private static final long serialVersionUID = 0L;
      * This field is required.
      * </pre>
      *
-     * <code>string business_name = 6;</code>
+     * <code>optional string business_name = 6;</code>
      * @return The businessName.
      */
     public java.lang.String getBusinessName() {
@@ -885,7 +885,7 @@ private static final long serialVersionUID = 0L;
      * This field is required.
      * </pre>
      *
-     * <code>string business_name = 6;</code>
+     * <code>optional string business_name = 6;</code>
      * @return The bytes for businessName.
      */
     public com.google.protobuf.ByteString
@@ -907,7 +907,7 @@ private static final long serialVersionUID = 0L;
      * This field is required.
      * </pre>
      *
-     * <code>string business_name = 6;</code>
+     * <code>optional string business_name = 6;</code>
      * @param value The businessName to set.
      * @return This builder for chaining.
      */
@@ -927,7 +927,7 @@ private static final long serialVersionUID = 0L;
      * This field is required.
      * </pre>
      *
-     * <code>string business_name = 6;</code>
+     * <code>optional string business_name = 6;</code>
      * @return This builder for chaining.
      */
     public Builder clearBusinessName() {
@@ -942,7 +942,7 @@ private static final long serialVersionUID = 0L;
      * This field is required.
      * </pre>
      *
-     * <code>string business_name = 6;</code>
+     * <code>optional string business_name = 6;</code>
      * @param value The bytes for businessName to set.
      * @return This builder for chaining.
      */
@@ -965,7 +965,7 @@ private static final long serialVersionUID = 0L;
      * This field is required.
      * </pre>
      *
-     * <code>string country_code = 7;</code>
+     * <code>optional string country_code = 7;</code>
      * @return Whether the countryCode field is set.
      */
     public boolean hasCountryCode() {
@@ -977,7 +977,7 @@ private static final long serialVersionUID = 0L;
      * This field is required.
      * </pre>
      *
-     * <code>string country_code = 7;</code>
+     * <code>optional string country_code = 7;</code>
      * @return The countryCode.
      */
     public java.lang.String getCountryCode() {
@@ -998,7 +998,7 @@ private static final long serialVersionUID = 0L;
      * This field is required.
      * </pre>
      *
-     * <code>string country_code = 7;</code>
+     * <code>optional string country_code = 7;</code>
      * @return The bytes for countryCode.
      */
     public com.google.protobuf.ByteString
@@ -1020,7 +1020,7 @@ private static final long serialVersionUID = 0L;
      * This field is required.
      * </pre>
      *
-     * <code>string country_code = 7;</code>
+     * <code>optional string country_code = 7;</code>
      * @param value The countryCode to set.
      * @return This builder for chaining.
      */
@@ -1040,7 +1040,7 @@ private static final long serialVersionUID = 0L;
      * This field is required.
      * </pre>
      *
-     * <code>string country_code = 7;</code>
+     * <code>optional string country_code = 7;</code>
      * @return This builder for chaining.
      */
     public Builder clearCountryCode() {
@@ -1055,7 +1055,7 @@ private static final long serialVersionUID = 0L;
      * This field is required.
      * </pre>
      *
-     * <code>string country_code = 7;</code>
+     * <code>optional string country_code = 7;</code>
      * @param value The bytes for countryCode to set.
      * @return This builder for chaining.
      */
@@ -1077,7 +1077,7 @@ private static final long serialVersionUID = 0L;
      * The advertiser's phone number the message will be sent to. Required.
      * </pre>
      *
-     * <code>string phone_number = 8;</code>
+     * <code>optional string phone_number = 8;</code>
      * @return Whether the phoneNumber field is set.
      */
     public boolean hasPhoneNumber() {
@@ -1088,7 +1088,7 @@ private static final long serialVersionUID = 0L;
      * The advertiser's phone number the message will be sent to. Required.
      * </pre>
      *
-     * <code>string phone_number = 8;</code>
+     * <code>optional string phone_number = 8;</code>
      * @return The phoneNumber.
      */
     public java.lang.String getPhoneNumber() {
@@ -1108,7 +1108,7 @@ private static final long serialVersionUID = 0L;
      * The advertiser's phone number the message will be sent to. Required.
      * </pre>
      *
-     * <code>string phone_number = 8;</code>
+     * <code>optional string phone_number = 8;</code>
      * @return The bytes for phoneNumber.
      */
     public com.google.protobuf.ByteString
@@ -1129,7 +1129,7 @@ private static final long serialVersionUID = 0L;
      * The advertiser's phone number the message will be sent to. Required.
      * </pre>
      *
-     * <code>string phone_number = 8;</code>
+     * <code>optional string phone_number = 8;</code>
      * @param value The phoneNumber to set.
      * @return This builder for chaining.
      */
@@ -1148,7 +1148,7 @@ private static final long serialVersionUID = 0L;
      * The advertiser's phone number the message will be sent to. Required.
      * </pre>
      *
-     * <code>string phone_number = 8;</code>
+     * <code>optional string phone_number = 8;</code>
      * @return This builder for chaining.
      */
     public Builder clearPhoneNumber() {
@@ -1162,7 +1162,7 @@ private static final long serialVersionUID = 0L;
      * The advertiser's phone number the message will be sent to. Required.
      * </pre>
      *
-     * <code>string phone_number = 8;</code>
+     * <code>optional string phone_number = 8;</code>
      * @param value The bytes for phoneNumber to set.
      * @return This builder for chaining.
      */
@@ -1185,7 +1185,7 @@ private static final long serialVersionUID = 0L;
      * This field is required.
      * </pre>
      *
-     * <code>string text = 9;</code>
+     * <code>optional string text = 9;</code>
      * @return Whether the text field is set.
      */
     public boolean hasText() {
@@ -1197,7 +1197,7 @@ private static final long serialVersionUID = 0L;
      * This field is required.
      * </pre>
      *
-     * <code>string text = 9;</code>
+     * <code>optional string text = 9;</code>
      * @return The text.
      */
     public java.lang.String getText() {
@@ -1218,7 +1218,7 @@ private static final long serialVersionUID = 0L;
      * This field is required.
      * </pre>
      *
-     * <code>string text = 9;</code>
+     * <code>optional string text = 9;</code>
      * @return The bytes for text.
      */
     public com.google.protobuf.ByteString
@@ -1240,7 +1240,7 @@ private static final long serialVersionUID = 0L;
      * This field is required.
      * </pre>
      *
-     * <code>string text = 9;</code>
+     * <code>optional string text = 9;</code>
      * @param value The text to set.
      * @return This builder for chaining.
      */
@@ -1260,7 +1260,7 @@ private static final long serialVersionUID = 0L;
      * This field is required.
      * </pre>
      *
-     * <code>string text = 9;</code>
+     * <code>optional string text = 9;</code>
      * @return This builder for chaining.
      */
     public Builder clearText() {
@@ -1275,7 +1275,7 @@ private static final long serialVersionUID = 0L;
      * This field is required.
      * </pre>
      *
-     * <code>string text = 9;</code>
+     * <code>optional string text = 9;</code>
      * @param value The bytes for text to set.
      * @return This builder for chaining.
      */
@@ -1297,7 +1297,7 @@ private static final long serialVersionUID = 0L;
      * The message extension_text populated in the messaging app.
      * </pre>
      *
-     * <code>string extension_text = 10;</code>
+     * <code>optional string extension_text = 10;</code>
      * @return Whether the extensionText field is set.
      */
     public boolean hasExtensionText() {
@@ -1308,7 +1308,7 @@ private static final long serialVersionUID = 0L;
      * The message extension_text populated in the messaging app.
      * </pre>
      *
-     * <code>string extension_text = 10;</code>
+     * <code>optional string extension_text = 10;</code>
      * @return The extensionText.
      */
     public java.lang.String getExtensionText() {
@@ -1328,7 +1328,7 @@ private static final long serialVersionUID = 0L;
      * The message extension_text populated in the messaging app.
      * </pre>
      *
-     * <code>string extension_text = 10;</code>
+     * <code>optional string extension_text = 10;</code>
      * @return The bytes for extensionText.
      */
     public com.google.protobuf.ByteString
@@ -1349,7 +1349,7 @@ private static final long serialVersionUID = 0L;
      * The message extension_text populated in the messaging app.
      * </pre>
      *
-     * <code>string extension_text = 10;</code>
+     * <code>optional string extension_text = 10;</code>
      * @param value The extensionText to set.
      * @return This builder for chaining.
      */
@@ -1368,7 +1368,7 @@ private static final long serialVersionUID = 0L;
      * The message extension_text populated in the messaging app.
      * </pre>
      *
-     * <code>string extension_text = 10;</code>
+     * <code>optional string extension_text = 10;</code>
      * @return This builder for chaining.
      */
     public Builder clearExtensionText() {
@@ -1382,7 +1382,7 @@ private static final long serialVersionUID = 0L;
      * The message extension_text populated in the messaging app.
      * </pre>
      *
-     * <code>string extension_text = 10;</code>
+     * <code>optional string extension_text = 10;</code>
      * @param value The bytes for extensionText to set.
      * @return This builder for chaining.
      */

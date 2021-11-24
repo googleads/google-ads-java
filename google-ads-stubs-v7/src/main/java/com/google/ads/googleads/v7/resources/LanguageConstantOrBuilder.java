@@ -36,7 +36,7 @@ public interface LanguageConstantOrBuilder extends
    * Output only. The ID of the language constant.
    * </pre>
    *
-   * <code>int64 id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -45,7 +45,7 @@ public interface LanguageConstantOrBuilder extends
    * Output only. The ID of the language constant.
    * </pre>
    *
-   * <code>int64 id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   long getId();
@@ -55,7 +55,7 @@ public interface LanguageConstantOrBuilder extends
    * Output only. The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
    * </pre>
    *
-   * <code>string code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the code field is set.
    */
   boolean hasCode();
@@ -64,7 +64,7 @@ public interface LanguageConstantOrBuilder extends
    * Output only. The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
    * </pre>
    *
-   * <code>string code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The code.
    */
   java.lang.String getCode();
@@ -73,7 +73,7 @@ public interface LanguageConstantOrBuilder extends
    * Output only. The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
    * </pre>
    *
-   * <code>string code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for code.
    */
   com.google.protobuf.ByteString
@@ -85,7 +85,7 @@ public interface LanguageConstantOrBuilder extends
    * etc.
    * </pre>
    *
-   * <code>string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the name field is set.
    */
   boolean hasName();
@@ -95,7 +95,7 @@ public interface LanguageConstantOrBuilder extends
    * etc.
    * </pre>
    *
-   * <code>string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The name.
    */
   java.lang.String getName();
@@ -105,7 +105,7 @@ public interface LanguageConstantOrBuilder extends
    * etc.
    * </pre>
    *
-   * <code>string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
@@ -116,7 +116,7 @@ public interface LanguageConstantOrBuilder extends
    * Output only. Whether the language is targetable.
    * </pre>
    *
-   * <code>bool targetable = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool targetable = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the targetable field is set.
    */
   boolean hasTargetable();
@@ -125,7 +125,7 @@ public interface LanguageConstantOrBuilder extends
    * Output only. Whether the language is targetable.
    * </pre>
    *
-   * <code>bool targetable = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool targetable = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The targetable.
    */
   boolean getTargetable();

@@ -147,7 +147,7 @@ private static final long serialVersionUID = 0L;
    * mutate request.
    * </pre>
    *
-   * <code>string function_string = 5;</code>
+   * <code>optional string function_string = 5;</code>
    * @return Whether the functionString field is set.
    */
   @java.lang.Override
@@ -171,7 +171,7 @@ private static final long serialVersionUID = 0L;
    * mutate request.
    * </pre>
    *
-   * <code>string function_string = 5;</code>
+   * <code>optional string function_string = 5;</code>
    * @return The functionString.
    */
   @java.lang.Override
@@ -204,7 +204,7 @@ private static final long serialVersionUID = 0L;
    * mutate request.
    * </pre>
    *
-   * <code>string function_string = 5;</code>
+   * <code>optional string function_string = 5;</code>
    * @return The bytes for functionString.
    */
   @java.lang.Override
@@ -839,7 +839,7 @@ private static final long serialVersionUID = 0L;
      * mutate request.
      * </pre>
      *
-     * <code>string function_string = 5;</code>
+     * <code>optional string function_string = 5;</code>
      * @return Whether the functionString field is set.
      */
     public boolean hasFunctionString() {
@@ -862,7 +862,7 @@ private static final long serialVersionUID = 0L;
      * mutate request.
      * </pre>
      *
-     * <code>string function_string = 5;</code>
+     * <code>optional string function_string = 5;</code>
      * @return The functionString.
      */
     public java.lang.String getFunctionString() {
@@ -894,7 +894,7 @@ private static final long serialVersionUID = 0L;
      * mutate request.
      * </pre>
      *
-     * <code>string function_string = 5;</code>
+     * <code>optional string function_string = 5;</code>
      * @return The bytes for functionString.
      */
     public com.google.protobuf.ByteString
@@ -927,7 +927,7 @@ private static final long serialVersionUID = 0L;
      * mutate request.
      * </pre>
      *
-     * <code>string function_string = 5;</code>
+     * <code>optional string function_string = 5;</code>
      * @param value The functionString to set.
      * @return This builder for chaining.
      */
@@ -958,7 +958,7 @@ private static final long serialVersionUID = 0L;
      * mutate request.
      * </pre>
      *
-     * <code>string function_string = 5;</code>
+     * <code>optional string function_string = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearFunctionString() {
@@ -984,7 +984,7 @@ private static final long serialVersionUID = 0L;
      * mutate request.
      * </pre>
      *
-     * <code>string function_string = 5;</code>
+     * <code>optional string function_string = 5;</code>
      * @param value The bytes for functionString to set.
      * @return This builder for chaining.
      */

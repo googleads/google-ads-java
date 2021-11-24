@@ -167,7 +167,7 @@ private static final long serialVersionUID = 0L;
    * Read only.
    * </pre>
    *
-   * <code>string customer = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string customer = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the customer field is set.
    */
   @java.lang.Override
@@ -180,7 +180,7 @@ private static final long serialVersionUID = 0L;
    * Read only.
    * </pre>
    *
-   * <code>string customer = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string customer = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The customer.
    */
   @java.lang.Override
@@ -202,7 +202,7 @@ private static final long serialVersionUID = 0L;
    * Read only.
    * </pre>
    *
-   * <code>string customer = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string customer = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for customer.
    */
   @java.lang.Override
@@ -229,7 +229,7 @@ private static final long serialVersionUID = 0L;
    * validated when creating a new CustomerLabel.
    * </pre>
    *
-   * <code>string label = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string label = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the label field is set.
    */
   @java.lang.Override
@@ -243,7 +243,7 @@ private static final long serialVersionUID = 0L;
    * validated when creating a new CustomerLabel.
    * </pre>
    *
-   * <code>string label = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string label = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The label.
    */
   @java.lang.Override
@@ -266,7 +266,7 @@ private static final long serialVersionUID = 0L;
    * validated when creating a new CustomerLabel.
    * </pre>
    *
-   * <code>string label = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string label = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for label.
    */
   @java.lang.Override
@@ -298,7 +298,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
@@ -316,7 +316,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
@@ -761,7 +761,7 @@ private static final long serialVersionUID = 0L;
      * Read only.
      * </pre>
      *
-     * <code>string customer = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string customer = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the customer field is set.
      */
     public boolean hasCustomer() {
@@ -773,7 +773,7 @@ private static final long serialVersionUID = 0L;
      * Read only.
      * </pre>
      *
-     * <code>string customer = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string customer = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The customer.
      */
     public java.lang.String getCustomer() {
@@ -794,7 +794,7 @@ private static final long serialVersionUID = 0L;
      * Read only.
      * </pre>
      *
-     * <code>string customer = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string customer = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for customer.
      */
     public com.google.protobuf.ByteString
@@ -816,7 +816,7 @@ private static final long serialVersionUID = 0L;
      * Read only.
      * </pre>
      *
-     * <code>string customer = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string customer = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The customer to set.
      * @return This builder for chaining.
      */
@@ -836,7 +836,7 @@ private static final long serialVersionUID = 0L;
      * Read only.
      * </pre>
      *
-     * <code>string customer = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string customer = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearCustomer() {
@@ -851,7 +851,7 @@ private static final long serialVersionUID = 0L;
      * Read only.
      * </pre>
      *
-     * <code>string customer = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string customer = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for customer to set.
      * @return This builder for chaining.
      */
@@ -875,7 +875,7 @@ private static final long serialVersionUID = 0L;
      * validated when creating a new CustomerLabel.
      * </pre>
      *
-     * <code>string label = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string label = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the label field is set.
      */
     public boolean hasLabel() {
@@ -888,7 +888,7 @@ private static final long serialVersionUID = 0L;
      * validated when creating a new CustomerLabel.
      * </pre>
      *
-     * <code>string label = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string label = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The label.
      */
     public java.lang.String getLabel() {
@@ -910,7 +910,7 @@ private static final long serialVersionUID = 0L;
      * validated when creating a new CustomerLabel.
      * </pre>
      *
-     * <code>string label = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string label = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for label.
      */
     public com.google.protobuf.ByteString
@@ -933,7 +933,7 @@ private static final long serialVersionUID = 0L;
      * validated when creating a new CustomerLabel.
      * </pre>
      *
-     * <code>string label = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string label = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The label to set.
      * @return This builder for chaining.
      */
@@ -954,7 +954,7 @@ private static final long serialVersionUID = 0L;
      * validated when creating a new CustomerLabel.
      * </pre>
      *
-     * <code>string label = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string label = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearLabel() {
@@ -970,7 +970,7 @@ private static final long serialVersionUID = 0L;
      * validated when creating a new CustomerLabel.
      * </pre>
      *
-     * <code>string label = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string label = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for label to set.
      * @return This builder for chaining.
      */

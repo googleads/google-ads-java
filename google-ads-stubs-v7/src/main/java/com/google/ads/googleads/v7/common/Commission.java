@@ -102,7 +102,7 @@ private static final long serialVersionUID = 0L;
    * rate of 0.106 (10.6%).
    * </pre>
    *
-   * <code>int64 commission_rate_micros = 2;</code>
+   * <code>optional int64 commission_rate_micros = 2;</code>
    * @return Whether the commissionRateMicros field is set.
    */
   @java.lang.Override
@@ -117,7 +117,7 @@ private static final long serialVersionUID = 0L;
    * rate of 0.106 (10.6%).
    * </pre>
    *
-   * <code>int64 commission_rate_micros = 2;</code>
+   * <code>optional int64 commission_rate_micros = 2;</code>
    * @return The commissionRateMicros.
    */
   @java.lang.Override
@@ -454,7 +454,7 @@ private static final long serialVersionUID = 0L;
      * rate of 0.106 (10.6%).
      * </pre>
      *
-     * <code>int64 commission_rate_micros = 2;</code>
+     * <code>optional int64 commission_rate_micros = 2;</code>
      * @return Whether the commissionRateMicros field is set.
      */
     @java.lang.Override
@@ -469,7 +469,7 @@ private static final long serialVersionUID = 0L;
      * rate of 0.106 (10.6%).
      * </pre>
      *
-     * <code>int64 commission_rate_micros = 2;</code>
+     * <code>optional int64 commission_rate_micros = 2;</code>
      * @return The commissionRateMicros.
      */
     @java.lang.Override
@@ -484,7 +484,7 @@ private static final long serialVersionUID = 0L;
      * rate of 0.106 (10.6%).
      * </pre>
      *
-     * <code>int64 commission_rate_micros = 2;</code>
+     * <code>optional int64 commission_rate_micros = 2;</code>
      * @param value The commissionRateMicros to set.
      * @return This builder for chaining.
      */
@@ -502,7 +502,7 @@ private static final long serialVersionUID = 0L;
      * rate of 0.106 (10.6%).
      * </pre>
      *
-     * <code>int64 commission_rate_micros = 2;</code>
+     * <code>optional int64 commission_rate_micros = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearCommissionRateMicros() {

@@ -12,7 +12,7 @@ public interface WebhookDeliveryOrBuilder extends
    * Webhook url specified by advertiser to send the lead.
    * </pre>
    *
-   * <code>string advertiser_webhook_url = 4;</code>
+   * <code>optional string advertiser_webhook_url = 4;</code>
    * @return Whether the advertiserWebhookUrl field is set.
    */
   boolean hasAdvertiserWebhookUrl();
@@ -21,7 +21,7 @@ public interface WebhookDeliveryOrBuilder extends
    * Webhook url specified by advertiser to send the lead.
    * </pre>
    *
-   * <code>string advertiser_webhook_url = 4;</code>
+   * <code>optional string advertiser_webhook_url = 4;</code>
    * @return The advertiserWebhookUrl.
    */
   java.lang.String getAdvertiserWebhookUrl();
@@ -30,7 +30,7 @@ public interface WebhookDeliveryOrBuilder extends
    * Webhook url specified by advertiser to send the lead.
    * </pre>
    *
-   * <code>string advertiser_webhook_url = 4;</code>
+   * <code>optional string advertiser_webhook_url = 4;</code>
    * @return The bytes for advertiserWebhookUrl.
    */
   com.google.protobuf.ByteString
@@ -41,7 +41,7 @@ public interface WebhookDeliveryOrBuilder extends
    * Anti-spoofing secret set by the advertiser as part of the webhook payload.
    * </pre>
    *
-   * <code>string google_secret = 5;</code>
+   * <code>optional string google_secret = 5;</code>
    * @return Whether the googleSecret field is set.
    */
   boolean hasGoogleSecret();
@@ -50,7 +50,7 @@ public interface WebhookDeliveryOrBuilder extends
    * Anti-spoofing secret set by the advertiser as part of the webhook payload.
    * </pre>
    *
-   * <code>string google_secret = 5;</code>
+   * <code>optional string google_secret = 5;</code>
    * @return The googleSecret.
    */
   java.lang.String getGoogleSecret();
@@ -59,7 +59,7 @@ public interface WebhookDeliveryOrBuilder extends
    * Anti-spoofing secret set by the advertiser as part of the webhook payload.
    * </pre>
    *
-   * <code>string google_secret = 5;</code>
+   * <code>optional string google_secret = 5;</code>
    * @return The bytes for googleSecret.
    */
   com.google.protobuf.ByteString
@@ -70,7 +70,7 @@ public interface WebhookDeliveryOrBuilder extends
    * The schema version that this delivery instance will use.
    * </pre>
    *
-   * <code>int64 payload_schema_version = 6;</code>
+   * <code>optional int64 payload_schema_version = 6;</code>
    * @return Whether the payloadSchemaVersion field is set.
    */
   boolean hasPayloadSchemaVersion();
@@ -79,7 +79,7 @@ public interface WebhookDeliveryOrBuilder extends
    * The schema version that this delivery instance will use.
    * </pre>
    *
-   * <code>int64 payload_schema_version = 6;</code>
+   * <code>optional int64 payload_schema_version = 6;</code>
    * @return The payloadSchemaVersion.
    */
   long getPayloadSchemaVersion();

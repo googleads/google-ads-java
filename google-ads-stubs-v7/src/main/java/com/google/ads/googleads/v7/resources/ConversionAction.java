@@ -970,7 +970,7 @@ private static final long serialVersionUID = 0L;
      * this conversion action is configured to always use the default value.
      * </pre>
      *
-     * <code>double default_value = 4;</code>
+     * <code>optional double default_value = 4;</code>
      * @return Whether the defaultValue field is set.
      */
     boolean hasDefaultValue();
@@ -981,7 +981,7 @@ private static final long serialVersionUID = 0L;
      * this conversion action is configured to always use the default value.
      * </pre>
      *
-     * <code>double default_value = 4;</code>
+     * <code>optional double default_value = 4;</code>
      * @return The defaultValue.
      */
     double getDefaultValue();
@@ -993,7 +993,7 @@ private static final long serialVersionUID = 0L;
      * conversion action is configured to always use the default value.
      * </pre>
      *
-     * <code>string default_currency_code = 5;</code>
+     * <code>optional string default_currency_code = 5;</code>
      * @return Whether the defaultCurrencyCode field is set.
      */
     boolean hasDefaultCurrencyCode();
@@ -1004,7 +1004,7 @@ private static final long serialVersionUID = 0L;
      * conversion action is configured to always use the default value.
      * </pre>
      *
-     * <code>string default_currency_code = 5;</code>
+     * <code>optional string default_currency_code = 5;</code>
      * @return The defaultCurrencyCode.
      */
     java.lang.String getDefaultCurrencyCode();
@@ -1015,7 +1015,7 @@ private static final long serialVersionUID = 0L;
      * conversion action is configured to always use the default value.
      * </pre>
      *
-     * <code>string default_currency_code = 5;</code>
+     * <code>optional string default_currency_code = 5;</code>
      * @return The bytes for defaultCurrencyCode.
      */
     com.google.protobuf.ByteString
@@ -1028,7 +1028,7 @@ private static final long serialVersionUID = 0L;
      * this conversion action.
      * </pre>
      *
-     * <code>bool always_use_default_value = 6;</code>
+     * <code>optional bool always_use_default_value = 6;</code>
      * @return Whether the alwaysUseDefaultValue field is set.
      */
     boolean hasAlwaysUseDefaultValue();
@@ -1039,7 +1039,7 @@ private static final long serialVersionUID = 0L;
      * this conversion action.
      * </pre>
      *
-     * <code>bool always_use_default_value = 6;</code>
+     * <code>optional bool always_use_default_value = 6;</code>
      * @return The alwaysUseDefaultValue.
      */
     boolean getAlwaysUseDefaultValue();
@@ -1154,7 +1154,7 @@ private static final long serialVersionUID = 0L;
      * this conversion action is configured to always use the default value.
      * </pre>
      *
-     * <code>double default_value = 4;</code>
+     * <code>optional double default_value = 4;</code>
      * @return Whether the defaultValue field is set.
      */
     @java.lang.Override
@@ -1168,7 +1168,7 @@ private static final long serialVersionUID = 0L;
      * this conversion action is configured to always use the default value.
      * </pre>
      *
-     * <code>double default_value = 4;</code>
+     * <code>optional double default_value = 4;</code>
      * @return The defaultValue.
      */
     @java.lang.Override
@@ -1185,7 +1185,7 @@ private static final long serialVersionUID = 0L;
      * conversion action is configured to always use the default value.
      * </pre>
      *
-     * <code>string default_currency_code = 5;</code>
+     * <code>optional string default_currency_code = 5;</code>
      * @return Whether the defaultCurrencyCode field is set.
      */
     @java.lang.Override
@@ -1199,7 +1199,7 @@ private static final long serialVersionUID = 0L;
      * conversion action is configured to always use the default value.
      * </pre>
      *
-     * <code>string default_currency_code = 5;</code>
+     * <code>optional string default_currency_code = 5;</code>
      * @return The defaultCurrencyCode.
      */
     @java.lang.Override
@@ -1222,7 +1222,7 @@ private static final long serialVersionUID = 0L;
      * conversion action is configured to always use the default value.
      * </pre>
      *
-     * <code>string default_currency_code = 5;</code>
+     * <code>optional string default_currency_code = 5;</code>
      * @return The bytes for defaultCurrencyCode.
      */
     @java.lang.Override
@@ -1249,7 +1249,7 @@ private static final long serialVersionUID = 0L;
      * this conversion action.
      * </pre>
      *
-     * <code>bool always_use_default_value = 6;</code>
+     * <code>optional bool always_use_default_value = 6;</code>
      * @return Whether the alwaysUseDefaultValue field is set.
      */
     @java.lang.Override
@@ -1263,7 +1263,7 @@ private static final long serialVersionUID = 0L;
      * this conversion action.
      * </pre>
      *
-     * <code>bool always_use_default_value = 6;</code>
+     * <code>optional bool always_use_default_value = 6;</code>
      * @return The alwaysUseDefaultValue.
      */
     @java.lang.Override
@@ -1652,7 +1652,7 @@ private static final long serialVersionUID = 0L;
        * this conversion action is configured to always use the default value.
        * </pre>
        *
-       * <code>double default_value = 4;</code>
+       * <code>optional double default_value = 4;</code>
        * @return Whether the defaultValue field is set.
        */
       @java.lang.Override
@@ -1666,7 +1666,7 @@ private static final long serialVersionUID = 0L;
        * this conversion action is configured to always use the default value.
        * </pre>
        *
-       * <code>double default_value = 4;</code>
+       * <code>optional double default_value = 4;</code>
        * @return The defaultValue.
        */
       @java.lang.Override
@@ -1680,7 +1680,7 @@ private static final long serialVersionUID = 0L;
        * this conversion action is configured to always use the default value.
        * </pre>
        *
-       * <code>double default_value = 4;</code>
+       * <code>optional double default_value = 4;</code>
        * @param value The defaultValue to set.
        * @return This builder for chaining.
        */
@@ -1697,7 +1697,7 @@ private static final long serialVersionUID = 0L;
        * this conversion action is configured to always use the default value.
        * </pre>
        *
-       * <code>double default_value = 4;</code>
+       * <code>optional double default_value = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearDefaultValue() {
@@ -1715,7 +1715,7 @@ private static final long serialVersionUID = 0L;
        * conversion action is configured to always use the default value.
        * </pre>
        *
-       * <code>string default_currency_code = 5;</code>
+       * <code>optional string default_currency_code = 5;</code>
        * @return Whether the defaultCurrencyCode field is set.
        */
       public boolean hasDefaultCurrencyCode() {
@@ -1728,7 +1728,7 @@ private static final long serialVersionUID = 0L;
        * conversion action is configured to always use the default value.
        * </pre>
        *
-       * <code>string default_currency_code = 5;</code>
+       * <code>optional string default_currency_code = 5;</code>
        * @return The defaultCurrencyCode.
        */
       public java.lang.String getDefaultCurrencyCode() {
@@ -1750,7 +1750,7 @@ private static final long serialVersionUID = 0L;
        * conversion action is configured to always use the default value.
        * </pre>
        *
-       * <code>string default_currency_code = 5;</code>
+       * <code>optional string default_currency_code = 5;</code>
        * @return The bytes for defaultCurrencyCode.
        */
       public com.google.protobuf.ByteString
@@ -1773,7 +1773,7 @@ private static final long serialVersionUID = 0L;
        * conversion action is configured to always use the default value.
        * </pre>
        *
-       * <code>string default_currency_code = 5;</code>
+       * <code>optional string default_currency_code = 5;</code>
        * @param value The defaultCurrencyCode to set.
        * @return This builder for chaining.
        */
@@ -1794,7 +1794,7 @@ private static final long serialVersionUID = 0L;
        * conversion action is configured to always use the default value.
        * </pre>
        *
-       * <code>string default_currency_code = 5;</code>
+       * <code>optional string default_currency_code = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearDefaultCurrencyCode() {
@@ -1810,7 +1810,7 @@ private static final long serialVersionUID = 0L;
        * conversion action is configured to always use the default value.
        * </pre>
        *
-       * <code>string default_currency_code = 5;</code>
+       * <code>optional string default_currency_code = 5;</code>
        * @param value The bytes for defaultCurrencyCode to set.
        * @return This builder for chaining.
        */
@@ -1834,7 +1834,7 @@ private static final long serialVersionUID = 0L;
        * this conversion action.
        * </pre>
        *
-       * <code>bool always_use_default_value = 6;</code>
+       * <code>optional bool always_use_default_value = 6;</code>
        * @return Whether the alwaysUseDefaultValue field is set.
        */
       @java.lang.Override
@@ -1848,7 +1848,7 @@ private static final long serialVersionUID = 0L;
        * this conversion action.
        * </pre>
        *
-       * <code>bool always_use_default_value = 6;</code>
+       * <code>optional bool always_use_default_value = 6;</code>
        * @return The alwaysUseDefaultValue.
        */
       @java.lang.Override
@@ -1862,7 +1862,7 @@ private static final long serialVersionUID = 0L;
        * this conversion action.
        * </pre>
        *
-       * <code>bool always_use_default_value = 6;</code>
+       * <code>optional bool always_use_default_value = 6;</code>
        * @param value The alwaysUseDefaultValue to set.
        * @return This builder for chaining.
        */
@@ -1879,7 +1879,7 @@ private static final long serialVersionUID = 0L;
        * this conversion action.
        * </pre>
        *
-       * <code>bool always_use_default_value = 6;</code>
+       * <code>optional bool always_use_default_value = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearAlwaysUseDefaultValue() {
@@ -1950,7 +1950,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The event name of a third-party app analytics conversion.
      * </pre>
      *
-     * <code>string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the eventName field is set.
      */
     boolean hasEventName();
@@ -1959,7 +1959,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The event name of a third-party app analytics conversion.
      * </pre>
      *
-     * <code>string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The eventName.
      */
     java.lang.String getEventName();
@@ -1968,7 +1968,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The event name of a third-party app analytics conversion.
      * </pre>
      *
-     * <code>string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for eventName.
      */
     com.google.protobuf.ByteString
@@ -2098,7 +2098,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The event name of a third-party app analytics conversion.
      * </pre>
      *
-     * <code>string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the eventName field is set.
      */
     @java.lang.Override
@@ -2110,7 +2110,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The event name of a third-party app analytics conversion.
      * </pre>
      *
-     * <code>string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The eventName.
      */
     @java.lang.Override
@@ -2131,7 +2131,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The event name of a third-party app analytics conversion.
      * </pre>
      *
-     * <code>string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for eventName.
      */
     @java.lang.Override
@@ -2212,7 +2212,7 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000001) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, eventName_);
       }
-      if (!getProviderNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(providerName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, providerName_);
       }
       unknownFields.writeTo(output);
@@ -2227,7 +2227,7 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, eventName_);
       }
-      if (!getProviderNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(providerName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, providerName_);
       }
       size += unknownFields.getSerializedSize();
@@ -2537,7 +2537,7 @@ private static final long serialVersionUID = 0L;
        * Output only. The event name of a third-party app analytics conversion.
        * </pre>
        *
-       * <code>string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return Whether the eventName field is set.
        */
       public boolean hasEventName() {
@@ -2548,7 +2548,7 @@ private static final long serialVersionUID = 0L;
        * Output only. The event name of a third-party app analytics conversion.
        * </pre>
        *
-       * <code>string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The eventName.
        */
       public java.lang.String getEventName() {
@@ -2568,7 +2568,7 @@ private static final long serialVersionUID = 0L;
        * Output only. The event name of a third-party app analytics conversion.
        * </pre>
        *
-       * <code>string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The bytes for eventName.
        */
       public com.google.protobuf.ByteString
@@ -2589,7 +2589,7 @@ private static final long serialVersionUID = 0L;
        * Output only. The event name of a third-party app analytics conversion.
        * </pre>
        *
-       * <code>string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @param value The eventName to set.
        * @return This builder for chaining.
        */
@@ -2608,7 +2608,7 @@ private static final long serialVersionUID = 0L;
        * Output only. The event name of a third-party app analytics conversion.
        * </pre>
        *
-       * <code>string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return This builder for chaining.
        */
       public Builder clearEventName() {
@@ -2622,7 +2622,7 @@ private static final long serialVersionUID = 0L;
        * Output only. The event name of a third-party app analytics conversion.
        * </pre>
        *
-       * <code>string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string event_name = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @param value The bytes for eventName to set.
        * @return This builder for chaining.
        */
@@ -2795,7 +2795,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The event name of a Firebase conversion.
      * </pre>
      *
-     * <code>string event_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string event_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the eventName field is set.
      */
     boolean hasEventName();
@@ -2804,7 +2804,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The event name of a Firebase conversion.
      * </pre>
      *
-     * <code>string event_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string event_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The eventName.
      */
     java.lang.String getEventName();
@@ -2813,7 +2813,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The event name of a Firebase conversion.
      * </pre>
      *
-     * <code>string event_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string event_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for eventName.
      */
     com.google.protobuf.ByteString
@@ -2824,7 +2824,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The Firebase project ID of the conversion.
      * </pre>
      *
-     * <code>string project_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string project_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the projectId field is set.
      */
     boolean hasProjectId();
@@ -2833,7 +2833,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The Firebase project ID of the conversion.
      * </pre>
      *
-     * <code>string project_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string project_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The projectId.
      */
     java.lang.String getProjectId();
@@ -2842,7 +2842,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The Firebase project ID of the conversion.
      * </pre>
      *
-     * <code>string project_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string project_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for projectId.
      */
     com.google.protobuf.ByteString
@@ -2952,7 +2952,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The event name of a Firebase conversion.
      * </pre>
      *
-     * <code>string event_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string event_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the eventName field is set.
      */
     @java.lang.Override
@@ -2964,7 +2964,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The event name of a Firebase conversion.
      * </pre>
      *
-     * <code>string event_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string event_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The eventName.
      */
     @java.lang.Override
@@ -2985,7 +2985,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The event name of a Firebase conversion.
      * </pre>
      *
-     * <code>string event_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string event_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for eventName.
      */
     @java.lang.Override
@@ -3010,7 +3010,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The Firebase project ID of the conversion.
      * </pre>
      *
-     * <code>string project_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string project_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the projectId field is set.
      */
     @java.lang.Override
@@ -3022,7 +3022,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The Firebase project ID of the conversion.
      * </pre>
      *
-     * <code>string project_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string project_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The projectId.
      */
     @java.lang.Override
@@ -3043,7 +3043,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The Firebase project ID of the conversion.
      * </pre>
      *
-     * <code>string project_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string project_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for projectId.
      */
     @java.lang.Override
@@ -3412,7 +3412,7 @@ private static final long serialVersionUID = 0L;
        * Output only. The event name of a Firebase conversion.
        * </pre>
        *
-       * <code>string event_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string event_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return Whether the eventName field is set.
        */
       public boolean hasEventName() {
@@ -3423,7 +3423,7 @@ private static final long serialVersionUID = 0L;
        * Output only. The event name of a Firebase conversion.
        * </pre>
        *
-       * <code>string event_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string event_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The eventName.
        */
       public java.lang.String getEventName() {
@@ -3443,7 +3443,7 @@ private static final long serialVersionUID = 0L;
        * Output only. The event name of a Firebase conversion.
        * </pre>
        *
-       * <code>string event_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string event_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The bytes for eventName.
        */
       public com.google.protobuf.ByteString
@@ -3464,7 +3464,7 @@ private static final long serialVersionUID = 0L;
        * Output only. The event name of a Firebase conversion.
        * </pre>
        *
-       * <code>string event_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string event_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @param value The eventName to set.
        * @return This builder for chaining.
        */
@@ -3483,7 +3483,7 @@ private static final long serialVersionUID = 0L;
        * Output only. The event name of a Firebase conversion.
        * </pre>
        *
-       * <code>string event_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string event_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return This builder for chaining.
        */
       public Builder clearEventName() {
@@ -3497,7 +3497,7 @@ private static final long serialVersionUID = 0L;
        * Output only. The event name of a Firebase conversion.
        * </pre>
        *
-       * <code>string event_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string event_name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @param value The bytes for eventName to set.
        * @return This builder for chaining.
        */
@@ -3519,7 +3519,7 @@ private static final long serialVersionUID = 0L;
        * Output only. The Firebase project ID of the conversion.
        * </pre>
        *
-       * <code>string project_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string project_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return Whether the projectId field is set.
        */
       public boolean hasProjectId() {
@@ -3530,7 +3530,7 @@ private static final long serialVersionUID = 0L;
        * Output only. The Firebase project ID of the conversion.
        * </pre>
        *
-       * <code>string project_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string project_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The projectId.
        */
       public java.lang.String getProjectId() {
@@ -3550,7 +3550,7 @@ private static final long serialVersionUID = 0L;
        * Output only. The Firebase project ID of the conversion.
        * </pre>
        *
-       * <code>string project_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string project_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The bytes for projectId.
        */
       public com.google.protobuf.ByteString
@@ -3571,7 +3571,7 @@ private static final long serialVersionUID = 0L;
        * Output only. The Firebase project ID of the conversion.
        * </pre>
        *
-       * <code>string project_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string project_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @param value The projectId to set.
        * @return This builder for chaining.
        */
@@ -3590,7 +3590,7 @@ private static final long serialVersionUID = 0L;
        * Output only. The Firebase project ID of the conversion.
        * </pre>
        *
-       * <code>string project_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string project_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return This builder for chaining.
        */
       public Builder clearProjectId() {
@@ -3604,7 +3604,7 @@ private static final long serialVersionUID = 0L;
        * Output only. The Firebase project ID of the conversion.
        * </pre>
        *
-       * <code>string project_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string project_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @param value The bytes for projectId to set.
        * @return This builder for chaining.
        */
@@ -3730,7 +3730,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of the conversion action.
    * </pre>
    *
-   * <code>int64 id = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   @java.lang.Override
@@ -3742,7 +3742,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of the conversion action.
    * </pre>
    *
-   * <code>int64 id = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   @java.lang.Override
@@ -3759,7 +3759,7 @@ private static final long serialVersionUID = 0L;
    * conversion actions.
    * </pre>
    *
-   * <code>string name = 22;</code>
+   * <code>optional string name = 22;</code>
    * @return Whether the name field is set.
    */
   @java.lang.Override
@@ -3773,7 +3773,7 @@ private static final long serialVersionUID = 0L;
    * conversion actions.
    * </pre>
    *
-   * <code>string name = 22;</code>
+   * <code>optional string name = 22;</code>
    * @return The name.
    */
   @java.lang.Override
@@ -3796,7 +3796,7 @@ private static final long serialVersionUID = 0L;
    * conversion actions.
    * </pre>
    *
-   * <code>string name = 22;</code>
+   * <code>optional string name = 22;</code>
    * @return The bytes for name.
    */
   @java.lang.Override
@@ -3903,7 +3903,7 @@ private static final long serialVersionUID = 0L;
    * is a system-defined conversion action.
    * </pre>
    *
-   * <code>string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the ownerCustomer field is set.
    */
   @java.lang.Override
@@ -3916,7 +3916,7 @@ private static final long serialVersionUID = 0L;
    * is a system-defined conversion action.
    * </pre>
    *
-   * <code>string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The ownerCustomer.
    */
   @java.lang.Override
@@ -3938,7 +3938,7 @@ private static final long serialVersionUID = 0L;
    * is a system-defined conversion action.
    * </pre>
    *
-   * <code>string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for ownerCustomer.
    */
   @java.lang.Override
@@ -3964,7 +3964,7 @@ private static final long serialVersionUID = 0L;
    * metric.
    * </pre>
    *
-   * <code>bool include_in_conversions_metric = 24;</code>
+   * <code>optional bool include_in_conversions_metric = 24;</code>
    * @return Whether the includeInConversionsMetric field is set.
    */
   @java.lang.Override
@@ -3977,7 +3977,7 @@ private static final long serialVersionUID = 0L;
    * metric.
    * </pre>
    *
-   * <code>bool include_in_conversions_metric = 24;</code>
+   * <code>optional bool include_in_conversions_metric = 24;</code>
    * @return The includeInConversionsMetric.
    */
   @java.lang.Override
@@ -3993,7 +3993,7 @@ private static final long serialVersionUID = 0L;
    * (e.g., a click) and a conversion event.
    * </pre>
    *
-   * <code>int64 click_through_lookback_window_days = 25;</code>
+   * <code>optional int64 click_through_lookback_window_days = 25;</code>
    * @return Whether the clickThroughLookbackWindowDays field is set.
    */
   @java.lang.Override
@@ -4006,7 +4006,7 @@ private static final long serialVersionUID = 0L;
    * (e.g., a click) and a conversion event.
    * </pre>
    *
-   * <code>int64 click_through_lookback_window_days = 25;</code>
+   * <code>optional int64 click_through_lookback_window_days = 25;</code>
    * @return The clickThroughLookbackWindowDays.
    */
   @java.lang.Override
@@ -4022,7 +4022,7 @@ private static final long serialVersionUID = 0L;
    * conversion without an interaction.
    * </pre>
    *
-   * <code>int64 view_through_lookback_window_days = 26;</code>
+   * <code>optional int64 view_through_lookback_window_days = 26;</code>
    * @return Whether the viewThroughLookbackWindowDays field is set.
    */
   @java.lang.Override
@@ -4035,7 +4035,7 @@ private static final long serialVersionUID = 0L;
    * conversion without an interaction.
    * </pre>
    *
-   * <code>int64 view_through_lookback_window_days = 26;</code>
+   * <code>optional int64 view_through_lookback_window_days = 26;</code>
    * @return The viewThroughLookbackWindowDays.
    */
   @java.lang.Override
@@ -4218,7 +4218,7 @@ private static final long serialVersionUID = 0L;
    * The value must be between 0 and 10000, inclusive.
    * </pre>
    *
-   * <code>int64 phone_call_duration_seconds = 27;</code>
+   * <code>optional int64 phone_call_duration_seconds = 27;</code>
    * @return Whether the phoneCallDurationSeconds field is set.
    */
   @java.lang.Override
@@ -4232,7 +4232,7 @@ private static final long serialVersionUID = 0L;
    * The value must be between 0 and 10000, inclusive.
    * </pre>
    *
-   * <code>int64 phone_call_duration_seconds = 27;</code>
+   * <code>optional int64 phone_call_duration_seconds = 27;</code>
    * @return The phoneCallDurationSeconds.
    */
   @java.lang.Override
@@ -4247,7 +4247,7 @@ private static final long serialVersionUID = 0L;
    * App ID for an app conversion action.
    * </pre>
    *
-   * <code>string app_id = 28;</code>
+   * <code>optional string app_id = 28;</code>
    * @return Whether the appId field is set.
    */
   @java.lang.Override
@@ -4259,7 +4259,7 @@ private static final long serialVersionUID = 0L;
    * App ID for an app conversion action.
    * </pre>
    *
-   * <code>string app_id = 28;</code>
+   * <code>optional string app_id = 28;</code>
    * @return The appId.
    */
   @java.lang.Override
@@ -4280,7 +4280,7 @@ private static final long serialVersionUID = 0L;
    * App ID for an app conversion action.
    * </pre>
    *
-   * <code>string app_id = 28;</code>
+   * <code>optional string app_id = 28;</code>
    * @return The bytes for appId.
    */
   @java.lang.Override
@@ -4415,7 +4415,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (status_ != com.google.ads.googleads.v7.enums.ConversionActionStatusEnum.ConversionActionStatus.UNSPECIFIED.getNumber()) {
@@ -4481,7 +4481,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (status_ != com.google.ads.googleads.v7.enums.ConversionActionStatusEnum.ConversionActionStatus.UNSPECIFIED.getNumber()) {
@@ -5286,7 +5286,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the conversion action.
      * </pre>
      *
-     * <code>int64 id = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the id field is set.
      */
     @java.lang.Override
@@ -5298,7 +5298,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the conversion action.
      * </pre>
      *
-     * <code>int64 id = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The id.
      */
     @java.lang.Override
@@ -5310,7 +5310,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the conversion action.
      * </pre>
      *
-     * <code>int64 id = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
@@ -5325,7 +5325,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the conversion action.
      * </pre>
      *
-     * <code>int64 id = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {
@@ -5343,7 +5343,7 @@ private static final long serialVersionUID = 0L;
      * conversion actions.
      * </pre>
      *
-     * <code>string name = 22;</code>
+     * <code>optional string name = 22;</code>
      * @return Whether the name field is set.
      */
     public boolean hasName() {
@@ -5356,7 +5356,7 @@ private static final long serialVersionUID = 0L;
      * conversion actions.
      * </pre>
      *
-     * <code>string name = 22;</code>
+     * <code>optional string name = 22;</code>
      * @return The name.
      */
     public java.lang.String getName() {
@@ -5378,7 +5378,7 @@ private static final long serialVersionUID = 0L;
      * conversion actions.
      * </pre>
      *
-     * <code>string name = 22;</code>
+     * <code>optional string name = 22;</code>
      * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
@@ -5401,7 +5401,7 @@ private static final long serialVersionUID = 0L;
      * conversion actions.
      * </pre>
      *
-     * <code>string name = 22;</code>
+     * <code>optional string name = 22;</code>
      * @param value The name to set.
      * @return This builder for chaining.
      */
@@ -5422,7 +5422,7 @@ private static final long serialVersionUID = 0L;
      * conversion actions.
      * </pre>
      *
-     * <code>string name = 22;</code>
+     * <code>optional string name = 22;</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
@@ -5438,7 +5438,7 @@ private static final long serialVersionUID = 0L;
      * conversion actions.
      * </pre>
      *
-     * <code>string name = 22;</code>
+     * <code>optional string name = 22;</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
@@ -5683,7 +5683,7 @@ private static final long serialVersionUID = 0L;
      * is a system-defined conversion action.
      * </pre>
      *
-     * <code>string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the ownerCustomer field is set.
      */
     public boolean hasOwnerCustomer() {
@@ -5695,7 +5695,7 @@ private static final long serialVersionUID = 0L;
      * is a system-defined conversion action.
      * </pre>
      *
-     * <code>string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The ownerCustomer.
      */
     public java.lang.String getOwnerCustomer() {
@@ -5716,7 +5716,7 @@ private static final long serialVersionUID = 0L;
      * is a system-defined conversion action.
      * </pre>
      *
-     * <code>string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for ownerCustomer.
      */
     public com.google.protobuf.ByteString
@@ -5738,7 +5738,7 @@ private static final long serialVersionUID = 0L;
      * is a system-defined conversion action.
      * </pre>
      *
-     * <code>string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The ownerCustomer to set.
      * @return This builder for chaining.
      */
@@ -5758,7 +5758,7 @@ private static final long serialVersionUID = 0L;
      * is a system-defined conversion action.
      * </pre>
      *
-     * <code>string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearOwnerCustomer() {
@@ -5773,7 +5773,7 @@ private static final long serialVersionUID = 0L;
      * is a system-defined conversion action.
      * </pre>
      *
-     * <code>string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for ownerCustomer to set.
      * @return This builder for chaining.
      */
@@ -5796,7 +5796,7 @@ private static final long serialVersionUID = 0L;
      * metric.
      * </pre>
      *
-     * <code>bool include_in_conversions_metric = 24;</code>
+     * <code>optional bool include_in_conversions_metric = 24;</code>
      * @return Whether the includeInConversionsMetric field is set.
      */
     @java.lang.Override
@@ -5809,7 +5809,7 @@ private static final long serialVersionUID = 0L;
      * metric.
      * </pre>
      *
-     * <code>bool include_in_conversions_metric = 24;</code>
+     * <code>optional bool include_in_conversions_metric = 24;</code>
      * @return The includeInConversionsMetric.
      */
     @java.lang.Override
@@ -5822,7 +5822,7 @@ private static final long serialVersionUID = 0L;
      * metric.
      * </pre>
      *
-     * <code>bool include_in_conversions_metric = 24;</code>
+     * <code>optional bool include_in_conversions_metric = 24;</code>
      * @param value The includeInConversionsMetric to set.
      * @return This builder for chaining.
      */
@@ -5838,7 +5838,7 @@ private static final long serialVersionUID = 0L;
      * metric.
      * </pre>
      *
-     * <code>bool include_in_conversions_metric = 24;</code>
+     * <code>optional bool include_in_conversions_metric = 24;</code>
      * @return This builder for chaining.
      */
     public Builder clearIncludeInConversionsMetric() {
@@ -5855,7 +5855,7 @@ private static final long serialVersionUID = 0L;
      * (e.g., a click) and a conversion event.
      * </pre>
      *
-     * <code>int64 click_through_lookback_window_days = 25;</code>
+     * <code>optional int64 click_through_lookback_window_days = 25;</code>
      * @return Whether the clickThroughLookbackWindowDays field is set.
      */
     @java.lang.Override
@@ -5868,7 +5868,7 @@ private static final long serialVersionUID = 0L;
      * (e.g., a click) and a conversion event.
      * </pre>
      *
-     * <code>int64 click_through_lookback_window_days = 25;</code>
+     * <code>optional int64 click_through_lookback_window_days = 25;</code>
      * @return The clickThroughLookbackWindowDays.
      */
     @java.lang.Override
@@ -5881,7 +5881,7 @@ private static final long serialVersionUID = 0L;
      * (e.g., a click) and a conversion event.
      * </pre>
      *
-     * <code>int64 click_through_lookback_window_days = 25;</code>
+     * <code>optional int64 click_through_lookback_window_days = 25;</code>
      * @param value The clickThroughLookbackWindowDays to set.
      * @return This builder for chaining.
      */
@@ -5897,7 +5897,7 @@ private static final long serialVersionUID = 0L;
      * (e.g., a click) and a conversion event.
      * </pre>
      *
-     * <code>int64 click_through_lookback_window_days = 25;</code>
+     * <code>optional int64 click_through_lookback_window_days = 25;</code>
      * @return This builder for chaining.
      */
     public Builder clearClickThroughLookbackWindowDays() {
@@ -5914,7 +5914,7 @@ private static final long serialVersionUID = 0L;
      * conversion without an interaction.
      * </pre>
      *
-     * <code>int64 view_through_lookback_window_days = 26;</code>
+     * <code>optional int64 view_through_lookback_window_days = 26;</code>
      * @return Whether the viewThroughLookbackWindowDays field is set.
      */
     @java.lang.Override
@@ -5927,7 +5927,7 @@ private static final long serialVersionUID = 0L;
      * conversion without an interaction.
      * </pre>
      *
-     * <code>int64 view_through_lookback_window_days = 26;</code>
+     * <code>optional int64 view_through_lookback_window_days = 26;</code>
      * @return The viewThroughLookbackWindowDays.
      */
     @java.lang.Override
@@ -5940,7 +5940,7 @@ private static final long serialVersionUID = 0L;
      * conversion without an interaction.
      * </pre>
      *
-     * <code>int64 view_through_lookback_window_days = 26;</code>
+     * <code>optional int64 view_through_lookback_window_days = 26;</code>
      * @param value The viewThroughLookbackWindowDays to set.
      * @return This builder for chaining.
      */
@@ -5956,7 +5956,7 @@ private static final long serialVersionUID = 0L;
      * conversion without an interaction.
      * </pre>
      *
-     * <code>int64 view_through_lookback_window_days = 26;</code>
+     * <code>optional int64 view_through_lookback_window_days = 26;</code>
      * @return This builder for chaining.
      */
     public Builder clearViewThroughLookbackWindowDays() {
@@ -6679,7 +6679,7 @@ private static final long serialVersionUID = 0L;
      * The value must be between 0 and 10000, inclusive.
      * </pre>
      *
-     * <code>int64 phone_call_duration_seconds = 27;</code>
+     * <code>optional int64 phone_call_duration_seconds = 27;</code>
      * @return Whether the phoneCallDurationSeconds field is set.
      */
     @java.lang.Override
@@ -6693,7 +6693,7 @@ private static final long serialVersionUID = 0L;
      * The value must be between 0 and 10000, inclusive.
      * </pre>
      *
-     * <code>int64 phone_call_duration_seconds = 27;</code>
+     * <code>optional int64 phone_call_duration_seconds = 27;</code>
      * @return The phoneCallDurationSeconds.
      */
     @java.lang.Override
@@ -6707,7 +6707,7 @@ private static final long serialVersionUID = 0L;
      * The value must be between 0 and 10000, inclusive.
      * </pre>
      *
-     * <code>int64 phone_call_duration_seconds = 27;</code>
+     * <code>optional int64 phone_call_duration_seconds = 27;</code>
      * @param value The phoneCallDurationSeconds to set.
      * @return This builder for chaining.
      */
@@ -6724,7 +6724,7 @@ private static final long serialVersionUID = 0L;
      * The value must be between 0 and 10000, inclusive.
      * </pre>
      *
-     * <code>int64 phone_call_duration_seconds = 27;</code>
+     * <code>optional int64 phone_call_duration_seconds = 27;</code>
      * @return This builder for chaining.
      */
     public Builder clearPhoneCallDurationSeconds() {
@@ -6740,7 +6740,7 @@ private static final long serialVersionUID = 0L;
      * App ID for an app conversion action.
      * </pre>
      *
-     * <code>string app_id = 28;</code>
+     * <code>optional string app_id = 28;</code>
      * @return Whether the appId field is set.
      */
     public boolean hasAppId() {
@@ -6751,7 +6751,7 @@ private static final long serialVersionUID = 0L;
      * App ID for an app conversion action.
      * </pre>
      *
-     * <code>string app_id = 28;</code>
+     * <code>optional string app_id = 28;</code>
      * @return The appId.
      */
     public java.lang.String getAppId() {
@@ -6771,7 +6771,7 @@ private static final long serialVersionUID = 0L;
      * App ID for an app conversion action.
      * </pre>
      *
-     * <code>string app_id = 28;</code>
+     * <code>optional string app_id = 28;</code>
      * @return The bytes for appId.
      */
     public com.google.protobuf.ByteString
@@ -6792,7 +6792,7 @@ private static final long serialVersionUID = 0L;
      * App ID for an app conversion action.
      * </pre>
      *
-     * <code>string app_id = 28;</code>
+     * <code>optional string app_id = 28;</code>
      * @param value The appId to set.
      * @return This builder for chaining.
      */
@@ -6811,7 +6811,7 @@ private static final long serialVersionUID = 0L;
      * App ID for an app conversion action.
      * </pre>
      *
-     * <code>string app_id = 28;</code>
+     * <code>optional string app_id = 28;</code>
      * @return This builder for chaining.
      */
     public Builder clearAppId() {
@@ -6825,7 +6825,7 @@ private static final long serialVersionUID = 0L;
      * App ID for an app conversion action.
      * </pre>
      *
-     * <code>string app_id = 28;</code>
+     * <code>optional string app_id = 28;</code>
      * @param value The bytes for appId to set.
      * @return This builder for chaining.
      */

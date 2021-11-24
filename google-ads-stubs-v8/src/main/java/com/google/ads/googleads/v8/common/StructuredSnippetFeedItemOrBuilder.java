@@ -13,7 +13,7 @@ public interface StructuredSnippetFeedItemOrBuilder extends
    * This string must not be empty.
    * </pre>
    *
-   * <code>string header = 3;</code>
+   * <code>optional string header = 3;</code>
    * @return Whether the header field is set.
    */
   boolean hasHeader();
@@ -23,7 +23,7 @@ public interface StructuredSnippetFeedItemOrBuilder extends
    * This string must not be empty.
    * </pre>
    *
-   * <code>string header = 3;</code>
+   * <code>optional string header = 3;</code>
    * @return The header.
    */
   java.lang.String getHeader();
@@ -33,7 +33,7 @@ public interface StructuredSnippetFeedItemOrBuilder extends
    * This string must not be empty.
    * </pre>
    *
-   * <code>string header = 3;</code>
+   * <code>optional string header = 3;</code>
    * @return The bytes for header.
    */
   com.google.protobuf.ByteString

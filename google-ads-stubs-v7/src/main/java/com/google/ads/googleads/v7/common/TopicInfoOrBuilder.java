@@ -12,7 +12,7 @@ public interface TopicInfoOrBuilder extends
    * The Topic Constant resource name.
    * </pre>
    *
-   * <code>string topic_constant = 3;</code>
+   * <code>optional string topic_constant = 3;</code>
    * @return Whether the topicConstant field is set.
    */
   boolean hasTopicConstant();
@@ -21,7 +21,7 @@ public interface TopicInfoOrBuilder extends
    * The Topic Constant resource name.
    * </pre>
    *
-   * <code>string topic_constant = 3;</code>
+   * <code>optional string topic_constant = 3;</code>
    * @return The topicConstant.
    */
   java.lang.String getTopicConstant();
@@ -30,7 +30,7 @@ public interface TopicInfoOrBuilder extends
    * The Topic Constant resource name.
    * </pre>
    *
-   * <code>string topic_constant = 3;</code>
+   * <code>optional string topic_constant = 3;</code>
    * @return The bytes for topicConstant.
    */
   com.google.protobuf.ByteString

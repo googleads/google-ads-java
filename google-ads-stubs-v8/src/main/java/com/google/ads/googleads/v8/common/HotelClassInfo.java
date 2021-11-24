@@ -98,7 +98,7 @@ private static final long serialVersionUID = 0L;
    * Long value of the hotel class.
    * </pre>
    *
-   * <code>int64 value = 2;</code>
+   * <code>optional int64 value = 2;</code>
    * @return Whether the value field is set.
    */
   @java.lang.Override
@@ -110,7 +110,7 @@ private static final long serialVersionUID = 0L;
    * Long value of the hotel class.
    * </pre>
    *
-   * <code>int64 value = 2;</code>
+   * <code>optional int64 value = 2;</code>
    * @return The value.
    */
   @java.lang.Override
@@ -443,7 +443,7 @@ private static final long serialVersionUID = 0L;
      * Long value of the hotel class.
      * </pre>
      *
-     * <code>int64 value = 2;</code>
+     * <code>optional int64 value = 2;</code>
      * @return Whether the value field is set.
      */
     @java.lang.Override
@@ -455,7 +455,7 @@ private static final long serialVersionUID = 0L;
      * Long value of the hotel class.
      * </pre>
      *
-     * <code>int64 value = 2;</code>
+     * <code>optional int64 value = 2;</code>
      * @return The value.
      */
     @java.lang.Override
@@ -467,7 +467,7 @@ private static final long serialVersionUID = 0L;
      * Long value of the hotel class.
      * </pre>
      *
-     * <code>int64 value = 2;</code>
+     * <code>optional int64 value = 2;</code>
      * @param value The value to set.
      * @return This builder for chaining.
      */
@@ -482,7 +482,7 @@ private static final long serialVersionUID = 0L;
      * Long value of the hotel class.
      * </pre>
      *
-     * <code>int64 value = 2;</code>
+     * <code>optional int64 value = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearValue() {

@@ -12,7 +12,7 @@ public interface VideoOutstreamAdInfoOrBuilder extends
    * The headline of the ad.
    * </pre>
    *
-   * <code>string headline = 3;</code>
+   * <code>optional string headline = 3;</code>
    * @return Whether the headline field is set.
    */
   boolean hasHeadline();
@@ -21,7 +21,7 @@ public interface VideoOutstreamAdInfoOrBuilder extends
    * The headline of the ad.
    * </pre>
    *
-   * <code>string headline = 3;</code>
+   * <code>optional string headline = 3;</code>
    * @return The headline.
    */
   java.lang.String getHeadline();
@@ -30,7 +30,7 @@ public interface VideoOutstreamAdInfoOrBuilder extends
    * The headline of the ad.
    * </pre>
    *
-   * <code>string headline = 3;</code>
+   * <code>optional string headline = 3;</code>
    * @return The bytes for headline.
    */
   com.google.protobuf.ByteString
@@ -41,7 +41,7 @@ public interface VideoOutstreamAdInfoOrBuilder extends
    * The description line.
    * </pre>
    *
-   * <code>string description = 4;</code>
+   * <code>optional string description = 4;</code>
    * @return Whether the description field is set.
    */
   boolean hasDescription();
@@ -50,7 +50,7 @@ public interface VideoOutstreamAdInfoOrBuilder extends
    * The description line.
    * </pre>
    *
-   * <code>string description = 4;</code>
+   * <code>optional string description = 4;</code>
    * @return The description.
    */
   java.lang.String getDescription();
@@ -59,7 +59,7 @@ public interface VideoOutstreamAdInfoOrBuilder extends
    * The description line.
    * </pre>
    *
-   * <code>string description = 4;</code>
+   * <code>optional string description = 4;</code>
    * @return The bytes for description.
    */
   com.google.protobuf.ByteString

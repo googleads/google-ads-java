@@ -36,7 +36,7 @@ public interface LandingPageViewOrBuilder extends
    * Output only. The advertiser-specified final URL.
    * </pre>
    *
-   * <code>string unexpanded_final_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string unexpanded_final_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the unexpandedFinalUrl field is set.
    */
   boolean hasUnexpandedFinalUrl();
@@ -45,7 +45,7 @@ public interface LandingPageViewOrBuilder extends
    * Output only. The advertiser-specified final URL.
    * </pre>
    *
-   * <code>string unexpanded_final_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string unexpanded_final_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The unexpandedFinalUrl.
    */
   java.lang.String getUnexpandedFinalUrl();
@@ -54,7 +54,7 @@ public interface LandingPageViewOrBuilder extends
    * Output only. The advertiser-specified final URL.
    * </pre>
    *
-   * <code>string unexpanded_final_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string unexpanded_final_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for unexpandedFinalUrl.
    */
   com.google.protobuf.ByteString

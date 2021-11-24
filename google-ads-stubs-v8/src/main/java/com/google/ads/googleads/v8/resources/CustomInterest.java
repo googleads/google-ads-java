@@ -196,7 +196,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Id of the custom interest.
    * </pre>
    *
-   * <code>int64 id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   @java.lang.Override
@@ -208,7 +208,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Id of the custom interest.
    * </pre>
    *
-   * <code>int64 id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   @java.lang.Override
@@ -254,7 +254,7 @@ private static final long serialVersionUID = 0L;
    * This field is required for create operations.
    * </pre>
    *
-   * <code>string name = 9;</code>
+   * <code>optional string name = 9;</code>
    * @return Whether the name field is set.
    */
   @java.lang.Override
@@ -268,7 +268,7 @@ private static final long serialVersionUID = 0L;
    * This field is required for create operations.
    * </pre>
    *
-   * <code>string name = 9;</code>
+   * <code>optional string name = 9;</code>
    * @return The name.
    */
   @java.lang.Override
@@ -291,7 +291,7 @@ private static final long serialVersionUID = 0L;
    * This field is required for create operations.
    * </pre>
    *
-   * <code>string name = 9;</code>
+   * <code>optional string name = 9;</code>
    * @return The bytes for name.
    */
   @java.lang.Override
@@ -345,7 +345,7 @@ private static final long serialVersionUID = 0L;
    * Description of this custom interest audience.
    * </pre>
    *
-   * <code>string description = 10;</code>
+   * <code>optional string description = 10;</code>
    * @return Whether the description field is set.
    */
   @java.lang.Override
@@ -357,7 +357,7 @@ private static final long serialVersionUID = 0L;
    * Description of this custom interest audience.
    * </pre>
    *
-   * <code>string description = 10;</code>
+   * <code>optional string description = 10;</code>
    * @return The description.
    */
   @java.lang.Override
@@ -378,7 +378,7 @@ private static final long serialVersionUID = 0L;
    * Description of this custom interest audience.
    * </pre>
    *
-   * <code>string description = 10;</code>
+   * <code>optional string description = 10;</code>
    * @return The bytes for description.
    */
   @java.lang.Override
@@ -480,7 +480,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (status_ != com.google.ads.googleads.v8.enums.CustomInterestStatusEnum.CustomInterestStatus.UNSPECIFIED.getNumber()) {
@@ -510,7 +510,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (status_ != com.google.ads.googleads.v8.enums.CustomInterestStatusEnum.CustomInterestStatus.UNSPECIFIED.getNumber()) {
@@ -1053,7 +1053,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Id of the custom interest.
      * </pre>
      *
-     * <code>int64 id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the id field is set.
      */
     @java.lang.Override
@@ -1065,7 +1065,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Id of the custom interest.
      * </pre>
      *
-     * <code>int64 id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The id.
      */
     @java.lang.Override
@@ -1077,7 +1077,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Id of the custom interest.
      * </pre>
      *
-     * <code>int64 id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
@@ -1092,7 +1092,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Id of the custom interest.
      * </pre>
      *
-     * <code>int64 id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {
@@ -1189,7 +1189,7 @@ private static final long serialVersionUID = 0L;
      * This field is required for create operations.
      * </pre>
      *
-     * <code>string name = 9;</code>
+     * <code>optional string name = 9;</code>
      * @return Whether the name field is set.
      */
     public boolean hasName() {
@@ -1202,7 +1202,7 @@ private static final long serialVersionUID = 0L;
      * This field is required for create operations.
      * </pre>
      *
-     * <code>string name = 9;</code>
+     * <code>optional string name = 9;</code>
      * @return The name.
      */
     public java.lang.String getName() {
@@ -1224,7 +1224,7 @@ private static final long serialVersionUID = 0L;
      * This field is required for create operations.
      * </pre>
      *
-     * <code>string name = 9;</code>
+     * <code>optional string name = 9;</code>
      * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
@@ -1247,7 +1247,7 @@ private static final long serialVersionUID = 0L;
      * This field is required for create operations.
      * </pre>
      *
-     * <code>string name = 9;</code>
+     * <code>optional string name = 9;</code>
      * @param value The name to set.
      * @return This builder for chaining.
      */
@@ -1268,7 +1268,7 @@ private static final long serialVersionUID = 0L;
      * This field is required for create operations.
      * </pre>
      *
-     * <code>string name = 9;</code>
+     * <code>optional string name = 9;</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
@@ -1284,7 +1284,7 @@ private static final long serialVersionUID = 0L;
      * This field is required for create operations.
      * </pre>
      *
-     * <code>string name = 9;</code>
+     * <code>optional string name = 9;</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
@@ -1385,7 +1385,7 @@ private static final long serialVersionUID = 0L;
      * Description of this custom interest audience.
      * </pre>
      *
-     * <code>string description = 10;</code>
+     * <code>optional string description = 10;</code>
      * @return Whether the description field is set.
      */
     public boolean hasDescription() {
@@ -1396,7 +1396,7 @@ private static final long serialVersionUID = 0L;
      * Description of this custom interest audience.
      * </pre>
      *
-     * <code>string description = 10;</code>
+     * <code>optional string description = 10;</code>
      * @return The description.
      */
     public java.lang.String getDescription() {
@@ -1416,7 +1416,7 @@ private static final long serialVersionUID = 0L;
      * Description of this custom interest audience.
      * </pre>
      *
-     * <code>string description = 10;</code>
+     * <code>optional string description = 10;</code>
      * @return The bytes for description.
      */
     public com.google.protobuf.ByteString
@@ -1437,7 +1437,7 @@ private static final long serialVersionUID = 0L;
      * Description of this custom interest audience.
      * </pre>
      *
-     * <code>string description = 10;</code>
+     * <code>optional string description = 10;</code>
      * @param value The description to set.
      * @return This builder for chaining.
      */
@@ -1456,7 +1456,7 @@ private static final long serialVersionUID = 0L;
      * Description of this custom interest audience.
      * </pre>
      *
-     * <code>string description = 10;</code>
+     * <code>optional string description = 10;</code>
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
@@ -1470,7 +1470,7 @@ private static final long serialVersionUID = 0L;
      * Description of this custom interest audience.
      * </pre>
      *
-     * <code>string description = 10;</code>
+     * <code>optional string description = 10;</code>
      * @param value The bytes for description to set.
      * @return This builder for chaining.
      */

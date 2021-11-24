@@ -96,9 +96,10 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The duration value in days.
+   * This field cannot be combined with the date_range field.
    * </pre>
    *
-   * <code>int32 duration_in_days = 2;</code>
+   * <code>optional int32 duration_in_days = 2;</code>
    * @return Whether the durationInDays field is set.
    */
   @java.lang.Override
@@ -108,9 +109,10 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The duration value in days.
+   * This field cannot be combined with the date_range field.
    * </pre>
    *
-   * <code>int32 duration_in_days = 2;</code>
+   * <code>optional int32 duration_in_days = 2;</code>
    * @return The durationInDays.
    */
   @java.lang.Override
@@ -440,9 +442,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The duration value in days.
+     * This field cannot be combined with the date_range field.
      * </pre>
      *
-     * <code>int32 duration_in_days = 2;</code>
+     * <code>optional int32 duration_in_days = 2;</code>
      * @return Whether the durationInDays field is set.
      */
     @java.lang.Override
@@ -452,9 +455,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The duration value in days.
+     * This field cannot be combined with the date_range field.
      * </pre>
      *
-     * <code>int32 duration_in_days = 2;</code>
+     * <code>optional int32 duration_in_days = 2;</code>
      * @return The durationInDays.
      */
     @java.lang.Override
@@ -464,9 +468,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The duration value in days.
+     * This field cannot be combined with the date_range field.
      * </pre>
      *
-     * <code>int32 duration_in_days = 2;</code>
+     * <code>optional int32 duration_in_days = 2;</code>
      * @param value The durationInDays to set.
      * @return This builder for chaining.
      */
@@ -479,9 +484,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The duration value in days.
+     * This field cannot be combined with the date_range field.
      * </pre>
      *
-     * <code>int32 duration_in_days = 2;</code>
+     * <code>optional int32 duration_in_days = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearDurationInDays() {

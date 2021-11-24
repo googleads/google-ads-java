@@ -42,7 +42,7 @@ public interface FrequencyCapEntryOrBuilder extends
    * Maximum number of events allowed during the time range by this cap.
    * </pre>
    *
-   * <code>int32 cap = 3;</code>
+   * <code>optional int32 cap = 3;</code>
    * @return Whether the cap field is set.
    */
   boolean hasCap();
@@ -51,7 +51,7 @@ public interface FrequencyCapEntryOrBuilder extends
    * Maximum number of events allowed during the time range by this cap.
    * </pre>
    *
-   * <code>int32 cap = 3;</code>
+   * <code>optional int32 cap = 3;</code>
    * @return The cap.
    */
   int getCap();

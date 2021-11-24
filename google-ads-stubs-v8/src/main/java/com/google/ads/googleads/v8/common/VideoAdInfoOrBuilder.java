@@ -12,7 +12,7 @@ public interface VideoAdInfoOrBuilder extends
    * The MediaFile resource to use for the video.
    * </pre>
    *
-   * <code>string media_file = 7;</code>
+   * <code>optional string media_file = 7;</code>
    * @return Whether the mediaFile field is set.
    */
   boolean hasMediaFile();
@@ -21,7 +21,7 @@ public interface VideoAdInfoOrBuilder extends
    * The MediaFile resource to use for the video.
    * </pre>
    *
-   * <code>string media_file = 7;</code>
+   * <code>optional string media_file = 7;</code>
    * @return The mediaFile.
    */
   java.lang.String getMediaFile();
@@ -30,7 +30,7 @@ public interface VideoAdInfoOrBuilder extends
    * The MediaFile resource to use for the video.
    * </pre>
    *
-   * <code>string media_file = 7;</code>
+   * <code>optional string media_file = 7;</code>
    * @return The bytes for mediaFile.
    */
   com.google.protobuf.ByteString

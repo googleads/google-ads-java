@@ -173,7 +173,7 @@ private static final long serialVersionUID = 0L;
    * localized.
    * </pre>
    *
-   * <code>string country_code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string country_code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the countryCode field is set.
    */
   @java.lang.Override
@@ -187,7 +187,7 @@ private static final long serialVersionUID = 0L;
    * localized.
    * </pre>
    *
-   * <code>string country_code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string country_code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The countryCode.
    */
   @java.lang.Override
@@ -210,7 +210,7 @@ private static final long serialVersionUID = 0L;
    * localized.
    * </pre>
    *
-   * <code>string country_code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string country_code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for countryCode.
    */
   @java.lang.Override
@@ -237,7 +237,7 @@ private static final long serialVersionUID = 0L;
    * localized.
    * </pre>
    *
-   * <code>string language_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string language_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the languageCode field is set.
    */
   @java.lang.Override
@@ -251,7 +251,7 @@ private static final long serialVersionUID = 0L;
    * localized.
    * </pre>
    *
-   * <code>string language_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string language_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The languageCode.
    */
   @java.lang.Override
@@ -274,7 +274,7 @@ private static final long serialVersionUID = 0L;
    * localized.
    * </pre>
    *
-   * <code>string language_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string language_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for languageCode.
    */
   @java.lang.Override
@@ -299,7 +299,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The display name of the keyword theme or sub keyword theme.
    * </pre>
    *
-   * <code>string display_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string display_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the displayName field is set.
    */
   @java.lang.Override
@@ -311,7 +311,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The display name of the keyword theme or sub keyword theme.
    * </pre>
    *
-   * <code>string display_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string display_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The displayName.
    */
   @java.lang.Override
@@ -332,7 +332,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The display name of the keyword theme or sub keyword theme.
    * </pre>
    *
-   * <code>string display_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string display_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for displayName.
    */
   @java.lang.Override
@@ -364,7 +364,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
@@ -385,7 +385,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
@@ -852,7 +852,7 @@ private static final long serialVersionUID = 0L;
      * localized.
      * </pre>
      *
-     * <code>string country_code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string country_code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the countryCode field is set.
      */
     public boolean hasCountryCode() {
@@ -865,7 +865,7 @@ private static final long serialVersionUID = 0L;
      * localized.
      * </pre>
      *
-     * <code>string country_code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string country_code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The countryCode.
      */
     public java.lang.String getCountryCode() {
@@ -887,7 +887,7 @@ private static final long serialVersionUID = 0L;
      * localized.
      * </pre>
      *
-     * <code>string country_code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string country_code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for countryCode.
      */
     public com.google.protobuf.ByteString
@@ -910,7 +910,7 @@ private static final long serialVersionUID = 0L;
      * localized.
      * </pre>
      *
-     * <code>string country_code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string country_code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The countryCode to set.
      * @return This builder for chaining.
      */
@@ -931,7 +931,7 @@ private static final long serialVersionUID = 0L;
      * localized.
      * </pre>
      *
-     * <code>string country_code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string country_code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearCountryCode() {
@@ -947,7 +947,7 @@ private static final long serialVersionUID = 0L;
      * localized.
      * </pre>
      *
-     * <code>string country_code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string country_code = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for countryCode to set.
      * @return This builder for chaining.
      */
@@ -971,7 +971,7 @@ private static final long serialVersionUID = 0L;
      * localized.
      * </pre>
      *
-     * <code>string language_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string language_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the languageCode field is set.
      */
     public boolean hasLanguageCode() {
@@ -984,7 +984,7 @@ private static final long serialVersionUID = 0L;
      * localized.
      * </pre>
      *
-     * <code>string language_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string language_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The languageCode.
      */
     public java.lang.String getLanguageCode() {
@@ -1006,7 +1006,7 @@ private static final long serialVersionUID = 0L;
      * localized.
      * </pre>
      *
-     * <code>string language_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string language_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for languageCode.
      */
     public com.google.protobuf.ByteString
@@ -1029,7 +1029,7 @@ private static final long serialVersionUID = 0L;
      * localized.
      * </pre>
      *
-     * <code>string language_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string language_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The languageCode to set.
      * @return This builder for chaining.
      */
@@ -1050,7 +1050,7 @@ private static final long serialVersionUID = 0L;
      * localized.
      * </pre>
      *
-     * <code>string language_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string language_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearLanguageCode() {
@@ -1066,7 +1066,7 @@ private static final long serialVersionUID = 0L;
      * localized.
      * </pre>
      *
-     * <code>string language_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string language_code = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for languageCode to set.
      * @return This builder for chaining.
      */
@@ -1088,7 +1088,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The display name of the keyword theme or sub keyword theme.
      * </pre>
      *
-     * <code>string display_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string display_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the displayName field is set.
      */
     public boolean hasDisplayName() {
@@ -1099,7 +1099,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The display name of the keyword theme or sub keyword theme.
      * </pre>
      *
-     * <code>string display_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string display_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The displayName.
      */
     public java.lang.String getDisplayName() {
@@ -1119,7 +1119,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The display name of the keyword theme or sub keyword theme.
      * </pre>
      *
-     * <code>string display_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string display_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for displayName.
      */
     public com.google.protobuf.ByteString
@@ -1140,7 +1140,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The display name of the keyword theme or sub keyword theme.
      * </pre>
      *
-     * <code>string display_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string display_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The displayName to set.
      * @return This builder for chaining.
      */
@@ -1159,7 +1159,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The display name of the keyword theme or sub keyword theme.
      * </pre>
      *
-     * <code>string display_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string display_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearDisplayName() {
@@ -1173,7 +1173,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The display name of the keyword theme or sub keyword theme.
      * </pre>
      *
-     * <code>string display_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string display_name = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for displayName to set.
      * @return This builder for chaining.
      */

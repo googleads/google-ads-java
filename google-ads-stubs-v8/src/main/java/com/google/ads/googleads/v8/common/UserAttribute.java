@@ -128,7 +128,7 @@ private static final long serialVersionUID = 0L;
    * Advertiser defined lifetime value for the user.
    * </pre>
    *
-   * <code>int64 lifetime_value_micros = 1;</code>
+   * <code>optional int64 lifetime_value_micros = 1;</code>
    * @return Whether the lifetimeValueMicros field is set.
    */
   @java.lang.Override
@@ -140,7 +140,7 @@ private static final long serialVersionUID = 0L;
    * Advertiser defined lifetime value for the user.
    * </pre>
    *
-   * <code>int64 lifetime_value_micros = 1;</code>
+   * <code>optional int64 lifetime_value_micros = 1;</code>
    * @return The lifetimeValueMicros.
    */
   @java.lang.Override
@@ -157,7 +157,7 @@ private static final long serialVersionUID = 0L;
    * operation where 0 will also be accepted.
    * </pre>
    *
-   * <code>int32 lifetime_value_bucket = 2;</code>
+   * <code>optional int32 lifetime_value_bucket = 2;</code>
    * @return Whether the lifetimeValueBucket field is set.
    */
   @java.lang.Override
@@ -171,7 +171,7 @@ private static final long serialVersionUID = 0L;
    * operation where 0 will also be accepted.
    * </pre>
    *
-   * <code>int32 lifetime_value_bucket = 2;</code>
+   * <code>optional int32 lifetime_value_bucket = 2;</code>
    * @return The lifetimeValueBucket.
    */
   @java.lang.Override
@@ -334,7 +334,7 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       output.writeInt32(2, lifetimeValueBucket_);
     }
-    if (!getLastPurchaseDateTimeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastPurchaseDateTime_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, lastPurchaseDateTime_);
     }
     if (averagePurchaseCount_ != 0) {
@@ -343,7 +343,7 @@ private static final long serialVersionUID = 0L;
     if (averagePurchaseValueMicros_ != 0L) {
       output.writeInt64(5, averagePurchaseValueMicros_);
     }
-    if (!getAcquisitionDateTimeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(acquisitionDateTime_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, acquisitionDateTime_);
     }
     unknownFields.writeTo(output);
@@ -363,7 +363,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(2, lifetimeValueBucket_);
     }
-    if (!getLastPurchaseDateTimeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lastPurchaseDateTime_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, lastPurchaseDateTime_);
     }
     if (averagePurchaseCount_ != 0) {
@@ -374,7 +374,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(5, averagePurchaseValueMicros_);
     }
-    if (!getAcquisitionDateTimeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(acquisitionDateTime_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, acquisitionDateTime_);
     }
     size += unknownFields.getSerializedSize();
@@ -734,7 +734,7 @@ private static final long serialVersionUID = 0L;
      * Advertiser defined lifetime value for the user.
      * </pre>
      *
-     * <code>int64 lifetime_value_micros = 1;</code>
+     * <code>optional int64 lifetime_value_micros = 1;</code>
      * @return Whether the lifetimeValueMicros field is set.
      */
     @java.lang.Override
@@ -746,7 +746,7 @@ private static final long serialVersionUID = 0L;
      * Advertiser defined lifetime value for the user.
      * </pre>
      *
-     * <code>int64 lifetime_value_micros = 1;</code>
+     * <code>optional int64 lifetime_value_micros = 1;</code>
      * @return The lifetimeValueMicros.
      */
     @java.lang.Override
@@ -758,7 +758,7 @@ private static final long serialVersionUID = 0L;
      * Advertiser defined lifetime value for the user.
      * </pre>
      *
-     * <code>int64 lifetime_value_micros = 1;</code>
+     * <code>optional int64 lifetime_value_micros = 1;</code>
      * @param value The lifetimeValueMicros to set.
      * @return This builder for chaining.
      */
@@ -773,7 +773,7 @@ private static final long serialVersionUID = 0L;
      * Advertiser defined lifetime value for the user.
      * </pre>
      *
-     * <code>int64 lifetime_value_micros = 1;</code>
+     * <code>optional int64 lifetime_value_micros = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearLifetimeValueMicros() {
@@ -791,7 +791,7 @@ private static final long serialVersionUID = 0L;
      * operation where 0 will also be accepted.
      * </pre>
      *
-     * <code>int32 lifetime_value_bucket = 2;</code>
+     * <code>optional int32 lifetime_value_bucket = 2;</code>
      * @return Whether the lifetimeValueBucket field is set.
      */
     @java.lang.Override
@@ -805,7 +805,7 @@ private static final long serialVersionUID = 0L;
      * operation where 0 will also be accepted.
      * </pre>
      *
-     * <code>int32 lifetime_value_bucket = 2;</code>
+     * <code>optional int32 lifetime_value_bucket = 2;</code>
      * @return The lifetimeValueBucket.
      */
     @java.lang.Override
@@ -819,7 +819,7 @@ private static final long serialVersionUID = 0L;
      * operation where 0 will also be accepted.
      * </pre>
      *
-     * <code>int32 lifetime_value_bucket = 2;</code>
+     * <code>optional int32 lifetime_value_bucket = 2;</code>
      * @param value The lifetimeValueBucket to set.
      * @return This builder for chaining.
      */
@@ -836,7 +836,7 @@ private static final long serialVersionUID = 0L;
      * operation where 0 will also be accepted.
      * </pre>
      *
-     * <code>int32 lifetime_value_bucket = 2;</code>
+     * <code>optional int32 lifetime_value_bucket = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearLifetimeValueBucket() {

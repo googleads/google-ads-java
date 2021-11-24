@@ -136,7 +136,7 @@ private static final long serialVersionUID = 0L;
    * member_type is URL.
    * </pre>
    *
-   * <code>string parameter = 3;</code>
+   * <code>optional string parameter = 3;</code>
    * @return Whether the parameter field is set.
    */
   @java.lang.Override
@@ -149,7 +149,7 @@ private static final long serialVersionUID = 0L;
    * member_type is URL.
    * </pre>
    *
-   * <code>string parameter = 3;</code>
+   * <code>optional string parameter = 3;</code>
    * @return The parameter.
    */
   @java.lang.Override
@@ -171,7 +171,7 @@ private static final long serialVersionUID = 0L;
    * member_type is URL.
    * </pre>
    *
-   * <code>string parameter = 3;</code>
+   * <code>optional string parameter = 3;</code>
    * @return The bytes for parameter.
    */
   @java.lang.Override
@@ -606,7 +606,7 @@ private static final long serialVersionUID = 0L;
      * member_type is URL.
      * </pre>
      *
-     * <code>string parameter = 3;</code>
+     * <code>optional string parameter = 3;</code>
      * @return Whether the parameter field is set.
      */
     public boolean hasParameter() {
@@ -618,7 +618,7 @@ private static final long serialVersionUID = 0L;
      * member_type is URL.
      * </pre>
      *
-     * <code>string parameter = 3;</code>
+     * <code>optional string parameter = 3;</code>
      * @return The parameter.
      */
     public java.lang.String getParameter() {
@@ -639,7 +639,7 @@ private static final long serialVersionUID = 0L;
      * member_type is URL.
      * </pre>
      *
-     * <code>string parameter = 3;</code>
+     * <code>optional string parameter = 3;</code>
      * @return The bytes for parameter.
      */
     public com.google.protobuf.ByteString
@@ -661,7 +661,7 @@ private static final long serialVersionUID = 0L;
      * member_type is URL.
      * </pre>
      *
-     * <code>string parameter = 3;</code>
+     * <code>optional string parameter = 3;</code>
      * @param value The parameter to set.
      * @return This builder for chaining.
      */
@@ -681,7 +681,7 @@ private static final long serialVersionUID = 0L;
      * member_type is URL.
      * </pre>
      *
-     * <code>string parameter = 3;</code>
+     * <code>optional string parameter = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearParameter() {
@@ -696,7 +696,7 @@ private static final long serialVersionUID = 0L;
      * member_type is URL.
      * </pre>
      *
-     * <code>string parameter = 3;</code>
+     * <code>optional string parameter = 3;</code>
      * @param value The bytes for parameter to set.
      * @return This builder for chaining.
      */

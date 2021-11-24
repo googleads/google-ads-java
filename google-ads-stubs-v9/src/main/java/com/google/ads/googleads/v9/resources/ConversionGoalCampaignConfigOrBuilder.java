@@ -72,19 +72,19 @@ public interface ConversionGoalCampaignConfigOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. The custom conversion goal the campaign is using for optimization.
+   * The custom conversion goal the campaign is using for optimization.
    * </pre>
    *
-   * <code>string custom_conversion_goal = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>string custom_conversion_goal = 4 [(.google.api.resource_reference) = { ... }</code>
    * @return The customConversionGoal.
    */
   java.lang.String getCustomConversionGoal();
   /**
    * <pre>
-   * Immutable. The custom conversion goal the campaign is using for optimization.
+   * The custom conversion goal the campaign is using for optimization.
    * </pre>
    *
-   * <code>string custom_conversion_goal = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>string custom_conversion_goal = 4 [(.google.api.resource_reference) = { ... }</code>
    * @return The bytes for customConversionGoal.
    */
   com.google.protobuf.ByteString

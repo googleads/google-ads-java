@@ -169,7 +169,7 @@ private static final long serialVersionUID = 0L;
    * be between 1 and 25, inclusive.
    * </pre>
    *
-   * <code>string link_text = 9;</code>
+   * <code>optional string link_text = 9;</code>
    * @return Whether the linkText field is set.
    */
   @java.lang.Override
@@ -183,7 +183,7 @@ private static final long serialVersionUID = 0L;
    * be between 1 and 25, inclusive.
    * </pre>
    *
-   * <code>string link_text = 9;</code>
+   * <code>optional string link_text = 9;</code>
    * @return The linkText.
    */
   @java.lang.Override
@@ -206,7 +206,7 @@ private static final long serialVersionUID = 0L;
    * be between 1 and 25, inclusive.
    * </pre>
    *
-   * <code>string link_text = 9;</code>
+   * <code>optional string link_text = 9;</code>
    * @return The bytes for linkText.
    */
   @java.lang.Override
@@ -232,7 +232,7 @@ private static final long serialVersionUID = 0L;
    * This string must not be empty.
    * </pre>
    *
-   * <code>string app_id = 10;</code>
+   * <code>optional string app_id = 10;</code>
    * @return Whether the appId field is set.
    */
   @java.lang.Override
@@ -245,7 +245,7 @@ private static final long serialVersionUID = 0L;
    * This string must not be empty.
    * </pre>
    *
-   * <code>string app_id = 10;</code>
+   * <code>optional string app_id = 10;</code>
    * @return The appId.
    */
   @java.lang.Override
@@ -267,7 +267,7 @@ private static final long serialVersionUID = 0L;
    * This string must not be empty.
    * </pre>
    *
-   * <code>string app_id = 10;</code>
+   * <code>optional string app_id = 10;</code>
    * @return The bytes for appId.
    */
   @java.lang.Override
@@ -427,7 +427,7 @@ private static final long serialVersionUID = 0L;
    * URL template for constructing a tracking URL. Default value is "{lpurl}".
    * </pre>
    *
-   * <code>string tracking_url_template = 13;</code>
+   * <code>optional string tracking_url_template = 13;</code>
    * @return Whether the trackingUrlTemplate field is set.
    */
   @java.lang.Override
@@ -439,7 +439,7 @@ private static final long serialVersionUID = 0L;
    * URL template for constructing a tracking URL. Default value is "{lpurl}".
    * </pre>
    *
-   * <code>string tracking_url_template = 13;</code>
+   * <code>optional string tracking_url_template = 13;</code>
    * @return The trackingUrlTemplate.
    */
   @java.lang.Override
@@ -460,7 +460,7 @@ private static final long serialVersionUID = 0L;
    * URL template for constructing a tracking URL. Default value is "{lpurl}".
    * </pre>
    *
-   * <code>string tracking_url_template = 13;</code>
+   * <code>optional string tracking_url_template = 13;</code>
    * @return The bytes for trackingUrlTemplate.
    */
   @java.lang.Override
@@ -551,7 +551,7 @@ private static final long serialVersionUID = 0L;
    * tracking.
    * </pre>
    *
-   * <code>string final_url_suffix = 14;</code>
+   * <code>optional string final_url_suffix = 14;</code>
    * @return Whether the finalUrlSuffix field is set.
    */
   @java.lang.Override
@@ -564,7 +564,7 @@ private static final long serialVersionUID = 0L;
    * tracking.
    * </pre>
    *
-   * <code>string final_url_suffix = 14;</code>
+   * <code>optional string final_url_suffix = 14;</code>
    * @return The finalUrlSuffix.
    */
   @java.lang.Override
@@ -586,7 +586,7 @@ private static final long serialVersionUID = 0L;
    * tracking.
    * </pre>
    *
-   * <code>string final_url_suffix = 14;</code>
+   * <code>optional string final_url_suffix = 14;</code>
    * @return The bytes for finalUrlSuffix.
    */
   @java.lang.Override
@@ -1148,7 +1148,7 @@ private static final long serialVersionUID = 0L;
      * be between 1 and 25, inclusive.
      * </pre>
      *
-     * <code>string link_text = 9;</code>
+     * <code>optional string link_text = 9;</code>
      * @return Whether the linkText field is set.
      */
     public boolean hasLinkText() {
@@ -1161,7 +1161,7 @@ private static final long serialVersionUID = 0L;
      * be between 1 and 25, inclusive.
      * </pre>
      *
-     * <code>string link_text = 9;</code>
+     * <code>optional string link_text = 9;</code>
      * @return The linkText.
      */
     public java.lang.String getLinkText() {
@@ -1183,7 +1183,7 @@ private static final long serialVersionUID = 0L;
      * be between 1 and 25, inclusive.
      * </pre>
      *
-     * <code>string link_text = 9;</code>
+     * <code>optional string link_text = 9;</code>
      * @return The bytes for linkText.
      */
     public com.google.protobuf.ByteString
@@ -1206,7 +1206,7 @@ private static final long serialVersionUID = 0L;
      * be between 1 and 25, inclusive.
      * </pre>
      *
-     * <code>string link_text = 9;</code>
+     * <code>optional string link_text = 9;</code>
      * @param value The linkText to set.
      * @return This builder for chaining.
      */
@@ -1227,7 +1227,7 @@ private static final long serialVersionUID = 0L;
      * be between 1 and 25, inclusive.
      * </pre>
      *
-     * <code>string link_text = 9;</code>
+     * <code>optional string link_text = 9;</code>
      * @return This builder for chaining.
      */
     public Builder clearLinkText() {
@@ -1243,7 +1243,7 @@ private static final long serialVersionUID = 0L;
      * be between 1 and 25, inclusive.
      * </pre>
      *
-     * <code>string link_text = 9;</code>
+     * <code>optional string link_text = 9;</code>
      * @param value The bytes for linkText to set.
      * @return This builder for chaining.
      */
@@ -1266,7 +1266,7 @@ private static final long serialVersionUID = 0L;
      * This string must not be empty.
      * </pre>
      *
-     * <code>string app_id = 10;</code>
+     * <code>optional string app_id = 10;</code>
      * @return Whether the appId field is set.
      */
     public boolean hasAppId() {
@@ -1278,7 +1278,7 @@ private static final long serialVersionUID = 0L;
      * This string must not be empty.
      * </pre>
      *
-     * <code>string app_id = 10;</code>
+     * <code>optional string app_id = 10;</code>
      * @return The appId.
      */
     public java.lang.String getAppId() {
@@ -1299,7 +1299,7 @@ private static final long serialVersionUID = 0L;
      * This string must not be empty.
      * </pre>
      *
-     * <code>string app_id = 10;</code>
+     * <code>optional string app_id = 10;</code>
      * @return The bytes for appId.
      */
     public com.google.protobuf.ByteString
@@ -1321,7 +1321,7 @@ private static final long serialVersionUID = 0L;
      * This string must not be empty.
      * </pre>
      *
-     * <code>string app_id = 10;</code>
+     * <code>optional string app_id = 10;</code>
      * @param value The appId to set.
      * @return This builder for chaining.
      */
@@ -1341,7 +1341,7 @@ private static final long serialVersionUID = 0L;
      * This string must not be empty.
      * </pre>
      *
-     * <code>string app_id = 10;</code>
+     * <code>optional string app_id = 10;</code>
      * @return This builder for chaining.
      */
     public Builder clearAppId() {
@@ -1356,7 +1356,7 @@ private static final long serialVersionUID = 0L;
      * This string must not be empty.
      * </pre>
      *
-     * <code>string app_id = 10;</code>
+     * <code>optional string app_id = 10;</code>
      * @param value The bytes for appId to set.
      * @return This builder for chaining.
      */
@@ -1758,7 +1758,7 @@ private static final long serialVersionUID = 0L;
      * URL template for constructing a tracking URL. Default value is "{lpurl}".
      * </pre>
      *
-     * <code>string tracking_url_template = 13;</code>
+     * <code>optional string tracking_url_template = 13;</code>
      * @return Whether the trackingUrlTemplate field is set.
      */
     public boolean hasTrackingUrlTemplate() {
@@ -1769,7 +1769,7 @@ private static final long serialVersionUID = 0L;
      * URL template for constructing a tracking URL. Default value is "{lpurl}".
      * </pre>
      *
-     * <code>string tracking_url_template = 13;</code>
+     * <code>optional string tracking_url_template = 13;</code>
      * @return The trackingUrlTemplate.
      */
     public java.lang.String getTrackingUrlTemplate() {
@@ -1789,7 +1789,7 @@ private static final long serialVersionUID = 0L;
      * URL template for constructing a tracking URL. Default value is "{lpurl}".
      * </pre>
      *
-     * <code>string tracking_url_template = 13;</code>
+     * <code>optional string tracking_url_template = 13;</code>
      * @return The bytes for trackingUrlTemplate.
      */
     public com.google.protobuf.ByteString
@@ -1810,7 +1810,7 @@ private static final long serialVersionUID = 0L;
      * URL template for constructing a tracking URL. Default value is "{lpurl}".
      * </pre>
      *
-     * <code>string tracking_url_template = 13;</code>
+     * <code>optional string tracking_url_template = 13;</code>
      * @param value The trackingUrlTemplate to set.
      * @return This builder for chaining.
      */
@@ -1829,7 +1829,7 @@ private static final long serialVersionUID = 0L;
      * URL template for constructing a tracking URL. Default value is "{lpurl}".
      * </pre>
      *
-     * <code>string tracking_url_template = 13;</code>
+     * <code>optional string tracking_url_template = 13;</code>
      * @return This builder for chaining.
      */
     public Builder clearTrackingUrlTemplate() {
@@ -1843,7 +1843,7 @@ private static final long serialVersionUID = 0L;
      * URL template for constructing a tracking URL. Default value is "{lpurl}".
      * </pre>
      *
-     * <code>string tracking_url_template = 13;</code>
+     * <code>optional string tracking_url_template = 13;</code>
      * @param value The bytes for trackingUrlTemplate to set.
      * @return This builder for chaining.
      */
@@ -2196,7 +2196,7 @@ private static final long serialVersionUID = 0L;
      * tracking.
      * </pre>
      *
-     * <code>string final_url_suffix = 14;</code>
+     * <code>optional string final_url_suffix = 14;</code>
      * @return Whether the finalUrlSuffix field is set.
      */
     public boolean hasFinalUrlSuffix() {
@@ -2208,7 +2208,7 @@ private static final long serialVersionUID = 0L;
      * tracking.
      * </pre>
      *
-     * <code>string final_url_suffix = 14;</code>
+     * <code>optional string final_url_suffix = 14;</code>
      * @return The finalUrlSuffix.
      */
     public java.lang.String getFinalUrlSuffix() {
@@ -2229,7 +2229,7 @@ private static final long serialVersionUID = 0L;
      * tracking.
      * </pre>
      *
-     * <code>string final_url_suffix = 14;</code>
+     * <code>optional string final_url_suffix = 14;</code>
      * @return The bytes for finalUrlSuffix.
      */
     public com.google.protobuf.ByteString
@@ -2251,7 +2251,7 @@ private static final long serialVersionUID = 0L;
      * tracking.
      * </pre>
      *
-     * <code>string final_url_suffix = 14;</code>
+     * <code>optional string final_url_suffix = 14;</code>
      * @param value The finalUrlSuffix to set.
      * @return This builder for chaining.
      */
@@ -2271,7 +2271,7 @@ private static final long serialVersionUID = 0L;
      * tracking.
      * </pre>
      *
-     * <code>string final_url_suffix = 14;</code>
+     * <code>optional string final_url_suffix = 14;</code>
      * @return This builder for chaining.
      */
     public Builder clearFinalUrlSuffix() {
@@ -2286,7 +2286,7 @@ private static final long serialVersionUID = 0L;
      * tracking.
      * </pre>
      *
-     * <code>string final_url_suffix = 14;</code>
+     * <code>optional string final_url_suffix = 14;</code>
      * @param value The bytes for finalUrlSuffix to set.
      * @return This builder for chaining.
      */

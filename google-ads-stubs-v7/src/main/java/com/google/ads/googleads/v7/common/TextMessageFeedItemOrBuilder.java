@@ -13,7 +13,7 @@ public interface TextMessageFeedItemOrBuilder extends
    * This field is required.
    * </pre>
    *
-   * <code>string business_name = 6;</code>
+   * <code>optional string business_name = 6;</code>
    * @return Whether the businessName field is set.
    */
   boolean hasBusinessName();
@@ -23,7 +23,7 @@ public interface TextMessageFeedItemOrBuilder extends
    * This field is required.
    * </pre>
    *
-   * <code>string business_name = 6;</code>
+   * <code>optional string business_name = 6;</code>
    * @return The businessName.
    */
   java.lang.String getBusinessName();
@@ -33,7 +33,7 @@ public interface TextMessageFeedItemOrBuilder extends
    * This field is required.
    * </pre>
    *
-   * <code>string business_name = 6;</code>
+   * <code>optional string business_name = 6;</code>
    * @return The bytes for businessName.
    */
   com.google.protobuf.ByteString
@@ -45,7 +45,7 @@ public interface TextMessageFeedItemOrBuilder extends
    * This field is required.
    * </pre>
    *
-   * <code>string country_code = 7;</code>
+   * <code>optional string country_code = 7;</code>
    * @return Whether the countryCode field is set.
    */
   boolean hasCountryCode();
@@ -55,7 +55,7 @@ public interface TextMessageFeedItemOrBuilder extends
    * This field is required.
    * </pre>
    *
-   * <code>string country_code = 7;</code>
+   * <code>optional string country_code = 7;</code>
    * @return The countryCode.
    */
   java.lang.String getCountryCode();
@@ -65,7 +65,7 @@ public interface TextMessageFeedItemOrBuilder extends
    * This field is required.
    * </pre>
    *
-   * <code>string country_code = 7;</code>
+   * <code>optional string country_code = 7;</code>
    * @return The bytes for countryCode.
    */
   com.google.protobuf.ByteString
@@ -76,7 +76,7 @@ public interface TextMessageFeedItemOrBuilder extends
    * The advertiser's phone number the message will be sent to. Required.
    * </pre>
    *
-   * <code>string phone_number = 8;</code>
+   * <code>optional string phone_number = 8;</code>
    * @return Whether the phoneNumber field is set.
    */
   boolean hasPhoneNumber();
@@ -85,7 +85,7 @@ public interface TextMessageFeedItemOrBuilder extends
    * The advertiser's phone number the message will be sent to. Required.
    * </pre>
    *
-   * <code>string phone_number = 8;</code>
+   * <code>optional string phone_number = 8;</code>
    * @return The phoneNumber.
    */
   java.lang.String getPhoneNumber();
@@ -94,7 +94,7 @@ public interface TextMessageFeedItemOrBuilder extends
    * The advertiser's phone number the message will be sent to. Required.
    * </pre>
    *
-   * <code>string phone_number = 8;</code>
+   * <code>optional string phone_number = 8;</code>
    * @return The bytes for phoneNumber.
    */
   com.google.protobuf.ByteString
@@ -106,7 +106,7 @@ public interface TextMessageFeedItemOrBuilder extends
    * This field is required.
    * </pre>
    *
-   * <code>string text = 9;</code>
+   * <code>optional string text = 9;</code>
    * @return Whether the text field is set.
    */
   boolean hasText();
@@ -116,7 +116,7 @@ public interface TextMessageFeedItemOrBuilder extends
    * This field is required.
    * </pre>
    *
-   * <code>string text = 9;</code>
+   * <code>optional string text = 9;</code>
    * @return The text.
    */
   java.lang.String getText();
@@ -126,7 +126,7 @@ public interface TextMessageFeedItemOrBuilder extends
    * This field is required.
    * </pre>
    *
-   * <code>string text = 9;</code>
+   * <code>optional string text = 9;</code>
    * @return The bytes for text.
    */
   com.google.protobuf.ByteString
@@ -137,7 +137,7 @@ public interface TextMessageFeedItemOrBuilder extends
    * The message extension_text populated in the messaging app.
    * </pre>
    *
-   * <code>string extension_text = 10;</code>
+   * <code>optional string extension_text = 10;</code>
    * @return Whether the extensionText field is set.
    */
   boolean hasExtensionText();
@@ -146,7 +146,7 @@ public interface TextMessageFeedItemOrBuilder extends
    * The message extension_text populated in the messaging app.
    * </pre>
    *
-   * <code>string extension_text = 10;</code>
+   * <code>optional string extension_text = 10;</code>
    * @return The extensionText.
    */
   java.lang.String getExtensionText();
@@ -155,7 +155,7 @@ public interface TextMessageFeedItemOrBuilder extends
    * The message extension_text populated in the messaging app.
    * </pre>
    *
-   * <code>string extension_text = 10;</code>
+   * <code>optional string extension_text = 10;</code>
    * @return The bytes for extensionText.
    */
   com.google.protobuf.ByteString

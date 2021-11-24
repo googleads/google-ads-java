@@ -40,25 +40,25 @@ public final class AssetGroupListingGroupFilterProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductChannel_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductType_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductType_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductCondition_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductCondition_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductCustomAttribute_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductCustomAttribute_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductItemId_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductItemId_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductCustomAttribute_descriptor;
+    internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductType_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductCustomAttribute_fieldAccessorTable;
+      internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductType_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -134,20 +134,20 @@ public final class AssetGroupListingGroupFilterProto {
       "ctChannel\022u\n\007channel\030\001 \001(\0162d.google.ads." +
       "googleads.v9.enums.ListingGroupFilterPro" +
       "ductChannelEnum.ListingGroupFilterProduc" +
-      "tChannel\032\244\001\n\013ProductType\022\022\n\005value\030\001 \001(\tH" +
-      "\000\210\001\001\022w\n\005level\030\002 \001(\0162h.google.ads.googlea" +
-      "ds.v9.enums.ListingGroupFilterProductTyp" +
-      "eLevelEnum.ListingGroupFilterProductType" +
-      "LevelB\010\n\006_value\032\217\001\n\020ProductCondition\022{\n\t" +
-      "condition\030\001 \001(\0162h.google.ads.googleads.v" +
-      "9.enums.ListingGroupFilterProductConditi" +
-      "onEnum.ListingGroupFilterProductConditio" +
-      "n\032-\n\rProductItemId\022\022\n\005value\030\001 \001(\tH\000\210\001\001B\010" +
-      "\n\006_value\032\267\001\n\026ProductCustomAttribute\022\022\n\005v" +
-      "alue\030\001 \001(\tH\000\210\001\001\022\177\n\005index\030\002 \001(\0162p.google." +
-      "ads.googleads.v9.enums.ListingGroupFilte" +
-      "rCustomAttributeIndexEnum.ListingGroupFi" +
-      "lterCustomAttributeIndexB\010\n\006_valueB\013\n\tdi" +
+      "tChannel\032\217\001\n\020ProductCondition\022{\n\tconditi" +
+      "on\030\001 \001(\0162h.google.ads.googleads.v9.enums" +
+      ".ListingGroupFilterProductConditionEnum." +
+      "ListingGroupFilterProductCondition\032\267\001\n\026P" +
+      "roductCustomAttribute\022\022\n\005value\030\001 \001(\tH\000\210\001" +
+      "\001\022\177\n\005index\030\002 \001(\0162p.google.ads.googleads." +
+      "v9.enums.ListingGroupFilterCustomAttribu" +
+      "teIndexEnum.ListingGroupFilterCustomAttr" +
+      "ibuteIndexB\010\n\006_value\032-\n\rProductItemId\022\022\n" +
+      "\005value\030\001 \001(\tH\000\210\001\001B\010\n\006_value\032\244\001\n\013ProductT" +
+      "ype\022\022\n\005value\030\001 \001(\tH\000\210\001\001\022w\n\005level\030\002 \001(\0162h" +
+      ".google.ads.googleads.v9.enums.ListingGr" +
+      "oupFilterProductTypeLevelEnum.ListingGro" +
+      "upFilterProductTypeLevelB\010\n\006_valueB\013\n\tdi" +
       "mensionB\216\002\n%com.google.ads.googleads.v9." +
       "resourcesB!AssetGroupListingGroupFilterP" +
       "rotoP\001ZJgoogle.golang.org/genproto/googl" +
@@ -201,30 +201,30 @@ public final class AssetGroupListingGroupFilterProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductChannel_descriptor,
         new java.lang.String[] { "Channel", });
-    internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductType_descriptor =
-      internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_descriptor.getNestedTypes().get(3);
-    internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductType_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductType_descriptor,
-        new java.lang.String[] { "Value", "Level", "Value", });
     internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductCondition_descriptor =
-      internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_descriptor.getNestedTypes().get(4);
+      internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_descriptor.getNestedTypes().get(3);
     internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductCondition_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductCondition_descriptor,
         new java.lang.String[] { "Condition", });
+    internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductCustomAttribute_descriptor =
+      internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_descriptor.getNestedTypes().get(4);
+    internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductCustomAttribute_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductCustomAttribute_descriptor,
+        new java.lang.String[] { "Value", "Index", "Value", });
     internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductItemId_descriptor =
       internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_descriptor.getNestedTypes().get(5);
     internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductItemId_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductItemId_descriptor,
         new java.lang.String[] { "Value", "Value", });
-    internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductCustomAttribute_descriptor =
+    internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductType_descriptor =
       internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_descriptor.getNestedTypes().get(6);
-    internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductCustomAttribute_fieldAccessorTable = new
+    internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductType_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductCustomAttribute_descriptor,
-        new java.lang.String[] { "Value", "Index", "Value", });
+        internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductType_descriptor,
+        new java.lang.String[] { "Value", "Level", "Value", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);

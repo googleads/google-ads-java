@@ -101,7 +101,7 @@ private static final long serialVersionUID = 0L;
    * The MediaFile resource name of the companion banner used with the ad.
    * </pre>
    *
-   * <code>string companion_banner = 2;</code>
+   * <code>optional string companion_banner = 2;</code>
    * @return Whether the companionBanner field is set.
    */
   @java.lang.Override
@@ -113,7 +113,7 @@ private static final long serialVersionUID = 0L;
    * The MediaFile resource name of the companion banner used with the ad.
    * </pre>
    *
-   * <code>string companion_banner = 2;</code>
+   * <code>optional string companion_banner = 2;</code>
    * @return The companionBanner.
    */
   @java.lang.Override
@@ -134,7 +134,7 @@ private static final long serialVersionUID = 0L;
    * The MediaFile resource name of the companion banner used with the ad.
    * </pre>
    *
-   * <code>string companion_banner = 2;</code>
+   * <code>optional string companion_banner = 2;</code>
    * @return The bytes for companionBanner.
    */
   @java.lang.Override
@@ -478,7 +478,7 @@ private static final long serialVersionUID = 0L;
      * The MediaFile resource name of the companion banner used with the ad.
      * </pre>
      *
-     * <code>string companion_banner = 2;</code>
+     * <code>optional string companion_banner = 2;</code>
      * @return Whether the companionBanner field is set.
      */
     public boolean hasCompanionBanner() {
@@ -489,7 +489,7 @@ private static final long serialVersionUID = 0L;
      * The MediaFile resource name of the companion banner used with the ad.
      * </pre>
      *
-     * <code>string companion_banner = 2;</code>
+     * <code>optional string companion_banner = 2;</code>
      * @return The companionBanner.
      */
     public java.lang.String getCompanionBanner() {
@@ -509,7 +509,7 @@ private static final long serialVersionUID = 0L;
      * The MediaFile resource name of the companion banner used with the ad.
      * </pre>
      *
-     * <code>string companion_banner = 2;</code>
+     * <code>optional string companion_banner = 2;</code>
      * @return The bytes for companionBanner.
      */
     public com.google.protobuf.ByteString
@@ -530,7 +530,7 @@ private static final long serialVersionUID = 0L;
      * The MediaFile resource name of the companion banner used with the ad.
      * </pre>
      *
-     * <code>string companion_banner = 2;</code>
+     * <code>optional string companion_banner = 2;</code>
      * @param value The companionBanner to set.
      * @return This builder for chaining.
      */
@@ -549,7 +549,7 @@ private static final long serialVersionUID = 0L;
      * The MediaFile resource name of the companion banner used with the ad.
      * </pre>
      *
-     * <code>string companion_banner = 2;</code>
+     * <code>optional string companion_banner = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearCompanionBanner() {
@@ -563,7 +563,7 @@ private static final long serialVersionUID = 0L;
      * The MediaFile resource name of the companion banner used with the ad.
      * </pre>
      *
-     * <code>string companion_banner = 2;</code>
+     * <code>optional string companion_banner = 2;</code>
      * @param value The bytes for companionBanner to set.
      * @return This builder for chaining.
      */

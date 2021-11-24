@@ -316,7 +316,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. Feed attribute from which to map.
    * </pre>
    *
-   * <code>int64 feed_attribute_id = 24 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional int64 feed_attribute_id = 24 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the feedAttributeId field is set.
    */
   @java.lang.Override
@@ -328,7 +328,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. Feed attribute from which to map.
    * </pre>
    *
-   * <code>int64 feed_attribute_id = 24 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional int64 feed_attribute_id = 24 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The feedAttributeId.
    */
   @java.lang.Override
@@ -346,7 +346,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 field_id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 field_id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the fieldId field is set.
    */
   @java.lang.Override
@@ -361,7 +361,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 field_id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 field_id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The fieldId.
    */
   @java.lang.Override
@@ -2204,7 +2204,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. Feed attribute from which to map.
      * </pre>
      *
-     * <code>int64 feed_attribute_id = 24 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional int64 feed_attribute_id = 24 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the feedAttributeId field is set.
      */
     @java.lang.Override
@@ -2216,7 +2216,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. Feed attribute from which to map.
      * </pre>
      *
-     * <code>int64 feed_attribute_id = 24 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional int64 feed_attribute_id = 24 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The feedAttributeId.
      */
     @java.lang.Override
@@ -2228,7 +2228,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. Feed attribute from which to map.
      * </pre>
      *
-     * <code>int64 feed_attribute_id = 24 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional int64 feed_attribute_id = 24 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @param value The feedAttributeId to set.
      * @return This builder for chaining.
      */
@@ -2243,7 +2243,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. Feed attribute from which to map.
      * </pre>
      *
-     * <code>int64 feed_attribute_id = 24 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional int64 feed_attribute_id = 24 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return This builder for chaining.
      */
     public Builder clearFeedAttributeId() {
@@ -2262,7 +2262,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 field_id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 field_id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the fieldId field is set.
      */
     @java.lang.Override
@@ -2277,7 +2277,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 field_id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 field_id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The fieldId.
      */
     @java.lang.Override
@@ -2292,7 +2292,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 field_id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 field_id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The fieldId to set.
      * @return This builder for chaining.
      */
@@ -2310,7 +2310,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 field_id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 field_id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearFieldId() {

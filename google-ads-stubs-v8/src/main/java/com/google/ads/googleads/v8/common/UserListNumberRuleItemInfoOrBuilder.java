@@ -37,7 +37,7 @@ public interface UserListNumberRuleItemInfoOrBuilder extends
    * rule item.
    * </pre>
    *
-   * <code>double value = 3;</code>
+   * <code>optional double value = 3;</code>
    * @return Whether the value field is set.
    */
   boolean hasValue();
@@ -48,7 +48,7 @@ public interface UserListNumberRuleItemInfoOrBuilder extends
    * rule item.
    * </pre>
    *
-   * <code>double value = 3;</code>
+   * <code>optional double value = 3;</code>
    * @return The value.
    */
   double getValue();

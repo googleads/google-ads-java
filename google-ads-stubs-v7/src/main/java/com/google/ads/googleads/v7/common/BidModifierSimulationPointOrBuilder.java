@@ -12,7 +12,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * The simulated bid modifier upon which projected metrics are based.
    * </pre>
    *
-   * <code>double bid_modifier = 15;</code>
+   * <code>optional double bid_modifier = 15;</code>
    * @return Whether the bidModifier field is set.
    */
   boolean hasBidModifier();
@@ -21,7 +21,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * The simulated bid modifier upon which projected metrics are based.
    * </pre>
    *
-   * <code>double bid_modifier = 15;</code>
+   * <code>optional double bid_modifier = 15;</code>
    * @return The bidModifier.
    */
   double getBidModifier();
@@ -32,7 +32,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * Only search advertising channel type supports this field.
    * </pre>
    *
-   * <code>double biddable_conversions = 16;</code>
+   * <code>optional double biddable_conversions = 16;</code>
    * @return Whether the biddableConversions field is set.
    */
   boolean hasBiddableConversions();
@@ -42,7 +42,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * Only search advertising channel type supports this field.
    * </pre>
    *
-   * <code>double biddable_conversions = 16;</code>
+   * <code>optional double biddable_conversions = 16;</code>
    * @return The biddableConversions.
    */
   double getBiddableConversions();
@@ -53,7 +53,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * Only search advertising channel type supports this field.
    * </pre>
    *
-   * <code>double biddable_conversions_value = 17;</code>
+   * <code>optional double biddable_conversions_value = 17;</code>
    * @return Whether the biddableConversionsValue field is set.
    */
   boolean hasBiddableConversionsValue();
@@ -63,7 +63,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * Only search advertising channel type supports this field.
    * </pre>
    *
-   * <code>double biddable_conversions_value = 17;</code>
+   * <code>optional double biddable_conversions_value = 17;</code>
    * @return The biddableConversionsValue.
    */
   double getBiddableConversionsValue();
@@ -73,7 +73,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * Projected number of clicks.
    * </pre>
    *
-   * <code>int64 clicks = 18;</code>
+   * <code>optional int64 clicks = 18;</code>
    * @return Whether the clicks field is set.
    */
   boolean hasClicks();
@@ -82,7 +82,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * Projected number of clicks.
    * </pre>
    *
-   * <code>int64 clicks = 18;</code>
+   * <code>optional int64 clicks = 18;</code>
    * @return The clicks.
    */
   long getClicks();
@@ -92,7 +92,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * Projected cost in micros.
    * </pre>
    *
-   * <code>int64 cost_micros = 19;</code>
+   * <code>optional int64 cost_micros = 19;</code>
    * @return Whether the costMicros field is set.
    */
   boolean hasCostMicros();
@@ -101,7 +101,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * Projected cost in micros.
    * </pre>
    *
-   * <code>int64 cost_micros = 19;</code>
+   * <code>optional int64 cost_micros = 19;</code>
    * @return The costMicros.
    */
   long getCostMicros();
@@ -111,7 +111,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * Projected number of impressions.
    * </pre>
    *
-   * <code>int64 impressions = 20;</code>
+   * <code>optional int64 impressions = 20;</code>
    * @return Whether the impressions field is set.
    */
   boolean hasImpressions();
@@ -120,7 +120,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * Projected number of impressions.
    * </pre>
    *
-   * <code>int64 impressions = 20;</code>
+   * <code>optional int64 impressions = 20;</code>
    * @return The impressions.
    */
   long getImpressions();
@@ -131,7 +131,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * Only search advertising channel type supports this field.
    * </pre>
    *
-   * <code>int64 top_slot_impressions = 21;</code>
+   * <code>optional int64 top_slot_impressions = 21;</code>
    * @return Whether the topSlotImpressions field is set.
    */
   boolean hasTopSlotImpressions();
@@ -141,7 +141,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * Only search advertising channel type supports this field.
    * </pre>
    *
-   * <code>int64 top_slot_impressions = 21;</code>
+   * <code>optional int64 top_slot_impressions = 21;</code>
    * @return The topSlotImpressions.
    */
   long getTopSlotImpressions();
@@ -152,7 +152,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * Only search advertising channel type supports this field.
    * </pre>
    *
-   * <code>double parent_biddable_conversions = 22;</code>
+   * <code>optional double parent_biddable_conversions = 22;</code>
    * @return Whether the parentBiddableConversions field is set.
    */
   boolean hasParentBiddableConversions();
@@ -162,7 +162,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * Only search advertising channel type supports this field.
    * </pre>
    *
-   * <code>double parent_biddable_conversions = 22;</code>
+   * <code>optional double parent_biddable_conversions = 22;</code>
    * @return The parentBiddableConversions.
    */
   double getParentBiddableConversions();
@@ -173,7 +173,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * Only search advertising channel type supports this field.
    * </pre>
    *
-   * <code>double parent_biddable_conversions_value = 23;</code>
+   * <code>optional double parent_biddable_conversions_value = 23;</code>
    * @return Whether the parentBiddableConversionsValue field is set.
    */
   boolean hasParentBiddableConversionsValue();
@@ -183,7 +183,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * Only search advertising channel type supports this field.
    * </pre>
    *
-   * <code>double parent_biddable_conversions_value = 23;</code>
+   * <code>optional double parent_biddable_conversions_value = 23;</code>
    * @return The parentBiddableConversionsValue.
    */
   double getParentBiddableConversionsValue();
@@ -193,7 +193,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * Projected number of clicks for the parent resource.
    * </pre>
    *
-   * <code>int64 parent_clicks = 24;</code>
+   * <code>optional int64 parent_clicks = 24;</code>
    * @return Whether the parentClicks field is set.
    */
   boolean hasParentClicks();
@@ -202,7 +202,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * Projected number of clicks for the parent resource.
    * </pre>
    *
-   * <code>int64 parent_clicks = 24;</code>
+   * <code>optional int64 parent_clicks = 24;</code>
    * @return The parentClicks.
    */
   long getParentClicks();
@@ -212,7 +212,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * Projected cost in micros for the parent resource.
    * </pre>
    *
-   * <code>int64 parent_cost_micros = 25;</code>
+   * <code>optional int64 parent_cost_micros = 25;</code>
    * @return Whether the parentCostMicros field is set.
    */
   boolean hasParentCostMicros();
@@ -221,7 +221,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * Projected cost in micros for the parent resource.
    * </pre>
    *
-   * <code>int64 parent_cost_micros = 25;</code>
+   * <code>optional int64 parent_cost_micros = 25;</code>
    * @return The parentCostMicros.
    */
   long getParentCostMicros();
@@ -231,7 +231,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * Projected number of impressions for the parent resource.
    * </pre>
    *
-   * <code>int64 parent_impressions = 26;</code>
+   * <code>optional int64 parent_impressions = 26;</code>
    * @return Whether the parentImpressions field is set.
    */
   boolean hasParentImpressions();
@@ -240,7 +240,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * Projected number of impressions for the parent resource.
    * </pre>
    *
-   * <code>int64 parent_impressions = 26;</code>
+   * <code>optional int64 parent_impressions = 26;</code>
    * @return The parentImpressions.
    */
   long getParentImpressions();
@@ -251,7 +251,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * Only search advertising channel type supports this field.
    * </pre>
    *
-   * <code>int64 parent_top_slot_impressions = 27;</code>
+   * <code>optional int64 parent_top_slot_impressions = 27;</code>
    * @return Whether the parentTopSlotImpressions field is set.
    */
   boolean hasParentTopSlotImpressions();
@@ -261,7 +261,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * Only search advertising channel type supports this field.
    * </pre>
    *
-   * <code>int64 parent_top_slot_impressions = 27;</code>
+   * <code>optional int64 parent_top_slot_impressions = 27;</code>
    * @return The parentTopSlotImpressions.
    */
   long getParentTopSlotImpressions();
@@ -272,7 +272,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * resource to realize this simulation.
    * </pre>
    *
-   * <code>int64 parent_required_budget_micros = 28;</code>
+   * <code>optional int64 parent_required_budget_micros = 28;</code>
    * @return Whether the parentRequiredBudgetMicros field is set.
    */
   boolean hasParentRequiredBudgetMicros();
@@ -282,7 +282,7 @@ public interface BidModifierSimulationPointOrBuilder extends
    * resource to realize this simulation.
    * </pre>
    *
-   * <code>int64 parent_required_budget_micros = 28;</code>
+   * <code>optional int64 parent_required_budget_micros = 28;</code>
    * @return The parentRequiredBudgetMicros.
    */
   long getParentRequiredBudgetMicros();

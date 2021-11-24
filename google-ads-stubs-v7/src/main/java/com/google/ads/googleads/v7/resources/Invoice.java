@@ -261,7 +261,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}`
      * </pre>
      *
-     * <code>string customer = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string customer = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the customer field is set.
      */
     boolean hasCustomer();
@@ -274,7 +274,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}`
      * </pre>
      *
-     * <code>string customer = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string customer = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The customer.
      */
     java.lang.String getCustomer();
@@ -287,7 +287,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}`
      * </pre>
      *
-     * <code>string customer = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string customer = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for customer.
      */
     com.google.protobuf.ByteString
@@ -299,7 +299,7 @@ private static final long serialVersionUID = 0L;
      * invoice PDF as "Account".
      * </pre>
      *
-     * <code>string customer_descriptive_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string customer_descriptive_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the customerDescriptiveName field is set.
      */
     boolean hasCustomerDescriptiveName();
@@ -309,7 +309,7 @@ private static final long serialVersionUID = 0L;
      * invoice PDF as "Account".
      * </pre>
      *
-     * <code>string customer_descriptive_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string customer_descriptive_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The customerDescriptiveName.
      */
     java.lang.String getCustomerDescriptiveName();
@@ -319,7 +319,7 @@ private static final long serialVersionUID = 0L;
      * invoice PDF as "Account".
      * </pre>
      *
-     * <code>string customer_descriptive_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string customer_descriptive_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for customerDescriptiveName.
      */
     com.google.protobuf.ByteString
@@ -333,7 +333,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/accountBudgets/{account_budget_id}`
      * </pre>
      *
-     * <code>string account_budget = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string account_budget = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the accountBudget field is set.
      */
     boolean hasAccountBudget();
@@ -345,7 +345,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/accountBudgets/{account_budget_id}`
      * </pre>
      *
-     * <code>string account_budget = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string account_budget = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The accountBudget.
      */
     java.lang.String getAccountBudget();
@@ -357,7 +357,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/accountBudgets/{account_budget_id}`
      * </pre>
      *
-     * <code>string account_budget = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string account_budget = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for accountBudget.
      */
     com.google.protobuf.ByteString
@@ -369,7 +369,7 @@ private static final long serialVersionUID = 0L;
      * budget".
      * </pre>
      *
-     * <code>string account_budget_name = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string account_budget_name = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the accountBudgetName field is set.
      */
     boolean hasAccountBudgetName();
@@ -379,7 +379,7 @@ private static final long serialVersionUID = 0L;
      * budget".
      * </pre>
      *
-     * <code>string account_budget_name = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string account_budget_name = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The accountBudgetName.
      */
     java.lang.String getAccountBudgetName();
@@ -389,7 +389,7 @@ private static final long serialVersionUID = 0L;
      * budget".
      * </pre>
      *
-     * <code>string account_budget_name = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string account_budget_name = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for accountBudgetName.
      */
     com.google.protobuf.ByteString
@@ -401,7 +401,7 @@ private static final long serialVersionUID = 0L;
      * invoice PDF as "Purchase order".
      * </pre>
      *
-     * <code>string purchase_order_number = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string purchase_order_number = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the purchaseOrderNumber field is set.
      */
     boolean hasPurchaseOrderNumber();
@@ -411,7 +411,7 @@ private static final long serialVersionUID = 0L;
      * invoice PDF as "Purchase order".
      * </pre>
      *
-     * <code>string purchase_order_number = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string purchase_order_number = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The purchaseOrderNumber.
      */
     java.lang.String getPurchaseOrderNumber();
@@ -421,7 +421,7 @@ private static final long serialVersionUID = 0L;
      * invoice PDF as "Purchase order".
      * </pre>
      *
-     * <code>string purchase_order_number = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string purchase_order_number = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for purchaseOrderNumber.
      */
     com.google.protobuf.ByteString
@@ -433,7 +433,7 @@ private static final long serialVersionUID = 0L;
      * period, in micros.
      * </pre>
      *
-     * <code>int64 subtotal_amount_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 subtotal_amount_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the subtotalAmountMicros field is set.
      */
     boolean hasSubtotalAmountMicros();
@@ -443,7 +443,7 @@ private static final long serialVersionUID = 0L;
      * period, in micros.
      * </pre>
      *
-     * <code>int64 subtotal_amount_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 subtotal_amount_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The subtotalAmountMicros.
      */
     long getSubtotalAmountMicros();
@@ -454,7 +454,7 @@ private static final long serialVersionUID = 0L;
      * micros.
      * </pre>
      *
-     * <code>int64 tax_amount_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 tax_amount_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the taxAmountMicros field is set.
      */
     boolean hasTaxAmountMicros();
@@ -464,7 +464,7 @@ private static final long serialVersionUID = 0L;
      * micros.
      * </pre>
      *
-     * <code>int64 tax_amount_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 tax_amount_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The taxAmountMicros.
      */
     long getTaxAmountMicros();
@@ -476,7 +476,7 @@ private static final long serialVersionUID = 0L;
      * the account budget tax amount.
      * </pre>
      *
-     * <code>int64 total_amount_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 total_amount_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the totalAmountMicros field is set.
      */
     boolean hasTotalAmountMicros();
@@ -487,7 +487,7 @@ private static final long serialVersionUID = 0L;
      * the account budget tax amount.
      * </pre>
      *
-     * <code>int64 total_amount_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 total_amount_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The totalAmountMicros.
      */
     long getTotalAmountMicros();
@@ -682,7 +682,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}`
      * </pre>
      *
-     * <code>string customer = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string customer = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the customer field is set.
      */
     @java.lang.Override
@@ -698,7 +698,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}`
      * </pre>
      *
-     * <code>string customer = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string customer = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The customer.
      */
     @java.lang.Override
@@ -723,7 +723,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}`
      * </pre>
      *
-     * <code>string customer = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string customer = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for customer.
      */
     @java.lang.Override
@@ -749,7 +749,7 @@ private static final long serialVersionUID = 0L;
      * invoice PDF as "Account".
      * </pre>
      *
-     * <code>string customer_descriptive_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string customer_descriptive_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the customerDescriptiveName field is set.
      */
     @java.lang.Override
@@ -762,7 +762,7 @@ private static final long serialVersionUID = 0L;
      * invoice PDF as "Account".
      * </pre>
      *
-     * <code>string customer_descriptive_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string customer_descriptive_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The customerDescriptiveName.
      */
     @java.lang.Override
@@ -784,7 +784,7 @@ private static final long serialVersionUID = 0L;
      * invoice PDF as "Account".
      * </pre>
      *
-     * <code>string customer_descriptive_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string customer_descriptive_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for customerDescriptiveName.
      */
     @java.lang.Override
@@ -812,7 +812,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/accountBudgets/{account_budget_id}`
      * </pre>
      *
-     * <code>string account_budget = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string account_budget = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the accountBudget field is set.
      */
     @java.lang.Override
@@ -827,7 +827,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/accountBudgets/{account_budget_id}`
      * </pre>
      *
-     * <code>string account_budget = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string account_budget = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The accountBudget.
      */
     @java.lang.Override
@@ -851,7 +851,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/accountBudgets/{account_budget_id}`
      * </pre>
      *
-     * <code>string account_budget = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string account_budget = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for accountBudget.
      */
     @java.lang.Override
@@ -877,7 +877,7 @@ private static final long serialVersionUID = 0L;
      * budget".
      * </pre>
      *
-     * <code>string account_budget_name = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string account_budget_name = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the accountBudgetName field is set.
      */
     @java.lang.Override
@@ -890,7 +890,7 @@ private static final long serialVersionUID = 0L;
      * budget".
      * </pre>
      *
-     * <code>string account_budget_name = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string account_budget_name = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The accountBudgetName.
      */
     @java.lang.Override
@@ -912,7 +912,7 @@ private static final long serialVersionUID = 0L;
      * budget".
      * </pre>
      *
-     * <code>string account_budget_name = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string account_budget_name = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for accountBudgetName.
      */
     @java.lang.Override
@@ -938,7 +938,7 @@ private static final long serialVersionUID = 0L;
      * invoice PDF as "Purchase order".
      * </pre>
      *
-     * <code>string purchase_order_number = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string purchase_order_number = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the purchaseOrderNumber field is set.
      */
     @java.lang.Override
@@ -951,7 +951,7 @@ private static final long serialVersionUID = 0L;
      * invoice PDF as "Purchase order".
      * </pre>
      *
-     * <code>string purchase_order_number = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string purchase_order_number = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The purchaseOrderNumber.
      */
     @java.lang.Override
@@ -973,7 +973,7 @@ private static final long serialVersionUID = 0L;
      * invoice PDF as "Purchase order".
      * </pre>
      *
-     * <code>string purchase_order_number = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string purchase_order_number = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for purchaseOrderNumber.
      */
     @java.lang.Override
@@ -999,7 +999,7 @@ private static final long serialVersionUID = 0L;
      * period, in micros.
      * </pre>
      *
-     * <code>int64 subtotal_amount_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 subtotal_amount_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the subtotalAmountMicros field is set.
      */
     @java.lang.Override
@@ -1012,7 +1012,7 @@ private static final long serialVersionUID = 0L;
      * period, in micros.
      * </pre>
      *
-     * <code>int64 subtotal_amount_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 subtotal_amount_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The subtotalAmountMicros.
      */
     @java.lang.Override
@@ -1028,7 +1028,7 @@ private static final long serialVersionUID = 0L;
      * micros.
      * </pre>
      *
-     * <code>int64 tax_amount_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 tax_amount_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the taxAmountMicros field is set.
      */
     @java.lang.Override
@@ -1041,7 +1041,7 @@ private static final long serialVersionUID = 0L;
      * micros.
      * </pre>
      *
-     * <code>int64 tax_amount_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 tax_amount_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The taxAmountMicros.
      */
     @java.lang.Override
@@ -1058,7 +1058,7 @@ private static final long serialVersionUID = 0L;
      * the account budget tax amount.
      * </pre>
      *
-     * <code>int64 total_amount_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 total_amount_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the totalAmountMicros field is set.
      */
     @java.lang.Override
@@ -1072,7 +1072,7 @@ private static final long serialVersionUID = 0L;
      * the account budget tax amount.
      * </pre>
      *
-     * <code>int64 total_amount_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 total_amount_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The totalAmountMicros.
      */
     @java.lang.Override
@@ -1665,7 +1665,7 @@ private static final long serialVersionUID = 0L;
        * `customers/{customer_id}`
        * </pre>
        *
-       * <code>string customer = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string customer = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return Whether the customer field is set.
        */
       public boolean hasCustomer() {
@@ -1680,7 +1680,7 @@ private static final long serialVersionUID = 0L;
        * `customers/{customer_id}`
        * </pre>
        *
-       * <code>string customer = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string customer = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The customer.
        */
       public java.lang.String getCustomer() {
@@ -1704,7 +1704,7 @@ private static final long serialVersionUID = 0L;
        * `customers/{customer_id}`
        * </pre>
        *
-       * <code>string customer = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string customer = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The bytes for customer.
        */
       public com.google.protobuf.ByteString
@@ -1729,7 +1729,7 @@ private static final long serialVersionUID = 0L;
        * `customers/{customer_id}`
        * </pre>
        *
-       * <code>string customer = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string customer = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @param value The customer to set.
        * @return This builder for chaining.
        */
@@ -1752,7 +1752,7 @@ private static final long serialVersionUID = 0L;
        * `customers/{customer_id}`
        * </pre>
        *
-       * <code>string customer = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string customer = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return This builder for chaining.
        */
       public Builder clearCustomer() {
@@ -1770,7 +1770,7 @@ private static final long serialVersionUID = 0L;
        * `customers/{customer_id}`
        * </pre>
        *
-       * <code>string customer = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string customer = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @param value The bytes for customer to set.
        * @return This builder for chaining.
        */
@@ -1793,7 +1793,7 @@ private static final long serialVersionUID = 0L;
        * invoice PDF as "Account".
        * </pre>
        *
-       * <code>string customer_descriptive_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string customer_descriptive_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return Whether the customerDescriptiveName field is set.
        */
       public boolean hasCustomerDescriptiveName() {
@@ -1805,7 +1805,7 @@ private static final long serialVersionUID = 0L;
        * invoice PDF as "Account".
        * </pre>
        *
-       * <code>string customer_descriptive_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string customer_descriptive_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The customerDescriptiveName.
        */
       public java.lang.String getCustomerDescriptiveName() {
@@ -1826,7 +1826,7 @@ private static final long serialVersionUID = 0L;
        * invoice PDF as "Account".
        * </pre>
        *
-       * <code>string customer_descriptive_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string customer_descriptive_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The bytes for customerDescriptiveName.
        */
       public com.google.protobuf.ByteString
@@ -1848,7 +1848,7 @@ private static final long serialVersionUID = 0L;
        * invoice PDF as "Account".
        * </pre>
        *
-       * <code>string customer_descriptive_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string customer_descriptive_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @param value The customerDescriptiveName to set.
        * @return This builder for chaining.
        */
@@ -1868,7 +1868,7 @@ private static final long serialVersionUID = 0L;
        * invoice PDF as "Account".
        * </pre>
        *
-       * <code>string customer_descriptive_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string customer_descriptive_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return This builder for chaining.
        */
       public Builder clearCustomerDescriptiveName() {
@@ -1883,7 +1883,7 @@ private static final long serialVersionUID = 0L;
        * invoice PDF as "Account".
        * </pre>
        *
-       * <code>string customer_descriptive_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string customer_descriptive_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @param value The bytes for customerDescriptiveName to set.
        * @return This builder for chaining.
        */
@@ -1908,7 +1908,7 @@ private static final long serialVersionUID = 0L;
        * `customers/{customer_id}/accountBudgets/{account_budget_id}`
        * </pre>
        *
-       * <code>string account_budget = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string account_budget = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return Whether the accountBudget field is set.
        */
       public boolean hasAccountBudget() {
@@ -1922,7 +1922,7 @@ private static final long serialVersionUID = 0L;
        * `customers/{customer_id}/accountBudgets/{account_budget_id}`
        * </pre>
        *
-       * <code>string account_budget = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string account_budget = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The accountBudget.
        */
       public java.lang.String getAccountBudget() {
@@ -1945,7 +1945,7 @@ private static final long serialVersionUID = 0L;
        * `customers/{customer_id}/accountBudgets/{account_budget_id}`
        * </pre>
        *
-       * <code>string account_budget = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string account_budget = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The bytes for accountBudget.
        */
       public com.google.protobuf.ByteString
@@ -1969,7 +1969,7 @@ private static final long serialVersionUID = 0L;
        * `customers/{customer_id}/accountBudgets/{account_budget_id}`
        * </pre>
        *
-       * <code>string account_budget = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string account_budget = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @param value The accountBudget to set.
        * @return This builder for chaining.
        */
@@ -1991,7 +1991,7 @@ private static final long serialVersionUID = 0L;
        * `customers/{customer_id}/accountBudgets/{account_budget_id}`
        * </pre>
        *
-       * <code>string account_budget = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string account_budget = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return This builder for chaining.
        */
       public Builder clearAccountBudget() {
@@ -2008,7 +2008,7 @@ private static final long serialVersionUID = 0L;
        * `customers/{customer_id}/accountBudgets/{account_budget_id}`
        * </pre>
        *
-       * <code>string account_budget = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string account_budget = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @param value The bytes for accountBudget to set.
        * @return This builder for chaining.
        */
@@ -2031,7 +2031,7 @@ private static final long serialVersionUID = 0L;
        * budget".
        * </pre>
        *
-       * <code>string account_budget_name = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string account_budget_name = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return Whether the accountBudgetName field is set.
        */
       public boolean hasAccountBudgetName() {
@@ -2043,7 +2043,7 @@ private static final long serialVersionUID = 0L;
        * budget".
        * </pre>
        *
-       * <code>string account_budget_name = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string account_budget_name = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The accountBudgetName.
        */
       public java.lang.String getAccountBudgetName() {
@@ -2064,7 +2064,7 @@ private static final long serialVersionUID = 0L;
        * budget".
        * </pre>
        *
-       * <code>string account_budget_name = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string account_budget_name = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The bytes for accountBudgetName.
        */
       public com.google.protobuf.ByteString
@@ -2086,7 +2086,7 @@ private static final long serialVersionUID = 0L;
        * budget".
        * </pre>
        *
-       * <code>string account_budget_name = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string account_budget_name = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @param value The accountBudgetName to set.
        * @return This builder for chaining.
        */
@@ -2106,7 +2106,7 @@ private static final long serialVersionUID = 0L;
        * budget".
        * </pre>
        *
-       * <code>string account_budget_name = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string account_budget_name = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return This builder for chaining.
        */
       public Builder clearAccountBudgetName() {
@@ -2121,7 +2121,7 @@ private static final long serialVersionUID = 0L;
        * budget".
        * </pre>
        *
-       * <code>string account_budget_name = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string account_budget_name = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @param value The bytes for accountBudgetName to set.
        * @return This builder for chaining.
        */
@@ -2144,7 +2144,7 @@ private static final long serialVersionUID = 0L;
        * invoice PDF as "Purchase order".
        * </pre>
        *
-       * <code>string purchase_order_number = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string purchase_order_number = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return Whether the purchaseOrderNumber field is set.
        */
       public boolean hasPurchaseOrderNumber() {
@@ -2156,7 +2156,7 @@ private static final long serialVersionUID = 0L;
        * invoice PDF as "Purchase order".
        * </pre>
        *
-       * <code>string purchase_order_number = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string purchase_order_number = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The purchaseOrderNumber.
        */
       public java.lang.String getPurchaseOrderNumber() {
@@ -2177,7 +2177,7 @@ private static final long serialVersionUID = 0L;
        * invoice PDF as "Purchase order".
        * </pre>
        *
-       * <code>string purchase_order_number = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string purchase_order_number = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The bytes for purchaseOrderNumber.
        */
       public com.google.protobuf.ByteString
@@ -2199,7 +2199,7 @@ private static final long serialVersionUID = 0L;
        * invoice PDF as "Purchase order".
        * </pre>
        *
-       * <code>string purchase_order_number = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string purchase_order_number = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @param value The purchaseOrderNumber to set.
        * @return This builder for chaining.
        */
@@ -2219,7 +2219,7 @@ private static final long serialVersionUID = 0L;
        * invoice PDF as "Purchase order".
        * </pre>
        *
-       * <code>string purchase_order_number = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string purchase_order_number = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return This builder for chaining.
        */
       public Builder clearPurchaseOrderNumber() {
@@ -2234,7 +2234,7 @@ private static final long serialVersionUID = 0L;
        * invoice PDF as "Purchase order".
        * </pre>
        *
-       * <code>string purchase_order_number = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string purchase_order_number = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @param value The bytes for purchaseOrderNumber to set.
        * @return This builder for chaining.
        */
@@ -2257,7 +2257,7 @@ private static final long serialVersionUID = 0L;
        * period, in micros.
        * </pre>
        *
-       * <code>int64 subtotal_amount_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional int64 subtotal_amount_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return Whether the subtotalAmountMicros field is set.
        */
       @java.lang.Override
@@ -2270,7 +2270,7 @@ private static final long serialVersionUID = 0L;
        * period, in micros.
        * </pre>
        *
-       * <code>int64 subtotal_amount_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional int64 subtotal_amount_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The subtotalAmountMicros.
        */
       @java.lang.Override
@@ -2283,7 +2283,7 @@ private static final long serialVersionUID = 0L;
        * period, in micros.
        * </pre>
        *
-       * <code>int64 subtotal_amount_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional int64 subtotal_amount_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @param value The subtotalAmountMicros to set.
        * @return This builder for chaining.
        */
@@ -2299,7 +2299,7 @@ private static final long serialVersionUID = 0L;
        * period, in micros.
        * </pre>
        *
-       * <code>int64 subtotal_amount_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional int64 subtotal_amount_micros = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return This builder for chaining.
        */
       public Builder clearSubtotalAmountMicros() {
@@ -2316,7 +2316,7 @@ private static final long serialVersionUID = 0L;
        * micros.
        * </pre>
        *
-       * <code>int64 tax_amount_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional int64 tax_amount_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return Whether the taxAmountMicros field is set.
        */
       @java.lang.Override
@@ -2329,7 +2329,7 @@ private static final long serialVersionUID = 0L;
        * micros.
        * </pre>
        *
-       * <code>int64 tax_amount_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional int64 tax_amount_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The taxAmountMicros.
        */
       @java.lang.Override
@@ -2342,7 +2342,7 @@ private static final long serialVersionUID = 0L;
        * micros.
        * </pre>
        *
-       * <code>int64 tax_amount_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional int64 tax_amount_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @param value The taxAmountMicros to set.
        * @return This builder for chaining.
        */
@@ -2358,7 +2358,7 @@ private static final long serialVersionUID = 0L;
        * micros.
        * </pre>
        *
-       * <code>int64 tax_amount_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional int64 tax_amount_micros = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return This builder for chaining.
        */
       public Builder clearTaxAmountMicros() {
@@ -2376,7 +2376,7 @@ private static final long serialVersionUID = 0L;
        * the account budget tax amount.
        * </pre>
        *
-       * <code>int64 total_amount_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional int64 total_amount_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return Whether the totalAmountMicros field is set.
        */
       @java.lang.Override
@@ -2390,7 +2390,7 @@ private static final long serialVersionUID = 0L;
        * the account budget tax amount.
        * </pre>
        *
-       * <code>int64 total_amount_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional int64 total_amount_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The totalAmountMicros.
        */
       @java.lang.Override
@@ -2404,7 +2404,7 @@ private static final long serialVersionUID = 0L;
        * the account budget tax amount.
        * </pre>
        *
-       * <code>int64 total_amount_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional int64 total_amount_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @param value The totalAmountMicros to set.
        * @return This builder for chaining.
        */
@@ -2421,7 +2421,7 @@ private static final long serialVersionUID = 0L;
        * the account budget tax amount.
        * </pre>
        *
-       * <code>int64 total_amount_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional int64 total_amount_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return This builder for chaining.
        */
       public Builder clearTotalAmountMicros() {
@@ -2716,7 +2716,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of the invoice. It appears on the invoice PDF as "Invoice number".
    * </pre>
    *
-   * <code>string id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   @java.lang.Override
@@ -2728,7 +2728,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of the invoice. It appears on the invoice PDF as "Invoice number".
    * </pre>
    *
-   * <code>string id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   @java.lang.Override
@@ -2749,7 +2749,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of the invoice. It appears on the invoice PDF as "Invoice number".
    * </pre>
    *
-   * <code>string id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for id.
    */
   @java.lang.Override
@@ -2802,7 +2802,7 @@ private static final long serialVersionUID = 0L;
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
-   * <code>string billing_setup = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string billing_setup = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the billingSetup field is set.
    */
   @java.lang.Override
@@ -2815,7 +2815,7 @@ private static final long serialVersionUID = 0L;
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
-   * <code>string billing_setup = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string billing_setup = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The billingSetup.
    */
   @java.lang.Override
@@ -2837,7 +2837,7 @@ private static final long serialVersionUID = 0L;
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
-   * <code>string billing_setup = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string billing_setup = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for billingSetup.
    */
   @java.lang.Override
@@ -2864,7 +2864,7 @@ private static final long serialVersionUID = 0L;
    * "Billing Account Number".
    * </pre>
    *
-   * <code>string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the paymentsAccountId field is set.
    */
   @java.lang.Override
@@ -2878,7 +2878,7 @@ private static final long serialVersionUID = 0L;
    * "Billing Account Number".
    * </pre>
    *
-   * <code>string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The paymentsAccountId.
    */
   @java.lang.Override
@@ -2901,7 +2901,7 @@ private static final long serialVersionUID = 0L;
    * "Billing Account Number".
    * </pre>
    *
-   * <code>string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for paymentsAccountId.
    */
   @java.lang.Override
@@ -2928,7 +2928,7 @@ private static final long serialVersionUID = 0L;
    * "Billing ID".
    * </pre>
    *
-   * <code>string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the paymentsProfileId field is set.
    */
   @java.lang.Override
@@ -2942,7 +2942,7 @@ private static final long serialVersionUID = 0L;
    * "Billing ID".
    * </pre>
    *
-   * <code>string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The paymentsProfileId.
    */
   @java.lang.Override
@@ -2965,7 +2965,7 @@ private static final long serialVersionUID = 0L;
    * "Billing ID".
    * </pre>
    *
-   * <code>string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for paymentsProfileId.
    */
   @java.lang.Override
@@ -2991,7 +2991,7 @@ private static final long serialVersionUID = 0L;
    * either "Issue date" or "Invoice date".
    * </pre>
    *
-   * <code>string issue_date = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string issue_date = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the issueDate field is set.
    */
   @java.lang.Override
@@ -3004,7 +3004,7 @@ private static final long serialVersionUID = 0L;
    * either "Issue date" or "Invoice date".
    * </pre>
    *
-   * <code>string issue_date = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string issue_date = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The issueDate.
    */
   @java.lang.Override
@@ -3026,7 +3026,7 @@ private static final long serialVersionUID = 0L;
    * either "Issue date" or "Invoice date".
    * </pre>
    *
-   * <code>string issue_date = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string issue_date = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for issueDate.
    */
   @java.lang.Override
@@ -3051,7 +3051,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The due date in yyyy-mm-dd format.
    * </pre>
    *
-   * <code>string due_date = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string due_date = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the dueDate field is set.
    */
   @java.lang.Override
@@ -3063,7 +3063,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The due date in yyyy-mm-dd format.
    * </pre>
    *
-   * <code>string due_date = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string due_date = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The dueDate.
    */
   @java.lang.Override
@@ -3084,7 +3084,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The due date in yyyy-mm-dd format.
    * </pre>
    *
-   * <code>string due_date = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string due_date = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for dueDate.
    */
   @java.lang.Override
@@ -3148,7 +3148,7 @@ private static final long serialVersionUID = 0L;
    * currency codes derived from the ISO 4217 standard is supported.
    * </pre>
    *
-   * <code>string currency_code = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string currency_code = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the currencyCode field is set.
    */
   @java.lang.Override
@@ -3161,7 +3161,7 @@ private static final long serialVersionUID = 0L;
    * currency codes derived from the ISO 4217 standard is supported.
    * </pre>
    *
-   * <code>string currency_code = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string currency_code = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The currencyCode.
    */
   @java.lang.Override
@@ -3183,7 +3183,7 @@ private static final long serialVersionUID = 0L;
    * currency codes derived from the ISO 4217 standard is supported.
    * </pre>
    *
-   * <code>string currency_code = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string currency_code = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for currencyCode.
    */
   @java.lang.Override
@@ -3303,7 +3303,7 @@ private static final long serialVersionUID = 0L;
    * longer included.
    * </pre>
    *
-   * <code>int64 subtotal_amount_micros = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 subtotal_amount_micros = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the subtotalAmountMicros field is set.
    */
   @java.lang.Override
@@ -3320,7 +3320,7 @@ private static final long serialVersionUID = 0L;
    * longer included.
    * </pre>
    *
-   * <code>int64 subtotal_amount_micros = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 subtotal_amount_micros = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The subtotalAmountMicros.
    */
   @java.lang.Override
@@ -3337,7 +3337,7 @@ private static final long serialVersionUID = 0L;
    * account budget.
    * </pre>
    *
-   * <code>int64 tax_amount_micros = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 tax_amount_micros = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the taxAmountMicros field is set.
    */
   @java.lang.Override
@@ -3351,7 +3351,7 @@ private static final long serialVersionUID = 0L;
    * account budget.
    * </pre>
    *
-   * <code>int64 tax_amount_micros = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 tax_amount_micros = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The taxAmountMicros.
    */
   @java.lang.Override
@@ -3370,7 +3370,7 @@ private static final long serialVersionUID = 0L;
    * Invoice.tax_amount_micros.
    * </pre>
    *
-   * <code>int64 total_amount_micros = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 total_amount_micros = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the totalAmountMicros field is set.
    */
   @java.lang.Override
@@ -3386,7 +3386,7 @@ private static final long serialVersionUID = 0L;
    * Invoice.tax_amount_micros.
    * </pre>
    *
-   * <code>int64 total_amount_micros = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 total_amount_micros = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The totalAmountMicros.
    */
   @java.lang.Override
@@ -3405,7 +3405,7 @@ private static final long serialVersionUID = 0L;
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
-   * <code>string corrected_invoice = 36 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string corrected_invoice = 36 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the correctedInvoice field is set.
    */
   @java.lang.Override
@@ -3421,7 +3421,7 @@ private static final long serialVersionUID = 0L;
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
-   * <code>string corrected_invoice = 36 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string corrected_invoice = 36 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The correctedInvoice.
    */
   @java.lang.Override
@@ -3446,7 +3446,7 @@ private static final long serialVersionUID = 0L;
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
-   * <code>string corrected_invoice = 36 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string corrected_invoice = 36 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for correctedInvoice.
    */
   @java.lang.Override
@@ -3547,7 +3547,7 @@ private static final long serialVersionUID = 0L;
    * token to request the PDF with this URL.
    * </pre>
    *
-   * <code>string pdf_url = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string pdf_url = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the pdfUrl field is set.
    */
   @java.lang.Override
@@ -3560,7 +3560,7 @@ private static final long serialVersionUID = 0L;
    * token to request the PDF with this URL.
    * </pre>
    *
-   * <code>string pdf_url = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string pdf_url = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The pdfUrl.
    */
   @java.lang.Override
@@ -3582,7 +3582,7 @@ private static final long serialVersionUID = 0L;
    * token to request the PDF with this URL.
    * </pre>
    *
-   * <code>string pdf_url = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string pdf_url = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for pdfUrl.
    */
   @java.lang.Override
@@ -3679,7 +3679,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (type_ != com.google.ads.googleads.v7.enums.InvoiceTypeEnum.InvoiceType.UNSPECIFIED.getNumber()) {
@@ -3757,7 +3757,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (type_ != com.google.ads.googleads.v7.enums.InvoiceTypeEnum.InvoiceType.UNSPECIFIED.getNumber()) {
@@ -4649,7 +4649,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the invoice. It appears on the invoice PDF as "Invoice number".
      * </pre>
      *
-     * <code>string id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the id field is set.
      */
     public boolean hasId() {
@@ -4660,7 +4660,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the invoice. It appears on the invoice PDF as "Invoice number".
      * </pre>
      *
-     * <code>string id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The id.
      */
     public java.lang.String getId() {
@@ -4680,7 +4680,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the invoice. It appears on the invoice PDF as "Invoice number".
      * </pre>
      *
-     * <code>string id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for id.
      */
     public com.google.protobuf.ByteString
@@ -4701,7 +4701,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the invoice. It appears on the invoice PDF as "Invoice number".
      * </pre>
      *
-     * <code>string id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
@@ -4720,7 +4720,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the invoice. It appears on the invoice PDF as "Invoice number".
      * </pre>
      *
-     * <code>string id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {
@@ -4734,7 +4734,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the invoice. It appears on the invoice PDF as "Invoice number".
      * </pre>
      *
-     * <code>string id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for id to set.
      * @return This builder for chaining.
      */
@@ -4831,7 +4831,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
-     * <code>string billing_setup = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string billing_setup = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the billingSetup field is set.
      */
     public boolean hasBillingSetup() {
@@ -4843,7 +4843,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
-     * <code>string billing_setup = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string billing_setup = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The billingSetup.
      */
     public java.lang.String getBillingSetup() {
@@ -4864,7 +4864,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
-     * <code>string billing_setup = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string billing_setup = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for billingSetup.
      */
     public com.google.protobuf.ByteString
@@ -4886,7 +4886,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
-     * <code>string billing_setup = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string billing_setup = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The billingSetup to set.
      * @return This builder for chaining.
      */
@@ -4906,7 +4906,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
-     * <code>string billing_setup = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string billing_setup = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearBillingSetup() {
@@ -4921,7 +4921,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/billingSetups/{billing_setup_id}`
      * </pre>
      *
-     * <code>string billing_setup = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string billing_setup = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for billingSetup to set.
      * @return This builder for chaining.
      */
@@ -4945,7 +4945,7 @@ private static final long serialVersionUID = 0L;
      * "Billing Account Number".
      * </pre>
      *
-     * <code>string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the paymentsAccountId field is set.
      */
     public boolean hasPaymentsAccountId() {
@@ -4958,7 +4958,7 @@ private static final long serialVersionUID = 0L;
      * "Billing Account Number".
      * </pre>
      *
-     * <code>string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The paymentsAccountId.
      */
     public java.lang.String getPaymentsAccountId() {
@@ -4980,7 +4980,7 @@ private static final long serialVersionUID = 0L;
      * "Billing Account Number".
      * </pre>
      *
-     * <code>string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for paymentsAccountId.
      */
     public com.google.protobuf.ByteString
@@ -5003,7 +5003,7 @@ private static final long serialVersionUID = 0L;
      * "Billing Account Number".
      * </pre>
      *
-     * <code>string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The paymentsAccountId to set.
      * @return This builder for chaining.
      */
@@ -5024,7 +5024,7 @@ private static final long serialVersionUID = 0L;
      * "Billing Account Number".
      * </pre>
      *
-     * <code>string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearPaymentsAccountId() {
@@ -5040,7 +5040,7 @@ private static final long serialVersionUID = 0L;
      * "Billing Account Number".
      * </pre>
      *
-     * <code>string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for paymentsAccountId to set.
      * @return This builder for chaining.
      */
@@ -5064,7 +5064,7 @@ private static final long serialVersionUID = 0L;
      * "Billing ID".
      * </pre>
      *
-     * <code>string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the paymentsProfileId field is set.
      */
     public boolean hasPaymentsProfileId() {
@@ -5077,7 +5077,7 @@ private static final long serialVersionUID = 0L;
      * "Billing ID".
      * </pre>
      *
-     * <code>string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The paymentsProfileId.
      */
     public java.lang.String getPaymentsProfileId() {
@@ -5099,7 +5099,7 @@ private static final long serialVersionUID = 0L;
      * "Billing ID".
      * </pre>
      *
-     * <code>string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for paymentsProfileId.
      */
     public com.google.protobuf.ByteString
@@ -5122,7 +5122,7 @@ private static final long serialVersionUID = 0L;
      * "Billing ID".
      * </pre>
      *
-     * <code>string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The paymentsProfileId to set.
      * @return This builder for chaining.
      */
@@ -5143,7 +5143,7 @@ private static final long serialVersionUID = 0L;
      * "Billing ID".
      * </pre>
      *
-     * <code>string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearPaymentsProfileId() {
@@ -5159,7 +5159,7 @@ private static final long serialVersionUID = 0L;
      * "Billing ID".
      * </pre>
      *
-     * <code>string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for paymentsProfileId to set.
      * @return This builder for chaining.
      */
@@ -5182,7 +5182,7 @@ private static final long serialVersionUID = 0L;
      * either "Issue date" or "Invoice date".
      * </pre>
      *
-     * <code>string issue_date = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string issue_date = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the issueDate field is set.
      */
     public boolean hasIssueDate() {
@@ -5194,7 +5194,7 @@ private static final long serialVersionUID = 0L;
      * either "Issue date" or "Invoice date".
      * </pre>
      *
-     * <code>string issue_date = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string issue_date = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The issueDate.
      */
     public java.lang.String getIssueDate() {
@@ -5215,7 +5215,7 @@ private static final long serialVersionUID = 0L;
      * either "Issue date" or "Invoice date".
      * </pre>
      *
-     * <code>string issue_date = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string issue_date = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for issueDate.
      */
     public com.google.protobuf.ByteString
@@ -5237,7 +5237,7 @@ private static final long serialVersionUID = 0L;
      * either "Issue date" or "Invoice date".
      * </pre>
      *
-     * <code>string issue_date = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string issue_date = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The issueDate to set.
      * @return This builder for chaining.
      */
@@ -5257,7 +5257,7 @@ private static final long serialVersionUID = 0L;
      * either "Issue date" or "Invoice date".
      * </pre>
      *
-     * <code>string issue_date = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string issue_date = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearIssueDate() {
@@ -5272,7 +5272,7 @@ private static final long serialVersionUID = 0L;
      * either "Issue date" or "Invoice date".
      * </pre>
      *
-     * <code>string issue_date = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string issue_date = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for issueDate to set.
      * @return This builder for chaining.
      */
@@ -5294,7 +5294,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The due date in yyyy-mm-dd format.
      * </pre>
      *
-     * <code>string due_date = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string due_date = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the dueDate field is set.
      */
     public boolean hasDueDate() {
@@ -5305,7 +5305,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The due date in yyyy-mm-dd format.
      * </pre>
      *
-     * <code>string due_date = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string due_date = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The dueDate.
      */
     public java.lang.String getDueDate() {
@@ -5325,7 +5325,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The due date in yyyy-mm-dd format.
      * </pre>
      *
-     * <code>string due_date = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string due_date = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for dueDate.
      */
     public com.google.protobuf.ByteString
@@ -5346,7 +5346,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The due date in yyyy-mm-dd format.
      * </pre>
      *
-     * <code>string due_date = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string due_date = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The dueDate to set.
      * @return This builder for chaining.
      */
@@ -5365,7 +5365,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The due date in yyyy-mm-dd format.
      * </pre>
      *
-     * <code>string due_date = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string due_date = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearDueDate() {
@@ -5379,7 +5379,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The due date in yyyy-mm-dd format.
      * </pre>
      *
-     * <code>string due_date = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string due_date = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for dueDate to set.
      * @return This builder for chaining.
      */
@@ -5557,7 +5557,7 @@ private static final long serialVersionUID = 0L;
      * currency codes derived from the ISO 4217 standard is supported.
      * </pre>
      *
-     * <code>string currency_code = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string currency_code = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the currencyCode field is set.
      */
     public boolean hasCurrencyCode() {
@@ -5569,7 +5569,7 @@ private static final long serialVersionUID = 0L;
      * currency codes derived from the ISO 4217 standard is supported.
      * </pre>
      *
-     * <code>string currency_code = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string currency_code = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The currencyCode.
      */
     public java.lang.String getCurrencyCode() {
@@ -5590,7 +5590,7 @@ private static final long serialVersionUID = 0L;
      * currency codes derived from the ISO 4217 standard is supported.
      * </pre>
      *
-     * <code>string currency_code = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string currency_code = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for currencyCode.
      */
     public com.google.protobuf.ByteString
@@ -5612,7 +5612,7 @@ private static final long serialVersionUID = 0L;
      * currency codes derived from the ISO 4217 standard is supported.
      * </pre>
      *
-     * <code>string currency_code = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string currency_code = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The currencyCode to set.
      * @return This builder for chaining.
      */
@@ -5632,7 +5632,7 @@ private static final long serialVersionUID = 0L;
      * currency codes derived from the ISO 4217 standard is supported.
      * </pre>
      *
-     * <code>string currency_code = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string currency_code = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearCurrencyCode() {
@@ -5647,7 +5647,7 @@ private static final long serialVersionUID = 0L;
      * currency codes derived from the ISO 4217 standard is supported.
      * </pre>
      *
-     * <code>string currency_code = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string currency_code = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for currencyCode to set.
      * @return This builder for chaining.
      */
@@ -5932,7 +5932,7 @@ private static final long serialVersionUID = 0L;
      * longer included.
      * </pre>
      *
-     * <code>int64 subtotal_amount_micros = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 subtotal_amount_micros = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the subtotalAmountMicros field is set.
      */
     @java.lang.Override
@@ -5949,7 +5949,7 @@ private static final long serialVersionUID = 0L;
      * longer included.
      * </pre>
      *
-     * <code>int64 subtotal_amount_micros = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 subtotal_amount_micros = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The subtotalAmountMicros.
      */
     @java.lang.Override
@@ -5966,7 +5966,7 @@ private static final long serialVersionUID = 0L;
      * longer included.
      * </pre>
      *
-     * <code>int64 subtotal_amount_micros = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 subtotal_amount_micros = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The subtotalAmountMicros to set.
      * @return This builder for chaining.
      */
@@ -5986,7 +5986,7 @@ private static final long serialVersionUID = 0L;
      * longer included.
      * </pre>
      *
-     * <code>int64 subtotal_amount_micros = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 subtotal_amount_micros = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearSubtotalAmountMicros() {
@@ -6004,7 +6004,7 @@ private static final long serialVersionUID = 0L;
      * account budget.
      * </pre>
      *
-     * <code>int64 tax_amount_micros = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 tax_amount_micros = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the taxAmountMicros field is set.
      */
     @java.lang.Override
@@ -6018,7 +6018,7 @@ private static final long serialVersionUID = 0L;
      * account budget.
      * </pre>
      *
-     * <code>int64 tax_amount_micros = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 tax_amount_micros = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The taxAmountMicros.
      */
     @java.lang.Override
@@ -6032,7 +6032,7 @@ private static final long serialVersionUID = 0L;
      * account budget.
      * </pre>
      *
-     * <code>int64 tax_amount_micros = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 tax_amount_micros = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The taxAmountMicros to set.
      * @return This builder for chaining.
      */
@@ -6049,7 +6049,7 @@ private static final long serialVersionUID = 0L;
      * account budget.
      * </pre>
      *
-     * <code>int64 tax_amount_micros = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 tax_amount_micros = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearTaxAmountMicros() {
@@ -6069,7 +6069,7 @@ private static final long serialVersionUID = 0L;
      * Invoice.tax_amount_micros.
      * </pre>
      *
-     * <code>int64 total_amount_micros = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 total_amount_micros = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the totalAmountMicros field is set.
      */
     @java.lang.Override
@@ -6085,7 +6085,7 @@ private static final long serialVersionUID = 0L;
      * Invoice.tax_amount_micros.
      * </pre>
      *
-     * <code>int64 total_amount_micros = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 total_amount_micros = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The totalAmountMicros.
      */
     @java.lang.Override
@@ -6101,7 +6101,7 @@ private static final long serialVersionUID = 0L;
      * Invoice.tax_amount_micros.
      * </pre>
      *
-     * <code>int64 total_amount_micros = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 total_amount_micros = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The totalAmountMicros to set.
      * @return This builder for chaining.
      */
@@ -6120,7 +6120,7 @@ private static final long serialVersionUID = 0L;
      * Invoice.tax_amount_micros.
      * </pre>
      *
-     * <code>int64 total_amount_micros = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 total_amount_micros = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearTotalAmountMicros() {
@@ -6140,7 +6140,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
-     * <code>string corrected_invoice = 36 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string corrected_invoice = 36 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the correctedInvoice field is set.
      */
     public boolean hasCorrectedInvoice() {
@@ -6155,7 +6155,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
-     * <code>string corrected_invoice = 36 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string corrected_invoice = 36 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The correctedInvoice.
      */
     public java.lang.String getCorrectedInvoice() {
@@ -6179,7 +6179,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
-     * <code>string corrected_invoice = 36 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string corrected_invoice = 36 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for correctedInvoice.
      */
     public com.google.protobuf.ByteString
@@ -6204,7 +6204,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
-     * <code>string corrected_invoice = 36 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string corrected_invoice = 36 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The correctedInvoice to set.
      * @return This builder for chaining.
      */
@@ -6227,7 +6227,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
-     * <code>string corrected_invoice = 36 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string corrected_invoice = 36 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearCorrectedInvoice() {
@@ -6245,7 +6245,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/invoices/{invoice_id}`
      * </pre>
      *
-     * <code>string corrected_invoice = 36 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string corrected_invoice = 36 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for correctedInvoice to set.
      * @return This builder for chaining.
      */
@@ -6468,7 +6468,7 @@ private static final long serialVersionUID = 0L;
      * token to request the PDF with this URL.
      * </pre>
      *
-     * <code>string pdf_url = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string pdf_url = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the pdfUrl field is set.
      */
     public boolean hasPdfUrl() {
@@ -6480,7 +6480,7 @@ private static final long serialVersionUID = 0L;
      * token to request the PDF with this URL.
      * </pre>
      *
-     * <code>string pdf_url = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string pdf_url = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The pdfUrl.
      */
     public java.lang.String getPdfUrl() {
@@ -6501,7 +6501,7 @@ private static final long serialVersionUID = 0L;
      * token to request the PDF with this URL.
      * </pre>
      *
-     * <code>string pdf_url = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string pdf_url = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for pdfUrl.
      */
     public com.google.protobuf.ByteString
@@ -6523,7 +6523,7 @@ private static final long serialVersionUID = 0L;
      * token to request the PDF with this URL.
      * </pre>
      *
-     * <code>string pdf_url = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string pdf_url = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The pdfUrl to set.
      * @return This builder for chaining.
      */
@@ -6543,7 +6543,7 @@ private static final long serialVersionUID = 0L;
      * token to request the PDF with this URL.
      * </pre>
      *
-     * <code>string pdf_url = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string pdf_url = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearPdfUrl() {
@@ -6558,7 +6558,7 @@ private static final long serialVersionUID = 0L;
      * token to request the PDF with this URL.
      * </pre>
      *
-     * <code>string pdf_url = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string pdf_url = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for pdfUrl to set.
      * @return This builder for chaining.
      */

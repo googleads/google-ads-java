@@ -15,8 +15,6 @@ package com.google.ads.googleads.v8.resources;
  * 5. DISPLAY - CPC_BID - DEFAULT
  * 6. DISPLAY - CPC_BID - UNIFORM
  * 7. DISPLAY - TARGET_CPA - UNIFORM
- * 8. VIDEO - CPV_BID - DEFAULT
- * 9. VIDEO - CPV_BID - UNIFORM
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v8.resources.AdGroupSimulation}
@@ -295,7 +293,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Ad group id of the simulation.
    * </pre>
    *
-   * <code>int64 ad_group_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 ad_group_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the adGroupId field is set.
    */
   @java.lang.Override
@@ -307,7 +305,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Ad group id of the simulation.
    * </pre>
    *
-   * <code>int64 ad_group_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 ad_group_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The adGroupId.
    */
   @java.lang.Override
@@ -376,7 +374,7 @@ private static final long serialVersionUID = 0L;
    * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
    * </pre>
    *
-   * <code>string start_date = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string start_date = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the startDate field is set.
    */
   @java.lang.Override
@@ -388,7 +386,7 @@ private static final long serialVersionUID = 0L;
    * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
    * </pre>
    *
-   * <code>string start_date = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string start_date = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The startDate.
    */
   @java.lang.Override
@@ -409,7 +407,7 @@ private static final long serialVersionUID = 0L;
    * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
    * </pre>
    *
-   * <code>string start_date = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string start_date = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for startDate.
    */
   @java.lang.Override
@@ -434,7 +432,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Last day on which the simulation is based, in YYYY-MM-DD format
    * </pre>
    *
-   * <code>string end_date = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string end_date = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the endDate field is set.
    */
   @java.lang.Override
@@ -446,7 +444,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Last day on which the simulation is based, in YYYY-MM-DD format
    * </pre>
    *
-   * <code>string end_date = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string end_date = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The endDate.
    */
   @java.lang.Override
@@ -467,7 +465,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Last day on which the simulation is based, in YYYY-MM-DD format
    * </pre>
    *
-   * <code>string end_date = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string end_date = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for endDate.
    */
   @java.lang.Override
@@ -671,7 +669,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (type_ != com.google.ads.googleads.v8.enums.SimulationTypeEnum.SimulationType.UNSPECIFIED.getNumber()) {
@@ -710,7 +708,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (type_ != com.google.ads.googleads.v8.enums.SimulationTypeEnum.SimulationType.UNSPECIFIED.getNumber()) {
@@ -959,8 +957,6 @@ private static final long serialVersionUID = 0L;
    * 5. DISPLAY - CPC_BID - DEFAULT
    * 6. DISPLAY - CPC_BID - UNIFORM
    * 7. DISPLAY - TARGET_CPA - UNIFORM
-   * 8. VIDEO - CPV_BID - DEFAULT
-   * 9. VIDEO - CPV_BID - UNIFORM
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v8.resources.AdGroupSimulation}
@@ -1336,7 +1332,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Ad group id of the simulation.
      * </pre>
      *
-     * <code>int64 ad_group_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 ad_group_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the adGroupId field is set.
      */
     @java.lang.Override
@@ -1348,7 +1344,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Ad group id of the simulation.
      * </pre>
      *
-     * <code>int64 ad_group_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 ad_group_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The adGroupId.
      */
     @java.lang.Override
@@ -1360,7 +1356,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Ad group id of the simulation.
      * </pre>
      *
-     * <code>int64 ad_group_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 ad_group_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The adGroupId to set.
      * @return This builder for chaining.
      */
@@ -1375,7 +1371,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Ad group id of the simulation.
      * </pre>
      *
-     * <code>int64 ad_group_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 ad_group_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearAdGroupId() {
@@ -1539,7 +1535,7 @@ private static final long serialVersionUID = 0L;
      * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
      * </pre>
      *
-     * <code>string start_date = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string start_date = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the startDate field is set.
      */
     public boolean hasStartDate() {
@@ -1550,7 +1546,7 @@ private static final long serialVersionUID = 0L;
      * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
      * </pre>
      *
-     * <code>string start_date = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string start_date = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The startDate.
      */
     public java.lang.String getStartDate() {
@@ -1570,7 +1566,7 @@ private static final long serialVersionUID = 0L;
      * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
      * </pre>
      *
-     * <code>string start_date = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string start_date = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for startDate.
      */
     public com.google.protobuf.ByteString
@@ -1591,7 +1587,7 @@ private static final long serialVersionUID = 0L;
      * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
      * </pre>
      *
-     * <code>string start_date = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string start_date = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The startDate to set.
      * @return This builder for chaining.
      */
@@ -1610,7 +1606,7 @@ private static final long serialVersionUID = 0L;
      * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
      * </pre>
      *
-     * <code>string start_date = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string start_date = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearStartDate() {
@@ -1624,7 +1620,7 @@ private static final long serialVersionUID = 0L;
      * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
      * </pre>
      *
-     * <code>string start_date = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string start_date = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for startDate to set.
      * @return This builder for chaining.
      */
@@ -1646,7 +1642,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Last day on which the simulation is based, in YYYY-MM-DD format
      * </pre>
      *
-     * <code>string end_date = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string end_date = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the endDate field is set.
      */
     public boolean hasEndDate() {
@@ -1657,7 +1653,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Last day on which the simulation is based, in YYYY-MM-DD format
      * </pre>
      *
-     * <code>string end_date = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string end_date = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The endDate.
      */
     public java.lang.String getEndDate() {
@@ -1677,7 +1673,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Last day on which the simulation is based, in YYYY-MM-DD format
      * </pre>
      *
-     * <code>string end_date = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string end_date = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for endDate.
      */
     public com.google.protobuf.ByteString
@@ -1698,7 +1694,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Last day on which the simulation is based, in YYYY-MM-DD format
      * </pre>
      *
-     * <code>string end_date = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string end_date = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The endDate to set.
      * @return This builder for chaining.
      */
@@ -1717,7 +1713,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Last day on which the simulation is based, in YYYY-MM-DD format
      * </pre>
      *
-     * <code>string end_date = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string end_date = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearEndDate() {
@@ -1731,7 +1727,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Last day on which the simulation is based, in YYYY-MM-DD format
      * </pre>
      *
-     * <code>string end_date = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string end_date = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for endDate to set.
      * @return This builder for chaining.
      */

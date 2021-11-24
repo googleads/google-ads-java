@@ -12,7 +12,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * Immutable. Feed attribute from which to map.
    * </pre>
    *
-   * <code>int64 feed_attribute_id = 24 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional int64 feed_attribute_id = 24 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the feedAttributeId field is set.
    */
   boolean hasFeedAttributeId();
@@ -21,7 +21,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * Immutable. Feed attribute from which to map.
    * </pre>
    *
-   * <code>int64 feed_attribute_id = 24 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional int64 feed_attribute_id = 24 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The feedAttributeId.
    */
   long getFeedAttributeId();
@@ -34,7 +34,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 field_id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 field_id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the fieldId field is set.
    */
   boolean hasFieldId();
@@ -46,7 +46,7 @@ public interface AttributeFieldMappingOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 field_id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 field_id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The fieldId.
    */
   long getFieldId();

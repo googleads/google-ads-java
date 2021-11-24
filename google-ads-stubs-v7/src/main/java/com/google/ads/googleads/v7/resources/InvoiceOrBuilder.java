@@ -38,7 +38,7 @@ public interface InvoiceOrBuilder extends
    * Output only. The ID of the invoice. It appears on the invoice PDF as "Invoice number".
    * </pre>
    *
-   * <code>string id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -47,7 +47,7 @@ public interface InvoiceOrBuilder extends
    * Output only. The ID of the invoice. It appears on the invoice PDF as "Invoice number".
    * </pre>
    *
-   * <code>string id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   java.lang.String getId();
@@ -56,7 +56,7 @@ public interface InvoiceOrBuilder extends
    * Output only. The ID of the invoice. It appears on the invoice PDF as "Invoice number".
    * </pre>
    *
-   * <code>string id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for id.
    */
   com.google.protobuf.ByteString
@@ -87,7 +87,7 @@ public interface InvoiceOrBuilder extends
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
-   * <code>string billing_setup = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string billing_setup = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the billingSetup field is set.
    */
   boolean hasBillingSetup();
@@ -97,7 +97,7 @@ public interface InvoiceOrBuilder extends
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
-   * <code>string billing_setup = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string billing_setup = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The billingSetup.
    */
   java.lang.String getBillingSetup();
@@ -107,7 +107,7 @@ public interface InvoiceOrBuilder extends
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
-   * <code>string billing_setup = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string billing_setup = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for billingSetup.
    */
   com.google.protobuf.ByteString
@@ -120,7 +120,7 @@ public interface InvoiceOrBuilder extends
    * "Billing Account Number".
    * </pre>
    *
-   * <code>string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the paymentsAccountId field is set.
    */
   boolean hasPaymentsAccountId();
@@ -131,7 +131,7 @@ public interface InvoiceOrBuilder extends
    * "Billing Account Number".
    * </pre>
    *
-   * <code>string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The paymentsAccountId.
    */
   java.lang.String getPaymentsAccountId();
@@ -142,7 +142,7 @@ public interface InvoiceOrBuilder extends
    * "Billing Account Number".
    * </pre>
    *
-   * <code>string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for paymentsAccountId.
    */
   com.google.protobuf.ByteString
@@ -155,7 +155,7 @@ public interface InvoiceOrBuilder extends
    * "Billing ID".
    * </pre>
    *
-   * <code>string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the paymentsProfileId field is set.
    */
   boolean hasPaymentsProfileId();
@@ -166,7 +166,7 @@ public interface InvoiceOrBuilder extends
    * "Billing ID".
    * </pre>
    *
-   * <code>string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The paymentsProfileId.
    */
   java.lang.String getPaymentsProfileId();
@@ -177,7 +177,7 @@ public interface InvoiceOrBuilder extends
    * "Billing ID".
    * </pre>
    *
-   * <code>string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for paymentsProfileId.
    */
   com.google.protobuf.ByteString
@@ -189,7 +189,7 @@ public interface InvoiceOrBuilder extends
    * either "Issue date" or "Invoice date".
    * </pre>
    *
-   * <code>string issue_date = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string issue_date = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the issueDate field is set.
    */
   boolean hasIssueDate();
@@ -199,7 +199,7 @@ public interface InvoiceOrBuilder extends
    * either "Issue date" or "Invoice date".
    * </pre>
    *
-   * <code>string issue_date = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string issue_date = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The issueDate.
    */
   java.lang.String getIssueDate();
@@ -209,7 +209,7 @@ public interface InvoiceOrBuilder extends
    * either "Issue date" or "Invoice date".
    * </pre>
    *
-   * <code>string issue_date = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string issue_date = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for issueDate.
    */
   com.google.protobuf.ByteString
@@ -220,7 +220,7 @@ public interface InvoiceOrBuilder extends
    * Output only. The due date in yyyy-mm-dd format.
    * </pre>
    *
-   * <code>string due_date = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string due_date = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the dueDate field is set.
    */
   boolean hasDueDate();
@@ -229,7 +229,7 @@ public interface InvoiceOrBuilder extends
    * Output only. The due date in yyyy-mm-dd format.
    * </pre>
    *
-   * <code>string due_date = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string due_date = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The dueDate.
    */
   java.lang.String getDueDate();
@@ -238,7 +238,7 @@ public interface InvoiceOrBuilder extends
    * Output only. The due date in yyyy-mm-dd format.
    * </pre>
    *
-   * <code>string due_date = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string due_date = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for dueDate.
    */
   com.google.protobuf.ByteString
@@ -277,7 +277,7 @@ public interface InvoiceOrBuilder extends
    * currency codes derived from the ISO 4217 standard is supported.
    * </pre>
    *
-   * <code>string currency_code = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string currency_code = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the currencyCode field is set.
    */
   boolean hasCurrencyCode();
@@ -287,7 +287,7 @@ public interface InvoiceOrBuilder extends
    * currency codes derived from the ISO 4217 standard is supported.
    * </pre>
    *
-   * <code>string currency_code = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string currency_code = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The currencyCode.
    */
   java.lang.String getCurrencyCode();
@@ -297,7 +297,7 @@ public interface InvoiceOrBuilder extends
    * currency codes derived from the ISO 4217 standard is supported.
    * </pre>
    *
-   * <code>string currency_code = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string currency_code = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for currencyCode.
    */
   com.google.protobuf.ByteString
@@ -373,7 +373,7 @@ public interface InvoiceOrBuilder extends
    * longer included.
    * </pre>
    *
-   * <code>int64 subtotal_amount_micros = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 subtotal_amount_micros = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the subtotalAmountMicros field is set.
    */
   boolean hasSubtotalAmountMicros();
@@ -387,7 +387,7 @@ public interface InvoiceOrBuilder extends
    * longer included.
    * </pre>
    *
-   * <code>int64 subtotal_amount_micros = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 subtotal_amount_micros = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The subtotalAmountMicros.
    */
   long getSubtotalAmountMicros();
@@ -399,7 +399,7 @@ public interface InvoiceOrBuilder extends
    * account budget.
    * </pre>
    *
-   * <code>int64 tax_amount_micros = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 tax_amount_micros = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the taxAmountMicros field is set.
    */
   boolean hasTaxAmountMicros();
@@ -410,7 +410,7 @@ public interface InvoiceOrBuilder extends
    * account budget.
    * </pre>
    *
-   * <code>int64 tax_amount_micros = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 tax_amount_micros = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The taxAmountMicros.
    */
   long getTaxAmountMicros();
@@ -424,7 +424,7 @@ public interface InvoiceOrBuilder extends
    * Invoice.tax_amount_micros.
    * </pre>
    *
-   * <code>int64 total_amount_micros = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 total_amount_micros = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the totalAmountMicros field is set.
    */
   boolean hasTotalAmountMicros();
@@ -437,7 +437,7 @@ public interface InvoiceOrBuilder extends
    * Invoice.tax_amount_micros.
    * </pre>
    *
-   * <code>int64 total_amount_micros = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 total_amount_micros = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The totalAmountMicros.
    */
   long getTotalAmountMicros();
@@ -451,7 +451,7 @@ public interface InvoiceOrBuilder extends
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
-   * <code>string corrected_invoice = 36 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string corrected_invoice = 36 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the correctedInvoice field is set.
    */
   boolean hasCorrectedInvoice();
@@ -464,7 +464,7 @@ public interface InvoiceOrBuilder extends
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
-   * <code>string corrected_invoice = 36 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string corrected_invoice = 36 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The correctedInvoice.
    */
   java.lang.String getCorrectedInvoice();
@@ -477,7 +477,7 @@ public interface InvoiceOrBuilder extends
    * `customers/{customer_id}/invoices/{invoice_id}`
    * </pre>
    *
-   * <code>string corrected_invoice = 36 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string corrected_invoice = 36 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for correctedInvoice.
    */
   com.google.protobuf.ByteString
@@ -554,7 +554,7 @@ public interface InvoiceOrBuilder extends
    * token to request the PDF with this URL.
    * </pre>
    *
-   * <code>string pdf_url = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string pdf_url = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the pdfUrl field is set.
    */
   boolean hasPdfUrl();
@@ -564,7 +564,7 @@ public interface InvoiceOrBuilder extends
    * token to request the PDF with this URL.
    * </pre>
    *
-   * <code>string pdf_url = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string pdf_url = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The pdfUrl.
    */
   java.lang.String getPdfUrl();
@@ -574,7 +574,7 @@ public interface InvoiceOrBuilder extends
    * token to request the PDF with this URL.
    * </pre>
    *
-   * <code>string pdf_url = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string pdf_url = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for pdfUrl.
    */
   com.google.protobuf.ByteString

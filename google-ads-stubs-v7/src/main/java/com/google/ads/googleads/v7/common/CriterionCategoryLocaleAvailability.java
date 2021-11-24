@@ -147,7 +147,7 @@ private static final long serialVersionUID = 0L;
    * Code of the country.
    * </pre>
    *
-   * <code>string country_code = 4;</code>
+   * <code>optional string country_code = 4;</code>
    * @return Whether the countryCode field is set.
    */
   @java.lang.Override
@@ -159,7 +159,7 @@ private static final long serialVersionUID = 0L;
    * Code of the country.
    * </pre>
    *
-   * <code>string country_code = 4;</code>
+   * <code>optional string country_code = 4;</code>
    * @return The countryCode.
    */
   @java.lang.Override
@@ -180,7 +180,7 @@ private static final long serialVersionUID = 0L;
    * Code of the country.
    * </pre>
    *
-   * <code>string country_code = 4;</code>
+   * <code>optional string country_code = 4;</code>
    * @return The bytes for countryCode.
    */
   @java.lang.Override
@@ -205,7 +205,7 @@ private static final long serialVersionUID = 0L;
    * Code of the language.
    * </pre>
    *
-   * <code>string language_code = 5;</code>
+   * <code>optional string language_code = 5;</code>
    * @return Whether the languageCode field is set.
    */
   @java.lang.Override
@@ -217,7 +217,7 @@ private static final long serialVersionUID = 0L;
    * Code of the language.
    * </pre>
    *
-   * <code>string language_code = 5;</code>
+   * <code>optional string language_code = 5;</code>
    * @return The languageCode.
    */
   @java.lang.Override
@@ -238,7 +238,7 @@ private static final long serialVersionUID = 0L;
    * Code of the language.
    * </pre>
    *
-   * <code>string language_code = 5;</code>
+   * <code>optional string language_code = 5;</code>
    * @return The bytes for languageCode.
    */
   @java.lang.Override
@@ -712,7 +712,7 @@ private static final long serialVersionUID = 0L;
      * Code of the country.
      * </pre>
      *
-     * <code>string country_code = 4;</code>
+     * <code>optional string country_code = 4;</code>
      * @return Whether the countryCode field is set.
      */
     public boolean hasCountryCode() {
@@ -723,7 +723,7 @@ private static final long serialVersionUID = 0L;
      * Code of the country.
      * </pre>
      *
-     * <code>string country_code = 4;</code>
+     * <code>optional string country_code = 4;</code>
      * @return The countryCode.
      */
     public java.lang.String getCountryCode() {
@@ -743,7 +743,7 @@ private static final long serialVersionUID = 0L;
      * Code of the country.
      * </pre>
      *
-     * <code>string country_code = 4;</code>
+     * <code>optional string country_code = 4;</code>
      * @return The bytes for countryCode.
      */
     public com.google.protobuf.ByteString
@@ -764,7 +764,7 @@ private static final long serialVersionUID = 0L;
      * Code of the country.
      * </pre>
      *
-     * <code>string country_code = 4;</code>
+     * <code>optional string country_code = 4;</code>
      * @param value The countryCode to set.
      * @return This builder for chaining.
      */
@@ -783,7 +783,7 @@ private static final long serialVersionUID = 0L;
      * Code of the country.
      * </pre>
      *
-     * <code>string country_code = 4;</code>
+     * <code>optional string country_code = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearCountryCode() {
@@ -797,7 +797,7 @@ private static final long serialVersionUID = 0L;
      * Code of the country.
      * </pre>
      *
-     * <code>string country_code = 4;</code>
+     * <code>optional string country_code = 4;</code>
      * @param value The bytes for countryCode to set.
      * @return This builder for chaining.
      */
@@ -819,7 +819,7 @@ private static final long serialVersionUID = 0L;
      * Code of the language.
      * </pre>
      *
-     * <code>string language_code = 5;</code>
+     * <code>optional string language_code = 5;</code>
      * @return Whether the languageCode field is set.
      */
     public boolean hasLanguageCode() {
@@ -830,7 +830,7 @@ private static final long serialVersionUID = 0L;
      * Code of the language.
      * </pre>
      *
-     * <code>string language_code = 5;</code>
+     * <code>optional string language_code = 5;</code>
      * @return The languageCode.
      */
     public java.lang.String getLanguageCode() {
@@ -850,7 +850,7 @@ private static final long serialVersionUID = 0L;
      * Code of the language.
      * </pre>
      *
-     * <code>string language_code = 5;</code>
+     * <code>optional string language_code = 5;</code>
      * @return The bytes for languageCode.
      */
     public com.google.protobuf.ByteString
@@ -871,7 +871,7 @@ private static final long serialVersionUID = 0L;
      * Code of the language.
      * </pre>
      *
-     * <code>string language_code = 5;</code>
+     * <code>optional string language_code = 5;</code>
      * @param value The languageCode to set.
      * @return This builder for chaining.
      */
@@ -890,7 +890,7 @@ private static final long serialVersionUID = 0L;
      * Code of the language.
      * </pre>
      *
-     * <code>string language_code = 5;</code>
+     * <code>optional string language_code = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearLanguageCode() {
@@ -904,7 +904,7 @@ private static final long serialVersionUID = 0L;
      * Code of the language.
      * </pre>
      *
-     * <code>string language_code = 5;</code>
+     * <code>optional string language_code = 5;</code>
      * @param value The bytes for languageCode to set.
      * @return This builder for chaining.
      */

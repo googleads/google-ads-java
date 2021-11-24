@@ -36,7 +36,7 @@ public interface AdGroupOrBuilder extends
    * Output only. The ID of the ad group.
    * </pre>
    *
-   * <code>int64 id = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -45,7 +45,7 @@ public interface AdGroupOrBuilder extends
    * Output only. The ID of the ad group.
    * </pre>
    *
-   * <code>int64 id = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   long getId();
@@ -60,7 +60,7 @@ public interface AdGroupOrBuilder extends
    * (code point 0xA) or carriage return (code point 0xD) characters.
    * </pre>
    *
-   * <code>string name = 35;</code>
+   * <code>optional string name = 35;</code>
    * @return Whether the name field is set.
    */
   boolean hasName();
@@ -74,7 +74,7 @@ public interface AdGroupOrBuilder extends
    * (code point 0xA) or carriage return (code point 0xD) characters.
    * </pre>
    *
-   * <code>string name = 35;</code>
+   * <code>optional string name = 35;</code>
    * @return The name.
    */
   java.lang.String getName();
@@ -88,7 +88,7 @@ public interface AdGroupOrBuilder extends
    * (code point 0xA) or carriage return (code point 0xD) characters.
    * </pre>
    *
-   * <code>string name = 35;</code>
+   * <code>optional string name = 35;</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
@@ -160,7 +160,7 @@ public interface AdGroupOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>string base_ad_group = 36 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string base_ad_group = 36 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the baseAdGroup field is set.
    */
   boolean hasBaseAdGroup();
@@ -173,7 +173,7 @@ public interface AdGroupOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>string base_ad_group = 36 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string base_ad_group = 36 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The baseAdGroup.
    */
   java.lang.String getBaseAdGroup();
@@ -186,7 +186,7 @@ public interface AdGroupOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>string base_ad_group = 36 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string base_ad_group = 36 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for baseAdGroup.
    */
   com.google.protobuf.ByteString
@@ -197,7 +197,7 @@ public interface AdGroupOrBuilder extends
    * The URL template for constructing a tracking URL.
    * </pre>
    *
-   * <code>string tracking_url_template = 37;</code>
+   * <code>optional string tracking_url_template = 37;</code>
    * @return Whether the trackingUrlTemplate field is set.
    */
   boolean hasTrackingUrlTemplate();
@@ -206,7 +206,7 @@ public interface AdGroupOrBuilder extends
    * The URL template for constructing a tracking URL.
    * </pre>
    *
-   * <code>string tracking_url_template = 37;</code>
+   * <code>optional string tracking_url_template = 37;</code>
    * @return The trackingUrlTemplate.
    */
   java.lang.String getTrackingUrlTemplate();
@@ -215,7 +215,7 @@ public interface AdGroupOrBuilder extends
    * The URL template for constructing a tracking URL.
    * </pre>
    *
-   * <code>string tracking_url_template = 37;</code>
+   * <code>optional string tracking_url_template = 37;</code>
    * @return The bytes for trackingUrlTemplate.
    */
   com.google.protobuf.ByteString
@@ -275,7 +275,7 @@ public interface AdGroupOrBuilder extends
    * Immutable. The campaign to which the ad group belongs.
    * </pre>
    *
-   * <code>string campaign = 38 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 38 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the campaign field is set.
    */
   boolean hasCampaign();
@@ -284,7 +284,7 @@ public interface AdGroupOrBuilder extends
    * Immutable. The campaign to which the ad group belongs.
    * </pre>
    *
-   * <code>string campaign = 38 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 38 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The campaign.
    */
   java.lang.String getCampaign();
@@ -293,7 +293,7 @@ public interface AdGroupOrBuilder extends
    * Immutable. The campaign to which the ad group belongs.
    * </pre>
    *
-   * <code>string campaign = 38 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 38 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for campaign.
    */
   com.google.protobuf.ByteString
@@ -304,7 +304,7 @@ public interface AdGroupOrBuilder extends
    * The maximum CPC (cost-per-click) bid.
    * </pre>
    *
-   * <code>int64 cpc_bid_micros = 39;</code>
+   * <code>optional int64 cpc_bid_micros = 39;</code>
    * @return Whether the cpcBidMicros field is set.
    */
   boolean hasCpcBidMicros();
@@ -313,7 +313,7 @@ public interface AdGroupOrBuilder extends
    * The maximum CPC (cost-per-click) bid.
    * </pre>
    *
-   * <code>int64 cpc_bid_micros = 39;</code>
+   * <code>optional int64 cpc_bid_micros = 39;</code>
    * @return The cpcBidMicros.
    */
   long getCpcBidMicros();
@@ -323,7 +323,7 @@ public interface AdGroupOrBuilder extends
    * The maximum CPM (cost-per-thousand viewable impressions) bid.
    * </pre>
    *
-   * <code>int64 cpm_bid_micros = 40;</code>
+   * <code>optional int64 cpm_bid_micros = 40;</code>
    * @return Whether the cpmBidMicros field is set.
    */
   boolean hasCpmBidMicros();
@@ -332,7 +332,7 @@ public interface AdGroupOrBuilder extends
    * The maximum CPM (cost-per-thousand viewable impressions) bid.
    * </pre>
    *
-   * <code>int64 cpm_bid_micros = 40;</code>
+   * <code>optional int64 cpm_bid_micros = 40;</code>
    * @return The cpmBidMicros.
    */
   long getCpmBidMicros();
@@ -346,7 +346,7 @@ public interface AdGroupOrBuilder extends
    * Otherwise, this value is ignored.
    * </pre>
    *
-   * <code>int64 target_cpa_micros = 41;</code>
+   * <code>optional int64 target_cpa_micros = 41;</code>
    * @return Whether the targetCpaMicros field is set.
    */
   boolean hasTargetCpaMicros();
@@ -359,7 +359,7 @@ public interface AdGroupOrBuilder extends
    * Otherwise, this value is ignored.
    * </pre>
    *
-   * <code>int64 target_cpa_micros = 41;</code>
+   * <code>optional int64 target_cpa_micros = 41;</code>
    * @return The targetCpaMicros.
    */
   long getTargetCpaMicros();
@@ -369,7 +369,7 @@ public interface AdGroupOrBuilder extends
    * Output only. The CPV (cost-per-view) bid.
    * </pre>
    *
-   * <code>int64 cpv_bid_micros = 42 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 cpv_bid_micros = 42 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the cpvBidMicros field is set.
    */
   boolean hasCpvBidMicros();
@@ -378,7 +378,7 @@ public interface AdGroupOrBuilder extends
    * Output only. The CPV (cost-per-view) bid.
    * </pre>
    *
-   * <code>int64 cpv_bid_micros = 42 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 cpv_bid_micros = 42 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The cpvBidMicros.
    */
   long getCpvBidMicros();
@@ -389,7 +389,7 @@ public interface AdGroupOrBuilder extends
    * thousand times the ad is shown.
    * </pre>
    *
-   * <code>int64 target_cpm_micros = 43;</code>
+   * <code>optional int64 target_cpm_micros = 43;</code>
    * @return Whether the targetCpmMicros field is set.
    */
   boolean hasTargetCpmMicros();
@@ -399,7 +399,7 @@ public interface AdGroupOrBuilder extends
    * thousand times the ad is shown.
    * </pre>
    *
-   * <code>int64 target_cpm_micros = 43;</code>
+   * <code>optional int64 target_cpm_micros = 43;</code>
    * @return The targetCpmMicros.
    */
   long getTargetCpmMicros();
@@ -413,7 +413,7 @@ public interface AdGroupOrBuilder extends
    * Otherwise, this value is ignored.
    * </pre>
    *
-   * <code>double target_roas = 44;</code>
+   * <code>optional double target_roas = 44;</code>
    * @return Whether the targetRoas field is set.
    */
   boolean hasTargetRoas();
@@ -426,7 +426,7 @@ public interface AdGroupOrBuilder extends
    * Otherwise, this value is ignored.
    * </pre>
    *
-   * <code>double target_roas = 44;</code>
+   * <code>optional double target_roas = 44;</code>
    * @return The targetRoas.
    */
   double getTargetRoas();
@@ -438,7 +438,7 @@ public interface AdGroupOrBuilder extends
    * value stored here is 1,000,000 * [fraction].
    * </pre>
    *
-   * <code>int64 percent_cpc_bid_micros = 45;</code>
+   * <code>optional int64 percent_cpc_bid_micros = 45;</code>
    * @return Whether the percentCpcBidMicros field is set.
    */
   boolean hasPercentCpcBidMicros();
@@ -449,7 +449,7 @@ public interface AdGroupOrBuilder extends
    * value stored here is 1,000,000 * [fraction].
    * </pre>
    *
-   * <code>int64 percent_cpc_bid_micros = 45;</code>
+   * <code>optional int64 percent_cpc_bid_micros = 45;</code>
    * @return The percentCpcBidMicros.
    */
   long getPercentCpcBidMicros();
@@ -509,7 +509,7 @@ public interface AdGroupOrBuilder extends
    * URL template for appending params to Final URL.
    * </pre>
    *
-   * <code>string final_url_suffix = 46;</code>
+   * <code>optional string final_url_suffix = 46;</code>
    * @return Whether the finalUrlSuffix field is set.
    */
   boolean hasFinalUrlSuffix();
@@ -518,7 +518,7 @@ public interface AdGroupOrBuilder extends
    * URL template for appending params to Final URL.
    * </pre>
    *
-   * <code>string final_url_suffix = 46;</code>
+   * <code>optional string final_url_suffix = 46;</code>
    * @return The finalUrlSuffix.
    */
   java.lang.String getFinalUrlSuffix();
@@ -527,7 +527,7 @@ public interface AdGroupOrBuilder extends
    * URL template for appending params to Final URL.
    * </pre>
    *
-   * <code>string final_url_suffix = 46;</code>
+   * <code>optional string final_url_suffix = 46;</code>
    * @return The bytes for finalUrlSuffix.
    */
   com.google.protobuf.ByteString
@@ -566,7 +566,7 @@ public interface AdGroupOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 effective_target_cpa_micros = 47 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 effective_target_cpa_micros = 47 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the effectiveTargetCpaMicros field is set.
    */
   boolean hasEffectiveTargetCpaMicros();
@@ -576,7 +576,7 @@ public interface AdGroupOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 effective_target_cpa_micros = 47 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 effective_target_cpa_micros = 47 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The effectiveTargetCpaMicros.
    */
   long getEffectiveTargetCpaMicros();
@@ -608,7 +608,7 @@ public interface AdGroupOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>double effective_target_roas = 48 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional double effective_target_roas = 48 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the effectiveTargetRoas field is set.
    */
   boolean hasEffectiveTargetRoas();
@@ -618,7 +618,7 @@ public interface AdGroupOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>double effective_target_roas = 48 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional double effective_target_roas = 48 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The effectiveTargetRoas.
    */
   double getEffectiveTargetRoas();

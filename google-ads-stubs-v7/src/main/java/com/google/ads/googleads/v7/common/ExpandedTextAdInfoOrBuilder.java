@@ -12,7 +12,7 @@ public interface ExpandedTextAdInfoOrBuilder extends
    * The first part of the ad's headline.
    * </pre>
    *
-   * <code>string headline_part1 = 8;</code>
+   * <code>optional string headline_part1 = 8;</code>
    * @return Whether the headlinePart1 field is set.
    */
   boolean hasHeadlinePart1();
@@ -21,7 +21,7 @@ public interface ExpandedTextAdInfoOrBuilder extends
    * The first part of the ad's headline.
    * </pre>
    *
-   * <code>string headline_part1 = 8;</code>
+   * <code>optional string headline_part1 = 8;</code>
    * @return The headlinePart1.
    */
   java.lang.String getHeadlinePart1();
@@ -30,7 +30,7 @@ public interface ExpandedTextAdInfoOrBuilder extends
    * The first part of the ad's headline.
    * </pre>
    *
-   * <code>string headline_part1 = 8;</code>
+   * <code>optional string headline_part1 = 8;</code>
    * @return The bytes for headlinePart1.
    */
   com.google.protobuf.ByteString
@@ -41,7 +41,7 @@ public interface ExpandedTextAdInfoOrBuilder extends
    * The second part of the ad's headline.
    * </pre>
    *
-   * <code>string headline_part2 = 9;</code>
+   * <code>optional string headline_part2 = 9;</code>
    * @return Whether the headlinePart2 field is set.
    */
   boolean hasHeadlinePart2();
@@ -50,7 +50,7 @@ public interface ExpandedTextAdInfoOrBuilder extends
    * The second part of the ad's headline.
    * </pre>
    *
-   * <code>string headline_part2 = 9;</code>
+   * <code>optional string headline_part2 = 9;</code>
    * @return The headlinePart2.
    */
   java.lang.String getHeadlinePart2();
@@ -59,7 +59,7 @@ public interface ExpandedTextAdInfoOrBuilder extends
    * The second part of the ad's headline.
    * </pre>
    *
-   * <code>string headline_part2 = 9;</code>
+   * <code>optional string headline_part2 = 9;</code>
    * @return The bytes for headlinePart2.
    */
   com.google.protobuf.ByteString
@@ -70,7 +70,7 @@ public interface ExpandedTextAdInfoOrBuilder extends
    * The third part of the ad's headline.
    * </pre>
    *
-   * <code>string headline_part3 = 10;</code>
+   * <code>optional string headline_part3 = 10;</code>
    * @return Whether the headlinePart3 field is set.
    */
   boolean hasHeadlinePart3();
@@ -79,7 +79,7 @@ public interface ExpandedTextAdInfoOrBuilder extends
    * The third part of the ad's headline.
    * </pre>
    *
-   * <code>string headline_part3 = 10;</code>
+   * <code>optional string headline_part3 = 10;</code>
    * @return The headlinePart3.
    */
   java.lang.String getHeadlinePart3();
@@ -88,7 +88,7 @@ public interface ExpandedTextAdInfoOrBuilder extends
    * The third part of the ad's headline.
    * </pre>
    *
-   * <code>string headline_part3 = 10;</code>
+   * <code>optional string headline_part3 = 10;</code>
    * @return The bytes for headlinePart3.
    */
   com.google.protobuf.ByteString
@@ -99,7 +99,7 @@ public interface ExpandedTextAdInfoOrBuilder extends
    * The description of the ad.
    * </pre>
    *
-   * <code>string description = 11;</code>
+   * <code>optional string description = 11;</code>
    * @return Whether the description field is set.
    */
   boolean hasDescription();
@@ -108,7 +108,7 @@ public interface ExpandedTextAdInfoOrBuilder extends
    * The description of the ad.
    * </pre>
    *
-   * <code>string description = 11;</code>
+   * <code>optional string description = 11;</code>
    * @return The description.
    */
   java.lang.String getDescription();
@@ -117,7 +117,7 @@ public interface ExpandedTextAdInfoOrBuilder extends
    * The description of the ad.
    * </pre>
    *
-   * <code>string description = 11;</code>
+   * <code>optional string description = 11;</code>
    * @return The bytes for description.
    */
   com.google.protobuf.ByteString
@@ -128,7 +128,7 @@ public interface ExpandedTextAdInfoOrBuilder extends
    * The second description of the ad.
    * </pre>
    *
-   * <code>string description2 = 12;</code>
+   * <code>optional string description2 = 12;</code>
    * @return Whether the description2 field is set.
    */
   boolean hasDescription2();
@@ -137,7 +137,7 @@ public interface ExpandedTextAdInfoOrBuilder extends
    * The second description of the ad.
    * </pre>
    *
-   * <code>string description2 = 12;</code>
+   * <code>optional string description2 = 12;</code>
    * @return The description2.
    */
   java.lang.String getDescription2();
@@ -146,7 +146,7 @@ public interface ExpandedTextAdInfoOrBuilder extends
    * The second description of the ad.
    * </pre>
    *
-   * <code>string description2 = 12;</code>
+   * <code>optional string description2 = 12;</code>
    * @return The bytes for description2.
    */
   com.google.protobuf.ByteString
@@ -157,7 +157,7 @@ public interface ExpandedTextAdInfoOrBuilder extends
    * The text that can appear alongside the ad's displayed URL.
    * </pre>
    *
-   * <code>string path1 = 13;</code>
+   * <code>optional string path1 = 13;</code>
    * @return Whether the path1 field is set.
    */
   boolean hasPath1();
@@ -166,7 +166,7 @@ public interface ExpandedTextAdInfoOrBuilder extends
    * The text that can appear alongside the ad's displayed URL.
    * </pre>
    *
-   * <code>string path1 = 13;</code>
+   * <code>optional string path1 = 13;</code>
    * @return The path1.
    */
   java.lang.String getPath1();
@@ -175,7 +175,7 @@ public interface ExpandedTextAdInfoOrBuilder extends
    * The text that can appear alongside the ad's displayed URL.
    * </pre>
    *
-   * <code>string path1 = 13;</code>
+   * <code>optional string path1 = 13;</code>
    * @return The bytes for path1.
    */
   com.google.protobuf.ByteString
@@ -186,7 +186,7 @@ public interface ExpandedTextAdInfoOrBuilder extends
    * Additional text that can appear alongside the ad's displayed URL.
    * </pre>
    *
-   * <code>string path2 = 14;</code>
+   * <code>optional string path2 = 14;</code>
    * @return Whether the path2 field is set.
    */
   boolean hasPath2();
@@ -195,7 +195,7 @@ public interface ExpandedTextAdInfoOrBuilder extends
    * Additional text that can appear alongside the ad's displayed URL.
    * </pre>
    *
-   * <code>string path2 = 14;</code>
+   * <code>optional string path2 = 14;</code>
    * @return The path2.
    */
   java.lang.String getPath2();
@@ -204,7 +204,7 @@ public interface ExpandedTextAdInfoOrBuilder extends
    * Additional text that can appear alongside the ad's displayed URL.
    * </pre>
    *
-   * <code>string path2 = 14;</code>
+   * <code>optional string path2 = 14;</code>
    * @return The bytes for path2.
    */
   com.google.protobuf.ByteString

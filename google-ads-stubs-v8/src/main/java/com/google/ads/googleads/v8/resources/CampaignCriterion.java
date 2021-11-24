@@ -710,7 +710,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The campaign to which the criterion belongs.
    * </pre>
    *
-   * <code>string campaign = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the campaign field is set.
    */
   @java.lang.Override
@@ -722,7 +722,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The campaign to which the criterion belongs.
    * </pre>
    *
-   * <code>string campaign = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The campaign.
    */
   @java.lang.Override
@@ -743,7 +743,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The campaign to which the criterion belongs.
    * </pre>
    *
-   * <code>string campaign = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for campaign.
    */
   @java.lang.Override
@@ -769,7 +769,7 @@ private static final long serialVersionUID = 0L;
    * This field is ignored during mutate.
    * </pre>
    *
-   * <code>int64 criterion_id = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 criterion_id = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the criterionId field is set.
    */
   @java.lang.Override
@@ -782,7 +782,7 @@ private static final long serialVersionUID = 0L;
    * This field is ignored during mutate.
    * </pre>
    *
-   * <code>int64 criterion_id = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 criterion_id = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The criterionId.
    */
   @java.lang.Override
@@ -847,7 +847,7 @@ private static final long serialVersionUID = 0L;
    * Use 0 to opt out of a Device type.
    * </pre>
    *
-   * <code>float bid_modifier = 39;</code>
+   * <code>optional float bid_modifier = 39;</code>
    * @return Whether the bidModifier field is set.
    */
   @java.lang.Override
@@ -861,7 +861,7 @@ private static final long serialVersionUID = 0L;
    * Use 0 to opt out of a Device type.
    * </pre>
    *
-   * <code>float bid_modifier = 39;</code>
+   * <code>optional float bid_modifier = 39;</code>
    * @return The bidModifier.
    */
   @java.lang.Override
@@ -876,7 +876,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. Whether to target (`false`) or exclude (`true`) the criterion.
    * </pre>
    *
-   * <code>bool negative = 40 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional bool negative = 40 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the negative field is set.
    */
   @java.lang.Override
@@ -888,7 +888,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. Whether to target (`false`) or exclude (`true`) the criterion.
    * </pre>
    *
-   * <code>bool negative = 40 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional bool negative = 40 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The negative.
    */
   @java.lang.Override
@@ -2254,7 +2254,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (type_ != com.google.ads.googleads.v8.enums.CriterionTypeEnum.CriterionType.UNSPECIFIED.getNumber()) {
@@ -2362,7 +2362,7 @@ private static final long serialVersionUID = 0L;
     if (criterionCase_ == 42) {
       output.writeMessage(42, (com.google.ads.googleads.v8.common.CombinedAudienceInfo) criterion_);
     }
-    if (!getDisplayNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 43, displayName_);
     }
     if (criterionCase_ == 45) {
@@ -2377,7 +2377,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (type_ != com.google.ads.googleads.v8.enums.CriterionTypeEnum.CriterionType.UNSPECIFIED.getNumber()) {
@@ -2519,7 +2519,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(42, (com.google.ads.googleads.v8.common.CombinedAudienceInfo) criterion_);
     }
-    if (!getDisplayNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(displayName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(43, displayName_);
     }
     if (criterionCase_ == 45) {
@@ -3628,7 +3628,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The campaign to which the criterion belongs.
      * </pre>
      *
-     * <code>string campaign = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the campaign field is set.
      */
     public boolean hasCampaign() {
@@ -3639,7 +3639,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The campaign to which the criterion belongs.
      * </pre>
      *
-     * <code>string campaign = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return The campaign.
      */
     public java.lang.String getCampaign() {
@@ -3659,7 +3659,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The campaign to which the criterion belongs.
      * </pre>
      *
-     * <code>string campaign = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for campaign.
      */
     public com.google.protobuf.ByteString
@@ -3680,7 +3680,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The campaign to which the criterion belongs.
      * </pre>
      *
-     * <code>string campaign = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @param value The campaign to set.
      * @return This builder for chaining.
      */
@@ -3699,7 +3699,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The campaign to which the criterion belongs.
      * </pre>
      *
-     * <code>string campaign = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearCampaign() {
@@ -3713,7 +3713,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The campaign to which the criterion belongs.
      * </pre>
      *
-     * <code>string campaign = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign = 37 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for campaign to set.
      * @return This builder for chaining.
      */
@@ -3736,7 +3736,7 @@ private static final long serialVersionUID = 0L;
      * This field is ignored during mutate.
      * </pre>
      *
-     * <code>int64 criterion_id = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 criterion_id = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the criterionId field is set.
      */
     @java.lang.Override
@@ -3749,7 +3749,7 @@ private static final long serialVersionUID = 0L;
      * This field is ignored during mutate.
      * </pre>
      *
-     * <code>int64 criterion_id = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 criterion_id = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The criterionId.
      */
     @java.lang.Override
@@ -3762,7 +3762,7 @@ private static final long serialVersionUID = 0L;
      * This field is ignored during mutate.
      * </pre>
      *
-     * <code>int64 criterion_id = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 criterion_id = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The criterionId to set.
      * @return This builder for chaining.
      */
@@ -3778,7 +3778,7 @@ private static final long serialVersionUID = 0L;
      * This field is ignored during mutate.
      * </pre>
      *
-     * <code>int64 criterion_id = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 criterion_id = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearCriterionId() {
@@ -3897,7 +3897,7 @@ private static final long serialVersionUID = 0L;
      * Use 0 to opt out of a Device type.
      * </pre>
      *
-     * <code>float bid_modifier = 39;</code>
+     * <code>optional float bid_modifier = 39;</code>
      * @return Whether the bidModifier field is set.
      */
     @java.lang.Override
@@ -3911,7 +3911,7 @@ private static final long serialVersionUID = 0L;
      * Use 0 to opt out of a Device type.
      * </pre>
      *
-     * <code>float bid_modifier = 39;</code>
+     * <code>optional float bid_modifier = 39;</code>
      * @return The bidModifier.
      */
     @java.lang.Override
@@ -3925,7 +3925,7 @@ private static final long serialVersionUID = 0L;
      * Use 0 to opt out of a Device type.
      * </pre>
      *
-     * <code>float bid_modifier = 39;</code>
+     * <code>optional float bid_modifier = 39;</code>
      * @param value The bidModifier to set.
      * @return This builder for chaining.
      */
@@ -3942,7 +3942,7 @@ private static final long serialVersionUID = 0L;
      * Use 0 to opt out of a Device type.
      * </pre>
      *
-     * <code>float bid_modifier = 39;</code>
+     * <code>optional float bid_modifier = 39;</code>
      * @return This builder for chaining.
      */
     public Builder clearBidModifier() {
@@ -3958,7 +3958,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. Whether to target (`false`) or exclude (`true`) the criterion.
      * </pre>
      *
-     * <code>bool negative = 40 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional bool negative = 40 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the negative field is set.
      */
     @java.lang.Override
@@ -3970,7 +3970,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. Whether to target (`false`) or exclude (`true`) the criterion.
      * </pre>
      *
-     * <code>bool negative = 40 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional bool negative = 40 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The negative.
      */
     @java.lang.Override
@@ -3982,7 +3982,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. Whether to target (`false`) or exclude (`true`) the criterion.
      * </pre>
      *
-     * <code>bool negative = 40 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional bool negative = 40 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @param value The negative to set.
      * @return This builder for chaining.
      */
@@ -3997,7 +3997,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. Whether to target (`false`) or exclude (`true`) the criterion.
      * </pre>
      *
-     * <code>bool negative = 40 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional bool negative = 40 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return This builder for chaining.
      */
     public Builder clearNegative() {

@@ -13,7 +13,7 @@ public interface HotelCalloutFeedItemOrBuilder extends
    * The length of this string should be between 1 and 25, inclusive.
    * </pre>
    *
-   * <code>string text = 3;</code>
+   * <code>optional string text = 3;</code>
    * @return Whether the text field is set.
    */
   boolean hasText();
@@ -23,7 +23,7 @@ public interface HotelCalloutFeedItemOrBuilder extends
    * The length of this string should be between 1 and 25, inclusive.
    * </pre>
    *
-   * <code>string text = 3;</code>
+   * <code>optional string text = 3;</code>
    * @return The text.
    */
   java.lang.String getText();
@@ -33,7 +33,7 @@ public interface HotelCalloutFeedItemOrBuilder extends
    * The length of this string should be between 1 and 25, inclusive.
    * </pre>
    *
-   * <code>string text = 3;</code>
+   * <code>optional string text = 3;</code>
    * @return The bytes for text.
    */
   com.google.protobuf.ByteString
@@ -45,7 +45,7 @@ public interface HotelCalloutFeedItemOrBuilder extends
    * IETF BCP 47 compliant language code.
    * </pre>
    *
-   * <code>string language_code = 4;</code>
+   * <code>optional string language_code = 4;</code>
    * @return Whether the languageCode field is set.
    */
   boolean hasLanguageCode();
@@ -55,7 +55,7 @@ public interface HotelCalloutFeedItemOrBuilder extends
    * IETF BCP 47 compliant language code.
    * </pre>
    *
-   * <code>string language_code = 4;</code>
+   * <code>optional string language_code = 4;</code>
    * @return The languageCode.
    */
   java.lang.String getLanguageCode();
@@ -65,7 +65,7 @@ public interface HotelCalloutFeedItemOrBuilder extends
    * IETF BCP 47 compliant language code.
    * </pre>
    *
-   * <code>string language_code = 4;</code>
+   * <code>optional string language_code = 4;</code>
    * @return The bytes for languageCode.
    */
   com.google.protobuf.ByteString

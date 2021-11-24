@@ -138,7 +138,7 @@ private static final long serialVersionUID = 0L;
    * modifiers.
    * </pre>
    *
-   * <code>bool bid_only = 3;</code>
+   * <code>optional bool bid_only = 3;</code>
    * @return Whether the bidOnly field is set.
    */
   @java.lang.Override
@@ -156,7 +156,7 @@ private static final long serialVersionUID = 0L;
    * modifiers.
    * </pre>
    *
-   * <code>bool bid_only = 3;</code>
+   * <code>optional bool bid_only = 3;</code>
    * @return The bidOnly.
    */
   @java.lang.Override
@@ -585,7 +585,7 @@ private static final long serialVersionUID = 0L;
      * modifiers.
      * </pre>
      *
-     * <code>bool bid_only = 3;</code>
+     * <code>optional bool bid_only = 3;</code>
      * @return Whether the bidOnly field is set.
      */
     @java.lang.Override
@@ -603,7 +603,7 @@ private static final long serialVersionUID = 0L;
      * modifiers.
      * </pre>
      *
-     * <code>bool bid_only = 3;</code>
+     * <code>optional bool bid_only = 3;</code>
      * @return The bidOnly.
      */
     @java.lang.Override
@@ -621,7 +621,7 @@ private static final long serialVersionUID = 0L;
      * modifiers.
      * </pre>
      *
-     * <code>bool bid_only = 3;</code>
+     * <code>optional bool bid_only = 3;</code>
      * @param value The bidOnly to set.
      * @return This builder for chaining.
      */
@@ -642,7 +642,7 @@ private static final long serialVersionUID = 0L;
      * modifiers.
      * </pre>
      *
-     * <code>bool bid_only = 3;</code>
+     * <code>optional bool bid_only = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearBidOnly() {

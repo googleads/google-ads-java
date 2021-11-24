@@ -37,7 +37,7 @@ public interface TargetRestrictionOrBuilder extends
    * modifiers.
    * </pre>
    *
-   * <code>bool bid_only = 3;</code>
+   * <code>optional bool bid_only = 3;</code>
    * @return Whether the bidOnly field is set.
    */
   boolean hasBidOnly();
@@ -52,7 +52,7 @@ public interface TargetRestrictionOrBuilder extends
    * modifiers.
    * </pre>
    *
-   * <code>bool bid_only = 3;</code>
+   * <code>optional bool bid_only = 3;</code>
    * @return The bidOnly.
    */
   boolean getBidOnly();

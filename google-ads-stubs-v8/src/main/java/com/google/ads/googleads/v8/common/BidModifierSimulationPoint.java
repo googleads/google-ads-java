@@ -163,7 +163,7 @@ private static final long serialVersionUID = 0L;
    * The simulated bid modifier upon which projected metrics are based.
    * </pre>
    *
-   * <code>double bid_modifier = 15;</code>
+   * <code>optional double bid_modifier = 15;</code>
    * @return Whether the bidModifier field is set.
    */
   @java.lang.Override
@@ -175,7 +175,7 @@ private static final long serialVersionUID = 0L;
    * The simulated bid modifier upon which projected metrics are based.
    * </pre>
    *
-   * <code>double bid_modifier = 15;</code>
+   * <code>optional double bid_modifier = 15;</code>
    * @return The bidModifier.
    */
   @java.lang.Override
@@ -191,7 +191,7 @@ private static final long serialVersionUID = 0L;
    * Only search advertising channel type supports this field.
    * </pre>
    *
-   * <code>double biddable_conversions = 16;</code>
+   * <code>optional double biddable_conversions = 16;</code>
    * @return Whether the biddableConversions field is set.
    */
   @java.lang.Override
@@ -204,7 +204,7 @@ private static final long serialVersionUID = 0L;
    * Only search advertising channel type supports this field.
    * </pre>
    *
-   * <code>double biddable_conversions = 16;</code>
+   * <code>optional double biddable_conversions = 16;</code>
    * @return The biddableConversions.
    */
   @java.lang.Override
@@ -220,7 +220,7 @@ private static final long serialVersionUID = 0L;
    * Only search advertising channel type supports this field.
    * </pre>
    *
-   * <code>double biddable_conversions_value = 17;</code>
+   * <code>optional double biddable_conversions_value = 17;</code>
    * @return Whether the biddableConversionsValue field is set.
    */
   @java.lang.Override
@@ -233,7 +233,7 @@ private static final long serialVersionUID = 0L;
    * Only search advertising channel type supports this field.
    * </pre>
    *
-   * <code>double biddable_conversions_value = 17;</code>
+   * <code>optional double biddable_conversions_value = 17;</code>
    * @return The biddableConversionsValue.
    */
   @java.lang.Override
@@ -248,7 +248,7 @@ private static final long serialVersionUID = 0L;
    * Projected number of clicks.
    * </pre>
    *
-   * <code>int64 clicks = 18;</code>
+   * <code>optional int64 clicks = 18;</code>
    * @return Whether the clicks field is set.
    */
   @java.lang.Override
@@ -260,7 +260,7 @@ private static final long serialVersionUID = 0L;
    * Projected number of clicks.
    * </pre>
    *
-   * <code>int64 clicks = 18;</code>
+   * <code>optional int64 clicks = 18;</code>
    * @return The clicks.
    */
   @java.lang.Override
@@ -275,7 +275,7 @@ private static final long serialVersionUID = 0L;
    * Projected cost in micros.
    * </pre>
    *
-   * <code>int64 cost_micros = 19;</code>
+   * <code>optional int64 cost_micros = 19;</code>
    * @return Whether the costMicros field is set.
    */
   @java.lang.Override
@@ -287,7 +287,7 @@ private static final long serialVersionUID = 0L;
    * Projected cost in micros.
    * </pre>
    *
-   * <code>int64 cost_micros = 19;</code>
+   * <code>optional int64 cost_micros = 19;</code>
    * @return The costMicros.
    */
   @java.lang.Override
@@ -302,7 +302,7 @@ private static final long serialVersionUID = 0L;
    * Projected number of impressions.
    * </pre>
    *
-   * <code>int64 impressions = 20;</code>
+   * <code>optional int64 impressions = 20;</code>
    * @return Whether the impressions field is set.
    */
   @java.lang.Override
@@ -314,7 +314,7 @@ private static final long serialVersionUID = 0L;
    * Projected number of impressions.
    * </pre>
    *
-   * <code>int64 impressions = 20;</code>
+   * <code>optional int64 impressions = 20;</code>
    * @return The impressions.
    */
   @java.lang.Override
@@ -330,7 +330,7 @@ private static final long serialVersionUID = 0L;
    * Only search advertising channel type supports this field.
    * </pre>
    *
-   * <code>int64 top_slot_impressions = 21;</code>
+   * <code>optional int64 top_slot_impressions = 21;</code>
    * @return Whether the topSlotImpressions field is set.
    */
   @java.lang.Override
@@ -343,7 +343,7 @@ private static final long serialVersionUID = 0L;
    * Only search advertising channel type supports this field.
    * </pre>
    *
-   * <code>int64 top_slot_impressions = 21;</code>
+   * <code>optional int64 top_slot_impressions = 21;</code>
    * @return The topSlotImpressions.
    */
   @java.lang.Override
@@ -359,7 +359,7 @@ private static final long serialVersionUID = 0L;
    * Only search advertising channel type supports this field.
    * </pre>
    *
-   * <code>double parent_biddable_conversions = 22;</code>
+   * <code>optional double parent_biddable_conversions = 22;</code>
    * @return Whether the parentBiddableConversions field is set.
    */
   @java.lang.Override
@@ -372,7 +372,7 @@ private static final long serialVersionUID = 0L;
    * Only search advertising channel type supports this field.
    * </pre>
    *
-   * <code>double parent_biddable_conversions = 22;</code>
+   * <code>optional double parent_biddable_conversions = 22;</code>
    * @return The parentBiddableConversions.
    */
   @java.lang.Override
@@ -388,7 +388,7 @@ private static final long serialVersionUID = 0L;
    * Only search advertising channel type supports this field.
    * </pre>
    *
-   * <code>double parent_biddable_conversions_value = 23;</code>
+   * <code>optional double parent_biddable_conversions_value = 23;</code>
    * @return Whether the parentBiddableConversionsValue field is set.
    */
   @java.lang.Override
@@ -401,7 +401,7 @@ private static final long serialVersionUID = 0L;
    * Only search advertising channel type supports this field.
    * </pre>
    *
-   * <code>double parent_biddable_conversions_value = 23;</code>
+   * <code>optional double parent_biddable_conversions_value = 23;</code>
    * @return The parentBiddableConversionsValue.
    */
   @java.lang.Override
@@ -416,7 +416,7 @@ private static final long serialVersionUID = 0L;
    * Projected number of clicks for the parent resource.
    * </pre>
    *
-   * <code>int64 parent_clicks = 24;</code>
+   * <code>optional int64 parent_clicks = 24;</code>
    * @return Whether the parentClicks field is set.
    */
   @java.lang.Override
@@ -428,7 +428,7 @@ private static final long serialVersionUID = 0L;
    * Projected number of clicks for the parent resource.
    * </pre>
    *
-   * <code>int64 parent_clicks = 24;</code>
+   * <code>optional int64 parent_clicks = 24;</code>
    * @return The parentClicks.
    */
   @java.lang.Override
@@ -443,7 +443,7 @@ private static final long serialVersionUID = 0L;
    * Projected cost in micros for the parent resource.
    * </pre>
    *
-   * <code>int64 parent_cost_micros = 25;</code>
+   * <code>optional int64 parent_cost_micros = 25;</code>
    * @return Whether the parentCostMicros field is set.
    */
   @java.lang.Override
@@ -455,7 +455,7 @@ private static final long serialVersionUID = 0L;
    * Projected cost in micros for the parent resource.
    * </pre>
    *
-   * <code>int64 parent_cost_micros = 25;</code>
+   * <code>optional int64 parent_cost_micros = 25;</code>
    * @return The parentCostMicros.
    */
   @java.lang.Override
@@ -470,7 +470,7 @@ private static final long serialVersionUID = 0L;
    * Projected number of impressions for the parent resource.
    * </pre>
    *
-   * <code>int64 parent_impressions = 26;</code>
+   * <code>optional int64 parent_impressions = 26;</code>
    * @return Whether the parentImpressions field is set.
    */
   @java.lang.Override
@@ -482,7 +482,7 @@ private static final long serialVersionUID = 0L;
    * Projected number of impressions for the parent resource.
    * </pre>
    *
-   * <code>int64 parent_impressions = 26;</code>
+   * <code>optional int64 parent_impressions = 26;</code>
    * @return The parentImpressions.
    */
   @java.lang.Override
@@ -498,7 +498,7 @@ private static final long serialVersionUID = 0L;
    * Only search advertising channel type supports this field.
    * </pre>
    *
-   * <code>int64 parent_top_slot_impressions = 27;</code>
+   * <code>optional int64 parent_top_slot_impressions = 27;</code>
    * @return Whether the parentTopSlotImpressions field is set.
    */
   @java.lang.Override
@@ -511,7 +511,7 @@ private static final long serialVersionUID = 0L;
    * Only search advertising channel type supports this field.
    * </pre>
    *
-   * <code>int64 parent_top_slot_impressions = 27;</code>
+   * <code>optional int64 parent_top_slot_impressions = 27;</code>
    * @return The parentTopSlotImpressions.
    */
   @java.lang.Override
@@ -527,7 +527,7 @@ private static final long serialVersionUID = 0L;
    * resource to realize this simulation.
    * </pre>
    *
-   * <code>int64 parent_required_budget_micros = 28;</code>
+   * <code>optional int64 parent_required_budget_micros = 28;</code>
    * @return Whether the parentRequiredBudgetMicros field is set.
    */
   @java.lang.Override
@@ -540,7 +540,7 @@ private static final long serialVersionUID = 0L;
    * resource to realize this simulation.
    * </pre>
    *
-   * <code>int64 parent_required_budget_micros = 28;</code>
+   * <code>optional int64 parent_required_budget_micros = 28;</code>
    * @return The parentRequiredBudgetMicros.
    */
   @java.lang.Override
@@ -1216,7 +1216,7 @@ private static final long serialVersionUID = 0L;
      * The simulated bid modifier upon which projected metrics are based.
      * </pre>
      *
-     * <code>double bid_modifier = 15;</code>
+     * <code>optional double bid_modifier = 15;</code>
      * @return Whether the bidModifier field is set.
      */
     @java.lang.Override
@@ -1228,7 +1228,7 @@ private static final long serialVersionUID = 0L;
      * The simulated bid modifier upon which projected metrics are based.
      * </pre>
      *
-     * <code>double bid_modifier = 15;</code>
+     * <code>optional double bid_modifier = 15;</code>
      * @return The bidModifier.
      */
     @java.lang.Override
@@ -1240,7 +1240,7 @@ private static final long serialVersionUID = 0L;
      * The simulated bid modifier upon which projected metrics are based.
      * </pre>
      *
-     * <code>double bid_modifier = 15;</code>
+     * <code>optional double bid_modifier = 15;</code>
      * @param value The bidModifier to set.
      * @return This builder for chaining.
      */
@@ -1255,7 +1255,7 @@ private static final long serialVersionUID = 0L;
      * The simulated bid modifier upon which projected metrics are based.
      * </pre>
      *
-     * <code>double bid_modifier = 15;</code>
+     * <code>optional double bid_modifier = 15;</code>
      * @return This builder for chaining.
      */
     public Builder clearBidModifier() {
@@ -1272,7 +1272,7 @@ private static final long serialVersionUID = 0L;
      * Only search advertising channel type supports this field.
      * </pre>
      *
-     * <code>double biddable_conversions = 16;</code>
+     * <code>optional double biddable_conversions = 16;</code>
      * @return Whether the biddableConversions field is set.
      */
     @java.lang.Override
@@ -1285,7 +1285,7 @@ private static final long serialVersionUID = 0L;
      * Only search advertising channel type supports this field.
      * </pre>
      *
-     * <code>double biddable_conversions = 16;</code>
+     * <code>optional double biddable_conversions = 16;</code>
      * @return The biddableConversions.
      */
     @java.lang.Override
@@ -1298,7 +1298,7 @@ private static final long serialVersionUID = 0L;
      * Only search advertising channel type supports this field.
      * </pre>
      *
-     * <code>double biddable_conversions = 16;</code>
+     * <code>optional double biddable_conversions = 16;</code>
      * @param value The biddableConversions to set.
      * @return This builder for chaining.
      */
@@ -1314,7 +1314,7 @@ private static final long serialVersionUID = 0L;
      * Only search advertising channel type supports this field.
      * </pre>
      *
-     * <code>double biddable_conversions = 16;</code>
+     * <code>optional double biddable_conversions = 16;</code>
      * @return This builder for chaining.
      */
     public Builder clearBiddableConversions() {
@@ -1331,7 +1331,7 @@ private static final long serialVersionUID = 0L;
      * Only search advertising channel type supports this field.
      * </pre>
      *
-     * <code>double biddable_conversions_value = 17;</code>
+     * <code>optional double biddable_conversions_value = 17;</code>
      * @return Whether the biddableConversionsValue field is set.
      */
     @java.lang.Override
@@ -1344,7 +1344,7 @@ private static final long serialVersionUID = 0L;
      * Only search advertising channel type supports this field.
      * </pre>
      *
-     * <code>double biddable_conversions_value = 17;</code>
+     * <code>optional double biddable_conversions_value = 17;</code>
      * @return The biddableConversionsValue.
      */
     @java.lang.Override
@@ -1357,7 +1357,7 @@ private static final long serialVersionUID = 0L;
      * Only search advertising channel type supports this field.
      * </pre>
      *
-     * <code>double biddable_conversions_value = 17;</code>
+     * <code>optional double biddable_conversions_value = 17;</code>
      * @param value The biddableConversionsValue to set.
      * @return This builder for chaining.
      */
@@ -1373,7 +1373,7 @@ private static final long serialVersionUID = 0L;
      * Only search advertising channel type supports this field.
      * </pre>
      *
-     * <code>double biddable_conversions_value = 17;</code>
+     * <code>optional double biddable_conversions_value = 17;</code>
      * @return This builder for chaining.
      */
     public Builder clearBiddableConversionsValue() {
@@ -1389,7 +1389,7 @@ private static final long serialVersionUID = 0L;
      * Projected number of clicks.
      * </pre>
      *
-     * <code>int64 clicks = 18;</code>
+     * <code>optional int64 clicks = 18;</code>
      * @return Whether the clicks field is set.
      */
     @java.lang.Override
@@ -1401,7 +1401,7 @@ private static final long serialVersionUID = 0L;
      * Projected number of clicks.
      * </pre>
      *
-     * <code>int64 clicks = 18;</code>
+     * <code>optional int64 clicks = 18;</code>
      * @return The clicks.
      */
     @java.lang.Override
@@ -1413,7 +1413,7 @@ private static final long serialVersionUID = 0L;
      * Projected number of clicks.
      * </pre>
      *
-     * <code>int64 clicks = 18;</code>
+     * <code>optional int64 clicks = 18;</code>
      * @param value The clicks to set.
      * @return This builder for chaining.
      */
@@ -1428,7 +1428,7 @@ private static final long serialVersionUID = 0L;
      * Projected number of clicks.
      * </pre>
      *
-     * <code>int64 clicks = 18;</code>
+     * <code>optional int64 clicks = 18;</code>
      * @return This builder for chaining.
      */
     public Builder clearClicks() {
@@ -1444,7 +1444,7 @@ private static final long serialVersionUID = 0L;
      * Projected cost in micros.
      * </pre>
      *
-     * <code>int64 cost_micros = 19;</code>
+     * <code>optional int64 cost_micros = 19;</code>
      * @return Whether the costMicros field is set.
      */
     @java.lang.Override
@@ -1456,7 +1456,7 @@ private static final long serialVersionUID = 0L;
      * Projected cost in micros.
      * </pre>
      *
-     * <code>int64 cost_micros = 19;</code>
+     * <code>optional int64 cost_micros = 19;</code>
      * @return The costMicros.
      */
     @java.lang.Override
@@ -1468,7 +1468,7 @@ private static final long serialVersionUID = 0L;
      * Projected cost in micros.
      * </pre>
      *
-     * <code>int64 cost_micros = 19;</code>
+     * <code>optional int64 cost_micros = 19;</code>
      * @param value The costMicros to set.
      * @return This builder for chaining.
      */
@@ -1483,7 +1483,7 @@ private static final long serialVersionUID = 0L;
      * Projected cost in micros.
      * </pre>
      *
-     * <code>int64 cost_micros = 19;</code>
+     * <code>optional int64 cost_micros = 19;</code>
      * @return This builder for chaining.
      */
     public Builder clearCostMicros() {
@@ -1499,7 +1499,7 @@ private static final long serialVersionUID = 0L;
      * Projected number of impressions.
      * </pre>
      *
-     * <code>int64 impressions = 20;</code>
+     * <code>optional int64 impressions = 20;</code>
      * @return Whether the impressions field is set.
      */
     @java.lang.Override
@@ -1511,7 +1511,7 @@ private static final long serialVersionUID = 0L;
      * Projected number of impressions.
      * </pre>
      *
-     * <code>int64 impressions = 20;</code>
+     * <code>optional int64 impressions = 20;</code>
      * @return The impressions.
      */
     @java.lang.Override
@@ -1523,7 +1523,7 @@ private static final long serialVersionUID = 0L;
      * Projected number of impressions.
      * </pre>
      *
-     * <code>int64 impressions = 20;</code>
+     * <code>optional int64 impressions = 20;</code>
      * @param value The impressions to set.
      * @return This builder for chaining.
      */
@@ -1538,7 +1538,7 @@ private static final long serialVersionUID = 0L;
      * Projected number of impressions.
      * </pre>
      *
-     * <code>int64 impressions = 20;</code>
+     * <code>optional int64 impressions = 20;</code>
      * @return This builder for chaining.
      */
     public Builder clearImpressions() {
@@ -1555,7 +1555,7 @@ private static final long serialVersionUID = 0L;
      * Only search advertising channel type supports this field.
      * </pre>
      *
-     * <code>int64 top_slot_impressions = 21;</code>
+     * <code>optional int64 top_slot_impressions = 21;</code>
      * @return Whether the topSlotImpressions field is set.
      */
     @java.lang.Override
@@ -1568,7 +1568,7 @@ private static final long serialVersionUID = 0L;
      * Only search advertising channel type supports this field.
      * </pre>
      *
-     * <code>int64 top_slot_impressions = 21;</code>
+     * <code>optional int64 top_slot_impressions = 21;</code>
      * @return The topSlotImpressions.
      */
     @java.lang.Override
@@ -1581,7 +1581,7 @@ private static final long serialVersionUID = 0L;
      * Only search advertising channel type supports this field.
      * </pre>
      *
-     * <code>int64 top_slot_impressions = 21;</code>
+     * <code>optional int64 top_slot_impressions = 21;</code>
      * @param value The topSlotImpressions to set.
      * @return This builder for chaining.
      */
@@ -1597,7 +1597,7 @@ private static final long serialVersionUID = 0L;
      * Only search advertising channel type supports this field.
      * </pre>
      *
-     * <code>int64 top_slot_impressions = 21;</code>
+     * <code>optional int64 top_slot_impressions = 21;</code>
      * @return This builder for chaining.
      */
     public Builder clearTopSlotImpressions() {
@@ -1614,7 +1614,7 @@ private static final long serialVersionUID = 0L;
      * Only search advertising channel type supports this field.
      * </pre>
      *
-     * <code>double parent_biddable_conversions = 22;</code>
+     * <code>optional double parent_biddable_conversions = 22;</code>
      * @return Whether the parentBiddableConversions field is set.
      */
     @java.lang.Override
@@ -1627,7 +1627,7 @@ private static final long serialVersionUID = 0L;
      * Only search advertising channel type supports this field.
      * </pre>
      *
-     * <code>double parent_biddable_conversions = 22;</code>
+     * <code>optional double parent_biddable_conversions = 22;</code>
      * @return The parentBiddableConversions.
      */
     @java.lang.Override
@@ -1640,7 +1640,7 @@ private static final long serialVersionUID = 0L;
      * Only search advertising channel type supports this field.
      * </pre>
      *
-     * <code>double parent_biddable_conversions = 22;</code>
+     * <code>optional double parent_biddable_conversions = 22;</code>
      * @param value The parentBiddableConversions to set.
      * @return This builder for chaining.
      */
@@ -1656,7 +1656,7 @@ private static final long serialVersionUID = 0L;
      * Only search advertising channel type supports this field.
      * </pre>
      *
-     * <code>double parent_biddable_conversions = 22;</code>
+     * <code>optional double parent_biddable_conversions = 22;</code>
      * @return This builder for chaining.
      */
     public Builder clearParentBiddableConversions() {
@@ -1673,7 +1673,7 @@ private static final long serialVersionUID = 0L;
      * Only search advertising channel type supports this field.
      * </pre>
      *
-     * <code>double parent_biddable_conversions_value = 23;</code>
+     * <code>optional double parent_biddable_conversions_value = 23;</code>
      * @return Whether the parentBiddableConversionsValue field is set.
      */
     @java.lang.Override
@@ -1686,7 +1686,7 @@ private static final long serialVersionUID = 0L;
      * Only search advertising channel type supports this field.
      * </pre>
      *
-     * <code>double parent_biddable_conversions_value = 23;</code>
+     * <code>optional double parent_biddable_conversions_value = 23;</code>
      * @return The parentBiddableConversionsValue.
      */
     @java.lang.Override
@@ -1699,7 +1699,7 @@ private static final long serialVersionUID = 0L;
      * Only search advertising channel type supports this field.
      * </pre>
      *
-     * <code>double parent_biddable_conversions_value = 23;</code>
+     * <code>optional double parent_biddable_conversions_value = 23;</code>
      * @param value The parentBiddableConversionsValue to set.
      * @return This builder for chaining.
      */
@@ -1715,7 +1715,7 @@ private static final long serialVersionUID = 0L;
      * Only search advertising channel type supports this field.
      * </pre>
      *
-     * <code>double parent_biddable_conversions_value = 23;</code>
+     * <code>optional double parent_biddable_conversions_value = 23;</code>
      * @return This builder for chaining.
      */
     public Builder clearParentBiddableConversionsValue() {
@@ -1731,7 +1731,7 @@ private static final long serialVersionUID = 0L;
      * Projected number of clicks for the parent resource.
      * </pre>
      *
-     * <code>int64 parent_clicks = 24;</code>
+     * <code>optional int64 parent_clicks = 24;</code>
      * @return Whether the parentClicks field is set.
      */
     @java.lang.Override
@@ -1743,7 +1743,7 @@ private static final long serialVersionUID = 0L;
      * Projected number of clicks for the parent resource.
      * </pre>
      *
-     * <code>int64 parent_clicks = 24;</code>
+     * <code>optional int64 parent_clicks = 24;</code>
      * @return The parentClicks.
      */
     @java.lang.Override
@@ -1755,7 +1755,7 @@ private static final long serialVersionUID = 0L;
      * Projected number of clicks for the parent resource.
      * </pre>
      *
-     * <code>int64 parent_clicks = 24;</code>
+     * <code>optional int64 parent_clicks = 24;</code>
      * @param value The parentClicks to set.
      * @return This builder for chaining.
      */
@@ -1770,7 +1770,7 @@ private static final long serialVersionUID = 0L;
      * Projected number of clicks for the parent resource.
      * </pre>
      *
-     * <code>int64 parent_clicks = 24;</code>
+     * <code>optional int64 parent_clicks = 24;</code>
      * @return This builder for chaining.
      */
     public Builder clearParentClicks() {
@@ -1786,7 +1786,7 @@ private static final long serialVersionUID = 0L;
      * Projected cost in micros for the parent resource.
      * </pre>
      *
-     * <code>int64 parent_cost_micros = 25;</code>
+     * <code>optional int64 parent_cost_micros = 25;</code>
      * @return Whether the parentCostMicros field is set.
      */
     @java.lang.Override
@@ -1798,7 +1798,7 @@ private static final long serialVersionUID = 0L;
      * Projected cost in micros for the parent resource.
      * </pre>
      *
-     * <code>int64 parent_cost_micros = 25;</code>
+     * <code>optional int64 parent_cost_micros = 25;</code>
      * @return The parentCostMicros.
      */
     @java.lang.Override
@@ -1810,7 +1810,7 @@ private static final long serialVersionUID = 0L;
      * Projected cost in micros for the parent resource.
      * </pre>
      *
-     * <code>int64 parent_cost_micros = 25;</code>
+     * <code>optional int64 parent_cost_micros = 25;</code>
      * @param value The parentCostMicros to set.
      * @return This builder for chaining.
      */
@@ -1825,7 +1825,7 @@ private static final long serialVersionUID = 0L;
      * Projected cost in micros for the parent resource.
      * </pre>
      *
-     * <code>int64 parent_cost_micros = 25;</code>
+     * <code>optional int64 parent_cost_micros = 25;</code>
      * @return This builder for chaining.
      */
     public Builder clearParentCostMicros() {
@@ -1841,7 +1841,7 @@ private static final long serialVersionUID = 0L;
      * Projected number of impressions for the parent resource.
      * </pre>
      *
-     * <code>int64 parent_impressions = 26;</code>
+     * <code>optional int64 parent_impressions = 26;</code>
      * @return Whether the parentImpressions field is set.
      */
     @java.lang.Override
@@ -1853,7 +1853,7 @@ private static final long serialVersionUID = 0L;
      * Projected number of impressions for the parent resource.
      * </pre>
      *
-     * <code>int64 parent_impressions = 26;</code>
+     * <code>optional int64 parent_impressions = 26;</code>
      * @return The parentImpressions.
      */
     @java.lang.Override
@@ -1865,7 +1865,7 @@ private static final long serialVersionUID = 0L;
      * Projected number of impressions for the parent resource.
      * </pre>
      *
-     * <code>int64 parent_impressions = 26;</code>
+     * <code>optional int64 parent_impressions = 26;</code>
      * @param value The parentImpressions to set.
      * @return This builder for chaining.
      */
@@ -1880,7 +1880,7 @@ private static final long serialVersionUID = 0L;
      * Projected number of impressions for the parent resource.
      * </pre>
      *
-     * <code>int64 parent_impressions = 26;</code>
+     * <code>optional int64 parent_impressions = 26;</code>
      * @return This builder for chaining.
      */
     public Builder clearParentImpressions() {
@@ -1897,7 +1897,7 @@ private static final long serialVersionUID = 0L;
      * Only search advertising channel type supports this field.
      * </pre>
      *
-     * <code>int64 parent_top_slot_impressions = 27;</code>
+     * <code>optional int64 parent_top_slot_impressions = 27;</code>
      * @return Whether the parentTopSlotImpressions field is set.
      */
     @java.lang.Override
@@ -1910,7 +1910,7 @@ private static final long serialVersionUID = 0L;
      * Only search advertising channel type supports this field.
      * </pre>
      *
-     * <code>int64 parent_top_slot_impressions = 27;</code>
+     * <code>optional int64 parent_top_slot_impressions = 27;</code>
      * @return The parentTopSlotImpressions.
      */
     @java.lang.Override
@@ -1923,7 +1923,7 @@ private static final long serialVersionUID = 0L;
      * Only search advertising channel type supports this field.
      * </pre>
      *
-     * <code>int64 parent_top_slot_impressions = 27;</code>
+     * <code>optional int64 parent_top_slot_impressions = 27;</code>
      * @param value The parentTopSlotImpressions to set.
      * @return This builder for chaining.
      */
@@ -1939,7 +1939,7 @@ private static final long serialVersionUID = 0L;
      * Only search advertising channel type supports this field.
      * </pre>
      *
-     * <code>int64 parent_top_slot_impressions = 27;</code>
+     * <code>optional int64 parent_top_slot_impressions = 27;</code>
      * @return This builder for chaining.
      */
     public Builder clearParentTopSlotImpressions() {
@@ -1956,7 +1956,7 @@ private static final long serialVersionUID = 0L;
      * resource to realize this simulation.
      * </pre>
      *
-     * <code>int64 parent_required_budget_micros = 28;</code>
+     * <code>optional int64 parent_required_budget_micros = 28;</code>
      * @return Whether the parentRequiredBudgetMicros field is set.
      */
     @java.lang.Override
@@ -1969,7 +1969,7 @@ private static final long serialVersionUID = 0L;
      * resource to realize this simulation.
      * </pre>
      *
-     * <code>int64 parent_required_budget_micros = 28;</code>
+     * <code>optional int64 parent_required_budget_micros = 28;</code>
      * @return The parentRequiredBudgetMicros.
      */
     @java.lang.Override
@@ -1982,7 +1982,7 @@ private static final long serialVersionUID = 0L;
      * resource to realize this simulation.
      * </pre>
      *
-     * <code>int64 parent_required_budget_micros = 28;</code>
+     * <code>optional int64 parent_required_budget_micros = 28;</code>
      * @param value The parentRequiredBudgetMicros to set.
      * @return This builder for chaining.
      */
@@ -1998,7 +1998,7 @@ private static final long serialVersionUID = 0L;
      * resource to realize this simulation.
      * </pre>
      *
-     * <code>int64 parent_required_budget_micros = 28;</code>
+     * <code>optional int64 parent_required_budget_micros = 28;</code>
      * @return This builder for chaining.
      */
     public Builder clearParentRequiredBudgetMicros() {

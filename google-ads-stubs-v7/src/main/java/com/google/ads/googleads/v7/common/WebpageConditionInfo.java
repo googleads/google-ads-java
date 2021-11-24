@@ -168,7 +168,7 @@ private static final long serialVersionUID = 0L;
    * Argument of webpage targeting condition.
    * </pre>
    *
-   * <code>string argument = 4;</code>
+   * <code>optional string argument = 4;</code>
    * @return Whether the argument field is set.
    */
   @java.lang.Override
@@ -180,7 +180,7 @@ private static final long serialVersionUID = 0L;
    * Argument of webpage targeting condition.
    * </pre>
    *
-   * <code>string argument = 4;</code>
+   * <code>optional string argument = 4;</code>
    * @return The argument.
    */
   @java.lang.Override
@@ -201,7 +201,7 @@ private static final long serialVersionUID = 0L;
    * Argument of webpage targeting condition.
    * </pre>
    *
-   * <code>string argument = 4;</code>
+   * <code>optional string argument = 4;</code>
    * @return The bytes for argument.
    */
   @java.lang.Override
@@ -724,7 +724,7 @@ private static final long serialVersionUID = 0L;
      * Argument of webpage targeting condition.
      * </pre>
      *
-     * <code>string argument = 4;</code>
+     * <code>optional string argument = 4;</code>
      * @return Whether the argument field is set.
      */
     public boolean hasArgument() {
@@ -735,7 +735,7 @@ private static final long serialVersionUID = 0L;
      * Argument of webpage targeting condition.
      * </pre>
      *
-     * <code>string argument = 4;</code>
+     * <code>optional string argument = 4;</code>
      * @return The argument.
      */
     public java.lang.String getArgument() {
@@ -755,7 +755,7 @@ private static final long serialVersionUID = 0L;
      * Argument of webpage targeting condition.
      * </pre>
      *
-     * <code>string argument = 4;</code>
+     * <code>optional string argument = 4;</code>
      * @return The bytes for argument.
      */
     public com.google.protobuf.ByteString
@@ -776,7 +776,7 @@ private static final long serialVersionUID = 0L;
      * Argument of webpage targeting condition.
      * </pre>
      *
-     * <code>string argument = 4;</code>
+     * <code>optional string argument = 4;</code>
      * @param value The argument to set.
      * @return This builder for chaining.
      */
@@ -795,7 +795,7 @@ private static final long serialVersionUID = 0L;
      * Argument of webpage targeting condition.
      * </pre>
      *
-     * <code>string argument = 4;</code>
+     * <code>optional string argument = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearArgument() {
@@ -809,7 +809,7 @@ private static final long serialVersionUID = 0L;
      * Argument of webpage targeting condition.
      * </pre>
      *
-     * <code>string argument = 4;</code>
+     * <code>optional string argument = 4;</code>
      * @param value The bytes for argument to set.
      * @return This builder for chaining.
      */

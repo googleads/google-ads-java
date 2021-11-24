@@ -377,7 +377,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Id of the user list.
    * </pre>
    *
-   * <code>int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   @java.lang.Override
@@ -389,7 +389,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Id of the user list.
    * </pre>
    *
-   * <code>int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   @java.lang.Override
@@ -407,7 +407,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>bool read_only = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool read_only = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the readOnly field is set.
    */
   @java.lang.Override
@@ -422,7 +422,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>bool read_only = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool read_only = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The readOnly.
    */
   @java.lang.Override
@@ -438,7 +438,7 @@ private static final long serialVersionUID = 0L;
    * may not be unique (e.g. if access_reason=SHARED)
    * </pre>
    *
-   * <code>string name = 27;</code>
+   * <code>optional string name = 27;</code>
    * @return Whether the name field is set.
    */
   @java.lang.Override
@@ -451,7 +451,7 @@ private static final long serialVersionUID = 0L;
    * may not be unique (e.g. if access_reason=SHARED)
    * </pre>
    *
-   * <code>string name = 27;</code>
+   * <code>optional string name = 27;</code>
    * @return The name.
    */
   @java.lang.Override
@@ -473,7 +473,7 @@ private static final long serialVersionUID = 0L;
    * may not be unique (e.g. if access_reason=SHARED)
    * </pre>
    *
-   * <code>string name = 27;</code>
+   * <code>optional string name = 27;</code>
    * @return The bytes for name.
    */
   @java.lang.Override
@@ -498,7 +498,7 @@ private static final long serialVersionUID = 0L;
    * Description of this user list.
    * </pre>
    *
-   * <code>string description = 28;</code>
+   * <code>optional string description = 28;</code>
    * @return Whether the description field is set.
    */
   @java.lang.Override
@@ -510,7 +510,7 @@ private static final long serialVersionUID = 0L;
    * Description of this user list.
    * </pre>
    *
-   * <code>string description = 28;</code>
+   * <code>optional string description = 28;</code>
    * @return The description.
    */
   @java.lang.Override
@@ -531,7 +531,7 @@ private static final long serialVersionUID = 0L;
    * Description of this user list.
    * </pre>
    *
-   * <code>string description = 28;</code>
+   * <code>optional string description = 28;</code>
    * @return The bytes for description.
    */
   @java.lang.Override
@@ -588,7 +588,7 @@ private static final long serialVersionUID = 0L;
    * IDs on their systems.
    * </pre>
    *
-   * <code>string integration_code = 29;</code>
+   * <code>optional string integration_code = 29;</code>
    * @return Whether the integrationCode field is set.
    */
   @java.lang.Override
@@ -601,7 +601,7 @@ private static final long serialVersionUID = 0L;
    * IDs on their systems.
    * </pre>
    *
-   * <code>string integration_code = 29;</code>
+   * <code>optional string integration_code = 29;</code>
    * @return The integrationCode.
    */
   @java.lang.Override
@@ -623,7 +623,7 @@ private static final long serialVersionUID = 0L;
    * IDs on their systems.
    * </pre>
    *
-   * <code>string integration_code = 29;</code>
+   * <code>optional string integration_code = 29;</code>
    * @return The bytes for integrationCode.
    */
   @java.lang.Override
@@ -652,7 +652,7 @@ private static final long serialVersionUID = 0L;
    * It'll be ignored for logical_user_list.
    * </pre>
    *
-   * <code>int64 membership_life_span = 30;</code>
+   * <code>optional int64 membership_life_span = 30;</code>
    * @return Whether the membershipLifeSpan field is set.
    */
   @java.lang.Override
@@ -668,7 +668,7 @@ private static final long serialVersionUID = 0L;
    * It'll be ignored for logical_user_list.
    * </pre>
    *
-   * <code>int64 membership_life_span = 30;</code>
+   * <code>optional int64 membership_life_span = 30;</code>
    * @return The membershipLifeSpan.
    */
   @java.lang.Override
@@ -685,7 +685,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 size_for_display = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 size_for_display = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the sizeForDisplay field is set.
    */
   @java.lang.Override
@@ -699,7 +699,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 size_for_display = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 size_for_display = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The sizeForDisplay.
    */
   @java.lang.Override
@@ -748,7 +748,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 size_for_search = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 size_for_search = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the sizeForSearch field is set.
    */
   @java.lang.Override
@@ -763,7 +763,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 size_for_search = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 size_for_search = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The sizeForSearch.
    */
   @java.lang.Override
@@ -931,7 +931,7 @@ private static final long serialVersionUID = 0L;
    * Indicates if this user list is eligible for Google Search Network.
    * </pre>
    *
-   * <code>bool eligible_for_search = 33;</code>
+   * <code>optional bool eligible_for_search = 33;</code>
    * @return Whether the eligibleForSearch field is set.
    */
   @java.lang.Override
@@ -943,7 +943,7 @@ private static final long serialVersionUID = 0L;
    * Indicates if this user list is eligible for Google Search Network.
    * </pre>
    *
-   * <code>bool eligible_for_search = 33;</code>
+   * <code>optional bool eligible_for_search = 33;</code>
    * @return The eligibleForSearch.
    */
   @java.lang.Override
@@ -959,7 +959,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>bool eligible_for_display = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool eligible_for_display = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the eligibleForDisplay field is set.
    */
   @java.lang.Override
@@ -972,7 +972,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>bool eligible_for_display = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool eligible_for_display = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The eligibleForDisplay.
    */
   @java.lang.Override
@@ -990,7 +990,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>int32 match_rate_percentage = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int32 match_rate_percentage = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the matchRatePercentage field is set.
    */
   @java.lang.Override
@@ -1005,7 +1005,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>int32 match_rate_percentage = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int32 match_rate_percentage = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The matchRatePercentage.
    */
   @java.lang.Override
@@ -1245,7 +1245,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (membershipStatus_ != com.google.ads.googleads.v8.enums.UserListMembershipStatusEnum.UserListMembershipStatus.UNSPECIFIED.getNumber()) {
@@ -1326,7 +1326,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (membershipStatus_ != com.google.ads.googleads.v8.enums.UserListMembershipStatusEnum.UserListMembershipStatus.UNSPECIFIED.getNumber()) {
@@ -2212,7 +2212,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Id of the user list.
      * </pre>
      *
-     * <code>int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the id field is set.
      */
     @java.lang.Override
@@ -2224,7 +2224,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Id of the user list.
      * </pre>
      *
-     * <code>int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The id.
      */
     @java.lang.Override
@@ -2236,7 +2236,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Id of the user list.
      * </pre>
      *
-     * <code>int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
@@ -2251,7 +2251,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Id of the user list.
      * </pre>
      *
-     * <code>int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {
@@ -2270,7 +2270,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>bool read_only = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool read_only = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the readOnly field is set.
      */
     @java.lang.Override
@@ -2285,7 +2285,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>bool read_only = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool read_only = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The readOnly.
      */
     @java.lang.Override
@@ -2300,7 +2300,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>bool read_only = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool read_only = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The readOnly to set.
      * @return This builder for chaining.
      */
@@ -2318,7 +2318,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>bool read_only = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool read_only = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearReadOnly() {
@@ -2335,7 +2335,7 @@ private static final long serialVersionUID = 0L;
      * may not be unique (e.g. if access_reason=SHARED)
      * </pre>
      *
-     * <code>string name = 27;</code>
+     * <code>optional string name = 27;</code>
      * @return Whether the name field is set.
      */
     public boolean hasName() {
@@ -2347,7 +2347,7 @@ private static final long serialVersionUID = 0L;
      * may not be unique (e.g. if access_reason=SHARED)
      * </pre>
      *
-     * <code>string name = 27;</code>
+     * <code>optional string name = 27;</code>
      * @return The name.
      */
     public java.lang.String getName() {
@@ -2368,7 +2368,7 @@ private static final long serialVersionUID = 0L;
      * may not be unique (e.g. if access_reason=SHARED)
      * </pre>
      *
-     * <code>string name = 27;</code>
+     * <code>optional string name = 27;</code>
      * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
@@ -2390,7 +2390,7 @@ private static final long serialVersionUID = 0L;
      * may not be unique (e.g. if access_reason=SHARED)
      * </pre>
      *
-     * <code>string name = 27;</code>
+     * <code>optional string name = 27;</code>
      * @param value The name to set.
      * @return This builder for chaining.
      */
@@ -2410,7 +2410,7 @@ private static final long serialVersionUID = 0L;
      * may not be unique (e.g. if access_reason=SHARED)
      * </pre>
      *
-     * <code>string name = 27;</code>
+     * <code>optional string name = 27;</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
@@ -2425,7 +2425,7 @@ private static final long serialVersionUID = 0L;
      * may not be unique (e.g. if access_reason=SHARED)
      * </pre>
      *
-     * <code>string name = 27;</code>
+     * <code>optional string name = 27;</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
@@ -2447,7 +2447,7 @@ private static final long serialVersionUID = 0L;
      * Description of this user list.
      * </pre>
      *
-     * <code>string description = 28;</code>
+     * <code>optional string description = 28;</code>
      * @return Whether the description field is set.
      */
     public boolean hasDescription() {
@@ -2458,7 +2458,7 @@ private static final long serialVersionUID = 0L;
      * Description of this user list.
      * </pre>
      *
-     * <code>string description = 28;</code>
+     * <code>optional string description = 28;</code>
      * @return The description.
      */
     public java.lang.String getDescription() {
@@ -2478,7 +2478,7 @@ private static final long serialVersionUID = 0L;
      * Description of this user list.
      * </pre>
      *
-     * <code>string description = 28;</code>
+     * <code>optional string description = 28;</code>
      * @return The bytes for description.
      */
     public com.google.protobuf.ByteString
@@ -2499,7 +2499,7 @@ private static final long serialVersionUID = 0L;
      * Description of this user list.
      * </pre>
      *
-     * <code>string description = 28;</code>
+     * <code>optional string description = 28;</code>
      * @param value The description to set.
      * @return This builder for chaining.
      */
@@ -2518,7 +2518,7 @@ private static final long serialVersionUID = 0L;
      * Description of this user list.
      * </pre>
      *
-     * <code>string description = 28;</code>
+     * <code>optional string description = 28;</code>
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
@@ -2532,7 +2532,7 @@ private static final long serialVersionUID = 0L;
      * Description of this user list.
      * </pre>
      *
-     * <code>string description = 28;</code>
+     * <code>optional string description = 28;</code>
      * @param value The bytes for description to set.
      * @return This builder for chaining.
      */
@@ -2639,7 +2639,7 @@ private static final long serialVersionUID = 0L;
      * IDs on their systems.
      * </pre>
      *
-     * <code>string integration_code = 29;</code>
+     * <code>optional string integration_code = 29;</code>
      * @return Whether the integrationCode field is set.
      */
     public boolean hasIntegrationCode() {
@@ -2651,7 +2651,7 @@ private static final long serialVersionUID = 0L;
      * IDs on their systems.
      * </pre>
      *
-     * <code>string integration_code = 29;</code>
+     * <code>optional string integration_code = 29;</code>
      * @return The integrationCode.
      */
     public java.lang.String getIntegrationCode() {
@@ -2672,7 +2672,7 @@ private static final long serialVersionUID = 0L;
      * IDs on their systems.
      * </pre>
      *
-     * <code>string integration_code = 29;</code>
+     * <code>optional string integration_code = 29;</code>
      * @return The bytes for integrationCode.
      */
     public com.google.protobuf.ByteString
@@ -2694,7 +2694,7 @@ private static final long serialVersionUID = 0L;
      * IDs on their systems.
      * </pre>
      *
-     * <code>string integration_code = 29;</code>
+     * <code>optional string integration_code = 29;</code>
      * @param value The integrationCode to set.
      * @return This builder for chaining.
      */
@@ -2714,7 +2714,7 @@ private static final long serialVersionUID = 0L;
      * IDs on their systems.
      * </pre>
      *
-     * <code>string integration_code = 29;</code>
+     * <code>optional string integration_code = 29;</code>
      * @return This builder for chaining.
      */
     public Builder clearIntegrationCode() {
@@ -2729,7 +2729,7 @@ private static final long serialVersionUID = 0L;
      * IDs on their systems.
      * </pre>
      *
-     * <code>string integration_code = 29;</code>
+     * <code>optional string integration_code = 29;</code>
      * @param value The bytes for integrationCode to set.
      * @return This builder for chaining.
      */
@@ -2755,7 +2755,7 @@ private static final long serialVersionUID = 0L;
      * It'll be ignored for logical_user_list.
      * </pre>
      *
-     * <code>int64 membership_life_span = 30;</code>
+     * <code>optional int64 membership_life_span = 30;</code>
      * @return Whether the membershipLifeSpan field is set.
      */
     @java.lang.Override
@@ -2771,7 +2771,7 @@ private static final long serialVersionUID = 0L;
      * It'll be ignored for logical_user_list.
      * </pre>
      *
-     * <code>int64 membership_life_span = 30;</code>
+     * <code>optional int64 membership_life_span = 30;</code>
      * @return The membershipLifeSpan.
      */
     @java.lang.Override
@@ -2787,7 +2787,7 @@ private static final long serialVersionUID = 0L;
      * It'll be ignored for logical_user_list.
      * </pre>
      *
-     * <code>int64 membership_life_span = 30;</code>
+     * <code>optional int64 membership_life_span = 30;</code>
      * @param value The membershipLifeSpan to set.
      * @return This builder for chaining.
      */
@@ -2806,7 +2806,7 @@ private static final long serialVersionUID = 0L;
      * It'll be ignored for logical_user_list.
      * </pre>
      *
-     * <code>int64 membership_life_span = 30;</code>
+     * <code>optional int64 membership_life_span = 30;</code>
      * @return This builder for chaining.
      */
     public Builder clearMembershipLifeSpan() {
@@ -2824,7 +2824,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 size_for_display = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 size_for_display = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the sizeForDisplay field is set.
      */
     @java.lang.Override
@@ -2838,7 +2838,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 size_for_display = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 size_for_display = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The sizeForDisplay.
      */
     @java.lang.Override
@@ -2852,7 +2852,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 size_for_display = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 size_for_display = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The sizeForDisplay to set.
      * @return This builder for chaining.
      */
@@ -2869,7 +2869,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 size_for_display = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 size_for_display = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearSizeForDisplay() {
@@ -2972,7 +2972,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 size_for_search = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 size_for_search = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the sizeForSearch field is set.
      */
     @java.lang.Override
@@ -2987,7 +2987,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 size_for_search = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 size_for_search = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The sizeForSearch.
      */
     @java.lang.Override
@@ -3002,7 +3002,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 size_for_search = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 size_for_search = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The sizeForSearch to set.
      * @return This builder for chaining.
      */
@@ -3020,7 +3020,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 size_for_search = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 size_for_search = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearSizeForSearch() {
@@ -3451,7 +3451,7 @@ private static final long serialVersionUID = 0L;
      * Indicates if this user list is eligible for Google Search Network.
      * </pre>
      *
-     * <code>bool eligible_for_search = 33;</code>
+     * <code>optional bool eligible_for_search = 33;</code>
      * @return Whether the eligibleForSearch field is set.
      */
     @java.lang.Override
@@ -3463,7 +3463,7 @@ private static final long serialVersionUID = 0L;
      * Indicates if this user list is eligible for Google Search Network.
      * </pre>
      *
-     * <code>bool eligible_for_search = 33;</code>
+     * <code>optional bool eligible_for_search = 33;</code>
      * @return The eligibleForSearch.
      */
     @java.lang.Override
@@ -3475,7 +3475,7 @@ private static final long serialVersionUID = 0L;
      * Indicates if this user list is eligible for Google Search Network.
      * </pre>
      *
-     * <code>bool eligible_for_search = 33;</code>
+     * <code>optional bool eligible_for_search = 33;</code>
      * @param value The eligibleForSearch to set.
      * @return This builder for chaining.
      */
@@ -3490,7 +3490,7 @@ private static final long serialVersionUID = 0L;
      * Indicates if this user list is eligible for Google Search Network.
      * </pre>
      *
-     * <code>bool eligible_for_search = 33;</code>
+     * <code>optional bool eligible_for_search = 33;</code>
      * @return This builder for chaining.
      */
     public Builder clearEligibleForSearch() {
@@ -3507,7 +3507,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>bool eligible_for_display = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool eligible_for_display = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the eligibleForDisplay field is set.
      */
     @java.lang.Override
@@ -3520,7 +3520,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>bool eligible_for_display = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool eligible_for_display = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The eligibleForDisplay.
      */
     @java.lang.Override
@@ -3533,7 +3533,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>bool eligible_for_display = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool eligible_for_display = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The eligibleForDisplay to set.
      * @return This builder for chaining.
      */
@@ -3549,7 +3549,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>bool eligible_for_display = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool eligible_for_display = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearEligibleForDisplay() {
@@ -3568,7 +3568,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int32 match_rate_percentage = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int32 match_rate_percentage = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the matchRatePercentage field is set.
      */
     @java.lang.Override
@@ -3583,7 +3583,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int32 match_rate_percentage = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int32 match_rate_percentage = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The matchRatePercentage.
      */
     @java.lang.Override
@@ -3598,7 +3598,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int32 match_rate_percentage = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int32 match_rate_percentage = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The matchRatePercentage to set.
      * @return This builder for chaining.
      */
@@ -3616,7 +3616,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int32 match_rate_percentage = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int32 match_rate_percentage = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearMatchRatePercentage() {

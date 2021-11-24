@@ -169,7 +169,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The description of the validation error.
    * </pre>
    *
-   * <code>string description = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string description = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the description field is set.
    */
   @java.lang.Override
@@ -181,7 +181,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The description of the validation error.
    * </pre>
    *
-   * <code>string description = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string description = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The description.
    */
   @java.lang.Override
@@ -202,7 +202,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The description of the validation error.
    * </pre>
    *
-   * <code>string description = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string description = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for description.
    */
   @java.lang.Override
@@ -275,7 +275,7 @@ private static final long serialVersionUID = 0L;
    * feed_attribute_id is not mapped). Note that extra_info is not localized.
    * </pre>
    *
-   * <code>string extra_info = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string extra_info = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the extraInfo field is set.
    */
   @java.lang.Override
@@ -289,7 +289,7 @@ private static final long serialVersionUID = 0L;
    * feed_attribute_id is not mapped). Note that extra_info is not localized.
    * </pre>
    *
-   * <code>string extra_info = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string extra_info = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The extraInfo.
    */
   @java.lang.Override
@@ -312,7 +312,7 @@ private static final long serialVersionUID = 0L;
    * feed_attribute_id is not mapped). Note that extra_info is not localized.
    * </pre>
    *
-   * <code>string extra_info = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string extra_info = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for extraInfo.
    */
   @java.lang.Override
@@ -822,7 +822,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The description of the validation error.
      * </pre>
      *
-     * <code>string description = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string description = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the description field is set.
      */
     public boolean hasDescription() {
@@ -833,7 +833,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The description of the validation error.
      * </pre>
      *
-     * <code>string description = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string description = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The description.
      */
     public java.lang.String getDescription() {
@@ -853,7 +853,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The description of the validation error.
      * </pre>
      *
-     * <code>string description = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string description = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for description.
      */
     public com.google.protobuf.ByteString
@@ -874,7 +874,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The description of the validation error.
      * </pre>
      *
-     * <code>string description = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string description = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The description to set.
      * @return This builder for chaining.
      */
@@ -893,7 +893,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The description of the validation error.
      * </pre>
      *
-     * <code>string description = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string description = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
@@ -907,7 +907,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The description of the validation error.
      * </pre>
      *
-     * <code>string description = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string description = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for description to set.
      * @return This builder for chaining.
      */
@@ -1052,7 +1052,7 @@ private static final long serialVersionUID = 0L;
      * feed_attribute_id is not mapped). Note that extra_info is not localized.
      * </pre>
      *
-     * <code>string extra_info = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string extra_info = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the extraInfo field is set.
      */
     public boolean hasExtraInfo() {
@@ -1065,7 +1065,7 @@ private static final long serialVersionUID = 0L;
      * feed_attribute_id is not mapped). Note that extra_info is not localized.
      * </pre>
      *
-     * <code>string extra_info = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string extra_info = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The extraInfo.
      */
     public java.lang.String getExtraInfo() {
@@ -1087,7 +1087,7 @@ private static final long serialVersionUID = 0L;
      * feed_attribute_id is not mapped). Note that extra_info is not localized.
      * </pre>
      *
-     * <code>string extra_info = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string extra_info = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for extraInfo.
      */
     public com.google.protobuf.ByteString
@@ -1110,7 +1110,7 @@ private static final long serialVersionUID = 0L;
      * feed_attribute_id is not mapped). Note that extra_info is not localized.
      * </pre>
      *
-     * <code>string extra_info = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string extra_info = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The extraInfo to set.
      * @return This builder for chaining.
      */
@@ -1131,7 +1131,7 @@ private static final long serialVersionUID = 0L;
      * feed_attribute_id is not mapped). Note that extra_info is not localized.
      * </pre>
      *
-     * <code>string extra_info = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string extra_info = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearExtraInfo() {
@@ -1147,7 +1147,7 @@ private static final long serialVersionUID = 0L;
      * feed_attribute_id is not mapped). Note that extra_info is not localized.
      * </pre>
      *
-     * <code>string extra_info = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string extra_info = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for extraInfo to set.
      * @return This builder for chaining.
      */

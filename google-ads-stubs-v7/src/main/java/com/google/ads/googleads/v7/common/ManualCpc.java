@@ -98,7 +98,7 @@ private static final long serialVersionUID = 0L;
    * Whether bids are to be enhanced based on conversion optimizer data.
    * </pre>
    *
-   * <code>bool enhanced_cpc_enabled = 2;</code>
+   * <code>optional bool enhanced_cpc_enabled = 2;</code>
    * @return Whether the enhancedCpcEnabled field is set.
    */
   @java.lang.Override
@@ -110,7 +110,7 @@ private static final long serialVersionUID = 0L;
    * Whether bids are to be enhanced based on conversion optimizer data.
    * </pre>
    *
-   * <code>bool enhanced_cpc_enabled = 2;</code>
+   * <code>optional bool enhanced_cpc_enabled = 2;</code>
    * @return The enhancedCpcEnabled.
    */
   @java.lang.Override
@@ -443,7 +443,7 @@ private static final long serialVersionUID = 0L;
      * Whether bids are to be enhanced based on conversion optimizer data.
      * </pre>
      *
-     * <code>bool enhanced_cpc_enabled = 2;</code>
+     * <code>optional bool enhanced_cpc_enabled = 2;</code>
      * @return Whether the enhancedCpcEnabled field is set.
      */
     @java.lang.Override
@@ -455,7 +455,7 @@ private static final long serialVersionUID = 0L;
      * Whether bids are to be enhanced based on conversion optimizer data.
      * </pre>
      *
-     * <code>bool enhanced_cpc_enabled = 2;</code>
+     * <code>optional bool enhanced_cpc_enabled = 2;</code>
      * @return The enhancedCpcEnabled.
      */
     @java.lang.Override
@@ -467,7 +467,7 @@ private static final long serialVersionUID = 0L;
      * Whether bids are to be enhanced based on conversion optimizer data.
      * </pre>
      *
-     * <code>bool enhanced_cpc_enabled = 2;</code>
+     * <code>optional bool enhanced_cpc_enabled = 2;</code>
      * @param value The enhancedCpcEnabled to set.
      * @return This builder for chaining.
      */
@@ -482,7 +482,7 @@ private static final long serialVersionUID = 0L;
      * Whether bids are to be enhanced based on conversion optimizer data.
      * </pre>
      *
-     * <code>bool enhanced_cpc_enabled = 2;</code>
+     * <code>optional bool enhanced_cpc_enabled = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearEnhancedCpcEnabled() {

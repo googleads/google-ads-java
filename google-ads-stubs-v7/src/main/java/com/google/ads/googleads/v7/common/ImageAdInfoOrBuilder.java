@@ -12,7 +12,7 @@ public interface ImageAdInfoOrBuilder extends
    * Width in pixels of the full size image.
    * </pre>
    *
-   * <code>int64 pixel_width = 15;</code>
+   * <code>optional int64 pixel_width = 15;</code>
    * @return Whether the pixelWidth field is set.
    */
   boolean hasPixelWidth();
@@ -21,7 +21,7 @@ public interface ImageAdInfoOrBuilder extends
    * Width in pixels of the full size image.
    * </pre>
    *
-   * <code>int64 pixel_width = 15;</code>
+   * <code>optional int64 pixel_width = 15;</code>
    * @return The pixelWidth.
    */
   long getPixelWidth();
@@ -31,7 +31,7 @@ public interface ImageAdInfoOrBuilder extends
    * Height in pixels of the full size image.
    * </pre>
    *
-   * <code>int64 pixel_height = 16;</code>
+   * <code>optional int64 pixel_height = 16;</code>
    * @return Whether the pixelHeight field is set.
    */
   boolean hasPixelHeight();
@@ -40,7 +40,7 @@ public interface ImageAdInfoOrBuilder extends
    * Height in pixels of the full size image.
    * </pre>
    *
-   * <code>int64 pixel_height = 16;</code>
+   * <code>optional int64 pixel_height = 16;</code>
    * @return The pixelHeight.
    */
   long getPixelHeight();
@@ -50,7 +50,7 @@ public interface ImageAdInfoOrBuilder extends
    * URL of the full size image.
    * </pre>
    *
-   * <code>string image_url = 17;</code>
+   * <code>optional string image_url = 17;</code>
    * @return Whether the imageUrl field is set.
    */
   boolean hasImageUrl();
@@ -59,7 +59,7 @@ public interface ImageAdInfoOrBuilder extends
    * URL of the full size image.
    * </pre>
    *
-   * <code>string image_url = 17;</code>
+   * <code>optional string image_url = 17;</code>
    * @return The imageUrl.
    */
   java.lang.String getImageUrl();
@@ -68,7 +68,7 @@ public interface ImageAdInfoOrBuilder extends
    * URL of the full size image.
    * </pre>
    *
-   * <code>string image_url = 17;</code>
+   * <code>optional string image_url = 17;</code>
    * @return The bytes for imageUrl.
    */
   com.google.protobuf.ByteString
@@ -79,7 +79,7 @@ public interface ImageAdInfoOrBuilder extends
    * Width in pixels of the preview size image.
    * </pre>
    *
-   * <code>int64 preview_pixel_width = 18;</code>
+   * <code>optional int64 preview_pixel_width = 18;</code>
    * @return Whether the previewPixelWidth field is set.
    */
   boolean hasPreviewPixelWidth();
@@ -88,7 +88,7 @@ public interface ImageAdInfoOrBuilder extends
    * Width in pixels of the preview size image.
    * </pre>
    *
-   * <code>int64 preview_pixel_width = 18;</code>
+   * <code>optional int64 preview_pixel_width = 18;</code>
    * @return The previewPixelWidth.
    */
   long getPreviewPixelWidth();
@@ -98,7 +98,7 @@ public interface ImageAdInfoOrBuilder extends
    * Height in pixels of the preview size image.
    * </pre>
    *
-   * <code>int64 preview_pixel_height = 19;</code>
+   * <code>optional int64 preview_pixel_height = 19;</code>
    * @return Whether the previewPixelHeight field is set.
    */
   boolean hasPreviewPixelHeight();
@@ -107,7 +107,7 @@ public interface ImageAdInfoOrBuilder extends
    * Height in pixels of the preview size image.
    * </pre>
    *
-   * <code>int64 preview_pixel_height = 19;</code>
+   * <code>optional int64 preview_pixel_height = 19;</code>
    * @return The previewPixelHeight.
    */
   long getPreviewPixelHeight();
@@ -117,7 +117,7 @@ public interface ImageAdInfoOrBuilder extends
    * URL of the preview size image.
    * </pre>
    *
-   * <code>string preview_image_url = 20;</code>
+   * <code>optional string preview_image_url = 20;</code>
    * @return Whether the previewImageUrl field is set.
    */
   boolean hasPreviewImageUrl();
@@ -126,7 +126,7 @@ public interface ImageAdInfoOrBuilder extends
    * URL of the preview size image.
    * </pre>
    *
-   * <code>string preview_image_url = 20;</code>
+   * <code>optional string preview_image_url = 20;</code>
    * @return The previewImageUrl.
    */
   java.lang.String getPreviewImageUrl();
@@ -135,7 +135,7 @@ public interface ImageAdInfoOrBuilder extends
    * URL of the preview size image.
    * </pre>
    *
-   * <code>string preview_image_url = 20;</code>
+   * <code>optional string preview_image_url = 20;</code>
    * @return The bytes for previewImageUrl.
    */
   com.google.protobuf.ByteString
@@ -166,7 +166,7 @@ public interface ImageAdInfoOrBuilder extends
    * the MediaFile's name. If the image was created from bytes, this is empty.
    * </pre>
    *
-   * <code>string name = 21;</code>
+   * <code>optional string name = 21;</code>
    * @return Whether the name field is set.
    */
   boolean hasName();
@@ -176,7 +176,7 @@ public interface ImageAdInfoOrBuilder extends
    * the MediaFile's name. If the image was created from bytes, this is empty.
    * </pre>
    *
-   * <code>string name = 21;</code>
+   * <code>optional string name = 21;</code>
    * @return The name.
    */
   java.lang.String getName();
@@ -186,7 +186,7 @@ public interface ImageAdInfoOrBuilder extends
    * the MediaFile's name. If the image was created from bytes, this is empty.
    * </pre>
    *
-   * <code>string name = 21;</code>
+   * <code>optional string name = 21;</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString

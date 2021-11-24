@@ -782,7 +782,7 @@ private static final long serialVersionUID = 0L;
    * The advertiser/brand name. Maximum display width is 25.
    * </pre>
    *
-   * <code>string business_name = 17;</code>
+   * <code>optional string business_name = 17;</code>
    * @return Whether the businessName field is set.
    */
   @java.lang.Override
@@ -794,7 +794,7 @@ private static final long serialVersionUID = 0L;
    * The advertiser/brand name. Maximum display width is 25.
    * </pre>
    *
-   * <code>string business_name = 17;</code>
+   * <code>optional string business_name = 17;</code>
    * @return The businessName.
    */
   @java.lang.Override
@@ -815,7 +815,7 @@ private static final long serialVersionUID = 0L;
    * The advertiser/brand name. Maximum display width is 25.
    * </pre>
    *
-   * <code>string business_name = 17;</code>
+   * <code>optional string business_name = 17;</code>
    * @return The bytes for businessName.
    */
   @java.lang.Override
@@ -842,7 +842,7 @@ private static final long serialVersionUID = 0L;
    * well.
    * </pre>
    *
-   * <code>string main_color = 18;</code>
+   * <code>optional string main_color = 18;</code>
    * @return Whether the mainColor field is set.
    */
   @java.lang.Override
@@ -856,7 +856,7 @@ private static final long serialVersionUID = 0L;
    * well.
    * </pre>
    *
-   * <code>string main_color = 18;</code>
+   * <code>optional string main_color = 18;</code>
    * @return The mainColor.
    */
   @java.lang.Override
@@ -879,7 +879,7 @@ private static final long serialVersionUID = 0L;
    * well.
    * </pre>
    *
-   * <code>string main_color = 18;</code>
+   * <code>optional string main_color = 18;</code>
    * @return The bytes for mainColor.
    */
   @java.lang.Override
@@ -906,7 +906,7 @@ private static final long serialVersionUID = 0L;
    * well.
    * </pre>
    *
-   * <code>string accent_color = 19;</code>
+   * <code>optional string accent_color = 19;</code>
    * @return Whether the accentColor field is set.
    */
   @java.lang.Override
@@ -920,7 +920,7 @@ private static final long serialVersionUID = 0L;
    * well.
    * </pre>
    *
-   * <code>string accent_color = 19;</code>
+   * <code>optional string accent_color = 19;</code>
    * @return The accentColor.
    */
   @java.lang.Override
@@ -943,7 +943,7 @@ private static final long serialVersionUID = 0L;
    * well.
    * </pre>
    *
-   * <code>string accent_color = 19;</code>
+   * <code>optional string accent_color = 19;</code>
    * @return The bytes for accentColor.
    */
   @java.lang.Override
@@ -972,7 +972,7 @@ private static final long serialVersionUID = 0L;
    * Must be true if `main_color` and `accent_color` are not set.
    * </pre>
    *
-   * <code>bool allow_flexible_color = 20;</code>
+   * <code>optional bool allow_flexible_color = 20;</code>
    * @return Whether the allowFlexibleColor field is set.
    */
   @java.lang.Override
@@ -988,7 +988,7 @@ private static final long serialVersionUID = 0L;
    * Must be true if `main_color` and `accent_color` are not set.
    * </pre>
    *
-   * <code>bool allow_flexible_color = 20;</code>
+   * <code>optional bool allow_flexible_color = 20;</code>
    * @return The allowFlexibleColor.
    */
   @java.lang.Override
@@ -1003,7 +1003,7 @@ private static final long serialVersionUID = 0L;
    * The call-to-action text for the ad. Maximum display width is 30.
    * </pre>
    *
-   * <code>string call_to_action_text = 21;</code>
+   * <code>optional string call_to_action_text = 21;</code>
    * @return Whether the callToActionText field is set.
    */
   @java.lang.Override
@@ -1015,7 +1015,7 @@ private static final long serialVersionUID = 0L;
    * The call-to-action text for the ad. Maximum display width is 30.
    * </pre>
    *
-   * <code>string call_to_action_text = 21;</code>
+   * <code>optional string call_to_action_text = 21;</code>
    * @return The callToActionText.
    */
   @java.lang.Override
@@ -1036,7 +1036,7 @@ private static final long serialVersionUID = 0L;
    * The call-to-action text for the ad. Maximum display width is 30.
    * </pre>
    *
-   * <code>string call_to_action_text = 21;</code>
+   * <code>optional string call_to_action_text = 21;</code>
    * @return The bytes for callToActionText.
    */
   @java.lang.Override
@@ -1061,7 +1061,7 @@ private static final long serialVersionUID = 0L;
    * Prefix before price. E.g. 'as low as'.
    * </pre>
    *
-   * <code>string price_prefix = 22;</code>
+   * <code>optional string price_prefix = 22;</code>
    * @return Whether the pricePrefix field is set.
    */
   @java.lang.Override
@@ -1073,7 +1073,7 @@ private static final long serialVersionUID = 0L;
    * Prefix before price. E.g. 'as low as'.
    * </pre>
    *
-   * <code>string price_prefix = 22;</code>
+   * <code>optional string price_prefix = 22;</code>
    * @return The pricePrefix.
    */
   @java.lang.Override
@@ -1094,7 +1094,7 @@ private static final long serialVersionUID = 0L;
    * Prefix before price. E.g. 'as low as'.
    * </pre>
    *
-   * <code>string price_prefix = 22;</code>
+   * <code>optional string price_prefix = 22;</code>
    * @return The bytes for pricePrefix.
    */
   @java.lang.Override
@@ -1120,7 +1120,7 @@ private static final long serialVersionUID = 0L;
    * 'Free two-day shipping'.
    * </pre>
    *
-   * <code>string promo_text = 23;</code>
+   * <code>optional string promo_text = 23;</code>
    * @return Whether the promoText field is set.
    */
   @java.lang.Override
@@ -1133,7 +1133,7 @@ private static final long serialVersionUID = 0L;
    * 'Free two-day shipping'.
    * </pre>
    *
-   * <code>string promo_text = 23;</code>
+   * <code>optional string promo_text = 23;</code>
    * @return The promoText.
    */
   @java.lang.Override
@@ -1155,7 +1155,7 @@ private static final long serialVersionUID = 0L;
    * 'Free two-day shipping'.
    * </pre>
    *
-   * <code>string promo_text = 23;</code>
+   * <code>optional string promo_text = 23;</code>
    * @return The bytes for promoText.
    */
   @java.lang.Override
@@ -4735,7 +4735,7 @@ private static final long serialVersionUID = 0L;
      * The advertiser/brand name. Maximum display width is 25.
      * </pre>
      *
-     * <code>string business_name = 17;</code>
+     * <code>optional string business_name = 17;</code>
      * @return Whether the businessName field is set.
      */
     public boolean hasBusinessName() {
@@ -4746,7 +4746,7 @@ private static final long serialVersionUID = 0L;
      * The advertiser/brand name. Maximum display width is 25.
      * </pre>
      *
-     * <code>string business_name = 17;</code>
+     * <code>optional string business_name = 17;</code>
      * @return The businessName.
      */
     public java.lang.String getBusinessName() {
@@ -4766,7 +4766,7 @@ private static final long serialVersionUID = 0L;
      * The advertiser/brand name. Maximum display width is 25.
      * </pre>
      *
-     * <code>string business_name = 17;</code>
+     * <code>optional string business_name = 17;</code>
      * @return The bytes for businessName.
      */
     public com.google.protobuf.ByteString
@@ -4787,7 +4787,7 @@ private static final long serialVersionUID = 0L;
      * The advertiser/brand name. Maximum display width is 25.
      * </pre>
      *
-     * <code>string business_name = 17;</code>
+     * <code>optional string business_name = 17;</code>
      * @param value The businessName to set.
      * @return This builder for chaining.
      */
@@ -4806,7 +4806,7 @@ private static final long serialVersionUID = 0L;
      * The advertiser/brand name. Maximum display width is 25.
      * </pre>
      *
-     * <code>string business_name = 17;</code>
+     * <code>optional string business_name = 17;</code>
      * @return This builder for chaining.
      */
     public Builder clearBusinessName() {
@@ -4820,7 +4820,7 @@ private static final long serialVersionUID = 0L;
      * The advertiser/brand name. Maximum display width is 25.
      * </pre>
      *
-     * <code>string business_name = 17;</code>
+     * <code>optional string business_name = 17;</code>
      * @param value The bytes for businessName to set.
      * @return This builder for chaining.
      */
@@ -4844,7 +4844,7 @@ private static final long serialVersionUID = 0L;
      * well.
      * </pre>
      *
-     * <code>string main_color = 18;</code>
+     * <code>optional string main_color = 18;</code>
      * @return Whether the mainColor field is set.
      */
     public boolean hasMainColor() {
@@ -4857,7 +4857,7 @@ private static final long serialVersionUID = 0L;
      * well.
      * </pre>
      *
-     * <code>string main_color = 18;</code>
+     * <code>optional string main_color = 18;</code>
      * @return The mainColor.
      */
     public java.lang.String getMainColor() {
@@ -4879,7 +4879,7 @@ private static final long serialVersionUID = 0L;
      * well.
      * </pre>
      *
-     * <code>string main_color = 18;</code>
+     * <code>optional string main_color = 18;</code>
      * @return The bytes for mainColor.
      */
     public com.google.protobuf.ByteString
@@ -4902,7 +4902,7 @@ private static final long serialVersionUID = 0L;
      * well.
      * </pre>
      *
-     * <code>string main_color = 18;</code>
+     * <code>optional string main_color = 18;</code>
      * @param value The mainColor to set.
      * @return This builder for chaining.
      */
@@ -4923,7 +4923,7 @@ private static final long serialVersionUID = 0L;
      * well.
      * </pre>
      *
-     * <code>string main_color = 18;</code>
+     * <code>optional string main_color = 18;</code>
      * @return This builder for chaining.
      */
     public Builder clearMainColor() {
@@ -4939,7 +4939,7 @@ private static final long serialVersionUID = 0L;
      * well.
      * </pre>
      *
-     * <code>string main_color = 18;</code>
+     * <code>optional string main_color = 18;</code>
      * @param value The bytes for mainColor to set.
      * @return This builder for chaining.
      */
@@ -4963,7 +4963,7 @@ private static final long serialVersionUID = 0L;
      * well.
      * </pre>
      *
-     * <code>string accent_color = 19;</code>
+     * <code>optional string accent_color = 19;</code>
      * @return Whether the accentColor field is set.
      */
     public boolean hasAccentColor() {
@@ -4976,7 +4976,7 @@ private static final long serialVersionUID = 0L;
      * well.
      * </pre>
      *
-     * <code>string accent_color = 19;</code>
+     * <code>optional string accent_color = 19;</code>
      * @return The accentColor.
      */
     public java.lang.String getAccentColor() {
@@ -4998,7 +4998,7 @@ private static final long serialVersionUID = 0L;
      * well.
      * </pre>
      *
-     * <code>string accent_color = 19;</code>
+     * <code>optional string accent_color = 19;</code>
      * @return The bytes for accentColor.
      */
     public com.google.protobuf.ByteString
@@ -5021,7 +5021,7 @@ private static final long serialVersionUID = 0L;
      * well.
      * </pre>
      *
-     * <code>string accent_color = 19;</code>
+     * <code>optional string accent_color = 19;</code>
      * @param value The accentColor to set.
      * @return This builder for chaining.
      */
@@ -5042,7 +5042,7 @@ private static final long serialVersionUID = 0L;
      * well.
      * </pre>
      *
-     * <code>string accent_color = 19;</code>
+     * <code>optional string accent_color = 19;</code>
      * @return This builder for chaining.
      */
     public Builder clearAccentColor() {
@@ -5058,7 +5058,7 @@ private static final long serialVersionUID = 0L;
      * well.
      * </pre>
      *
-     * <code>string accent_color = 19;</code>
+     * <code>optional string accent_color = 19;</code>
      * @param value The bytes for accentColor to set.
      * @return This builder for chaining.
      */
@@ -5084,7 +5084,7 @@ private static final long serialVersionUID = 0L;
      * Must be true if `main_color` and `accent_color` are not set.
      * </pre>
      *
-     * <code>bool allow_flexible_color = 20;</code>
+     * <code>optional bool allow_flexible_color = 20;</code>
      * @return Whether the allowFlexibleColor field is set.
      */
     @java.lang.Override
@@ -5100,7 +5100,7 @@ private static final long serialVersionUID = 0L;
      * Must be true if `main_color` and `accent_color` are not set.
      * </pre>
      *
-     * <code>bool allow_flexible_color = 20;</code>
+     * <code>optional bool allow_flexible_color = 20;</code>
      * @return The allowFlexibleColor.
      */
     @java.lang.Override
@@ -5116,7 +5116,7 @@ private static final long serialVersionUID = 0L;
      * Must be true if `main_color` and `accent_color` are not set.
      * </pre>
      *
-     * <code>bool allow_flexible_color = 20;</code>
+     * <code>optional bool allow_flexible_color = 20;</code>
      * @param value The allowFlexibleColor to set.
      * @return This builder for chaining.
      */
@@ -5135,7 +5135,7 @@ private static final long serialVersionUID = 0L;
      * Must be true if `main_color` and `accent_color` are not set.
      * </pre>
      *
-     * <code>bool allow_flexible_color = 20;</code>
+     * <code>optional bool allow_flexible_color = 20;</code>
      * @return This builder for chaining.
      */
     public Builder clearAllowFlexibleColor() {
@@ -5151,7 +5151,7 @@ private static final long serialVersionUID = 0L;
      * The call-to-action text for the ad. Maximum display width is 30.
      * </pre>
      *
-     * <code>string call_to_action_text = 21;</code>
+     * <code>optional string call_to_action_text = 21;</code>
      * @return Whether the callToActionText field is set.
      */
     public boolean hasCallToActionText() {
@@ -5162,7 +5162,7 @@ private static final long serialVersionUID = 0L;
      * The call-to-action text for the ad. Maximum display width is 30.
      * </pre>
      *
-     * <code>string call_to_action_text = 21;</code>
+     * <code>optional string call_to_action_text = 21;</code>
      * @return The callToActionText.
      */
     public java.lang.String getCallToActionText() {
@@ -5182,7 +5182,7 @@ private static final long serialVersionUID = 0L;
      * The call-to-action text for the ad. Maximum display width is 30.
      * </pre>
      *
-     * <code>string call_to_action_text = 21;</code>
+     * <code>optional string call_to_action_text = 21;</code>
      * @return The bytes for callToActionText.
      */
     public com.google.protobuf.ByteString
@@ -5203,7 +5203,7 @@ private static final long serialVersionUID = 0L;
      * The call-to-action text for the ad. Maximum display width is 30.
      * </pre>
      *
-     * <code>string call_to_action_text = 21;</code>
+     * <code>optional string call_to_action_text = 21;</code>
      * @param value The callToActionText to set.
      * @return This builder for chaining.
      */
@@ -5222,7 +5222,7 @@ private static final long serialVersionUID = 0L;
      * The call-to-action text for the ad. Maximum display width is 30.
      * </pre>
      *
-     * <code>string call_to_action_text = 21;</code>
+     * <code>optional string call_to_action_text = 21;</code>
      * @return This builder for chaining.
      */
     public Builder clearCallToActionText() {
@@ -5236,7 +5236,7 @@ private static final long serialVersionUID = 0L;
      * The call-to-action text for the ad. Maximum display width is 30.
      * </pre>
      *
-     * <code>string call_to_action_text = 21;</code>
+     * <code>optional string call_to_action_text = 21;</code>
      * @param value The bytes for callToActionText to set.
      * @return This builder for chaining.
      */
@@ -5258,7 +5258,7 @@ private static final long serialVersionUID = 0L;
      * Prefix before price. E.g. 'as low as'.
      * </pre>
      *
-     * <code>string price_prefix = 22;</code>
+     * <code>optional string price_prefix = 22;</code>
      * @return Whether the pricePrefix field is set.
      */
     public boolean hasPricePrefix() {
@@ -5269,7 +5269,7 @@ private static final long serialVersionUID = 0L;
      * Prefix before price. E.g. 'as low as'.
      * </pre>
      *
-     * <code>string price_prefix = 22;</code>
+     * <code>optional string price_prefix = 22;</code>
      * @return The pricePrefix.
      */
     public java.lang.String getPricePrefix() {
@@ -5289,7 +5289,7 @@ private static final long serialVersionUID = 0L;
      * Prefix before price. E.g. 'as low as'.
      * </pre>
      *
-     * <code>string price_prefix = 22;</code>
+     * <code>optional string price_prefix = 22;</code>
      * @return The bytes for pricePrefix.
      */
     public com.google.protobuf.ByteString
@@ -5310,7 +5310,7 @@ private static final long serialVersionUID = 0L;
      * Prefix before price. E.g. 'as low as'.
      * </pre>
      *
-     * <code>string price_prefix = 22;</code>
+     * <code>optional string price_prefix = 22;</code>
      * @param value The pricePrefix to set.
      * @return This builder for chaining.
      */
@@ -5329,7 +5329,7 @@ private static final long serialVersionUID = 0L;
      * Prefix before price. E.g. 'as low as'.
      * </pre>
      *
-     * <code>string price_prefix = 22;</code>
+     * <code>optional string price_prefix = 22;</code>
      * @return This builder for chaining.
      */
     public Builder clearPricePrefix() {
@@ -5343,7 +5343,7 @@ private static final long serialVersionUID = 0L;
      * Prefix before price. E.g. 'as low as'.
      * </pre>
      *
-     * <code>string price_prefix = 22;</code>
+     * <code>optional string price_prefix = 22;</code>
      * @param value The bytes for pricePrefix to set.
      * @return This builder for chaining.
      */
@@ -5366,7 +5366,7 @@ private static final long serialVersionUID = 0L;
      * 'Free two-day shipping'.
      * </pre>
      *
-     * <code>string promo_text = 23;</code>
+     * <code>optional string promo_text = 23;</code>
      * @return Whether the promoText field is set.
      */
     public boolean hasPromoText() {
@@ -5378,7 +5378,7 @@ private static final long serialVersionUID = 0L;
      * 'Free two-day shipping'.
      * </pre>
      *
-     * <code>string promo_text = 23;</code>
+     * <code>optional string promo_text = 23;</code>
      * @return The promoText.
      */
     public java.lang.String getPromoText() {
@@ -5399,7 +5399,7 @@ private static final long serialVersionUID = 0L;
      * 'Free two-day shipping'.
      * </pre>
      *
-     * <code>string promo_text = 23;</code>
+     * <code>optional string promo_text = 23;</code>
      * @return The bytes for promoText.
      */
     public com.google.protobuf.ByteString
@@ -5421,7 +5421,7 @@ private static final long serialVersionUID = 0L;
      * 'Free two-day shipping'.
      * </pre>
      *
-     * <code>string promo_text = 23;</code>
+     * <code>optional string promo_text = 23;</code>
      * @param value The promoText to set.
      * @return This builder for chaining.
      */
@@ -5441,7 +5441,7 @@ private static final long serialVersionUID = 0L;
      * 'Free two-day shipping'.
      * </pre>
      *
-     * <code>string promo_text = 23;</code>
+     * <code>optional string promo_text = 23;</code>
      * @return This builder for chaining.
      */
     public Builder clearPromoText() {
@@ -5456,7 +5456,7 @@ private static final long serialVersionUID = 0L;
      * 'Free two-day shipping'.
      * </pre>
      *
-     * <code>string promo_text = 23;</code>
+     * <code>optional string promo_text = 23;</code>
      * @param value The bytes for promoText to set.
      * @return This builder for chaining.
      */

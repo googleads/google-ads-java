@@ -196,7 +196,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 draft_id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 draft_id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the draftId field is set.
    */
   @java.lang.Override
@@ -209,7 +209,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 draft_id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 draft_id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The draftId.
    */
   @java.lang.Override
@@ -224,7 +224,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The base campaign to which the draft belongs.
    * </pre>
    *
-   * <code>string base_campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string base_campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the baseCampaign field is set.
    */
   @java.lang.Override
@@ -236,7 +236,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The base campaign to which the draft belongs.
    * </pre>
    *
-   * <code>string base_campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string base_campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The baseCampaign.
    */
   @java.lang.Override
@@ -257,7 +257,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The base campaign to which the draft belongs.
    * </pre>
    *
-   * <code>string base_campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string base_campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for baseCampaign.
    */
   @java.lang.Override
@@ -286,7 +286,7 @@ private static final long serialVersionUID = 0L;
    * (code point 0xA) or carriage return (code point 0xD) characters.
    * </pre>
    *
-   * <code>string name = 11;</code>
+   * <code>optional string name = 11;</code>
    * @return Whether the name field is set.
    */
   @java.lang.Override
@@ -302,7 +302,7 @@ private static final long serialVersionUID = 0L;
    * (code point 0xA) or carriage return (code point 0xD) characters.
    * </pre>
    *
-   * <code>string name = 11;</code>
+   * <code>optional string name = 11;</code>
    * @return The name.
    */
   @java.lang.Override
@@ -327,7 +327,7 @@ private static final long serialVersionUID = 0L;
    * (code point 0xA) or carriage return (code point 0xD) characters.
    * </pre>
    *
-   * <code>string name = 11;</code>
+   * <code>optional string name = 11;</code>
    * @return The bytes for name.
    */
   @java.lang.Override
@@ -354,7 +354,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>string draft_campaign = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string draft_campaign = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the draftCampaign field is set.
    */
   @java.lang.Override
@@ -368,7 +368,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>string draft_campaign = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string draft_campaign = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The draftCampaign.
    */
   @java.lang.Override
@@ -391,7 +391,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>string draft_campaign = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string draft_campaign = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for draftCampaign.
    */
   @java.lang.Override
@@ -445,7 +445,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Whether there is an experiment based on this draft currently serving.
    * </pre>
    *
-   * <code>bool has_experiment_running = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool has_experiment_running = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the hasExperimentRunning field is set.
    */
   @java.lang.Override
@@ -457,7 +457,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Whether there is an experiment based on this draft currently serving.
    * </pre>
    *
-   * <code>bool has_experiment_running = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool has_experiment_running = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The hasExperimentRunning.
    */
   @java.lang.Override
@@ -474,7 +474,7 @@ private static final long serialVersionUID = 0L;
    * is in progress or finished.
    * </pre>
    *
-   * <code>string long_running_operation = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string long_running_operation = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the longRunningOperation field is set.
    */
   @java.lang.Override
@@ -488,7 +488,7 @@ private static final long serialVersionUID = 0L;
    * is in progress or finished.
    * </pre>
    *
-   * <code>string long_running_operation = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string long_running_operation = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The longRunningOperation.
    */
   @java.lang.Override
@@ -511,7 +511,7 @@ private static final long serialVersionUID = 0L;
    * is in progress or finished.
    * </pre>
    *
-   * <code>string long_running_operation = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string long_running_operation = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for longRunningOperation.
    */
   @java.lang.Override
@@ -543,7 +543,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (status_ != com.google.ads.googleads.v8.enums.CampaignDraftStatusEnum.CampaignDraftStatus.UNSPECIFIED.getNumber()) {
@@ -576,7 +576,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (status_ != com.google.ads.googleads.v8.enums.CampaignDraftStatusEnum.CampaignDraftStatus.UNSPECIFIED.getNumber()) {
@@ -1124,7 +1124,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 draft_id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 draft_id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the draftId field is set.
      */
     @java.lang.Override
@@ -1137,7 +1137,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 draft_id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 draft_id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The draftId.
      */
     @java.lang.Override
@@ -1150,7 +1150,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 draft_id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 draft_id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The draftId to set.
      * @return This builder for chaining.
      */
@@ -1166,7 +1166,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 draft_id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 draft_id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearDraftId() {
@@ -1182,7 +1182,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The base campaign to which the draft belongs.
      * </pre>
      *
-     * <code>string base_campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string base_campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the baseCampaign field is set.
      */
     public boolean hasBaseCampaign() {
@@ -1193,7 +1193,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The base campaign to which the draft belongs.
      * </pre>
      *
-     * <code>string base_campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string base_campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return The baseCampaign.
      */
     public java.lang.String getBaseCampaign() {
@@ -1213,7 +1213,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The base campaign to which the draft belongs.
      * </pre>
      *
-     * <code>string base_campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string base_campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for baseCampaign.
      */
     public com.google.protobuf.ByteString
@@ -1234,7 +1234,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The base campaign to which the draft belongs.
      * </pre>
      *
-     * <code>string base_campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string base_campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @param value The baseCampaign to set.
      * @return This builder for chaining.
      */
@@ -1253,7 +1253,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The base campaign to which the draft belongs.
      * </pre>
      *
-     * <code>string base_campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string base_campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearBaseCampaign() {
@@ -1267,7 +1267,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The base campaign to which the draft belongs.
      * </pre>
      *
-     * <code>string base_campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string base_campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for baseCampaign to set.
      * @return This builder for chaining.
      */
@@ -1293,7 +1293,7 @@ private static final long serialVersionUID = 0L;
      * (code point 0xA) or carriage return (code point 0xD) characters.
      * </pre>
      *
-     * <code>string name = 11;</code>
+     * <code>optional string name = 11;</code>
      * @return Whether the name field is set.
      */
     public boolean hasName() {
@@ -1308,7 +1308,7 @@ private static final long serialVersionUID = 0L;
      * (code point 0xA) or carriage return (code point 0xD) characters.
      * </pre>
      *
-     * <code>string name = 11;</code>
+     * <code>optional string name = 11;</code>
      * @return The name.
      */
     public java.lang.String getName() {
@@ -1332,7 +1332,7 @@ private static final long serialVersionUID = 0L;
      * (code point 0xA) or carriage return (code point 0xD) characters.
      * </pre>
      *
-     * <code>string name = 11;</code>
+     * <code>optional string name = 11;</code>
      * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
@@ -1357,7 +1357,7 @@ private static final long serialVersionUID = 0L;
      * (code point 0xA) or carriage return (code point 0xD) characters.
      * </pre>
      *
-     * <code>string name = 11;</code>
+     * <code>optional string name = 11;</code>
      * @param value The name to set.
      * @return This builder for chaining.
      */
@@ -1380,7 +1380,7 @@ private static final long serialVersionUID = 0L;
      * (code point 0xA) or carriage return (code point 0xD) characters.
      * </pre>
      *
-     * <code>string name = 11;</code>
+     * <code>optional string name = 11;</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
@@ -1398,7 +1398,7 @@ private static final long serialVersionUID = 0L;
      * (code point 0xA) or carriage return (code point 0xD) characters.
      * </pre>
      *
-     * <code>string name = 11;</code>
+     * <code>optional string name = 11;</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
@@ -1422,7 +1422,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string draft_campaign = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string draft_campaign = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the draftCampaign field is set.
      */
     public boolean hasDraftCampaign() {
@@ -1435,7 +1435,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string draft_campaign = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string draft_campaign = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The draftCampaign.
      */
     public java.lang.String getDraftCampaign() {
@@ -1457,7 +1457,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string draft_campaign = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string draft_campaign = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for draftCampaign.
      */
     public com.google.protobuf.ByteString
@@ -1480,7 +1480,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string draft_campaign = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string draft_campaign = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The draftCampaign to set.
      * @return This builder for chaining.
      */
@@ -1501,7 +1501,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string draft_campaign = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string draft_campaign = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearDraftCampaign() {
@@ -1517,7 +1517,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string draft_campaign = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string draft_campaign = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for draftCampaign to set.
      * @return This builder for chaining.
      */
@@ -1618,7 +1618,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Whether there is an experiment based on this draft currently serving.
      * </pre>
      *
-     * <code>bool has_experiment_running = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool has_experiment_running = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the hasExperimentRunning field is set.
      */
     @java.lang.Override
@@ -1630,7 +1630,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Whether there is an experiment based on this draft currently serving.
      * </pre>
      *
-     * <code>bool has_experiment_running = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool has_experiment_running = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The hasExperimentRunning.
      */
     @java.lang.Override
@@ -1642,7 +1642,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Whether there is an experiment based on this draft currently serving.
      * </pre>
      *
-     * <code>bool has_experiment_running = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool has_experiment_running = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The hasExperimentRunning to set.
      * @return This builder for chaining.
      */
@@ -1657,7 +1657,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Whether there is an experiment based on this draft currently serving.
      * </pre>
      *
-     * <code>bool has_experiment_running = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool has_experiment_running = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearHasExperimentRunning() {
@@ -1675,7 +1675,7 @@ private static final long serialVersionUID = 0L;
      * is in progress or finished.
      * </pre>
      *
-     * <code>string long_running_operation = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string long_running_operation = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the longRunningOperation field is set.
      */
     public boolean hasLongRunningOperation() {
@@ -1688,7 +1688,7 @@ private static final long serialVersionUID = 0L;
      * is in progress or finished.
      * </pre>
      *
-     * <code>string long_running_operation = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string long_running_operation = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The longRunningOperation.
      */
     public java.lang.String getLongRunningOperation() {
@@ -1710,7 +1710,7 @@ private static final long serialVersionUID = 0L;
      * is in progress or finished.
      * </pre>
      *
-     * <code>string long_running_operation = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string long_running_operation = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for longRunningOperation.
      */
     public com.google.protobuf.ByteString
@@ -1733,7 +1733,7 @@ private static final long serialVersionUID = 0L;
      * is in progress or finished.
      * </pre>
      *
-     * <code>string long_running_operation = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string long_running_operation = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The longRunningOperation to set.
      * @return This builder for chaining.
      */
@@ -1754,7 +1754,7 @@ private static final long serialVersionUID = 0L;
      * is in progress or finished.
      * </pre>
      *
-     * <code>string long_running_operation = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string long_running_operation = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearLongRunningOperation() {
@@ -1770,7 +1770,7 @@ private static final long serialVersionUID = 0L;
      * is in progress or finished.
      * </pre>
      *
-     * <code>string long_running_operation = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string long_running_operation = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for longRunningOperation to set.
      * @return This builder for chaining.
      */

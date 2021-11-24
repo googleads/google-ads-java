@@ -36,7 +36,7 @@ public interface ClickViewOrBuilder extends
    * Output only. The Google Click ID.
    * </pre>
    *
-   * <code>string gclid = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string gclid = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the gclid field is set.
    */
   boolean hasGclid();
@@ -45,7 +45,7 @@ public interface ClickViewOrBuilder extends
    * Output only. The Google Click ID.
    * </pre>
    *
-   * <code>string gclid = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string gclid = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The gclid.
    */
   java.lang.String getGclid();
@@ -54,7 +54,7 @@ public interface ClickViewOrBuilder extends
    * Output only. The Google Click ID.
    * </pre>
    *
-   * <code>string gclid = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string gclid = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for gclid.
    */
   com.google.protobuf.ByteString
@@ -125,7 +125,7 @@ public interface ClickViewOrBuilder extends
    * Output only. Page number in search results where the ad was shown.
    * </pre>
    *
-   * <code>int64 page_number = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 page_number = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the pageNumber field is set.
    */
   boolean hasPageNumber();
@@ -134,7 +134,7 @@ public interface ClickViewOrBuilder extends
    * Output only. Page number in search results where the ad was shown.
    * </pre>
    *
-   * <code>int64 page_number = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 page_number = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The pageNumber.
    */
   long getPageNumber();
@@ -144,7 +144,7 @@ public interface ClickViewOrBuilder extends
    * Output only. The associated ad.
    * </pre>
    *
-   * <code>string ad_group_ad = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_ad = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the adGroupAd field is set.
    */
   boolean hasAdGroupAd();
@@ -153,7 +153,7 @@ public interface ClickViewOrBuilder extends
    * Output only. The associated ad.
    * </pre>
    *
-   * <code>string ad_group_ad = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_ad = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The adGroupAd.
    */
   java.lang.String getAdGroupAd();
@@ -162,7 +162,7 @@ public interface ClickViewOrBuilder extends
    * Output only. The associated ad.
    * </pre>
    *
-   * <code>string ad_group_ad = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_ad = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for adGroupAd.
    */
   com.google.protobuf.ByteString
@@ -173,7 +173,7 @@ public interface ClickViewOrBuilder extends
    * Output only. The associated campaign location target, if one exists.
    * </pre>
    *
-   * <code>string campaign_location_target = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign_location_target = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the campaignLocationTarget field is set.
    */
   boolean hasCampaignLocationTarget();
@@ -182,7 +182,7 @@ public interface ClickViewOrBuilder extends
    * Output only. The associated campaign location target, if one exists.
    * </pre>
    *
-   * <code>string campaign_location_target = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign_location_target = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The campaignLocationTarget.
    */
   java.lang.String getCampaignLocationTarget();
@@ -191,7 +191,7 @@ public interface ClickViewOrBuilder extends
    * Output only. The associated campaign location target, if one exists.
    * </pre>
    *
-   * <code>string campaign_location_target = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign_location_target = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for campaignLocationTarget.
    */
   com.google.protobuf.ByteString
@@ -202,7 +202,7 @@ public interface ClickViewOrBuilder extends
    * Output only. The associated user list, if one exists.
    * </pre>
    *
-   * <code>string user_list = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string user_list = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the userList field is set.
    */
   boolean hasUserList();
@@ -211,7 +211,7 @@ public interface ClickViewOrBuilder extends
    * Output only. The associated user list, if one exists.
    * </pre>
    *
-   * <code>string user_list = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string user_list = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The userList.
    */
   java.lang.String getUserList();
@@ -220,7 +220,7 @@ public interface ClickViewOrBuilder extends
    * Output only. The associated user list, if one exists.
    * </pre>
    *
-   * <code>string user_list = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string user_list = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for userList.
    */
   com.google.protobuf.ByteString

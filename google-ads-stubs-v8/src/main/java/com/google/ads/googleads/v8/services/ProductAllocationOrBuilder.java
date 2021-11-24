@@ -11,10 +11,10 @@ public interface ProductAllocationOrBuilder extends
    * <pre>
    * Selected product for planning. The product codes returned are within the
    * set of the ones returned by ListPlannableProducts when using the same
-   * location id.
+   * location ID.
    * </pre>
    *
-   * <code>string plannable_product_code = 3;</code>
+   * <code>optional string plannable_product_code = 3;</code>
    * @return Whether the plannableProductCode field is set.
    */
   boolean hasPlannableProductCode();
@@ -22,10 +22,10 @@ public interface ProductAllocationOrBuilder extends
    * <pre>
    * Selected product for planning. The product codes returned are within the
    * set of the ones returned by ListPlannableProducts when using the same
-   * location id.
+   * location ID.
    * </pre>
    *
-   * <code>string plannable_product_code = 3;</code>
+   * <code>optional string plannable_product_code = 3;</code>
    * @return The plannableProductCode.
    */
   java.lang.String getPlannableProductCode();
@@ -33,10 +33,10 @@ public interface ProductAllocationOrBuilder extends
    * <pre>
    * Selected product for planning. The product codes returned are within the
    * set of the ones returned by ListPlannableProducts when using the same
-   * location id.
+   * location ID.
    * </pre>
    *
-   * <code>string plannable_product_code = 3;</code>
+   * <code>optional string plannable_product_code = 3;</code>
    * @return The bytes for plannableProductCode.
    */
   com.google.protobuf.ByteString
@@ -48,7 +48,7 @@ public interface ProductAllocationOrBuilder extends
    * Amount in micros. One million is equivalent to one unit.
    * </pre>
    *
-   * <code>int64 budget_micros = 4;</code>
+   * <code>optional int64 budget_micros = 4;</code>
    * @return Whether the budgetMicros field is set.
    */
   boolean hasBudgetMicros();
@@ -58,7 +58,7 @@ public interface ProductAllocationOrBuilder extends
    * Amount in micros. One million is equivalent to one unit.
    * </pre>
    *
-   * <code>int64 budget_micros = 4;</code>
+   * <code>optional int64 budget_micros = 4;</code>
    * @return The budgetMicros.
    */
   long getBudgetMicros();

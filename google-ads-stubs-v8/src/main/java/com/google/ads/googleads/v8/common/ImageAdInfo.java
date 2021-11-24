@@ -200,7 +200,7 @@ private static final long serialVersionUID = 0L;
    * Width in pixels of the full size image.
    * </pre>
    *
-   * <code>int64 pixel_width = 15;</code>
+   * <code>optional int64 pixel_width = 15;</code>
    * @return Whether the pixelWidth field is set.
    */
   @java.lang.Override
@@ -212,7 +212,7 @@ private static final long serialVersionUID = 0L;
    * Width in pixels of the full size image.
    * </pre>
    *
-   * <code>int64 pixel_width = 15;</code>
+   * <code>optional int64 pixel_width = 15;</code>
    * @return The pixelWidth.
    */
   @java.lang.Override
@@ -227,7 +227,7 @@ private static final long serialVersionUID = 0L;
    * Height in pixels of the full size image.
    * </pre>
    *
-   * <code>int64 pixel_height = 16;</code>
+   * <code>optional int64 pixel_height = 16;</code>
    * @return Whether the pixelHeight field is set.
    */
   @java.lang.Override
@@ -239,7 +239,7 @@ private static final long serialVersionUID = 0L;
    * Height in pixels of the full size image.
    * </pre>
    *
-   * <code>int64 pixel_height = 16;</code>
+   * <code>optional int64 pixel_height = 16;</code>
    * @return The pixelHeight.
    */
   @java.lang.Override
@@ -254,7 +254,7 @@ private static final long serialVersionUID = 0L;
    * URL of the full size image.
    * </pre>
    *
-   * <code>string image_url = 17;</code>
+   * <code>optional string image_url = 17;</code>
    * @return Whether the imageUrl field is set.
    */
   @java.lang.Override
@@ -266,7 +266,7 @@ private static final long serialVersionUID = 0L;
    * URL of the full size image.
    * </pre>
    *
-   * <code>string image_url = 17;</code>
+   * <code>optional string image_url = 17;</code>
    * @return The imageUrl.
    */
   @java.lang.Override
@@ -287,7 +287,7 @@ private static final long serialVersionUID = 0L;
    * URL of the full size image.
    * </pre>
    *
-   * <code>string image_url = 17;</code>
+   * <code>optional string image_url = 17;</code>
    * @return The bytes for imageUrl.
    */
   @java.lang.Override
@@ -312,7 +312,7 @@ private static final long serialVersionUID = 0L;
    * Width in pixels of the preview size image.
    * </pre>
    *
-   * <code>int64 preview_pixel_width = 18;</code>
+   * <code>optional int64 preview_pixel_width = 18;</code>
    * @return Whether the previewPixelWidth field is set.
    */
   @java.lang.Override
@@ -324,7 +324,7 @@ private static final long serialVersionUID = 0L;
    * Width in pixels of the preview size image.
    * </pre>
    *
-   * <code>int64 preview_pixel_width = 18;</code>
+   * <code>optional int64 preview_pixel_width = 18;</code>
    * @return The previewPixelWidth.
    */
   @java.lang.Override
@@ -339,7 +339,7 @@ private static final long serialVersionUID = 0L;
    * Height in pixels of the preview size image.
    * </pre>
    *
-   * <code>int64 preview_pixel_height = 19;</code>
+   * <code>optional int64 preview_pixel_height = 19;</code>
    * @return Whether the previewPixelHeight field is set.
    */
   @java.lang.Override
@@ -351,7 +351,7 @@ private static final long serialVersionUID = 0L;
    * Height in pixels of the preview size image.
    * </pre>
    *
-   * <code>int64 preview_pixel_height = 19;</code>
+   * <code>optional int64 preview_pixel_height = 19;</code>
    * @return The previewPixelHeight.
    */
   @java.lang.Override
@@ -366,7 +366,7 @@ private static final long serialVersionUID = 0L;
    * URL of the preview size image.
    * </pre>
    *
-   * <code>string preview_image_url = 20;</code>
+   * <code>optional string preview_image_url = 20;</code>
    * @return Whether the previewImageUrl field is set.
    */
   @java.lang.Override
@@ -378,7 +378,7 @@ private static final long serialVersionUID = 0L;
    * URL of the preview size image.
    * </pre>
    *
-   * <code>string preview_image_url = 20;</code>
+   * <code>optional string preview_image_url = 20;</code>
    * @return The previewImageUrl.
    */
   @java.lang.Override
@@ -399,7 +399,7 @@ private static final long serialVersionUID = 0L;
    * URL of the preview size image.
    * </pre>
    *
-   * <code>string preview_image_url = 20;</code>
+   * <code>optional string preview_image_url = 20;</code>
    * @return The bytes for previewImageUrl.
    */
   @java.lang.Override
@@ -452,7 +452,7 @@ private static final long serialVersionUID = 0L;
    * the MediaFile's name. If the image was created from bytes, this is empty.
    * </pre>
    *
-   * <code>string name = 21;</code>
+   * <code>optional string name = 21;</code>
    * @return Whether the name field is set.
    */
   @java.lang.Override
@@ -465,7 +465,7 @@ private static final long serialVersionUID = 0L;
    * the MediaFile's name. If the image was created from bytes, this is empty.
    * </pre>
    *
-   * <code>string name = 21;</code>
+   * <code>optional string name = 21;</code>
    * @return The name.
    */
   @java.lang.Override
@@ -487,7 +487,7 @@ private static final long serialVersionUID = 0L;
    * the MediaFile's name. If the image was created from bytes, this is empty.
    * </pre>
    *
-   * <code>string name = 21;</code>
+   * <code>optional string name = 21;</code>
    * @return The bytes for name.
    */
   @java.lang.Override
@@ -1228,7 +1228,7 @@ private static final long serialVersionUID = 0L;
      * Width in pixels of the full size image.
      * </pre>
      *
-     * <code>int64 pixel_width = 15;</code>
+     * <code>optional int64 pixel_width = 15;</code>
      * @return Whether the pixelWidth field is set.
      */
     @java.lang.Override
@@ -1240,7 +1240,7 @@ private static final long serialVersionUID = 0L;
      * Width in pixels of the full size image.
      * </pre>
      *
-     * <code>int64 pixel_width = 15;</code>
+     * <code>optional int64 pixel_width = 15;</code>
      * @return The pixelWidth.
      */
     @java.lang.Override
@@ -1252,7 +1252,7 @@ private static final long serialVersionUID = 0L;
      * Width in pixels of the full size image.
      * </pre>
      *
-     * <code>int64 pixel_width = 15;</code>
+     * <code>optional int64 pixel_width = 15;</code>
      * @param value The pixelWidth to set.
      * @return This builder for chaining.
      */
@@ -1267,7 +1267,7 @@ private static final long serialVersionUID = 0L;
      * Width in pixels of the full size image.
      * </pre>
      *
-     * <code>int64 pixel_width = 15;</code>
+     * <code>optional int64 pixel_width = 15;</code>
      * @return This builder for chaining.
      */
     public Builder clearPixelWidth() {
@@ -1283,7 +1283,7 @@ private static final long serialVersionUID = 0L;
      * Height in pixels of the full size image.
      * </pre>
      *
-     * <code>int64 pixel_height = 16;</code>
+     * <code>optional int64 pixel_height = 16;</code>
      * @return Whether the pixelHeight field is set.
      */
     @java.lang.Override
@@ -1295,7 +1295,7 @@ private static final long serialVersionUID = 0L;
      * Height in pixels of the full size image.
      * </pre>
      *
-     * <code>int64 pixel_height = 16;</code>
+     * <code>optional int64 pixel_height = 16;</code>
      * @return The pixelHeight.
      */
     @java.lang.Override
@@ -1307,7 +1307,7 @@ private static final long serialVersionUID = 0L;
      * Height in pixels of the full size image.
      * </pre>
      *
-     * <code>int64 pixel_height = 16;</code>
+     * <code>optional int64 pixel_height = 16;</code>
      * @param value The pixelHeight to set.
      * @return This builder for chaining.
      */
@@ -1322,7 +1322,7 @@ private static final long serialVersionUID = 0L;
      * Height in pixels of the full size image.
      * </pre>
      *
-     * <code>int64 pixel_height = 16;</code>
+     * <code>optional int64 pixel_height = 16;</code>
      * @return This builder for chaining.
      */
     public Builder clearPixelHeight() {
@@ -1338,7 +1338,7 @@ private static final long serialVersionUID = 0L;
      * URL of the full size image.
      * </pre>
      *
-     * <code>string image_url = 17;</code>
+     * <code>optional string image_url = 17;</code>
      * @return Whether the imageUrl field is set.
      */
     public boolean hasImageUrl() {
@@ -1349,7 +1349,7 @@ private static final long serialVersionUID = 0L;
      * URL of the full size image.
      * </pre>
      *
-     * <code>string image_url = 17;</code>
+     * <code>optional string image_url = 17;</code>
      * @return The imageUrl.
      */
     public java.lang.String getImageUrl() {
@@ -1369,7 +1369,7 @@ private static final long serialVersionUID = 0L;
      * URL of the full size image.
      * </pre>
      *
-     * <code>string image_url = 17;</code>
+     * <code>optional string image_url = 17;</code>
      * @return The bytes for imageUrl.
      */
     public com.google.protobuf.ByteString
@@ -1390,7 +1390,7 @@ private static final long serialVersionUID = 0L;
      * URL of the full size image.
      * </pre>
      *
-     * <code>string image_url = 17;</code>
+     * <code>optional string image_url = 17;</code>
      * @param value The imageUrl to set.
      * @return This builder for chaining.
      */
@@ -1409,7 +1409,7 @@ private static final long serialVersionUID = 0L;
      * URL of the full size image.
      * </pre>
      *
-     * <code>string image_url = 17;</code>
+     * <code>optional string image_url = 17;</code>
      * @return This builder for chaining.
      */
     public Builder clearImageUrl() {
@@ -1423,7 +1423,7 @@ private static final long serialVersionUID = 0L;
      * URL of the full size image.
      * </pre>
      *
-     * <code>string image_url = 17;</code>
+     * <code>optional string image_url = 17;</code>
      * @param value The bytes for imageUrl to set.
      * @return This builder for chaining.
      */
@@ -1445,7 +1445,7 @@ private static final long serialVersionUID = 0L;
      * Width in pixels of the preview size image.
      * </pre>
      *
-     * <code>int64 preview_pixel_width = 18;</code>
+     * <code>optional int64 preview_pixel_width = 18;</code>
      * @return Whether the previewPixelWidth field is set.
      */
     @java.lang.Override
@@ -1457,7 +1457,7 @@ private static final long serialVersionUID = 0L;
      * Width in pixels of the preview size image.
      * </pre>
      *
-     * <code>int64 preview_pixel_width = 18;</code>
+     * <code>optional int64 preview_pixel_width = 18;</code>
      * @return The previewPixelWidth.
      */
     @java.lang.Override
@@ -1469,7 +1469,7 @@ private static final long serialVersionUID = 0L;
      * Width in pixels of the preview size image.
      * </pre>
      *
-     * <code>int64 preview_pixel_width = 18;</code>
+     * <code>optional int64 preview_pixel_width = 18;</code>
      * @param value The previewPixelWidth to set.
      * @return This builder for chaining.
      */
@@ -1484,7 +1484,7 @@ private static final long serialVersionUID = 0L;
      * Width in pixels of the preview size image.
      * </pre>
      *
-     * <code>int64 preview_pixel_width = 18;</code>
+     * <code>optional int64 preview_pixel_width = 18;</code>
      * @return This builder for chaining.
      */
     public Builder clearPreviewPixelWidth() {
@@ -1500,7 +1500,7 @@ private static final long serialVersionUID = 0L;
      * Height in pixels of the preview size image.
      * </pre>
      *
-     * <code>int64 preview_pixel_height = 19;</code>
+     * <code>optional int64 preview_pixel_height = 19;</code>
      * @return Whether the previewPixelHeight field is set.
      */
     @java.lang.Override
@@ -1512,7 +1512,7 @@ private static final long serialVersionUID = 0L;
      * Height in pixels of the preview size image.
      * </pre>
      *
-     * <code>int64 preview_pixel_height = 19;</code>
+     * <code>optional int64 preview_pixel_height = 19;</code>
      * @return The previewPixelHeight.
      */
     @java.lang.Override
@@ -1524,7 +1524,7 @@ private static final long serialVersionUID = 0L;
      * Height in pixels of the preview size image.
      * </pre>
      *
-     * <code>int64 preview_pixel_height = 19;</code>
+     * <code>optional int64 preview_pixel_height = 19;</code>
      * @param value The previewPixelHeight to set.
      * @return This builder for chaining.
      */
@@ -1539,7 +1539,7 @@ private static final long serialVersionUID = 0L;
      * Height in pixels of the preview size image.
      * </pre>
      *
-     * <code>int64 preview_pixel_height = 19;</code>
+     * <code>optional int64 preview_pixel_height = 19;</code>
      * @return This builder for chaining.
      */
     public Builder clearPreviewPixelHeight() {
@@ -1555,7 +1555,7 @@ private static final long serialVersionUID = 0L;
      * URL of the preview size image.
      * </pre>
      *
-     * <code>string preview_image_url = 20;</code>
+     * <code>optional string preview_image_url = 20;</code>
      * @return Whether the previewImageUrl field is set.
      */
     public boolean hasPreviewImageUrl() {
@@ -1566,7 +1566,7 @@ private static final long serialVersionUID = 0L;
      * URL of the preview size image.
      * </pre>
      *
-     * <code>string preview_image_url = 20;</code>
+     * <code>optional string preview_image_url = 20;</code>
      * @return The previewImageUrl.
      */
     public java.lang.String getPreviewImageUrl() {
@@ -1586,7 +1586,7 @@ private static final long serialVersionUID = 0L;
      * URL of the preview size image.
      * </pre>
      *
-     * <code>string preview_image_url = 20;</code>
+     * <code>optional string preview_image_url = 20;</code>
      * @return The bytes for previewImageUrl.
      */
     public com.google.protobuf.ByteString
@@ -1607,7 +1607,7 @@ private static final long serialVersionUID = 0L;
      * URL of the preview size image.
      * </pre>
      *
-     * <code>string preview_image_url = 20;</code>
+     * <code>optional string preview_image_url = 20;</code>
      * @param value The previewImageUrl to set.
      * @return This builder for chaining.
      */
@@ -1626,7 +1626,7 @@ private static final long serialVersionUID = 0L;
      * URL of the preview size image.
      * </pre>
      *
-     * <code>string preview_image_url = 20;</code>
+     * <code>optional string preview_image_url = 20;</code>
      * @return This builder for chaining.
      */
     public Builder clearPreviewImageUrl() {
@@ -1640,7 +1640,7 @@ private static final long serialVersionUID = 0L;
      * URL of the preview size image.
      * </pre>
      *
-     * <code>string preview_image_url = 20;</code>
+     * <code>optional string preview_image_url = 20;</code>
      * @param value The bytes for previewImageUrl to set.
      * @return This builder for chaining.
      */
@@ -1737,7 +1737,7 @@ private static final long serialVersionUID = 0L;
      * the MediaFile's name. If the image was created from bytes, this is empty.
      * </pre>
      *
-     * <code>string name = 21;</code>
+     * <code>optional string name = 21;</code>
      * @return Whether the name field is set.
      */
     public boolean hasName() {
@@ -1749,7 +1749,7 @@ private static final long serialVersionUID = 0L;
      * the MediaFile's name. If the image was created from bytes, this is empty.
      * </pre>
      *
-     * <code>string name = 21;</code>
+     * <code>optional string name = 21;</code>
      * @return The name.
      */
     public java.lang.String getName() {
@@ -1770,7 +1770,7 @@ private static final long serialVersionUID = 0L;
      * the MediaFile's name. If the image was created from bytes, this is empty.
      * </pre>
      *
-     * <code>string name = 21;</code>
+     * <code>optional string name = 21;</code>
      * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
@@ -1792,7 +1792,7 @@ private static final long serialVersionUID = 0L;
      * the MediaFile's name. If the image was created from bytes, this is empty.
      * </pre>
      *
-     * <code>string name = 21;</code>
+     * <code>optional string name = 21;</code>
      * @param value The name to set.
      * @return This builder for chaining.
      */
@@ -1812,7 +1812,7 @@ private static final long serialVersionUID = 0L;
      * the MediaFile's name. If the image was created from bytes, this is empty.
      * </pre>
      *
-     * <code>string name = 21;</code>
+     * <code>optional string name = 21;</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
@@ -1827,7 +1827,7 @@ private static final long serialVersionUID = 0L;
      * the MediaFile's name. If the image was created from bytes, this is empty.
      * </pre>
      *
-     * <code>string name = 21;</code>
+     * <code>optional string name = 21;</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */

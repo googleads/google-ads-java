@@ -105,7 +105,7 @@ private static final long serialVersionUID = 0L;
    * Three-character ISO 4217 currency code.
    * </pre>
    *
-   * <code>string currency_code = 3;</code>
+   * <code>optional string currency_code = 3;</code>
    * @return Whether the currencyCode field is set.
    */
   @java.lang.Override
@@ -117,7 +117,7 @@ private static final long serialVersionUID = 0L;
    * Three-character ISO 4217 currency code.
    * </pre>
    *
-   * <code>string currency_code = 3;</code>
+   * <code>optional string currency_code = 3;</code>
    * @return The currencyCode.
    */
   @java.lang.Override
@@ -138,7 +138,7 @@ private static final long serialVersionUID = 0L;
    * Three-character ISO 4217 currency code.
    * </pre>
    *
-   * <code>string currency_code = 3;</code>
+   * <code>optional string currency_code = 3;</code>
    * @return The bytes for currencyCode.
    */
   @java.lang.Override
@@ -163,7 +163,7 @@ private static final long serialVersionUID = 0L;
    * Amount in micros. One million is equivalent to one unit.
    * </pre>
    *
-   * <code>int64 amount_micros = 4;</code>
+   * <code>optional int64 amount_micros = 4;</code>
    * @return Whether the amountMicros field is set.
    */
   @java.lang.Override
@@ -175,7 +175,7 @@ private static final long serialVersionUID = 0L;
    * Amount in micros. One million is equivalent to one unit.
    * </pre>
    *
-   * <code>int64 amount_micros = 4;</code>
+   * <code>optional int64 amount_micros = 4;</code>
    * @return The amountMicros.
    */
   @java.lang.Override
@@ -534,7 +534,7 @@ private static final long serialVersionUID = 0L;
      * Three-character ISO 4217 currency code.
      * </pre>
      *
-     * <code>string currency_code = 3;</code>
+     * <code>optional string currency_code = 3;</code>
      * @return Whether the currencyCode field is set.
      */
     public boolean hasCurrencyCode() {
@@ -545,7 +545,7 @@ private static final long serialVersionUID = 0L;
      * Three-character ISO 4217 currency code.
      * </pre>
      *
-     * <code>string currency_code = 3;</code>
+     * <code>optional string currency_code = 3;</code>
      * @return The currencyCode.
      */
     public java.lang.String getCurrencyCode() {
@@ -565,7 +565,7 @@ private static final long serialVersionUID = 0L;
      * Three-character ISO 4217 currency code.
      * </pre>
      *
-     * <code>string currency_code = 3;</code>
+     * <code>optional string currency_code = 3;</code>
      * @return The bytes for currencyCode.
      */
     public com.google.protobuf.ByteString
@@ -586,7 +586,7 @@ private static final long serialVersionUID = 0L;
      * Three-character ISO 4217 currency code.
      * </pre>
      *
-     * <code>string currency_code = 3;</code>
+     * <code>optional string currency_code = 3;</code>
      * @param value The currencyCode to set.
      * @return This builder for chaining.
      */
@@ -605,7 +605,7 @@ private static final long serialVersionUID = 0L;
      * Three-character ISO 4217 currency code.
      * </pre>
      *
-     * <code>string currency_code = 3;</code>
+     * <code>optional string currency_code = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearCurrencyCode() {
@@ -619,7 +619,7 @@ private static final long serialVersionUID = 0L;
      * Three-character ISO 4217 currency code.
      * </pre>
      *
-     * <code>string currency_code = 3;</code>
+     * <code>optional string currency_code = 3;</code>
      * @param value The bytes for currencyCode to set.
      * @return This builder for chaining.
      */
@@ -641,7 +641,7 @@ private static final long serialVersionUID = 0L;
      * Amount in micros. One million is equivalent to one unit.
      * </pre>
      *
-     * <code>int64 amount_micros = 4;</code>
+     * <code>optional int64 amount_micros = 4;</code>
      * @return Whether the amountMicros field is set.
      */
     @java.lang.Override
@@ -653,7 +653,7 @@ private static final long serialVersionUID = 0L;
      * Amount in micros. One million is equivalent to one unit.
      * </pre>
      *
-     * <code>int64 amount_micros = 4;</code>
+     * <code>optional int64 amount_micros = 4;</code>
      * @return The amountMicros.
      */
     @java.lang.Override
@@ -665,7 +665,7 @@ private static final long serialVersionUID = 0L;
      * Amount in micros. One million is equivalent to one unit.
      * </pre>
      *
-     * <code>int64 amount_micros = 4;</code>
+     * <code>optional int64 amount_micros = 4;</code>
      * @param value The amountMicros to set.
      * @return This builder for chaining.
      */
@@ -680,7 +680,7 @@ private static final long serialVersionUID = 0L;
      * Amount in micros. One million is equivalent to one unit.
      * </pre>
      *
-     * <code>int64 amount_micros = 4;</code>
+     * <code>optional int64 amount_micros = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearAmountMicros() {

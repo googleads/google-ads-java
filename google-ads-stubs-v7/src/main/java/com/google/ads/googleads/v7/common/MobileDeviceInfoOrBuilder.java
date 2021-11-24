@@ -12,7 +12,7 @@ public interface MobileDeviceInfoOrBuilder extends
    * The mobile device constant resource name.
    * </pre>
    *
-   * <code>string mobile_device_constant = 2;</code>
+   * <code>optional string mobile_device_constant = 2;</code>
    * @return Whether the mobileDeviceConstant field is set.
    */
   boolean hasMobileDeviceConstant();
@@ -21,7 +21,7 @@ public interface MobileDeviceInfoOrBuilder extends
    * The mobile device constant resource name.
    * </pre>
    *
-   * <code>string mobile_device_constant = 2;</code>
+   * <code>optional string mobile_device_constant = 2;</code>
    * @return The mobileDeviceConstant.
    */
   java.lang.String getMobileDeviceConstant();
@@ -30,7 +30,7 @@ public interface MobileDeviceInfoOrBuilder extends
    * The mobile device constant resource name.
    * </pre>
    *
-   * <code>string mobile_device_constant = 2;</code>
+   * <code>optional string mobile_device_constant = 2;</code>
    * @return The bytes for mobileDeviceConstant.
    */
   com.google.protobuf.ByteString

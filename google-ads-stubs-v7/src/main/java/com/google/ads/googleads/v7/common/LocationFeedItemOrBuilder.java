@@ -12,7 +12,7 @@ public interface LocationFeedItemOrBuilder extends
    * The name of the business.
    * </pre>
    *
-   * <code>string business_name = 9;</code>
+   * <code>optional string business_name = 9;</code>
    * @return Whether the businessName field is set.
    */
   boolean hasBusinessName();
@@ -21,7 +21,7 @@ public interface LocationFeedItemOrBuilder extends
    * The name of the business.
    * </pre>
    *
-   * <code>string business_name = 9;</code>
+   * <code>optional string business_name = 9;</code>
    * @return The businessName.
    */
   java.lang.String getBusinessName();
@@ -30,7 +30,7 @@ public interface LocationFeedItemOrBuilder extends
    * The name of the business.
    * </pre>
    *
-   * <code>string business_name = 9;</code>
+   * <code>optional string business_name = 9;</code>
    * @return The bytes for businessName.
    */
   com.google.protobuf.ByteString
@@ -41,7 +41,7 @@ public interface LocationFeedItemOrBuilder extends
    * Line 1 of the business address.
    * </pre>
    *
-   * <code>string address_line_1 = 10;</code>
+   * <code>optional string address_line_1 = 10;</code>
    * @return Whether the addressLine1 field is set.
    */
   boolean hasAddressLine1();
@@ -50,7 +50,7 @@ public interface LocationFeedItemOrBuilder extends
    * Line 1 of the business address.
    * </pre>
    *
-   * <code>string address_line_1 = 10;</code>
+   * <code>optional string address_line_1 = 10;</code>
    * @return The addressLine1.
    */
   java.lang.String getAddressLine1();
@@ -59,7 +59,7 @@ public interface LocationFeedItemOrBuilder extends
    * Line 1 of the business address.
    * </pre>
    *
-   * <code>string address_line_1 = 10;</code>
+   * <code>optional string address_line_1 = 10;</code>
    * @return The bytes for addressLine1.
    */
   com.google.protobuf.ByteString
@@ -70,7 +70,7 @@ public interface LocationFeedItemOrBuilder extends
    * Line 2 of the business address.
    * </pre>
    *
-   * <code>string address_line_2 = 11;</code>
+   * <code>optional string address_line_2 = 11;</code>
    * @return Whether the addressLine2 field is set.
    */
   boolean hasAddressLine2();
@@ -79,7 +79,7 @@ public interface LocationFeedItemOrBuilder extends
    * Line 2 of the business address.
    * </pre>
    *
-   * <code>string address_line_2 = 11;</code>
+   * <code>optional string address_line_2 = 11;</code>
    * @return The addressLine2.
    */
   java.lang.String getAddressLine2();
@@ -88,7 +88,7 @@ public interface LocationFeedItemOrBuilder extends
    * Line 2 of the business address.
    * </pre>
    *
-   * <code>string address_line_2 = 11;</code>
+   * <code>optional string address_line_2 = 11;</code>
    * @return The bytes for addressLine2.
    */
   com.google.protobuf.ByteString
@@ -99,7 +99,7 @@ public interface LocationFeedItemOrBuilder extends
    * City of the business address.
    * </pre>
    *
-   * <code>string city = 12;</code>
+   * <code>optional string city = 12;</code>
    * @return Whether the city field is set.
    */
   boolean hasCity();
@@ -108,7 +108,7 @@ public interface LocationFeedItemOrBuilder extends
    * City of the business address.
    * </pre>
    *
-   * <code>string city = 12;</code>
+   * <code>optional string city = 12;</code>
    * @return The city.
    */
   java.lang.String getCity();
@@ -117,7 +117,7 @@ public interface LocationFeedItemOrBuilder extends
    * City of the business address.
    * </pre>
    *
-   * <code>string city = 12;</code>
+   * <code>optional string city = 12;</code>
    * @return The bytes for city.
    */
   com.google.protobuf.ByteString
@@ -128,7 +128,7 @@ public interface LocationFeedItemOrBuilder extends
    * Province of the business address.
    * </pre>
    *
-   * <code>string province = 13;</code>
+   * <code>optional string province = 13;</code>
    * @return Whether the province field is set.
    */
   boolean hasProvince();
@@ -137,7 +137,7 @@ public interface LocationFeedItemOrBuilder extends
    * Province of the business address.
    * </pre>
    *
-   * <code>string province = 13;</code>
+   * <code>optional string province = 13;</code>
    * @return The province.
    */
   java.lang.String getProvince();
@@ -146,7 +146,7 @@ public interface LocationFeedItemOrBuilder extends
    * Province of the business address.
    * </pre>
    *
-   * <code>string province = 13;</code>
+   * <code>optional string province = 13;</code>
    * @return The bytes for province.
    */
   com.google.protobuf.ByteString
@@ -157,7 +157,7 @@ public interface LocationFeedItemOrBuilder extends
    * Postal code of the business address.
    * </pre>
    *
-   * <code>string postal_code = 14;</code>
+   * <code>optional string postal_code = 14;</code>
    * @return Whether the postalCode field is set.
    */
   boolean hasPostalCode();
@@ -166,7 +166,7 @@ public interface LocationFeedItemOrBuilder extends
    * Postal code of the business address.
    * </pre>
    *
-   * <code>string postal_code = 14;</code>
+   * <code>optional string postal_code = 14;</code>
    * @return The postalCode.
    */
   java.lang.String getPostalCode();
@@ -175,7 +175,7 @@ public interface LocationFeedItemOrBuilder extends
    * Postal code of the business address.
    * </pre>
    *
-   * <code>string postal_code = 14;</code>
+   * <code>optional string postal_code = 14;</code>
    * @return The bytes for postalCode.
    */
   com.google.protobuf.ByteString
@@ -186,7 +186,7 @@ public interface LocationFeedItemOrBuilder extends
    * Country code of the business address.
    * </pre>
    *
-   * <code>string country_code = 15;</code>
+   * <code>optional string country_code = 15;</code>
    * @return Whether the countryCode field is set.
    */
   boolean hasCountryCode();
@@ -195,7 +195,7 @@ public interface LocationFeedItemOrBuilder extends
    * Country code of the business address.
    * </pre>
    *
-   * <code>string country_code = 15;</code>
+   * <code>optional string country_code = 15;</code>
    * @return The countryCode.
    */
   java.lang.String getCountryCode();
@@ -204,7 +204,7 @@ public interface LocationFeedItemOrBuilder extends
    * Country code of the business address.
    * </pre>
    *
-   * <code>string country_code = 15;</code>
+   * <code>optional string country_code = 15;</code>
    * @return The bytes for countryCode.
    */
   com.google.protobuf.ByteString
@@ -215,7 +215,7 @@ public interface LocationFeedItemOrBuilder extends
    * Phone number of the business.
    * </pre>
    *
-   * <code>string phone_number = 16;</code>
+   * <code>optional string phone_number = 16;</code>
    * @return Whether the phoneNumber field is set.
    */
   boolean hasPhoneNumber();
@@ -224,7 +224,7 @@ public interface LocationFeedItemOrBuilder extends
    * Phone number of the business.
    * </pre>
    *
-   * <code>string phone_number = 16;</code>
+   * <code>optional string phone_number = 16;</code>
    * @return The phoneNumber.
    */
   java.lang.String getPhoneNumber();
@@ -233,7 +233,7 @@ public interface LocationFeedItemOrBuilder extends
    * Phone number of the business.
    * </pre>
    *
-   * <code>string phone_number = 16;</code>
+   * <code>optional string phone_number = 16;</code>
    * @return The bytes for phoneNumber.
    */
   com.google.protobuf.ByteString

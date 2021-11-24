@@ -36,7 +36,7 @@ public interface CustomerFeedOrBuilder extends
    * Immutable. The feed being linked to the customer.
    * </pre>
    *
-   * <code>string feed = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string feed = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the feed field is set.
    */
   boolean hasFeed();
@@ -45,7 +45,7 @@ public interface CustomerFeedOrBuilder extends
    * Immutable. The feed being linked to the customer.
    * </pre>
    *
-   * <code>string feed = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string feed = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The feed.
    */
   java.lang.String getFeed();
@@ -54,7 +54,7 @@ public interface CustomerFeedOrBuilder extends
    * Immutable. The feed being linked to the customer.
    * </pre>
    *
-   * <code>string feed = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string feed = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for feed.
    */
   com.google.protobuf.ByteString

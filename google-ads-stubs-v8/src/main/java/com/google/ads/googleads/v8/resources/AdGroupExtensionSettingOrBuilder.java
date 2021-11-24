@@ -58,7 +58,7 @@ public interface AdGroupExtensionSettingOrBuilder extends
    * `customers/{customer_id}/adGroups/{ad_group_id}`
    * </pre>
    *
-   * <code>string ad_group = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the adGroup field is set.
    */
   boolean hasAdGroup();
@@ -70,7 +70,7 @@ public interface AdGroupExtensionSettingOrBuilder extends
    * `customers/{customer_id}/adGroups/{ad_group_id}`
    * </pre>
    *
-   * <code>string ad_group = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The adGroup.
    */
   java.lang.String getAdGroup();
@@ -82,7 +82,7 @@ public interface AdGroupExtensionSettingOrBuilder extends
    * `customers/{customer_id}/adGroups/{ad_group_id}`
    * </pre>
    *
-   * <code>string ad_group = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for adGroup.
    */
   com.google.protobuf.ByteString

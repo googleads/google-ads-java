@@ -216,7 +216,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The FeedMapping that contains the placeholder type.
    * </pre>
    *
-   * <code>string feed_mapping_resource_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string feed_mapping_resource_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the feedMappingResourceName field is set.
    */
   @java.lang.Override
@@ -228,7 +228,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The FeedMapping that contains the placeholder type.
    * </pre>
    *
-   * <code>string feed_mapping_resource_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string feed_mapping_resource_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The feedMappingResourceName.
    */
   @java.lang.Override
@@ -249,7 +249,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The FeedMapping that contains the placeholder type.
    * </pre>
    *
-   * <code>string feed_mapping_resource_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string feed_mapping_resource_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for feedMappingResourceName.
    */
   @java.lang.Override
@@ -1207,7 +1207,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The FeedMapping that contains the placeholder type.
      * </pre>
      *
-     * <code>string feed_mapping_resource_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string feed_mapping_resource_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the feedMappingResourceName field is set.
      */
     public boolean hasFeedMappingResourceName() {
@@ -1218,7 +1218,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The FeedMapping that contains the placeholder type.
      * </pre>
      *
-     * <code>string feed_mapping_resource_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string feed_mapping_resource_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The feedMappingResourceName.
      */
     public java.lang.String getFeedMappingResourceName() {
@@ -1238,7 +1238,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The FeedMapping that contains the placeholder type.
      * </pre>
      *
-     * <code>string feed_mapping_resource_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string feed_mapping_resource_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for feedMappingResourceName.
      */
     public com.google.protobuf.ByteString
@@ -1259,7 +1259,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The FeedMapping that contains the placeholder type.
      * </pre>
      *
-     * <code>string feed_mapping_resource_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string feed_mapping_resource_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The feedMappingResourceName to set.
      * @return This builder for chaining.
      */
@@ -1278,7 +1278,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The FeedMapping that contains the placeholder type.
      * </pre>
      *
-     * <code>string feed_mapping_resource_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string feed_mapping_resource_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearFeedMappingResourceName() {
@@ -1292,7 +1292,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The FeedMapping that contains the placeholder type.
      * </pre>
      *
-     * <code>string feed_mapping_resource_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string feed_mapping_resource_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for feedMappingResourceName to set.
      * @return This builder for chaining.
      */

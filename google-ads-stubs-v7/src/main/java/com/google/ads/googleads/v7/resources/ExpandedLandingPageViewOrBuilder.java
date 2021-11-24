@@ -36,7 +36,7 @@ public interface ExpandedLandingPageViewOrBuilder extends
    * Output only. The final URL that clicks are directed to.
    * </pre>
    *
-   * <code>string expanded_final_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string expanded_final_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the expandedFinalUrl field is set.
    */
   boolean hasExpandedFinalUrl();
@@ -45,7 +45,7 @@ public interface ExpandedLandingPageViewOrBuilder extends
    * Output only. The final URL that clicks are directed to.
    * </pre>
    *
-   * <code>string expanded_final_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string expanded_final_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The expandedFinalUrl.
    */
   java.lang.String getExpandedFinalUrl();
@@ -54,7 +54,7 @@ public interface ExpandedLandingPageViewOrBuilder extends
    * Output only. The final URL that clicks are directed to.
    * </pre>
    *
-   * <code>string expanded_final_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string expanded_final_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for expandedFinalUrl.
    */
   com.google.protobuf.ByteString

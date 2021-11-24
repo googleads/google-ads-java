@@ -234,7 +234,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The Google Click ID.
    * </pre>
    *
-   * <code>string gclid = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string gclid = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the gclid field is set.
    */
   @java.lang.Override
@@ -246,7 +246,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The Google Click ID.
    * </pre>
    *
-   * <code>string gclid = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string gclid = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The gclid.
    */
   @java.lang.Override
@@ -267,7 +267,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The Google Click ID.
    * </pre>
    *
-   * <code>string gclid = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string gclid = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for gclid.
    */
   @java.lang.Override
@@ -374,7 +374,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Page number in search results where the ad was shown.
    * </pre>
    *
-   * <code>int64 page_number = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 page_number = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the pageNumber field is set.
    */
   @java.lang.Override
@@ -386,7 +386,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Page number in search results where the ad was shown.
    * </pre>
    *
-   * <code>int64 page_number = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 page_number = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The pageNumber.
    */
   @java.lang.Override
@@ -401,7 +401,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The associated ad.
    * </pre>
    *
-   * <code>string ad_group_ad = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_ad = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the adGroupAd field is set.
    */
   @java.lang.Override
@@ -413,7 +413,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The associated ad.
    * </pre>
    *
-   * <code>string ad_group_ad = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_ad = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The adGroupAd.
    */
   @java.lang.Override
@@ -434,7 +434,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The associated ad.
    * </pre>
    *
-   * <code>string ad_group_ad = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_ad = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for adGroupAd.
    */
   @java.lang.Override
@@ -459,7 +459,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The associated campaign location target, if one exists.
    * </pre>
    *
-   * <code>string campaign_location_target = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign_location_target = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the campaignLocationTarget field is set.
    */
   @java.lang.Override
@@ -471,7 +471,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The associated campaign location target, if one exists.
    * </pre>
    *
-   * <code>string campaign_location_target = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign_location_target = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The campaignLocationTarget.
    */
   @java.lang.Override
@@ -492,7 +492,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The associated campaign location target, if one exists.
    * </pre>
    *
-   * <code>string campaign_location_target = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign_location_target = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for campaignLocationTarget.
    */
   @java.lang.Override
@@ -517,7 +517,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The associated user list, if one exists.
    * </pre>
    *
-   * <code>string user_list = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string user_list = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the userList field is set.
    */
   @java.lang.Override
@@ -529,7 +529,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The associated user list, if one exists.
    * </pre>
    *
-   * <code>string user_list = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string user_list = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The userList.
    */
   @java.lang.Override
@@ -550,7 +550,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The associated user list, if one exists.
    * </pre>
    *
-   * <code>string user_list = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string user_list = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for userList.
    */
   @java.lang.Override
@@ -668,7 +668,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (areaOfInterest_ != null) {
@@ -692,7 +692,7 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000010) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 12, userList_);
     }
-    if (!getKeywordBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyword_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 13, keyword_);
     }
     if (keywordInfo_ != null) {
@@ -707,7 +707,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (areaOfInterest_ != null) {
@@ -734,7 +734,7 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000010) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, userList_);
     }
-    if (!getKeywordBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(keyword_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, keyword_);
     }
     if (keywordInfo_ != null) {
@@ -1318,7 +1318,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The Google Click ID.
      * </pre>
      *
-     * <code>string gclid = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string gclid = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the gclid field is set.
      */
     public boolean hasGclid() {
@@ -1329,7 +1329,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The Google Click ID.
      * </pre>
      *
-     * <code>string gclid = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string gclid = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The gclid.
      */
     public java.lang.String getGclid() {
@@ -1349,7 +1349,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The Google Click ID.
      * </pre>
      *
-     * <code>string gclid = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string gclid = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for gclid.
      */
     public com.google.protobuf.ByteString
@@ -1370,7 +1370,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The Google Click ID.
      * </pre>
      *
-     * <code>string gclid = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string gclid = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The gclid to set.
      * @return This builder for chaining.
      */
@@ -1389,7 +1389,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The Google Click ID.
      * </pre>
      *
-     * <code>string gclid = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string gclid = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearGclid() {
@@ -1403,7 +1403,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The Google Click ID.
      * </pre>
      *
-     * <code>string gclid = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string gclid = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for gclid to set.
      * @return This builder for chaining.
      */
@@ -1753,7 +1753,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Page number in search results where the ad was shown.
      * </pre>
      *
-     * <code>int64 page_number = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 page_number = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the pageNumber field is set.
      */
     @java.lang.Override
@@ -1765,7 +1765,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Page number in search results where the ad was shown.
      * </pre>
      *
-     * <code>int64 page_number = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 page_number = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The pageNumber.
      */
     @java.lang.Override
@@ -1777,7 +1777,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Page number in search results where the ad was shown.
      * </pre>
      *
-     * <code>int64 page_number = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 page_number = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The pageNumber to set.
      * @return This builder for chaining.
      */
@@ -1792,7 +1792,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Page number in search results where the ad was shown.
      * </pre>
      *
-     * <code>int64 page_number = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 page_number = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearPageNumber() {
@@ -1808,7 +1808,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The associated ad.
      * </pre>
      *
-     * <code>string ad_group_ad = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_ad = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the adGroupAd field is set.
      */
     public boolean hasAdGroupAd() {
@@ -1819,7 +1819,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The associated ad.
      * </pre>
      *
-     * <code>string ad_group_ad = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_ad = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The adGroupAd.
      */
     public java.lang.String getAdGroupAd() {
@@ -1839,7 +1839,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The associated ad.
      * </pre>
      *
-     * <code>string ad_group_ad = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_ad = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for adGroupAd.
      */
     public com.google.protobuf.ByteString
@@ -1860,7 +1860,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The associated ad.
      * </pre>
      *
-     * <code>string ad_group_ad = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_ad = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The adGroupAd to set.
      * @return This builder for chaining.
      */
@@ -1879,7 +1879,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The associated ad.
      * </pre>
      *
-     * <code>string ad_group_ad = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_ad = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearAdGroupAd() {
@@ -1893,7 +1893,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The associated ad.
      * </pre>
      *
-     * <code>string ad_group_ad = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_ad = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for adGroupAd to set.
      * @return This builder for chaining.
      */
@@ -1915,7 +1915,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The associated campaign location target, if one exists.
      * </pre>
      *
-     * <code>string campaign_location_target = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign_location_target = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the campaignLocationTarget field is set.
      */
     public boolean hasCampaignLocationTarget() {
@@ -1926,7 +1926,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The associated campaign location target, if one exists.
      * </pre>
      *
-     * <code>string campaign_location_target = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign_location_target = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The campaignLocationTarget.
      */
     public java.lang.String getCampaignLocationTarget() {
@@ -1946,7 +1946,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The associated campaign location target, if one exists.
      * </pre>
      *
-     * <code>string campaign_location_target = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign_location_target = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for campaignLocationTarget.
      */
     public com.google.protobuf.ByteString
@@ -1967,7 +1967,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The associated campaign location target, if one exists.
      * </pre>
      *
-     * <code>string campaign_location_target = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign_location_target = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The campaignLocationTarget to set.
      * @return This builder for chaining.
      */
@@ -1986,7 +1986,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The associated campaign location target, if one exists.
      * </pre>
      *
-     * <code>string campaign_location_target = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign_location_target = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearCampaignLocationTarget() {
@@ -2000,7 +2000,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The associated campaign location target, if one exists.
      * </pre>
      *
-     * <code>string campaign_location_target = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign_location_target = 11 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for campaignLocationTarget to set.
      * @return This builder for chaining.
      */
@@ -2022,7 +2022,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The associated user list, if one exists.
      * </pre>
      *
-     * <code>string user_list = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string user_list = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the userList field is set.
      */
     public boolean hasUserList() {
@@ -2033,7 +2033,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The associated user list, if one exists.
      * </pre>
      *
-     * <code>string user_list = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string user_list = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The userList.
      */
     public java.lang.String getUserList() {
@@ -2053,7 +2053,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The associated user list, if one exists.
      * </pre>
      *
-     * <code>string user_list = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string user_list = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for userList.
      */
     public com.google.protobuf.ByteString
@@ -2074,7 +2074,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The associated user list, if one exists.
      * </pre>
      *
-     * <code>string user_list = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string user_list = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The userList to set.
      * @return This builder for chaining.
      */
@@ -2093,7 +2093,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The associated user list, if one exists.
      * </pre>
      *
-     * <code>string user_list = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string user_list = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearUserList() {
@@ -2107,7 +2107,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The associated user list, if one exists.
      * </pre>
      *
-     * <code>string user_list = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string user_list = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for userList to set.
      * @return This builder for chaining.
      */

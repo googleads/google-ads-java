@@ -36,7 +36,7 @@ public interface MobileAppCategoryConstantOrBuilder extends
    * Output only. The ID of the mobile app category constant.
    * </pre>
    *
-   * <code>int32 id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int32 id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -45,7 +45,7 @@ public interface MobileAppCategoryConstantOrBuilder extends
    * Output only. The ID of the mobile app category constant.
    * </pre>
    *
-   * <code>int32 id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int32 id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   int getId();
@@ -55,7 +55,7 @@ public interface MobileAppCategoryConstantOrBuilder extends
    * Output only. Mobile app category name.
    * </pre>
    *
-   * <code>string name = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the name field is set.
    */
   boolean hasName();
@@ -64,7 +64,7 @@ public interface MobileAppCategoryConstantOrBuilder extends
    * Output only. Mobile app category name.
    * </pre>
    *
-   * <code>string name = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The name.
    */
   java.lang.String getName();
@@ -73,7 +73,7 @@ public interface MobileAppCategoryConstantOrBuilder extends
    * Output only. Mobile app category name.
    * </pre>
    *
-   * <code>string name = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString

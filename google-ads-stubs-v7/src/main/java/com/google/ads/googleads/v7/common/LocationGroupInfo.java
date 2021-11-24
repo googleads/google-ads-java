@@ -139,7 +139,7 @@ private static final long serialVersionUID = 0L;
    * This is required and must be set in CREATE operations.
    * </pre>
    *
-   * <code>string feed = 5;</code>
+   * <code>optional string feed = 5;</code>
    * @return Whether the feed field is set.
    */
   @java.lang.Override
@@ -152,7 +152,7 @@ private static final long serialVersionUID = 0L;
    * This is required and must be set in CREATE operations.
    * </pre>
    *
-   * <code>string feed = 5;</code>
+   * <code>optional string feed = 5;</code>
    * @return The feed.
    */
   @java.lang.Override
@@ -174,7 +174,7 @@ private static final long serialVersionUID = 0L;
    * This is required and must be set in CREATE operations.
    * </pre>
    *
-   * <code>string feed = 5;</code>
+   * <code>optional string feed = 5;</code>
    * @return The bytes for feed.
    */
   @java.lang.Override
@@ -255,7 +255,7 @@ private static final long serialVersionUID = 0L;
    * This is required and must be set in CREATE operations.
    * </pre>
    *
-   * <code>int64 radius = 7;</code>
+   * <code>optional int64 radius = 7;</code>
    * @return Whether the radius field is set.
    */
   @java.lang.Override
@@ -268,7 +268,7 @@ private static final long serialVersionUID = 0L;
    * This is required and must be set in CREATE operations.
    * </pre>
    *
-   * <code>int64 radius = 7;</code>
+   * <code>optional int64 radius = 7;</code>
    * @return The radius.
    */
   @java.lang.Override
@@ -806,7 +806,7 @@ private static final long serialVersionUID = 0L;
      * This is required and must be set in CREATE operations.
      * </pre>
      *
-     * <code>string feed = 5;</code>
+     * <code>optional string feed = 5;</code>
      * @return Whether the feed field is set.
      */
     public boolean hasFeed() {
@@ -818,7 +818,7 @@ private static final long serialVersionUID = 0L;
      * This is required and must be set in CREATE operations.
      * </pre>
      *
-     * <code>string feed = 5;</code>
+     * <code>optional string feed = 5;</code>
      * @return The feed.
      */
     public java.lang.String getFeed() {
@@ -839,7 +839,7 @@ private static final long serialVersionUID = 0L;
      * This is required and must be set in CREATE operations.
      * </pre>
      *
-     * <code>string feed = 5;</code>
+     * <code>optional string feed = 5;</code>
      * @return The bytes for feed.
      */
     public com.google.protobuf.ByteString
@@ -861,7 +861,7 @@ private static final long serialVersionUID = 0L;
      * This is required and must be set in CREATE operations.
      * </pre>
      *
-     * <code>string feed = 5;</code>
+     * <code>optional string feed = 5;</code>
      * @param value The feed to set.
      * @return This builder for chaining.
      */
@@ -881,7 +881,7 @@ private static final long serialVersionUID = 0L;
      * This is required and must be set in CREATE operations.
      * </pre>
      *
-     * <code>string feed = 5;</code>
+     * <code>optional string feed = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearFeed() {
@@ -896,7 +896,7 @@ private static final long serialVersionUID = 0L;
      * This is required and must be set in CREATE operations.
      * </pre>
      *
-     * <code>string feed = 5;</code>
+     * <code>optional string feed = 5;</code>
      * @param value The bytes for feed to set.
      * @return This builder for chaining.
      */
@@ -1074,7 +1074,7 @@ private static final long serialVersionUID = 0L;
      * This is required and must be set in CREATE operations.
      * </pre>
      *
-     * <code>int64 radius = 7;</code>
+     * <code>optional int64 radius = 7;</code>
      * @return Whether the radius field is set.
      */
     @java.lang.Override
@@ -1087,7 +1087,7 @@ private static final long serialVersionUID = 0L;
      * This is required and must be set in CREATE operations.
      * </pre>
      *
-     * <code>int64 radius = 7;</code>
+     * <code>optional int64 radius = 7;</code>
      * @return The radius.
      */
     @java.lang.Override
@@ -1100,7 +1100,7 @@ private static final long serialVersionUID = 0L;
      * This is required and must be set in CREATE operations.
      * </pre>
      *
-     * <code>int64 radius = 7;</code>
+     * <code>optional int64 radius = 7;</code>
      * @param value The radius to set.
      * @return This builder for chaining.
      */
@@ -1116,7 +1116,7 @@ private static final long serialVersionUID = 0L;
      * This is required and must be set in CREATE operations.
      * </pre>
      *
-     * <code>int64 radius = 7;</code>
+     * <code>optional int64 radius = 7;</code>
      * @return This builder for chaining.
      */
     public Builder clearRadius() {

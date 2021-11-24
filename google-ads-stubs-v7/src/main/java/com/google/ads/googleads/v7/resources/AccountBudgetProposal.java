@@ -494,7 +494,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of the proposal.
    * </pre>
    *
-   * <code>int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   @java.lang.Override
@@ -506,7 +506,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of the proposal.
    * </pre>
    *
-   * <code>int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   @java.lang.Override
@@ -521,7 +521,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The resource name of the billing setup associated with this proposal.
    * </pre>
    *
-   * <code>string billing_setup = 26 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string billing_setup = 26 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the billingSetup field is set.
    */
   @java.lang.Override
@@ -533,7 +533,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The resource name of the billing setup associated with this proposal.
    * </pre>
    *
-   * <code>string billing_setup = 26 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string billing_setup = 26 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The billingSetup.
    */
   @java.lang.Override
@@ -554,7 +554,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The resource name of the billing setup associated with this proposal.
    * </pre>
    *
-   * <code>string billing_setup = 26 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string billing_setup = 26 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for billingSetup.
    */
   @java.lang.Override
@@ -580,7 +580,7 @@ private static final long serialVersionUID = 0L;
    * proposal.
    * </pre>
    *
-   * <code>string account_budget = 27 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string account_budget = 27 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the accountBudget field is set.
    */
   @java.lang.Override
@@ -593,7 +593,7 @@ private static final long serialVersionUID = 0L;
    * proposal.
    * </pre>
    *
-   * <code>string account_budget = 27 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string account_budget = 27 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The accountBudget.
    */
   @java.lang.Override
@@ -615,7 +615,7 @@ private static final long serialVersionUID = 0L;
    * proposal.
    * </pre>
    *
-   * <code>string account_budget = 27 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string account_budget = 27 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for accountBudget.
    */
   @java.lang.Override
@@ -698,7 +698,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The name to assign to the account-level budget.
    * </pre>
    *
-   * <code>string proposed_name = 28 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string proposed_name = 28 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the proposedName field is set.
    */
   @java.lang.Override
@@ -710,7 +710,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The name to assign to the account-level budget.
    * </pre>
    *
-   * <code>string proposed_name = 28 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string proposed_name = 28 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The proposedName.
    */
   @java.lang.Override
@@ -731,7 +731,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The name to assign to the account-level budget.
    * </pre>
    *
-   * <code>string proposed_name = 28 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string proposed_name = 28 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The bytes for proposedName.
    */
   @java.lang.Override
@@ -756,7 +756,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The approved start date time in yyyy-mm-dd hh:mm:ss format.
    * </pre>
    *
-   * <code>string approved_start_date_time = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string approved_start_date_time = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the approvedStartDateTime field is set.
    */
   @java.lang.Override
@@ -768,7 +768,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The approved start date time in yyyy-mm-dd hh:mm:ss format.
    * </pre>
    *
-   * <code>string approved_start_date_time = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string approved_start_date_time = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The approvedStartDateTime.
    */
   @java.lang.Override
@@ -789,7 +789,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The approved start date time in yyyy-mm-dd hh:mm:ss format.
    * </pre>
    *
-   * <code>string approved_start_date_time = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string approved_start_date_time = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for approvedStartDateTime.
    */
   @java.lang.Override
@@ -815,7 +815,7 @@ private static final long serialVersionUID = 0L;
    * reference this budget in their monthly invoices.
    * </pre>
    *
-   * <code>string proposed_purchase_order_number = 35 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string proposed_purchase_order_number = 35 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the proposedPurchaseOrderNumber field is set.
    */
   @java.lang.Override
@@ -828,7 +828,7 @@ private static final long serialVersionUID = 0L;
    * reference this budget in their monthly invoices.
    * </pre>
    *
-   * <code>string proposed_purchase_order_number = 35 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string proposed_purchase_order_number = 35 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The proposedPurchaseOrderNumber.
    */
   @java.lang.Override
@@ -850,7 +850,7 @@ private static final long serialVersionUID = 0L;
    * reference this budget in their monthly invoices.
    * </pre>
    *
-   * <code>string proposed_purchase_order_number = 35 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string proposed_purchase_order_number = 35 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The bytes for proposedPurchaseOrderNumber.
    */
   @java.lang.Override
@@ -875,7 +875,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. Notes associated with this budget.
    * </pre>
    *
-   * <code>string proposed_notes = 36 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string proposed_notes = 36 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the proposedNotes field is set.
    */
   @java.lang.Override
@@ -887,7 +887,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. Notes associated with this budget.
    * </pre>
    *
-   * <code>string proposed_notes = 36 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string proposed_notes = 36 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The proposedNotes.
    */
   @java.lang.Override
@@ -908,7 +908,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. Notes associated with this budget.
    * </pre>
    *
-   * <code>string proposed_notes = 36 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string proposed_notes = 36 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The bytes for proposedNotes.
    */
   @java.lang.Override
@@ -934,7 +934,7 @@ private static final long serialVersionUID = 0L;
    * not the same as its approval date time, if applicable.
    * </pre>
    *
-   * <code>string creation_date_time = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string creation_date_time = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the creationDateTime field is set.
    */
   @java.lang.Override
@@ -947,7 +947,7 @@ private static final long serialVersionUID = 0L;
    * not the same as its approval date time, if applicable.
    * </pre>
    *
-   * <code>string creation_date_time = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string creation_date_time = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The creationDateTime.
    */
   @java.lang.Override
@@ -969,7 +969,7 @@ private static final long serialVersionUID = 0L;
    * not the same as its approval date time, if applicable.
    * </pre>
    *
-   * <code>string creation_date_time = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string creation_date_time = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for creationDateTime.
    */
   @java.lang.Override
@@ -994,7 +994,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The date time when this account-level budget was approved, if applicable.
    * </pre>
    *
-   * <code>string approval_date_time = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string approval_date_time = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the approvalDateTime field is set.
    */
   @java.lang.Override
@@ -1006,7 +1006,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The date time when this account-level budget was approved, if applicable.
    * </pre>
    *
-   * <code>string approval_date_time = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string approval_date_time = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The approvalDateTime.
    */
   @java.lang.Override
@@ -1027,7 +1027,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The date time when this account-level budget was approved, if applicable.
    * </pre>
    *
-   * <code>string approval_date_time = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string approval_date_time = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for approvalDateTime.
    */
   @java.lang.Override
@@ -1533,7 +1533,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (proposalType_ != com.google.ads.googleads.v7.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType.UNSPECIFIED.getNumber()) {
@@ -1610,7 +1610,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (proposalType_ != com.google.ads.googleads.v7.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType.UNSPECIFIED.getNumber()) {
@@ -2602,7 +2602,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the proposal.
      * </pre>
      *
-     * <code>int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the id field is set.
      */
     @java.lang.Override
@@ -2614,7 +2614,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the proposal.
      * </pre>
      *
-     * <code>int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The id.
      */
     @java.lang.Override
@@ -2626,7 +2626,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the proposal.
      * </pre>
      *
-     * <code>int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
@@ -2641,7 +2641,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the proposal.
      * </pre>
      *
-     * <code>int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {
@@ -2657,7 +2657,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The resource name of the billing setup associated with this proposal.
      * </pre>
      *
-     * <code>string billing_setup = 26 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string billing_setup = 26 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the billingSetup field is set.
      */
     public boolean hasBillingSetup() {
@@ -2668,7 +2668,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The resource name of the billing setup associated with this proposal.
      * </pre>
      *
-     * <code>string billing_setup = 26 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string billing_setup = 26 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return The billingSetup.
      */
     public java.lang.String getBillingSetup() {
@@ -2688,7 +2688,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The resource name of the billing setup associated with this proposal.
      * </pre>
      *
-     * <code>string billing_setup = 26 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string billing_setup = 26 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for billingSetup.
      */
     public com.google.protobuf.ByteString
@@ -2709,7 +2709,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The resource name of the billing setup associated with this proposal.
      * </pre>
      *
-     * <code>string billing_setup = 26 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string billing_setup = 26 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @param value The billingSetup to set.
      * @return This builder for chaining.
      */
@@ -2728,7 +2728,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The resource name of the billing setup associated with this proposal.
      * </pre>
      *
-     * <code>string billing_setup = 26 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string billing_setup = 26 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearBillingSetup() {
@@ -2742,7 +2742,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The resource name of the billing setup associated with this proposal.
      * </pre>
      *
-     * <code>string billing_setup = 26 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string billing_setup = 26 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for billingSetup to set.
      * @return This builder for chaining.
      */
@@ -2765,7 +2765,7 @@ private static final long serialVersionUID = 0L;
      * proposal.
      * </pre>
      *
-     * <code>string account_budget = 27 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string account_budget = 27 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the accountBudget field is set.
      */
     public boolean hasAccountBudget() {
@@ -2777,7 +2777,7 @@ private static final long serialVersionUID = 0L;
      * proposal.
      * </pre>
      *
-     * <code>string account_budget = 27 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string account_budget = 27 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return The accountBudget.
      */
     public java.lang.String getAccountBudget() {
@@ -2798,7 +2798,7 @@ private static final long serialVersionUID = 0L;
      * proposal.
      * </pre>
      *
-     * <code>string account_budget = 27 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string account_budget = 27 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for accountBudget.
      */
     public com.google.protobuf.ByteString
@@ -2820,7 +2820,7 @@ private static final long serialVersionUID = 0L;
      * proposal.
      * </pre>
      *
-     * <code>string account_budget = 27 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string account_budget = 27 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @param value The accountBudget to set.
      * @return This builder for chaining.
      */
@@ -2840,7 +2840,7 @@ private static final long serialVersionUID = 0L;
      * proposal.
      * </pre>
      *
-     * <code>string account_budget = 27 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string account_budget = 27 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearAccountBudget() {
@@ -2855,7 +2855,7 @@ private static final long serialVersionUID = 0L;
      * proposal.
      * </pre>
      *
-     * <code>string account_budget = 27 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string account_budget = 27 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for accountBudget to set.
      * @return This builder for chaining.
      */
@@ -3035,7 +3035,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The name to assign to the account-level budget.
      * </pre>
      *
-     * <code>string proposed_name = 28 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string proposed_name = 28 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the proposedName field is set.
      */
     public boolean hasProposedName() {
@@ -3046,7 +3046,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The name to assign to the account-level budget.
      * </pre>
      *
-     * <code>string proposed_name = 28 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string proposed_name = 28 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The proposedName.
      */
     public java.lang.String getProposedName() {
@@ -3066,7 +3066,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The name to assign to the account-level budget.
      * </pre>
      *
-     * <code>string proposed_name = 28 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string proposed_name = 28 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The bytes for proposedName.
      */
     public com.google.protobuf.ByteString
@@ -3087,7 +3087,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The name to assign to the account-level budget.
      * </pre>
      *
-     * <code>string proposed_name = 28 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string proposed_name = 28 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @param value The proposedName to set.
      * @return This builder for chaining.
      */
@@ -3106,7 +3106,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The name to assign to the account-level budget.
      * </pre>
      *
-     * <code>string proposed_name = 28 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string proposed_name = 28 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return This builder for chaining.
      */
     public Builder clearProposedName() {
@@ -3120,7 +3120,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The name to assign to the account-level budget.
      * </pre>
      *
-     * <code>string proposed_name = 28 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string proposed_name = 28 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @param value The bytes for proposedName to set.
      * @return This builder for chaining.
      */
@@ -3142,7 +3142,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The approved start date time in yyyy-mm-dd hh:mm:ss format.
      * </pre>
      *
-     * <code>string approved_start_date_time = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string approved_start_date_time = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the approvedStartDateTime field is set.
      */
     public boolean hasApprovedStartDateTime() {
@@ -3153,7 +3153,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The approved start date time in yyyy-mm-dd hh:mm:ss format.
      * </pre>
      *
-     * <code>string approved_start_date_time = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string approved_start_date_time = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The approvedStartDateTime.
      */
     public java.lang.String getApprovedStartDateTime() {
@@ -3173,7 +3173,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The approved start date time in yyyy-mm-dd hh:mm:ss format.
      * </pre>
      *
-     * <code>string approved_start_date_time = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string approved_start_date_time = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for approvedStartDateTime.
      */
     public com.google.protobuf.ByteString
@@ -3194,7 +3194,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The approved start date time in yyyy-mm-dd hh:mm:ss format.
      * </pre>
      *
-     * <code>string approved_start_date_time = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string approved_start_date_time = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The approvedStartDateTime to set.
      * @return This builder for chaining.
      */
@@ -3213,7 +3213,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The approved start date time in yyyy-mm-dd hh:mm:ss format.
      * </pre>
      *
-     * <code>string approved_start_date_time = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string approved_start_date_time = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearApprovedStartDateTime() {
@@ -3227,7 +3227,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The approved start date time in yyyy-mm-dd hh:mm:ss format.
      * </pre>
      *
-     * <code>string approved_start_date_time = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string approved_start_date_time = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for approvedStartDateTime to set.
      * @return This builder for chaining.
      */
@@ -3250,7 +3250,7 @@ private static final long serialVersionUID = 0L;
      * reference this budget in their monthly invoices.
      * </pre>
      *
-     * <code>string proposed_purchase_order_number = 35 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string proposed_purchase_order_number = 35 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the proposedPurchaseOrderNumber field is set.
      */
     public boolean hasProposedPurchaseOrderNumber() {
@@ -3262,7 +3262,7 @@ private static final long serialVersionUID = 0L;
      * reference this budget in their monthly invoices.
      * </pre>
      *
-     * <code>string proposed_purchase_order_number = 35 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string proposed_purchase_order_number = 35 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The proposedPurchaseOrderNumber.
      */
     public java.lang.String getProposedPurchaseOrderNumber() {
@@ -3283,7 +3283,7 @@ private static final long serialVersionUID = 0L;
      * reference this budget in their monthly invoices.
      * </pre>
      *
-     * <code>string proposed_purchase_order_number = 35 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string proposed_purchase_order_number = 35 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The bytes for proposedPurchaseOrderNumber.
      */
     public com.google.protobuf.ByteString
@@ -3305,7 +3305,7 @@ private static final long serialVersionUID = 0L;
      * reference this budget in their monthly invoices.
      * </pre>
      *
-     * <code>string proposed_purchase_order_number = 35 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string proposed_purchase_order_number = 35 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @param value The proposedPurchaseOrderNumber to set.
      * @return This builder for chaining.
      */
@@ -3325,7 +3325,7 @@ private static final long serialVersionUID = 0L;
      * reference this budget in their monthly invoices.
      * </pre>
      *
-     * <code>string proposed_purchase_order_number = 35 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string proposed_purchase_order_number = 35 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return This builder for chaining.
      */
     public Builder clearProposedPurchaseOrderNumber() {
@@ -3340,7 +3340,7 @@ private static final long serialVersionUID = 0L;
      * reference this budget in their monthly invoices.
      * </pre>
      *
-     * <code>string proposed_purchase_order_number = 35 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string proposed_purchase_order_number = 35 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @param value The bytes for proposedPurchaseOrderNumber to set.
      * @return This builder for chaining.
      */
@@ -3362,7 +3362,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. Notes associated with this budget.
      * </pre>
      *
-     * <code>string proposed_notes = 36 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string proposed_notes = 36 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the proposedNotes field is set.
      */
     public boolean hasProposedNotes() {
@@ -3373,7 +3373,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. Notes associated with this budget.
      * </pre>
      *
-     * <code>string proposed_notes = 36 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string proposed_notes = 36 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The proposedNotes.
      */
     public java.lang.String getProposedNotes() {
@@ -3393,7 +3393,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. Notes associated with this budget.
      * </pre>
      *
-     * <code>string proposed_notes = 36 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string proposed_notes = 36 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The bytes for proposedNotes.
      */
     public com.google.protobuf.ByteString
@@ -3414,7 +3414,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. Notes associated with this budget.
      * </pre>
      *
-     * <code>string proposed_notes = 36 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string proposed_notes = 36 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @param value The proposedNotes to set.
      * @return This builder for chaining.
      */
@@ -3433,7 +3433,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. Notes associated with this budget.
      * </pre>
      *
-     * <code>string proposed_notes = 36 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string proposed_notes = 36 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return This builder for chaining.
      */
     public Builder clearProposedNotes() {
@@ -3447,7 +3447,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. Notes associated with this budget.
      * </pre>
      *
-     * <code>string proposed_notes = 36 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string proposed_notes = 36 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @param value The bytes for proposedNotes to set.
      * @return This builder for chaining.
      */
@@ -3470,7 +3470,7 @@ private static final long serialVersionUID = 0L;
      * not the same as its approval date time, if applicable.
      * </pre>
      *
-     * <code>string creation_date_time = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string creation_date_time = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the creationDateTime field is set.
      */
     public boolean hasCreationDateTime() {
@@ -3482,7 +3482,7 @@ private static final long serialVersionUID = 0L;
      * not the same as its approval date time, if applicable.
      * </pre>
      *
-     * <code>string creation_date_time = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string creation_date_time = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The creationDateTime.
      */
     public java.lang.String getCreationDateTime() {
@@ -3503,7 +3503,7 @@ private static final long serialVersionUID = 0L;
      * not the same as its approval date time, if applicable.
      * </pre>
      *
-     * <code>string creation_date_time = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string creation_date_time = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for creationDateTime.
      */
     public com.google.protobuf.ByteString
@@ -3525,7 +3525,7 @@ private static final long serialVersionUID = 0L;
      * not the same as its approval date time, if applicable.
      * </pre>
      *
-     * <code>string creation_date_time = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string creation_date_time = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The creationDateTime to set.
      * @return This builder for chaining.
      */
@@ -3545,7 +3545,7 @@ private static final long serialVersionUID = 0L;
      * not the same as its approval date time, if applicable.
      * </pre>
      *
-     * <code>string creation_date_time = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string creation_date_time = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearCreationDateTime() {
@@ -3560,7 +3560,7 @@ private static final long serialVersionUID = 0L;
      * not the same as its approval date time, if applicable.
      * </pre>
      *
-     * <code>string creation_date_time = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string creation_date_time = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for creationDateTime to set.
      * @return This builder for chaining.
      */
@@ -3582,7 +3582,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The date time when this account-level budget was approved, if applicable.
      * </pre>
      *
-     * <code>string approval_date_time = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string approval_date_time = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the approvalDateTime field is set.
      */
     public boolean hasApprovalDateTime() {
@@ -3593,7 +3593,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The date time when this account-level budget was approved, if applicable.
      * </pre>
      *
-     * <code>string approval_date_time = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string approval_date_time = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The approvalDateTime.
      */
     public java.lang.String getApprovalDateTime() {
@@ -3613,7 +3613,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The date time when this account-level budget was approved, if applicable.
      * </pre>
      *
-     * <code>string approval_date_time = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string approval_date_time = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for approvalDateTime.
      */
     public com.google.protobuf.ByteString
@@ -3634,7 +3634,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The date time when this account-level budget was approved, if applicable.
      * </pre>
      *
-     * <code>string approval_date_time = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string approval_date_time = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The approvalDateTime to set.
      * @return This builder for chaining.
      */
@@ -3653,7 +3653,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The date time when this account-level budget was approved, if applicable.
      * </pre>
      *
-     * <code>string approval_date_time = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string approval_date_time = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearApprovalDateTime() {
@@ -3667,7 +3667,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The date time when this account-level budget was approved, if applicable.
      * </pre>
      *
-     * <code>string approval_date_time = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string approval_date_time = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for approvalDateTime to set.
      * @return This builder for chaining.
      */

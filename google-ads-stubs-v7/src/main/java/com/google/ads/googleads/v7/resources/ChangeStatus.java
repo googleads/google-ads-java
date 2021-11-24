@@ -242,7 +242,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Time at which the most recent change has occurred on this resource.
    * </pre>
    *
-   * <code>string last_change_date_time = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string last_change_date_time = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the lastChangeDateTime field is set.
    */
   @java.lang.Override
@@ -254,7 +254,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Time at which the most recent change has occurred on this resource.
    * </pre>
    *
-   * <code>string last_change_date_time = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string last_change_date_time = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The lastChangeDateTime.
    */
   @java.lang.Override
@@ -275,7 +275,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Time at which the most recent change has occurred on this resource.
    * </pre>
    *
-   * <code>string last_change_date_time = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string last_change_date_time = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for lastChangeDateTime.
    */
   @java.lang.Override
@@ -331,7 +331,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The Campaign affected by this change.
    * </pre>
    *
-   * <code>string campaign = 17 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 17 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the campaign field is set.
    */
   @java.lang.Override
@@ -343,7 +343,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The Campaign affected by this change.
    * </pre>
    *
-   * <code>string campaign = 17 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 17 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The campaign.
    */
   @java.lang.Override
@@ -364,7 +364,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The Campaign affected by this change.
    * </pre>
    *
-   * <code>string campaign = 17 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 17 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for campaign.
    */
   @java.lang.Override
@@ -389,7 +389,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The AdGroup affected by this change.
    * </pre>
    *
-   * <code>string ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the adGroup field is set.
    */
   @java.lang.Override
@@ -401,7 +401,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The AdGroup affected by this change.
    * </pre>
    *
-   * <code>string ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The adGroup.
    */
   @java.lang.Override
@@ -422,7 +422,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The AdGroup affected by this change.
    * </pre>
    *
-   * <code>string ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for adGroup.
    */
   @java.lang.Override
@@ -474,7 +474,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The AdGroupAd affected by this change.
    * </pre>
    *
-   * <code>string ad_group_ad = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_ad = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the adGroupAd field is set.
    */
   @java.lang.Override
@@ -486,7 +486,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The AdGroupAd affected by this change.
    * </pre>
    *
-   * <code>string ad_group_ad = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_ad = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The adGroupAd.
    */
   @java.lang.Override
@@ -507,7 +507,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The AdGroupAd affected by this change.
    * </pre>
    *
-   * <code>string ad_group_ad = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_ad = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for adGroupAd.
    */
   @java.lang.Override
@@ -532,7 +532,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The AdGroupCriterion affected by this change.
    * </pre>
    *
-   * <code>string ad_group_criterion = 26 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_criterion = 26 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the adGroupCriterion field is set.
    */
   @java.lang.Override
@@ -544,7 +544,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The AdGroupCriterion affected by this change.
    * </pre>
    *
-   * <code>string ad_group_criterion = 26 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_criterion = 26 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The adGroupCriterion.
    */
   @java.lang.Override
@@ -565,7 +565,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The AdGroupCriterion affected by this change.
    * </pre>
    *
-   * <code>string ad_group_criterion = 26 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_criterion = 26 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for adGroupCriterion.
    */
   @java.lang.Override
@@ -590,7 +590,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The CampaignCriterion affected by this change.
    * </pre>
    *
-   * <code>string campaign_criterion = 27 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign_criterion = 27 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the campaignCriterion field is set.
    */
   @java.lang.Override
@@ -602,7 +602,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The CampaignCriterion affected by this change.
    * </pre>
    *
-   * <code>string campaign_criterion = 27 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign_criterion = 27 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The campaignCriterion.
    */
   @java.lang.Override
@@ -623,7 +623,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The CampaignCriterion affected by this change.
    * </pre>
    *
-   * <code>string campaign_criterion = 27 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign_criterion = 27 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for campaignCriterion.
    */
   @java.lang.Override
@@ -648,7 +648,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The Feed affected by this change.
    * </pre>
    *
-   * <code>string feed = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string feed = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the feed field is set.
    */
   @java.lang.Override
@@ -660,7 +660,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The Feed affected by this change.
    * </pre>
    *
-   * <code>string feed = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string feed = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The feed.
    */
   @java.lang.Override
@@ -681,7 +681,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The Feed affected by this change.
    * </pre>
    *
-   * <code>string feed = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string feed = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for feed.
    */
   @java.lang.Override
@@ -706,7 +706,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The FeedItem affected by this change.
    * </pre>
    *
-   * <code>string feed_item = 29 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string feed_item = 29 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the feedItem field is set.
    */
   @java.lang.Override
@@ -718,7 +718,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The FeedItem affected by this change.
    * </pre>
    *
-   * <code>string feed_item = 29 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string feed_item = 29 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The feedItem.
    */
   @java.lang.Override
@@ -739,7 +739,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The FeedItem affected by this change.
    * </pre>
    *
-   * <code>string feed_item = 29 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string feed_item = 29 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for feedItem.
    */
   @java.lang.Override
@@ -764,7 +764,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The AdGroupFeed affected by this change.
    * </pre>
    *
-   * <code>string ad_group_feed = 30 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_feed = 30 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the adGroupFeed field is set.
    */
   @java.lang.Override
@@ -776,7 +776,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The AdGroupFeed affected by this change.
    * </pre>
    *
-   * <code>string ad_group_feed = 30 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_feed = 30 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The adGroupFeed.
    */
   @java.lang.Override
@@ -797,7 +797,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The AdGroupFeed affected by this change.
    * </pre>
    *
-   * <code>string ad_group_feed = 30 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_feed = 30 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for adGroupFeed.
    */
   @java.lang.Override
@@ -822,7 +822,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The CampaignFeed affected by this change.
    * </pre>
    *
-   * <code>string campaign_feed = 31 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign_feed = 31 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the campaignFeed field is set.
    */
   @java.lang.Override
@@ -834,7 +834,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The CampaignFeed affected by this change.
    * </pre>
    *
-   * <code>string campaign_feed = 31 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign_feed = 31 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The campaignFeed.
    */
   @java.lang.Override
@@ -855,7 +855,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The CampaignFeed affected by this change.
    * </pre>
    *
-   * <code>string campaign_feed = 31 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign_feed = 31 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for campaignFeed.
    */
   @java.lang.Override
@@ -880,7 +880,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The AdGroupBidModifier affected by this change.
    * </pre>
    *
-   * <code>string ad_group_bid_modifier = 32 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_bid_modifier = 32 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the adGroupBidModifier field is set.
    */
   @java.lang.Override
@@ -892,7 +892,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The AdGroupBidModifier affected by this change.
    * </pre>
    *
-   * <code>string ad_group_bid_modifier = 32 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_bid_modifier = 32 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The adGroupBidModifier.
    */
   @java.lang.Override
@@ -913,7 +913,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The AdGroupBidModifier affected by this change.
    * </pre>
    *
-   * <code>string ad_group_bid_modifier = 32 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_bid_modifier = 32 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for adGroupBidModifier.
    */
   @java.lang.Override
@@ -945,7 +945,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (resourceType_ != com.google.ads.googleads.v7.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType.UNSPECIFIED.getNumber()) {
@@ -996,7 +996,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (resourceType_ != com.google.ads.googleads.v7.enums.ChangeStatusResourceTypeEnum.ChangeStatusResourceType.UNSPECIFIED.getNumber()) {
@@ -1672,7 +1672,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Time at which the most recent change has occurred on this resource.
      * </pre>
      *
-     * <code>string last_change_date_time = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string last_change_date_time = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the lastChangeDateTime field is set.
      */
     public boolean hasLastChangeDateTime() {
@@ -1683,7 +1683,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Time at which the most recent change has occurred on this resource.
      * </pre>
      *
-     * <code>string last_change_date_time = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string last_change_date_time = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The lastChangeDateTime.
      */
     public java.lang.String getLastChangeDateTime() {
@@ -1703,7 +1703,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Time at which the most recent change has occurred on this resource.
      * </pre>
      *
-     * <code>string last_change_date_time = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string last_change_date_time = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for lastChangeDateTime.
      */
     public com.google.protobuf.ByteString
@@ -1724,7 +1724,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Time at which the most recent change has occurred on this resource.
      * </pre>
      *
-     * <code>string last_change_date_time = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string last_change_date_time = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The lastChangeDateTime to set.
      * @return This builder for chaining.
      */
@@ -1743,7 +1743,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Time at which the most recent change has occurred on this resource.
      * </pre>
      *
-     * <code>string last_change_date_time = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string last_change_date_time = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearLastChangeDateTime() {
@@ -1757,7 +1757,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Time at which the most recent change has occurred on this resource.
      * </pre>
      *
-     * <code>string last_change_date_time = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string last_change_date_time = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for lastChangeDateTime to set.
      * @return This builder for chaining.
      */
@@ -1863,7 +1863,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The Campaign affected by this change.
      * </pre>
      *
-     * <code>string campaign = 17 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign = 17 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the campaign field is set.
      */
     public boolean hasCampaign() {
@@ -1874,7 +1874,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The Campaign affected by this change.
      * </pre>
      *
-     * <code>string campaign = 17 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign = 17 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The campaign.
      */
     public java.lang.String getCampaign() {
@@ -1894,7 +1894,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The Campaign affected by this change.
      * </pre>
      *
-     * <code>string campaign = 17 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign = 17 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for campaign.
      */
     public com.google.protobuf.ByteString
@@ -1915,7 +1915,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The Campaign affected by this change.
      * </pre>
      *
-     * <code>string campaign = 17 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign = 17 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The campaign to set.
      * @return This builder for chaining.
      */
@@ -1934,7 +1934,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The Campaign affected by this change.
      * </pre>
      *
-     * <code>string campaign = 17 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign = 17 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearCampaign() {
@@ -1948,7 +1948,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The Campaign affected by this change.
      * </pre>
      *
-     * <code>string campaign = 17 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign = 17 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for campaign to set.
      * @return This builder for chaining.
      */
@@ -1970,7 +1970,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The AdGroup affected by this change.
      * </pre>
      *
-     * <code>string ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the adGroup field is set.
      */
     public boolean hasAdGroup() {
@@ -1981,7 +1981,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The AdGroup affected by this change.
      * </pre>
      *
-     * <code>string ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The adGroup.
      */
     public java.lang.String getAdGroup() {
@@ -2001,7 +2001,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The AdGroup affected by this change.
      * </pre>
      *
-     * <code>string ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for adGroup.
      */
     public com.google.protobuf.ByteString
@@ -2022,7 +2022,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The AdGroup affected by this change.
      * </pre>
      *
-     * <code>string ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The adGroup to set.
      * @return This builder for chaining.
      */
@@ -2041,7 +2041,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The AdGroup affected by this change.
      * </pre>
      *
-     * <code>string ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearAdGroup() {
@@ -2055,7 +2055,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The AdGroup affected by this change.
      * </pre>
      *
-     * <code>string ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for adGroup to set.
      * @return This builder for chaining.
      */
@@ -2151,7 +2151,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The AdGroupAd affected by this change.
      * </pre>
      *
-     * <code>string ad_group_ad = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_ad = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the adGroupAd field is set.
      */
     public boolean hasAdGroupAd() {
@@ -2162,7 +2162,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The AdGroupAd affected by this change.
      * </pre>
      *
-     * <code>string ad_group_ad = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_ad = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The adGroupAd.
      */
     public java.lang.String getAdGroupAd() {
@@ -2182,7 +2182,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The AdGroupAd affected by this change.
      * </pre>
      *
-     * <code>string ad_group_ad = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_ad = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for adGroupAd.
      */
     public com.google.protobuf.ByteString
@@ -2203,7 +2203,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The AdGroupAd affected by this change.
      * </pre>
      *
-     * <code>string ad_group_ad = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_ad = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The adGroupAd to set.
      * @return This builder for chaining.
      */
@@ -2222,7 +2222,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The AdGroupAd affected by this change.
      * </pre>
      *
-     * <code>string ad_group_ad = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_ad = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearAdGroupAd() {
@@ -2236,7 +2236,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The AdGroupAd affected by this change.
      * </pre>
      *
-     * <code>string ad_group_ad = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_ad = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for adGroupAd to set.
      * @return This builder for chaining.
      */
@@ -2258,7 +2258,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The AdGroupCriterion affected by this change.
      * </pre>
      *
-     * <code>string ad_group_criterion = 26 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_criterion = 26 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the adGroupCriterion field is set.
      */
     public boolean hasAdGroupCriterion() {
@@ -2269,7 +2269,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The AdGroupCriterion affected by this change.
      * </pre>
      *
-     * <code>string ad_group_criterion = 26 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_criterion = 26 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The adGroupCriterion.
      */
     public java.lang.String getAdGroupCriterion() {
@@ -2289,7 +2289,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The AdGroupCriterion affected by this change.
      * </pre>
      *
-     * <code>string ad_group_criterion = 26 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_criterion = 26 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for adGroupCriterion.
      */
     public com.google.protobuf.ByteString
@@ -2310,7 +2310,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The AdGroupCriterion affected by this change.
      * </pre>
      *
-     * <code>string ad_group_criterion = 26 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_criterion = 26 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The adGroupCriterion to set.
      * @return This builder for chaining.
      */
@@ -2329,7 +2329,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The AdGroupCriterion affected by this change.
      * </pre>
      *
-     * <code>string ad_group_criterion = 26 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_criterion = 26 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearAdGroupCriterion() {
@@ -2343,7 +2343,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The AdGroupCriterion affected by this change.
      * </pre>
      *
-     * <code>string ad_group_criterion = 26 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_criterion = 26 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for adGroupCriterion to set.
      * @return This builder for chaining.
      */
@@ -2365,7 +2365,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The CampaignCriterion affected by this change.
      * </pre>
      *
-     * <code>string campaign_criterion = 27 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign_criterion = 27 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the campaignCriterion field is set.
      */
     public boolean hasCampaignCriterion() {
@@ -2376,7 +2376,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The CampaignCriterion affected by this change.
      * </pre>
      *
-     * <code>string campaign_criterion = 27 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign_criterion = 27 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The campaignCriterion.
      */
     public java.lang.String getCampaignCriterion() {
@@ -2396,7 +2396,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The CampaignCriterion affected by this change.
      * </pre>
      *
-     * <code>string campaign_criterion = 27 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign_criterion = 27 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for campaignCriterion.
      */
     public com.google.protobuf.ByteString
@@ -2417,7 +2417,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The CampaignCriterion affected by this change.
      * </pre>
      *
-     * <code>string campaign_criterion = 27 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign_criterion = 27 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The campaignCriterion to set.
      * @return This builder for chaining.
      */
@@ -2436,7 +2436,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The CampaignCriterion affected by this change.
      * </pre>
      *
-     * <code>string campaign_criterion = 27 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign_criterion = 27 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearCampaignCriterion() {
@@ -2450,7 +2450,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The CampaignCriterion affected by this change.
      * </pre>
      *
-     * <code>string campaign_criterion = 27 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign_criterion = 27 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for campaignCriterion to set.
      * @return This builder for chaining.
      */
@@ -2472,7 +2472,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The Feed affected by this change.
      * </pre>
      *
-     * <code>string feed = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string feed = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the feed field is set.
      */
     public boolean hasFeed() {
@@ -2483,7 +2483,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The Feed affected by this change.
      * </pre>
      *
-     * <code>string feed = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string feed = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The feed.
      */
     public java.lang.String getFeed() {
@@ -2503,7 +2503,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The Feed affected by this change.
      * </pre>
      *
-     * <code>string feed = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string feed = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for feed.
      */
     public com.google.protobuf.ByteString
@@ -2524,7 +2524,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The Feed affected by this change.
      * </pre>
      *
-     * <code>string feed = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string feed = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The feed to set.
      * @return This builder for chaining.
      */
@@ -2543,7 +2543,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The Feed affected by this change.
      * </pre>
      *
-     * <code>string feed = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string feed = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearFeed() {
@@ -2557,7 +2557,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The Feed affected by this change.
      * </pre>
      *
-     * <code>string feed = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string feed = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for feed to set.
      * @return This builder for chaining.
      */
@@ -2579,7 +2579,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The FeedItem affected by this change.
      * </pre>
      *
-     * <code>string feed_item = 29 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string feed_item = 29 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the feedItem field is set.
      */
     public boolean hasFeedItem() {
@@ -2590,7 +2590,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The FeedItem affected by this change.
      * </pre>
      *
-     * <code>string feed_item = 29 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string feed_item = 29 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The feedItem.
      */
     public java.lang.String getFeedItem() {
@@ -2610,7 +2610,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The FeedItem affected by this change.
      * </pre>
      *
-     * <code>string feed_item = 29 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string feed_item = 29 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for feedItem.
      */
     public com.google.protobuf.ByteString
@@ -2631,7 +2631,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The FeedItem affected by this change.
      * </pre>
      *
-     * <code>string feed_item = 29 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string feed_item = 29 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The feedItem to set.
      * @return This builder for chaining.
      */
@@ -2650,7 +2650,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The FeedItem affected by this change.
      * </pre>
      *
-     * <code>string feed_item = 29 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string feed_item = 29 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearFeedItem() {
@@ -2664,7 +2664,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The FeedItem affected by this change.
      * </pre>
      *
-     * <code>string feed_item = 29 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string feed_item = 29 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for feedItem to set.
      * @return This builder for chaining.
      */
@@ -2686,7 +2686,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The AdGroupFeed affected by this change.
      * </pre>
      *
-     * <code>string ad_group_feed = 30 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_feed = 30 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the adGroupFeed field is set.
      */
     public boolean hasAdGroupFeed() {
@@ -2697,7 +2697,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The AdGroupFeed affected by this change.
      * </pre>
      *
-     * <code>string ad_group_feed = 30 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_feed = 30 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The adGroupFeed.
      */
     public java.lang.String getAdGroupFeed() {
@@ -2717,7 +2717,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The AdGroupFeed affected by this change.
      * </pre>
      *
-     * <code>string ad_group_feed = 30 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_feed = 30 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for adGroupFeed.
      */
     public com.google.protobuf.ByteString
@@ -2738,7 +2738,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The AdGroupFeed affected by this change.
      * </pre>
      *
-     * <code>string ad_group_feed = 30 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_feed = 30 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The adGroupFeed to set.
      * @return This builder for chaining.
      */
@@ -2757,7 +2757,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The AdGroupFeed affected by this change.
      * </pre>
      *
-     * <code>string ad_group_feed = 30 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_feed = 30 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearAdGroupFeed() {
@@ -2771,7 +2771,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The AdGroupFeed affected by this change.
      * </pre>
      *
-     * <code>string ad_group_feed = 30 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_feed = 30 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for adGroupFeed to set.
      * @return This builder for chaining.
      */
@@ -2793,7 +2793,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The CampaignFeed affected by this change.
      * </pre>
      *
-     * <code>string campaign_feed = 31 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign_feed = 31 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the campaignFeed field is set.
      */
     public boolean hasCampaignFeed() {
@@ -2804,7 +2804,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The CampaignFeed affected by this change.
      * </pre>
      *
-     * <code>string campaign_feed = 31 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign_feed = 31 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The campaignFeed.
      */
     public java.lang.String getCampaignFeed() {
@@ -2824,7 +2824,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The CampaignFeed affected by this change.
      * </pre>
      *
-     * <code>string campaign_feed = 31 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign_feed = 31 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for campaignFeed.
      */
     public com.google.protobuf.ByteString
@@ -2845,7 +2845,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The CampaignFeed affected by this change.
      * </pre>
      *
-     * <code>string campaign_feed = 31 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign_feed = 31 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The campaignFeed to set.
      * @return This builder for chaining.
      */
@@ -2864,7 +2864,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The CampaignFeed affected by this change.
      * </pre>
      *
-     * <code>string campaign_feed = 31 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign_feed = 31 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearCampaignFeed() {
@@ -2878,7 +2878,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The CampaignFeed affected by this change.
      * </pre>
      *
-     * <code>string campaign_feed = 31 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign_feed = 31 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for campaignFeed to set.
      * @return This builder for chaining.
      */
@@ -2900,7 +2900,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The AdGroupBidModifier affected by this change.
      * </pre>
      *
-     * <code>string ad_group_bid_modifier = 32 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_bid_modifier = 32 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the adGroupBidModifier field is set.
      */
     public boolean hasAdGroupBidModifier() {
@@ -2911,7 +2911,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The AdGroupBidModifier affected by this change.
      * </pre>
      *
-     * <code>string ad_group_bid_modifier = 32 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_bid_modifier = 32 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The adGroupBidModifier.
      */
     public java.lang.String getAdGroupBidModifier() {
@@ -2931,7 +2931,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The AdGroupBidModifier affected by this change.
      * </pre>
      *
-     * <code>string ad_group_bid_modifier = 32 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_bid_modifier = 32 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for adGroupBidModifier.
      */
     public com.google.protobuf.ByteString
@@ -2952,7 +2952,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The AdGroupBidModifier affected by this change.
      * </pre>
      *
-     * <code>string ad_group_bid_modifier = 32 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_bid_modifier = 32 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The adGroupBidModifier to set.
      * @return This builder for chaining.
      */
@@ -2971,7 +2971,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The AdGroupBidModifier affected by this change.
      * </pre>
      *
-     * <code>string ad_group_bid_modifier = 32 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_bid_modifier = 32 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearAdGroupBidModifier() {
@@ -2985,7 +2985,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The AdGroupBidModifier affected by this change.
      * </pre>
      *
-     * <code>string ad_group_bid_modifier = 32 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_bid_modifier = 32 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for adGroupBidModifier to set.
      * @return This builder for chaining.
      */

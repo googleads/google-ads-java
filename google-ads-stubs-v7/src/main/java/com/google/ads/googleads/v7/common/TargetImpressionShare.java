@@ -140,7 +140,7 @@ private static final long serialVersionUID = 0L;
    * E.g. 1% equals 10,000.
    * </pre>
    *
-   * <code>int64 location_fraction_micros = 4;</code>
+   * <code>optional int64 location_fraction_micros = 4;</code>
    * @return Whether the locationFractionMicros field is set.
    */
   @java.lang.Override
@@ -153,7 +153,7 @@ private static final long serialVersionUID = 0L;
    * E.g. 1% equals 10,000.
    * </pre>
    *
-   * <code>int64 location_fraction_micros = 4;</code>
+   * <code>optional int64 location_fraction_micros = 4;</code>
    * @return The locationFractionMicros.
    */
   @java.lang.Override
@@ -170,7 +170,7 @@ private static final long serialVersionUID = 0L;
    * and specified in local micros.
    * </pre>
    *
-   * <code>int64 cpc_bid_ceiling_micros = 5;</code>
+   * <code>optional int64 cpc_bid_ceiling_micros = 5;</code>
    * @return Whether the cpcBidCeilingMicros field is set.
    */
   @java.lang.Override
@@ -184,7 +184,7 @@ private static final long serialVersionUID = 0L;
    * and specified in local micros.
    * </pre>
    *
-   * <code>int64 cpc_bid_ceiling_micros = 5;</code>
+   * <code>optional int64 cpc_bid_ceiling_micros = 5;</code>
    * @return The cpcBidCeilingMicros.
    */
   @java.lang.Override
@@ -636,7 +636,7 @@ private static final long serialVersionUID = 0L;
      * E.g. 1% equals 10,000.
      * </pre>
      *
-     * <code>int64 location_fraction_micros = 4;</code>
+     * <code>optional int64 location_fraction_micros = 4;</code>
      * @return Whether the locationFractionMicros field is set.
      */
     @java.lang.Override
@@ -649,7 +649,7 @@ private static final long serialVersionUID = 0L;
      * E.g. 1% equals 10,000.
      * </pre>
      *
-     * <code>int64 location_fraction_micros = 4;</code>
+     * <code>optional int64 location_fraction_micros = 4;</code>
      * @return The locationFractionMicros.
      */
     @java.lang.Override
@@ -662,7 +662,7 @@ private static final long serialVersionUID = 0L;
      * E.g. 1% equals 10,000.
      * </pre>
      *
-     * <code>int64 location_fraction_micros = 4;</code>
+     * <code>optional int64 location_fraction_micros = 4;</code>
      * @param value The locationFractionMicros to set.
      * @return This builder for chaining.
      */
@@ -678,7 +678,7 @@ private static final long serialVersionUID = 0L;
      * E.g. 1% equals 10,000.
      * </pre>
      *
-     * <code>int64 location_fraction_micros = 4;</code>
+     * <code>optional int64 location_fraction_micros = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearLocationFractionMicros() {
@@ -696,7 +696,7 @@ private static final long serialVersionUID = 0L;
      * and specified in local micros.
      * </pre>
      *
-     * <code>int64 cpc_bid_ceiling_micros = 5;</code>
+     * <code>optional int64 cpc_bid_ceiling_micros = 5;</code>
      * @return Whether the cpcBidCeilingMicros field is set.
      */
     @java.lang.Override
@@ -710,7 +710,7 @@ private static final long serialVersionUID = 0L;
      * and specified in local micros.
      * </pre>
      *
-     * <code>int64 cpc_bid_ceiling_micros = 5;</code>
+     * <code>optional int64 cpc_bid_ceiling_micros = 5;</code>
      * @return The cpcBidCeilingMicros.
      */
     @java.lang.Override
@@ -724,7 +724,7 @@ private static final long serialVersionUID = 0L;
      * and specified in local micros.
      * </pre>
      *
-     * <code>int64 cpc_bid_ceiling_micros = 5;</code>
+     * <code>optional int64 cpc_bid_ceiling_micros = 5;</code>
      * @param value The cpcBidCeilingMicros to set.
      * @return This builder for chaining.
      */
@@ -741,7 +741,7 @@ private static final long serialVersionUID = 0L;
      * and specified in local micros.
      * </pre>
      *
-     * <code>int64 cpc_bid_ceiling_micros = 5;</code>
+     * <code>optional int64 cpc_bid_ceiling_micros = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearCpcBidCeilingMicros() {

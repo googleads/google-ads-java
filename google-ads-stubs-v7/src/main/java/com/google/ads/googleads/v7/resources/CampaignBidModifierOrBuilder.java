@@ -36,7 +36,7 @@ public interface CampaignBidModifierOrBuilder extends
    * Output only. The campaign to which this criterion belongs.
    * </pre>
    *
-   * <code>string campaign = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the campaign field is set.
    */
   boolean hasCampaign();
@@ -45,7 +45,7 @@ public interface CampaignBidModifierOrBuilder extends
    * Output only. The campaign to which this criterion belongs.
    * </pre>
    *
-   * <code>string campaign = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The campaign.
    */
   java.lang.String getCampaign();
@@ -54,7 +54,7 @@ public interface CampaignBidModifierOrBuilder extends
    * Output only. The campaign to which this criterion belongs.
    * </pre>
    *
-   * <code>string campaign = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for campaign.
    */
   com.google.protobuf.ByteString
@@ -66,7 +66,7 @@ public interface CampaignBidModifierOrBuilder extends
    * This field is ignored for mutates.
    * </pre>
    *
-   * <code>int64 criterion_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 criterion_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the criterionId field is set.
    */
   boolean hasCriterionId();
@@ -76,7 +76,7 @@ public interface CampaignBidModifierOrBuilder extends
    * This field is ignored for mutates.
    * </pre>
    *
-   * <code>int64 criterion_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 criterion_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The criterionId.
    */
   long getCriterionId();
@@ -86,7 +86,7 @@ public interface CampaignBidModifierOrBuilder extends
    * The modifier for the bid when the criterion matches.
    * </pre>
    *
-   * <code>double bid_modifier = 8;</code>
+   * <code>optional double bid_modifier = 8;</code>
    * @return Whether the bidModifier field is set.
    */
   boolean hasBidModifier();
@@ -95,7 +95,7 @@ public interface CampaignBidModifierOrBuilder extends
    * The modifier for the bid when the criterion matches.
    * </pre>
    *
-   * <code>double bid_modifier = 8;</code>
+   * <code>optional double bid_modifier = 8;</code>
    * @return The bidModifier.
    */
   double getBidModifier();

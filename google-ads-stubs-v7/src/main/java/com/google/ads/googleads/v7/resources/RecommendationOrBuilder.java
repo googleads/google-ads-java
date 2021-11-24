@@ -87,7 +87,7 @@ public interface RecommendationOrBuilder extends
    * MOVE_UNUSED_BUDGET
    * </pre>
    *
-   * <code>string campaign_budget = 24 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign_budget = 24 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the campaignBudget field is set.
    */
   boolean hasCampaignBudget();
@@ -100,7 +100,7 @@ public interface RecommendationOrBuilder extends
    * MOVE_UNUSED_BUDGET
    * </pre>
    *
-   * <code>string campaign_budget = 24 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign_budget = 24 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The campaignBudget.
    */
   java.lang.String getCampaignBudget();
@@ -113,7 +113,7 @@ public interface RecommendationOrBuilder extends
    * MOVE_UNUSED_BUDGET
    * </pre>
    *
-   * <code>string campaign_budget = 24 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign_budget = 24 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for campaignBudget.
    */
   com.google.protobuf.ByteString
@@ -130,7 +130,7 @@ public interface RecommendationOrBuilder extends
    * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN, TEXT_AD
    * </pre>
    *
-   * <code>string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the campaign field is set.
    */
   boolean hasCampaign();
@@ -145,7 +145,7 @@ public interface RecommendationOrBuilder extends
    * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN, TEXT_AD
    * </pre>
    *
-   * <code>string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The campaign.
    */
   java.lang.String getCampaign();
@@ -160,7 +160,7 @@ public interface RecommendationOrBuilder extends
    * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN, TEXT_AD
    * </pre>
    *
-   * <code>string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for campaign.
    */
   com.google.protobuf.ByteString
@@ -174,7 +174,7 @@ public interface RecommendationOrBuilder extends
    * KEYWORD, OPTIMIZE_AD_ROTATION, RESPONSIVE_SEARCH_AD, TEXT_AD
    * </pre>
    *
-   * <code>string ad_group = 26 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group = 26 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the adGroup field is set.
    */
   boolean hasAdGroup();
@@ -186,7 +186,7 @@ public interface RecommendationOrBuilder extends
    * KEYWORD, OPTIMIZE_AD_ROTATION, RESPONSIVE_SEARCH_AD, TEXT_AD
    * </pre>
    *
-   * <code>string ad_group = 26 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group = 26 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The adGroup.
    */
   java.lang.String getAdGroup();
@@ -198,7 +198,7 @@ public interface RecommendationOrBuilder extends
    * KEYWORD, OPTIMIZE_AD_ROTATION, RESPONSIVE_SEARCH_AD, TEXT_AD
    * </pre>
    *
-   * <code>string ad_group = 26 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group = 26 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for adGroup.
    */
   com.google.protobuf.ByteString
@@ -209,7 +209,7 @@ public interface RecommendationOrBuilder extends
    * Output only. Whether the recommendation is dismissed or not.
    * </pre>
    *
-   * <code>bool dismissed = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool dismissed = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the dismissed field is set.
    */
   boolean hasDismissed();
@@ -218,7 +218,7 @@ public interface RecommendationOrBuilder extends
    * Output only. Whether the recommendation is dismissed or not.
    * </pre>
    *
-   * <code>bool dismissed = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool dismissed = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The dismissed.
    */
   boolean getDismissed();

@@ -127,7 +127,7 @@ private static final long serialVersionUID = 0L;
      * If field_name is a repeated field, this is the element that failed
      * </pre>
      *
-     * <code>int32 index = 3;</code>
+     * <code>optional int32 index = 3;</code>
      * @return Whether the index field is set.
      */
     boolean hasIndex();
@@ -136,7 +136,7 @@ private static final long serialVersionUID = 0L;
      * If field_name is a repeated field, this is the element that failed
      * </pre>
      *
-     * <code>int32 index = 3;</code>
+     * <code>optional int32 index = 3;</code>
      * @return The index.
      */
     int getIndex();
@@ -289,7 +289,7 @@ private static final long serialVersionUID = 0L;
      * If field_name is a repeated field, this is the element that failed
      * </pre>
      *
-     * <code>int32 index = 3;</code>
+     * <code>optional int32 index = 3;</code>
      * @return Whether the index field is set.
      */
     @java.lang.Override
@@ -301,7 +301,7 @@ private static final long serialVersionUID = 0L;
      * If field_name is a repeated field, this is the element that failed
      * </pre>
      *
-     * <code>int32 index = 3;</code>
+     * <code>optional int32 index = 3;</code>
      * @return The index.
      */
     @java.lang.Override
@@ -323,7 +323,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getFieldNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fieldName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, fieldName_);
       }
       if (((bitField0_ & 0x00000001) != 0)) {
@@ -338,7 +338,7 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (!getFieldNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fieldName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, fieldName_);
       }
       if (((bitField0_ & 0x00000001) != 0)) {
@@ -746,7 +746,7 @@ private static final long serialVersionUID = 0L;
        * If field_name is a repeated field, this is the element that failed
        * </pre>
        *
-       * <code>int32 index = 3;</code>
+       * <code>optional int32 index = 3;</code>
        * @return Whether the index field is set.
        */
       @java.lang.Override
@@ -758,7 +758,7 @@ private static final long serialVersionUID = 0L;
        * If field_name is a repeated field, this is the element that failed
        * </pre>
        *
-       * <code>int32 index = 3;</code>
+       * <code>optional int32 index = 3;</code>
        * @return The index.
        */
       @java.lang.Override
@@ -770,7 +770,7 @@ private static final long serialVersionUID = 0L;
        * If field_name is a repeated field, this is the element that failed
        * </pre>
        *
-       * <code>int32 index = 3;</code>
+       * <code>optional int32 index = 3;</code>
        * @param value The index to set.
        * @return This builder for chaining.
        */
@@ -785,7 +785,7 @@ private static final long serialVersionUID = 0L;
        * If field_name is a repeated field, this is the element that failed
        * </pre>
        *
-       * <code>int32 index = 3;</code>
+       * <code>optional int32 index = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearIndex() {

@@ -12,7 +12,7 @@ public interface OnTargetAudienceMetricsOrBuilder extends
    * Reference audience size matching the considered targeting for YouTube.
    * </pre>
    *
-   * <code>int64 youtube_audience_size = 3;</code>
+   * <code>optional int64 youtube_audience_size = 3;</code>
    * @return Whether the youtubeAudienceSize field is set.
    */
   boolean hasYoutubeAudienceSize();
@@ -21,7 +21,7 @@ public interface OnTargetAudienceMetricsOrBuilder extends
    * Reference audience size matching the considered targeting for YouTube.
    * </pre>
    *
-   * <code>int64 youtube_audience_size = 3;</code>
+   * <code>optional int64 youtube_audience_size = 3;</code>
    * @return The youtubeAudienceSize.
    */
   long getYoutubeAudienceSize();
@@ -31,7 +31,7 @@ public interface OnTargetAudienceMetricsOrBuilder extends
    * Reference audience size matching the considered targeting for Census.
    * </pre>
    *
-   * <code>int64 census_audience_size = 4;</code>
+   * <code>optional int64 census_audience_size = 4;</code>
    * @return Whether the censusAudienceSize field is set.
    */
   boolean hasCensusAudienceSize();
@@ -40,7 +40,7 @@ public interface OnTargetAudienceMetricsOrBuilder extends
    * Reference audience size matching the considered targeting for Census.
    * </pre>
    *
-   * <code>int64 census_audience_size = 4;</code>
+   * <code>optional int64 census_audience_size = 4;</code>
    * @return The censusAudienceSize.
    */
   long getCensusAudienceSize();

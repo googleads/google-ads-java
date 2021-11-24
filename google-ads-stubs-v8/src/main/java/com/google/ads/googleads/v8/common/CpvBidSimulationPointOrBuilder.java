@@ -12,7 +12,7 @@ public interface CpvBidSimulationPointOrBuilder extends
    * The simulated CPV bid upon which projected metrics are based.
    * </pre>
    *
-   * <code>int64 cpv_bid_micros = 5;</code>
+   * <code>optional int64 cpv_bid_micros = 5;</code>
    * @return Whether the cpvBidMicros field is set.
    */
   boolean hasCpvBidMicros();
@@ -21,7 +21,7 @@ public interface CpvBidSimulationPointOrBuilder extends
    * The simulated CPV bid upon which projected metrics are based.
    * </pre>
    *
-   * <code>int64 cpv_bid_micros = 5;</code>
+   * <code>optional int64 cpv_bid_micros = 5;</code>
    * @return The cpvBidMicros.
    */
   long getCpvBidMicros();
@@ -31,7 +31,7 @@ public interface CpvBidSimulationPointOrBuilder extends
    * Projected cost in micros.
    * </pre>
    *
-   * <code>int64 cost_micros = 6;</code>
+   * <code>optional int64 cost_micros = 6;</code>
    * @return Whether the costMicros field is set.
    */
   boolean hasCostMicros();
@@ -40,7 +40,7 @@ public interface CpvBidSimulationPointOrBuilder extends
    * Projected cost in micros.
    * </pre>
    *
-   * <code>int64 cost_micros = 6;</code>
+   * <code>optional int64 cost_micros = 6;</code>
    * @return The costMicros.
    */
   long getCostMicros();
@@ -50,7 +50,7 @@ public interface CpvBidSimulationPointOrBuilder extends
    * Projected number of impressions.
    * </pre>
    *
-   * <code>int64 impressions = 7;</code>
+   * <code>optional int64 impressions = 7;</code>
    * @return Whether the impressions field is set.
    */
   boolean hasImpressions();
@@ -59,7 +59,7 @@ public interface CpvBidSimulationPointOrBuilder extends
    * Projected number of impressions.
    * </pre>
    *
-   * <code>int64 impressions = 7;</code>
+   * <code>optional int64 impressions = 7;</code>
    * @return The impressions.
    */
   long getImpressions();
@@ -69,7 +69,7 @@ public interface CpvBidSimulationPointOrBuilder extends
    * Projected number of views.
    * </pre>
    *
-   * <code>int64 views = 8;</code>
+   * <code>optional int64 views = 8;</code>
    * @return Whether the views field is set.
    */
   boolean hasViews();
@@ -78,7 +78,7 @@ public interface CpvBidSimulationPointOrBuilder extends
    * Projected number of views.
    * </pre>
    *
-   * <code>int64 views = 8;</code>
+   * <code>optional int64 views = 8;</code>
    * @return The views.
    */
   long getViews();

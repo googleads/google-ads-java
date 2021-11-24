@@ -37,7 +37,7 @@ public interface FeedOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -47,7 +47,7 @@ public interface FeedOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   long getId();
@@ -57,7 +57,7 @@ public interface FeedOrBuilder extends
    * Immutable. Name of the feed. Required.
    * </pre>
    *
-   * <code>string name = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string name = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the name field is set.
    */
   boolean hasName();
@@ -66,7 +66,7 @@ public interface FeedOrBuilder extends
    * Immutable. Name of the feed. Required.
    * </pre>
    *
-   * <code>string name = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string name = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The name.
    */
   java.lang.String getName();
@@ -75,7 +75,7 @@ public interface FeedOrBuilder extends
    * Immutable. Name of the feed. Required.
    * </pre>
    *
-   * <code>string name = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string name = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
@@ -231,8 +231,7 @@ public interface FeedOrBuilder extends
 
   /**
    * <pre>
-   * Data used to configure a location feed populated from Google My Business
-   * Locations.
+   * Data used to configure a location feed populated from Business Profile.
    * </pre>
    *
    * <code>.google.ads.googleads.v7.resources.Feed.PlacesLocationFeedData places_location_feed_data = 6;</code>
@@ -241,8 +240,7 @@ public interface FeedOrBuilder extends
   boolean hasPlacesLocationFeedData();
   /**
    * <pre>
-   * Data used to configure a location feed populated from Google My Business
-   * Locations.
+   * Data used to configure a location feed populated from Business Profile.
    * </pre>
    *
    * <code>.google.ads.googleads.v7.resources.Feed.PlacesLocationFeedData places_location_feed_data = 6;</code>
@@ -251,8 +249,7 @@ public interface FeedOrBuilder extends
   com.google.ads.googleads.v7.resources.Feed.PlacesLocationFeedData getPlacesLocationFeedData();
   /**
    * <pre>
-   * Data used to configure a location feed populated from Google My Business
-   * Locations.
+   * Data used to configure a location feed populated from Business Profile.
    * </pre>
    *
    * <code>.google.ads.googleads.v7.resources.Feed.PlacesLocationFeedData places_location_feed_data = 6;</code>

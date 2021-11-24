@@ -36,7 +36,7 @@ public interface BiddingStrategyOrBuilder extends
    * Output only. The ID of the bidding strategy.
    * </pre>
    *
-   * <code>int64 id = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -45,7 +45,7 @@ public interface BiddingStrategyOrBuilder extends
    * Output only. The ID of the bidding strategy.
    * </pre>
    *
-   * <code>int64 id = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   long getId();
@@ -58,7 +58,7 @@ public interface BiddingStrategyOrBuilder extends
    * in UTF-8 bytes, (trimmed).
    * </pre>
    *
-   * <code>string name = 17;</code>
+   * <code>optional string name = 17;</code>
    * @return Whether the name field is set.
    */
   boolean hasName();
@@ -70,7 +70,7 @@ public interface BiddingStrategyOrBuilder extends
    * in UTF-8 bytes, (trimmed).
    * </pre>
    *
-   * <code>string name = 17;</code>
+   * <code>optional string name = 17;</code>
    * @return The name.
    */
   java.lang.String getName();
@@ -82,7 +82,7 @@ public interface BiddingStrategyOrBuilder extends
    * in UTF-8 bytes, (trimmed).
    * </pre>
    *
-   * <code>string name = 17;</code>
+   * <code>optional string name = 17;</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
@@ -142,7 +142,7 @@ public interface BiddingStrategyOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>string effective_currency_code = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string effective_currency_code = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the effectiveCurrencyCode field is set.
    */
   boolean hasEffectiveCurrencyCode();
@@ -156,7 +156,7 @@ public interface BiddingStrategyOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>string effective_currency_code = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string effective_currency_code = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The effectiveCurrencyCode.
    */
   java.lang.String getEffectiveCurrencyCode();
@@ -170,7 +170,7 @@ public interface BiddingStrategyOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>string effective_currency_code = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string effective_currency_code = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for effectiveCurrencyCode.
    */
   com.google.protobuf.ByteString
@@ -182,7 +182,7 @@ public interface BiddingStrategyOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 campaign_count = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 campaign_count = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the campaignCount field is set.
    */
   boolean hasCampaignCount();
@@ -192,7 +192,7 @@ public interface BiddingStrategyOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 campaign_count = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 campaign_count = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The campaignCount.
    */
   long getCampaignCount();
@@ -203,7 +203,7 @@ public interface BiddingStrategyOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 non_removed_campaign_count = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 non_removed_campaign_count = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the nonRemovedCampaignCount field is set.
    */
   boolean hasNonRemovedCampaignCount();
@@ -213,7 +213,7 @@ public interface BiddingStrategyOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 non_removed_campaign_count = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 non_removed_campaign_count = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The nonRemovedCampaignCount.
    */
   long getNonRemovedCampaignCount();

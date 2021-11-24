@@ -113,7 +113,7 @@ private static final long serialVersionUID = 0L;
    * The simulated CPV bid upon which projected metrics are based.
    * </pre>
    *
-   * <code>int64 cpv_bid_micros = 5;</code>
+   * <code>optional int64 cpv_bid_micros = 5;</code>
    * @return Whether the cpvBidMicros field is set.
    */
   @java.lang.Override
@@ -125,7 +125,7 @@ private static final long serialVersionUID = 0L;
    * The simulated CPV bid upon which projected metrics are based.
    * </pre>
    *
-   * <code>int64 cpv_bid_micros = 5;</code>
+   * <code>optional int64 cpv_bid_micros = 5;</code>
    * @return The cpvBidMicros.
    */
   @java.lang.Override
@@ -140,7 +140,7 @@ private static final long serialVersionUID = 0L;
    * Projected cost in micros.
    * </pre>
    *
-   * <code>int64 cost_micros = 6;</code>
+   * <code>optional int64 cost_micros = 6;</code>
    * @return Whether the costMicros field is set.
    */
   @java.lang.Override
@@ -152,7 +152,7 @@ private static final long serialVersionUID = 0L;
    * Projected cost in micros.
    * </pre>
    *
-   * <code>int64 cost_micros = 6;</code>
+   * <code>optional int64 cost_micros = 6;</code>
    * @return The costMicros.
    */
   @java.lang.Override
@@ -167,7 +167,7 @@ private static final long serialVersionUID = 0L;
    * Projected number of impressions.
    * </pre>
    *
-   * <code>int64 impressions = 7;</code>
+   * <code>optional int64 impressions = 7;</code>
    * @return Whether the impressions field is set.
    */
   @java.lang.Override
@@ -179,7 +179,7 @@ private static final long serialVersionUID = 0L;
    * Projected number of impressions.
    * </pre>
    *
-   * <code>int64 impressions = 7;</code>
+   * <code>optional int64 impressions = 7;</code>
    * @return The impressions.
    */
   @java.lang.Override
@@ -194,7 +194,7 @@ private static final long serialVersionUID = 0L;
    * Projected number of views.
    * </pre>
    *
-   * <code>int64 views = 8;</code>
+   * <code>optional int64 views = 8;</code>
    * @return Whether the views field is set.
    */
   @java.lang.Override
@@ -206,7 +206,7 @@ private static final long serialVersionUID = 0L;
    * Projected number of views.
    * </pre>
    *
-   * <code>int64 views = 8;</code>
+   * <code>optional int64 views = 8;</code>
    * @return The views.
    */
   @java.lang.Override
@@ -617,7 +617,7 @@ private static final long serialVersionUID = 0L;
      * The simulated CPV bid upon which projected metrics are based.
      * </pre>
      *
-     * <code>int64 cpv_bid_micros = 5;</code>
+     * <code>optional int64 cpv_bid_micros = 5;</code>
      * @return Whether the cpvBidMicros field is set.
      */
     @java.lang.Override
@@ -629,7 +629,7 @@ private static final long serialVersionUID = 0L;
      * The simulated CPV bid upon which projected metrics are based.
      * </pre>
      *
-     * <code>int64 cpv_bid_micros = 5;</code>
+     * <code>optional int64 cpv_bid_micros = 5;</code>
      * @return The cpvBidMicros.
      */
     @java.lang.Override
@@ -641,7 +641,7 @@ private static final long serialVersionUID = 0L;
      * The simulated CPV bid upon which projected metrics are based.
      * </pre>
      *
-     * <code>int64 cpv_bid_micros = 5;</code>
+     * <code>optional int64 cpv_bid_micros = 5;</code>
      * @param value The cpvBidMicros to set.
      * @return This builder for chaining.
      */
@@ -656,7 +656,7 @@ private static final long serialVersionUID = 0L;
      * The simulated CPV bid upon which projected metrics are based.
      * </pre>
      *
-     * <code>int64 cpv_bid_micros = 5;</code>
+     * <code>optional int64 cpv_bid_micros = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearCpvBidMicros() {
@@ -672,7 +672,7 @@ private static final long serialVersionUID = 0L;
      * Projected cost in micros.
      * </pre>
      *
-     * <code>int64 cost_micros = 6;</code>
+     * <code>optional int64 cost_micros = 6;</code>
      * @return Whether the costMicros field is set.
      */
     @java.lang.Override
@@ -684,7 +684,7 @@ private static final long serialVersionUID = 0L;
      * Projected cost in micros.
      * </pre>
      *
-     * <code>int64 cost_micros = 6;</code>
+     * <code>optional int64 cost_micros = 6;</code>
      * @return The costMicros.
      */
     @java.lang.Override
@@ -696,7 +696,7 @@ private static final long serialVersionUID = 0L;
      * Projected cost in micros.
      * </pre>
      *
-     * <code>int64 cost_micros = 6;</code>
+     * <code>optional int64 cost_micros = 6;</code>
      * @param value The costMicros to set.
      * @return This builder for chaining.
      */
@@ -711,7 +711,7 @@ private static final long serialVersionUID = 0L;
      * Projected cost in micros.
      * </pre>
      *
-     * <code>int64 cost_micros = 6;</code>
+     * <code>optional int64 cost_micros = 6;</code>
      * @return This builder for chaining.
      */
     public Builder clearCostMicros() {
@@ -727,7 +727,7 @@ private static final long serialVersionUID = 0L;
      * Projected number of impressions.
      * </pre>
      *
-     * <code>int64 impressions = 7;</code>
+     * <code>optional int64 impressions = 7;</code>
      * @return Whether the impressions field is set.
      */
     @java.lang.Override
@@ -739,7 +739,7 @@ private static final long serialVersionUID = 0L;
      * Projected number of impressions.
      * </pre>
      *
-     * <code>int64 impressions = 7;</code>
+     * <code>optional int64 impressions = 7;</code>
      * @return The impressions.
      */
     @java.lang.Override
@@ -751,7 +751,7 @@ private static final long serialVersionUID = 0L;
      * Projected number of impressions.
      * </pre>
      *
-     * <code>int64 impressions = 7;</code>
+     * <code>optional int64 impressions = 7;</code>
      * @param value The impressions to set.
      * @return This builder for chaining.
      */
@@ -766,7 +766,7 @@ private static final long serialVersionUID = 0L;
      * Projected number of impressions.
      * </pre>
      *
-     * <code>int64 impressions = 7;</code>
+     * <code>optional int64 impressions = 7;</code>
      * @return This builder for chaining.
      */
     public Builder clearImpressions() {
@@ -782,7 +782,7 @@ private static final long serialVersionUID = 0L;
      * Projected number of views.
      * </pre>
      *
-     * <code>int64 views = 8;</code>
+     * <code>optional int64 views = 8;</code>
      * @return Whether the views field is set.
      */
     @java.lang.Override
@@ -794,7 +794,7 @@ private static final long serialVersionUID = 0L;
      * Projected number of views.
      * </pre>
      *
-     * <code>int64 views = 8;</code>
+     * <code>optional int64 views = 8;</code>
      * @return The views.
      */
     @java.lang.Override
@@ -806,7 +806,7 @@ private static final long serialVersionUID = 0L;
      * Projected number of views.
      * </pre>
      *
-     * <code>int64 views = 8;</code>
+     * <code>optional int64 views = 8;</code>
      * @param value The views to set.
      * @return This builder for chaining.
      */
@@ -821,7 +821,7 @@ private static final long serialVersionUID = 0L;
      * Projected number of views.
      * </pre>
      *
-     * <code>int64 views = 8;</code>
+     * <code>optional int64 views = 8;</code>
      * @return This builder for chaining.
      */
     public Builder clearViews() {

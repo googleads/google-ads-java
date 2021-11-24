@@ -285,7 +285,7 @@ private static final long serialVersionUID = 0L;
    * is not set is not included in this availability configuration.
    * </pre>
    *
-   * <code>bool include_default_channel_sub_type = 5;</code>
+   * <code>optional bool include_default_channel_sub_type = 5;</code>
    * @return Whether the includeDefaultChannelSubType field is set.
    */
   @java.lang.Override
@@ -300,7 +300,7 @@ private static final long serialVersionUID = 0L;
    * is not set is not included in this availability configuration.
    * </pre>
    *
-   * <code>bool include_default_channel_sub_type = 5;</code>
+   * <code>optional bool include_default_channel_sub_type = 5;</code>
    * @return The includeDefaultChannelSubType.
    */
   @java.lang.Override
@@ -1072,7 +1072,7 @@ private static final long serialVersionUID = 0L;
      * is not set is not included in this availability configuration.
      * </pre>
      *
-     * <code>bool include_default_channel_sub_type = 5;</code>
+     * <code>optional bool include_default_channel_sub_type = 5;</code>
      * @return Whether the includeDefaultChannelSubType field is set.
      */
     @java.lang.Override
@@ -1087,7 +1087,7 @@ private static final long serialVersionUID = 0L;
      * is not set is not included in this availability configuration.
      * </pre>
      *
-     * <code>bool include_default_channel_sub_type = 5;</code>
+     * <code>optional bool include_default_channel_sub_type = 5;</code>
      * @return The includeDefaultChannelSubType.
      */
     @java.lang.Override
@@ -1102,7 +1102,7 @@ private static final long serialVersionUID = 0L;
      * is not set is not included in this availability configuration.
      * </pre>
      *
-     * <code>bool include_default_channel_sub_type = 5;</code>
+     * <code>optional bool include_default_channel_sub_type = 5;</code>
      * @param value The includeDefaultChannelSubType to set.
      * @return This builder for chaining.
      */
@@ -1120,7 +1120,7 @@ private static final long serialVersionUID = 0L;
      * is not set is not included in this availability configuration.
      * </pre>
      *
-     * <code>bool include_default_channel_sub_type = 5;</code>
+     * <code>optional bool include_default_channel_sub_type = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearIncludeDefaultChannelSubType() {

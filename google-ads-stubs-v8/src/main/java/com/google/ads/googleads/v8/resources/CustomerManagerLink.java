@@ -169,7 +169,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The manager customer linked to the customer.
    * </pre>
    *
-   * <code>string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the managerCustomer field is set.
    */
   @java.lang.Override
@@ -181,7 +181,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The manager customer linked to the customer.
    * </pre>
    *
-   * <code>string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The managerCustomer.
    */
   @java.lang.Override
@@ -202,7 +202,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The manager customer linked to the customer.
    * </pre>
    *
-   * <code>string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for managerCustomer.
    */
   @java.lang.Override
@@ -227,7 +227,7 @@ private static final long serialVersionUID = 0L;
    * Output only. ID of the customer-manager link. This field is read only.
    * </pre>
    *
-   * <code>int64 manager_link_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 manager_link_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the managerLinkId field is set.
    */
   @java.lang.Override
@@ -239,7 +239,7 @@ private static final long serialVersionUID = 0L;
    * Output only. ID of the customer-manager link. This field is read only.
    * </pre>
    *
-   * <code>int64 manager_link_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 manager_link_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The managerLinkId.
    */
   @java.lang.Override
@@ -288,7 +288,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (status_ != com.google.ads.googleads.v8.enums.ManagerLinkStatusEnum.ManagerLinkStatus.UNSPECIFIED.getNumber()) {
@@ -309,7 +309,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (status_ != com.google.ads.googleads.v8.enums.ManagerLinkStatusEnum.ManagerLinkStatus.UNSPECIFIED.getNumber()) {
@@ -764,7 +764,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The manager customer linked to the customer.
      * </pre>
      *
-     * <code>string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the managerCustomer field is set.
      */
     public boolean hasManagerCustomer() {
@@ -775,7 +775,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The manager customer linked to the customer.
      * </pre>
      *
-     * <code>string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The managerCustomer.
      */
     public java.lang.String getManagerCustomer() {
@@ -795,7 +795,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The manager customer linked to the customer.
      * </pre>
      *
-     * <code>string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for managerCustomer.
      */
     public com.google.protobuf.ByteString
@@ -816,7 +816,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The manager customer linked to the customer.
      * </pre>
      *
-     * <code>string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The managerCustomer to set.
      * @return This builder for chaining.
      */
@@ -835,7 +835,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The manager customer linked to the customer.
      * </pre>
      *
-     * <code>string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearManagerCustomer() {
@@ -849,7 +849,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The manager customer linked to the customer.
      * </pre>
      *
-     * <code>string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string manager_customer = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for managerCustomer to set.
      * @return This builder for chaining.
      */
@@ -871,7 +871,7 @@ private static final long serialVersionUID = 0L;
      * Output only. ID of the customer-manager link. This field is read only.
      * </pre>
      *
-     * <code>int64 manager_link_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 manager_link_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the managerLinkId field is set.
      */
     @java.lang.Override
@@ -883,7 +883,7 @@ private static final long serialVersionUID = 0L;
      * Output only. ID of the customer-manager link. This field is read only.
      * </pre>
      *
-     * <code>int64 manager_link_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 manager_link_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The managerLinkId.
      */
     @java.lang.Override
@@ -895,7 +895,7 @@ private static final long serialVersionUID = 0L;
      * Output only. ID of the customer-manager link. This field is read only.
      * </pre>
      *
-     * <code>int64 manager_link_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 manager_link_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The managerLinkId to set.
      * @return This builder for chaining.
      */
@@ -910,7 +910,7 @@ private static final long serialVersionUID = 0L;
      * Output only. ID of the customer-manager link. This field is read only.
      * </pre>
      *
-     * <code>int64 manager_link_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 manager_link_id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearManagerLinkId() {

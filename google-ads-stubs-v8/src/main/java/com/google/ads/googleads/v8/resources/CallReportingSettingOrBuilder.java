@@ -13,7 +13,7 @@ public interface CallReportingSettingOrBuilder extends
    * System.
    * </pre>
    *
-   * <code>bool call_reporting_enabled = 10;</code>
+   * <code>optional bool call_reporting_enabled = 10;</code>
    * @return Whether the callReportingEnabled field is set.
    */
   boolean hasCallReportingEnabled();
@@ -23,7 +23,7 @@ public interface CallReportingSettingOrBuilder extends
    * System.
    * </pre>
    *
-   * <code>bool call_reporting_enabled = 10;</code>
+   * <code>optional bool call_reporting_enabled = 10;</code>
    * @return The callReportingEnabled.
    */
   boolean getCallReportingEnabled();
@@ -33,7 +33,7 @@ public interface CallReportingSettingOrBuilder extends
    * Whether to enable call conversion reporting.
    * </pre>
    *
-   * <code>bool call_conversion_reporting_enabled = 11;</code>
+   * <code>optional bool call_conversion_reporting_enabled = 11;</code>
    * @return Whether the callConversionReportingEnabled field is set.
    */
   boolean hasCallConversionReportingEnabled();
@@ -42,7 +42,7 @@ public interface CallReportingSettingOrBuilder extends
    * Whether to enable call conversion reporting.
    * </pre>
    *
-   * <code>bool call_conversion_reporting_enabled = 11;</code>
+   * <code>optional bool call_conversion_reporting_enabled = 11;</code>
    * @return The callConversionReportingEnabled.
    */
   boolean getCallConversionReportingEnabled();
@@ -54,7 +54,7 @@ public interface CallReportingSettingOrBuilder extends
    * call_conversion_reporting_enabled is set to true.
    * </pre>
    *
-   * <code>string call_conversion_action = 12 [(.google.api.resource_reference) = { ... }</code>
+   * <code>optional string call_conversion_action = 12 [(.google.api.resource_reference) = { ... }</code>
    * @return Whether the callConversionAction field is set.
    */
   boolean hasCallConversionAction();
@@ -65,7 +65,7 @@ public interface CallReportingSettingOrBuilder extends
    * call_conversion_reporting_enabled is set to true.
    * </pre>
    *
-   * <code>string call_conversion_action = 12 [(.google.api.resource_reference) = { ... }</code>
+   * <code>optional string call_conversion_action = 12 [(.google.api.resource_reference) = { ... }</code>
    * @return The callConversionAction.
    */
   java.lang.String getCallConversionAction();
@@ -76,7 +76,7 @@ public interface CallReportingSettingOrBuilder extends
    * call_conversion_reporting_enabled is set to true.
    * </pre>
    *
-   * <code>string call_conversion_action = 12 [(.google.api.resource_reference) = { ... }</code>
+   * <code>optional string call_conversion_action = 12 [(.google.api.resource_reference) = { ... }</code>
    * @return The bytes for callConversionAction.
    */
   com.google.protobuf.ByteString

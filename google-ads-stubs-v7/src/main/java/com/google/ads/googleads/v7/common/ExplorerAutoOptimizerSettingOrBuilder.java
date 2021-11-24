@@ -12,7 +12,7 @@ public interface ExplorerAutoOptimizerSettingOrBuilder extends
    * Indicates whether the optimizer is turned on.
    * </pre>
    *
-   * <code>bool opt_in = 2;</code>
+   * <code>optional bool opt_in = 2;</code>
    * @return Whether the optIn field is set.
    */
   boolean hasOptIn();
@@ -21,7 +21,7 @@ public interface ExplorerAutoOptimizerSettingOrBuilder extends
    * Indicates whether the optimizer is turned on.
    * </pre>
    *
-   * <code>bool opt_in = 2;</code>
+   * <code>optional bool opt_in = 2;</code>
    * @return The optIn.
    */
   boolean getOptIn();

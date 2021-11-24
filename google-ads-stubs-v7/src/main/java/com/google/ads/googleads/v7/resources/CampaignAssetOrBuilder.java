@@ -36,7 +36,7 @@ public interface CampaignAssetOrBuilder extends
    * Immutable. The campaign to which the asset is linked.
    * </pre>
    *
-   * <code>string campaign = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the campaign field is set.
    */
   boolean hasCampaign();
@@ -45,7 +45,7 @@ public interface CampaignAssetOrBuilder extends
    * Immutable. The campaign to which the asset is linked.
    * </pre>
    *
-   * <code>string campaign = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The campaign.
    */
   java.lang.String getCampaign();
@@ -54,7 +54,7 @@ public interface CampaignAssetOrBuilder extends
    * Immutable. The campaign to which the asset is linked.
    * </pre>
    *
-   * <code>string campaign = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for campaign.
    */
   com.google.protobuf.ByteString
@@ -65,7 +65,7 @@ public interface CampaignAssetOrBuilder extends
    * Immutable. The asset which is linked to the campaign.
    * </pre>
    *
-   * <code>string asset = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string asset = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the asset field is set.
    */
   boolean hasAsset();
@@ -74,7 +74,7 @@ public interface CampaignAssetOrBuilder extends
    * Immutable. The asset which is linked to the campaign.
    * </pre>
    *
-   * <code>string asset = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string asset = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The asset.
    */
   java.lang.String getAsset();
@@ -83,7 +83,7 @@ public interface CampaignAssetOrBuilder extends
    * Immutable. The asset which is linked to the campaign.
    * </pre>
    *
-   * <code>string asset = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string asset = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for asset.
    */
   com.google.protobuf.ByteString

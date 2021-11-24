@@ -36,7 +36,7 @@ public interface ChangeStatusOrBuilder extends
    * Output only. Time at which the most recent change has occurred on this resource.
    * </pre>
    *
-   * <code>string last_change_date_time = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string last_change_date_time = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the lastChangeDateTime field is set.
    */
   boolean hasLastChangeDateTime();
@@ -45,7 +45,7 @@ public interface ChangeStatusOrBuilder extends
    * Output only. Time at which the most recent change has occurred on this resource.
    * </pre>
    *
-   * <code>string last_change_date_time = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string last_change_date_time = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The lastChangeDateTime.
    */
   java.lang.String getLastChangeDateTime();
@@ -54,7 +54,7 @@ public interface ChangeStatusOrBuilder extends
    * Output only. Time at which the most recent change has occurred on this resource.
    * </pre>
    *
-   * <code>string last_change_date_time = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string last_change_date_time = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for lastChangeDateTime.
    */
   com.google.protobuf.ByteString
@@ -88,7 +88,7 @@ public interface ChangeStatusOrBuilder extends
    * Output only. The Campaign affected by this change.
    * </pre>
    *
-   * <code>string campaign = 17 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 17 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the campaign field is set.
    */
   boolean hasCampaign();
@@ -97,7 +97,7 @@ public interface ChangeStatusOrBuilder extends
    * Output only. The Campaign affected by this change.
    * </pre>
    *
-   * <code>string campaign = 17 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 17 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The campaign.
    */
   java.lang.String getCampaign();
@@ -106,7 +106,7 @@ public interface ChangeStatusOrBuilder extends
    * Output only. The Campaign affected by this change.
    * </pre>
    *
-   * <code>string campaign = 17 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 17 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for campaign.
    */
   com.google.protobuf.ByteString
@@ -117,7 +117,7 @@ public interface ChangeStatusOrBuilder extends
    * Output only. The AdGroup affected by this change.
    * </pre>
    *
-   * <code>string ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the adGroup field is set.
    */
   boolean hasAdGroup();
@@ -126,7 +126,7 @@ public interface ChangeStatusOrBuilder extends
    * Output only. The AdGroup affected by this change.
    * </pre>
    *
-   * <code>string ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The adGroup.
    */
   java.lang.String getAdGroup();
@@ -135,7 +135,7 @@ public interface ChangeStatusOrBuilder extends
    * Output only. The AdGroup affected by this change.
    * </pre>
    *
-   * <code>string ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for adGroup.
    */
   com.google.protobuf.ByteString
@@ -165,7 +165,7 @@ public interface ChangeStatusOrBuilder extends
    * Output only. The AdGroupAd affected by this change.
    * </pre>
    *
-   * <code>string ad_group_ad = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_ad = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the adGroupAd field is set.
    */
   boolean hasAdGroupAd();
@@ -174,7 +174,7 @@ public interface ChangeStatusOrBuilder extends
    * Output only. The AdGroupAd affected by this change.
    * </pre>
    *
-   * <code>string ad_group_ad = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_ad = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The adGroupAd.
    */
   java.lang.String getAdGroupAd();
@@ -183,7 +183,7 @@ public interface ChangeStatusOrBuilder extends
    * Output only. The AdGroupAd affected by this change.
    * </pre>
    *
-   * <code>string ad_group_ad = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_ad = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for adGroupAd.
    */
   com.google.protobuf.ByteString
@@ -194,7 +194,7 @@ public interface ChangeStatusOrBuilder extends
    * Output only. The AdGroupCriterion affected by this change.
    * </pre>
    *
-   * <code>string ad_group_criterion = 26 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_criterion = 26 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the adGroupCriterion field is set.
    */
   boolean hasAdGroupCriterion();
@@ -203,7 +203,7 @@ public interface ChangeStatusOrBuilder extends
    * Output only. The AdGroupCriterion affected by this change.
    * </pre>
    *
-   * <code>string ad_group_criterion = 26 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_criterion = 26 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The adGroupCriterion.
    */
   java.lang.String getAdGroupCriterion();
@@ -212,7 +212,7 @@ public interface ChangeStatusOrBuilder extends
    * Output only. The AdGroupCriterion affected by this change.
    * </pre>
    *
-   * <code>string ad_group_criterion = 26 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_criterion = 26 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for adGroupCriterion.
    */
   com.google.protobuf.ByteString
@@ -223,7 +223,7 @@ public interface ChangeStatusOrBuilder extends
    * Output only. The CampaignCriterion affected by this change.
    * </pre>
    *
-   * <code>string campaign_criterion = 27 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign_criterion = 27 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the campaignCriterion field is set.
    */
   boolean hasCampaignCriterion();
@@ -232,7 +232,7 @@ public interface ChangeStatusOrBuilder extends
    * Output only. The CampaignCriterion affected by this change.
    * </pre>
    *
-   * <code>string campaign_criterion = 27 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign_criterion = 27 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The campaignCriterion.
    */
   java.lang.String getCampaignCriterion();
@@ -241,7 +241,7 @@ public interface ChangeStatusOrBuilder extends
    * Output only. The CampaignCriterion affected by this change.
    * </pre>
    *
-   * <code>string campaign_criterion = 27 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign_criterion = 27 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for campaignCriterion.
    */
   com.google.protobuf.ByteString
@@ -252,7 +252,7 @@ public interface ChangeStatusOrBuilder extends
    * Output only. The Feed affected by this change.
    * </pre>
    *
-   * <code>string feed = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string feed = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the feed field is set.
    */
   boolean hasFeed();
@@ -261,7 +261,7 @@ public interface ChangeStatusOrBuilder extends
    * Output only. The Feed affected by this change.
    * </pre>
    *
-   * <code>string feed = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string feed = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The feed.
    */
   java.lang.String getFeed();
@@ -270,7 +270,7 @@ public interface ChangeStatusOrBuilder extends
    * Output only. The Feed affected by this change.
    * </pre>
    *
-   * <code>string feed = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string feed = 28 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for feed.
    */
   com.google.protobuf.ByteString
@@ -281,7 +281,7 @@ public interface ChangeStatusOrBuilder extends
    * Output only. The FeedItem affected by this change.
    * </pre>
    *
-   * <code>string feed_item = 29 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string feed_item = 29 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the feedItem field is set.
    */
   boolean hasFeedItem();
@@ -290,7 +290,7 @@ public interface ChangeStatusOrBuilder extends
    * Output only. The FeedItem affected by this change.
    * </pre>
    *
-   * <code>string feed_item = 29 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string feed_item = 29 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The feedItem.
    */
   java.lang.String getFeedItem();
@@ -299,7 +299,7 @@ public interface ChangeStatusOrBuilder extends
    * Output only. The FeedItem affected by this change.
    * </pre>
    *
-   * <code>string feed_item = 29 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string feed_item = 29 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for feedItem.
    */
   com.google.protobuf.ByteString
@@ -310,7 +310,7 @@ public interface ChangeStatusOrBuilder extends
    * Output only. The AdGroupFeed affected by this change.
    * </pre>
    *
-   * <code>string ad_group_feed = 30 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_feed = 30 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the adGroupFeed field is set.
    */
   boolean hasAdGroupFeed();
@@ -319,7 +319,7 @@ public interface ChangeStatusOrBuilder extends
    * Output only. The AdGroupFeed affected by this change.
    * </pre>
    *
-   * <code>string ad_group_feed = 30 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_feed = 30 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The adGroupFeed.
    */
   java.lang.String getAdGroupFeed();
@@ -328,7 +328,7 @@ public interface ChangeStatusOrBuilder extends
    * Output only. The AdGroupFeed affected by this change.
    * </pre>
    *
-   * <code>string ad_group_feed = 30 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_feed = 30 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for adGroupFeed.
    */
   com.google.protobuf.ByteString
@@ -339,7 +339,7 @@ public interface ChangeStatusOrBuilder extends
    * Output only. The CampaignFeed affected by this change.
    * </pre>
    *
-   * <code>string campaign_feed = 31 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign_feed = 31 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the campaignFeed field is set.
    */
   boolean hasCampaignFeed();
@@ -348,7 +348,7 @@ public interface ChangeStatusOrBuilder extends
    * Output only. The CampaignFeed affected by this change.
    * </pre>
    *
-   * <code>string campaign_feed = 31 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign_feed = 31 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The campaignFeed.
    */
   java.lang.String getCampaignFeed();
@@ -357,7 +357,7 @@ public interface ChangeStatusOrBuilder extends
    * Output only. The CampaignFeed affected by this change.
    * </pre>
    *
-   * <code>string campaign_feed = 31 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign_feed = 31 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for campaignFeed.
    */
   com.google.protobuf.ByteString
@@ -368,7 +368,7 @@ public interface ChangeStatusOrBuilder extends
    * Output only. The AdGroupBidModifier affected by this change.
    * </pre>
    *
-   * <code>string ad_group_bid_modifier = 32 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_bid_modifier = 32 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the adGroupBidModifier field is set.
    */
   boolean hasAdGroupBidModifier();
@@ -377,7 +377,7 @@ public interface ChangeStatusOrBuilder extends
    * Output only. The AdGroupBidModifier affected by this change.
    * </pre>
    *
-   * <code>string ad_group_bid_modifier = 32 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_bid_modifier = 32 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The adGroupBidModifier.
    */
   java.lang.String getAdGroupBidModifier();
@@ -386,7 +386,7 @@ public interface ChangeStatusOrBuilder extends
    * Output only. The AdGroupBidModifier affected by this change.
    * </pre>
    *
-   * <code>string ad_group_bid_modifier = 32 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_bid_modifier = 32 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for adGroupBidModifier.
    */
   com.google.protobuf.ByteString

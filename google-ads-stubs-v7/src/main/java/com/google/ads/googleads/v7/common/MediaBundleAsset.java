@@ -102,7 +102,7 @@ private static final long serialVersionUID = 0L;
    * MediaBundleAsset. This field is mutate only.
    * </pre>
    *
-   * <code>bytes data = 2;</code>
+   * <code>optional bytes data = 2;</code>
    * @return Whether the data field is set.
    */
   @java.lang.Override
@@ -117,7 +117,7 @@ private static final long serialVersionUID = 0L;
    * MediaBundleAsset. This field is mutate only.
    * </pre>
    *
-   * <code>bytes data = 2;</code>
+   * <code>optional bytes data = 2;</code>
    * @return The data.
    */
   @java.lang.Override
@@ -452,7 +452,7 @@ private static final long serialVersionUID = 0L;
      * MediaBundleAsset. This field is mutate only.
      * </pre>
      *
-     * <code>bytes data = 2;</code>
+     * <code>optional bytes data = 2;</code>
      * @return Whether the data field is set.
      */
     @java.lang.Override
@@ -467,7 +467,7 @@ private static final long serialVersionUID = 0L;
      * MediaBundleAsset. This field is mutate only.
      * </pre>
      *
-     * <code>bytes data = 2;</code>
+     * <code>optional bytes data = 2;</code>
      * @return The data.
      */
     @java.lang.Override
@@ -482,7 +482,7 @@ private static final long serialVersionUID = 0L;
      * MediaBundleAsset. This field is mutate only.
      * </pre>
      *
-     * <code>bytes data = 2;</code>
+     * <code>optional bytes data = 2;</code>
      * @param value The data to set.
      * @return This builder for chaining.
      */
@@ -503,7 +503,7 @@ private static final long serialVersionUID = 0L;
      * MediaBundleAsset. This field is mutate only.
      * </pre>
      *
-     * <code>bytes data = 2;</code>
+     * <code>optional bytes data = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearData() {

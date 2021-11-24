@@ -38,7 +38,7 @@ public interface ProductBiddingCategoryConstantOrBuilder extends
    * this article: https://support.google.com/merchants/answer/6324436.
    * </pre>
    *
-   * <code>int64 id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -49,7 +49,7 @@ public interface ProductBiddingCategoryConstantOrBuilder extends
    * this article: https://support.google.com/merchants/answer/6324436.
    * </pre>
    *
-   * <code>int64 id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   long getId();
@@ -59,7 +59,7 @@ public interface ProductBiddingCategoryConstantOrBuilder extends
    * Output only. Two-letter upper-case country code of the product bidding category.
    * </pre>
    *
-   * <code>string country_code = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string country_code = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the countryCode field is set.
    */
   boolean hasCountryCode();
@@ -68,7 +68,7 @@ public interface ProductBiddingCategoryConstantOrBuilder extends
    * Output only. Two-letter upper-case country code of the product bidding category.
    * </pre>
    *
-   * <code>string country_code = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string country_code = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The countryCode.
    */
   java.lang.String getCountryCode();
@@ -77,7 +77,7 @@ public interface ProductBiddingCategoryConstantOrBuilder extends
    * Output only. Two-letter upper-case country code of the product bidding category.
    * </pre>
    *
-   * <code>string country_code = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string country_code = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for countryCode.
    */
   com.google.protobuf.ByteString
@@ -88,7 +88,7 @@ public interface ProductBiddingCategoryConstantOrBuilder extends
    * Output only. Resource name of the parent product bidding category.
    * </pre>
    *
-   * <code>string product_bidding_category_constant_parent = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string product_bidding_category_constant_parent = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the productBiddingCategoryConstantParent field is set.
    */
   boolean hasProductBiddingCategoryConstantParent();
@@ -97,7 +97,7 @@ public interface ProductBiddingCategoryConstantOrBuilder extends
    * Output only. Resource name of the parent product bidding category.
    * </pre>
    *
-   * <code>string product_bidding_category_constant_parent = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string product_bidding_category_constant_parent = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The productBiddingCategoryConstantParent.
    */
   java.lang.String getProductBiddingCategoryConstantParent();
@@ -106,7 +106,7 @@ public interface ProductBiddingCategoryConstantOrBuilder extends
    * Output only. Resource name of the parent product bidding category.
    * </pre>
    *
-   * <code>string product_bidding_category_constant_parent = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string product_bidding_category_constant_parent = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for productBiddingCategoryConstantParent.
    */
   com.google.protobuf.ByteString
@@ -155,7 +155,7 @@ public interface ProductBiddingCategoryConstantOrBuilder extends
    * Output only. Language code of the product bidding category.
    * </pre>
    *
-   * <code>string language_code = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string language_code = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the languageCode field is set.
    */
   boolean hasLanguageCode();
@@ -164,7 +164,7 @@ public interface ProductBiddingCategoryConstantOrBuilder extends
    * Output only. Language code of the product bidding category.
    * </pre>
    *
-   * <code>string language_code = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string language_code = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The languageCode.
    */
   java.lang.String getLanguageCode();
@@ -173,7 +173,7 @@ public interface ProductBiddingCategoryConstantOrBuilder extends
    * Output only. Language code of the product bidding category.
    * </pre>
    *
-   * <code>string language_code = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string language_code = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for languageCode.
    */
   com.google.protobuf.ByteString
@@ -185,7 +185,7 @@ public interface ProductBiddingCategoryConstantOrBuilder extends
    * language_code.
    * </pre>
    *
-   * <code>string localized_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string localized_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the localizedName field is set.
    */
   boolean hasLocalizedName();
@@ -195,7 +195,7 @@ public interface ProductBiddingCategoryConstantOrBuilder extends
    * language_code.
    * </pre>
    *
-   * <code>string localized_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string localized_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The localizedName.
    */
   java.lang.String getLocalizedName();
@@ -205,7 +205,7 @@ public interface ProductBiddingCategoryConstantOrBuilder extends
    * language_code.
    * </pre>
    *
-   * <code>string localized_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string localized_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for localizedName.
    */
   com.google.protobuf.ByteString

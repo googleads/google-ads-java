@@ -12,7 +12,7 @@ public interface SuggestSmartCampaignBudgetOptionsResponseOrBuilder extends
    * Optional. The lowest budget option.
    * </pre>
    *
-   * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption low = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption low = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
    * @return Whether the low field is set.
    */
   boolean hasLow();
@@ -21,7 +21,7 @@ public interface SuggestSmartCampaignBudgetOptionsResponseOrBuilder extends
    * Optional. The lowest budget option.
    * </pre>
    *
-   * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption low = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption low = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
    * @return The low.
    */
   com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption getLow();
@@ -30,7 +30,7 @@ public interface SuggestSmartCampaignBudgetOptionsResponseOrBuilder extends
    * Optional. The lowest budget option.
    * </pre>
    *
-   * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption low = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption low = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
    */
   com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOptionOrBuilder getLowOrBuilder();
 
@@ -39,7 +39,7 @@ public interface SuggestSmartCampaignBudgetOptionsResponseOrBuilder extends
    * Optional. The recommended budget option.
    * </pre>
    *
-   * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption recommended = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption recommended = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
    * @return Whether the recommended field is set.
    */
   boolean hasRecommended();
@@ -48,7 +48,7 @@ public interface SuggestSmartCampaignBudgetOptionsResponseOrBuilder extends
    * Optional. The recommended budget option.
    * </pre>
    *
-   * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption recommended = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption recommended = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
    * @return The recommended.
    */
   com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption getRecommended();
@@ -57,7 +57,7 @@ public interface SuggestSmartCampaignBudgetOptionsResponseOrBuilder extends
    * Optional. The recommended budget option.
    * </pre>
    *
-   * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption recommended = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption recommended = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
    */
   com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOptionOrBuilder getRecommendedOrBuilder();
 
@@ -66,7 +66,7 @@ public interface SuggestSmartCampaignBudgetOptionsResponseOrBuilder extends
    * Optional. The highest budget option.
    * </pre>
    *
-   * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption high = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption high = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
    * @return Whether the high field is set.
    */
   boolean hasHigh();
@@ -75,7 +75,7 @@ public interface SuggestSmartCampaignBudgetOptionsResponseOrBuilder extends
    * Optional. The highest budget option.
    * </pre>
    *
-   * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption high = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption high = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
    * @return The high.
    */
   com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption getHigh();
@@ -84,7 +84,7 @@ public interface SuggestSmartCampaignBudgetOptionsResponseOrBuilder extends
    * Optional. The highest budget option.
    * </pre>
    *
-   * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption high = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption high = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
    */
   com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOptionOrBuilder getHighOrBuilder();
 }

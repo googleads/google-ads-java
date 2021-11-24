@@ -113,6 +113,9 @@ public interface PlannableTargetingOrBuilder extends
   /**
    * <pre>
    * Targetable devices for the ad product.
+   * TABLET device targeting is automatically applied to reported metrics
+   * when MOBILE targeting is selected for CPM_MASTHEAD,
+   * GOOGLE_PREFERRED_BUMPER and GOOGLE_PREFERRED_SHORT products.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v8.common.DeviceInfo devices = 3;</code>
@@ -122,6 +125,9 @@ public interface PlannableTargetingOrBuilder extends
   /**
    * <pre>
    * Targetable devices for the ad product.
+   * TABLET device targeting is automatically applied to reported metrics
+   * when MOBILE targeting is selected for CPM_MASTHEAD,
+   * GOOGLE_PREFERRED_BUMPER and GOOGLE_PREFERRED_SHORT products.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v8.common.DeviceInfo devices = 3;</code>
@@ -130,6 +136,9 @@ public interface PlannableTargetingOrBuilder extends
   /**
    * <pre>
    * Targetable devices for the ad product.
+   * TABLET device targeting is automatically applied to reported metrics
+   * when MOBILE targeting is selected for CPM_MASTHEAD,
+   * GOOGLE_PREFERRED_BUMPER and GOOGLE_PREFERRED_SHORT products.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v8.common.DeviceInfo devices = 3;</code>
@@ -138,6 +147,9 @@ public interface PlannableTargetingOrBuilder extends
   /**
    * <pre>
    * Targetable devices for the ad product.
+   * TABLET device targeting is automatically applied to reported metrics
+   * when MOBILE targeting is selected for CPM_MASTHEAD,
+   * GOOGLE_PREFERRED_BUMPER and GOOGLE_PREFERRED_SHORT products.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v8.common.DeviceInfo devices = 3;</code>
@@ -147,6 +159,9 @@ public interface PlannableTargetingOrBuilder extends
   /**
    * <pre>
    * Targetable devices for the ad product.
+   * TABLET device targeting is automatically applied to reported metrics
+   * when MOBILE targeting is selected for CPM_MASTHEAD,
+   * GOOGLE_PREFERRED_BUMPER and GOOGLE_PREFERRED_SHORT products.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v8.common.DeviceInfo devices = 3;</code>

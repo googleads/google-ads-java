@@ -98,7 +98,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The duration of the Audio in milliseconds.
    * </pre>
    *
-   * <code>int64 ad_duration_millis = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 ad_duration_millis = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the adDurationMillis field is set.
    */
   @java.lang.Override
@@ -110,7 +110,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The duration of the Audio in milliseconds.
    * </pre>
    *
-   * <code>int64 ad_duration_millis = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 ad_duration_millis = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The adDurationMillis.
    */
   @java.lang.Override
@@ -443,7 +443,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The duration of the Audio in milliseconds.
      * </pre>
      *
-     * <code>int64 ad_duration_millis = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 ad_duration_millis = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the adDurationMillis field is set.
      */
     @java.lang.Override
@@ -455,7 +455,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The duration of the Audio in milliseconds.
      * </pre>
      *
-     * <code>int64 ad_duration_millis = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 ad_duration_millis = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The adDurationMillis.
      */
     @java.lang.Override
@@ -467,7 +467,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The duration of the Audio in milliseconds.
      * </pre>
      *
-     * <code>int64 ad_duration_millis = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 ad_duration_millis = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The adDurationMillis to set.
      * @return This builder for chaining.
      */
@@ -482,7 +482,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The duration of the Audio in milliseconds.
      * </pre>
      *
-     * <code>int64 ad_duration_millis = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 ad_duration_millis = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearAdDurationMillis() {

@@ -36,7 +36,7 @@ public interface TopicConstantOrBuilder extends
    * Output only. The ID of the topic.
    * </pre>
    *
-   * <code>int64 id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -45,7 +45,7 @@ public interface TopicConstantOrBuilder extends
    * Output only. The ID of the topic.
    * </pre>
    *
-   * <code>int64 id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   long getId();
@@ -55,7 +55,7 @@ public interface TopicConstantOrBuilder extends
    * Output only. Resource name of parent of the topic constant.
    * </pre>
    *
-   * <code>string topic_constant_parent = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string topic_constant_parent = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the topicConstantParent field is set.
    */
   boolean hasTopicConstantParent();
@@ -64,7 +64,7 @@ public interface TopicConstantOrBuilder extends
    * Output only. Resource name of parent of the topic constant.
    * </pre>
    *
-   * <code>string topic_constant_parent = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string topic_constant_parent = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The topicConstantParent.
    */
   java.lang.String getTopicConstantParent();
@@ -73,7 +73,7 @@ public interface TopicConstantOrBuilder extends
    * Output only. Resource name of parent of the topic constant.
    * </pre>
    *
-   * <code>string topic_constant_parent = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string topic_constant_parent = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for topicConstantParent.
    */
   com.google.protobuf.ByteString

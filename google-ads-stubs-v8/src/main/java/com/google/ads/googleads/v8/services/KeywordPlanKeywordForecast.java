@@ -114,7 +114,7 @@ private static final long serialVersionUID = 0L;
    * `customers/{customer_id}/keywordPlanAdGroupKeywords/{keyword_plan_ad_group_keyword_id}`
    * </pre>
    *
-   * <code>string keyword_plan_ad_group_keyword = 3;</code>
+   * <code>optional string keyword_plan_ad_group_keyword = 3;</code>
    * @return Whether the keywordPlanAdGroupKeyword field is set.
    */
   @java.lang.Override
@@ -127,7 +127,7 @@ private static final long serialVersionUID = 0L;
    * `customers/{customer_id}/keywordPlanAdGroupKeywords/{keyword_plan_ad_group_keyword_id}`
    * </pre>
    *
-   * <code>string keyword_plan_ad_group_keyword = 3;</code>
+   * <code>optional string keyword_plan_ad_group_keyword = 3;</code>
    * @return The keywordPlanAdGroupKeyword.
    */
   @java.lang.Override
@@ -149,7 +149,7 @@ private static final long serialVersionUID = 0L;
    * `customers/{customer_id}/keywordPlanAdGroupKeywords/{keyword_plan_ad_group_keyword_id}`
    * </pre>
    *
-   * <code>string keyword_plan_ad_group_keyword = 3;</code>
+   * <code>optional string keyword_plan_ad_group_keyword = 3;</code>
    * @return The bytes for keywordPlanAdGroupKeyword.
    */
   @java.lang.Override
@@ -561,7 +561,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/keywordPlanAdGroupKeywords/{keyword_plan_ad_group_keyword_id}`
      * </pre>
      *
-     * <code>string keyword_plan_ad_group_keyword = 3;</code>
+     * <code>optional string keyword_plan_ad_group_keyword = 3;</code>
      * @return Whether the keywordPlanAdGroupKeyword field is set.
      */
     public boolean hasKeywordPlanAdGroupKeyword() {
@@ -573,7 +573,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/keywordPlanAdGroupKeywords/{keyword_plan_ad_group_keyword_id}`
      * </pre>
      *
-     * <code>string keyword_plan_ad_group_keyword = 3;</code>
+     * <code>optional string keyword_plan_ad_group_keyword = 3;</code>
      * @return The keywordPlanAdGroupKeyword.
      */
     public java.lang.String getKeywordPlanAdGroupKeyword() {
@@ -594,7 +594,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/keywordPlanAdGroupKeywords/{keyword_plan_ad_group_keyword_id}`
      * </pre>
      *
-     * <code>string keyword_plan_ad_group_keyword = 3;</code>
+     * <code>optional string keyword_plan_ad_group_keyword = 3;</code>
      * @return The bytes for keywordPlanAdGroupKeyword.
      */
     public com.google.protobuf.ByteString
@@ -616,7 +616,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/keywordPlanAdGroupKeywords/{keyword_plan_ad_group_keyword_id}`
      * </pre>
      *
-     * <code>string keyword_plan_ad_group_keyword = 3;</code>
+     * <code>optional string keyword_plan_ad_group_keyword = 3;</code>
      * @param value The keywordPlanAdGroupKeyword to set.
      * @return This builder for chaining.
      */
@@ -636,7 +636,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/keywordPlanAdGroupKeywords/{keyword_plan_ad_group_keyword_id}`
      * </pre>
      *
-     * <code>string keyword_plan_ad_group_keyword = 3;</code>
+     * <code>optional string keyword_plan_ad_group_keyword = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearKeywordPlanAdGroupKeyword() {
@@ -651,7 +651,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/keywordPlanAdGroupKeywords/{keyword_plan_ad_group_keyword_id}`
      * </pre>
      *
-     * <code>string keyword_plan_ad_group_keyword = 3;</code>
+     * <code>optional string keyword_plan_ad_group_keyword = 3;</code>
      * @param value The bytes for keywordPlanAdGroupKeyword to set.
      * @return This builder for chaining.
      */

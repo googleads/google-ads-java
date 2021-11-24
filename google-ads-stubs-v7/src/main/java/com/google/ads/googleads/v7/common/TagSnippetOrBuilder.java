@@ -53,7 +53,7 @@ public interface TagSnippetOrBuilder extends
    * new cookies on your domain.
    * </pre>
    *
-   * <code>string global_site_tag = 5;</code>
+   * <code>optional string global_site_tag = 5;</code>
    * @return Whether the globalSiteTag field is set.
    */
   boolean hasGlobalSiteTag();
@@ -63,7 +63,7 @@ public interface TagSnippetOrBuilder extends
    * new cookies on your domain.
    * </pre>
    *
-   * <code>string global_site_tag = 5;</code>
+   * <code>optional string global_site_tag = 5;</code>
    * @return The globalSiteTag.
    */
   java.lang.String getGlobalSiteTag();
@@ -73,7 +73,7 @@ public interface TagSnippetOrBuilder extends
    * new cookies on your domain.
    * </pre>
    *
-   * <code>string global_site_tag = 5;</code>
+   * <code>optional string global_site_tag = 5;</code>
    * @return The bytes for globalSiteTag.
    */
   com.google.protobuf.ByteString
@@ -85,7 +85,7 @@ public interface TagSnippetOrBuilder extends
    * should be counted as conversions.
    * </pre>
    *
-   * <code>string event_snippet = 6;</code>
+   * <code>optional string event_snippet = 6;</code>
    * @return Whether the eventSnippet field is set.
    */
   boolean hasEventSnippet();
@@ -95,7 +95,7 @@ public interface TagSnippetOrBuilder extends
    * should be counted as conversions.
    * </pre>
    *
-   * <code>string event_snippet = 6;</code>
+   * <code>optional string event_snippet = 6;</code>
    * @return The eventSnippet.
    */
   java.lang.String getEventSnippet();
@@ -105,7 +105,7 @@ public interface TagSnippetOrBuilder extends
    * should be counted as conversions.
    * </pre>
    *
-   * <code>string event_snippet = 6;</code>
+   * <code>optional string event_snippet = 6;</code>
    * @return The bytes for eventSnippet.
    */
   com.google.protobuf.ByteString

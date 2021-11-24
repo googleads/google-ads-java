@@ -14,7 +14,7 @@ public interface AppFeedItemOrBuilder extends
    * be between 1 and 25, inclusive.
    * </pre>
    *
-   * <code>string link_text = 9;</code>
+   * <code>optional string link_text = 9;</code>
    * @return Whether the linkText field is set.
    */
   boolean hasLinkText();
@@ -25,7 +25,7 @@ public interface AppFeedItemOrBuilder extends
    * be between 1 and 25, inclusive.
    * </pre>
    *
-   * <code>string link_text = 9;</code>
+   * <code>optional string link_text = 9;</code>
    * @return The linkText.
    */
   java.lang.String getLinkText();
@@ -36,7 +36,7 @@ public interface AppFeedItemOrBuilder extends
    * be between 1 and 25, inclusive.
    * </pre>
    *
-   * <code>string link_text = 9;</code>
+   * <code>optional string link_text = 9;</code>
    * @return The bytes for linkText.
    */
   com.google.protobuf.ByteString
@@ -48,7 +48,7 @@ public interface AppFeedItemOrBuilder extends
    * This string must not be empty.
    * </pre>
    *
-   * <code>string app_id = 10;</code>
+   * <code>optional string app_id = 10;</code>
    * @return Whether the appId field is set.
    */
   boolean hasAppId();
@@ -58,7 +58,7 @@ public interface AppFeedItemOrBuilder extends
    * This string must not be empty.
    * </pre>
    *
-   * <code>string app_id = 10;</code>
+   * <code>optional string app_id = 10;</code>
    * @return The appId.
    */
   java.lang.String getAppId();
@@ -68,7 +68,7 @@ public interface AppFeedItemOrBuilder extends
    * This string must not be empty.
    * </pre>
    *
-   * <code>string app_id = 10;</code>
+   * <code>optional string app_id = 10;</code>
    * @return The bytes for appId.
    */
   com.google.protobuf.ByteString
@@ -186,7 +186,7 @@ public interface AppFeedItemOrBuilder extends
    * URL template for constructing a tracking URL. Default value is "{lpurl}".
    * </pre>
    *
-   * <code>string tracking_url_template = 13;</code>
+   * <code>optional string tracking_url_template = 13;</code>
    * @return Whether the trackingUrlTemplate field is set.
    */
   boolean hasTrackingUrlTemplate();
@@ -195,7 +195,7 @@ public interface AppFeedItemOrBuilder extends
    * URL template for constructing a tracking URL. Default value is "{lpurl}".
    * </pre>
    *
-   * <code>string tracking_url_template = 13;</code>
+   * <code>optional string tracking_url_template = 13;</code>
    * @return The trackingUrlTemplate.
    */
   java.lang.String getTrackingUrlTemplate();
@@ -204,7 +204,7 @@ public interface AppFeedItemOrBuilder extends
    * URL template for constructing a tracking URL. Default value is "{lpurl}".
    * </pre>
    *
-   * <code>string tracking_url_template = 13;</code>
+   * <code>optional string tracking_url_template = 13;</code>
    * @return The bytes for trackingUrlTemplate.
    */
   com.google.protobuf.ByteString
@@ -265,7 +265,7 @@ public interface AppFeedItemOrBuilder extends
    * tracking.
    * </pre>
    *
-   * <code>string final_url_suffix = 14;</code>
+   * <code>optional string final_url_suffix = 14;</code>
    * @return Whether the finalUrlSuffix field is set.
    */
   boolean hasFinalUrlSuffix();
@@ -275,7 +275,7 @@ public interface AppFeedItemOrBuilder extends
    * tracking.
    * </pre>
    *
-   * <code>string final_url_suffix = 14;</code>
+   * <code>optional string final_url_suffix = 14;</code>
    * @return The finalUrlSuffix.
    */
   java.lang.String getFinalUrlSuffix();
@@ -285,7 +285,7 @@ public interface AppFeedItemOrBuilder extends
    * tracking.
    * </pre>
    *
-   * <code>string final_url_suffix = 14;</code>
+   * <code>optional string final_url_suffix = 14;</code>
    * @return The bytes for finalUrlSuffix.
    */
   com.google.protobuf.ByteString

@@ -62,7 +62,7 @@ public interface ListingGroupInfoOrBuilder extends
    * subdivision. Null for the root group.
    * </pre>
    *
-   * <code>string parent_ad_group_criterion = 4;</code>
+   * <code>optional string parent_ad_group_criterion = 4;</code>
    * @return Whether the parentAdGroupCriterion field is set.
    */
   boolean hasParentAdGroupCriterion();
@@ -72,7 +72,7 @@ public interface ListingGroupInfoOrBuilder extends
    * subdivision. Null for the root group.
    * </pre>
    *
-   * <code>string parent_ad_group_criterion = 4;</code>
+   * <code>optional string parent_ad_group_criterion = 4;</code>
    * @return The parentAdGroupCriterion.
    */
   java.lang.String getParentAdGroupCriterion();
@@ -82,7 +82,7 @@ public interface ListingGroupInfoOrBuilder extends
    * subdivision. Null for the root group.
    * </pre>
    *
-   * <code>string parent_ad_group_criterion = 4;</code>
+   * <code>optional string parent_ad_group_criterion = 4;</code>
    * @return The bytes for parentAdGroupCriterion.
    */
   com.google.protobuf.ByteString

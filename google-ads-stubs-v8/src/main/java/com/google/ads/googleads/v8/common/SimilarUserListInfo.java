@@ -101,7 +101,7 @@ private static final long serialVersionUID = 0L;
    * Seed UserList from which this list is derived.
    * </pre>
    *
-   * <code>string seed_user_list = 2;</code>
+   * <code>optional string seed_user_list = 2;</code>
    * @return Whether the seedUserList field is set.
    */
   @java.lang.Override
@@ -113,7 +113,7 @@ private static final long serialVersionUID = 0L;
    * Seed UserList from which this list is derived.
    * </pre>
    *
-   * <code>string seed_user_list = 2;</code>
+   * <code>optional string seed_user_list = 2;</code>
    * @return The seedUserList.
    */
   @java.lang.Override
@@ -134,7 +134,7 @@ private static final long serialVersionUID = 0L;
    * Seed UserList from which this list is derived.
    * </pre>
    *
-   * <code>string seed_user_list = 2;</code>
+   * <code>optional string seed_user_list = 2;</code>
    * @return The bytes for seedUserList.
    */
   @java.lang.Override
@@ -478,7 +478,7 @@ private static final long serialVersionUID = 0L;
      * Seed UserList from which this list is derived.
      * </pre>
      *
-     * <code>string seed_user_list = 2;</code>
+     * <code>optional string seed_user_list = 2;</code>
      * @return Whether the seedUserList field is set.
      */
     public boolean hasSeedUserList() {
@@ -489,7 +489,7 @@ private static final long serialVersionUID = 0L;
      * Seed UserList from which this list is derived.
      * </pre>
      *
-     * <code>string seed_user_list = 2;</code>
+     * <code>optional string seed_user_list = 2;</code>
      * @return The seedUserList.
      */
     public java.lang.String getSeedUserList() {
@@ -509,7 +509,7 @@ private static final long serialVersionUID = 0L;
      * Seed UserList from which this list is derived.
      * </pre>
      *
-     * <code>string seed_user_list = 2;</code>
+     * <code>optional string seed_user_list = 2;</code>
      * @return The bytes for seedUserList.
      */
     public com.google.protobuf.ByteString
@@ -530,7 +530,7 @@ private static final long serialVersionUID = 0L;
      * Seed UserList from which this list is derived.
      * </pre>
      *
-     * <code>string seed_user_list = 2;</code>
+     * <code>optional string seed_user_list = 2;</code>
      * @param value The seedUserList to set.
      * @return This builder for chaining.
      */
@@ -549,7 +549,7 @@ private static final long serialVersionUID = 0L;
      * Seed UserList from which this list is derived.
      * </pre>
      *
-     * <code>string seed_user_list = 2;</code>
+     * <code>optional string seed_user_list = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearSeedUserList() {
@@ -563,7 +563,7 @@ private static final long serialVersionUID = 0L;
      * Seed UserList from which this list is derived.
      * </pre>
      *
-     * <code>string seed_user_list = 2;</code>
+     * <code>optional string seed_user_list = 2;</code>
      * @param value The bytes for seedUserList to set.
      * @return This builder for chaining.
      */

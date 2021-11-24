@@ -121,7 +121,7 @@ private static final long serialVersionUID = 0L;
    * To list the available plannable product codes use ListPlannableProducts.
    * </pre>
    *
-   * <code>string plannable_product_code = 4;</code>
+   * <code>optional string plannable_product_code = 4;</code>
    * @return Whether the plannableProductCode field is set.
    */
   @java.lang.Override
@@ -134,7 +134,7 @@ private static final long serialVersionUID = 0L;
    * To list the available plannable product codes use ListPlannableProducts.
    * </pre>
    *
-   * <code>string plannable_product_code = 4;</code>
+   * <code>optional string plannable_product_code = 4;</code>
    * @return The plannableProductCode.
    */
   @java.lang.Override
@@ -156,7 +156,7 @@ private static final long serialVersionUID = 0L;
    * To list the available plannable product codes use ListPlannableProducts.
    * </pre>
    *
-   * <code>string plannable_product_code = 4;</code>
+   * <code>optional string plannable_product_code = 4;</code>
    * @return The bytes for plannableProductCode.
    */
   @java.lang.Override
@@ -275,7 +275,7 @@ private static final long serialVersionUID = 0L;
     if (plannableTargeting_ != null) {
       output.writeMessage(2, getPlannableTargeting());
     }
-    if (!getPlannableProductNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(plannableProductName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, plannableProductName_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
@@ -294,7 +294,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getPlannableTargeting());
     }
-    if (!getPlannableProductNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(plannableProductName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, plannableProductName_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
@@ -631,7 +631,7 @@ private static final long serialVersionUID = 0L;
      * To list the available plannable product codes use ListPlannableProducts.
      * </pre>
      *
-     * <code>string plannable_product_code = 4;</code>
+     * <code>optional string plannable_product_code = 4;</code>
      * @return Whether the plannableProductCode field is set.
      */
     public boolean hasPlannableProductCode() {
@@ -643,7 +643,7 @@ private static final long serialVersionUID = 0L;
      * To list the available plannable product codes use ListPlannableProducts.
      * </pre>
      *
-     * <code>string plannable_product_code = 4;</code>
+     * <code>optional string plannable_product_code = 4;</code>
      * @return The plannableProductCode.
      */
     public java.lang.String getPlannableProductCode() {
@@ -664,7 +664,7 @@ private static final long serialVersionUID = 0L;
      * To list the available plannable product codes use ListPlannableProducts.
      * </pre>
      *
-     * <code>string plannable_product_code = 4;</code>
+     * <code>optional string plannable_product_code = 4;</code>
      * @return The bytes for plannableProductCode.
      */
     public com.google.protobuf.ByteString
@@ -686,7 +686,7 @@ private static final long serialVersionUID = 0L;
      * To list the available plannable product codes use ListPlannableProducts.
      * </pre>
      *
-     * <code>string plannable_product_code = 4;</code>
+     * <code>optional string plannable_product_code = 4;</code>
      * @param value The plannableProductCode to set.
      * @return This builder for chaining.
      */
@@ -706,7 +706,7 @@ private static final long serialVersionUID = 0L;
      * To list the available plannable product codes use ListPlannableProducts.
      * </pre>
      *
-     * <code>string plannable_product_code = 4;</code>
+     * <code>optional string plannable_product_code = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearPlannableProductCode() {
@@ -721,7 +721,7 @@ private static final long serialVersionUID = 0L;
      * To list the available plannable product codes use ListPlannableProducts.
      * </pre>
      *
-     * <code>string plannable_product_code = 4;</code>
+     * <code>optional string plannable_product_code = 4;</code>
      * @param value The bytes for plannableProductCode to set.
      * @return This builder for chaining.
      */

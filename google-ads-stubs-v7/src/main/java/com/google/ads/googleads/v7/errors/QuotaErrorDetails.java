@@ -403,7 +403,7 @@ private static final long serialVersionUID = 0L;
     if (rateScope_ != com.google.ads.googleads.v7.errors.QuotaErrorDetails.QuotaRateScope.UNSPECIFIED.getNumber()) {
       output.writeEnum(1, rateScope_);
     }
-    if (!getRateNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rateName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, rateName_);
     }
     if (retryDelay_ != null) {
@@ -422,7 +422,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(1, rateScope_);
     }
-    if (!getRateNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(rateName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, rateName_);
     }
     if (retryDelay_ != null) {

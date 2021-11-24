@@ -14,7 +14,7 @@ public interface TextLabelOrBuilder extends
    * Note: The background color may not be visible for manager accounts.
    * </pre>
    *
-   * <code>string background_color = 3;</code>
+   * <code>optional string background_color = 3;</code>
    * @return Whether the backgroundColor field is set.
    */
   boolean hasBackgroundColor();
@@ -25,7 +25,7 @@ public interface TextLabelOrBuilder extends
    * Note: The background color may not be visible for manager accounts.
    * </pre>
    *
-   * <code>string background_color = 3;</code>
+   * <code>optional string background_color = 3;</code>
    * @return The backgroundColor.
    */
   java.lang.String getBackgroundColor();
@@ -36,7 +36,7 @@ public interface TextLabelOrBuilder extends
    * Note: The background color may not be visible for manager accounts.
    * </pre>
    *
-   * <code>string background_color = 3;</code>
+   * <code>optional string background_color = 3;</code>
    * @return The bytes for backgroundColor.
    */
   com.google.protobuf.ByteString
@@ -48,7 +48,7 @@ public interface TextLabelOrBuilder extends
    * characters.
    * </pre>
    *
-   * <code>string description = 4;</code>
+   * <code>optional string description = 4;</code>
    * @return Whether the description field is set.
    */
   boolean hasDescription();
@@ -58,7 +58,7 @@ public interface TextLabelOrBuilder extends
    * characters.
    * </pre>
    *
-   * <code>string description = 4;</code>
+   * <code>optional string description = 4;</code>
    * @return The description.
    */
   java.lang.String getDescription();
@@ -68,7 +68,7 @@ public interface TextLabelOrBuilder extends
    * characters.
    * </pre>
    *
-   * <code>string description = 4;</code>
+   * <code>optional string description = 4;</code>
    * @return The bytes for description.
    */
   com.google.protobuf.ByteString

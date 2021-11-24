@@ -11,7 +11,7 @@ public interface PlannedProductReachForecastOrBuilder extends
    * <pre>
    * Selected product for planning. The product codes returned are within the
    * set of the ones returned by ListPlannableProducts when using the same
-   * location id.
+   * location ID.
    * </pre>
    *
    * <code>string plannable_product_code = 1;</code>
@@ -22,7 +22,7 @@ public interface PlannedProductReachForecastOrBuilder extends
    * <pre>
    * Selected product for planning. The product codes returned are within the
    * set of the ones returned by ListPlannableProducts when using the same
-   * location id.
+   * location ID.
    * </pre>
    *
    * <code>string plannable_product_code = 1;</code>

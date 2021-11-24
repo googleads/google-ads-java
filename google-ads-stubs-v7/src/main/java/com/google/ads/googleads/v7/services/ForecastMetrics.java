@@ -118,7 +118,7 @@ private static final long serialVersionUID = 0L;
    * Impressions
    * </pre>
    *
-   * <code>double impressions = 7;</code>
+   * <code>optional double impressions = 7;</code>
    * @return Whether the impressions field is set.
    */
   @java.lang.Override
@@ -130,7 +130,7 @@ private static final long serialVersionUID = 0L;
    * Impressions
    * </pre>
    *
-   * <code>double impressions = 7;</code>
+   * <code>optional double impressions = 7;</code>
    * @return The impressions.
    */
   @java.lang.Override
@@ -145,7 +145,7 @@ private static final long serialVersionUID = 0L;
    * Ctr
    * </pre>
    *
-   * <code>double ctr = 8;</code>
+   * <code>optional double ctr = 8;</code>
    * @return Whether the ctr field is set.
    */
   @java.lang.Override
@@ -157,7 +157,7 @@ private static final long serialVersionUID = 0L;
    * Ctr
    * </pre>
    *
-   * <code>double ctr = 8;</code>
+   * <code>optional double ctr = 8;</code>
    * @return The ctr.
    */
   @java.lang.Override
@@ -172,7 +172,7 @@ private static final long serialVersionUID = 0L;
    * AVG cpc
    * </pre>
    *
-   * <code>int64 average_cpc = 9;</code>
+   * <code>optional int64 average_cpc = 9;</code>
    * @return Whether the averageCpc field is set.
    */
   @java.lang.Override
@@ -184,7 +184,7 @@ private static final long serialVersionUID = 0L;
    * AVG cpc
    * </pre>
    *
-   * <code>int64 average_cpc = 9;</code>
+   * <code>optional int64 average_cpc = 9;</code>
    * @return The averageCpc.
    */
   @java.lang.Override
@@ -199,7 +199,7 @@ private static final long serialVersionUID = 0L;
    * Clicks
    * </pre>
    *
-   * <code>double clicks = 10;</code>
+   * <code>optional double clicks = 10;</code>
    * @return Whether the clicks field is set.
    */
   @java.lang.Override
@@ -211,7 +211,7 @@ private static final long serialVersionUID = 0L;
    * Clicks
    * </pre>
    *
-   * <code>double clicks = 10;</code>
+   * <code>optional double clicks = 10;</code>
    * @return The clicks.
    */
   @java.lang.Override
@@ -226,7 +226,7 @@ private static final long serialVersionUID = 0L;
    * Cost
    * </pre>
    *
-   * <code>int64 cost_micros = 11;</code>
+   * <code>optional int64 cost_micros = 11;</code>
    * @return Whether the costMicros field is set.
    */
   @java.lang.Override
@@ -238,7 +238,7 @@ private static final long serialVersionUID = 0L;
    * Cost
    * </pre>
    *
-   * <code>int64 cost_micros = 11;</code>
+   * <code>optional int64 cost_micros = 11;</code>
    * @return The costMicros.
    */
   @java.lang.Override
@@ -678,7 +678,7 @@ private static final long serialVersionUID = 0L;
      * Impressions
      * </pre>
      *
-     * <code>double impressions = 7;</code>
+     * <code>optional double impressions = 7;</code>
      * @return Whether the impressions field is set.
      */
     @java.lang.Override
@@ -690,7 +690,7 @@ private static final long serialVersionUID = 0L;
      * Impressions
      * </pre>
      *
-     * <code>double impressions = 7;</code>
+     * <code>optional double impressions = 7;</code>
      * @return The impressions.
      */
     @java.lang.Override
@@ -702,7 +702,7 @@ private static final long serialVersionUID = 0L;
      * Impressions
      * </pre>
      *
-     * <code>double impressions = 7;</code>
+     * <code>optional double impressions = 7;</code>
      * @param value The impressions to set.
      * @return This builder for chaining.
      */
@@ -717,7 +717,7 @@ private static final long serialVersionUID = 0L;
      * Impressions
      * </pre>
      *
-     * <code>double impressions = 7;</code>
+     * <code>optional double impressions = 7;</code>
      * @return This builder for chaining.
      */
     public Builder clearImpressions() {
@@ -733,7 +733,7 @@ private static final long serialVersionUID = 0L;
      * Ctr
      * </pre>
      *
-     * <code>double ctr = 8;</code>
+     * <code>optional double ctr = 8;</code>
      * @return Whether the ctr field is set.
      */
     @java.lang.Override
@@ -745,7 +745,7 @@ private static final long serialVersionUID = 0L;
      * Ctr
      * </pre>
      *
-     * <code>double ctr = 8;</code>
+     * <code>optional double ctr = 8;</code>
      * @return The ctr.
      */
     @java.lang.Override
@@ -757,7 +757,7 @@ private static final long serialVersionUID = 0L;
      * Ctr
      * </pre>
      *
-     * <code>double ctr = 8;</code>
+     * <code>optional double ctr = 8;</code>
      * @param value The ctr to set.
      * @return This builder for chaining.
      */
@@ -772,7 +772,7 @@ private static final long serialVersionUID = 0L;
      * Ctr
      * </pre>
      *
-     * <code>double ctr = 8;</code>
+     * <code>optional double ctr = 8;</code>
      * @return This builder for chaining.
      */
     public Builder clearCtr() {
@@ -788,7 +788,7 @@ private static final long serialVersionUID = 0L;
      * AVG cpc
      * </pre>
      *
-     * <code>int64 average_cpc = 9;</code>
+     * <code>optional int64 average_cpc = 9;</code>
      * @return Whether the averageCpc field is set.
      */
     @java.lang.Override
@@ -800,7 +800,7 @@ private static final long serialVersionUID = 0L;
      * AVG cpc
      * </pre>
      *
-     * <code>int64 average_cpc = 9;</code>
+     * <code>optional int64 average_cpc = 9;</code>
      * @return The averageCpc.
      */
     @java.lang.Override
@@ -812,7 +812,7 @@ private static final long serialVersionUID = 0L;
      * AVG cpc
      * </pre>
      *
-     * <code>int64 average_cpc = 9;</code>
+     * <code>optional int64 average_cpc = 9;</code>
      * @param value The averageCpc to set.
      * @return This builder for chaining.
      */
@@ -827,7 +827,7 @@ private static final long serialVersionUID = 0L;
      * AVG cpc
      * </pre>
      *
-     * <code>int64 average_cpc = 9;</code>
+     * <code>optional int64 average_cpc = 9;</code>
      * @return This builder for chaining.
      */
     public Builder clearAverageCpc() {
@@ -843,7 +843,7 @@ private static final long serialVersionUID = 0L;
      * Clicks
      * </pre>
      *
-     * <code>double clicks = 10;</code>
+     * <code>optional double clicks = 10;</code>
      * @return Whether the clicks field is set.
      */
     @java.lang.Override
@@ -855,7 +855,7 @@ private static final long serialVersionUID = 0L;
      * Clicks
      * </pre>
      *
-     * <code>double clicks = 10;</code>
+     * <code>optional double clicks = 10;</code>
      * @return The clicks.
      */
     @java.lang.Override
@@ -867,7 +867,7 @@ private static final long serialVersionUID = 0L;
      * Clicks
      * </pre>
      *
-     * <code>double clicks = 10;</code>
+     * <code>optional double clicks = 10;</code>
      * @param value The clicks to set.
      * @return This builder for chaining.
      */
@@ -882,7 +882,7 @@ private static final long serialVersionUID = 0L;
      * Clicks
      * </pre>
      *
-     * <code>double clicks = 10;</code>
+     * <code>optional double clicks = 10;</code>
      * @return This builder for chaining.
      */
     public Builder clearClicks() {
@@ -898,7 +898,7 @@ private static final long serialVersionUID = 0L;
      * Cost
      * </pre>
      *
-     * <code>int64 cost_micros = 11;</code>
+     * <code>optional int64 cost_micros = 11;</code>
      * @return Whether the costMicros field is set.
      */
     @java.lang.Override
@@ -910,7 +910,7 @@ private static final long serialVersionUID = 0L;
      * Cost
      * </pre>
      *
-     * <code>int64 cost_micros = 11;</code>
+     * <code>optional int64 cost_micros = 11;</code>
      * @return The costMicros.
      */
     @java.lang.Override
@@ -922,7 +922,7 @@ private static final long serialVersionUID = 0L;
      * Cost
      * </pre>
      *
-     * <code>int64 cost_micros = 11;</code>
+     * <code>optional int64 cost_micros = 11;</code>
      * @param value The costMicros to set.
      * @return This builder for chaining.
      */
@@ -937,7 +937,7 @@ private static final long serialVersionUID = 0L;
      * Cost
      * </pre>
      *
-     * <code>int64 cost_micros = 11;</code>
+     * <code>optional int64 cost_micros = 11;</code>
      * @return This builder for chaining.
      */
     public Builder clearCostMicros() {

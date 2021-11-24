@@ -286,7 +286,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of the customer.
    * </pre>
    *
-   * <code>int64 id = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   @java.lang.Override
@@ -298,7 +298,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of the customer.
    * </pre>
    *
-   * <code>int64 id = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   @java.lang.Override
@@ -313,7 +313,7 @@ private static final long serialVersionUID = 0L;
    * Optional, non-unique descriptive name of the customer.
    * </pre>
    *
-   * <code>string descriptive_name = 20;</code>
+   * <code>optional string descriptive_name = 20;</code>
    * @return Whether the descriptiveName field is set.
    */
   @java.lang.Override
@@ -325,7 +325,7 @@ private static final long serialVersionUID = 0L;
    * Optional, non-unique descriptive name of the customer.
    * </pre>
    *
-   * <code>string descriptive_name = 20;</code>
+   * <code>optional string descriptive_name = 20;</code>
    * @return The descriptiveName.
    */
   @java.lang.Override
@@ -346,7 +346,7 @@ private static final long serialVersionUID = 0L;
    * Optional, non-unique descriptive name of the customer.
    * </pre>
    *
-   * <code>string descriptive_name = 20;</code>
+   * <code>optional string descriptive_name = 20;</code>
    * @return The bytes for descriptiveName.
    */
   @java.lang.Override
@@ -373,7 +373,7 @@ private static final long serialVersionUID = 0L;
    * supported.
    * </pre>
    *
-   * <code>string currency_code = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string currency_code = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the currencyCode field is set.
    */
   @java.lang.Override
@@ -387,7 +387,7 @@ private static final long serialVersionUID = 0L;
    * supported.
    * </pre>
    *
-   * <code>string currency_code = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string currency_code = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The currencyCode.
    */
   @java.lang.Override
@@ -410,7 +410,7 @@ private static final long serialVersionUID = 0L;
    * supported.
    * </pre>
    *
-   * <code>string currency_code = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string currency_code = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The bytes for currencyCode.
    */
   @java.lang.Override
@@ -435,7 +435,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The local timezone ID of the customer.
    * </pre>
    *
-   * <code>string time_zone = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string time_zone = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the timeZone field is set.
    */
   @java.lang.Override
@@ -447,7 +447,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The local timezone ID of the customer.
    * </pre>
    *
-   * <code>string time_zone = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string time_zone = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The timeZone.
    */
   @java.lang.Override
@@ -468,7 +468,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The local timezone ID of the customer.
    * </pre>
    *
-   * <code>string time_zone = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string time_zone = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The bytes for timeZone.
    */
   @java.lang.Override
@@ -493,7 +493,7 @@ private static final long serialVersionUID = 0L;
    * The URL template for constructing a tracking URL out of parameters.
    * </pre>
    *
-   * <code>string tracking_url_template = 23;</code>
+   * <code>optional string tracking_url_template = 23;</code>
    * @return Whether the trackingUrlTemplate field is set.
    */
   @java.lang.Override
@@ -505,7 +505,7 @@ private static final long serialVersionUID = 0L;
    * The URL template for constructing a tracking URL out of parameters.
    * </pre>
    *
-   * <code>string tracking_url_template = 23;</code>
+   * <code>optional string tracking_url_template = 23;</code>
    * @return The trackingUrlTemplate.
    */
   @java.lang.Override
@@ -526,7 +526,7 @@ private static final long serialVersionUID = 0L;
    * The URL template for constructing a tracking URL out of parameters.
    * </pre>
    *
-   * <code>string tracking_url_template = 23;</code>
+   * <code>optional string tracking_url_template = 23;</code>
    * @return The bytes for trackingUrlTemplate.
    */
   @java.lang.Override
@@ -551,7 +551,7 @@ private static final long serialVersionUID = 0L;
    * The URL template for appending params to the final URL
    * </pre>
    *
-   * <code>string final_url_suffix = 24;</code>
+   * <code>optional string final_url_suffix = 24;</code>
    * @return Whether the finalUrlSuffix field is set.
    */
   @java.lang.Override
@@ -563,7 +563,7 @@ private static final long serialVersionUID = 0L;
    * The URL template for appending params to the final URL
    * </pre>
    *
-   * <code>string final_url_suffix = 24;</code>
+   * <code>optional string final_url_suffix = 24;</code>
    * @return The finalUrlSuffix.
    */
   @java.lang.Override
@@ -584,7 +584,7 @@ private static final long serialVersionUID = 0L;
    * The URL template for appending params to the final URL
    * </pre>
    *
-   * <code>string final_url_suffix = 24;</code>
+   * <code>optional string final_url_suffix = 24;</code>
    * @return The bytes for finalUrlSuffix.
    */
   @java.lang.Override
@@ -609,7 +609,7 @@ private static final long serialVersionUID = 0L;
    * Whether auto-tagging is enabled for the customer.
    * </pre>
    *
-   * <code>bool auto_tagging_enabled = 25;</code>
+   * <code>optional bool auto_tagging_enabled = 25;</code>
    * @return Whether the autoTaggingEnabled field is set.
    */
   @java.lang.Override
@@ -621,7 +621,7 @@ private static final long serialVersionUID = 0L;
    * Whether auto-tagging is enabled for the customer.
    * </pre>
    *
-   * <code>bool auto_tagging_enabled = 25;</code>
+   * <code>optional bool auto_tagging_enabled = 25;</code>
    * @return The autoTaggingEnabled.
    */
   @java.lang.Override
@@ -638,7 +638,7 @@ private static final long serialVersionUID = 0L;
    * information, see https://support.google.com/partners/answer/3125774.
    * </pre>
    *
-   * <code>bool has_partners_badge = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool has_partners_badge = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the hasPartnersBadge field is set.
    */
   @java.lang.Override
@@ -652,7 +652,7 @@ private static final long serialVersionUID = 0L;
    * information, see https://support.google.com/partners/answer/3125774.
    * </pre>
    *
-   * <code>bool has_partners_badge = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool has_partners_badge = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The hasPartnersBadge.
    */
   @java.lang.Override
@@ -667,7 +667,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Whether the customer is a manager.
    * </pre>
    *
-   * <code>bool manager = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool manager = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the manager field is set.
    */
   @java.lang.Override
@@ -679,7 +679,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Whether the customer is a manager.
    * </pre>
    *
-   * <code>bool manager = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool manager = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The manager.
    */
   @java.lang.Override
@@ -694,7 +694,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Whether the customer is a test account.
    * </pre>
    *
-   * <code>bool test_account = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool test_account = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the testAccount field is set.
    */
   @java.lang.Override
@@ -706,7 +706,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Whether the customer is a test account.
    * </pre>
    *
-   * <code>bool test_account = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool test_account = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The testAccount.
    */
   @java.lang.Override
@@ -924,7 +924,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>double optimization_score = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional double optimization_score = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the optimizationScore field is set.
    */
   @java.lang.Override
@@ -942,7 +942,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>double optimization_score = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional double optimization_score = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The optimizationScore.
    */
   @java.lang.Override
@@ -987,7 +987,7 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     getSerializedSize();
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (callReportingSetting_ != null) {
@@ -1051,7 +1051,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (callReportingSetting_ != null) {
@@ -1832,7 +1832,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the customer.
      * </pre>
      *
-     * <code>int64 id = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the id field is set.
      */
     @java.lang.Override
@@ -1844,7 +1844,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the customer.
      * </pre>
      *
-     * <code>int64 id = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The id.
      */
     @java.lang.Override
@@ -1856,7 +1856,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the customer.
      * </pre>
      *
-     * <code>int64 id = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
@@ -1871,7 +1871,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the customer.
      * </pre>
      *
-     * <code>int64 id = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {
@@ -1887,7 +1887,7 @@ private static final long serialVersionUID = 0L;
      * Optional, non-unique descriptive name of the customer.
      * </pre>
      *
-     * <code>string descriptive_name = 20;</code>
+     * <code>optional string descriptive_name = 20;</code>
      * @return Whether the descriptiveName field is set.
      */
     public boolean hasDescriptiveName() {
@@ -1898,7 +1898,7 @@ private static final long serialVersionUID = 0L;
      * Optional, non-unique descriptive name of the customer.
      * </pre>
      *
-     * <code>string descriptive_name = 20;</code>
+     * <code>optional string descriptive_name = 20;</code>
      * @return The descriptiveName.
      */
     public java.lang.String getDescriptiveName() {
@@ -1918,7 +1918,7 @@ private static final long serialVersionUID = 0L;
      * Optional, non-unique descriptive name of the customer.
      * </pre>
      *
-     * <code>string descriptive_name = 20;</code>
+     * <code>optional string descriptive_name = 20;</code>
      * @return The bytes for descriptiveName.
      */
     public com.google.protobuf.ByteString
@@ -1939,7 +1939,7 @@ private static final long serialVersionUID = 0L;
      * Optional, non-unique descriptive name of the customer.
      * </pre>
      *
-     * <code>string descriptive_name = 20;</code>
+     * <code>optional string descriptive_name = 20;</code>
      * @param value The descriptiveName to set.
      * @return This builder for chaining.
      */
@@ -1958,7 +1958,7 @@ private static final long serialVersionUID = 0L;
      * Optional, non-unique descriptive name of the customer.
      * </pre>
      *
-     * <code>string descriptive_name = 20;</code>
+     * <code>optional string descriptive_name = 20;</code>
      * @return This builder for chaining.
      */
     public Builder clearDescriptiveName() {
@@ -1972,7 +1972,7 @@ private static final long serialVersionUID = 0L;
      * Optional, non-unique descriptive name of the customer.
      * </pre>
      *
-     * <code>string descriptive_name = 20;</code>
+     * <code>optional string descriptive_name = 20;</code>
      * @param value The bytes for descriptiveName to set.
      * @return This builder for chaining.
      */
@@ -1996,7 +1996,7 @@ private static final long serialVersionUID = 0L;
      * supported.
      * </pre>
      *
-     * <code>string currency_code = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string currency_code = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the currencyCode field is set.
      */
     public boolean hasCurrencyCode() {
@@ -2009,7 +2009,7 @@ private static final long serialVersionUID = 0L;
      * supported.
      * </pre>
      *
-     * <code>string currency_code = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string currency_code = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The currencyCode.
      */
     public java.lang.String getCurrencyCode() {
@@ -2031,7 +2031,7 @@ private static final long serialVersionUID = 0L;
      * supported.
      * </pre>
      *
-     * <code>string currency_code = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string currency_code = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The bytes for currencyCode.
      */
     public com.google.protobuf.ByteString
@@ -2054,7 +2054,7 @@ private static final long serialVersionUID = 0L;
      * supported.
      * </pre>
      *
-     * <code>string currency_code = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string currency_code = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @param value The currencyCode to set.
      * @return This builder for chaining.
      */
@@ -2075,7 +2075,7 @@ private static final long serialVersionUID = 0L;
      * supported.
      * </pre>
      *
-     * <code>string currency_code = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string currency_code = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return This builder for chaining.
      */
     public Builder clearCurrencyCode() {
@@ -2091,7 +2091,7 @@ private static final long serialVersionUID = 0L;
      * supported.
      * </pre>
      *
-     * <code>string currency_code = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string currency_code = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @param value The bytes for currencyCode to set.
      * @return This builder for chaining.
      */
@@ -2113,7 +2113,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The local timezone ID of the customer.
      * </pre>
      *
-     * <code>string time_zone = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string time_zone = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the timeZone field is set.
      */
     public boolean hasTimeZone() {
@@ -2124,7 +2124,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The local timezone ID of the customer.
      * </pre>
      *
-     * <code>string time_zone = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string time_zone = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The timeZone.
      */
     public java.lang.String getTimeZone() {
@@ -2144,7 +2144,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The local timezone ID of the customer.
      * </pre>
      *
-     * <code>string time_zone = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string time_zone = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The bytes for timeZone.
      */
     public com.google.protobuf.ByteString
@@ -2165,7 +2165,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The local timezone ID of the customer.
      * </pre>
      *
-     * <code>string time_zone = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string time_zone = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @param value The timeZone to set.
      * @return This builder for chaining.
      */
@@ -2184,7 +2184,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The local timezone ID of the customer.
      * </pre>
      *
-     * <code>string time_zone = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string time_zone = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return This builder for chaining.
      */
     public Builder clearTimeZone() {
@@ -2198,7 +2198,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The local timezone ID of the customer.
      * </pre>
      *
-     * <code>string time_zone = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string time_zone = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @param value The bytes for timeZone to set.
      * @return This builder for chaining.
      */
@@ -2220,7 +2220,7 @@ private static final long serialVersionUID = 0L;
      * The URL template for constructing a tracking URL out of parameters.
      * </pre>
      *
-     * <code>string tracking_url_template = 23;</code>
+     * <code>optional string tracking_url_template = 23;</code>
      * @return Whether the trackingUrlTemplate field is set.
      */
     public boolean hasTrackingUrlTemplate() {
@@ -2231,7 +2231,7 @@ private static final long serialVersionUID = 0L;
      * The URL template for constructing a tracking URL out of parameters.
      * </pre>
      *
-     * <code>string tracking_url_template = 23;</code>
+     * <code>optional string tracking_url_template = 23;</code>
      * @return The trackingUrlTemplate.
      */
     public java.lang.String getTrackingUrlTemplate() {
@@ -2251,7 +2251,7 @@ private static final long serialVersionUID = 0L;
      * The URL template for constructing a tracking URL out of parameters.
      * </pre>
      *
-     * <code>string tracking_url_template = 23;</code>
+     * <code>optional string tracking_url_template = 23;</code>
      * @return The bytes for trackingUrlTemplate.
      */
     public com.google.protobuf.ByteString
@@ -2272,7 +2272,7 @@ private static final long serialVersionUID = 0L;
      * The URL template for constructing a tracking URL out of parameters.
      * </pre>
      *
-     * <code>string tracking_url_template = 23;</code>
+     * <code>optional string tracking_url_template = 23;</code>
      * @param value The trackingUrlTemplate to set.
      * @return This builder for chaining.
      */
@@ -2291,7 +2291,7 @@ private static final long serialVersionUID = 0L;
      * The URL template for constructing a tracking URL out of parameters.
      * </pre>
      *
-     * <code>string tracking_url_template = 23;</code>
+     * <code>optional string tracking_url_template = 23;</code>
      * @return This builder for chaining.
      */
     public Builder clearTrackingUrlTemplate() {
@@ -2305,7 +2305,7 @@ private static final long serialVersionUID = 0L;
      * The URL template for constructing a tracking URL out of parameters.
      * </pre>
      *
-     * <code>string tracking_url_template = 23;</code>
+     * <code>optional string tracking_url_template = 23;</code>
      * @param value The bytes for trackingUrlTemplate to set.
      * @return This builder for chaining.
      */
@@ -2327,7 +2327,7 @@ private static final long serialVersionUID = 0L;
      * The URL template for appending params to the final URL
      * </pre>
      *
-     * <code>string final_url_suffix = 24;</code>
+     * <code>optional string final_url_suffix = 24;</code>
      * @return Whether the finalUrlSuffix field is set.
      */
     public boolean hasFinalUrlSuffix() {
@@ -2338,7 +2338,7 @@ private static final long serialVersionUID = 0L;
      * The URL template for appending params to the final URL
      * </pre>
      *
-     * <code>string final_url_suffix = 24;</code>
+     * <code>optional string final_url_suffix = 24;</code>
      * @return The finalUrlSuffix.
      */
     public java.lang.String getFinalUrlSuffix() {
@@ -2358,7 +2358,7 @@ private static final long serialVersionUID = 0L;
      * The URL template for appending params to the final URL
      * </pre>
      *
-     * <code>string final_url_suffix = 24;</code>
+     * <code>optional string final_url_suffix = 24;</code>
      * @return The bytes for finalUrlSuffix.
      */
     public com.google.protobuf.ByteString
@@ -2379,7 +2379,7 @@ private static final long serialVersionUID = 0L;
      * The URL template for appending params to the final URL
      * </pre>
      *
-     * <code>string final_url_suffix = 24;</code>
+     * <code>optional string final_url_suffix = 24;</code>
      * @param value The finalUrlSuffix to set.
      * @return This builder for chaining.
      */
@@ -2398,7 +2398,7 @@ private static final long serialVersionUID = 0L;
      * The URL template for appending params to the final URL
      * </pre>
      *
-     * <code>string final_url_suffix = 24;</code>
+     * <code>optional string final_url_suffix = 24;</code>
      * @return This builder for chaining.
      */
     public Builder clearFinalUrlSuffix() {
@@ -2412,7 +2412,7 @@ private static final long serialVersionUID = 0L;
      * The URL template for appending params to the final URL
      * </pre>
      *
-     * <code>string final_url_suffix = 24;</code>
+     * <code>optional string final_url_suffix = 24;</code>
      * @param value The bytes for finalUrlSuffix to set.
      * @return This builder for chaining.
      */
@@ -2434,7 +2434,7 @@ private static final long serialVersionUID = 0L;
      * Whether auto-tagging is enabled for the customer.
      * </pre>
      *
-     * <code>bool auto_tagging_enabled = 25;</code>
+     * <code>optional bool auto_tagging_enabled = 25;</code>
      * @return Whether the autoTaggingEnabled field is set.
      */
     @java.lang.Override
@@ -2446,7 +2446,7 @@ private static final long serialVersionUID = 0L;
      * Whether auto-tagging is enabled for the customer.
      * </pre>
      *
-     * <code>bool auto_tagging_enabled = 25;</code>
+     * <code>optional bool auto_tagging_enabled = 25;</code>
      * @return The autoTaggingEnabled.
      */
     @java.lang.Override
@@ -2458,7 +2458,7 @@ private static final long serialVersionUID = 0L;
      * Whether auto-tagging is enabled for the customer.
      * </pre>
      *
-     * <code>bool auto_tagging_enabled = 25;</code>
+     * <code>optional bool auto_tagging_enabled = 25;</code>
      * @param value The autoTaggingEnabled to set.
      * @return This builder for chaining.
      */
@@ -2473,7 +2473,7 @@ private static final long serialVersionUID = 0L;
      * Whether auto-tagging is enabled for the customer.
      * </pre>
      *
-     * <code>bool auto_tagging_enabled = 25;</code>
+     * <code>optional bool auto_tagging_enabled = 25;</code>
      * @return This builder for chaining.
      */
     public Builder clearAutoTaggingEnabled() {
@@ -2491,7 +2491,7 @@ private static final long serialVersionUID = 0L;
      * information, see https://support.google.com/partners/answer/3125774.
      * </pre>
      *
-     * <code>bool has_partners_badge = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool has_partners_badge = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the hasPartnersBadge field is set.
      */
     @java.lang.Override
@@ -2505,7 +2505,7 @@ private static final long serialVersionUID = 0L;
      * information, see https://support.google.com/partners/answer/3125774.
      * </pre>
      *
-     * <code>bool has_partners_badge = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool has_partners_badge = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The hasPartnersBadge.
      */
     @java.lang.Override
@@ -2519,7 +2519,7 @@ private static final long serialVersionUID = 0L;
      * information, see https://support.google.com/partners/answer/3125774.
      * </pre>
      *
-     * <code>bool has_partners_badge = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool has_partners_badge = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The hasPartnersBadge to set.
      * @return This builder for chaining.
      */
@@ -2536,7 +2536,7 @@ private static final long serialVersionUID = 0L;
      * information, see https://support.google.com/partners/answer/3125774.
      * </pre>
      *
-     * <code>bool has_partners_badge = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool has_partners_badge = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearHasPartnersBadge() {
@@ -2552,7 +2552,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Whether the customer is a manager.
      * </pre>
      *
-     * <code>bool manager = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool manager = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the manager field is set.
      */
     @java.lang.Override
@@ -2564,7 +2564,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Whether the customer is a manager.
      * </pre>
      *
-     * <code>bool manager = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool manager = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The manager.
      */
     @java.lang.Override
@@ -2576,7 +2576,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Whether the customer is a manager.
      * </pre>
      *
-     * <code>bool manager = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool manager = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The manager to set.
      * @return This builder for chaining.
      */
@@ -2591,7 +2591,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Whether the customer is a manager.
      * </pre>
      *
-     * <code>bool manager = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool manager = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearManager() {
@@ -2607,7 +2607,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Whether the customer is a test account.
      * </pre>
      *
-     * <code>bool test_account = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool test_account = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the testAccount field is set.
      */
     @java.lang.Override
@@ -2619,7 +2619,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Whether the customer is a test account.
      * </pre>
      *
-     * <code>bool test_account = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool test_account = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The testAccount.
      */
     @java.lang.Override
@@ -2631,7 +2631,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Whether the customer is a test account.
      * </pre>
      *
-     * <code>bool test_account = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool test_account = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The testAccount to set.
      * @return This builder for chaining.
      */
@@ -2646,7 +2646,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Whether the customer is a test account.
      * </pre>
      *
-     * <code>bool test_account = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool test_account = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearTestAccount() {
@@ -3333,7 +3333,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>double optimization_score = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional double optimization_score = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the optimizationScore field is set.
      */
     @java.lang.Override
@@ -3351,7 +3351,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>double optimization_score = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional double optimization_score = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The optimizationScore.
      */
     @java.lang.Override
@@ -3369,7 +3369,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>double optimization_score = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional double optimization_score = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The optimizationScore to set.
      * @return This builder for chaining.
      */
@@ -3390,7 +3390,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>double optimization_score = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional double optimization_score = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearOptimizationScore() {

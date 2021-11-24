@@ -107,7 +107,7 @@ private static final long serialVersionUID = 0L;
    * Reference audience size matching the considered targeting for YouTube.
    * </pre>
    *
-   * <code>int64 youtube_audience_size = 3;</code>
+   * <code>optional int64 youtube_audience_size = 3;</code>
    * @return Whether the youtubeAudienceSize field is set.
    */
   @java.lang.Override
@@ -119,7 +119,7 @@ private static final long serialVersionUID = 0L;
    * Reference audience size matching the considered targeting for YouTube.
    * </pre>
    *
-   * <code>int64 youtube_audience_size = 3;</code>
+   * <code>optional int64 youtube_audience_size = 3;</code>
    * @return The youtubeAudienceSize.
    */
   @java.lang.Override
@@ -134,7 +134,7 @@ private static final long serialVersionUID = 0L;
    * Reference audience size matching the considered targeting for Census.
    * </pre>
    *
-   * <code>int64 census_audience_size = 4;</code>
+   * <code>optional int64 census_audience_size = 4;</code>
    * @return Whether the censusAudienceSize field is set.
    */
   @java.lang.Override
@@ -146,7 +146,7 @@ private static final long serialVersionUID = 0L;
    * Reference audience size matching the considered targeting for Census.
    * </pre>
    *
-   * <code>int64 census_audience_size = 4;</code>
+   * <code>optional int64 census_audience_size = 4;</code>
    * @return The censusAudienceSize.
    */
   @java.lang.Override
@@ -509,7 +509,7 @@ private static final long serialVersionUID = 0L;
      * Reference audience size matching the considered targeting for YouTube.
      * </pre>
      *
-     * <code>int64 youtube_audience_size = 3;</code>
+     * <code>optional int64 youtube_audience_size = 3;</code>
      * @return Whether the youtubeAudienceSize field is set.
      */
     @java.lang.Override
@@ -521,7 +521,7 @@ private static final long serialVersionUID = 0L;
      * Reference audience size matching the considered targeting for YouTube.
      * </pre>
      *
-     * <code>int64 youtube_audience_size = 3;</code>
+     * <code>optional int64 youtube_audience_size = 3;</code>
      * @return The youtubeAudienceSize.
      */
     @java.lang.Override
@@ -533,7 +533,7 @@ private static final long serialVersionUID = 0L;
      * Reference audience size matching the considered targeting for YouTube.
      * </pre>
      *
-     * <code>int64 youtube_audience_size = 3;</code>
+     * <code>optional int64 youtube_audience_size = 3;</code>
      * @param value The youtubeAudienceSize to set.
      * @return This builder for chaining.
      */
@@ -548,7 +548,7 @@ private static final long serialVersionUID = 0L;
      * Reference audience size matching the considered targeting for YouTube.
      * </pre>
      *
-     * <code>int64 youtube_audience_size = 3;</code>
+     * <code>optional int64 youtube_audience_size = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearYoutubeAudienceSize() {
@@ -564,7 +564,7 @@ private static final long serialVersionUID = 0L;
      * Reference audience size matching the considered targeting for Census.
      * </pre>
      *
-     * <code>int64 census_audience_size = 4;</code>
+     * <code>optional int64 census_audience_size = 4;</code>
      * @return Whether the censusAudienceSize field is set.
      */
     @java.lang.Override
@@ -576,7 +576,7 @@ private static final long serialVersionUID = 0L;
      * Reference audience size matching the considered targeting for Census.
      * </pre>
      *
-     * <code>int64 census_audience_size = 4;</code>
+     * <code>optional int64 census_audience_size = 4;</code>
      * @return The censusAudienceSize.
      */
     @java.lang.Override
@@ -588,7 +588,7 @@ private static final long serialVersionUID = 0L;
      * Reference audience size matching the considered targeting for Census.
      * </pre>
      *
-     * <code>int64 census_audience_size = 4;</code>
+     * <code>optional int64 census_audience_size = 4;</code>
      * @param value The censusAudienceSize to set.
      * @return This builder for chaining.
      */
@@ -603,7 +603,7 @@ private static final long serialVersionUID = 0L;
      * Reference audience size matching the considered targeting for Census.
      * </pre>
      *
-     * <code>int64 census_audience_size = 4;</code>
+     * <code>optional int64 census_audience_size = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearCensusAudienceSize() {

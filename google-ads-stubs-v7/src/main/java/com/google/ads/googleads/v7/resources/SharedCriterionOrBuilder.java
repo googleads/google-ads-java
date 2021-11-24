@@ -36,7 +36,7 @@ public interface SharedCriterionOrBuilder extends
    * Immutable. The shared set to which the shared criterion belongs.
    * </pre>
    *
-   * <code>string shared_set = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string shared_set = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the sharedSet field is set.
    */
   boolean hasSharedSet();
@@ -45,7 +45,7 @@ public interface SharedCriterionOrBuilder extends
    * Immutable. The shared set to which the shared criterion belongs.
    * </pre>
    *
-   * <code>string shared_set = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string shared_set = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The sharedSet.
    */
   java.lang.String getSharedSet();
@@ -54,7 +54,7 @@ public interface SharedCriterionOrBuilder extends
    * Immutable. The shared set to which the shared criterion belongs.
    * </pre>
    *
-   * <code>string shared_set = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string shared_set = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for sharedSet.
    */
   com.google.protobuf.ByteString
@@ -66,7 +66,7 @@ public interface SharedCriterionOrBuilder extends
    * This field is ignored for mutates.
    * </pre>
    *
-   * <code>int64 criterion_id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 criterion_id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the criterionId field is set.
    */
   boolean hasCriterionId();
@@ -76,7 +76,7 @@ public interface SharedCriterionOrBuilder extends
    * This field is ignored for mutates.
    * </pre>
    *
-   * <code>int64 criterion_id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 criterion_id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The criterionId.
    */
   long getCriterionId();

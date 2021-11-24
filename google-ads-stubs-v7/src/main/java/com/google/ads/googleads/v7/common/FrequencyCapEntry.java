@@ -153,7 +153,7 @@ private static final long serialVersionUID = 0L;
    * Maximum number of events allowed during the time range by this cap.
    * </pre>
    *
-   * <code>int32 cap = 3;</code>
+   * <code>optional int32 cap = 3;</code>
    * @return Whether the cap field is set.
    */
   @java.lang.Override
@@ -165,7 +165,7 @@ private static final long serialVersionUID = 0L;
    * Maximum number of events allowed during the time range by this cap.
    * </pre>
    *
-   * <code>int32 cap = 3;</code>
+   * <code>optional int32 cap = 3;</code>
    * @return The cap.
    */
   @java.lang.Override
@@ -692,7 +692,7 @@ private static final long serialVersionUID = 0L;
      * Maximum number of events allowed during the time range by this cap.
      * </pre>
      *
-     * <code>int32 cap = 3;</code>
+     * <code>optional int32 cap = 3;</code>
      * @return Whether the cap field is set.
      */
     @java.lang.Override
@@ -704,7 +704,7 @@ private static final long serialVersionUID = 0L;
      * Maximum number of events allowed during the time range by this cap.
      * </pre>
      *
-     * <code>int32 cap = 3;</code>
+     * <code>optional int32 cap = 3;</code>
      * @return The cap.
      */
     @java.lang.Override
@@ -716,7 +716,7 @@ private static final long serialVersionUID = 0L;
      * Maximum number of events allowed during the time range by this cap.
      * </pre>
      *
-     * <code>int32 cap = 3;</code>
+     * <code>optional int32 cap = 3;</code>
      * @param value The cap to set.
      * @return This builder for chaining.
      */
@@ -731,7 +731,7 @@ private static final long serialVersionUID = 0L;
      * Maximum number of events allowed during the time range by this cap.
      * </pre>
      *
-     * <code>int32 cap = 3;</code>
+     * <code>optional int32 cap = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearCap() {

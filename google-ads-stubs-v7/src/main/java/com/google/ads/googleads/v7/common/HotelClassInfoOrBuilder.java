@@ -12,7 +12,7 @@ public interface HotelClassInfoOrBuilder extends
    * Long value of the hotel class.
    * </pre>
    *
-   * <code>int64 value = 2;</code>
+   * <code>optional int64 value = 2;</code>
    * @return Whether the value field is set.
    */
   boolean hasValue();
@@ -21,7 +21,7 @@ public interface HotelClassInfoOrBuilder extends
    * Long value of the hotel class.
    * </pre>
    *
-   * <code>int64 value = 2;</code>
+   * <code>optional int64 value = 2;</code>
    * @return The value.
    */
   long getValue();

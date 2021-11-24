@@ -19,7 +19,7 @@ public interface UserListRuleItemInfoOrBuilder extends
    * This field must be populated when creating a new rule item.
    * </pre>
    *
-   * <code>string name = 5;</code>
+   * <code>optional string name = 5;</code>
    * @return Whether the name field is set.
    */
   boolean hasName();
@@ -35,7 +35,7 @@ public interface UserListRuleItemInfoOrBuilder extends
    * This field must be populated when creating a new rule item.
    * </pre>
    *
-   * <code>string name = 5;</code>
+   * <code>optional string name = 5;</code>
    * @return The name.
    */
   java.lang.String getName();
@@ -51,7 +51,7 @@ public interface UserListRuleItemInfoOrBuilder extends
    * This field must be populated when creating a new rule item.
    * </pre>
    *
-   * <code>string name = 5;</code>
+   * <code>optional string name = 5;</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString

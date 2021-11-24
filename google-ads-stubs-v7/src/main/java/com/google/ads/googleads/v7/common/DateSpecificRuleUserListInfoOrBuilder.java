@@ -44,7 +44,7 @@ public interface DateSpecificRuleUserListInfoOrBuilder extends
    * Required for creating a data specific rule user list.
    * </pre>
    *
-   * <code>string start_date = 4;</code>
+   * <code>optional string start_date = 4;</code>
    * @return Whether the startDate field is set.
    */
   boolean hasStartDate();
@@ -55,7 +55,7 @@ public interface DateSpecificRuleUserListInfoOrBuilder extends
    * Required for creating a data specific rule user list.
    * </pre>
    *
-   * <code>string start_date = 4;</code>
+   * <code>optional string start_date = 4;</code>
    * @return The startDate.
    */
   java.lang.String getStartDate();
@@ -66,7 +66,7 @@ public interface DateSpecificRuleUserListInfoOrBuilder extends
    * Required for creating a data specific rule user list.
    * </pre>
    *
-   * <code>string start_date = 4;</code>
+   * <code>optional string start_date = 4;</code>
    * @return The bytes for startDate.
    */
   com.google.protobuf.ByteString
@@ -79,7 +79,7 @@ public interface DateSpecificRuleUserListInfoOrBuilder extends
    * Required for creating a data specific rule user list.
    * </pre>
    *
-   * <code>string end_date = 5;</code>
+   * <code>optional string end_date = 5;</code>
    * @return Whether the endDate field is set.
    */
   boolean hasEndDate();
@@ -90,7 +90,7 @@ public interface DateSpecificRuleUserListInfoOrBuilder extends
    * Required for creating a data specific rule user list.
    * </pre>
    *
-   * <code>string end_date = 5;</code>
+   * <code>optional string end_date = 5;</code>
    * @return The endDate.
    */
   java.lang.String getEndDate();
@@ -101,7 +101,7 @@ public interface DateSpecificRuleUserListInfoOrBuilder extends
    * Required for creating a data specific rule user list.
    * </pre>
    *
-   * <code>string end_date = 5;</code>
+   * <code>optional string end_date = 5;</code>
    * @return The bytes for endDate.
    */
   com.google.protobuf.ByteString

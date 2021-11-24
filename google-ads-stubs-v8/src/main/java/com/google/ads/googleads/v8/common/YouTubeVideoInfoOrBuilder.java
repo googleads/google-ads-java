@@ -12,7 +12,7 @@ public interface YouTubeVideoInfoOrBuilder extends
    * YouTube video id as it appears on the YouTube watch page.
    * </pre>
    *
-   * <code>string video_id = 2;</code>
+   * <code>optional string video_id = 2;</code>
    * @return Whether the videoId field is set.
    */
   boolean hasVideoId();
@@ -21,7 +21,7 @@ public interface YouTubeVideoInfoOrBuilder extends
    * YouTube video id as it appears on the YouTube watch page.
    * </pre>
    *
-   * <code>string video_id = 2;</code>
+   * <code>optional string video_id = 2;</code>
    * @return The videoId.
    */
   java.lang.String getVideoId();
@@ -30,7 +30,7 @@ public interface YouTubeVideoInfoOrBuilder extends
    * YouTube video id as it appears on the YouTube watch page.
    * </pre>
    *
-   * <code>string video_id = 2;</code>
+   * <code>optional string video_id = 2;</code>
    * @return The bytes for videoId.
    */
   com.google.protobuf.ByteString

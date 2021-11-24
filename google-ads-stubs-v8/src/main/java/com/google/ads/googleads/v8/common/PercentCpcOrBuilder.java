@@ -15,7 +15,7 @@ public interface PercentCpcOrBuilder extends
    * undefined.
    * </pre>
    *
-   * <code>int64 cpc_bid_ceiling_micros = 3;</code>
+   * <code>optional int64 cpc_bid_ceiling_micros = 3;</code>
    * @return Whether the cpcBidCeilingMicros field is set.
    */
   boolean hasCpcBidCeilingMicros();
@@ -27,7 +27,7 @@ public interface PercentCpcOrBuilder extends
    * undefined.
    * </pre>
    *
-   * <code>int64 cpc_bid_ceiling_micros = 3;</code>
+   * <code>optional int64 cpc_bid_ceiling_micros = 3;</code>
    * @return The cpcBidCeilingMicros.
    */
   long getCpcBidCeilingMicros();
@@ -40,7 +40,7 @@ public interface PercentCpcOrBuilder extends
    * not.
    * </pre>
    *
-   * <code>bool enhanced_cpc_enabled = 4;</code>
+   * <code>optional bool enhanced_cpc_enabled = 4;</code>
    * @return Whether the enhancedCpcEnabled field is set.
    */
   boolean hasEnhancedCpcEnabled();
@@ -52,7 +52,7 @@ public interface PercentCpcOrBuilder extends
    * not.
    * </pre>
    *
-   * <code>bool enhanced_cpc_enabled = 4;</code>
+   * <code>optional bool enhanced_cpc_enabled = 4;</code>
    * @return The enhancedCpcEnabled.
    */
   boolean getEnhancedCpcEnabled();

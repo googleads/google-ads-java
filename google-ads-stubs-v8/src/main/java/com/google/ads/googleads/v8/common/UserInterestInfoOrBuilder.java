@@ -12,7 +12,7 @@ public interface UserInterestInfoOrBuilder extends
    * The UserInterest resource name.
    * </pre>
    *
-   * <code>string user_interest_category = 2;</code>
+   * <code>optional string user_interest_category = 2;</code>
    * @return Whether the userInterestCategory field is set.
    */
   boolean hasUserInterestCategory();
@@ -21,7 +21,7 @@ public interface UserInterestInfoOrBuilder extends
    * The UserInterest resource name.
    * </pre>
    *
-   * <code>string user_interest_category = 2;</code>
+   * <code>optional string user_interest_category = 2;</code>
    * @return The userInterestCategory.
    */
   java.lang.String getUserInterestCategory();
@@ -30,7 +30,7 @@ public interface UserInterestInfoOrBuilder extends
    * The UserInterest resource name.
    * </pre>
    *
-   * <code>string user_interest_category = 2;</code>
+   * <code>optional string user_interest_category = 2;</code>
    * @return The bytes for userInterestCategory.
    */
   com.google.protobuf.ByteString

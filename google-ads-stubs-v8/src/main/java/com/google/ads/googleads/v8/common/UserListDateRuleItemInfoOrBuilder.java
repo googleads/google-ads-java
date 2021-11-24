@@ -37,7 +37,7 @@ public interface UserListDateRuleItemInfoOrBuilder extends
    * Times are reported in the customer's time zone.
    * </pre>
    *
-   * <code>string value = 4;</code>
+   * <code>optional string value = 4;</code>
    * @return Whether the value field is set.
    */
   boolean hasValue();
@@ -48,7 +48,7 @@ public interface UserListDateRuleItemInfoOrBuilder extends
    * Times are reported in the customer's time zone.
    * </pre>
    *
-   * <code>string value = 4;</code>
+   * <code>optional string value = 4;</code>
    * @return The value.
    */
   java.lang.String getValue();
@@ -59,7 +59,7 @@ public interface UserListDateRuleItemInfoOrBuilder extends
    * Times are reported in the customer's time zone.
    * </pre>
    *
-   * <code>string value = 4;</code>
+   * <code>optional string value = 4;</code>
    * @return The bytes for value.
    */
   com.google.protobuf.ByteString
@@ -72,7 +72,7 @@ public interface UserListDateRuleItemInfoOrBuilder extends
    * present.
    * </pre>
    *
-   * <code>int64 offset_in_days = 5;</code>
+   * <code>optional int64 offset_in_days = 5;</code>
    * @return Whether the offsetInDays field is set.
    */
   boolean hasOffsetInDays();
@@ -83,7 +83,7 @@ public interface UserListDateRuleItemInfoOrBuilder extends
    * present.
    * </pre>
    *
-   * <code>int64 offset_in_days = 5;</code>
+   * <code>optional int64 offset_in_days = 5;</code>
    * @return The offsetInDays.
    */
   long getOffsetInDays();

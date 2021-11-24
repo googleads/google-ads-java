@@ -126,7 +126,7 @@ private static final long serialVersionUID = 0L;
    * The fraction needs to be between 0 and 1 (excluding 0).
    * </pre>
    *
-   * <code>double loyalty_fraction = 5;</code>
+   * <code>optional double loyalty_fraction = 5;</code>
    * @return Whether the loyaltyFraction field is set.
    */
   @java.lang.Override
@@ -141,7 +141,7 @@ private static final long serialVersionUID = 0L;
    * The fraction needs to be between 0 and 1 (excluding 0).
    * </pre>
    *
-   * <code>double loyalty_fraction = 5;</code>
+   * <code>optional double loyalty_fraction = 5;</code>
    * @return The loyaltyFraction.
    */
   @java.lang.Override
@@ -160,7 +160,7 @@ private static final long serialVersionUID = 0L;
    * would be 0.5.
    * </pre>
    *
-   * <code>double transaction_upload_fraction = 6;</code>
+   * <code>optional double transaction_upload_fraction = 6;</code>
    * @return Whether the transactionUploadFraction field is set.
    */
   @java.lang.Override
@@ -176,7 +176,7 @@ private static final long serialVersionUID = 0L;
    * would be 0.5.
    * </pre>
    *
-   * <code>double transaction_upload_fraction = 6;</code>
+   * <code>optional double transaction_upload_fraction = 6;</code>
    * @return The transactionUploadFraction.
    */
   @java.lang.Override
@@ -194,7 +194,7 @@ private static final long serialVersionUID = 0L;
    * Accessible only to customers on the allow-list.
    * </pre>
    *
-   * <code>string custom_key = 7;</code>
+   * <code>optional string custom_key = 7;</code>
    * @return Whether the customKey field is set.
    */
   @java.lang.Override
@@ -209,7 +209,7 @@ private static final long serialVersionUID = 0L;
    * Accessible only to customers on the allow-list.
    * </pre>
    *
-   * <code>string custom_key = 7;</code>
+   * <code>optional string custom_key = 7;</code>
    * @return The customKey.
    */
   @java.lang.Override
@@ -233,7 +233,7 @@ private static final long serialVersionUID = 0L;
    * Accessible only to customers on the allow-list.
    * </pre>
    *
-   * <code>string custom_key = 7;</code>
+   * <code>optional string custom_key = 7;</code>
    * @return The bytes for customKey.
    */
   @java.lang.Override
@@ -701,7 +701,7 @@ private static final long serialVersionUID = 0L;
      * The fraction needs to be between 0 and 1 (excluding 0).
      * </pre>
      *
-     * <code>double loyalty_fraction = 5;</code>
+     * <code>optional double loyalty_fraction = 5;</code>
      * @return Whether the loyaltyFraction field is set.
      */
     @java.lang.Override
@@ -716,7 +716,7 @@ private static final long serialVersionUID = 0L;
      * The fraction needs to be between 0 and 1 (excluding 0).
      * </pre>
      *
-     * <code>double loyalty_fraction = 5;</code>
+     * <code>optional double loyalty_fraction = 5;</code>
      * @return The loyaltyFraction.
      */
     @java.lang.Override
@@ -731,7 +731,7 @@ private static final long serialVersionUID = 0L;
      * The fraction needs to be between 0 and 1 (excluding 0).
      * </pre>
      *
-     * <code>double loyalty_fraction = 5;</code>
+     * <code>optional double loyalty_fraction = 5;</code>
      * @param value The loyaltyFraction to set.
      * @return This builder for chaining.
      */
@@ -749,7 +749,7 @@ private static final long serialVersionUID = 0L;
      * The fraction needs to be between 0 and 1 (excluding 0).
      * </pre>
      *
-     * <code>double loyalty_fraction = 5;</code>
+     * <code>optional double loyalty_fraction = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearLoyaltyFraction() {
@@ -769,7 +769,7 @@ private static final long serialVersionUID = 0L;
      * would be 0.5.
      * </pre>
      *
-     * <code>double transaction_upload_fraction = 6;</code>
+     * <code>optional double transaction_upload_fraction = 6;</code>
      * @return Whether the transactionUploadFraction field is set.
      */
     @java.lang.Override
@@ -785,7 +785,7 @@ private static final long serialVersionUID = 0L;
      * would be 0.5.
      * </pre>
      *
-     * <code>double transaction_upload_fraction = 6;</code>
+     * <code>optional double transaction_upload_fraction = 6;</code>
      * @return The transactionUploadFraction.
      */
     @java.lang.Override
@@ -801,7 +801,7 @@ private static final long serialVersionUID = 0L;
      * would be 0.5.
      * </pre>
      *
-     * <code>double transaction_upload_fraction = 6;</code>
+     * <code>optional double transaction_upload_fraction = 6;</code>
      * @param value The transactionUploadFraction to set.
      * @return This builder for chaining.
      */
@@ -820,7 +820,7 @@ private static final long serialVersionUID = 0L;
      * would be 0.5.
      * </pre>
      *
-     * <code>double transaction_upload_fraction = 6;</code>
+     * <code>optional double transaction_upload_fraction = 6;</code>
      * @return This builder for chaining.
      */
     public Builder clearTransactionUploadFraction() {
@@ -839,7 +839,7 @@ private static final long serialVersionUID = 0L;
      * Accessible only to customers on the allow-list.
      * </pre>
      *
-     * <code>string custom_key = 7;</code>
+     * <code>optional string custom_key = 7;</code>
      * @return Whether the customKey field is set.
      */
     public boolean hasCustomKey() {
@@ -853,7 +853,7 @@ private static final long serialVersionUID = 0L;
      * Accessible only to customers on the allow-list.
      * </pre>
      *
-     * <code>string custom_key = 7;</code>
+     * <code>optional string custom_key = 7;</code>
      * @return The customKey.
      */
     public java.lang.String getCustomKey() {
@@ -876,7 +876,7 @@ private static final long serialVersionUID = 0L;
      * Accessible only to customers on the allow-list.
      * </pre>
      *
-     * <code>string custom_key = 7;</code>
+     * <code>optional string custom_key = 7;</code>
      * @return The bytes for customKey.
      */
     public com.google.protobuf.ByteString
@@ -900,7 +900,7 @@ private static final long serialVersionUID = 0L;
      * Accessible only to customers on the allow-list.
      * </pre>
      *
-     * <code>string custom_key = 7;</code>
+     * <code>optional string custom_key = 7;</code>
      * @param value The customKey to set.
      * @return This builder for chaining.
      */
@@ -922,7 +922,7 @@ private static final long serialVersionUID = 0L;
      * Accessible only to customers on the allow-list.
      * </pre>
      *
-     * <code>string custom_key = 7;</code>
+     * <code>optional string custom_key = 7;</code>
      * @return This builder for chaining.
      */
     public Builder clearCustomKey() {
@@ -939,7 +939,7 @@ private static final long serialVersionUID = 0L;
      * Accessible only to customers on the allow-list.
      * </pre>
      *
-     * <code>string custom_key = 7;</code>
+     * <code>optional string custom_key = 7;</code>
      * @param value The bytes for customKey to set.
      * @return This builder for chaining.
      */

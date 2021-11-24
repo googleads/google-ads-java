@@ -12,7 +12,7 @@ public interface MediaVideoOrBuilder extends
    * Output only. The duration of the Video in milliseconds.
    * </pre>
    *
-   * <code>int64 ad_duration_millis = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 ad_duration_millis = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the adDurationMillis field is set.
    */
   boolean hasAdDurationMillis();
@@ -21,7 +21,7 @@ public interface MediaVideoOrBuilder extends
    * Output only. The duration of the Video in milliseconds.
    * </pre>
    *
-   * <code>int64 ad_duration_millis = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 ad_duration_millis = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The adDurationMillis.
    */
   long getAdDurationMillis();
@@ -33,7 +33,7 @@ public interface MediaVideoOrBuilder extends
    * streaming URL for this video.
    * </pre>
    *
-   * <code>string youtube_video_id = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string youtube_video_id = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the youtubeVideoId field is set.
    */
   boolean hasYoutubeVideoId();
@@ -44,7 +44,7 @@ public interface MediaVideoOrBuilder extends
    * streaming URL for this video.
    * </pre>
    *
-   * <code>string youtube_video_id = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string youtube_video_id = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The youtubeVideoId.
    */
   java.lang.String getYoutubeVideoId();
@@ -55,7 +55,7 @@ public interface MediaVideoOrBuilder extends
    * streaming URL for this video.
    * </pre>
    *
-   * <code>string youtube_video_id = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string youtube_video_id = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The bytes for youtubeVideoId.
    */
   com.google.protobuf.ByteString
@@ -68,7 +68,7 @@ public interface MediaVideoOrBuilder extends
    * television commercials.
    * </pre>
    *
-   * <code>string advertising_id_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string advertising_id_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the advertisingIdCode field is set.
    */
   boolean hasAdvertisingIdCode();
@@ -79,7 +79,7 @@ public interface MediaVideoOrBuilder extends
    * television commercials.
    * </pre>
    *
-   * <code>string advertising_id_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string advertising_id_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The advertisingIdCode.
    */
   java.lang.String getAdvertisingIdCode();
@@ -90,7 +90,7 @@ public interface MediaVideoOrBuilder extends
    * television commercials.
    * </pre>
    *
-   * <code>string advertising_id_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string advertising_id_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for advertisingIdCode.
    */
   com.google.protobuf.ByteString
@@ -102,7 +102,7 @@ public interface MediaVideoOrBuilder extends
    * mainly for television commercials.
    * </pre>
    *
-   * <code>string isci_code = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string isci_code = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the isciCode field is set.
    */
   boolean hasIsciCode();
@@ -112,7 +112,7 @@ public interface MediaVideoOrBuilder extends
    * mainly for television commercials.
    * </pre>
    *
-   * <code>string isci_code = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string isci_code = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The isciCode.
    */
   java.lang.String getIsciCode();
@@ -122,7 +122,7 @@ public interface MediaVideoOrBuilder extends
    * mainly for television commercials.
    * </pre>
    *
-   * <code>string isci_code = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string isci_code = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for isciCode.
    */
   com.google.protobuf.ByteString

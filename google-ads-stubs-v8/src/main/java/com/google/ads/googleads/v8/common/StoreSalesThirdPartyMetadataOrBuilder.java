@@ -14,7 +14,7 @@ public interface StoreSalesThirdPartyMetadataOrBuilder extends
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
    *
-   * <code>string advertiser_upload_date_time = 7;</code>
+   * <code>optional string advertiser_upload_date_time = 7;</code>
    * @return Whether the advertiserUploadDateTime field is set.
    */
   boolean hasAdvertiserUploadDateTime();
@@ -25,7 +25,7 @@ public interface StoreSalesThirdPartyMetadataOrBuilder extends
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
    *
-   * <code>string advertiser_upload_date_time = 7;</code>
+   * <code>optional string advertiser_upload_date_time = 7;</code>
    * @return The advertiserUploadDateTime.
    */
   java.lang.String getAdvertiserUploadDateTime();
@@ -36,7 +36,7 @@ public interface StoreSalesThirdPartyMetadataOrBuilder extends
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
    *
-   * <code>string advertiser_upload_date_time = 7;</code>
+   * <code>optional string advertiser_upload_date_time = 7;</code>
    * @return The bytes for advertiserUploadDateTime.
    */
   com.google.protobuf.ByteString
@@ -50,7 +50,7 @@ public interface StoreSalesThirdPartyMetadataOrBuilder extends
    * The fraction needs to be between 0 and 1 (excluding 0).
    * </pre>
    *
-   * <code>double valid_transaction_fraction = 8;</code>
+   * <code>optional double valid_transaction_fraction = 8;</code>
    * @return Whether the validTransactionFraction field is set.
    */
   boolean hasValidTransactionFraction();
@@ -62,7 +62,7 @@ public interface StoreSalesThirdPartyMetadataOrBuilder extends
    * The fraction needs to be between 0 and 1 (excluding 0).
    * </pre>
    *
-   * <code>double valid_transaction_fraction = 8;</code>
+   * <code>optional double valid_transaction_fraction = 8;</code>
    * @return The validTransactionFraction.
    */
   double getValidTransactionFraction();
@@ -75,7 +75,7 @@ public interface StoreSalesThirdPartyMetadataOrBuilder extends
    * The fraction needs to be between 0 and 1 (excluding 0).
    * </pre>
    *
-   * <code>double partner_match_fraction = 9;</code>
+   * <code>optional double partner_match_fraction = 9;</code>
    * @return Whether the partnerMatchFraction field is set.
    */
   boolean hasPartnerMatchFraction();
@@ -87,7 +87,7 @@ public interface StoreSalesThirdPartyMetadataOrBuilder extends
    * The fraction needs to be between 0 and 1 (excluding 0).
    * </pre>
    *
-   * <code>double partner_match_fraction = 9;</code>
+   * <code>optional double partner_match_fraction = 9;</code>
    * @return The partnerMatchFraction.
    */
   double getPartnerMatchFraction();
@@ -100,7 +100,7 @@ public interface StoreSalesThirdPartyMetadataOrBuilder extends
    * The fraction needs to be between 0 and 1 (excluding 0).
    * </pre>
    *
-   * <code>double partner_upload_fraction = 10;</code>
+   * <code>optional double partner_upload_fraction = 10;</code>
    * @return Whether the partnerUploadFraction field is set.
    */
   boolean hasPartnerUploadFraction();
@@ -112,7 +112,7 @@ public interface StoreSalesThirdPartyMetadataOrBuilder extends
    * The fraction needs to be between 0 and 1 (excluding 0).
    * </pre>
    *
-   * <code>double partner_upload_fraction = 10;</code>
+   * <code>optional double partner_upload_fraction = 10;</code>
    * @return The partnerUploadFraction.
    */
   double getPartnerUploadFraction();
@@ -122,7 +122,7 @@ public interface StoreSalesThirdPartyMetadataOrBuilder extends
    * Version of partner IDs to be used for uploads. Required.
    * </pre>
    *
-   * <code>string bridge_map_version_id = 11;</code>
+   * <code>optional string bridge_map_version_id = 11;</code>
    * @return Whether the bridgeMapVersionId field is set.
    */
   boolean hasBridgeMapVersionId();
@@ -131,7 +131,7 @@ public interface StoreSalesThirdPartyMetadataOrBuilder extends
    * Version of partner IDs to be used for uploads. Required.
    * </pre>
    *
-   * <code>string bridge_map_version_id = 11;</code>
+   * <code>optional string bridge_map_version_id = 11;</code>
    * @return The bridgeMapVersionId.
    */
   java.lang.String getBridgeMapVersionId();
@@ -140,7 +140,7 @@ public interface StoreSalesThirdPartyMetadataOrBuilder extends
    * Version of partner IDs to be used for uploads. Required.
    * </pre>
    *
-   * <code>string bridge_map_version_id = 11;</code>
+   * <code>optional string bridge_map_version_id = 11;</code>
    * @return The bytes for bridgeMapVersionId.
    */
   com.google.protobuf.ByteString
@@ -151,7 +151,7 @@ public interface StoreSalesThirdPartyMetadataOrBuilder extends
    * ID of the third party partner updating the transaction feed.
    * </pre>
    *
-   * <code>int64 partner_id = 12;</code>
+   * <code>optional int64 partner_id = 12;</code>
    * @return Whether the partnerId field is set.
    */
   boolean hasPartnerId();
@@ -160,7 +160,7 @@ public interface StoreSalesThirdPartyMetadataOrBuilder extends
    * ID of the third party partner updating the transaction feed.
    * </pre>
    *
-   * <code>int64 partner_id = 12;</code>
+   * <code>optional int64 partner_id = 12;</code>
    * @return The partnerId.
    */
   long getPartnerId();

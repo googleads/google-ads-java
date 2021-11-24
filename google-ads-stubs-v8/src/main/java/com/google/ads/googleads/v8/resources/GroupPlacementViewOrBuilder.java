@@ -37,7 +37,7 @@ public interface GroupPlacementViewOrBuilder extends
    * app ID, or a YouTube channel ID.
    * </pre>
    *
-   * <code>string placement = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string placement = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the placement field is set.
    */
   boolean hasPlacement();
@@ -47,7 +47,7 @@ public interface GroupPlacementViewOrBuilder extends
    * app ID, or a YouTube channel ID.
    * </pre>
    *
-   * <code>string placement = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string placement = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The placement.
    */
   java.lang.String getPlacement();
@@ -57,7 +57,7 @@ public interface GroupPlacementViewOrBuilder extends
    * app ID, or a YouTube channel ID.
    * </pre>
    *
-   * <code>string placement = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string placement = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for placement.
    */
   com.google.protobuf.ByteString
@@ -68,7 +68,7 @@ public interface GroupPlacementViewOrBuilder extends
    * Output only. Domain name for websites and YouTube channel name for YouTube channels.
    * </pre>
    *
-   * <code>string display_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string display_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the displayName field is set.
    */
   boolean hasDisplayName();
@@ -77,7 +77,7 @@ public interface GroupPlacementViewOrBuilder extends
    * Output only. Domain name for websites and YouTube channel name for YouTube channels.
    * </pre>
    *
-   * <code>string display_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string display_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The displayName.
    */
   java.lang.String getDisplayName();
@@ -86,7 +86,7 @@ public interface GroupPlacementViewOrBuilder extends
    * Output only. Domain name for websites and YouTube channel name for YouTube channels.
    * </pre>
    *
-   * <code>string display_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string display_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for displayName.
    */
   com.google.protobuf.ByteString
@@ -98,7 +98,7 @@ public interface GroupPlacementViewOrBuilder extends
    * app store, or a YouTube channel URL.
    * </pre>
    *
-   * <code>string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the targetUrl field is set.
    */
   boolean hasTargetUrl();
@@ -108,7 +108,7 @@ public interface GroupPlacementViewOrBuilder extends
    * app store, or a YouTube channel URL.
    * </pre>
    *
-   * <code>string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The targetUrl.
    */
   java.lang.String getTargetUrl();
@@ -118,7 +118,7 @@ public interface GroupPlacementViewOrBuilder extends
    * app store, or a YouTube channel URL.
    * </pre>
    *
-   * <code>string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for targetUrl.
    */
   com.google.protobuf.ByteString

@@ -116,7 +116,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Selected product for planning. The product codes returned are within the
    * set of the ones returned by ListPlannableProducts when using the same
-   * location id.
+   * location ID.
    * </pre>
    *
    * <code>string plannable_product_code = 1;</code>
@@ -139,7 +139,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Selected product for planning. The product codes returned are within the
    * set of the ones returned by ListPlannableProducts when using the same
-   * location id.
+   * location ID.
    * </pre>
    *
    * <code>string plannable_product_code = 1;</code>
@@ -229,7 +229,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getPlannableProductCodeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(plannableProductCode_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, plannableProductCode_);
     }
     if (costMicros_ != 0L) {
@@ -247,7 +247,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getPlannableProductCodeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(plannableProductCode_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, plannableProductCode_);
     }
     if (costMicros_ != 0L) {
@@ -575,7 +575,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Selected product for planning. The product codes returned are within the
      * set of the ones returned by ListPlannableProducts when using the same
-     * location id.
+     * location ID.
      * </pre>
      *
      * <code>string plannable_product_code = 1;</code>
@@ -597,7 +597,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Selected product for planning. The product codes returned are within the
      * set of the ones returned by ListPlannableProducts when using the same
-     * location id.
+     * location ID.
      * </pre>
      *
      * <code>string plannable_product_code = 1;</code>
@@ -620,7 +620,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Selected product for planning. The product codes returned are within the
      * set of the ones returned by ListPlannableProducts when using the same
-     * location id.
+     * location ID.
      * </pre>
      *
      * <code>string plannable_product_code = 1;</code>
@@ -641,7 +641,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Selected product for planning. The product codes returned are within the
      * set of the ones returned by ListPlannableProducts when using the same
-     * location id.
+     * location ID.
      * </pre>
      *
      * <code>string plannable_product_code = 1;</code>
@@ -657,7 +657,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Selected product for planning. The product codes returned are within the
      * set of the ones returned by ListPlannableProducts when using the same
-     * location id.
+     * location ID.
      * </pre>
      *
      * <code>string plannable_product_code = 1;</code>

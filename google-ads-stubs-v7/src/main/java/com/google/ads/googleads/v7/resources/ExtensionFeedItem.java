@@ -505,7 +505,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of this feed item. Read-only.
    * </pre>
    *
-   * <code>int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   @java.lang.Override
@@ -517,7 +517,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of this feed item. Read-only.
    * </pre>
    *
-   * <code>int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   @java.lang.Override
@@ -564,7 +564,7 @@ private static final long serialVersionUID = 0L;
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
    *
-   * <code>string start_date_time = 26;</code>
+   * <code>optional string start_date_time = 26;</code>
    * @return Whether the startDateTime field is set.
    */
   @java.lang.Override
@@ -579,7 +579,7 @@ private static final long serialVersionUID = 0L;
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
    *
-   * <code>string start_date_time = 26;</code>
+   * <code>optional string start_date_time = 26;</code>
    * @return The startDateTime.
    */
   @java.lang.Override
@@ -603,7 +603,7 @@ private static final long serialVersionUID = 0L;
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
    *
-   * <code>string start_date_time = 26;</code>
+   * <code>optional string start_date_time = 26;</code>
    * @return The bytes for startDateTime.
    */
   @java.lang.Override
@@ -631,7 +631,7 @@ private static final long serialVersionUID = 0L;
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
    *
-   * <code>string end_date_time = 27;</code>
+   * <code>optional string end_date_time = 27;</code>
    * @return Whether the endDateTime field is set.
    */
   @java.lang.Override
@@ -646,7 +646,7 @@ private static final long serialVersionUID = 0L;
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
    *
-   * <code>string end_date_time = 27;</code>
+   * <code>optional string end_date_time = 27;</code>
    * @return The endDateTime.
    */
   @java.lang.Override
@@ -670,7 +670,7 @@ private static final long serialVersionUID = 0L;
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
    *
-   * <code>string end_date_time = 27;</code>
+   * <code>optional string end_date_time = 27;</code>
    * @return The bytes for endDateTime.
    */
   @java.lang.Override
@@ -792,7 +792,7 @@ private static final long serialVersionUID = 0L;
    * The targeted geo target constant.
    * </pre>
    *
-   * <code>string targeted_geo_target_constant = 30 [(.google.api.resource_reference) = { ... }</code>
+   * <code>optional string targeted_geo_target_constant = 30 [(.google.api.resource_reference) = { ... }</code>
    * @return Whether the targetedGeoTargetConstant field is set.
    */
   @java.lang.Override
@@ -804,7 +804,7 @@ private static final long serialVersionUID = 0L;
    * The targeted geo target constant.
    * </pre>
    *
-   * <code>string targeted_geo_target_constant = 30 [(.google.api.resource_reference) = { ... }</code>
+   * <code>optional string targeted_geo_target_constant = 30 [(.google.api.resource_reference) = { ... }</code>
    * @return The targetedGeoTargetConstant.
    */
   @java.lang.Override
@@ -825,7 +825,7 @@ private static final long serialVersionUID = 0L;
    * The targeted geo target constant.
    * </pre>
    *
-   * <code>string targeted_geo_target_constant = 30 [(.google.api.resource_reference) = { ... }</code>
+   * <code>optional string targeted_geo_target_constant = 30 [(.google.api.resource_reference) = { ... }</code>
    * @return The bytes for targetedGeoTargetConstant.
    */
   @java.lang.Override
@@ -1257,8 +1257,8 @@ private static final long serialVersionUID = 0L;
   public static final int LOCATION_FEED_ITEM_FIELD_NUMBER = 14;
   /**
    * <pre>
-   * Output only. Location extension. Locations are synced from a GMB account into a feed.
-   * This field is read-only.
+   * Output only. Location extension. Locations are synced from a Business Profile into a
+   * feed. This field is read-only.
    * </pre>
    *
    * <code>.google.ads.googleads.v7.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1270,8 +1270,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Location extension. Locations are synced from a GMB account into a feed.
-   * This field is read-only.
+   * Output only. Location extension. Locations are synced from a Business Profile into a
+   * feed. This field is read-only.
    * </pre>
    *
    * <code>.google.ads.googleads.v7.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1286,8 +1286,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Location extension. Locations are synced from a GMB account into a feed.
-   * This field is read-only.
+   * Output only. Location extension. Locations are synced from a Business Profile into a
+   * feed. This field is read-only.
    * </pre>
    *
    * <code>.google.ads.googleads.v7.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1577,7 +1577,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (extensionCase_ == 2) {
@@ -1658,7 +1658,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (extensionCase_ == 2) {
@@ -2644,7 +2644,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of this feed item. Read-only.
      * </pre>
      *
-     * <code>int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the id field is set.
      */
     @java.lang.Override
@@ -2656,7 +2656,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of this feed item. Read-only.
      * </pre>
      *
-     * <code>int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The id.
      */
     @java.lang.Override
@@ -2668,7 +2668,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of this feed item. Read-only.
      * </pre>
      *
-     * <code>int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
@@ -2683,7 +2683,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of this feed item. Read-only.
      * </pre>
      *
-     * <code>int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {
@@ -2781,7 +2781,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string start_date_time = 26;</code>
+     * <code>optional string start_date_time = 26;</code>
      * @return Whether the startDateTime field is set.
      */
     public boolean hasStartDateTime() {
@@ -2795,7 +2795,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string start_date_time = 26;</code>
+     * <code>optional string start_date_time = 26;</code>
      * @return The startDateTime.
      */
     public java.lang.String getStartDateTime() {
@@ -2818,7 +2818,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string start_date_time = 26;</code>
+     * <code>optional string start_date_time = 26;</code>
      * @return The bytes for startDateTime.
      */
     public com.google.protobuf.ByteString
@@ -2842,7 +2842,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string start_date_time = 26;</code>
+     * <code>optional string start_date_time = 26;</code>
      * @param value The startDateTime to set.
      * @return This builder for chaining.
      */
@@ -2864,7 +2864,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string start_date_time = 26;</code>
+     * <code>optional string start_date_time = 26;</code>
      * @return This builder for chaining.
      */
     public Builder clearStartDateTime() {
@@ -2881,7 +2881,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string start_date_time = 26;</code>
+     * <code>optional string start_date_time = 26;</code>
      * @param value The bytes for startDateTime to set.
      * @return This builder for chaining.
      */
@@ -2906,7 +2906,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string end_date_time = 27;</code>
+     * <code>optional string end_date_time = 27;</code>
      * @return Whether the endDateTime field is set.
      */
     public boolean hasEndDateTime() {
@@ -2920,7 +2920,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string end_date_time = 27;</code>
+     * <code>optional string end_date_time = 27;</code>
      * @return The endDateTime.
      */
     public java.lang.String getEndDateTime() {
@@ -2943,7 +2943,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string end_date_time = 27;</code>
+     * <code>optional string end_date_time = 27;</code>
      * @return The bytes for endDateTime.
      */
     public com.google.protobuf.ByteString
@@ -2967,7 +2967,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string end_date_time = 27;</code>
+     * <code>optional string end_date_time = 27;</code>
      * @param value The endDateTime to set.
      * @return This builder for chaining.
      */
@@ -2989,7 +2989,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string end_date_time = 27;</code>
+     * <code>optional string end_date_time = 27;</code>
      * @return This builder for chaining.
      */
     public Builder clearEndDateTime() {
@@ -3006,7 +3006,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string end_date_time = 27;</code>
+     * <code>optional string end_date_time = 27;</code>
      * @param value The bytes for endDateTime to set.
      * @return This builder for chaining.
      */
@@ -3450,7 +3450,7 @@ private static final long serialVersionUID = 0L;
      * The targeted geo target constant.
      * </pre>
      *
-     * <code>string targeted_geo_target_constant = 30 [(.google.api.resource_reference) = { ... }</code>
+     * <code>optional string targeted_geo_target_constant = 30 [(.google.api.resource_reference) = { ... }</code>
      * @return Whether the targetedGeoTargetConstant field is set.
      */
     public boolean hasTargetedGeoTargetConstant() {
@@ -3461,7 +3461,7 @@ private static final long serialVersionUID = 0L;
      * The targeted geo target constant.
      * </pre>
      *
-     * <code>string targeted_geo_target_constant = 30 [(.google.api.resource_reference) = { ... }</code>
+     * <code>optional string targeted_geo_target_constant = 30 [(.google.api.resource_reference) = { ... }</code>
      * @return The targetedGeoTargetConstant.
      */
     public java.lang.String getTargetedGeoTargetConstant() {
@@ -3481,7 +3481,7 @@ private static final long serialVersionUID = 0L;
      * The targeted geo target constant.
      * </pre>
      *
-     * <code>string targeted_geo_target_constant = 30 [(.google.api.resource_reference) = { ... }</code>
+     * <code>optional string targeted_geo_target_constant = 30 [(.google.api.resource_reference) = { ... }</code>
      * @return The bytes for targetedGeoTargetConstant.
      */
     public com.google.protobuf.ByteString
@@ -3502,7 +3502,7 @@ private static final long serialVersionUID = 0L;
      * The targeted geo target constant.
      * </pre>
      *
-     * <code>string targeted_geo_target_constant = 30 [(.google.api.resource_reference) = { ... }</code>
+     * <code>optional string targeted_geo_target_constant = 30 [(.google.api.resource_reference) = { ... }</code>
      * @param value The targetedGeoTargetConstant to set.
      * @return This builder for chaining.
      */
@@ -3521,7 +3521,7 @@ private static final long serialVersionUID = 0L;
      * The targeted geo target constant.
      * </pre>
      *
-     * <code>string targeted_geo_target_constant = 30 [(.google.api.resource_reference) = { ... }</code>
+     * <code>optional string targeted_geo_target_constant = 30 [(.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearTargetedGeoTargetConstant() {
@@ -3535,7 +3535,7 @@ private static final long serialVersionUID = 0L;
      * The targeted geo target constant.
      * </pre>
      *
-     * <code>string targeted_geo_target_constant = 30 [(.google.api.resource_reference) = { ... }</code>
+     * <code>optional string targeted_geo_target_constant = 30 [(.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for targetedGeoTargetConstant to set.
      * @return This builder for chaining.
      */
@@ -5205,8 +5205,8 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v7.common.LocationFeedItem, com.google.ads.googleads.v7.common.LocationFeedItem.Builder, com.google.ads.googleads.v7.common.LocationFeedItemOrBuilder> locationFeedItemBuilder_;
     /**
      * <pre>
-     * Output only. Location extension. Locations are synced from a GMB account into a feed.
-     * This field is read-only.
+     * Output only. Location extension. Locations are synced from a Business Profile into a
+     * feed. This field is read-only.
      * </pre>
      *
      * <code>.google.ads.googleads.v7.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5218,8 +5218,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Location extension. Locations are synced from a GMB account into a feed.
-     * This field is read-only.
+     * Output only. Location extension. Locations are synced from a Business Profile into a
+     * feed. This field is read-only.
      * </pre>
      *
      * <code>.google.ads.googleads.v7.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5241,8 +5241,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Location extension. Locations are synced from a GMB account into a feed.
-     * This field is read-only.
+     * Output only. Location extension. Locations are synced from a Business Profile into a
+     * feed. This field is read-only.
      * </pre>
      *
      * <code>.google.ads.googleads.v7.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5262,8 +5262,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Location extension. Locations are synced from a GMB account into a feed.
-     * This field is read-only.
+     * Output only. Location extension. Locations are synced from a Business Profile into a
+     * feed. This field is read-only.
      * </pre>
      *
      * <code>.google.ads.googleads.v7.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5281,8 +5281,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Location extension. Locations are synced from a GMB account into a feed.
-     * This field is read-only.
+     * Output only. Location extension. Locations are synced from a Business Profile into a
+     * feed. This field is read-only.
      * </pre>
      *
      * <code>.google.ads.googleads.v7.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5308,8 +5308,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Location extension. Locations are synced from a GMB account into a feed.
-     * This field is read-only.
+     * Output only. Location extension. Locations are synced from a Business Profile into a
+     * feed. This field is read-only.
      * </pre>
      *
      * <code>.google.ads.googleads.v7.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5332,8 +5332,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Location extension. Locations are synced from a GMB account into a feed.
-     * This field is read-only.
+     * Output only. Location extension. Locations are synced from a Business Profile into a
+     * feed. This field is read-only.
      * </pre>
      *
      * <code>.google.ads.googleads.v7.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5343,8 +5343,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Location extension. Locations are synced from a GMB account into a feed.
-     * This field is read-only.
+     * Output only. Location extension. Locations are synced from a Business Profile into a
+     * feed. This field is read-only.
      * </pre>
      *
      * <code>.google.ads.googleads.v7.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5362,8 +5362,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Location extension. Locations are synced from a GMB account into a feed.
-     * This field is read-only.
+     * Output only. Location extension. Locations are synced from a Business Profile into a
+     * feed. This field is read-only.
      * </pre>
      *
      * <code>.google.ads.googleads.v7.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

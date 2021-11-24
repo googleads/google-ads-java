@@ -104,7 +104,7 @@ private static final long serialVersionUID = 0L;
    * Advertiser defined lifetime value for the user.
    * </pre>
    *
-   * <code>int64 lifetime_value_micros = 1;</code>
+   * <code>optional int64 lifetime_value_micros = 1;</code>
    * @return Whether the lifetimeValueMicros field is set.
    */
   @java.lang.Override
@@ -116,7 +116,7 @@ private static final long serialVersionUID = 0L;
    * Advertiser defined lifetime value for the user.
    * </pre>
    *
-   * <code>int64 lifetime_value_micros = 1;</code>
+   * <code>optional int64 lifetime_value_micros = 1;</code>
    * @return The lifetimeValueMicros.
    */
   @java.lang.Override
@@ -133,7 +133,7 @@ private static final long serialVersionUID = 0L;
    * operation where 0 will also be accepted.
    * </pre>
    *
-   * <code>int32 lifetime_value_bucket = 2;</code>
+   * <code>optional int32 lifetime_value_bucket = 2;</code>
    * @return Whether the lifetimeValueBucket field is set.
    */
   @java.lang.Override
@@ -147,7 +147,7 @@ private static final long serialVersionUID = 0L;
    * operation where 0 will also be accepted.
    * </pre>
    *
-   * <code>int32 lifetime_value_bucket = 2;</code>
+   * <code>optional int32 lifetime_value_bucket = 2;</code>
    * @return The lifetimeValueBucket.
    */
   @java.lang.Override
@@ -506,7 +506,7 @@ private static final long serialVersionUID = 0L;
      * Advertiser defined lifetime value for the user.
      * </pre>
      *
-     * <code>int64 lifetime_value_micros = 1;</code>
+     * <code>optional int64 lifetime_value_micros = 1;</code>
      * @return Whether the lifetimeValueMicros field is set.
      */
     @java.lang.Override
@@ -518,7 +518,7 @@ private static final long serialVersionUID = 0L;
      * Advertiser defined lifetime value for the user.
      * </pre>
      *
-     * <code>int64 lifetime_value_micros = 1;</code>
+     * <code>optional int64 lifetime_value_micros = 1;</code>
      * @return The lifetimeValueMicros.
      */
     @java.lang.Override
@@ -530,7 +530,7 @@ private static final long serialVersionUID = 0L;
      * Advertiser defined lifetime value for the user.
      * </pre>
      *
-     * <code>int64 lifetime_value_micros = 1;</code>
+     * <code>optional int64 lifetime_value_micros = 1;</code>
      * @param value The lifetimeValueMicros to set.
      * @return This builder for chaining.
      */
@@ -545,7 +545,7 @@ private static final long serialVersionUID = 0L;
      * Advertiser defined lifetime value for the user.
      * </pre>
      *
-     * <code>int64 lifetime_value_micros = 1;</code>
+     * <code>optional int64 lifetime_value_micros = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearLifetimeValueMicros() {
@@ -563,7 +563,7 @@ private static final long serialVersionUID = 0L;
      * operation where 0 will also be accepted.
      * </pre>
      *
-     * <code>int32 lifetime_value_bucket = 2;</code>
+     * <code>optional int32 lifetime_value_bucket = 2;</code>
      * @return Whether the lifetimeValueBucket field is set.
      */
     @java.lang.Override
@@ -577,7 +577,7 @@ private static final long serialVersionUID = 0L;
      * operation where 0 will also be accepted.
      * </pre>
      *
-     * <code>int32 lifetime_value_bucket = 2;</code>
+     * <code>optional int32 lifetime_value_bucket = 2;</code>
      * @return The lifetimeValueBucket.
      */
     @java.lang.Override
@@ -591,7 +591,7 @@ private static final long serialVersionUID = 0L;
      * operation where 0 will also be accepted.
      * </pre>
      *
-     * <code>int32 lifetime_value_bucket = 2;</code>
+     * <code>optional int32 lifetime_value_bucket = 2;</code>
      * @param value The lifetimeValueBucket to set.
      * @return This builder for chaining.
      */
@@ -608,7 +608,7 @@ private static final long serialVersionUID = 0L;
      * operation where 0 will also be accepted.
      * </pre>
      *
-     * <code>int32 lifetime_value_bucket = 2;</code>
+     * <code>optional int32 lifetime_value_bucket = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearLifetimeValueBucket() {

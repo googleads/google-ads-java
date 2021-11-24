@@ -36,7 +36,7 @@ public interface UserListOrBuilder extends
    * Output only. Id of the user list.
    * </pre>
    *
-   * <code>int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -45,7 +45,7 @@ public interface UserListOrBuilder extends
    * Output only. Id of the user list.
    * </pre>
    *
-   * <code>int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   long getId();
@@ -58,7 +58,7 @@ public interface UserListOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>bool read_only = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool read_only = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the readOnly field is set.
    */
   boolean hasReadOnly();
@@ -70,7 +70,7 @@ public interface UserListOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>bool read_only = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool read_only = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The readOnly.
    */
   boolean getReadOnly();
@@ -81,7 +81,7 @@ public interface UserListOrBuilder extends
    * may not be unique (e.g. if access_reason=SHARED)
    * </pre>
    *
-   * <code>string name = 27;</code>
+   * <code>optional string name = 27;</code>
    * @return Whether the name field is set.
    */
   boolean hasName();
@@ -91,7 +91,7 @@ public interface UserListOrBuilder extends
    * may not be unique (e.g. if access_reason=SHARED)
    * </pre>
    *
-   * <code>string name = 27;</code>
+   * <code>optional string name = 27;</code>
    * @return The name.
    */
   java.lang.String getName();
@@ -101,7 +101,7 @@ public interface UserListOrBuilder extends
    * may not be unique (e.g. if access_reason=SHARED)
    * </pre>
    *
-   * <code>string name = 27;</code>
+   * <code>optional string name = 27;</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
@@ -112,7 +112,7 @@ public interface UserListOrBuilder extends
    * Description of this user list.
    * </pre>
    *
-   * <code>string description = 28;</code>
+   * <code>optional string description = 28;</code>
    * @return Whether the description field is set.
    */
   boolean hasDescription();
@@ -121,7 +121,7 @@ public interface UserListOrBuilder extends
    * Description of this user list.
    * </pre>
    *
-   * <code>string description = 28;</code>
+   * <code>optional string description = 28;</code>
    * @return The description.
    */
   java.lang.String getDescription();
@@ -130,7 +130,7 @@ public interface UserListOrBuilder extends
    * Description of this user list.
    * </pre>
    *
-   * <code>string description = 28;</code>
+   * <code>optional string description = 28;</code>
    * @return The bytes for description.
    */
   com.google.protobuf.ByteString
@@ -165,7 +165,7 @@ public interface UserListOrBuilder extends
    * IDs on their systems.
    * </pre>
    *
-   * <code>string integration_code = 29;</code>
+   * <code>optional string integration_code = 29;</code>
    * @return Whether the integrationCode field is set.
    */
   boolean hasIntegrationCode();
@@ -175,7 +175,7 @@ public interface UserListOrBuilder extends
    * IDs on their systems.
    * </pre>
    *
-   * <code>string integration_code = 29;</code>
+   * <code>optional string integration_code = 29;</code>
    * @return The integrationCode.
    */
   java.lang.String getIntegrationCode();
@@ -185,7 +185,7 @@ public interface UserListOrBuilder extends
    * IDs on their systems.
    * </pre>
    *
-   * <code>string integration_code = 29;</code>
+   * <code>optional string integration_code = 29;</code>
    * @return The bytes for integrationCode.
    */
   com.google.protobuf.ByteString
@@ -200,7 +200,7 @@ public interface UserListOrBuilder extends
    * It'll be ignored for logical_user_list.
    * </pre>
    *
-   * <code>int64 membership_life_span = 30;</code>
+   * <code>optional int64 membership_life_span = 30;</code>
    * @return Whether the membershipLifeSpan field is set.
    */
   boolean hasMembershipLifeSpan();
@@ -213,7 +213,7 @@ public interface UserListOrBuilder extends
    * It'll be ignored for logical_user_list.
    * </pre>
    *
-   * <code>int64 membership_life_span = 30;</code>
+   * <code>optional int64 membership_life_span = 30;</code>
    * @return The membershipLifeSpan.
    */
   long getMembershipLifeSpan();
@@ -225,7 +225,7 @@ public interface UserListOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 size_for_display = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 size_for_display = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the sizeForDisplay field is set.
    */
   boolean hasSizeForDisplay();
@@ -236,7 +236,7 @@ public interface UserListOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 size_for_display = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 size_for_display = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The sizeForDisplay.
    */
   long getSizeForDisplay();
@@ -272,7 +272,7 @@ public interface UserListOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 size_for_search = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 size_for_search = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the sizeForSearch field is set.
    */
   boolean hasSizeForSearch();
@@ -284,7 +284,7 @@ public interface UserListOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 size_for_search = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 size_for_search = 32 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The sizeForSearch.
    */
   long getSizeForSearch();
@@ -407,7 +407,7 @@ public interface UserListOrBuilder extends
    * Indicates if this user list is eligible for Google Search Network.
    * </pre>
    *
-   * <code>bool eligible_for_search = 33;</code>
+   * <code>optional bool eligible_for_search = 33;</code>
    * @return Whether the eligibleForSearch field is set.
    */
   boolean hasEligibleForSearch();
@@ -416,7 +416,7 @@ public interface UserListOrBuilder extends
    * Indicates if this user list is eligible for Google Search Network.
    * </pre>
    *
-   * <code>bool eligible_for_search = 33;</code>
+   * <code>optional bool eligible_for_search = 33;</code>
    * @return The eligibleForSearch.
    */
   boolean getEligibleForSearch();
@@ -427,7 +427,7 @@ public interface UserListOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>bool eligible_for_display = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool eligible_for_display = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the eligibleForDisplay field is set.
    */
   boolean hasEligibleForDisplay();
@@ -437,7 +437,7 @@ public interface UserListOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>bool eligible_for_display = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool eligible_for_display = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The eligibleForDisplay.
    */
   boolean getEligibleForDisplay();
@@ -450,7 +450,7 @@ public interface UserListOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>int32 match_rate_percentage = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int32 match_rate_percentage = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the matchRatePercentage field is set.
    */
   boolean hasMatchRatePercentage();
@@ -462,7 +462,7 @@ public interface UserListOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>int32 match_rate_percentage = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int32 match_rate_percentage = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The matchRatePercentage.
    */
   int getMatchRatePercentage();

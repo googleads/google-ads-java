@@ -111,8 +111,7 @@ private static final long serialVersionUID = 0L;
     UNKNOWN(1),
     /**
      * <pre>
-     * Locations associated with the customer's linked Google My Business
-     * account.
+     * Locations associated with the customer's linked Business Profile.
      * </pre>
      *
      * <code>GOOGLE_MY_BUSINESS = 2;</code>
@@ -147,8 +146,7 @@ private static final long serialVersionUID = 0L;
     public static final int UNKNOWN_VALUE = 1;
     /**
      * <pre>
-     * Locations associated with the customer's linked Google My Business
-     * account.
+     * Locations associated with the customer's linked Business Profile.
      * </pre>
      *
      * <code>GOOGLE_MY_BUSINESS = 2;</code>

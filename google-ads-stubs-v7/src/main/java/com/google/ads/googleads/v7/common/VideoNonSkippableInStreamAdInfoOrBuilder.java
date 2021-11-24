@@ -12,7 +12,7 @@ public interface VideoNonSkippableInStreamAdInfoOrBuilder extends
    * The MediaFile resource name of the companion banner used with the ad.
    * </pre>
    *
-   * <code>string companion_banner = 2;</code>
+   * <code>optional string companion_banner = 2;</code>
    * @return Whether the companionBanner field is set.
    */
   boolean hasCompanionBanner();
@@ -21,7 +21,7 @@ public interface VideoNonSkippableInStreamAdInfoOrBuilder extends
    * The MediaFile resource name of the companion banner used with the ad.
    * </pre>
    *
-   * <code>string companion_banner = 2;</code>
+   * <code>optional string companion_banner = 2;</code>
    * @return The companionBanner.
    */
   java.lang.String getCompanionBanner();
@@ -30,7 +30,7 @@ public interface VideoNonSkippableInStreamAdInfoOrBuilder extends
    * The MediaFile resource name of the companion banner used with the ad.
    * </pre>
    *
-   * <code>string companion_banner = 2;</code>
+   * <code>optional string companion_banner = 2;</code>
    * @return The bytes for companionBanner.
    */
   com.google.protobuf.ByteString

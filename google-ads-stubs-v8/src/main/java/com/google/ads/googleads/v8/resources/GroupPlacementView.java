@@ -179,7 +179,7 @@ private static final long serialVersionUID = 0L;
    * app ID, or a YouTube channel ID.
    * </pre>
    *
-   * <code>string placement = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string placement = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the placement field is set.
    */
   @java.lang.Override
@@ -192,7 +192,7 @@ private static final long serialVersionUID = 0L;
    * app ID, or a YouTube channel ID.
    * </pre>
    *
-   * <code>string placement = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string placement = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The placement.
    */
   @java.lang.Override
@@ -214,7 +214,7 @@ private static final long serialVersionUID = 0L;
    * app ID, or a YouTube channel ID.
    * </pre>
    *
-   * <code>string placement = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string placement = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for placement.
    */
   @java.lang.Override
@@ -239,7 +239,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Domain name for websites and YouTube channel name for YouTube channels.
    * </pre>
    *
-   * <code>string display_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string display_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the displayName field is set.
    */
   @java.lang.Override
@@ -251,7 +251,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Domain name for websites and YouTube channel name for YouTube channels.
    * </pre>
    *
-   * <code>string display_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string display_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The displayName.
    */
   @java.lang.Override
@@ -272,7 +272,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Domain name for websites and YouTube channel name for YouTube channels.
    * </pre>
    *
-   * <code>string display_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string display_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for displayName.
    */
   @java.lang.Override
@@ -298,7 +298,7 @@ private static final long serialVersionUID = 0L;
    * app store, or a YouTube channel URL.
    * </pre>
    *
-   * <code>string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the targetUrl field is set.
    */
   @java.lang.Override
@@ -311,7 +311,7 @@ private static final long serialVersionUID = 0L;
    * app store, or a YouTube channel URL.
    * </pre>
    *
-   * <code>string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The targetUrl.
    */
   @java.lang.Override
@@ -333,7 +333,7 @@ private static final long serialVersionUID = 0L;
    * app store, or a YouTube channel URL.
    * </pre>
    *
-   * <code>string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for targetUrl.
    */
   @java.lang.Override
@@ -392,7 +392,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (placementType_ != com.google.ads.googleads.v8.enums.PlacementTypeEnum.PlacementType.UNSPECIFIED.getNumber()) {
@@ -416,7 +416,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (placementType_ != com.google.ads.googleads.v8.enums.PlacementTypeEnum.PlacementType.UNSPECIFIED.getNumber()) {
@@ -895,7 +895,7 @@ private static final long serialVersionUID = 0L;
      * app ID, or a YouTube channel ID.
      * </pre>
      *
-     * <code>string placement = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string placement = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the placement field is set.
      */
     public boolean hasPlacement() {
@@ -907,7 +907,7 @@ private static final long serialVersionUID = 0L;
      * app ID, or a YouTube channel ID.
      * </pre>
      *
-     * <code>string placement = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string placement = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The placement.
      */
     public java.lang.String getPlacement() {
@@ -928,7 +928,7 @@ private static final long serialVersionUID = 0L;
      * app ID, or a YouTube channel ID.
      * </pre>
      *
-     * <code>string placement = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string placement = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for placement.
      */
     public com.google.protobuf.ByteString
@@ -950,7 +950,7 @@ private static final long serialVersionUID = 0L;
      * app ID, or a YouTube channel ID.
      * </pre>
      *
-     * <code>string placement = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string placement = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The placement to set.
      * @return This builder for chaining.
      */
@@ -970,7 +970,7 @@ private static final long serialVersionUID = 0L;
      * app ID, or a YouTube channel ID.
      * </pre>
      *
-     * <code>string placement = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string placement = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearPlacement() {
@@ -985,7 +985,7 @@ private static final long serialVersionUID = 0L;
      * app ID, or a YouTube channel ID.
      * </pre>
      *
-     * <code>string placement = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string placement = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for placement to set.
      * @return This builder for chaining.
      */
@@ -1007,7 +1007,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Domain name for websites and YouTube channel name for YouTube channels.
      * </pre>
      *
-     * <code>string display_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string display_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the displayName field is set.
      */
     public boolean hasDisplayName() {
@@ -1018,7 +1018,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Domain name for websites and YouTube channel name for YouTube channels.
      * </pre>
      *
-     * <code>string display_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string display_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The displayName.
      */
     public java.lang.String getDisplayName() {
@@ -1038,7 +1038,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Domain name for websites and YouTube channel name for YouTube channels.
      * </pre>
      *
-     * <code>string display_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string display_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for displayName.
      */
     public com.google.protobuf.ByteString
@@ -1059,7 +1059,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Domain name for websites and YouTube channel name for YouTube channels.
      * </pre>
      *
-     * <code>string display_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string display_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The displayName to set.
      * @return This builder for chaining.
      */
@@ -1078,7 +1078,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Domain name for websites and YouTube channel name for YouTube channels.
      * </pre>
      *
-     * <code>string display_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string display_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearDisplayName() {
@@ -1092,7 +1092,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Domain name for websites and YouTube channel name for YouTube channels.
      * </pre>
      *
-     * <code>string display_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string display_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for displayName to set.
      * @return This builder for chaining.
      */
@@ -1115,7 +1115,7 @@ private static final long serialVersionUID = 0L;
      * app store, or a YouTube channel URL.
      * </pre>
      *
-     * <code>string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the targetUrl field is set.
      */
     public boolean hasTargetUrl() {
@@ -1127,7 +1127,7 @@ private static final long serialVersionUID = 0L;
      * app store, or a YouTube channel URL.
      * </pre>
      *
-     * <code>string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The targetUrl.
      */
     public java.lang.String getTargetUrl() {
@@ -1148,7 +1148,7 @@ private static final long serialVersionUID = 0L;
      * app store, or a YouTube channel URL.
      * </pre>
      *
-     * <code>string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for targetUrl.
      */
     public com.google.protobuf.ByteString
@@ -1170,7 +1170,7 @@ private static final long serialVersionUID = 0L;
      * app store, or a YouTube channel URL.
      * </pre>
      *
-     * <code>string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The targetUrl to set.
      * @return This builder for chaining.
      */
@@ -1190,7 +1190,7 @@ private static final long serialVersionUID = 0L;
      * app store, or a YouTube channel URL.
      * </pre>
      *
-     * <code>string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearTargetUrl() {
@@ -1205,7 +1205,7 @@ private static final long serialVersionUID = 0L;
      * app store, or a YouTube channel URL.
      * </pre>
      *
-     * <code>string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for targetUrl to set.
      * @return This builder for chaining.
      */

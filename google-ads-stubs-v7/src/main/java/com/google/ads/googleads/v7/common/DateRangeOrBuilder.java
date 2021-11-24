@@ -12,7 +12,7 @@ public interface DateRangeOrBuilder extends
    * The start date, in yyyy-mm-dd format. This date is inclusive.
    * </pre>
    *
-   * <code>string start_date = 3;</code>
+   * <code>optional string start_date = 3;</code>
    * @return Whether the startDate field is set.
    */
   boolean hasStartDate();
@@ -21,7 +21,7 @@ public interface DateRangeOrBuilder extends
    * The start date, in yyyy-mm-dd format. This date is inclusive.
    * </pre>
    *
-   * <code>string start_date = 3;</code>
+   * <code>optional string start_date = 3;</code>
    * @return The startDate.
    */
   java.lang.String getStartDate();
@@ -30,7 +30,7 @@ public interface DateRangeOrBuilder extends
    * The start date, in yyyy-mm-dd format. This date is inclusive.
    * </pre>
    *
-   * <code>string start_date = 3;</code>
+   * <code>optional string start_date = 3;</code>
    * @return The bytes for startDate.
    */
   com.google.protobuf.ByteString
@@ -41,7 +41,7 @@ public interface DateRangeOrBuilder extends
    * The end date, in yyyy-mm-dd format. This date is inclusive.
    * </pre>
    *
-   * <code>string end_date = 4;</code>
+   * <code>optional string end_date = 4;</code>
    * @return Whether the endDate field is set.
    */
   boolean hasEndDate();
@@ -50,7 +50,7 @@ public interface DateRangeOrBuilder extends
    * The end date, in yyyy-mm-dd format. This date is inclusive.
    * </pre>
    *
-   * <code>string end_date = 4;</code>
+   * <code>optional string end_date = 4;</code>
    * @return The endDate.
    */
   java.lang.String getEndDate();
@@ -59,7 +59,7 @@ public interface DateRangeOrBuilder extends
    * The end date, in yyyy-mm-dd format. This date is inclusive.
    * </pre>
    *
-   * <code>string end_date = 4;</code>
+   * <code>optional string end_date = 4;</code>
    * @return The bytes for endDate.
    */
   com.google.protobuf.ByteString

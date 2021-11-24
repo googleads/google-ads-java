@@ -12,7 +12,7 @@ public interface MobileAppCategoryInfoOrBuilder extends
    * The mobile app category constant resource name.
    * </pre>
    *
-   * <code>string mobile_app_category_constant = 2;</code>
+   * <code>optional string mobile_app_category_constant = 2;</code>
    * @return Whether the mobileAppCategoryConstant field is set.
    */
   boolean hasMobileAppCategoryConstant();
@@ -21,7 +21,7 @@ public interface MobileAppCategoryInfoOrBuilder extends
    * The mobile app category constant resource name.
    * </pre>
    *
-   * <code>string mobile_app_category_constant = 2;</code>
+   * <code>optional string mobile_app_category_constant = 2;</code>
    * @return The mobileAppCategoryConstant.
    */
   java.lang.String getMobileAppCategoryConstant();
@@ -30,7 +30,7 @@ public interface MobileAppCategoryInfoOrBuilder extends
    * The mobile app category constant resource name.
    * </pre>
    *
-   * <code>string mobile_app_category_constant = 2;</code>
+   * <code>optional string mobile_app_category_constant = 2;</code>
    * @return The bytes for mobileAppCategoryConstant.
    */
   com.google.protobuf.ByteString

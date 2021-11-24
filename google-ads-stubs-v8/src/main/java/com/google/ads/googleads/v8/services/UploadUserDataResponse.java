@@ -106,7 +106,7 @@ private static final long serialVersionUID = 0L;
    * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
    * </pre>
    *
-   * <code>string upload_date_time = 3;</code>
+   * <code>optional string upload_date_time = 3;</code>
    * @return Whether the uploadDateTime field is set.
    */
   @java.lang.Override
@@ -119,7 +119,7 @@ private static final long serialVersionUID = 0L;
    * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
    * </pre>
    *
-   * <code>string upload_date_time = 3;</code>
+   * <code>optional string upload_date_time = 3;</code>
    * @return The uploadDateTime.
    */
   @java.lang.Override
@@ -141,7 +141,7 @@ private static final long serialVersionUID = 0L;
    * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
    * </pre>
    *
-   * <code>string upload_date_time = 3;</code>
+   * <code>optional string upload_date_time = 3;</code>
    * @return The bytes for uploadDateTime.
    */
   @java.lang.Override
@@ -166,7 +166,7 @@ private static final long serialVersionUID = 0L;
    * Number of upload data operations received by API.
    * </pre>
    *
-   * <code>int32 received_operations_count = 4;</code>
+   * <code>optional int32 received_operations_count = 4;</code>
    * @return Whether the receivedOperationsCount field is set.
    */
   @java.lang.Override
@@ -178,7 +178,7 @@ private static final long serialVersionUID = 0L;
    * Number of upload data operations received by API.
    * </pre>
    *
-   * <code>int32 received_operations_count = 4;</code>
+   * <code>optional int32 received_operations_count = 4;</code>
    * @return The receivedOperationsCount.
    */
   @java.lang.Override
@@ -537,7 +537,7 @@ private static final long serialVersionUID = 0L;
      * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
      * </pre>
      *
-     * <code>string upload_date_time = 3;</code>
+     * <code>optional string upload_date_time = 3;</code>
      * @return Whether the uploadDateTime field is set.
      */
     public boolean hasUploadDateTime() {
@@ -549,7 +549,7 @@ private static final long serialVersionUID = 0L;
      * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
      * </pre>
      *
-     * <code>string upload_date_time = 3;</code>
+     * <code>optional string upload_date_time = 3;</code>
      * @return The uploadDateTime.
      */
     public java.lang.String getUploadDateTime() {
@@ -570,7 +570,7 @@ private static final long serialVersionUID = 0L;
      * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
      * </pre>
      *
-     * <code>string upload_date_time = 3;</code>
+     * <code>optional string upload_date_time = 3;</code>
      * @return The bytes for uploadDateTime.
      */
     public com.google.protobuf.ByteString
@@ -592,7 +592,7 @@ private static final long serialVersionUID = 0L;
      * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
      * </pre>
      *
-     * <code>string upload_date_time = 3;</code>
+     * <code>optional string upload_date_time = 3;</code>
      * @param value The uploadDateTime to set.
      * @return This builder for chaining.
      */
@@ -612,7 +612,7 @@ private static final long serialVersionUID = 0L;
      * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
      * </pre>
      *
-     * <code>string upload_date_time = 3;</code>
+     * <code>optional string upload_date_time = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearUploadDateTime() {
@@ -627,7 +627,7 @@ private static final long serialVersionUID = 0L;
      * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
      * </pre>
      *
-     * <code>string upload_date_time = 3;</code>
+     * <code>optional string upload_date_time = 3;</code>
      * @param value The bytes for uploadDateTime to set.
      * @return This builder for chaining.
      */
@@ -649,7 +649,7 @@ private static final long serialVersionUID = 0L;
      * Number of upload data operations received by API.
      * </pre>
      *
-     * <code>int32 received_operations_count = 4;</code>
+     * <code>optional int32 received_operations_count = 4;</code>
      * @return Whether the receivedOperationsCount field is set.
      */
     @java.lang.Override
@@ -661,7 +661,7 @@ private static final long serialVersionUID = 0L;
      * Number of upload data operations received by API.
      * </pre>
      *
-     * <code>int32 received_operations_count = 4;</code>
+     * <code>optional int32 received_operations_count = 4;</code>
      * @return The receivedOperationsCount.
      */
     @java.lang.Override
@@ -673,7 +673,7 @@ private static final long serialVersionUID = 0L;
      * Number of upload data operations received by API.
      * </pre>
      *
-     * <code>int32 received_operations_count = 4;</code>
+     * <code>optional int32 received_operations_count = 4;</code>
      * @param value The receivedOperationsCount to set.
      * @return This builder for chaining.
      */
@@ -688,7 +688,7 @@ private static final long serialVersionUID = 0L;
      * Number of upload data operations received by API.
      * </pre>
      *
-     * <code>int32 received_operations_count = 4;</code>
+     * <code>optional int32 received_operations_count = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearReceivedOperationsCount() {

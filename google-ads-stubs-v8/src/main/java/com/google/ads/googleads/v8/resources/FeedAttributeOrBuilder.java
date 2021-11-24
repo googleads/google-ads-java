@@ -12,7 +12,7 @@ public interface FeedAttributeOrBuilder extends
    * ID of the attribute.
    * </pre>
    *
-   * <code>int64 id = 5;</code>
+   * <code>optional int64 id = 5;</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -21,7 +21,7 @@ public interface FeedAttributeOrBuilder extends
    * ID of the attribute.
    * </pre>
    *
-   * <code>int64 id = 5;</code>
+   * <code>optional int64 id = 5;</code>
    * @return The id.
    */
   long getId();
@@ -31,7 +31,7 @@ public interface FeedAttributeOrBuilder extends
    * The name of the attribute. Required.
    * </pre>
    *
-   * <code>string name = 6;</code>
+   * <code>optional string name = 6;</code>
    * @return Whether the name field is set.
    */
   boolean hasName();
@@ -40,7 +40,7 @@ public interface FeedAttributeOrBuilder extends
    * The name of the attribute. Required.
    * </pre>
    *
-   * <code>string name = 6;</code>
+   * <code>optional string name = 6;</code>
    * @return The name.
    */
   java.lang.String getName();
@@ -49,7 +49,7 @@ public interface FeedAttributeOrBuilder extends
    * The name of the attribute. Required.
    * </pre>
    *
-   * <code>string name = 6;</code>
+   * <code>optional string name = 6;</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
@@ -82,7 +82,7 @@ public interface FeedAttributeOrBuilder extends
    * FeedItems must be referenced by their feed_item_id.
    * </pre>
    *
-   * <code>bool is_part_of_key = 7;</code>
+   * <code>optional bool is_part_of_key = 7;</code>
    * @return Whether the isPartOfKey field is set.
    */
   boolean hasIsPartOfKey();
@@ -94,7 +94,7 @@ public interface FeedAttributeOrBuilder extends
    * FeedItems must be referenced by their feed_item_id.
    * </pre>
    *
-   * <code>bool is_part_of_key = 7;</code>
+   * <code>optional bool is_part_of_key = 7;</code>
    * @return The isPartOfKey.
    */
   boolean getIsPartOfKey();

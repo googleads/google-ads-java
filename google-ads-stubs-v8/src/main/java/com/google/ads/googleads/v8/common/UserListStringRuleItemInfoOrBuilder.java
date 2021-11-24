@@ -38,7 +38,7 @@ public interface UserListStringRuleItemInfoOrBuilder extends
    * creating a new string rule item.
    * </pre>
    *
-   * <code>string value = 3;</code>
+   * <code>optional string value = 3;</code>
    * @return Whether the value field is set.
    */
   boolean hasValue();
@@ -50,7 +50,7 @@ public interface UserListStringRuleItemInfoOrBuilder extends
    * creating a new string rule item.
    * </pre>
    *
-   * <code>string value = 3;</code>
+   * <code>optional string value = 3;</code>
    * @return The value.
    */
   java.lang.String getValue();
@@ -62,7 +62,7 @@ public interface UserListStringRuleItemInfoOrBuilder extends
    * creating a new string rule item.
    * </pre>
    *
-   * <code>string value = 3;</code>
+   * <code>optional string value = 3;</code>
    * @return The bytes for value.
    */
   com.google.protobuf.ByteString

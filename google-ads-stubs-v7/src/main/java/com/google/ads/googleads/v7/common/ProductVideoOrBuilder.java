@@ -12,7 +12,7 @@ public interface ProductVideoOrBuilder extends
    * The MediaFile resource name of a video which must be hosted on YouTube.
    * </pre>
    *
-   * <code>string product_video = 2;</code>
+   * <code>optional string product_video = 2;</code>
    * @return Whether the productVideo field is set.
    */
   boolean hasProductVideo();
@@ -21,7 +21,7 @@ public interface ProductVideoOrBuilder extends
    * The MediaFile resource name of a video which must be hosted on YouTube.
    * </pre>
    *
-   * <code>string product_video = 2;</code>
+   * <code>optional string product_video = 2;</code>
    * @return The productVideo.
    */
   java.lang.String getProductVideo();
@@ -30,7 +30,7 @@ public interface ProductVideoOrBuilder extends
    * The MediaFile resource name of a video which must be hosted on YouTube.
    * </pre>
    *
-   * <code>string product_video = 2;</code>
+   * <code>optional string product_video = 2;</code>
    * @return The bytes for productVideo.
    */
   com.google.protobuf.ByteString

@@ -110,7 +110,7 @@ private static final long serialVersionUID = 0L;
    * Height of the image.
    * </pre>
    *
-   * <code>int64 height_pixels = 4;</code>
+   * <code>optional int64 height_pixels = 4;</code>
    * @return Whether the heightPixels field is set.
    */
   @java.lang.Override
@@ -122,7 +122,7 @@ private static final long serialVersionUID = 0L;
    * Height of the image.
    * </pre>
    *
-   * <code>int64 height_pixels = 4;</code>
+   * <code>optional int64 height_pixels = 4;</code>
    * @return The heightPixels.
    */
   @java.lang.Override
@@ -137,7 +137,7 @@ private static final long serialVersionUID = 0L;
    * Width of the image.
    * </pre>
    *
-   * <code>int64 width_pixels = 5;</code>
+   * <code>optional int64 width_pixels = 5;</code>
    * @return Whether the widthPixels field is set.
    */
   @java.lang.Override
@@ -149,7 +149,7 @@ private static final long serialVersionUID = 0L;
    * Width of the image.
    * </pre>
    *
-   * <code>int64 width_pixels = 5;</code>
+   * <code>optional int64 width_pixels = 5;</code>
    * @return The widthPixels.
    */
   @java.lang.Override
@@ -164,7 +164,7 @@ private static final long serialVersionUID = 0L;
    * A URL that returns the image with this height and width.
    * </pre>
    *
-   * <code>string url = 6;</code>
+   * <code>optional string url = 6;</code>
    * @return Whether the url field is set.
    */
   @java.lang.Override
@@ -176,7 +176,7 @@ private static final long serialVersionUID = 0L;
    * A URL that returns the image with this height and width.
    * </pre>
    *
-   * <code>string url = 6;</code>
+   * <code>optional string url = 6;</code>
    * @return The url.
    */
   @java.lang.Override
@@ -197,7 +197,7 @@ private static final long serialVersionUID = 0L;
    * A URL that returns the image with this height and width.
    * </pre>
    *
-   * <code>string url = 6;</code>
+   * <code>optional string url = 6;</code>
    * @return The bytes for url.
    */
   @java.lang.Override
@@ -592,7 +592,7 @@ private static final long serialVersionUID = 0L;
      * Height of the image.
      * </pre>
      *
-     * <code>int64 height_pixels = 4;</code>
+     * <code>optional int64 height_pixels = 4;</code>
      * @return Whether the heightPixels field is set.
      */
     @java.lang.Override
@@ -604,7 +604,7 @@ private static final long serialVersionUID = 0L;
      * Height of the image.
      * </pre>
      *
-     * <code>int64 height_pixels = 4;</code>
+     * <code>optional int64 height_pixels = 4;</code>
      * @return The heightPixels.
      */
     @java.lang.Override
@@ -616,7 +616,7 @@ private static final long serialVersionUID = 0L;
      * Height of the image.
      * </pre>
      *
-     * <code>int64 height_pixels = 4;</code>
+     * <code>optional int64 height_pixels = 4;</code>
      * @param value The heightPixels to set.
      * @return This builder for chaining.
      */
@@ -631,7 +631,7 @@ private static final long serialVersionUID = 0L;
      * Height of the image.
      * </pre>
      *
-     * <code>int64 height_pixels = 4;</code>
+     * <code>optional int64 height_pixels = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearHeightPixels() {
@@ -647,7 +647,7 @@ private static final long serialVersionUID = 0L;
      * Width of the image.
      * </pre>
      *
-     * <code>int64 width_pixels = 5;</code>
+     * <code>optional int64 width_pixels = 5;</code>
      * @return Whether the widthPixels field is set.
      */
     @java.lang.Override
@@ -659,7 +659,7 @@ private static final long serialVersionUID = 0L;
      * Width of the image.
      * </pre>
      *
-     * <code>int64 width_pixels = 5;</code>
+     * <code>optional int64 width_pixels = 5;</code>
      * @return The widthPixels.
      */
     @java.lang.Override
@@ -671,7 +671,7 @@ private static final long serialVersionUID = 0L;
      * Width of the image.
      * </pre>
      *
-     * <code>int64 width_pixels = 5;</code>
+     * <code>optional int64 width_pixels = 5;</code>
      * @param value The widthPixels to set.
      * @return This builder for chaining.
      */
@@ -686,7 +686,7 @@ private static final long serialVersionUID = 0L;
      * Width of the image.
      * </pre>
      *
-     * <code>int64 width_pixels = 5;</code>
+     * <code>optional int64 width_pixels = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearWidthPixels() {
@@ -702,7 +702,7 @@ private static final long serialVersionUID = 0L;
      * A URL that returns the image with this height and width.
      * </pre>
      *
-     * <code>string url = 6;</code>
+     * <code>optional string url = 6;</code>
      * @return Whether the url field is set.
      */
     public boolean hasUrl() {
@@ -713,7 +713,7 @@ private static final long serialVersionUID = 0L;
      * A URL that returns the image with this height and width.
      * </pre>
      *
-     * <code>string url = 6;</code>
+     * <code>optional string url = 6;</code>
      * @return The url.
      */
     public java.lang.String getUrl() {
@@ -733,7 +733,7 @@ private static final long serialVersionUID = 0L;
      * A URL that returns the image with this height and width.
      * </pre>
      *
-     * <code>string url = 6;</code>
+     * <code>optional string url = 6;</code>
      * @return The bytes for url.
      */
     public com.google.protobuf.ByteString
@@ -754,7 +754,7 @@ private static final long serialVersionUID = 0L;
      * A URL that returns the image with this height and width.
      * </pre>
      *
-     * <code>string url = 6;</code>
+     * <code>optional string url = 6;</code>
      * @param value The url to set.
      * @return This builder for chaining.
      */
@@ -773,7 +773,7 @@ private static final long serialVersionUID = 0L;
      * A URL that returns the image with this height and width.
      * </pre>
      *
-     * <code>string url = 6;</code>
+     * <code>optional string url = 6;</code>
      * @return This builder for chaining.
      */
     public Builder clearUrl() {
@@ -787,7 +787,7 @@ private static final long serialVersionUID = 0L;
      * A URL that returns the image with this height and width.
      * </pre>
      *
-     * <code>string url = 6;</code>
+     * <code>optional string url = 6;</code>
      * @param value The bytes for url to set.
      * @return This builder for chaining.
      */

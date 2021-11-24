@@ -12,7 +12,7 @@ public interface HotelLengthOfStayInfoOrBuilder extends
    * Low end of the number of nights in the stay.
    * </pre>
    *
-   * <code>int64 min_nights = 3;</code>
+   * <code>optional int64 min_nights = 3;</code>
    * @return Whether the minNights field is set.
    */
   boolean hasMinNights();
@@ -21,7 +21,7 @@ public interface HotelLengthOfStayInfoOrBuilder extends
    * Low end of the number of nights in the stay.
    * </pre>
    *
-   * <code>int64 min_nights = 3;</code>
+   * <code>optional int64 min_nights = 3;</code>
    * @return The minNights.
    */
   long getMinNights();
@@ -31,7 +31,7 @@ public interface HotelLengthOfStayInfoOrBuilder extends
    * High end of the number of nights in the stay.
    * </pre>
    *
-   * <code>int64 max_nights = 4;</code>
+   * <code>optional int64 max_nights = 4;</code>
    * @return Whether the maxNights field is set.
    */
   boolean hasMaxNights();
@@ -40,7 +40,7 @@ public interface HotelLengthOfStayInfoOrBuilder extends
    * High end of the number of nights in the stay.
    * </pre>
    *
-   * <code>int64 max_nights = 4;</code>
+   * <code>optional int64 max_nights = 4;</code>
    * @return The maxNights.
    */
   long getMaxNights();

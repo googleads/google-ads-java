@@ -142,7 +142,7 @@ private static final long serialVersionUID = 0L;
    * Postal code.
    * </pre>
    *
-   * <code>string postal_code = 8;</code>
+   * <code>optional string postal_code = 8;</code>
    * @return Whether the postalCode field is set.
    */
   @java.lang.Override
@@ -154,7 +154,7 @@ private static final long serialVersionUID = 0L;
    * Postal code.
    * </pre>
    *
-   * <code>string postal_code = 8;</code>
+   * <code>optional string postal_code = 8;</code>
    * @return The postalCode.
    */
   @java.lang.Override
@@ -175,7 +175,7 @@ private static final long serialVersionUID = 0L;
    * Postal code.
    * </pre>
    *
-   * <code>string postal_code = 8;</code>
+   * <code>optional string postal_code = 8;</code>
    * @return The bytes for postalCode.
    */
   @java.lang.Override
@@ -200,7 +200,7 @@ private static final long serialVersionUID = 0L;
    * Province or state code.
    * </pre>
    *
-   * <code>string province_code = 9;</code>
+   * <code>optional string province_code = 9;</code>
    * @return Whether the provinceCode field is set.
    */
   @java.lang.Override
@@ -212,7 +212,7 @@ private static final long serialVersionUID = 0L;
    * Province or state code.
    * </pre>
    *
-   * <code>string province_code = 9;</code>
+   * <code>optional string province_code = 9;</code>
    * @return The provinceCode.
    */
   @java.lang.Override
@@ -233,7 +233,7 @@ private static final long serialVersionUID = 0L;
    * Province or state code.
    * </pre>
    *
-   * <code>string province_code = 9;</code>
+   * <code>optional string province_code = 9;</code>
    * @return The bytes for provinceCode.
    */
   @java.lang.Override
@@ -258,7 +258,7 @@ private static final long serialVersionUID = 0L;
    * Country code.
    * </pre>
    *
-   * <code>string country_code = 10;</code>
+   * <code>optional string country_code = 10;</code>
    * @return Whether the countryCode field is set.
    */
   @java.lang.Override
@@ -270,7 +270,7 @@ private static final long serialVersionUID = 0L;
    * Country code.
    * </pre>
    *
-   * <code>string country_code = 10;</code>
+   * <code>optional string country_code = 10;</code>
    * @return The countryCode.
    */
   @java.lang.Override
@@ -291,7 +291,7 @@ private static final long serialVersionUID = 0L;
    * Country code.
    * </pre>
    *
-   * <code>string country_code = 10;</code>
+   * <code>optional string country_code = 10;</code>
    * @return The bytes for countryCode.
    */
   @java.lang.Override
@@ -316,7 +316,7 @@ private static final long serialVersionUID = 0L;
    * Province or state name.
    * </pre>
    *
-   * <code>string province_name = 11;</code>
+   * <code>optional string province_name = 11;</code>
    * @return Whether the provinceName field is set.
    */
   @java.lang.Override
@@ -328,7 +328,7 @@ private static final long serialVersionUID = 0L;
    * Province or state name.
    * </pre>
    *
-   * <code>string province_name = 11;</code>
+   * <code>optional string province_name = 11;</code>
    * @return The provinceName.
    */
   @java.lang.Override
@@ -349,7 +349,7 @@ private static final long serialVersionUID = 0L;
    * Province or state name.
    * </pre>
    *
-   * <code>string province_name = 11;</code>
+   * <code>optional string province_name = 11;</code>
    * @return The bytes for provinceName.
    */
   @java.lang.Override
@@ -374,7 +374,7 @@ private static final long serialVersionUID = 0L;
    * Street address line 1.
    * </pre>
    *
-   * <code>string street_address = 12;</code>
+   * <code>optional string street_address = 12;</code>
    * @return Whether the streetAddress field is set.
    */
   @java.lang.Override
@@ -386,7 +386,7 @@ private static final long serialVersionUID = 0L;
    * Street address line 1.
    * </pre>
    *
-   * <code>string street_address = 12;</code>
+   * <code>optional string street_address = 12;</code>
    * @return The streetAddress.
    */
   @java.lang.Override
@@ -407,7 +407,7 @@ private static final long serialVersionUID = 0L;
    * Street address line 1.
    * </pre>
    *
-   * <code>string street_address = 12;</code>
+   * <code>optional string street_address = 12;</code>
    * @return The bytes for streetAddress.
    */
   @java.lang.Override
@@ -434,7 +434,7 @@ private static final long serialVersionUID = 0L;
    * empty.
    * </pre>
    *
-   * <code>string street_address2 = 13;</code>
+   * <code>optional string street_address2 = 13;</code>
    * @return Whether the streetAddress2 field is set.
    */
   @java.lang.Override
@@ -448,7 +448,7 @@ private static final long serialVersionUID = 0L;
    * empty.
    * </pre>
    *
-   * <code>string street_address2 = 13;</code>
+   * <code>optional string street_address2 = 13;</code>
    * @return The streetAddress2.
    */
   @java.lang.Override
@@ -471,7 +471,7 @@ private static final long serialVersionUID = 0L;
    * empty.
    * </pre>
    *
-   * <code>string street_address2 = 13;</code>
+   * <code>optional string street_address2 = 13;</code>
    * @return The bytes for streetAddress2.
    */
   @java.lang.Override
@@ -496,7 +496,7 @@ private static final long serialVersionUID = 0L;
    * Name of the city.
    * </pre>
    *
-   * <code>string city_name = 14;</code>
+   * <code>optional string city_name = 14;</code>
    * @return Whether the cityName field is set.
    */
   @java.lang.Override
@@ -508,7 +508,7 @@ private static final long serialVersionUID = 0L;
    * Name of the city.
    * </pre>
    *
-   * <code>string city_name = 14;</code>
+   * <code>optional string city_name = 14;</code>
    * @return The cityName.
    */
   @java.lang.Override
@@ -529,7 +529,7 @@ private static final long serialVersionUID = 0L;
    * Name of the city.
    * </pre>
    *
-   * <code>string city_name = 14;</code>
+   * <code>optional string city_name = 14;</code>
    * @return The bytes for cityName.
    */
   @java.lang.Override
@@ -1028,7 +1028,7 @@ private static final long serialVersionUID = 0L;
      * Postal code.
      * </pre>
      *
-     * <code>string postal_code = 8;</code>
+     * <code>optional string postal_code = 8;</code>
      * @return Whether the postalCode field is set.
      */
     public boolean hasPostalCode() {
@@ -1039,7 +1039,7 @@ private static final long serialVersionUID = 0L;
      * Postal code.
      * </pre>
      *
-     * <code>string postal_code = 8;</code>
+     * <code>optional string postal_code = 8;</code>
      * @return The postalCode.
      */
     public java.lang.String getPostalCode() {
@@ -1059,7 +1059,7 @@ private static final long serialVersionUID = 0L;
      * Postal code.
      * </pre>
      *
-     * <code>string postal_code = 8;</code>
+     * <code>optional string postal_code = 8;</code>
      * @return The bytes for postalCode.
      */
     public com.google.protobuf.ByteString
@@ -1080,7 +1080,7 @@ private static final long serialVersionUID = 0L;
      * Postal code.
      * </pre>
      *
-     * <code>string postal_code = 8;</code>
+     * <code>optional string postal_code = 8;</code>
      * @param value The postalCode to set.
      * @return This builder for chaining.
      */
@@ -1099,7 +1099,7 @@ private static final long serialVersionUID = 0L;
      * Postal code.
      * </pre>
      *
-     * <code>string postal_code = 8;</code>
+     * <code>optional string postal_code = 8;</code>
      * @return This builder for chaining.
      */
     public Builder clearPostalCode() {
@@ -1113,7 +1113,7 @@ private static final long serialVersionUID = 0L;
      * Postal code.
      * </pre>
      *
-     * <code>string postal_code = 8;</code>
+     * <code>optional string postal_code = 8;</code>
      * @param value The bytes for postalCode to set.
      * @return This builder for chaining.
      */
@@ -1135,7 +1135,7 @@ private static final long serialVersionUID = 0L;
      * Province or state code.
      * </pre>
      *
-     * <code>string province_code = 9;</code>
+     * <code>optional string province_code = 9;</code>
      * @return Whether the provinceCode field is set.
      */
     public boolean hasProvinceCode() {
@@ -1146,7 +1146,7 @@ private static final long serialVersionUID = 0L;
      * Province or state code.
      * </pre>
      *
-     * <code>string province_code = 9;</code>
+     * <code>optional string province_code = 9;</code>
      * @return The provinceCode.
      */
     public java.lang.String getProvinceCode() {
@@ -1166,7 +1166,7 @@ private static final long serialVersionUID = 0L;
      * Province or state code.
      * </pre>
      *
-     * <code>string province_code = 9;</code>
+     * <code>optional string province_code = 9;</code>
      * @return The bytes for provinceCode.
      */
     public com.google.protobuf.ByteString
@@ -1187,7 +1187,7 @@ private static final long serialVersionUID = 0L;
      * Province or state code.
      * </pre>
      *
-     * <code>string province_code = 9;</code>
+     * <code>optional string province_code = 9;</code>
      * @param value The provinceCode to set.
      * @return This builder for chaining.
      */
@@ -1206,7 +1206,7 @@ private static final long serialVersionUID = 0L;
      * Province or state code.
      * </pre>
      *
-     * <code>string province_code = 9;</code>
+     * <code>optional string province_code = 9;</code>
      * @return This builder for chaining.
      */
     public Builder clearProvinceCode() {
@@ -1220,7 +1220,7 @@ private static final long serialVersionUID = 0L;
      * Province or state code.
      * </pre>
      *
-     * <code>string province_code = 9;</code>
+     * <code>optional string province_code = 9;</code>
      * @param value The bytes for provinceCode to set.
      * @return This builder for chaining.
      */
@@ -1242,7 +1242,7 @@ private static final long serialVersionUID = 0L;
      * Country code.
      * </pre>
      *
-     * <code>string country_code = 10;</code>
+     * <code>optional string country_code = 10;</code>
      * @return Whether the countryCode field is set.
      */
     public boolean hasCountryCode() {
@@ -1253,7 +1253,7 @@ private static final long serialVersionUID = 0L;
      * Country code.
      * </pre>
      *
-     * <code>string country_code = 10;</code>
+     * <code>optional string country_code = 10;</code>
      * @return The countryCode.
      */
     public java.lang.String getCountryCode() {
@@ -1273,7 +1273,7 @@ private static final long serialVersionUID = 0L;
      * Country code.
      * </pre>
      *
-     * <code>string country_code = 10;</code>
+     * <code>optional string country_code = 10;</code>
      * @return The bytes for countryCode.
      */
     public com.google.protobuf.ByteString
@@ -1294,7 +1294,7 @@ private static final long serialVersionUID = 0L;
      * Country code.
      * </pre>
      *
-     * <code>string country_code = 10;</code>
+     * <code>optional string country_code = 10;</code>
      * @param value The countryCode to set.
      * @return This builder for chaining.
      */
@@ -1313,7 +1313,7 @@ private static final long serialVersionUID = 0L;
      * Country code.
      * </pre>
      *
-     * <code>string country_code = 10;</code>
+     * <code>optional string country_code = 10;</code>
      * @return This builder for chaining.
      */
     public Builder clearCountryCode() {
@@ -1327,7 +1327,7 @@ private static final long serialVersionUID = 0L;
      * Country code.
      * </pre>
      *
-     * <code>string country_code = 10;</code>
+     * <code>optional string country_code = 10;</code>
      * @param value The bytes for countryCode to set.
      * @return This builder for chaining.
      */
@@ -1349,7 +1349,7 @@ private static final long serialVersionUID = 0L;
      * Province or state name.
      * </pre>
      *
-     * <code>string province_name = 11;</code>
+     * <code>optional string province_name = 11;</code>
      * @return Whether the provinceName field is set.
      */
     public boolean hasProvinceName() {
@@ -1360,7 +1360,7 @@ private static final long serialVersionUID = 0L;
      * Province or state name.
      * </pre>
      *
-     * <code>string province_name = 11;</code>
+     * <code>optional string province_name = 11;</code>
      * @return The provinceName.
      */
     public java.lang.String getProvinceName() {
@@ -1380,7 +1380,7 @@ private static final long serialVersionUID = 0L;
      * Province or state name.
      * </pre>
      *
-     * <code>string province_name = 11;</code>
+     * <code>optional string province_name = 11;</code>
      * @return The bytes for provinceName.
      */
     public com.google.protobuf.ByteString
@@ -1401,7 +1401,7 @@ private static final long serialVersionUID = 0L;
      * Province or state name.
      * </pre>
      *
-     * <code>string province_name = 11;</code>
+     * <code>optional string province_name = 11;</code>
      * @param value The provinceName to set.
      * @return This builder for chaining.
      */
@@ -1420,7 +1420,7 @@ private static final long serialVersionUID = 0L;
      * Province or state name.
      * </pre>
      *
-     * <code>string province_name = 11;</code>
+     * <code>optional string province_name = 11;</code>
      * @return This builder for chaining.
      */
     public Builder clearProvinceName() {
@@ -1434,7 +1434,7 @@ private static final long serialVersionUID = 0L;
      * Province or state name.
      * </pre>
      *
-     * <code>string province_name = 11;</code>
+     * <code>optional string province_name = 11;</code>
      * @param value The bytes for provinceName to set.
      * @return This builder for chaining.
      */
@@ -1456,7 +1456,7 @@ private static final long serialVersionUID = 0L;
      * Street address line 1.
      * </pre>
      *
-     * <code>string street_address = 12;</code>
+     * <code>optional string street_address = 12;</code>
      * @return Whether the streetAddress field is set.
      */
     public boolean hasStreetAddress() {
@@ -1467,7 +1467,7 @@ private static final long serialVersionUID = 0L;
      * Street address line 1.
      * </pre>
      *
-     * <code>string street_address = 12;</code>
+     * <code>optional string street_address = 12;</code>
      * @return The streetAddress.
      */
     public java.lang.String getStreetAddress() {
@@ -1487,7 +1487,7 @@ private static final long serialVersionUID = 0L;
      * Street address line 1.
      * </pre>
      *
-     * <code>string street_address = 12;</code>
+     * <code>optional string street_address = 12;</code>
      * @return The bytes for streetAddress.
      */
     public com.google.protobuf.ByteString
@@ -1508,7 +1508,7 @@ private static final long serialVersionUID = 0L;
      * Street address line 1.
      * </pre>
      *
-     * <code>string street_address = 12;</code>
+     * <code>optional string street_address = 12;</code>
      * @param value The streetAddress to set.
      * @return This builder for chaining.
      */
@@ -1527,7 +1527,7 @@ private static final long serialVersionUID = 0L;
      * Street address line 1.
      * </pre>
      *
-     * <code>string street_address = 12;</code>
+     * <code>optional string street_address = 12;</code>
      * @return This builder for chaining.
      */
     public Builder clearStreetAddress() {
@@ -1541,7 +1541,7 @@ private static final long serialVersionUID = 0L;
      * Street address line 1.
      * </pre>
      *
-     * <code>string street_address = 12;</code>
+     * <code>optional string street_address = 12;</code>
      * @param value The bytes for streetAddress to set.
      * @return This builder for chaining.
      */
@@ -1565,7 +1565,7 @@ private static final long serialVersionUID = 0L;
      * empty.
      * </pre>
      *
-     * <code>string street_address2 = 13;</code>
+     * <code>optional string street_address2 = 13;</code>
      * @return Whether the streetAddress2 field is set.
      */
     public boolean hasStreetAddress2() {
@@ -1578,7 +1578,7 @@ private static final long serialVersionUID = 0L;
      * empty.
      * </pre>
      *
-     * <code>string street_address2 = 13;</code>
+     * <code>optional string street_address2 = 13;</code>
      * @return The streetAddress2.
      */
     public java.lang.String getStreetAddress2() {
@@ -1600,7 +1600,7 @@ private static final long serialVersionUID = 0L;
      * empty.
      * </pre>
      *
-     * <code>string street_address2 = 13;</code>
+     * <code>optional string street_address2 = 13;</code>
      * @return The bytes for streetAddress2.
      */
     public com.google.protobuf.ByteString
@@ -1623,7 +1623,7 @@ private static final long serialVersionUID = 0L;
      * empty.
      * </pre>
      *
-     * <code>string street_address2 = 13;</code>
+     * <code>optional string street_address2 = 13;</code>
      * @param value The streetAddress2 to set.
      * @return This builder for chaining.
      */
@@ -1644,7 +1644,7 @@ private static final long serialVersionUID = 0L;
      * empty.
      * </pre>
      *
-     * <code>string street_address2 = 13;</code>
+     * <code>optional string street_address2 = 13;</code>
      * @return This builder for chaining.
      */
     public Builder clearStreetAddress2() {
@@ -1660,7 +1660,7 @@ private static final long serialVersionUID = 0L;
      * empty.
      * </pre>
      *
-     * <code>string street_address2 = 13;</code>
+     * <code>optional string street_address2 = 13;</code>
      * @param value The bytes for streetAddress2 to set.
      * @return This builder for chaining.
      */
@@ -1682,7 +1682,7 @@ private static final long serialVersionUID = 0L;
      * Name of the city.
      * </pre>
      *
-     * <code>string city_name = 14;</code>
+     * <code>optional string city_name = 14;</code>
      * @return Whether the cityName field is set.
      */
     public boolean hasCityName() {
@@ -1693,7 +1693,7 @@ private static final long serialVersionUID = 0L;
      * Name of the city.
      * </pre>
      *
-     * <code>string city_name = 14;</code>
+     * <code>optional string city_name = 14;</code>
      * @return The cityName.
      */
     public java.lang.String getCityName() {
@@ -1713,7 +1713,7 @@ private static final long serialVersionUID = 0L;
      * Name of the city.
      * </pre>
      *
-     * <code>string city_name = 14;</code>
+     * <code>optional string city_name = 14;</code>
      * @return The bytes for cityName.
      */
     public com.google.protobuf.ByteString
@@ -1734,7 +1734,7 @@ private static final long serialVersionUID = 0L;
      * Name of the city.
      * </pre>
      *
-     * <code>string city_name = 14;</code>
+     * <code>optional string city_name = 14;</code>
      * @param value The cityName to set.
      * @return This builder for chaining.
      */
@@ -1753,7 +1753,7 @@ private static final long serialVersionUID = 0L;
      * Name of the city.
      * </pre>
      *
-     * <code>string city_name = 14;</code>
+     * <code>optional string city_name = 14;</code>
      * @return This builder for chaining.
      */
     public Builder clearCityName() {
@@ -1767,7 +1767,7 @@ private static final long serialVersionUID = 0L;
      * Name of the city.
      * </pre>
      *
-     * <code>string city_name = 14;</code>
+     * <code>optional string city_name = 14;</code>
      * @param value The bytes for cityName to set.
      * @return This builder for chaining.
      */

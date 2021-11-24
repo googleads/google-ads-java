@@ -36,7 +36,7 @@ public interface RemarketingActionOrBuilder extends
    * Output only. Id of the remarketing action.
    * </pre>
    *
-   * <code>int64 id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -45,7 +45,7 @@ public interface RemarketingActionOrBuilder extends
    * Output only. Id of the remarketing action.
    * </pre>
    *
-   * <code>int64 id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   long getId();
@@ -57,7 +57,7 @@ public interface RemarketingActionOrBuilder extends
    * remarketing actions.
    * </pre>
    *
-   * <code>string name = 6;</code>
+   * <code>optional string name = 6;</code>
    * @return Whether the name field is set.
    */
   boolean hasName();
@@ -68,7 +68,7 @@ public interface RemarketingActionOrBuilder extends
    * remarketing actions.
    * </pre>
    *
-   * <code>string name = 6;</code>
+   * <code>optional string name = 6;</code>
    * @return The name.
    */
   java.lang.String getName();
@@ -79,7 +79,7 @@ public interface RemarketingActionOrBuilder extends
    * remarketing actions.
    * </pre>
    *
-   * <code>string name = 6;</code>
+   * <code>optional string name = 6;</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString

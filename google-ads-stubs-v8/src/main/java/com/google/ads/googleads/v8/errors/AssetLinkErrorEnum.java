@@ -245,6 +245,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The YouTube video referenced in the provided asset has unknown duration.
+     * This might be the case for a livestream video or a video being currently
+     * uploaded to YouTube. In both cases, the video duration should eventually
+     * get resolved.
      * </pre>
      *
      * <code>YOUTUBE_VIDEO_DURATION_NOT_DEFINED = 18;</code>
@@ -405,6 +408,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The YouTube video referenced in the provided asset has unknown duration.
+     * This might be the case for a livestream video or a video being currently
+     * uploaded to YouTube. In both cases, the video duration should eventually
+     * get resolved.
      * </pre>
      *
      * <code>YOUTUBE_VIDEO_DURATION_NOT_DEFINED = 18;</code>

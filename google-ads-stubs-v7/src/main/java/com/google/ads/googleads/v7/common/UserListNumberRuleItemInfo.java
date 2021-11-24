@@ -138,7 +138,7 @@ private static final long serialVersionUID = 0L;
    * rule item.
    * </pre>
    *
-   * <code>double value = 3;</code>
+   * <code>optional double value = 3;</code>
    * @return Whether the value field is set.
    */
   @java.lang.Override
@@ -152,7 +152,7 @@ private static final long serialVersionUID = 0L;
    * rule item.
    * </pre>
    *
-   * <code>double value = 3;</code>
+   * <code>optional double value = 3;</code>
    * @return The value.
    */
   @java.lang.Override
@@ -588,7 +588,7 @@ private static final long serialVersionUID = 0L;
      * rule item.
      * </pre>
      *
-     * <code>double value = 3;</code>
+     * <code>optional double value = 3;</code>
      * @return Whether the value field is set.
      */
     @java.lang.Override
@@ -602,7 +602,7 @@ private static final long serialVersionUID = 0L;
      * rule item.
      * </pre>
      *
-     * <code>double value = 3;</code>
+     * <code>optional double value = 3;</code>
      * @return The value.
      */
     @java.lang.Override
@@ -616,7 +616,7 @@ private static final long serialVersionUID = 0L;
      * rule item.
      * </pre>
      *
-     * <code>double value = 3;</code>
+     * <code>optional double value = 3;</code>
      * @param value The value to set.
      * @return This builder for chaining.
      */
@@ -633,7 +633,7 @@ private static final long serialVersionUID = 0L;
      * rule item.
      * </pre>
      *
-     * <code>double value = 3;</code>
+     * <code>optional double value = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearValue() {

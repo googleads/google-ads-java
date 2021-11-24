@@ -13,7 +13,7 @@ public interface UploadUserDataResponseOrBuilder extends
    * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
    * </pre>
    *
-   * <code>string upload_date_time = 3;</code>
+   * <code>optional string upload_date_time = 3;</code>
    * @return Whether the uploadDateTime field is set.
    */
   boolean hasUploadDateTime();
@@ -23,7 +23,7 @@ public interface UploadUserDataResponseOrBuilder extends
    * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
    * </pre>
    *
-   * <code>string upload_date_time = 3;</code>
+   * <code>optional string upload_date_time = 3;</code>
    * @return The uploadDateTime.
    */
   java.lang.String getUploadDateTime();
@@ -33,7 +33,7 @@ public interface UploadUserDataResponseOrBuilder extends
    * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
    * </pre>
    *
-   * <code>string upload_date_time = 3;</code>
+   * <code>optional string upload_date_time = 3;</code>
    * @return The bytes for uploadDateTime.
    */
   com.google.protobuf.ByteString
@@ -44,7 +44,7 @@ public interface UploadUserDataResponseOrBuilder extends
    * Number of upload data operations received by API.
    * </pre>
    *
-   * <code>int32 received_operations_count = 4;</code>
+   * <code>optional int32 received_operations_count = 4;</code>
    * @return Whether the receivedOperationsCount field is set.
    */
   boolean hasReceivedOperationsCount();
@@ -53,7 +53,7 @@ public interface UploadUserDataResponseOrBuilder extends
    * Number of upload data operations received by API.
    * </pre>
    *
-   * <code>int32 received_operations_count = 4;</code>
+   * <code>optional int32 received_operations_count = 4;</code>
    * @return The receivedOperationsCount.
    */
   int getReceivedOperationsCount();

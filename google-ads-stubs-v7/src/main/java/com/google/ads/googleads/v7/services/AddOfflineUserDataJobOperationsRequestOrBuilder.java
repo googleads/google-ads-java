@@ -32,7 +32,7 @@ public interface AddOfflineUserDataJobOperationsRequestOrBuilder extends
    * True to enable partial failure for the offline user data job.
    * </pre>
    *
-   * <code>bool enable_partial_failure = 4;</code>
+   * <code>optional bool enable_partial_failure = 4;</code>
    * @return Whether the enablePartialFailure field is set.
    */
   boolean hasEnablePartialFailure();
@@ -41,7 +41,7 @@ public interface AddOfflineUserDataJobOperationsRequestOrBuilder extends
    * True to enable partial failure for the offline user data job.
    * </pre>
    *
-   * <code>bool enable_partial_failure = 4;</code>
+   * <code>optional bool enable_partial_failure = 4;</code>
    * @return The enablePartialFailure.
    */
   boolean getEnablePartialFailure();

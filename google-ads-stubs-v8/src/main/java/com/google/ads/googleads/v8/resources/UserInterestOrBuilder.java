@@ -55,7 +55,7 @@ public interface UserInterestOrBuilder extends
    * Output only. The ID of the user interest.
    * </pre>
    *
-   * <code>int64 user_interest_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 user_interest_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the userInterestId field is set.
    */
   boolean hasUserInterestId();
@@ -64,7 +64,7 @@ public interface UserInterestOrBuilder extends
    * Output only. The ID of the user interest.
    * </pre>
    *
-   * <code>int64 user_interest_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 user_interest_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The userInterestId.
    */
   long getUserInterestId();
@@ -74,7 +74,7 @@ public interface UserInterestOrBuilder extends
    * Output only. The name of the user interest.
    * </pre>
    *
-   * <code>string name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the name field is set.
    */
   boolean hasName();
@@ -83,7 +83,7 @@ public interface UserInterestOrBuilder extends
    * Output only. The name of the user interest.
    * </pre>
    *
-   * <code>string name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The name.
    */
   java.lang.String getName();
@@ -92,7 +92,7 @@ public interface UserInterestOrBuilder extends
    * Output only. The name of the user interest.
    * </pre>
    *
-   * <code>string name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
@@ -103,7 +103,7 @@ public interface UserInterestOrBuilder extends
    * Output only. The parent of the user interest.
    * </pre>
    *
-   * <code>string user_interest_parent = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string user_interest_parent = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the userInterestParent field is set.
    */
   boolean hasUserInterestParent();
@@ -112,7 +112,7 @@ public interface UserInterestOrBuilder extends
    * Output only. The parent of the user interest.
    * </pre>
    *
-   * <code>string user_interest_parent = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string user_interest_parent = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The userInterestParent.
    */
   java.lang.String getUserInterestParent();
@@ -121,7 +121,7 @@ public interface UserInterestOrBuilder extends
    * Output only. The parent of the user interest.
    * </pre>
    *
-   * <code>string user_interest_parent = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string user_interest_parent = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for userInterestParent.
    */
   com.google.protobuf.ByteString
@@ -132,7 +132,7 @@ public interface UserInterestOrBuilder extends
    * Output only. True if the user interest is launched to all channels and locales.
    * </pre>
    *
-   * <code>bool launched_to_all = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool launched_to_all = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the launchedToAll field is set.
    */
   boolean hasLaunchedToAll();
@@ -141,7 +141,7 @@ public interface UserInterestOrBuilder extends
    * Output only. True if the user interest is launched to all channels and locales.
    * </pre>
    *
-   * <code>bool launched_to_all = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool launched_to_all = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The launchedToAll.
    */
   boolean getLaunchedToAll();

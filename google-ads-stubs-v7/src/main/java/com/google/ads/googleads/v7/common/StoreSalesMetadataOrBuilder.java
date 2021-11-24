@@ -15,7 +15,7 @@ public interface StoreSalesMetadataOrBuilder extends
    * The fraction needs to be between 0 and 1 (excluding 0).
    * </pre>
    *
-   * <code>double loyalty_fraction = 5;</code>
+   * <code>optional double loyalty_fraction = 5;</code>
    * @return Whether the loyaltyFraction field is set.
    */
   boolean hasLoyaltyFraction();
@@ -27,7 +27,7 @@ public interface StoreSalesMetadataOrBuilder extends
    * The fraction needs to be between 0 and 1 (excluding 0).
    * </pre>
    *
-   * <code>double loyalty_fraction = 5;</code>
+   * <code>optional double loyalty_fraction = 5;</code>
    * @return The loyaltyFraction.
    */
   double getLoyaltyFraction();
@@ -41,7 +41,7 @@ public interface StoreSalesMetadataOrBuilder extends
    * would be 0.5.
    * </pre>
    *
-   * <code>double transaction_upload_fraction = 6;</code>
+   * <code>optional double transaction_upload_fraction = 6;</code>
    * @return Whether the transactionUploadFraction field is set.
    */
   boolean hasTransactionUploadFraction();
@@ -54,7 +54,7 @@ public interface StoreSalesMetadataOrBuilder extends
    * would be 0.5.
    * </pre>
    *
-   * <code>double transaction_upload_fraction = 6;</code>
+   * <code>optional double transaction_upload_fraction = 6;</code>
    * @return The transactionUploadFraction.
    */
   double getTransactionUploadFraction();
@@ -67,7 +67,7 @@ public interface StoreSalesMetadataOrBuilder extends
    * Accessible only to customers on the allow-list.
    * </pre>
    *
-   * <code>string custom_key = 7;</code>
+   * <code>optional string custom_key = 7;</code>
    * @return Whether the customKey field is set.
    */
   boolean hasCustomKey();
@@ -79,7 +79,7 @@ public interface StoreSalesMetadataOrBuilder extends
    * Accessible only to customers on the allow-list.
    * </pre>
    *
-   * <code>string custom_key = 7;</code>
+   * <code>optional string custom_key = 7;</code>
    * @return The customKey.
    */
   java.lang.String getCustomKey();
@@ -91,7 +91,7 @@ public interface StoreSalesMetadataOrBuilder extends
    * Accessible only to customers on the allow-list.
    * </pre>
    *
-   * <code>string custom_key = 7;</code>
+   * <code>optional string custom_key = 7;</code>
    * @return The bytes for customKey.
    */
   com.google.protobuf.ByteString

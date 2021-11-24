@@ -186,7 +186,7 @@ private static final long serialVersionUID = 0L;
    * application ID, or a YouTube video ID.
    * </pre>
    *
-   * <code>string placement = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string placement = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the placement field is set.
    */
   @java.lang.Override
@@ -199,7 +199,7 @@ private static final long serialVersionUID = 0L;
    * application ID, or a YouTube video ID.
    * </pre>
    *
-   * <code>string placement = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string placement = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The placement.
    */
   @java.lang.Override
@@ -221,7 +221,7 @@ private static final long serialVersionUID = 0L;
    * application ID, or a YouTube video ID.
    * </pre>
    *
-   * <code>string placement = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string placement = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for placement.
    */
   @java.lang.Override
@@ -247,7 +247,7 @@ private static final long serialVersionUID = 0L;
    * videos, and translated mobile app name for mobile apps.
    * </pre>
    *
-   * <code>string display_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string display_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the displayName field is set.
    */
   @java.lang.Override
@@ -260,7 +260,7 @@ private static final long serialVersionUID = 0L;
    * videos, and translated mobile app name for mobile apps.
    * </pre>
    *
-   * <code>string display_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string display_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The displayName.
    */
   @java.lang.Override
@@ -282,7 +282,7 @@ private static final long serialVersionUID = 0L;
    * videos, and translated mobile app name for mobile apps.
    * </pre>
    *
-   * <code>string display_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string display_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for displayName.
    */
   @java.lang.Override
@@ -308,7 +308,7 @@ private static final long serialVersionUID = 0L;
    * app store, or a YouTube channel URL.
    * </pre>
    *
-   * <code>string group_placement_target_url = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string group_placement_target_url = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the groupPlacementTargetUrl field is set.
    */
   @java.lang.Override
@@ -321,7 +321,7 @@ private static final long serialVersionUID = 0L;
    * app store, or a YouTube channel URL.
    * </pre>
    *
-   * <code>string group_placement_target_url = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string group_placement_target_url = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The groupPlacementTargetUrl.
    */
   @java.lang.Override
@@ -343,7 +343,7 @@ private static final long serialVersionUID = 0L;
    * app store, or a YouTube channel URL.
    * </pre>
    *
-   * <code>string group_placement_target_url = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string group_placement_target_url = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for groupPlacementTargetUrl.
    */
   @java.lang.Override
@@ -369,7 +369,7 @@ private static final long serialVersionUID = 0L;
    * store, or a YouTube video URL.
    * </pre>
    *
-   * <code>string target_url = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string target_url = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the targetUrl field is set.
    */
   @java.lang.Override
@@ -382,7 +382,7 @@ private static final long serialVersionUID = 0L;
    * store, or a YouTube video URL.
    * </pre>
    *
-   * <code>string target_url = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string target_url = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The targetUrl.
    */
   @java.lang.Override
@@ -404,7 +404,7 @@ private static final long serialVersionUID = 0L;
    * store, or a YouTube video URL.
    * </pre>
    *
-   * <code>string target_url = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string target_url = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for targetUrl.
    */
   @java.lang.Override
@@ -463,7 +463,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (placementType_ != com.google.ads.googleads.v8.enums.PlacementTypeEnum.PlacementType.UNSPECIFIED.getNumber()) {
@@ -490,7 +490,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (placementType_ != com.google.ads.googleads.v8.enums.PlacementTypeEnum.PlacementType.UNSPECIFIED.getNumber()) {
@@ -992,7 +992,7 @@ private static final long serialVersionUID = 0L;
      * application ID, or a YouTube video ID.
      * </pre>
      *
-     * <code>string placement = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string placement = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the placement field is set.
      */
     public boolean hasPlacement() {
@@ -1004,7 +1004,7 @@ private static final long serialVersionUID = 0L;
      * application ID, or a YouTube video ID.
      * </pre>
      *
-     * <code>string placement = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string placement = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The placement.
      */
     public java.lang.String getPlacement() {
@@ -1025,7 +1025,7 @@ private static final long serialVersionUID = 0L;
      * application ID, or a YouTube video ID.
      * </pre>
      *
-     * <code>string placement = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string placement = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for placement.
      */
     public com.google.protobuf.ByteString
@@ -1047,7 +1047,7 @@ private static final long serialVersionUID = 0L;
      * application ID, or a YouTube video ID.
      * </pre>
      *
-     * <code>string placement = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string placement = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The placement to set.
      * @return This builder for chaining.
      */
@@ -1067,7 +1067,7 @@ private static final long serialVersionUID = 0L;
      * application ID, or a YouTube video ID.
      * </pre>
      *
-     * <code>string placement = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string placement = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearPlacement() {
@@ -1082,7 +1082,7 @@ private static final long serialVersionUID = 0L;
      * application ID, or a YouTube video ID.
      * </pre>
      *
-     * <code>string placement = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string placement = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for placement to set.
      * @return This builder for chaining.
      */
@@ -1105,7 +1105,7 @@ private static final long serialVersionUID = 0L;
      * videos, and translated mobile app name for mobile apps.
      * </pre>
      *
-     * <code>string display_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string display_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the displayName field is set.
      */
     public boolean hasDisplayName() {
@@ -1117,7 +1117,7 @@ private static final long serialVersionUID = 0L;
      * videos, and translated mobile app name for mobile apps.
      * </pre>
      *
-     * <code>string display_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string display_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The displayName.
      */
     public java.lang.String getDisplayName() {
@@ -1138,7 +1138,7 @@ private static final long serialVersionUID = 0L;
      * videos, and translated mobile app name for mobile apps.
      * </pre>
      *
-     * <code>string display_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string display_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for displayName.
      */
     public com.google.protobuf.ByteString
@@ -1160,7 +1160,7 @@ private static final long serialVersionUID = 0L;
      * videos, and translated mobile app name for mobile apps.
      * </pre>
      *
-     * <code>string display_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string display_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The displayName to set.
      * @return This builder for chaining.
      */
@@ -1180,7 +1180,7 @@ private static final long serialVersionUID = 0L;
      * videos, and translated mobile app name for mobile apps.
      * </pre>
      *
-     * <code>string display_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string display_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearDisplayName() {
@@ -1195,7 +1195,7 @@ private static final long serialVersionUID = 0L;
      * videos, and translated mobile app name for mobile apps.
      * </pre>
      *
-     * <code>string display_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string display_name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for displayName to set.
      * @return This builder for chaining.
      */
@@ -1218,7 +1218,7 @@ private static final long serialVersionUID = 0L;
      * app store, or a YouTube channel URL.
      * </pre>
      *
-     * <code>string group_placement_target_url = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string group_placement_target_url = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the groupPlacementTargetUrl field is set.
      */
     public boolean hasGroupPlacementTargetUrl() {
@@ -1230,7 +1230,7 @@ private static final long serialVersionUID = 0L;
      * app store, or a YouTube channel URL.
      * </pre>
      *
-     * <code>string group_placement_target_url = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string group_placement_target_url = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The groupPlacementTargetUrl.
      */
     public java.lang.String getGroupPlacementTargetUrl() {
@@ -1251,7 +1251,7 @@ private static final long serialVersionUID = 0L;
      * app store, or a YouTube channel URL.
      * </pre>
      *
-     * <code>string group_placement_target_url = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string group_placement_target_url = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for groupPlacementTargetUrl.
      */
     public com.google.protobuf.ByteString
@@ -1273,7 +1273,7 @@ private static final long serialVersionUID = 0L;
      * app store, or a YouTube channel URL.
      * </pre>
      *
-     * <code>string group_placement_target_url = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string group_placement_target_url = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The groupPlacementTargetUrl to set.
      * @return This builder for chaining.
      */
@@ -1293,7 +1293,7 @@ private static final long serialVersionUID = 0L;
      * app store, or a YouTube channel URL.
      * </pre>
      *
-     * <code>string group_placement_target_url = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string group_placement_target_url = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearGroupPlacementTargetUrl() {
@@ -1308,7 +1308,7 @@ private static final long serialVersionUID = 0L;
      * app store, or a YouTube channel URL.
      * </pre>
      *
-     * <code>string group_placement_target_url = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string group_placement_target_url = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for groupPlacementTargetUrl to set.
      * @return This builder for chaining.
      */
@@ -1331,7 +1331,7 @@ private static final long serialVersionUID = 0L;
      * store, or a YouTube video URL.
      * </pre>
      *
-     * <code>string target_url = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string target_url = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the targetUrl field is set.
      */
     public boolean hasTargetUrl() {
@@ -1343,7 +1343,7 @@ private static final long serialVersionUID = 0L;
      * store, or a YouTube video URL.
      * </pre>
      *
-     * <code>string target_url = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string target_url = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The targetUrl.
      */
     public java.lang.String getTargetUrl() {
@@ -1364,7 +1364,7 @@ private static final long serialVersionUID = 0L;
      * store, or a YouTube video URL.
      * </pre>
      *
-     * <code>string target_url = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string target_url = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for targetUrl.
      */
     public com.google.protobuf.ByteString
@@ -1386,7 +1386,7 @@ private static final long serialVersionUID = 0L;
      * store, or a YouTube video URL.
      * </pre>
      *
-     * <code>string target_url = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string target_url = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The targetUrl to set.
      * @return This builder for chaining.
      */
@@ -1406,7 +1406,7 @@ private static final long serialVersionUID = 0L;
      * store, or a YouTube video URL.
      * </pre>
      *
-     * <code>string target_url = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string target_url = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearTargetUrl() {
@@ -1421,7 +1421,7 @@ private static final long serialVersionUID = 0L;
      * store, or a YouTube video URL.
      * </pre>
      *
-     * <code>string target_url = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string target_url = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for targetUrl to set.
      * @return This builder for chaining.
      */

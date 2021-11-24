@@ -36,7 +36,7 @@ public interface MobileDeviceConstantOrBuilder extends
    * Output only. The ID of the mobile device constant.
    * </pre>
    *
-   * <code>int64 id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -45,7 +45,7 @@ public interface MobileDeviceConstantOrBuilder extends
    * Output only. The ID of the mobile device constant.
    * </pre>
    *
-   * <code>int64 id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   long getId();
@@ -55,7 +55,7 @@ public interface MobileDeviceConstantOrBuilder extends
    * Output only. The name of the mobile device.
    * </pre>
    *
-   * <code>string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the name field is set.
    */
   boolean hasName();
@@ -64,7 +64,7 @@ public interface MobileDeviceConstantOrBuilder extends
    * Output only. The name of the mobile device.
    * </pre>
    *
-   * <code>string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The name.
    */
   java.lang.String getName();
@@ -73,7 +73,7 @@ public interface MobileDeviceConstantOrBuilder extends
    * Output only. The name of the mobile device.
    * </pre>
    *
-   * <code>string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
@@ -84,7 +84,7 @@ public interface MobileDeviceConstantOrBuilder extends
    * Output only. The manufacturer of the mobile device.
    * </pre>
    *
-   * <code>string manufacturer_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string manufacturer_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the manufacturerName field is set.
    */
   boolean hasManufacturerName();
@@ -93,7 +93,7 @@ public interface MobileDeviceConstantOrBuilder extends
    * Output only. The manufacturer of the mobile device.
    * </pre>
    *
-   * <code>string manufacturer_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string manufacturer_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The manufacturerName.
    */
   java.lang.String getManufacturerName();
@@ -102,7 +102,7 @@ public interface MobileDeviceConstantOrBuilder extends
    * Output only. The manufacturer of the mobile device.
    * </pre>
    *
-   * <code>string manufacturer_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string manufacturer_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for manufacturerName.
    */
   com.google.protobuf.ByteString
@@ -113,7 +113,7 @@ public interface MobileDeviceConstantOrBuilder extends
    * Output only. The operating system of the mobile device.
    * </pre>
    *
-   * <code>string operating_system_name = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string operating_system_name = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the operatingSystemName field is set.
    */
   boolean hasOperatingSystemName();
@@ -122,7 +122,7 @@ public interface MobileDeviceConstantOrBuilder extends
    * Output only. The operating system of the mobile device.
    * </pre>
    *
-   * <code>string operating_system_name = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string operating_system_name = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The operatingSystemName.
    */
   java.lang.String getOperatingSystemName();
@@ -131,7 +131,7 @@ public interface MobileDeviceConstantOrBuilder extends
    * Output only. The operating system of the mobile device.
    * </pre>
    *
-   * <code>string operating_system_name = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string operating_system_name = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for operatingSystemName.
    */
   com.google.protobuf.ByteString

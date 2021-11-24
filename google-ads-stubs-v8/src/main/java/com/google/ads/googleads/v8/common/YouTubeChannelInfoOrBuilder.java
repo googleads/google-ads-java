@@ -12,7 +12,7 @@ public interface YouTubeChannelInfoOrBuilder extends
    * The YouTube uploader channel id or the channel code of a YouTube channel.
    * </pre>
    *
-   * <code>string channel_id = 2;</code>
+   * <code>optional string channel_id = 2;</code>
    * @return Whether the channelId field is set.
    */
   boolean hasChannelId();
@@ -21,7 +21,7 @@ public interface YouTubeChannelInfoOrBuilder extends
    * The YouTube uploader channel id or the channel code of a YouTube channel.
    * </pre>
    *
-   * <code>string channel_id = 2;</code>
+   * <code>optional string channel_id = 2;</code>
    * @return The channelId.
    */
   java.lang.String getChannelId();
@@ -30,7 +30,7 @@ public interface YouTubeChannelInfoOrBuilder extends
    * The YouTube uploader channel id or the channel code of a YouTube channel.
    * </pre>
    *
-   * <code>string channel_id = 2;</code>
+   * <code>optional string channel_id = 2;</code>
    * @return The bytes for channelId.
    */
   com.google.protobuf.ByteString

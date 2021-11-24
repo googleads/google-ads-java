@@ -39,7 +39,7 @@ public interface ProximityInfoOrBuilder extends
    * The radius of the proximity.
    * </pre>
    *
-   * <code>double radius = 5;</code>
+   * <code>optional double radius = 5;</code>
    * @return Whether the radius field is set.
    */
   boolean hasRadius();
@@ -48,7 +48,7 @@ public interface ProximityInfoOrBuilder extends
    * The radius of the proximity.
    * </pre>
    *
-   * <code>double radius = 5;</code>
+   * <code>optional double radius = 5;</code>
    * @return The radius.
    */
   double getRadius();

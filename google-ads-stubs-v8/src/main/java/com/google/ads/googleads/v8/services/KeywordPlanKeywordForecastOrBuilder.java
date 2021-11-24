@@ -13,7 +13,7 @@ public interface KeywordPlanKeywordForecastOrBuilder extends
    * `customers/{customer_id}/keywordPlanAdGroupKeywords/{keyword_plan_ad_group_keyword_id}`
    * </pre>
    *
-   * <code>string keyword_plan_ad_group_keyword = 3;</code>
+   * <code>optional string keyword_plan_ad_group_keyword = 3;</code>
    * @return Whether the keywordPlanAdGroupKeyword field is set.
    */
   boolean hasKeywordPlanAdGroupKeyword();
@@ -23,7 +23,7 @@ public interface KeywordPlanKeywordForecastOrBuilder extends
    * `customers/{customer_id}/keywordPlanAdGroupKeywords/{keyword_plan_ad_group_keyword_id}`
    * </pre>
    *
-   * <code>string keyword_plan_ad_group_keyword = 3;</code>
+   * <code>optional string keyword_plan_ad_group_keyword = 3;</code>
    * @return The keywordPlanAdGroupKeyword.
    */
   java.lang.String getKeywordPlanAdGroupKeyword();
@@ -33,7 +33,7 @@ public interface KeywordPlanKeywordForecastOrBuilder extends
    * `customers/{customer_id}/keywordPlanAdGroupKeywords/{keyword_plan_ad_group_keyword_id}`
    * </pre>
    *
-   * <code>string keyword_plan_ad_group_keyword = 3;</code>
+   * <code>optional string keyword_plan_ad_group_keyword = 3;</code>
    * @return The bytes for keywordPlanAdGroupKeyword.
    */
   com.google.protobuf.ByteString

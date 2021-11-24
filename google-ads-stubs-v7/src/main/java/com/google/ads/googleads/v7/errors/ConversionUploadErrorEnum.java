@@ -165,8 +165,8 @@ private static final long serialVersionUID = 0L;
     GCLID_NOT_FOUND(7),
     /**
      * <pre>
-     * The click associated with the given gclid is owned by a customer
-     * account that the uploading customer does not manage.
+     * The click associated with the given gclid is owned by a customer account
+     * that the uploading customer does not manage.
      * </pre>
      *
      * <code>UNAUTHORIZED_CUSTOMER = 8;</code>
@@ -392,8 +392,8 @@ private static final long serialVersionUID = 0L;
     public static final int GCLID_NOT_FOUND_VALUE = 7;
     /**
      * <pre>
-     * The click associated with the given gclid is owned by a customer
-     * account that the uploading customer does not manage.
+     * The click associated with the given gclid is owned by a customer account
+     * that the uploading customer does not manage.
      * </pre>
      *
      * <code>UNAUTHORIZED_CUSTOMER = 8;</code>

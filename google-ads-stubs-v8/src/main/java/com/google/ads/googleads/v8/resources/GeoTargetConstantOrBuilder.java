@@ -36,7 +36,7 @@ public interface GeoTargetConstantOrBuilder extends
    * Output only. The ID of the geo target constant.
    * </pre>
    *
-   * <code>int64 id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -45,7 +45,7 @@ public interface GeoTargetConstantOrBuilder extends
    * Output only. The ID of the geo target constant.
    * </pre>
    *
-   * <code>int64 id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   long getId();
@@ -55,7 +55,7 @@ public interface GeoTargetConstantOrBuilder extends
    * Output only. Geo target constant English name.
    * </pre>
    *
-   * <code>string name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the name field is set.
    */
   boolean hasName();
@@ -64,7 +64,7 @@ public interface GeoTargetConstantOrBuilder extends
    * Output only. Geo target constant English name.
    * </pre>
    *
-   * <code>string name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The name.
    */
   java.lang.String getName();
@@ -73,7 +73,7 @@ public interface GeoTargetConstantOrBuilder extends
    * Output only. Geo target constant English name.
    * </pre>
    *
-   * <code>string name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
@@ -84,7 +84,7 @@ public interface GeoTargetConstantOrBuilder extends
    * Output only. The ISO-3166-1 alpha-2 country code that is associated with the target.
    * </pre>
    *
-   * <code>string country_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string country_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the countryCode field is set.
    */
   boolean hasCountryCode();
@@ -93,7 +93,7 @@ public interface GeoTargetConstantOrBuilder extends
    * Output only. The ISO-3166-1 alpha-2 country code that is associated with the target.
    * </pre>
    *
-   * <code>string country_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string country_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The countryCode.
    */
   java.lang.String getCountryCode();
@@ -102,7 +102,7 @@ public interface GeoTargetConstantOrBuilder extends
    * Output only. The ISO-3166-1 alpha-2 country code that is associated with the target.
    * </pre>
    *
-   * <code>string country_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string country_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for countryCode.
    */
   com.google.protobuf.ByteString
@@ -113,7 +113,7 @@ public interface GeoTargetConstantOrBuilder extends
    * Output only. Geo target constant target type.
    * </pre>
    *
-   * <code>string target_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string target_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the targetType field is set.
    */
   boolean hasTargetType();
@@ -122,7 +122,7 @@ public interface GeoTargetConstantOrBuilder extends
    * Output only. Geo target constant target type.
    * </pre>
    *
-   * <code>string target_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string target_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The targetType.
    */
   java.lang.String getTargetType();
@@ -131,7 +131,7 @@ public interface GeoTargetConstantOrBuilder extends
    * Output only. Geo target constant target type.
    * </pre>
    *
-   * <code>string target_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string target_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for targetType.
    */
   com.google.protobuf.ByteString
@@ -162,7 +162,7 @@ public interface GeoTargetConstantOrBuilder extends
    * of its parent and country.
    * </pre>
    *
-   * <code>string canonical_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string canonical_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the canonicalName field is set.
    */
   boolean hasCanonicalName();
@@ -172,7 +172,7 @@ public interface GeoTargetConstantOrBuilder extends
    * of its parent and country.
    * </pre>
    *
-   * <code>string canonical_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string canonical_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The canonicalName.
    */
   java.lang.String getCanonicalName();
@@ -182,7 +182,7 @@ public interface GeoTargetConstantOrBuilder extends
    * of its parent and country.
    * </pre>
    *
-   * <code>string canonical_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string canonical_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for canonicalName.
    */
   com.google.protobuf.ByteString
@@ -195,7 +195,7 @@ public interface GeoTargetConstantOrBuilder extends
    * `geoTargetConstants/{parent_geo_target_constant_id}`
    * </pre>
    *
-   * <code>string parent_geo_target = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string parent_geo_target = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the parentGeoTarget field is set.
    */
   boolean hasParentGeoTarget();
@@ -206,7 +206,7 @@ public interface GeoTargetConstantOrBuilder extends
    * `geoTargetConstants/{parent_geo_target_constant_id}`
    * </pre>
    *
-   * <code>string parent_geo_target = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string parent_geo_target = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The parentGeoTarget.
    */
   java.lang.String getParentGeoTarget();
@@ -217,7 +217,7 @@ public interface GeoTargetConstantOrBuilder extends
    * `geoTargetConstants/{parent_geo_target_constant_id}`
    * </pre>
    *
-   * <code>string parent_geo_target = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string parent_geo_target = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for parentGeoTarget.
    */
   com.google.protobuf.ByteString

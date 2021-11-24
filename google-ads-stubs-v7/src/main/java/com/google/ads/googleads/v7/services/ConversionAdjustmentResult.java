@@ -176,7 +176,7 @@ private static final long serialVersionUID = 0L;
    * adjustment.
    * </pre>
    *
-   * <code>string conversion_action = 7;</code>
+   * <code>optional string conversion_action = 7;</code>
    * @return Whether the conversionAction field is set.
    */
   @java.lang.Override
@@ -189,7 +189,7 @@ private static final long serialVersionUID = 0L;
    * adjustment.
    * </pre>
    *
-   * <code>string conversion_action = 7;</code>
+   * <code>optional string conversion_action = 7;</code>
    * @return The conversionAction.
    */
   @java.lang.Override
@@ -211,7 +211,7 @@ private static final long serialVersionUID = 0L;
    * adjustment.
    * </pre>
    *
-   * <code>string conversion_action = 7;</code>
+   * <code>optional string conversion_action = 7;</code>
    * @return The bytes for conversionAction.
    */
   @java.lang.Override
@@ -237,7 +237,7 @@ private static final long serialVersionUID = 0L;
    * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
    * </pre>
    *
-   * <code>string adjustment_date_time = 8;</code>
+   * <code>optional string adjustment_date_time = 8;</code>
    * @return Whether the adjustmentDateTime field is set.
    */
   @java.lang.Override
@@ -250,7 +250,7 @@ private static final long serialVersionUID = 0L;
    * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
    * </pre>
    *
-   * <code>string adjustment_date_time = 8;</code>
+   * <code>optional string adjustment_date_time = 8;</code>
    * @return The adjustmentDateTime.
    */
   @java.lang.Override
@@ -272,7 +272,7 @@ private static final long serialVersionUID = 0L;
    * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
    * </pre>
    *
-   * <code>string adjustment_date_time = 8;</code>
+   * <code>optional string adjustment_date_time = 8;</code>
    * @return The bytes for adjustmentDateTime.
    */
   @java.lang.Override
@@ -876,7 +876,7 @@ private static final long serialVersionUID = 0L;
      * adjustment.
      * </pre>
      *
-     * <code>string conversion_action = 7;</code>
+     * <code>optional string conversion_action = 7;</code>
      * @return Whether the conversionAction field is set.
      */
     public boolean hasConversionAction() {
@@ -888,7 +888,7 @@ private static final long serialVersionUID = 0L;
      * adjustment.
      * </pre>
      *
-     * <code>string conversion_action = 7;</code>
+     * <code>optional string conversion_action = 7;</code>
      * @return The conversionAction.
      */
     public java.lang.String getConversionAction() {
@@ -909,7 +909,7 @@ private static final long serialVersionUID = 0L;
      * adjustment.
      * </pre>
      *
-     * <code>string conversion_action = 7;</code>
+     * <code>optional string conversion_action = 7;</code>
      * @return The bytes for conversionAction.
      */
     public com.google.protobuf.ByteString
@@ -931,7 +931,7 @@ private static final long serialVersionUID = 0L;
      * adjustment.
      * </pre>
      *
-     * <code>string conversion_action = 7;</code>
+     * <code>optional string conversion_action = 7;</code>
      * @param value The conversionAction to set.
      * @return This builder for chaining.
      */
@@ -951,7 +951,7 @@ private static final long serialVersionUID = 0L;
      * adjustment.
      * </pre>
      *
-     * <code>string conversion_action = 7;</code>
+     * <code>optional string conversion_action = 7;</code>
      * @return This builder for chaining.
      */
     public Builder clearConversionAction() {
@@ -966,7 +966,7 @@ private static final long serialVersionUID = 0L;
      * adjustment.
      * </pre>
      *
-     * <code>string conversion_action = 7;</code>
+     * <code>optional string conversion_action = 7;</code>
      * @param value The bytes for conversionAction to set.
      * @return This builder for chaining.
      */
@@ -989,7 +989,7 @@ private static final long serialVersionUID = 0L;
      * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
      * </pre>
      *
-     * <code>string adjustment_date_time = 8;</code>
+     * <code>optional string adjustment_date_time = 8;</code>
      * @return Whether the adjustmentDateTime field is set.
      */
     public boolean hasAdjustmentDateTime() {
@@ -1001,7 +1001,7 @@ private static final long serialVersionUID = 0L;
      * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
      * </pre>
      *
-     * <code>string adjustment_date_time = 8;</code>
+     * <code>optional string adjustment_date_time = 8;</code>
      * @return The adjustmentDateTime.
      */
     public java.lang.String getAdjustmentDateTime() {
@@ -1022,7 +1022,7 @@ private static final long serialVersionUID = 0L;
      * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
      * </pre>
      *
-     * <code>string adjustment_date_time = 8;</code>
+     * <code>optional string adjustment_date_time = 8;</code>
      * @return The bytes for adjustmentDateTime.
      */
     public com.google.protobuf.ByteString
@@ -1044,7 +1044,7 @@ private static final long serialVersionUID = 0L;
      * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
      * </pre>
      *
-     * <code>string adjustment_date_time = 8;</code>
+     * <code>optional string adjustment_date_time = 8;</code>
      * @param value The adjustmentDateTime to set.
      * @return This builder for chaining.
      */
@@ -1064,7 +1064,7 @@ private static final long serialVersionUID = 0L;
      * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
      * </pre>
      *
-     * <code>string adjustment_date_time = 8;</code>
+     * <code>optional string adjustment_date_time = 8;</code>
      * @return This builder for chaining.
      */
     public Builder clearAdjustmentDateTime() {
@@ -1079,7 +1079,7 @@ private static final long serialVersionUID = 0L;
      * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
      * </pre>
      *
-     * <code>string adjustment_date_time = 8;</code>
+     * <code>optional string adjustment_date_time = 8;</code>
      * @param value The bytes for adjustmentDateTime to set.
      * @return This builder for chaining.
      */

@@ -213,7 +213,7 @@ private static final long serialVersionUID = 0L;
    * be between 3:1 and 5:1 (+-1%).
    * </pre>
    *
-   * <code>string header_image = 10;</code>
+   * <code>optional string header_image = 10;</code>
    * @return Whether the headerImage field is set.
    */
   @java.lang.Override
@@ -227,7 +227,7 @@ private static final long serialVersionUID = 0L;
    * be between 3:1 and 5:1 (+-1%).
    * </pre>
    *
-   * <code>string header_image = 10;</code>
+   * <code>optional string header_image = 10;</code>
    * @return The headerImage.
    */
   @java.lang.Override
@@ -250,7 +250,7 @@ private static final long serialVersionUID = 0L;
    * be between 3:1 and 5:1 (+-1%).
    * </pre>
    *
-   * <code>string header_image = 10;</code>
+   * <code>optional string header_image = 10;</code>
    * @return The bytes for headerImage.
    */
   @java.lang.Override
@@ -278,7 +278,7 @@ private static final long serialVersionUID = 0L;
    * minimum size of 300x300 pixels and aspect ratio of 1:1 (+-1%)
    * </pre>
    *
-   * <code>string marketing_image = 11;</code>
+   * <code>optional string marketing_image = 11;</code>
    * @return Whether the marketingImage field is set.
    */
   @java.lang.Override
@@ -293,7 +293,7 @@ private static final long serialVersionUID = 0L;
    * minimum size of 300x300 pixels and aspect ratio of 1:1 (+-1%)
    * </pre>
    *
-   * <code>string marketing_image = 11;</code>
+   * <code>optional string marketing_image = 11;</code>
    * @return The marketingImage.
    */
   @java.lang.Override
@@ -317,7 +317,7 @@ private static final long serialVersionUID = 0L;
    * minimum size of 300x300 pixels and aspect ratio of 1:1 (+-1%)
    * </pre>
    *
-   * <code>string marketing_image = 11;</code>
+   * <code>optional string marketing_image = 11;</code>
    * @return The bytes for marketingImage.
    */
   @java.lang.Override
@@ -342,7 +342,7 @@ private static final long serialVersionUID = 0L;
    * Headline of the marketing image.
    * </pre>
    *
-   * <code>string marketing_image_headline = 12;</code>
+   * <code>optional string marketing_image_headline = 12;</code>
    * @return Whether the marketingImageHeadline field is set.
    */
   @java.lang.Override
@@ -354,7 +354,7 @@ private static final long serialVersionUID = 0L;
    * Headline of the marketing image.
    * </pre>
    *
-   * <code>string marketing_image_headline = 12;</code>
+   * <code>optional string marketing_image_headline = 12;</code>
    * @return The marketingImageHeadline.
    */
   @java.lang.Override
@@ -375,7 +375,7 @@ private static final long serialVersionUID = 0L;
    * Headline of the marketing image.
    * </pre>
    *
-   * <code>string marketing_image_headline = 12;</code>
+   * <code>optional string marketing_image_headline = 12;</code>
    * @return The bytes for marketingImageHeadline.
    */
   @java.lang.Override
@@ -400,7 +400,7 @@ private static final long serialVersionUID = 0L;
    * Description of the marketing image.
    * </pre>
    *
-   * <code>string marketing_image_description = 13;</code>
+   * <code>optional string marketing_image_description = 13;</code>
    * @return Whether the marketingImageDescription field is set.
    */
   @java.lang.Override
@@ -412,7 +412,7 @@ private static final long serialVersionUID = 0L;
    * Description of the marketing image.
    * </pre>
    *
-   * <code>string marketing_image_description = 13;</code>
+   * <code>optional string marketing_image_description = 13;</code>
    * @return The marketingImageDescription.
    */
   @java.lang.Override
@@ -433,7 +433,7 @@ private static final long serialVersionUID = 0L;
    * Description of the marketing image.
    * </pre>
    *
-   * <code>string marketing_image_description = 13;</code>
+   * <code>optional string marketing_image_description = 13;</code>
    * @return The bytes for marketingImageDescription.
    */
   @java.lang.Override
@@ -1344,7 +1344,7 @@ private static final long serialVersionUID = 0L;
      * be between 3:1 and 5:1 (+-1%).
      * </pre>
      *
-     * <code>string header_image = 10;</code>
+     * <code>optional string header_image = 10;</code>
      * @return Whether the headerImage field is set.
      */
     public boolean hasHeaderImage() {
@@ -1357,7 +1357,7 @@ private static final long serialVersionUID = 0L;
      * be between 3:1 and 5:1 (+-1%).
      * </pre>
      *
-     * <code>string header_image = 10;</code>
+     * <code>optional string header_image = 10;</code>
      * @return The headerImage.
      */
     public java.lang.String getHeaderImage() {
@@ -1379,7 +1379,7 @@ private static final long serialVersionUID = 0L;
      * be between 3:1 and 5:1 (+-1%).
      * </pre>
      *
-     * <code>string header_image = 10;</code>
+     * <code>optional string header_image = 10;</code>
      * @return The bytes for headerImage.
      */
     public com.google.protobuf.ByteString
@@ -1402,7 +1402,7 @@ private static final long serialVersionUID = 0L;
      * be between 3:1 and 5:1 (+-1%).
      * </pre>
      *
-     * <code>string header_image = 10;</code>
+     * <code>optional string header_image = 10;</code>
      * @param value The headerImage to set.
      * @return This builder for chaining.
      */
@@ -1423,7 +1423,7 @@ private static final long serialVersionUID = 0L;
      * be between 3:1 and 5:1 (+-1%).
      * </pre>
      *
-     * <code>string header_image = 10;</code>
+     * <code>optional string header_image = 10;</code>
      * @return This builder for chaining.
      */
     public Builder clearHeaderImage() {
@@ -1439,7 +1439,7 @@ private static final long serialVersionUID = 0L;
      * be between 3:1 and 5:1 (+-1%).
      * </pre>
      *
-     * <code>string header_image = 10;</code>
+     * <code>optional string header_image = 10;</code>
      * @param value The bytes for headerImage to set.
      * @return This builder for chaining.
      */
@@ -1464,7 +1464,7 @@ private static final long serialVersionUID = 0L;
      * minimum size of 300x300 pixels and aspect ratio of 1:1 (+-1%)
      * </pre>
      *
-     * <code>string marketing_image = 11;</code>
+     * <code>optional string marketing_image = 11;</code>
      * @return Whether the marketingImage field is set.
      */
     public boolean hasMarketingImage() {
@@ -1478,7 +1478,7 @@ private static final long serialVersionUID = 0L;
      * minimum size of 300x300 pixels and aspect ratio of 1:1 (+-1%)
      * </pre>
      *
-     * <code>string marketing_image = 11;</code>
+     * <code>optional string marketing_image = 11;</code>
      * @return The marketingImage.
      */
     public java.lang.String getMarketingImage() {
@@ -1501,7 +1501,7 @@ private static final long serialVersionUID = 0L;
      * minimum size of 300x300 pixels and aspect ratio of 1:1 (+-1%)
      * </pre>
      *
-     * <code>string marketing_image = 11;</code>
+     * <code>optional string marketing_image = 11;</code>
      * @return The bytes for marketingImage.
      */
     public com.google.protobuf.ByteString
@@ -1525,7 +1525,7 @@ private static final long serialVersionUID = 0L;
      * minimum size of 300x300 pixels and aspect ratio of 1:1 (+-1%)
      * </pre>
      *
-     * <code>string marketing_image = 11;</code>
+     * <code>optional string marketing_image = 11;</code>
      * @param value The marketingImage to set.
      * @return This builder for chaining.
      */
@@ -1547,7 +1547,7 @@ private static final long serialVersionUID = 0L;
      * minimum size of 300x300 pixels and aspect ratio of 1:1 (+-1%)
      * </pre>
      *
-     * <code>string marketing_image = 11;</code>
+     * <code>optional string marketing_image = 11;</code>
      * @return This builder for chaining.
      */
     public Builder clearMarketingImage() {
@@ -1564,7 +1564,7 @@ private static final long serialVersionUID = 0L;
      * minimum size of 300x300 pixels and aspect ratio of 1:1 (+-1%)
      * </pre>
      *
-     * <code>string marketing_image = 11;</code>
+     * <code>optional string marketing_image = 11;</code>
      * @param value The bytes for marketingImage to set.
      * @return This builder for chaining.
      */
@@ -1586,7 +1586,7 @@ private static final long serialVersionUID = 0L;
      * Headline of the marketing image.
      * </pre>
      *
-     * <code>string marketing_image_headline = 12;</code>
+     * <code>optional string marketing_image_headline = 12;</code>
      * @return Whether the marketingImageHeadline field is set.
      */
     public boolean hasMarketingImageHeadline() {
@@ -1597,7 +1597,7 @@ private static final long serialVersionUID = 0L;
      * Headline of the marketing image.
      * </pre>
      *
-     * <code>string marketing_image_headline = 12;</code>
+     * <code>optional string marketing_image_headline = 12;</code>
      * @return The marketingImageHeadline.
      */
     public java.lang.String getMarketingImageHeadline() {
@@ -1617,7 +1617,7 @@ private static final long serialVersionUID = 0L;
      * Headline of the marketing image.
      * </pre>
      *
-     * <code>string marketing_image_headline = 12;</code>
+     * <code>optional string marketing_image_headline = 12;</code>
      * @return The bytes for marketingImageHeadline.
      */
     public com.google.protobuf.ByteString
@@ -1638,7 +1638,7 @@ private static final long serialVersionUID = 0L;
      * Headline of the marketing image.
      * </pre>
      *
-     * <code>string marketing_image_headline = 12;</code>
+     * <code>optional string marketing_image_headline = 12;</code>
      * @param value The marketingImageHeadline to set.
      * @return This builder for chaining.
      */
@@ -1657,7 +1657,7 @@ private static final long serialVersionUID = 0L;
      * Headline of the marketing image.
      * </pre>
      *
-     * <code>string marketing_image_headline = 12;</code>
+     * <code>optional string marketing_image_headline = 12;</code>
      * @return This builder for chaining.
      */
     public Builder clearMarketingImageHeadline() {
@@ -1671,7 +1671,7 @@ private static final long serialVersionUID = 0L;
      * Headline of the marketing image.
      * </pre>
      *
-     * <code>string marketing_image_headline = 12;</code>
+     * <code>optional string marketing_image_headline = 12;</code>
      * @param value The bytes for marketingImageHeadline to set.
      * @return This builder for chaining.
      */
@@ -1693,7 +1693,7 @@ private static final long serialVersionUID = 0L;
      * Description of the marketing image.
      * </pre>
      *
-     * <code>string marketing_image_description = 13;</code>
+     * <code>optional string marketing_image_description = 13;</code>
      * @return Whether the marketingImageDescription field is set.
      */
     public boolean hasMarketingImageDescription() {
@@ -1704,7 +1704,7 @@ private static final long serialVersionUID = 0L;
      * Description of the marketing image.
      * </pre>
      *
-     * <code>string marketing_image_description = 13;</code>
+     * <code>optional string marketing_image_description = 13;</code>
      * @return The marketingImageDescription.
      */
     public java.lang.String getMarketingImageDescription() {
@@ -1724,7 +1724,7 @@ private static final long serialVersionUID = 0L;
      * Description of the marketing image.
      * </pre>
      *
-     * <code>string marketing_image_description = 13;</code>
+     * <code>optional string marketing_image_description = 13;</code>
      * @return The bytes for marketingImageDescription.
      */
     public com.google.protobuf.ByteString
@@ -1745,7 +1745,7 @@ private static final long serialVersionUID = 0L;
      * Description of the marketing image.
      * </pre>
      *
-     * <code>string marketing_image_description = 13;</code>
+     * <code>optional string marketing_image_description = 13;</code>
      * @param value The marketingImageDescription to set.
      * @return This builder for chaining.
      */
@@ -1764,7 +1764,7 @@ private static final long serialVersionUID = 0L;
      * Description of the marketing image.
      * </pre>
      *
-     * <code>string marketing_image_description = 13;</code>
+     * <code>optional string marketing_image_description = 13;</code>
      * @return This builder for chaining.
      */
     public Builder clearMarketingImageDescription() {
@@ -1778,7 +1778,7 @@ private static final long serialVersionUID = 0L;
      * Description of the marketing image.
      * </pre>
      *
-     * <code>string marketing_image_description = 13;</code>
+     * <code>optional string marketing_image_description = 13;</code>
      * @param value The bytes for marketingImageDescription to set.
      * @return This builder for chaining.
      */

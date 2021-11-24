@@ -33,7 +33,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * Three-character ISO 4217 currency code.
    * </pre>
    *
-   * <code>string currency_code = 9;</code>
+   * <code>optional string currency_code = 9;</code>
    * @return Whether the currencyCode field is set.
    */
   boolean hasCurrencyCode();
@@ -43,7 +43,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * Three-character ISO 4217 currency code.
    * </pre>
    *
-   * <code>string currency_code = 9;</code>
+   * <code>optional string currency_code = 9;</code>
    * @return The currencyCode.
    */
   java.lang.String getCurrencyCode();
@@ -53,7 +53,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * Three-character ISO 4217 currency code.
    * </pre>
    *
-   * <code>string currency_code = 9;</code>
+   * <code>optional string currency_code = 9;</code>
    * @return The bytes for currencyCode.
    */
   com.google.protobuf.ByteString
@@ -97,7 +97,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * Please use cookie_frequency_cap_setting instead.
    * </pre>
    *
-   * <code>int32 cookie_frequency_cap = 10;</code>
+   * <code>optional int32 cookie_frequency_cap = 10;</code>
    * @return Whether the cookieFrequencyCap field is set.
    */
   boolean hasCookieFrequencyCap();
@@ -112,7 +112,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * Please use cookie_frequency_cap_setting instead.
    * </pre>
    *
-   * <code>int32 cookie_frequency_cap = 10;</code>
+   * <code>optional int32 cookie_frequency_cap = 10;</code>
    * @return The cookieFrequencyCap.
    */
   int getCookieFrequencyCap();
@@ -123,7 +123,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * This is equivalent to the frequency cap exposed in Google Ads when creating
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user during a specified time interval.
-   * If not specified, no cap is applied.
+   * If not specified, a default of 0 (no cap) is applied.
    * This field replaces the deprecated cookie_frequency_cap field.
    * </pre>
    *
@@ -137,7 +137,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * This is equivalent to the frequency cap exposed in Google Ads when creating
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user during a specified time interval.
-   * If not specified, no cap is applied.
+   * If not specified, a default of 0 (no cap) is applied.
    * This field replaces the deprecated cookie_frequency_cap field.
    * </pre>
    *
@@ -151,7 +151,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * This is equivalent to the frequency cap exposed in Google Ads when creating
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user during a specified time interval.
-   * If not specified, no cap is applied.
+   * If not specified, a default of 0 (no cap) is applied.
    * This field replaces the deprecated cookie_frequency_cap field.
    * </pre>
    *
@@ -168,7 +168,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * This field cannot be combined with the effective_frequency_limit field.
    * </pre>
    *
-   * <code>int32 min_effective_frequency = 11;</code>
+   * <code>optional int32 min_effective_frequency = 11;</code>
    * @return Whether the minEffectiveFrequency field is set.
    */
   boolean hasMinEffectiveFrequency();
@@ -181,7 +181,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * This field cannot be combined with the effective_frequency_limit field.
    * </pre>
    *
-   * <code>int32 min_effective_frequency = 11;</code>
+   * <code>optional int32 min_effective_frequency = 11;</code>
    * @return The minEffectiveFrequency.
    */
   int getMinEffectiveFrequency();
@@ -198,7 +198,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * This field cannot be combined with the min_effective_frequency field.
    * </pre>
    *
-   * <code>.google.ads.googleads.v8.services.EffectiveFrequencyLimit effective_frequency_limit = 12;</code>
+   * <code>optional .google.ads.googleads.v8.services.EffectiveFrequencyLimit effective_frequency_limit = 12;</code>
    * @return Whether the effectiveFrequencyLimit field is set.
    */
   boolean hasEffectiveFrequencyLimit();
@@ -214,7 +214,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * This field cannot be combined with the min_effective_frequency field.
    * </pre>
    *
-   * <code>.google.ads.googleads.v8.services.EffectiveFrequencyLimit effective_frequency_limit = 12;</code>
+   * <code>optional .google.ads.googleads.v8.services.EffectiveFrequencyLimit effective_frequency_limit = 12;</code>
    * @return The effectiveFrequencyLimit.
    */
   com.google.ads.googleads.v8.services.EffectiveFrequencyLimit getEffectiveFrequencyLimit();
@@ -230,7 +230,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * This field cannot be combined with the min_effective_frequency field.
    * </pre>
    *
-   * <code>.google.ads.googleads.v8.services.EffectiveFrequencyLimit effective_frequency_limit = 12;</code>
+   * <code>optional .google.ads.googleads.v8.services.EffectiveFrequencyLimit effective_frequency_limit = 12;</code>
    */
   com.google.ads.googleads.v8.services.EffectiveFrequencyLimitOrBuilder getEffectiveFrequencyLimitOrBuilder();
 

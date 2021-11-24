@@ -120,7 +120,7 @@ private static final long serialVersionUID = 0L;
    * This field is required and must be set in CREATE operations.
    * </pre>
    *
-   * <code>string app_id = 4;</code>
+   * <code>optional string app_id = 4;</code>
    * @return Whether the appId field is set.
    */
   @java.lang.Override
@@ -145,7 +145,7 @@ private static final long serialVersionUID = 0L;
    * This field is required and must be set in CREATE operations.
    * </pre>
    *
-   * <code>string app_id = 4;</code>
+   * <code>optional string app_id = 4;</code>
    * @return The appId.
    */
   @java.lang.Override
@@ -179,7 +179,7 @@ private static final long serialVersionUID = 0L;
    * This field is required and must be set in CREATE operations.
    * </pre>
    *
-   * <code>string app_id = 4;</code>
+   * <code>optional string app_id = 4;</code>
    * @return The bytes for appId.
    */
   @java.lang.Override
@@ -204,7 +204,7 @@ private static final long serialVersionUID = 0L;
    * Name of this mobile application.
    * </pre>
    *
-   * <code>string name = 5;</code>
+   * <code>optional string name = 5;</code>
    * @return Whether the name field is set.
    */
   @java.lang.Override
@@ -216,7 +216,7 @@ private static final long serialVersionUID = 0L;
    * Name of this mobile application.
    * </pre>
    *
-   * <code>string name = 5;</code>
+   * <code>optional string name = 5;</code>
    * @return The name.
    */
   @java.lang.Override
@@ -237,7 +237,7 @@ private static final long serialVersionUID = 0L;
    * Name of this mobile application.
    * </pre>
    *
-   * <code>string name = 5;</code>
+   * <code>optional string name = 5;</code>
    * @return The bytes for name.
    */
   @java.lang.Override
@@ -619,7 +619,7 @@ private static final long serialVersionUID = 0L;
      * This field is required and must be set in CREATE operations.
      * </pre>
      *
-     * <code>string app_id = 4;</code>
+     * <code>optional string app_id = 4;</code>
      * @return Whether the appId field is set.
      */
     public boolean hasAppId() {
@@ -643,7 +643,7 @@ private static final long serialVersionUID = 0L;
      * This field is required and must be set in CREATE operations.
      * </pre>
      *
-     * <code>string app_id = 4;</code>
+     * <code>optional string app_id = 4;</code>
      * @return The appId.
      */
     public java.lang.String getAppId() {
@@ -676,7 +676,7 @@ private static final long serialVersionUID = 0L;
      * This field is required and must be set in CREATE operations.
      * </pre>
      *
-     * <code>string app_id = 4;</code>
+     * <code>optional string app_id = 4;</code>
      * @return The bytes for appId.
      */
     public com.google.protobuf.ByteString
@@ -710,7 +710,7 @@ private static final long serialVersionUID = 0L;
      * This field is required and must be set in CREATE operations.
      * </pre>
      *
-     * <code>string app_id = 4;</code>
+     * <code>optional string app_id = 4;</code>
      * @param value The appId to set.
      * @return This builder for chaining.
      */
@@ -742,7 +742,7 @@ private static final long serialVersionUID = 0L;
      * This field is required and must be set in CREATE operations.
      * </pre>
      *
-     * <code>string app_id = 4;</code>
+     * <code>optional string app_id = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearAppId() {
@@ -769,7 +769,7 @@ private static final long serialVersionUID = 0L;
      * This field is required and must be set in CREATE operations.
      * </pre>
      *
-     * <code>string app_id = 4;</code>
+     * <code>optional string app_id = 4;</code>
      * @param value The bytes for appId to set.
      * @return This builder for chaining.
      */
@@ -791,7 +791,7 @@ private static final long serialVersionUID = 0L;
      * Name of this mobile application.
      * </pre>
      *
-     * <code>string name = 5;</code>
+     * <code>optional string name = 5;</code>
      * @return Whether the name field is set.
      */
     public boolean hasName() {
@@ -802,7 +802,7 @@ private static final long serialVersionUID = 0L;
      * Name of this mobile application.
      * </pre>
      *
-     * <code>string name = 5;</code>
+     * <code>optional string name = 5;</code>
      * @return The name.
      */
     public java.lang.String getName() {
@@ -822,7 +822,7 @@ private static final long serialVersionUID = 0L;
      * Name of this mobile application.
      * </pre>
      *
-     * <code>string name = 5;</code>
+     * <code>optional string name = 5;</code>
      * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
@@ -843,7 +843,7 @@ private static final long serialVersionUID = 0L;
      * Name of this mobile application.
      * </pre>
      *
-     * <code>string name = 5;</code>
+     * <code>optional string name = 5;</code>
      * @param value The name to set.
      * @return This builder for chaining.
      */
@@ -862,7 +862,7 @@ private static final long serialVersionUID = 0L;
      * Name of this mobile application.
      * </pre>
      *
-     * <code>string name = 5;</code>
+     * <code>optional string name = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
@@ -876,7 +876,7 @@ private static final long serialVersionUID = 0L;
      * Name of this mobile application.
      * </pre>
      *
-     * <code>string name = 5;</code>
+     * <code>optional string name = 5;</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */

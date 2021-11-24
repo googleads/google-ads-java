@@ -66,8 +66,8 @@ public interface ConversionValueRuleSetOperationOrBuilder extends
 
   /**
    * <pre>
-   * Update operation: The conversion action is expected to have a valid
-   * resource name.
+   * Update operation: The conversion value rule set is expected to have a
+   * valid resource name.
    * </pre>
    *
    * <code>.google.ads.googleads.v8.resources.ConversionValueRuleSet update = 2;</code>
@@ -76,8 +76,8 @@ public interface ConversionValueRuleSetOperationOrBuilder extends
   boolean hasUpdate();
   /**
    * <pre>
-   * Update operation: The conversion action is expected to have a valid
-   * resource name.
+   * Update operation: The conversion value rule set is expected to have a
+   * valid resource name.
    * </pre>
    *
    * <code>.google.ads.googleads.v8.resources.ConversionValueRuleSet update = 2;</code>
@@ -86,8 +86,8 @@ public interface ConversionValueRuleSetOperationOrBuilder extends
   com.google.ads.googleads.v8.resources.ConversionValueRuleSet getUpdate();
   /**
    * <pre>
-   * Update operation: The conversion action is expected to have a valid
-   * resource name.
+   * Update operation: The conversion value rule set is expected to have a
+   * valid resource name.
    * </pre>
    *
    * <code>.google.ads.googleads.v8.resources.ConversionValueRuleSet update = 2;</code>
@@ -96,8 +96,8 @@ public interface ConversionValueRuleSetOperationOrBuilder extends
 
   /**
    * <pre>
-   * Remove operation: A resource name for the removed conversion action is
-   * expected, in this format:
+   * Remove operation: A resource name for the removed conversion value rule
+   * set is expected, in this format:
    * `customers/{customer_id}/conversionValueRuleSets/{conversion_value_rule_set_id}`
    * </pre>
    *
@@ -107,8 +107,8 @@ public interface ConversionValueRuleSetOperationOrBuilder extends
   boolean hasRemove();
   /**
    * <pre>
-   * Remove operation: A resource name for the removed conversion action is
-   * expected, in this format:
+   * Remove operation: A resource name for the removed conversion value rule
+   * set is expected, in this format:
    * `customers/{customer_id}/conversionValueRuleSets/{conversion_value_rule_set_id}`
    * </pre>
    *
@@ -118,8 +118,8 @@ public interface ConversionValueRuleSetOperationOrBuilder extends
   java.lang.String getRemove();
   /**
    * <pre>
-   * Remove operation: A resource name for the removed conversion action is
-   * expected, in this format:
+   * Remove operation: A resource name for the removed conversion value rule
+   * set is expected, in this format:
    * `customers/{customer_id}/conversionValueRuleSets/{conversion_value_rule_set_id}`
    * </pre>
    *

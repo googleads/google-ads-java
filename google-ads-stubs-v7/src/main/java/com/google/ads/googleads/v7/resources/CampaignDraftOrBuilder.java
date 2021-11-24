@@ -37,7 +37,7 @@ public interface CampaignDraftOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 draft_id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 draft_id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the draftId field is set.
    */
   boolean hasDraftId();
@@ -47,7 +47,7 @@ public interface CampaignDraftOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 draft_id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 draft_id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The draftId.
    */
   long getDraftId();
@@ -57,7 +57,7 @@ public interface CampaignDraftOrBuilder extends
    * Immutable. The base campaign to which the draft belongs.
    * </pre>
    *
-   * <code>string base_campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string base_campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the baseCampaign field is set.
    */
   boolean hasBaseCampaign();
@@ -66,7 +66,7 @@ public interface CampaignDraftOrBuilder extends
    * Immutable. The base campaign to which the draft belongs.
    * </pre>
    *
-   * <code>string base_campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string base_campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The baseCampaign.
    */
   java.lang.String getBaseCampaign();
@@ -75,7 +75,7 @@ public interface CampaignDraftOrBuilder extends
    * Immutable. The base campaign to which the draft belongs.
    * </pre>
    *
-   * <code>string base_campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string base_campaign = 10 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for baseCampaign.
    */
   com.google.protobuf.ByteString
@@ -90,7 +90,7 @@ public interface CampaignDraftOrBuilder extends
    * (code point 0xA) or carriage return (code point 0xD) characters.
    * </pre>
    *
-   * <code>string name = 11;</code>
+   * <code>optional string name = 11;</code>
    * @return Whether the name field is set.
    */
   boolean hasName();
@@ -103,7 +103,7 @@ public interface CampaignDraftOrBuilder extends
    * (code point 0xA) or carriage return (code point 0xD) characters.
    * </pre>
    *
-   * <code>string name = 11;</code>
+   * <code>optional string name = 11;</code>
    * @return The name.
    */
   java.lang.String getName();
@@ -116,7 +116,7 @@ public interface CampaignDraftOrBuilder extends
    * (code point 0xA) or carriage return (code point 0xD) characters.
    * </pre>
    *
-   * <code>string name = 11;</code>
+   * <code>optional string name = 11;</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
@@ -129,7 +129,7 @@ public interface CampaignDraftOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>string draft_campaign = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string draft_campaign = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the draftCampaign field is set.
    */
   boolean hasDraftCampaign();
@@ -140,7 +140,7 @@ public interface CampaignDraftOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>string draft_campaign = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string draft_campaign = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The draftCampaign.
    */
   java.lang.String getDraftCampaign();
@@ -151,7 +151,7 @@ public interface CampaignDraftOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>string draft_campaign = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string draft_campaign = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for draftCampaign.
    */
   com.google.protobuf.ByteString
@@ -183,7 +183,7 @@ public interface CampaignDraftOrBuilder extends
    * Output only. Whether there is an experiment based on this draft currently serving.
    * </pre>
    *
-   * <code>bool has_experiment_running = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool has_experiment_running = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the hasExperimentRunning field is set.
    */
   boolean hasHasExperimentRunning();
@@ -192,7 +192,7 @@ public interface CampaignDraftOrBuilder extends
    * Output only. Whether there is an experiment based on this draft currently serving.
    * </pre>
    *
-   * <code>bool has_experiment_running = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool has_experiment_running = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The hasExperimentRunning.
    */
   boolean getHasExperimentRunning();
@@ -204,7 +204,7 @@ public interface CampaignDraftOrBuilder extends
    * is in progress or finished.
    * </pre>
    *
-   * <code>string long_running_operation = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string long_running_operation = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the longRunningOperation field is set.
    */
   boolean hasLongRunningOperation();
@@ -215,7 +215,7 @@ public interface CampaignDraftOrBuilder extends
    * is in progress or finished.
    * </pre>
    *
-   * <code>string long_running_operation = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string long_running_operation = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The longRunningOperation.
    */
   java.lang.String getLongRunningOperation();
@@ -226,7 +226,7 @@ public interface CampaignDraftOrBuilder extends
    * is in progress or finished.
    * </pre>
    *
-   * <code>string long_running_operation = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string long_running_operation = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for longRunningOperation.
    */
   com.google.protobuf.ByteString

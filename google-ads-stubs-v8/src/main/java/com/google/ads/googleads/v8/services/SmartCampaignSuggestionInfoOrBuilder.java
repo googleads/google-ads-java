@@ -171,11 +171,11 @@ public interface SmartCampaignSuggestionInfoOrBuilder extends
 
   /**
    * <pre>
-   * Optional. The ID of the Google My Business (GMB) Location.
-   * The location ID can be fetched by GMB API with its form:
+   * Optional. The ID of the Business Profile location.
+   * The location ID can be fetched by Business Profile API with its form:
    * accounts/{accountId}/locations/{locationId}. The last {locationId}
-   * component from the GMB API represents the business_location_id.
-   * See the [Google My Business API]
+   * component from the Business Profile API represents the
+   * business_location_id. See the [Business Profile API]
    * (https://developers.google.com/my-business/reference/rest/v4/accounts.locations)
    * </pre>
    *
@@ -185,11 +185,11 @@ public interface SmartCampaignSuggestionInfoOrBuilder extends
   boolean hasBusinessLocationId();
   /**
    * <pre>
-   * Optional. The ID of the Google My Business (GMB) Location.
-   * The location ID can be fetched by GMB API with its form:
+   * Optional. The ID of the Business Profile location.
+   * The location ID can be fetched by Business Profile API with its form:
    * accounts/{accountId}/locations/{locationId}. The last {locationId}
-   * component from the GMB API represents the business_location_id.
-   * See the [Google My Business API]
+   * component from the Business Profile API represents the
+   * business_location_id. See the [Business Profile API]
    * (https://developers.google.com/my-business/reference/rest/v4/accounts.locations)
    * </pre>
    *

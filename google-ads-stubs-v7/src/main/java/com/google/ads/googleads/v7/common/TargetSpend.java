@@ -110,7 +110,7 @@ private static final long serialVersionUID = 0L;
    * for details.
    * </pre>
    *
-   * <code>int64 target_spend_micros = 3 [deprecated = true];</code>
+   * <code>optional int64 target_spend_micros = 3 [deprecated = true];</code>
    * @return Whether the targetSpendMicros field is set.
    */
   @java.lang.Override
@@ -128,7 +128,7 @@ private static final long serialVersionUID = 0L;
    * for details.
    * </pre>
    *
-   * <code>int64 target_spend_micros = 3 [deprecated = true];</code>
+   * <code>optional int64 target_spend_micros = 3 [deprecated = true];</code>
    * @return The targetSpendMicros.
    */
   @java.lang.Override
@@ -144,7 +144,7 @@ private static final long serialVersionUID = 0L;
    * The limit applies to all keywords managed by the strategy.
    * </pre>
    *
-   * <code>int64 cpc_bid_ceiling_micros = 4;</code>
+   * <code>optional int64 cpc_bid_ceiling_micros = 4;</code>
    * @return Whether the cpcBidCeilingMicros field is set.
    */
   @java.lang.Override
@@ -157,7 +157,7 @@ private static final long serialVersionUID = 0L;
    * The limit applies to all keywords managed by the strategy.
    * </pre>
    *
-   * <code>int64 cpc_bid_ceiling_micros = 4;</code>
+   * <code>optional int64 cpc_bid_ceiling_micros = 4;</code>
    * @return The cpcBidCeilingMicros.
    */
   @java.lang.Override
@@ -523,7 +523,7 @@ private static final long serialVersionUID = 0L;
      * for details.
      * </pre>
      *
-     * <code>int64 target_spend_micros = 3 [deprecated = true];</code>
+     * <code>optional int64 target_spend_micros = 3 [deprecated = true];</code>
      * @return Whether the targetSpendMicros field is set.
      */
     @java.lang.Override
@@ -541,7 +541,7 @@ private static final long serialVersionUID = 0L;
      * for details.
      * </pre>
      *
-     * <code>int64 target_spend_micros = 3 [deprecated = true];</code>
+     * <code>optional int64 target_spend_micros = 3 [deprecated = true];</code>
      * @return The targetSpendMicros.
      */
     @java.lang.Override
@@ -559,7 +559,7 @@ private static final long serialVersionUID = 0L;
      * for details.
      * </pre>
      *
-     * <code>int64 target_spend_micros = 3 [deprecated = true];</code>
+     * <code>optional int64 target_spend_micros = 3 [deprecated = true];</code>
      * @param value The targetSpendMicros to set.
      * @return This builder for chaining.
      */
@@ -580,7 +580,7 @@ private static final long serialVersionUID = 0L;
      * for details.
      * </pre>
      *
-     * <code>int64 target_spend_micros = 3 [deprecated = true];</code>
+     * <code>optional int64 target_spend_micros = 3 [deprecated = true];</code>
      * @return This builder for chaining.
      */
     @java.lang.Deprecated public Builder clearTargetSpendMicros() {
@@ -597,7 +597,7 @@ private static final long serialVersionUID = 0L;
      * The limit applies to all keywords managed by the strategy.
      * </pre>
      *
-     * <code>int64 cpc_bid_ceiling_micros = 4;</code>
+     * <code>optional int64 cpc_bid_ceiling_micros = 4;</code>
      * @return Whether the cpcBidCeilingMicros field is set.
      */
     @java.lang.Override
@@ -610,7 +610,7 @@ private static final long serialVersionUID = 0L;
      * The limit applies to all keywords managed by the strategy.
      * </pre>
      *
-     * <code>int64 cpc_bid_ceiling_micros = 4;</code>
+     * <code>optional int64 cpc_bid_ceiling_micros = 4;</code>
      * @return The cpcBidCeilingMicros.
      */
     @java.lang.Override
@@ -623,7 +623,7 @@ private static final long serialVersionUID = 0L;
      * The limit applies to all keywords managed by the strategy.
      * </pre>
      *
-     * <code>int64 cpc_bid_ceiling_micros = 4;</code>
+     * <code>optional int64 cpc_bid_ceiling_micros = 4;</code>
      * @param value The cpcBidCeilingMicros to set.
      * @return This builder for chaining.
      */
@@ -639,7 +639,7 @@ private static final long serialVersionUID = 0L;
      * The limit applies to all keywords managed by the strategy.
      * </pre>
      *
-     * <code>int64 cpc_bid_ceiling_micros = 4;</code>
+     * <code>optional int64 cpc_bid_ceiling_micros = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearCpcBidCeilingMicros() {

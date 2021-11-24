@@ -12,7 +12,7 @@ public interface ClickConversionOrBuilder extends
    * The Google click ID (gclid) associated with this conversion.
    * </pre>
    *
-   * <code>string gclid = 9;</code>
+   * <code>optional string gclid = 9;</code>
    * @return Whether the gclid field is set.
    */
   boolean hasGclid();
@@ -21,7 +21,7 @@ public interface ClickConversionOrBuilder extends
    * The Google click ID (gclid) associated with this conversion.
    * </pre>
    *
-   * <code>string gclid = 9;</code>
+   * <code>optional string gclid = 9;</code>
    * @return The gclid.
    */
   java.lang.String getGclid();
@@ -30,7 +30,7 @@ public interface ClickConversionOrBuilder extends
    * The Google click ID (gclid) associated with this conversion.
    * </pre>
    *
-   * <code>string gclid = 9;</code>
+   * <code>optional string gclid = 9;</code>
    * @return The bytes for gclid.
    */
   com.google.protobuf.ByteString
@@ -44,7 +44,7 @@ public interface ClickConversionOrBuilder extends
    * conversion action id as the sole identifier of the conversion action.
    * </pre>
    *
-   * <code>string conversion_action = 10;</code>
+   * <code>optional string conversion_action = 10;</code>
    * @return Whether the conversionAction field is set.
    */
   boolean hasConversionAction();
@@ -56,7 +56,7 @@ public interface ClickConversionOrBuilder extends
    * conversion action id as the sole identifier of the conversion action.
    * </pre>
    *
-   * <code>string conversion_action = 10;</code>
+   * <code>optional string conversion_action = 10;</code>
    * @return The conversionAction.
    */
   java.lang.String getConversionAction();
@@ -68,7 +68,7 @@ public interface ClickConversionOrBuilder extends
    * conversion action id as the sole identifier of the conversion action.
    * </pre>
    *
-   * <code>string conversion_action = 10;</code>
+   * <code>optional string conversion_action = 10;</code>
    * @return The bytes for conversionAction.
    */
   com.google.protobuf.ByteString
@@ -81,7 +81,7 @@ public interface ClickConversionOrBuilder extends
    * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. “2019-01-01 12:32:45-08:00”.
    * </pre>
    *
-   * <code>string conversion_date_time = 11;</code>
+   * <code>optional string conversion_date_time = 11;</code>
    * @return Whether the conversionDateTime field is set.
    */
   boolean hasConversionDateTime();
@@ -92,7 +92,7 @@ public interface ClickConversionOrBuilder extends
    * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. “2019-01-01 12:32:45-08:00”.
    * </pre>
    *
-   * <code>string conversion_date_time = 11;</code>
+   * <code>optional string conversion_date_time = 11;</code>
    * @return The conversionDateTime.
    */
   java.lang.String getConversionDateTime();
@@ -103,7 +103,7 @@ public interface ClickConversionOrBuilder extends
    * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. “2019-01-01 12:32:45-08:00”.
    * </pre>
    *
-   * <code>string conversion_date_time = 11;</code>
+   * <code>optional string conversion_date_time = 11;</code>
    * @return The bytes for conversionDateTime.
    */
   com.google.protobuf.ByteString
@@ -114,7 +114,7 @@ public interface ClickConversionOrBuilder extends
    * The value of the conversion for the advertiser.
    * </pre>
    *
-   * <code>double conversion_value = 12;</code>
+   * <code>optional double conversion_value = 12;</code>
    * @return Whether the conversionValue field is set.
    */
   boolean hasConversionValue();
@@ -123,7 +123,7 @@ public interface ClickConversionOrBuilder extends
    * The value of the conversion for the advertiser.
    * </pre>
    *
-   * <code>double conversion_value = 12;</code>
+   * <code>optional double conversion_value = 12;</code>
    * @return The conversionValue.
    */
   double getConversionValue();
@@ -134,7 +134,7 @@ public interface ClickConversionOrBuilder extends
    * 3-character currency code. For example: USD, EUR.
    * </pre>
    *
-   * <code>string currency_code = 13;</code>
+   * <code>optional string currency_code = 13;</code>
    * @return Whether the currencyCode field is set.
    */
   boolean hasCurrencyCode();
@@ -144,7 +144,7 @@ public interface ClickConversionOrBuilder extends
    * 3-character currency code. For example: USD, EUR.
    * </pre>
    *
-   * <code>string currency_code = 13;</code>
+   * <code>optional string currency_code = 13;</code>
    * @return The currencyCode.
    */
   java.lang.String getCurrencyCode();
@@ -154,7 +154,7 @@ public interface ClickConversionOrBuilder extends
    * 3-character currency code. For example: USD, EUR.
    * </pre>
    *
-   * <code>string currency_code = 13;</code>
+   * <code>optional string currency_code = 13;</code>
    * @return The bytes for currencyCode.
    */
   com.google.protobuf.ByteString
@@ -166,7 +166,7 @@ public interface ClickConversionOrBuilder extends
    * for one conversion per conversion action.
    * </pre>
    *
-   * <code>string order_id = 14;</code>
+   * <code>optional string order_id = 14;</code>
    * @return Whether the orderId field is set.
    */
   boolean hasOrderId();
@@ -176,7 +176,7 @@ public interface ClickConversionOrBuilder extends
    * for one conversion per conversion action.
    * </pre>
    *
-   * <code>string order_id = 14;</code>
+   * <code>optional string order_id = 14;</code>
    * @return The orderId.
    */
   java.lang.String getOrderId();
@@ -186,7 +186,7 @@ public interface ClickConversionOrBuilder extends
    * for one conversion per conversion action.
    * </pre>
    *
-   * <code>string order_id = 14;</code>
+   * <code>optional string order_id = 14;</code>
    * @return The bytes for orderId.
    */
   com.google.protobuf.ByteString

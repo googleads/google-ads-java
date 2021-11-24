@@ -32,7 +32,7 @@ public interface TargetImpressionShareOrBuilder extends
    * E.g. 1% equals 10,000.
    * </pre>
    *
-   * <code>int64 location_fraction_micros = 4;</code>
+   * <code>optional int64 location_fraction_micros = 4;</code>
    * @return Whether the locationFractionMicros field is set.
    */
   boolean hasLocationFractionMicros();
@@ -42,7 +42,7 @@ public interface TargetImpressionShareOrBuilder extends
    * E.g. 1% equals 10,000.
    * </pre>
    *
-   * <code>int64 location_fraction_micros = 4;</code>
+   * <code>optional int64 location_fraction_micros = 4;</code>
    * @return The locationFractionMicros.
    */
   long getLocationFractionMicros();
@@ -54,7 +54,7 @@ public interface TargetImpressionShareOrBuilder extends
    * and specified in local micros.
    * </pre>
    *
-   * <code>int64 cpc_bid_ceiling_micros = 5;</code>
+   * <code>optional int64 cpc_bid_ceiling_micros = 5;</code>
    * @return Whether the cpcBidCeilingMicros field is set.
    */
   boolean hasCpcBidCeilingMicros();
@@ -65,7 +65,7 @@ public interface TargetImpressionShareOrBuilder extends
    * and specified in local micros.
    * </pre>
    *
-   * <code>int64 cpc_bid_ceiling_micros = 5;</code>
+   * <code>optional int64 cpc_bid_ceiling_micros = 5;</code>
    * @return The cpcBidCeilingMicros.
    */
   long getCpcBidCeilingMicros();

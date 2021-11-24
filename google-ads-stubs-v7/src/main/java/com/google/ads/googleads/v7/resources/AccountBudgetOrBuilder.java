@@ -36,7 +36,7 @@ public interface AccountBudgetOrBuilder extends
    * Output only. The ID of the account-level budget.
    * </pre>
    *
-   * <code>int64 id = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -45,7 +45,7 @@ public interface AccountBudgetOrBuilder extends
    * Output only. The ID of the account-level budget.
    * </pre>
    *
-   * <code>int64 id = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   long getId();
@@ -57,7 +57,7 @@ public interface AccountBudgetOrBuilder extends
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
-   * <code>string billing_setup = 24 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string billing_setup = 24 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the billingSetup field is set.
    */
   boolean hasBillingSetup();
@@ -68,7 +68,7 @@ public interface AccountBudgetOrBuilder extends
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
-   * <code>string billing_setup = 24 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string billing_setup = 24 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The billingSetup.
    */
   java.lang.String getBillingSetup();
@@ -79,7 +79,7 @@ public interface AccountBudgetOrBuilder extends
    * `customers/{customer_id}/billingSetups/{billing_setup_id}`
    * </pre>
    *
-   * <code>string billing_setup = 24 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string billing_setup = 24 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for billingSetup.
    */
   com.google.protobuf.ByteString
@@ -109,7 +109,7 @@ public interface AccountBudgetOrBuilder extends
    * Output only. The name of the account-level budget.
    * </pre>
    *
-   * <code>string name = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the name field is set.
    */
   boolean hasName();
@@ -118,7 +118,7 @@ public interface AccountBudgetOrBuilder extends
    * Output only. The name of the account-level budget.
    * </pre>
    *
-   * <code>string name = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The name.
    */
   java.lang.String getName();
@@ -127,7 +127,7 @@ public interface AccountBudgetOrBuilder extends
    * Output only. The name of the account-level budget.
    * </pre>
    *
-   * <code>string name = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
@@ -140,7 +140,7 @@ public interface AccountBudgetOrBuilder extends
    * this is the time of request.
    * </pre>
    *
-   * <code>string proposed_start_date_time = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string proposed_start_date_time = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the proposedStartDateTime field is set.
    */
   boolean hasProposedStartDateTime();
@@ -151,7 +151,7 @@ public interface AccountBudgetOrBuilder extends
    * this is the time of request.
    * </pre>
    *
-   * <code>string proposed_start_date_time = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string proposed_start_date_time = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The proposedStartDateTime.
    */
   java.lang.String getProposedStartDateTime();
@@ -162,7 +162,7 @@ public interface AccountBudgetOrBuilder extends
    * this is the time of request.
    * </pre>
    *
-   * <code>string proposed_start_date_time = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string proposed_start_date_time = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for proposedStartDateTime.
    */
   com.google.protobuf.ByteString
@@ -176,7 +176,7 @@ public interface AccountBudgetOrBuilder extends
    * the approved start time is the time of approval.
    * </pre>
    *
-   * <code>string approved_start_date_time = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string approved_start_date_time = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the approvedStartDateTime field is set.
    */
   boolean hasApprovedStartDateTime();
@@ -188,7 +188,7 @@ public interface AccountBudgetOrBuilder extends
    * the approved start time is the time of approval.
    * </pre>
    *
-   * <code>string approved_start_date_time = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string approved_start_date_time = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The approvedStartDateTime.
    */
   java.lang.String getApprovedStartDateTime();
@@ -200,7 +200,7 @@ public interface AccountBudgetOrBuilder extends
    * the approved start time is the time of approval.
    * </pre>
    *
-   * <code>string approved_start_date_time = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string approved_start_date_time = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for approvedStartDateTime.
    */
   com.google.protobuf.ByteString
@@ -235,7 +235,7 @@ public interface AccountBudgetOrBuilder extends
    * in their monthly invoices.
    * </pre>
    *
-   * <code>string purchase_order_number = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string purchase_order_number = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the purchaseOrderNumber field is set.
    */
   boolean hasPurchaseOrderNumber();
@@ -245,7 +245,7 @@ public interface AccountBudgetOrBuilder extends
    * in their monthly invoices.
    * </pre>
    *
-   * <code>string purchase_order_number = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string purchase_order_number = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The purchaseOrderNumber.
    */
   java.lang.String getPurchaseOrderNumber();
@@ -255,7 +255,7 @@ public interface AccountBudgetOrBuilder extends
    * in their monthly invoices.
    * </pre>
    *
-   * <code>string purchase_order_number = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string purchase_order_number = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for purchaseOrderNumber.
    */
   com.google.protobuf.ByteString
@@ -266,7 +266,7 @@ public interface AccountBudgetOrBuilder extends
    * Output only. Notes associated with the budget.
    * </pre>
    *
-   * <code>string notes = 36 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string notes = 36 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the notes field is set.
    */
   boolean hasNotes();
@@ -275,7 +275,7 @@ public interface AccountBudgetOrBuilder extends
    * Output only. Notes associated with the budget.
    * </pre>
    *
-   * <code>string notes = 36 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string notes = 36 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The notes.
    */
   java.lang.String getNotes();
@@ -284,7 +284,7 @@ public interface AccountBudgetOrBuilder extends
    * Output only. Notes associated with the budget.
    * </pre>
    *
-   * <code>string notes = 36 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string notes = 36 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for notes.
    */
   com.google.protobuf.ByteString

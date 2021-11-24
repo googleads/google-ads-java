@@ -201,7 +201,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The campaign this category is recommended for.
    * </pre>
    *
-   * <code>string campaign = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the campaign field is set.
    */
   @java.lang.Override
@@ -213,7 +213,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The campaign this category is recommended for.
    * </pre>
    *
-   * <code>string campaign = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The campaign.
    */
   @java.lang.Override
@@ -234,7 +234,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The campaign this category is recommended for.
    * </pre>
    *
-   * <code>string campaign = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for campaign.
    */
   @java.lang.Override
@@ -260,7 +260,7 @@ private static final long serialVersionUID = 0L;
    * about electronics, the categories could be "cameras", "televisions", etc.
    * </pre>
    *
-   * <code>string category = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string category = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the category field is set.
    */
   @java.lang.Override
@@ -273,7 +273,7 @@ private static final long serialVersionUID = 0L;
    * about electronics, the categories could be "cameras", "televisions", etc.
    * </pre>
    *
-   * <code>string category = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string category = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The category.
    */
   @java.lang.Override
@@ -295,7 +295,7 @@ private static final long serialVersionUID = 0L;
    * about electronics, the categories could be "cameras", "televisions", etc.
    * </pre>
    *
-   * <code>string category = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string category = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for category.
    */
   @java.lang.Override
@@ -324,7 +324,7 @@ private static final long serialVersionUID = 0L;
    * and match searches with.
    * </pre>
    *
-   * <code>string language_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string language_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the languageCode field is set.
    */
   @java.lang.Override
@@ -340,7 +340,7 @@ private static final long serialVersionUID = 0L;
    * and match searches with.
    * </pre>
    *
-   * <code>string language_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string language_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The languageCode.
    */
   @java.lang.Override
@@ -365,7 +365,7 @@ private static final long serialVersionUID = 0L;
    * and match searches with.
    * </pre>
    *
-   * <code>string language_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string language_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for languageCode.
    */
   @java.lang.Override
@@ -391,7 +391,7 @@ private static final long serialVersionUID = 0L;
    * DynamicSearchAdsSetting required for dynamic search ads.
    * </pre>
    *
-   * <code>string domain = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string domain = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the domain field is set.
    */
   @java.lang.Override
@@ -404,7 +404,7 @@ private static final long serialVersionUID = 0L;
    * DynamicSearchAdsSetting required for dynamic search ads.
    * </pre>
    *
-   * <code>string domain = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string domain = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The domain.
    */
   @java.lang.Override
@@ -426,7 +426,7 @@ private static final long serialVersionUID = 0L;
    * DynamicSearchAdsSetting required for dynamic search ads.
    * </pre>
    *
-   * <code>string domain = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string domain = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for domain.
    */
   @java.lang.Override
@@ -451,7 +451,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Fraction of pages on your site that this category matches.
    * </pre>
    *
-   * <code>double coverage_fraction = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional double coverage_fraction = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the coverageFraction field is set.
    */
   @java.lang.Override
@@ -463,7 +463,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Fraction of pages on your site that this category matches.
    * </pre>
    *
-   * <code>double coverage_fraction = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional double coverage_fraction = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The coverageFraction.
    */
   @java.lang.Override
@@ -479,7 +479,7 @@ private static final long serialVersionUID = 0L;
    * indicate a better match for the domain. null indicates not recommended.
    * </pre>
    *
-   * <code>int64 category_rank = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 category_rank = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the categoryRank field is set.
    */
   @java.lang.Override
@@ -492,7 +492,7 @@ private static final long serialVersionUID = 0L;
    * indicate a better match for the domain. null indicates not recommended.
    * </pre>
    *
-   * <code>int64 category_rank = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 category_rank = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The categoryRank.
    */
   @java.lang.Override
@@ -507,7 +507,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Indicates whether this category has sub-categories.
    * </pre>
    *
-   * <code>bool has_children = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool has_children = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the hasChildren field is set.
    */
   @java.lang.Override
@@ -519,7 +519,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Indicates whether this category has sub-categories.
    * </pre>
    *
-   * <code>bool has_children = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool has_children = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The hasChildren.
    */
   @java.lang.Override
@@ -534,7 +534,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The recommended cost per click for the category.
    * </pre>
    *
-   * <code>int64 recommended_cpc_bid_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 recommended_cpc_bid_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the recommendedCpcBidMicros field is set.
    */
   @java.lang.Override
@@ -546,7 +546,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The recommended cost per click for the category.
    * </pre>
    *
-   * <code>int64 recommended_cpc_bid_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 recommended_cpc_bid_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The recommendedCpcBidMicros.
    */
   @java.lang.Override
@@ -568,7 +568,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
@@ -604,7 +604,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
@@ -1188,7 +1188,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The campaign this category is recommended for.
      * </pre>
      *
-     * <code>string campaign = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the campaign field is set.
      */
     public boolean hasCampaign() {
@@ -1199,7 +1199,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The campaign this category is recommended for.
      * </pre>
      *
-     * <code>string campaign = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The campaign.
      */
     public java.lang.String getCampaign() {
@@ -1219,7 +1219,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The campaign this category is recommended for.
      * </pre>
      *
-     * <code>string campaign = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for campaign.
      */
     public com.google.protobuf.ByteString
@@ -1240,7 +1240,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The campaign this category is recommended for.
      * </pre>
      *
-     * <code>string campaign = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The campaign to set.
      * @return This builder for chaining.
      */
@@ -1259,7 +1259,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The campaign this category is recommended for.
      * </pre>
      *
-     * <code>string campaign = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearCampaign() {
@@ -1273,7 +1273,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The campaign this category is recommended for.
      * </pre>
      *
-     * <code>string campaign = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for campaign to set.
      * @return This builder for chaining.
      */
@@ -1296,7 +1296,7 @@ private static final long serialVersionUID = 0L;
      * about electronics, the categories could be "cameras", "televisions", etc.
      * </pre>
      *
-     * <code>string category = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string category = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the category field is set.
      */
     public boolean hasCategory() {
@@ -1308,7 +1308,7 @@ private static final long serialVersionUID = 0L;
      * about electronics, the categories could be "cameras", "televisions", etc.
      * </pre>
      *
-     * <code>string category = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string category = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The category.
      */
     public java.lang.String getCategory() {
@@ -1329,7 +1329,7 @@ private static final long serialVersionUID = 0L;
      * about electronics, the categories could be "cameras", "televisions", etc.
      * </pre>
      *
-     * <code>string category = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string category = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for category.
      */
     public com.google.protobuf.ByteString
@@ -1351,7 +1351,7 @@ private static final long serialVersionUID = 0L;
      * about electronics, the categories could be "cameras", "televisions", etc.
      * </pre>
      *
-     * <code>string category = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string category = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The category to set.
      * @return This builder for chaining.
      */
@@ -1371,7 +1371,7 @@ private static final long serialVersionUID = 0L;
      * about electronics, the categories could be "cameras", "televisions", etc.
      * </pre>
      *
-     * <code>string category = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string category = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearCategory() {
@@ -1386,7 +1386,7 @@ private static final long serialVersionUID = 0L;
      * about electronics, the categories could be "cameras", "televisions", etc.
      * </pre>
      *
-     * <code>string category = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string category = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for category to set.
      * @return This builder for chaining.
      */
@@ -1412,7 +1412,7 @@ private static final long serialVersionUID = 0L;
      * and match searches with.
      * </pre>
      *
-     * <code>string language_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string language_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the languageCode field is set.
      */
     public boolean hasLanguageCode() {
@@ -1427,7 +1427,7 @@ private static final long serialVersionUID = 0L;
      * and match searches with.
      * </pre>
      *
-     * <code>string language_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string language_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The languageCode.
      */
     public java.lang.String getLanguageCode() {
@@ -1451,7 +1451,7 @@ private static final long serialVersionUID = 0L;
      * and match searches with.
      * </pre>
      *
-     * <code>string language_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string language_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for languageCode.
      */
     public com.google.protobuf.ByteString
@@ -1476,7 +1476,7 @@ private static final long serialVersionUID = 0L;
      * and match searches with.
      * </pre>
      *
-     * <code>string language_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string language_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The languageCode to set.
      * @return This builder for chaining.
      */
@@ -1499,7 +1499,7 @@ private static final long serialVersionUID = 0L;
      * and match searches with.
      * </pre>
      *
-     * <code>string language_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string language_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearLanguageCode() {
@@ -1517,7 +1517,7 @@ private static final long serialVersionUID = 0L;
      * and match searches with.
      * </pre>
      *
-     * <code>string language_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string language_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for languageCode to set.
      * @return This builder for chaining.
      */
@@ -1540,7 +1540,7 @@ private static final long serialVersionUID = 0L;
      * DynamicSearchAdsSetting required for dynamic search ads.
      * </pre>
      *
-     * <code>string domain = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string domain = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the domain field is set.
      */
     public boolean hasDomain() {
@@ -1552,7 +1552,7 @@ private static final long serialVersionUID = 0L;
      * DynamicSearchAdsSetting required for dynamic search ads.
      * </pre>
      *
-     * <code>string domain = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string domain = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The domain.
      */
     public java.lang.String getDomain() {
@@ -1573,7 +1573,7 @@ private static final long serialVersionUID = 0L;
      * DynamicSearchAdsSetting required for dynamic search ads.
      * </pre>
      *
-     * <code>string domain = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string domain = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for domain.
      */
     public com.google.protobuf.ByteString
@@ -1595,7 +1595,7 @@ private static final long serialVersionUID = 0L;
      * DynamicSearchAdsSetting required for dynamic search ads.
      * </pre>
      *
-     * <code>string domain = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string domain = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The domain to set.
      * @return This builder for chaining.
      */
@@ -1615,7 +1615,7 @@ private static final long serialVersionUID = 0L;
      * DynamicSearchAdsSetting required for dynamic search ads.
      * </pre>
      *
-     * <code>string domain = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string domain = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearDomain() {
@@ -1630,7 +1630,7 @@ private static final long serialVersionUID = 0L;
      * DynamicSearchAdsSetting required for dynamic search ads.
      * </pre>
      *
-     * <code>string domain = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string domain = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for domain to set.
      * @return This builder for chaining.
      */
@@ -1652,7 +1652,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Fraction of pages on your site that this category matches.
      * </pre>
      *
-     * <code>double coverage_fraction = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional double coverage_fraction = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the coverageFraction field is set.
      */
     @java.lang.Override
@@ -1664,7 +1664,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Fraction of pages on your site that this category matches.
      * </pre>
      *
-     * <code>double coverage_fraction = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional double coverage_fraction = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The coverageFraction.
      */
     @java.lang.Override
@@ -1676,7 +1676,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Fraction of pages on your site that this category matches.
      * </pre>
      *
-     * <code>double coverage_fraction = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional double coverage_fraction = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The coverageFraction to set.
      * @return This builder for chaining.
      */
@@ -1691,7 +1691,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Fraction of pages on your site that this category matches.
      * </pre>
      *
-     * <code>double coverage_fraction = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional double coverage_fraction = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearCoverageFraction() {
@@ -1708,7 +1708,7 @@ private static final long serialVersionUID = 0L;
      * indicate a better match for the domain. null indicates not recommended.
      * </pre>
      *
-     * <code>int64 category_rank = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 category_rank = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the categoryRank field is set.
      */
     @java.lang.Override
@@ -1721,7 +1721,7 @@ private static final long serialVersionUID = 0L;
      * indicate a better match for the domain. null indicates not recommended.
      * </pre>
      *
-     * <code>int64 category_rank = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 category_rank = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The categoryRank.
      */
     @java.lang.Override
@@ -1734,7 +1734,7 @@ private static final long serialVersionUID = 0L;
      * indicate a better match for the domain. null indicates not recommended.
      * </pre>
      *
-     * <code>int64 category_rank = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 category_rank = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The categoryRank to set.
      * @return This builder for chaining.
      */
@@ -1750,7 +1750,7 @@ private static final long serialVersionUID = 0L;
      * indicate a better match for the domain. null indicates not recommended.
      * </pre>
      *
-     * <code>int64 category_rank = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 category_rank = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearCategoryRank() {
@@ -1766,7 +1766,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Indicates whether this category has sub-categories.
      * </pre>
      *
-     * <code>bool has_children = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool has_children = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the hasChildren field is set.
      */
     @java.lang.Override
@@ -1778,7 +1778,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Indicates whether this category has sub-categories.
      * </pre>
      *
-     * <code>bool has_children = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool has_children = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The hasChildren.
      */
     @java.lang.Override
@@ -1790,7 +1790,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Indicates whether this category has sub-categories.
      * </pre>
      *
-     * <code>bool has_children = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool has_children = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The hasChildren to set.
      * @return This builder for chaining.
      */
@@ -1805,7 +1805,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Indicates whether this category has sub-categories.
      * </pre>
      *
-     * <code>bool has_children = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool has_children = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearHasChildren() {
@@ -1821,7 +1821,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The recommended cost per click for the category.
      * </pre>
      *
-     * <code>int64 recommended_cpc_bid_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 recommended_cpc_bid_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the recommendedCpcBidMicros field is set.
      */
     @java.lang.Override
@@ -1833,7 +1833,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The recommended cost per click for the category.
      * </pre>
      *
-     * <code>int64 recommended_cpc_bid_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 recommended_cpc_bid_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The recommendedCpcBidMicros.
      */
     @java.lang.Override
@@ -1845,7 +1845,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The recommended cost per click for the category.
      * </pre>
      *
-     * <code>int64 recommended_cpc_bid_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 recommended_cpc_bid_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The recommendedCpcBidMicros to set.
      * @return This builder for chaining.
      */
@@ -1860,7 +1860,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The recommended cost per click for the category.
      * </pre>
      *
-     * <code>int64 recommended_cpc_bid_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 recommended_cpc_bid_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearRecommendedCpcBidMicros() {

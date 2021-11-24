@@ -120,7 +120,7 @@ private static final long serialVersionUID = 0L;
    * ID of the attribute.
    * </pre>
    *
-   * <code>int64 id = 5;</code>
+   * <code>optional int64 id = 5;</code>
    * @return Whether the id field is set.
    */
   @java.lang.Override
@@ -132,7 +132,7 @@ private static final long serialVersionUID = 0L;
    * ID of the attribute.
    * </pre>
    *
-   * <code>int64 id = 5;</code>
+   * <code>optional int64 id = 5;</code>
    * @return The id.
    */
   @java.lang.Override
@@ -147,7 +147,7 @@ private static final long serialVersionUID = 0L;
    * The name of the attribute. Required.
    * </pre>
    *
-   * <code>string name = 6;</code>
+   * <code>optional string name = 6;</code>
    * @return Whether the name field is set.
    */
   @java.lang.Override
@@ -159,7 +159,7 @@ private static final long serialVersionUID = 0L;
    * The name of the attribute. Required.
    * </pre>
    *
-   * <code>string name = 6;</code>
+   * <code>optional string name = 6;</code>
    * @return The name.
    */
   @java.lang.Override
@@ -180,7 +180,7 @@ private static final long serialVersionUID = 0L;
    * The name of the attribute. Required.
    * </pre>
    *
-   * <code>string name = 6;</code>
+   * <code>optional string name = 6;</code>
    * @return The bytes for name.
    */
   @java.lang.Override
@@ -235,7 +235,7 @@ private static final long serialVersionUID = 0L;
    * FeedItems must be referenced by their feed_item_id.
    * </pre>
    *
-   * <code>bool is_part_of_key = 7;</code>
+   * <code>optional bool is_part_of_key = 7;</code>
    * @return Whether the isPartOfKey field is set.
    */
   @java.lang.Override
@@ -250,7 +250,7 @@ private static final long serialVersionUID = 0L;
    * FeedItems must be referenced by their feed_item_id.
    * </pre>
    *
-   * <code>bool is_part_of_key = 7;</code>
+   * <code>optional bool is_part_of_key = 7;</code>
    * @return The isPartOfKey.
    */
   @java.lang.Override
@@ -654,7 +654,7 @@ private static final long serialVersionUID = 0L;
      * ID of the attribute.
      * </pre>
      *
-     * <code>int64 id = 5;</code>
+     * <code>optional int64 id = 5;</code>
      * @return Whether the id field is set.
      */
     @java.lang.Override
@@ -666,7 +666,7 @@ private static final long serialVersionUID = 0L;
      * ID of the attribute.
      * </pre>
      *
-     * <code>int64 id = 5;</code>
+     * <code>optional int64 id = 5;</code>
      * @return The id.
      */
     @java.lang.Override
@@ -678,7 +678,7 @@ private static final long serialVersionUID = 0L;
      * ID of the attribute.
      * </pre>
      *
-     * <code>int64 id = 5;</code>
+     * <code>optional int64 id = 5;</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
@@ -693,7 +693,7 @@ private static final long serialVersionUID = 0L;
      * ID of the attribute.
      * </pre>
      *
-     * <code>int64 id = 5;</code>
+     * <code>optional int64 id = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {
@@ -709,7 +709,7 @@ private static final long serialVersionUID = 0L;
      * The name of the attribute. Required.
      * </pre>
      *
-     * <code>string name = 6;</code>
+     * <code>optional string name = 6;</code>
      * @return Whether the name field is set.
      */
     public boolean hasName() {
@@ -720,7 +720,7 @@ private static final long serialVersionUID = 0L;
      * The name of the attribute. Required.
      * </pre>
      *
-     * <code>string name = 6;</code>
+     * <code>optional string name = 6;</code>
      * @return The name.
      */
     public java.lang.String getName() {
@@ -740,7 +740,7 @@ private static final long serialVersionUID = 0L;
      * The name of the attribute. Required.
      * </pre>
      *
-     * <code>string name = 6;</code>
+     * <code>optional string name = 6;</code>
      * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
@@ -761,7 +761,7 @@ private static final long serialVersionUID = 0L;
      * The name of the attribute. Required.
      * </pre>
      *
-     * <code>string name = 6;</code>
+     * <code>optional string name = 6;</code>
      * @param value The name to set.
      * @return This builder for chaining.
      */
@@ -780,7 +780,7 @@ private static final long serialVersionUID = 0L;
      * The name of the attribute. Required.
      * </pre>
      *
-     * <code>string name = 6;</code>
+     * <code>optional string name = 6;</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
@@ -794,7 +794,7 @@ private static final long serialVersionUID = 0L;
      * The name of the attribute. Required.
      * </pre>
      *
-     * <code>string name = 6;</code>
+     * <code>optional string name = 6;</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
@@ -893,7 +893,7 @@ private static final long serialVersionUID = 0L;
      * FeedItems must be referenced by their feed_item_id.
      * </pre>
      *
-     * <code>bool is_part_of_key = 7;</code>
+     * <code>optional bool is_part_of_key = 7;</code>
      * @return Whether the isPartOfKey field is set.
      */
     @java.lang.Override
@@ -908,7 +908,7 @@ private static final long serialVersionUID = 0L;
      * FeedItems must be referenced by their feed_item_id.
      * </pre>
      *
-     * <code>bool is_part_of_key = 7;</code>
+     * <code>optional bool is_part_of_key = 7;</code>
      * @return The isPartOfKey.
      */
     @java.lang.Override
@@ -923,7 +923,7 @@ private static final long serialVersionUID = 0L;
      * FeedItems must be referenced by their feed_item_id.
      * </pre>
      *
-     * <code>bool is_part_of_key = 7;</code>
+     * <code>optional bool is_part_of_key = 7;</code>
      * @param value The isPartOfKey to set.
      * @return This builder for chaining.
      */
@@ -941,7 +941,7 @@ private static final long serialVersionUID = 0L;
      * FeedItems must be referenced by their feed_item_id.
      * </pre>
      *
-     * <code>bool is_part_of_key = 7;</code>
+     * <code>optional bool is_part_of_key = 7;</code>
      * @return This builder for chaining.
      */
     public Builder clearIsPartOfKey() {

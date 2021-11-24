@@ -13,7 +13,7 @@ public interface CalloutFeedItemOrBuilder extends
    * The length of this string should be between 1 and 25, inclusive.
    * </pre>
    *
-   * <code>string callout_text = 2;</code>
+   * <code>optional string callout_text = 2;</code>
    * @return Whether the calloutText field is set.
    */
   boolean hasCalloutText();
@@ -23,7 +23,7 @@ public interface CalloutFeedItemOrBuilder extends
    * The length of this string should be between 1 and 25, inclusive.
    * </pre>
    *
-   * <code>string callout_text = 2;</code>
+   * <code>optional string callout_text = 2;</code>
    * @return The calloutText.
    */
   java.lang.String getCalloutText();
@@ -33,7 +33,7 @@ public interface CalloutFeedItemOrBuilder extends
    * The length of this string should be between 1 and 25, inclusive.
    * </pre>
    *
-   * <code>string callout_text = 2;</code>
+   * <code>optional string callout_text = 2;</code>
    * @return The bytes for calloutText.
    */
   com.google.protobuf.ByteString

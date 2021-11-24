@@ -132,7 +132,7 @@ private static final long serialVersionUID = 0L;
    * The total searches for the device.
    * </pre>
    *
-   * <code>int64 search_count = 2;</code>
+   * <code>optional int64 search_count = 2;</code>
    * @return Whether the searchCount field is set.
    */
   @java.lang.Override
@@ -144,7 +144,7 @@ private static final long serialVersionUID = 0L;
    * The total searches for the device.
    * </pre>
    *
-   * <code>int64 search_count = 2;</code>
+   * <code>optional int64 search_count = 2;</code>
    * @return The searchCount.
    */
   @java.lang.Override
@@ -567,7 +567,7 @@ private static final long serialVersionUID = 0L;
      * The total searches for the device.
      * </pre>
      *
-     * <code>int64 search_count = 2;</code>
+     * <code>optional int64 search_count = 2;</code>
      * @return Whether the searchCount field is set.
      */
     @java.lang.Override
@@ -579,7 +579,7 @@ private static final long serialVersionUID = 0L;
      * The total searches for the device.
      * </pre>
      *
-     * <code>int64 search_count = 2;</code>
+     * <code>optional int64 search_count = 2;</code>
      * @return The searchCount.
      */
     @java.lang.Override
@@ -591,7 +591,7 @@ private static final long serialVersionUID = 0L;
      * The total searches for the device.
      * </pre>
      *
-     * <code>int64 search_count = 2;</code>
+     * <code>optional int64 search_count = 2;</code>
      * @param value The searchCount to set.
      * @return This builder for chaining.
      */
@@ -606,7 +606,7 @@ private static final long serialVersionUID = 0L;
      * The total searches for the device.
      * </pre>
      *
-     * <code>int64 search_count = 2;</code>
+     * <code>optional int64 search_count = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearSearchCount() {

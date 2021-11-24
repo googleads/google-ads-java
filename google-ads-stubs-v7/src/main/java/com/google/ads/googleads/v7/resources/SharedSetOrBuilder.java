@@ -36,7 +36,7 @@ public interface SharedSetOrBuilder extends
    * Output only. The ID of this shared set. Read only.
    * </pre>
    *
-   * <code>int64 id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -45,7 +45,7 @@ public interface SharedSetOrBuilder extends
    * Output only. The ID of this shared set. Read only.
    * </pre>
    *
-   * <code>int64 id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   long getId();
@@ -80,7 +80,7 @@ public interface SharedSetOrBuilder extends
    * inclusive.
    * </pre>
    *
-   * <code>string name = 9;</code>
+   * <code>optional string name = 9;</code>
    * @return Whether the name field is set.
    */
   boolean hasName();
@@ -93,7 +93,7 @@ public interface SharedSetOrBuilder extends
    * inclusive.
    * </pre>
    *
-   * <code>string name = 9;</code>
+   * <code>optional string name = 9;</code>
    * @return The name.
    */
   java.lang.String getName();
@@ -106,7 +106,7 @@ public interface SharedSetOrBuilder extends
    * inclusive.
    * </pre>
    *
-   * <code>string name = 9;</code>
+   * <code>optional string name = 9;</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
@@ -136,7 +136,7 @@ public interface SharedSetOrBuilder extends
    * Output only. The number of shared criteria within this shared set. Read only.
    * </pre>
    *
-   * <code>int64 member_count = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 member_count = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the memberCount field is set.
    */
   boolean hasMemberCount();
@@ -145,7 +145,7 @@ public interface SharedSetOrBuilder extends
    * Output only. The number of shared criteria within this shared set. Read only.
    * </pre>
    *
-   * <code>int64 member_count = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 member_count = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The memberCount.
    */
   long getMemberCount();
@@ -155,7 +155,7 @@ public interface SharedSetOrBuilder extends
    * Output only. The number of campaigns associated with this shared set. Read only.
    * </pre>
    *
-   * <code>int64 reference_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 reference_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the referenceCount field is set.
    */
   boolean hasReferenceCount();
@@ -164,7 +164,7 @@ public interface SharedSetOrBuilder extends
    * Output only. The number of campaigns associated with this shared set. Read only.
    * </pre>
    *
-   * <code>int64 reference_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 reference_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The referenceCount.
    */
   long getReferenceCount();

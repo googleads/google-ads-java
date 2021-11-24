@@ -96,7 +96,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Required. The ID of the selected location for planning. To list the available
-   * plannable location ids use ListPlannableLocations.
+   * plannable location ids use [ReachPlanService.ListPlannableLocations][google.ads.googleads.v7.services.ReachPlanService.ListPlannableLocations].
    * </pre>
    *
    * <code>string plannable_location_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -118,7 +118,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Required. The ID of the selected location for planning. To list the available
-   * plannable location ids use ListPlannableLocations.
+   * plannable location ids use [ReachPlanService.ListPlannableLocations][google.ads.googleads.v7.services.ReachPlanService.ListPlannableLocations].
    * </pre>
    *
    * <code>string plannable_location_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -153,7 +153,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getPlannableLocationIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(plannableLocationId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, plannableLocationId_);
     }
     unknownFields.writeTo(output);
@@ -165,7 +165,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getPlannableLocationIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(plannableLocationId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, plannableLocationId_);
     }
     size += unknownFields.getSerializedSize();
@@ -449,7 +449,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. The ID of the selected location for planning. To list the available
-     * plannable location ids use ListPlannableLocations.
+     * plannable location ids use [ReachPlanService.ListPlannableLocations][google.ads.googleads.v7.services.ReachPlanService.ListPlannableLocations].
      * </pre>
      *
      * <code>string plannable_location_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -470,7 +470,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. The ID of the selected location for planning. To list the available
-     * plannable location ids use ListPlannableLocations.
+     * plannable location ids use [ReachPlanService.ListPlannableLocations][google.ads.googleads.v7.services.ReachPlanService.ListPlannableLocations].
      * </pre>
      *
      * <code>string plannable_location_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -492,7 +492,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. The ID of the selected location for planning. To list the available
-     * plannable location ids use ListPlannableLocations.
+     * plannable location ids use [ReachPlanService.ListPlannableLocations][google.ads.googleads.v7.services.ReachPlanService.ListPlannableLocations].
      * </pre>
      *
      * <code>string plannable_location_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -512,7 +512,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. The ID of the selected location for planning. To list the available
-     * plannable location ids use ListPlannableLocations.
+     * plannable location ids use [ReachPlanService.ListPlannableLocations][google.ads.googleads.v7.services.ReachPlanService.ListPlannableLocations].
      * </pre>
      *
      * <code>string plannable_location_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -527,7 +527,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. The ID of the selected location for planning. To list the available
-     * plannable location ids use ListPlannableLocations.
+     * plannable location ids use [ReachPlanService.ListPlannableLocations][google.ads.googleads.v7.services.ReachPlanService.ListPlannableLocations].
      * </pre>
      *
      * <code>string plannable_location_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>

@@ -261,8 +261,8 @@ private static final long serialVersionUID = 0L;
   public static final int UPDATE_FIELD_NUMBER = 2;
   /**
    * <pre>
-   * Update operation: The conversion action is expected to have a valid
-   * resource name.
+   * Update operation: The conversion value rule set is expected to have a
+   * valid resource name.
    * </pre>
    *
    * <code>.google.ads.googleads.v9.resources.ConversionValueRuleSet update = 2;</code>
@@ -274,8 +274,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Update operation: The conversion action is expected to have a valid
-   * resource name.
+   * Update operation: The conversion value rule set is expected to have a
+   * valid resource name.
    * </pre>
    *
    * <code>.google.ads.googleads.v9.resources.ConversionValueRuleSet update = 2;</code>
@@ -290,8 +290,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Update operation: The conversion action is expected to have a valid
-   * resource name.
+   * Update operation: The conversion value rule set is expected to have a
+   * valid resource name.
    * </pre>
    *
    * <code>.google.ads.googleads.v9.resources.ConversionValueRuleSet update = 2;</code>
@@ -307,8 +307,8 @@ private static final long serialVersionUID = 0L;
   public static final int REMOVE_FIELD_NUMBER = 3;
   /**
    * <pre>
-   * Remove operation: A resource name for the removed conversion action is
-   * expected, in this format:
+   * Remove operation: A resource name for the removed conversion value rule
+   * set is expected, in this format:
    * `customers/{customer_id}/conversionValueRuleSets/{conversion_value_rule_set_id}`
    * </pre>
    *
@@ -320,8 +320,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Remove operation: A resource name for the removed conversion action is
-   * expected, in this format:
+   * Remove operation: A resource name for the removed conversion value rule
+   * set is expected, in this format:
    * `customers/{customer_id}/conversionValueRuleSets/{conversion_value_rule_set_id}`
    * </pre>
    *
@@ -347,8 +347,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Remove operation: A resource name for the removed conversion action is
-   * expected, in this format:
+   * Remove operation: A resource name for the removed conversion value rule
+   * set is expected, in this format:
    * `customers/{customer_id}/conversionValueRuleSets/{conversion_value_rule_set_id}`
    * </pre>
    *
@@ -1145,8 +1145,8 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v9.resources.ConversionValueRuleSet, com.google.ads.googleads.v9.resources.ConversionValueRuleSet.Builder, com.google.ads.googleads.v9.resources.ConversionValueRuleSetOrBuilder> updateBuilder_;
     /**
      * <pre>
-     * Update operation: The conversion action is expected to have a valid
-     * resource name.
+     * Update operation: The conversion value rule set is expected to have a
+     * valid resource name.
      * </pre>
      *
      * <code>.google.ads.googleads.v9.resources.ConversionValueRuleSet update = 2;</code>
@@ -1158,8 +1158,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Update operation: The conversion action is expected to have a valid
-     * resource name.
+     * Update operation: The conversion value rule set is expected to have a
+     * valid resource name.
      * </pre>
      *
      * <code>.google.ads.googleads.v9.resources.ConversionValueRuleSet update = 2;</code>
@@ -1181,8 +1181,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Update operation: The conversion action is expected to have a valid
-     * resource name.
+     * Update operation: The conversion value rule set is expected to have a
+     * valid resource name.
      * </pre>
      *
      * <code>.google.ads.googleads.v9.resources.ConversionValueRuleSet update = 2;</code>
@@ -1202,8 +1202,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Update operation: The conversion action is expected to have a valid
-     * resource name.
+     * Update operation: The conversion value rule set is expected to have a
+     * valid resource name.
      * </pre>
      *
      * <code>.google.ads.googleads.v9.resources.ConversionValueRuleSet update = 2;</code>
@@ -1221,8 +1221,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Update operation: The conversion action is expected to have a valid
-     * resource name.
+     * Update operation: The conversion value rule set is expected to have a
+     * valid resource name.
      * </pre>
      *
      * <code>.google.ads.googleads.v9.resources.ConversionValueRuleSet update = 2;</code>
@@ -1248,8 +1248,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Update operation: The conversion action is expected to have a valid
-     * resource name.
+     * Update operation: The conversion value rule set is expected to have a
+     * valid resource name.
      * </pre>
      *
      * <code>.google.ads.googleads.v9.resources.ConversionValueRuleSet update = 2;</code>
@@ -1272,8 +1272,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Update operation: The conversion action is expected to have a valid
-     * resource name.
+     * Update operation: The conversion value rule set is expected to have a
+     * valid resource name.
      * </pre>
      *
      * <code>.google.ads.googleads.v9.resources.ConversionValueRuleSet update = 2;</code>
@@ -1283,8 +1283,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Update operation: The conversion action is expected to have a valid
-     * resource name.
+     * Update operation: The conversion value rule set is expected to have a
+     * valid resource name.
      * </pre>
      *
      * <code>.google.ads.googleads.v9.resources.ConversionValueRuleSet update = 2;</code>
@@ -1302,8 +1302,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Update operation: The conversion action is expected to have a valid
-     * resource name.
+     * Update operation: The conversion value rule set is expected to have a
+     * valid resource name.
      * </pre>
      *
      * <code>.google.ads.googleads.v9.resources.ConversionValueRuleSet update = 2;</code>
@@ -1329,8 +1329,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Remove operation: A resource name for the removed conversion action is
-     * expected, in this format:
+     * Remove operation: A resource name for the removed conversion value rule
+     * set is expected, in this format:
      * `customers/{customer_id}/conversionValueRuleSets/{conversion_value_rule_set_id}`
      * </pre>
      *
@@ -1343,8 +1343,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Remove operation: A resource name for the removed conversion action is
-     * expected, in this format:
+     * Remove operation: A resource name for the removed conversion value rule
+     * set is expected, in this format:
      * `customers/{customer_id}/conversionValueRuleSets/{conversion_value_rule_set_id}`
      * </pre>
      *
@@ -1371,8 +1371,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Remove operation: A resource name for the removed conversion action is
-     * expected, in this format:
+     * Remove operation: A resource name for the removed conversion value rule
+     * set is expected, in this format:
      * `customers/{customer_id}/conversionValueRuleSets/{conversion_value_rule_set_id}`
      * </pre>
      *
@@ -1400,8 +1400,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Remove operation: A resource name for the removed conversion action is
-     * expected, in this format:
+     * Remove operation: A resource name for the removed conversion value rule
+     * set is expected, in this format:
      * `customers/{customer_id}/conversionValueRuleSets/{conversion_value_rule_set_id}`
      * </pre>
      *
@@ -1421,8 +1421,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Remove operation: A resource name for the removed conversion action is
-     * expected, in this format:
+     * Remove operation: A resource name for the removed conversion value rule
+     * set is expected, in this format:
      * `customers/{customer_id}/conversionValueRuleSets/{conversion_value_rule_set_id}`
      * </pre>
      *
@@ -1439,8 +1439,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Remove operation: A resource name for the removed conversion action is
-     * expected, in this format:
+     * Remove operation: A resource name for the removed conversion value rule
+     * set is expected, in this format:
      * `customers/{customer_id}/conversionValueRuleSets/{conversion_value_rule_set_id}`
      * </pre>
      *

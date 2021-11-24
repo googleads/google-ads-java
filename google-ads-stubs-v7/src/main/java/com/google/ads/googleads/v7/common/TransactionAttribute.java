@@ -150,7 +150,7 @@ private static final long serialVersionUID = 0L;
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30+03:00"
    * </pre>
    *
-   * <code>string transaction_date_time = 8;</code>
+   * <code>optional string transaction_date_time = 8;</code>
    * @return Whether the transactionDateTime field is set.
    */
   @java.lang.Override
@@ -166,7 +166,7 @@ private static final long serialVersionUID = 0L;
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30+03:00"
    * </pre>
    *
-   * <code>string transaction_date_time = 8;</code>
+   * <code>optional string transaction_date_time = 8;</code>
    * @return The transactionDateTime.
    */
   @java.lang.Override
@@ -191,7 +191,7 @@ private static final long serialVersionUID = 0L;
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30+03:00"
    * </pre>
    *
-   * <code>string transaction_date_time = 8;</code>
+   * <code>optional string transaction_date_time = 8;</code>
    * @return The bytes for transactionDateTime.
    */
   @java.lang.Override
@@ -220,7 +220,7 @@ private static final long serialVersionUID = 0L;
    * in the ItemAttributes.
    * </pre>
    *
-   * <code>double transaction_amount_micros = 9;</code>
+   * <code>optional double transaction_amount_micros = 9;</code>
    * @return Whether the transactionAmountMicros field is set.
    */
   @java.lang.Override
@@ -236,7 +236,7 @@ private static final long serialVersionUID = 0L;
    * in the ItemAttributes.
    * </pre>
    *
-   * <code>double transaction_amount_micros = 9;</code>
+   * <code>optional double transaction_amount_micros = 9;</code>
    * @return The transactionAmountMicros.
    */
   @java.lang.Override
@@ -251,7 +251,7 @@ private static final long serialVersionUID = 0L;
    * Transaction currency code. ISO 4217 three-letter code is used. Required.
    * </pre>
    *
-   * <code>string currency_code = 10;</code>
+   * <code>optional string currency_code = 10;</code>
    * @return Whether the currencyCode field is set.
    */
   @java.lang.Override
@@ -263,7 +263,7 @@ private static final long serialVersionUID = 0L;
    * Transaction currency code. ISO 4217 three-letter code is used. Required.
    * </pre>
    *
-   * <code>string currency_code = 10;</code>
+   * <code>optional string currency_code = 10;</code>
    * @return The currencyCode.
    */
   @java.lang.Override
@@ -284,7 +284,7 @@ private static final long serialVersionUID = 0L;
    * Transaction currency code. ISO 4217 three-letter code is used. Required.
    * </pre>
    *
-   * <code>string currency_code = 10;</code>
+   * <code>optional string currency_code = 10;</code>
    * @return The bytes for currencyCode.
    */
   @java.lang.Override
@@ -310,7 +310,7 @@ private static final long serialVersionUID = 0L;
    * Required.
    * </pre>
    *
-   * <code>string conversion_action = 11;</code>
+   * <code>optional string conversion_action = 11;</code>
    * @return Whether the conversionAction field is set.
    */
   @java.lang.Override
@@ -323,7 +323,7 @@ private static final long serialVersionUID = 0L;
    * Required.
    * </pre>
    *
-   * <code>string conversion_action = 11;</code>
+   * <code>optional string conversion_action = 11;</code>
    * @return The conversionAction.
    */
   @java.lang.Override
@@ -345,7 +345,7 @@ private static final long serialVersionUID = 0L;
    * Required.
    * </pre>
    *
-   * <code>string conversion_action = 11;</code>
+   * <code>optional string conversion_action = 11;</code>
    * @return The bytes for conversionAction.
    */
   @java.lang.Override
@@ -371,7 +371,7 @@ private static final long serialVersionUID = 0L;
    * Accessible only to customers on the allow-list.
    * </pre>
    *
-   * <code>string order_id = 12;</code>
+   * <code>optional string order_id = 12;</code>
    * @return Whether the orderId field is set.
    */
   @java.lang.Override
@@ -384,7 +384,7 @@ private static final long serialVersionUID = 0L;
    * Accessible only to customers on the allow-list.
    * </pre>
    *
-   * <code>string order_id = 12;</code>
+   * <code>optional string order_id = 12;</code>
    * @return The orderId.
    */
   @java.lang.Override
@@ -406,7 +406,7 @@ private static final long serialVersionUID = 0L;
    * Accessible only to customers on the allow-list.
    * </pre>
    *
-   * <code>string order_id = 12;</code>
+   * <code>optional string order_id = 12;</code>
    * @return The bytes for orderId.
    */
   @java.lang.Override
@@ -473,7 +473,7 @@ private static final long serialVersionUID = 0L;
    * Accessible only to customers on the allow-list.
    * </pre>
    *
-   * <code>string custom_value = 13;</code>
+   * <code>optional string custom_value = 13;</code>
    * @return Whether the customValue field is set.
    */
   @java.lang.Override
@@ -486,7 +486,7 @@ private static final long serialVersionUID = 0L;
    * Accessible only to customers on the allow-list.
    * </pre>
    *
-   * <code>string custom_value = 13;</code>
+   * <code>optional string custom_value = 13;</code>
    * @return The customValue.
    */
   @java.lang.Override
@@ -508,7 +508,7 @@ private static final long serialVersionUID = 0L;
    * Accessible only to customers on the allow-list.
    * </pre>
    *
-   * <code>string custom_value = 13;</code>
+   * <code>optional string custom_value = 13;</code>
    * @return The bytes for customValue.
    */
   @java.lang.Override
@@ -1016,7 +1016,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30+03:00"
      * </pre>
      *
-     * <code>string transaction_date_time = 8;</code>
+     * <code>optional string transaction_date_time = 8;</code>
      * @return Whether the transactionDateTime field is set.
      */
     public boolean hasTransactionDateTime() {
@@ -1031,7 +1031,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30+03:00"
      * </pre>
      *
-     * <code>string transaction_date_time = 8;</code>
+     * <code>optional string transaction_date_time = 8;</code>
      * @return The transactionDateTime.
      */
     public java.lang.String getTransactionDateTime() {
@@ -1055,7 +1055,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30+03:00"
      * </pre>
      *
-     * <code>string transaction_date_time = 8;</code>
+     * <code>optional string transaction_date_time = 8;</code>
      * @return The bytes for transactionDateTime.
      */
     public com.google.protobuf.ByteString
@@ -1080,7 +1080,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30+03:00"
      * </pre>
      *
-     * <code>string transaction_date_time = 8;</code>
+     * <code>optional string transaction_date_time = 8;</code>
      * @param value The transactionDateTime to set.
      * @return This builder for chaining.
      */
@@ -1103,7 +1103,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30+03:00"
      * </pre>
      *
-     * <code>string transaction_date_time = 8;</code>
+     * <code>optional string transaction_date_time = 8;</code>
      * @return This builder for chaining.
      */
     public Builder clearTransactionDateTime() {
@@ -1121,7 +1121,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30+03:00"
      * </pre>
      *
-     * <code>string transaction_date_time = 8;</code>
+     * <code>optional string transaction_date_time = 8;</code>
      * @param value The bytes for transactionDateTime to set.
      * @return This builder for chaining.
      */
@@ -1147,7 +1147,7 @@ private static final long serialVersionUID = 0L;
      * in the ItemAttributes.
      * </pre>
      *
-     * <code>double transaction_amount_micros = 9;</code>
+     * <code>optional double transaction_amount_micros = 9;</code>
      * @return Whether the transactionAmountMicros field is set.
      */
     @java.lang.Override
@@ -1163,7 +1163,7 @@ private static final long serialVersionUID = 0L;
      * in the ItemAttributes.
      * </pre>
      *
-     * <code>double transaction_amount_micros = 9;</code>
+     * <code>optional double transaction_amount_micros = 9;</code>
      * @return The transactionAmountMicros.
      */
     @java.lang.Override
@@ -1179,7 +1179,7 @@ private static final long serialVersionUID = 0L;
      * in the ItemAttributes.
      * </pre>
      *
-     * <code>double transaction_amount_micros = 9;</code>
+     * <code>optional double transaction_amount_micros = 9;</code>
      * @param value The transactionAmountMicros to set.
      * @return This builder for chaining.
      */
@@ -1198,7 +1198,7 @@ private static final long serialVersionUID = 0L;
      * in the ItemAttributes.
      * </pre>
      *
-     * <code>double transaction_amount_micros = 9;</code>
+     * <code>optional double transaction_amount_micros = 9;</code>
      * @return This builder for chaining.
      */
     public Builder clearTransactionAmountMicros() {
@@ -1214,7 +1214,7 @@ private static final long serialVersionUID = 0L;
      * Transaction currency code. ISO 4217 three-letter code is used. Required.
      * </pre>
      *
-     * <code>string currency_code = 10;</code>
+     * <code>optional string currency_code = 10;</code>
      * @return Whether the currencyCode field is set.
      */
     public boolean hasCurrencyCode() {
@@ -1225,7 +1225,7 @@ private static final long serialVersionUID = 0L;
      * Transaction currency code. ISO 4217 three-letter code is used. Required.
      * </pre>
      *
-     * <code>string currency_code = 10;</code>
+     * <code>optional string currency_code = 10;</code>
      * @return The currencyCode.
      */
     public java.lang.String getCurrencyCode() {
@@ -1245,7 +1245,7 @@ private static final long serialVersionUID = 0L;
      * Transaction currency code. ISO 4217 three-letter code is used. Required.
      * </pre>
      *
-     * <code>string currency_code = 10;</code>
+     * <code>optional string currency_code = 10;</code>
      * @return The bytes for currencyCode.
      */
     public com.google.protobuf.ByteString
@@ -1266,7 +1266,7 @@ private static final long serialVersionUID = 0L;
      * Transaction currency code. ISO 4217 three-letter code is used. Required.
      * </pre>
      *
-     * <code>string currency_code = 10;</code>
+     * <code>optional string currency_code = 10;</code>
      * @param value The currencyCode to set.
      * @return This builder for chaining.
      */
@@ -1285,7 +1285,7 @@ private static final long serialVersionUID = 0L;
      * Transaction currency code. ISO 4217 three-letter code is used. Required.
      * </pre>
      *
-     * <code>string currency_code = 10;</code>
+     * <code>optional string currency_code = 10;</code>
      * @return This builder for chaining.
      */
     public Builder clearCurrencyCode() {
@@ -1299,7 +1299,7 @@ private static final long serialVersionUID = 0L;
      * Transaction currency code. ISO 4217 three-letter code is used. Required.
      * </pre>
      *
-     * <code>string currency_code = 10;</code>
+     * <code>optional string currency_code = 10;</code>
      * @param value The bytes for currencyCode to set.
      * @return This builder for chaining.
      */
@@ -1322,7 +1322,7 @@ private static final long serialVersionUID = 0L;
      * Required.
      * </pre>
      *
-     * <code>string conversion_action = 11;</code>
+     * <code>optional string conversion_action = 11;</code>
      * @return Whether the conversionAction field is set.
      */
     public boolean hasConversionAction() {
@@ -1334,7 +1334,7 @@ private static final long serialVersionUID = 0L;
      * Required.
      * </pre>
      *
-     * <code>string conversion_action = 11;</code>
+     * <code>optional string conversion_action = 11;</code>
      * @return The conversionAction.
      */
     public java.lang.String getConversionAction() {
@@ -1355,7 +1355,7 @@ private static final long serialVersionUID = 0L;
      * Required.
      * </pre>
      *
-     * <code>string conversion_action = 11;</code>
+     * <code>optional string conversion_action = 11;</code>
      * @return The bytes for conversionAction.
      */
     public com.google.protobuf.ByteString
@@ -1377,7 +1377,7 @@ private static final long serialVersionUID = 0L;
      * Required.
      * </pre>
      *
-     * <code>string conversion_action = 11;</code>
+     * <code>optional string conversion_action = 11;</code>
      * @param value The conversionAction to set.
      * @return This builder for chaining.
      */
@@ -1397,7 +1397,7 @@ private static final long serialVersionUID = 0L;
      * Required.
      * </pre>
      *
-     * <code>string conversion_action = 11;</code>
+     * <code>optional string conversion_action = 11;</code>
      * @return This builder for chaining.
      */
     public Builder clearConversionAction() {
@@ -1412,7 +1412,7 @@ private static final long serialVersionUID = 0L;
      * Required.
      * </pre>
      *
-     * <code>string conversion_action = 11;</code>
+     * <code>optional string conversion_action = 11;</code>
      * @param value The bytes for conversionAction to set.
      * @return This builder for chaining.
      */
@@ -1435,7 +1435,7 @@ private static final long serialVersionUID = 0L;
      * Accessible only to customers on the allow-list.
      * </pre>
      *
-     * <code>string order_id = 12;</code>
+     * <code>optional string order_id = 12;</code>
      * @return Whether the orderId field is set.
      */
     public boolean hasOrderId() {
@@ -1447,7 +1447,7 @@ private static final long serialVersionUID = 0L;
      * Accessible only to customers on the allow-list.
      * </pre>
      *
-     * <code>string order_id = 12;</code>
+     * <code>optional string order_id = 12;</code>
      * @return The orderId.
      */
     public java.lang.String getOrderId() {
@@ -1468,7 +1468,7 @@ private static final long serialVersionUID = 0L;
      * Accessible only to customers on the allow-list.
      * </pre>
      *
-     * <code>string order_id = 12;</code>
+     * <code>optional string order_id = 12;</code>
      * @return The bytes for orderId.
      */
     public com.google.protobuf.ByteString
@@ -1490,7 +1490,7 @@ private static final long serialVersionUID = 0L;
      * Accessible only to customers on the allow-list.
      * </pre>
      *
-     * <code>string order_id = 12;</code>
+     * <code>optional string order_id = 12;</code>
      * @param value The orderId to set.
      * @return This builder for chaining.
      */
@@ -1510,7 +1510,7 @@ private static final long serialVersionUID = 0L;
      * Accessible only to customers on the allow-list.
      * </pre>
      *
-     * <code>string order_id = 12;</code>
+     * <code>optional string order_id = 12;</code>
      * @return This builder for chaining.
      */
     public Builder clearOrderId() {
@@ -1525,7 +1525,7 @@ private static final long serialVersionUID = 0L;
      * Accessible only to customers on the allow-list.
      * </pre>
      *
-     * <code>string order_id = 12;</code>
+     * <code>optional string order_id = 12;</code>
      * @param value The bytes for orderId to set.
      * @return This builder for chaining.
      */
@@ -1712,7 +1712,7 @@ private static final long serialVersionUID = 0L;
      * Accessible only to customers on the allow-list.
      * </pre>
      *
-     * <code>string custom_value = 13;</code>
+     * <code>optional string custom_value = 13;</code>
      * @return Whether the customValue field is set.
      */
     public boolean hasCustomValue() {
@@ -1724,7 +1724,7 @@ private static final long serialVersionUID = 0L;
      * Accessible only to customers on the allow-list.
      * </pre>
      *
-     * <code>string custom_value = 13;</code>
+     * <code>optional string custom_value = 13;</code>
      * @return The customValue.
      */
     public java.lang.String getCustomValue() {
@@ -1745,7 +1745,7 @@ private static final long serialVersionUID = 0L;
      * Accessible only to customers on the allow-list.
      * </pre>
      *
-     * <code>string custom_value = 13;</code>
+     * <code>optional string custom_value = 13;</code>
      * @return The bytes for customValue.
      */
     public com.google.protobuf.ByteString
@@ -1767,7 +1767,7 @@ private static final long serialVersionUID = 0L;
      * Accessible only to customers on the allow-list.
      * </pre>
      *
-     * <code>string custom_value = 13;</code>
+     * <code>optional string custom_value = 13;</code>
      * @param value The customValue to set.
      * @return This builder for chaining.
      */
@@ -1787,7 +1787,7 @@ private static final long serialVersionUID = 0L;
      * Accessible only to customers on the allow-list.
      * </pre>
      *
-     * <code>string custom_value = 13;</code>
+     * <code>optional string custom_value = 13;</code>
      * @return This builder for chaining.
      */
     public Builder clearCustomValue() {
@@ -1802,7 +1802,7 @@ private static final long serialVersionUID = 0L;
      * Accessible only to customers on the allow-list.
      * </pre>
      *
-     * <code>string custom_value = 13;</code>
+     * <code>optional string custom_value = 13;</code>
      * @param value The bytes for customValue to set.
      * @return This builder for chaining.
      */

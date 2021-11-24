@@ -37,7 +37,7 @@ public interface CustomerLabelOrBuilder extends
    * Read only.
    * </pre>
    *
-   * <code>string customer = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string customer = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the customer field is set.
    */
   boolean hasCustomer();
@@ -47,7 +47,7 @@ public interface CustomerLabelOrBuilder extends
    * Read only.
    * </pre>
    *
-   * <code>string customer = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string customer = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The customer.
    */
   java.lang.String getCustomer();
@@ -57,7 +57,7 @@ public interface CustomerLabelOrBuilder extends
    * Read only.
    * </pre>
    *
-   * <code>string customer = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string customer = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for customer.
    */
   com.google.protobuf.ByteString
@@ -70,7 +70,7 @@ public interface CustomerLabelOrBuilder extends
    * validated when creating a new CustomerLabel.
    * </pre>
    *
-   * <code>string label = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string label = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the label field is set.
    */
   boolean hasLabel();
@@ -81,7 +81,7 @@ public interface CustomerLabelOrBuilder extends
    * validated when creating a new CustomerLabel.
    * </pre>
    *
-   * <code>string label = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string label = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The label.
    */
   java.lang.String getLabel();
@@ -92,7 +92,7 @@ public interface CustomerLabelOrBuilder extends
    * validated when creating a new CustomerLabel.
    * </pre>
    *
-   * <code>string label = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string label = 5 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for label.
    */
   com.google.protobuf.ByteString

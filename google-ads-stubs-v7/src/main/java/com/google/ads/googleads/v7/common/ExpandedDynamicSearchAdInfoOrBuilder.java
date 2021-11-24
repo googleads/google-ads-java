@@ -12,7 +12,7 @@ public interface ExpandedDynamicSearchAdInfoOrBuilder extends
    * The description of the ad.
    * </pre>
    *
-   * <code>string description = 3;</code>
+   * <code>optional string description = 3;</code>
    * @return Whether the description field is set.
    */
   boolean hasDescription();
@@ -21,7 +21,7 @@ public interface ExpandedDynamicSearchAdInfoOrBuilder extends
    * The description of the ad.
    * </pre>
    *
-   * <code>string description = 3;</code>
+   * <code>optional string description = 3;</code>
    * @return The description.
    */
   java.lang.String getDescription();
@@ -30,7 +30,7 @@ public interface ExpandedDynamicSearchAdInfoOrBuilder extends
    * The description of the ad.
    * </pre>
    *
-   * <code>string description = 3;</code>
+   * <code>optional string description = 3;</code>
    * @return The bytes for description.
    */
   com.google.protobuf.ByteString
@@ -41,7 +41,7 @@ public interface ExpandedDynamicSearchAdInfoOrBuilder extends
    * The second description of the ad.
    * </pre>
    *
-   * <code>string description2 = 4;</code>
+   * <code>optional string description2 = 4;</code>
    * @return Whether the description2 field is set.
    */
   boolean hasDescription2();
@@ -50,7 +50,7 @@ public interface ExpandedDynamicSearchAdInfoOrBuilder extends
    * The second description of the ad.
    * </pre>
    *
-   * <code>string description2 = 4;</code>
+   * <code>optional string description2 = 4;</code>
    * @return The description2.
    */
   java.lang.String getDescription2();
@@ -59,7 +59,7 @@ public interface ExpandedDynamicSearchAdInfoOrBuilder extends
    * The second description of the ad.
    * </pre>
    *
-   * <code>string description2 = 4;</code>
+   * <code>optional string description2 = 4;</code>
    * @return The bytes for description2.
    */
   com.google.protobuf.ByteString

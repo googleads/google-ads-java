@@ -14,7 +14,7 @@ public interface ConversionTrackingSettingOrBuilder extends
    * doesn't use conversion tracking, this is 0. This field is read-only.
    * </pre>
    *
-   * <code>int64 conversion_tracking_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 conversion_tracking_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the conversionTrackingId field is set.
    */
   boolean hasConversionTrackingId();
@@ -25,7 +25,7 @@ public interface ConversionTrackingSettingOrBuilder extends
    * doesn't use conversion tracking, this is 0. This field is read-only.
    * </pre>
    *
-   * <code>int64 conversion_tracking_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 conversion_tracking_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The conversionTrackingId.
    */
   long getConversionTrackingId();
@@ -38,7 +38,7 @@ public interface ConversionTrackingSettingOrBuilder extends
    * Ads UI. This field is read-only.
    * </pre>
    *
-   * <code>int64 cross_account_conversion_tracking_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 cross_account_conversion_tracking_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the crossAccountConversionTrackingId field is set.
    */
   boolean hasCrossAccountConversionTrackingId();
@@ -50,7 +50,7 @@ public interface ConversionTrackingSettingOrBuilder extends
    * Ads UI. This field is read-only.
    * </pre>
    *
-   * <code>int64 cross_account_conversion_tracking_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 cross_account_conversion_tracking_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The crossAccountConversionTrackingId.
    */
   long getCrossAccountConversionTrackingId();

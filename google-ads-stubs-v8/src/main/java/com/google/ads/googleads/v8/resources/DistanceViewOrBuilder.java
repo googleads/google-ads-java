@@ -55,7 +55,7 @@ public interface DistanceViewOrBuilder extends
    * Output only. True if the DistanceBucket is using the metric system, false otherwise.
    * </pre>
    *
-   * <code>bool metric_system = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool metric_system = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the metricSystem field is set.
    */
   boolean hasMetricSystem();
@@ -64,7 +64,7 @@ public interface DistanceViewOrBuilder extends
    * Output only. True if the DistanceBucket is using the metric system, false otherwise.
    * </pre>
    *
-   * <code>bool metric_system = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool metric_system = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The metricSystem.
    */
   boolean getMetricSystem();

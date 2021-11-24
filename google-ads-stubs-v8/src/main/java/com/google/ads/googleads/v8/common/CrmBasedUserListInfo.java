@@ -123,7 +123,7 @@ private static final long serialVersionUID = 0L;
    * IDs.
    * </pre>
    *
-   * <code>string app_id = 4;</code>
+   * <code>optional string app_id = 4;</code>
    * @return Whether the appId field is set.
    */
   @java.lang.Override
@@ -144,7 +144,7 @@ private static final long serialVersionUID = 0L;
    * IDs.
    * </pre>
    *
-   * <code>string app_id = 4;</code>
+   * <code>optional string app_id = 4;</code>
    * @return The appId.
    */
   @java.lang.Override
@@ -174,7 +174,7 @@ private static final long serialVersionUID = 0L;
    * IDs.
    * </pre>
    *
-   * <code>string app_id = 4;</code>
+   * <code>optional string app_id = 4;</code>
    * @return The bytes for appId.
    */
   @java.lang.Override
@@ -618,7 +618,7 @@ private static final long serialVersionUID = 0L;
      * IDs.
      * </pre>
      *
-     * <code>string app_id = 4;</code>
+     * <code>optional string app_id = 4;</code>
      * @return Whether the appId field is set.
      */
     public boolean hasAppId() {
@@ -638,7 +638,7 @@ private static final long serialVersionUID = 0L;
      * IDs.
      * </pre>
      *
-     * <code>string app_id = 4;</code>
+     * <code>optional string app_id = 4;</code>
      * @return The appId.
      */
     public java.lang.String getAppId() {
@@ -667,7 +667,7 @@ private static final long serialVersionUID = 0L;
      * IDs.
      * </pre>
      *
-     * <code>string app_id = 4;</code>
+     * <code>optional string app_id = 4;</code>
      * @return The bytes for appId.
      */
     public com.google.protobuf.ByteString
@@ -697,7 +697,7 @@ private static final long serialVersionUID = 0L;
      * IDs.
      * </pre>
      *
-     * <code>string app_id = 4;</code>
+     * <code>optional string app_id = 4;</code>
      * @param value The appId to set.
      * @return This builder for chaining.
      */
@@ -725,7 +725,7 @@ private static final long serialVersionUID = 0L;
      * IDs.
      * </pre>
      *
-     * <code>string app_id = 4;</code>
+     * <code>optional string app_id = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearAppId() {
@@ -748,7 +748,7 @@ private static final long serialVersionUID = 0L;
      * IDs.
      * </pre>
      *
-     * <code>string app_id = 4;</code>
+     * <code>optional string app_id = 4;</code>
      * @param value The bytes for appId to set.
      * @return This builder for chaining.
      */

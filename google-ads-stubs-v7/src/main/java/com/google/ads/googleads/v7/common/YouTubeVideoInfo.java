@@ -100,7 +100,7 @@ private static final long serialVersionUID = 0L;
    * YouTube video id as it appears on the YouTube watch page.
    * </pre>
    *
-   * <code>string video_id = 2;</code>
+   * <code>optional string video_id = 2;</code>
    * @return Whether the videoId field is set.
    */
   @java.lang.Override
@@ -112,7 +112,7 @@ private static final long serialVersionUID = 0L;
    * YouTube video id as it appears on the YouTube watch page.
    * </pre>
    *
-   * <code>string video_id = 2;</code>
+   * <code>optional string video_id = 2;</code>
    * @return The videoId.
    */
   @java.lang.Override
@@ -133,7 +133,7 @@ private static final long serialVersionUID = 0L;
    * YouTube video id as it appears on the YouTube watch page.
    * </pre>
    *
-   * <code>string video_id = 2;</code>
+   * <code>optional string video_id = 2;</code>
    * @return The bytes for videoId.
    */
   @java.lang.Override
@@ -476,7 +476,7 @@ private static final long serialVersionUID = 0L;
      * YouTube video id as it appears on the YouTube watch page.
      * </pre>
      *
-     * <code>string video_id = 2;</code>
+     * <code>optional string video_id = 2;</code>
      * @return Whether the videoId field is set.
      */
     public boolean hasVideoId() {
@@ -487,7 +487,7 @@ private static final long serialVersionUID = 0L;
      * YouTube video id as it appears on the YouTube watch page.
      * </pre>
      *
-     * <code>string video_id = 2;</code>
+     * <code>optional string video_id = 2;</code>
      * @return The videoId.
      */
     public java.lang.String getVideoId() {
@@ -507,7 +507,7 @@ private static final long serialVersionUID = 0L;
      * YouTube video id as it appears on the YouTube watch page.
      * </pre>
      *
-     * <code>string video_id = 2;</code>
+     * <code>optional string video_id = 2;</code>
      * @return The bytes for videoId.
      */
     public com.google.protobuf.ByteString
@@ -528,7 +528,7 @@ private static final long serialVersionUID = 0L;
      * YouTube video id as it appears on the YouTube watch page.
      * </pre>
      *
-     * <code>string video_id = 2;</code>
+     * <code>optional string video_id = 2;</code>
      * @param value The videoId to set.
      * @return This builder for chaining.
      */
@@ -547,7 +547,7 @@ private static final long serialVersionUID = 0L;
      * YouTube video id as it appears on the YouTube watch page.
      * </pre>
      *
-     * <code>string video_id = 2;</code>
+     * <code>optional string video_id = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearVideoId() {
@@ -561,7 +561,7 @@ private static final long serialVersionUID = 0L;
      * YouTube video id as it appears on the YouTube watch page.
      * </pre>
      *
-     * <code>string video_id = 2;</code>
+     * <code>optional string video_id = 2;</code>
      * @param value The bytes for videoId to set.
      * @return This builder for chaining.
      */

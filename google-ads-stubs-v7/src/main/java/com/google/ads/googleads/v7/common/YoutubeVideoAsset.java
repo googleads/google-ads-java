@@ -108,7 +108,7 @@ private static final long serialVersionUID = 0L;
    * YouTube video URL.
    * </pre>
    *
-   * <code>string youtube_video_id = 2;</code>
+   * <code>optional string youtube_video_id = 2;</code>
    * @return Whether the youtubeVideoId field is set.
    */
   @java.lang.Override
@@ -121,7 +121,7 @@ private static final long serialVersionUID = 0L;
    * YouTube video URL.
    * </pre>
    *
-   * <code>string youtube_video_id = 2;</code>
+   * <code>optional string youtube_video_id = 2;</code>
    * @return The youtubeVideoId.
    */
   @java.lang.Override
@@ -143,7 +143,7 @@ private static final long serialVersionUID = 0L;
    * YouTube video URL.
    * </pre>
    *
-   * <code>string youtube_video_id = 2;</code>
+   * <code>optional string youtube_video_id = 2;</code>
    * @return The bytes for youtubeVideoId.
    */
   @java.lang.Override
@@ -224,7 +224,7 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, youtubeVideoId_);
     }
-    if (!getYoutubeVideoTitleBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(youtubeVideoTitle_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, youtubeVideoTitle_);
     }
     unknownFields.writeTo(output);
@@ -239,7 +239,7 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, youtubeVideoId_);
     }
-    if (!getYoutubeVideoTitleBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(youtubeVideoTitle_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, youtubeVideoTitle_);
     }
     size += unknownFields.getSerializedSize();
@@ -550,7 +550,7 @@ private static final long serialVersionUID = 0L;
      * YouTube video URL.
      * </pre>
      *
-     * <code>string youtube_video_id = 2;</code>
+     * <code>optional string youtube_video_id = 2;</code>
      * @return Whether the youtubeVideoId field is set.
      */
     public boolean hasYoutubeVideoId() {
@@ -562,7 +562,7 @@ private static final long serialVersionUID = 0L;
      * YouTube video URL.
      * </pre>
      *
-     * <code>string youtube_video_id = 2;</code>
+     * <code>optional string youtube_video_id = 2;</code>
      * @return The youtubeVideoId.
      */
     public java.lang.String getYoutubeVideoId() {
@@ -583,7 +583,7 @@ private static final long serialVersionUID = 0L;
      * YouTube video URL.
      * </pre>
      *
-     * <code>string youtube_video_id = 2;</code>
+     * <code>optional string youtube_video_id = 2;</code>
      * @return The bytes for youtubeVideoId.
      */
     public com.google.protobuf.ByteString
@@ -605,7 +605,7 @@ private static final long serialVersionUID = 0L;
      * YouTube video URL.
      * </pre>
      *
-     * <code>string youtube_video_id = 2;</code>
+     * <code>optional string youtube_video_id = 2;</code>
      * @param value The youtubeVideoId to set.
      * @return This builder for chaining.
      */
@@ -625,7 +625,7 @@ private static final long serialVersionUID = 0L;
      * YouTube video URL.
      * </pre>
      *
-     * <code>string youtube_video_id = 2;</code>
+     * <code>optional string youtube_video_id = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearYoutubeVideoId() {
@@ -640,7 +640,7 @@ private static final long serialVersionUID = 0L;
      * YouTube video URL.
      * </pre>
      *
-     * <code>string youtube_video_id = 2;</code>
+     * <code>optional string youtube_video_id = 2;</code>
      * @param value The bytes for youtubeVideoId to set.
      * @return This builder for chaining.
      */

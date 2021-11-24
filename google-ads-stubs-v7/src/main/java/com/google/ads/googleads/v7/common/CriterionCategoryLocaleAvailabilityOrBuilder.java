@@ -37,7 +37,7 @@ public interface CriterionCategoryLocaleAvailabilityOrBuilder extends
    * Code of the country.
    * </pre>
    *
-   * <code>string country_code = 4;</code>
+   * <code>optional string country_code = 4;</code>
    * @return Whether the countryCode field is set.
    */
   boolean hasCountryCode();
@@ -46,7 +46,7 @@ public interface CriterionCategoryLocaleAvailabilityOrBuilder extends
    * Code of the country.
    * </pre>
    *
-   * <code>string country_code = 4;</code>
+   * <code>optional string country_code = 4;</code>
    * @return The countryCode.
    */
   java.lang.String getCountryCode();
@@ -55,7 +55,7 @@ public interface CriterionCategoryLocaleAvailabilityOrBuilder extends
    * Code of the country.
    * </pre>
    *
-   * <code>string country_code = 4;</code>
+   * <code>optional string country_code = 4;</code>
    * @return The bytes for countryCode.
    */
   com.google.protobuf.ByteString
@@ -66,7 +66,7 @@ public interface CriterionCategoryLocaleAvailabilityOrBuilder extends
    * Code of the language.
    * </pre>
    *
-   * <code>string language_code = 5;</code>
+   * <code>optional string language_code = 5;</code>
    * @return Whether the languageCode field is set.
    */
   boolean hasLanguageCode();
@@ -75,7 +75,7 @@ public interface CriterionCategoryLocaleAvailabilityOrBuilder extends
    * Code of the language.
    * </pre>
    *
-   * <code>string language_code = 5;</code>
+   * <code>optional string language_code = 5;</code>
    * @return The languageCode.
    */
   java.lang.String getLanguageCode();
@@ -84,7 +84,7 @@ public interface CriterionCategoryLocaleAvailabilityOrBuilder extends
    * Code of the language.
    * </pre>
    *
-   * <code>string language_code = 5;</code>
+   * <code>optional string language_code = 5;</code>
    * @return The bytes for languageCode.
    */
   com.google.protobuf.ByteString

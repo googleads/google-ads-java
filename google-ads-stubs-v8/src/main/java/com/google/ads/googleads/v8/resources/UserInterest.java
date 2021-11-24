@@ -221,7 +221,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of the user interest.
    * </pre>
    *
-   * <code>int64 user_interest_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 user_interest_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the userInterestId field is set.
    */
   @java.lang.Override
@@ -233,7 +233,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of the user interest.
    * </pre>
    *
-   * <code>int64 user_interest_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 user_interest_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The userInterestId.
    */
   @java.lang.Override
@@ -248,7 +248,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The name of the user interest.
    * </pre>
    *
-   * <code>string name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the name field is set.
    */
   @java.lang.Override
@@ -260,7 +260,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The name of the user interest.
    * </pre>
    *
-   * <code>string name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The name.
    */
   @java.lang.Override
@@ -281,7 +281,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The name of the user interest.
    * </pre>
    *
-   * <code>string name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for name.
    */
   @java.lang.Override
@@ -306,7 +306,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The parent of the user interest.
    * </pre>
    *
-   * <code>string user_interest_parent = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string user_interest_parent = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the userInterestParent field is set.
    */
   @java.lang.Override
@@ -318,7 +318,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The parent of the user interest.
    * </pre>
    *
-   * <code>string user_interest_parent = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string user_interest_parent = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The userInterestParent.
    */
   @java.lang.Override
@@ -339,7 +339,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The parent of the user interest.
    * </pre>
    *
-   * <code>string user_interest_parent = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string user_interest_parent = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for userInterestParent.
    */
   @java.lang.Override
@@ -364,7 +364,7 @@ private static final long serialVersionUID = 0L;
    * Output only. True if the user interest is launched to all channels and locales.
    * </pre>
    *
-   * <code>bool launched_to_all = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool launched_to_all = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the launchedToAll field is set.
    */
   @java.lang.Override
@@ -376,7 +376,7 @@ private static final long serialVersionUID = 0L;
    * Output only. True if the user interest is launched to all channels and locales.
    * </pre>
    *
-   * <code>bool launched_to_all = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool launched_to_all = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The launchedToAll.
    */
   @java.lang.Override
@@ -458,7 +458,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (taxonomyType_ != com.google.ads.googleads.v8.enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType.UNSPECIFIED.getNumber()) {
@@ -488,7 +488,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (taxonomyType_ != com.google.ads.googleads.v8.enums.UserInterestTaxonomyTypeEnum.UserInterestTaxonomyType.UNSPECIFIED.getNumber()) {
@@ -1115,7 +1115,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the user interest.
      * </pre>
      *
-     * <code>int64 user_interest_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 user_interest_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the userInterestId field is set.
      */
     @java.lang.Override
@@ -1127,7 +1127,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the user interest.
      * </pre>
      *
-     * <code>int64 user_interest_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 user_interest_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The userInterestId.
      */
     @java.lang.Override
@@ -1139,7 +1139,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the user interest.
      * </pre>
      *
-     * <code>int64 user_interest_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 user_interest_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The userInterestId to set.
      * @return This builder for chaining.
      */
@@ -1154,7 +1154,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the user interest.
      * </pre>
      *
-     * <code>int64 user_interest_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 user_interest_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearUserInterestId() {
@@ -1170,7 +1170,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The name of the user interest.
      * </pre>
      *
-     * <code>string name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the name field is set.
      */
     public boolean hasName() {
@@ -1181,7 +1181,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The name of the user interest.
      * </pre>
      *
-     * <code>string name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The name.
      */
     public java.lang.String getName() {
@@ -1201,7 +1201,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The name of the user interest.
      * </pre>
      *
-     * <code>string name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
@@ -1222,7 +1222,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The name of the user interest.
      * </pre>
      *
-     * <code>string name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The name to set.
      * @return This builder for chaining.
      */
@@ -1241,7 +1241,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The name of the user interest.
      * </pre>
      *
-     * <code>string name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
@@ -1255,7 +1255,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The name of the user interest.
      * </pre>
      *
-     * <code>string name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
@@ -1277,7 +1277,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The parent of the user interest.
      * </pre>
      *
-     * <code>string user_interest_parent = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string user_interest_parent = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the userInterestParent field is set.
      */
     public boolean hasUserInterestParent() {
@@ -1288,7 +1288,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The parent of the user interest.
      * </pre>
      *
-     * <code>string user_interest_parent = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string user_interest_parent = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The userInterestParent.
      */
     public java.lang.String getUserInterestParent() {
@@ -1308,7 +1308,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The parent of the user interest.
      * </pre>
      *
-     * <code>string user_interest_parent = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string user_interest_parent = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for userInterestParent.
      */
     public com.google.protobuf.ByteString
@@ -1329,7 +1329,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The parent of the user interest.
      * </pre>
      *
-     * <code>string user_interest_parent = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string user_interest_parent = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The userInterestParent to set.
      * @return This builder for chaining.
      */
@@ -1348,7 +1348,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The parent of the user interest.
      * </pre>
      *
-     * <code>string user_interest_parent = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string user_interest_parent = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearUserInterestParent() {
@@ -1362,7 +1362,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The parent of the user interest.
      * </pre>
      *
-     * <code>string user_interest_parent = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string user_interest_parent = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for userInterestParent to set.
      * @return This builder for chaining.
      */
@@ -1384,7 +1384,7 @@ private static final long serialVersionUID = 0L;
      * Output only. True if the user interest is launched to all channels and locales.
      * </pre>
      *
-     * <code>bool launched_to_all = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool launched_to_all = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the launchedToAll field is set.
      */
     @java.lang.Override
@@ -1396,7 +1396,7 @@ private static final long serialVersionUID = 0L;
      * Output only. True if the user interest is launched to all channels and locales.
      * </pre>
      *
-     * <code>bool launched_to_all = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool launched_to_all = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The launchedToAll.
      */
     @java.lang.Override
@@ -1408,7 +1408,7 @@ private static final long serialVersionUID = 0L;
      * Output only. True if the user interest is launched to all channels and locales.
      * </pre>
      *
-     * <code>bool launched_to_all = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool launched_to_all = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The launchedToAll to set.
      * @return This builder for chaining.
      */
@@ -1423,7 +1423,7 @@ private static final long serialVersionUID = 0L;
      * Output only. True if the user interest is launched to all channels and locales.
      * </pre>
      *
-     * <code>bool launched_to_all = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool launched_to_all = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearLaunchedToAll() {

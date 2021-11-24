@@ -163,7 +163,7 @@ private static final long serialVersionUID = 0L;
    * Required for creating a data specific rule user list.
    * </pre>
    *
-   * <code>string start_date = 4;</code>
+   * <code>optional string start_date = 4;</code>
    * @return Whether the startDate field is set.
    */
   @java.lang.Override
@@ -177,7 +177,7 @@ private static final long serialVersionUID = 0L;
    * Required for creating a data specific rule user list.
    * </pre>
    *
-   * <code>string start_date = 4;</code>
+   * <code>optional string start_date = 4;</code>
    * @return The startDate.
    */
   @java.lang.Override
@@ -200,7 +200,7 @@ private static final long serialVersionUID = 0L;
    * Required for creating a data specific rule user list.
    * </pre>
    *
-   * <code>string start_date = 4;</code>
+   * <code>optional string start_date = 4;</code>
    * @return The bytes for startDate.
    */
   @java.lang.Override
@@ -227,7 +227,7 @@ private static final long serialVersionUID = 0L;
    * Required for creating a data specific rule user list.
    * </pre>
    *
-   * <code>string end_date = 5;</code>
+   * <code>optional string end_date = 5;</code>
    * @return Whether the endDate field is set.
    */
   @java.lang.Override
@@ -241,7 +241,7 @@ private static final long serialVersionUID = 0L;
    * Required for creating a data specific rule user list.
    * </pre>
    *
-   * <code>string end_date = 5;</code>
+   * <code>optional string end_date = 5;</code>
    * @return The endDate.
    */
   @java.lang.Override
@@ -264,7 +264,7 @@ private static final long serialVersionUID = 0L;
    * Required for creating a data specific rule user list.
    * </pre>
    *
-   * <code>string end_date = 5;</code>
+   * <code>optional string end_date = 5;</code>
    * @return The bytes for endDate.
    */
   @java.lang.Override
@@ -829,7 +829,7 @@ private static final long serialVersionUID = 0L;
      * Required for creating a data specific rule user list.
      * </pre>
      *
-     * <code>string start_date = 4;</code>
+     * <code>optional string start_date = 4;</code>
      * @return Whether the startDate field is set.
      */
     public boolean hasStartDate() {
@@ -842,7 +842,7 @@ private static final long serialVersionUID = 0L;
      * Required for creating a data specific rule user list.
      * </pre>
      *
-     * <code>string start_date = 4;</code>
+     * <code>optional string start_date = 4;</code>
      * @return The startDate.
      */
     public java.lang.String getStartDate() {
@@ -864,7 +864,7 @@ private static final long serialVersionUID = 0L;
      * Required for creating a data specific rule user list.
      * </pre>
      *
-     * <code>string start_date = 4;</code>
+     * <code>optional string start_date = 4;</code>
      * @return The bytes for startDate.
      */
     public com.google.protobuf.ByteString
@@ -887,7 +887,7 @@ private static final long serialVersionUID = 0L;
      * Required for creating a data specific rule user list.
      * </pre>
      *
-     * <code>string start_date = 4;</code>
+     * <code>optional string start_date = 4;</code>
      * @param value The startDate to set.
      * @return This builder for chaining.
      */
@@ -908,7 +908,7 @@ private static final long serialVersionUID = 0L;
      * Required for creating a data specific rule user list.
      * </pre>
      *
-     * <code>string start_date = 4;</code>
+     * <code>optional string start_date = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearStartDate() {
@@ -924,7 +924,7 @@ private static final long serialVersionUID = 0L;
      * Required for creating a data specific rule user list.
      * </pre>
      *
-     * <code>string start_date = 4;</code>
+     * <code>optional string start_date = 4;</code>
      * @param value The bytes for startDate to set.
      * @return This builder for chaining.
      */
@@ -948,7 +948,7 @@ private static final long serialVersionUID = 0L;
      * Required for creating a data specific rule user list.
      * </pre>
      *
-     * <code>string end_date = 5;</code>
+     * <code>optional string end_date = 5;</code>
      * @return Whether the endDate field is set.
      */
     public boolean hasEndDate() {
@@ -961,7 +961,7 @@ private static final long serialVersionUID = 0L;
      * Required for creating a data specific rule user list.
      * </pre>
      *
-     * <code>string end_date = 5;</code>
+     * <code>optional string end_date = 5;</code>
      * @return The endDate.
      */
     public java.lang.String getEndDate() {
@@ -983,7 +983,7 @@ private static final long serialVersionUID = 0L;
      * Required for creating a data specific rule user list.
      * </pre>
      *
-     * <code>string end_date = 5;</code>
+     * <code>optional string end_date = 5;</code>
      * @return The bytes for endDate.
      */
     public com.google.protobuf.ByteString
@@ -1006,7 +1006,7 @@ private static final long serialVersionUID = 0L;
      * Required for creating a data specific rule user list.
      * </pre>
      *
-     * <code>string end_date = 5;</code>
+     * <code>optional string end_date = 5;</code>
      * @param value The endDate to set.
      * @return This builder for chaining.
      */
@@ -1027,7 +1027,7 @@ private static final long serialVersionUID = 0L;
      * Required for creating a data specific rule user list.
      * </pre>
      *
-     * <code>string end_date = 5;</code>
+     * <code>optional string end_date = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearEndDate() {
@@ -1043,7 +1043,7 @@ private static final long serialVersionUID = 0L;
      * Required for creating a data specific rule user list.
      * </pre>
      *
-     * <code>string end_date = 5;</code>
+     * <code>optional string end_date = 5;</code>
      * @param value The bytes for endDate to set.
      * @return This builder for chaining.
      */

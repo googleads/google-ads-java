@@ -140,7 +140,7 @@ private static final long serialVersionUID = 0L;
    * Example: "exampleapp://productid_1234". Required.
    * </pre>
    *
-   * <code>string url = 3;</code>
+   * <code>optional string url = 3;</code>
    * @return Whether the url field is set.
    */
   @java.lang.Override
@@ -158,7 +158,7 @@ private static final long serialVersionUID = 0L;
    * Example: "exampleapp://productid_1234". Required.
    * </pre>
    *
-   * <code>string url = 3;</code>
+   * <code>optional string url = 3;</code>
    * @return The url.
    */
   @java.lang.Override
@@ -185,7 +185,7 @@ private static final long serialVersionUID = 0L;
    * Example: "exampleapp://productid_1234". Required.
    * </pre>
    *
-   * <code>string url = 3;</code>
+   * <code>optional string url = 3;</code>
    * @return The bytes for url.
    */
   @java.lang.Override
@@ -624,7 +624,7 @@ private static final long serialVersionUID = 0L;
      * Example: "exampleapp://productid_1234". Required.
      * </pre>
      *
-     * <code>string url = 3;</code>
+     * <code>optional string url = 3;</code>
      * @return Whether the url field is set.
      */
     public boolean hasUrl() {
@@ -641,7 +641,7 @@ private static final long serialVersionUID = 0L;
      * Example: "exampleapp://productid_1234". Required.
      * </pre>
      *
-     * <code>string url = 3;</code>
+     * <code>optional string url = 3;</code>
      * @return The url.
      */
     public java.lang.String getUrl() {
@@ -667,7 +667,7 @@ private static final long serialVersionUID = 0L;
      * Example: "exampleapp://productid_1234". Required.
      * </pre>
      *
-     * <code>string url = 3;</code>
+     * <code>optional string url = 3;</code>
      * @return The bytes for url.
      */
     public com.google.protobuf.ByteString
@@ -694,7 +694,7 @@ private static final long serialVersionUID = 0L;
      * Example: "exampleapp://productid_1234". Required.
      * </pre>
      *
-     * <code>string url = 3;</code>
+     * <code>optional string url = 3;</code>
      * @param value The url to set.
      * @return This builder for chaining.
      */
@@ -719,7 +719,7 @@ private static final long serialVersionUID = 0L;
      * Example: "exampleapp://productid_1234". Required.
      * </pre>
      *
-     * <code>string url = 3;</code>
+     * <code>optional string url = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearUrl() {
@@ -739,7 +739,7 @@ private static final long serialVersionUID = 0L;
      * Example: "exampleapp://productid_1234". Required.
      * </pre>
      *
-     * <code>string url = 3;</code>
+     * <code>optional string url = 3;</code>
      * @param value The bytes for url to set.
      * @return This builder for chaining.
      */

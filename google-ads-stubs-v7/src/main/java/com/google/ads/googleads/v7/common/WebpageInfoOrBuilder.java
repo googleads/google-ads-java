@@ -16,7 +16,7 @@ public interface WebpageInfoOrBuilder extends
    * operations.
    * </pre>
    *
-   * <code>string criterion_name = 3;</code>
+   * <code>optional string criterion_name = 3;</code>
    * @return Whether the criterionName field is set.
    */
   boolean hasCriterionName();
@@ -29,7 +29,7 @@ public interface WebpageInfoOrBuilder extends
    * operations.
    * </pre>
    *
-   * <code>string criterion_name = 3;</code>
+   * <code>optional string criterion_name = 3;</code>
    * @return The criterionName.
    */
   java.lang.String getCriterionName();
@@ -42,7 +42,7 @@ public interface WebpageInfoOrBuilder extends
    * operations.
    * </pre>
    *
-   * <code>string criterion_name = 3;</code>
+   * <code>optional string criterion_name = 3;</code>
    * @return The bytes for criterionName.
    */
   com.google.protobuf.ByteString

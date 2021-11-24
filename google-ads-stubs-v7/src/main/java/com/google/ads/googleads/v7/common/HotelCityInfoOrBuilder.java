@@ -12,7 +12,7 @@ public interface HotelCityInfoOrBuilder extends
    * The Geo Target Constant resource name.
    * </pre>
    *
-   * <code>string city_criterion = 2;</code>
+   * <code>optional string city_criterion = 2;</code>
    * @return Whether the cityCriterion field is set.
    */
   boolean hasCityCriterion();
@@ -21,7 +21,7 @@ public interface HotelCityInfoOrBuilder extends
    * The Geo Target Constant resource name.
    * </pre>
    *
-   * <code>string city_criterion = 2;</code>
+   * <code>optional string city_criterion = 2;</code>
    * @return The cityCriterion.
    */
   java.lang.String getCityCriterion();
@@ -30,7 +30,7 @@ public interface HotelCityInfoOrBuilder extends
    * The Geo Target Constant resource name.
    * </pre>
    *
-   * <code>string city_criterion = 2;</code>
+   * <code>optional string city_criterion = 2;</code>
    * @return The bytes for cityCriterion.
    */
   com.google.protobuf.ByteString

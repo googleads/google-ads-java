@@ -127,7 +127,7 @@ private static final long serialVersionUID = 0L;
    * Asset text.
    * </pre>
    *
-   * <code>string text = 4;</code>
+   * <code>optional string text = 4;</code>
    * @return Whether the text field is set.
    */
   @java.lang.Override
@@ -139,7 +139,7 @@ private static final long serialVersionUID = 0L;
    * Asset text.
    * </pre>
    *
-   * <code>string text = 4;</code>
+   * <code>optional string text = 4;</code>
    * @return The text.
    */
   @java.lang.Override
@@ -160,7 +160,7 @@ private static final long serialVersionUID = 0L;
    * Asset text.
    * </pre>
    *
-   * <code>string text = 4;</code>
+   * <code>optional string text = 4;</code>
    * @return The bytes for text.
    */
   @java.lang.Override
@@ -663,7 +663,7 @@ private static final long serialVersionUID = 0L;
      * Asset text.
      * </pre>
      *
-     * <code>string text = 4;</code>
+     * <code>optional string text = 4;</code>
      * @return Whether the text field is set.
      */
     public boolean hasText() {
@@ -674,7 +674,7 @@ private static final long serialVersionUID = 0L;
      * Asset text.
      * </pre>
      *
-     * <code>string text = 4;</code>
+     * <code>optional string text = 4;</code>
      * @return The text.
      */
     public java.lang.String getText() {
@@ -694,7 +694,7 @@ private static final long serialVersionUID = 0L;
      * Asset text.
      * </pre>
      *
-     * <code>string text = 4;</code>
+     * <code>optional string text = 4;</code>
      * @return The bytes for text.
      */
     public com.google.protobuf.ByteString
@@ -715,7 +715,7 @@ private static final long serialVersionUID = 0L;
      * Asset text.
      * </pre>
      *
-     * <code>string text = 4;</code>
+     * <code>optional string text = 4;</code>
      * @param value The text to set.
      * @return This builder for chaining.
      */
@@ -734,7 +734,7 @@ private static final long serialVersionUID = 0L;
      * Asset text.
      * </pre>
      *
-     * <code>string text = 4;</code>
+     * <code>optional string text = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearText() {
@@ -748,7 +748,7 @@ private static final long serialVersionUID = 0L;
      * Asset text.
      * </pre>
      *
-     * <code>string text = 4;</code>
+     * <code>optional string text = 4;</code>
      * @param value The bytes for text to set.
      * @return This builder for chaining.
      */

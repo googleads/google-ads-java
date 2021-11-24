@@ -12,7 +12,7 @@ public interface TextAdInfoOrBuilder extends
    * The headline of the ad.
    * </pre>
    *
-   * <code>string headline = 4;</code>
+   * <code>optional string headline = 4;</code>
    * @return Whether the headline field is set.
    */
   boolean hasHeadline();
@@ -21,7 +21,7 @@ public interface TextAdInfoOrBuilder extends
    * The headline of the ad.
    * </pre>
    *
-   * <code>string headline = 4;</code>
+   * <code>optional string headline = 4;</code>
    * @return The headline.
    */
   java.lang.String getHeadline();
@@ -30,7 +30,7 @@ public interface TextAdInfoOrBuilder extends
    * The headline of the ad.
    * </pre>
    *
-   * <code>string headline = 4;</code>
+   * <code>optional string headline = 4;</code>
    * @return The bytes for headline.
    */
   com.google.protobuf.ByteString
@@ -41,7 +41,7 @@ public interface TextAdInfoOrBuilder extends
    * The first line of the ad's description.
    * </pre>
    *
-   * <code>string description1 = 5;</code>
+   * <code>optional string description1 = 5;</code>
    * @return Whether the description1 field is set.
    */
   boolean hasDescription1();
@@ -50,7 +50,7 @@ public interface TextAdInfoOrBuilder extends
    * The first line of the ad's description.
    * </pre>
    *
-   * <code>string description1 = 5;</code>
+   * <code>optional string description1 = 5;</code>
    * @return The description1.
    */
   java.lang.String getDescription1();
@@ -59,7 +59,7 @@ public interface TextAdInfoOrBuilder extends
    * The first line of the ad's description.
    * </pre>
    *
-   * <code>string description1 = 5;</code>
+   * <code>optional string description1 = 5;</code>
    * @return The bytes for description1.
    */
   com.google.protobuf.ByteString
@@ -70,7 +70,7 @@ public interface TextAdInfoOrBuilder extends
    * The second line of the ad's description.
    * </pre>
    *
-   * <code>string description2 = 6;</code>
+   * <code>optional string description2 = 6;</code>
    * @return Whether the description2 field is set.
    */
   boolean hasDescription2();
@@ -79,7 +79,7 @@ public interface TextAdInfoOrBuilder extends
    * The second line of the ad's description.
    * </pre>
    *
-   * <code>string description2 = 6;</code>
+   * <code>optional string description2 = 6;</code>
    * @return The description2.
    */
   java.lang.String getDescription2();
@@ -88,7 +88,7 @@ public interface TextAdInfoOrBuilder extends
    * The second line of the ad's description.
    * </pre>
    *
-   * <code>string description2 = 6;</code>
+   * <code>optional string description2 = 6;</code>
    * @return The bytes for description2.
    */
   com.google.protobuf.ByteString

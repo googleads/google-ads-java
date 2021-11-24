@@ -10,6 +10,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v7/services/extension_feed_item_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class ExtensionFeedItemServiceGrpc {
 
   private ExtensionFeedItemServiceGrpc() {}

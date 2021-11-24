@@ -798,7 +798,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the conversion action.
    * </pre>
    *
-   * <code>string conversion_action = 113;</code>
+   * <code>optional string conversion_action = 113;</code>
    * @return Whether the conversionAction field is set.
    */
   @java.lang.Override
@@ -810,7 +810,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the conversion action.
    * </pre>
    *
-   * <code>string conversion_action = 113;</code>
+   * <code>optional string conversion_action = 113;</code>
    * @return The conversionAction.
    */
   @java.lang.Override
@@ -831,7 +831,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the conversion action.
    * </pre>
    *
-   * <code>string conversion_action = 113;</code>
+   * <code>optional string conversion_action = 113;</code>
    * @return The bytes for conversionAction.
    */
   @java.lang.Override
@@ -883,7 +883,7 @@ private static final long serialVersionUID = 0L;
    * Conversion action name.
    * </pre>
    *
-   * <code>string conversion_action_name = 114;</code>
+   * <code>optional string conversion_action_name = 114;</code>
    * @return Whether the conversionActionName field is set.
    */
   @java.lang.Override
@@ -895,7 +895,7 @@ private static final long serialVersionUID = 0L;
    * Conversion action name.
    * </pre>
    *
-   * <code>string conversion_action_name = 114;</code>
+   * <code>optional string conversion_action_name = 114;</code>
    * @return The conversionActionName.
    */
   @java.lang.Override
@@ -916,7 +916,7 @@ private static final long serialVersionUID = 0L;
    * Conversion action name.
    * </pre>
    *
-   * <code>string conversion_action_name = 114;</code>
+   * <code>optional string conversion_action_name = 114;</code>
    * @return The bytes for conversionActionName.
    */
   @java.lang.Override
@@ -945,7 +945,7 @@ private static final long serialVersionUID = 0L;
    * post-adjustment data.
    * </pre>
    *
-   * <code>bool conversion_adjustment = 115;</code>
+   * <code>optional bool conversion_adjustment = 115;</code>
    * @return Whether the conversionAdjustment field is set.
    */
   @java.lang.Override
@@ -961,7 +961,7 @@ private static final long serialVersionUID = 0L;
    * post-adjustment data.
    * </pre>
    *
-   * <code>bool conversion_adjustment = 115;</code>
+   * <code>optional bool conversion_adjustment = 115;</code>
    * @return The conversionAdjustment.
    */
   @java.lang.Override
@@ -1062,7 +1062,7 @@ private static final long serialVersionUID = 0L;
    * yyyy-MM-dd format, e.g., 2018-04-17.
    * </pre>
    *
-   * <code>string date = 79;</code>
+   * <code>optional string date = 79;</code>
    * @return Whether the date field is set.
    */
   @java.lang.Override
@@ -1075,7 +1075,7 @@ private static final long serialVersionUID = 0L;
    * yyyy-MM-dd format, e.g., 2018-04-17.
    * </pre>
    *
-   * <code>string date = 79;</code>
+   * <code>optional string date = 79;</code>
    * @return The date.
    */
   @java.lang.Override
@@ -1097,7 +1097,7 @@ private static final long serialVersionUID = 0L;
    * yyyy-MM-dd format, e.g., 2018-04-17.
    * </pre>
    *
-   * <code>string date = 79;</code>
+   * <code>optional string date = 79;</code>
    * @return The bytes for date.
    */
   @java.lang.Override
@@ -1203,7 +1203,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the geo target constant that represents an airport.
    * </pre>
    *
-   * <code>string geo_target_airport = 116;</code>
+   * <code>optional string geo_target_airport = 116;</code>
    * @return Whether the geoTargetAirport field is set.
    */
   @java.lang.Override
@@ -1215,7 +1215,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the geo target constant that represents an airport.
    * </pre>
    *
-   * <code>string geo_target_airport = 116;</code>
+   * <code>optional string geo_target_airport = 116;</code>
    * @return The geoTargetAirport.
    */
   @java.lang.Override
@@ -1236,7 +1236,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the geo target constant that represents an airport.
    * </pre>
    *
-   * <code>string geo_target_airport = 116;</code>
+   * <code>optional string geo_target_airport = 116;</code>
    * @return The bytes for geoTargetAirport.
    */
   @java.lang.Override
@@ -1261,7 +1261,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the geo target constant that represents a canton.
    * </pre>
    *
-   * <code>string geo_target_canton = 117;</code>
+   * <code>optional string geo_target_canton = 117;</code>
    * @return Whether the geoTargetCanton field is set.
    */
   @java.lang.Override
@@ -1273,7 +1273,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the geo target constant that represents a canton.
    * </pre>
    *
-   * <code>string geo_target_canton = 117;</code>
+   * <code>optional string geo_target_canton = 117;</code>
    * @return The geoTargetCanton.
    */
   @java.lang.Override
@@ -1294,7 +1294,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the geo target constant that represents a canton.
    * </pre>
    *
-   * <code>string geo_target_canton = 117;</code>
+   * <code>optional string geo_target_canton = 117;</code>
    * @return The bytes for geoTargetCanton.
    */
   @java.lang.Override
@@ -1319,7 +1319,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the geo target constant that represents a city.
    * </pre>
    *
-   * <code>string geo_target_city = 118;</code>
+   * <code>optional string geo_target_city = 118;</code>
    * @return Whether the geoTargetCity field is set.
    */
   @java.lang.Override
@@ -1331,7 +1331,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the geo target constant that represents a city.
    * </pre>
    *
-   * <code>string geo_target_city = 118;</code>
+   * <code>optional string geo_target_city = 118;</code>
    * @return The geoTargetCity.
    */
   @java.lang.Override
@@ -1352,7 +1352,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the geo target constant that represents a city.
    * </pre>
    *
-   * <code>string geo_target_city = 118;</code>
+   * <code>optional string geo_target_city = 118;</code>
    * @return The bytes for geoTargetCity.
    */
   @java.lang.Override
@@ -1377,7 +1377,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the geo target constant that represents a country.
    * </pre>
    *
-   * <code>string geo_target_country = 119;</code>
+   * <code>optional string geo_target_country = 119;</code>
    * @return Whether the geoTargetCountry field is set.
    */
   @java.lang.Override
@@ -1389,7 +1389,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the geo target constant that represents a country.
    * </pre>
    *
-   * <code>string geo_target_country = 119;</code>
+   * <code>optional string geo_target_country = 119;</code>
    * @return The geoTargetCountry.
    */
   @java.lang.Override
@@ -1410,7 +1410,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the geo target constant that represents a country.
    * </pre>
    *
-   * <code>string geo_target_country = 119;</code>
+   * <code>optional string geo_target_country = 119;</code>
    * @return The bytes for geoTargetCountry.
    */
   @java.lang.Override
@@ -1435,7 +1435,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the geo target constant that represents a county.
    * </pre>
    *
-   * <code>string geo_target_county = 120;</code>
+   * <code>optional string geo_target_county = 120;</code>
    * @return Whether the geoTargetCounty field is set.
    */
   @java.lang.Override
@@ -1447,7 +1447,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the geo target constant that represents a county.
    * </pre>
    *
-   * <code>string geo_target_county = 120;</code>
+   * <code>optional string geo_target_county = 120;</code>
    * @return The geoTargetCounty.
    */
   @java.lang.Override
@@ -1468,7 +1468,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the geo target constant that represents a county.
    * </pre>
    *
-   * <code>string geo_target_county = 120;</code>
+   * <code>optional string geo_target_county = 120;</code>
    * @return The bytes for geoTargetCounty.
    */
   @java.lang.Override
@@ -1493,7 +1493,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the geo target constant that represents a district.
    * </pre>
    *
-   * <code>string geo_target_district = 121;</code>
+   * <code>optional string geo_target_district = 121;</code>
    * @return Whether the geoTargetDistrict field is set.
    */
   @java.lang.Override
@@ -1505,7 +1505,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the geo target constant that represents a district.
    * </pre>
    *
-   * <code>string geo_target_district = 121;</code>
+   * <code>optional string geo_target_district = 121;</code>
    * @return The geoTargetDistrict.
    */
   @java.lang.Override
@@ -1526,7 +1526,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the geo target constant that represents a district.
    * </pre>
    *
-   * <code>string geo_target_district = 121;</code>
+   * <code>optional string geo_target_district = 121;</code>
    * @return The bytes for geoTargetDistrict.
    */
   @java.lang.Override
@@ -1551,7 +1551,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the geo target constant that represents a metro.
    * </pre>
    *
-   * <code>string geo_target_metro = 122;</code>
+   * <code>optional string geo_target_metro = 122;</code>
    * @return Whether the geoTargetMetro field is set.
    */
   @java.lang.Override
@@ -1563,7 +1563,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the geo target constant that represents a metro.
    * </pre>
    *
-   * <code>string geo_target_metro = 122;</code>
+   * <code>optional string geo_target_metro = 122;</code>
    * @return The geoTargetMetro.
    */
   @java.lang.Override
@@ -1584,7 +1584,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the geo target constant that represents a metro.
    * </pre>
    *
-   * <code>string geo_target_metro = 122;</code>
+   * <code>optional string geo_target_metro = 122;</code>
    * @return The bytes for geoTargetMetro.
    */
   @java.lang.Override
@@ -1610,7 +1610,7 @@ private static final long serialVersionUID = 0L;
    * specific location.
    * </pre>
    *
-   * <code>string geo_target_most_specific_location = 123;</code>
+   * <code>optional string geo_target_most_specific_location = 123;</code>
    * @return Whether the geoTargetMostSpecificLocation field is set.
    */
   @java.lang.Override
@@ -1623,7 +1623,7 @@ private static final long serialVersionUID = 0L;
    * specific location.
    * </pre>
    *
-   * <code>string geo_target_most_specific_location = 123;</code>
+   * <code>optional string geo_target_most_specific_location = 123;</code>
    * @return The geoTargetMostSpecificLocation.
    */
   @java.lang.Override
@@ -1645,7 +1645,7 @@ private static final long serialVersionUID = 0L;
    * specific location.
    * </pre>
    *
-   * <code>string geo_target_most_specific_location = 123;</code>
+   * <code>optional string geo_target_most_specific_location = 123;</code>
    * @return The bytes for geoTargetMostSpecificLocation.
    */
   @java.lang.Override
@@ -1670,7 +1670,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the geo target constant that represents a postal code.
    * </pre>
    *
-   * <code>string geo_target_postal_code = 124;</code>
+   * <code>optional string geo_target_postal_code = 124;</code>
    * @return Whether the geoTargetPostalCode field is set.
    */
   @java.lang.Override
@@ -1682,7 +1682,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the geo target constant that represents a postal code.
    * </pre>
    *
-   * <code>string geo_target_postal_code = 124;</code>
+   * <code>optional string geo_target_postal_code = 124;</code>
    * @return The geoTargetPostalCode.
    */
   @java.lang.Override
@@ -1703,7 +1703,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the geo target constant that represents a postal code.
    * </pre>
    *
-   * <code>string geo_target_postal_code = 124;</code>
+   * <code>optional string geo_target_postal_code = 124;</code>
    * @return The bytes for geoTargetPostalCode.
    */
   @java.lang.Override
@@ -1728,7 +1728,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the geo target constant that represents a province.
    * </pre>
    *
-   * <code>string geo_target_province = 125;</code>
+   * <code>optional string geo_target_province = 125;</code>
    * @return Whether the geoTargetProvince field is set.
    */
   @java.lang.Override
@@ -1740,7 +1740,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the geo target constant that represents a province.
    * </pre>
    *
-   * <code>string geo_target_province = 125;</code>
+   * <code>optional string geo_target_province = 125;</code>
    * @return The geoTargetProvince.
    */
   @java.lang.Override
@@ -1761,7 +1761,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the geo target constant that represents a province.
    * </pre>
    *
-   * <code>string geo_target_province = 125;</code>
+   * <code>optional string geo_target_province = 125;</code>
    * @return The bytes for geoTargetProvince.
    */
   @java.lang.Override
@@ -1786,7 +1786,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the geo target constant that represents a region.
    * </pre>
    *
-   * <code>string geo_target_region = 126;</code>
+   * <code>optional string geo_target_region = 126;</code>
    * @return Whether the geoTargetRegion field is set.
    */
   @java.lang.Override
@@ -1798,7 +1798,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the geo target constant that represents a region.
    * </pre>
    *
-   * <code>string geo_target_region = 126;</code>
+   * <code>optional string geo_target_region = 126;</code>
    * @return The geoTargetRegion.
    */
   @java.lang.Override
@@ -1819,7 +1819,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the geo target constant that represents a region.
    * </pre>
    *
-   * <code>string geo_target_region = 126;</code>
+   * <code>optional string geo_target_region = 126;</code>
    * @return The bytes for geoTargetRegion.
    */
   @java.lang.Override
@@ -1844,7 +1844,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the geo target constant that represents a state.
    * </pre>
    *
-   * <code>string geo_target_state = 127;</code>
+   * <code>optional string geo_target_state = 127;</code>
    * @return Whether the geoTargetState field is set.
    */
   @java.lang.Override
@@ -1856,7 +1856,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the geo target constant that represents a state.
    * </pre>
    *
-   * <code>string geo_target_state = 127;</code>
+   * <code>optional string geo_target_state = 127;</code>
    * @return The geoTargetState.
    */
   @java.lang.Override
@@ -1877,7 +1877,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the geo target constant that represents a state.
    * </pre>
    *
-   * <code>string geo_target_state = 127;</code>
+   * <code>optional string geo_target_state = 127;</code>
    * @return The bytes for geoTargetState.
    */
   @java.lang.Override
@@ -1902,7 +1902,7 @@ private static final long serialVersionUID = 0L;
    * Hotel booking window in days.
    * </pre>
    *
-   * <code>int64 hotel_booking_window_days = 135;</code>
+   * <code>optional int64 hotel_booking_window_days = 135;</code>
    * @return Whether the hotelBookingWindowDays field is set.
    */
   @java.lang.Override
@@ -1914,7 +1914,7 @@ private static final long serialVersionUID = 0L;
    * Hotel booking window in days.
    * </pre>
    *
-   * <code>int64 hotel_booking_window_days = 135;</code>
+   * <code>optional int64 hotel_booking_window_days = 135;</code>
    * @return The hotelBookingWindowDays.
    */
   @java.lang.Override
@@ -1929,7 +1929,7 @@ private static final long serialVersionUID = 0L;
    * Hotel center ID.
    * </pre>
    *
-   * <code>int64 hotel_center_id = 80;</code>
+   * <code>optional int64 hotel_center_id = 80;</code>
    * @return Whether the hotelCenterId field is set.
    */
   @java.lang.Override
@@ -1941,7 +1941,7 @@ private static final long serialVersionUID = 0L;
    * Hotel center ID.
    * </pre>
    *
-   * <code>int64 hotel_center_id = 80;</code>
+   * <code>optional int64 hotel_center_id = 80;</code>
    * @return The hotelCenterId.
    */
   @java.lang.Override
@@ -1956,7 +1956,7 @@ private static final long serialVersionUID = 0L;
    * Hotel check-in date. Formatted as yyyy-MM-dd.
    * </pre>
    *
-   * <code>string hotel_check_in_date = 81;</code>
+   * <code>optional string hotel_check_in_date = 81;</code>
    * @return Whether the hotelCheckInDate field is set.
    */
   @java.lang.Override
@@ -1968,7 +1968,7 @@ private static final long serialVersionUID = 0L;
    * Hotel check-in date. Formatted as yyyy-MM-dd.
    * </pre>
    *
-   * <code>string hotel_check_in_date = 81;</code>
+   * <code>optional string hotel_check_in_date = 81;</code>
    * @return The hotelCheckInDate.
    */
   @java.lang.Override
@@ -1989,7 +1989,7 @@ private static final long serialVersionUID = 0L;
    * Hotel check-in date. Formatted as yyyy-MM-dd.
    * </pre>
    *
-   * <code>string hotel_check_in_date = 81;</code>
+   * <code>optional string hotel_check_in_date = 81;</code>
    * @return The bytes for hotelCheckInDate.
    */
   @java.lang.Override
@@ -2041,7 +2041,7 @@ private static final long serialVersionUID = 0L;
    * Hotel city.
    * </pre>
    *
-   * <code>string hotel_city = 82;</code>
+   * <code>optional string hotel_city = 82;</code>
    * @return Whether the hotelCity field is set.
    */
   @java.lang.Override
@@ -2053,7 +2053,7 @@ private static final long serialVersionUID = 0L;
    * Hotel city.
    * </pre>
    *
-   * <code>string hotel_city = 82;</code>
+   * <code>optional string hotel_city = 82;</code>
    * @return The hotelCity.
    */
   @java.lang.Override
@@ -2074,7 +2074,7 @@ private static final long serialVersionUID = 0L;
    * Hotel city.
    * </pre>
    *
-   * <code>string hotel_city = 82;</code>
+   * <code>optional string hotel_city = 82;</code>
    * @return The bytes for hotelCity.
    */
   @java.lang.Override
@@ -2099,7 +2099,7 @@ private static final long serialVersionUID = 0L;
    * Hotel class.
    * </pre>
    *
-   * <code>int32 hotel_class = 83;</code>
+   * <code>optional int32 hotel_class = 83;</code>
    * @return Whether the hotelClass field is set.
    */
   @java.lang.Override
@@ -2111,7 +2111,7 @@ private static final long serialVersionUID = 0L;
    * Hotel class.
    * </pre>
    *
-   * <code>int32 hotel_class = 83;</code>
+   * <code>optional int32 hotel_class = 83;</code>
    * @return The hotelClass.
    */
   @java.lang.Override
@@ -2126,7 +2126,7 @@ private static final long serialVersionUID = 0L;
    * Hotel country.
    * </pre>
    *
-   * <code>string hotel_country = 84;</code>
+   * <code>optional string hotel_country = 84;</code>
    * @return Whether the hotelCountry field is set.
    */
   @java.lang.Override
@@ -2138,7 +2138,7 @@ private static final long serialVersionUID = 0L;
    * Hotel country.
    * </pre>
    *
-   * <code>string hotel_country = 84;</code>
+   * <code>optional string hotel_country = 84;</code>
    * @return The hotelCountry.
    */
   @java.lang.Override
@@ -2159,7 +2159,7 @@ private static final long serialVersionUID = 0L;
    * Hotel country.
    * </pre>
    *
-   * <code>string hotel_country = 84;</code>
+   * <code>optional string hotel_country = 84;</code>
    * @return The bytes for hotelCountry.
    */
   @java.lang.Override
@@ -2211,7 +2211,7 @@ private static final long serialVersionUID = 0L;
    * Hotel length of stay.
    * </pre>
    *
-   * <code>int32 hotel_length_of_stay = 85;</code>
+   * <code>optional int32 hotel_length_of_stay = 85;</code>
    * @return Whether the hotelLengthOfStay field is set.
    */
   @java.lang.Override
@@ -2223,7 +2223,7 @@ private static final long serialVersionUID = 0L;
    * Hotel length of stay.
    * </pre>
    *
-   * <code>int32 hotel_length_of_stay = 85;</code>
+   * <code>optional int32 hotel_length_of_stay = 85;</code>
    * @return The hotelLengthOfStay.
    */
   @java.lang.Override
@@ -2238,7 +2238,7 @@ private static final long serialVersionUID = 0L;
    * Hotel rate rule ID.
    * </pre>
    *
-   * <code>string hotel_rate_rule_id = 86;</code>
+   * <code>optional string hotel_rate_rule_id = 86;</code>
    * @return Whether the hotelRateRuleId field is set.
    */
   @java.lang.Override
@@ -2250,7 +2250,7 @@ private static final long serialVersionUID = 0L;
    * Hotel rate rule ID.
    * </pre>
    *
-   * <code>string hotel_rate_rule_id = 86;</code>
+   * <code>optional string hotel_rate_rule_id = 86;</code>
    * @return The hotelRateRuleId.
    */
   @java.lang.Override
@@ -2271,7 +2271,7 @@ private static final long serialVersionUID = 0L;
    * Hotel rate rule ID.
    * </pre>
    *
-   * <code>string hotel_rate_rule_id = 86;</code>
+   * <code>optional string hotel_rate_rule_id = 86;</code>
    * @return The bytes for hotelRateRuleId.
    */
   @java.lang.Override
@@ -2350,7 +2350,7 @@ private static final long serialVersionUID = 0L;
    * Hotel state.
    * </pre>
    *
-   * <code>string hotel_state = 87;</code>
+   * <code>optional string hotel_state = 87;</code>
    * @return Whether the hotelState field is set.
    */
   @java.lang.Override
@@ -2362,7 +2362,7 @@ private static final long serialVersionUID = 0L;
    * Hotel state.
    * </pre>
    *
-   * <code>string hotel_state = 87;</code>
+   * <code>optional string hotel_state = 87;</code>
    * @return The hotelState.
    */
   @java.lang.Override
@@ -2383,7 +2383,7 @@ private static final long serialVersionUID = 0L;
    * Hotel state.
    * </pre>
    *
-   * <code>string hotel_state = 87;</code>
+   * <code>optional string hotel_state = 87;</code>
    * @return The bytes for hotelState.
    */
   @java.lang.Override
@@ -2408,7 +2408,7 @@ private static final long serialVersionUID = 0L;
    * Hour of day as a number between 0 and 23, inclusive.
    * </pre>
    *
-   * <code>int32 hour = 88;</code>
+   * <code>optional int32 hour = 88;</code>
    * @return Whether the hour field is set.
    */
   @java.lang.Override
@@ -2420,7 +2420,7 @@ private static final long serialVersionUID = 0L;
    * Hour of day as a number between 0 and 23, inclusive.
    * </pre>
    *
-   * <code>int32 hour = 88;</code>
+   * <code>optional int32 hour = 88;</code>
    * @return The hour.
    */
   @java.lang.Override
@@ -2437,7 +2437,7 @@ private static final long serialVersionUID = 0L;
    * or a different extension or ad unit.
    * </pre>
    *
-   * <code>bool interaction_on_this_extension = 89;</code>
+   * <code>optional bool interaction_on_this_extension = 89;</code>
    * @return Whether the interactionOnThisExtension field is set.
    */
   @java.lang.Override
@@ -2451,7 +2451,7 @@ private static final long serialVersionUID = 0L;
    * or a different extension or ad unit.
    * </pre>
    *
-   * <code>bool interaction_on_this_extension = 89;</code>
+   * <code>optional bool interaction_on_this_extension = 89;</code>
    * @return The interactionOnThisExtension.
    */
   @java.lang.Override
@@ -2505,7 +2505,7 @@ private static final long serialVersionUID = 0L;
    * yyyy-MM-dd.
    * </pre>
    *
-   * <code>string month = 90;</code>
+   * <code>optional string month = 90;</code>
    * @return Whether the month field is set.
    */
   @java.lang.Override
@@ -2518,7 +2518,7 @@ private static final long serialVersionUID = 0L;
    * yyyy-MM-dd.
    * </pre>
    *
-   * <code>string month = 90;</code>
+   * <code>optional string month = 90;</code>
    * @return The month.
    */
   @java.lang.Override
@@ -2540,7 +2540,7 @@ private static final long serialVersionUID = 0L;
    * yyyy-MM-dd.
    * </pre>
    *
-   * <code>string month = 90;</code>
+   * <code>optional string month = 90;</code>
    * @return The bytes for month.
    */
   @java.lang.Override
@@ -2592,7 +2592,7 @@ private static final long serialVersionUID = 0L;
    * Partner hotel ID.
    * </pre>
    *
-   * <code>string partner_hotel_id = 91;</code>
+   * <code>optional string partner_hotel_id = 91;</code>
    * @return Whether the partnerHotelId field is set.
    */
   @java.lang.Override
@@ -2604,7 +2604,7 @@ private static final long serialVersionUID = 0L;
    * Partner hotel ID.
    * </pre>
    *
-   * <code>string partner_hotel_id = 91;</code>
+   * <code>optional string partner_hotel_id = 91;</code>
    * @return The partnerHotelId.
    */
   @java.lang.Override
@@ -2625,7 +2625,7 @@ private static final long serialVersionUID = 0L;
    * Partner hotel ID.
    * </pre>
    *
-   * <code>string partner_hotel_id = 91;</code>
+   * <code>optional string partner_hotel_id = 91;</code>
    * @return The bytes for partnerHotelId.
    */
   @java.lang.Override
@@ -2677,7 +2677,7 @@ private static final long serialVersionUID = 0L;
    * Aggregator ID of the product.
    * </pre>
    *
-   * <code>int64 product_aggregator_id = 132;</code>
+   * <code>optional int64 product_aggregator_id = 132;</code>
    * @return Whether the productAggregatorId field is set.
    */
   @java.lang.Override
@@ -2689,7 +2689,7 @@ private static final long serialVersionUID = 0L;
    * Aggregator ID of the product.
    * </pre>
    *
-   * <code>int64 product_aggregator_id = 132;</code>
+   * <code>optional int64 product_aggregator_id = 132;</code>
    * @return The productAggregatorId.
    */
   @java.lang.Override
@@ -2704,7 +2704,7 @@ private static final long serialVersionUID = 0L;
    * Bidding category (level 1) of the product.
    * </pre>
    *
-   * <code>string product_bidding_category_level1 = 92;</code>
+   * <code>optional string product_bidding_category_level1 = 92;</code>
    * @return Whether the productBiddingCategoryLevel1 field is set.
    */
   @java.lang.Override
@@ -2716,7 +2716,7 @@ private static final long serialVersionUID = 0L;
    * Bidding category (level 1) of the product.
    * </pre>
    *
-   * <code>string product_bidding_category_level1 = 92;</code>
+   * <code>optional string product_bidding_category_level1 = 92;</code>
    * @return The productBiddingCategoryLevel1.
    */
   @java.lang.Override
@@ -2737,7 +2737,7 @@ private static final long serialVersionUID = 0L;
    * Bidding category (level 1) of the product.
    * </pre>
    *
-   * <code>string product_bidding_category_level1 = 92;</code>
+   * <code>optional string product_bidding_category_level1 = 92;</code>
    * @return The bytes for productBiddingCategoryLevel1.
    */
   @java.lang.Override
@@ -2762,7 +2762,7 @@ private static final long serialVersionUID = 0L;
    * Bidding category (level 2) of the product.
    * </pre>
    *
-   * <code>string product_bidding_category_level2 = 93;</code>
+   * <code>optional string product_bidding_category_level2 = 93;</code>
    * @return Whether the productBiddingCategoryLevel2 field is set.
    */
   @java.lang.Override
@@ -2774,7 +2774,7 @@ private static final long serialVersionUID = 0L;
    * Bidding category (level 2) of the product.
    * </pre>
    *
-   * <code>string product_bidding_category_level2 = 93;</code>
+   * <code>optional string product_bidding_category_level2 = 93;</code>
    * @return The productBiddingCategoryLevel2.
    */
   @java.lang.Override
@@ -2795,7 +2795,7 @@ private static final long serialVersionUID = 0L;
    * Bidding category (level 2) of the product.
    * </pre>
    *
-   * <code>string product_bidding_category_level2 = 93;</code>
+   * <code>optional string product_bidding_category_level2 = 93;</code>
    * @return The bytes for productBiddingCategoryLevel2.
    */
   @java.lang.Override
@@ -2820,7 +2820,7 @@ private static final long serialVersionUID = 0L;
    * Bidding category (level 3) of the product.
    * </pre>
    *
-   * <code>string product_bidding_category_level3 = 94;</code>
+   * <code>optional string product_bidding_category_level3 = 94;</code>
    * @return Whether the productBiddingCategoryLevel3 field is set.
    */
   @java.lang.Override
@@ -2832,7 +2832,7 @@ private static final long serialVersionUID = 0L;
    * Bidding category (level 3) of the product.
    * </pre>
    *
-   * <code>string product_bidding_category_level3 = 94;</code>
+   * <code>optional string product_bidding_category_level3 = 94;</code>
    * @return The productBiddingCategoryLevel3.
    */
   @java.lang.Override
@@ -2853,7 +2853,7 @@ private static final long serialVersionUID = 0L;
    * Bidding category (level 3) of the product.
    * </pre>
    *
-   * <code>string product_bidding_category_level3 = 94;</code>
+   * <code>optional string product_bidding_category_level3 = 94;</code>
    * @return The bytes for productBiddingCategoryLevel3.
    */
   @java.lang.Override
@@ -2878,7 +2878,7 @@ private static final long serialVersionUID = 0L;
    * Bidding category (level 4) of the product.
    * </pre>
    *
-   * <code>string product_bidding_category_level4 = 95;</code>
+   * <code>optional string product_bidding_category_level4 = 95;</code>
    * @return Whether the productBiddingCategoryLevel4 field is set.
    */
   @java.lang.Override
@@ -2890,7 +2890,7 @@ private static final long serialVersionUID = 0L;
    * Bidding category (level 4) of the product.
    * </pre>
    *
-   * <code>string product_bidding_category_level4 = 95;</code>
+   * <code>optional string product_bidding_category_level4 = 95;</code>
    * @return The productBiddingCategoryLevel4.
    */
   @java.lang.Override
@@ -2911,7 +2911,7 @@ private static final long serialVersionUID = 0L;
    * Bidding category (level 4) of the product.
    * </pre>
    *
-   * <code>string product_bidding_category_level4 = 95;</code>
+   * <code>optional string product_bidding_category_level4 = 95;</code>
    * @return The bytes for productBiddingCategoryLevel4.
    */
   @java.lang.Override
@@ -2936,7 +2936,7 @@ private static final long serialVersionUID = 0L;
    * Bidding category (level 5) of the product.
    * </pre>
    *
-   * <code>string product_bidding_category_level5 = 96;</code>
+   * <code>optional string product_bidding_category_level5 = 96;</code>
    * @return Whether the productBiddingCategoryLevel5 field is set.
    */
   @java.lang.Override
@@ -2948,7 +2948,7 @@ private static final long serialVersionUID = 0L;
    * Bidding category (level 5) of the product.
    * </pre>
    *
-   * <code>string product_bidding_category_level5 = 96;</code>
+   * <code>optional string product_bidding_category_level5 = 96;</code>
    * @return The productBiddingCategoryLevel5.
    */
   @java.lang.Override
@@ -2969,7 +2969,7 @@ private static final long serialVersionUID = 0L;
    * Bidding category (level 5) of the product.
    * </pre>
    *
-   * <code>string product_bidding_category_level5 = 96;</code>
+   * <code>optional string product_bidding_category_level5 = 96;</code>
    * @return The bytes for productBiddingCategoryLevel5.
    */
   @java.lang.Override
@@ -2994,7 +2994,7 @@ private static final long serialVersionUID = 0L;
    * Brand of the product.
    * </pre>
    *
-   * <code>string product_brand = 97;</code>
+   * <code>optional string product_brand = 97;</code>
    * @return Whether the productBrand field is set.
    */
   @java.lang.Override
@@ -3006,7 +3006,7 @@ private static final long serialVersionUID = 0L;
    * Brand of the product.
    * </pre>
    *
-   * <code>string product_brand = 97;</code>
+   * <code>optional string product_brand = 97;</code>
    * @return The productBrand.
    */
   @java.lang.Override
@@ -3027,7 +3027,7 @@ private static final long serialVersionUID = 0L;
    * Brand of the product.
    * </pre>
    *
-   * <code>string product_brand = 97;</code>
+   * <code>optional string product_brand = 97;</code>
    * @return The bytes for productBrand.
    */
   @java.lang.Override
@@ -3134,7 +3134,7 @@ private static final long serialVersionUID = 0L;
    * product.
    * </pre>
    *
-   * <code>string product_country = 98;</code>
+   * <code>optional string product_country = 98;</code>
    * @return Whether the productCountry field is set.
    */
   @java.lang.Override
@@ -3147,7 +3147,7 @@ private static final long serialVersionUID = 0L;
    * product.
    * </pre>
    *
-   * <code>string product_country = 98;</code>
+   * <code>optional string product_country = 98;</code>
    * @return The productCountry.
    */
   @java.lang.Override
@@ -3169,7 +3169,7 @@ private static final long serialVersionUID = 0L;
    * product.
    * </pre>
    *
-   * <code>string product_country = 98;</code>
+   * <code>optional string product_country = 98;</code>
    * @return The bytes for productCountry.
    */
   @java.lang.Override
@@ -3194,7 +3194,7 @@ private static final long serialVersionUID = 0L;
    * Custom attribute 0 of the product.
    * </pre>
    *
-   * <code>string product_custom_attribute0 = 99;</code>
+   * <code>optional string product_custom_attribute0 = 99;</code>
    * @return Whether the productCustomAttribute0 field is set.
    */
   @java.lang.Override
@@ -3206,7 +3206,7 @@ private static final long serialVersionUID = 0L;
    * Custom attribute 0 of the product.
    * </pre>
    *
-   * <code>string product_custom_attribute0 = 99;</code>
+   * <code>optional string product_custom_attribute0 = 99;</code>
    * @return The productCustomAttribute0.
    */
   @java.lang.Override
@@ -3227,7 +3227,7 @@ private static final long serialVersionUID = 0L;
    * Custom attribute 0 of the product.
    * </pre>
    *
-   * <code>string product_custom_attribute0 = 99;</code>
+   * <code>optional string product_custom_attribute0 = 99;</code>
    * @return The bytes for productCustomAttribute0.
    */
   @java.lang.Override
@@ -3252,7 +3252,7 @@ private static final long serialVersionUID = 0L;
    * Custom attribute 1 of the product.
    * </pre>
    *
-   * <code>string product_custom_attribute1 = 100;</code>
+   * <code>optional string product_custom_attribute1 = 100;</code>
    * @return Whether the productCustomAttribute1 field is set.
    */
   @java.lang.Override
@@ -3264,7 +3264,7 @@ private static final long serialVersionUID = 0L;
    * Custom attribute 1 of the product.
    * </pre>
    *
-   * <code>string product_custom_attribute1 = 100;</code>
+   * <code>optional string product_custom_attribute1 = 100;</code>
    * @return The productCustomAttribute1.
    */
   @java.lang.Override
@@ -3285,7 +3285,7 @@ private static final long serialVersionUID = 0L;
    * Custom attribute 1 of the product.
    * </pre>
    *
-   * <code>string product_custom_attribute1 = 100;</code>
+   * <code>optional string product_custom_attribute1 = 100;</code>
    * @return The bytes for productCustomAttribute1.
    */
   @java.lang.Override
@@ -3310,7 +3310,7 @@ private static final long serialVersionUID = 0L;
    * Custom attribute 2 of the product.
    * </pre>
    *
-   * <code>string product_custom_attribute2 = 101;</code>
+   * <code>optional string product_custom_attribute2 = 101;</code>
    * @return Whether the productCustomAttribute2 field is set.
    */
   @java.lang.Override
@@ -3322,7 +3322,7 @@ private static final long serialVersionUID = 0L;
    * Custom attribute 2 of the product.
    * </pre>
    *
-   * <code>string product_custom_attribute2 = 101;</code>
+   * <code>optional string product_custom_attribute2 = 101;</code>
    * @return The productCustomAttribute2.
    */
   @java.lang.Override
@@ -3343,7 +3343,7 @@ private static final long serialVersionUID = 0L;
    * Custom attribute 2 of the product.
    * </pre>
    *
-   * <code>string product_custom_attribute2 = 101;</code>
+   * <code>optional string product_custom_attribute2 = 101;</code>
    * @return The bytes for productCustomAttribute2.
    */
   @java.lang.Override
@@ -3368,7 +3368,7 @@ private static final long serialVersionUID = 0L;
    * Custom attribute 3 of the product.
    * </pre>
    *
-   * <code>string product_custom_attribute3 = 102;</code>
+   * <code>optional string product_custom_attribute3 = 102;</code>
    * @return Whether the productCustomAttribute3 field is set.
    */
   @java.lang.Override
@@ -3380,7 +3380,7 @@ private static final long serialVersionUID = 0L;
    * Custom attribute 3 of the product.
    * </pre>
    *
-   * <code>string product_custom_attribute3 = 102;</code>
+   * <code>optional string product_custom_attribute3 = 102;</code>
    * @return The productCustomAttribute3.
    */
   @java.lang.Override
@@ -3401,7 +3401,7 @@ private static final long serialVersionUID = 0L;
    * Custom attribute 3 of the product.
    * </pre>
    *
-   * <code>string product_custom_attribute3 = 102;</code>
+   * <code>optional string product_custom_attribute3 = 102;</code>
    * @return The bytes for productCustomAttribute3.
    */
   @java.lang.Override
@@ -3426,7 +3426,7 @@ private static final long serialVersionUID = 0L;
    * Custom attribute 4 of the product.
    * </pre>
    *
-   * <code>string product_custom_attribute4 = 103;</code>
+   * <code>optional string product_custom_attribute4 = 103;</code>
    * @return Whether the productCustomAttribute4 field is set.
    */
   @java.lang.Override
@@ -3438,7 +3438,7 @@ private static final long serialVersionUID = 0L;
    * Custom attribute 4 of the product.
    * </pre>
    *
-   * <code>string product_custom_attribute4 = 103;</code>
+   * <code>optional string product_custom_attribute4 = 103;</code>
    * @return The productCustomAttribute4.
    */
   @java.lang.Override
@@ -3459,7 +3459,7 @@ private static final long serialVersionUID = 0L;
    * Custom attribute 4 of the product.
    * </pre>
    *
-   * <code>string product_custom_attribute4 = 103;</code>
+   * <code>optional string product_custom_attribute4 = 103;</code>
    * @return The bytes for productCustomAttribute4.
    */
   @java.lang.Override
@@ -3484,7 +3484,7 @@ private static final long serialVersionUID = 0L;
    * Item ID of the product.
    * </pre>
    *
-   * <code>string product_item_id = 104;</code>
+   * <code>optional string product_item_id = 104;</code>
    * @return Whether the productItemId field is set.
    */
   @java.lang.Override
@@ -3496,7 +3496,7 @@ private static final long serialVersionUID = 0L;
    * Item ID of the product.
    * </pre>
    *
-   * <code>string product_item_id = 104;</code>
+   * <code>optional string product_item_id = 104;</code>
    * @return The productItemId.
    */
   @java.lang.Override
@@ -3517,7 +3517,7 @@ private static final long serialVersionUID = 0L;
    * Item ID of the product.
    * </pre>
    *
-   * <code>string product_item_id = 104;</code>
+   * <code>optional string product_item_id = 104;</code>
    * @return The bytes for productItemId.
    */
   @java.lang.Override
@@ -3542,7 +3542,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the language constant for the language of the product.
    * </pre>
    *
-   * <code>string product_language = 105;</code>
+   * <code>optional string product_language = 105;</code>
    * @return Whether the productLanguage field is set.
    */
   @java.lang.Override
@@ -3554,7 +3554,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the language constant for the language of the product.
    * </pre>
    *
-   * <code>string product_language = 105;</code>
+   * <code>optional string product_language = 105;</code>
    * @return The productLanguage.
    */
   @java.lang.Override
@@ -3575,7 +3575,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the language constant for the language of the product.
    * </pre>
    *
-   * <code>string product_language = 105;</code>
+   * <code>optional string product_language = 105;</code>
    * @return The bytes for productLanguage.
    */
   @java.lang.Override
@@ -3600,7 +3600,7 @@ private static final long serialVersionUID = 0L;
    * Merchant ID of the product.
    * </pre>
    *
-   * <code>int64 product_merchant_id = 133;</code>
+   * <code>optional int64 product_merchant_id = 133;</code>
    * @return Whether the productMerchantId field is set.
    */
   @java.lang.Override
@@ -3612,7 +3612,7 @@ private static final long serialVersionUID = 0L;
    * Merchant ID of the product.
    * </pre>
    *
-   * <code>int64 product_merchant_id = 133;</code>
+   * <code>optional int64 product_merchant_id = 133;</code>
    * @return The productMerchantId.
    */
   @java.lang.Override
@@ -3627,7 +3627,7 @@ private static final long serialVersionUID = 0L;
    * Store ID of the product.
    * </pre>
    *
-   * <code>string product_store_id = 106;</code>
+   * <code>optional string product_store_id = 106;</code>
    * @return Whether the productStoreId field is set.
    */
   @java.lang.Override
@@ -3639,7 +3639,7 @@ private static final long serialVersionUID = 0L;
    * Store ID of the product.
    * </pre>
    *
-   * <code>string product_store_id = 106;</code>
+   * <code>optional string product_store_id = 106;</code>
    * @return The productStoreId.
    */
   @java.lang.Override
@@ -3660,7 +3660,7 @@ private static final long serialVersionUID = 0L;
    * Store ID of the product.
    * </pre>
    *
-   * <code>string product_store_id = 106;</code>
+   * <code>optional string product_store_id = 106;</code>
    * @return The bytes for productStoreId.
    */
   @java.lang.Override
@@ -3685,7 +3685,7 @@ private static final long serialVersionUID = 0L;
    * Title of the product.
    * </pre>
    *
-   * <code>string product_title = 107;</code>
+   * <code>optional string product_title = 107;</code>
    * @return Whether the productTitle field is set.
    */
   @java.lang.Override
@@ -3697,7 +3697,7 @@ private static final long serialVersionUID = 0L;
    * Title of the product.
    * </pre>
    *
-   * <code>string product_title = 107;</code>
+   * <code>optional string product_title = 107;</code>
    * @return The productTitle.
    */
   @java.lang.Override
@@ -3718,7 +3718,7 @@ private static final long serialVersionUID = 0L;
    * Title of the product.
    * </pre>
    *
-   * <code>string product_title = 107;</code>
+   * <code>optional string product_title = 107;</code>
    * @return The bytes for productTitle.
    */
   @java.lang.Override
@@ -3743,7 +3743,7 @@ private static final long serialVersionUID = 0L;
    * Type (level 1) of the product.
    * </pre>
    *
-   * <code>string product_type_l1 = 108;</code>
+   * <code>optional string product_type_l1 = 108;</code>
    * @return Whether the productTypeL1 field is set.
    */
   @java.lang.Override
@@ -3755,7 +3755,7 @@ private static final long serialVersionUID = 0L;
    * Type (level 1) of the product.
    * </pre>
    *
-   * <code>string product_type_l1 = 108;</code>
+   * <code>optional string product_type_l1 = 108;</code>
    * @return The productTypeL1.
    */
   @java.lang.Override
@@ -3776,7 +3776,7 @@ private static final long serialVersionUID = 0L;
    * Type (level 1) of the product.
    * </pre>
    *
-   * <code>string product_type_l1 = 108;</code>
+   * <code>optional string product_type_l1 = 108;</code>
    * @return The bytes for productTypeL1.
    */
   @java.lang.Override
@@ -3801,7 +3801,7 @@ private static final long serialVersionUID = 0L;
    * Type (level 2) of the product.
    * </pre>
    *
-   * <code>string product_type_l2 = 109;</code>
+   * <code>optional string product_type_l2 = 109;</code>
    * @return Whether the productTypeL2 field is set.
    */
   @java.lang.Override
@@ -3813,7 +3813,7 @@ private static final long serialVersionUID = 0L;
    * Type (level 2) of the product.
    * </pre>
    *
-   * <code>string product_type_l2 = 109;</code>
+   * <code>optional string product_type_l2 = 109;</code>
    * @return The productTypeL2.
    */
   @java.lang.Override
@@ -3834,7 +3834,7 @@ private static final long serialVersionUID = 0L;
    * Type (level 2) of the product.
    * </pre>
    *
-   * <code>string product_type_l2 = 109;</code>
+   * <code>optional string product_type_l2 = 109;</code>
    * @return The bytes for productTypeL2.
    */
   @java.lang.Override
@@ -3859,7 +3859,7 @@ private static final long serialVersionUID = 0L;
    * Type (level 3) of the product.
    * </pre>
    *
-   * <code>string product_type_l3 = 110;</code>
+   * <code>optional string product_type_l3 = 110;</code>
    * @return Whether the productTypeL3 field is set.
    */
   @java.lang.Override
@@ -3871,7 +3871,7 @@ private static final long serialVersionUID = 0L;
    * Type (level 3) of the product.
    * </pre>
    *
-   * <code>string product_type_l3 = 110;</code>
+   * <code>optional string product_type_l3 = 110;</code>
    * @return The productTypeL3.
    */
   @java.lang.Override
@@ -3892,7 +3892,7 @@ private static final long serialVersionUID = 0L;
    * Type (level 3) of the product.
    * </pre>
    *
-   * <code>string product_type_l3 = 110;</code>
+   * <code>optional string product_type_l3 = 110;</code>
    * @return The bytes for productTypeL3.
    */
   @java.lang.Override
@@ -3917,7 +3917,7 @@ private static final long serialVersionUID = 0L;
    * Type (level 4) of the product.
    * </pre>
    *
-   * <code>string product_type_l4 = 111;</code>
+   * <code>optional string product_type_l4 = 111;</code>
    * @return Whether the productTypeL4 field is set.
    */
   @java.lang.Override
@@ -3929,7 +3929,7 @@ private static final long serialVersionUID = 0L;
    * Type (level 4) of the product.
    * </pre>
    *
-   * <code>string product_type_l4 = 111;</code>
+   * <code>optional string product_type_l4 = 111;</code>
    * @return The productTypeL4.
    */
   @java.lang.Override
@@ -3950,7 +3950,7 @@ private static final long serialVersionUID = 0L;
    * Type (level 4) of the product.
    * </pre>
    *
-   * <code>string product_type_l4 = 111;</code>
+   * <code>optional string product_type_l4 = 111;</code>
    * @return The bytes for productTypeL4.
    */
   @java.lang.Override
@@ -3975,7 +3975,7 @@ private static final long serialVersionUID = 0L;
    * Type (level 5) of the product.
    * </pre>
    *
-   * <code>string product_type_l5 = 112;</code>
+   * <code>optional string product_type_l5 = 112;</code>
    * @return Whether the productTypeL5 field is set.
    */
   @java.lang.Override
@@ -3987,7 +3987,7 @@ private static final long serialVersionUID = 0L;
    * Type (level 5) of the product.
    * </pre>
    *
-   * <code>string product_type_l5 = 112;</code>
+   * <code>optional string product_type_l5 = 112;</code>
    * @return The productTypeL5.
    */
   @java.lang.Override
@@ -4008,7 +4008,7 @@ private static final long serialVersionUID = 0L;
    * Type (level 5) of the product.
    * </pre>
    *
-   * <code>string product_type_l5 = 112;</code>
+   * <code>optional string product_type_l5 = 112;</code>
    * @return The bytes for productTypeL5.
    */
   @java.lang.Override
@@ -4035,7 +4035,7 @@ private static final long serialVersionUID = 0L;
    * starts on 2018-04-01. Formatted as yyyy-MM-dd.
    * </pre>
    *
-   * <code>string quarter = 128;</code>
+   * <code>optional string quarter = 128;</code>
    * @return Whether the quarter field is set.
    */
   @java.lang.Override
@@ -4049,7 +4049,7 @@ private static final long serialVersionUID = 0L;
    * starts on 2018-04-01. Formatted as yyyy-MM-dd.
    * </pre>
    *
-   * <code>string quarter = 128;</code>
+   * <code>optional string quarter = 128;</code>
    * @return The quarter.
    */
   @java.lang.Override
@@ -4072,7 +4072,7 @@ private static final long serialVersionUID = 0L;
    * starts on 2018-04-01. Formatted as yyyy-MM-dd.
    * </pre>
    *
-   * <code>string quarter = 128;</code>
+   * <code>optional string quarter = 128;</code>
    * @return The bytes for quarter.
    */
   @java.lang.Override
@@ -4244,7 +4244,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the ad group criterion that represents webpage criterion.
    * </pre>
    *
-   * <code>string webpage = 129;</code>
+   * <code>optional string webpage = 129;</code>
    * @return Whether the webpage field is set.
    */
   @java.lang.Override
@@ -4256,7 +4256,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the ad group criterion that represents webpage criterion.
    * </pre>
    *
-   * <code>string webpage = 129;</code>
+   * <code>optional string webpage = 129;</code>
    * @return The webpage.
    */
   @java.lang.Override
@@ -4277,7 +4277,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the ad group criterion that represents webpage criterion.
    * </pre>
    *
-   * <code>string webpage = 129;</code>
+   * <code>optional string webpage = 129;</code>
    * @return The bytes for webpage.
    */
   @java.lang.Override
@@ -4303,7 +4303,7 @@ private static final long serialVersionUID = 0L;
    * Monday. Formatted as yyyy-MM-dd.
    * </pre>
    *
-   * <code>string week = 130;</code>
+   * <code>optional string week = 130;</code>
    * @return Whether the week field is set.
    */
   @java.lang.Override
@@ -4316,7 +4316,7 @@ private static final long serialVersionUID = 0L;
    * Monday. Formatted as yyyy-MM-dd.
    * </pre>
    *
-   * <code>string week = 130;</code>
+   * <code>optional string week = 130;</code>
    * @return The week.
    */
   @java.lang.Override
@@ -4338,7 +4338,7 @@ private static final long serialVersionUID = 0L;
    * Monday. Formatted as yyyy-MM-dd.
    * </pre>
    *
-   * <code>string week = 130;</code>
+   * <code>optional string week = 130;</code>
    * @return The bytes for week.
    */
   @java.lang.Override
@@ -4363,7 +4363,7 @@ private static final long serialVersionUID = 0L;
    * Year, formatted as yyyy.
    * </pre>
    *
-   * <code>int32 year = 131;</code>
+   * <code>optional int32 year = 131;</code>
    * @return Whether the year field is set.
    */
   @java.lang.Override
@@ -4375,7 +4375,7 @@ private static final long serialVersionUID = 0L;
    * Year, formatted as yyyy.
    * </pre>
    *
-   * <code>int32 year = 131;</code>
+   * <code>optional int32 year = 131;</code>
    * @return The year.
    */
   @java.lang.Override
@@ -4391,7 +4391,7 @@ private static final long serialVersionUID = 0L;
    * Null value means this segment is not applicable, e.g. non-iOS campaign.
    * </pre>
    *
-   * <code>int64 sk_ad_network_conversion_value = 137;</code>
+   * <code>optional int64 sk_ad_network_conversion_value = 137;</code>
    * @return Whether the skAdNetworkConversionValue field is set.
    */
   @java.lang.Override
@@ -4404,7 +4404,7 @@ private static final long serialVersionUID = 0L;
    * Null value means this segment is not applicable, e.g. non-iOS campaign.
    * </pre>
    *
-   * <code>int64 sk_ad_network_conversion_value = 137;</code>
+   * <code>optional int64 sk_ad_network_conversion_value = 137;</code>
    * @return The skAdNetworkConversionValue.
    */
   @java.lang.Override
@@ -4427,7 +4427,7 @@ private static final long serialVersionUID = 0L;
    * other parts of the served ad this asset is served with.
    * </pre>
    *
-   * <code>.google.ads.googleads.v8.common.AssetInteractionTarget asset_interaction_target = 139;</code>
+   * <code>optional .google.ads.googleads.v8.common.AssetInteractionTarget asset_interaction_target = 139;</code>
    * @return Whether the assetInteractionTarget field is set.
    */
   @java.lang.Override
@@ -4447,7 +4447,7 @@ private static final long serialVersionUID = 0L;
    * other parts of the served ad this asset is served with.
    * </pre>
    *
-   * <code>.google.ads.googleads.v8.common.AssetInteractionTarget asset_interaction_target = 139;</code>
+   * <code>optional .google.ads.googleads.v8.common.AssetInteractionTarget asset_interaction_target = 139;</code>
    * @return The assetInteractionTarget.
    */
   @java.lang.Override
@@ -4467,7 +4467,7 @@ private static final long serialVersionUID = 0L;
    * other parts of the served ad this asset is served with.
    * </pre>
    *
-   * <code>.google.ads.googleads.v8.common.AssetInteractionTarget asset_interaction_target = 139;</code>
+   * <code>optional .google.ads.googleads.v8.common.AssetInteractionTarget asset_interaction_target = 139;</code>
    */
   @java.lang.Override
   public com.google.ads.googleads.v8.common.AssetInteractionTargetOrBuilder getAssetInteractionTargetOrBuilder() {
@@ -7110,7 +7110,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the conversion action.
      * </pre>
      *
-     * <code>string conversion_action = 113;</code>
+     * <code>optional string conversion_action = 113;</code>
      * @return Whether the conversionAction field is set.
      */
     public boolean hasConversionAction() {
@@ -7121,7 +7121,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the conversion action.
      * </pre>
      *
-     * <code>string conversion_action = 113;</code>
+     * <code>optional string conversion_action = 113;</code>
      * @return The conversionAction.
      */
     public java.lang.String getConversionAction() {
@@ -7141,7 +7141,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the conversion action.
      * </pre>
      *
-     * <code>string conversion_action = 113;</code>
+     * <code>optional string conversion_action = 113;</code>
      * @return The bytes for conversionAction.
      */
     public com.google.protobuf.ByteString
@@ -7162,7 +7162,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the conversion action.
      * </pre>
      *
-     * <code>string conversion_action = 113;</code>
+     * <code>optional string conversion_action = 113;</code>
      * @param value The conversionAction to set.
      * @return This builder for chaining.
      */
@@ -7181,7 +7181,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the conversion action.
      * </pre>
      *
-     * <code>string conversion_action = 113;</code>
+     * <code>optional string conversion_action = 113;</code>
      * @return This builder for chaining.
      */
     public Builder clearConversionAction() {
@@ -7195,7 +7195,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the conversion action.
      * </pre>
      *
-     * <code>string conversion_action = 113;</code>
+     * <code>optional string conversion_action = 113;</code>
      * @param value The bytes for conversionAction to set.
      * @return This builder for chaining.
      */
@@ -7291,7 +7291,7 @@ private static final long serialVersionUID = 0L;
      * Conversion action name.
      * </pre>
      *
-     * <code>string conversion_action_name = 114;</code>
+     * <code>optional string conversion_action_name = 114;</code>
      * @return Whether the conversionActionName field is set.
      */
     public boolean hasConversionActionName() {
@@ -7302,7 +7302,7 @@ private static final long serialVersionUID = 0L;
      * Conversion action name.
      * </pre>
      *
-     * <code>string conversion_action_name = 114;</code>
+     * <code>optional string conversion_action_name = 114;</code>
      * @return The conversionActionName.
      */
     public java.lang.String getConversionActionName() {
@@ -7322,7 +7322,7 @@ private static final long serialVersionUID = 0L;
      * Conversion action name.
      * </pre>
      *
-     * <code>string conversion_action_name = 114;</code>
+     * <code>optional string conversion_action_name = 114;</code>
      * @return The bytes for conversionActionName.
      */
     public com.google.protobuf.ByteString
@@ -7343,7 +7343,7 @@ private static final long serialVersionUID = 0L;
      * Conversion action name.
      * </pre>
      *
-     * <code>string conversion_action_name = 114;</code>
+     * <code>optional string conversion_action_name = 114;</code>
      * @param value The conversionActionName to set.
      * @return This builder for chaining.
      */
@@ -7362,7 +7362,7 @@ private static final long serialVersionUID = 0L;
      * Conversion action name.
      * </pre>
      *
-     * <code>string conversion_action_name = 114;</code>
+     * <code>optional string conversion_action_name = 114;</code>
      * @return This builder for chaining.
      */
     public Builder clearConversionActionName() {
@@ -7376,7 +7376,7 @@ private static final long serialVersionUID = 0L;
      * Conversion action name.
      * </pre>
      *
-     * <code>string conversion_action_name = 114;</code>
+     * <code>optional string conversion_action_name = 114;</code>
      * @param value The bytes for conversionActionName to set.
      * @return This builder for chaining.
      */
@@ -7402,7 +7402,7 @@ private static final long serialVersionUID = 0L;
      * post-adjustment data.
      * </pre>
      *
-     * <code>bool conversion_adjustment = 115;</code>
+     * <code>optional bool conversion_adjustment = 115;</code>
      * @return Whether the conversionAdjustment field is set.
      */
     @java.lang.Override
@@ -7418,7 +7418,7 @@ private static final long serialVersionUID = 0L;
      * post-adjustment data.
      * </pre>
      *
-     * <code>bool conversion_adjustment = 115;</code>
+     * <code>optional bool conversion_adjustment = 115;</code>
      * @return The conversionAdjustment.
      */
     @java.lang.Override
@@ -7434,7 +7434,7 @@ private static final long serialVersionUID = 0L;
      * post-adjustment data.
      * </pre>
      *
-     * <code>bool conversion_adjustment = 115;</code>
+     * <code>optional bool conversion_adjustment = 115;</code>
      * @param value The conversionAdjustment to set.
      * @return This builder for chaining.
      */
@@ -7453,7 +7453,7 @@ private static final long serialVersionUID = 0L;
      * post-adjustment data.
      * </pre>
      *
-     * <code>bool conversion_adjustment = 115;</code>
+     * <code>optional bool conversion_adjustment = 115;</code>
      * @return This builder for chaining.
      */
     public Builder clearConversionAdjustment() {
@@ -7702,7 +7702,7 @@ private static final long serialVersionUID = 0L;
      * yyyy-MM-dd format, e.g., 2018-04-17.
      * </pre>
      *
-     * <code>string date = 79;</code>
+     * <code>optional string date = 79;</code>
      * @return Whether the date field is set.
      */
     public boolean hasDate() {
@@ -7714,7 +7714,7 @@ private static final long serialVersionUID = 0L;
      * yyyy-MM-dd format, e.g., 2018-04-17.
      * </pre>
      *
-     * <code>string date = 79;</code>
+     * <code>optional string date = 79;</code>
      * @return The date.
      */
     public java.lang.String getDate() {
@@ -7735,7 +7735,7 @@ private static final long serialVersionUID = 0L;
      * yyyy-MM-dd format, e.g., 2018-04-17.
      * </pre>
      *
-     * <code>string date = 79;</code>
+     * <code>optional string date = 79;</code>
      * @return The bytes for date.
      */
     public com.google.protobuf.ByteString
@@ -7757,7 +7757,7 @@ private static final long serialVersionUID = 0L;
      * yyyy-MM-dd format, e.g., 2018-04-17.
      * </pre>
      *
-     * <code>string date = 79;</code>
+     * <code>optional string date = 79;</code>
      * @param value The date to set.
      * @return This builder for chaining.
      */
@@ -7777,7 +7777,7 @@ private static final long serialVersionUID = 0L;
      * yyyy-MM-dd format, e.g., 2018-04-17.
      * </pre>
      *
-     * <code>string date = 79;</code>
+     * <code>optional string date = 79;</code>
      * @return This builder for chaining.
      */
     public Builder clearDate() {
@@ -7792,7 +7792,7 @@ private static final long serialVersionUID = 0L;
      * yyyy-MM-dd format, e.g., 2018-04-17.
      * </pre>
      *
-     * <code>string date = 79;</code>
+     * <code>optional string date = 79;</code>
      * @param value The bytes for date to set.
      * @return This builder for chaining.
      */
@@ -8036,7 +8036,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents an airport.
      * </pre>
      *
-     * <code>string geo_target_airport = 116;</code>
+     * <code>optional string geo_target_airport = 116;</code>
      * @return Whether the geoTargetAirport field is set.
      */
     public boolean hasGeoTargetAirport() {
@@ -8047,7 +8047,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents an airport.
      * </pre>
      *
-     * <code>string geo_target_airport = 116;</code>
+     * <code>optional string geo_target_airport = 116;</code>
      * @return The geoTargetAirport.
      */
     public java.lang.String getGeoTargetAirport() {
@@ -8067,7 +8067,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents an airport.
      * </pre>
      *
-     * <code>string geo_target_airport = 116;</code>
+     * <code>optional string geo_target_airport = 116;</code>
      * @return The bytes for geoTargetAirport.
      */
     public com.google.protobuf.ByteString
@@ -8088,7 +8088,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents an airport.
      * </pre>
      *
-     * <code>string geo_target_airport = 116;</code>
+     * <code>optional string geo_target_airport = 116;</code>
      * @param value The geoTargetAirport to set.
      * @return This builder for chaining.
      */
@@ -8107,7 +8107,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents an airport.
      * </pre>
      *
-     * <code>string geo_target_airport = 116;</code>
+     * <code>optional string geo_target_airport = 116;</code>
      * @return This builder for chaining.
      */
     public Builder clearGeoTargetAirport() {
@@ -8121,7 +8121,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents an airport.
      * </pre>
      *
-     * <code>string geo_target_airport = 116;</code>
+     * <code>optional string geo_target_airport = 116;</code>
      * @param value The bytes for geoTargetAirport to set.
      * @return This builder for chaining.
      */
@@ -8143,7 +8143,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a canton.
      * </pre>
      *
-     * <code>string geo_target_canton = 117;</code>
+     * <code>optional string geo_target_canton = 117;</code>
      * @return Whether the geoTargetCanton field is set.
      */
     public boolean hasGeoTargetCanton() {
@@ -8154,7 +8154,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a canton.
      * </pre>
      *
-     * <code>string geo_target_canton = 117;</code>
+     * <code>optional string geo_target_canton = 117;</code>
      * @return The geoTargetCanton.
      */
     public java.lang.String getGeoTargetCanton() {
@@ -8174,7 +8174,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a canton.
      * </pre>
      *
-     * <code>string geo_target_canton = 117;</code>
+     * <code>optional string geo_target_canton = 117;</code>
      * @return The bytes for geoTargetCanton.
      */
     public com.google.protobuf.ByteString
@@ -8195,7 +8195,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a canton.
      * </pre>
      *
-     * <code>string geo_target_canton = 117;</code>
+     * <code>optional string geo_target_canton = 117;</code>
      * @param value The geoTargetCanton to set.
      * @return This builder for chaining.
      */
@@ -8214,7 +8214,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a canton.
      * </pre>
      *
-     * <code>string geo_target_canton = 117;</code>
+     * <code>optional string geo_target_canton = 117;</code>
      * @return This builder for chaining.
      */
     public Builder clearGeoTargetCanton() {
@@ -8228,7 +8228,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a canton.
      * </pre>
      *
-     * <code>string geo_target_canton = 117;</code>
+     * <code>optional string geo_target_canton = 117;</code>
      * @param value The bytes for geoTargetCanton to set.
      * @return This builder for chaining.
      */
@@ -8250,7 +8250,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a city.
      * </pre>
      *
-     * <code>string geo_target_city = 118;</code>
+     * <code>optional string geo_target_city = 118;</code>
      * @return Whether the geoTargetCity field is set.
      */
     public boolean hasGeoTargetCity() {
@@ -8261,7 +8261,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a city.
      * </pre>
      *
-     * <code>string geo_target_city = 118;</code>
+     * <code>optional string geo_target_city = 118;</code>
      * @return The geoTargetCity.
      */
     public java.lang.String getGeoTargetCity() {
@@ -8281,7 +8281,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a city.
      * </pre>
      *
-     * <code>string geo_target_city = 118;</code>
+     * <code>optional string geo_target_city = 118;</code>
      * @return The bytes for geoTargetCity.
      */
     public com.google.protobuf.ByteString
@@ -8302,7 +8302,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a city.
      * </pre>
      *
-     * <code>string geo_target_city = 118;</code>
+     * <code>optional string geo_target_city = 118;</code>
      * @param value The geoTargetCity to set.
      * @return This builder for chaining.
      */
@@ -8321,7 +8321,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a city.
      * </pre>
      *
-     * <code>string geo_target_city = 118;</code>
+     * <code>optional string geo_target_city = 118;</code>
      * @return This builder for chaining.
      */
     public Builder clearGeoTargetCity() {
@@ -8335,7 +8335,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a city.
      * </pre>
      *
-     * <code>string geo_target_city = 118;</code>
+     * <code>optional string geo_target_city = 118;</code>
      * @param value The bytes for geoTargetCity to set.
      * @return This builder for chaining.
      */
@@ -8357,7 +8357,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a country.
      * </pre>
      *
-     * <code>string geo_target_country = 119;</code>
+     * <code>optional string geo_target_country = 119;</code>
      * @return Whether the geoTargetCountry field is set.
      */
     public boolean hasGeoTargetCountry() {
@@ -8368,7 +8368,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a country.
      * </pre>
      *
-     * <code>string geo_target_country = 119;</code>
+     * <code>optional string geo_target_country = 119;</code>
      * @return The geoTargetCountry.
      */
     public java.lang.String getGeoTargetCountry() {
@@ -8388,7 +8388,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a country.
      * </pre>
      *
-     * <code>string geo_target_country = 119;</code>
+     * <code>optional string geo_target_country = 119;</code>
      * @return The bytes for geoTargetCountry.
      */
     public com.google.protobuf.ByteString
@@ -8409,7 +8409,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a country.
      * </pre>
      *
-     * <code>string geo_target_country = 119;</code>
+     * <code>optional string geo_target_country = 119;</code>
      * @param value The geoTargetCountry to set.
      * @return This builder for chaining.
      */
@@ -8428,7 +8428,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a country.
      * </pre>
      *
-     * <code>string geo_target_country = 119;</code>
+     * <code>optional string geo_target_country = 119;</code>
      * @return This builder for chaining.
      */
     public Builder clearGeoTargetCountry() {
@@ -8442,7 +8442,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a country.
      * </pre>
      *
-     * <code>string geo_target_country = 119;</code>
+     * <code>optional string geo_target_country = 119;</code>
      * @param value The bytes for geoTargetCountry to set.
      * @return This builder for chaining.
      */
@@ -8464,7 +8464,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a county.
      * </pre>
      *
-     * <code>string geo_target_county = 120;</code>
+     * <code>optional string geo_target_county = 120;</code>
      * @return Whether the geoTargetCounty field is set.
      */
     public boolean hasGeoTargetCounty() {
@@ -8475,7 +8475,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a county.
      * </pre>
      *
-     * <code>string geo_target_county = 120;</code>
+     * <code>optional string geo_target_county = 120;</code>
      * @return The geoTargetCounty.
      */
     public java.lang.String getGeoTargetCounty() {
@@ -8495,7 +8495,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a county.
      * </pre>
      *
-     * <code>string geo_target_county = 120;</code>
+     * <code>optional string geo_target_county = 120;</code>
      * @return The bytes for geoTargetCounty.
      */
     public com.google.protobuf.ByteString
@@ -8516,7 +8516,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a county.
      * </pre>
      *
-     * <code>string geo_target_county = 120;</code>
+     * <code>optional string geo_target_county = 120;</code>
      * @param value The geoTargetCounty to set.
      * @return This builder for chaining.
      */
@@ -8535,7 +8535,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a county.
      * </pre>
      *
-     * <code>string geo_target_county = 120;</code>
+     * <code>optional string geo_target_county = 120;</code>
      * @return This builder for chaining.
      */
     public Builder clearGeoTargetCounty() {
@@ -8549,7 +8549,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a county.
      * </pre>
      *
-     * <code>string geo_target_county = 120;</code>
+     * <code>optional string geo_target_county = 120;</code>
      * @param value The bytes for geoTargetCounty to set.
      * @return This builder for chaining.
      */
@@ -8571,7 +8571,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a district.
      * </pre>
      *
-     * <code>string geo_target_district = 121;</code>
+     * <code>optional string geo_target_district = 121;</code>
      * @return Whether the geoTargetDistrict field is set.
      */
     public boolean hasGeoTargetDistrict() {
@@ -8582,7 +8582,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a district.
      * </pre>
      *
-     * <code>string geo_target_district = 121;</code>
+     * <code>optional string geo_target_district = 121;</code>
      * @return The geoTargetDistrict.
      */
     public java.lang.String getGeoTargetDistrict() {
@@ -8602,7 +8602,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a district.
      * </pre>
      *
-     * <code>string geo_target_district = 121;</code>
+     * <code>optional string geo_target_district = 121;</code>
      * @return The bytes for geoTargetDistrict.
      */
     public com.google.protobuf.ByteString
@@ -8623,7 +8623,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a district.
      * </pre>
      *
-     * <code>string geo_target_district = 121;</code>
+     * <code>optional string geo_target_district = 121;</code>
      * @param value The geoTargetDistrict to set.
      * @return This builder for chaining.
      */
@@ -8642,7 +8642,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a district.
      * </pre>
      *
-     * <code>string geo_target_district = 121;</code>
+     * <code>optional string geo_target_district = 121;</code>
      * @return This builder for chaining.
      */
     public Builder clearGeoTargetDistrict() {
@@ -8656,7 +8656,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a district.
      * </pre>
      *
-     * <code>string geo_target_district = 121;</code>
+     * <code>optional string geo_target_district = 121;</code>
      * @param value The bytes for geoTargetDistrict to set.
      * @return This builder for chaining.
      */
@@ -8678,7 +8678,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a metro.
      * </pre>
      *
-     * <code>string geo_target_metro = 122;</code>
+     * <code>optional string geo_target_metro = 122;</code>
      * @return Whether the geoTargetMetro field is set.
      */
     public boolean hasGeoTargetMetro() {
@@ -8689,7 +8689,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a metro.
      * </pre>
      *
-     * <code>string geo_target_metro = 122;</code>
+     * <code>optional string geo_target_metro = 122;</code>
      * @return The geoTargetMetro.
      */
     public java.lang.String getGeoTargetMetro() {
@@ -8709,7 +8709,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a metro.
      * </pre>
      *
-     * <code>string geo_target_metro = 122;</code>
+     * <code>optional string geo_target_metro = 122;</code>
      * @return The bytes for geoTargetMetro.
      */
     public com.google.protobuf.ByteString
@@ -8730,7 +8730,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a metro.
      * </pre>
      *
-     * <code>string geo_target_metro = 122;</code>
+     * <code>optional string geo_target_metro = 122;</code>
      * @param value The geoTargetMetro to set.
      * @return This builder for chaining.
      */
@@ -8749,7 +8749,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a metro.
      * </pre>
      *
-     * <code>string geo_target_metro = 122;</code>
+     * <code>optional string geo_target_metro = 122;</code>
      * @return This builder for chaining.
      */
     public Builder clearGeoTargetMetro() {
@@ -8763,7 +8763,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a metro.
      * </pre>
      *
-     * <code>string geo_target_metro = 122;</code>
+     * <code>optional string geo_target_metro = 122;</code>
      * @param value The bytes for geoTargetMetro to set.
      * @return This builder for chaining.
      */
@@ -8786,7 +8786,7 @@ private static final long serialVersionUID = 0L;
      * specific location.
      * </pre>
      *
-     * <code>string geo_target_most_specific_location = 123;</code>
+     * <code>optional string geo_target_most_specific_location = 123;</code>
      * @return Whether the geoTargetMostSpecificLocation field is set.
      */
     public boolean hasGeoTargetMostSpecificLocation() {
@@ -8798,7 +8798,7 @@ private static final long serialVersionUID = 0L;
      * specific location.
      * </pre>
      *
-     * <code>string geo_target_most_specific_location = 123;</code>
+     * <code>optional string geo_target_most_specific_location = 123;</code>
      * @return The geoTargetMostSpecificLocation.
      */
     public java.lang.String getGeoTargetMostSpecificLocation() {
@@ -8819,7 +8819,7 @@ private static final long serialVersionUID = 0L;
      * specific location.
      * </pre>
      *
-     * <code>string geo_target_most_specific_location = 123;</code>
+     * <code>optional string geo_target_most_specific_location = 123;</code>
      * @return The bytes for geoTargetMostSpecificLocation.
      */
     public com.google.protobuf.ByteString
@@ -8841,7 +8841,7 @@ private static final long serialVersionUID = 0L;
      * specific location.
      * </pre>
      *
-     * <code>string geo_target_most_specific_location = 123;</code>
+     * <code>optional string geo_target_most_specific_location = 123;</code>
      * @param value The geoTargetMostSpecificLocation to set.
      * @return This builder for chaining.
      */
@@ -8861,7 +8861,7 @@ private static final long serialVersionUID = 0L;
      * specific location.
      * </pre>
      *
-     * <code>string geo_target_most_specific_location = 123;</code>
+     * <code>optional string geo_target_most_specific_location = 123;</code>
      * @return This builder for chaining.
      */
     public Builder clearGeoTargetMostSpecificLocation() {
@@ -8876,7 +8876,7 @@ private static final long serialVersionUID = 0L;
      * specific location.
      * </pre>
      *
-     * <code>string geo_target_most_specific_location = 123;</code>
+     * <code>optional string geo_target_most_specific_location = 123;</code>
      * @param value The bytes for geoTargetMostSpecificLocation to set.
      * @return This builder for chaining.
      */
@@ -8898,7 +8898,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a postal code.
      * </pre>
      *
-     * <code>string geo_target_postal_code = 124;</code>
+     * <code>optional string geo_target_postal_code = 124;</code>
      * @return Whether the geoTargetPostalCode field is set.
      */
     public boolean hasGeoTargetPostalCode() {
@@ -8909,7 +8909,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a postal code.
      * </pre>
      *
-     * <code>string geo_target_postal_code = 124;</code>
+     * <code>optional string geo_target_postal_code = 124;</code>
      * @return The geoTargetPostalCode.
      */
     public java.lang.String getGeoTargetPostalCode() {
@@ -8929,7 +8929,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a postal code.
      * </pre>
      *
-     * <code>string geo_target_postal_code = 124;</code>
+     * <code>optional string geo_target_postal_code = 124;</code>
      * @return The bytes for geoTargetPostalCode.
      */
     public com.google.protobuf.ByteString
@@ -8950,7 +8950,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a postal code.
      * </pre>
      *
-     * <code>string geo_target_postal_code = 124;</code>
+     * <code>optional string geo_target_postal_code = 124;</code>
      * @param value The geoTargetPostalCode to set.
      * @return This builder for chaining.
      */
@@ -8969,7 +8969,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a postal code.
      * </pre>
      *
-     * <code>string geo_target_postal_code = 124;</code>
+     * <code>optional string geo_target_postal_code = 124;</code>
      * @return This builder for chaining.
      */
     public Builder clearGeoTargetPostalCode() {
@@ -8983,7 +8983,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a postal code.
      * </pre>
      *
-     * <code>string geo_target_postal_code = 124;</code>
+     * <code>optional string geo_target_postal_code = 124;</code>
      * @param value The bytes for geoTargetPostalCode to set.
      * @return This builder for chaining.
      */
@@ -9005,7 +9005,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a province.
      * </pre>
      *
-     * <code>string geo_target_province = 125;</code>
+     * <code>optional string geo_target_province = 125;</code>
      * @return Whether the geoTargetProvince field is set.
      */
     public boolean hasGeoTargetProvince() {
@@ -9016,7 +9016,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a province.
      * </pre>
      *
-     * <code>string geo_target_province = 125;</code>
+     * <code>optional string geo_target_province = 125;</code>
      * @return The geoTargetProvince.
      */
     public java.lang.String getGeoTargetProvince() {
@@ -9036,7 +9036,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a province.
      * </pre>
      *
-     * <code>string geo_target_province = 125;</code>
+     * <code>optional string geo_target_province = 125;</code>
      * @return The bytes for geoTargetProvince.
      */
     public com.google.protobuf.ByteString
@@ -9057,7 +9057,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a province.
      * </pre>
      *
-     * <code>string geo_target_province = 125;</code>
+     * <code>optional string geo_target_province = 125;</code>
      * @param value The geoTargetProvince to set.
      * @return This builder for chaining.
      */
@@ -9076,7 +9076,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a province.
      * </pre>
      *
-     * <code>string geo_target_province = 125;</code>
+     * <code>optional string geo_target_province = 125;</code>
      * @return This builder for chaining.
      */
     public Builder clearGeoTargetProvince() {
@@ -9090,7 +9090,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a province.
      * </pre>
      *
-     * <code>string geo_target_province = 125;</code>
+     * <code>optional string geo_target_province = 125;</code>
      * @param value The bytes for geoTargetProvince to set.
      * @return This builder for chaining.
      */
@@ -9112,7 +9112,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a region.
      * </pre>
      *
-     * <code>string geo_target_region = 126;</code>
+     * <code>optional string geo_target_region = 126;</code>
      * @return Whether the geoTargetRegion field is set.
      */
     public boolean hasGeoTargetRegion() {
@@ -9123,7 +9123,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a region.
      * </pre>
      *
-     * <code>string geo_target_region = 126;</code>
+     * <code>optional string geo_target_region = 126;</code>
      * @return The geoTargetRegion.
      */
     public java.lang.String getGeoTargetRegion() {
@@ -9143,7 +9143,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a region.
      * </pre>
      *
-     * <code>string geo_target_region = 126;</code>
+     * <code>optional string geo_target_region = 126;</code>
      * @return The bytes for geoTargetRegion.
      */
     public com.google.protobuf.ByteString
@@ -9164,7 +9164,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a region.
      * </pre>
      *
-     * <code>string geo_target_region = 126;</code>
+     * <code>optional string geo_target_region = 126;</code>
      * @param value The geoTargetRegion to set.
      * @return This builder for chaining.
      */
@@ -9183,7 +9183,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a region.
      * </pre>
      *
-     * <code>string geo_target_region = 126;</code>
+     * <code>optional string geo_target_region = 126;</code>
      * @return This builder for chaining.
      */
     public Builder clearGeoTargetRegion() {
@@ -9197,7 +9197,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a region.
      * </pre>
      *
-     * <code>string geo_target_region = 126;</code>
+     * <code>optional string geo_target_region = 126;</code>
      * @param value The bytes for geoTargetRegion to set.
      * @return This builder for chaining.
      */
@@ -9219,7 +9219,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a state.
      * </pre>
      *
-     * <code>string geo_target_state = 127;</code>
+     * <code>optional string geo_target_state = 127;</code>
      * @return Whether the geoTargetState field is set.
      */
     public boolean hasGeoTargetState() {
@@ -9230,7 +9230,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a state.
      * </pre>
      *
-     * <code>string geo_target_state = 127;</code>
+     * <code>optional string geo_target_state = 127;</code>
      * @return The geoTargetState.
      */
     public java.lang.String getGeoTargetState() {
@@ -9250,7 +9250,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a state.
      * </pre>
      *
-     * <code>string geo_target_state = 127;</code>
+     * <code>optional string geo_target_state = 127;</code>
      * @return The bytes for geoTargetState.
      */
     public com.google.protobuf.ByteString
@@ -9271,7 +9271,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a state.
      * </pre>
      *
-     * <code>string geo_target_state = 127;</code>
+     * <code>optional string geo_target_state = 127;</code>
      * @param value The geoTargetState to set.
      * @return This builder for chaining.
      */
@@ -9290,7 +9290,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a state.
      * </pre>
      *
-     * <code>string geo_target_state = 127;</code>
+     * <code>optional string geo_target_state = 127;</code>
      * @return This builder for chaining.
      */
     public Builder clearGeoTargetState() {
@@ -9304,7 +9304,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the geo target constant that represents a state.
      * </pre>
      *
-     * <code>string geo_target_state = 127;</code>
+     * <code>optional string geo_target_state = 127;</code>
      * @param value The bytes for geoTargetState to set.
      * @return This builder for chaining.
      */
@@ -9326,7 +9326,7 @@ private static final long serialVersionUID = 0L;
      * Hotel booking window in days.
      * </pre>
      *
-     * <code>int64 hotel_booking_window_days = 135;</code>
+     * <code>optional int64 hotel_booking_window_days = 135;</code>
      * @return Whether the hotelBookingWindowDays field is set.
      */
     @java.lang.Override
@@ -9338,7 +9338,7 @@ private static final long serialVersionUID = 0L;
      * Hotel booking window in days.
      * </pre>
      *
-     * <code>int64 hotel_booking_window_days = 135;</code>
+     * <code>optional int64 hotel_booking_window_days = 135;</code>
      * @return The hotelBookingWindowDays.
      */
     @java.lang.Override
@@ -9350,7 +9350,7 @@ private static final long serialVersionUID = 0L;
      * Hotel booking window in days.
      * </pre>
      *
-     * <code>int64 hotel_booking_window_days = 135;</code>
+     * <code>optional int64 hotel_booking_window_days = 135;</code>
      * @param value The hotelBookingWindowDays to set.
      * @return This builder for chaining.
      */
@@ -9365,7 +9365,7 @@ private static final long serialVersionUID = 0L;
      * Hotel booking window in days.
      * </pre>
      *
-     * <code>int64 hotel_booking_window_days = 135;</code>
+     * <code>optional int64 hotel_booking_window_days = 135;</code>
      * @return This builder for chaining.
      */
     public Builder clearHotelBookingWindowDays() {
@@ -9381,7 +9381,7 @@ private static final long serialVersionUID = 0L;
      * Hotel center ID.
      * </pre>
      *
-     * <code>int64 hotel_center_id = 80;</code>
+     * <code>optional int64 hotel_center_id = 80;</code>
      * @return Whether the hotelCenterId field is set.
      */
     @java.lang.Override
@@ -9393,7 +9393,7 @@ private static final long serialVersionUID = 0L;
      * Hotel center ID.
      * </pre>
      *
-     * <code>int64 hotel_center_id = 80;</code>
+     * <code>optional int64 hotel_center_id = 80;</code>
      * @return The hotelCenterId.
      */
     @java.lang.Override
@@ -9405,7 +9405,7 @@ private static final long serialVersionUID = 0L;
      * Hotel center ID.
      * </pre>
      *
-     * <code>int64 hotel_center_id = 80;</code>
+     * <code>optional int64 hotel_center_id = 80;</code>
      * @param value The hotelCenterId to set.
      * @return This builder for chaining.
      */
@@ -9420,7 +9420,7 @@ private static final long serialVersionUID = 0L;
      * Hotel center ID.
      * </pre>
      *
-     * <code>int64 hotel_center_id = 80;</code>
+     * <code>optional int64 hotel_center_id = 80;</code>
      * @return This builder for chaining.
      */
     public Builder clearHotelCenterId() {
@@ -9436,7 +9436,7 @@ private static final long serialVersionUID = 0L;
      * Hotel check-in date. Formatted as yyyy-MM-dd.
      * </pre>
      *
-     * <code>string hotel_check_in_date = 81;</code>
+     * <code>optional string hotel_check_in_date = 81;</code>
      * @return Whether the hotelCheckInDate field is set.
      */
     public boolean hasHotelCheckInDate() {
@@ -9447,7 +9447,7 @@ private static final long serialVersionUID = 0L;
      * Hotel check-in date. Formatted as yyyy-MM-dd.
      * </pre>
      *
-     * <code>string hotel_check_in_date = 81;</code>
+     * <code>optional string hotel_check_in_date = 81;</code>
      * @return The hotelCheckInDate.
      */
     public java.lang.String getHotelCheckInDate() {
@@ -9467,7 +9467,7 @@ private static final long serialVersionUID = 0L;
      * Hotel check-in date. Formatted as yyyy-MM-dd.
      * </pre>
      *
-     * <code>string hotel_check_in_date = 81;</code>
+     * <code>optional string hotel_check_in_date = 81;</code>
      * @return The bytes for hotelCheckInDate.
      */
     public com.google.protobuf.ByteString
@@ -9488,7 +9488,7 @@ private static final long serialVersionUID = 0L;
      * Hotel check-in date. Formatted as yyyy-MM-dd.
      * </pre>
      *
-     * <code>string hotel_check_in_date = 81;</code>
+     * <code>optional string hotel_check_in_date = 81;</code>
      * @param value The hotelCheckInDate to set.
      * @return This builder for chaining.
      */
@@ -9507,7 +9507,7 @@ private static final long serialVersionUID = 0L;
      * Hotel check-in date. Formatted as yyyy-MM-dd.
      * </pre>
      *
-     * <code>string hotel_check_in_date = 81;</code>
+     * <code>optional string hotel_check_in_date = 81;</code>
      * @return This builder for chaining.
      */
     public Builder clearHotelCheckInDate() {
@@ -9521,7 +9521,7 @@ private static final long serialVersionUID = 0L;
      * Hotel check-in date. Formatted as yyyy-MM-dd.
      * </pre>
      *
-     * <code>string hotel_check_in_date = 81;</code>
+     * <code>optional string hotel_check_in_date = 81;</code>
      * @param value The bytes for hotelCheckInDate to set.
      * @return This builder for chaining.
      */
@@ -9617,7 +9617,7 @@ private static final long serialVersionUID = 0L;
      * Hotel city.
      * </pre>
      *
-     * <code>string hotel_city = 82;</code>
+     * <code>optional string hotel_city = 82;</code>
      * @return Whether the hotelCity field is set.
      */
     public boolean hasHotelCity() {
@@ -9628,7 +9628,7 @@ private static final long serialVersionUID = 0L;
      * Hotel city.
      * </pre>
      *
-     * <code>string hotel_city = 82;</code>
+     * <code>optional string hotel_city = 82;</code>
      * @return The hotelCity.
      */
     public java.lang.String getHotelCity() {
@@ -9648,7 +9648,7 @@ private static final long serialVersionUID = 0L;
      * Hotel city.
      * </pre>
      *
-     * <code>string hotel_city = 82;</code>
+     * <code>optional string hotel_city = 82;</code>
      * @return The bytes for hotelCity.
      */
     public com.google.protobuf.ByteString
@@ -9669,7 +9669,7 @@ private static final long serialVersionUID = 0L;
      * Hotel city.
      * </pre>
      *
-     * <code>string hotel_city = 82;</code>
+     * <code>optional string hotel_city = 82;</code>
      * @param value The hotelCity to set.
      * @return This builder for chaining.
      */
@@ -9688,7 +9688,7 @@ private static final long serialVersionUID = 0L;
      * Hotel city.
      * </pre>
      *
-     * <code>string hotel_city = 82;</code>
+     * <code>optional string hotel_city = 82;</code>
      * @return This builder for chaining.
      */
     public Builder clearHotelCity() {
@@ -9702,7 +9702,7 @@ private static final long serialVersionUID = 0L;
      * Hotel city.
      * </pre>
      *
-     * <code>string hotel_city = 82;</code>
+     * <code>optional string hotel_city = 82;</code>
      * @param value The bytes for hotelCity to set.
      * @return This builder for chaining.
      */
@@ -9724,7 +9724,7 @@ private static final long serialVersionUID = 0L;
      * Hotel class.
      * </pre>
      *
-     * <code>int32 hotel_class = 83;</code>
+     * <code>optional int32 hotel_class = 83;</code>
      * @return Whether the hotelClass field is set.
      */
     @java.lang.Override
@@ -9736,7 +9736,7 @@ private static final long serialVersionUID = 0L;
      * Hotel class.
      * </pre>
      *
-     * <code>int32 hotel_class = 83;</code>
+     * <code>optional int32 hotel_class = 83;</code>
      * @return The hotelClass.
      */
     @java.lang.Override
@@ -9748,7 +9748,7 @@ private static final long serialVersionUID = 0L;
      * Hotel class.
      * </pre>
      *
-     * <code>int32 hotel_class = 83;</code>
+     * <code>optional int32 hotel_class = 83;</code>
      * @param value The hotelClass to set.
      * @return This builder for chaining.
      */
@@ -9763,7 +9763,7 @@ private static final long serialVersionUID = 0L;
      * Hotel class.
      * </pre>
      *
-     * <code>int32 hotel_class = 83;</code>
+     * <code>optional int32 hotel_class = 83;</code>
      * @return This builder for chaining.
      */
     public Builder clearHotelClass() {
@@ -9779,7 +9779,7 @@ private static final long serialVersionUID = 0L;
      * Hotel country.
      * </pre>
      *
-     * <code>string hotel_country = 84;</code>
+     * <code>optional string hotel_country = 84;</code>
      * @return Whether the hotelCountry field is set.
      */
     public boolean hasHotelCountry() {
@@ -9790,7 +9790,7 @@ private static final long serialVersionUID = 0L;
      * Hotel country.
      * </pre>
      *
-     * <code>string hotel_country = 84;</code>
+     * <code>optional string hotel_country = 84;</code>
      * @return The hotelCountry.
      */
     public java.lang.String getHotelCountry() {
@@ -9810,7 +9810,7 @@ private static final long serialVersionUID = 0L;
      * Hotel country.
      * </pre>
      *
-     * <code>string hotel_country = 84;</code>
+     * <code>optional string hotel_country = 84;</code>
      * @return The bytes for hotelCountry.
      */
     public com.google.protobuf.ByteString
@@ -9831,7 +9831,7 @@ private static final long serialVersionUID = 0L;
      * Hotel country.
      * </pre>
      *
-     * <code>string hotel_country = 84;</code>
+     * <code>optional string hotel_country = 84;</code>
      * @param value The hotelCountry to set.
      * @return This builder for chaining.
      */
@@ -9850,7 +9850,7 @@ private static final long serialVersionUID = 0L;
      * Hotel country.
      * </pre>
      *
-     * <code>string hotel_country = 84;</code>
+     * <code>optional string hotel_country = 84;</code>
      * @return This builder for chaining.
      */
     public Builder clearHotelCountry() {
@@ -9864,7 +9864,7 @@ private static final long serialVersionUID = 0L;
      * Hotel country.
      * </pre>
      *
-     * <code>string hotel_country = 84;</code>
+     * <code>optional string hotel_country = 84;</code>
      * @param value The bytes for hotelCountry to set.
      * @return This builder for chaining.
      */
@@ -9960,7 +9960,7 @@ private static final long serialVersionUID = 0L;
      * Hotel length of stay.
      * </pre>
      *
-     * <code>int32 hotel_length_of_stay = 85;</code>
+     * <code>optional int32 hotel_length_of_stay = 85;</code>
      * @return Whether the hotelLengthOfStay field is set.
      */
     @java.lang.Override
@@ -9972,7 +9972,7 @@ private static final long serialVersionUID = 0L;
      * Hotel length of stay.
      * </pre>
      *
-     * <code>int32 hotel_length_of_stay = 85;</code>
+     * <code>optional int32 hotel_length_of_stay = 85;</code>
      * @return The hotelLengthOfStay.
      */
     @java.lang.Override
@@ -9984,7 +9984,7 @@ private static final long serialVersionUID = 0L;
      * Hotel length of stay.
      * </pre>
      *
-     * <code>int32 hotel_length_of_stay = 85;</code>
+     * <code>optional int32 hotel_length_of_stay = 85;</code>
      * @param value The hotelLengthOfStay to set.
      * @return This builder for chaining.
      */
@@ -9999,7 +9999,7 @@ private static final long serialVersionUID = 0L;
      * Hotel length of stay.
      * </pre>
      *
-     * <code>int32 hotel_length_of_stay = 85;</code>
+     * <code>optional int32 hotel_length_of_stay = 85;</code>
      * @return This builder for chaining.
      */
     public Builder clearHotelLengthOfStay() {
@@ -10015,7 +10015,7 @@ private static final long serialVersionUID = 0L;
      * Hotel rate rule ID.
      * </pre>
      *
-     * <code>string hotel_rate_rule_id = 86;</code>
+     * <code>optional string hotel_rate_rule_id = 86;</code>
      * @return Whether the hotelRateRuleId field is set.
      */
     public boolean hasHotelRateRuleId() {
@@ -10026,7 +10026,7 @@ private static final long serialVersionUID = 0L;
      * Hotel rate rule ID.
      * </pre>
      *
-     * <code>string hotel_rate_rule_id = 86;</code>
+     * <code>optional string hotel_rate_rule_id = 86;</code>
      * @return The hotelRateRuleId.
      */
     public java.lang.String getHotelRateRuleId() {
@@ -10046,7 +10046,7 @@ private static final long serialVersionUID = 0L;
      * Hotel rate rule ID.
      * </pre>
      *
-     * <code>string hotel_rate_rule_id = 86;</code>
+     * <code>optional string hotel_rate_rule_id = 86;</code>
      * @return The bytes for hotelRateRuleId.
      */
     public com.google.protobuf.ByteString
@@ -10067,7 +10067,7 @@ private static final long serialVersionUID = 0L;
      * Hotel rate rule ID.
      * </pre>
      *
-     * <code>string hotel_rate_rule_id = 86;</code>
+     * <code>optional string hotel_rate_rule_id = 86;</code>
      * @param value The hotelRateRuleId to set.
      * @return This builder for chaining.
      */
@@ -10086,7 +10086,7 @@ private static final long serialVersionUID = 0L;
      * Hotel rate rule ID.
      * </pre>
      *
-     * <code>string hotel_rate_rule_id = 86;</code>
+     * <code>optional string hotel_rate_rule_id = 86;</code>
      * @return This builder for chaining.
      */
     public Builder clearHotelRateRuleId() {
@@ -10100,7 +10100,7 @@ private static final long serialVersionUID = 0L;
      * Hotel rate rule ID.
      * </pre>
      *
-     * <code>string hotel_rate_rule_id = 86;</code>
+     * <code>optional string hotel_rate_rule_id = 86;</code>
      * @param value The bytes for hotelRateRuleId to set.
      * @return This builder for chaining.
      */
@@ -10270,7 +10270,7 @@ private static final long serialVersionUID = 0L;
      * Hotel state.
      * </pre>
      *
-     * <code>string hotel_state = 87;</code>
+     * <code>optional string hotel_state = 87;</code>
      * @return Whether the hotelState field is set.
      */
     public boolean hasHotelState() {
@@ -10281,7 +10281,7 @@ private static final long serialVersionUID = 0L;
      * Hotel state.
      * </pre>
      *
-     * <code>string hotel_state = 87;</code>
+     * <code>optional string hotel_state = 87;</code>
      * @return The hotelState.
      */
     public java.lang.String getHotelState() {
@@ -10301,7 +10301,7 @@ private static final long serialVersionUID = 0L;
      * Hotel state.
      * </pre>
      *
-     * <code>string hotel_state = 87;</code>
+     * <code>optional string hotel_state = 87;</code>
      * @return The bytes for hotelState.
      */
     public com.google.protobuf.ByteString
@@ -10322,7 +10322,7 @@ private static final long serialVersionUID = 0L;
      * Hotel state.
      * </pre>
      *
-     * <code>string hotel_state = 87;</code>
+     * <code>optional string hotel_state = 87;</code>
      * @param value The hotelState to set.
      * @return This builder for chaining.
      */
@@ -10341,7 +10341,7 @@ private static final long serialVersionUID = 0L;
      * Hotel state.
      * </pre>
      *
-     * <code>string hotel_state = 87;</code>
+     * <code>optional string hotel_state = 87;</code>
      * @return This builder for chaining.
      */
     public Builder clearHotelState() {
@@ -10355,7 +10355,7 @@ private static final long serialVersionUID = 0L;
      * Hotel state.
      * </pre>
      *
-     * <code>string hotel_state = 87;</code>
+     * <code>optional string hotel_state = 87;</code>
      * @param value The bytes for hotelState to set.
      * @return This builder for chaining.
      */
@@ -10377,7 +10377,7 @@ private static final long serialVersionUID = 0L;
      * Hour of day as a number between 0 and 23, inclusive.
      * </pre>
      *
-     * <code>int32 hour = 88;</code>
+     * <code>optional int32 hour = 88;</code>
      * @return Whether the hour field is set.
      */
     @java.lang.Override
@@ -10389,7 +10389,7 @@ private static final long serialVersionUID = 0L;
      * Hour of day as a number between 0 and 23, inclusive.
      * </pre>
      *
-     * <code>int32 hour = 88;</code>
+     * <code>optional int32 hour = 88;</code>
      * @return The hour.
      */
     @java.lang.Override
@@ -10401,7 +10401,7 @@ private static final long serialVersionUID = 0L;
      * Hour of day as a number between 0 and 23, inclusive.
      * </pre>
      *
-     * <code>int32 hour = 88;</code>
+     * <code>optional int32 hour = 88;</code>
      * @param value The hour to set.
      * @return This builder for chaining.
      */
@@ -10416,7 +10416,7 @@ private static final long serialVersionUID = 0L;
      * Hour of day as a number between 0 and 23, inclusive.
      * </pre>
      *
-     * <code>int32 hour = 88;</code>
+     * <code>optional int32 hour = 88;</code>
      * @return This builder for chaining.
      */
     public Builder clearHour() {
@@ -10434,7 +10434,7 @@ private static final long serialVersionUID = 0L;
      * or a different extension or ad unit.
      * </pre>
      *
-     * <code>bool interaction_on_this_extension = 89;</code>
+     * <code>optional bool interaction_on_this_extension = 89;</code>
      * @return Whether the interactionOnThisExtension field is set.
      */
     @java.lang.Override
@@ -10448,7 +10448,7 @@ private static final long serialVersionUID = 0L;
      * or a different extension or ad unit.
      * </pre>
      *
-     * <code>bool interaction_on_this_extension = 89;</code>
+     * <code>optional bool interaction_on_this_extension = 89;</code>
      * @return The interactionOnThisExtension.
      */
     @java.lang.Override
@@ -10462,7 +10462,7 @@ private static final long serialVersionUID = 0L;
      * or a different extension or ad unit.
      * </pre>
      *
-     * <code>bool interaction_on_this_extension = 89;</code>
+     * <code>optional bool interaction_on_this_extension = 89;</code>
      * @param value The interactionOnThisExtension to set.
      * @return This builder for chaining.
      */
@@ -10479,7 +10479,7 @@ private static final long serialVersionUID = 0L;
      * or a different extension or ad unit.
      * </pre>
      *
-     * <code>bool interaction_on_this_extension = 89;</code>
+     * <code>optional bool interaction_on_this_extension = 89;</code>
      * @return This builder for chaining.
      */
     public Builder clearInteractionOnThisExtension() {
@@ -10651,7 +10651,7 @@ private static final long serialVersionUID = 0L;
      * yyyy-MM-dd.
      * </pre>
      *
-     * <code>string month = 90;</code>
+     * <code>optional string month = 90;</code>
      * @return Whether the month field is set.
      */
     public boolean hasMonth() {
@@ -10663,7 +10663,7 @@ private static final long serialVersionUID = 0L;
      * yyyy-MM-dd.
      * </pre>
      *
-     * <code>string month = 90;</code>
+     * <code>optional string month = 90;</code>
      * @return The month.
      */
     public java.lang.String getMonth() {
@@ -10684,7 +10684,7 @@ private static final long serialVersionUID = 0L;
      * yyyy-MM-dd.
      * </pre>
      *
-     * <code>string month = 90;</code>
+     * <code>optional string month = 90;</code>
      * @return The bytes for month.
      */
     public com.google.protobuf.ByteString
@@ -10706,7 +10706,7 @@ private static final long serialVersionUID = 0L;
      * yyyy-MM-dd.
      * </pre>
      *
-     * <code>string month = 90;</code>
+     * <code>optional string month = 90;</code>
      * @param value The month to set.
      * @return This builder for chaining.
      */
@@ -10726,7 +10726,7 @@ private static final long serialVersionUID = 0L;
      * yyyy-MM-dd.
      * </pre>
      *
-     * <code>string month = 90;</code>
+     * <code>optional string month = 90;</code>
      * @return This builder for chaining.
      */
     public Builder clearMonth() {
@@ -10741,7 +10741,7 @@ private static final long serialVersionUID = 0L;
      * yyyy-MM-dd.
      * </pre>
      *
-     * <code>string month = 90;</code>
+     * <code>optional string month = 90;</code>
      * @param value The bytes for month to set.
      * @return This builder for chaining.
      */
@@ -10837,7 +10837,7 @@ private static final long serialVersionUID = 0L;
      * Partner hotel ID.
      * </pre>
      *
-     * <code>string partner_hotel_id = 91;</code>
+     * <code>optional string partner_hotel_id = 91;</code>
      * @return Whether the partnerHotelId field is set.
      */
     public boolean hasPartnerHotelId() {
@@ -10848,7 +10848,7 @@ private static final long serialVersionUID = 0L;
      * Partner hotel ID.
      * </pre>
      *
-     * <code>string partner_hotel_id = 91;</code>
+     * <code>optional string partner_hotel_id = 91;</code>
      * @return The partnerHotelId.
      */
     public java.lang.String getPartnerHotelId() {
@@ -10868,7 +10868,7 @@ private static final long serialVersionUID = 0L;
      * Partner hotel ID.
      * </pre>
      *
-     * <code>string partner_hotel_id = 91;</code>
+     * <code>optional string partner_hotel_id = 91;</code>
      * @return The bytes for partnerHotelId.
      */
     public com.google.protobuf.ByteString
@@ -10889,7 +10889,7 @@ private static final long serialVersionUID = 0L;
      * Partner hotel ID.
      * </pre>
      *
-     * <code>string partner_hotel_id = 91;</code>
+     * <code>optional string partner_hotel_id = 91;</code>
      * @param value The partnerHotelId to set.
      * @return This builder for chaining.
      */
@@ -10908,7 +10908,7 @@ private static final long serialVersionUID = 0L;
      * Partner hotel ID.
      * </pre>
      *
-     * <code>string partner_hotel_id = 91;</code>
+     * <code>optional string partner_hotel_id = 91;</code>
      * @return This builder for chaining.
      */
     public Builder clearPartnerHotelId() {
@@ -10922,7 +10922,7 @@ private static final long serialVersionUID = 0L;
      * Partner hotel ID.
      * </pre>
      *
-     * <code>string partner_hotel_id = 91;</code>
+     * <code>optional string partner_hotel_id = 91;</code>
      * @param value The bytes for partnerHotelId to set.
      * @return This builder for chaining.
      */
@@ -11018,7 +11018,7 @@ private static final long serialVersionUID = 0L;
      * Aggregator ID of the product.
      * </pre>
      *
-     * <code>int64 product_aggregator_id = 132;</code>
+     * <code>optional int64 product_aggregator_id = 132;</code>
      * @return Whether the productAggregatorId field is set.
      */
     @java.lang.Override
@@ -11030,7 +11030,7 @@ private static final long serialVersionUID = 0L;
      * Aggregator ID of the product.
      * </pre>
      *
-     * <code>int64 product_aggregator_id = 132;</code>
+     * <code>optional int64 product_aggregator_id = 132;</code>
      * @return The productAggregatorId.
      */
     @java.lang.Override
@@ -11042,7 +11042,7 @@ private static final long serialVersionUID = 0L;
      * Aggregator ID of the product.
      * </pre>
      *
-     * <code>int64 product_aggregator_id = 132;</code>
+     * <code>optional int64 product_aggregator_id = 132;</code>
      * @param value The productAggregatorId to set.
      * @return This builder for chaining.
      */
@@ -11057,7 +11057,7 @@ private static final long serialVersionUID = 0L;
      * Aggregator ID of the product.
      * </pre>
      *
-     * <code>int64 product_aggregator_id = 132;</code>
+     * <code>optional int64 product_aggregator_id = 132;</code>
      * @return This builder for chaining.
      */
     public Builder clearProductAggregatorId() {
@@ -11073,7 +11073,7 @@ private static final long serialVersionUID = 0L;
      * Bidding category (level 1) of the product.
      * </pre>
      *
-     * <code>string product_bidding_category_level1 = 92;</code>
+     * <code>optional string product_bidding_category_level1 = 92;</code>
      * @return Whether the productBiddingCategoryLevel1 field is set.
      */
     public boolean hasProductBiddingCategoryLevel1() {
@@ -11084,7 +11084,7 @@ private static final long serialVersionUID = 0L;
      * Bidding category (level 1) of the product.
      * </pre>
      *
-     * <code>string product_bidding_category_level1 = 92;</code>
+     * <code>optional string product_bidding_category_level1 = 92;</code>
      * @return The productBiddingCategoryLevel1.
      */
     public java.lang.String getProductBiddingCategoryLevel1() {
@@ -11104,7 +11104,7 @@ private static final long serialVersionUID = 0L;
      * Bidding category (level 1) of the product.
      * </pre>
      *
-     * <code>string product_bidding_category_level1 = 92;</code>
+     * <code>optional string product_bidding_category_level1 = 92;</code>
      * @return The bytes for productBiddingCategoryLevel1.
      */
     public com.google.protobuf.ByteString
@@ -11125,7 +11125,7 @@ private static final long serialVersionUID = 0L;
      * Bidding category (level 1) of the product.
      * </pre>
      *
-     * <code>string product_bidding_category_level1 = 92;</code>
+     * <code>optional string product_bidding_category_level1 = 92;</code>
      * @param value The productBiddingCategoryLevel1 to set.
      * @return This builder for chaining.
      */
@@ -11144,7 +11144,7 @@ private static final long serialVersionUID = 0L;
      * Bidding category (level 1) of the product.
      * </pre>
      *
-     * <code>string product_bidding_category_level1 = 92;</code>
+     * <code>optional string product_bidding_category_level1 = 92;</code>
      * @return This builder for chaining.
      */
     public Builder clearProductBiddingCategoryLevel1() {
@@ -11158,7 +11158,7 @@ private static final long serialVersionUID = 0L;
      * Bidding category (level 1) of the product.
      * </pre>
      *
-     * <code>string product_bidding_category_level1 = 92;</code>
+     * <code>optional string product_bidding_category_level1 = 92;</code>
      * @param value The bytes for productBiddingCategoryLevel1 to set.
      * @return This builder for chaining.
      */
@@ -11180,7 +11180,7 @@ private static final long serialVersionUID = 0L;
      * Bidding category (level 2) of the product.
      * </pre>
      *
-     * <code>string product_bidding_category_level2 = 93;</code>
+     * <code>optional string product_bidding_category_level2 = 93;</code>
      * @return Whether the productBiddingCategoryLevel2 field is set.
      */
     public boolean hasProductBiddingCategoryLevel2() {
@@ -11191,7 +11191,7 @@ private static final long serialVersionUID = 0L;
      * Bidding category (level 2) of the product.
      * </pre>
      *
-     * <code>string product_bidding_category_level2 = 93;</code>
+     * <code>optional string product_bidding_category_level2 = 93;</code>
      * @return The productBiddingCategoryLevel2.
      */
     public java.lang.String getProductBiddingCategoryLevel2() {
@@ -11211,7 +11211,7 @@ private static final long serialVersionUID = 0L;
      * Bidding category (level 2) of the product.
      * </pre>
      *
-     * <code>string product_bidding_category_level2 = 93;</code>
+     * <code>optional string product_bidding_category_level2 = 93;</code>
      * @return The bytes for productBiddingCategoryLevel2.
      */
     public com.google.protobuf.ByteString
@@ -11232,7 +11232,7 @@ private static final long serialVersionUID = 0L;
      * Bidding category (level 2) of the product.
      * </pre>
      *
-     * <code>string product_bidding_category_level2 = 93;</code>
+     * <code>optional string product_bidding_category_level2 = 93;</code>
      * @param value The productBiddingCategoryLevel2 to set.
      * @return This builder for chaining.
      */
@@ -11251,7 +11251,7 @@ private static final long serialVersionUID = 0L;
      * Bidding category (level 2) of the product.
      * </pre>
      *
-     * <code>string product_bidding_category_level2 = 93;</code>
+     * <code>optional string product_bidding_category_level2 = 93;</code>
      * @return This builder for chaining.
      */
     public Builder clearProductBiddingCategoryLevel2() {
@@ -11265,7 +11265,7 @@ private static final long serialVersionUID = 0L;
      * Bidding category (level 2) of the product.
      * </pre>
      *
-     * <code>string product_bidding_category_level2 = 93;</code>
+     * <code>optional string product_bidding_category_level2 = 93;</code>
      * @param value The bytes for productBiddingCategoryLevel2 to set.
      * @return This builder for chaining.
      */
@@ -11287,7 +11287,7 @@ private static final long serialVersionUID = 0L;
      * Bidding category (level 3) of the product.
      * </pre>
      *
-     * <code>string product_bidding_category_level3 = 94;</code>
+     * <code>optional string product_bidding_category_level3 = 94;</code>
      * @return Whether the productBiddingCategoryLevel3 field is set.
      */
     public boolean hasProductBiddingCategoryLevel3() {
@@ -11298,7 +11298,7 @@ private static final long serialVersionUID = 0L;
      * Bidding category (level 3) of the product.
      * </pre>
      *
-     * <code>string product_bidding_category_level3 = 94;</code>
+     * <code>optional string product_bidding_category_level3 = 94;</code>
      * @return The productBiddingCategoryLevel3.
      */
     public java.lang.String getProductBiddingCategoryLevel3() {
@@ -11318,7 +11318,7 @@ private static final long serialVersionUID = 0L;
      * Bidding category (level 3) of the product.
      * </pre>
      *
-     * <code>string product_bidding_category_level3 = 94;</code>
+     * <code>optional string product_bidding_category_level3 = 94;</code>
      * @return The bytes for productBiddingCategoryLevel3.
      */
     public com.google.protobuf.ByteString
@@ -11339,7 +11339,7 @@ private static final long serialVersionUID = 0L;
      * Bidding category (level 3) of the product.
      * </pre>
      *
-     * <code>string product_bidding_category_level3 = 94;</code>
+     * <code>optional string product_bidding_category_level3 = 94;</code>
      * @param value The productBiddingCategoryLevel3 to set.
      * @return This builder for chaining.
      */
@@ -11358,7 +11358,7 @@ private static final long serialVersionUID = 0L;
      * Bidding category (level 3) of the product.
      * </pre>
      *
-     * <code>string product_bidding_category_level3 = 94;</code>
+     * <code>optional string product_bidding_category_level3 = 94;</code>
      * @return This builder for chaining.
      */
     public Builder clearProductBiddingCategoryLevel3() {
@@ -11372,7 +11372,7 @@ private static final long serialVersionUID = 0L;
      * Bidding category (level 3) of the product.
      * </pre>
      *
-     * <code>string product_bidding_category_level3 = 94;</code>
+     * <code>optional string product_bidding_category_level3 = 94;</code>
      * @param value The bytes for productBiddingCategoryLevel3 to set.
      * @return This builder for chaining.
      */
@@ -11394,7 +11394,7 @@ private static final long serialVersionUID = 0L;
      * Bidding category (level 4) of the product.
      * </pre>
      *
-     * <code>string product_bidding_category_level4 = 95;</code>
+     * <code>optional string product_bidding_category_level4 = 95;</code>
      * @return Whether the productBiddingCategoryLevel4 field is set.
      */
     public boolean hasProductBiddingCategoryLevel4() {
@@ -11405,7 +11405,7 @@ private static final long serialVersionUID = 0L;
      * Bidding category (level 4) of the product.
      * </pre>
      *
-     * <code>string product_bidding_category_level4 = 95;</code>
+     * <code>optional string product_bidding_category_level4 = 95;</code>
      * @return The productBiddingCategoryLevel4.
      */
     public java.lang.String getProductBiddingCategoryLevel4() {
@@ -11425,7 +11425,7 @@ private static final long serialVersionUID = 0L;
      * Bidding category (level 4) of the product.
      * </pre>
      *
-     * <code>string product_bidding_category_level4 = 95;</code>
+     * <code>optional string product_bidding_category_level4 = 95;</code>
      * @return The bytes for productBiddingCategoryLevel4.
      */
     public com.google.protobuf.ByteString
@@ -11446,7 +11446,7 @@ private static final long serialVersionUID = 0L;
      * Bidding category (level 4) of the product.
      * </pre>
      *
-     * <code>string product_bidding_category_level4 = 95;</code>
+     * <code>optional string product_bidding_category_level4 = 95;</code>
      * @param value The productBiddingCategoryLevel4 to set.
      * @return This builder for chaining.
      */
@@ -11465,7 +11465,7 @@ private static final long serialVersionUID = 0L;
      * Bidding category (level 4) of the product.
      * </pre>
      *
-     * <code>string product_bidding_category_level4 = 95;</code>
+     * <code>optional string product_bidding_category_level4 = 95;</code>
      * @return This builder for chaining.
      */
     public Builder clearProductBiddingCategoryLevel4() {
@@ -11479,7 +11479,7 @@ private static final long serialVersionUID = 0L;
      * Bidding category (level 4) of the product.
      * </pre>
      *
-     * <code>string product_bidding_category_level4 = 95;</code>
+     * <code>optional string product_bidding_category_level4 = 95;</code>
      * @param value The bytes for productBiddingCategoryLevel4 to set.
      * @return This builder for chaining.
      */
@@ -11501,7 +11501,7 @@ private static final long serialVersionUID = 0L;
      * Bidding category (level 5) of the product.
      * </pre>
      *
-     * <code>string product_bidding_category_level5 = 96;</code>
+     * <code>optional string product_bidding_category_level5 = 96;</code>
      * @return Whether the productBiddingCategoryLevel5 field is set.
      */
     public boolean hasProductBiddingCategoryLevel5() {
@@ -11512,7 +11512,7 @@ private static final long serialVersionUID = 0L;
      * Bidding category (level 5) of the product.
      * </pre>
      *
-     * <code>string product_bidding_category_level5 = 96;</code>
+     * <code>optional string product_bidding_category_level5 = 96;</code>
      * @return The productBiddingCategoryLevel5.
      */
     public java.lang.String getProductBiddingCategoryLevel5() {
@@ -11532,7 +11532,7 @@ private static final long serialVersionUID = 0L;
      * Bidding category (level 5) of the product.
      * </pre>
      *
-     * <code>string product_bidding_category_level5 = 96;</code>
+     * <code>optional string product_bidding_category_level5 = 96;</code>
      * @return The bytes for productBiddingCategoryLevel5.
      */
     public com.google.protobuf.ByteString
@@ -11553,7 +11553,7 @@ private static final long serialVersionUID = 0L;
      * Bidding category (level 5) of the product.
      * </pre>
      *
-     * <code>string product_bidding_category_level5 = 96;</code>
+     * <code>optional string product_bidding_category_level5 = 96;</code>
      * @param value The productBiddingCategoryLevel5 to set.
      * @return This builder for chaining.
      */
@@ -11572,7 +11572,7 @@ private static final long serialVersionUID = 0L;
      * Bidding category (level 5) of the product.
      * </pre>
      *
-     * <code>string product_bidding_category_level5 = 96;</code>
+     * <code>optional string product_bidding_category_level5 = 96;</code>
      * @return This builder for chaining.
      */
     public Builder clearProductBiddingCategoryLevel5() {
@@ -11586,7 +11586,7 @@ private static final long serialVersionUID = 0L;
      * Bidding category (level 5) of the product.
      * </pre>
      *
-     * <code>string product_bidding_category_level5 = 96;</code>
+     * <code>optional string product_bidding_category_level5 = 96;</code>
      * @param value The bytes for productBiddingCategoryLevel5 to set.
      * @return This builder for chaining.
      */
@@ -11608,7 +11608,7 @@ private static final long serialVersionUID = 0L;
      * Brand of the product.
      * </pre>
      *
-     * <code>string product_brand = 97;</code>
+     * <code>optional string product_brand = 97;</code>
      * @return Whether the productBrand field is set.
      */
     public boolean hasProductBrand() {
@@ -11619,7 +11619,7 @@ private static final long serialVersionUID = 0L;
      * Brand of the product.
      * </pre>
      *
-     * <code>string product_brand = 97;</code>
+     * <code>optional string product_brand = 97;</code>
      * @return The productBrand.
      */
     public java.lang.String getProductBrand() {
@@ -11639,7 +11639,7 @@ private static final long serialVersionUID = 0L;
      * Brand of the product.
      * </pre>
      *
-     * <code>string product_brand = 97;</code>
+     * <code>optional string product_brand = 97;</code>
      * @return The bytes for productBrand.
      */
     public com.google.protobuf.ByteString
@@ -11660,7 +11660,7 @@ private static final long serialVersionUID = 0L;
      * Brand of the product.
      * </pre>
      *
-     * <code>string product_brand = 97;</code>
+     * <code>optional string product_brand = 97;</code>
      * @param value The productBrand to set.
      * @return This builder for chaining.
      */
@@ -11679,7 +11679,7 @@ private static final long serialVersionUID = 0L;
      * Brand of the product.
      * </pre>
      *
-     * <code>string product_brand = 97;</code>
+     * <code>optional string product_brand = 97;</code>
      * @return This builder for chaining.
      */
     public Builder clearProductBrand() {
@@ -11693,7 +11693,7 @@ private static final long serialVersionUID = 0L;
      * Brand of the product.
      * </pre>
      *
-     * <code>string product_brand = 97;</code>
+     * <code>optional string product_brand = 97;</code>
      * @param value The bytes for productBrand to set.
      * @return This builder for chaining.
      */
@@ -11938,7 +11938,7 @@ private static final long serialVersionUID = 0L;
      * product.
      * </pre>
      *
-     * <code>string product_country = 98;</code>
+     * <code>optional string product_country = 98;</code>
      * @return Whether the productCountry field is set.
      */
     public boolean hasProductCountry() {
@@ -11950,7 +11950,7 @@ private static final long serialVersionUID = 0L;
      * product.
      * </pre>
      *
-     * <code>string product_country = 98;</code>
+     * <code>optional string product_country = 98;</code>
      * @return The productCountry.
      */
     public java.lang.String getProductCountry() {
@@ -11971,7 +11971,7 @@ private static final long serialVersionUID = 0L;
      * product.
      * </pre>
      *
-     * <code>string product_country = 98;</code>
+     * <code>optional string product_country = 98;</code>
      * @return The bytes for productCountry.
      */
     public com.google.protobuf.ByteString
@@ -11993,7 +11993,7 @@ private static final long serialVersionUID = 0L;
      * product.
      * </pre>
      *
-     * <code>string product_country = 98;</code>
+     * <code>optional string product_country = 98;</code>
      * @param value The productCountry to set.
      * @return This builder for chaining.
      */
@@ -12013,7 +12013,7 @@ private static final long serialVersionUID = 0L;
      * product.
      * </pre>
      *
-     * <code>string product_country = 98;</code>
+     * <code>optional string product_country = 98;</code>
      * @return This builder for chaining.
      */
     public Builder clearProductCountry() {
@@ -12028,7 +12028,7 @@ private static final long serialVersionUID = 0L;
      * product.
      * </pre>
      *
-     * <code>string product_country = 98;</code>
+     * <code>optional string product_country = 98;</code>
      * @param value The bytes for productCountry to set.
      * @return This builder for chaining.
      */
@@ -12050,7 +12050,7 @@ private static final long serialVersionUID = 0L;
      * Custom attribute 0 of the product.
      * </pre>
      *
-     * <code>string product_custom_attribute0 = 99;</code>
+     * <code>optional string product_custom_attribute0 = 99;</code>
      * @return Whether the productCustomAttribute0 field is set.
      */
     public boolean hasProductCustomAttribute0() {
@@ -12061,7 +12061,7 @@ private static final long serialVersionUID = 0L;
      * Custom attribute 0 of the product.
      * </pre>
      *
-     * <code>string product_custom_attribute0 = 99;</code>
+     * <code>optional string product_custom_attribute0 = 99;</code>
      * @return The productCustomAttribute0.
      */
     public java.lang.String getProductCustomAttribute0() {
@@ -12081,7 +12081,7 @@ private static final long serialVersionUID = 0L;
      * Custom attribute 0 of the product.
      * </pre>
      *
-     * <code>string product_custom_attribute0 = 99;</code>
+     * <code>optional string product_custom_attribute0 = 99;</code>
      * @return The bytes for productCustomAttribute0.
      */
     public com.google.protobuf.ByteString
@@ -12102,7 +12102,7 @@ private static final long serialVersionUID = 0L;
      * Custom attribute 0 of the product.
      * </pre>
      *
-     * <code>string product_custom_attribute0 = 99;</code>
+     * <code>optional string product_custom_attribute0 = 99;</code>
      * @param value The productCustomAttribute0 to set.
      * @return This builder for chaining.
      */
@@ -12121,7 +12121,7 @@ private static final long serialVersionUID = 0L;
      * Custom attribute 0 of the product.
      * </pre>
      *
-     * <code>string product_custom_attribute0 = 99;</code>
+     * <code>optional string product_custom_attribute0 = 99;</code>
      * @return This builder for chaining.
      */
     public Builder clearProductCustomAttribute0() {
@@ -12135,7 +12135,7 @@ private static final long serialVersionUID = 0L;
      * Custom attribute 0 of the product.
      * </pre>
      *
-     * <code>string product_custom_attribute0 = 99;</code>
+     * <code>optional string product_custom_attribute0 = 99;</code>
      * @param value The bytes for productCustomAttribute0 to set.
      * @return This builder for chaining.
      */
@@ -12157,7 +12157,7 @@ private static final long serialVersionUID = 0L;
      * Custom attribute 1 of the product.
      * </pre>
      *
-     * <code>string product_custom_attribute1 = 100;</code>
+     * <code>optional string product_custom_attribute1 = 100;</code>
      * @return Whether the productCustomAttribute1 field is set.
      */
     public boolean hasProductCustomAttribute1() {
@@ -12168,7 +12168,7 @@ private static final long serialVersionUID = 0L;
      * Custom attribute 1 of the product.
      * </pre>
      *
-     * <code>string product_custom_attribute1 = 100;</code>
+     * <code>optional string product_custom_attribute1 = 100;</code>
      * @return The productCustomAttribute1.
      */
     public java.lang.String getProductCustomAttribute1() {
@@ -12188,7 +12188,7 @@ private static final long serialVersionUID = 0L;
      * Custom attribute 1 of the product.
      * </pre>
      *
-     * <code>string product_custom_attribute1 = 100;</code>
+     * <code>optional string product_custom_attribute1 = 100;</code>
      * @return The bytes for productCustomAttribute1.
      */
     public com.google.protobuf.ByteString
@@ -12209,7 +12209,7 @@ private static final long serialVersionUID = 0L;
      * Custom attribute 1 of the product.
      * </pre>
      *
-     * <code>string product_custom_attribute1 = 100;</code>
+     * <code>optional string product_custom_attribute1 = 100;</code>
      * @param value The productCustomAttribute1 to set.
      * @return This builder for chaining.
      */
@@ -12228,7 +12228,7 @@ private static final long serialVersionUID = 0L;
      * Custom attribute 1 of the product.
      * </pre>
      *
-     * <code>string product_custom_attribute1 = 100;</code>
+     * <code>optional string product_custom_attribute1 = 100;</code>
      * @return This builder for chaining.
      */
     public Builder clearProductCustomAttribute1() {
@@ -12242,7 +12242,7 @@ private static final long serialVersionUID = 0L;
      * Custom attribute 1 of the product.
      * </pre>
      *
-     * <code>string product_custom_attribute1 = 100;</code>
+     * <code>optional string product_custom_attribute1 = 100;</code>
      * @param value The bytes for productCustomAttribute1 to set.
      * @return This builder for chaining.
      */
@@ -12264,7 +12264,7 @@ private static final long serialVersionUID = 0L;
      * Custom attribute 2 of the product.
      * </pre>
      *
-     * <code>string product_custom_attribute2 = 101;</code>
+     * <code>optional string product_custom_attribute2 = 101;</code>
      * @return Whether the productCustomAttribute2 field is set.
      */
     public boolean hasProductCustomAttribute2() {
@@ -12275,7 +12275,7 @@ private static final long serialVersionUID = 0L;
      * Custom attribute 2 of the product.
      * </pre>
      *
-     * <code>string product_custom_attribute2 = 101;</code>
+     * <code>optional string product_custom_attribute2 = 101;</code>
      * @return The productCustomAttribute2.
      */
     public java.lang.String getProductCustomAttribute2() {
@@ -12295,7 +12295,7 @@ private static final long serialVersionUID = 0L;
      * Custom attribute 2 of the product.
      * </pre>
      *
-     * <code>string product_custom_attribute2 = 101;</code>
+     * <code>optional string product_custom_attribute2 = 101;</code>
      * @return The bytes for productCustomAttribute2.
      */
     public com.google.protobuf.ByteString
@@ -12316,7 +12316,7 @@ private static final long serialVersionUID = 0L;
      * Custom attribute 2 of the product.
      * </pre>
      *
-     * <code>string product_custom_attribute2 = 101;</code>
+     * <code>optional string product_custom_attribute2 = 101;</code>
      * @param value The productCustomAttribute2 to set.
      * @return This builder for chaining.
      */
@@ -12335,7 +12335,7 @@ private static final long serialVersionUID = 0L;
      * Custom attribute 2 of the product.
      * </pre>
      *
-     * <code>string product_custom_attribute2 = 101;</code>
+     * <code>optional string product_custom_attribute2 = 101;</code>
      * @return This builder for chaining.
      */
     public Builder clearProductCustomAttribute2() {
@@ -12349,7 +12349,7 @@ private static final long serialVersionUID = 0L;
      * Custom attribute 2 of the product.
      * </pre>
      *
-     * <code>string product_custom_attribute2 = 101;</code>
+     * <code>optional string product_custom_attribute2 = 101;</code>
      * @param value The bytes for productCustomAttribute2 to set.
      * @return This builder for chaining.
      */
@@ -12371,7 +12371,7 @@ private static final long serialVersionUID = 0L;
      * Custom attribute 3 of the product.
      * </pre>
      *
-     * <code>string product_custom_attribute3 = 102;</code>
+     * <code>optional string product_custom_attribute3 = 102;</code>
      * @return Whether the productCustomAttribute3 field is set.
      */
     public boolean hasProductCustomAttribute3() {
@@ -12382,7 +12382,7 @@ private static final long serialVersionUID = 0L;
      * Custom attribute 3 of the product.
      * </pre>
      *
-     * <code>string product_custom_attribute3 = 102;</code>
+     * <code>optional string product_custom_attribute3 = 102;</code>
      * @return The productCustomAttribute3.
      */
     public java.lang.String getProductCustomAttribute3() {
@@ -12402,7 +12402,7 @@ private static final long serialVersionUID = 0L;
      * Custom attribute 3 of the product.
      * </pre>
      *
-     * <code>string product_custom_attribute3 = 102;</code>
+     * <code>optional string product_custom_attribute3 = 102;</code>
      * @return The bytes for productCustomAttribute3.
      */
     public com.google.protobuf.ByteString
@@ -12423,7 +12423,7 @@ private static final long serialVersionUID = 0L;
      * Custom attribute 3 of the product.
      * </pre>
      *
-     * <code>string product_custom_attribute3 = 102;</code>
+     * <code>optional string product_custom_attribute3 = 102;</code>
      * @param value The productCustomAttribute3 to set.
      * @return This builder for chaining.
      */
@@ -12442,7 +12442,7 @@ private static final long serialVersionUID = 0L;
      * Custom attribute 3 of the product.
      * </pre>
      *
-     * <code>string product_custom_attribute3 = 102;</code>
+     * <code>optional string product_custom_attribute3 = 102;</code>
      * @return This builder for chaining.
      */
     public Builder clearProductCustomAttribute3() {
@@ -12456,7 +12456,7 @@ private static final long serialVersionUID = 0L;
      * Custom attribute 3 of the product.
      * </pre>
      *
-     * <code>string product_custom_attribute3 = 102;</code>
+     * <code>optional string product_custom_attribute3 = 102;</code>
      * @param value The bytes for productCustomAttribute3 to set.
      * @return This builder for chaining.
      */
@@ -12478,7 +12478,7 @@ private static final long serialVersionUID = 0L;
      * Custom attribute 4 of the product.
      * </pre>
      *
-     * <code>string product_custom_attribute4 = 103;</code>
+     * <code>optional string product_custom_attribute4 = 103;</code>
      * @return Whether the productCustomAttribute4 field is set.
      */
     public boolean hasProductCustomAttribute4() {
@@ -12489,7 +12489,7 @@ private static final long serialVersionUID = 0L;
      * Custom attribute 4 of the product.
      * </pre>
      *
-     * <code>string product_custom_attribute4 = 103;</code>
+     * <code>optional string product_custom_attribute4 = 103;</code>
      * @return The productCustomAttribute4.
      */
     public java.lang.String getProductCustomAttribute4() {
@@ -12509,7 +12509,7 @@ private static final long serialVersionUID = 0L;
      * Custom attribute 4 of the product.
      * </pre>
      *
-     * <code>string product_custom_attribute4 = 103;</code>
+     * <code>optional string product_custom_attribute4 = 103;</code>
      * @return The bytes for productCustomAttribute4.
      */
     public com.google.protobuf.ByteString
@@ -12530,7 +12530,7 @@ private static final long serialVersionUID = 0L;
      * Custom attribute 4 of the product.
      * </pre>
      *
-     * <code>string product_custom_attribute4 = 103;</code>
+     * <code>optional string product_custom_attribute4 = 103;</code>
      * @param value The productCustomAttribute4 to set.
      * @return This builder for chaining.
      */
@@ -12549,7 +12549,7 @@ private static final long serialVersionUID = 0L;
      * Custom attribute 4 of the product.
      * </pre>
      *
-     * <code>string product_custom_attribute4 = 103;</code>
+     * <code>optional string product_custom_attribute4 = 103;</code>
      * @return This builder for chaining.
      */
     public Builder clearProductCustomAttribute4() {
@@ -12563,7 +12563,7 @@ private static final long serialVersionUID = 0L;
      * Custom attribute 4 of the product.
      * </pre>
      *
-     * <code>string product_custom_attribute4 = 103;</code>
+     * <code>optional string product_custom_attribute4 = 103;</code>
      * @param value The bytes for productCustomAttribute4 to set.
      * @return This builder for chaining.
      */
@@ -12585,7 +12585,7 @@ private static final long serialVersionUID = 0L;
      * Item ID of the product.
      * </pre>
      *
-     * <code>string product_item_id = 104;</code>
+     * <code>optional string product_item_id = 104;</code>
      * @return Whether the productItemId field is set.
      */
     public boolean hasProductItemId() {
@@ -12596,7 +12596,7 @@ private static final long serialVersionUID = 0L;
      * Item ID of the product.
      * </pre>
      *
-     * <code>string product_item_id = 104;</code>
+     * <code>optional string product_item_id = 104;</code>
      * @return The productItemId.
      */
     public java.lang.String getProductItemId() {
@@ -12616,7 +12616,7 @@ private static final long serialVersionUID = 0L;
      * Item ID of the product.
      * </pre>
      *
-     * <code>string product_item_id = 104;</code>
+     * <code>optional string product_item_id = 104;</code>
      * @return The bytes for productItemId.
      */
     public com.google.protobuf.ByteString
@@ -12637,7 +12637,7 @@ private static final long serialVersionUID = 0L;
      * Item ID of the product.
      * </pre>
      *
-     * <code>string product_item_id = 104;</code>
+     * <code>optional string product_item_id = 104;</code>
      * @param value The productItemId to set.
      * @return This builder for chaining.
      */
@@ -12656,7 +12656,7 @@ private static final long serialVersionUID = 0L;
      * Item ID of the product.
      * </pre>
      *
-     * <code>string product_item_id = 104;</code>
+     * <code>optional string product_item_id = 104;</code>
      * @return This builder for chaining.
      */
     public Builder clearProductItemId() {
@@ -12670,7 +12670,7 @@ private static final long serialVersionUID = 0L;
      * Item ID of the product.
      * </pre>
      *
-     * <code>string product_item_id = 104;</code>
+     * <code>optional string product_item_id = 104;</code>
      * @param value The bytes for productItemId to set.
      * @return This builder for chaining.
      */
@@ -12692,7 +12692,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the language constant for the language of the product.
      * </pre>
      *
-     * <code>string product_language = 105;</code>
+     * <code>optional string product_language = 105;</code>
      * @return Whether the productLanguage field is set.
      */
     public boolean hasProductLanguage() {
@@ -12703,7 +12703,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the language constant for the language of the product.
      * </pre>
      *
-     * <code>string product_language = 105;</code>
+     * <code>optional string product_language = 105;</code>
      * @return The productLanguage.
      */
     public java.lang.String getProductLanguage() {
@@ -12723,7 +12723,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the language constant for the language of the product.
      * </pre>
      *
-     * <code>string product_language = 105;</code>
+     * <code>optional string product_language = 105;</code>
      * @return The bytes for productLanguage.
      */
     public com.google.protobuf.ByteString
@@ -12744,7 +12744,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the language constant for the language of the product.
      * </pre>
      *
-     * <code>string product_language = 105;</code>
+     * <code>optional string product_language = 105;</code>
      * @param value The productLanguage to set.
      * @return This builder for chaining.
      */
@@ -12763,7 +12763,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the language constant for the language of the product.
      * </pre>
      *
-     * <code>string product_language = 105;</code>
+     * <code>optional string product_language = 105;</code>
      * @return This builder for chaining.
      */
     public Builder clearProductLanguage() {
@@ -12777,7 +12777,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the language constant for the language of the product.
      * </pre>
      *
-     * <code>string product_language = 105;</code>
+     * <code>optional string product_language = 105;</code>
      * @param value The bytes for productLanguage to set.
      * @return This builder for chaining.
      */
@@ -12799,7 +12799,7 @@ private static final long serialVersionUID = 0L;
      * Merchant ID of the product.
      * </pre>
      *
-     * <code>int64 product_merchant_id = 133;</code>
+     * <code>optional int64 product_merchant_id = 133;</code>
      * @return Whether the productMerchantId field is set.
      */
     @java.lang.Override
@@ -12811,7 +12811,7 @@ private static final long serialVersionUID = 0L;
      * Merchant ID of the product.
      * </pre>
      *
-     * <code>int64 product_merchant_id = 133;</code>
+     * <code>optional int64 product_merchant_id = 133;</code>
      * @return The productMerchantId.
      */
     @java.lang.Override
@@ -12823,7 +12823,7 @@ private static final long serialVersionUID = 0L;
      * Merchant ID of the product.
      * </pre>
      *
-     * <code>int64 product_merchant_id = 133;</code>
+     * <code>optional int64 product_merchant_id = 133;</code>
      * @param value The productMerchantId to set.
      * @return This builder for chaining.
      */
@@ -12838,7 +12838,7 @@ private static final long serialVersionUID = 0L;
      * Merchant ID of the product.
      * </pre>
      *
-     * <code>int64 product_merchant_id = 133;</code>
+     * <code>optional int64 product_merchant_id = 133;</code>
      * @return This builder for chaining.
      */
     public Builder clearProductMerchantId() {
@@ -12854,7 +12854,7 @@ private static final long serialVersionUID = 0L;
      * Store ID of the product.
      * </pre>
      *
-     * <code>string product_store_id = 106;</code>
+     * <code>optional string product_store_id = 106;</code>
      * @return Whether the productStoreId field is set.
      */
     public boolean hasProductStoreId() {
@@ -12865,7 +12865,7 @@ private static final long serialVersionUID = 0L;
      * Store ID of the product.
      * </pre>
      *
-     * <code>string product_store_id = 106;</code>
+     * <code>optional string product_store_id = 106;</code>
      * @return The productStoreId.
      */
     public java.lang.String getProductStoreId() {
@@ -12885,7 +12885,7 @@ private static final long serialVersionUID = 0L;
      * Store ID of the product.
      * </pre>
      *
-     * <code>string product_store_id = 106;</code>
+     * <code>optional string product_store_id = 106;</code>
      * @return The bytes for productStoreId.
      */
     public com.google.protobuf.ByteString
@@ -12906,7 +12906,7 @@ private static final long serialVersionUID = 0L;
      * Store ID of the product.
      * </pre>
      *
-     * <code>string product_store_id = 106;</code>
+     * <code>optional string product_store_id = 106;</code>
      * @param value The productStoreId to set.
      * @return This builder for chaining.
      */
@@ -12925,7 +12925,7 @@ private static final long serialVersionUID = 0L;
      * Store ID of the product.
      * </pre>
      *
-     * <code>string product_store_id = 106;</code>
+     * <code>optional string product_store_id = 106;</code>
      * @return This builder for chaining.
      */
     public Builder clearProductStoreId() {
@@ -12939,7 +12939,7 @@ private static final long serialVersionUID = 0L;
      * Store ID of the product.
      * </pre>
      *
-     * <code>string product_store_id = 106;</code>
+     * <code>optional string product_store_id = 106;</code>
      * @param value The bytes for productStoreId to set.
      * @return This builder for chaining.
      */
@@ -12961,7 +12961,7 @@ private static final long serialVersionUID = 0L;
      * Title of the product.
      * </pre>
      *
-     * <code>string product_title = 107;</code>
+     * <code>optional string product_title = 107;</code>
      * @return Whether the productTitle field is set.
      */
     public boolean hasProductTitle() {
@@ -12972,7 +12972,7 @@ private static final long serialVersionUID = 0L;
      * Title of the product.
      * </pre>
      *
-     * <code>string product_title = 107;</code>
+     * <code>optional string product_title = 107;</code>
      * @return The productTitle.
      */
     public java.lang.String getProductTitle() {
@@ -12992,7 +12992,7 @@ private static final long serialVersionUID = 0L;
      * Title of the product.
      * </pre>
      *
-     * <code>string product_title = 107;</code>
+     * <code>optional string product_title = 107;</code>
      * @return The bytes for productTitle.
      */
     public com.google.protobuf.ByteString
@@ -13013,7 +13013,7 @@ private static final long serialVersionUID = 0L;
      * Title of the product.
      * </pre>
      *
-     * <code>string product_title = 107;</code>
+     * <code>optional string product_title = 107;</code>
      * @param value The productTitle to set.
      * @return This builder for chaining.
      */
@@ -13032,7 +13032,7 @@ private static final long serialVersionUID = 0L;
      * Title of the product.
      * </pre>
      *
-     * <code>string product_title = 107;</code>
+     * <code>optional string product_title = 107;</code>
      * @return This builder for chaining.
      */
     public Builder clearProductTitle() {
@@ -13046,7 +13046,7 @@ private static final long serialVersionUID = 0L;
      * Title of the product.
      * </pre>
      *
-     * <code>string product_title = 107;</code>
+     * <code>optional string product_title = 107;</code>
      * @param value The bytes for productTitle to set.
      * @return This builder for chaining.
      */
@@ -13068,7 +13068,7 @@ private static final long serialVersionUID = 0L;
      * Type (level 1) of the product.
      * </pre>
      *
-     * <code>string product_type_l1 = 108;</code>
+     * <code>optional string product_type_l1 = 108;</code>
      * @return Whether the productTypeL1 field is set.
      */
     public boolean hasProductTypeL1() {
@@ -13079,7 +13079,7 @@ private static final long serialVersionUID = 0L;
      * Type (level 1) of the product.
      * </pre>
      *
-     * <code>string product_type_l1 = 108;</code>
+     * <code>optional string product_type_l1 = 108;</code>
      * @return The productTypeL1.
      */
     public java.lang.String getProductTypeL1() {
@@ -13099,7 +13099,7 @@ private static final long serialVersionUID = 0L;
      * Type (level 1) of the product.
      * </pre>
      *
-     * <code>string product_type_l1 = 108;</code>
+     * <code>optional string product_type_l1 = 108;</code>
      * @return The bytes for productTypeL1.
      */
     public com.google.protobuf.ByteString
@@ -13120,7 +13120,7 @@ private static final long serialVersionUID = 0L;
      * Type (level 1) of the product.
      * </pre>
      *
-     * <code>string product_type_l1 = 108;</code>
+     * <code>optional string product_type_l1 = 108;</code>
      * @param value The productTypeL1 to set.
      * @return This builder for chaining.
      */
@@ -13139,7 +13139,7 @@ private static final long serialVersionUID = 0L;
      * Type (level 1) of the product.
      * </pre>
      *
-     * <code>string product_type_l1 = 108;</code>
+     * <code>optional string product_type_l1 = 108;</code>
      * @return This builder for chaining.
      */
     public Builder clearProductTypeL1() {
@@ -13153,7 +13153,7 @@ private static final long serialVersionUID = 0L;
      * Type (level 1) of the product.
      * </pre>
      *
-     * <code>string product_type_l1 = 108;</code>
+     * <code>optional string product_type_l1 = 108;</code>
      * @param value The bytes for productTypeL1 to set.
      * @return This builder for chaining.
      */
@@ -13175,7 +13175,7 @@ private static final long serialVersionUID = 0L;
      * Type (level 2) of the product.
      * </pre>
      *
-     * <code>string product_type_l2 = 109;</code>
+     * <code>optional string product_type_l2 = 109;</code>
      * @return Whether the productTypeL2 field is set.
      */
     public boolean hasProductTypeL2() {
@@ -13186,7 +13186,7 @@ private static final long serialVersionUID = 0L;
      * Type (level 2) of the product.
      * </pre>
      *
-     * <code>string product_type_l2 = 109;</code>
+     * <code>optional string product_type_l2 = 109;</code>
      * @return The productTypeL2.
      */
     public java.lang.String getProductTypeL2() {
@@ -13206,7 +13206,7 @@ private static final long serialVersionUID = 0L;
      * Type (level 2) of the product.
      * </pre>
      *
-     * <code>string product_type_l2 = 109;</code>
+     * <code>optional string product_type_l2 = 109;</code>
      * @return The bytes for productTypeL2.
      */
     public com.google.protobuf.ByteString
@@ -13227,7 +13227,7 @@ private static final long serialVersionUID = 0L;
      * Type (level 2) of the product.
      * </pre>
      *
-     * <code>string product_type_l2 = 109;</code>
+     * <code>optional string product_type_l2 = 109;</code>
      * @param value The productTypeL2 to set.
      * @return This builder for chaining.
      */
@@ -13246,7 +13246,7 @@ private static final long serialVersionUID = 0L;
      * Type (level 2) of the product.
      * </pre>
      *
-     * <code>string product_type_l2 = 109;</code>
+     * <code>optional string product_type_l2 = 109;</code>
      * @return This builder for chaining.
      */
     public Builder clearProductTypeL2() {
@@ -13260,7 +13260,7 @@ private static final long serialVersionUID = 0L;
      * Type (level 2) of the product.
      * </pre>
      *
-     * <code>string product_type_l2 = 109;</code>
+     * <code>optional string product_type_l2 = 109;</code>
      * @param value The bytes for productTypeL2 to set.
      * @return This builder for chaining.
      */
@@ -13282,7 +13282,7 @@ private static final long serialVersionUID = 0L;
      * Type (level 3) of the product.
      * </pre>
      *
-     * <code>string product_type_l3 = 110;</code>
+     * <code>optional string product_type_l3 = 110;</code>
      * @return Whether the productTypeL3 field is set.
      */
     public boolean hasProductTypeL3() {
@@ -13293,7 +13293,7 @@ private static final long serialVersionUID = 0L;
      * Type (level 3) of the product.
      * </pre>
      *
-     * <code>string product_type_l3 = 110;</code>
+     * <code>optional string product_type_l3 = 110;</code>
      * @return The productTypeL3.
      */
     public java.lang.String getProductTypeL3() {
@@ -13313,7 +13313,7 @@ private static final long serialVersionUID = 0L;
      * Type (level 3) of the product.
      * </pre>
      *
-     * <code>string product_type_l3 = 110;</code>
+     * <code>optional string product_type_l3 = 110;</code>
      * @return The bytes for productTypeL3.
      */
     public com.google.protobuf.ByteString
@@ -13334,7 +13334,7 @@ private static final long serialVersionUID = 0L;
      * Type (level 3) of the product.
      * </pre>
      *
-     * <code>string product_type_l3 = 110;</code>
+     * <code>optional string product_type_l3 = 110;</code>
      * @param value The productTypeL3 to set.
      * @return This builder for chaining.
      */
@@ -13353,7 +13353,7 @@ private static final long serialVersionUID = 0L;
      * Type (level 3) of the product.
      * </pre>
      *
-     * <code>string product_type_l3 = 110;</code>
+     * <code>optional string product_type_l3 = 110;</code>
      * @return This builder for chaining.
      */
     public Builder clearProductTypeL3() {
@@ -13367,7 +13367,7 @@ private static final long serialVersionUID = 0L;
      * Type (level 3) of the product.
      * </pre>
      *
-     * <code>string product_type_l3 = 110;</code>
+     * <code>optional string product_type_l3 = 110;</code>
      * @param value The bytes for productTypeL3 to set.
      * @return This builder for chaining.
      */
@@ -13389,7 +13389,7 @@ private static final long serialVersionUID = 0L;
      * Type (level 4) of the product.
      * </pre>
      *
-     * <code>string product_type_l4 = 111;</code>
+     * <code>optional string product_type_l4 = 111;</code>
      * @return Whether the productTypeL4 field is set.
      */
     public boolean hasProductTypeL4() {
@@ -13400,7 +13400,7 @@ private static final long serialVersionUID = 0L;
      * Type (level 4) of the product.
      * </pre>
      *
-     * <code>string product_type_l4 = 111;</code>
+     * <code>optional string product_type_l4 = 111;</code>
      * @return The productTypeL4.
      */
     public java.lang.String getProductTypeL4() {
@@ -13420,7 +13420,7 @@ private static final long serialVersionUID = 0L;
      * Type (level 4) of the product.
      * </pre>
      *
-     * <code>string product_type_l4 = 111;</code>
+     * <code>optional string product_type_l4 = 111;</code>
      * @return The bytes for productTypeL4.
      */
     public com.google.protobuf.ByteString
@@ -13441,7 +13441,7 @@ private static final long serialVersionUID = 0L;
      * Type (level 4) of the product.
      * </pre>
      *
-     * <code>string product_type_l4 = 111;</code>
+     * <code>optional string product_type_l4 = 111;</code>
      * @param value The productTypeL4 to set.
      * @return This builder for chaining.
      */
@@ -13460,7 +13460,7 @@ private static final long serialVersionUID = 0L;
      * Type (level 4) of the product.
      * </pre>
      *
-     * <code>string product_type_l4 = 111;</code>
+     * <code>optional string product_type_l4 = 111;</code>
      * @return This builder for chaining.
      */
     public Builder clearProductTypeL4() {
@@ -13474,7 +13474,7 @@ private static final long serialVersionUID = 0L;
      * Type (level 4) of the product.
      * </pre>
      *
-     * <code>string product_type_l4 = 111;</code>
+     * <code>optional string product_type_l4 = 111;</code>
      * @param value The bytes for productTypeL4 to set.
      * @return This builder for chaining.
      */
@@ -13496,7 +13496,7 @@ private static final long serialVersionUID = 0L;
      * Type (level 5) of the product.
      * </pre>
      *
-     * <code>string product_type_l5 = 112;</code>
+     * <code>optional string product_type_l5 = 112;</code>
      * @return Whether the productTypeL5 field is set.
      */
     public boolean hasProductTypeL5() {
@@ -13507,7 +13507,7 @@ private static final long serialVersionUID = 0L;
      * Type (level 5) of the product.
      * </pre>
      *
-     * <code>string product_type_l5 = 112;</code>
+     * <code>optional string product_type_l5 = 112;</code>
      * @return The productTypeL5.
      */
     public java.lang.String getProductTypeL5() {
@@ -13527,7 +13527,7 @@ private static final long serialVersionUID = 0L;
      * Type (level 5) of the product.
      * </pre>
      *
-     * <code>string product_type_l5 = 112;</code>
+     * <code>optional string product_type_l5 = 112;</code>
      * @return The bytes for productTypeL5.
      */
     public com.google.protobuf.ByteString
@@ -13548,7 +13548,7 @@ private static final long serialVersionUID = 0L;
      * Type (level 5) of the product.
      * </pre>
      *
-     * <code>string product_type_l5 = 112;</code>
+     * <code>optional string product_type_l5 = 112;</code>
      * @param value The productTypeL5 to set.
      * @return This builder for chaining.
      */
@@ -13567,7 +13567,7 @@ private static final long serialVersionUID = 0L;
      * Type (level 5) of the product.
      * </pre>
      *
-     * <code>string product_type_l5 = 112;</code>
+     * <code>optional string product_type_l5 = 112;</code>
      * @return This builder for chaining.
      */
     public Builder clearProductTypeL5() {
@@ -13581,7 +13581,7 @@ private static final long serialVersionUID = 0L;
      * Type (level 5) of the product.
      * </pre>
      *
-     * <code>string product_type_l5 = 112;</code>
+     * <code>optional string product_type_l5 = 112;</code>
      * @param value The bytes for productTypeL5 to set.
      * @return This builder for chaining.
      */
@@ -13605,7 +13605,7 @@ private static final long serialVersionUID = 0L;
      * starts on 2018-04-01. Formatted as yyyy-MM-dd.
      * </pre>
      *
-     * <code>string quarter = 128;</code>
+     * <code>optional string quarter = 128;</code>
      * @return Whether the quarter field is set.
      */
     public boolean hasQuarter() {
@@ -13618,7 +13618,7 @@ private static final long serialVersionUID = 0L;
      * starts on 2018-04-01. Formatted as yyyy-MM-dd.
      * </pre>
      *
-     * <code>string quarter = 128;</code>
+     * <code>optional string quarter = 128;</code>
      * @return The quarter.
      */
     public java.lang.String getQuarter() {
@@ -13640,7 +13640,7 @@ private static final long serialVersionUID = 0L;
      * starts on 2018-04-01. Formatted as yyyy-MM-dd.
      * </pre>
      *
-     * <code>string quarter = 128;</code>
+     * <code>optional string quarter = 128;</code>
      * @return The bytes for quarter.
      */
     public com.google.protobuf.ByteString
@@ -13663,7 +13663,7 @@ private static final long serialVersionUID = 0L;
      * starts on 2018-04-01. Formatted as yyyy-MM-dd.
      * </pre>
      *
-     * <code>string quarter = 128;</code>
+     * <code>optional string quarter = 128;</code>
      * @param value The quarter to set.
      * @return This builder for chaining.
      */
@@ -13684,7 +13684,7 @@ private static final long serialVersionUID = 0L;
      * starts on 2018-04-01. Formatted as yyyy-MM-dd.
      * </pre>
      *
-     * <code>string quarter = 128;</code>
+     * <code>optional string quarter = 128;</code>
      * @return This builder for chaining.
      */
     public Builder clearQuarter() {
@@ -13700,7 +13700,7 @@ private static final long serialVersionUID = 0L;
      * starts on 2018-04-01. Formatted as yyyy-MM-dd.
      * </pre>
      *
-     * <code>string quarter = 128;</code>
+     * <code>optional string quarter = 128;</code>
      * @param value The bytes for quarter to set.
      * @return This builder for chaining.
      */
@@ -14122,7 +14122,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the ad group criterion that represents webpage criterion.
      * </pre>
      *
-     * <code>string webpage = 129;</code>
+     * <code>optional string webpage = 129;</code>
      * @return Whether the webpage field is set.
      */
     public boolean hasWebpage() {
@@ -14133,7 +14133,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the ad group criterion that represents webpage criterion.
      * </pre>
      *
-     * <code>string webpage = 129;</code>
+     * <code>optional string webpage = 129;</code>
      * @return The webpage.
      */
     public java.lang.String getWebpage() {
@@ -14153,7 +14153,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the ad group criterion that represents webpage criterion.
      * </pre>
      *
-     * <code>string webpage = 129;</code>
+     * <code>optional string webpage = 129;</code>
      * @return The bytes for webpage.
      */
     public com.google.protobuf.ByteString
@@ -14174,7 +14174,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the ad group criterion that represents webpage criterion.
      * </pre>
      *
-     * <code>string webpage = 129;</code>
+     * <code>optional string webpage = 129;</code>
      * @param value The webpage to set.
      * @return This builder for chaining.
      */
@@ -14193,7 +14193,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the ad group criterion that represents webpage criterion.
      * </pre>
      *
-     * <code>string webpage = 129;</code>
+     * <code>optional string webpage = 129;</code>
      * @return This builder for chaining.
      */
     public Builder clearWebpage() {
@@ -14207,7 +14207,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the ad group criterion that represents webpage criterion.
      * </pre>
      *
-     * <code>string webpage = 129;</code>
+     * <code>optional string webpage = 129;</code>
      * @param value The bytes for webpage to set.
      * @return This builder for chaining.
      */
@@ -14230,7 +14230,7 @@ private static final long serialVersionUID = 0L;
      * Monday. Formatted as yyyy-MM-dd.
      * </pre>
      *
-     * <code>string week = 130;</code>
+     * <code>optional string week = 130;</code>
      * @return Whether the week field is set.
      */
     public boolean hasWeek() {
@@ -14242,7 +14242,7 @@ private static final long serialVersionUID = 0L;
      * Monday. Formatted as yyyy-MM-dd.
      * </pre>
      *
-     * <code>string week = 130;</code>
+     * <code>optional string week = 130;</code>
      * @return The week.
      */
     public java.lang.String getWeek() {
@@ -14263,7 +14263,7 @@ private static final long serialVersionUID = 0L;
      * Monday. Formatted as yyyy-MM-dd.
      * </pre>
      *
-     * <code>string week = 130;</code>
+     * <code>optional string week = 130;</code>
      * @return The bytes for week.
      */
     public com.google.protobuf.ByteString
@@ -14285,7 +14285,7 @@ private static final long serialVersionUID = 0L;
      * Monday. Formatted as yyyy-MM-dd.
      * </pre>
      *
-     * <code>string week = 130;</code>
+     * <code>optional string week = 130;</code>
      * @param value The week to set.
      * @return This builder for chaining.
      */
@@ -14305,7 +14305,7 @@ private static final long serialVersionUID = 0L;
      * Monday. Formatted as yyyy-MM-dd.
      * </pre>
      *
-     * <code>string week = 130;</code>
+     * <code>optional string week = 130;</code>
      * @return This builder for chaining.
      */
     public Builder clearWeek() {
@@ -14320,7 +14320,7 @@ private static final long serialVersionUID = 0L;
      * Monday. Formatted as yyyy-MM-dd.
      * </pre>
      *
-     * <code>string week = 130;</code>
+     * <code>optional string week = 130;</code>
      * @param value The bytes for week to set.
      * @return This builder for chaining.
      */
@@ -14342,7 +14342,7 @@ private static final long serialVersionUID = 0L;
      * Year, formatted as yyyy.
      * </pre>
      *
-     * <code>int32 year = 131;</code>
+     * <code>optional int32 year = 131;</code>
      * @return Whether the year field is set.
      */
     @java.lang.Override
@@ -14354,7 +14354,7 @@ private static final long serialVersionUID = 0L;
      * Year, formatted as yyyy.
      * </pre>
      *
-     * <code>int32 year = 131;</code>
+     * <code>optional int32 year = 131;</code>
      * @return The year.
      */
     @java.lang.Override
@@ -14366,7 +14366,7 @@ private static final long serialVersionUID = 0L;
      * Year, formatted as yyyy.
      * </pre>
      *
-     * <code>int32 year = 131;</code>
+     * <code>optional int32 year = 131;</code>
      * @param value The year to set.
      * @return This builder for chaining.
      */
@@ -14381,7 +14381,7 @@ private static final long serialVersionUID = 0L;
      * Year, formatted as yyyy.
      * </pre>
      *
-     * <code>int32 year = 131;</code>
+     * <code>optional int32 year = 131;</code>
      * @return This builder for chaining.
      */
     public Builder clearYear() {
@@ -14398,7 +14398,7 @@ private static final long serialVersionUID = 0L;
      * Null value means this segment is not applicable, e.g. non-iOS campaign.
      * </pre>
      *
-     * <code>int64 sk_ad_network_conversion_value = 137;</code>
+     * <code>optional int64 sk_ad_network_conversion_value = 137;</code>
      * @return Whether the skAdNetworkConversionValue field is set.
      */
     @java.lang.Override
@@ -14411,7 +14411,7 @@ private static final long serialVersionUID = 0L;
      * Null value means this segment is not applicable, e.g. non-iOS campaign.
      * </pre>
      *
-     * <code>int64 sk_ad_network_conversion_value = 137;</code>
+     * <code>optional int64 sk_ad_network_conversion_value = 137;</code>
      * @return The skAdNetworkConversionValue.
      */
     @java.lang.Override
@@ -14424,7 +14424,7 @@ private static final long serialVersionUID = 0L;
      * Null value means this segment is not applicable, e.g. non-iOS campaign.
      * </pre>
      *
-     * <code>int64 sk_ad_network_conversion_value = 137;</code>
+     * <code>optional int64 sk_ad_network_conversion_value = 137;</code>
      * @param value The skAdNetworkConversionValue to set.
      * @return This builder for chaining.
      */
@@ -14440,7 +14440,7 @@ private static final long serialVersionUID = 0L;
      * Null value means this segment is not applicable, e.g. non-iOS campaign.
      * </pre>
      *
-     * <code>int64 sk_ad_network_conversion_value = 137;</code>
+     * <code>optional int64 sk_ad_network_conversion_value = 137;</code>
      * @return This builder for chaining.
      */
     public Builder clearSkAdNetworkConversionValue() {
@@ -14466,7 +14466,7 @@ private static final long serialVersionUID = 0L;
      * other parts of the served ad this asset is served with.
      * </pre>
      *
-     * <code>.google.ads.googleads.v8.common.AssetInteractionTarget asset_interaction_target = 139;</code>
+     * <code>optional .google.ads.googleads.v8.common.AssetInteractionTarget asset_interaction_target = 139;</code>
      * @return Whether the assetInteractionTarget field is set.
      */
     public boolean hasAssetInteractionTarget() {
@@ -14485,7 +14485,7 @@ private static final long serialVersionUID = 0L;
      * other parts of the served ad this asset is served with.
      * </pre>
      *
-     * <code>.google.ads.googleads.v8.common.AssetInteractionTarget asset_interaction_target = 139;</code>
+     * <code>optional .google.ads.googleads.v8.common.AssetInteractionTarget asset_interaction_target = 139;</code>
      * @return The assetInteractionTarget.
      */
     public com.google.ads.googleads.v8.common.AssetInteractionTarget getAssetInteractionTarget() {
@@ -14508,7 +14508,7 @@ private static final long serialVersionUID = 0L;
      * other parts of the served ad this asset is served with.
      * </pre>
      *
-     * <code>.google.ads.googleads.v8.common.AssetInteractionTarget asset_interaction_target = 139;</code>
+     * <code>optional .google.ads.googleads.v8.common.AssetInteractionTarget asset_interaction_target = 139;</code>
      */
     public Builder setAssetInteractionTarget(com.google.ads.googleads.v8.common.AssetInteractionTarget value) {
       if (assetInteractionTargetBuilder_ == null) {
@@ -14536,7 +14536,7 @@ private static final long serialVersionUID = 0L;
      * other parts of the served ad this asset is served with.
      * </pre>
      *
-     * <code>.google.ads.googleads.v8.common.AssetInteractionTarget asset_interaction_target = 139;</code>
+     * <code>optional .google.ads.googleads.v8.common.AssetInteractionTarget asset_interaction_target = 139;</code>
      */
     public Builder setAssetInteractionTarget(
         com.google.ads.googleads.v8.common.AssetInteractionTarget.Builder builderForValue) {
@@ -14562,7 +14562,7 @@ private static final long serialVersionUID = 0L;
      * other parts of the served ad this asset is served with.
      * </pre>
      *
-     * <code>.google.ads.googleads.v8.common.AssetInteractionTarget asset_interaction_target = 139;</code>
+     * <code>optional .google.ads.googleads.v8.common.AssetInteractionTarget asset_interaction_target = 139;</code>
      */
     public Builder mergeAssetInteractionTarget(com.google.ads.googleads.v8.common.AssetInteractionTarget value) {
       if (assetInteractionTargetBuilder_ == null) {
@@ -14594,7 +14594,7 @@ private static final long serialVersionUID = 0L;
      * other parts of the served ad this asset is served with.
      * </pre>
      *
-     * <code>.google.ads.googleads.v8.common.AssetInteractionTarget asset_interaction_target = 139;</code>
+     * <code>optional .google.ads.googleads.v8.common.AssetInteractionTarget asset_interaction_target = 139;</code>
      */
     public Builder clearAssetInteractionTarget() {
       if (assetInteractionTargetBuilder_ == null) {
@@ -14619,7 +14619,7 @@ private static final long serialVersionUID = 0L;
      * other parts of the served ad this asset is served with.
      * </pre>
      *
-     * <code>.google.ads.googleads.v8.common.AssetInteractionTarget asset_interaction_target = 139;</code>
+     * <code>optional .google.ads.googleads.v8.common.AssetInteractionTarget asset_interaction_target = 139;</code>
      */
     public com.google.ads.googleads.v8.common.AssetInteractionTarget.Builder getAssetInteractionTargetBuilder() {
       bitField1_ |= 0x02000000;
@@ -14639,7 +14639,7 @@ private static final long serialVersionUID = 0L;
      * other parts of the served ad this asset is served with.
      * </pre>
      *
-     * <code>.google.ads.googleads.v8.common.AssetInteractionTarget asset_interaction_target = 139;</code>
+     * <code>optional .google.ads.googleads.v8.common.AssetInteractionTarget asset_interaction_target = 139;</code>
      */
     public com.google.ads.googleads.v8.common.AssetInteractionTargetOrBuilder getAssetInteractionTargetOrBuilder() {
       if (assetInteractionTargetBuilder_ != null) {
@@ -14662,7 +14662,7 @@ private static final long serialVersionUID = 0L;
      * other parts of the served ad this asset is served with.
      * </pre>
      *
-     * <code>.google.ads.googleads.v8.common.AssetInteractionTarget asset_interaction_target = 139;</code>
+     * <code>optional .google.ads.googleads.v8.common.AssetInteractionTarget asset_interaction_target = 139;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v8.common.AssetInteractionTarget, com.google.ads.googleads.v8.common.AssetInteractionTarget.Builder, com.google.ads.googleads.v8.common.AssetInteractionTargetOrBuilder> 

@@ -101,7 +101,7 @@ private static final long serialVersionUID = 0L;
    * https://support.google.com/business/answer/3370250#storecode
    * </pre>
    *
-   * <code>string store_code = 2;</code>
+   * <code>optional string store_code = 2;</code>
    * @return Whether the storeCode field is set.
    */
   @java.lang.Override
@@ -114,7 +114,7 @@ private static final long serialVersionUID = 0L;
    * https://support.google.com/business/answer/3370250#storecode
    * </pre>
    *
-   * <code>string store_code = 2;</code>
+   * <code>optional string store_code = 2;</code>
    * @return The storeCode.
    */
   @java.lang.Override
@@ -136,7 +136,7 @@ private static final long serialVersionUID = 0L;
    * https://support.google.com/business/answer/3370250#storecode
    * </pre>
    *
-   * <code>string store_code = 2;</code>
+   * <code>optional string store_code = 2;</code>
    * @return The bytes for storeCode.
    */
   @java.lang.Override
@@ -480,7 +480,7 @@ private static final long serialVersionUID = 0L;
      * https://support.google.com/business/answer/3370250#storecode
      * </pre>
      *
-     * <code>string store_code = 2;</code>
+     * <code>optional string store_code = 2;</code>
      * @return Whether the storeCode field is set.
      */
     public boolean hasStoreCode() {
@@ -492,7 +492,7 @@ private static final long serialVersionUID = 0L;
      * https://support.google.com/business/answer/3370250#storecode
      * </pre>
      *
-     * <code>string store_code = 2;</code>
+     * <code>optional string store_code = 2;</code>
      * @return The storeCode.
      */
     public java.lang.String getStoreCode() {
@@ -513,7 +513,7 @@ private static final long serialVersionUID = 0L;
      * https://support.google.com/business/answer/3370250#storecode
      * </pre>
      *
-     * <code>string store_code = 2;</code>
+     * <code>optional string store_code = 2;</code>
      * @return The bytes for storeCode.
      */
     public com.google.protobuf.ByteString
@@ -535,7 +535,7 @@ private static final long serialVersionUID = 0L;
      * https://support.google.com/business/answer/3370250#storecode
      * </pre>
      *
-     * <code>string store_code = 2;</code>
+     * <code>optional string store_code = 2;</code>
      * @param value The storeCode to set.
      * @return This builder for chaining.
      */
@@ -555,7 +555,7 @@ private static final long serialVersionUID = 0L;
      * https://support.google.com/business/answer/3370250#storecode
      * </pre>
      *
-     * <code>string store_code = 2;</code>
+     * <code>optional string store_code = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearStoreCode() {
@@ -570,7 +570,7 @@ private static final long serialVersionUID = 0L;
      * https://support.google.com/business/answer/3370250#storecode
      * </pre>
      *
-     * <code>string store_code = 2;</code>
+     * <code>optional string store_code = 2;</code>
      * @param value The bytes for storeCode to set.
      * @return This builder for chaining.
      */

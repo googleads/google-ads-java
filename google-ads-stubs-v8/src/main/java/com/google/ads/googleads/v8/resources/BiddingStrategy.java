@@ -349,7 +349,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of the bidding strategy.
    * </pre>
    *
-   * <code>int64 id = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   @java.lang.Override
@@ -361,7 +361,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of the bidding strategy.
    * </pre>
    *
-   * <code>int64 id = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   @java.lang.Override
@@ -379,7 +379,7 @@ private static final long serialVersionUID = 0L;
    * in UTF-8 bytes, (trimmed).
    * </pre>
    *
-   * <code>string name = 17;</code>
+   * <code>optional string name = 17;</code>
    * @return Whether the name field is set.
    */
   @java.lang.Override
@@ -394,7 +394,7 @@ private static final long serialVersionUID = 0L;
    * in UTF-8 bytes, (trimmed).
    * </pre>
    *
-   * <code>string name = 17;</code>
+   * <code>optional string name = 17;</code>
    * @return The name.
    */
   @java.lang.Override
@@ -418,7 +418,7 @@ private static final long serialVersionUID = 0L;
    * in UTF-8 bytes, (trimmed).
    * </pre>
    *
-   * <code>string name = 17;</code>
+   * <code>optional string name = 17;</code>
    * @return The bytes for name.
    */
   @java.lang.Override
@@ -564,7 +564,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>string effective_currency_code = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string effective_currency_code = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the effectiveCurrencyCode field is set.
    */
   @java.lang.Override
@@ -581,7 +581,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>string effective_currency_code = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string effective_currency_code = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The effectiveCurrencyCode.
    */
   @java.lang.Override
@@ -607,7 +607,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>string effective_currency_code = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string effective_currency_code = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for effectiveCurrencyCode.
    */
   @java.lang.Override
@@ -633,7 +633,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 campaign_count = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 campaign_count = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the campaignCount field is set.
    */
   @java.lang.Override
@@ -646,7 +646,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 campaign_count = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 campaign_count = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The campaignCount.
    */
   @java.lang.Override
@@ -662,7 +662,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 non_removed_campaign_count = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 non_removed_campaign_count = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the nonRemovedCampaignCount field is set.
    */
   @java.lang.Override
@@ -675,7 +675,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 non_removed_campaign_count = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 non_removed_campaign_count = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The nonRemovedCampaignCount.
    */
   @java.lang.Override
@@ -1022,7 +1022,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (type_ != com.google.ads.googleads.v8.enums.BiddingStrategyTypeEnum.BiddingStrategyType.UNSPECIFIED.getNumber()) {
@@ -1064,7 +1064,7 @@ private static final long serialVersionUID = 0L;
     if (schemeCase_ == 22) {
       output.writeMessage(22, (com.google.ads.googleads.v8.common.MaximizeConversions) scheme_);
     }
-    if (!getCurrencyCodeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currencyCode_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 23, currencyCode_);
     }
     if (schemeCase_ == 48) {
@@ -1079,7 +1079,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (type_ != com.google.ads.googleads.v8.enums.BiddingStrategyTypeEnum.BiddingStrategyType.UNSPECIFIED.getNumber()) {
@@ -1132,7 +1132,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(22, (com.google.ads.googleads.v8.common.MaximizeConversions) scheme_);
     }
-    if (!getCurrencyCodeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(currencyCode_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(23, currencyCode_);
     }
     if (schemeCase_ == 48) {
@@ -1823,7 +1823,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the bidding strategy.
      * </pre>
      *
-     * <code>int64 id = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the id field is set.
      */
     @java.lang.Override
@@ -1835,7 +1835,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the bidding strategy.
      * </pre>
      *
-     * <code>int64 id = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The id.
      */
     @java.lang.Override
@@ -1847,7 +1847,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the bidding strategy.
      * </pre>
      *
-     * <code>int64 id = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
@@ -1862,7 +1862,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the bidding strategy.
      * </pre>
      *
-     * <code>int64 id = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {
@@ -1881,7 +1881,7 @@ private static final long serialVersionUID = 0L;
      * in UTF-8 bytes, (trimmed).
      * </pre>
      *
-     * <code>string name = 17;</code>
+     * <code>optional string name = 17;</code>
      * @return Whether the name field is set.
      */
     public boolean hasName() {
@@ -1895,7 +1895,7 @@ private static final long serialVersionUID = 0L;
      * in UTF-8 bytes, (trimmed).
      * </pre>
      *
-     * <code>string name = 17;</code>
+     * <code>optional string name = 17;</code>
      * @return The name.
      */
     public java.lang.String getName() {
@@ -1918,7 +1918,7 @@ private static final long serialVersionUID = 0L;
      * in UTF-8 bytes, (trimmed).
      * </pre>
      *
-     * <code>string name = 17;</code>
+     * <code>optional string name = 17;</code>
      * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
@@ -1942,7 +1942,7 @@ private static final long serialVersionUID = 0L;
      * in UTF-8 bytes, (trimmed).
      * </pre>
      *
-     * <code>string name = 17;</code>
+     * <code>optional string name = 17;</code>
      * @param value The name to set.
      * @return This builder for chaining.
      */
@@ -1964,7 +1964,7 @@ private static final long serialVersionUID = 0L;
      * in UTF-8 bytes, (trimmed).
      * </pre>
      *
-     * <code>string name = 17;</code>
+     * <code>optional string name = 17;</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
@@ -1981,7 +1981,7 @@ private static final long serialVersionUID = 0L;
      * in UTF-8 bytes, (trimmed).
      * </pre>
      *
-     * <code>string name = 17;</code>
+     * <code>optional string name = 17;</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
@@ -2292,7 +2292,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string effective_currency_code = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string effective_currency_code = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the effectiveCurrencyCode field is set.
      */
     public boolean hasEffectiveCurrencyCode() {
@@ -2308,7 +2308,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string effective_currency_code = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string effective_currency_code = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The effectiveCurrencyCode.
      */
     public java.lang.String getEffectiveCurrencyCode() {
@@ -2333,7 +2333,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string effective_currency_code = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string effective_currency_code = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for effectiveCurrencyCode.
      */
     public com.google.protobuf.ByteString
@@ -2359,7 +2359,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string effective_currency_code = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string effective_currency_code = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The effectiveCurrencyCode to set.
      * @return This builder for chaining.
      */
@@ -2383,7 +2383,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string effective_currency_code = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string effective_currency_code = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearEffectiveCurrencyCode() {
@@ -2402,7 +2402,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>string effective_currency_code = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string effective_currency_code = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for effectiveCurrencyCode to set.
      * @return This builder for chaining.
      */
@@ -2425,7 +2425,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 campaign_count = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 campaign_count = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the campaignCount field is set.
      */
     @java.lang.Override
@@ -2438,7 +2438,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 campaign_count = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 campaign_count = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The campaignCount.
      */
     @java.lang.Override
@@ -2451,7 +2451,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 campaign_count = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 campaign_count = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The campaignCount to set.
      * @return This builder for chaining.
      */
@@ -2467,7 +2467,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 campaign_count = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 campaign_count = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearCampaignCount() {
@@ -2484,7 +2484,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 non_removed_campaign_count = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 non_removed_campaign_count = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the nonRemovedCampaignCount field is set.
      */
     @java.lang.Override
@@ -2497,7 +2497,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 non_removed_campaign_count = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 non_removed_campaign_count = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The nonRemovedCampaignCount.
      */
     @java.lang.Override
@@ -2510,7 +2510,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 non_removed_campaign_count = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 non_removed_campaign_count = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The nonRemovedCampaignCount to set.
      * @return This builder for chaining.
      */
@@ -2526,7 +2526,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 non_removed_campaign_count = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 non_removed_campaign_count = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearNonRemovedCampaignCount() {

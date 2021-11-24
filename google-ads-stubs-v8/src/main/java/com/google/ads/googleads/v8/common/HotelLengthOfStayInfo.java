@@ -103,7 +103,7 @@ private static final long serialVersionUID = 0L;
    * Low end of the number of nights in the stay.
    * </pre>
    *
-   * <code>int64 min_nights = 3;</code>
+   * <code>optional int64 min_nights = 3;</code>
    * @return Whether the minNights field is set.
    */
   @java.lang.Override
@@ -115,7 +115,7 @@ private static final long serialVersionUID = 0L;
    * Low end of the number of nights in the stay.
    * </pre>
    *
-   * <code>int64 min_nights = 3;</code>
+   * <code>optional int64 min_nights = 3;</code>
    * @return The minNights.
    */
   @java.lang.Override
@@ -130,7 +130,7 @@ private static final long serialVersionUID = 0L;
    * High end of the number of nights in the stay.
    * </pre>
    *
-   * <code>int64 max_nights = 4;</code>
+   * <code>optional int64 max_nights = 4;</code>
    * @return Whether the maxNights field is set.
    */
   @java.lang.Override
@@ -142,7 +142,7 @@ private static final long serialVersionUID = 0L;
    * High end of the number of nights in the stay.
    * </pre>
    *
-   * <code>int64 max_nights = 4;</code>
+   * <code>optional int64 max_nights = 4;</code>
    * @return The maxNights.
    */
   @java.lang.Override
@@ -501,7 +501,7 @@ private static final long serialVersionUID = 0L;
      * Low end of the number of nights in the stay.
      * </pre>
      *
-     * <code>int64 min_nights = 3;</code>
+     * <code>optional int64 min_nights = 3;</code>
      * @return Whether the minNights field is set.
      */
     @java.lang.Override
@@ -513,7 +513,7 @@ private static final long serialVersionUID = 0L;
      * Low end of the number of nights in the stay.
      * </pre>
      *
-     * <code>int64 min_nights = 3;</code>
+     * <code>optional int64 min_nights = 3;</code>
      * @return The minNights.
      */
     @java.lang.Override
@@ -525,7 +525,7 @@ private static final long serialVersionUID = 0L;
      * Low end of the number of nights in the stay.
      * </pre>
      *
-     * <code>int64 min_nights = 3;</code>
+     * <code>optional int64 min_nights = 3;</code>
      * @param value The minNights to set.
      * @return This builder for chaining.
      */
@@ -540,7 +540,7 @@ private static final long serialVersionUID = 0L;
      * Low end of the number of nights in the stay.
      * </pre>
      *
-     * <code>int64 min_nights = 3;</code>
+     * <code>optional int64 min_nights = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearMinNights() {
@@ -556,7 +556,7 @@ private static final long serialVersionUID = 0L;
      * High end of the number of nights in the stay.
      * </pre>
      *
-     * <code>int64 max_nights = 4;</code>
+     * <code>optional int64 max_nights = 4;</code>
      * @return Whether the maxNights field is set.
      */
     @java.lang.Override
@@ -568,7 +568,7 @@ private static final long serialVersionUID = 0L;
      * High end of the number of nights in the stay.
      * </pre>
      *
-     * <code>int64 max_nights = 4;</code>
+     * <code>optional int64 max_nights = 4;</code>
      * @return The maxNights.
      */
     @java.lang.Override
@@ -580,7 +580,7 @@ private static final long serialVersionUID = 0L;
      * High end of the number of nights in the stay.
      * </pre>
      *
-     * <code>int64 max_nights = 4;</code>
+     * <code>optional int64 max_nights = 4;</code>
      * @param value The maxNights to set.
      * @return This builder for chaining.
      */
@@ -595,7 +595,7 @@ private static final long serialVersionUID = 0L;
      * High end of the number of nights in the stay.
      * </pre>
      *
-     * <code>int64 max_nights = 4;</code>
+     * <code>optional int64 max_nights = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearMaxNights() {

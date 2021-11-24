@@ -107,7 +107,7 @@ private static final long serialVersionUID = 0L;
    * The campaign resource name.
    * </pre>
    *
-   * <code>string campaign = 1;</code>
+   * <code>optional string campaign = 1;</code>
    * @return Whether the campaign field is set.
    */
   @java.lang.Override
@@ -119,7 +119,7 @@ private static final long serialVersionUID = 0L;
    * The campaign resource name.
    * </pre>
    *
-   * <code>string campaign = 1;</code>
+   * <code>optional string campaign = 1;</code>
    * @return The campaign.
    */
   @java.lang.Override
@@ -140,7 +140,7 @@ private static final long serialVersionUID = 0L;
    * The campaign resource name.
    * </pre>
    *
-   * <code>string campaign = 1;</code>
+   * <code>optional string campaign = 1;</code>
    * @return The bytes for campaign.
    */
   @java.lang.Override
@@ -526,7 +526,7 @@ private static final long serialVersionUID = 0L;
      * The campaign resource name.
      * </pre>
      *
-     * <code>string campaign = 1;</code>
+     * <code>optional string campaign = 1;</code>
      * @return Whether the campaign field is set.
      */
     public boolean hasCampaign() {
@@ -537,7 +537,7 @@ private static final long serialVersionUID = 0L;
      * The campaign resource name.
      * </pre>
      *
-     * <code>string campaign = 1;</code>
+     * <code>optional string campaign = 1;</code>
      * @return The campaign.
      */
     public java.lang.String getCampaign() {
@@ -557,7 +557,7 @@ private static final long serialVersionUID = 0L;
      * The campaign resource name.
      * </pre>
      *
-     * <code>string campaign = 1;</code>
+     * <code>optional string campaign = 1;</code>
      * @return The bytes for campaign.
      */
     public com.google.protobuf.ByteString
@@ -578,7 +578,7 @@ private static final long serialVersionUID = 0L;
      * The campaign resource name.
      * </pre>
      *
-     * <code>string campaign = 1;</code>
+     * <code>optional string campaign = 1;</code>
      * @param value The campaign to set.
      * @return This builder for chaining.
      */
@@ -597,7 +597,7 @@ private static final long serialVersionUID = 0L;
      * The campaign resource name.
      * </pre>
      *
-     * <code>string campaign = 1;</code>
+     * <code>optional string campaign = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearCampaign() {
@@ -611,7 +611,7 @@ private static final long serialVersionUID = 0L;
      * The campaign resource name.
      * </pre>
      *
-     * <code>string campaign = 1;</code>
+     * <code>optional string campaign = 1;</code>
      * @param value The bytes for campaign to set.
      * @return This builder for chaining.
      */

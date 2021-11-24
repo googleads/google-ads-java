@@ -21,7 +21,7 @@ public interface CrmBasedUserListInfoOrBuilder extends
    * IDs.
    * </pre>
    *
-   * <code>string app_id = 4;</code>
+   * <code>optional string app_id = 4;</code>
    * @return Whether the appId field is set.
    */
   boolean hasAppId();
@@ -39,7 +39,7 @@ public interface CrmBasedUserListInfoOrBuilder extends
    * IDs.
    * </pre>
    *
-   * <code>string app_id = 4;</code>
+   * <code>optional string app_id = 4;</code>
    * @return The appId.
    */
   java.lang.String getAppId();
@@ -57,7 +57,7 @@ public interface CrmBasedUserListInfoOrBuilder extends
    * IDs.
    * </pre>
    *
-   * <code>string app_id = 4;</code>
+   * <code>optional string app_id = 4;</code>
    * @return The bytes for appId.
    */
   com.google.protobuf.ByteString

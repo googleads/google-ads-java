@@ -13,7 +13,7 @@ public interface CallFeedItemOrBuilder extends
    * This string must not be empty.
    * </pre>
    *
-   * <code>string phone_number = 7;</code>
+   * <code>optional string phone_number = 7;</code>
    * @return Whether the phoneNumber field is set.
    */
   boolean hasPhoneNumber();
@@ -23,7 +23,7 @@ public interface CallFeedItemOrBuilder extends
    * This string must not be empty.
    * </pre>
    *
-   * <code>string phone_number = 7;</code>
+   * <code>optional string phone_number = 7;</code>
    * @return The phoneNumber.
    */
   java.lang.String getPhoneNumber();
@@ -33,7 +33,7 @@ public interface CallFeedItemOrBuilder extends
    * This string must not be empty.
    * </pre>
    *
-   * <code>string phone_number = 7;</code>
+   * <code>optional string phone_number = 7;</code>
    * @return The bytes for phoneNumber.
    */
   com.google.protobuf.ByteString
@@ -45,7 +45,7 @@ public interface CallFeedItemOrBuilder extends
    * This string must not be empty.
    * </pre>
    *
-   * <code>string country_code = 8;</code>
+   * <code>optional string country_code = 8;</code>
    * @return Whether the countryCode field is set.
    */
   boolean hasCountryCode();
@@ -55,7 +55,7 @@ public interface CallFeedItemOrBuilder extends
    * This string must not be empty.
    * </pre>
    *
-   * <code>string country_code = 8;</code>
+   * <code>optional string country_code = 8;</code>
    * @return The countryCode.
    */
   java.lang.String getCountryCode();
@@ -65,7 +65,7 @@ public interface CallFeedItemOrBuilder extends
    * This string must not be empty.
    * </pre>
    *
-   * <code>string country_code = 8;</code>
+   * <code>optional string country_code = 8;</code>
    * @return The bytes for countryCode.
    */
   com.google.protobuf.ByteString
@@ -77,7 +77,7 @@ public interface CallFeedItemOrBuilder extends
    * not enabled.
    * </pre>
    *
-   * <code>bool call_tracking_enabled = 9;</code>
+   * <code>optional bool call_tracking_enabled = 9;</code>
    * @return Whether the callTrackingEnabled field is set.
    */
   boolean hasCallTrackingEnabled();
@@ -87,7 +87,7 @@ public interface CallFeedItemOrBuilder extends
    * not enabled.
    * </pre>
    *
-   * <code>bool call_tracking_enabled = 9;</code>
+   * <code>optional bool call_tracking_enabled = 9;</code>
    * @return The callTrackingEnabled.
    */
   boolean getCallTrackingEnabled();
@@ -99,7 +99,7 @@ public interface CallFeedItemOrBuilder extends
    * call_tracking_enabled is set to true. Otherwise this field is ignored.
    * </pre>
    *
-   * <code>string call_conversion_action = 10;</code>
+   * <code>optional string call_conversion_action = 10;</code>
    * @return Whether the callConversionAction field is set.
    */
   boolean hasCallConversionAction();
@@ -110,7 +110,7 @@ public interface CallFeedItemOrBuilder extends
    * call_tracking_enabled is set to true. Otherwise this field is ignored.
    * </pre>
    *
-   * <code>string call_conversion_action = 10;</code>
+   * <code>optional string call_conversion_action = 10;</code>
    * @return The callConversionAction.
    */
   java.lang.String getCallConversionAction();
@@ -121,7 +121,7 @@ public interface CallFeedItemOrBuilder extends
    * call_tracking_enabled is set to true. Otherwise this field is ignored.
    * </pre>
    *
-   * <code>string call_conversion_action = 10;</code>
+   * <code>optional string call_conversion_action = 10;</code>
    * @return The bytes for callConversionAction.
    */
   com.google.protobuf.ByteString
@@ -133,7 +133,7 @@ public interface CallFeedItemOrBuilder extends
    * not be set if this is true. Optional.
    * </pre>
    *
-   * <code>bool call_conversion_tracking_disabled = 11;</code>
+   * <code>optional bool call_conversion_tracking_disabled = 11;</code>
    * @return Whether the callConversionTrackingDisabled field is set.
    */
   boolean hasCallConversionTrackingDisabled();
@@ -143,7 +143,7 @@ public interface CallFeedItemOrBuilder extends
    * not be set if this is true. Optional.
    * </pre>
    *
-   * <code>bool call_conversion_tracking_disabled = 11;</code>
+   * <code>optional bool call_conversion_tracking_disabled = 11;</code>
    * @return The callConversionTrackingDisabled.
    */
   boolean getCallConversionTrackingDisabled();

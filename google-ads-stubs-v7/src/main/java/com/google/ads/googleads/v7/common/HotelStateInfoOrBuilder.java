@@ -12,7 +12,7 @@ public interface HotelStateInfoOrBuilder extends
    * The Geo Target Constant resource name.
    * </pre>
    *
-   * <code>string state_criterion = 2;</code>
+   * <code>optional string state_criterion = 2;</code>
    * @return Whether the stateCriterion field is set.
    */
   boolean hasStateCriterion();
@@ -21,7 +21,7 @@ public interface HotelStateInfoOrBuilder extends
    * The Geo Target Constant resource name.
    * </pre>
    *
-   * <code>string state_criterion = 2;</code>
+   * <code>optional string state_criterion = 2;</code>
    * @return The stateCriterion.
    */
   java.lang.String getStateCriterion();
@@ -30,7 +30,7 @@ public interface HotelStateInfoOrBuilder extends
    * The Geo Target Constant resource name.
    * </pre>
    *
-   * <code>string state_criterion = 2;</code>
+   * <code>optional string state_criterion = 2;</code>
    * @return The bytes for stateCriterion.
    */
   com.google.protobuf.ByteString

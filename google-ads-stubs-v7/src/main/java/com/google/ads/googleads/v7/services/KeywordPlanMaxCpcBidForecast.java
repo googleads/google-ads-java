@@ -111,7 +111,7 @@ private static final long serialVersionUID = 0L;
    * The max cpc bid in micros.
    * </pre>
    *
-   * <code>int64 max_cpc_bid_micros = 3;</code>
+   * <code>optional int64 max_cpc_bid_micros = 3;</code>
    * @return Whether the maxCpcBidMicros field is set.
    */
   @java.lang.Override
@@ -123,7 +123,7 @@ private static final long serialVersionUID = 0L;
    * The max cpc bid in micros.
    * </pre>
    *
-   * <code>int64 max_cpc_bid_micros = 3;</code>
+   * <code>optional int64 max_cpc_bid_micros = 3;</code>
    * @return The maxCpcBidMicros.
    */
   @java.lang.Override
@@ -524,7 +524,7 @@ private static final long serialVersionUID = 0L;
      * The max cpc bid in micros.
      * </pre>
      *
-     * <code>int64 max_cpc_bid_micros = 3;</code>
+     * <code>optional int64 max_cpc_bid_micros = 3;</code>
      * @return Whether the maxCpcBidMicros field is set.
      */
     @java.lang.Override
@@ -536,7 +536,7 @@ private static final long serialVersionUID = 0L;
      * The max cpc bid in micros.
      * </pre>
      *
-     * <code>int64 max_cpc_bid_micros = 3;</code>
+     * <code>optional int64 max_cpc_bid_micros = 3;</code>
      * @return The maxCpcBidMicros.
      */
     @java.lang.Override
@@ -548,7 +548,7 @@ private static final long serialVersionUID = 0L;
      * The max cpc bid in micros.
      * </pre>
      *
-     * <code>int64 max_cpc_bid_micros = 3;</code>
+     * <code>optional int64 max_cpc_bid_micros = 3;</code>
      * @param value The maxCpcBidMicros to set.
      * @return This builder for chaining.
      */
@@ -563,7 +563,7 @@ private static final long serialVersionUID = 0L;
      * The max cpc bid in micros.
      * </pre>
      *
-     * <code>int64 max_cpc_bid_micros = 3;</code>
+     * <code>optional int64 max_cpc_bid_micros = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearMaxCpcBidMicros() {

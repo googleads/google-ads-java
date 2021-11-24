@@ -34,7 +34,7 @@ public interface ItemAttributeOrBuilder extends
    * ID of the Merchant Center Account.
    * </pre>
    *
-   * <code>int64 merchant_id = 2;</code>
+   * <code>optional int64 merchant_id = 2;</code>
    * @return Whether the merchantId field is set.
    */
   boolean hasMerchantId();
@@ -43,7 +43,7 @@ public interface ItemAttributeOrBuilder extends
    * ID of the Merchant Center Account.
    * </pre>
    *
-   * <code>int64 merchant_id = 2;</code>
+   * <code>optional int64 merchant_id = 2;</code>
    * @return The merchantId.
    */
   long getMerchantId();

@@ -107,7 +107,7 @@ private static final long serialVersionUID = 0L;
    * String value of the product custom attribute.
    * </pre>
    *
-   * <code>string value = 3;</code>
+   * <code>optional string value = 3;</code>
    * @return Whether the value field is set.
    */
   @java.lang.Override
@@ -119,7 +119,7 @@ private static final long serialVersionUID = 0L;
    * String value of the product custom attribute.
    * </pre>
    *
-   * <code>string value = 3;</code>
+   * <code>optional string value = 3;</code>
    * @return The value.
    */
   @java.lang.Override
@@ -140,7 +140,7 @@ private static final long serialVersionUID = 0L;
    * String value of the product custom attribute.
    * </pre>
    *
-   * <code>string value = 3;</code>
+   * <code>optional string value = 3;</code>
    * @return The bytes for value.
    */
   @java.lang.Override
@@ -526,7 +526,7 @@ private static final long serialVersionUID = 0L;
      * String value of the product custom attribute.
      * </pre>
      *
-     * <code>string value = 3;</code>
+     * <code>optional string value = 3;</code>
      * @return Whether the value field is set.
      */
     public boolean hasValue() {
@@ -537,7 +537,7 @@ private static final long serialVersionUID = 0L;
      * String value of the product custom attribute.
      * </pre>
      *
-     * <code>string value = 3;</code>
+     * <code>optional string value = 3;</code>
      * @return The value.
      */
     public java.lang.String getValue() {
@@ -557,7 +557,7 @@ private static final long serialVersionUID = 0L;
      * String value of the product custom attribute.
      * </pre>
      *
-     * <code>string value = 3;</code>
+     * <code>optional string value = 3;</code>
      * @return The bytes for value.
      */
     public com.google.protobuf.ByteString
@@ -578,7 +578,7 @@ private static final long serialVersionUID = 0L;
      * String value of the product custom attribute.
      * </pre>
      *
-     * <code>string value = 3;</code>
+     * <code>optional string value = 3;</code>
      * @param value The value to set.
      * @return This builder for chaining.
      */
@@ -597,7 +597,7 @@ private static final long serialVersionUID = 0L;
      * String value of the product custom attribute.
      * </pre>
      *
-     * <code>string value = 3;</code>
+     * <code>optional string value = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearValue() {
@@ -611,7 +611,7 @@ private static final long serialVersionUID = 0L;
      * String value of the product custom attribute.
      * </pre>
      *
-     * <code>string value = 3;</code>
+     * <code>optional string value = 3;</code>
      * @param value The bytes for value to set.
      * @return This builder for chaining.
      */

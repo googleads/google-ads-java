@@ -36,7 +36,7 @@ public interface CustomInterestOrBuilder extends
    * Output only. Id of the custom interest.
    * </pre>
    *
-   * <code>int64 id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -45,7 +45,7 @@ public interface CustomInterestOrBuilder extends
    * Output only. Id of the custom interest.
    * </pre>
    *
-   * <code>int64 id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   long getId();
@@ -78,7 +78,7 @@ public interface CustomInterestOrBuilder extends
    * This field is required for create operations.
    * </pre>
    *
-   * <code>string name = 9;</code>
+   * <code>optional string name = 9;</code>
    * @return Whether the name field is set.
    */
   boolean hasName();
@@ -89,7 +89,7 @@ public interface CustomInterestOrBuilder extends
    * This field is required for create operations.
    * </pre>
    *
-   * <code>string name = 9;</code>
+   * <code>optional string name = 9;</code>
    * @return The name.
    */
   java.lang.String getName();
@@ -100,7 +100,7 @@ public interface CustomInterestOrBuilder extends
    * This field is required for create operations.
    * </pre>
    *
-   * <code>string name = 9;</code>
+   * <code>optional string name = 9;</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
@@ -132,7 +132,7 @@ public interface CustomInterestOrBuilder extends
    * Description of this custom interest audience.
    * </pre>
    *
-   * <code>string description = 10;</code>
+   * <code>optional string description = 10;</code>
    * @return Whether the description field is set.
    */
   boolean hasDescription();
@@ -141,7 +141,7 @@ public interface CustomInterestOrBuilder extends
    * Description of this custom interest audience.
    * </pre>
    *
-   * <code>string description = 10;</code>
+   * <code>optional string description = 10;</code>
    * @return The description.
    */
   java.lang.String getDescription();
@@ -150,7 +150,7 @@ public interface CustomInterestOrBuilder extends
    * Description of this custom interest audience.
    * </pre>
    *
-   * <code>string description = 10;</code>
+   * <code>optional string description = 10;</code>
    * @return The bytes for description.
    */
   com.google.protobuf.ByteString

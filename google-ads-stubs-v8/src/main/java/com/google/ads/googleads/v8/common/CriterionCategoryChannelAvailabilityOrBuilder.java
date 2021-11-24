@@ -112,7 +112,7 @@ public interface CriterionCategoryChannelAvailabilityOrBuilder extends
    * is not set is not included in this availability configuration.
    * </pre>
    *
-   * <code>bool include_default_channel_sub_type = 5;</code>
+   * <code>optional bool include_default_channel_sub_type = 5;</code>
    * @return Whether the includeDefaultChannelSubType field is set.
    */
   boolean hasIncludeDefaultChannelSubType();
@@ -124,7 +124,7 @@ public interface CriterionCategoryChannelAvailabilityOrBuilder extends
    * is not set is not included in this availability configuration.
    * </pre>
    *
-   * <code>bool include_default_channel_sub_type = 5;</code>
+   * <code>optional bool include_default_channel_sub_type = 5;</code>
    * @return The includeDefaultChannelSubType.
    */
   boolean getIncludeDefaultChannelSubType();

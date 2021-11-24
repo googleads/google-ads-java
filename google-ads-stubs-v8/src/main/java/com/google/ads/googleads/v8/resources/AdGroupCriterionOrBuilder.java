@@ -37,7 +37,7 @@ public interface AdGroupCriterionOrBuilder extends
    * This field is ignored for mutates.
    * </pre>
    *
-   * <code>int64 criterion_id = 56 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 criterion_id = 56 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the criterionId field is set.
    */
   boolean hasCriterionId();
@@ -47,7 +47,7 @@ public interface AdGroupCriterionOrBuilder extends
    * This field is ignored for mutates.
    * </pre>
    *
-   * <code>int64 criterion_id = 56 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 criterion_id = 56 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The criterionId.
    */
   long getCriterionId();
@@ -141,7 +141,7 @@ public interface AdGroupCriterionOrBuilder extends
    * Immutable. The ad group to which the criterion belongs.
    * </pre>
    *
-   * <code>string ad_group = 57 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group = 57 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the adGroup field is set.
    */
   boolean hasAdGroup();
@@ -150,7 +150,7 @@ public interface AdGroupCriterionOrBuilder extends
    * Immutable. The ad group to which the criterion belongs.
    * </pre>
    *
-   * <code>string ad_group = 57 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group = 57 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The adGroup.
    */
   java.lang.String getAdGroup();
@@ -159,7 +159,7 @@ public interface AdGroupCriterionOrBuilder extends
    * Immutable. The ad group to which the criterion belongs.
    * </pre>
    *
-   * <code>string ad_group = 57 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group = 57 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for adGroup.
    */
   com.google.protobuf.ByteString
@@ -191,7 +191,7 @@ public interface AdGroupCriterionOrBuilder extends
    * remove then re-add it.
    * </pre>
    *
-   * <code>bool negative = 58 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional bool negative = 58 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the negative field is set.
    */
   boolean hasNegative();
@@ -202,7 +202,7 @@ public interface AdGroupCriterionOrBuilder extends
    * remove then re-add it.
    * </pre>
    *
-   * <code>bool negative = 58 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional bool negative = 58 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The negative.
    */
   boolean getNegative();
@@ -345,7 +345,7 @@ public interface AdGroupCriterionOrBuilder extends
    * in the range: 0.1 - 10.0. Most targetable criteria types support modifiers.
    * </pre>
    *
-   * <code>double bid_modifier = 61;</code>
+   * <code>optional double bid_modifier = 61;</code>
    * @return Whether the bidModifier field is set.
    */
   boolean hasBidModifier();
@@ -355,7 +355,7 @@ public interface AdGroupCriterionOrBuilder extends
    * in the range: 0.1 - 10.0. Most targetable criteria types support modifiers.
    * </pre>
    *
-   * <code>double bid_modifier = 61;</code>
+   * <code>optional double bid_modifier = 61;</code>
    * @return The bidModifier.
    */
   double getBidModifier();
@@ -365,7 +365,7 @@ public interface AdGroupCriterionOrBuilder extends
    * The CPC (cost-per-click) bid.
    * </pre>
    *
-   * <code>int64 cpc_bid_micros = 62;</code>
+   * <code>optional int64 cpc_bid_micros = 62;</code>
    * @return Whether the cpcBidMicros field is set.
    */
   boolean hasCpcBidMicros();
@@ -374,7 +374,7 @@ public interface AdGroupCriterionOrBuilder extends
    * The CPC (cost-per-click) bid.
    * </pre>
    *
-   * <code>int64 cpc_bid_micros = 62;</code>
+   * <code>optional int64 cpc_bid_micros = 62;</code>
    * @return The cpcBidMicros.
    */
   long getCpcBidMicros();
@@ -384,7 +384,7 @@ public interface AdGroupCriterionOrBuilder extends
    * The CPM (cost-per-thousand viewable impressions) bid.
    * </pre>
    *
-   * <code>int64 cpm_bid_micros = 63;</code>
+   * <code>optional int64 cpm_bid_micros = 63;</code>
    * @return Whether the cpmBidMicros field is set.
    */
   boolean hasCpmBidMicros();
@@ -393,7 +393,7 @@ public interface AdGroupCriterionOrBuilder extends
    * The CPM (cost-per-thousand viewable impressions) bid.
    * </pre>
    *
-   * <code>int64 cpm_bid_micros = 63;</code>
+   * <code>optional int64 cpm_bid_micros = 63;</code>
    * @return The cpmBidMicros.
    */
   long getCpmBidMicros();
@@ -403,7 +403,7 @@ public interface AdGroupCriterionOrBuilder extends
    * The CPV (cost-per-view) bid.
    * </pre>
    *
-   * <code>int64 cpv_bid_micros = 64;</code>
+   * <code>optional int64 cpv_bid_micros = 64;</code>
    * @return Whether the cpvBidMicros field is set.
    */
   boolean hasCpvBidMicros();
@@ -412,7 +412,7 @@ public interface AdGroupCriterionOrBuilder extends
    * The CPV (cost-per-view) bid.
    * </pre>
    *
-   * <code>int64 cpv_bid_micros = 64;</code>
+   * <code>optional int64 cpv_bid_micros = 64;</code>
    * @return The cpvBidMicros.
    */
   long getCpvBidMicros();
@@ -424,7 +424,7 @@ public interface AdGroupCriterionOrBuilder extends
    * value stored here is 1,000,000 * [fraction].
    * </pre>
    *
-   * <code>int64 percent_cpc_bid_micros = 65;</code>
+   * <code>optional int64 percent_cpc_bid_micros = 65;</code>
    * @return Whether the percentCpcBidMicros field is set.
    */
   boolean hasPercentCpcBidMicros();
@@ -435,7 +435,7 @@ public interface AdGroupCriterionOrBuilder extends
    * value stored here is 1,000,000 * [fraction].
    * </pre>
    *
-   * <code>int64 percent_cpc_bid_micros = 65;</code>
+   * <code>optional int64 percent_cpc_bid_micros = 65;</code>
    * @return The percentCpcBidMicros.
    */
   long getPercentCpcBidMicros();
@@ -445,7 +445,7 @@ public interface AdGroupCriterionOrBuilder extends
    * Output only. The effective CPC (cost-per-click) bid.
    * </pre>
    *
-   * <code>int64 effective_cpc_bid_micros = 66 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 effective_cpc_bid_micros = 66 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the effectiveCpcBidMicros field is set.
    */
   boolean hasEffectiveCpcBidMicros();
@@ -454,7 +454,7 @@ public interface AdGroupCriterionOrBuilder extends
    * Output only. The effective CPC (cost-per-click) bid.
    * </pre>
    *
-   * <code>int64 effective_cpc_bid_micros = 66 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 effective_cpc_bid_micros = 66 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The effectiveCpcBidMicros.
    */
   long getEffectiveCpcBidMicros();
@@ -464,7 +464,7 @@ public interface AdGroupCriterionOrBuilder extends
    * Output only. The effective CPM (cost-per-thousand viewable impressions) bid.
    * </pre>
    *
-   * <code>int64 effective_cpm_bid_micros = 67 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 effective_cpm_bid_micros = 67 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the effectiveCpmBidMicros field is set.
    */
   boolean hasEffectiveCpmBidMicros();
@@ -473,7 +473,7 @@ public interface AdGroupCriterionOrBuilder extends
    * Output only. The effective CPM (cost-per-thousand viewable impressions) bid.
    * </pre>
    *
-   * <code>int64 effective_cpm_bid_micros = 67 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 effective_cpm_bid_micros = 67 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The effectiveCpmBidMicros.
    */
   long getEffectiveCpmBidMicros();
@@ -483,7 +483,7 @@ public interface AdGroupCriterionOrBuilder extends
    * Output only. The effective CPV (cost-per-view) bid.
    * </pre>
    *
-   * <code>int64 effective_cpv_bid_micros = 68 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 effective_cpv_bid_micros = 68 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the effectiveCpvBidMicros field is set.
    */
   boolean hasEffectiveCpvBidMicros();
@@ -492,7 +492,7 @@ public interface AdGroupCriterionOrBuilder extends
    * Output only. The effective CPV (cost-per-view) bid.
    * </pre>
    *
-   * <code>int64 effective_cpv_bid_micros = 68 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 effective_cpv_bid_micros = 68 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The effectiveCpvBidMicros.
    */
   long getEffectiveCpvBidMicros();
@@ -502,7 +502,7 @@ public interface AdGroupCriterionOrBuilder extends
    * Output only. The effective Percent CPC bid amount.
    * </pre>
    *
-   * <code>int64 effective_percent_cpc_bid_micros = 69 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 effective_percent_cpc_bid_micros = 69 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the effectivePercentCpcBidMicros field is set.
    */
   boolean hasEffectivePercentCpcBidMicros();
@@ -511,7 +511,7 @@ public interface AdGroupCriterionOrBuilder extends
    * Output only. The effective Percent CPC bid amount.
    * </pre>
    *
-   * <code>int64 effective_percent_cpc_bid_micros = 69 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 effective_percent_cpc_bid_micros = 69 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The effectivePercentCpcBidMicros.
    */
   long getEffectivePercentCpcBidMicros();
@@ -710,7 +710,7 @@ public interface AdGroupCriterionOrBuilder extends
    * URL template for appending params to final URL.
    * </pre>
    *
-   * <code>string final_url_suffix = 72;</code>
+   * <code>optional string final_url_suffix = 72;</code>
    * @return Whether the finalUrlSuffix field is set.
    */
   boolean hasFinalUrlSuffix();
@@ -719,7 +719,7 @@ public interface AdGroupCriterionOrBuilder extends
    * URL template for appending params to final URL.
    * </pre>
    *
-   * <code>string final_url_suffix = 72;</code>
+   * <code>optional string final_url_suffix = 72;</code>
    * @return The finalUrlSuffix.
    */
   java.lang.String getFinalUrlSuffix();
@@ -728,7 +728,7 @@ public interface AdGroupCriterionOrBuilder extends
    * URL template for appending params to final URL.
    * </pre>
    *
-   * <code>string final_url_suffix = 72;</code>
+   * <code>optional string final_url_suffix = 72;</code>
    * @return The bytes for finalUrlSuffix.
    */
   com.google.protobuf.ByteString
@@ -739,7 +739,7 @@ public interface AdGroupCriterionOrBuilder extends
    * The URL template for constructing a tracking URL.
    * </pre>
    *
-   * <code>string tracking_url_template = 73;</code>
+   * <code>optional string tracking_url_template = 73;</code>
    * @return Whether the trackingUrlTemplate field is set.
    */
   boolean hasTrackingUrlTemplate();
@@ -748,7 +748,7 @@ public interface AdGroupCriterionOrBuilder extends
    * The URL template for constructing a tracking URL.
    * </pre>
    *
-   * <code>string tracking_url_template = 73;</code>
+   * <code>optional string tracking_url_template = 73;</code>
    * @return The trackingUrlTemplate.
    */
   java.lang.String getTrackingUrlTemplate();
@@ -757,7 +757,7 @@ public interface AdGroupCriterionOrBuilder extends
    * The URL template for constructing a tracking URL.
    * </pre>
    *
-   * <code>string tracking_url_template = 73;</code>
+   * <code>optional string tracking_url_template = 73;</code>
    * @return The bytes for trackingUrlTemplate.
    */
   com.google.protobuf.ByteString

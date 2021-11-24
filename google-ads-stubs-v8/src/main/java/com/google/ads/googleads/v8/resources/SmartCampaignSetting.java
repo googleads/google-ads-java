@@ -145,7 +145,7 @@ private static final long serialVersionUID = 0L;
      * Phone number of the smart campaign.
      * </pre>
      *
-     * <code>string phone_number = 1;</code>
+     * <code>optional string phone_number = 1;</code>
      * @return Whether the phoneNumber field is set.
      */
     boolean hasPhoneNumber();
@@ -154,7 +154,7 @@ private static final long serialVersionUID = 0L;
      * Phone number of the smart campaign.
      * </pre>
      *
-     * <code>string phone_number = 1;</code>
+     * <code>optional string phone_number = 1;</code>
      * @return The phoneNumber.
      */
     java.lang.String getPhoneNumber();
@@ -163,7 +163,7 @@ private static final long serialVersionUID = 0L;
      * Phone number of the smart campaign.
      * </pre>
      *
-     * <code>string phone_number = 1;</code>
+     * <code>optional string phone_number = 1;</code>
      * @return The bytes for phoneNumber.
      */
     com.google.protobuf.ByteString
@@ -174,7 +174,7 @@ private static final long serialVersionUID = 0L;
      * Upper-case, two-letter country code as defined by ISO-3166.
      * </pre>
      *
-     * <code>string country_code = 2;</code>
+     * <code>optional string country_code = 2;</code>
      * @return Whether the countryCode field is set.
      */
     boolean hasCountryCode();
@@ -183,7 +183,7 @@ private static final long serialVersionUID = 0L;
      * Upper-case, two-letter country code as defined by ISO-3166.
      * </pre>
      *
-     * <code>string country_code = 2;</code>
+     * <code>optional string country_code = 2;</code>
      * @return The countryCode.
      */
     java.lang.String getCountryCode();
@@ -192,7 +192,7 @@ private static final long serialVersionUID = 0L;
      * Upper-case, two-letter country code as defined by ISO-3166.
      * </pre>
      *
-     * <code>string country_code = 2;</code>
+     * <code>optional string country_code = 2;</code>
      * @return The bytes for countryCode.
      */
     com.google.protobuf.ByteString
@@ -302,7 +302,7 @@ private static final long serialVersionUID = 0L;
      * Phone number of the smart campaign.
      * </pre>
      *
-     * <code>string phone_number = 1;</code>
+     * <code>optional string phone_number = 1;</code>
      * @return Whether the phoneNumber field is set.
      */
     @java.lang.Override
@@ -314,7 +314,7 @@ private static final long serialVersionUID = 0L;
      * Phone number of the smart campaign.
      * </pre>
      *
-     * <code>string phone_number = 1;</code>
+     * <code>optional string phone_number = 1;</code>
      * @return The phoneNumber.
      */
     @java.lang.Override
@@ -335,7 +335,7 @@ private static final long serialVersionUID = 0L;
      * Phone number of the smart campaign.
      * </pre>
      *
-     * <code>string phone_number = 1;</code>
+     * <code>optional string phone_number = 1;</code>
      * @return The bytes for phoneNumber.
      */
     @java.lang.Override
@@ -360,7 +360,7 @@ private static final long serialVersionUID = 0L;
      * Upper-case, two-letter country code as defined by ISO-3166.
      * </pre>
      *
-     * <code>string country_code = 2;</code>
+     * <code>optional string country_code = 2;</code>
      * @return Whether the countryCode field is set.
      */
     @java.lang.Override
@@ -372,7 +372,7 @@ private static final long serialVersionUID = 0L;
      * Upper-case, two-letter country code as defined by ISO-3166.
      * </pre>
      *
-     * <code>string country_code = 2;</code>
+     * <code>optional string country_code = 2;</code>
      * @return The countryCode.
      */
     @java.lang.Override
@@ -393,7 +393,7 @@ private static final long serialVersionUID = 0L;
      * Upper-case, two-letter country code as defined by ISO-3166.
      * </pre>
      *
-     * <code>string country_code = 2;</code>
+     * <code>optional string country_code = 2;</code>
      * @return The bytes for countryCode.
      */
     @java.lang.Override
@@ -762,7 +762,7 @@ private static final long serialVersionUID = 0L;
        * Phone number of the smart campaign.
        * </pre>
        *
-       * <code>string phone_number = 1;</code>
+       * <code>optional string phone_number = 1;</code>
        * @return Whether the phoneNumber field is set.
        */
       public boolean hasPhoneNumber() {
@@ -773,7 +773,7 @@ private static final long serialVersionUID = 0L;
        * Phone number of the smart campaign.
        * </pre>
        *
-       * <code>string phone_number = 1;</code>
+       * <code>optional string phone_number = 1;</code>
        * @return The phoneNumber.
        */
       public java.lang.String getPhoneNumber() {
@@ -793,7 +793,7 @@ private static final long serialVersionUID = 0L;
        * Phone number of the smart campaign.
        * </pre>
        *
-       * <code>string phone_number = 1;</code>
+       * <code>optional string phone_number = 1;</code>
        * @return The bytes for phoneNumber.
        */
       public com.google.protobuf.ByteString
@@ -814,7 +814,7 @@ private static final long serialVersionUID = 0L;
        * Phone number of the smart campaign.
        * </pre>
        *
-       * <code>string phone_number = 1;</code>
+       * <code>optional string phone_number = 1;</code>
        * @param value The phoneNumber to set.
        * @return This builder for chaining.
        */
@@ -833,7 +833,7 @@ private static final long serialVersionUID = 0L;
        * Phone number of the smart campaign.
        * </pre>
        *
-       * <code>string phone_number = 1;</code>
+       * <code>optional string phone_number = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearPhoneNumber() {
@@ -847,7 +847,7 @@ private static final long serialVersionUID = 0L;
        * Phone number of the smart campaign.
        * </pre>
        *
-       * <code>string phone_number = 1;</code>
+       * <code>optional string phone_number = 1;</code>
        * @param value The bytes for phoneNumber to set.
        * @return This builder for chaining.
        */
@@ -869,7 +869,7 @@ private static final long serialVersionUID = 0L;
        * Upper-case, two-letter country code as defined by ISO-3166.
        * </pre>
        *
-       * <code>string country_code = 2;</code>
+       * <code>optional string country_code = 2;</code>
        * @return Whether the countryCode field is set.
        */
       public boolean hasCountryCode() {
@@ -880,7 +880,7 @@ private static final long serialVersionUID = 0L;
        * Upper-case, two-letter country code as defined by ISO-3166.
        * </pre>
        *
-       * <code>string country_code = 2;</code>
+       * <code>optional string country_code = 2;</code>
        * @return The countryCode.
        */
       public java.lang.String getCountryCode() {
@@ -900,7 +900,7 @@ private static final long serialVersionUID = 0L;
        * Upper-case, two-letter country code as defined by ISO-3166.
        * </pre>
        *
-       * <code>string country_code = 2;</code>
+       * <code>optional string country_code = 2;</code>
        * @return The bytes for countryCode.
        */
       public com.google.protobuf.ByteString
@@ -921,7 +921,7 @@ private static final long serialVersionUID = 0L;
        * Upper-case, two-letter country code as defined by ISO-3166.
        * </pre>
        *
-       * <code>string country_code = 2;</code>
+       * <code>optional string country_code = 2;</code>
        * @param value The countryCode to set.
        * @return This builder for chaining.
        */
@@ -940,7 +940,7 @@ private static final long serialVersionUID = 0L;
        * Upper-case, two-letter country code as defined by ISO-3166.
        * </pre>
        *
-       * <code>string country_code = 2;</code>
+       * <code>optional string country_code = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearCountryCode() {
@@ -954,7 +954,7 @@ private static final long serialVersionUID = 0L;
        * Upper-case, two-letter country code as defined by ISO-3166.
        * </pre>
        *
-       * <code>string country_code = 2;</code>
+       * <code>optional string country_code = 2;</code>
        * @param value The bytes for countryCode to set.
        * @return This builder for chaining.
        */
@@ -1356,11 +1356,11 @@ private static final long serialVersionUID = 0L;
   public static final int BUSINESS_LOCATION_ID_FIELD_NUMBER = 6;
   /**
    * <pre>
-   * The ID of the Google My Business (GMB) Location.
-   * The location ID can be fetched by GMB API with its form:
+   * The ID of the Business Profile location.
+   * The location ID can be fetched by Business Profile API with its form:
    * accounts/{accountId}/locations/{locationId}. The last {locationId}
-   * component from the GMB API represents the business_location_id.
-   * See the [Google My Business API]
+   * component from the Business Profile API represents the
+   * business_location_id. See the [Business Profile API]
    * (https://developers.google.com/my-business/reference/rest/v4/accounts.locations)
    * </pre>
    *
@@ -1373,11 +1373,11 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The ID of the Google My Business (GMB) Location.
-   * The location ID can be fetched by GMB API with its form:
+   * The ID of the Business Profile location.
+   * The location ID can be fetched by Business Profile API with its form:
    * accounts/{accountId}/locations/{locationId}. The last {locationId}
-   * component from the GMB API represents the business_location_id.
-   * See the [Google My Business API]
+   * component from the Business Profile API represents the
+   * business_location_id. See the [Business Profile API]
    * (https://developers.google.com/my-business/reference/rest/v4/accounts.locations)
    * </pre>
    *
@@ -1406,16 +1406,16 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
-    if (!getCampaignBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(campaign_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, campaign_);
     }
     if (phoneNumber_ != null) {
       output.writeMessage(3, getPhoneNumber());
     }
-    if (!getFinalUrlBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(finalUrl_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, finalUrl_);
     }
     if (businessSettingCase_ == 5) {
@@ -1425,7 +1425,7 @@ private static final long serialVersionUID = 0L;
       output.writeInt64(
           6, (long)((java.lang.Long) businessSetting_));
     }
-    if (!getAdvertisingLanguageCodeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(advertisingLanguageCode_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, advertisingLanguageCode_);
     }
     unknownFields.writeTo(output);
@@ -1437,17 +1437,17 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
-    if (!getCampaignBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(campaign_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, campaign_);
     }
     if (phoneNumber_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getPhoneNumber());
     }
-    if (!getFinalUrlBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(finalUrl_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, finalUrl_);
     }
     if (businessSettingCase_ == 5) {
@@ -1458,7 +1458,7 @@ private static final long serialVersionUID = 0L;
         .computeInt64Size(
             6, (long)((java.lang.Long) businessSetting_));
     }
-    if (!getAdvertisingLanguageCodeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(advertisingLanguageCode_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, advertisingLanguageCode_);
     }
     size += unknownFields.getSerializedSize();
@@ -2531,11 +2531,11 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The ID of the Google My Business (GMB) Location.
-     * The location ID can be fetched by GMB API with its form:
+     * The ID of the Business Profile location.
+     * The location ID can be fetched by Business Profile API with its form:
      * accounts/{accountId}/locations/{locationId}. The last {locationId}
-     * component from the GMB API represents the business_location_id.
-     * See the [Google My Business API]
+     * component from the Business Profile API represents the
+     * business_location_id. See the [Business Profile API]
      * (https://developers.google.com/my-business/reference/rest/v4/accounts.locations)
      * </pre>
      *
@@ -2547,11 +2547,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the Google My Business (GMB) Location.
-     * The location ID can be fetched by GMB API with its form:
+     * The ID of the Business Profile location.
+     * The location ID can be fetched by Business Profile API with its form:
      * accounts/{accountId}/locations/{locationId}. The last {locationId}
-     * component from the GMB API represents the business_location_id.
-     * See the [Google My Business API]
+     * component from the Business Profile API represents the
+     * business_location_id. See the [Business Profile API]
      * (https://developers.google.com/my-business/reference/rest/v4/accounts.locations)
      * </pre>
      *
@@ -2566,11 +2566,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the Google My Business (GMB) Location.
-     * The location ID can be fetched by GMB API with its form:
+     * The ID of the Business Profile location.
+     * The location ID can be fetched by Business Profile API with its form:
      * accounts/{accountId}/locations/{locationId}. The last {locationId}
-     * component from the GMB API represents the business_location_id.
-     * See the [Google My Business API]
+     * component from the Business Profile API represents the
+     * business_location_id. See the [Business Profile API]
      * (https://developers.google.com/my-business/reference/rest/v4/accounts.locations)
      * </pre>
      *
@@ -2586,11 +2586,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The ID of the Google My Business (GMB) Location.
-     * The location ID can be fetched by GMB API with its form:
+     * The ID of the Business Profile location.
+     * The location ID can be fetched by Business Profile API with its form:
      * accounts/{accountId}/locations/{locationId}. The last {locationId}
-     * component from the GMB API represents the business_location_id.
-     * See the [Google My Business API]
+     * component from the Business Profile API represents the
+     * business_location_id. See the [Business Profile API]
      * (https://developers.google.com/my-business/reference/rest/v4/accounts.locations)
      * </pre>
      *

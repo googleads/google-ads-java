@@ -767,19 +767,19 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getCountryCodeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(countryCode_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, countryCode_);
     }
-    if (!getPhoneNumberBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(phoneNumber_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, phoneNumber_);
     }
-    if (!getBusinessNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(businessName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, businessName_);
     }
-    if (!getDescription1Bytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description1_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description1_);
     }
-    if (!getDescription2Bytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description2_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, description2_);
     }
     if (callTracked_ != false) {
@@ -788,25 +788,25 @@ private static final long serialVersionUID = 0L;
     if (disableCallConversion_ != false) {
       output.writeBool(7, disableCallConversion_);
     }
-    if (!getPhoneNumberVerificationUrlBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(phoneNumberVerificationUrl_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 8, phoneNumberVerificationUrl_);
     }
-    if (!getConversionActionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(conversionAction_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 9, conversionAction_);
     }
     if (conversionReportingState_ != com.google.ads.googleads.v8.enums.CallConversionReportingStateEnum.CallConversionReportingState.UNSPECIFIED.getNumber()) {
       output.writeEnum(10, conversionReportingState_);
     }
-    if (!getHeadline1Bytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(headline1_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 11, headline1_);
     }
-    if (!getHeadline2Bytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(headline2_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 12, headline2_);
     }
-    if (!getPath1Bytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(path1_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 13, path1_);
     }
-    if (!getPath2Bytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(path2_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 14, path2_);
     }
     unknownFields.writeTo(output);
@@ -818,19 +818,19 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getCountryCodeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(countryCode_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, countryCode_);
     }
-    if (!getPhoneNumberBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(phoneNumber_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, phoneNumber_);
     }
-    if (!getBusinessNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(businessName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, businessName_);
     }
-    if (!getDescription1Bytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description1_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description1_);
     }
-    if (!getDescription2Bytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description2_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, description2_);
     }
     if (callTracked_ != false) {
@@ -841,26 +841,26 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(7, disableCallConversion_);
     }
-    if (!getPhoneNumberVerificationUrlBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(phoneNumberVerificationUrl_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, phoneNumberVerificationUrl_);
     }
-    if (!getConversionActionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(conversionAction_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, conversionAction_);
     }
     if (conversionReportingState_ != com.google.ads.googleads.v8.enums.CallConversionReportingStateEnum.CallConversionReportingState.UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(10, conversionReportingState_);
     }
-    if (!getHeadline1Bytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(headline1_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, headline1_);
     }
-    if (!getHeadline2Bytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(headline2_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, headline2_);
     }
-    if (!getPath1Bytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(path1_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, path1_);
     }
-    if (!getPath2Bytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(path2_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, path2_);
     }
     size += unknownFields.getSerializedSize();

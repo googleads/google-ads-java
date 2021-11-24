@@ -12,7 +12,7 @@ public interface CustomParameterOrBuilder extends
    * The key matching the parameter tag name.
    * </pre>
    *
-   * <code>string key = 3;</code>
+   * <code>optional string key = 3;</code>
    * @return Whether the key field is set.
    */
   boolean hasKey();
@@ -21,7 +21,7 @@ public interface CustomParameterOrBuilder extends
    * The key matching the parameter tag name.
    * </pre>
    *
-   * <code>string key = 3;</code>
+   * <code>optional string key = 3;</code>
    * @return The key.
    */
   java.lang.String getKey();
@@ -30,7 +30,7 @@ public interface CustomParameterOrBuilder extends
    * The key matching the parameter tag name.
    * </pre>
    *
-   * <code>string key = 3;</code>
+   * <code>optional string key = 3;</code>
    * @return The bytes for key.
    */
   com.google.protobuf.ByteString
@@ -41,7 +41,7 @@ public interface CustomParameterOrBuilder extends
    * The value to be substituted.
    * </pre>
    *
-   * <code>string value = 4;</code>
+   * <code>optional string value = 4;</code>
    * @return Whether the value field is set.
    */
   boolean hasValue();
@@ -50,7 +50,7 @@ public interface CustomParameterOrBuilder extends
    * The value to be substituted.
    * </pre>
    *
-   * <code>string value = 4;</code>
+   * <code>optional string value = 4;</code>
    * @return The value.
    */
   java.lang.String getValue();
@@ -59,7 +59,7 @@ public interface CustomParameterOrBuilder extends
    * The value to be substituted.
    * </pre>
    *
-   * <code>string value = 4;</code>
+   * <code>optional string value = 4;</code>
    * @return The bytes for value.
    */
   com.google.protobuf.ByteString

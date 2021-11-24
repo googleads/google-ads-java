@@ -107,7 +107,7 @@ private static final long serialVersionUID = 0L;
    * undefined.
    * </pre>
    *
-   * <code>int64 cpc_bid_ceiling_micros = 3;</code>
+   * <code>optional int64 cpc_bid_ceiling_micros = 3;</code>
    * @return Whether the cpcBidCeilingMicros field is set.
    */
   @java.lang.Override
@@ -122,7 +122,7 @@ private static final long serialVersionUID = 0L;
    * undefined.
    * </pre>
    *
-   * <code>int64 cpc_bid_ceiling_micros = 3;</code>
+   * <code>optional int64 cpc_bid_ceiling_micros = 3;</code>
    * @return The cpcBidCeilingMicros.
    */
   @java.lang.Override
@@ -140,7 +140,7 @@ private static final long serialVersionUID = 0L;
    * not.
    * </pre>
    *
-   * <code>bool enhanced_cpc_enabled = 4;</code>
+   * <code>optional bool enhanced_cpc_enabled = 4;</code>
    * @return Whether the enhancedCpcEnabled field is set.
    */
   @java.lang.Override
@@ -155,7 +155,7 @@ private static final long serialVersionUID = 0L;
    * not.
    * </pre>
    *
-   * <code>bool enhanced_cpc_enabled = 4;</code>
+   * <code>optional bool enhanced_cpc_enabled = 4;</code>
    * @return The enhancedCpcEnabled.
    */
   @java.lang.Override
@@ -518,7 +518,7 @@ private static final long serialVersionUID = 0L;
      * undefined.
      * </pre>
      *
-     * <code>int64 cpc_bid_ceiling_micros = 3;</code>
+     * <code>optional int64 cpc_bid_ceiling_micros = 3;</code>
      * @return Whether the cpcBidCeilingMicros field is set.
      */
     @java.lang.Override
@@ -533,7 +533,7 @@ private static final long serialVersionUID = 0L;
      * undefined.
      * </pre>
      *
-     * <code>int64 cpc_bid_ceiling_micros = 3;</code>
+     * <code>optional int64 cpc_bid_ceiling_micros = 3;</code>
      * @return The cpcBidCeilingMicros.
      */
     @java.lang.Override
@@ -548,7 +548,7 @@ private static final long serialVersionUID = 0L;
      * undefined.
      * </pre>
      *
-     * <code>int64 cpc_bid_ceiling_micros = 3;</code>
+     * <code>optional int64 cpc_bid_ceiling_micros = 3;</code>
      * @param value The cpcBidCeilingMicros to set.
      * @return This builder for chaining.
      */
@@ -566,7 +566,7 @@ private static final long serialVersionUID = 0L;
      * undefined.
      * </pre>
      *
-     * <code>int64 cpc_bid_ceiling_micros = 3;</code>
+     * <code>optional int64 cpc_bid_ceiling_micros = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearCpcBidCeilingMicros() {
@@ -585,7 +585,7 @@ private static final long serialVersionUID = 0L;
      * not.
      * </pre>
      *
-     * <code>bool enhanced_cpc_enabled = 4;</code>
+     * <code>optional bool enhanced_cpc_enabled = 4;</code>
      * @return Whether the enhancedCpcEnabled field is set.
      */
     @java.lang.Override
@@ -600,7 +600,7 @@ private static final long serialVersionUID = 0L;
      * not.
      * </pre>
      *
-     * <code>bool enhanced_cpc_enabled = 4;</code>
+     * <code>optional bool enhanced_cpc_enabled = 4;</code>
      * @return The enhancedCpcEnabled.
      */
     @java.lang.Override
@@ -615,7 +615,7 @@ private static final long serialVersionUID = 0L;
      * not.
      * </pre>
      *
-     * <code>bool enhanced_cpc_enabled = 4;</code>
+     * <code>optional bool enhanced_cpc_enabled = 4;</code>
      * @param value The enhancedCpcEnabled to set.
      * @return This builder for chaining.
      */
@@ -633,7 +633,7 @@ private static final long serialVersionUID = 0L;
      * not.
      * </pre>
      *
-     * <code>bool enhanced_cpc_enabled = 4;</code>
+     * <code>optional bool enhanced_cpc_enabled = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearEnhancedCpcEnabled() {

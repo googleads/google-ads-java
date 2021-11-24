@@ -178,7 +178,7 @@ private static final long serialVersionUID = 0L;
    * new cookies on your domain.
    * </pre>
    *
-   * <code>string global_site_tag = 5;</code>
+   * <code>optional string global_site_tag = 5;</code>
    * @return Whether the globalSiteTag field is set.
    */
   @java.lang.Override
@@ -191,7 +191,7 @@ private static final long serialVersionUID = 0L;
    * new cookies on your domain.
    * </pre>
    *
-   * <code>string global_site_tag = 5;</code>
+   * <code>optional string global_site_tag = 5;</code>
    * @return The globalSiteTag.
    */
   @java.lang.Override
@@ -213,7 +213,7 @@ private static final long serialVersionUID = 0L;
    * new cookies on your domain.
    * </pre>
    *
-   * <code>string global_site_tag = 5;</code>
+   * <code>optional string global_site_tag = 5;</code>
    * @return The bytes for globalSiteTag.
    */
   @java.lang.Override
@@ -239,7 +239,7 @@ private static final long serialVersionUID = 0L;
    * should be counted as conversions.
    * </pre>
    *
-   * <code>string event_snippet = 6;</code>
+   * <code>optional string event_snippet = 6;</code>
    * @return Whether the eventSnippet field is set.
    */
   @java.lang.Override
@@ -252,7 +252,7 @@ private static final long serialVersionUID = 0L;
    * should be counted as conversions.
    * </pre>
    *
-   * <code>string event_snippet = 6;</code>
+   * <code>optional string event_snippet = 6;</code>
    * @return The eventSnippet.
    */
   @java.lang.Override
@@ -274,7 +274,7 @@ private static final long serialVersionUID = 0L;
    * should be counted as conversions.
    * </pre>
    *
-   * <code>string event_snippet = 6;</code>
+   * <code>optional string event_snippet = 6;</code>
    * @return The bytes for eventSnippet.
    */
   @java.lang.Override
@@ -829,7 +829,7 @@ private static final long serialVersionUID = 0L;
      * new cookies on your domain.
      * </pre>
      *
-     * <code>string global_site_tag = 5;</code>
+     * <code>optional string global_site_tag = 5;</code>
      * @return Whether the globalSiteTag field is set.
      */
     public boolean hasGlobalSiteTag() {
@@ -841,7 +841,7 @@ private static final long serialVersionUID = 0L;
      * new cookies on your domain.
      * </pre>
      *
-     * <code>string global_site_tag = 5;</code>
+     * <code>optional string global_site_tag = 5;</code>
      * @return The globalSiteTag.
      */
     public java.lang.String getGlobalSiteTag() {
@@ -862,7 +862,7 @@ private static final long serialVersionUID = 0L;
      * new cookies on your domain.
      * </pre>
      *
-     * <code>string global_site_tag = 5;</code>
+     * <code>optional string global_site_tag = 5;</code>
      * @return The bytes for globalSiteTag.
      */
     public com.google.protobuf.ByteString
@@ -884,7 +884,7 @@ private static final long serialVersionUID = 0L;
      * new cookies on your domain.
      * </pre>
      *
-     * <code>string global_site_tag = 5;</code>
+     * <code>optional string global_site_tag = 5;</code>
      * @param value The globalSiteTag to set.
      * @return This builder for chaining.
      */
@@ -904,7 +904,7 @@ private static final long serialVersionUID = 0L;
      * new cookies on your domain.
      * </pre>
      *
-     * <code>string global_site_tag = 5;</code>
+     * <code>optional string global_site_tag = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearGlobalSiteTag() {
@@ -919,7 +919,7 @@ private static final long serialVersionUID = 0L;
      * new cookies on your domain.
      * </pre>
      *
-     * <code>string global_site_tag = 5;</code>
+     * <code>optional string global_site_tag = 5;</code>
      * @param value The bytes for globalSiteTag to set.
      * @return This builder for chaining.
      */
@@ -942,7 +942,7 @@ private static final long serialVersionUID = 0L;
      * should be counted as conversions.
      * </pre>
      *
-     * <code>string event_snippet = 6;</code>
+     * <code>optional string event_snippet = 6;</code>
      * @return Whether the eventSnippet field is set.
      */
     public boolean hasEventSnippet() {
@@ -954,7 +954,7 @@ private static final long serialVersionUID = 0L;
      * should be counted as conversions.
      * </pre>
      *
-     * <code>string event_snippet = 6;</code>
+     * <code>optional string event_snippet = 6;</code>
      * @return The eventSnippet.
      */
     public java.lang.String getEventSnippet() {
@@ -975,7 +975,7 @@ private static final long serialVersionUID = 0L;
      * should be counted as conversions.
      * </pre>
      *
-     * <code>string event_snippet = 6;</code>
+     * <code>optional string event_snippet = 6;</code>
      * @return The bytes for eventSnippet.
      */
     public com.google.protobuf.ByteString
@@ -997,7 +997,7 @@ private static final long serialVersionUID = 0L;
      * should be counted as conversions.
      * </pre>
      *
-     * <code>string event_snippet = 6;</code>
+     * <code>optional string event_snippet = 6;</code>
      * @param value The eventSnippet to set.
      * @return This builder for chaining.
      */
@@ -1017,7 +1017,7 @@ private static final long serialVersionUID = 0L;
      * should be counted as conversions.
      * </pre>
      *
-     * <code>string event_snippet = 6;</code>
+     * <code>optional string event_snippet = 6;</code>
      * @return This builder for chaining.
      */
     public Builder clearEventSnippet() {
@@ -1032,7 +1032,7 @@ private static final long serialVersionUID = 0L;
      * should be counted as conversions.
      * </pre>
      *
-     * <code>string event_snippet = 6;</code>
+     * <code>optional string event_snippet = 6;</code>
      * @param value The bytes for eventSnippet to set.
      * @return This builder for chaining.
      */

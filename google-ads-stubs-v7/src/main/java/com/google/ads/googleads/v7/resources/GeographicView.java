@@ -193,7 +193,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Criterion Id for the country.
    * </pre>
    *
-   * <code>int64 country_criterion_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 country_criterion_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the countryCriterionId field is set.
    */
   @java.lang.Override
@@ -205,7 +205,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Criterion Id for the country.
    * </pre>
    *
-   * <code>int64 country_criterion_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 country_criterion_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The countryCriterionId.
    */
   @java.lang.Override
@@ -227,7 +227,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (locationType_ != com.google.ads.googleads.v7.enums.GeoTargetingTypeEnum.GeoTargetingType.UNSPECIFIED.getNumber()) {
@@ -245,7 +245,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (locationType_ != com.google.ads.googleads.v7.enums.GeoTargetingTypeEnum.GeoTargetingType.UNSPECIFIED.getNumber()) {
@@ -755,7 +755,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Criterion Id for the country.
      * </pre>
      *
-     * <code>int64 country_criterion_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 country_criterion_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the countryCriterionId field is set.
      */
     @java.lang.Override
@@ -767,7 +767,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Criterion Id for the country.
      * </pre>
      *
-     * <code>int64 country_criterion_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 country_criterion_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The countryCriterionId.
      */
     @java.lang.Override
@@ -779,7 +779,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Criterion Id for the country.
      * </pre>
      *
-     * <code>int64 country_criterion_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 country_criterion_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The countryCriterionId to set.
      * @return This builder for chaining.
      */
@@ -794,7 +794,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Criterion Id for the country.
      * </pre>
      *
-     * <code>int64 country_criterion_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 country_criterion_id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearCountryCriterionId() {

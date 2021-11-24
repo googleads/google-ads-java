@@ -101,7 +101,7 @@ private static final long serialVersionUID = 0L;
    * The CustomInterest resource name.
    * </pre>
    *
-   * <code>string custom_intent = 2;</code>
+   * <code>optional string custom_intent = 2;</code>
    * @return Whether the customIntent field is set.
    */
   @java.lang.Override
@@ -113,7 +113,7 @@ private static final long serialVersionUID = 0L;
    * The CustomInterest resource name.
    * </pre>
    *
-   * <code>string custom_intent = 2;</code>
+   * <code>optional string custom_intent = 2;</code>
    * @return The customIntent.
    */
   @java.lang.Override
@@ -134,7 +134,7 @@ private static final long serialVersionUID = 0L;
    * The CustomInterest resource name.
    * </pre>
    *
-   * <code>string custom_intent = 2;</code>
+   * <code>optional string custom_intent = 2;</code>
    * @return The bytes for customIntent.
    */
   @java.lang.Override
@@ -478,7 +478,7 @@ private static final long serialVersionUID = 0L;
      * The CustomInterest resource name.
      * </pre>
      *
-     * <code>string custom_intent = 2;</code>
+     * <code>optional string custom_intent = 2;</code>
      * @return Whether the customIntent field is set.
      */
     public boolean hasCustomIntent() {
@@ -489,7 +489,7 @@ private static final long serialVersionUID = 0L;
      * The CustomInterest resource name.
      * </pre>
      *
-     * <code>string custom_intent = 2;</code>
+     * <code>optional string custom_intent = 2;</code>
      * @return The customIntent.
      */
     public java.lang.String getCustomIntent() {
@@ -509,7 +509,7 @@ private static final long serialVersionUID = 0L;
      * The CustomInterest resource name.
      * </pre>
      *
-     * <code>string custom_intent = 2;</code>
+     * <code>optional string custom_intent = 2;</code>
      * @return The bytes for customIntent.
      */
     public com.google.protobuf.ByteString
@@ -530,7 +530,7 @@ private static final long serialVersionUID = 0L;
      * The CustomInterest resource name.
      * </pre>
      *
-     * <code>string custom_intent = 2;</code>
+     * <code>optional string custom_intent = 2;</code>
      * @param value The customIntent to set.
      * @return This builder for chaining.
      */
@@ -549,7 +549,7 @@ private static final long serialVersionUID = 0L;
      * The CustomInterest resource name.
      * </pre>
      *
-     * <code>string custom_intent = 2;</code>
+     * <code>optional string custom_intent = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearCustomIntent() {
@@ -563,7 +563,7 @@ private static final long serialVersionUID = 0L;
      * The CustomInterest resource name.
      * </pre>
      *
-     * <code>string custom_intent = 2;</code>
+     * <code>optional string custom_intent = 2;</code>
      * @param value The bytes for customIntent to set.
      * @return This builder for chaining.
      */

@@ -36,7 +36,7 @@ public interface AdGroupBidModifierOrBuilder extends
    * Immutable. The ad group to which this criterion belongs.
    * </pre>
    *
-   * <code>string ad_group = 13 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group = 13 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the adGroup field is set.
    */
   boolean hasAdGroup();
@@ -45,7 +45,7 @@ public interface AdGroupBidModifierOrBuilder extends
    * Immutable. The ad group to which this criterion belongs.
    * </pre>
    *
-   * <code>string ad_group = 13 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group = 13 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The adGroup.
    */
   java.lang.String getAdGroup();
@@ -54,7 +54,7 @@ public interface AdGroupBidModifierOrBuilder extends
    * Immutable. The ad group to which this criterion belongs.
    * </pre>
    *
-   * <code>string ad_group = 13 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group = 13 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for adGroup.
    */
   com.google.protobuf.ByteString
@@ -66,7 +66,7 @@ public interface AdGroupBidModifierOrBuilder extends
    * This field is ignored for mutates.
    * </pre>
    *
-   * <code>int64 criterion_id = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 criterion_id = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the criterionId field is set.
    */
   boolean hasCriterionId();
@@ -76,7 +76,7 @@ public interface AdGroupBidModifierOrBuilder extends
    * This field is ignored for mutates.
    * </pre>
    *
-   * <code>int64 criterion_id = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 criterion_id = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The criterionId.
    */
   long getCriterionId();
@@ -88,7 +88,7 @@ public interface AdGroupBidModifierOrBuilder extends
    * Use 0 to opt out of a Device type.
    * </pre>
    *
-   * <code>double bid_modifier = 15;</code>
+   * <code>optional double bid_modifier = 15;</code>
    * @return Whether the bidModifier field is set.
    */
   boolean hasBidModifier();
@@ -99,7 +99,7 @@ public interface AdGroupBidModifierOrBuilder extends
    * Use 0 to opt out of a Device type.
    * </pre>
    *
-   * <code>double bid_modifier = 15;</code>
+   * <code>optional double bid_modifier = 15;</code>
    * @return The bidModifier.
    */
   double getBidModifier();
@@ -113,7 +113,7 @@ public interface AdGroupBidModifierOrBuilder extends
    * This field is readonly.
    * </pre>
    *
-   * <code>string base_ad_group = 16 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string base_ad_group = 16 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the baseAdGroup field is set.
    */
   boolean hasBaseAdGroup();
@@ -126,7 +126,7 @@ public interface AdGroupBidModifierOrBuilder extends
    * This field is readonly.
    * </pre>
    *
-   * <code>string base_ad_group = 16 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string base_ad_group = 16 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The baseAdGroup.
    */
   java.lang.String getBaseAdGroup();
@@ -139,7 +139,7 @@ public interface AdGroupBidModifierOrBuilder extends
    * This field is readonly.
    * </pre>
    *
-   * <code>string base_ad_group = 16 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string base_ad_group = 16 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for baseAdGroup.
    */
   com.google.protobuf.ByteString

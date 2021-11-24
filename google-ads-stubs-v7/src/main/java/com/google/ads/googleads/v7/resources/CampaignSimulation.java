@@ -695,7 +695,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (campaignId_ != 0L) {
@@ -707,10 +707,10 @@ private static final long serialVersionUID = 0L;
     if (modificationMethod_ != com.google.ads.googleads.v7.enums.SimulationModificationMethodEnum.SimulationModificationMethod.UNSPECIFIED.getNumber()) {
       output.writeEnum(4, modificationMethod_);
     }
-    if (!getStartDateBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(startDate_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, startDate_);
     }
-    if (!getEndDateBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endDate_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, endDate_);
     }
     if (pointListCase_ == 7) {
@@ -737,7 +737,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (campaignId_ != 0L) {
@@ -752,10 +752,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(4, modificationMethod_);
     }
-    if (!getStartDateBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(startDate_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, startDate_);
     }
-    if (!getEndDateBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endDate_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, endDate_);
     }
     if (pointListCase_ == 7) {

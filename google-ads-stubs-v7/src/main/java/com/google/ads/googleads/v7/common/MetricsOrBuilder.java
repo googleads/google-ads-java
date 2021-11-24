@@ -13,7 +13,7 @@ public interface MetricsOrBuilder extends
    * above the organic search results.
    * </pre>
    *
-   * <code>double absolute_top_impression_percentage = 183;</code>
+   * <code>optional double absolute_top_impression_percentage = 183;</code>
    * @return Whether the absoluteTopImpressionPercentage field is set.
    */
   boolean hasAbsoluteTopImpressionPercentage();
@@ -23,7 +23,7 @@ public interface MetricsOrBuilder extends
    * above the organic search results.
    * </pre>
    *
-   * <code>double absolute_top_impression_percentage = 183;</code>
+   * <code>optional double absolute_top_impression_percentage = 183;</code>
    * @return The absoluteTopImpressionPercentage.
    */
   double getAbsoluteTopImpressionPercentage();
@@ -33,7 +33,7 @@ public interface MetricsOrBuilder extends
    * Average cost of viewable impressions (`active_view_impressions`).
    * </pre>
    *
-   * <code>double active_view_cpm = 184;</code>
+   * <code>optional double active_view_cpm = 184;</code>
    * @return Whether the activeViewCpm field is set.
    */
   boolean hasActiveViewCpm();
@@ -42,7 +42,7 @@ public interface MetricsOrBuilder extends
    * Average cost of viewable impressions (`active_view_impressions`).
    * </pre>
    *
-   * <code>double active_view_cpm = 184;</code>
+   * <code>optional double active_view_cpm = 184;</code>
    * @return The activeViewCpm.
    */
   double getActiveViewCpm();
@@ -53,7 +53,7 @@ public interface MetricsOrBuilder extends
    * This metric is reported only for display network.
    * </pre>
    *
-   * <code>double active_view_ctr = 185;</code>
+   * <code>optional double active_view_ctr = 185;</code>
    * @return Whether the activeViewCtr field is set.
    */
   boolean hasActiveViewCtr();
@@ -63,7 +63,7 @@ public interface MetricsOrBuilder extends
    * This metric is reported only for display network.
    * </pre>
    *
-   * <code>double active_view_ctr = 185;</code>
+   * <code>optional double active_view_ctr = 185;</code>
    * @return The activeViewCtr.
    */
   double getActiveViewCtr();
@@ -74,7 +74,7 @@ public interface MetricsOrBuilder extends
    * Network site.
    * </pre>
    *
-   * <code>int64 active_view_impressions = 186;</code>
+   * <code>optional int64 active_view_impressions = 186;</code>
    * @return Whether the activeViewImpressions field is set.
    */
   boolean hasActiveViewImpressions();
@@ -84,7 +84,7 @@ public interface MetricsOrBuilder extends
    * Network site.
    * </pre>
    *
-   * <code>int64 active_view_impressions = 186;</code>
+   * <code>optional int64 active_view_impressions = 186;</code>
    * @return The activeViewImpressions.
    */
   long getActiveViewImpressions();
@@ -95,7 +95,7 @@ public interface MetricsOrBuilder extends
    * number of served impressions.
    * </pre>
    *
-   * <code>double active_view_measurability = 187;</code>
+   * <code>optional double active_view_measurability = 187;</code>
    * @return Whether the activeViewMeasurability field is set.
    */
   boolean hasActiveViewMeasurability();
@@ -105,7 +105,7 @@ public interface MetricsOrBuilder extends
    * number of served impressions.
    * </pre>
    *
-   * <code>double active_view_measurability = 187;</code>
+   * <code>optional double active_view_measurability = 187;</code>
    * @return The activeViewMeasurability.
    */
   double getActiveViewMeasurability();
@@ -116,7 +116,7 @@ public interface MetricsOrBuilder extends
    * View.
    * </pre>
    *
-   * <code>int64 active_view_measurable_cost_micros = 188;</code>
+   * <code>optional int64 active_view_measurable_cost_micros = 188;</code>
    * @return Whether the activeViewMeasurableCostMicros field is set.
    */
   boolean hasActiveViewMeasurableCostMicros();
@@ -126,7 +126,7 @@ public interface MetricsOrBuilder extends
    * View.
    * </pre>
    *
-   * <code>int64 active_view_measurable_cost_micros = 188;</code>
+   * <code>optional int64 active_view_measurable_cost_micros = 188;</code>
    * @return The activeViewMeasurableCostMicros.
    */
   long getActiveViewMeasurableCostMicros();
@@ -137,7 +137,7 @@ public interface MetricsOrBuilder extends
    * where they can be seen.
    * </pre>
    *
-   * <code>int64 active_view_measurable_impressions = 189;</code>
+   * <code>optional int64 active_view_measurable_impressions = 189;</code>
    * @return Whether the activeViewMeasurableImpressions field is set.
    */
   boolean hasActiveViewMeasurableImpressions();
@@ -147,7 +147,7 @@ public interface MetricsOrBuilder extends
    * where they can be seen.
    * </pre>
    *
-   * <code>int64 active_view_measurable_impressions = 189;</code>
+   * <code>optional int64 active_view_measurable_impressions = 189;</code>
    * @return The activeViewMeasurableImpressions.
    */
   long getActiveViewMeasurableImpressions();
@@ -158,7 +158,7 @@ public interface MetricsOrBuilder extends
    * (measurable impressions) and was viewable (viewable impressions).
    * </pre>
    *
-   * <code>double active_view_viewability = 190;</code>
+   * <code>optional double active_view_viewability = 190;</code>
    * @return Whether the activeViewViewability field is set.
    */
   boolean hasActiveViewViewability();
@@ -168,7 +168,7 @@ public interface MetricsOrBuilder extends
    * (measurable impressions) and was viewable (viewable impressions).
    * </pre>
    *
-   * <code>double active_view_viewability = 190;</code>
+   * <code>optional double active_view_viewability = 190;</code>
    * @return The activeViewViewability.
    */
   double getActiveViewViewability();
@@ -179,7 +179,7 @@ public interface MetricsOrBuilder extends
    * divided by the number of ad interactions.
    * </pre>
    *
-   * <code>double all_conversions_from_interactions_rate = 191;</code>
+   * <code>optional double all_conversions_from_interactions_rate = 191;</code>
    * @return Whether the allConversionsFromInteractionsRate field is set.
    */
   boolean hasAllConversionsFromInteractionsRate();
@@ -189,7 +189,7 @@ public interface MetricsOrBuilder extends
    * divided by the number of ad interactions.
    * </pre>
    *
-   * <code>double all_conversions_from_interactions_rate = 191;</code>
+   * <code>optional double all_conversions_from_interactions_rate = 191;</code>
    * @return The allConversionsFromInteractionsRate.
    */
   double getAllConversionsFromInteractionsRate();
@@ -199,7 +199,7 @@ public interface MetricsOrBuilder extends
    * The value of all conversions.
    * </pre>
    *
-   * <code>double all_conversions_value = 192;</code>
+   * <code>optional double all_conversions_value = 192;</code>
    * @return Whether the allConversionsValue field is set.
    */
   boolean hasAllConversionsValue();
@@ -208,7 +208,7 @@ public interface MetricsOrBuilder extends
    * The value of all conversions.
    * </pre>
    *
-   * <code>double all_conversions_value = 192;</code>
+   * <code>optional double all_conversions_value = 192;</code>
    * @return The allConversionsValue.
    */
   double getAllConversionsValue();
@@ -232,7 +232,7 @@ public interface MetricsOrBuilder extends
    * of the value of include_in_conversions_metric.
    * </pre>
    *
-   * <code>double all_conversions = 193;</code>
+   * <code>optional double all_conversions = 193;</code>
    * @return Whether the allConversions field is set.
    */
   boolean hasAllConversions();
@@ -242,7 +242,7 @@ public interface MetricsOrBuilder extends
    * of the value of include_in_conversions_metric.
    * </pre>
    *
-   * <code>double all_conversions = 193;</code>
+   * <code>optional double all_conversions = 193;</code>
    * @return The allConversions.
    */
   double getAllConversions();
@@ -267,7 +267,7 @@ public interface MetricsOrBuilder extends
    * (such as clicks for text ads or views for video ads).
    * </pre>
    *
-   * <code>double all_conversions_value_per_cost = 194;</code>
+   * <code>optional double all_conversions_value_per_cost = 194;</code>
    * @return Whether the allConversionsValuePerCost field is set.
    */
   boolean hasAllConversionsValuePerCost();
@@ -277,7 +277,7 @@ public interface MetricsOrBuilder extends
    * (such as clicks for text ads or views for video ads).
    * </pre>
    *
-   * <code>double all_conversions_value_per_cost = 194;</code>
+   * <code>optional double all_conversions_value_per_cost = 194;</code>
    * @return The allConversionsValuePerCost.
    */
   double getAllConversionsValuePerCost();
@@ -290,7 +290,7 @@ public interface MetricsOrBuilder extends
    * This metric applies to feed items only.
    * </pre>
    *
-   * <code>double all_conversions_from_click_to_call = 195;</code>
+   * <code>optional double all_conversions_from_click_to_call = 195;</code>
    * @return Whether the allConversionsFromClickToCall field is set.
    */
   boolean hasAllConversionsFromClickToCall();
@@ -302,7 +302,7 @@ public interface MetricsOrBuilder extends
    * This metric applies to feed items only.
    * </pre>
    *
-   * <code>double all_conversions_from_click_to_call = 195;</code>
+   * <code>optional double all_conversions_from_click_to_call = 195;</code>
    * @return The allConversionsFromClickToCall.
    */
   double getAllConversionsFromClickToCall();
@@ -314,7 +314,7 @@ public interface MetricsOrBuilder extends
    * This metric applies to feed items only.
    * </pre>
    *
-   * <code>double all_conversions_from_directions = 196;</code>
+   * <code>optional double all_conversions_from_directions = 196;</code>
    * @return Whether the allConversionsFromDirections field is set.
    */
   boolean hasAllConversionsFromDirections();
@@ -325,7 +325,7 @@ public interface MetricsOrBuilder extends
    * This metric applies to feed items only.
    * </pre>
    *
-   * <code>double all_conversions_from_directions = 196;</code>
+   * <code>optional double all_conversions_from_directions = 196;</code>
    * @return The allConversionsFromDirections.
    */
   double getAllConversionsFromDirections();
@@ -336,7 +336,7 @@ public interface MetricsOrBuilder extends
    * of interactions.
    * </pre>
    *
-   * <code>double all_conversions_from_interactions_value_per_interaction = 197;</code>
+   * <code>optional double all_conversions_from_interactions_value_per_interaction = 197;</code>
    * @return Whether the allConversionsFromInteractionsValuePerInteraction field is set.
    */
   boolean hasAllConversionsFromInteractionsValuePerInteraction();
@@ -346,7 +346,7 @@ public interface MetricsOrBuilder extends
    * of interactions.
    * </pre>
    *
-   * <code>double all_conversions_from_interactions_value_per_interaction = 197;</code>
+   * <code>optional double all_conversions_from_interactions_value_per_interaction = 197;</code>
    * @return The allConversionsFromInteractionsValuePerInteraction.
    */
   double getAllConversionsFromInteractionsValuePerInteraction();
@@ -358,7 +358,7 @@ public interface MetricsOrBuilder extends
    * This metric applies to feed items only.
    * </pre>
    *
-   * <code>double all_conversions_from_menu = 198;</code>
+   * <code>optional double all_conversions_from_menu = 198;</code>
    * @return Whether the allConversionsFromMenu field is set.
    */
   boolean hasAllConversionsFromMenu();
@@ -369,7 +369,7 @@ public interface MetricsOrBuilder extends
    * This metric applies to feed items only.
    * </pre>
    *
-   * <code>double all_conversions_from_menu = 198;</code>
+   * <code>optional double all_conversions_from_menu = 198;</code>
    * @return The allConversionsFromMenu.
    */
   double getAllConversionsFromMenu();
@@ -380,7 +380,7 @@ public interface MetricsOrBuilder extends
    * This metric applies to feed items only.
    * </pre>
    *
-   * <code>double all_conversions_from_order = 199;</code>
+   * <code>optional double all_conversions_from_order = 199;</code>
    * @return Whether the allConversionsFromOrder field is set.
    */
   boolean hasAllConversionsFromOrder();
@@ -390,7 +390,7 @@ public interface MetricsOrBuilder extends
    * This metric applies to feed items only.
    * </pre>
    *
-   * <code>double all_conversions_from_order = 199;</code>
+   * <code>optional double all_conversions_from_order = 199;</code>
    * @return The allConversionsFromOrder.
    */
   double getAllConversionsFromOrder();
@@ -402,7 +402,7 @@ public interface MetricsOrBuilder extends
    * This metric applies to feed items only.
    * </pre>
    *
-   * <code>double all_conversions_from_other_engagement = 200;</code>
+   * <code>optional double all_conversions_from_other_engagement = 200;</code>
    * @return Whether the allConversionsFromOtherEngagement field is set.
    */
   boolean hasAllConversionsFromOtherEngagement();
@@ -413,7 +413,7 @@ public interface MetricsOrBuilder extends
    * This metric applies to feed items only.
    * </pre>
    *
-   * <code>double all_conversions_from_other_engagement = 200;</code>
+   * <code>optional double all_conversions_from_other_engagement = 200;</code>
    * @return The allConversionsFromOtherEngagement.
    */
   double getAllConversionsFromOtherEngagement();
@@ -424,7 +424,7 @@ public interface MetricsOrBuilder extends
    * This metric applies to feed items only.
    * </pre>
    *
-   * <code>double all_conversions_from_store_visit = 201;</code>
+   * <code>optional double all_conversions_from_store_visit = 201;</code>
    * @return Whether the allConversionsFromStoreVisit field is set.
    */
   boolean hasAllConversionsFromStoreVisit();
@@ -434,7 +434,7 @@ public interface MetricsOrBuilder extends
    * This metric applies to feed items only.
    * </pre>
    *
-   * <code>double all_conversions_from_store_visit = 201;</code>
+   * <code>optional double all_conversions_from_store_visit = 201;</code>
    * @return The allConversionsFromStoreVisit.
    */
   double getAllConversionsFromStoreVisit();
@@ -446,7 +446,7 @@ public interface MetricsOrBuilder extends
    * This metric applies to feed items only.
    * </pre>
    *
-   * <code>double all_conversions_from_store_website = 202;</code>
+   * <code>optional double all_conversions_from_store_website = 202;</code>
    * @return Whether the allConversionsFromStoreWebsite field is set.
    */
   boolean hasAllConversionsFromStoreWebsite();
@@ -457,7 +457,7 @@ public interface MetricsOrBuilder extends
    * This metric applies to feed items only.
    * </pre>
    *
-   * <code>double all_conversions_from_store_website = 202;</code>
+   * <code>optional double all_conversions_from_store_website = 202;</code>
    * @return The allConversionsFromStoreWebsite.
    */
   double getAllConversionsFromStoreWebsite();
@@ -468,7 +468,7 @@ public interface MetricsOrBuilder extends
    * of your ads divided by the total number of interactions.
    * </pre>
    *
-   * <code>double average_cost = 203;</code>
+   * <code>optional double average_cost = 203;</code>
    * @return Whether the averageCost field is set.
    */
   boolean hasAverageCost();
@@ -478,7 +478,7 @@ public interface MetricsOrBuilder extends
    * of your ads divided by the total number of interactions.
    * </pre>
    *
-   * <code>double average_cost = 203;</code>
+   * <code>optional double average_cost = 203;</code>
    * @return The averageCost.
    */
   double getAverageCost();
@@ -489,7 +489,7 @@ public interface MetricsOrBuilder extends
    * received.
    * </pre>
    *
-   * <code>double average_cpc = 204;</code>
+   * <code>optional double average_cpc = 204;</code>
    * @return Whether the averageCpc field is set.
    */
   boolean hasAverageCpc();
@@ -499,7 +499,7 @@ public interface MetricsOrBuilder extends
    * received.
    * </pre>
    *
-   * <code>double average_cpc = 204;</code>
+   * <code>optional double average_cpc = 204;</code>
    * @return The averageCpc.
    */
   double getAverageCpc();
@@ -511,7 +511,7 @@ public interface MetricsOrBuilder extends
    * of ad engagements.
    * </pre>
    *
-   * <code>double average_cpe = 205;</code>
+   * <code>optional double average_cpe = 205;</code>
    * @return Whether the averageCpe field is set.
    */
   boolean hasAverageCpe();
@@ -522,7 +522,7 @@ public interface MetricsOrBuilder extends
    * of ad engagements.
    * </pre>
    *
-   * <code>double average_cpe = 205;</code>
+   * <code>optional double average_cpe = 205;</code>
    * @return The averageCpe.
    */
   double getAverageCpe();
@@ -532,7 +532,7 @@ public interface MetricsOrBuilder extends
    * Average cost-per-thousand impressions (CPM).
    * </pre>
    *
-   * <code>double average_cpm = 206;</code>
+   * <code>optional double average_cpm = 206;</code>
    * @return Whether the averageCpm field is set.
    */
   boolean hasAverageCpm();
@@ -541,7 +541,7 @@ public interface MetricsOrBuilder extends
    * Average cost-per-thousand impressions (CPM).
    * </pre>
    *
-   * <code>double average_cpm = 206;</code>
+   * <code>optional double average_cpm = 206;</code>
    * @return The averageCpm.
    */
   double getAverageCpm();
@@ -553,7 +553,7 @@ public interface MetricsOrBuilder extends
    * the number of views.
    * </pre>
    *
-   * <code>double average_cpv = 207;</code>
+   * <code>optional double average_cpv = 207;</code>
    * @return Whether the averageCpv field is set.
    */
   boolean hasAverageCpv();
@@ -564,7 +564,7 @@ public interface MetricsOrBuilder extends
    * the number of views.
    * </pre>
    *
-   * <code>double average_cpv = 207;</code>
+   * <code>optional double average_cpv = 207;</code>
    * @return The averageCpv.
    */
   double getAverageCpv();
@@ -574,7 +574,7 @@ public interface MetricsOrBuilder extends
    * Average number of pages viewed per session.
    * </pre>
    *
-   * <code>double average_page_views = 208;</code>
+   * <code>optional double average_page_views = 208;</code>
    * @return Whether the averagePageViews field is set.
    */
   boolean hasAveragePageViews();
@@ -583,7 +583,7 @@ public interface MetricsOrBuilder extends
    * Average number of pages viewed per session.
    * </pre>
    *
-   * <code>double average_page_views = 208;</code>
+   * <code>optional double average_page_views = 208;</code>
    * @return The averagePageViews.
    */
   double getAveragePageViews();
@@ -594,7 +594,7 @@ public interface MetricsOrBuilder extends
    * from Google Analytics.
    * </pre>
    *
-   * <code>double average_time_on_site = 209;</code>
+   * <code>optional double average_time_on_site = 209;</code>
    * @return Whether the averageTimeOnSite field is set.
    */
   boolean hasAverageTimeOnSite();
@@ -604,7 +604,7 @@ public interface MetricsOrBuilder extends
    * from Google Analytics.
    * </pre>
    *
-   * <code>double average_time_on_site = 209;</code>
+   * <code>optional double average_time_on_site = 209;</code>
    * @return The averageTimeOnSite.
    */
   double getAverageTimeOnSite();
@@ -614,7 +614,7 @@ public interface MetricsOrBuilder extends
    * An indication of how other advertisers are bidding on similar products.
    * </pre>
    *
-   * <code>double benchmark_average_max_cpc = 210;</code>
+   * <code>optional double benchmark_average_max_cpc = 210;</code>
    * @return Whether the benchmarkAverageMaxCpc field is set.
    */
   boolean hasBenchmarkAverageMaxCpc();
@@ -623,7 +623,7 @@ public interface MetricsOrBuilder extends
    * An indication of how other advertisers are bidding on similar products.
    * </pre>
    *
-   * <code>double benchmark_average_max_cpc = 210;</code>
+   * <code>optional double benchmark_average_max_cpc = 210;</code>
    * @return The benchmarkAverageMaxCpc.
    */
   double getBenchmarkAverageMaxCpc();
@@ -634,7 +634,7 @@ public interface MetricsOrBuilder extends
    * are performing based on how often people who see their ad click on it.
    * </pre>
    *
-   * <code>double benchmark_ctr = 211;</code>
+   * <code>optional double benchmark_ctr = 211;</code>
    * @return Whether the benchmarkCtr field is set.
    */
   boolean hasBenchmarkCtr();
@@ -644,7 +644,7 @@ public interface MetricsOrBuilder extends
    * are performing based on how often people who see their ad click on it.
    * </pre>
    *
-   * <code>double benchmark_ctr = 211;</code>
+   * <code>optional double benchmark_ctr = 211;</code>
    * @return The benchmarkCtr.
    */
   double getBenchmarkCtr();
@@ -655,7 +655,7 @@ public interface MetricsOrBuilder extends
    * site. Imported from Google Analytics.
    * </pre>
    *
-   * <code>double bounce_rate = 212;</code>
+   * <code>optional double bounce_rate = 212;</code>
    * @return Whether the bounceRate field is set.
    */
   boolean hasBounceRate();
@@ -665,7 +665,7 @@ public interface MetricsOrBuilder extends
    * site. Imported from Google Analytics.
    * </pre>
    *
-   * <code>double bounce_rate = 212;</code>
+   * <code>optional double bounce_rate = 212;</code>
    * @return The bounceRate.
    */
   double getBounceRate();
@@ -675,7 +675,7 @@ public interface MetricsOrBuilder extends
    * The number of clicks.
    * </pre>
    *
-   * <code>int64 clicks = 131;</code>
+   * <code>optional int64 clicks = 131;</code>
    * @return Whether the clicks field is set.
    */
   boolean hasClicks();
@@ -684,7 +684,7 @@ public interface MetricsOrBuilder extends
    * The number of clicks.
    * </pre>
    *
-   * <code>int64 clicks = 131;</code>
+   * <code>optional int64 clicks = 131;</code>
    * @return The clicks.
    */
   long getClicks();
@@ -696,7 +696,7 @@ public interface MetricsOrBuilder extends
    * https://support.google.com/google-ads/answer/3097241 for details.
    * </pre>
    *
-   * <code>int64 combined_clicks = 156;</code>
+   * <code>optional int64 combined_clicks = 156;</code>
    * @return Whether the combinedClicks field is set.
    */
   boolean hasCombinedClicks();
@@ -707,7 +707,7 @@ public interface MetricsOrBuilder extends
    * https://support.google.com/google-ads/answer/3097241 for details.
    * </pre>
    *
-   * <code>int64 combined_clicks = 156;</code>
+   * <code>optional int64 combined_clicks = 156;</code>
    * @return The combinedClicks.
    */
   long getCombinedClicks();
@@ -720,7 +720,7 @@ public interface MetricsOrBuilder extends
    * details.
    * </pre>
    *
-   * <code>double combined_clicks_per_query = 157;</code>
+   * <code>optional double combined_clicks_per_query = 157;</code>
    * @return Whether the combinedClicksPerQuery field is set.
    */
   boolean hasCombinedClicksPerQuery();
@@ -732,7 +732,7 @@ public interface MetricsOrBuilder extends
    * details.
    * </pre>
    *
-   * <code>double combined_clicks_per_query = 157;</code>
+   * <code>optional double combined_clicks_per_query = 157;</code>
    * @return The combinedClicksPerQuery.
    */
   double getCombinedClicksPerQuery();
@@ -744,7 +744,7 @@ public interface MetricsOrBuilder extends
    * https://support.google.com/google-ads/answer/3097241 for details.
    * </pre>
    *
-   * <code>int64 combined_queries = 158;</code>
+   * <code>optional int64 combined_queries = 158;</code>
    * @return Whether the combinedQueries field is set.
    */
   boolean hasCombinedQueries();
@@ -755,7 +755,7 @@ public interface MetricsOrBuilder extends
    * https://support.google.com/google-ads/answer/3097241 for details.
    * </pre>
    *
-   * <code>int64 combined_queries = 158;</code>
+   * <code>optional int64 combined_queries = 158;</code>
    * @return The combinedQueries.
    */
   long getCombinedQueries();
@@ -768,7 +768,7 @@ public interface MetricsOrBuilder extends
    * to 0.9. Any value above 0.9 is reported as 0.9001.
    * </pre>
    *
-   * <code>double content_budget_lost_impression_share = 159;</code>
+   * <code>optional double content_budget_lost_impression_share = 159;</code>
    * @return Whether the contentBudgetLostImpressionShare field is set.
    */
   boolean hasContentBudgetLostImpressionShare();
@@ -780,7 +780,7 @@ public interface MetricsOrBuilder extends
    * to 0.9. Any value above 0.9 is reported as 0.9001.
    * </pre>
    *
-   * <code>double content_budget_lost_impression_share = 159;</code>
+   * <code>optional double content_budget_lost_impression_share = 159;</code>
    * @return The contentBudgetLostImpressionShare.
    */
   double getContentBudgetLostImpressionShare();
@@ -793,7 +793,7 @@ public interface MetricsOrBuilder extends
    * value below 0.1 is reported as 0.0999.
    * </pre>
    *
-   * <code>double content_impression_share = 160;</code>
+   * <code>optional double content_impression_share = 160;</code>
    * @return Whether the contentImpressionShare field is set.
    */
   boolean hasContentImpressionShare();
@@ -805,7 +805,7 @@ public interface MetricsOrBuilder extends
    * value below 0.1 is reported as 0.0999.
    * </pre>
    *
-   * <code>double content_impression_share = 160;</code>
+   * <code>optional double content_impression_share = 160;</code>
    * @return The contentImpressionShare.
    */
   double getContentImpressionShare();
@@ -819,7 +819,7 @@ public interface MetricsOrBuilder extends
    * advertiser). The date/time is in the customer's time zone.
    * </pre>
    *
-   * <code>string conversion_last_received_request_date_time = 161;</code>
+   * <code>optional string conversion_last_received_request_date_time = 161;</code>
    * @return Whether the conversionLastReceivedRequestDateTime field is set.
    */
   boolean hasConversionLastReceivedRequestDateTime();
@@ -832,7 +832,7 @@ public interface MetricsOrBuilder extends
    * advertiser). The date/time is in the customer's time zone.
    * </pre>
    *
-   * <code>string conversion_last_received_request_date_time = 161;</code>
+   * <code>optional string conversion_last_received_request_date_time = 161;</code>
    * @return The conversionLastReceivedRequestDateTime.
    */
   java.lang.String getConversionLastReceivedRequestDateTime();
@@ -845,7 +845,7 @@ public interface MetricsOrBuilder extends
    * advertiser). The date/time is in the customer's time zone.
    * </pre>
    *
-   * <code>string conversion_last_received_request_date_time = 161;</code>
+   * <code>optional string conversion_last_received_request_date_time = 161;</code>
    * @return The bytes for conversionLastReceivedRequestDateTime.
    */
   com.google.protobuf.ByteString
@@ -857,7 +857,7 @@ public interface MetricsOrBuilder extends
    * is in the customer's time zone.
    * </pre>
    *
-   * <code>string conversion_last_conversion_date = 162;</code>
+   * <code>optional string conversion_last_conversion_date = 162;</code>
    * @return Whether the conversionLastConversionDate field is set.
    */
   boolean hasConversionLastConversionDate();
@@ -867,7 +867,7 @@ public interface MetricsOrBuilder extends
    * is in the customer's time zone.
    * </pre>
    *
-   * <code>string conversion_last_conversion_date = 162;</code>
+   * <code>optional string conversion_last_conversion_date = 162;</code>
    * @return The conversionLastConversionDate.
    */
   java.lang.String getConversionLastConversionDate();
@@ -877,7 +877,7 @@ public interface MetricsOrBuilder extends
    * is in the customer's time zone.
    * </pre>
    *
-   * <code>string conversion_last_conversion_date = 162;</code>
+   * <code>optional string conversion_last_conversion_date = 162;</code>
    * @return The bytes for conversionLastConversionDate.
    */
   com.google.protobuf.ByteString
@@ -891,7 +891,7 @@ public interface MetricsOrBuilder extends
    * to 0.9. Any value above 0.9 is reported as 0.9001.
    * </pre>
    *
-   * <code>double content_rank_lost_impression_share = 163;</code>
+   * <code>optional double content_rank_lost_impression_share = 163;</code>
    * @return Whether the contentRankLostImpressionShare field is set.
    */
   boolean hasContentRankLostImpressionShare();
@@ -903,7 +903,7 @@ public interface MetricsOrBuilder extends
    * to 0.9. Any value above 0.9 is reported as 0.9001.
    * </pre>
    *
-   * <code>double content_rank_lost_impression_share = 163;</code>
+   * <code>optional double content_rank_lost_impression_share = 163;</code>
    * @return The contentRankLostImpressionShare.
    */
   double getContentRankLostImpressionShare();
@@ -917,7 +917,7 @@ public interface MetricsOrBuilder extends
    * optimize for these conversions.
    * </pre>
    *
-   * <code>double conversions_from_interactions_rate = 164;</code>
+   * <code>optional double conversions_from_interactions_rate = 164;</code>
    * @return Whether the conversionsFromInteractionsRate field is set.
    */
   boolean hasConversionsFromInteractionsRate();
@@ -930,7 +930,7 @@ public interface MetricsOrBuilder extends
    * optimize for these conversions.
    * </pre>
    *
-   * <code>double conversions_from_interactions_rate = 164;</code>
+   * <code>optional double conversions_from_interactions_rate = 164;</code>
    * @return The conversionsFromInteractionsRate.
    */
   double getConversionsFromInteractionsRate();
@@ -943,7 +943,7 @@ public interface MetricsOrBuilder extends
    * conversions.
    * </pre>
    *
-   * <code>double conversions_value = 165;</code>
+   * <code>optional double conversions_value = 165;</code>
    * @return Whether the conversionsValue field is set.
    */
   boolean hasConversionsValue();
@@ -955,7 +955,7 @@ public interface MetricsOrBuilder extends
    * conversions.
    * </pre>
    *
-   * <code>double conversions_value = 165;</code>
+   * <code>optional double conversions_value = 165;</code>
    * @return The conversionsValue.
    */
   double getConversionsValue();
@@ -984,7 +984,7 @@ public interface MetricsOrBuilder extends
    * will optimize for these conversions.
    * </pre>
    *
-   * <code>double conversions_value_per_cost = 166;</code>
+   * <code>optional double conversions_value_per_cost = 166;</code>
    * @return Whether the conversionsValuePerCost field is set.
    */
   boolean hasConversionsValuePerCost();
@@ -996,7 +996,7 @@ public interface MetricsOrBuilder extends
    * will optimize for these conversions.
    * </pre>
    *
-   * <code>double conversions_value_per_cost = 166;</code>
+   * <code>optional double conversions_value_per_cost = 166;</code>
    * @return The conversionsValuePerCost.
    */
   double getConversionsValuePerCost();
@@ -1010,7 +1010,7 @@ public interface MetricsOrBuilder extends
    * conversions.
    * </pre>
    *
-   * <code>double conversions_from_interactions_value_per_interaction = 167;</code>
+   * <code>optional double conversions_from_interactions_value_per_interaction = 167;</code>
    * @return Whether the conversionsFromInteractionsValuePerInteraction field is set.
    */
   boolean hasConversionsFromInteractionsValuePerInteraction();
@@ -1023,7 +1023,7 @@ public interface MetricsOrBuilder extends
    * conversions.
    * </pre>
    *
-   * <code>double conversions_from_interactions_value_per_interaction = 167;</code>
+   * <code>optional double conversions_from_interactions_value_per_interaction = 167;</code>
    * @return The conversionsFromInteractionsValuePerInteraction.
    */
   double getConversionsFromInteractionsValuePerInteraction();
@@ -1036,7 +1036,7 @@ public interface MetricsOrBuilder extends
    * conversions.
    * </pre>
    *
-   * <code>double conversions = 168;</code>
+   * <code>optional double conversions = 168;</code>
    * @return Whether the conversions field is set.
    */
   boolean hasConversions();
@@ -1048,7 +1048,7 @@ public interface MetricsOrBuilder extends
    * conversions.
    * </pre>
    *
-   * <code>double conversions = 168;</code>
+   * <code>optional double conversions = 168;</code>
    * @return The conversions.
    */
   double getConversions();
@@ -1075,7 +1075,7 @@ public interface MetricsOrBuilder extends
    * (CPM) costs during this period.
    * </pre>
    *
-   * <code>int64 cost_micros = 169;</code>
+   * <code>optional int64 cost_micros = 169;</code>
    * @return Whether the costMicros field is set.
    */
   boolean hasCostMicros();
@@ -1085,7 +1085,7 @@ public interface MetricsOrBuilder extends
    * (CPM) costs during this period.
    * </pre>
    *
-   * <code>int64 cost_micros = 169;</code>
+   * <code>optional int64 cost_micros = 169;</code>
    * @return The costMicros.
    */
   long getCostMicros();
@@ -1095,7 +1095,7 @@ public interface MetricsOrBuilder extends
    * The cost of ad interactions divided by all conversions.
    * </pre>
    *
-   * <code>double cost_per_all_conversions = 170;</code>
+   * <code>optional double cost_per_all_conversions = 170;</code>
    * @return Whether the costPerAllConversions field is set.
    */
   boolean hasCostPerAllConversions();
@@ -1104,7 +1104,7 @@ public interface MetricsOrBuilder extends
    * The cost of ad interactions divided by all conversions.
    * </pre>
    *
-   * <code>double cost_per_all_conversions = 170;</code>
+   * <code>optional double cost_per_all_conversions = 170;</code>
    * @return The costPerAllConversions.
    */
   double getCostPerAllConversions();
@@ -1117,7 +1117,7 @@ public interface MetricsOrBuilder extends
    * optimize for these conversions.
    * </pre>
    *
-   * <code>double cost_per_conversion = 171;</code>
+   * <code>optional double cost_per_conversion = 171;</code>
    * @return Whether the costPerConversion field is set.
    */
   boolean hasCostPerConversion();
@@ -1129,7 +1129,7 @@ public interface MetricsOrBuilder extends
    * optimize for these conversions.
    * </pre>
    *
-   * <code>double cost_per_conversion = 171;</code>
+   * <code>optional double cost_per_conversion = 171;</code>
    * @return The costPerConversion.
    */
   double getCostPerConversion();
@@ -1143,7 +1143,7 @@ public interface MetricsOrBuilder extends
    * conversions.
    * </pre>
    *
-   * <code>double cost_per_current_model_attributed_conversion = 172;</code>
+   * <code>optional double cost_per_current_model_attributed_conversion = 172;</code>
    * @return Whether the costPerCurrentModelAttributedConversion field is set.
    */
   boolean hasCostPerCurrentModelAttributedConversion();
@@ -1156,7 +1156,7 @@ public interface MetricsOrBuilder extends
    * conversions.
    * </pre>
    *
-   * <code>double cost_per_current_model_attributed_conversion = 172;</code>
+   * <code>optional double cost_per_current_model_attributed_conversion = 172;</code>
    * @return The costPerCurrentModelAttributedConversion.
    */
   double getCostPerCurrentModelAttributedConversion();
@@ -1168,7 +1168,7 @@ public interface MetricsOrBuilder extends
    * Cross-device conversions are already included in all_conversions.
    * </pre>
    *
-   * <code>double cross_device_conversions = 173;</code>
+   * <code>optional double cross_device_conversions = 173;</code>
    * @return Whether the crossDeviceConversions field is set.
    */
   boolean hasCrossDeviceConversions();
@@ -1179,7 +1179,7 @@ public interface MetricsOrBuilder extends
    * Cross-device conversions are already included in all_conversions.
    * </pre>
    *
-   * <code>double cross_device_conversions = 173;</code>
+   * <code>optional double cross_device_conversions = 173;</code>
    * @return The crossDeviceConversions.
    */
   double getCrossDeviceConversions();
@@ -1190,7 +1190,7 @@ public interface MetricsOrBuilder extends
    * of times your ad is shown (Impressions).
    * </pre>
    *
-   * <code>double ctr = 174;</code>
+   * <code>optional double ctr = 174;</code>
    * @return Whether the ctr field is set.
    */
   boolean hasCtr();
@@ -1200,7 +1200,7 @@ public interface MetricsOrBuilder extends
    * of times your ad is shown (Impressions).
    * </pre>
    *
-   * <code>double ctr = 174;</code>
+   * <code>optional double ctr = 174;</code>
    * @return The ctr.
    */
   double getCtr();
@@ -1214,7 +1214,7 @@ public interface MetricsOrBuilder extends
    * conversions.
    * </pre>
    *
-   * <code>double current_model_attributed_conversions = 175;</code>
+   * <code>optional double current_model_attributed_conversions = 175;</code>
    * @return Whether the currentModelAttributedConversions field is set.
    */
   boolean hasCurrentModelAttributedConversions();
@@ -1227,7 +1227,7 @@ public interface MetricsOrBuilder extends
    * conversions.
    * </pre>
    *
-   * <code>double current_model_attributed_conversions = 175;</code>
+   * <code>optional double current_model_attributed_conversions = 175;</code>
    * @return The currentModelAttributedConversions.
    */
   double getCurrentModelAttributedConversions();
@@ -1242,7 +1242,7 @@ public interface MetricsOrBuilder extends
    * conversions.
    * </pre>
    *
-   * <code>double current_model_attributed_conversions_from_interactions_rate = 176;</code>
+   * <code>optional double current_model_attributed_conversions_from_interactions_rate = 176;</code>
    * @return Whether the currentModelAttributedConversionsFromInteractionsRate field is set.
    */
   boolean hasCurrentModelAttributedConversionsFromInteractionsRate();
@@ -1256,7 +1256,7 @@ public interface MetricsOrBuilder extends
    * conversions.
    * </pre>
    *
-   * <code>double current_model_attributed_conversions_from_interactions_rate = 176;</code>
+   * <code>optional double current_model_attributed_conversions_from_interactions_rate = 176;</code>
    * @return The currentModelAttributedConversionsFromInteractionsRate.
    */
   double getCurrentModelAttributedConversionsFromInteractionsRate();
@@ -1270,7 +1270,7 @@ public interface MetricsOrBuilder extends
    * conversions.
    * </pre>
    *
-   * <code>double current_model_attributed_conversions_from_interactions_value_per_interaction = 177;</code>
+   * <code>optional double current_model_attributed_conversions_from_interactions_value_per_interaction = 177;</code>
    * @return Whether the currentModelAttributedConversionsFromInteractionsValuePerInteraction field is set.
    */
   boolean hasCurrentModelAttributedConversionsFromInteractionsValuePerInteraction();
@@ -1283,7 +1283,7 @@ public interface MetricsOrBuilder extends
    * conversions.
    * </pre>
    *
-   * <code>double current_model_attributed_conversions_from_interactions_value_per_interaction = 177;</code>
+   * <code>optional double current_model_attributed_conversions_from_interactions_value_per_interaction = 177;</code>
    * @return The currentModelAttributedConversionsFromInteractionsValuePerInteraction.
    */
   double getCurrentModelAttributedConversionsFromInteractionsValuePerInteraction();
@@ -1296,7 +1296,7 @@ public interface MetricsOrBuilder extends
    * optimize for these conversions.
    * </pre>
    *
-   * <code>double current_model_attributed_conversions_value = 178;</code>
+   * <code>optional double current_model_attributed_conversions_value = 178;</code>
    * @return Whether the currentModelAttributedConversionsValue field is set.
    */
   boolean hasCurrentModelAttributedConversionsValue();
@@ -1308,7 +1308,7 @@ public interface MetricsOrBuilder extends
    * optimize for these conversions.
    * </pre>
    *
-   * <code>double current_model_attributed_conversions_value = 178;</code>
+   * <code>optional double current_model_attributed_conversions_value = 178;</code>
    * @return The currentModelAttributedConversionsValue.
    */
   double getCurrentModelAttributedConversionsValue();
@@ -1322,7 +1322,7 @@ public interface MetricsOrBuilder extends
    * conversions.
    * </pre>
    *
-   * <code>double current_model_attributed_conversions_value_per_cost = 179;</code>
+   * <code>optional double current_model_attributed_conversions_value_per_cost = 179;</code>
    * @return Whether the currentModelAttributedConversionsValuePerCost field is set.
    */
   boolean hasCurrentModelAttributedConversionsValuePerCost();
@@ -1335,7 +1335,7 @@ public interface MetricsOrBuilder extends
    * conversions.
    * </pre>
    *
-   * <code>double current_model_attributed_conversions_value_per_cost = 179;</code>
+   * <code>optional double current_model_attributed_conversions_value_per_cost = 179;</code>
    * @return The currentModelAttributedConversionsValuePerCost.
    */
   double getCurrentModelAttributedConversionsValuePerCost();
@@ -1346,7 +1346,7 @@ public interface MetricsOrBuilder extends
    * number of ad expansions divided by the number of times your ad is shown.
    * </pre>
    *
-   * <code>double engagement_rate = 180;</code>
+   * <code>optional double engagement_rate = 180;</code>
    * @return Whether the engagementRate field is set.
    */
   boolean hasEngagementRate();
@@ -1356,7 +1356,7 @@ public interface MetricsOrBuilder extends
    * number of ad expansions divided by the number of times your ad is shown.
    * </pre>
    *
-   * <code>double engagement_rate = 180;</code>
+   * <code>optional double engagement_rate = 180;</code>
    * @return The engagementRate.
    */
   double getEngagementRate();
@@ -1368,7 +1368,7 @@ public interface MetricsOrBuilder extends
    * future, other ad types may support engagement metrics.
    * </pre>
    *
-   * <code>int64 engagements = 181;</code>
+   * <code>optional int64 engagements = 181;</code>
    * @return Whether the engagements field is set.
    */
   boolean hasEngagements();
@@ -1379,7 +1379,7 @@ public interface MetricsOrBuilder extends
    * future, other ad types may support engagement metrics.
    * </pre>
    *
-   * <code>int64 engagements = 181;</code>
+   * <code>optional int64 engagements = 181;</code>
    * @return The engagements.
    */
   long getEngagements();
@@ -1389,7 +1389,7 @@ public interface MetricsOrBuilder extends
    * Average lead value based on clicks.
    * </pre>
    *
-   * <code>double hotel_average_lead_value_micros = 213;</code>
+   * <code>optional double hotel_average_lead_value_micros = 213;</code>
    * @return Whether the hotelAverageLeadValueMicros field is set.
    */
   boolean hasHotelAverageLeadValueMicros();
@@ -1398,7 +1398,7 @@ public interface MetricsOrBuilder extends
    * Average lead value based on clicks.
    * </pre>
    *
-   * <code>double hotel_average_lead_value_micros = 213;</code>
+   * <code>optional double hotel_average_lead_value_micros = 213;</code>
    * @return The hotelAverageLeadValueMicros.
    */
   double getHotelAverageLeadValueMicros();
@@ -1409,7 +1409,7 @@ public interface MetricsOrBuilder extends
    * advertiser and the cheapest price offered by the competing advertiser.
    * </pre>
    *
-   * <code>double hotel_price_difference_percentage = 214;</code>
+   * <code>optional double hotel_price_difference_percentage = 214;</code>
    * @return Whether the hotelPriceDifferencePercentage field is set.
    */
   boolean hasHotelPriceDifferencePercentage();
@@ -1419,7 +1419,7 @@ public interface MetricsOrBuilder extends
    * advertiser and the cheapest price offered by the competing advertiser.
    * </pre>
    *
-   * <code>double hotel_price_difference_percentage = 214;</code>
+   * <code>optional double hotel_price_difference_percentage = 214;</code>
    * @return The hotelPriceDifferencePercentage.
    */
   double getHotelPriceDifferencePercentage();
@@ -1430,7 +1430,7 @@ public interface MetricsOrBuilder extends
    * feed performance.
    * </pre>
    *
-   * <code>int64 hotel_eligible_impressions = 215;</code>
+   * <code>optional int64 hotel_eligible_impressions = 215;</code>
    * @return Whether the hotelEligibleImpressions field is set.
    */
   boolean hasHotelEligibleImpressions();
@@ -1440,7 +1440,7 @@ public interface MetricsOrBuilder extends
    * feed performance.
    * </pre>
    *
-   * <code>int64 hotel_eligible_impressions = 215;</code>
+   * <code>optional int64 hotel_eligible_impressions = 215;</code>
    * @return The hotelEligibleImpressions.
    */
   long getHotelEligibleImpressions();
@@ -1488,7 +1488,7 @@ public interface MetricsOrBuilder extends
    * The historical quality score.
    * </pre>
    *
-   * <code>int64 historical_quality_score = 216;</code>
+   * <code>optional int64 historical_quality_score = 216;</code>
    * @return Whether the historicalQualityScore field is set.
    */
   boolean hasHistoricalQualityScore();
@@ -1497,7 +1497,7 @@ public interface MetricsOrBuilder extends
    * The historical quality score.
    * </pre>
    *
-   * <code>int64 historical_quality_score = 216;</code>
+   * <code>optional int64 historical_quality_score = 216;</code>
    * @return The historicalQualityScore.
    */
   long getHistoricalQualityScore();
@@ -1526,7 +1526,7 @@ public interface MetricsOrBuilder extends
    * The number of times the ad was forwarded to someone else as a message.
    * </pre>
    *
-   * <code>int64 gmail_forwards = 217;</code>
+   * <code>optional int64 gmail_forwards = 217;</code>
    * @return Whether the gmailForwards field is set.
    */
   boolean hasGmailForwards();
@@ -1535,7 +1535,7 @@ public interface MetricsOrBuilder extends
    * The number of times the ad was forwarded to someone else as a message.
    * </pre>
    *
-   * <code>int64 gmail_forwards = 217;</code>
+   * <code>optional int64 gmail_forwards = 217;</code>
    * @return The gmailForwards.
    */
   long getGmailForwards();
@@ -1546,7 +1546,7 @@ public interface MetricsOrBuilder extends
    * message.
    * </pre>
    *
-   * <code>int64 gmail_saves = 218;</code>
+   * <code>optional int64 gmail_saves = 218;</code>
    * @return Whether the gmailSaves field is set.
    */
   boolean hasGmailSaves();
@@ -1556,7 +1556,7 @@ public interface MetricsOrBuilder extends
    * message.
    * </pre>
    *
-   * <code>int64 gmail_saves = 218;</code>
+   * <code>optional int64 gmail_saves = 218;</code>
    * @return The gmailSaves.
    */
   long getGmailSaves();
@@ -1567,7 +1567,7 @@ public interface MetricsOrBuilder extends
    * ads.
    * </pre>
    *
-   * <code>int64 gmail_secondary_clicks = 219;</code>
+   * <code>optional int64 gmail_secondary_clicks = 219;</code>
    * @return Whether the gmailSecondaryClicks field is set.
    */
   boolean hasGmailSecondaryClicks();
@@ -1577,7 +1577,7 @@ public interface MetricsOrBuilder extends
    * ads.
    * </pre>
    *
-   * <code>int64 gmail_secondary_clicks = 219;</code>
+   * <code>optional int64 gmail_secondary_clicks = 219;</code>
    * @return The gmailSecondaryClicks.
    */
   long getGmailSecondaryClicks();
@@ -1588,7 +1588,7 @@ public interface MetricsOrBuilder extends
    * This metric applies to feed items only.
    * </pre>
    *
-   * <code>int64 impressions_from_store_reach = 220;</code>
+   * <code>optional int64 impressions_from_store_reach = 220;</code>
    * @return Whether the impressionsFromStoreReach field is set.
    */
   boolean hasImpressionsFromStoreReach();
@@ -1598,7 +1598,7 @@ public interface MetricsOrBuilder extends
    * This metric applies to feed items only.
    * </pre>
    *
-   * <code>int64 impressions_from_store_reach = 220;</code>
+   * <code>optional int64 impressions_from_store_reach = 220;</code>
    * @return The impressionsFromStoreReach.
    */
   long getImpressionsFromStoreReach();
@@ -1609,7 +1609,7 @@ public interface MetricsOrBuilder extends
    * website on the Google Network.
    * </pre>
    *
-   * <code>int64 impressions = 221;</code>
+   * <code>optional int64 impressions = 221;</code>
    * @return Whether the impressions field is set.
    */
   boolean hasImpressions();
@@ -1619,7 +1619,7 @@ public interface MetricsOrBuilder extends
    * website on the Google Network.
    * </pre>
    *
-   * <code>int64 impressions = 221;</code>
+   * <code>optional int64 impressions = 221;</code>
    * @return The impressions.
    */
   long getImpressions();
@@ -1631,7 +1631,7 @@ public interface MetricsOrBuilder extends
    * is shown.
    * </pre>
    *
-   * <code>double interaction_rate = 222;</code>
+   * <code>optional double interaction_rate = 222;</code>
    * @return Whether the interactionRate field is set.
    */
   boolean hasInteractionRate();
@@ -1642,7 +1642,7 @@ public interface MetricsOrBuilder extends
    * is shown.
    * </pre>
    *
-   * <code>double interaction_rate = 222;</code>
+   * <code>optional double interaction_rate = 222;</code>
    * @return The interactionRate.
    */
   double getInteractionRate();
@@ -1654,7 +1654,7 @@ public interface MetricsOrBuilder extends
    * for text and shopping ads, views for video ads, and so on.
    * </pre>
    *
-   * <code>int64 interactions = 223;</code>
+   * <code>optional int64 interactions = 223;</code>
    * @return Whether the interactions field is set.
    */
   boolean hasInteractions();
@@ -1665,7 +1665,7 @@ public interface MetricsOrBuilder extends
    * for text and shopping ads, views for video ads, and so on.
    * </pre>
    *
-   * <code>int64 interactions = 223;</code>
+   * <code>optional int64 interactions = 223;</code>
    * @return The interactions.
    */
   long getInteractions();
@@ -1725,7 +1725,7 @@ public interface MetricsOrBuilder extends
    * (filtered + non-filtered clicks) during the reporting period.
    * </pre>
    *
-   * <code>double invalid_click_rate = 224;</code>
+   * <code>optional double invalid_click_rate = 224;</code>
    * @return Whether the invalidClickRate field is set.
    */
   boolean hasInvalidClickRate();
@@ -1735,7 +1735,7 @@ public interface MetricsOrBuilder extends
    * (filtered + non-filtered clicks) during the reporting period.
    * </pre>
    *
-   * <code>double invalid_click_rate = 224;</code>
+   * <code>optional double invalid_click_rate = 224;</code>
    * @return The invalidClickRate.
    */
   double getInvalidClickRate();
@@ -1745,7 +1745,7 @@ public interface MetricsOrBuilder extends
    * Number of clicks Google considers illegitimate and doesn't charge you for.
    * </pre>
    *
-   * <code>int64 invalid_clicks = 225;</code>
+   * <code>optional int64 invalid_clicks = 225;</code>
    * @return Whether the invalidClicks field is set.
    */
   boolean hasInvalidClicks();
@@ -1754,7 +1754,7 @@ public interface MetricsOrBuilder extends
    * Number of clicks Google considers illegitimate and doesn't charge you for.
    * </pre>
    *
-   * <code>int64 invalid_clicks = 225;</code>
+   * <code>optional int64 invalid_clicks = 225;</code>
    * @return The invalidClicks.
    */
   long getInvalidClicks();
@@ -1765,7 +1765,7 @@ public interface MetricsOrBuilder extends
    * were message tracking eligible.
    * </pre>
    *
-   * <code>int64 message_chats = 226;</code>
+   * <code>optional int64 message_chats = 226;</code>
    * @return Whether the messageChats field is set.
    */
   boolean hasMessageChats();
@@ -1775,7 +1775,7 @@ public interface MetricsOrBuilder extends
    * were message tracking eligible.
    * </pre>
    *
-   * <code>int64 message_chats = 226;</code>
+   * <code>optional int64 message_chats = 226;</code>
    * @return The messageChats.
    */
   long getMessageChats();
@@ -1785,7 +1785,7 @@ public interface MetricsOrBuilder extends
    * Number of Click To Message impressions that were message tracking eligible.
    * </pre>
    *
-   * <code>int64 message_impressions = 227;</code>
+   * <code>optional int64 message_impressions = 227;</code>
    * @return Whether the messageImpressions field is set.
    */
   boolean hasMessageImpressions();
@@ -1794,7 +1794,7 @@ public interface MetricsOrBuilder extends
    * Number of Click To Message impressions that were message tracking eligible.
    * </pre>
    *
-   * <code>int64 message_impressions = 227;</code>
+   * <code>optional int64 message_impressions = 227;</code>
    * @return The messageImpressions.
    */
   long getMessageImpressions();
@@ -1808,7 +1808,7 @@ public interface MetricsOrBuilder extends
    * Note that this rate can be more than 1.0 for a given message impression.
    * </pre>
    *
-   * <code>double message_chat_rate = 228;</code>
+   * <code>optional double message_chat_rate = 228;</code>
    * @return Whether the messageChatRate field is set.
    */
   boolean hasMessageChatRate();
@@ -1821,7 +1821,7 @@ public interface MetricsOrBuilder extends
    * Note that this rate can be more than 1.0 for a given message impression.
    * </pre>
    *
-   * <code>double message_chat_rate = 228;</code>
+   * <code>optional double message_chat_rate = 228;</code>
    * @return The messageChatRate.
    */
   double getMessageChatRate();
@@ -1831,7 +1831,7 @@ public interface MetricsOrBuilder extends
    * The percentage of mobile clicks that go to a mobile-friendly page.
    * </pre>
    *
-   * <code>double mobile_friendly_clicks_percentage = 229;</code>
+   * <code>optional double mobile_friendly_clicks_percentage = 229;</code>
    * @return Whether the mobileFriendlyClicksPercentage field is set.
    */
   boolean hasMobileFriendlyClicksPercentage();
@@ -1840,7 +1840,7 @@ public interface MetricsOrBuilder extends
    * The percentage of mobile clicks that go to a mobile-friendly page.
    * </pre>
    *
-   * <code>double mobile_friendly_clicks_percentage = 229;</code>
+   * <code>optional double mobile_friendly_clicks_percentage = 229;</code>
    * @return The mobileFriendlyClicksPercentage.
    */
   double getMobileFriendlyClicksPercentage();
@@ -1852,7 +1852,7 @@ public interface MetricsOrBuilder extends
    * https://support.google.com/google-ads/answer/3097241 for details.
    * </pre>
    *
-   * <code>int64 organic_clicks = 230;</code>
+   * <code>optional int64 organic_clicks = 230;</code>
    * @return Whether the organicClicks field is set.
    */
   boolean hasOrganicClicks();
@@ -1863,7 +1863,7 @@ public interface MetricsOrBuilder extends
    * https://support.google.com/google-ads/answer/3097241 for details.
    * </pre>
    *
-   * <code>int64 organic_clicks = 230;</code>
+   * <code>optional int64 organic_clicks = 230;</code>
    * @return The organicClicks.
    */
   long getOrganicClicks();
@@ -1876,7 +1876,7 @@ public interface MetricsOrBuilder extends
    * https://support.google.com/google-ads/answer/3097241 for details.
    * </pre>
    *
-   * <code>double organic_clicks_per_query = 231;</code>
+   * <code>optional double organic_clicks_per_query = 231;</code>
    * @return Whether the organicClicksPerQuery field is set.
    */
   boolean hasOrganicClicksPerQuery();
@@ -1888,7 +1888,7 @@ public interface MetricsOrBuilder extends
    * https://support.google.com/google-ads/answer/3097241 for details.
    * </pre>
    *
-   * <code>double organic_clicks_per_query = 231;</code>
+   * <code>optional double organic_clicks_per_query = 231;</code>
    * @return The organicClicksPerQuery.
    */
   double getOrganicClicksPerQuery();
@@ -1900,7 +1900,7 @@ public interface MetricsOrBuilder extends
    * details.
    * </pre>
    *
-   * <code>int64 organic_impressions = 232;</code>
+   * <code>optional int64 organic_impressions = 232;</code>
    * @return Whether the organicImpressions field is set.
    */
   boolean hasOrganicImpressions();
@@ -1911,7 +1911,7 @@ public interface MetricsOrBuilder extends
    * details.
    * </pre>
    *
-   * <code>int64 organic_impressions = 232;</code>
+   * <code>optional int64 organic_impressions = 232;</code>
    * @return The organicImpressions.
    */
   long getOrganicImpressions();
@@ -1924,7 +1924,7 @@ public interface MetricsOrBuilder extends
    * page at https://support.google.com/google-ads/answer/3097241 for details.
    * </pre>
    *
-   * <code>double organic_impressions_per_query = 233;</code>
+   * <code>optional double organic_impressions_per_query = 233;</code>
    * @return Whether the organicImpressionsPerQuery field is set.
    */
   boolean hasOrganicImpressionsPerQuery();
@@ -1936,7 +1936,7 @@ public interface MetricsOrBuilder extends
    * page at https://support.google.com/google-ads/answer/3097241 for details.
    * </pre>
    *
-   * <code>double organic_impressions_per_query = 233;</code>
+   * <code>optional double organic_impressions_per_query = 233;</code>
    * @return The organicImpressionsPerQuery.
    */
   double getOrganicImpressionsPerQuery();
@@ -1948,7 +1948,7 @@ public interface MetricsOrBuilder extends
    * https://support.google.com/google-ads/answer/3097241 for details.
    * </pre>
    *
-   * <code>int64 organic_queries = 234;</code>
+   * <code>optional int64 organic_queries = 234;</code>
    * @return Whether the organicQueries field is set.
    */
   boolean hasOrganicQueries();
@@ -1959,7 +1959,7 @@ public interface MetricsOrBuilder extends
    * https://support.google.com/google-ads/answer/3097241 for details.
    * </pre>
    *
-   * <code>int64 organic_queries = 234;</code>
+   * <code>optional int64 organic_queries = 234;</code>
    * @return The organicQueries.
    */
   long getOrganicQueries();
@@ -1970,7 +1970,7 @@ public interface MetricsOrBuilder extends
    * site before). Imported from Google Analytics.
    * </pre>
    *
-   * <code>double percent_new_visitors = 235;</code>
+   * <code>optional double percent_new_visitors = 235;</code>
    * @return Whether the percentNewVisitors field is set.
    */
   boolean hasPercentNewVisitors();
@@ -1980,7 +1980,7 @@ public interface MetricsOrBuilder extends
    * site before). Imported from Google Analytics.
    * </pre>
    *
-   * <code>double percent_new_visitors = 235;</code>
+   * <code>optional double percent_new_visitors = 235;</code>
    * @return The percentNewVisitors.
    */
   double getPercentNewVisitors();
@@ -1990,7 +1990,7 @@ public interface MetricsOrBuilder extends
    * Number of offline phone calls.
    * </pre>
    *
-   * <code>int64 phone_calls = 236;</code>
+   * <code>optional int64 phone_calls = 236;</code>
    * @return Whether the phoneCalls field is set.
    */
   boolean hasPhoneCalls();
@@ -1999,7 +1999,7 @@ public interface MetricsOrBuilder extends
    * Number of offline phone calls.
    * </pre>
    *
-   * <code>int64 phone_calls = 236;</code>
+   * <code>optional int64 phone_calls = 236;</code>
    * @return The phoneCalls.
    */
   long getPhoneCalls();
@@ -2009,7 +2009,7 @@ public interface MetricsOrBuilder extends
    * Number of offline phone impressions.
    * </pre>
    *
-   * <code>int64 phone_impressions = 237;</code>
+   * <code>optional int64 phone_impressions = 237;</code>
    * @return Whether the phoneImpressions field is set.
    */
   boolean hasPhoneImpressions();
@@ -2018,7 +2018,7 @@ public interface MetricsOrBuilder extends
    * Number of offline phone impressions.
    * </pre>
    *
-   * <code>int64 phone_impressions = 237;</code>
+   * <code>optional int64 phone_impressions = 237;</code>
    * @return The phoneImpressions.
    */
   long getPhoneImpressions();
@@ -2029,7 +2029,7 @@ public interface MetricsOrBuilder extends
    * times your phone number is shown (phone_impressions).
    * </pre>
    *
-   * <code>double phone_through_rate = 238;</code>
+   * <code>optional double phone_through_rate = 238;</code>
    * @return Whether the phoneThroughRate field is set.
    */
   boolean hasPhoneThroughRate();
@@ -2039,7 +2039,7 @@ public interface MetricsOrBuilder extends
    * times your phone number is shown (phone_impressions).
    * </pre>
    *
-   * <code>double phone_through_rate = 238;</code>
+   * <code>optional double phone_through_rate = 238;</code>
    * @return The phoneThroughRate.
    */
   double getPhoneThroughRate();
@@ -2051,7 +2051,7 @@ public interface MetricsOrBuilder extends
    * perform on Display Network sites compared to other ads on the same sites.
    * </pre>
    *
-   * <code>double relative_ctr = 239;</code>
+   * <code>optional double relative_ctr = 239;</code>
    * @return Whether the relativeCtr field is set.
    */
   boolean hasRelativeCtr();
@@ -2062,7 +2062,7 @@ public interface MetricsOrBuilder extends
    * perform on Display Network sites compared to other ads on the same sites.
    * </pre>
    *
-   * <code>double relative_ctr = 239;</code>
+   * <code>optional double relative_ctr = 239;</code>
    * @return The relativeCtr.
    */
   double getRelativeCtr();
@@ -2075,7 +2075,7 @@ public interface MetricsOrBuilder extends
    * for details. Any value below 0.1 is reported as 0.0999.
    * </pre>
    *
-   * <code>double search_absolute_top_impression_share = 136;</code>
+   * <code>optional double search_absolute_top_impression_share = 136;</code>
    * @return Whether the searchAbsoluteTopImpressionShare field is set.
    */
   boolean hasSearchAbsoluteTopImpressionShare();
@@ -2087,7 +2087,7 @@ public interface MetricsOrBuilder extends
    * for details. Any value below 0.1 is reported as 0.0999.
    * </pre>
    *
-   * <code>double search_absolute_top_impression_share = 136;</code>
+   * <code>optional double search_absolute_top_impression_share = 136;</code>
    * @return The searchAbsoluteTopImpressionShare.
    */
   double getSearchAbsoluteTopImpressionShare();
@@ -2100,7 +2100,7 @@ public interface MetricsOrBuilder extends
    * 0.9. Any value above 0.9 is reported as 0.9001.
    * </pre>
    *
-   * <code>double search_budget_lost_absolute_top_impression_share = 137;</code>
+   * <code>optional double search_budget_lost_absolute_top_impression_share = 137;</code>
    * @return Whether the searchBudgetLostAbsoluteTopImpressionShare field is set.
    */
   boolean hasSearchBudgetLostAbsoluteTopImpressionShare();
@@ -2112,7 +2112,7 @@ public interface MetricsOrBuilder extends
    * 0.9. Any value above 0.9 is reported as 0.9001.
    * </pre>
    *
-   * <code>double search_budget_lost_absolute_top_impression_share = 137;</code>
+   * <code>optional double search_budget_lost_absolute_top_impression_share = 137;</code>
    * @return The searchBudgetLostAbsoluteTopImpressionShare.
    */
   double getSearchBudgetLostAbsoluteTopImpressionShare();
@@ -2125,7 +2125,7 @@ public interface MetricsOrBuilder extends
    * value above 0.9 is reported as 0.9001.
    * </pre>
    *
-   * <code>double search_budget_lost_impression_share = 138;</code>
+   * <code>optional double search_budget_lost_impression_share = 138;</code>
    * @return Whether the searchBudgetLostImpressionShare field is set.
    */
   boolean hasSearchBudgetLostImpressionShare();
@@ -2137,7 +2137,7 @@ public interface MetricsOrBuilder extends
    * value above 0.9 is reported as 0.9001.
    * </pre>
    *
-   * <code>double search_budget_lost_impression_share = 138;</code>
+   * <code>optional double search_budget_lost_impression_share = 138;</code>
    * @return The searchBudgetLostImpressionShare.
    */
   double getSearchBudgetLostImpressionShare();
@@ -2150,7 +2150,7 @@ public interface MetricsOrBuilder extends
    * value above 0.9 is reported as 0.9001.
    * </pre>
    *
-   * <code>double search_budget_lost_top_impression_share = 139;</code>
+   * <code>optional double search_budget_lost_top_impression_share = 139;</code>
    * @return Whether the searchBudgetLostTopImpressionShare field is set.
    */
   boolean hasSearchBudgetLostTopImpressionShare();
@@ -2162,7 +2162,7 @@ public interface MetricsOrBuilder extends
    * value above 0.9 is reported as 0.9001.
    * </pre>
    *
-   * <code>double search_budget_lost_top_impression_share = 139;</code>
+   * <code>optional double search_budget_lost_top_impression_share = 139;</code>
    * @return The searchBudgetLostTopImpressionShare.
    */
   double getSearchBudgetLostTopImpressionShare();
@@ -2175,7 +2175,7 @@ public interface MetricsOrBuilder extends
    * below 0.1 is reported as 0.0999.
    * </pre>
    *
-   * <code>double search_click_share = 140;</code>
+   * <code>optional double search_click_share = 140;</code>
    * @return Whether the searchClickShare field is set.
    */
   boolean hasSearchClickShare();
@@ -2187,7 +2187,7 @@ public interface MetricsOrBuilder extends
    * below 0.1 is reported as 0.0999.
    * </pre>
    *
-   * <code>double search_click_share = 140;</code>
+   * <code>optional double search_click_share = 140;</code>
    * @return The searchClickShare.
    */
   double getSearchClickShare();
@@ -2202,7 +2202,7 @@ public interface MetricsOrBuilder extends
    * is reported as 0.0999.
    * </pre>
    *
-   * <code>double search_exact_match_impression_share = 141;</code>
+   * <code>optional double search_exact_match_impression_share = 141;</code>
    * @return Whether the searchExactMatchImpressionShare field is set.
    */
   boolean hasSearchExactMatchImpressionShare();
@@ -2216,7 +2216,7 @@ public interface MetricsOrBuilder extends
    * is reported as 0.0999.
    * </pre>
    *
-   * <code>double search_exact_match_impression_share = 141;</code>
+   * <code>optional double search_exact_match_impression_share = 141;</code>
    * @return The searchExactMatchImpressionShare.
    */
   double getSearchExactMatchImpressionShare();
@@ -2229,7 +2229,7 @@ public interface MetricsOrBuilder extends
    * value below 0.1 is reported as 0.0999.
    * </pre>
    *
-   * <code>double search_impression_share = 142;</code>
+   * <code>optional double search_impression_share = 142;</code>
    * @return Whether the searchImpressionShare field is set.
    */
   boolean hasSearchImpressionShare();
@@ -2241,7 +2241,7 @@ public interface MetricsOrBuilder extends
    * value below 0.1 is reported as 0.0999.
    * </pre>
    *
-   * <code>double search_impression_share = 142;</code>
+   * <code>optional double search_impression_share = 142;</code>
    * @return The searchImpressionShare.
    */
   double getSearchImpressionShare();
@@ -2254,7 +2254,7 @@ public interface MetricsOrBuilder extends
    * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
    * </pre>
    *
-   * <code>double search_rank_lost_absolute_top_impression_share = 143;</code>
+   * <code>optional double search_rank_lost_absolute_top_impression_share = 143;</code>
    * @return Whether the searchRankLostAbsoluteTopImpressionShare field is set.
    */
   boolean hasSearchRankLostAbsoluteTopImpressionShare();
@@ -2266,7 +2266,7 @@ public interface MetricsOrBuilder extends
    * range of 0 to 0.9. Any value above 0.9 is reported as 0.9001.
    * </pre>
    *
-   * <code>double search_rank_lost_absolute_top_impression_share = 143;</code>
+   * <code>optional double search_rank_lost_absolute_top_impression_share = 143;</code>
    * @return The searchRankLostAbsoluteTopImpressionShare.
    */
   double getSearchRankLostAbsoluteTopImpressionShare();
@@ -2279,7 +2279,7 @@ public interface MetricsOrBuilder extends
    * 0.9. Any value above 0.9 is reported as 0.9001.
    * </pre>
    *
-   * <code>double search_rank_lost_impression_share = 144;</code>
+   * <code>optional double search_rank_lost_impression_share = 144;</code>
    * @return Whether the searchRankLostImpressionShare field is set.
    */
   boolean hasSearchRankLostImpressionShare();
@@ -2291,7 +2291,7 @@ public interface MetricsOrBuilder extends
    * 0.9. Any value above 0.9 is reported as 0.9001.
    * </pre>
    *
-   * <code>double search_rank_lost_impression_share = 144;</code>
+   * <code>optional double search_rank_lost_impression_share = 144;</code>
    * @return The searchRankLostImpressionShare.
    */
   double getSearchRankLostImpressionShare();
@@ -2304,7 +2304,7 @@ public interface MetricsOrBuilder extends
    * to 0.9. Any value above 0.9 is reported as 0.9001.
    * </pre>
    *
-   * <code>double search_rank_lost_top_impression_share = 145;</code>
+   * <code>optional double search_rank_lost_top_impression_share = 145;</code>
    * @return Whether the searchRankLostTopImpressionShare field is set.
    */
   boolean hasSearchRankLostTopImpressionShare();
@@ -2316,7 +2316,7 @@ public interface MetricsOrBuilder extends
    * to 0.9. Any value above 0.9 is reported as 0.9001.
    * </pre>
    *
-   * <code>double search_rank_lost_top_impression_share = 145;</code>
+   * <code>optional double search_rank_lost_top_impression_share = 145;</code>
    * @return The searchRankLostTopImpressionShare.
    */
   double getSearchRankLostTopImpressionShare();
@@ -2330,7 +2330,7 @@ public interface MetricsOrBuilder extends
    * value below 0.1 is reported as 0.0999.
    * </pre>
    *
-   * <code>double search_top_impression_share = 146;</code>
+   * <code>optional double search_top_impression_share = 146;</code>
    * @return Whether the searchTopImpressionShare field is set.
    */
   boolean hasSearchTopImpressionShare();
@@ -2343,7 +2343,7 @@ public interface MetricsOrBuilder extends
    * value below 0.1 is reported as 0.0999.
    * </pre>
    *
-   * <code>double search_top_impression_share = 146;</code>
+   * <code>optional double search_top_impression_share = 146;</code>
    * @return The searchTopImpressionShare.
    */
   double getSearchTopImpressionShare();
@@ -2354,7 +2354,7 @@ public interface MetricsOrBuilder extends
    * The score is a range from 1 to 10, 10 being the fastest.
    * </pre>
    *
-   * <code>int64 speed_score = 147;</code>
+   * <code>optional int64 speed_score = 147;</code>
    * @return Whether the speedScore field is set.
    */
   boolean hasSpeedScore();
@@ -2364,7 +2364,7 @@ public interface MetricsOrBuilder extends
    * The score is a range from 1 to 10, 10 being the fastest.
    * </pre>
    *
-   * <code>int64 speed_score = 147;</code>
+   * <code>optional int64 speed_score = 147;</code>
    * @return The speedScore.
    */
   long getSpeedScore();
@@ -2375,7 +2375,7 @@ public interface MetricsOrBuilder extends
    * organic search results.
    * </pre>
    *
-   * <code>double top_impression_percentage = 148;</code>
+   * <code>optional double top_impression_percentage = 148;</code>
    * @return Whether the topImpressionPercentage field is set.
    */
   boolean hasTopImpressionPercentage();
@@ -2385,7 +2385,7 @@ public interface MetricsOrBuilder extends
    * organic search results.
    * </pre>
    *
-   * <code>double top_impression_percentage = 148;</code>
+   * <code>optional double top_impression_percentage = 148;</code>
    * @return The topImpressionPercentage.
    */
   double getTopImpressionPercentage();
@@ -2396,7 +2396,7 @@ public interface MetricsOrBuilder extends
    * that reach a valid AMP page.
    * </pre>
    *
-   * <code>double valid_accelerated_mobile_pages_clicks_percentage = 149;</code>
+   * <code>optional double valid_accelerated_mobile_pages_clicks_percentage = 149;</code>
    * @return Whether the validAcceleratedMobilePagesClicksPercentage field is set.
    */
   boolean hasValidAcceleratedMobilePagesClicksPercentage();
@@ -2406,7 +2406,7 @@ public interface MetricsOrBuilder extends
    * that reach a valid AMP page.
    * </pre>
    *
-   * <code>double valid_accelerated_mobile_pages_clicks_percentage = 149;</code>
+   * <code>optional double valid_accelerated_mobile_pages_clicks_percentage = 149;</code>
    * @return The validAcceleratedMobilePagesClicksPercentage.
    */
   double getValidAcceleratedMobilePagesClicksPercentage();
@@ -2416,7 +2416,7 @@ public interface MetricsOrBuilder extends
    * The value of all conversions divided by the number of all conversions.
    * </pre>
    *
-   * <code>double value_per_all_conversions = 150;</code>
+   * <code>optional double value_per_all_conversions = 150;</code>
    * @return Whether the valuePerAllConversions field is set.
    */
   boolean hasValuePerAllConversions();
@@ -2425,7 +2425,7 @@ public interface MetricsOrBuilder extends
    * The value of all conversions divided by the number of all conversions.
    * </pre>
    *
-   * <code>double value_per_all_conversions = 150;</code>
+   * <code>optional double value_per_all_conversions = 150;</code>
    * @return The valuePerAllConversions.
    */
   double getValuePerAllConversions();
@@ -2438,7 +2438,7 @@ public interface MetricsOrBuilder extends
    * at https://support.google.com/google-ads/answer/9549009.
    * </pre>
    *
-   * <code>double value_per_all_conversions_by_conversion_date = 244;</code>
+   * <code>optional double value_per_all_conversions_by_conversion_date = 244;</code>
    * @return Whether the valuePerAllConversionsByConversionDate field is set.
    */
   boolean hasValuePerAllConversionsByConversionDate();
@@ -2450,7 +2450,7 @@ public interface MetricsOrBuilder extends
    * at https://support.google.com/google-ads/answer/9549009.
    * </pre>
    *
-   * <code>double value_per_all_conversions_by_conversion_date = 244;</code>
+   * <code>optional double value_per_all_conversions_by_conversion_date = 244;</code>
    * @return The valuePerAllConversionsByConversionDate.
    */
   double getValuePerAllConversionsByConversionDate();
@@ -2463,7 +2463,7 @@ public interface MetricsOrBuilder extends
    * will optimize for these conversions.
    * </pre>
    *
-   * <code>double value_per_conversion = 151;</code>
+   * <code>optional double value_per_conversion = 151;</code>
    * @return Whether the valuePerConversion field is set.
    */
   boolean hasValuePerConversion();
@@ -2475,7 +2475,7 @@ public interface MetricsOrBuilder extends
    * will optimize for these conversions.
    * </pre>
    *
-   * <code>double value_per_conversion = 151;</code>
+   * <code>optional double value_per_conversion = 151;</code>
    * @return The valuePerConversion.
    */
   double getValuePerConversion();
@@ -2491,7 +2491,7 @@ public interface MetricsOrBuilder extends
    * https://support.google.com/google-ads/answer/9549009.
    * </pre>
    *
-   * <code>double value_per_conversions_by_conversion_date = 245;</code>
+   * <code>optional double value_per_conversions_by_conversion_date = 245;</code>
    * @return Whether the valuePerConversionsByConversionDate field is set.
    */
   boolean hasValuePerConversionsByConversionDate();
@@ -2506,7 +2506,7 @@ public interface MetricsOrBuilder extends
    * https://support.google.com/google-ads/answer/9549009.
    * </pre>
    *
-   * <code>double value_per_conversions_by_conversion_date = 245;</code>
+   * <code>optional double value_per_conversions_by_conversion_date = 245;</code>
    * @return The valuePerConversionsByConversionDate.
    */
   double getValuePerConversionsByConversionDate();
@@ -2520,7 +2520,7 @@ public interface MetricsOrBuilder extends
    * conversions.
    * </pre>
    *
-   * <code>double value_per_current_model_attributed_conversion = 152;</code>
+   * <code>optional double value_per_current_model_attributed_conversion = 152;</code>
    * @return Whether the valuePerCurrentModelAttributedConversion field is set.
    */
   boolean hasValuePerCurrentModelAttributedConversion();
@@ -2533,7 +2533,7 @@ public interface MetricsOrBuilder extends
    * conversions.
    * </pre>
    *
-   * <code>double value_per_current_model_attributed_conversion = 152;</code>
+   * <code>optional double value_per_current_model_attributed_conversion = 152;</code>
    * @return The valuePerCurrentModelAttributedConversion.
    */
   double getValuePerCurrentModelAttributedConversion();
@@ -2543,7 +2543,7 @@ public interface MetricsOrBuilder extends
    * Percentage of impressions where the viewer watched all of your video.
    * </pre>
    *
-   * <code>double video_quartile_p100_rate = 132;</code>
+   * <code>optional double video_quartile_p100_rate = 132;</code>
    * @return Whether the videoQuartileP100Rate field is set.
    */
   boolean hasVideoQuartileP100Rate();
@@ -2552,7 +2552,7 @@ public interface MetricsOrBuilder extends
    * Percentage of impressions where the viewer watched all of your video.
    * </pre>
    *
-   * <code>double video_quartile_p100_rate = 132;</code>
+   * <code>optional double video_quartile_p100_rate = 132;</code>
    * @return The videoQuartileP100Rate.
    */
   double getVideoQuartileP100Rate();
@@ -2562,7 +2562,7 @@ public interface MetricsOrBuilder extends
    * Percentage of impressions where the viewer watched 25% of your video.
    * </pre>
    *
-   * <code>double video_quartile_p25_rate = 133;</code>
+   * <code>optional double video_quartile_p25_rate = 133;</code>
    * @return Whether the videoQuartileP25Rate field is set.
    */
   boolean hasVideoQuartileP25Rate();
@@ -2571,7 +2571,7 @@ public interface MetricsOrBuilder extends
    * Percentage of impressions where the viewer watched 25% of your video.
    * </pre>
    *
-   * <code>double video_quartile_p25_rate = 133;</code>
+   * <code>optional double video_quartile_p25_rate = 133;</code>
    * @return The videoQuartileP25Rate.
    */
   double getVideoQuartileP25Rate();
@@ -2581,7 +2581,7 @@ public interface MetricsOrBuilder extends
    * Percentage of impressions where the viewer watched 50% of your video.
    * </pre>
    *
-   * <code>double video_quartile_p50_rate = 134;</code>
+   * <code>optional double video_quartile_p50_rate = 134;</code>
    * @return Whether the videoQuartileP50Rate field is set.
    */
   boolean hasVideoQuartileP50Rate();
@@ -2590,7 +2590,7 @@ public interface MetricsOrBuilder extends
    * Percentage of impressions where the viewer watched 50% of your video.
    * </pre>
    *
-   * <code>double video_quartile_p50_rate = 134;</code>
+   * <code>optional double video_quartile_p50_rate = 134;</code>
    * @return The videoQuartileP50Rate.
    */
   double getVideoQuartileP50Rate();
@@ -2600,7 +2600,7 @@ public interface MetricsOrBuilder extends
    * Percentage of impressions where the viewer watched 75% of your video.
    * </pre>
    *
-   * <code>double video_quartile_p75_rate = 135;</code>
+   * <code>optional double video_quartile_p75_rate = 135;</code>
    * @return Whether the videoQuartileP75Rate field is set.
    */
   boolean hasVideoQuartileP75Rate();
@@ -2609,7 +2609,7 @@ public interface MetricsOrBuilder extends
    * Percentage of impressions where the viewer watched 75% of your video.
    * </pre>
    *
-   * <code>double video_quartile_p75_rate = 135;</code>
+   * <code>optional double video_quartile_p75_rate = 135;</code>
    * @return The videoQuartileP75Rate.
    */
   double getVideoQuartileP75Rate();
@@ -2621,7 +2621,7 @@ public interface MetricsOrBuilder extends
    * ads.
    * </pre>
    *
-   * <code>double video_view_rate = 153;</code>
+   * <code>optional double video_view_rate = 153;</code>
    * @return Whether the videoViewRate field is set.
    */
   boolean hasVideoViewRate();
@@ -2632,7 +2632,7 @@ public interface MetricsOrBuilder extends
    * ads.
    * </pre>
    *
-   * <code>double video_view_rate = 153;</code>
+   * <code>optional double video_view_rate = 153;</code>
    * @return The videoViewRate.
    */
   double getVideoViewRate();
@@ -2642,7 +2642,7 @@ public interface MetricsOrBuilder extends
    * The number of times your video ads were viewed.
    * </pre>
    *
-   * <code>int64 video_views = 154;</code>
+   * <code>optional int64 video_views = 154;</code>
    * @return Whether the videoViews field is set.
    */
   boolean hasVideoViews();
@@ -2651,7 +2651,7 @@ public interface MetricsOrBuilder extends
    * The number of times your video ads were viewed.
    * </pre>
    *
-   * <code>int64 video_views = 154;</code>
+   * <code>optional int64 video_views = 154;</code>
    * @return The videoViews.
    */
   long getVideoViews();
@@ -2664,7 +2664,7 @@ public interface MetricsOrBuilder extends
    * clicking on) another ad.
    * </pre>
    *
-   * <code>int64 view_through_conversions = 155;</code>
+   * <code>optional int64 view_through_conversions = 155;</code>
    * @return Whether the viewThroughConversions field is set.
    */
   boolean hasViewThroughConversions();
@@ -2676,7 +2676,7 @@ public interface MetricsOrBuilder extends
    * clicking on) another ad.
    * </pre>
    *
-   * <code>int64 view_through_conversions = 155;</code>
+   * <code>optional int64 view_through_conversions = 155;</code>
    * @return The viewThroughConversions.
    */
   long getViewThroughConversions();

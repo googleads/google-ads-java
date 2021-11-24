@@ -15,7 +15,7 @@ public interface PolicyTopicEntryOrBuilder extends
    * at any time.
    * </pre>
    *
-   * <code>string topic = 5;</code>
+   * <code>optional string topic = 5;</code>
    * @return Whether the topic field is set.
    */
   boolean hasTopic();
@@ -27,7 +27,7 @@ public interface PolicyTopicEntryOrBuilder extends
    * at any time.
    * </pre>
    *
-   * <code>string topic = 5;</code>
+   * <code>optional string topic = 5;</code>
    * @return The topic.
    */
   java.lang.String getTopic();
@@ -39,7 +39,7 @@ public interface PolicyTopicEntryOrBuilder extends
    * at any time.
    * </pre>
    *
-   * <code>string topic = 5;</code>
+   * <code>optional string topic = 5;</code>
    * @return The bytes for topic.
    */
   com.google.protobuf.ByteString

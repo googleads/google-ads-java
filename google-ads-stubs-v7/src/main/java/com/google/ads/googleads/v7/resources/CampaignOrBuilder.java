@@ -36,7 +36,7 @@ public interface CampaignOrBuilder extends
    * Output only. The ID of the campaign.
    * </pre>
    *
-   * <code>int64 id = 59 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 59 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -45,7 +45,7 @@ public interface CampaignOrBuilder extends
    * Output only. The ID of the campaign.
    * </pre>
    *
-   * <code>int64 id = 59 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 59 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   long getId();
@@ -59,7 +59,7 @@ public interface CampaignOrBuilder extends
    * (code point 0xA) or carriage return (code point 0xD) characters.
    * </pre>
    *
-   * <code>string name = 58;</code>
+   * <code>optional string name = 58;</code>
    * @return Whether the name field is set.
    */
   boolean hasName();
@@ -72,7 +72,7 @@ public interface CampaignOrBuilder extends
    * (code point 0xA) or carriage return (code point 0xD) characters.
    * </pre>
    *
-   * <code>string name = 58;</code>
+   * <code>optional string name = 58;</code>
    * @return The name.
    */
   java.lang.String getName();
@@ -85,7 +85,7 @@ public interface CampaignOrBuilder extends
    * (code point 0xA) or carriage return (code point 0xD) characters.
    * </pre>
    *
-   * <code>string name = 58;</code>
+   * <code>optional string name = 58;</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
@@ -209,7 +209,7 @@ public interface CampaignOrBuilder extends
    * The URL template for constructing a tracking URL.
    * </pre>
    *
-   * <code>string tracking_url_template = 60;</code>
+   * <code>optional string tracking_url_template = 60;</code>
    * @return Whether the trackingUrlTemplate field is set.
    */
   boolean hasTrackingUrlTemplate();
@@ -218,7 +218,7 @@ public interface CampaignOrBuilder extends
    * The URL template for constructing a tracking URL.
    * </pre>
    *
-   * <code>string tracking_url_template = 60;</code>
+   * <code>optional string tracking_url_template = 60;</code>
    * @return The trackingUrlTemplate.
    */
   java.lang.String getTrackingUrlTemplate();
@@ -227,7 +227,7 @@ public interface CampaignOrBuilder extends
    * The URL template for constructing a tracking URL.
    * </pre>
    *
-   * <code>string tracking_url_template = 60;</code>
+   * <code>optional string tracking_url_template = 60;</code>
    * @return The bytes for trackingUrlTemplate.
    */
   com.google.protobuf.ByteString
@@ -595,7 +595,7 @@ public interface CampaignOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>string base_campaign = 56 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string base_campaign = 56 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the baseCampaign field is set.
    */
   boolean hasBaseCampaign();
@@ -606,7 +606,7 @@ public interface CampaignOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>string base_campaign = 56 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string base_campaign = 56 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The baseCampaign.
    */
   java.lang.String getBaseCampaign();
@@ -617,7 +617,7 @@ public interface CampaignOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>string base_campaign = 56 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string base_campaign = 56 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for baseCampaign.
    */
   com.google.protobuf.ByteString
@@ -628,7 +628,7 @@ public interface CampaignOrBuilder extends
    * The budget of the campaign.
    * </pre>
    *
-   * <code>string campaign_budget = 62 [(.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign_budget = 62 [(.google.api.resource_reference) = { ... }</code>
    * @return Whether the campaignBudget field is set.
    */
   boolean hasCampaignBudget();
@@ -637,7 +637,7 @@ public interface CampaignOrBuilder extends
    * The budget of the campaign.
    * </pre>
    *
-   * <code>string campaign_budget = 62 [(.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign_budget = 62 [(.google.api.resource_reference) = { ... }</code>
    * @return The campaignBudget.
    */
   java.lang.String getCampaignBudget();
@@ -646,7 +646,7 @@ public interface CampaignOrBuilder extends
    * The budget of the campaign.
    * </pre>
    *
-   * <code>string campaign_budget = 62 [(.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign_budget = 62 [(.google.api.resource_reference) = { ... }</code>
    * @return The bytes for campaignBudget.
    */
   com.google.protobuf.ByteString
@@ -684,7 +684,7 @@ public interface CampaignOrBuilder extends
    * The date when campaign started.
    * </pre>
    *
-   * <code>string start_date = 63;</code>
+   * <code>optional string start_date = 63;</code>
    * @return Whether the startDate field is set.
    */
   boolean hasStartDate();
@@ -693,7 +693,7 @@ public interface CampaignOrBuilder extends
    * The date when campaign started.
    * </pre>
    *
-   * <code>string start_date = 63;</code>
+   * <code>optional string start_date = 63;</code>
    * @return The startDate.
    */
   java.lang.String getStartDate();
@@ -702,7 +702,7 @@ public interface CampaignOrBuilder extends
    * The date when campaign started.
    * </pre>
    *
-   * <code>string start_date = 63;</code>
+   * <code>optional string start_date = 63;</code>
    * @return The bytes for startDate.
    */
   com.google.protobuf.ByteString
@@ -713,7 +713,7 @@ public interface CampaignOrBuilder extends
    * The last day of the campaign.
    * </pre>
    *
-   * <code>string end_date = 64;</code>
+   * <code>optional string end_date = 64;</code>
    * @return Whether the endDate field is set.
    */
   boolean hasEndDate();
@@ -722,7 +722,7 @@ public interface CampaignOrBuilder extends
    * The last day of the campaign.
    * </pre>
    *
-   * <code>string end_date = 64;</code>
+   * <code>optional string end_date = 64;</code>
    * @return The endDate.
    */
   java.lang.String getEndDate();
@@ -731,7 +731,7 @@ public interface CampaignOrBuilder extends
    * The last day of the campaign.
    * </pre>
    *
-   * <code>string end_date = 64;</code>
+   * <code>optional string end_date = 64;</code>
    * @return The bytes for endDate.
    */
   com.google.protobuf.ByteString
@@ -743,7 +743,7 @@ public interface CampaignOrBuilder extends
    * with parallel tracking.
    * </pre>
    *
-   * <code>string final_url_suffix = 65;</code>
+   * <code>optional string final_url_suffix = 65;</code>
    * @return Whether the finalUrlSuffix field is set.
    */
   boolean hasFinalUrlSuffix();
@@ -753,7 +753,7 @@ public interface CampaignOrBuilder extends
    * with parallel tracking.
    * </pre>
    *
-   * <code>string final_url_suffix = 65;</code>
+   * <code>optional string final_url_suffix = 65;</code>
    * @return The finalUrlSuffix.
    */
   java.lang.String getFinalUrlSuffix();
@@ -763,7 +763,7 @@ public interface CampaignOrBuilder extends
    * with parallel tracking.
    * </pre>
    *
-   * <code>string final_url_suffix = 65;</code>
+   * <code>optional string final_url_suffix = 65;</code>
    * @return The bytes for finalUrlSuffix.
    */
   com.google.protobuf.ByteString
@@ -977,7 +977,7 @@ public interface CampaignOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>double optimization_score = 66 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional double optimization_score = 66 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the optimizationScore field is set.
    */
   boolean hasOptimizationScore();
@@ -993,7 +993,7 @@ public interface CampaignOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>double optimization_score = 66 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional double optimization_score = 66 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The optimizationScore.
    */
   double getOptimizationScore();

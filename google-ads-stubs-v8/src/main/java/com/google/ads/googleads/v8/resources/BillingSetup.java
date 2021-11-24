@@ -160,7 +160,7 @@ private static final long serialVersionUID = 0L;
      * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
      * </pre>
      *
-     * <code>string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the paymentsAccountId field is set.
      */
     boolean hasPaymentsAccountId();
@@ -171,7 +171,7 @@ private static final long serialVersionUID = 0L;
      * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
      * </pre>
      *
-     * <code>string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The paymentsAccountId.
      */
     java.lang.String getPaymentsAccountId();
@@ -182,7 +182,7 @@ private static final long serialVersionUID = 0L;
      * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
      * </pre>
      *
-     * <code>string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for paymentsAccountId.
      */
     com.google.protobuf.ByteString
@@ -196,7 +196,7 @@ private static final long serialVersionUID = 0L;
      * This name will be printed in the monthly invoices.
      * </pre>
      *
-     * <code>string payments_account_name = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string payments_account_name = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the paymentsAccountName field is set.
      */
     boolean hasPaymentsAccountName();
@@ -208,7 +208,7 @@ private static final long serialVersionUID = 0L;
      * This name will be printed in the monthly invoices.
      * </pre>
      *
-     * <code>string payments_account_name = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string payments_account_name = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The paymentsAccountName.
      */
     java.lang.String getPaymentsAccountName();
@@ -220,7 +220,7 @@ private static final long serialVersionUID = 0L;
      * This name will be printed in the monthly invoices.
      * </pre>
      *
-     * <code>string payments_account_name = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string payments_account_name = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The bytes for paymentsAccountName.
      */
     com.google.protobuf.ByteString
@@ -233,7 +233,7 @@ private static final long serialVersionUID = 0L;
      * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
      * </pre>
      *
-     * <code>string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the paymentsProfileId field is set.
      */
     boolean hasPaymentsProfileId();
@@ -244,7 +244,7 @@ private static final long serialVersionUID = 0L;
      * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
      * </pre>
      *
-     * <code>string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The paymentsProfileId.
      */
     java.lang.String getPaymentsProfileId();
@@ -255,7 +255,7 @@ private static final long serialVersionUID = 0L;
      * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
      * </pre>
      *
-     * <code>string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The bytes for paymentsProfileId.
      */
     com.google.protobuf.ByteString
@@ -266,7 +266,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The name of the payments profile associated with the billing setup.
      * </pre>
      *
-     * <code>string payments_profile_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string payments_profile_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the paymentsProfileName field is set.
      */
     boolean hasPaymentsProfileName();
@@ -275,7 +275,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The name of the payments profile associated with the billing setup.
      * </pre>
      *
-     * <code>string payments_profile_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string payments_profile_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The paymentsProfileName.
      */
     java.lang.String getPaymentsProfileName();
@@ -284,7 +284,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The name of the payments profile associated with the billing setup.
      * </pre>
      *
-     * <code>string payments_profile_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string payments_profile_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for paymentsProfileName.
      */
     com.google.protobuf.ByteString
@@ -296,7 +296,7 @@ private static final long serialVersionUID = 0L;
      * when a sequential liability agreement has been arranged.
      * </pre>
      *
-     * <code>string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the secondaryPaymentsProfileId field is set.
      */
     boolean hasSecondaryPaymentsProfileId();
@@ -306,7 +306,7 @@ private static final long serialVersionUID = 0L;
      * when a sequential liability agreement has been arranged.
      * </pre>
      *
-     * <code>string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The secondaryPaymentsProfileId.
      */
     java.lang.String getSecondaryPaymentsProfileId();
@@ -316,7 +316,7 @@ private static final long serialVersionUID = 0L;
      * when a sequential liability agreement has been arranged.
      * </pre>
      *
-     * <code>string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for secondaryPaymentsProfileId.
      */
     com.google.protobuf.ByteString
@@ -449,7 +449,7 @@ private static final long serialVersionUID = 0L;
      * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
      * </pre>
      *
-     * <code>string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the paymentsAccountId field is set.
      */
     @java.lang.Override
@@ -463,7 +463,7 @@ private static final long serialVersionUID = 0L;
      * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
      * </pre>
      *
-     * <code>string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The paymentsAccountId.
      */
     @java.lang.Override
@@ -486,7 +486,7 @@ private static final long serialVersionUID = 0L;
      * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
      * </pre>
      *
-     * <code>string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for paymentsAccountId.
      */
     @java.lang.Override
@@ -514,7 +514,7 @@ private static final long serialVersionUID = 0L;
      * This name will be printed in the monthly invoices.
      * </pre>
      *
-     * <code>string payments_account_name = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string payments_account_name = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the paymentsAccountName field is set.
      */
     @java.lang.Override
@@ -529,7 +529,7 @@ private static final long serialVersionUID = 0L;
      * This name will be printed in the monthly invoices.
      * </pre>
      *
-     * <code>string payments_account_name = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string payments_account_name = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The paymentsAccountName.
      */
     @java.lang.Override
@@ -553,7 +553,7 @@ private static final long serialVersionUID = 0L;
      * This name will be printed in the monthly invoices.
      * </pre>
      *
-     * <code>string payments_account_name = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string payments_account_name = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The bytes for paymentsAccountName.
      */
     @java.lang.Override
@@ -580,7 +580,7 @@ private static final long serialVersionUID = 0L;
      * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
      * </pre>
      *
-     * <code>string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the paymentsProfileId field is set.
      */
     @java.lang.Override
@@ -594,7 +594,7 @@ private static final long serialVersionUID = 0L;
      * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
      * </pre>
      *
-     * <code>string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The paymentsProfileId.
      */
     @java.lang.Override
@@ -617,7 +617,7 @@ private static final long serialVersionUID = 0L;
      * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
      * </pre>
      *
-     * <code>string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The bytes for paymentsProfileId.
      */
     @java.lang.Override
@@ -642,7 +642,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The name of the payments profile associated with the billing setup.
      * </pre>
      *
-     * <code>string payments_profile_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string payments_profile_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the paymentsProfileName field is set.
      */
     @java.lang.Override
@@ -654,7 +654,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The name of the payments profile associated with the billing setup.
      * </pre>
      *
-     * <code>string payments_profile_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string payments_profile_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The paymentsProfileName.
      */
     @java.lang.Override
@@ -675,7 +675,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The name of the payments profile associated with the billing setup.
      * </pre>
      *
-     * <code>string payments_profile_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string payments_profile_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for paymentsProfileName.
      */
     @java.lang.Override
@@ -701,7 +701,7 @@ private static final long serialVersionUID = 0L;
      * when a sequential liability agreement has been arranged.
      * </pre>
      *
-     * <code>string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the secondaryPaymentsProfileId field is set.
      */
     @java.lang.Override
@@ -714,7 +714,7 @@ private static final long serialVersionUID = 0L;
      * when a sequential liability agreement has been arranged.
      * </pre>
      *
-     * <code>string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The secondaryPaymentsProfileId.
      */
     @java.lang.Override
@@ -736,7 +736,7 @@ private static final long serialVersionUID = 0L;
      * when a sequential liability agreement has been arranged.
      * </pre>
      *
-     * <code>string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for secondaryPaymentsProfileId.
      */
     @java.lang.Override
@@ -1185,7 +1185,7 @@ private static final long serialVersionUID = 0L;
        * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
        * </pre>
        *
-       * <code>string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return Whether the paymentsAccountId field is set.
        */
       public boolean hasPaymentsAccountId() {
@@ -1198,7 +1198,7 @@ private static final long serialVersionUID = 0L;
        * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
        * </pre>
        *
-       * <code>string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The paymentsAccountId.
        */
       public java.lang.String getPaymentsAccountId() {
@@ -1220,7 +1220,7 @@ private static final long serialVersionUID = 0L;
        * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
        * </pre>
        *
-       * <code>string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The bytes for paymentsAccountId.
        */
       public com.google.protobuf.ByteString
@@ -1243,7 +1243,7 @@ private static final long serialVersionUID = 0L;
        * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
        * </pre>
        *
-       * <code>string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @param value The paymentsAccountId to set.
        * @return This builder for chaining.
        */
@@ -1264,7 +1264,7 @@ private static final long serialVersionUID = 0L;
        * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
        * </pre>
        *
-       * <code>string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return This builder for chaining.
        */
       public Builder clearPaymentsAccountId() {
@@ -1280,7 +1280,7 @@ private static final long serialVersionUID = 0L;
        * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
        * </pre>
        *
-       * <code>string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @param value The bytes for paymentsAccountId to set.
        * @return This builder for chaining.
        */
@@ -1305,7 +1305,7 @@ private static final long serialVersionUID = 0L;
        * This name will be printed in the monthly invoices.
        * </pre>
        *
-       * <code>string payments_account_name = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * <code>optional string payments_account_name = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
        * @return Whether the paymentsAccountName field is set.
        */
       public boolean hasPaymentsAccountName() {
@@ -1319,7 +1319,7 @@ private static final long serialVersionUID = 0L;
        * This name will be printed in the monthly invoices.
        * </pre>
        *
-       * <code>string payments_account_name = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * <code>optional string payments_account_name = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
        * @return The paymentsAccountName.
        */
       public java.lang.String getPaymentsAccountName() {
@@ -1342,7 +1342,7 @@ private static final long serialVersionUID = 0L;
        * This name will be printed in the monthly invoices.
        * </pre>
        *
-       * <code>string payments_account_name = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * <code>optional string payments_account_name = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
        * @return The bytes for paymentsAccountName.
        */
       public com.google.protobuf.ByteString
@@ -1366,7 +1366,7 @@ private static final long serialVersionUID = 0L;
        * This name will be printed in the monthly invoices.
        * </pre>
        *
-       * <code>string payments_account_name = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * <code>optional string payments_account_name = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
        * @param value The paymentsAccountName to set.
        * @return This builder for chaining.
        */
@@ -1388,7 +1388,7 @@ private static final long serialVersionUID = 0L;
        * This name will be printed in the monthly invoices.
        * </pre>
        *
-       * <code>string payments_account_name = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * <code>optional string payments_account_name = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
        * @return This builder for chaining.
        */
       public Builder clearPaymentsAccountName() {
@@ -1405,7 +1405,7 @@ private static final long serialVersionUID = 0L;
        * This name will be printed in the monthly invoices.
        * </pre>
        *
-       * <code>string payments_account_name = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * <code>optional string payments_account_name = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
        * @param value The bytes for paymentsAccountName to set.
        * @return This builder for chaining.
        */
@@ -1429,7 +1429,7 @@ private static final long serialVersionUID = 0L;
        * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
        * </pre>
        *
-       * <code>string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * <code>optional string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
        * @return Whether the paymentsProfileId field is set.
        */
       public boolean hasPaymentsProfileId() {
@@ -1442,7 +1442,7 @@ private static final long serialVersionUID = 0L;
        * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
        * </pre>
        *
-       * <code>string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * <code>optional string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
        * @return The paymentsProfileId.
        */
       public java.lang.String getPaymentsProfileId() {
@@ -1464,7 +1464,7 @@ private static final long serialVersionUID = 0L;
        * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
        * </pre>
        *
-       * <code>string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * <code>optional string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
        * @return The bytes for paymentsProfileId.
        */
       public com.google.protobuf.ByteString
@@ -1487,7 +1487,7 @@ private static final long serialVersionUID = 0L;
        * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
        * </pre>
        *
-       * <code>string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * <code>optional string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
        * @param value The paymentsProfileId to set.
        * @return This builder for chaining.
        */
@@ -1508,7 +1508,7 @@ private static final long serialVersionUID = 0L;
        * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
        * </pre>
        *
-       * <code>string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * <code>optional string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
        * @return This builder for chaining.
        */
       public Builder clearPaymentsProfileId() {
@@ -1524,7 +1524,7 @@ private static final long serialVersionUID = 0L;
        * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
        * </pre>
        *
-       * <code>string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
+       * <code>optional string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
        * @param value The bytes for paymentsProfileId to set.
        * @return This builder for chaining.
        */
@@ -1546,7 +1546,7 @@ private static final long serialVersionUID = 0L;
        * Output only. The name of the payments profile associated with the billing setup.
        * </pre>
        *
-       * <code>string payments_profile_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string payments_profile_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return Whether the paymentsProfileName field is set.
        */
       public boolean hasPaymentsProfileName() {
@@ -1557,7 +1557,7 @@ private static final long serialVersionUID = 0L;
        * Output only. The name of the payments profile associated with the billing setup.
        * </pre>
        *
-       * <code>string payments_profile_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string payments_profile_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The paymentsProfileName.
        */
       public java.lang.String getPaymentsProfileName() {
@@ -1577,7 +1577,7 @@ private static final long serialVersionUID = 0L;
        * Output only. The name of the payments profile associated with the billing setup.
        * </pre>
        *
-       * <code>string payments_profile_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string payments_profile_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The bytes for paymentsProfileName.
        */
       public com.google.protobuf.ByteString
@@ -1598,7 +1598,7 @@ private static final long serialVersionUID = 0L;
        * Output only. The name of the payments profile associated with the billing setup.
        * </pre>
        *
-       * <code>string payments_profile_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string payments_profile_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @param value The paymentsProfileName to set.
        * @return This builder for chaining.
        */
@@ -1617,7 +1617,7 @@ private static final long serialVersionUID = 0L;
        * Output only. The name of the payments profile associated with the billing setup.
        * </pre>
        *
-       * <code>string payments_profile_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string payments_profile_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return This builder for chaining.
        */
       public Builder clearPaymentsProfileName() {
@@ -1631,7 +1631,7 @@ private static final long serialVersionUID = 0L;
        * Output only. The name of the payments profile associated with the billing setup.
        * </pre>
        *
-       * <code>string payments_profile_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string payments_profile_name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @param value The bytes for paymentsProfileName to set.
        * @return This builder for chaining.
        */
@@ -1654,7 +1654,7 @@ private static final long serialVersionUID = 0L;
        * when a sequential liability agreement has been arranged.
        * </pre>
        *
-       * <code>string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return Whether the secondaryPaymentsProfileId field is set.
        */
       public boolean hasSecondaryPaymentsProfileId() {
@@ -1666,7 +1666,7 @@ private static final long serialVersionUID = 0L;
        * when a sequential liability agreement has been arranged.
        * </pre>
        *
-       * <code>string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The secondaryPaymentsProfileId.
        */
       public java.lang.String getSecondaryPaymentsProfileId() {
@@ -1687,7 +1687,7 @@ private static final long serialVersionUID = 0L;
        * when a sequential liability agreement has been arranged.
        * </pre>
        *
-       * <code>string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The bytes for secondaryPaymentsProfileId.
        */
       public com.google.protobuf.ByteString
@@ -1709,7 +1709,7 @@ private static final long serialVersionUID = 0L;
        * when a sequential liability agreement has been arranged.
        * </pre>
        *
-       * <code>string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @param value The secondaryPaymentsProfileId to set.
        * @return This builder for chaining.
        */
@@ -1729,7 +1729,7 @@ private static final long serialVersionUID = 0L;
        * when a sequential liability agreement has been arranged.
        * </pre>
        *
-       * <code>string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return This builder for chaining.
        */
       public Builder clearSecondaryPaymentsProfileId() {
@@ -1744,7 +1744,7 @@ private static final long serialVersionUID = 0L;
        * when a sequential liability agreement has been arranged.
        * </pre>
        *
-       * <code>string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @param value The bytes for secondaryPaymentsProfileId to set.
        * @return This builder for chaining.
        */
@@ -1952,7 +1952,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of the billing setup.
    * </pre>
    *
-   * <code>int64 id = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   @java.lang.Override
@@ -1964,7 +1964,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of the billing setup.
    * </pre>
    *
-   * <code>int64 id = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   @java.lang.Override
@@ -2012,7 +2012,7 @@ private static final long serialVersionUID = 0L;
    * populated.
    * </pre>
    *
-   * <code>string payments_account = 18 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string payments_account = 18 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the paymentsAccount field is set.
    */
   @java.lang.Override
@@ -2030,7 +2030,7 @@ private static final long serialVersionUID = 0L;
    * populated.
    * </pre>
    *
-   * <code>string payments_account = 18 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string payments_account = 18 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The paymentsAccount.
    */
   @java.lang.Override
@@ -2057,7 +2057,7 @@ private static final long serialVersionUID = 0L;
    * populated.
    * </pre>
    *
-   * <code>string payments_account = 18 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string payments_account = 18 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for paymentsAccount.
    */
   @java.lang.Override
@@ -2358,7 +2358,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (status_ != com.google.ads.googleads.v8.enums.BillingSetupStatusEnum.BillingSetupStatus.UNSPECIFIED.getNumber()) {
@@ -2394,7 +2394,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (status_ != com.google.ads.googleads.v8.enums.BillingSetupStatusEnum.BillingSetupStatus.UNSPECIFIED.getNumber()) {
@@ -3019,7 +3019,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the billing setup.
      * </pre>
      *
-     * <code>int64 id = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the id field is set.
      */
     @java.lang.Override
@@ -3031,7 +3031,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the billing setup.
      * </pre>
      *
-     * <code>int64 id = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The id.
      */
     @java.lang.Override
@@ -3043,7 +3043,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the billing setup.
      * </pre>
      *
-     * <code>int64 id = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
@@ -3058,7 +3058,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the billing setup.
      * </pre>
      *
-     * <code>int64 id = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {
@@ -3154,7 +3154,7 @@ private static final long serialVersionUID = 0L;
      * populated.
      * </pre>
      *
-     * <code>string payments_account = 18 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string payments_account = 18 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the paymentsAccount field is set.
      */
     public boolean hasPaymentsAccount() {
@@ -3171,7 +3171,7 @@ private static final long serialVersionUID = 0L;
      * populated.
      * </pre>
      *
-     * <code>string payments_account = 18 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string payments_account = 18 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return The paymentsAccount.
      */
     public java.lang.String getPaymentsAccount() {
@@ -3197,7 +3197,7 @@ private static final long serialVersionUID = 0L;
      * populated.
      * </pre>
      *
-     * <code>string payments_account = 18 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string payments_account = 18 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for paymentsAccount.
      */
     public com.google.protobuf.ByteString
@@ -3224,7 +3224,7 @@ private static final long serialVersionUID = 0L;
      * populated.
      * </pre>
      *
-     * <code>string payments_account = 18 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string payments_account = 18 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @param value The paymentsAccount to set.
      * @return This builder for chaining.
      */
@@ -3249,7 +3249,7 @@ private static final long serialVersionUID = 0L;
      * populated.
      * </pre>
      *
-     * <code>string payments_account = 18 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string payments_account = 18 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearPaymentsAccount() {
@@ -3269,7 +3269,7 @@ private static final long serialVersionUID = 0L;
      * populated.
      * </pre>
      *
-     * <code>string payments_account = 18 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string payments_account = 18 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for paymentsAccount to set.
      * @return This builder for chaining.
      */

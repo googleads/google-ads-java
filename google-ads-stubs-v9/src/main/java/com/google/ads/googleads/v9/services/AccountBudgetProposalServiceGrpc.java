@@ -20,6 +20,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v9/services/account_budget_proposal_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class AccountBudgetProposalServiceGrpc {
 
   private AccountBudgetProposalServiceGrpc() {}

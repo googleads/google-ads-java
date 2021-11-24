@@ -101,7 +101,7 @@ private static final long serialVersionUID = 0L;
    * Required for job of CUSTOMER_MATCH_USER_LIST type.
    * </pre>
    *
-   * <code>string user_list = 2;</code>
+   * <code>optional string user_list = 2;</code>
    * @return Whether the userList field is set.
    */
   @java.lang.Override
@@ -114,7 +114,7 @@ private static final long serialVersionUID = 0L;
    * Required for job of CUSTOMER_MATCH_USER_LIST type.
    * </pre>
    *
-   * <code>string user_list = 2;</code>
+   * <code>optional string user_list = 2;</code>
    * @return The userList.
    */
   @java.lang.Override
@@ -136,7 +136,7 @@ private static final long serialVersionUID = 0L;
    * Required for job of CUSTOMER_MATCH_USER_LIST type.
    * </pre>
    *
-   * <code>string user_list = 2;</code>
+   * <code>optional string user_list = 2;</code>
    * @return The bytes for userList.
    */
   @java.lang.Override
@@ -480,7 +480,7 @@ private static final long serialVersionUID = 0L;
      * Required for job of CUSTOMER_MATCH_USER_LIST type.
      * </pre>
      *
-     * <code>string user_list = 2;</code>
+     * <code>optional string user_list = 2;</code>
      * @return Whether the userList field is set.
      */
     public boolean hasUserList() {
@@ -492,7 +492,7 @@ private static final long serialVersionUID = 0L;
      * Required for job of CUSTOMER_MATCH_USER_LIST type.
      * </pre>
      *
-     * <code>string user_list = 2;</code>
+     * <code>optional string user_list = 2;</code>
      * @return The userList.
      */
     public java.lang.String getUserList() {
@@ -513,7 +513,7 @@ private static final long serialVersionUID = 0L;
      * Required for job of CUSTOMER_MATCH_USER_LIST type.
      * </pre>
      *
-     * <code>string user_list = 2;</code>
+     * <code>optional string user_list = 2;</code>
      * @return The bytes for userList.
      */
     public com.google.protobuf.ByteString
@@ -535,7 +535,7 @@ private static final long serialVersionUID = 0L;
      * Required for job of CUSTOMER_MATCH_USER_LIST type.
      * </pre>
      *
-     * <code>string user_list = 2;</code>
+     * <code>optional string user_list = 2;</code>
      * @param value The userList to set.
      * @return This builder for chaining.
      */
@@ -555,7 +555,7 @@ private static final long serialVersionUID = 0L;
      * Required for job of CUSTOMER_MATCH_USER_LIST type.
      * </pre>
      *
-     * <code>string user_list = 2;</code>
+     * <code>optional string user_list = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearUserList() {
@@ -570,7 +570,7 @@ private static final long serialVersionUID = 0L;
      * Required for job of CUSTOMER_MATCH_USER_LIST type.
      * </pre>
      *
-     * <code>string user_list = 2;</code>
+     * <code>optional string user_list = 2;</code>
      * @param value The bytes for userList to set.
      * @return This builder for chaining.
      */

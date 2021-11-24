@@ -110,7 +110,7 @@ private static final long serialVersionUID = 0L;
    * The year of the search volume (e.g. 2020).
    * </pre>
    *
-   * <code>int64 year = 4;</code>
+   * <code>optional int64 year = 4;</code>
    * @return Whether the year field is set.
    */
   @java.lang.Override
@@ -122,7 +122,7 @@ private static final long serialVersionUID = 0L;
    * The year of the search volume (e.g. 2020).
    * </pre>
    *
-   * <code>int64 year = 4;</code>
+   * <code>optional int64 year = 4;</code>
    * @return The year.
    */
   @java.lang.Override
@@ -166,7 +166,7 @@ private static final long serialVersionUID = 0L;
    * that month.
    * </pre>
    *
-   * <code>int64 monthly_searches = 5;</code>
+   * <code>optional int64 monthly_searches = 5;</code>
    * @return Whether the monthlySearches field is set.
    */
   @java.lang.Override
@@ -180,7 +180,7 @@ private static final long serialVersionUID = 0L;
    * that month.
    * </pre>
    *
-   * <code>int64 monthly_searches = 5;</code>
+   * <code>optional int64 monthly_searches = 5;</code>
    * @return The monthlySearches.
    */
   @java.lang.Override
@@ -555,7 +555,7 @@ private static final long serialVersionUID = 0L;
      * The year of the search volume (e.g. 2020).
      * </pre>
      *
-     * <code>int64 year = 4;</code>
+     * <code>optional int64 year = 4;</code>
      * @return Whether the year field is set.
      */
     @java.lang.Override
@@ -567,7 +567,7 @@ private static final long serialVersionUID = 0L;
      * The year of the search volume (e.g. 2020).
      * </pre>
      *
-     * <code>int64 year = 4;</code>
+     * <code>optional int64 year = 4;</code>
      * @return The year.
      */
     @java.lang.Override
@@ -579,7 +579,7 @@ private static final long serialVersionUID = 0L;
      * The year of the search volume (e.g. 2020).
      * </pre>
      *
-     * <code>int64 year = 4;</code>
+     * <code>optional int64 year = 4;</code>
      * @param value The year to set.
      * @return This builder for chaining.
      */
@@ -594,7 +594,7 @@ private static final long serialVersionUID = 0L;
      * The year of the search volume (e.g. 2020).
      * </pre>
      *
-     * <code>int64 year = 4;</code>
+     * <code>optional int64 year = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearYear() {
@@ -686,7 +686,7 @@ private static final long serialVersionUID = 0L;
      * that month.
      * </pre>
      *
-     * <code>int64 monthly_searches = 5;</code>
+     * <code>optional int64 monthly_searches = 5;</code>
      * @return Whether the monthlySearches field is set.
      */
     @java.lang.Override
@@ -700,7 +700,7 @@ private static final long serialVersionUID = 0L;
      * that month.
      * </pre>
      *
-     * <code>int64 monthly_searches = 5;</code>
+     * <code>optional int64 monthly_searches = 5;</code>
      * @return The monthlySearches.
      */
     @java.lang.Override
@@ -714,7 +714,7 @@ private static final long serialVersionUID = 0L;
      * that month.
      * </pre>
      *
-     * <code>int64 monthly_searches = 5;</code>
+     * <code>optional int64 monthly_searches = 5;</code>
      * @param value The monthlySearches to set.
      * @return This builder for chaining.
      */
@@ -731,7 +731,7 @@ private static final long serialVersionUID = 0L;
      * that month.
      * </pre>
      *
-     * <code>int64 monthly_searches = 5;</code>
+     * <code>optional int64 monthly_searches = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearMonthlySearches() {

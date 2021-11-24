@@ -143,7 +143,7 @@ private static final long serialVersionUID = 0L;
      * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:00"
      * </pre>
      *
-     * <code>string creation_date_time = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string creation_date_time = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the creationDateTime field is set.
      */
     boolean hasCreationDateTime();
@@ -153,7 +153,7 @@ private static final long serialVersionUID = 0L;
      * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:00"
      * </pre>
      *
-     * <code>string creation_date_time = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string creation_date_time = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The creationDateTime.
      */
     java.lang.String getCreationDateTime();
@@ -163,7 +163,7 @@ private static final long serialVersionUID = 0L;
      * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:00"
      * </pre>
      *
-     * <code>string creation_date_time = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string creation_date_time = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for creationDateTime.
      */
     com.google.protobuf.ByteString
@@ -175,7 +175,7 @@ private static final long serialVersionUID = 0L;
      * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:30"
      * </pre>
      *
-     * <code>string start_date_time = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string start_date_time = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the startDateTime field is set.
      */
     boolean hasStartDateTime();
@@ -185,7 +185,7 @@ private static final long serialVersionUID = 0L;
      * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:30"
      * </pre>
      *
-     * <code>string start_date_time = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string start_date_time = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The startDateTime.
      */
     java.lang.String getStartDateTime();
@@ -195,7 +195,7 @@ private static final long serialVersionUID = 0L;
      * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:30"
      * </pre>
      *
-     * <code>string start_date_time = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string start_date_time = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for startDateTime.
      */
     com.google.protobuf.ByteString
@@ -207,7 +207,7 @@ private static final long serialVersionUID = 0L;
      * Formatted as yyyy-MM-dd HH:mm:ss. Example: "2018-03-05 09:16:00"
      * </pre>
      *
-     * <code>string completion_date_time = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string completion_date_time = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the completionDateTime field is set.
      */
     boolean hasCompletionDateTime();
@@ -217,7 +217,7 @@ private static final long serialVersionUID = 0L;
      * Formatted as yyyy-MM-dd HH:mm:ss. Example: "2018-03-05 09:16:00"
      * </pre>
      *
-     * <code>string completion_date_time = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string completion_date_time = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The completionDateTime.
      */
     java.lang.String getCompletionDateTime();
@@ -227,7 +227,7 @@ private static final long serialVersionUID = 0L;
      * Formatted as yyyy-MM-dd HH:mm:ss. Example: "2018-03-05 09:16:00"
      * </pre>
      *
-     * <code>string completion_date_time = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string completion_date_time = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for completionDateTime.
      */
     com.google.protobuf.ByteString
@@ -239,7 +239,7 @@ private static final long serialVersionUID = 0L;
      * This is empty if the job hasn't started running yet.
      * </pre>
      *
-     * <code>double estimated_completion_ratio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional double estimated_completion_ratio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the estimatedCompletionRatio field is set.
      */
     boolean hasEstimatedCompletionRatio();
@@ -249,7 +249,7 @@ private static final long serialVersionUID = 0L;
      * This is empty if the job hasn't started running yet.
      * </pre>
      *
-     * <code>double estimated_completion_ratio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional double estimated_completion_ratio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The estimatedCompletionRatio.
      */
     double getEstimatedCompletionRatio();
@@ -259,7 +259,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The number of mutate operations in the batch job.
      * </pre>
      *
-     * <code>int64 operation_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 operation_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the operationCount field is set.
      */
     boolean hasOperationCount();
@@ -268,7 +268,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The number of mutate operations in the batch job.
      * </pre>
      *
-     * <code>int64 operation_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 operation_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The operationCount.
      */
     long getOperationCount();
@@ -279,7 +279,7 @@ private static final long serialVersionUID = 0L;
      * Present only if the job has started running.
      * </pre>
      *
-     * <code>int64 executed_operation_count = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 executed_operation_count = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the executedOperationCount field is set.
      */
     boolean hasExecutedOperationCount();
@@ -289,7 +289,7 @@ private static final long serialVersionUID = 0L;
      * Present only if the job has started running.
      * </pre>
      *
-     * <code>int64 executed_operation_count = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 executed_operation_count = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The executedOperationCount.
      */
     long getExecutedOperationCount();
@@ -422,7 +422,7 @@ private static final long serialVersionUID = 0L;
      * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:00"
      * </pre>
      *
-     * <code>string creation_date_time = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string creation_date_time = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the creationDateTime field is set.
      */
     @java.lang.Override
@@ -435,7 +435,7 @@ private static final long serialVersionUID = 0L;
      * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:00"
      * </pre>
      *
-     * <code>string creation_date_time = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string creation_date_time = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The creationDateTime.
      */
     @java.lang.Override
@@ -457,7 +457,7 @@ private static final long serialVersionUID = 0L;
      * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:00"
      * </pre>
      *
-     * <code>string creation_date_time = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string creation_date_time = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for creationDateTime.
      */
     @java.lang.Override
@@ -483,7 +483,7 @@ private static final long serialVersionUID = 0L;
      * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:30"
      * </pre>
      *
-     * <code>string start_date_time = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string start_date_time = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the startDateTime field is set.
      */
     @java.lang.Override
@@ -496,7 +496,7 @@ private static final long serialVersionUID = 0L;
      * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:30"
      * </pre>
      *
-     * <code>string start_date_time = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string start_date_time = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The startDateTime.
      */
     @java.lang.Override
@@ -518,7 +518,7 @@ private static final long serialVersionUID = 0L;
      * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:30"
      * </pre>
      *
-     * <code>string start_date_time = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string start_date_time = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for startDateTime.
      */
     @java.lang.Override
@@ -544,7 +544,7 @@ private static final long serialVersionUID = 0L;
      * Formatted as yyyy-MM-dd HH:mm:ss. Example: "2018-03-05 09:16:00"
      * </pre>
      *
-     * <code>string completion_date_time = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string completion_date_time = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the completionDateTime field is set.
      */
     @java.lang.Override
@@ -557,7 +557,7 @@ private static final long serialVersionUID = 0L;
      * Formatted as yyyy-MM-dd HH:mm:ss. Example: "2018-03-05 09:16:00"
      * </pre>
      *
-     * <code>string completion_date_time = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string completion_date_time = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The completionDateTime.
      */
     @java.lang.Override
@@ -579,7 +579,7 @@ private static final long serialVersionUID = 0L;
      * Formatted as yyyy-MM-dd HH:mm:ss. Example: "2018-03-05 09:16:00"
      * </pre>
      *
-     * <code>string completion_date_time = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string completion_date_time = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for completionDateTime.
      */
     @java.lang.Override
@@ -605,7 +605,7 @@ private static final long serialVersionUID = 0L;
      * This is empty if the job hasn't started running yet.
      * </pre>
      *
-     * <code>double estimated_completion_ratio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional double estimated_completion_ratio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the estimatedCompletionRatio field is set.
      */
     @java.lang.Override
@@ -618,7 +618,7 @@ private static final long serialVersionUID = 0L;
      * This is empty if the job hasn't started running yet.
      * </pre>
      *
-     * <code>double estimated_completion_ratio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional double estimated_completion_ratio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The estimatedCompletionRatio.
      */
     @java.lang.Override
@@ -633,7 +633,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The number of mutate operations in the batch job.
      * </pre>
      *
-     * <code>int64 operation_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 operation_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the operationCount field is set.
      */
     @java.lang.Override
@@ -645,7 +645,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The number of mutate operations in the batch job.
      * </pre>
      *
-     * <code>int64 operation_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 operation_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The operationCount.
      */
     @java.lang.Override
@@ -661,7 +661,7 @@ private static final long serialVersionUID = 0L;
      * Present only if the job has started running.
      * </pre>
      *
-     * <code>int64 executed_operation_count = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 executed_operation_count = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the executedOperationCount field is set.
      */
     @java.lang.Override
@@ -674,7 +674,7 @@ private static final long serialVersionUID = 0L;
      * Present only if the job has started running.
      * </pre>
      *
-     * <code>int64 executed_operation_count = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 executed_operation_count = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The executedOperationCount.
      */
     @java.lang.Override
@@ -1140,7 +1140,7 @@ private static final long serialVersionUID = 0L;
        * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:00"
        * </pre>
        *
-       * <code>string creation_date_time = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string creation_date_time = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return Whether the creationDateTime field is set.
        */
       public boolean hasCreationDateTime() {
@@ -1152,7 +1152,7 @@ private static final long serialVersionUID = 0L;
        * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:00"
        * </pre>
        *
-       * <code>string creation_date_time = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string creation_date_time = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The creationDateTime.
        */
       public java.lang.String getCreationDateTime() {
@@ -1173,7 +1173,7 @@ private static final long serialVersionUID = 0L;
        * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:00"
        * </pre>
        *
-       * <code>string creation_date_time = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string creation_date_time = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The bytes for creationDateTime.
        */
       public com.google.protobuf.ByteString
@@ -1195,7 +1195,7 @@ private static final long serialVersionUID = 0L;
        * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:00"
        * </pre>
        *
-       * <code>string creation_date_time = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string creation_date_time = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @param value The creationDateTime to set.
        * @return This builder for chaining.
        */
@@ -1215,7 +1215,7 @@ private static final long serialVersionUID = 0L;
        * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:00"
        * </pre>
        *
-       * <code>string creation_date_time = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string creation_date_time = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return This builder for chaining.
        */
       public Builder clearCreationDateTime() {
@@ -1230,7 +1230,7 @@ private static final long serialVersionUID = 0L;
        * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:00"
        * </pre>
        *
-       * <code>string creation_date_time = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string creation_date_time = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @param value The bytes for creationDateTime to set.
        * @return This builder for chaining.
        */
@@ -1253,7 +1253,7 @@ private static final long serialVersionUID = 0L;
        * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:30"
        * </pre>
        *
-       * <code>string start_date_time = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string start_date_time = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return Whether the startDateTime field is set.
        */
       public boolean hasStartDateTime() {
@@ -1265,7 +1265,7 @@ private static final long serialVersionUID = 0L;
        * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:30"
        * </pre>
        *
-       * <code>string start_date_time = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string start_date_time = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The startDateTime.
        */
       public java.lang.String getStartDateTime() {
@@ -1286,7 +1286,7 @@ private static final long serialVersionUID = 0L;
        * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:30"
        * </pre>
        *
-       * <code>string start_date_time = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string start_date_time = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The bytes for startDateTime.
        */
       public com.google.protobuf.ByteString
@@ -1308,7 +1308,7 @@ private static final long serialVersionUID = 0L;
        * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:30"
        * </pre>
        *
-       * <code>string start_date_time = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string start_date_time = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @param value The startDateTime to set.
        * @return This builder for chaining.
        */
@@ -1328,7 +1328,7 @@ private static final long serialVersionUID = 0L;
        * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:30"
        * </pre>
        *
-       * <code>string start_date_time = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string start_date_time = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return This builder for chaining.
        */
       public Builder clearStartDateTime() {
@@ -1343,7 +1343,7 @@ private static final long serialVersionUID = 0L;
        * Formatted as yyyy-mm-dd hh:mm:ss. Example: "2018-03-05 09:15:30"
        * </pre>
        *
-       * <code>string start_date_time = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string start_date_time = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @param value The bytes for startDateTime to set.
        * @return This builder for chaining.
        */
@@ -1366,7 +1366,7 @@ private static final long serialVersionUID = 0L;
        * Formatted as yyyy-MM-dd HH:mm:ss. Example: "2018-03-05 09:16:00"
        * </pre>
        *
-       * <code>string completion_date_time = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string completion_date_time = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return Whether the completionDateTime field is set.
        */
       public boolean hasCompletionDateTime() {
@@ -1378,7 +1378,7 @@ private static final long serialVersionUID = 0L;
        * Formatted as yyyy-MM-dd HH:mm:ss. Example: "2018-03-05 09:16:00"
        * </pre>
        *
-       * <code>string completion_date_time = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string completion_date_time = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The completionDateTime.
        */
       public java.lang.String getCompletionDateTime() {
@@ -1399,7 +1399,7 @@ private static final long serialVersionUID = 0L;
        * Formatted as yyyy-MM-dd HH:mm:ss. Example: "2018-03-05 09:16:00"
        * </pre>
        *
-       * <code>string completion_date_time = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string completion_date_time = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The bytes for completionDateTime.
        */
       public com.google.protobuf.ByteString
@@ -1421,7 +1421,7 @@ private static final long serialVersionUID = 0L;
        * Formatted as yyyy-MM-dd HH:mm:ss. Example: "2018-03-05 09:16:00"
        * </pre>
        *
-       * <code>string completion_date_time = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string completion_date_time = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @param value The completionDateTime to set.
        * @return This builder for chaining.
        */
@@ -1441,7 +1441,7 @@ private static final long serialVersionUID = 0L;
        * Formatted as yyyy-MM-dd HH:mm:ss. Example: "2018-03-05 09:16:00"
        * </pre>
        *
-       * <code>string completion_date_time = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string completion_date_time = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return This builder for chaining.
        */
       public Builder clearCompletionDateTime() {
@@ -1456,7 +1456,7 @@ private static final long serialVersionUID = 0L;
        * Formatted as yyyy-MM-dd HH:mm:ss. Example: "2018-03-05 09:16:00"
        * </pre>
        *
-       * <code>string completion_date_time = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional string completion_date_time = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @param value The bytes for completionDateTime to set.
        * @return This builder for chaining.
        */
@@ -1479,7 +1479,7 @@ private static final long serialVersionUID = 0L;
        * This is empty if the job hasn't started running yet.
        * </pre>
        *
-       * <code>double estimated_completion_ratio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional double estimated_completion_ratio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return Whether the estimatedCompletionRatio field is set.
        */
       @java.lang.Override
@@ -1492,7 +1492,7 @@ private static final long serialVersionUID = 0L;
        * This is empty if the job hasn't started running yet.
        * </pre>
        *
-       * <code>double estimated_completion_ratio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional double estimated_completion_ratio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The estimatedCompletionRatio.
        */
       @java.lang.Override
@@ -1505,7 +1505,7 @@ private static final long serialVersionUID = 0L;
        * This is empty if the job hasn't started running yet.
        * </pre>
        *
-       * <code>double estimated_completion_ratio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional double estimated_completion_ratio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @param value The estimatedCompletionRatio to set.
        * @return This builder for chaining.
        */
@@ -1521,7 +1521,7 @@ private static final long serialVersionUID = 0L;
        * This is empty if the job hasn't started running yet.
        * </pre>
        *
-       * <code>double estimated_completion_ratio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional double estimated_completion_ratio = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return This builder for chaining.
        */
       public Builder clearEstimatedCompletionRatio() {
@@ -1537,7 +1537,7 @@ private static final long serialVersionUID = 0L;
        * Output only. The number of mutate operations in the batch job.
        * </pre>
        *
-       * <code>int64 operation_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional int64 operation_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return Whether the operationCount field is set.
        */
       @java.lang.Override
@@ -1549,7 +1549,7 @@ private static final long serialVersionUID = 0L;
        * Output only. The number of mutate operations in the batch job.
        * </pre>
        *
-       * <code>int64 operation_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional int64 operation_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The operationCount.
        */
       @java.lang.Override
@@ -1561,7 +1561,7 @@ private static final long serialVersionUID = 0L;
        * Output only. The number of mutate operations in the batch job.
        * </pre>
        *
-       * <code>int64 operation_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional int64 operation_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @param value The operationCount to set.
        * @return This builder for chaining.
        */
@@ -1576,7 +1576,7 @@ private static final long serialVersionUID = 0L;
        * Output only. The number of mutate operations in the batch job.
        * </pre>
        *
-       * <code>int64 operation_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional int64 operation_count = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return This builder for chaining.
        */
       public Builder clearOperationCount() {
@@ -1593,7 +1593,7 @@ private static final long serialVersionUID = 0L;
        * Present only if the job has started running.
        * </pre>
        *
-       * <code>int64 executed_operation_count = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional int64 executed_operation_count = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return Whether the executedOperationCount field is set.
        */
       @java.lang.Override
@@ -1606,7 +1606,7 @@ private static final long serialVersionUID = 0L;
        * Present only if the job has started running.
        * </pre>
        *
-       * <code>int64 executed_operation_count = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional int64 executed_operation_count = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return The executedOperationCount.
        */
       @java.lang.Override
@@ -1619,7 +1619,7 @@ private static final long serialVersionUID = 0L;
        * Present only if the job has started running.
        * </pre>
        *
-       * <code>int64 executed_operation_count = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional int64 executed_operation_count = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @param value The executedOperationCount to set.
        * @return This builder for chaining.
        */
@@ -1635,7 +1635,7 @@ private static final long serialVersionUID = 0L;
        * Present only if the job has started running.
        * </pre>
        *
-       * <code>int64 executed_operation_count = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * <code>optional int64 executed_operation_count = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
        * @return This builder for chaining.
        */
       public Builder clearExecutedOperationCount() {
@@ -1755,7 +1755,7 @@ private static final long serialVersionUID = 0L;
    * Output only. ID of this batch job.
    * </pre>
    *
-   * <code>int64 id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   @java.lang.Override
@@ -1767,7 +1767,7 @@ private static final long serialVersionUID = 0L;
    * Output only. ID of this batch job.
    * </pre>
    *
-   * <code>int64 id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   @java.lang.Override
@@ -1783,7 +1783,7 @@ private static final long serialVersionUID = 0L;
    * batch job status is PENDING.
    * </pre>
    *
-   * <code>string next_add_sequence_token = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string next_add_sequence_token = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the nextAddSequenceToken field is set.
    */
   @java.lang.Override
@@ -1796,7 +1796,7 @@ private static final long serialVersionUID = 0L;
    * batch job status is PENDING.
    * </pre>
    *
-   * <code>string next_add_sequence_token = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string next_add_sequence_token = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The nextAddSequenceToken.
    */
   @java.lang.Override
@@ -1818,7 +1818,7 @@ private static final long serialVersionUID = 0L;
    * batch job status is PENDING.
    * </pre>
    *
-   * <code>string next_add_sequence_token = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string next_add_sequence_token = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for nextAddSequenceToken.
    */
   @java.lang.Override
@@ -1909,7 +1909,7 @@ private static final long serialVersionUID = 0L;
    * for completion. Only set when the batch job status is RUNNING or DONE.
    * </pre>
    *
-   * <code>string long_running_operation = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string long_running_operation = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the longRunningOperation field is set.
    */
   @java.lang.Override
@@ -1922,7 +1922,7 @@ private static final long serialVersionUID = 0L;
    * for completion. Only set when the batch job status is RUNNING or DONE.
    * </pre>
    *
-   * <code>string long_running_operation = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string long_running_operation = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The longRunningOperation.
    */
   @java.lang.Override
@@ -1944,7 +1944,7 @@ private static final long serialVersionUID = 0L;
    * for completion. Only set when the batch job status is RUNNING or DONE.
    * </pre>
    *
-   * <code>string long_running_operation = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string long_running_operation = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for longRunningOperation.
    */
   @java.lang.Override
@@ -1976,7 +1976,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (metadata_ != null) {
@@ -2003,7 +2003,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (metadata_ != null) {
@@ -2510,7 +2510,7 @@ private static final long serialVersionUID = 0L;
      * Output only. ID of this batch job.
      * </pre>
      *
-     * <code>int64 id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the id field is set.
      */
     @java.lang.Override
@@ -2522,7 +2522,7 @@ private static final long serialVersionUID = 0L;
      * Output only. ID of this batch job.
      * </pre>
      *
-     * <code>int64 id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The id.
      */
     @java.lang.Override
@@ -2534,7 +2534,7 @@ private static final long serialVersionUID = 0L;
      * Output only. ID of this batch job.
      * </pre>
      *
-     * <code>int64 id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
@@ -2549,7 +2549,7 @@ private static final long serialVersionUID = 0L;
      * Output only. ID of this batch job.
      * </pre>
      *
-     * <code>int64 id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {
@@ -2566,7 +2566,7 @@ private static final long serialVersionUID = 0L;
      * batch job status is PENDING.
      * </pre>
      *
-     * <code>string next_add_sequence_token = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string next_add_sequence_token = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the nextAddSequenceToken field is set.
      */
     public boolean hasNextAddSequenceToken() {
@@ -2578,7 +2578,7 @@ private static final long serialVersionUID = 0L;
      * batch job status is PENDING.
      * </pre>
      *
-     * <code>string next_add_sequence_token = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string next_add_sequence_token = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The nextAddSequenceToken.
      */
     public java.lang.String getNextAddSequenceToken() {
@@ -2599,7 +2599,7 @@ private static final long serialVersionUID = 0L;
      * batch job status is PENDING.
      * </pre>
      *
-     * <code>string next_add_sequence_token = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string next_add_sequence_token = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for nextAddSequenceToken.
      */
     public com.google.protobuf.ByteString
@@ -2621,7 +2621,7 @@ private static final long serialVersionUID = 0L;
      * batch job status is PENDING.
      * </pre>
      *
-     * <code>string next_add_sequence_token = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string next_add_sequence_token = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The nextAddSequenceToken to set.
      * @return This builder for chaining.
      */
@@ -2641,7 +2641,7 @@ private static final long serialVersionUID = 0L;
      * batch job status is PENDING.
      * </pre>
      *
-     * <code>string next_add_sequence_token = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string next_add_sequence_token = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearNextAddSequenceToken() {
@@ -2656,7 +2656,7 @@ private static final long serialVersionUID = 0L;
      * batch job status is PENDING.
      * </pre>
      *
-     * <code>string next_add_sequence_token = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string next_add_sequence_token = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for nextAddSequenceToken to set.
      * @return This builder for chaining.
      */
@@ -2908,7 +2908,7 @@ private static final long serialVersionUID = 0L;
      * for completion. Only set when the batch job status is RUNNING or DONE.
      * </pre>
      *
-     * <code>string long_running_operation = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string long_running_operation = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the longRunningOperation field is set.
      */
     public boolean hasLongRunningOperation() {
@@ -2920,7 +2920,7 @@ private static final long serialVersionUID = 0L;
      * for completion. Only set when the batch job status is RUNNING or DONE.
      * </pre>
      *
-     * <code>string long_running_operation = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string long_running_operation = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The longRunningOperation.
      */
     public java.lang.String getLongRunningOperation() {
@@ -2941,7 +2941,7 @@ private static final long serialVersionUID = 0L;
      * for completion. Only set when the batch job status is RUNNING or DONE.
      * </pre>
      *
-     * <code>string long_running_operation = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string long_running_operation = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for longRunningOperation.
      */
     public com.google.protobuf.ByteString
@@ -2963,7 +2963,7 @@ private static final long serialVersionUID = 0L;
      * for completion. Only set when the batch job status is RUNNING or DONE.
      * </pre>
      *
-     * <code>string long_running_operation = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string long_running_operation = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The longRunningOperation to set.
      * @return This builder for chaining.
      */
@@ -2983,7 +2983,7 @@ private static final long serialVersionUID = 0L;
      * for completion. Only set when the batch job status is RUNNING or DONE.
      * </pre>
      *
-     * <code>string long_running_operation = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string long_running_operation = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearLongRunningOperation() {
@@ -2998,7 +2998,7 @@ private static final long serialVersionUID = 0L;
      * for completion. Only set when the batch job status is RUNNING or DONE.
      * </pre>
      *
-     * <code>string long_running_operation = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string long_running_operation = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for longRunningOperation to set.
      * @return This builder for chaining.
      */

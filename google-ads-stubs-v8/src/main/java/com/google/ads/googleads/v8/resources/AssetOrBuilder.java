@@ -36,7 +36,7 @@ public interface AssetOrBuilder extends
    * Output only. The ID of the asset.
    * </pre>
    *
-   * <code>int64 id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -45,7 +45,7 @@ public interface AssetOrBuilder extends
    * Output only. The ID of the asset.
    * </pre>
    *
-   * <code>int64 id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   long getId();
@@ -55,7 +55,7 @@ public interface AssetOrBuilder extends
    * Optional name of the asset.
    * </pre>
    *
-   * <code>string name = 12;</code>
+   * <code>optional string name = 12;</code>
    * @return Whether the name field is set.
    */
   boolean hasName();
@@ -64,7 +64,7 @@ public interface AssetOrBuilder extends
    * Optional name of the asset.
    * </pre>
    *
-   * <code>string name = 12;</code>
+   * <code>optional string name = 12;</code>
    * @return The name.
    */
   java.lang.String getName();
@@ -73,7 +73,7 @@ public interface AssetOrBuilder extends
    * Optional name of the asset.
    * </pre>
    *
-   * <code>string name = 12;</code>
+   * <code>optional string name = 12;</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
@@ -185,7 +185,7 @@ public interface AssetOrBuilder extends
    * URL template for constructing a tracking URL.
    * </pre>
    *
-   * <code>string tracking_url_template = 17;</code>
+   * <code>optional string tracking_url_template = 17;</code>
    * @return Whether the trackingUrlTemplate field is set.
    */
   boolean hasTrackingUrlTemplate();
@@ -194,7 +194,7 @@ public interface AssetOrBuilder extends
    * URL template for constructing a tracking URL.
    * </pre>
    *
-   * <code>string tracking_url_template = 17;</code>
+   * <code>optional string tracking_url_template = 17;</code>
    * @return The trackingUrlTemplate.
    */
   java.lang.String getTrackingUrlTemplate();
@@ -203,7 +203,7 @@ public interface AssetOrBuilder extends
    * URL template for constructing a tracking URL.
    * </pre>
    *
-   * <code>string tracking_url_template = 17;</code>
+   * <code>optional string tracking_url_template = 17;</code>
    * @return The bytes for trackingUrlTemplate.
    */
   com.google.protobuf.ByteString
@@ -264,7 +264,7 @@ public interface AssetOrBuilder extends
    * tracking.
    * </pre>
    *
-   * <code>string final_url_suffix = 19;</code>
+   * <code>optional string final_url_suffix = 19;</code>
    * @return Whether the finalUrlSuffix field is set.
    */
   boolean hasFinalUrlSuffix();
@@ -274,7 +274,7 @@ public interface AssetOrBuilder extends
    * tracking.
    * </pre>
    *
-   * <code>string final_url_suffix = 19;</code>
+   * <code>optional string final_url_suffix = 19;</code>
    * @return The finalUrlSuffix.
    */
   java.lang.String getFinalUrlSuffix();
@@ -284,7 +284,7 @@ public interface AssetOrBuilder extends
    * tracking.
    * </pre>
    *
-   * <code>string final_url_suffix = 19;</code>
+   * <code>optional string final_url_suffix = 19;</code>
    * @return The bytes for finalUrlSuffix.
    */
   com.google.protobuf.ByteString

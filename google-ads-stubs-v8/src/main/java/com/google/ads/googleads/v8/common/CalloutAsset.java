@@ -347,13 +347,13 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getCalloutTextBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(calloutText_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, calloutText_);
     }
-    if (!getStartDateBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(startDate_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, startDate_);
     }
-    if (!getEndDateBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endDate_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, endDate_);
     }
     for (int i = 0; i < adScheduleTargets_.size(); i++) {
@@ -368,13 +368,13 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getCalloutTextBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(calloutText_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, calloutText_);
     }
-    if (!getStartDateBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(startDate_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, startDate_);
     }
-    if (!getEndDateBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endDate_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, endDate_);
     }
     for (int i = 0; i < adScheduleTargets_.size(); i++) {

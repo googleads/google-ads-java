@@ -15,7 +15,7 @@ public interface CommissionOrBuilder extends
    * rate of 0.106 (10.6%).
    * </pre>
    *
-   * <code>int64 commission_rate_micros = 2;</code>
+   * <code>optional int64 commission_rate_micros = 2;</code>
    * @return Whether the commissionRateMicros field is set.
    */
   boolean hasCommissionRateMicros();
@@ -27,7 +27,7 @@ public interface CommissionOrBuilder extends
    * rate of 0.106 (10.6%).
    * </pre>
    *
-   * <code>int64 commission_rate_micros = 2;</code>
+   * <code>optional int64 commission_rate_micros = 2;</code>
    * @return The commissionRateMicros.
    */
   long getCommissionRateMicros();

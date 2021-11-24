@@ -364,7 +364,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getProductIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, productId_);
       }
       if (quantity_ != 0) {
@@ -382,7 +382,7 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (!getProductIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(productId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, productId_);
       }
       if (quantity_ != 0) {
@@ -1166,13 +1166,13 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getMerchantIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(merchantId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, merchantId_);
     }
-    if (!getFeedCountryCodeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feedCountryCode_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, feedCountryCode_);
     }
-    if (!getFeedLanguageCodeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feedLanguageCode_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, feedLanguageCode_);
     }
     if (localTransactionCost_ != 0D) {
@@ -1190,13 +1190,13 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getMerchantIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(merchantId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, merchantId_);
     }
-    if (!getFeedCountryCodeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feedCountryCode_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, feedCountryCode_);
     }
-    if (!getFeedLanguageCodeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feedLanguageCode_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, feedLanguageCode_);
     }
     if (localTransactionCost_ != 0D) {

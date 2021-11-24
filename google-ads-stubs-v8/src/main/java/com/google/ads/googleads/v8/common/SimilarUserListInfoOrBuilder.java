@@ -12,7 +12,7 @@ public interface SimilarUserListInfoOrBuilder extends
    * Seed UserList from which this list is derived.
    * </pre>
    *
-   * <code>string seed_user_list = 2;</code>
+   * <code>optional string seed_user_list = 2;</code>
    * @return Whether the seedUserList field is set.
    */
   boolean hasSeedUserList();
@@ -21,7 +21,7 @@ public interface SimilarUserListInfoOrBuilder extends
    * Seed UserList from which this list is derived.
    * </pre>
    *
-   * <code>string seed_user_list = 2;</code>
+   * <code>optional string seed_user_list = 2;</code>
    * @return The seedUserList.
    */
   java.lang.String getSeedUserList();
@@ -30,7 +30,7 @@ public interface SimilarUserListInfoOrBuilder extends
    * Seed UserList from which this list is derived.
    * </pre>
    *
-   * <code>string seed_user_list = 2;</code>
+   * <code>optional string seed_user_list = 2;</code>
    * @return The bytes for seedUserList.
    */
   com.google.protobuf.ByteString

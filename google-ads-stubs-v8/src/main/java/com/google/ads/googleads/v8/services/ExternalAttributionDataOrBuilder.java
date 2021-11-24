@@ -13,7 +13,7 @@ public interface ExternalAttributionDataOrBuilder extends
    * Google Ads click.
    * </pre>
    *
-   * <code>double external_attribution_credit = 3;</code>
+   * <code>optional double external_attribution_credit = 3;</code>
    * @return Whether the externalAttributionCredit field is set.
    */
   boolean hasExternalAttributionCredit();
@@ -23,7 +23,7 @@ public interface ExternalAttributionDataOrBuilder extends
    * Google Ads click.
    * </pre>
    *
-   * <code>double external_attribution_credit = 3;</code>
+   * <code>optional double external_attribution_credit = 3;</code>
    * @return The externalAttributionCredit.
    */
   double getExternalAttributionCredit();
@@ -33,7 +33,7 @@ public interface ExternalAttributionDataOrBuilder extends
    * Specifies the attribution model name.
    * </pre>
    *
-   * <code>string external_attribution_model = 4;</code>
+   * <code>optional string external_attribution_model = 4;</code>
    * @return Whether the externalAttributionModel field is set.
    */
   boolean hasExternalAttributionModel();
@@ -42,7 +42,7 @@ public interface ExternalAttributionDataOrBuilder extends
    * Specifies the attribution model name.
    * </pre>
    *
-   * <code>string external_attribution_model = 4;</code>
+   * <code>optional string external_attribution_model = 4;</code>
    * @return The externalAttributionModel.
    */
   java.lang.String getExternalAttributionModel();
@@ -51,7 +51,7 @@ public interface ExternalAttributionDataOrBuilder extends
    * Specifies the attribution model name.
    * </pre>
    *
-   * <code>string external_attribution_model = 4;</code>
+   * <code>optional string external_attribution_model = 4;</code>
    * @return The bytes for externalAttributionModel.
    */
   com.google.protobuf.ByteString

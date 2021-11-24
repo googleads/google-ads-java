@@ -177,7 +177,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of the keyword plan.
    * </pre>
    *
-   * <code>int64 id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   @java.lang.Override
@@ -189,7 +189,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of the keyword plan.
    * </pre>
    *
-   * <code>int64 id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   @java.lang.Override
@@ -206,7 +206,7 @@ private static final long serialVersionUID = 0L;
    * plans.
    * </pre>
    *
-   * <code>string name = 6;</code>
+   * <code>optional string name = 6;</code>
    * @return Whether the name field is set.
    */
   @java.lang.Override
@@ -220,7 +220,7 @@ private static final long serialVersionUID = 0L;
    * plans.
    * </pre>
    *
-   * <code>string name = 6;</code>
+   * <code>optional string name = 6;</code>
    * @return The name.
    */
   @java.lang.Override
@@ -243,7 +243,7 @@ private static final long serialVersionUID = 0L;
    * plans.
    * </pre>
    *
-   * <code>string name = 6;</code>
+   * <code>optional string name = 6;</code>
    * @return The bytes for name.
    */
   @java.lang.Override
@@ -313,7 +313,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (forecastPeriod_ != null) {
@@ -334,7 +334,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (forecastPeriod_ != null) {
@@ -805,7 +805,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the keyword plan.
      * </pre>
      *
-     * <code>int64 id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the id field is set.
      */
     @java.lang.Override
@@ -817,7 +817,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the keyword plan.
      * </pre>
      *
-     * <code>int64 id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The id.
      */
     @java.lang.Override
@@ -829,7 +829,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the keyword plan.
      * </pre>
      *
-     * <code>int64 id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
@@ -844,7 +844,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the keyword plan.
      * </pre>
      *
-     * <code>int64 id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {
@@ -862,7 +862,7 @@ private static final long serialVersionUID = 0L;
      * plans.
      * </pre>
      *
-     * <code>string name = 6;</code>
+     * <code>optional string name = 6;</code>
      * @return Whether the name field is set.
      */
     public boolean hasName() {
@@ -875,7 +875,7 @@ private static final long serialVersionUID = 0L;
      * plans.
      * </pre>
      *
-     * <code>string name = 6;</code>
+     * <code>optional string name = 6;</code>
      * @return The name.
      */
     public java.lang.String getName() {
@@ -897,7 +897,7 @@ private static final long serialVersionUID = 0L;
      * plans.
      * </pre>
      *
-     * <code>string name = 6;</code>
+     * <code>optional string name = 6;</code>
      * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
@@ -920,7 +920,7 @@ private static final long serialVersionUID = 0L;
      * plans.
      * </pre>
      *
-     * <code>string name = 6;</code>
+     * <code>optional string name = 6;</code>
      * @param value The name to set.
      * @return This builder for chaining.
      */
@@ -941,7 +941,7 @@ private static final long serialVersionUID = 0L;
      * plans.
      * </pre>
      *
-     * <code>string name = 6;</code>
+     * <code>optional string name = 6;</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
@@ -957,7 +957,7 @@ private static final long serialVersionUID = 0L;
      * plans.
      * </pre>
      *
-     * <code>string name = 6;</code>
+     * <code>optional string name = 6;</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */

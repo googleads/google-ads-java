@@ -12,7 +12,7 @@ public interface MediaAudioOrBuilder extends
    * Output only. The duration of the Audio in milliseconds.
    * </pre>
    *
-   * <code>int64 ad_duration_millis = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 ad_duration_millis = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the adDurationMillis field is set.
    */
   boolean hasAdDurationMillis();
@@ -21,7 +21,7 @@ public interface MediaAudioOrBuilder extends
    * Output only. The duration of the Audio in milliseconds.
    * </pre>
    *
-   * <code>int64 ad_duration_millis = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 ad_duration_millis = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The adDurationMillis.
    */
   long getAdDurationMillis();

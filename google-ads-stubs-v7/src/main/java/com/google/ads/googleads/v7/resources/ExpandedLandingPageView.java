@@ -158,7 +158,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The final URL that clicks are directed to.
    * </pre>
    *
-   * <code>string expanded_final_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string expanded_final_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the expandedFinalUrl field is set.
    */
   @java.lang.Override
@@ -170,7 +170,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The final URL that clicks are directed to.
    * </pre>
    *
-   * <code>string expanded_final_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string expanded_final_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The expandedFinalUrl.
    */
   @java.lang.Override
@@ -191,7 +191,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The final URL that clicks are directed to.
    * </pre>
    *
-   * <code>string expanded_final_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string expanded_final_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for expandedFinalUrl.
    */
   @java.lang.Override
@@ -223,7 +223,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
@@ -238,7 +238,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
@@ -658,7 +658,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The final URL that clicks are directed to.
      * </pre>
      *
-     * <code>string expanded_final_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string expanded_final_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the expandedFinalUrl field is set.
      */
     public boolean hasExpandedFinalUrl() {
@@ -669,7 +669,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The final URL that clicks are directed to.
      * </pre>
      *
-     * <code>string expanded_final_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string expanded_final_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The expandedFinalUrl.
      */
     public java.lang.String getExpandedFinalUrl() {
@@ -689,7 +689,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The final URL that clicks are directed to.
      * </pre>
      *
-     * <code>string expanded_final_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string expanded_final_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for expandedFinalUrl.
      */
     public com.google.protobuf.ByteString
@@ -710,7 +710,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The final URL that clicks are directed to.
      * </pre>
      *
-     * <code>string expanded_final_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string expanded_final_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The expandedFinalUrl to set.
      * @return This builder for chaining.
      */
@@ -729,7 +729,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The final URL that clicks are directed to.
      * </pre>
      *
-     * <code>string expanded_final_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string expanded_final_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearExpandedFinalUrl() {
@@ -743,7 +743,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The final URL that clicks are directed to.
      * </pre>
      *
-     * <code>string expanded_final_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string expanded_final_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for expandedFinalUrl to set.
      * @return This builder for chaining.
      */

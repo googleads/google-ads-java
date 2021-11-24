@@ -71,7 +71,7 @@ public interface FrequencyCapKeyOrBuilder extends
    * Number of time units the cap lasts.
    * </pre>
    *
-   * <code>int32 time_length = 5;</code>
+   * <code>optional int32 time_length = 5;</code>
    * @return Whether the timeLength field is set.
    */
   boolean hasTimeLength();
@@ -80,7 +80,7 @@ public interface FrequencyCapKeyOrBuilder extends
    * Number of time units the cap lasts.
    * </pre>
    *
-   * <code>int32 time_length = 5;</code>
+   * <code>optional int32 time_length = 5;</code>
    * @return The timeLength.
    */
   int getTimeLength();

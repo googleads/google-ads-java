@@ -31,7 +31,7 @@ public interface FeedItemPlaceholderPolicyInfoOrBuilder extends
    * Output only. The FeedMapping that contains the placeholder type.
    * </pre>
    *
-   * <code>string feed_mapping_resource_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string feed_mapping_resource_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the feedMappingResourceName field is set.
    */
   boolean hasFeedMappingResourceName();
@@ -40,7 +40,7 @@ public interface FeedItemPlaceholderPolicyInfoOrBuilder extends
    * Output only. The FeedMapping that contains the placeholder type.
    * </pre>
    *
-   * <code>string feed_mapping_resource_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string feed_mapping_resource_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The feedMappingResourceName.
    */
   java.lang.String getFeedMappingResourceName();
@@ -49,7 +49,7 @@ public interface FeedItemPlaceholderPolicyInfoOrBuilder extends
    * Output only. The FeedMapping that contains the placeholder type.
    * </pre>
    *
-   * <code>string feed_mapping_resource_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string feed_mapping_resource_name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for feedMappingResourceName.
    */
   com.google.protobuf.ByteString

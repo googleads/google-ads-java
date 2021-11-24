@@ -36,7 +36,7 @@ public interface AdParameterOrBuilder extends
    * Immutable. The ad group criterion that this ad parameter belongs to.
    * </pre>
    *
-   * <code>string ad_group_criterion = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_criterion = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the adGroupCriterion field is set.
    */
   boolean hasAdGroupCriterion();
@@ -45,7 +45,7 @@ public interface AdParameterOrBuilder extends
    * Immutable. The ad group criterion that this ad parameter belongs to.
    * </pre>
    *
-   * <code>string ad_group_criterion = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_criterion = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The adGroupCriterion.
    */
   java.lang.String getAdGroupCriterion();
@@ -54,7 +54,7 @@ public interface AdParameterOrBuilder extends
    * Immutable. The ad group criterion that this ad parameter belongs to.
    * </pre>
    *
-   * <code>string ad_group_criterion = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_criterion = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for adGroupCriterion.
    */
   com.google.protobuf.ByteString
@@ -65,7 +65,7 @@ public interface AdParameterOrBuilder extends
    * Immutable. The unique index of this ad parameter. Must be either 1 or 2.
    * </pre>
    *
-   * <code>int64 parameter_index = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional int64 parameter_index = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the parameterIndex field is set.
    */
   boolean hasParameterIndex();
@@ -74,7 +74,7 @@ public interface AdParameterOrBuilder extends
    * Immutable. The unique index of this ad parameter. Must be either 1 or 2.
    * </pre>
    *
-   * <code>int64 parameter_index = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional int64 parameter_index = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The parameterIndex.
    */
   long getParameterIndex();
@@ -96,7 +96,7 @@ public interface AdParameterOrBuilder extends
    *    valid.
    * </pre>
    *
-   * <code>string insertion_text = 7;</code>
+   * <code>optional string insertion_text = 7;</code>
    * @return Whether the insertionText field is set.
    */
   boolean hasInsertionText();
@@ -117,7 +117,7 @@ public interface AdParameterOrBuilder extends
    *    valid.
    * </pre>
    *
-   * <code>string insertion_text = 7;</code>
+   * <code>optional string insertion_text = 7;</code>
    * @return The insertionText.
    */
   java.lang.String getInsertionText();
@@ -138,7 +138,7 @@ public interface AdParameterOrBuilder extends
    *    valid.
    * </pre>
    *
-   * <code>string insertion_text = 7;</code>
+   * <code>optional string insertion_text = 7;</code>
    * @return The bytes for insertionText.
    */
   com.google.protobuf.ByteString

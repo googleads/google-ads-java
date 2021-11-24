@@ -221,7 +221,7 @@ private static final long serialVersionUID = 0L;
    * Id of the feed attribute for which the value is associated with.
    * </pre>
    *
-   * <code>int64 feed_attribute_id = 11;</code>
+   * <code>optional int64 feed_attribute_id = 11;</code>
    * @return Whether the feedAttributeId field is set.
    */
   @java.lang.Override
@@ -233,7 +233,7 @@ private static final long serialVersionUID = 0L;
    * Id of the feed attribute for which the value is associated with.
    * </pre>
    *
-   * <code>int64 feed_attribute_id = 11;</code>
+   * <code>optional int64 feed_attribute_id = 11;</code>
    * @return The feedAttributeId.
    */
   @java.lang.Override
@@ -249,7 +249,7 @@ private static final long serialVersionUID = 0L;
    * of type INT64.
    * </pre>
    *
-   * <code>int64 integer_value = 12;</code>
+   * <code>optional int64 integer_value = 12;</code>
    * @return Whether the integerValue field is set.
    */
   @java.lang.Override
@@ -262,7 +262,7 @@ private static final long serialVersionUID = 0L;
    * of type INT64.
    * </pre>
    *
-   * <code>int64 integer_value = 12;</code>
+   * <code>optional int64 integer_value = 12;</code>
    * @return The integerValue.
    */
   @java.lang.Override
@@ -278,7 +278,7 @@ private static final long serialVersionUID = 0L;
    * of type BOOLEAN.
    * </pre>
    *
-   * <code>bool boolean_value = 13;</code>
+   * <code>optional bool boolean_value = 13;</code>
    * @return Whether the booleanValue field is set.
    */
   @java.lang.Override
@@ -291,7 +291,7 @@ private static final long serialVersionUID = 0L;
    * of type BOOLEAN.
    * </pre>
    *
-   * <code>bool boolean_value = 13;</code>
+   * <code>optional bool boolean_value = 13;</code>
    * @return The booleanValue.
    */
   @java.lang.Override
@@ -310,7 +310,7 @@ private static final long serialVersionUID = 0L;
    * "YYYYMMDD HHMMSS".
    * </pre>
    *
-   * <code>string string_value = 14;</code>
+   * <code>optional string string_value = 14;</code>
    * @return Whether the stringValue field is set.
    */
   @java.lang.Override
@@ -326,7 +326,7 @@ private static final long serialVersionUID = 0L;
    * "YYYYMMDD HHMMSS".
    * </pre>
    *
-   * <code>string string_value = 14;</code>
+   * <code>optional string string_value = 14;</code>
    * @return The stringValue.
    */
   @java.lang.Override
@@ -351,7 +351,7 @@ private static final long serialVersionUID = 0L;
    * "YYYYMMDD HHMMSS".
    * </pre>
    *
-   * <code>string string_value = 14;</code>
+   * <code>optional string string_value = 14;</code>
    * @return The bytes for stringValue.
    */
   @java.lang.Override
@@ -377,7 +377,7 @@ private static final long serialVersionUID = 0L;
    * of type DOUBLE.
    * </pre>
    *
-   * <code>double double_value = 15;</code>
+   * <code>optional double double_value = 15;</code>
    * @return Whether the doubleValue field is set.
    */
   @java.lang.Override
@@ -390,7 +390,7 @@ private static final long serialVersionUID = 0L;
    * of type DOUBLE.
    * </pre>
    *
-   * <code>double double_value = 15;</code>
+   * <code>optional double double_value = 15;</code>
    * @return The doubleValue.
    */
   @java.lang.Override
@@ -1268,7 +1268,7 @@ private static final long serialVersionUID = 0L;
      * Id of the feed attribute for which the value is associated with.
      * </pre>
      *
-     * <code>int64 feed_attribute_id = 11;</code>
+     * <code>optional int64 feed_attribute_id = 11;</code>
      * @return Whether the feedAttributeId field is set.
      */
     @java.lang.Override
@@ -1280,7 +1280,7 @@ private static final long serialVersionUID = 0L;
      * Id of the feed attribute for which the value is associated with.
      * </pre>
      *
-     * <code>int64 feed_attribute_id = 11;</code>
+     * <code>optional int64 feed_attribute_id = 11;</code>
      * @return The feedAttributeId.
      */
     @java.lang.Override
@@ -1292,7 +1292,7 @@ private static final long serialVersionUID = 0L;
      * Id of the feed attribute for which the value is associated with.
      * </pre>
      *
-     * <code>int64 feed_attribute_id = 11;</code>
+     * <code>optional int64 feed_attribute_id = 11;</code>
      * @param value The feedAttributeId to set.
      * @return This builder for chaining.
      */
@@ -1307,7 +1307,7 @@ private static final long serialVersionUID = 0L;
      * Id of the feed attribute for which the value is associated with.
      * </pre>
      *
-     * <code>int64 feed_attribute_id = 11;</code>
+     * <code>optional int64 feed_attribute_id = 11;</code>
      * @return This builder for chaining.
      */
     public Builder clearFeedAttributeId() {
@@ -1324,7 +1324,7 @@ private static final long serialVersionUID = 0L;
      * of type INT64.
      * </pre>
      *
-     * <code>int64 integer_value = 12;</code>
+     * <code>optional int64 integer_value = 12;</code>
      * @return Whether the integerValue field is set.
      */
     @java.lang.Override
@@ -1337,7 +1337,7 @@ private static final long serialVersionUID = 0L;
      * of type INT64.
      * </pre>
      *
-     * <code>int64 integer_value = 12;</code>
+     * <code>optional int64 integer_value = 12;</code>
      * @return The integerValue.
      */
     @java.lang.Override
@@ -1350,7 +1350,7 @@ private static final long serialVersionUID = 0L;
      * of type INT64.
      * </pre>
      *
-     * <code>int64 integer_value = 12;</code>
+     * <code>optional int64 integer_value = 12;</code>
      * @param value The integerValue to set.
      * @return This builder for chaining.
      */
@@ -1366,7 +1366,7 @@ private static final long serialVersionUID = 0L;
      * of type INT64.
      * </pre>
      *
-     * <code>int64 integer_value = 12;</code>
+     * <code>optional int64 integer_value = 12;</code>
      * @return This builder for chaining.
      */
     public Builder clearIntegerValue() {
@@ -1383,7 +1383,7 @@ private static final long serialVersionUID = 0L;
      * of type BOOLEAN.
      * </pre>
      *
-     * <code>bool boolean_value = 13;</code>
+     * <code>optional bool boolean_value = 13;</code>
      * @return Whether the booleanValue field is set.
      */
     @java.lang.Override
@@ -1396,7 +1396,7 @@ private static final long serialVersionUID = 0L;
      * of type BOOLEAN.
      * </pre>
      *
-     * <code>bool boolean_value = 13;</code>
+     * <code>optional bool boolean_value = 13;</code>
      * @return The booleanValue.
      */
     @java.lang.Override
@@ -1409,7 +1409,7 @@ private static final long serialVersionUID = 0L;
      * of type BOOLEAN.
      * </pre>
      *
-     * <code>bool boolean_value = 13;</code>
+     * <code>optional bool boolean_value = 13;</code>
      * @param value The booleanValue to set.
      * @return This builder for chaining.
      */
@@ -1425,7 +1425,7 @@ private static final long serialVersionUID = 0L;
      * of type BOOLEAN.
      * </pre>
      *
-     * <code>bool boolean_value = 13;</code>
+     * <code>optional bool boolean_value = 13;</code>
      * @return This builder for chaining.
      */
     public Builder clearBooleanValue() {
@@ -1445,7 +1445,7 @@ private static final long serialVersionUID = 0L;
      * "YYYYMMDD HHMMSS".
      * </pre>
      *
-     * <code>string string_value = 14;</code>
+     * <code>optional string string_value = 14;</code>
      * @return Whether the stringValue field is set.
      */
     public boolean hasStringValue() {
@@ -1460,7 +1460,7 @@ private static final long serialVersionUID = 0L;
      * "YYYYMMDD HHMMSS".
      * </pre>
      *
-     * <code>string string_value = 14;</code>
+     * <code>optional string string_value = 14;</code>
      * @return The stringValue.
      */
     public java.lang.String getStringValue() {
@@ -1484,7 +1484,7 @@ private static final long serialVersionUID = 0L;
      * "YYYYMMDD HHMMSS".
      * </pre>
      *
-     * <code>string string_value = 14;</code>
+     * <code>optional string string_value = 14;</code>
      * @return The bytes for stringValue.
      */
     public com.google.protobuf.ByteString
@@ -1509,7 +1509,7 @@ private static final long serialVersionUID = 0L;
      * "YYYYMMDD HHMMSS".
      * </pre>
      *
-     * <code>string string_value = 14;</code>
+     * <code>optional string string_value = 14;</code>
      * @param value The stringValue to set.
      * @return This builder for chaining.
      */
@@ -1532,7 +1532,7 @@ private static final long serialVersionUID = 0L;
      * "YYYYMMDD HHMMSS".
      * </pre>
      *
-     * <code>string string_value = 14;</code>
+     * <code>optional string string_value = 14;</code>
      * @return This builder for chaining.
      */
     public Builder clearStringValue() {
@@ -1550,7 +1550,7 @@ private static final long serialVersionUID = 0L;
      * "YYYYMMDD HHMMSS".
      * </pre>
      *
-     * <code>string string_value = 14;</code>
+     * <code>optional string string_value = 14;</code>
      * @param value The bytes for stringValue to set.
      * @return This builder for chaining.
      */
@@ -1573,7 +1573,7 @@ private static final long serialVersionUID = 0L;
      * of type DOUBLE.
      * </pre>
      *
-     * <code>double double_value = 15;</code>
+     * <code>optional double double_value = 15;</code>
      * @return Whether the doubleValue field is set.
      */
     @java.lang.Override
@@ -1586,7 +1586,7 @@ private static final long serialVersionUID = 0L;
      * of type DOUBLE.
      * </pre>
      *
-     * <code>double double_value = 15;</code>
+     * <code>optional double double_value = 15;</code>
      * @return The doubleValue.
      */
     @java.lang.Override
@@ -1599,7 +1599,7 @@ private static final long serialVersionUID = 0L;
      * of type DOUBLE.
      * </pre>
      *
-     * <code>double double_value = 15;</code>
+     * <code>optional double double_value = 15;</code>
      * @param value The doubleValue to set.
      * @return This builder for chaining.
      */
@@ -1615,7 +1615,7 @@ private static final long serialVersionUID = 0L;
      * of type DOUBLE.
      * </pre>
      *
-     * <code>double double_value = 15;</code>
+     * <code>optional double double_value = 15;</code>
      * @return This builder for chaining.
      */
     public Builder clearDoubleValue() {

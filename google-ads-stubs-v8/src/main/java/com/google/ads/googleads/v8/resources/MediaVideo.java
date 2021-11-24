@@ -119,7 +119,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The duration of the Video in milliseconds.
    * </pre>
    *
-   * <code>int64 ad_duration_millis = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 ad_duration_millis = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the adDurationMillis field is set.
    */
   @java.lang.Override
@@ -131,7 +131,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The duration of the Video in milliseconds.
    * </pre>
    *
-   * <code>int64 ad_duration_millis = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 ad_duration_millis = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The adDurationMillis.
    */
   @java.lang.Override
@@ -148,7 +148,7 @@ private static final long serialVersionUID = 0L;
    * streaming URL for this video.
    * </pre>
    *
-   * <code>string youtube_video_id = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string youtube_video_id = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the youtubeVideoId field is set.
    */
   @java.lang.Override
@@ -162,7 +162,7 @@ private static final long serialVersionUID = 0L;
    * streaming URL for this video.
    * </pre>
    *
-   * <code>string youtube_video_id = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string youtube_video_id = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The youtubeVideoId.
    */
   @java.lang.Override
@@ -185,7 +185,7 @@ private static final long serialVersionUID = 0L;
    * streaming URL for this video.
    * </pre>
    *
-   * <code>string youtube_video_id = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string youtube_video_id = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The bytes for youtubeVideoId.
    */
   @java.lang.Override
@@ -212,7 +212,7 @@ private static final long serialVersionUID = 0L;
    * television commercials.
    * </pre>
    *
-   * <code>string advertising_id_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string advertising_id_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the advertisingIdCode field is set.
    */
   @java.lang.Override
@@ -226,7 +226,7 @@ private static final long serialVersionUID = 0L;
    * television commercials.
    * </pre>
    *
-   * <code>string advertising_id_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string advertising_id_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The advertisingIdCode.
    */
   @java.lang.Override
@@ -249,7 +249,7 @@ private static final long serialVersionUID = 0L;
    * television commercials.
    * </pre>
    *
-   * <code>string advertising_id_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string advertising_id_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for advertisingIdCode.
    */
   @java.lang.Override
@@ -275,7 +275,7 @@ private static final long serialVersionUID = 0L;
    * mainly for television commercials.
    * </pre>
    *
-   * <code>string isci_code = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string isci_code = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the isciCode field is set.
    */
   @java.lang.Override
@@ -288,7 +288,7 @@ private static final long serialVersionUID = 0L;
    * mainly for television commercials.
    * </pre>
    *
-   * <code>string isci_code = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string isci_code = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The isciCode.
    */
   @java.lang.Override
@@ -310,7 +310,7 @@ private static final long serialVersionUID = 0L;
    * mainly for television commercials.
    * </pre>
    *
-   * <code>string isci_code = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string isci_code = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for isciCode.
    */
   @java.lang.Override
@@ -731,7 +731,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The duration of the Video in milliseconds.
      * </pre>
      *
-     * <code>int64 ad_duration_millis = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 ad_duration_millis = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the adDurationMillis field is set.
      */
     @java.lang.Override
@@ -743,7 +743,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The duration of the Video in milliseconds.
      * </pre>
      *
-     * <code>int64 ad_duration_millis = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 ad_duration_millis = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The adDurationMillis.
      */
     @java.lang.Override
@@ -755,7 +755,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The duration of the Video in milliseconds.
      * </pre>
      *
-     * <code>int64 ad_duration_millis = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 ad_duration_millis = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The adDurationMillis to set.
      * @return This builder for chaining.
      */
@@ -770,7 +770,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The duration of the Video in milliseconds.
      * </pre>
      *
-     * <code>int64 ad_duration_millis = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 ad_duration_millis = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearAdDurationMillis() {
@@ -788,7 +788,7 @@ private static final long serialVersionUID = 0L;
      * streaming URL for this video.
      * </pre>
      *
-     * <code>string youtube_video_id = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string youtube_video_id = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the youtubeVideoId field is set.
      */
     public boolean hasYoutubeVideoId() {
@@ -801,7 +801,7 @@ private static final long serialVersionUID = 0L;
      * streaming URL for this video.
      * </pre>
      *
-     * <code>string youtube_video_id = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string youtube_video_id = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The youtubeVideoId.
      */
     public java.lang.String getYoutubeVideoId() {
@@ -823,7 +823,7 @@ private static final long serialVersionUID = 0L;
      * streaming URL for this video.
      * </pre>
      *
-     * <code>string youtube_video_id = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string youtube_video_id = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The bytes for youtubeVideoId.
      */
     public com.google.protobuf.ByteString
@@ -846,7 +846,7 @@ private static final long serialVersionUID = 0L;
      * streaming URL for this video.
      * </pre>
      *
-     * <code>string youtube_video_id = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string youtube_video_id = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @param value The youtubeVideoId to set.
      * @return This builder for chaining.
      */
@@ -867,7 +867,7 @@ private static final long serialVersionUID = 0L;
      * streaming URL for this video.
      * </pre>
      *
-     * <code>string youtube_video_id = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string youtube_video_id = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return This builder for chaining.
      */
     public Builder clearYoutubeVideoId() {
@@ -883,7 +883,7 @@ private static final long serialVersionUID = 0L;
      * streaming URL for this video.
      * </pre>
      *
-     * <code>string youtube_video_id = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string youtube_video_id = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @param value The bytes for youtubeVideoId to set.
      * @return This builder for chaining.
      */
@@ -907,7 +907,7 @@ private static final long serialVersionUID = 0L;
      * television commercials.
      * </pre>
      *
-     * <code>string advertising_id_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string advertising_id_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the advertisingIdCode field is set.
      */
     public boolean hasAdvertisingIdCode() {
@@ -920,7 +920,7 @@ private static final long serialVersionUID = 0L;
      * television commercials.
      * </pre>
      *
-     * <code>string advertising_id_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string advertising_id_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The advertisingIdCode.
      */
     public java.lang.String getAdvertisingIdCode() {
@@ -942,7 +942,7 @@ private static final long serialVersionUID = 0L;
      * television commercials.
      * </pre>
      *
-     * <code>string advertising_id_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string advertising_id_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for advertisingIdCode.
      */
     public com.google.protobuf.ByteString
@@ -965,7 +965,7 @@ private static final long serialVersionUID = 0L;
      * television commercials.
      * </pre>
      *
-     * <code>string advertising_id_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string advertising_id_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The advertisingIdCode to set.
      * @return This builder for chaining.
      */
@@ -986,7 +986,7 @@ private static final long serialVersionUID = 0L;
      * television commercials.
      * </pre>
      *
-     * <code>string advertising_id_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string advertising_id_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearAdvertisingIdCode() {
@@ -1002,7 +1002,7 @@ private static final long serialVersionUID = 0L;
      * television commercials.
      * </pre>
      *
-     * <code>string advertising_id_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string advertising_id_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for advertisingIdCode to set.
      * @return This builder for chaining.
      */
@@ -1025,7 +1025,7 @@ private static final long serialVersionUID = 0L;
      * mainly for television commercials.
      * </pre>
      *
-     * <code>string isci_code = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string isci_code = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the isciCode field is set.
      */
     public boolean hasIsciCode() {
@@ -1037,7 +1037,7 @@ private static final long serialVersionUID = 0L;
      * mainly for television commercials.
      * </pre>
      *
-     * <code>string isci_code = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string isci_code = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The isciCode.
      */
     public java.lang.String getIsciCode() {
@@ -1058,7 +1058,7 @@ private static final long serialVersionUID = 0L;
      * mainly for television commercials.
      * </pre>
      *
-     * <code>string isci_code = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string isci_code = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for isciCode.
      */
     public com.google.protobuf.ByteString
@@ -1080,7 +1080,7 @@ private static final long serialVersionUID = 0L;
      * mainly for television commercials.
      * </pre>
      *
-     * <code>string isci_code = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string isci_code = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The isciCode to set.
      * @return This builder for chaining.
      */
@@ -1100,7 +1100,7 @@ private static final long serialVersionUID = 0L;
      * mainly for television commercials.
      * </pre>
      *
-     * <code>string isci_code = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string isci_code = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearIsciCode() {
@@ -1115,7 +1115,7 @@ private static final long serialVersionUID = 0L;
      * mainly for television commercials.
      * </pre>
      *
-     * <code>string isci_code = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string isci_code = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for isciCode to set.
      * @return This builder for chaining.
      */

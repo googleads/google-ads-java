@@ -100,7 +100,7 @@ private static final long serialVersionUID = 0L;
    * The geo target constant resource name.
    * </pre>
    *
-   * <code>string geo_target_constant = 2;</code>
+   * <code>optional string geo_target_constant = 2;</code>
    * @return Whether the geoTargetConstant field is set.
    */
   @java.lang.Override
@@ -112,7 +112,7 @@ private static final long serialVersionUID = 0L;
    * The geo target constant resource name.
    * </pre>
    *
-   * <code>string geo_target_constant = 2;</code>
+   * <code>optional string geo_target_constant = 2;</code>
    * @return The geoTargetConstant.
    */
   @java.lang.Override
@@ -133,7 +133,7 @@ private static final long serialVersionUID = 0L;
    * The geo target constant resource name.
    * </pre>
    *
-   * <code>string geo_target_constant = 2;</code>
+   * <code>optional string geo_target_constant = 2;</code>
    * @return The bytes for geoTargetConstant.
    */
   @java.lang.Override
@@ -476,7 +476,7 @@ private static final long serialVersionUID = 0L;
      * The geo target constant resource name.
      * </pre>
      *
-     * <code>string geo_target_constant = 2;</code>
+     * <code>optional string geo_target_constant = 2;</code>
      * @return Whether the geoTargetConstant field is set.
      */
     public boolean hasGeoTargetConstant() {
@@ -487,7 +487,7 @@ private static final long serialVersionUID = 0L;
      * The geo target constant resource name.
      * </pre>
      *
-     * <code>string geo_target_constant = 2;</code>
+     * <code>optional string geo_target_constant = 2;</code>
      * @return The geoTargetConstant.
      */
     public java.lang.String getGeoTargetConstant() {
@@ -507,7 +507,7 @@ private static final long serialVersionUID = 0L;
      * The geo target constant resource name.
      * </pre>
      *
-     * <code>string geo_target_constant = 2;</code>
+     * <code>optional string geo_target_constant = 2;</code>
      * @return The bytes for geoTargetConstant.
      */
     public com.google.protobuf.ByteString
@@ -528,7 +528,7 @@ private static final long serialVersionUID = 0L;
      * The geo target constant resource name.
      * </pre>
      *
-     * <code>string geo_target_constant = 2;</code>
+     * <code>optional string geo_target_constant = 2;</code>
      * @param value The geoTargetConstant to set.
      * @return This builder for chaining.
      */
@@ -547,7 +547,7 @@ private static final long serialVersionUID = 0L;
      * The geo target constant resource name.
      * </pre>
      *
-     * <code>string geo_target_constant = 2;</code>
+     * <code>optional string geo_target_constant = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearGeoTargetConstant() {
@@ -561,7 +561,7 @@ private static final long serialVersionUID = 0L;
      * The geo target constant resource name.
      * </pre>
      *
-     * <code>string geo_target_constant = 2;</code>
+     * <code>optional string geo_target_constant = 2;</code>
      * @param value The bytes for geoTargetConstant to set.
      * @return This builder for chaining.
      */

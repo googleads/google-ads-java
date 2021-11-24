@@ -36,7 +36,7 @@ public interface SearchTermViewOrBuilder extends
    * Output only. The search term.
    * </pre>
    *
-   * <code>string search_term = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string search_term = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the searchTerm field is set.
    */
   boolean hasSearchTerm();
@@ -45,7 +45,7 @@ public interface SearchTermViewOrBuilder extends
    * Output only. The search term.
    * </pre>
    *
-   * <code>string search_term = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string search_term = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The searchTerm.
    */
   java.lang.String getSearchTerm();
@@ -54,7 +54,7 @@ public interface SearchTermViewOrBuilder extends
    * Output only. The search term.
    * </pre>
    *
-   * <code>string search_term = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string search_term = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for searchTerm.
    */
   com.google.protobuf.ByteString
@@ -65,7 +65,7 @@ public interface SearchTermViewOrBuilder extends
    * Output only. The ad group the search term served in.
    * </pre>
    *
-   * <code>string ad_group = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the adGroup field is set.
    */
   boolean hasAdGroup();
@@ -74,7 +74,7 @@ public interface SearchTermViewOrBuilder extends
    * Output only. The ad group the search term served in.
    * </pre>
    *
-   * <code>string ad_group = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The adGroup.
    */
   java.lang.String getAdGroup();
@@ -83,7 +83,7 @@ public interface SearchTermViewOrBuilder extends
    * Output only. The ad group the search term served in.
    * </pre>
    *
-   * <code>string ad_group = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group = 6 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for adGroup.
    */
   com.google.protobuf.ByteString

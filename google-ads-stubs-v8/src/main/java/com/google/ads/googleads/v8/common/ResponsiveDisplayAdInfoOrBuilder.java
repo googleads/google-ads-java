@@ -407,7 +407,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * The advertiser/brand name. Maximum display width is 25.
    * </pre>
    *
-   * <code>string business_name = 17;</code>
+   * <code>optional string business_name = 17;</code>
    * @return Whether the businessName field is set.
    */
   boolean hasBusinessName();
@@ -416,7 +416,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * The advertiser/brand name. Maximum display width is 25.
    * </pre>
    *
-   * <code>string business_name = 17;</code>
+   * <code>optional string business_name = 17;</code>
    * @return The businessName.
    */
   java.lang.String getBusinessName();
@@ -425,7 +425,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * The advertiser/brand name. Maximum display width is 25.
    * </pre>
    *
-   * <code>string business_name = 17;</code>
+   * <code>optional string business_name = 17;</code>
    * @return The bytes for businessName.
    */
   com.google.protobuf.ByteString
@@ -438,7 +438,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * well.
    * </pre>
    *
-   * <code>string main_color = 18;</code>
+   * <code>optional string main_color = 18;</code>
    * @return Whether the mainColor field is set.
    */
   boolean hasMainColor();
@@ -449,7 +449,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * well.
    * </pre>
    *
-   * <code>string main_color = 18;</code>
+   * <code>optional string main_color = 18;</code>
    * @return The mainColor.
    */
   java.lang.String getMainColor();
@@ -460,7 +460,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * well.
    * </pre>
    *
-   * <code>string main_color = 18;</code>
+   * <code>optional string main_color = 18;</code>
    * @return The bytes for mainColor.
    */
   com.google.protobuf.ByteString
@@ -473,7 +473,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * well.
    * </pre>
    *
-   * <code>string accent_color = 19;</code>
+   * <code>optional string accent_color = 19;</code>
    * @return Whether the accentColor field is set.
    */
   boolean hasAccentColor();
@@ -484,7 +484,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * well.
    * </pre>
    *
-   * <code>string accent_color = 19;</code>
+   * <code>optional string accent_color = 19;</code>
    * @return The accentColor.
    */
   java.lang.String getAccentColor();
@@ -495,7 +495,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * well.
    * </pre>
    *
-   * <code>string accent_color = 19;</code>
+   * <code>optional string accent_color = 19;</code>
    * @return The bytes for accentColor.
    */
   com.google.protobuf.ByteString
@@ -510,7 +510,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * Must be true if `main_color` and `accent_color` are not set.
    * </pre>
    *
-   * <code>bool allow_flexible_color = 20;</code>
+   * <code>optional bool allow_flexible_color = 20;</code>
    * @return Whether the allowFlexibleColor field is set.
    */
   boolean hasAllowFlexibleColor();
@@ -523,7 +523,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * Must be true if `main_color` and `accent_color` are not set.
    * </pre>
    *
-   * <code>bool allow_flexible_color = 20;</code>
+   * <code>optional bool allow_flexible_color = 20;</code>
    * @return The allowFlexibleColor.
    */
   boolean getAllowFlexibleColor();
@@ -533,7 +533,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * The call-to-action text for the ad. Maximum display width is 30.
    * </pre>
    *
-   * <code>string call_to_action_text = 21;</code>
+   * <code>optional string call_to_action_text = 21;</code>
    * @return Whether the callToActionText field is set.
    */
   boolean hasCallToActionText();
@@ -542,7 +542,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * The call-to-action text for the ad. Maximum display width is 30.
    * </pre>
    *
-   * <code>string call_to_action_text = 21;</code>
+   * <code>optional string call_to_action_text = 21;</code>
    * @return The callToActionText.
    */
   java.lang.String getCallToActionText();
@@ -551,7 +551,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * The call-to-action text for the ad. Maximum display width is 30.
    * </pre>
    *
-   * <code>string call_to_action_text = 21;</code>
+   * <code>optional string call_to_action_text = 21;</code>
    * @return The bytes for callToActionText.
    */
   com.google.protobuf.ByteString
@@ -562,7 +562,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * Prefix before price. E.g. 'as low as'.
    * </pre>
    *
-   * <code>string price_prefix = 22;</code>
+   * <code>optional string price_prefix = 22;</code>
    * @return Whether the pricePrefix field is set.
    */
   boolean hasPricePrefix();
@@ -571,7 +571,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * Prefix before price. E.g. 'as low as'.
    * </pre>
    *
-   * <code>string price_prefix = 22;</code>
+   * <code>optional string price_prefix = 22;</code>
    * @return The pricePrefix.
    */
   java.lang.String getPricePrefix();
@@ -580,7 +580,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * Prefix before price. E.g. 'as low as'.
    * </pre>
    *
-   * <code>string price_prefix = 22;</code>
+   * <code>optional string price_prefix = 22;</code>
    * @return The bytes for pricePrefix.
    */
   com.google.protobuf.ByteString
@@ -592,7 +592,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * 'Free two-day shipping'.
    * </pre>
    *
-   * <code>string promo_text = 23;</code>
+   * <code>optional string promo_text = 23;</code>
    * @return Whether the promoText field is set.
    */
   boolean hasPromoText();
@@ -602,7 +602,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * 'Free two-day shipping'.
    * </pre>
    *
-   * <code>string promo_text = 23;</code>
+   * <code>optional string promo_text = 23;</code>
    * @return The promoText.
    */
   java.lang.String getPromoText();
@@ -612,7 +612,7 @@ public interface ResponsiveDisplayAdInfoOrBuilder extends
    * 'Free two-day shipping'.
    * </pre>
    *
-   * <code>string promo_text = 23;</code>
+   * <code>optional string promo_text = 23;</code>
    * @return The bytes for promoText.
    */
   com.google.protobuf.ByteString

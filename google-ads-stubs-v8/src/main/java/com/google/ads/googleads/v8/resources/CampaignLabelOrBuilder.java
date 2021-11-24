@@ -36,7 +36,7 @@ public interface CampaignLabelOrBuilder extends
    * Immutable. The campaign to which the label is attached.
    * </pre>
    *
-   * <code>string campaign = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the campaign field is set.
    */
   boolean hasCampaign();
@@ -45,7 +45,7 @@ public interface CampaignLabelOrBuilder extends
    * Immutable. The campaign to which the label is attached.
    * </pre>
    *
-   * <code>string campaign = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The campaign.
    */
   java.lang.String getCampaign();
@@ -54,7 +54,7 @@ public interface CampaignLabelOrBuilder extends
    * Immutable. The campaign to which the label is attached.
    * </pre>
    *
-   * <code>string campaign = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for campaign.
    */
   com.google.protobuf.ByteString
@@ -65,7 +65,7 @@ public interface CampaignLabelOrBuilder extends
    * Immutable. The label assigned to the campaign.
    * </pre>
    *
-   * <code>string label = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string label = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the label field is set.
    */
   boolean hasLabel();
@@ -74,7 +74,7 @@ public interface CampaignLabelOrBuilder extends
    * Immutable. The label assigned to the campaign.
    * </pre>
    *
-   * <code>string label = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string label = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The label.
    */
   java.lang.String getLabel();
@@ -83,7 +83,7 @@ public interface CampaignLabelOrBuilder extends
    * Immutable. The label assigned to the campaign.
    * </pre>
    *
-   * <code>string label = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string label = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for label.
    */
   com.google.protobuf.ByteString

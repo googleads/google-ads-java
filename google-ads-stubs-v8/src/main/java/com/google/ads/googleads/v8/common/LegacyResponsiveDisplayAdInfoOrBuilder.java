@@ -12,7 +12,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * The short version of the ad's headline.
    * </pre>
    *
-   * <code>string short_headline = 16;</code>
+   * <code>optional string short_headline = 16;</code>
    * @return Whether the shortHeadline field is set.
    */
   boolean hasShortHeadline();
@@ -21,7 +21,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * The short version of the ad's headline.
    * </pre>
    *
-   * <code>string short_headline = 16;</code>
+   * <code>optional string short_headline = 16;</code>
    * @return The shortHeadline.
    */
   java.lang.String getShortHeadline();
@@ -30,7 +30,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * The short version of the ad's headline.
    * </pre>
    *
-   * <code>string short_headline = 16;</code>
+   * <code>optional string short_headline = 16;</code>
    * @return The bytes for shortHeadline.
    */
   com.google.protobuf.ByteString
@@ -41,7 +41,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * The long version of the ad's headline.
    * </pre>
    *
-   * <code>string long_headline = 17;</code>
+   * <code>optional string long_headline = 17;</code>
    * @return Whether the longHeadline field is set.
    */
   boolean hasLongHeadline();
@@ -50,7 +50,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * The long version of the ad's headline.
    * </pre>
    *
-   * <code>string long_headline = 17;</code>
+   * <code>optional string long_headline = 17;</code>
    * @return The longHeadline.
    */
   java.lang.String getLongHeadline();
@@ -59,7 +59,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * The long version of the ad's headline.
    * </pre>
    *
-   * <code>string long_headline = 17;</code>
+   * <code>optional string long_headline = 17;</code>
    * @return The bytes for longHeadline.
    */
   com.google.protobuf.ByteString
@@ -70,7 +70,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * The description of the ad.
    * </pre>
    *
-   * <code>string description = 18;</code>
+   * <code>optional string description = 18;</code>
    * @return Whether the description field is set.
    */
   boolean hasDescription();
@@ -79,7 +79,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * The description of the ad.
    * </pre>
    *
-   * <code>string description = 18;</code>
+   * <code>optional string description = 18;</code>
    * @return The description.
    */
   java.lang.String getDescription();
@@ -88,7 +88,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * The description of the ad.
    * </pre>
    *
-   * <code>string description = 18;</code>
+   * <code>optional string description = 18;</code>
    * @return The bytes for description.
    */
   com.google.protobuf.ByteString
@@ -99,7 +99,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * The business name in the ad.
    * </pre>
    *
-   * <code>string business_name = 19;</code>
+   * <code>optional string business_name = 19;</code>
    * @return Whether the businessName field is set.
    */
   boolean hasBusinessName();
@@ -108,7 +108,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * The business name in the ad.
    * </pre>
    *
-   * <code>string business_name = 19;</code>
+   * <code>optional string business_name = 19;</code>
    * @return The businessName.
    */
   java.lang.String getBusinessName();
@@ -117,7 +117,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * The business name in the ad.
    * </pre>
    *
-   * <code>string business_name = 19;</code>
+   * <code>optional string business_name = 19;</code>
    * @return The bytes for businessName.
    */
   com.google.protobuf.ByteString
@@ -132,7 +132,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * Must be true if `main_color` and `accent_color` are not set.
    * </pre>
    *
-   * <code>bool allow_flexible_color = 20;</code>
+   * <code>optional bool allow_flexible_color = 20;</code>
    * @return Whether the allowFlexibleColor field is set.
    */
   boolean hasAllowFlexibleColor();
@@ -145,7 +145,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * Must be true if `main_color` and `accent_color` are not set.
    * </pre>
    *
-   * <code>bool allow_flexible_color = 20;</code>
+   * <code>optional bool allow_flexible_color = 20;</code>
    * @return The allowFlexibleColor.
    */
   boolean getAllowFlexibleColor();
@@ -157,7 +157,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * well.
    * </pre>
    *
-   * <code>string accent_color = 21;</code>
+   * <code>optional string accent_color = 21;</code>
    * @return Whether the accentColor field is set.
    */
   boolean hasAccentColor();
@@ -168,7 +168,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * well.
    * </pre>
    *
-   * <code>string accent_color = 21;</code>
+   * <code>optional string accent_color = 21;</code>
    * @return The accentColor.
    */
   java.lang.String getAccentColor();
@@ -179,7 +179,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * well.
    * </pre>
    *
-   * <code>string accent_color = 21;</code>
+   * <code>optional string accent_color = 21;</code>
    * @return The bytes for accentColor.
    */
   com.google.protobuf.ByteString
@@ -192,7 +192,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * well.
    * </pre>
    *
-   * <code>string main_color = 22;</code>
+   * <code>optional string main_color = 22;</code>
    * @return Whether the mainColor field is set.
    */
   boolean hasMainColor();
@@ -203,7 +203,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * well.
    * </pre>
    *
-   * <code>string main_color = 22;</code>
+   * <code>optional string main_color = 22;</code>
    * @return The mainColor.
    */
   java.lang.String getMainColor();
@@ -214,7 +214,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * well.
    * </pre>
    *
-   * <code>string main_color = 22;</code>
+   * <code>optional string main_color = 22;</code>
    * @return The bytes for mainColor.
    */
   com.google.protobuf.ByteString
@@ -225,7 +225,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * The call-to-action text for the ad.
    * </pre>
    *
-   * <code>string call_to_action_text = 23;</code>
+   * <code>optional string call_to_action_text = 23;</code>
    * @return Whether the callToActionText field is set.
    */
   boolean hasCallToActionText();
@@ -234,7 +234,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * The call-to-action text for the ad.
    * </pre>
    *
-   * <code>string call_to_action_text = 23;</code>
+   * <code>optional string call_to_action_text = 23;</code>
    * @return The callToActionText.
    */
   java.lang.String getCallToActionText();
@@ -243,7 +243,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * The call-to-action text for the ad.
    * </pre>
    *
-   * <code>string call_to_action_text = 23;</code>
+   * <code>optional string call_to_action_text = 23;</code>
    * @return The bytes for callToActionText.
    */
   com.google.protobuf.ByteString
@@ -254,7 +254,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * The MediaFile resource name of the logo image used in the ad.
    * </pre>
    *
-   * <code>string logo_image = 24;</code>
+   * <code>optional string logo_image = 24;</code>
    * @return Whether the logoImage field is set.
    */
   boolean hasLogoImage();
@@ -263,7 +263,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * The MediaFile resource name of the logo image used in the ad.
    * </pre>
    *
-   * <code>string logo_image = 24;</code>
+   * <code>optional string logo_image = 24;</code>
    * @return The logoImage.
    */
   java.lang.String getLogoImage();
@@ -272,7 +272,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * The MediaFile resource name of the logo image used in the ad.
    * </pre>
    *
-   * <code>string logo_image = 24;</code>
+   * <code>optional string logo_image = 24;</code>
    * @return The bytes for logoImage.
    */
   com.google.protobuf.ByteString
@@ -283,7 +283,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * The MediaFile resource name of the square logo image used in the ad.
    * </pre>
    *
-   * <code>string square_logo_image = 25;</code>
+   * <code>optional string square_logo_image = 25;</code>
    * @return Whether the squareLogoImage field is set.
    */
   boolean hasSquareLogoImage();
@@ -292,7 +292,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * The MediaFile resource name of the square logo image used in the ad.
    * </pre>
    *
-   * <code>string square_logo_image = 25;</code>
+   * <code>optional string square_logo_image = 25;</code>
    * @return The squareLogoImage.
    */
   java.lang.String getSquareLogoImage();
@@ -301,7 +301,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * The MediaFile resource name of the square logo image used in the ad.
    * </pre>
    *
-   * <code>string square_logo_image = 25;</code>
+   * <code>optional string square_logo_image = 25;</code>
    * @return The bytes for squareLogoImage.
    */
   com.google.protobuf.ByteString
@@ -312,7 +312,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * The MediaFile resource name of the marketing image used in the ad.
    * </pre>
    *
-   * <code>string marketing_image = 26;</code>
+   * <code>optional string marketing_image = 26;</code>
    * @return Whether the marketingImage field is set.
    */
   boolean hasMarketingImage();
@@ -321,7 +321,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * The MediaFile resource name of the marketing image used in the ad.
    * </pre>
    *
-   * <code>string marketing_image = 26;</code>
+   * <code>optional string marketing_image = 26;</code>
    * @return The marketingImage.
    */
   java.lang.String getMarketingImage();
@@ -330,7 +330,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * The MediaFile resource name of the marketing image used in the ad.
    * </pre>
    *
-   * <code>string marketing_image = 26;</code>
+   * <code>optional string marketing_image = 26;</code>
    * @return The bytes for marketingImage.
    */
   com.google.protobuf.ByteString
@@ -341,7 +341,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * The MediaFile resource name of the square marketing image used in the ad.
    * </pre>
    *
-   * <code>string square_marketing_image = 27;</code>
+   * <code>optional string square_marketing_image = 27;</code>
    * @return Whether the squareMarketingImage field is set.
    */
   boolean hasSquareMarketingImage();
@@ -350,7 +350,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * The MediaFile resource name of the square marketing image used in the ad.
    * </pre>
    *
-   * <code>string square_marketing_image = 27;</code>
+   * <code>optional string square_marketing_image = 27;</code>
    * @return The squareMarketingImage.
    */
   java.lang.String getSquareMarketingImage();
@@ -359,7 +359,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * The MediaFile resource name of the square marketing image used in the ad.
    * </pre>
    *
-   * <code>string square_marketing_image = 27;</code>
+   * <code>optional string square_marketing_image = 27;</code>
    * @return The bytes for squareMarketingImage.
    */
   com.google.protobuf.ByteString
@@ -389,7 +389,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * Prefix before price. E.g. 'as low as'.
    * </pre>
    *
-   * <code>string price_prefix = 28;</code>
+   * <code>optional string price_prefix = 28;</code>
    * @return Whether the pricePrefix field is set.
    */
   boolean hasPricePrefix();
@@ -398,7 +398,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * Prefix before price. E.g. 'as low as'.
    * </pre>
    *
-   * <code>string price_prefix = 28;</code>
+   * <code>optional string price_prefix = 28;</code>
    * @return The pricePrefix.
    */
   java.lang.String getPricePrefix();
@@ -407,7 +407,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * Prefix before price. E.g. 'as low as'.
    * </pre>
    *
-   * <code>string price_prefix = 28;</code>
+   * <code>optional string price_prefix = 28;</code>
    * @return The bytes for pricePrefix.
    */
   com.google.protobuf.ByteString
@@ -419,7 +419,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * 'Free two-day shipping'.
    * </pre>
    *
-   * <code>string promo_text = 29;</code>
+   * <code>optional string promo_text = 29;</code>
    * @return Whether the promoText field is set.
    */
   boolean hasPromoText();
@@ -429,7 +429,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * 'Free two-day shipping'.
    * </pre>
    *
-   * <code>string promo_text = 29;</code>
+   * <code>optional string promo_text = 29;</code>
    * @return The promoText.
    */
   java.lang.String getPromoText();
@@ -439,7 +439,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
    * 'Free two-day shipping'.
    * </pre>
    *
-   * <code>string promo_text = 29;</code>
+   * <code>optional string promo_text = 29;</code>
    * @return The bytes for promoText.
    */
   com.google.protobuf.ByteString

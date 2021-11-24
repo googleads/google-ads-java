@@ -101,7 +101,7 @@ private static final long serialVersionUID = 0L;
    * The CustomInterest resource name.
    * </pre>
    *
-   * <code>string custom_affinity = 2;</code>
+   * <code>optional string custom_affinity = 2;</code>
    * @return Whether the customAffinity field is set.
    */
   @java.lang.Override
@@ -113,7 +113,7 @@ private static final long serialVersionUID = 0L;
    * The CustomInterest resource name.
    * </pre>
    *
-   * <code>string custom_affinity = 2;</code>
+   * <code>optional string custom_affinity = 2;</code>
    * @return The customAffinity.
    */
   @java.lang.Override
@@ -134,7 +134,7 @@ private static final long serialVersionUID = 0L;
    * The CustomInterest resource name.
    * </pre>
    *
-   * <code>string custom_affinity = 2;</code>
+   * <code>optional string custom_affinity = 2;</code>
    * @return The bytes for customAffinity.
    */
   @java.lang.Override
@@ -478,7 +478,7 @@ private static final long serialVersionUID = 0L;
      * The CustomInterest resource name.
      * </pre>
      *
-     * <code>string custom_affinity = 2;</code>
+     * <code>optional string custom_affinity = 2;</code>
      * @return Whether the customAffinity field is set.
      */
     public boolean hasCustomAffinity() {
@@ -489,7 +489,7 @@ private static final long serialVersionUID = 0L;
      * The CustomInterest resource name.
      * </pre>
      *
-     * <code>string custom_affinity = 2;</code>
+     * <code>optional string custom_affinity = 2;</code>
      * @return The customAffinity.
      */
     public java.lang.String getCustomAffinity() {
@@ -509,7 +509,7 @@ private static final long serialVersionUID = 0L;
      * The CustomInterest resource name.
      * </pre>
      *
-     * <code>string custom_affinity = 2;</code>
+     * <code>optional string custom_affinity = 2;</code>
      * @return The bytes for customAffinity.
      */
     public com.google.protobuf.ByteString
@@ -530,7 +530,7 @@ private static final long serialVersionUID = 0L;
      * The CustomInterest resource name.
      * </pre>
      *
-     * <code>string custom_affinity = 2;</code>
+     * <code>optional string custom_affinity = 2;</code>
      * @param value The customAffinity to set.
      * @return This builder for chaining.
      */
@@ -549,7 +549,7 @@ private static final long serialVersionUID = 0L;
      * The CustomInterest resource name.
      * </pre>
      *
-     * <code>string custom_affinity = 2;</code>
+     * <code>optional string custom_affinity = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearCustomAffinity() {
@@ -563,7 +563,7 @@ private static final long serialVersionUID = 0L;
      * The CustomInterest resource name.
      * </pre>
      *
-     * <code>string custom_affinity = 2;</code>
+     * <code>optional string custom_affinity = 2;</code>
      * @param value The bytes for customAffinity to set.
      * @return This builder for chaining.
      */

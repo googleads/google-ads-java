@@ -345,7 +345,7 @@ private static final long serialVersionUID = 0L;
    * Required
    * </pre>
    *
-   * <code>string language = 14;</code>
+   * <code>optional string language = 14;</code>
    * @return Whether the language field is set.
    */
   @java.lang.Override
@@ -358,7 +358,7 @@ private static final long serialVersionUID = 0L;
    * Required
    * </pre>
    *
-   * <code>string language = 14;</code>
+   * <code>optional string language = 14;</code>
    * @return The language.
    */
   @java.lang.Override
@@ -380,7 +380,7 @@ private static final long serialVersionUID = 0L;
    * Required
    * </pre>
    *
-   * <code>string language = 14;</code>
+   * <code>optional string language = 14;</code>
    * @return The bytes for language.
    */
   @java.lang.Override
@@ -913,7 +913,7 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     getSerializedSize();
-    if (!getCustomerIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customerId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, customerId_);
     }
     if (seedCase_ == 2) {
@@ -934,7 +934,7 @@ private static final long serialVersionUID = 0L;
     if (seedCase_ == 11) {
       output.writeMessage(11, (com.google.ads.googleads.v8.services.SiteSeed) seed_);
     }
-    if (!getPageTokenBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 12, pageToken_);
     }
     if (pageSize_ != 0) {
@@ -968,7 +968,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getCustomerIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customerId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, customerId_);
     }
     if (seedCase_ == 2) {
@@ -995,7 +995,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, (com.google.ads.googleads.v8.services.SiteSeed) seed_);
     }
-    if (!getPageTokenBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(pageToken_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, pageToken_);
     }
     if (pageSize_ != 0) {
@@ -1677,7 +1677,7 @@ private static final long serialVersionUID = 0L;
      * Required
      * </pre>
      *
-     * <code>string language = 14;</code>
+     * <code>optional string language = 14;</code>
      * @return Whether the language field is set.
      */
     public boolean hasLanguage() {
@@ -1689,7 +1689,7 @@ private static final long serialVersionUID = 0L;
      * Required
      * </pre>
      *
-     * <code>string language = 14;</code>
+     * <code>optional string language = 14;</code>
      * @return The language.
      */
     public java.lang.String getLanguage() {
@@ -1710,7 +1710,7 @@ private static final long serialVersionUID = 0L;
      * Required
      * </pre>
      *
-     * <code>string language = 14;</code>
+     * <code>optional string language = 14;</code>
      * @return The bytes for language.
      */
     public com.google.protobuf.ByteString
@@ -1732,7 +1732,7 @@ private static final long serialVersionUID = 0L;
      * Required
      * </pre>
      *
-     * <code>string language = 14;</code>
+     * <code>optional string language = 14;</code>
      * @param value The language to set.
      * @return This builder for chaining.
      */
@@ -1752,7 +1752,7 @@ private static final long serialVersionUID = 0L;
      * Required
      * </pre>
      *
-     * <code>string language = 14;</code>
+     * <code>optional string language = 14;</code>
      * @return This builder for chaining.
      */
     public Builder clearLanguage() {
@@ -1767,7 +1767,7 @@ private static final long serialVersionUID = 0L;
      * Required
      * </pre>
      *
-     * <code>string language = 14;</code>
+     * <code>optional string language = 14;</code>
      * @param value The bytes for language to set.
      * @return This builder for chaining.
      */

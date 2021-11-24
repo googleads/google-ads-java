@@ -15,7 +15,7 @@ public interface ThirdPartyAppAnalyticsLinkIdentifierOrBuilder extends
    * the link.
    * </pre>
    *
-   * <code>int64 app_analytics_provider_id = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional int64 app_analytics_provider_id = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the appAnalyticsProviderId field is set.
    */
   boolean hasAppAnalyticsProviderId();
@@ -27,7 +27,7 @@ public interface ThirdPartyAppAnalyticsLinkIdentifierOrBuilder extends
    * the link.
    * </pre>
    *
-   * <code>int64 app_analytics_provider_id = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional int64 app_analytics_provider_id = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The appAnalyticsProviderId.
    */
   long getAppAnalyticsProviderId();
@@ -47,7 +47,7 @@ public interface ThirdPartyAppAnalyticsLinkIdentifierOrBuilder extends
    * the link.
    * </pre>
    *
-   * <code>string app_id = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string app_id = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the appId field is set.
    */
   boolean hasAppId();
@@ -66,7 +66,7 @@ public interface ThirdPartyAppAnalyticsLinkIdentifierOrBuilder extends
    * the link.
    * </pre>
    *
-   * <code>string app_id = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string app_id = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The appId.
    */
   java.lang.String getAppId();
@@ -85,7 +85,7 @@ public interface ThirdPartyAppAnalyticsLinkIdentifierOrBuilder extends
    * the link.
    * </pre>
    *
-   * <code>string app_id = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string app_id = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The bytes for appId.
    */
   com.google.protobuf.ByteString

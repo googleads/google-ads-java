@@ -12,7 +12,7 @@ public interface LocationInfoOrBuilder extends
    * The geo target constant resource name.
    * </pre>
    *
-   * <code>string geo_target_constant = 2;</code>
+   * <code>optional string geo_target_constant = 2;</code>
    * @return Whether the geoTargetConstant field is set.
    */
   boolean hasGeoTargetConstant();
@@ -21,7 +21,7 @@ public interface LocationInfoOrBuilder extends
    * The geo target constant resource name.
    * </pre>
    *
-   * <code>string geo_target_constant = 2;</code>
+   * <code>optional string geo_target_constant = 2;</code>
    * @return The geoTargetConstant.
    */
   java.lang.String getGeoTargetConstant();
@@ -30,7 +30,7 @@ public interface LocationInfoOrBuilder extends
    * The geo target constant resource name.
    * </pre>
    *
-   * <code>string geo_target_constant = 2;</code>
+   * <code>optional string geo_target_constant = 2;</code>
    * @return The bytes for geoTargetConstant.
    */
   com.google.protobuf.ByteString

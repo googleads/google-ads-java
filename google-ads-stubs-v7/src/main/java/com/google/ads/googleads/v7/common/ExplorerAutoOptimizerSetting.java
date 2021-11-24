@@ -100,7 +100,7 @@ private static final long serialVersionUID = 0L;
    * Indicates whether the optimizer is turned on.
    * </pre>
    *
-   * <code>bool opt_in = 2;</code>
+   * <code>optional bool opt_in = 2;</code>
    * @return Whether the optIn field is set.
    */
   @java.lang.Override
@@ -112,7 +112,7 @@ private static final long serialVersionUID = 0L;
    * Indicates whether the optimizer is turned on.
    * </pre>
    *
-   * <code>bool opt_in = 2;</code>
+   * <code>optional bool opt_in = 2;</code>
    * @return The optIn.
    */
   @java.lang.Override
@@ -447,7 +447,7 @@ private static final long serialVersionUID = 0L;
      * Indicates whether the optimizer is turned on.
      * </pre>
      *
-     * <code>bool opt_in = 2;</code>
+     * <code>optional bool opt_in = 2;</code>
      * @return Whether the optIn field is set.
      */
     @java.lang.Override
@@ -459,7 +459,7 @@ private static final long serialVersionUID = 0L;
      * Indicates whether the optimizer is turned on.
      * </pre>
      *
-     * <code>bool opt_in = 2;</code>
+     * <code>optional bool opt_in = 2;</code>
      * @return The optIn.
      */
     @java.lang.Override
@@ -471,7 +471,7 @@ private static final long serialVersionUID = 0L;
      * Indicates whether the optimizer is turned on.
      * </pre>
      *
-     * <code>bool opt_in = 2;</code>
+     * <code>optional bool opt_in = 2;</code>
      * @param value The optIn to set.
      * @return This builder for chaining.
      */
@@ -486,7 +486,7 @@ private static final long serialVersionUID = 0L;
      * Indicates whether the optimizer is turned on.
      * </pre>
      *
-     * <code>bool opt_in = 2;</code>
+     * <code>optional bool opt_in = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearOptIn() {

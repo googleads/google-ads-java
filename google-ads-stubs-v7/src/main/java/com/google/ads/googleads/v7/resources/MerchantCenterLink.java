@@ -171,7 +171,7 @@ private static final long serialVersionUID = 0L;
    * This field is readonly.
    * </pre>
    *
-   * <code>int64 id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   @java.lang.Override
@@ -184,7 +184,7 @@ private static final long serialVersionUID = 0L;
    * This field is readonly.
    * </pre>
    *
-   * <code>int64 id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   @java.lang.Override
@@ -200,7 +200,7 @@ private static final long serialVersionUID = 0L;
    * This field is readonly.
    * </pre>
    *
-   * <code>string merchant_center_account_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string merchant_center_account_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the merchantCenterAccountName field is set.
    */
   @java.lang.Override
@@ -213,7 +213,7 @@ private static final long serialVersionUID = 0L;
    * This field is readonly.
    * </pre>
    *
-   * <code>string merchant_center_account_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string merchant_center_account_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The merchantCenterAccountName.
    */
   @java.lang.Override
@@ -235,7 +235,7 @@ private static final long serialVersionUID = 0L;
    * This field is readonly.
    * </pre>
    *
-   * <code>string merchant_center_account_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string merchant_center_account_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for merchantCenterAccountName.
    */
   @java.lang.Override
@@ -294,7 +294,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (status_ != com.google.ads.googleads.v7.enums.MerchantCenterLinkStatusEnum.MerchantCenterLinkStatus.UNSPECIFIED.getNumber()) {
@@ -315,7 +315,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (status_ != com.google.ads.googleads.v7.enums.MerchantCenterLinkStatusEnum.MerchantCenterLinkStatus.UNSPECIFIED.getNumber()) {
@@ -772,7 +772,7 @@ private static final long serialVersionUID = 0L;
      * This field is readonly.
      * </pre>
      *
-     * <code>int64 id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the id field is set.
      */
     @java.lang.Override
@@ -785,7 +785,7 @@ private static final long serialVersionUID = 0L;
      * This field is readonly.
      * </pre>
      *
-     * <code>int64 id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The id.
      */
     @java.lang.Override
@@ -798,7 +798,7 @@ private static final long serialVersionUID = 0L;
      * This field is readonly.
      * </pre>
      *
-     * <code>int64 id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
@@ -814,7 +814,7 @@ private static final long serialVersionUID = 0L;
      * This field is readonly.
      * </pre>
      *
-     * <code>int64 id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {
@@ -831,7 +831,7 @@ private static final long serialVersionUID = 0L;
      * This field is readonly.
      * </pre>
      *
-     * <code>string merchant_center_account_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string merchant_center_account_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the merchantCenterAccountName field is set.
      */
     public boolean hasMerchantCenterAccountName() {
@@ -843,7 +843,7 @@ private static final long serialVersionUID = 0L;
      * This field is readonly.
      * </pre>
      *
-     * <code>string merchant_center_account_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string merchant_center_account_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The merchantCenterAccountName.
      */
     public java.lang.String getMerchantCenterAccountName() {
@@ -864,7 +864,7 @@ private static final long serialVersionUID = 0L;
      * This field is readonly.
      * </pre>
      *
-     * <code>string merchant_center_account_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string merchant_center_account_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for merchantCenterAccountName.
      */
     public com.google.protobuf.ByteString
@@ -886,7 +886,7 @@ private static final long serialVersionUID = 0L;
      * This field is readonly.
      * </pre>
      *
-     * <code>string merchant_center_account_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string merchant_center_account_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The merchantCenterAccountName to set.
      * @return This builder for chaining.
      */
@@ -906,7 +906,7 @@ private static final long serialVersionUID = 0L;
      * This field is readonly.
      * </pre>
      *
-     * <code>string merchant_center_account_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string merchant_center_account_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearMerchantCenterAccountName() {
@@ -921,7 +921,7 @@ private static final long serialVersionUID = 0L;
      * This field is readonly.
      * </pre>
      *
-     * <code>string merchant_center_account_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string merchant_center_account_name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for merchantCenterAccountName to set.
      * @return This builder for chaining.
      */

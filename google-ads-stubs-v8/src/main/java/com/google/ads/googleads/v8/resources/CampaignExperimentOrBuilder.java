@@ -37,7 +37,7 @@ public interface CampaignExperimentOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 id = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -47,7 +47,7 @@ public interface CampaignExperimentOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 id = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   long getId();
@@ -57,7 +57,7 @@ public interface CampaignExperimentOrBuilder extends
    * Immutable. The campaign draft with staged changes to the base campaign.
    * </pre>
    *
-   * <code>string campaign_draft = 14 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign_draft = 14 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the campaignDraft field is set.
    */
   boolean hasCampaignDraft();
@@ -66,7 +66,7 @@ public interface CampaignExperimentOrBuilder extends
    * Immutable. The campaign draft with staged changes to the base campaign.
    * </pre>
    *
-   * <code>string campaign_draft = 14 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign_draft = 14 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The campaignDraft.
    */
   java.lang.String getCampaignDraft();
@@ -75,7 +75,7 @@ public interface CampaignExperimentOrBuilder extends
    * Immutable. The campaign draft with staged changes to the base campaign.
    * </pre>
    *
-   * <code>string campaign_draft = 14 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign_draft = 14 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for campaignDraft.
    */
   com.google.protobuf.ByteString
@@ -91,7 +91,7 @@ public interface CampaignExperimentOrBuilder extends
    * (code point 0xA) or carriage return (code point 0xD) characters.
    * </pre>
    *
-   * <code>string name = 15;</code>
+   * <code>optional string name = 15;</code>
    * @return Whether the name field is set.
    */
   boolean hasName();
@@ -105,7 +105,7 @@ public interface CampaignExperimentOrBuilder extends
    * (code point 0xA) or carriage return (code point 0xD) characters.
    * </pre>
    *
-   * <code>string name = 15;</code>
+   * <code>optional string name = 15;</code>
    * @return The name.
    */
   java.lang.String getName();
@@ -119,7 +119,7 @@ public interface CampaignExperimentOrBuilder extends
    * (code point 0xA) or carriage return (code point 0xD) characters.
    * </pre>
    *
-   * <code>string name = 15;</code>
+   * <code>optional string name = 15;</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
@@ -130,7 +130,7 @@ public interface CampaignExperimentOrBuilder extends
    * The description of the experiment.
    * </pre>
    *
-   * <code>string description = 16;</code>
+   * <code>optional string description = 16;</code>
    * @return Whether the description field is set.
    */
   boolean hasDescription();
@@ -139,7 +139,7 @@ public interface CampaignExperimentOrBuilder extends
    * The description of the experiment.
    * </pre>
    *
-   * <code>string description = 16;</code>
+   * <code>optional string description = 16;</code>
    * @return The description.
    */
   java.lang.String getDescription();
@@ -148,7 +148,7 @@ public interface CampaignExperimentOrBuilder extends
    * The description of the experiment.
    * </pre>
    *
-   * <code>string description = 16;</code>
+   * <code>optional string description = 16;</code>
    * @return The bytes for description.
    */
   com.google.protobuf.ByteString
@@ -161,7 +161,7 @@ public interface CampaignExperimentOrBuilder extends
    * (100 - traffic_split_percent). Required for create.
    * </pre>
    *
-   * <code>int64 traffic_split_percent = 17 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional int64 traffic_split_percent = 17 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the trafficSplitPercent field is set.
    */
   boolean hasTrafficSplitPercent();
@@ -172,7 +172,7 @@ public interface CampaignExperimentOrBuilder extends
    * (100 - traffic_split_percent). Required for create.
    * </pre>
    *
-   * <code>int64 traffic_split_percent = 17 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional int64 traffic_split_percent = 17 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The trafficSplitPercent.
    */
   long getTrafficSplitPercent();
@@ -201,7 +201,7 @@ public interface CampaignExperimentOrBuilder extends
    * Output only. The experiment campaign, as opposed to the base campaign.
    * </pre>
    *
-   * <code>string experiment_campaign = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string experiment_campaign = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the experimentCampaign field is set.
    */
   boolean hasExperimentCampaign();
@@ -210,7 +210,7 @@ public interface CampaignExperimentOrBuilder extends
    * Output only. The experiment campaign, as opposed to the base campaign.
    * </pre>
    *
-   * <code>string experiment_campaign = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string experiment_campaign = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The experimentCampaign.
    */
   java.lang.String getExperimentCampaign();
@@ -219,7 +219,7 @@ public interface CampaignExperimentOrBuilder extends
    * Output only. The experiment campaign, as opposed to the base campaign.
    * </pre>
    *
-   * <code>string experiment_campaign = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string experiment_campaign = 18 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for experimentCampaign.
    */
   com.google.protobuf.ByteString
@@ -251,7 +251,7 @@ public interface CampaignExperimentOrBuilder extends
    * running operation is returned.
    * </pre>
    *
-   * <code>string long_running_operation = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string long_running_operation = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the longRunningOperation field is set.
    */
   boolean hasLongRunningOperation();
@@ -262,7 +262,7 @@ public interface CampaignExperimentOrBuilder extends
    * running operation is returned.
    * </pre>
    *
-   * <code>string long_running_operation = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string long_running_operation = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The longRunningOperation.
    */
   java.lang.String getLongRunningOperation();
@@ -273,7 +273,7 @@ public interface CampaignExperimentOrBuilder extends
    * running operation is returned.
    * </pre>
    *
-   * <code>string long_running_operation = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string long_running_operation = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for longRunningOperation.
    */
   com.google.protobuf.ByteString
@@ -289,7 +289,7 @@ public interface CampaignExperimentOrBuilder extends
    * Example: 2019-03-14
    * </pre>
    *
-   * <code>string start_date = 20;</code>
+   * <code>optional string start_date = 20;</code>
    * @return Whether the startDate field is set.
    */
   boolean hasStartDate();
@@ -303,7 +303,7 @@ public interface CampaignExperimentOrBuilder extends
    * Example: 2019-03-14
    * </pre>
    *
-   * <code>string start_date = 20;</code>
+   * <code>optional string start_date = 20;</code>
    * @return The startDate.
    */
   java.lang.String getStartDate();
@@ -317,7 +317,7 @@ public interface CampaignExperimentOrBuilder extends
    * Example: 2019-03-14
    * </pre>
    *
-   * <code>string start_date = 20;</code>
+   * <code>optional string start_date = 20;</code>
    * @return The bytes for startDate.
    */
   com.google.protobuf.ByteString
@@ -332,7 +332,7 @@ public interface CampaignExperimentOrBuilder extends
    * Example: 2019-04-18
    * </pre>
    *
-   * <code>string end_date = 21;</code>
+   * <code>optional string end_date = 21;</code>
    * @return Whether the endDate field is set.
    */
   boolean hasEndDate();
@@ -345,7 +345,7 @@ public interface CampaignExperimentOrBuilder extends
    * Example: 2019-04-18
    * </pre>
    *
-   * <code>string end_date = 21;</code>
+   * <code>optional string end_date = 21;</code>
    * @return The endDate.
    */
   java.lang.String getEndDate();
@@ -358,7 +358,7 @@ public interface CampaignExperimentOrBuilder extends
    * Example: 2019-04-18
    * </pre>
    *
-   * <code>string end_date = 21;</code>
+   * <code>optional string end_date = 21;</code>
    * @return The bytes for endDate.
    */
   com.google.protobuf.ByteString

@@ -36,7 +36,7 @@ public interface AdGroupFeedOrBuilder extends
    * Immutable. The feed being linked to the ad group.
    * </pre>
    *
-   * <code>string feed = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string feed = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the feed field is set.
    */
   boolean hasFeed();
@@ -45,7 +45,7 @@ public interface AdGroupFeedOrBuilder extends
    * Immutable. The feed being linked to the ad group.
    * </pre>
    *
-   * <code>string feed = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string feed = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The feed.
    */
   java.lang.String getFeed();
@@ -54,7 +54,7 @@ public interface AdGroupFeedOrBuilder extends
    * Immutable. The feed being linked to the ad group.
    * </pre>
    *
-   * <code>string feed = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string feed = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for feed.
    */
   com.google.protobuf.ByteString
@@ -65,7 +65,7 @@ public interface AdGroupFeedOrBuilder extends
    * Immutable. The ad group being linked to the feed.
    * </pre>
    *
-   * <code>string ad_group = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the adGroup field is set.
    */
   boolean hasAdGroup();
@@ -74,7 +74,7 @@ public interface AdGroupFeedOrBuilder extends
    * Immutable. The ad group being linked to the feed.
    * </pre>
    *
-   * <code>string ad_group = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The adGroup.
    */
   java.lang.String getAdGroup();
@@ -83,7 +83,7 @@ public interface AdGroupFeedOrBuilder extends
    * Immutable. The ad group being linked to the feed.
    * </pre>
    *
-   * <code>string ad_group = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for adGroup.
    */
   com.google.protobuf.ByteString

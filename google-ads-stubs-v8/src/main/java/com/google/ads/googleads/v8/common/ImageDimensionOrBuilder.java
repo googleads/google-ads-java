@@ -12,7 +12,7 @@ public interface ImageDimensionOrBuilder extends
    * Height of the image.
    * </pre>
    *
-   * <code>int64 height_pixels = 4;</code>
+   * <code>optional int64 height_pixels = 4;</code>
    * @return Whether the heightPixels field is set.
    */
   boolean hasHeightPixels();
@@ -21,7 +21,7 @@ public interface ImageDimensionOrBuilder extends
    * Height of the image.
    * </pre>
    *
-   * <code>int64 height_pixels = 4;</code>
+   * <code>optional int64 height_pixels = 4;</code>
    * @return The heightPixels.
    */
   long getHeightPixels();
@@ -31,7 +31,7 @@ public interface ImageDimensionOrBuilder extends
    * Width of the image.
    * </pre>
    *
-   * <code>int64 width_pixels = 5;</code>
+   * <code>optional int64 width_pixels = 5;</code>
    * @return Whether the widthPixels field is set.
    */
   boolean hasWidthPixels();
@@ -40,7 +40,7 @@ public interface ImageDimensionOrBuilder extends
    * Width of the image.
    * </pre>
    *
-   * <code>int64 width_pixels = 5;</code>
+   * <code>optional int64 width_pixels = 5;</code>
    * @return The widthPixels.
    */
   long getWidthPixels();
@@ -50,7 +50,7 @@ public interface ImageDimensionOrBuilder extends
    * A URL that returns the image with this height and width.
    * </pre>
    *
-   * <code>string url = 6;</code>
+   * <code>optional string url = 6;</code>
    * @return Whether the url field is set.
    */
   boolean hasUrl();
@@ -59,7 +59,7 @@ public interface ImageDimensionOrBuilder extends
    * A URL that returns the image with this height and width.
    * </pre>
    *
-   * <code>string url = 6;</code>
+   * <code>optional string url = 6;</code>
    * @return The url.
    */
   java.lang.String getUrl();
@@ -68,7 +68,7 @@ public interface ImageDimensionOrBuilder extends
    * A URL that returns the image with this height and width.
    * </pre>
    *
-   * <code>string url = 6;</code>
+   * <code>optional string url = 6;</code>
    * @return The bytes for url.
    */
   com.google.protobuf.ByteString

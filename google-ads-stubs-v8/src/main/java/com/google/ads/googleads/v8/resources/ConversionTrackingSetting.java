@@ -106,7 +106,7 @@ private static final long serialVersionUID = 0L;
    * doesn't use conversion tracking, this is 0. This field is read-only.
    * </pre>
    *
-   * <code>int64 conversion_tracking_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 conversion_tracking_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the conversionTrackingId field is set.
    */
   @java.lang.Override
@@ -120,7 +120,7 @@ private static final long serialVersionUID = 0L;
    * doesn't use conversion tracking, this is 0. This field is read-only.
    * </pre>
    *
-   * <code>int64 conversion_tracking_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 conversion_tracking_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The conversionTrackingId.
    */
   @java.lang.Override
@@ -138,7 +138,7 @@ private static final long serialVersionUID = 0L;
    * Ads UI. This field is read-only.
    * </pre>
    *
-   * <code>int64 cross_account_conversion_tracking_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 cross_account_conversion_tracking_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the crossAccountConversionTrackingId field is set.
    */
   @java.lang.Override
@@ -153,7 +153,7 @@ private static final long serialVersionUID = 0L;
    * Ads UI. This field is read-only.
    * </pre>
    *
-   * <code>int64 cross_account_conversion_tracking_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 cross_account_conversion_tracking_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The crossAccountConversionTrackingId.
    */
   @java.lang.Override
@@ -515,7 +515,7 @@ private static final long serialVersionUID = 0L;
      * doesn't use conversion tracking, this is 0. This field is read-only.
      * </pre>
      *
-     * <code>int64 conversion_tracking_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 conversion_tracking_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the conversionTrackingId field is set.
      */
     @java.lang.Override
@@ -529,7 +529,7 @@ private static final long serialVersionUID = 0L;
      * doesn't use conversion tracking, this is 0. This field is read-only.
      * </pre>
      *
-     * <code>int64 conversion_tracking_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 conversion_tracking_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The conversionTrackingId.
      */
     @java.lang.Override
@@ -543,7 +543,7 @@ private static final long serialVersionUID = 0L;
      * doesn't use conversion tracking, this is 0. This field is read-only.
      * </pre>
      *
-     * <code>int64 conversion_tracking_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 conversion_tracking_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The conversionTrackingId to set.
      * @return This builder for chaining.
      */
@@ -560,7 +560,7 @@ private static final long serialVersionUID = 0L;
      * doesn't use conversion tracking, this is 0. This field is read-only.
      * </pre>
      *
-     * <code>int64 conversion_tracking_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 conversion_tracking_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearConversionTrackingId() {
@@ -579,7 +579,7 @@ private static final long serialVersionUID = 0L;
      * Ads UI. This field is read-only.
      * </pre>
      *
-     * <code>int64 cross_account_conversion_tracking_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 cross_account_conversion_tracking_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the crossAccountConversionTrackingId field is set.
      */
     @java.lang.Override
@@ -594,7 +594,7 @@ private static final long serialVersionUID = 0L;
      * Ads UI. This field is read-only.
      * </pre>
      *
-     * <code>int64 cross_account_conversion_tracking_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 cross_account_conversion_tracking_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The crossAccountConversionTrackingId.
      */
     @java.lang.Override
@@ -609,7 +609,7 @@ private static final long serialVersionUID = 0L;
      * Ads UI. This field is read-only.
      * </pre>
      *
-     * <code>int64 cross_account_conversion_tracking_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 cross_account_conversion_tracking_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The crossAccountConversionTrackingId to set.
      * @return This builder for chaining.
      */
@@ -627,7 +627,7 @@ private static final long serialVersionUID = 0L;
      * Ads UI. This field is read-only.
      * </pre>
      *
-     * <code>int64 cross_account_conversion_tracking_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 cross_account_conversion_tracking_id = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearCrossAccountConversionTrackingId() {

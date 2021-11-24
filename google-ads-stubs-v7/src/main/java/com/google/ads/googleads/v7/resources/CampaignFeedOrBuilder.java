@@ -36,7 +36,7 @@ public interface CampaignFeedOrBuilder extends
    * Immutable. The feed to which the CampaignFeed belongs.
    * </pre>
    *
-   * <code>string feed = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string feed = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the feed field is set.
    */
   boolean hasFeed();
@@ -45,7 +45,7 @@ public interface CampaignFeedOrBuilder extends
    * Immutable. The feed to which the CampaignFeed belongs.
    * </pre>
    *
-   * <code>string feed = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string feed = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The feed.
    */
   java.lang.String getFeed();
@@ -54,7 +54,7 @@ public interface CampaignFeedOrBuilder extends
    * Immutable. The feed to which the CampaignFeed belongs.
    * </pre>
    *
-   * <code>string feed = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string feed = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for feed.
    */
   com.google.protobuf.ByteString
@@ -65,7 +65,7 @@ public interface CampaignFeedOrBuilder extends
    * Immutable. The campaign to which the CampaignFeed belongs.
    * </pre>
    *
-   * <code>string campaign = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the campaign field is set.
    */
   boolean hasCampaign();
@@ -74,7 +74,7 @@ public interface CampaignFeedOrBuilder extends
    * Immutable. The campaign to which the CampaignFeed belongs.
    * </pre>
    *
-   * <code>string campaign = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The campaign.
    */
   java.lang.String getCampaign();
@@ -83,7 +83,7 @@ public interface CampaignFeedOrBuilder extends
    * Immutable. The campaign to which the CampaignFeed belongs.
    * </pre>
    *
-   * <code>string campaign = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 8 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for campaign.
    */
   com.google.protobuf.ByteString

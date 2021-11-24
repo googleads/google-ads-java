@@ -12,7 +12,7 @@ public interface CarrierInfoOrBuilder extends
    * The Carrier constant resource name.
    * </pre>
    *
-   * <code>string carrier_constant = 2;</code>
+   * <code>optional string carrier_constant = 2;</code>
    * @return Whether the carrierConstant field is set.
    */
   boolean hasCarrierConstant();
@@ -21,7 +21,7 @@ public interface CarrierInfoOrBuilder extends
    * The Carrier constant resource name.
    * </pre>
    *
-   * <code>string carrier_constant = 2;</code>
+   * <code>optional string carrier_constant = 2;</code>
    * @return The carrierConstant.
    */
   java.lang.String getCarrierConstant();
@@ -30,7 +30,7 @@ public interface CarrierInfoOrBuilder extends
    * The Carrier constant resource name.
    * </pre>
    *
-   * <code>string carrier_constant = 2;</code>
+   * <code>optional string carrier_constant = 2;</code>
    * @return The bytes for carrierConstant.
    */
   com.google.protobuf.ByteString

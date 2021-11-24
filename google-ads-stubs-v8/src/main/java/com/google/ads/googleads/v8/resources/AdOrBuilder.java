@@ -36,7 +36,7 @@ public interface AdOrBuilder extends
    * Output only. The ID of the ad.
    * </pre>
    *
-   * <code>int64 id = 40 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 40 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -45,7 +45,7 @@ public interface AdOrBuilder extends
    * Output only. The ID of the ad.
    * </pre>
    *
-   * <code>int64 id = 40 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 40 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   long getId();
@@ -194,7 +194,7 @@ public interface AdOrBuilder extends
    * The URL template for constructing a tracking URL.
    * </pre>
    *
-   * <code>string tracking_url_template = 43;</code>
+   * <code>optional string tracking_url_template = 43;</code>
    * @return Whether the trackingUrlTemplate field is set.
    */
   boolean hasTrackingUrlTemplate();
@@ -203,7 +203,7 @@ public interface AdOrBuilder extends
    * The URL template for constructing a tracking URL.
    * </pre>
    *
-   * <code>string tracking_url_template = 43;</code>
+   * <code>optional string tracking_url_template = 43;</code>
    * @return The trackingUrlTemplate.
    */
   java.lang.String getTrackingUrlTemplate();
@@ -212,7 +212,7 @@ public interface AdOrBuilder extends
    * The URL template for constructing a tracking URL.
    * </pre>
    *
-   * <code>string tracking_url_template = 43;</code>
+   * <code>optional string tracking_url_template = 43;</code>
    * @return The bytes for trackingUrlTemplate.
    */
   com.google.protobuf.ByteString
@@ -223,7 +223,7 @@ public interface AdOrBuilder extends
    * The suffix to use when constructing a final URL.
    * </pre>
    *
-   * <code>string final_url_suffix = 44;</code>
+   * <code>optional string final_url_suffix = 44;</code>
    * @return Whether the finalUrlSuffix field is set.
    */
   boolean hasFinalUrlSuffix();
@@ -232,7 +232,7 @@ public interface AdOrBuilder extends
    * The suffix to use when constructing a final URL.
    * </pre>
    *
-   * <code>string final_url_suffix = 44;</code>
+   * <code>optional string final_url_suffix = 44;</code>
    * @return The finalUrlSuffix.
    */
   java.lang.String getFinalUrlSuffix();
@@ -241,7 +241,7 @@ public interface AdOrBuilder extends
    * The suffix to use when constructing a final URL.
    * </pre>
    *
-   * <code>string final_url_suffix = 44;</code>
+   * <code>optional string final_url_suffix = 44;</code>
    * @return The bytes for finalUrlSuffix.
    */
   com.google.protobuf.ByteString
@@ -306,7 +306,7 @@ public interface AdOrBuilder extends
    * The URL that appears in the ad description for some ad formats.
    * </pre>
    *
-   * <code>string display_url = 45;</code>
+   * <code>optional string display_url = 45;</code>
    * @return Whether the displayUrl field is set.
    */
   boolean hasDisplayUrl();
@@ -315,7 +315,7 @@ public interface AdOrBuilder extends
    * The URL that appears in the ad description for some ad formats.
    * </pre>
    *
-   * <code>string display_url = 45;</code>
+   * <code>optional string display_url = 45;</code>
    * @return The displayUrl.
    */
   java.lang.String getDisplayUrl();
@@ -324,7 +324,7 @@ public interface AdOrBuilder extends
    * The URL that appears in the ad description for some ad formats.
    * </pre>
    *
-   * <code>string display_url = 45;</code>
+   * <code>optional string display_url = 45;</code>
    * @return The bytes for displayUrl.
    */
   com.google.protobuf.ByteString
@@ -357,7 +357,7 @@ public interface AdOrBuilder extends
    * performing.
    * </pre>
    *
-   * <code>bool added_by_google_ads = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool added_by_google_ads = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the addedByGoogleAds field is set.
    */
   boolean hasAddedByGoogleAds();
@@ -369,7 +369,7 @@ public interface AdOrBuilder extends
    * performing.
    * </pre>
    *
-   * <code>bool added_by_google_ads = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool added_by_google_ads = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The addedByGoogleAds.
    */
   boolean getAddedByGoogleAds();
@@ -460,7 +460,7 @@ public interface AdOrBuilder extends
    * ShoppingComparisonListingAd and VideoAd.
    * </pre>
    *
-   * <code>string name = 47 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string name = 47 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the name field is set.
    */
   boolean hasName();
@@ -472,7 +472,7 @@ public interface AdOrBuilder extends
    * ShoppingComparisonListingAd and VideoAd.
    * </pre>
    *
-   * <code>string name = 47 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string name = 47 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The name.
    */
   java.lang.String getName();
@@ -484,7 +484,7 @@ public interface AdOrBuilder extends
    * ShoppingComparisonListingAd and VideoAd.
    * </pre>
    *
-   * <code>string name = 47 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string name = 47 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString

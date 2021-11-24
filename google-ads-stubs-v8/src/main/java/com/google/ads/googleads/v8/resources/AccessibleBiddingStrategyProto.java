@@ -30,15 +30,15 @@ public final class AccessibleBiddingStrategyProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v8_resources_AccessibleBiddingStrategy_MaximizeConversions_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_google_ads_googleads_v8_resources_AccessibleBiddingStrategy_TargetImpressionShare_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_google_ads_googleads_v8_resources_AccessibleBiddingStrategy_TargetImpressionShare_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_google_ads_googleads_v8_resources_AccessibleBiddingStrategy_TargetCpa_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v8_resources_AccessibleBiddingStrategy_TargetCpa_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v8_resources_AccessibleBiddingStrategy_TargetImpressionShare_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v8_resources_AccessibleBiddingStrategy_TargetImpressionShare_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_google_ads_googleads_v8_resources_AccessibleBiddingStrategy_TargetRoas_descriptor;
   static final 
@@ -93,15 +93,15 @@ public final class AccessibleBiddingStrategyProto {
       "ingStrategy.TargetSpendB\003\340A\003H\000\0323\n\027Maximi" +
       "zeConversionValue\022\030\n\013target_roas\030\001 \001(\001B\003" +
       "\340A\003\032.\n\023MaximizeConversions\022\027\n\ntarget_cpa" +
-      "\030\001 \001(\003B\003\340A\003\032\227\002\n\025TargetImpressionShare\022u\n" +
-      "\010location\030\001 \001(\0162^.google.ads.googleads.v" +
-      "8.enums.TargetImpressionShareLocationEnu" +
-      "m.TargetImpressionShareLocationB\003\340A\003\022%\n\030" +
-      "location_fraction_micros\030\002 \001(\003H\000\210\001\001\022(\n\026c" +
-      "pc_bid_ceiling_micros\030\003 \001(\003B\003\340A\003H\001\210\001\001B\033\n" +
-      "\031_location_fraction_microsB\031\n\027_cpc_bid_c" +
-      "eiling_micros\032F\n\tTargetCpa\022#\n\021target_cpa" +
-      "_micros\030\001 \001(\003B\003\340A\003H\000\210\001\001B\024\n\022_target_cpa_m" +
+      "\030\001 \001(\003B\003\340A\003\032F\n\tTargetCpa\022#\n\021target_cpa_m" +
+      "icros\030\001 \001(\003B\003\340A\003H\000\210\001\001B\024\n\022_target_cpa_mic" +
+      "ros\032\227\002\n\025TargetImpressionShare\022u\n\010locatio" +
+      "n\030\001 \001(\0162^.google.ads.googleads.v8.enums." +
+      "TargetImpressionShareLocationEnum.Target" +
+      "ImpressionShareLocationB\003\340A\003\022%\n\030location" +
+      "_fraction_micros\030\002 \001(\003H\000\210\001\001\022(\n\026cpc_bid_c" +
+      "eiling_micros\030\003 \001(\003B\003\340A\003H\001\210\001\001B\033\n\031_locati" +
+      "on_fraction_microsB\031\n\027_cpc_bid_ceiling_m" +
       "icros\032;\n\nTargetRoas\022\035\n\013target_roas\030\001 \001(\001" +
       "B\003\340A\003H\000\210\001\001B\016\n\014_target_roas\032\223\001\n\013TargetSpe" +
       "nd\022\'\n\023target_spend_micros\030\001 \001(\003B\005\030\001\340A\003H\000" +
@@ -146,18 +146,18 @@ public final class AccessibleBiddingStrategyProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v8_resources_AccessibleBiddingStrategy_MaximizeConversions_descriptor,
         new java.lang.String[] { "TargetCpa", });
-    internal_static_google_ads_googleads_v8_resources_AccessibleBiddingStrategy_TargetImpressionShare_descriptor =
-      internal_static_google_ads_googleads_v8_resources_AccessibleBiddingStrategy_descriptor.getNestedTypes().get(2);
-    internal_static_google_ads_googleads_v8_resources_AccessibleBiddingStrategy_TargetImpressionShare_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_google_ads_googleads_v8_resources_AccessibleBiddingStrategy_TargetImpressionShare_descriptor,
-        new java.lang.String[] { "Location", "LocationFractionMicros", "CpcBidCeilingMicros", "LocationFractionMicros", "CpcBidCeilingMicros", });
     internal_static_google_ads_googleads_v8_resources_AccessibleBiddingStrategy_TargetCpa_descriptor =
-      internal_static_google_ads_googleads_v8_resources_AccessibleBiddingStrategy_descriptor.getNestedTypes().get(3);
+      internal_static_google_ads_googleads_v8_resources_AccessibleBiddingStrategy_descriptor.getNestedTypes().get(2);
     internal_static_google_ads_googleads_v8_resources_AccessibleBiddingStrategy_TargetCpa_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v8_resources_AccessibleBiddingStrategy_TargetCpa_descriptor,
         new java.lang.String[] { "TargetCpaMicros", "TargetCpaMicros", });
+    internal_static_google_ads_googleads_v8_resources_AccessibleBiddingStrategy_TargetImpressionShare_descriptor =
+      internal_static_google_ads_googleads_v8_resources_AccessibleBiddingStrategy_descriptor.getNestedTypes().get(3);
+    internal_static_google_ads_googleads_v8_resources_AccessibleBiddingStrategy_TargetImpressionShare_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v8_resources_AccessibleBiddingStrategy_TargetImpressionShare_descriptor,
+        new java.lang.String[] { "Location", "LocationFractionMicros", "CpcBidCeilingMicros", "LocationFractionMicros", "CpcBidCeilingMicros", });
     internal_static_google_ads_googleads_v8_resources_AccessibleBiddingStrategy_TargetRoas_descriptor =
       internal_static_google_ads_googleads_v8_resources_AccessibleBiddingStrategy_descriptor.getNestedTypes().get(4);
     internal_static_google_ads_googleads_v8_resources_AccessibleBiddingStrategy_TargetRoas_fieldAccessorTable = new

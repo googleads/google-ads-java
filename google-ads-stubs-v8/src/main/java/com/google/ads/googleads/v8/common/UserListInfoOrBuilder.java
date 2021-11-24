@@ -12,7 +12,7 @@ public interface UserListInfoOrBuilder extends
    * The User List resource name.
    * </pre>
    *
-   * <code>string user_list = 2;</code>
+   * <code>optional string user_list = 2;</code>
    * @return Whether the userList field is set.
    */
   boolean hasUserList();
@@ -21,7 +21,7 @@ public interface UserListInfoOrBuilder extends
    * The User List resource name.
    * </pre>
    *
-   * <code>string user_list = 2;</code>
+   * <code>optional string user_list = 2;</code>
    * @return The userList.
    */
   java.lang.String getUserList();
@@ -30,7 +30,7 @@ public interface UserListInfoOrBuilder extends
    * The User List resource name.
    * </pre>
    *
-   * <code>string user_list = 2;</code>
+   * <code>optional string user_list = 2;</code>
    * @return The bytes for userList.
    */
   com.google.protobuf.ByteString

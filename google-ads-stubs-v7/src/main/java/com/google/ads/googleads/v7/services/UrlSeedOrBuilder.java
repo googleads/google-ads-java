@@ -12,7 +12,7 @@ public interface UrlSeedOrBuilder extends
    * The URL to crawl in order to generate keyword ideas.
    * </pre>
    *
-   * <code>string url = 2;</code>
+   * <code>optional string url = 2;</code>
    * @return Whether the url field is set.
    */
   boolean hasUrl();
@@ -21,7 +21,7 @@ public interface UrlSeedOrBuilder extends
    * The URL to crawl in order to generate keyword ideas.
    * </pre>
    *
-   * <code>string url = 2;</code>
+   * <code>optional string url = 2;</code>
    * @return The url.
    */
   java.lang.String getUrl();
@@ -30,7 +30,7 @@ public interface UrlSeedOrBuilder extends
    * The URL to crawl in order to generate keyword ideas.
    * </pre>
    *
-   * <code>string url = 2;</code>
+   * <code>optional string url = 2;</code>
    * @return The bytes for url.
    */
   com.google.protobuf.ByteString

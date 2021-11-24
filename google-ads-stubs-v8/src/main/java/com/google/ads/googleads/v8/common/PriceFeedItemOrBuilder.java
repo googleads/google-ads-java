@@ -50,7 +50,7 @@ public interface PriceFeedItemOrBuilder extends
    * Tracking URL template for all offers of this price extension.
    * </pre>
    *
-   * <code>string tracking_url_template = 7;</code>
+   * <code>optional string tracking_url_template = 7;</code>
    * @return Whether the trackingUrlTemplate field is set.
    */
   boolean hasTrackingUrlTemplate();
@@ -59,7 +59,7 @@ public interface PriceFeedItemOrBuilder extends
    * Tracking URL template for all offers of this price extension.
    * </pre>
    *
-   * <code>string tracking_url_template = 7;</code>
+   * <code>optional string tracking_url_template = 7;</code>
    * @return The trackingUrlTemplate.
    */
   java.lang.String getTrackingUrlTemplate();
@@ -68,7 +68,7 @@ public interface PriceFeedItemOrBuilder extends
    * Tracking URL template for all offers of this price extension.
    * </pre>
    *
-   * <code>string tracking_url_template = 7;</code>
+   * <code>optional string tracking_url_template = 7;</code>
    * @return The bytes for trackingUrlTemplate.
    */
   com.google.protobuf.ByteString
@@ -79,7 +79,7 @@ public interface PriceFeedItemOrBuilder extends
    * The code of the language used for this price extension.
    * </pre>
    *
-   * <code>string language_code = 8;</code>
+   * <code>optional string language_code = 8;</code>
    * @return Whether the languageCode field is set.
    */
   boolean hasLanguageCode();
@@ -88,7 +88,7 @@ public interface PriceFeedItemOrBuilder extends
    * The code of the language used for this price extension.
    * </pre>
    *
-   * <code>string language_code = 8;</code>
+   * <code>optional string language_code = 8;</code>
    * @return The languageCode.
    */
   java.lang.String getLanguageCode();
@@ -97,7 +97,7 @@ public interface PriceFeedItemOrBuilder extends
    * The code of the language used for this price extension.
    * </pre>
    *
-   * <code>string language_code = 8;</code>
+   * <code>optional string language_code = 8;</code>
    * @return The bytes for languageCode.
    */
   com.google.protobuf.ByteString
@@ -152,7 +152,7 @@ public interface PriceFeedItemOrBuilder extends
    * Tracking URL template for all offers of this price extension.
    * </pre>
    *
-   * <code>string final_url_suffix = 9;</code>
+   * <code>optional string final_url_suffix = 9;</code>
    * @return Whether the finalUrlSuffix field is set.
    */
   boolean hasFinalUrlSuffix();
@@ -161,7 +161,7 @@ public interface PriceFeedItemOrBuilder extends
    * Tracking URL template for all offers of this price extension.
    * </pre>
    *
-   * <code>string final_url_suffix = 9;</code>
+   * <code>optional string final_url_suffix = 9;</code>
    * @return The finalUrlSuffix.
    */
   java.lang.String getFinalUrlSuffix();
@@ -170,7 +170,7 @@ public interface PriceFeedItemOrBuilder extends
    * Tracking URL template for all offers of this price extension.
    * </pre>
    *
-   * <code>string final_url_suffix = 9;</code>
+   * <code>optional string final_url_suffix = 9;</code>
    * @return The bytes for finalUrlSuffix.
    */
   com.google.protobuf.ByteString

@@ -197,7 +197,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of the geo target constant.
    * </pre>
    *
-   * <code>int64 id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   @java.lang.Override
@@ -209,7 +209,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of the geo target constant.
    * </pre>
    *
-   * <code>int64 id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   @java.lang.Override
@@ -224,7 +224,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Geo target constant English name.
    * </pre>
    *
-   * <code>string name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the name field is set.
    */
   @java.lang.Override
@@ -236,7 +236,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Geo target constant English name.
    * </pre>
    *
-   * <code>string name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The name.
    */
   @java.lang.Override
@@ -257,7 +257,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Geo target constant English name.
    * </pre>
    *
-   * <code>string name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for name.
    */
   @java.lang.Override
@@ -282,7 +282,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ISO-3166-1 alpha-2 country code that is associated with the target.
    * </pre>
    *
-   * <code>string country_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string country_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the countryCode field is set.
    */
   @java.lang.Override
@@ -294,7 +294,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ISO-3166-1 alpha-2 country code that is associated with the target.
    * </pre>
    *
-   * <code>string country_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string country_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The countryCode.
    */
   @java.lang.Override
@@ -315,7 +315,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ISO-3166-1 alpha-2 country code that is associated with the target.
    * </pre>
    *
-   * <code>string country_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string country_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for countryCode.
    */
   @java.lang.Override
@@ -340,7 +340,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Geo target constant target type.
    * </pre>
    *
-   * <code>string target_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string target_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the targetType field is set.
    */
   @java.lang.Override
@@ -352,7 +352,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Geo target constant target type.
    * </pre>
    *
-   * <code>string target_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string target_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The targetType.
    */
   @java.lang.Override
@@ -373,7 +373,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Geo target constant target type.
    * </pre>
    *
-   * <code>string target_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string target_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for targetType.
    */
   @java.lang.Override
@@ -426,7 +426,7 @@ private static final long serialVersionUID = 0L;
    * of its parent and country.
    * </pre>
    *
-   * <code>string canonical_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string canonical_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the canonicalName field is set.
    */
   @java.lang.Override
@@ -439,7 +439,7 @@ private static final long serialVersionUID = 0L;
    * of its parent and country.
    * </pre>
    *
-   * <code>string canonical_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string canonical_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The canonicalName.
    */
   @java.lang.Override
@@ -461,7 +461,7 @@ private static final long serialVersionUID = 0L;
    * of its parent and country.
    * </pre>
    *
-   * <code>string canonical_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string canonical_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for canonicalName.
    */
   @java.lang.Override
@@ -488,7 +488,7 @@ private static final long serialVersionUID = 0L;
    * `geoTargetConstants/{parent_geo_target_constant_id}`
    * </pre>
    *
-   * <code>string parent_geo_target = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string parent_geo_target = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the parentGeoTarget field is set.
    */
   @java.lang.Override
@@ -502,7 +502,7 @@ private static final long serialVersionUID = 0L;
    * `geoTargetConstants/{parent_geo_target_constant_id}`
    * </pre>
    *
-   * <code>string parent_geo_target = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string parent_geo_target = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The parentGeoTarget.
    */
   @java.lang.Override
@@ -525,7 +525,7 @@ private static final long serialVersionUID = 0L;
    * `geoTargetConstants/{parent_geo_target_constant_id}`
    * </pre>
    *
-   * <code>string parent_geo_target = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string parent_geo_target = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for parentGeoTarget.
    */
   @java.lang.Override
@@ -557,7 +557,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (status_ != com.google.ads.googleads.v8.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus.UNSPECIFIED.getNumber()) {
@@ -590,7 +590,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (status_ != com.google.ads.googleads.v8.enums.GeoTargetConstantStatusEnum.GeoTargetConstantStatus.UNSPECIFIED.getNumber()) {
@@ -1137,7 +1137,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the geo target constant.
      * </pre>
      *
-     * <code>int64 id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the id field is set.
      */
     @java.lang.Override
@@ -1149,7 +1149,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the geo target constant.
      * </pre>
      *
-     * <code>int64 id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The id.
      */
     @java.lang.Override
@@ -1161,7 +1161,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the geo target constant.
      * </pre>
      *
-     * <code>int64 id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
@@ -1176,7 +1176,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the geo target constant.
      * </pre>
      *
-     * <code>int64 id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {
@@ -1192,7 +1192,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Geo target constant English name.
      * </pre>
      *
-     * <code>string name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the name field is set.
      */
     public boolean hasName() {
@@ -1203,7 +1203,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Geo target constant English name.
      * </pre>
      *
-     * <code>string name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The name.
      */
     public java.lang.String getName() {
@@ -1223,7 +1223,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Geo target constant English name.
      * </pre>
      *
-     * <code>string name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
@@ -1244,7 +1244,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Geo target constant English name.
      * </pre>
      *
-     * <code>string name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The name to set.
      * @return This builder for chaining.
      */
@@ -1263,7 +1263,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Geo target constant English name.
      * </pre>
      *
-     * <code>string name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
@@ -1277,7 +1277,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Geo target constant English name.
      * </pre>
      *
-     * <code>string name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string name = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
@@ -1299,7 +1299,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ISO-3166-1 alpha-2 country code that is associated with the target.
      * </pre>
      *
-     * <code>string country_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string country_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the countryCode field is set.
      */
     public boolean hasCountryCode() {
@@ -1310,7 +1310,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ISO-3166-1 alpha-2 country code that is associated with the target.
      * </pre>
      *
-     * <code>string country_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string country_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The countryCode.
      */
     public java.lang.String getCountryCode() {
@@ -1330,7 +1330,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ISO-3166-1 alpha-2 country code that is associated with the target.
      * </pre>
      *
-     * <code>string country_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string country_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for countryCode.
      */
     public com.google.protobuf.ByteString
@@ -1351,7 +1351,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ISO-3166-1 alpha-2 country code that is associated with the target.
      * </pre>
      *
-     * <code>string country_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string country_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The countryCode to set.
      * @return This builder for chaining.
      */
@@ -1370,7 +1370,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ISO-3166-1 alpha-2 country code that is associated with the target.
      * </pre>
      *
-     * <code>string country_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string country_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearCountryCode() {
@@ -1384,7 +1384,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ISO-3166-1 alpha-2 country code that is associated with the target.
      * </pre>
      *
-     * <code>string country_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string country_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for countryCode to set.
      * @return This builder for chaining.
      */
@@ -1406,7 +1406,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Geo target constant target type.
      * </pre>
      *
-     * <code>string target_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string target_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the targetType field is set.
      */
     public boolean hasTargetType() {
@@ -1417,7 +1417,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Geo target constant target type.
      * </pre>
      *
-     * <code>string target_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string target_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The targetType.
      */
     public java.lang.String getTargetType() {
@@ -1437,7 +1437,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Geo target constant target type.
      * </pre>
      *
-     * <code>string target_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string target_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for targetType.
      */
     public com.google.protobuf.ByteString
@@ -1458,7 +1458,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Geo target constant target type.
      * </pre>
      *
-     * <code>string target_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string target_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The targetType to set.
      * @return This builder for chaining.
      */
@@ -1477,7 +1477,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Geo target constant target type.
      * </pre>
      *
-     * <code>string target_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string target_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearTargetType() {
@@ -1491,7 +1491,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Geo target constant target type.
      * </pre>
      *
-     * <code>string target_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string target_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for targetType to set.
      * @return This builder for chaining.
      */
@@ -1588,7 +1588,7 @@ private static final long serialVersionUID = 0L;
      * of its parent and country.
      * </pre>
      *
-     * <code>string canonical_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string canonical_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the canonicalName field is set.
      */
     public boolean hasCanonicalName() {
@@ -1600,7 +1600,7 @@ private static final long serialVersionUID = 0L;
      * of its parent and country.
      * </pre>
      *
-     * <code>string canonical_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string canonical_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The canonicalName.
      */
     public java.lang.String getCanonicalName() {
@@ -1621,7 +1621,7 @@ private static final long serialVersionUID = 0L;
      * of its parent and country.
      * </pre>
      *
-     * <code>string canonical_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string canonical_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for canonicalName.
      */
     public com.google.protobuf.ByteString
@@ -1643,7 +1643,7 @@ private static final long serialVersionUID = 0L;
      * of its parent and country.
      * </pre>
      *
-     * <code>string canonical_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string canonical_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The canonicalName to set.
      * @return This builder for chaining.
      */
@@ -1663,7 +1663,7 @@ private static final long serialVersionUID = 0L;
      * of its parent and country.
      * </pre>
      *
-     * <code>string canonical_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string canonical_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearCanonicalName() {
@@ -1678,7 +1678,7 @@ private static final long serialVersionUID = 0L;
      * of its parent and country.
      * </pre>
      *
-     * <code>string canonical_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string canonical_name = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for canonicalName to set.
      * @return This builder for chaining.
      */
@@ -1702,7 +1702,7 @@ private static final long serialVersionUID = 0L;
      * `geoTargetConstants/{parent_geo_target_constant_id}`
      * </pre>
      *
-     * <code>string parent_geo_target = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string parent_geo_target = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the parentGeoTarget field is set.
      */
     public boolean hasParentGeoTarget() {
@@ -1715,7 +1715,7 @@ private static final long serialVersionUID = 0L;
      * `geoTargetConstants/{parent_geo_target_constant_id}`
      * </pre>
      *
-     * <code>string parent_geo_target = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string parent_geo_target = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The parentGeoTarget.
      */
     public java.lang.String getParentGeoTarget() {
@@ -1737,7 +1737,7 @@ private static final long serialVersionUID = 0L;
      * `geoTargetConstants/{parent_geo_target_constant_id}`
      * </pre>
      *
-     * <code>string parent_geo_target = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string parent_geo_target = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for parentGeoTarget.
      */
     public com.google.protobuf.ByteString
@@ -1760,7 +1760,7 @@ private static final long serialVersionUID = 0L;
      * `geoTargetConstants/{parent_geo_target_constant_id}`
      * </pre>
      *
-     * <code>string parent_geo_target = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string parent_geo_target = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The parentGeoTarget to set.
      * @return This builder for chaining.
      */
@@ -1781,7 +1781,7 @@ private static final long serialVersionUID = 0L;
      * `geoTargetConstants/{parent_geo_target_constant_id}`
      * </pre>
      *
-     * <code>string parent_geo_target = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string parent_geo_target = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearParentGeoTarget() {
@@ -1797,7 +1797,7 @@ private static final long serialVersionUID = 0L;
      * `geoTargetConstants/{parent_geo_target_constant_id}`
      * </pre>
      *
-     * <code>string parent_geo_target = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string parent_geo_target = 9 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for parentGeoTarget to set.
      * @return This builder for chaining.
      */

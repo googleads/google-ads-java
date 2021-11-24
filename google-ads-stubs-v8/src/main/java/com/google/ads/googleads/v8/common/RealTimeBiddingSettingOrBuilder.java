@@ -12,7 +12,7 @@ public interface RealTimeBiddingSettingOrBuilder extends
    * Whether the campaign is opted in to real-time bidding.
    * </pre>
    *
-   * <code>bool opt_in = 2;</code>
+   * <code>optional bool opt_in = 2;</code>
    * @return Whether the optIn field is set.
    */
   boolean hasOptIn();
@@ -21,7 +21,7 @@ public interface RealTimeBiddingSettingOrBuilder extends
    * Whether the campaign is opted in to real-time bidding.
    * </pre>
    *
-   * <code>bool opt_in = 2;</code>
+   * <code>optional bool opt_in = 2;</code>
    * @return The optIn.
    */
   boolean getOptIn();

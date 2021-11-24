@@ -217,7 +217,7 @@ private static final long serialVersionUID = 0L;
    * The MediaFile resource to use for the video.
    * </pre>
    *
-   * <code>string media_file = 7;</code>
+   * <code>optional string media_file = 7;</code>
    * @return Whether the mediaFile field is set.
    */
   @java.lang.Override
@@ -229,7 +229,7 @@ private static final long serialVersionUID = 0L;
    * The MediaFile resource to use for the video.
    * </pre>
    *
-   * <code>string media_file = 7;</code>
+   * <code>optional string media_file = 7;</code>
    * @return The mediaFile.
    */
   @java.lang.Override
@@ -250,7 +250,7 @@ private static final long serialVersionUID = 0L;
    * The MediaFile resource to use for the video.
    * </pre>
    *
-   * <code>string media_file = 7;</code>
+   * <code>optional string media_file = 7;</code>
    * @return The bytes for mediaFile.
    */
   @java.lang.Override
@@ -970,7 +970,7 @@ private static final long serialVersionUID = 0L;
      * The MediaFile resource to use for the video.
      * </pre>
      *
-     * <code>string media_file = 7;</code>
+     * <code>optional string media_file = 7;</code>
      * @return Whether the mediaFile field is set.
      */
     public boolean hasMediaFile() {
@@ -981,7 +981,7 @@ private static final long serialVersionUID = 0L;
      * The MediaFile resource to use for the video.
      * </pre>
      *
-     * <code>string media_file = 7;</code>
+     * <code>optional string media_file = 7;</code>
      * @return The mediaFile.
      */
     public java.lang.String getMediaFile() {
@@ -1001,7 +1001,7 @@ private static final long serialVersionUID = 0L;
      * The MediaFile resource to use for the video.
      * </pre>
      *
-     * <code>string media_file = 7;</code>
+     * <code>optional string media_file = 7;</code>
      * @return The bytes for mediaFile.
      */
     public com.google.protobuf.ByteString
@@ -1022,7 +1022,7 @@ private static final long serialVersionUID = 0L;
      * The MediaFile resource to use for the video.
      * </pre>
      *
-     * <code>string media_file = 7;</code>
+     * <code>optional string media_file = 7;</code>
      * @param value The mediaFile to set.
      * @return This builder for chaining.
      */
@@ -1041,7 +1041,7 @@ private static final long serialVersionUID = 0L;
      * The MediaFile resource to use for the video.
      * </pre>
      *
-     * <code>string media_file = 7;</code>
+     * <code>optional string media_file = 7;</code>
      * @return This builder for chaining.
      */
     public Builder clearMediaFile() {
@@ -1055,7 +1055,7 @@ private static final long serialVersionUID = 0L;
      * The MediaFile resource to use for the video.
      * </pre>
      *
-     * <code>string media_file = 7;</code>
+     * <code>optional string media_file = 7;</code>
      * @param value The bytes for mediaFile to set.
      * @return This builder for chaining.
      */

@@ -100,7 +100,7 @@ private static final long serialVersionUID = 0L;
    * The YouTube uploader channel id or the channel code of a YouTube channel.
    * </pre>
    *
-   * <code>string channel_id = 2;</code>
+   * <code>optional string channel_id = 2;</code>
    * @return Whether the channelId field is set.
    */
   @java.lang.Override
@@ -112,7 +112,7 @@ private static final long serialVersionUID = 0L;
    * The YouTube uploader channel id or the channel code of a YouTube channel.
    * </pre>
    *
-   * <code>string channel_id = 2;</code>
+   * <code>optional string channel_id = 2;</code>
    * @return The channelId.
    */
   @java.lang.Override
@@ -133,7 +133,7 @@ private static final long serialVersionUID = 0L;
    * The YouTube uploader channel id or the channel code of a YouTube channel.
    * </pre>
    *
-   * <code>string channel_id = 2;</code>
+   * <code>optional string channel_id = 2;</code>
    * @return The bytes for channelId.
    */
   @java.lang.Override
@@ -476,7 +476,7 @@ private static final long serialVersionUID = 0L;
      * The YouTube uploader channel id or the channel code of a YouTube channel.
      * </pre>
      *
-     * <code>string channel_id = 2;</code>
+     * <code>optional string channel_id = 2;</code>
      * @return Whether the channelId field is set.
      */
     public boolean hasChannelId() {
@@ -487,7 +487,7 @@ private static final long serialVersionUID = 0L;
      * The YouTube uploader channel id or the channel code of a YouTube channel.
      * </pre>
      *
-     * <code>string channel_id = 2;</code>
+     * <code>optional string channel_id = 2;</code>
      * @return The channelId.
      */
     public java.lang.String getChannelId() {
@@ -507,7 +507,7 @@ private static final long serialVersionUID = 0L;
      * The YouTube uploader channel id or the channel code of a YouTube channel.
      * </pre>
      *
-     * <code>string channel_id = 2;</code>
+     * <code>optional string channel_id = 2;</code>
      * @return The bytes for channelId.
      */
     public com.google.protobuf.ByteString
@@ -528,7 +528,7 @@ private static final long serialVersionUID = 0L;
      * The YouTube uploader channel id or the channel code of a YouTube channel.
      * </pre>
      *
-     * <code>string channel_id = 2;</code>
+     * <code>optional string channel_id = 2;</code>
      * @param value The channelId to set.
      * @return This builder for chaining.
      */
@@ -547,7 +547,7 @@ private static final long serialVersionUID = 0L;
      * The YouTube uploader channel id or the channel code of a YouTube channel.
      * </pre>
      *
-     * <code>string channel_id = 2;</code>
+     * <code>optional string channel_id = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearChannelId() {
@@ -561,7 +561,7 @@ private static final long serialVersionUID = 0L;
      * The YouTube uploader channel id or the channel code of a YouTube channel.
      * </pre>
      *
-     * <code>string channel_id = 2;</code>
+     * <code>optional string channel_id = 2;</code>
      * @param value The bytes for channelId to set.
      * @return This builder for chaining.
      */

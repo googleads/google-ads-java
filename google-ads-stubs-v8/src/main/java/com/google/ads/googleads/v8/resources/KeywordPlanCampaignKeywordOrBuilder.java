@@ -36,7 +36,7 @@ public interface KeywordPlanCampaignKeywordOrBuilder extends
    * The Keyword Plan campaign to which this negative keyword belongs.
    * </pre>
    *
-   * <code>string keyword_plan_campaign = 8 [(.google.api.resource_reference) = { ... }</code>
+   * <code>optional string keyword_plan_campaign = 8 [(.google.api.resource_reference) = { ... }</code>
    * @return Whether the keywordPlanCampaign field is set.
    */
   boolean hasKeywordPlanCampaign();
@@ -45,7 +45,7 @@ public interface KeywordPlanCampaignKeywordOrBuilder extends
    * The Keyword Plan campaign to which this negative keyword belongs.
    * </pre>
    *
-   * <code>string keyword_plan_campaign = 8 [(.google.api.resource_reference) = { ... }</code>
+   * <code>optional string keyword_plan_campaign = 8 [(.google.api.resource_reference) = { ... }</code>
    * @return The keywordPlanCampaign.
    */
   java.lang.String getKeywordPlanCampaign();
@@ -54,7 +54,7 @@ public interface KeywordPlanCampaignKeywordOrBuilder extends
    * The Keyword Plan campaign to which this negative keyword belongs.
    * </pre>
    *
-   * <code>string keyword_plan_campaign = 8 [(.google.api.resource_reference) = { ... }</code>
+   * <code>optional string keyword_plan_campaign = 8 [(.google.api.resource_reference) = { ... }</code>
    * @return The bytes for keywordPlanCampaign.
    */
   com.google.protobuf.ByteString
@@ -65,7 +65,7 @@ public interface KeywordPlanCampaignKeywordOrBuilder extends
    * Output only. The ID of the Keyword Plan negative keyword.
    * </pre>
    *
-   * <code>int64 id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -74,7 +74,7 @@ public interface KeywordPlanCampaignKeywordOrBuilder extends
    * Output only. The ID of the Keyword Plan negative keyword.
    * </pre>
    *
-   * <code>int64 id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   long getId();
@@ -84,7 +84,7 @@ public interface KeywordPlanCampaignKeywordOrBuilder extends
    * The keyword text.
    * </pre>
    *
-   * <code>string text = 10;</code>
+   * <code>optional string text = 10;</code>
    * @return Whether the text field is set.
    */
   boolean hasText();
@@ -93,7 +93,7 @@ public interface KeywordPlanCampaignKeywordOrBuilder extends
    * The keyword text.
    * </pre>
    *
-   * <code>string text = 10;</code>
+   * <code>optional string text = 10;</code>
    * @return The text.
    */
   java.lang.String getText();
@@ -102,7 +102,7 @@ public interface KeywordPlanCampaignKeywordOrBuilder extends
    * The keyword text.
    * </pre>
    *
-   * <code>string text = 10;</code>
+   * <code>optional string text = 10;</code>
    * @return The bytes for text.
    */
   com.google.protobuf.ByteString
@@ -133,7 +133,7 @@ public interface KeywordPlanCampaignKeywordOrBuilder extends
    * Must be set to true. Only negative campaign keywords are supported.
    * </pre>
    *
-   * <code>bool negative = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional bool negative = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the negative field is set.
    */
   boolean hasNegative();
@@ -143,7 +143,7 @@ public interface KeywordPlanCampaignKeywordOrBuilder extends
    * Must be set to true. Only negative campaign keywords are supported.
    * </pre>
    *
-   * <code>bool negative = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional bool negative = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The negative.
    */
   boolean getNegative();

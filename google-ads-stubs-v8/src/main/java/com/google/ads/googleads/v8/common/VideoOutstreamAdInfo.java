@@ -108,7 +108,7 @@ private static final long serialVersionUID = 0L;
    * The headline of the ad.
    * </pre>
    *
-   * <code>string headline = 3;</code>
+   * <code>optional string headline = 3;</code>
    * @return Whether the headline field is set.
    */
   @java.lang.Override
@@ -120,7 +120,7 @@ private static final long serialVersionUID = 0L;
    * The headline of the ad.
    * </pre>
    *
-   * <code>string headline = 3;</code>
+   * <code>optional string headline = 3;</code>
    * @return The headline.
    */
   @java.lang.Override
@@ -141,7 +141,7 @@ private static final long serialVersionUID = 0L;
    * The headline of the ad.
    * </pre>
    *
-   * <code>string headline = 3;</code>
+   * <code>optional string headline = 3;</code>
    * @return The bytes for headline.
    */
   @java.lang.Override
@@ -166,7 +166,7 @@ private static final long serialVersionUID = 0L;
    * The description line.
    * </pre>
    *
-   * <code>string description = 4;</code>
+   * <code>optional string description = 4;</code>
    * @return Whether the description field is set.
    */
   @java.lang.Override
@@ -178,7 +178,7 @@ private static final long serialVersionUID = 0L;
    * The description line.
    * </pre>
    *
-   * <code>string description = 4;</code>
+   * <code>optional string description = 4;</code>
    * @return The description.
    */
   @java.lang.Override
@@ -199,7 +199,7 @@ private static final long serialVersionUID = 0L;
    * The description line.
    * </pre>
    *
-   * <code>string description = 4;</code>
+   * <code>optional string description = 4;</code>
    * @return The bytes for description.
    */
   @java.lang.Override
@@ -569,7 +569,7 @@ private static final long serialVersionUID = 0L;
      * The headline of the ad.
      * </pre>
      *
-     * <code>string headline = 3;</code>
+     * <code>optional string headline = 3;</code>
      * @return Whether the headline field is set.
      */
     public boolean hasHeadline() {
@@ -580,7 +580,7 @@ private static final long serialVersionUID = 0L;
      * The headline of the ad.
      * </pre>
      *
-     * <code>string headline = 3;</code>
+     * <code>optional string headline = 3;</code>
      * @return The headline.
      */
     public java.lang.String getHeadline() {
@@ -600,7 +600,7 @@ private static final long serialVersionUID = 0L;
      * The headline of the ad.
      * </pre>
      *
-     * <code>string headline = 3;</code>
+     * <code>optional string headline = 3;</code>
      * @return The bytes for headline.
      */
     public com.google.protobuf.ByteString
@@ -621,7 +621,7 @@ private static final long serialVersionUID = 0L;
      * The headline of the ad.
      * </pre>
      *
-     * <code>string headline = 3;</code>
+     * <code>optional string headline = 3;</code>
      * @param value The headline to set.
      * @return This builder for chaining.
      */
@@ -640,7 +640,7 @@ private static final long serialVersionUID = 0L;
      * The headline of the ad.
      * </pre>
      *
-     * <code>string headline = 3;</code>
+     * <code>optional string headline = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearHeadline() {
@@ -654,7 +654,7 @@ private static final long serialVersionUID = 0L;
      * The headline of the ad.
      * </pre>
      *
-     * <code>string headline = 3;</code>
+     * <code>optional string headline = 3;</code>
      * @param value The bytes for headline to set.
      * @return This builder for chaining.
      */
@@ -676,7 +676,7 @@ private static final long serialVersionUID = 0L;
      * The description line.
      * </pre>
      *
-     * <code>string description = 4;</code>
+     * <code>optional string description = 4;</code>
      * @return Whether the description field is set.
      */
     public boolean hasDescription() {
@@ -687,7 +687,7 @@ private static final long serialVersionUID = 0L;
      * The description line.
      * </pre>
      *
-     * <code>string description = 4;</code>
+     * <code>optional string description = 4;</code>
      * @return The description.
      */
     public java.lang.String getDescription() {
@@ -707,7 +707,7 @@ private static final long serialVersionUID = 0L;
      * The description line.
      * </pre>
      *
-     * <code>string description = 4;</code>
+     * <code>optional string description = 4;</code>
      * @return The bytes for description.
      */
     public com.google.protobuf.ByteString
@@ -728,7 +728,7 @@ private static final long serialVersionUID = 0L;
      * The description line.
      * </pre>
      *
-     * <code>string description = 4;</code>
+     * <code>optional string description = 4;</code>
      * @param value The description to set.
      * @return This builder for chaining.
      */
@@ -747,7 +747,7 @@ private static final long serialVersionUID = 0L;
      * The description line.
      * </pre>
      *
-     * <code>string description = 4;</code>
+     * <code>optional string description = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
@@ -761,7 +761,7 @@ private static final long serialVersionUID = 0L;
      * The description line.
      * </pre>
      *
-     * <code>string description = 4;</code>
+     * <code>optional string description = 4;</code>
      * @param value The bytes for description to set.
      * @return This builder for chaining.
      */

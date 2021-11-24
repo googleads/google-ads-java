@@ -178,7 +178,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The campaign to which the asset is linked.
    * </pre>
    *
-   * <code>string campaign = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the campaign field is set.
    */
   @java.lang.Override
@@ -190,7 +190,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The campaign to which the asset is linked.
    * </pre>
    *
-   * <code>string campaign = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The campaign.
    */
   @java.lang.Override
@@ -211,7 +211,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The campaign to which the asset is linked.
    * </pre>
    *
-   * <code>string campaign = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for campaign.
    */
   @java.lang.Override
@@ -236,7 +236,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The asset which is linked to the campaign.
    * </pre>
    *
-   * <code>string asset = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string asset = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the asset field is set.
    */
   @java.lang.Override
@@ -248,7 +248,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The asset which is linked to the campaign.
    * </pre>
    *
-   * <code>string asset = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string asset = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The asset.
    */
   @java.lang.Override
@@ -269,7 +269,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The asset which is linked to the campaign.
    * </pre>
    *
-   * <code>string asset = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string asset = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for asset.
    */
   @java.lang.Override
@@ -357,7 +357,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (fieldType_ != com.google.ads.googleads.v8.enums.AssetFieldTypeEnum.AssetFieldType.UNSPECIFIED.getNumber()) {
@@ -381,7 +381,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (fieldType_ != com.google.ads.googleads.v8.enums.AssetFieldTypeEnum.AssetFieldType.UNSPECIFIED.getNumber()) {
@@ -849,7 +849,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The campaign to which the asset is linked.
      * </pre>
      *
-     * <code>string campaign = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the campaign field is set.
      */
     public boolean hasCampaign() {
@@ -860,7 +860,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The campaign to which the asset is linked.
      * </pre>
      *
-     * <code>string campaign = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return The campaign.
      */
     public java.lang.String getCampaign() {
@@ -880,7 +880,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The campaign to which the asset is linked.
      * </pre>
      *
-     * <code>string campaign = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for campaign.
      */
     public com.google.protobuf.ByteString
@@ -901,7 +901,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The campaign to which the asset is linked.
      * </pre>
      *
-     * <code>string campaign = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @param value The campaign to set.
      * @return This builder for chaining.
      */
@@ -920,7 +920,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The campaign to which the asset is linked.
      * </pre>
      *
-     * <code>string campaign = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearCampaign() {
@@ -934,7 +934,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The campaign to which the asset is linked.
      * </pre>
      *
-     * <code>string campaign = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for campaign to set.
      * @return This builder for chaining.
      */
@@ -956,7 +956,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The asset which is linked to the campaign.
      * </pre>
      *
-     * <code>string asset = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string asset = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the asset field is set.
      */
     public boolean hasAsset() {
@@ -967,7 +967,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The asset which is linked to the campaign.
      * </pre>
      *
-     * <code>string asset = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string asset = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return The asset.
      */
     public java.lang.String getAsset() {
@@ -987,7 +987,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The asset which is linked to the campaign.
      * </pre>
      *
-     * <code>string asset = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string asset = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for asset.
      */
     public com.google.protobuf.ByteString
@@ -1008,7 +1008,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The asset which is linked to the campaign.
      * </pre>
      *
-     * <code>string asset = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string asset = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @param value The asset to set.
      * @return This builder for chaining.
      */
@@ -1027,7 +1027,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The asset which is linked to the campaign.
      * </pre>
      *
-     * <code>string asset = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string asset = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearAsset() {
@@ -1041,7 +1041,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The asset which is linked to the campaign.
      * </pre>
      *
-     * <code>string asset = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string asset = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for asset to set.
      * @return This builder for chaining.
      */

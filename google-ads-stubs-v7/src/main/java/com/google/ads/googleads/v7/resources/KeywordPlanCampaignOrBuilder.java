@@ -36,7 +36,7 @@ public interface KeywordPlanCampaignOrBuilder extends
    * The keyword plan this campaign belongs to.
    * </pre>
    *
-   * <code>string keyword_plan = 9 [(.google.api.resource_reference) = { ... }</code>
+   * <code>optional string keyword_plan = 9 [(.google.api.resource_reference) = { ... }</code>
    * @return Whether the keywordPlan field is set.
    */
   boolean hasKeywordPlan();
@@ -45,7 +45,7 @@ public interface KeywordPlanCampaignOrBuilder extends
    * The keyword plan this campaign belongs to.
    * </pre>
    *
-   * <code>string keyword_plan = 9 [(.google.api.resource_reference) = { ... }</code>
+   * <code>optional string keyword_plan = 9 [(.google.api.resource_reference) = { ... }</code>
    * @return The keywordPlan.
    */
   java.lang.String getKeywordPlan();
@@ -54,7 +54,7 @@ public interface KeywordPlanCampaignOrBuilder extends
    * The keyword plan this campaign belongs to.
    * </pre>
    *
-   * <code>string keyword_plan = 9 [(.google.api.resource_reference) = { ... }</code>
+   * <code>optional string keyword_plan = 9 [(.google.api.resource_reference) = { ... }</code>
    * @return The bytes for keywordPlan.
    */
   com.google.protobuf.ByteString
@@ -65,7 +65,7 @@ public interface KeywordPlanCampaignOrBuilder extends
    * Output only. The ID of the Keyword Plan campaign.
    * </pre>
    *
-   * <code>int64 id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -74,7 +74,7 @@ public interface KeywordPlanCampaignOrBuilder extends
    * Output only. The ID of the Keyword Plan campaign.
    * </pre>
    *
-   * <code>int64 id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   long getId();
@@ -86,7 +86,7 @@ public interface KeywordPlanCampaignOrBuilder extends
    * campaigns.
    * </pre>
    *
-   * <code>string name = 11;</code>
+   * <code>optional string name = 11;</code>
    * @return Whether the name field is set.
    */
   boolean hasName();
@@ -97,7 +97,7 @@ public interface KeywordPlanCampaignOrBuilder extends
    * campaigns.
    * </pre>
    *
-   * <code>string name = 11;</code>
+   * <code>optional string name = 11;</code>
    * @return The name.
    */
   java.lang.String getName();
@@ -108,7 +108,7 @@ public interface KeywordPlanCampaignOrBuilder extends
    * campaigns.
    * </pre>
    *
-   * <code>string name = 11;</code>
+   * <code>optional string name = 11;</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
@@ -190,7 +190,7 @@ public interface KeywordPlanCampaignOrBuilder extends
    * campaigns.
    * </pre>
    *
-   * <code>int64 cpc_bid_micros = 13;</code>
+   * <code>optional int64 cpc_bid_micros = 13;</code>
    * @return Whether the cpcBidMicros field is set.
    */
   boolean hasCpcBidMicros();
@@ -202,7 +202,7 @@ public interface KeywordPlanCampaignOrBuilder extends
    * campaigns.
    * </pre>
    *
-   * <code>int64 cpc_bid_micros = 13;</code>
+   * <code>optional int64 cpc_bid_micros = 13;</code>
    * @return The cpcBidMicros.
    */
   long getCpcBidMicros();

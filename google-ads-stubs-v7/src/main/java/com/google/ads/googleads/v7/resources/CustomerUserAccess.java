@@ -200,7 +200,7 @@ private static final long serialVersionUID = 0L;
    * Read only field
    * </pre>
    *
-   * <code>string email_address = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string email_address = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the emailAddress field is set.
    */
   @java.lang.Override
@@ -213,7 +213,7 @@ private static final long serialVersionUID = 0L;
    * Read only field
    * </pre>
    *
-   * <code>string email_address = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string email_address = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The emailAddress.
    */
   @java.lang.Override
@@ -235,7 +235,7 @@ private static final long serialVersionUID = 0L;
    * Read only field
    * </pre>
    *
-   * <code>string email_address = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string email_address = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for emailAddress.
    */
   @java.lang.Override
@@ -290,7 +290,7 @@ private static final long serialVersionUID = 0L;
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
    *
-   * <code>string access_creation_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string access_creation_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the accessCreationDateTime field is set.
    */
   @java.lang.Override
@@ -305,7 +305,7 @@ private static final long serialVersionUID = 0L;
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
    *
-   * <code>string access_creation_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string access_creation_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The accessCreationDateTime.
    */
   @java.lang.Override
@@ -329,7 +329,7 @@ private static final long serialVersionUID = 0L;
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
    *
-   * <code>string access_creation_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string access_creation_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for accessCreationDateTime.
    */
   @java.lang.Override
@@ -355,7 +355,7 @@ private static final long serialVersionUID = 0L;
    * Read only field
    * </pre>
    *
-   * <code>string inviter_user_email_address = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string inviter_user_email_address = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the inviterUserEmailAddress field is set.
    */
   @java.lang.Override
@@ -368,7 +368,7 @@ private static final long serialVersionUID = 0L;
    * Read only field
    * </pre>
    *
-   * <code>string inviter_user_email_address = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string inviter_user_email_address = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The inviterUserEmailAddress.
    */
   @java.lang.Override
@@ -390,7 +390,7 @@ private static final long serialVersionUID = 0L;
    * Read only field
    * </pre>
    *
-   * <code>string inviter_user_email_address = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string inviter_user_email_address = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for inviterUserEmailAddress.
    */
   @java.lang.Override
@@ -422,7 +422,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (userId_ != 0L) {
@@ -449,7 +449,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (userId_ != 0L) {
@@ -989,7 +989,7 @@ private static final long serialVersionUID = 0L;
      * Read only field
      * </pre>
      *
-     * <code>string email_address = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string email_address = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the emailAddress field is set.
      */
     public boolean hasEmailAddress() {
@@ -1001,7 +1001,7 @@ private static final long serialVersionUID = 0L;
      * Read only field
      * </pre>
      *
-     * <code>string email_address = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string email_address = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The emailAddress.
      */
     public java.lang.String getEmailAddress() {
@@ -1022,7 +1022,7 @@ private static final long serialVersionUID = 0L;
      * Read only field
      * </pre>
      *
-     * <code>string email_address = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string email_address = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for emailAddress.
      */
     public com.google.protobuf.ByteString
@@ -1044,7 +1044,7 @@ private static final long serialVersionUID = 0L;
      * Read only field
      * </pre>
      *
-     * <code>string email_address = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string email_address = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The emailAddress to set.
      * @return This builder for chaining.
      */
@@ -1064,7 +1064,7 @@ private static final long serialVersionUID = 0L;
      * Read only field
      * </pre>
      *
-     * <code>string email_address = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string email_address = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearEmailAddress() {
@@ -1079,7 +1079,7 @@ private static final long serialVersionUID = 0L;
      * Read only field
      * </pre>
      *
-     * <code>string email_address = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string email_address = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for emailAddress to set.
      * @return This builder for chaining.
      */
@@ -1178,7 +1178,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string access_creation_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string access_creation_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the accessCreationDateTime field is set.
      */
     public boolean hasAccessCreationDateTime() {
@@ -1192,7 +1192,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string access_creation_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string access_creation_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The accessCreationDateTime.
      */
     public java.lang.String getAccessCreationDateTime() {
@@ -1215,7 +1215,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string access_creation_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string access_creation_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for accessCreationDateTime.
      */
     public com.google.protobuf.ByteString
@@ -1239,7 +1239,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string access_creation_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string access_creation_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The accessCreationDateTime to set.
      * @return This builder for chaining.
      */
@@ -1261,7 +1261,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string access_creation_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string access_creation_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearAccessCreationDateTime() {
@@ -1278,7 +1278,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string access_creation_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string access_creation_date_time = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for accessCreationDateTime to set.
      * @return This builder for chaining.
      */
@@ -1301,7 +1301,7 @@ private static final long serialVersionUID = 0L;
      * Read only field
      * </pre>
      *
-     * <code>string inviter_user_email_address = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string inviter_user_email_address = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the inviterUserEmailAddress field is set.
      */
     public boolean hasInviterUserEmailAddress() {
@@ -1313,7 +1313,7 @@ private static final long serialVersionUID = 0L;
      * Read only field
      * </pre>
      *
-     * <code>string inviter_user_email_address = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string inviter_user_email_address = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The inviterUserEmailAddress.
      */
     public java.lang.String getInviterUserEmailAddress() {
@@ -1334,7 +1334,7 @@ private static final long serialVersionUID = 0L;
      * Read only field
      * </pre>
      *
-     * <code>string inviter_user_email_address = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string inviter_user_email_address = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for inviterUserEmailAddress.
      */
     public com.google.protobuf.ByteString
@@ -1356,7 +1356,7 @@ private static final long serialVersionUID = 0L;
      * Read only field
      * </pre>
      *
-     * <code>string inviter_user_email_address = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string inviter_user_email_address = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The inviterUserEmailAddress to set.
      * @return This builder for chaining.
      */
@@ -1376,7 +1376,7 @@ private static final long serialVersionUID = 0L;
      * Read only field
      * </pre>
      *
-     * <code>string inviter_user_email_address = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string inviter_user_email_address = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearInviterUserEmailAddress() {
@@ -1391,7 +1391,7 @@ private static final long serialVersionUID = 0L;
      * Read only field
      * </pre>
      *
-     * <code>string inviter_user_email_address = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string inviter_user_email_address = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for inviterUserEmailAddress to set.
      * @return This builder for chaining.
      */

@@ -5478,22 +5478,22 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
-    if (!getChangeDateTimeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(changeDateTime_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, changeDateTime_);
     }
     if (changeResourceType_ != com.google.ads.googleads.v8.enums.ChangeEventResourceTypeEnum.ChangeEventResourceType.UNSPECIFIED.getNumber()) {
       output.writeEnum(3, changeResourceType_);
     }
-    if (!getChangeResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(changeResourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, changeResourceName_);
     }
     if (clientType_ != com.google.ads.googleads.v8.enums.ChangeClientTypeEnum.ChangeClientType.UNSPECIFIED.getNumber()) {
       output.writeEnum(5, clientType_);
     }
-    if (!getUserEmailBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userEmail_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, userEmail_);
     }
     if (oldResource_ != null) {
@@ -5508,19 +5508,19 @@ private static final long serialVersionUID = 0L;
     if (changedFields_ != null) {
       output.writeMessage(10, getChangedFields());
     }
-    if (!getCampaignBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(campaign_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 11, campaign_);
     }
-    if (!getAdGroupBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(adGroup_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 12, adGroup_);
     }
-    if (!getFeedBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feed_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 13, feed_);
     }
-    if (!getFeedItemBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feedItem_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 14, feedItem_);
     }
-    if (!getAssetBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(asset_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 20, asset_);
     }
     unknownFields.writeTo(output);
@@ -5532,24 +5532,24 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
-    if (!getChangeDateTimeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(changeDateTime_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, changeDateTime_);
     }
     if (changeResourceType_ != com.google.ads.googleads.v8.enums.ChangeEventResourceTypeEnum.ChangeEventResourceType.UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, changeResourceType_);
     }
-    if (!getChangeResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(changeResourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, changeResourceName_);
     }
     if (clientType_ != com.google.ads.googleads.v8.enums.ChangeClientTypeEnum.ChangeClientType.UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(5, clientType_);
     }
-    if (!getUserEmailBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(userEmail_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, userEmail_);
     }
     if (oldResource_ != null) {
@@ -5568,19 +5568,19 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, getChangedFields());
     }
-    if (!getCampaignBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(campaign_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, campaign_);
     }
-    if (!getAdGroupBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(adGroup_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, adGroup_);
     }
-    if (!getFeedBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feed_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, feed_);
     }
-    if (!getFeedItemBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feedItem_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, feedItem_);
     }
-    if (!getAssetBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(asset_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(20, asset_);
     }
     size += unknownFields.getSerializedSize();

@@ -135,7 +135,7 @@ private static final long serialVersionUID = 0L;
    * operations.
    * </pre>
    *
-   * <code>string criterion_name = 3;</code>
+   * <code>optional string criterion_name = 3;</code>
    * @return Whether the criterionName field is set.
    */
   @java.lang.Override
@@ -151,7 +151,7 @@ private static final long serialVersionUID = 0L;
    * operations.
    * </pre>
    *
-   * <code>string criterion_name = 3;</code>
+   * <code>optional string criterion_name = 3;</code>
    * @return The criterionName.
    */
   @java.lang.Override
@@ -176,7 +176,7 @@ private static final long serialVersionUID = 0L;
    * operations.
    * </pre>
    *
-   * <code>string criterion_name = 3;</code>
+   * <code>optional string criterion_name = 3;</code>
    * @return The bytes for criterionName.
    */
   @java.lang.Override
@@ -764,7 +764,7 @@ private static final long serialVersionUID = 0L;
      * operations.
      * </pre>
      *
-     * <code>string criterion_name = 3;</code>
+     * <code>optional string criterion_name = 3;</code>
      * @return Whether the criterionName field is set.
      */
     public boolean hasCriterionName() {
@@ -779,7 +779,7 @@ private static final long serialVersionUID = 0L;
      * operations.
      * </pre>
      *
-     * <code>string criterion_name = 3;</code>
+     * <code>optional string criterion_name = 3;</code>
      * @return The criterionName.
      */
     public java.lang.String getCriterionName() {
@@ -803,7 +803,7 @@ private static final long serialVersionUID = 0L;
      * operations.
      * </pre>
      *
-     * <code>string criterion_name = 3;</code>
+     * <code>optional string criterion_name = 3;</code>
      * @return The bytes for criterionName.
      */
     public com.google.protobuf.ByteString
@@ -828,7 +828,7 @@ private static final long serialVersionUID = 0L;
      * operations.
      * </pre>
      *
-     * <code>string criterion_name = 3;</code>
+     * <code>optional string criterion_name = 3;</code>
      * @param value The criterionName to set.
      * @return This builder for chaining.
      */
@@ -851,7 +851,7 @@ private static final long serialVersionUID = 0L;
      * operations.
      * </pre>
      *
-     * <code>string criterion_name = 3;</code>
+     * <code>optional string criterion_name = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearCriterionName() {
@@ -869,7 +869,7 @@ private static final long serialVersionUID = 0L;
      * operations.
      * </pre>
      *
-     * <code>string criterion_name = 3;</code>
+     * <code>optional string criterion_name = 3;</code>
      * @param value The bytes for criterionName to set.
      * @return This builder for chaining.
      */

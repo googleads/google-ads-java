@@ -100,7 +100,7 @@ private static final long serialVersionUID = 0L;
    * The mobile device constant resource name.
    * </pre>
    *
-   * <code>string mobile_device_constant = 2;</code>
+   * <code>optional string mobile_device_constant = 2;</code>
    * @return Whether the mobileDeviceConstant field is set.
    */
   @java.lang.Override
@@ -112,7 +112,7 @@ private static final long serialVersionUID = 0L;
    * The mobile device constant resource name.
    * </pre>
    *
-   * <code>string mobile_device_constant = 2;</code>
+   * <code>optional string mobile_device_constant = 2;</code>
    * @return The mobileDeviceConstant.
    */
   @java.lang.Override
@@ -133,7 +133,7 @@ private static final long serialVersionUID = 0L;
    * The mobile device constant resource name.
    * </pre>
    *
-   * <code>string mobile_device_constant = 2;</code>
+   * <code>optional string mobile_device_constant = 2;</code>
    * @return The bytes for mobileDeviceConstant.
    */
   @java.lang.Override
@@ -476,7 +476,7 @@ private static final long serialVersionUID = 0L;
      * The mobile device constant resource name.
      * </pre>
      *
-     * <code>string mobile_device_constant = 2;</code>
+     * <code>optional string mobile_device_constant = 2;</code>
      * @return Whether the mobileDeviceConstant field is set.
      */
     public boolean hasMobileDeviceConstant() {
@@ -487,7 +487,7 @@ private static final long serialVersionUID = 0L;
      * The mobile device constant resource name.
      * </pre>
      *
-     * <code>string mobile_device_constant = 2;</code>
+     * <code>optional string mobile_device_constant = 2;</code>
      * @return The mobileDeviceConstant.
      */
     public java.lang.String getMobileDeviceConstant() {
@@ -507,7 +507,7 @@ private static final long serialVersionUID = 0L;
      * The mobile device constant resource name.
      * </pre>
      *
-     * <code>string mobile_device_constant = 2;</code>
+     * <code>optional string mobile_device_constant = 2;</code>
      * @return The bytes for mobileDeviceConstant.
      */
     public com.google.protobuf.ByteString
@@ -528,7 +528,7 @@ private static final long serialVersionUID = 0L;
      * The mobile device constant resource name.
      * </pre>
      *
-     * <code>string mobile_device_constant = 2;</code>
+     * <code>optional string mobile_device_constant = 2;</code>
      * @param value The mobileDeviceConstant to set.
      * @return This builder for chaining.
      */
@@ -547,7 +547,7 @@ private static final long serialVersionUID = 0L;
      * The mobile device constant resource name.
      * </pre>
      *
-     * <code>string mobile_device_constant = 2;</code>
+     * <code>optional string mobile_device_constant = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearMobileDeviceConstant() {
@@ -561,7 +561,7 @@ private static final long serialVersionUID = 0L;
      * The mobile device constant resource name.
      * </pre>
      *
-     * <code>string mobile_device_constant = 2;</code>
+     * <code>optional string mobile_device_constant = 2;</code>
      * @param value The bytes for mobileDeviceConstant to set.
      * @return This builder for chaining.
      */

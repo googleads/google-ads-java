@@ -106,7 +106,7 @@ private static final long serialVersionUID = 0L;
    * Google Ads click.
    * </pre>
    *
-   * <code>double external_attribution_credit = 3;</code>
+   * <code>optional double external_attribution_credit = 3;</code>
    * @return Whether the externalAttributionCredit field is set.
    */
   @java.lang.Override
@@ -119,7 +119,7 @@ private static final long serialVersionUID = 0L;
    * Google Ads click.
    * </pre>
    *
-   * <code>double external_attribution_credit = 3;</code>
+   * <code>optional double external_attribution_credit = 3;</code>
    * @return The externalAttributionCredit.
    */
   @java.lang.Override
@@ -134,7 +134,7 @@ private static final long serialVersionUID = 0L;
    * Specifies the attribution model name.
    * </pre>
    *
-   * <code>string external_attribution_model = 4;</code>
+   * <code>optional string external_attribution_model = 4;</code>
    * @return Whether the externalAttributionModel field is set.
    */
   @java.lang.Override
@@ -146,7 +146,7 @@ private static final long serialVersionUID = 0L;
    * Specifies the attribution model name.
    * </pre>
    *
-   * <code>string external_attribution_model = 4;</code>
+   * <code>optional string external_attribution_model = 4;</code>
    * @return The externalAttributionModel.
    */
   @java.lang.Override
@@ -167,7 +167,7 @@ private static final long serialVersionUID = 0L;
    * Specifies the attribution model name.
    * </pre>
    *
-   * <code>string external_attribution_model = 4;</code>
+   * <code>optional string external_attribution_model = 4;</code>
    * @return The bytes for externalAttributionModel.
    */
   @java.lang.Override
@@ -538,7 +538,7 @@ private static final long serialVersionUID = 0L;
      * Google Ads click.
      * </pre>
      *
-     * <code>double external_attribution_credit = 3;</code>
+     * <code>optional double external_attribution_credit = 3;</code>
      * @return Whether the externalAttributionCredit field is set.
      */
     @java.lang.Override
@@ -551,7 +551,7 @@ private static final long serialVersionUID = 0L;
      * Google Ads click.
      * </pre>
      *
-     * <code>double external_attribution_credit = 3;</code>
+     * <code>optional double external_attribution_credit = 3;</code>
      * @return The externalAttributionCredit.
      */
     @java.lang.Override
@@ -564,7 +564,7 @@ private static final long serialVersionUID = 0L;
      * Google Ads click.
      * </pre>
      *
-     * <code>double external_attribution_credit = 3;</code>
+     * <code>optional double external_attribution_credit = 3;</code>
      * @param value The externalAttributionCredit to set.
      * @return This builder for chaining.
      */
@@ -580,7 +580,7 @@ private static final long serialVersionUID = 0L;
      * Google Ads click.
      * </pre>
      *
-     * <code>double external_attribution_credit = 3;</code>
+     * <code>optional double external_attribution_credit = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearExternalAttributionCredit() {
@@ -596,7 +596,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the attribution model name.
      * </pre>
      *
-     * <code>string external_attribution_model = 4;</code>
+     * <code>optional string external_attribution_model = 4;</code>
      * @return Whether the externalAttributionModel field is set.
      */
     public boolean hasExternalAttributionModel() {
@@ -607,7 +607,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the attribution model name.
      * </pre>
      *
-     * <code>string external_attribution_model = 4;</code>
+     * <code>optional string external_attribution_model = 4;</code>
      * @return The externalAttributionModel.
      */
     public java.lang.String getExternalAttributionModel() {
@@ -627,7 +627,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the attribution model name.
      * </pre>
      *
-     * <code>string external_attribution_model = 4;</code>
+     * <code>optional string external_attribution_model = 4;</code>
      * @return The bytes for externalAttributionModel.
      */
     public com.google.protobuf.ByteString
@@ -648,7 +648,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the attribution model name.
      * </pre>
      *
-     * <code>string external_attribution_model = 4;</code>
+     * <code>optional string external_attribution_model = 4;</code>
      * @param value The externalAttributionModel to set.
      * @return This builder for chaining.
      */
@@ -667,7 +667,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the attribution model name.
      * </pre>
      *
-     * <code>string external_attribution_model = 4;</code>
+     * <code>optional string external_attribution_model = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearExternalAttributionModel() {
@@ -681,7 +681,7 @@ private static final long serialVersionUID = 0L;
      * Specifies the attribution model name.
      * </pre>
      *
-     * <code>string external_attribution_model = 4;</code>
+     * <code>optional string external_attribution_model = 4;</code>
      * @param value The bytes for externalAttributionModel to set.
      * @return This builder for chaining.
      */

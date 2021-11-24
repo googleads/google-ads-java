@@ -63,7 +63,7 @@ public interface AdScheduleInfoOrBuilder extends
    * operations.
    * </pre>
    *
-   * <code>int32 start_hour = 6;</code>
+   * <code>optional int32 start_hour = 6;</code>
    * @return Whether the startHour field is set.
    */
   boolean hasStartHour();
@@ -75,7 +75,7 @@ public interface AdScheduleInfoOrBuilder extends
    * operations.
    * </pre>
    *
-   * <code>int32 start_hour = 6;</code>
+   * <code>optional int32 start_hour = 6;</code>
    * @return The startHour.
    */
   int getStartHour();
@@ -88,7 +88,7 @@ public interface AdScheduleInfoOrBuilder extends
    * operations.
    * </pre>
    *
-   * <code>int32 end_hour = 7;</code>
+   * <code>optional int32 end_hour = 7;</code>
    * @return Whether the endHour field is set.
    */
   boolean hasEndHour();
@@ -100,7 +100,7 @@ public interface AdScheduleInfoOrBuilder extends
    * operations.
    * </pre>
    *
-   * <code>int32 end_hour = 7;</code>
+   * <code>optional int32 end_hour = 7;</code>
    * @return The endHour.
    */
   int getEndHour();

@@ -12,7 +12,7 @@ public interface KeywordPlanGeoTargetOrBuilder extends
    * Required. The resource name of the geo target.
    * </pre>
    *
-   * <code>string geo_target_constant = 2 [(.google.api.resource_reference) = { ... }</code>
+   * <code>optional string geo_target_constant = 2 [(.google.api.resource_reference) = { ... }</code>
    * @return Whether the geoTargetConstant field is set.
    */
   boolean hasGeoTargetConstant();
@@ -21,7 +21,7 @@ public interface KeywordPlanGeoTargetOrBuilder extends
    * Required. The resource name of the geo target.
    * </pre>
    *
-   * <code>string geo_target_constant = 2 [(.google.api.resource_reference) = { ... }</code>
+   * <code>optional string geo_target_constant = 2 [(.google.api.resource_reference) = { ... }</code>
    * @return The geoTargetConstant.
    */
   java.lang.String getGeoTargetConstant();
@@ -30,7 +30,7 @@ public interface KeywordPlanGeoTargetOrBuilder extends
    * Required. The resource name of the geo target.
    * </pre>
    *
-   * <code>string geo_target_constant = 2 [(.google.api.resource_reference) = { ... }</code>
+   * <code>optional string geo_target_constant = 2 [(.google.api.resource_reference) = { ... }</code>
    * @return The bytes for geoTargetConstant.
    */
   com.google.protobuf.ByteString

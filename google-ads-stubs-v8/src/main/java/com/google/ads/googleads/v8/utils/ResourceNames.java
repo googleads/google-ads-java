@@ -149,8 +149,8 @@ import com.google.ads.googleads.v8.resources.UserListName;
 import com.google.ads.googleads.v8.resources.UserLocationViewName;
 import com.google.ads.googleads.v8.resources.VideoName;
 import com.google.ads.googleads.v8.resources.WebpageViewName;
-import com.google.ads.googleads.v9.resources.BiddingDataExclusionName;
-import com.google.ads.googleads.v9.resources.BiddingSeasonalityAdjustmentName;
+import com.google.ads.googleads.v8.resources.BiddingDataExclusionName;
+import com.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustmentName;
 
 /**
  * Utilities for generating resource names. Offers several advantages over the utilities in the

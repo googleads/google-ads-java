@@ -12,7 +12,7 @@ public interface ForecastMetricsOrBuilder extends
    * Impressions
    * </pre>
    *
-   * <code>double impressions = 7;</code>
+   * <code>optional double impressions = 7;</code>
    * @return Whether the impressions field is set.
    */
   boolean hasImpressions();
@@ -21,7 +21,7 @@ public interface ForecastMetricsOrBuilder extends
    * Impressions
    * </pre>
    *
-   * <code>double impressions = 7;</code>
+   * <code>optional double impressions = 7;</code>
    * @return The impressions.
    */
   double getImpressions();
@@ -31,7 +31,7 @@ public interface ForecastMetricsOrBuilder extends
    * Ctr
    * </pre>
    *
-   * <code>double ctr = 8;</code>
+   * <code>optional double ctr = 8;</code>
    * @return Whether the ctr field is set.
    */
   boolean hasCtr();
@@ -40,7 +40,7 @@ public interface ForecastMetricsOrBuilder extends
    * Ctr
    * </pre>
    *
-   * <code>double ctr = 8;</code>
+   * <code>optional double ctr = 8;</code>
    * @return The ctr.
    */
   double getCtr();
@@ -50,7 +50,7 @@ public interface ForecastMetricsOrBuilder extends
    * AVG cpc
    * </pre>
    *
-   * <code>int64 average_cpc = 9;</code>
+   * <code>optional int64 average_cpc = 9;</code>
    * @return Whether the averageCpc field is set.
    */
   boolean hasAverageCpc();
@@ -59,7 +59,7 @@ public interface ForecastMetricsOrBuilder extends
    * AVG cpc
    * </pre>
    *
-   * <code>int64 average_cpc = 9;</code>
+   * <code>optional int64 average_cpc = 9;</code>
    * @return The averageCpc.
    */
   long getAverageCpc();
@@ -69,7 +69,7 @@ public interface ForecastMetricsOrBuilder extends
    * Clicks
    * </pre>
    *
-   * <code>double clicks = 10;</code>
+   * <code>optional double clicks = 10;</code>
    * @return Whether the clicks field is set.
    */
   boolean hasClicks();
@@ -78,7 +78,7 @@ public interface ForecastMetricsOrBuilder extends
    * Clicks
    * </pre>
    *
-   * <code>double clicks = 10;</code>
+   * <code>optional double clicks = 10;</code>
    * @return The clicks.
    */
   double getClicks();
@@ -88,7 +88,7 @@ public interface ForecastMetricsOrBuilder extends
    * Cost
    * </pre>
    *
-   * <code>int64 cost_micros = 11;</code>
+   * <code>optional int64 cost_micros = 11;</code>
    * @return Whether the costMicros field is set.
    */
   boolean hasCostMicros();
@@ -97,7 +97,7 @@ public interface ForecastMetricsOrBuilder extends
    * Cost
    * </pre>
    *
-   * <code>int64 cost_micros = 11;</code>
+   * <code>optional int64 cost_micros = 11;</code>
    * @return The costMicros.
    */
   long getCostMicros();

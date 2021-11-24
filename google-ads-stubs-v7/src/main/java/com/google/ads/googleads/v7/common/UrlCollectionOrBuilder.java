@@ -12,7 +12,7 @@ public interface UrlCollectionOrBuilder extends
    * Unique identifier for this UrlCollection instance.
    * </pre>
    *
-   * <code>string url_collection_id = 5;</code>
+   * <code>optional string url_collection_id = 5;</code>
    * @return Whether the urlCollectionId field is set.
    */
   boolean hasUrlCollectionId();
@@ -21,7 +21,7 @@ public interface UrlCollectionOrBuilder extends
    * Unique identifier for this UrlCollection instance.
    * </pre>
    *
-   * <code>string url_collection_id = 5;</code>
+   * <code>optional string url_collection_id = 5;</code>
    * @return The urlCollectionId.
    */
   java.lang.String getUrlCollectionId();
@@ -30,7 +30,7 @@ public interface UrlCollectionOrBuilder extends
    * Unique identifier for this UrlCollection instance.
    * </pre>
    *
-   * <code>string url_collection_id = 5;</code>
+   * <code>optional string url_collection_id = 5;</code>
    * @return The bytes for urlCollectionId.
    */
   com.google.protobuf.ByteString
@@ -123,7 +123,7 @@ public interface UrlCollectionOrBuilder extends
    * URL template for constructing a tracking URL.
    * </pre>
    *
-   * <code>string tracking_url_template = 8;</code>
+   * <code>optional string tracking_url_template = 8;</code>
    * @return Whether the trackingUrlTemplate field is set.
    */
   boolean hasTrackingUrlTemplate();
@@ -132,7 +132,7 @@ public interface UrlCollectionOrBuilder extends
    * URL template for constructing a tracking URL.
    * </pre>
    *
-   * <code>string tracking_url_template = 8;</code>
+   * <code>optional string tracking_url_template = 8;</code>
    * @return The trackingUrlTemplate.
    */
   java.lang.String getTrackingUrlTemplate();
@@ -141,7 +141,7 @@ public interface UrlCollectionOrBuilder extends
    * URL template for constructing a tracking URL.
    * </pre>
    *
-   * <code>string tracking_url_template = 8;</code>
+   * <code>optional string tracking_url_template = 8;</code>
    * @return The bytes for trackingUrlTemplate.
    */
   com.google.protobuf.ByteString

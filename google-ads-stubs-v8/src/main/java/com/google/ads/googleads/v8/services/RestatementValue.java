@@ -111,7 +111,7 @@ private static final long serialVersionUID = 0L;
    * and ignored.
    * </pre>
    *
-   * <code>double adjusted_value = 3;</code>
+   * <code>optional double adjusted_value = 3;</code>
    * @return Whether the adjustedValue field is set.
    */
   @java.lang.Override
@@ -129,7 +129,7 @@ private static final long serialVersionUID = 0L;
    * and ignored.
    * </pre>
    *
-   * <code>double adjusted_value = 3;</code>
+   * <code>optional double adjusted_value = 3;</code>
    * @return The adjustedValue.
    */
   @java.lang.Override
@@ -147,7 +147,7 @@ private static final long serialVersionUID = 0L;
    * code e.g. USD or EUR.
    * </pre>
    *
-   * <code>string currency_code = 4;</code>
+   * <code>optional string currency_code = 4;</code>
    * @return Whether the currencyCode field is set.
    */
   @java.lang.Override
@@ -162,7 +162,7 @@ private static final long serialVersionUID = 0L;
    * code e.g. USD or EUR.
    * </pre>
    *
-   * <code>string currency_code = 4;</code>
+   * <code>optional string currency_code = 4;</code>
    * @return The currencyCode.
    */
   @java.lang.Override
@@ -186,7 +186,7 @@ private static final long serialVersionUID = 0L;
    * code e.g. USD or EUR.
    * </pre>
    *
-   * <code>string currency_code = 4;</code>
+   * <code>optional string currency_code = 4;</code>
    * @return The bytes for currencyCode.
    */
   @java.lang.Override
@@ -562,7 +562,7 @@ private static final long serialVersionUID = 0L;
      * and ignored.
      * </pre>
      *
-     * <code>double adjusted_value = 3;</code>
+     * <code>optional double adjusted_value = 3;</code>
      * @return Whether the adjustedValue field is set.
      */
     @java.lang.Override
@@ -580,7 +580,7 @@ private static final long serialVersionUID = 0L;
      * and ignored.
      * </pre>
      *
-     * <code>double adjusted_value = 3;</code>
+     * <code>optional double adjusted_value = 3;</code>
      * @return The adjustedValue.
      */
     @java.lang.Override
@@ -598,7 +598,7 @@ private static final long serialVersionUID = 0L;
      * and ignored.
      * </pre>
      *
-     * <code>double adjusted_value = 3;</code>
+     * <code>optional double adjusted_value = 3;</code>
      * @param value The adjustedValue to set.
      * @return This builder for chaining.
      */
@@ -619,7 +619,7 @@ private static final long serialVersionUID = 0L;
      * and ignored.
      * </pre>
      *
-     * <code>double adjusted_value = 3;</code>
+     * <code>optional double adjusted_value = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearAdjustedValue() {
@@ -638,7 +638,7 @@ private static final long serialVersionUID = 0L;
      * code e.g. USD or EUR.
      * </pre>
      *
-     * <code>string currency_code = 4;</code>
+     * <code>optional string currency_code = 4;</code>
      * @return Whether the currencyCode field is set.
      */
     public boolean hasCurrencyCode() {
@@ -652,7 +652,7 @@ private static final long serialVersionUID = 0L;
      * code e.g. USD or EUR.
      * </pre>
      *
-     * <code>string currency_code = 4;</code>
+     * <code>optional string currency_code = 4;</code>
      * @return The currencyCode.
      */
     public java.lang.String getCurrencyCode() {
@@ -675,7 +675,7 @@ private static final long serialVersionUID = 0L;
      * code e.g. USD or EUR.
      * </pre>
      *
-     * <code>string currency_code = 4;</code>
+     * <code>optional string currency_code = 4;</code>
      * @return The bytes for currencyCode.
      */
     public com.google.protobuf.ByteString
@@ -699,7 +699,7 @@ private static final long serialVersionUID = 0L;
      * code e.g. USD or EUR.
      * </pre>
      *
-     * <code>string currency_code = 4;</code>
+     * <code>optional string currency_code = 4;</code>
      * @param value The currencyCode to set.
      * @return This builder for chaining.
      */
@@ -721,7 +721,7 @@ private static final long serialVersionUID = 0L;
      * code e.g. USD or EUR.
      * </pre>
      *
-     * <code>string currency_code = 4;</code>
+     * <code>optional string currency_code = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearCurrencyCode() {
@@ -738,7 +738,7 @@ private static final long serialVersionUID = 0L;
      * code e.g. USD or EUR.
      * </pre>
      *
-     * <code>string currency_code = 4;</code>
+     * <code>optional string currency_code = 4;</code>
      * @param value The bytes for currencyCode to set.
      * @return This builder for chaining.
      */

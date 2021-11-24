@@ -108,7 +108,7 @@ private static final long serialVersionUID = 0L;
    * Unique ID of the violated policy.
    * </pre>
    *
-   * <code>string policy_name = 3;</code>
+   * <code>optional string policy_name = 3;</code>
    * @return Whether the policyName field is set.
    */
   @java.lang.Override
@@ -120,7 +120,7 @@ private static final long serialVersionUID = 0L;
    * Unique ID of the violated policy.
    * </pre>
    *
-   * <code>string policy_name = 3;</code>
+   * <code>optional string policy_name = 3;</code>
    * @return The policyName.
    */
   @java.lang.Override
@@ -141,7 +141,7 @@ private static final long serialVersionUID = 0L;
    * Unique ID of the violated policy.
    * </pre>
    *
-   * <code>string policy_name = 3;</code>
+   * <code>optional string policy_name = 3;</code>
    * @return The bytes for policyName.
    */
   @java.lang.Override
@@ -170,7 +170,7 @@ private static final long serialVersionUID = 0L;
    * Must be specified for ad exemptions.
    * </pre>
    *
-   * <code>string violating_text = 4;</code>
+   * <code>optional string violating_text = 4;</code>
    * @return Whether the violatingText field is set.
    */
   @java.lang.Override
@@ -186,7 +186,7 @@ private static final long serialVersionUID = 0L;
    * Must be specified for ad exemptions.
    * </pre>
    *
-   * <code>string violating_text = 4;</code>
+   * <code>optional string violating_text = 4;</code>
    * @return The violatingText.
    */
   @java.lang.Override
@@ -211,7 +211,7 @@ private static final long serialVersionUID = 0L;
    * Must be specified for ad exemptions.
    * </pre>
    *
-   * <code>string violating_text = 4;</code>
+   * <code>optional string violating_text = 4;</code>
    * @return The bytes for violatingText.
    */
   @java.lang.Override
@@ -581,7 +581,7 @@ private static final long serialVersionUID = 0L;
      * Unique ID of the violated policy.
      * </pre>
      *
-     * <code>string policy_name = 3;</code>
+     * <code>optional string policy_name = 3;</code>
      * @return Whether the policyName field is set.
      */
     public boolean hasPolicyName() {
@@ -592,7 +592,7 @@ private static final long serialVersionUID = 0L;
      * Unique ID of the violated policy.
      * </pre>
      *
-     * <code>string policy_name = 3;</code>
+     * <code>optional string policy_name = 3;</code>
      * @return The policyName.
      */
     public java.lang.String getPolicyName() {
@@ -612,7 +612,7 @@ private static final long serialVersionUID = 0L;
      * Unique ID of the violated policy.
      * </pre>
      *
-     * <code>string policy_name = 3;</code>
+     * <code>optional string policy_name = 3;</code>
      * @return The bytes for policyName.
      */
     public com.google.protobuf.ByteString
@@ -633,7 +633,7 @@ private static final long serialVersionUID = 0L;
      * Unique ID of the violated policy.
      * </pre>
      *
-     * <code>string policy_name = 3;</code>
+     * <code>optional string policy_name = 3;</code>
      * @param value The policyName to set.
      * @return This builder for chaining.
      */
@@ -652,7 +652,7 @@ private static final long serialVersionUID = 0L;
      * Unique ID of the violated policy.
      * </pre>
      *
-     * <code>string policy_name = 3;</code>
+     * <code>optional string policy_name = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearPolicyName() {
@@ -666,7 +666,7 @@ private static final long serialVersionUID = 0L;
      * Unique ID of the violated policy.
      * </pre>
      *
-     * <code>string policy_name = 3;</code>
+     * <code>optional string policy_name = 3;</code>
      * @param value The bytes for policyName to set.
      * @return This builder for chaining.
      */
@@ -692,7 +692,7 @@ private static final long serialVersionUID = 0L;
      * Must be specified for ad exemptions.
      * </pre>
      *
-     * <code>string violating_text = 4;</code>
+     * <code>optional string violating_text = 4;</code>
      * @return Whether the violatingText field is set.
      */
     public boolean hasViolatingText() {
@@ -707,7 +707,7 @@ private static final long serialVersionUID = 0L;
      * Must be specified for ad exemptions.
      * </pre>
      *
-     * <code>string violating_text = 4;</code>
+     * <code>optional string violating_text = 4;</code>
      * @return The violatingText.
      */
     public java.lang.String getViolatingText() {
@@ -731,7 +731,7 @@ private static final long serialVersionUID = 0L;
      * Must be specified for ad exemptions.
      * </pre>
      *
-     * <code>string violating_text = 4;</code>
+     * <code>optional string violating_text = 4;</code>
      * @return The bytes for violatingText.
      */
     public com.google.protobuf.ByteString
@@ -756,7 +756,7 @@ private static final long serialVersionUID = 0L;
      * Must be specified for ad exemptions.
      * </pre>
      *
-     * <code>string violating_text = 4;</code>
+     * <code>optional string violating_text = 4;</code>
      * @param value The violatingText to set.
      * @return This builder for chaining.
      */
@@ -779,7 +779,7 @@ private static final long serialVersionUID = 0L;
      * Must be specified for ad exemptions.
      * </pre>
      *
-     * <code>string violating_text = 4;</code>
+     * <code>optional string violating_text = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearViolatingText() {
@@ -797,7 +797,7 @@ private static final long serialVersionUID = 0L;
      * Must be specified for ad exemptions.
      * </pre>
      *
-     * <code>string violating_text = 4;</code>
+     * <code>optional string violating_text = 4;</code>
      * @param value The bytes for violatingText to set.
      * @return This builder for chaining.
      */

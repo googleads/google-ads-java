@@ -310,7 +310,7 @@ private static final long serialVersionUID = 0L;
    * This field is required.
    * </pre>
    *
-   * <code>string promotion_target = 16;</code>
+   * <code>optional string promotion_target = 16;</code>
    * @return Whether the promotionTarget field is set.
    */
   @java.lang.Override
@@ -323,7 +323,7 @@ private static final long serialVersionUID = 0L;
    * This field is required.
    * </pre>
    *
-   * <code>string promotion_target = 16;</code>
+   * <code>optional string promotion_target = 16;</code>
    * @return The promotionTarget.
    */
   @java.lang.Override
@@ -345,7 +345,7 @@ private static final long serialVersionUID = 0L;
    * This field is required.
    * </pre>
    *
-   * <code>string promotion_target = 16;</code>
+   * <code>optional string promotion_target = 16;</code>
    * @return The bytes for promotionTarget.
    */
   @java.lang.Override
@@ -397,7 +397,7 @@ private static final long serialVersionUID = 0L;
    * Start date of when the promotion is eligible to be redeemed.
    * </pre>
    *
-   * <code>string promotion_start_date = 19;</code>
+   * <code>optional string promotion_start_date = 19;</code>
    * @return Whether the promotionStartDate field is set.
    */
   @java.lang.Override
@@ -409,7 +409,7 @@ private static final long serialVersionUID = 0L;
    * Start date of when the promotion is eligible to be redeemed.
    * </pre>
    *
-   * <code>string promotion_start_date = 19;</code>
+   * <code>optional string promotion_start_date = 19;</code>
    * @return The promotionStartDate.
    */
   @java.lang.Override
@@ -430,7 +430,7 @@ private static final long serialVersionUID = 0L;
    * Start date of when the promotion is eligible to be redeemed.
    * </pre>
    *
-   * <code>string promotion_start_date = 19;</code>
+   * <code>optional string promotion_start_date = 19;</code>
    * @return The bytes for promotionStartDate.
    */
   @java.lang.Override
@@ -455,7 +455,7 @@ private static final long serialVersionUID = 0L;
    * Last date when the promotion is eligible to be redeemed.
    * </pre>
    *
-   * <code>string promotion_end_date = 20;</code>
+   * <code>optional string promotion_end_date = 20;</code>
    * @return Whether the promotionEndDate field is set.
    */
   @java.lang.Override
@@ -467,7 +467,7 @@ private static final long serialVersionUID = 0L;
    * Last date when the promotion is eligible to be redeemed.
    * </pre>
    *
-   * <code>string promotion_end_date = 20;</code>
+   * <code>optional string promotion_end_date = 20;</code>
    * @return The promotionEndDate.
    */
   @java.lang.Override
@@ -488,7 +488,7 @@ private static final long serialVersionUID = 0L;
    * Last date when the promotion is eligible to be redeemed.
    * </pre>
    *
-   * <code>string promotion_end_date = 20;</code>
+   * <code>optional string promotion_end_date = 20;</code>
    * @return The bytes for promotionEndDate.
    */
   @java.lang.Override
@@ -650,7 +650,7 @@ private static final long serialVersionUID = 0L;
    * URL template for constructing a tracking URL.
    * </pre>
    *
-   * <code>string tracking_url_template = 23;</code>
+   * <code>optional string tracking_url_template = 23;</code>
    * @return Whether the trackingUrlTemplate field is set.
    */
   @java.lang.Override
@@ -662,7 +662,7 @@ private static final long serialVersionUID = 0L;
    * URL template for constructing a tracking URL.
    * </pre>
    *
-   * <code>string tracking_url_template = 23;</code>
+   * <code>optional string tracking_url_template = 23;</code>
    * @return The trackingUrlTemplate.
    */
   @java.lang.Override
@@ -683,7 +683,7 @@ private static final long serialVersionUID = 0L;
    * URL template for constructing a tracking URL.
    * </pre>
    *
-   * <code>string tracking_url_template = 23;</code>
+   * <code>optional string tracking_url_template = 23;</code>
    * @return The bytes for trackingUrlTemplate.
    */
   @java.lang.Override
@@ -774,7 +774,7 @@ private static final long serialVersionUID = 0L;
    * tracking.
    * </pre>
    *
-   * <code>string final_url_suffix = 24;</code>
+   * <code>optional string final_url_suffix = 24;</code>
    * @return Whether the finalUrlSuffix field is set.
    */
   @java.lang.Override
@@ -787,7 +787,7 @@ private static final long serialVersionUID = 0L;
    * tracking.
    * </pre>
    *
-   * <code>string final_url_suffix = 24;</code>
+   * <code>optional string final_url_suffix = 24;</code>
    * @return The finalUrlSuffix.
    */
   @java.lang.Override
@@ -809,7 +809,7 @@ private static final long serialVersionUID = 0L;
    * tracking.
    * </pre>
    *
-   * <code>string final_url_suffix = 24;</code>
+   * <code>optional string final_url_suffix = 24;</code>
    * @return The bytes for finalUrlSuffix.
    */
   @java.lang.Override
@@ -835,7 +835,7 @@ private static final long serialVersionUID = 0L;
    * Represented as BCP 47 language tag.
    * </pre>
    *
-   * <code>string language_code = 25;</code>
+   * <code>optional string language_code = 25;</code>
    * @return Whether the languageCode field is set.
    */
   @java.lang.Override
@@ -848,7 +848,7 @@ private static final long serialVersionUID = 0L;
    * Represented as BCP 47 language tag.
    * </pre>
    *
-   * <code>string language_code = 25;</code>
+   * <code>optional string language_code = 25;</code>
    * @return The languageCode.
    */
   @java.lang.Override
@@ -870,7 +870,7 @@ private static final long serialVersionUID = 0L;
    * Represented as BCP 47 language tag.
    * </pre>
    *
-   * <code>string language_code = 25;</code>
+   * <code>optional string language_code = 25;</code>
    * @return The bytes for languageCode.
    */
   @java.lang.Override
@@ -1852,7 +1852,7 @@ private static final long serialVersionUID = 0L;
      * This field is required.
      * </pre>
      *
-     * <code>string promotion_target = 16;</code>
+     * <code>optional string promotion_target = 16;</code>
      * @return Whether the promotionTarget field is set.
      */
     public boolean hasPromotionTarget() {
@@ -1864,7 +1864,7 @@ private static final long serialVersionUID = 0L;
      * This field is required.
      * </pre>
      *
-     * <code>string promotion_target = 16;</code>
+     * <code>optional string promotion_target = 16;</code>
      * @return The promotionTarget.
      */
     public java.lang.String getPromotionTarget() {
@@ -1885,7 +1885,7 @@ private static final long serialVersionUID = 0L;
      * This field is required.
      * </pre>
      *
-     * <code>string promotion_target = 16;</code>
+     * <code>optional string promotion_target = 16;</code>
      * @return The bytes for promotionTarget.
      */
     public com.google.protobuf.ByteString
@@ -1907,7 +1907,7 @@ private static final long serialVersionUID = 0L;
      * This field is required.
      * </pre>
      *
-     * <code>string promotion_target = 16;</code>
+     * <code>optional string promotion_target = 16;</code>
      * @param value The promotionTarget to set.
      * @return This builder for chaining.
      */
@@ -1927,7 +1927,7 @@ private static final long serialVersionUID = 0L;
      * This field is required.
      * </pre>
      *
-     * <code>string promotion_target = 16;</code>
+     * <code>optional string promotion_target = 16;</code>
      * @return This builder for chaining.
      */
     public Builder clearPromotionTarget() {
@@ -1942,7 +1942,7 @@ private static final long serialVersionUID = 0L;
      * This field is required.
      * </pre>
      *
-     * <code>string promotion_target = 16;</code>
+     * <code>optional string promotion_target = 16;</code>
      * @param value The bytes for promotionTarget to set.
      * @return This builder for chaining.
      */
@@ -2038,7 +2038,7 @@ private static final long serialVersionUID = 0L;
      * Start date of when the promotion is eligible to be redeemed.
      * </pre>
      *
-     * <code>string promotion_start_date = 19;</code>
+     * <code>optional string promotion_start_date = 19;</code>
      * @return Whether the promotionStartDate field is set.
      */
     public boolean hasPromotionStartDate() {
@@ -2049,7 +2049,7 @@ private static final long serialVersionUID = 0L;
      * Start date of when the promotion is eligible to be redeemed.
      * </pre>
      *
-     * <code>string promotion_start_date = 19;</code>
+     * <code>optional string promotion_start_date = 19;</code>
      * @return The promotionStartDate.
      */
     public java.lang.String getPromotionStartDate() {
@@ -2069,7 +2069,7 @@ private static final long serialVersionUID = 0L;
      * Start date of when the promotion is eligible to be redeemed.
      * </pre>
      *
-     * <code>string promotion_start_date = 19;</code>
+     * <code>optional string promotion_start_date = 19;</code>
      * @return The bytes for promotionStartDate.
      */
     public com.google.protobuf.ByteString
@@ -2090,7 +2090,7 @@ private static final long serialVersionUID = 0L;
      * Start date of when the promotion is eligible to be redeemed.
      * </pre>
      *
-     * <code>string promotion_start_date = 19;</code>
+     * <code>optional string promotion_start_date = 19;</code>
      * @param value The promotionStartDate to set.
      * @return This builder for chaining.
      */
@@ -2109,7 +2109,7 @@ private static final long serialVersionUID = 0L;
      * Start date of when the promotion is eligible to be redeemed.
      * </pre>
      *
-     * <code>string promotion_start_date = 19;</code>
+     * <code>optional string promotion_start_date = 19;</code>
      * @return This builder for chaining.
      */
     public Builder clearPromotionStartDate() {
@@ -2123,7 +2123,7 @@ private static final long serialVersionUID = 0L;
      * Start date of when the promotion is eligible to be redeemed.
      * </pre>
      *
-     * <code>string promotion_start_date = 19;</code>
+     * <code>optional string promotion_start_date = 19;</code>
      * @param value The bytes for promotionStartDate to set.
      * @return This builder for chaining.
      */
@@ -2145,7 +2145,7 @@ private static final long serialVersionUID = 0L;
      * Last date when the promotion is eligible to be redeemed.
      * </pre>
      *
-     * <code>string promotion_end_date = 20;</code>
+     * <code>optional string promotion_end_date = 20;</code>
      * @return Whether the promotionEndDate field is set.
      */
     public boolean hasPromotionEndDate() {
@@ -2156,7 +2156,7 @@ private static final long serialVersionUID = 0L;
      * Last date when the promotion is eligible to be redeemed.
      * </pre>
      *
-     * <code>string promotion_end_date = 20;</code>
+     * <code>optional string promotion_end_date = 20;</code>
      * @return The promotionEndDate.
      */
     public java.lang.String getPromotionEndDate() {
@@ -2176,7 +2176,7 @@ private static final long serialVersionUID = 0L;
      * Last date when the promotion is eligible to be redeemed.
      * </pre>
      *
-     * <code>string promotion_end_date = 20;</code>
+     * <code>optional string promotion_end_date = 20;</code>
      * @return The bytes for promotionEndDate.
      */
     public com.google.protobuf.ByteString
@@ -2197,7 +2197,7 @@ private static final long serialVersionUID = 0L;
      * Last date when the promotion is eligible to be redeemed.
      * </pre>
      *
-     * <code>string promotion_end_date = 20;</code>
+     * <code>optional string promotion_end_date = 20;</code>
      * @param value The promotionEndDate to set.
      * @return This builder for chaining.
      */
@@ -2216,7 +2216,7 @@ private static final long serialVersionUID = 0L;
      * Last date when the promotion is eligible to be redeemed.
      * </pre>
      *
-     * <code>string promotion_end_date = 20;</code>
+     * <code>optional string promotion_end_date = 20;</code>
      * @return This builder for chaining.
      */
     public Builder clearPromotionEndDate() {
@@ -2230,7 +2230,7 @@ private static final long serialVersionUID = 0L;
      * Last date when the promotion is eligible to be redeemed.
      * </pre>
      *
-     * <code>string promotion_end_date = 20;</code>
+     * <code>optional string promotion_end_date = 20;</code>
      * @param value The bytes for promotionEndDate to set.
      * @return This builder for chaining.
      */
@@ -2637,7 +2637,7 @@ private static final long serialVersionUID = 0L;
      * URL template for constructing a tracking URL.
      * </pre>
      *
-     * <code>string tracking_url_template = 23;</code>
+     * <code>optional string tracking_url_template = 23;</code>
      * @return Whether the trackingUrlTemplate field is set.
      */
     public boolean hasTrackingUrlTemplate() {
@@ -2648,7 +2648,7 @@ private static final long serialVersionUID = 0L;
      * URL template for constructing a tracking URL.
      * </pre>
      *
-     * <code>string tracking_url_template = 23;</code>
+     * <code>optional string tracking_url_template = 23;</code>
      * @return The trackingUrlTemplate.
      */
     public java.lang.String getTrackingUrlTemplate() {
@@ -2668,7 +2668,7 @@ private static final long serialVersionUID = 0L;
      * URL template for constructing a tracking URL.
      * </pre>
      *
-     * <code>string tracking_url_template = 23;</code>
+     * <code>optional string tracking_url_template = 23;</code>
      * @return The bytes for trackingUrlTemplate.
      */
     public com.google.protobuf.ByteString
@@ -2689,7 +2689,7 @@ private static final long serialVersionUID = 0L;
      * URL template for constructing a tracking URL.
      * </pre>
      *
-     * <code>string tracking_url_template = 23;</code>
+     * <code>optional string tracking_url_template = 23;</code>
      * @param value The trackingUrlTemplate to set.
      * @return This builder for chaining.
      */
@@ -2708,7 +2708,7 @@ private static final long serialVersionUID = 0L;
      * URL template for constructing a tracking URL.
      * </pre>
      *
-     * <code>string tracking_url_template = 23;</code>
+     * <code>optional string tracking_url_template = 23;</code>
      * @return This builder for chaining.
      */
     public Builder clearTrackingUrlTemplate() {
@@ -2722,7 +2722,7 @@ private static final long serialVersionUID = 0L;
      * URL template for constructing a tracking URL.
      * </pre>
      *
-     * <code>string tracking_url_template = 23;</code>
+     * <code>optional string tracking_url_template = 23;</code>
      * @param value The bytes for trackingUrlTemplate to set.
      * @return This builder for chaining.
      */
@@ -3075,7 +3075,7 @@ private static final long serialVersionUID = 0L;
      * tracking.
      * </pre>
      *
-     * <code>string final_url_suffix = 24;</code>
+     * <code>optional string final_url_suffix = 24;</code>
      * @return Whether the finalUrlSuffix field is set.
      */
     public boolean hasFinalUrlSuffix() {
@@ -3087,7 +3087,7 @@ private static final long serialVersionUID = 0L;
      * tracking.
      * </pre>
      *
-     * <code>string final_url_suffix = 24;</code>
+     * <code>optional string final_url_suffix = 24;</code>
      * @return The finalUrlSuffix.
      */
     public java.lang.String getFinalUrlSuffix() {
@@ -3108,7 +3108,7 @@ private static final long serialVersionUID = 0L;
      * tracking.
      * </pre>
      *
-     * <code>string final_url_suffix = 24;</code>
+     * <code>optional string final_url_suffix = 24;</code>
      * @return The bytes for finalUrlSuffix.
      */
     public com.google.protobuf.ByteString
@@ -3130,7 +3130,7 @@ private static final long serialVersionUID = 0L;
      * tracking.
      * </pre>
      *
-     * <code>string final_url_suffix = 24;</code>
+     * <code>optional string final_url_suffix = 24;</code>
      * @param value The finalUrlSuffix to set.
      * @return This builder for chaining.
      */
@@ -3150,7 +3150,7 @@ private static final long serialVersionUID = 0L;
      * tracking.
      * </pre>
      *
-     * <code>string final_url_suffix = 24;</code>
+     * <code>optional string final_url_suffix = 24;</code>
      * @return This builder for chaining.
      */
     public Builder clearFinalUrlSuffix() {
@@ -3165,7 +3165,7 @@ private static final long serialVersionUID = 0L;
      * tracking.
      * </pre>
      *
-     * <code>string final_url_suffix = 24;</code>
+     * <code>optional string final_url_suffix = 24;</code>
      * @param value The bytes for finalUrlSuffix to set.
      * @return This builder for chaining.
      */
@@ -3188,7 +3188,7 @@ private static final long serialVersionUID = 0L;
      * Represented as BCP 47 language tag.
      * </pre>
      *
-     * <code>string language_code = 25;</code>
+     * <code>optional string language_code = 25;</code>
      * @return Whether the languageCode field is set.
      */
     public boolean hasLanguageCode() {
@@ -3200,7 +3200,7 @@ private static final long serialVersionUID = 0L;
      * Represented as BCP 47 language tag.
      * </pre>
      *
-     * <code>string language_code = 25;</code>
+     * <code>optional string language_code = 25;</code>
      * @return The languageCode.
      */
     public java.lang.String getLanguageCode() {
@@ -3221,7 +3221,7 @@ private static final long serialVersionUID = 0L;
      * Represented as BCP 47 language tag.
      * </pre>
      *
-     * <code>string language_code = 25;</code>
+     * <code>optional string language_code = 25;</code>
      * @return The bytes for languageCode.
      */
     public com.google.protobuf.ByteString
@@ -3243,7 +3243,7 @@ private static final long serialVersionUID = 0L;
      * Represented as BCP 47 language tag.
      * </pre>
      *
-     * <code>string language_code = 25;</code>
+     * <code>optional string language_code = 25;</code>
      * @param value The languageCode to set.
      * @return This builder for chaining.
      */
@@ -3263,7 +3263,7 @@ private static final long serialVersionUID = 0L;
      * Represented as BCP 47 language tag.
      * </pre>
      *
-     * <code>string language_code = 25;</code>
+     * <code>optional string language_code = 25;</code>
      * @return This builder for chaining.
      */
     public Builder clearLanguageCode() {
@@ -3278,7 +3278,7 @@ private static final long serialVersionUID = 0L;
      * Represented as BCP 47 language tag.
      * </pre>
      *
-     * <code>string language_code = 25;</code>
+     * <code>optional string language_code = 25;</code>
      * @param value The bytes for languageCode to set.
      * @return This builder for chaining.
      */

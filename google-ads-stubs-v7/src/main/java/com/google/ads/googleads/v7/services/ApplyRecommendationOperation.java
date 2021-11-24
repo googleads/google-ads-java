@@ -242,7 +242,7 @@ private static final long serialVersionUID = 0L;
      * field.
      * </pre>
      *
-     * <code>int64 new_budget_amount_micros = 2;</code>
+     * <code>optional int64 new_budget_amount_micros = 2;</code>
      * @return Whether the newBudgetAmountMicros field is set.
      */
     boolean hasNewBudgetAmountMicros();
@@ -252,7 +252,7 @@ private static final long serialVersionUID = 0L;
      * field.
      * </pre>
      *
-     * <code>int64 new_budget_amount_micros = 2;</code>
+     * <code>optional int64 new_budget_amount_micros = 2;</code>
      * @return The newBudgetAmountMicros.
      */
     long getNewBudgetAmountMicros();
@@ -353,7 +353,7 @@ private static final long serialVersionUID = 0L;
      * field.
      * </pre>
      *
-     * <code>int64 new_budget_amount_micros = 2;</code>
+     * <code>optional int64 new_budget_amount_micros = 2;</code>
      * @return Whether the newBudgetAmountMicros field is set.
      */
     @java.lang.Override
@@ -366,7 +366,7 @@ private static final long serialVersionUID = 0L;
      * field.
      * </pre>
      *
-     * <code>int64 new_budget_amount_micros = 2;</code>
+     * <code>optional int64 new_budget_amount_micros = 2;</code>
      * @return The newBudgetAmountMicros.
      */
     @java.lang.Override
@@ -700,7 +700,7 @@ private static final long serialVersionUID = 0L;
        * field.
        * </pre>
        *
-       * <code>int64 new_budget_amount_micros = 2;</code>
+       * <code>optional int64 new_budget_amount_micros = 2;</code>
        * @return Whether the newBudgetAmountMicros field is set.
        */
       @java.lang.Override
@@ -713,7 +713,7 @@ private static final long serialVersionUID = 0L;
        * field.
        * </pre>
        *
-       * <code>int64 new_budget_amount_micros = 2;</code>
+       * <code>optional int64 new_budget_amount_micros = 2;</code>
        * @return The newBudgetAmountMicros.
        */
       @java.lang.Override
@@ -726,7 +726,7 @@ private static final long serialVersionUID = 0L;
        * field.
        * </pre>
        *
-       * <code>int64 new_budget_amount_micros = 2;</code>
+       * <code>optional int64 new_budget_amount_micros = 2;</code>
        * @param value The newBudgetAmountMicros to set.
        * @return This builder for chaining.
        */
@@ -742,7 +742,7 @@ private static final long serialVersionUID = 0L;
        * field.
        * </pre>
        *
-       * <code>int64 new_budget_amount_micros = 2;</code>
+       * <code>optional int64 new_budget_amount_micros = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearNewBudgetAmountMicros() {
@@ -1517,7 +1517,7 @@ private static final long serialVersionUID = 0L;
      * The ad group resource to add keyword to. This is a required field.
      * </pre>
      *
-     * <code>string ad_group = 4;</code>
+     * <code>optional string ad_group = 4;</code>
      * @return Whether the adGroup field is set.
      */
     boolean hasAdGroup();
@@ -1526,7 +1526,7 @@ private static final long serialVersionUID = 0L;
      * The ad group resource to add keyword to. This is a required field.
      * </pre>
      *
-     * <code>string ad_group = 4;</code>
+     * <code>optional string ad_group = 4;</code>
      * @return The adGroup.
      */
     java.lang.String getAdGroup();
@@ -1535,7 +1535,7 @@ private static final long serialVersionUID = 0L;
      * The ad group resource to add keyword to. This is a required field.
      * </pre>
      *
-     * <code>string ad_group = 4;</code>
+     * <code>optional string ad_group = 4;</code>
      * @return The bytes for adGroup.
      */
     com.google.protobuf.ByteString
@@ -1566,7 +1566,7 @@ private static final long serialVersionUID = 0L;
      * bid based on bidding strategy used by target ad group.
      * </pre>
      *
-     * <code>int64 cpc_bid_micros = 5;</code>
+     * <code>optional int64 cpc_bid_micros = 5;</code>
      * @return Whether the cpcBidMicros field is set.
      */
     boolean hasCpcBidMicros();
@@ -1576,7 +1576,7 @@ private static final long serialVersionUID = 0L;
      * bid based on bidding strategy used by target ad group.
      * </pre>
      *
-     * <code>int64 cpc_bid_micros = 5;</code>
+     * <code>optional int64 cpc_bid_micros = 5;</code>
      * @return The cpcBidMicros.
      */
     long getCpcBidMicros();
@@ -1690,7 +1690,7 @@ private static final long serialVersionUID = 0L;
      * The ad group resource to add keyword to. This is a required field.
      * </pre>
      *
-     * <code>string ad_group = 4;</code>
+     * <code>optional string ad_group = 4;</code>
      * @return Whether the adGroup field is set.
      */
     @java.lang.Override
@@ -1702,7 +1702,7 @@ private static final long serialVersionUID = 0L;
      * The ad group resource to add keyword to. This is a required field.
      * </pre>
      *
-     * <code>string ad_group = 4;</code>
+     * <code>optional string ad_group = 4;</code>
      * @return The adGroup.
      */
     @java.lang.Override
@@ -1723,7 +1723,7 @@ private static final long serialVersionUID = 0L;
      * The ad group resource to add keyword to. This is a required field.
      * </pre>
      *
-     * <code>string ad_group = 4;</code>
+     * <code>optional string ad_group = 4;</code>
      * @return The bytes for adGroup.
      */
     @java.lang.Override
@@ -1776,7 +1776,7 @@ private static final long serialVersionUID = 0L;
      * bid based on bidding strategy used by target ad group.
      * </pre>
      *
-     * <code>int64 cpc_bid_micros = 5;</code>
+     * <code>optional int64 cpc_bid_micros = 5;</code>
      * @return Whether the cpcBidMicros field is set.
      */
     @java.lang.Override
@@ -1789,7 +1789,7 @@ private static final long serialVersionUID = 0L;
      * bid based on bidding strategy used by target ad group.
      * </pre>
      *
-     * <code>int64 cpc_bid_micros = 5;</code>
+     * <code>optional int64 cpc_bid_micros = 5;</code>
      * @return The cpcBidMicros.
      */
     @java.lang.Override
@@ -2164,7 +2164,7 @@ private static final long serialVersionUID = 0L;
        * The ad group resource to add keyword to. This is a required field.
        * </pre>
        *
-       * <code>string ad_group = 4;</code>
+       * <code>optional string ad_group = 4;</code>
        * @return Whether the adGroup field is set.
        */
       public boolean hasAdGroup() {
@@ -2175,7 +2175,7 @@ private static final long serialVersionUID = 0L;
        * The ad group resource to add keyword to. This is a required field.
        * </pre>
        *
-       * <code>string ad_group = 4;</code>
+       * <code>optional string ad_group = 4;</code>
        * @return The adGroup.
        */
       public java.lang.String getAdGroup() {
@@ -2195,7 +2195,7 @@ private static final long serialVersionUID = 0L;
        * The ad group resource to add keyword to. This is a required field.
        * </pre>
        *
-       * <code>string ad_group = 4;</code>
+       * <code>optional string ad_group = 4;</code>
        * @return The bytes for adGroup.
        */
       public com.google.protobuf.ByteString
@@ -2216,7 +2216,7 @@ private static final long serialVersionUID = 0L;
        * The ad group resource to add keyword to. This is a required field.
        * </pre>
        *
-       * <code>string ad_group = 4;</code>
+       * <code>optional string ad_group = 4;</code>
        * @param value The adGroup to set.
        * @return This builder for chaining.
        */
@@ -2235,7 +2235,7 @@ private static final long serialVersionUID = 0L;
        * The ad group resource to add keyword to. This is a required field.
        * </pre>
        *
-       * <code>string ad_group = 4;</code>
+       * <code>optional string ad_group = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearAdGroup() {
@@ -2249,7 +2249,7 @@ private static final long serialVersionUID = 0L;
        * The ad group resource to add keyword to. This is a required field.
        * </pre>
        *
-       * <code>string ad_group = 4;</code>
+       * <code>optional string ad_group = 4;</code>
        * @param value The bytes for adGroup to set.
        * @return This builder for chaining.
        */
@@ -2346,7 +2346,7 @@ private static final long serialVersionUID = 0L;
        * bid based on bidding strategy used by target ad group.
        * </pre>
        *
-       * <code>int64 cpc_bid_micros = 5;</code>
+       * <code>optional int64 cpc_bid_micros = 5;</code>
        * @return Whether the cpcBidMicros field is set.
        */
       @java.lang.Override
@@ -2359,7 +2359,7 @@ private static final long serialVersionUID = 0L;
        * bid based on bidding strategy used by target ad group.
        * </pre>
        *
-       * <code>int64 cpc_bid_micros = 5;</code>
+       * <code>optional int64 cpc_bid_micros = 5;</code>
        * @return The cpcBidMicros.
        */
       @java.lang.Override
@@ -2372,7 +2372,7 @@ private static final long serialVersionUID = 0L;
        * bid based on bidding strategy used by target ad group.
        * </pre>
        *
-       * <code>int64 cpc_bid_micros = 5;</code>
+       * <code>optional int64 cpc_bid_micros = 5;</code>
        * @param value The cpcBidMicros to set.
        * @return This builder for chaining.
        */
@@ -2388,7 +2388,7 @@ private static final long serialVersionUID = 0L;
        * bid based on bidding strategy used by target ad group.
        * </pre>
        *
-       * <code>int64 cpc_bid_micros = 5;</code>
+       * <code>optional int64 cpc_bid_micros = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearCpcBidMicros() {
@@ -2460,7 +2460,7 @@ private static final long serialVersionUID = 0L;
      * field.
      * </pre>
      *
-     * <code>int64 target_cpa_micros = 3;</code>
+     * <code>optional int64 target_cpa_micros = 3;</code>
      * @return Whether the targetCpaMicros field is set.
      */
     boolean hasTargetCpaMicros();
@@ -2470,7 +2470,7 @@ private static final long serialVersionUID = 0L;
      * field.
      * </pre>
      *
-     * <code>int64 target_cpa_micros = 3;</code>
+     * <code>optional int64 target_cpa_micros = 3;</code>
      * @return The targetCpaMicros.
      */
     long getTargetCpaMicros();
@@ -2480,7 +2480,7 @@ private static final long serialVersionUID = 0L;
      * Optional, budget amount to set for the campaign.
      * </pre>
      *
-     * <code>int64 new_campaign_budget_amount_micros = 4;</code>
+     * <code>optional int64 new_campaign_budget_amount_micros = 4;</code>
      * @return Whether the newCampaignBudgetAmountMicros field is set.
      */
     boolean hasNewCampaignBudgetAmountMicros();
@@ -2489,7 +2489,7 @@ private static final long serialVersionUID = 0L;
      * Optional, budget amount to set for the campaign.
      * </pre>
      *
-     * <code>int64 new_campaign_budget_amount_micros = 4;</code>
+     * <code>optional int64 new_campaign_budget_amount_micros = 4;</code>
      * @return The newCampaignBudgetAmountMicros.
      */
     long getNewCampaignBudgetAmountMicros();
@@ -2595,7 +2595,7 @@ private static final long serialVersionUID = 0L;
      * field.
      * </pre>
      *
-     * <code>int64 target_cpa_micros = 3;</code>
+     * <code>optional int64 target_cpa_micros = 3;</code>
      * @return Whether the targetCpaMicros field is set.
      */
     @java.lang.Override
@@ -2608,7 +2608,7 @@ private static final long serialVersionUID = 0L;
      * field.
      * </pre>
      *
-     * <code>int64 target_cpa_micros = 3;</code>
+     * <code>optional int64 target_cpa_micros = 3;</code>
      * @return The targetCpaMicros.
      */
     @java.lang.Override
@@ -2623,7 +2623,7 @@ private static final long serialVersionUID = 0L;
      * Optional, budget amount to set for the campaign.
      * </pre>
      *
-     * <code>int64 new_campaign_budget_amount_micros = 4;</code>
+     * <code>optional int64 new_campaign_budget_amount_micros = 4;</code>
      * @return Whether the newCampaignBudgetAmountMicros field is set.
      */
     @java.lang.Override
@@ -2635,7 +2635,7 @@ private static final long serialVersionUID = 0L;
      * Optional, budget amount to set for the campaign.
      * </pre>
      *
-     * <code>int64 new_campaign_budget_amount_micros = 4;</code>
+     * <code>optional int64 new_campaign_budget_amount_micros = 4;</code>
      * @return The newCampaignBudgetAmountMicros.
      */
     @java.lang.Override
@@ -2995,7 +2995,7 @@ private static final long serialVersionUID = 0L;
        * field.
        * </pre>
        *
-       * <code>int64 target_cpa_micros = 3;</code>
+       * <code>optional int64 target_cpa_micros = 3;</code>
        * @return Whether the targetCpaMicros field is set.
        */
       @java.lang.Override
@@ -3008,7 +3008,7 @@ private static final long serialVersionUID = 0L;
        * field.
        * </pre>
        *
-       * <code>int64 target_cpa_micros = 3;</code>
+       * <code>optional int64 target_cpa_micros = 3;</code>
        * @return The targetCpaMicros.
        */
       @java.lang.Override
@@ -3021,7 +3021,7 @@ private static final long serialVersionUID = 0L;
        * field.
        * </pre>
        *
-       * <code>int64 target_cpa_micros = 3;</code>
+       * <code>optional int64 target_cpa_micros = 3;</code>
        * @param value The targetCpaMicros to set.
        * @return This builder for chaining.
        */
@@ -3037,7 +3037,7 @@ private static final long serialVersionUID = 0L;
        * field.
        * </pre>
        *
-       * <code>int64 target_cpa_micros = 3;</code>
+       * <code>optional int64 target_cpa_micros = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearTargetCpaMicros() {
@@ -3053,7 +3053,7 @@ private static final long serialVersionUID = 0L;
        * Optional, budget amount to set for the campaign.
        * </pre>
        *
-       * <code>int64 new_campaign_budget_amount_micros = 4;</code>
+       * <code>optional int64 new_campaign_budget_amount_micros = 4;</code>
        * @return Whether the newCampaignBudgetAmountMicros field is set.
        */
       @java.lang.Override
@@ -3065,7 +3065,7 @@ private static final long serialVersionUID = 0L;
        * Optional, budget amount to set for the campaign.
        * </pre>
        *
-       * <code>int64 new_campaign_budget_amount_micros = 4;</code>
+       * <code>optional int64 new_campaign_budget_amount_micros = 4;</code>
        * @return The newCampaignBudgetAmountMicros.
        */
       @java.lang.Override
@@ -3077,7 +3077,7 @@ private static final long serialVersionUID = 0L;
        * Optional, budget amount to set for the campaign.
        * </pre>
        *
-       * <code>int64 new_campaign_budget_amount_micros = 4;</code>
+       * <code>optional int64 new_campaign_budget_amount_micros = 4;</code>
        * @param value The newCampaignBudgetAmountMicros to set.
        * @return This builder for chaining.
        */
@@ -3092,7 +3092,7 @@ private static final long serialVersionUID = 0L;
        * Optional, budget amount to set for the campaign.
        * </pre>
        *
-       * <code>int64 new_campaign_budget_amount_micros = 4;</code>
+       * <code>optional int64 new_campaign_budget_amount_micros = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearNewCampaignBudgetAmountMicros() {
@@ -3165,7 +3165,7 @@ private static final long serialVersionUID = 0L;
      * required field, unless new_campaign_budget_amount_micros is set.
      * </pre>
      *
-     * <code>double target_roas = 1;</code>
+     * <code>optional double target_roas = 1;</code>
      * @return Whether the targetRoas field is set.
      */
     boolean hasTargetRoas();
@@ -3176,7 +3176,7 @@ private static final long serialVersionUID = 0L;
      * required field, unless new_campaign_budget_amount_micros is set.
      * </pre>
      *
-     * <code>double target_roas = 1;</code>
+     * <code>optional double target_roas = 1;</code>
      * @return The targetRoas.
      */
     double getTargetRoas();
@@ -3186,7 +3186,7 @@ private static final long serialVersionUID = 0L;
      * Optional, budget amount to set for the campaign.
      * </pre>
      *
-     * <code>int64 new_campaign_budget_amount_micros = 2;</code>
+     * <code>optional int64 new_campaign_budget_amount_micros = 2;</code>
      * @return Whether the newCampaignBudgetAmountMicros field is set.
      */
     boolean hasNewCampaignBudgetAmountMicros();
@@ -3195,7 +3195,7 @@ private static final long serialVersionUID = 0L;
      * Optional, budget amount to set for the campaign.
      * </pre>
      *
-     * <code>int64 new_campaign_budget_amount_micros = 2;</code>
+     * <code>optional int64 new_campaign_budget_amount_micros = 2;</code>
      * @return The newCampaignBudgetAmountMicros.
      */
     long getNewCampaignBudgetAmountMicros();
@@ -3302,7 +3302,7 @@ private static final long serialVersionUID = 0L;
      * required field, unless new_campaign_budget_amount_micros is set.
      * </pre>
      *
-     * <code>double target_roas = 1;</code>
+     * <code>optional double target_roas = 1;</code>
      * @return Whether the targetRoas field is set.
      */
     @java.lang.Override
@@ -3316,7 +3316,7 @@ private static final long serialVersionUID = 0L;
      * required field, unless new_campaign_budget_amount_micros is set.
      * </pre>
      *
-     * <code>double target_roas = 1;</code>
+     * <code>optional double target_roas = 1;</code>
      * @return The targetRoas.
      */
     @java.lang.Override
@@ -3331,7 +3331,7 @@ private static final long serialVersionUID = 0L;
      * Optional, budget amount to set for the campaign.
      * </pre>
      *
-     * <code>int64 new_campaign_budget_amount_micros = 2;</code>
+     * <code>optional int64 new_campaign_budget_amount_micros = 2;</code>
      * @return Whether the newCampaignBudgetAmountMicros field is set.
      */
     @java.lang.Override
@@ -3343,7 +3343,7 @@ private static final long serialVersionUID = 0L;
      * Optional, budget amount to set for the campaign.
      * </pre>
      *
-     * <code>int64 new_campaign_budget_amount_micros = 2;</code>
+     * <code>optional int64 new_campaign_budget_amount_micros = 2;</code>
      * @return The newCampaignBudgetAmountMicros.
      */
     @java.lang.Override
@@ -3705,7 +3705,7 @@ private static final long serialVersionUID = 0L;
        * required field, unless new_campaign_budget_amount_micros is set.
        * </pre>
        *
-       * <code>double target_roas = 1;</code>
+       * <code>optional double target_roas = 1;</code>
        * @return Whether the targetRoas field is set.
        */
       @java.lang.Override
@@ -3719,7 +3719,7 @@ private static final long serialVersionUID = 0L;
        * required field, unless new_campaign_budget_amount_micros is set.
        * </pre>
        *
-       * <code>double target_roas = 1;</code>
+       * <code>optional double target_roas = 1;</code>
        * @return The targetRoas.
        */
       @java.lang.Override
@@ -3733,7 +3733,7 @@ private static final long serialVersionUID = 0L;
        * required field, unless new_campaign_budget_amount_micros is set.
        * </pre>
        *
-       * <code>double target_roas = 1;</code>
+       * <code>optional double target_roas = 1;</code>
        * @param value The targetRoas to set.
        * @return This builder for chaining.
        */
@@ -3750,7 +3750,7 @@ private static final long serialVersionUID = 0L;
        * required field, unless new_campaign_budget_amount_micros is set.
        * </pre>
        *
-       * <code>double target_roas = 1;</code>
+       * <code>optional double target_roas = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearTargetRoas() {
@@ -3766,7 +3766,7 @@ private static final long serialVersionUID = 0L;
        * Optional, budget amount to set for the campaign.
        * </pre>
        *
-       * <code>int64 new_campaign_budget_amount_micros = 2;</code>
+       * <code>optional int64 new_campaign_budget_amount_micros = 2;</code>
        * @return Whether the newCampaignBudgetAmountMicros field is set.
        */
       @java.lang.Override
@@ -3778,7 +3778,7 @@ private static final long serialVersionUID = 0L;
        * Optional, budget amount to set for the campaign.
        * </pre>
        *
-       * <code>int64 new_campaign_budget_amount_micros = 2;</code>
+       * <code>optional int64 new_campaign_budget_amount_micros = 2;</code>
        * @return The newCampaignBudgetAmountMicros.
        */
       @java.lang.Override
@@ -3790,7 +3790,7 @@ private static final long serialVersionUID = 0L;
        * Optional, budget amount to set for the campaign.
        * </pre>
        *
-       * <code>int64 new_campaign_budget_amount_micros = 2;</code>
+       * <code>optional int64 new_campaign_budget_amount_micros = 2;</code>
        * @param value The newCampaignBudgetAmountMicros to set.
        * @return This builder for chaining.
        */
@@ -3805,7 +3805,7 @@ private static final long serialVersionUID = 0L;
        * Optional, budget amount to set for the campaign.
        * </pre>
        *
-       * <code>int64 new_campaign_budget_amount_micros = 2;</code>
+       * <code>optional int64 new_campaign_budget_amount_micros = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearNewCampaignBudgetAmountMicros() {
@@ -6616,7 +6616,7 @@ private static final long serialVersionUID = 0L;
      * a required field.
      * </pre>
      *
-     * <code>int64 budget_micros_to_move = 2;</code>
+     * <code>optional int64 budget_micros_to_move = 2;</code>
      * @return Whether the budgetMicrosToMove field is set.
      */
     boolean hasBudgetMicrosToMove();
@@ -6626,7 +6626,7 @@ private static final long serialVersionUID = 0L;
      * a required field.
      * </pre>
      *
-     * <code>int64 budget_micros_to_move = 2;</code>
+     * <code>optional int64 budget_micros_to_move = 2;</code>
      * @return The budgetMicrosToMove.
      */
     long getBudgetMicrosToMove();
@@ -6727,7 +6727,7 @@ private static final long serialVersionUID = 0L;
      * a required field.
      * </pre>
      *
-     * <code>int64 budget_micros_to_move = 2;</code>
+     * <code>optional int64 budget_micros_to_move = 2;</code>
      * @return Whether the budgetMicrosToMove field is set.
      */
     @java.lang.Override
@@ -6740,7 +6740,7 @@ private static final long serialVersionUID = 0L;
      * a required field.
      * </pre>
      *
-     * <code>int64 budget_micros_to_move = 2;</code>
+     * <code>optional int64 budget_micros_to_move = 2;</code>
      * @return The budgetMicrosToMove.
      */
     @java.lang.Override
@@ -7074,7 +7074,7 @@ private static final long serialVersionUID = 0L;
        * a required field.
        * </pre>
        *
-       * <code>int64 budget_micros_to_move = 2;</code>
+       * <code>optional int64 budget_micros_to_move = 2;</code>
        * @return Whether the budgetMicrosToMove field is set.
        */
       @java.lang.Override
@@ -7087,7 +7087,7 @@ private static final long serialVersionUID = 0L;
        * a required field.
        * </pre>
        *
-       * <code>int64 budget_micros_to_move = 2;</code>
+       * <code>optional int64 budget_micros_to_move = 2;</code>
        * @return The budgetMicrosToMove.
        */
       @java.lang.Override
@@ -7100,7 +7100,7 @@ private static final long serialVersionUID = 0L;
        * a required field.
        * </pre>
        *
-       * <code>int64 budget_micros_to_move = 2;</code>
+       * <code>optional int64 budget_micros_to_move = 2;</code>
        * @param value The budgetMicrosToMove to set.
        * @return This builder for chaining.
        */
@@ -7116,7 +7116,7 @@ private static final long serialVersionUID = 0L;
        * a required field.
        * </pre>
        *
-       * <code>int64 budget_micros_to_move = 2;</code>
+       * <code>optional int64 budget_micros_to_move = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearBudgetMicrosToMove() {
@@ -8423,7 +8423,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (applyParametersCase_ == 2) {
@@ -8465,7 +8465,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (applyParametersCase_ == 2) {

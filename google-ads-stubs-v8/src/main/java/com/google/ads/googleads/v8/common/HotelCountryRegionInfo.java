@@ -100,7 +100,7 @@ private static final long serialVersionUID = 0L;
    * The Geo Target Constant resource name.
    * </pre>
    *
-   * <code>string country_region_criterion = 2;</code>
+   * <code>optional string country_region_criterion = 2;</code>
    * @return Whether the countryRegionCriterion field is set.
    */
   @java.lang.Override
@@ -112,7 +112,7 @@ private static final long serialVersionUID = 0L;
    * The Geo Target Constant resource name.
    * </pre>
    *
-   * <code>string country_region_criterion = 2;</code>
+   * <code>optional string country_region_criterion = 2;</code>
    * @return The countryRegionCriterion.
    */
   @java.lang.Override
@@ -133,7 +133,7 @@ private static final long serialVersionUID = 0L;
    * The Geo Target Constant resource name.
    * </pre>
    *
-   * <code>string country_region_criterion = 2;</code>
+   * <code>optional string country_region_criterion = 2;</code>
    * @return The bytes for countryRegionCriterion.
    */
   @java.lang.Override
@@ -476,7 +476,7 @@ private static final long serialVersionUID = 0L;
      * The Geo Target Constant resource name.
      * </pre>
      *
-     * <code>string country_region_criterion = 2;</code>
+     * <code>optional string country_region_criterion = 2;</code>
      * @return Whether the countryRegionCriterion field is set.
      */
     public boolean hasCountryRegionCriterion() {
@@ -487,7 +487,7 @@ private static final long serialVersionUID = 0L;
      * The Geo Target Constant resource name.
      * </pre>
      *
-     * <code>string country_region_criterion = 2;</code>
+     * <code>optional string country_region_criterion = 2;</code>
      * @return The countryRegionCriterion.
      */
     public java.lang.String getCountryRegionCriterion() {
@@ -507,7 +507,7 @@ private static final long serialVersionUID = 0L;
      * The Geo Target Constant resource name.
      * </pre>
      *
-     * <code>string country_region_criterion = 2;</code>
+     * <code>optional string country_region_criterion = 2;</code>
      * @return The bytes for countryRegionCriterion.
      */
     public com.google.protobuf.ByteString
@@ -528,7 +528,7 @@ private static final long serialVersionUID = 0L;
      * The Geo Target Constant resource name.
      * </pre>
      *
-     * <code>string country_region_criterion = 2;</code>
+     * <code>optional string country_region_criterion = 2;</code>
      * @param value The countryRegionCriterion to set.
      * @return This builder for chaining.
      */
@@ -547,7 +547,7 @@ private static final long serialVersionUID = 0L;
      * The Geo Target Constant resource name.
      * </pre>
      *
-     * <code>string country_region_criterion = 2;</code>
+     * <code>optional string country_region_criterion = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearCountryRegionCriterion() {
@@ -561,7 +561,7 @@ private static final long serialVersionUID = 0L;
      * The Geo Target Constant resource name.
      * </pre>
      *
-     * <code>string country_region_criterion = 2;</code>
+     * <code>optional string country_region_criterion = 2;</code>
      * @param value The bytes for countryRegionCriterion to set.
      * @return This builder for chaining.
      */

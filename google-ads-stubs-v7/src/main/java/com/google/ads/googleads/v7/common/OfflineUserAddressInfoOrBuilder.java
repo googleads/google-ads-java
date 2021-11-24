@@ -14,7 +14,7 @@ public interface OfflineUserAddressInfoOrBuilder extends
    * between).
    * </pre>
    *
-   * <code>string hashed_first_name = 7;</code>
+   * <code>optional string hashed_first_name = 7;</code>
    * @return Whether the hashedFirstName field is set.
    */
   boolean hasHashedFirstName();
@@ -25,7 +25,7 @@ public interface OfflineUserAddressInfoOrBuilder extends
    * between).
    * </pre>
    *
-   * <code>string hashed_first_name = 7;</code>
+   * <code>optional string hashed_first_name = 7;</code>
    * @return The hashedFirstName.
    */
   java.lang.String getHashedFirstName();
@@ -36,7 +36,7 @@ public interface OfflineUserAddressInfoOrBuilder extends
    * between).
    * </pre>
    *
-   * <code>string hashed_first_name = 7;</code>
+   * <code>optional string hashed_first_name = 7;</code>
    * @return The bytes for hashedFirstName.
    */
   com.google.protobuf.ByteString
@@ -48,7 +48,7 @@ public interface OfflineUserAddressInfoOrBuilder extends
    * case only and no punctuation).
    * </pre>
    *
-   * <code>string hashed_last_name = 8;</code>
+   * <code>optional string hashed_last_name = 8;</code>
    * @return Whether the hashedLastName field is set.
    */
   boolean hasHashedLastName();
@@ -58,7 +58,7 @@ public interface OfflineUserAddressInfoOrBuilder extends
    * case only and no punctuation).
    * </pre>
    *
-   * <code>string hashed_last_name = 8;</code>
+   * <code>optional string hashed_last_name = 8;</code>
    * @return The hashedLastName.
    */
   java.lang.String getHashedLastName();
@@ -68,7 +68,7 @@ public interface OfflineUserAddressInfoOrBuilder extends
    * case only and no punctuation).
    * </pre>
    *
-   * <code>string hashed_last_name = 8;</code>
+   * <code>optional string hashed_last_name = 8;</code>
    * @return The bytes for hashedLastName.
    */
   com.google.protobuf.ByteString
@@ -79,7 +79,7 @@ public interface OfflineUserAddressInfoOrBuilder extends
    * City of the address. Only accepted for Store Sales Direct data.
    * </pre>
    *
-   * <code>string city = 9;</code>
+   * <code>optional string city = 9;</code>
    * @return Whether the city field is set.
    */
   boolean hasCity();
@@ -88,7 +88,7 @@ public interface OfflineUserAddressInfoOrBuilder extends
    * City of the address. Only accepted for Store Sales Direct data.
    * </pre>
    *
-   * <code>string city = 9;</code>
+   * <code>optional string city = 9;</code>
    * @return The city.
    */
   java.lang.String getCity();
@@ -97,7 +97,7 @@ public interface OfflineUserAddressInfoOrBuilder extends
    * City of the address. Only accepted for Store Sales Direct data.
    * </pre>
    *
-   * <code>string city = 9;</code>
+   * <code>optional string city = 9;</code>
    * @return The bytes for city.
    */
   com.google.protobuf.ByteString
@@ -108,7 +108,7 @@ public interface OfflineUserAddressInfoOrBuilder extends
    * State code of the address. Only accepted for Store Sales Direct data.
    * </pre>
    *
-   * <code>string state = 10;</code>
+   * <code>optional string state = 10;</code>
    * @return Whether the state field is set.
    */
   boolean hasState();
@@ -117,7 +117,7 @@ public interface OfflineUserAddressInfoOrBuilder extends
    * State code of the address. Only accepted for Store Sales Direct data.
    * </pre>
    *
-   * <code>string state = 10;</code>
+   * <code>optional string state = 10;</code>
    * @return The state.
    */
   java.lang.String getState();
@@ -126,7 +126,7 @@ public interface OfflineUserAddressInfoOrBuilder extends
    * State code of the address. Only accepted for Store Sales Direct data.
    * </pre>
    *
-   * <code>string state = 10;</code>
+   * <code>optional string state = 10;</code>
    * @return The bytes for state.
    */
   com.google.protobuf.ByteString
@@ -137,7 +137,7 @@ public interface OfflineUserAddressInfoOrBuilder extends
    * 2-letter country code in ISO-3166-1 alpha-2 of the user's address.
    * </pre>
    *
-   * <code>string country_code = 11;</code>
+   * <code>optional string country_code = 11;</code>
    * @return Whether the countryCode field is set.
    */
   boolean hasCountryCode();
@@ -146,7 +146,7 @@ public interface OfflineUserAddressInfoOrBuilder extends
    * 2-letter country code in ISO-3166-1 alpha-2 of the user's address.
    * </pre>
    *
-   * <code>string country_code = 11;</code>
+   * <code>optional string country_code = 11;</code>
    * @return The countryCode.
    */
   java.lang.String getCountryCode();
@@ -155,7 +155,7 @@ public interface OfflineUserAddressInfoOrBuilder extends
    * 2-letter country code in ISO-3166-1 alpha-2 of the user's address.
    * </pre>
    *
-   * <code>string country_code = 11;</code>
+   * <code>optional string country_code = 11;</code>
    * @return The bytes for countryCode.
    */
   com.google.protobuf.ByteString
@@ -166,7 +166,7 @@ public interface OfflineUserAddressInfoOrBuilder extends
    * Postal code of the user's address.
    * </pre>
    *
-   * <code>string postal_code = 12;</code>
+   * <code>optional string postal_code = 12;</code>
    * @return Whether the postalCode field is set.
    */
   boolean hasPostalCode();
@@ -175,7 +175,7 @@ public interface OfflineUserAddressInfoOrBuilder extends
    * Postal code of the user's address.
    * </pre>
    *
-   * <code>string postal_code = 12;</code>
+   * <code>optional string postal_code = 12;</code>
    * @return The postalCode.
    */
   java.lang.String getPostalCode();
@@ -184,7 +184,7 @@ public interface OfflineUserAddressInfoOrBuilder extends
    * Postal code of the user's address.
    * </pre>
    *
-   * <code>string postal_code = 12;</code>
+   * <code>optional string postal_code = 12;</code>
    * @return The bytes for postalCode.
    */
   com.google.protobuf.ByteString

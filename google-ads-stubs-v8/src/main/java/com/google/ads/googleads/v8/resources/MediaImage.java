@@ -113,7 +113,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. Raw image data.
    * </pre>
    *
-   * <code>bytes data = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional bytes data = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the data field is set.
    */
   @java.lang.Override
@@ -125,7 +125,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. Raw image data.
    * </pre>
    *
-   * <code>bytes data = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional bytes data = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The data.
    */
   @java.lang.Override
@@ -140,7 +140,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The url to the full size version of the image.
    * </pre>
    *
-   * <code>string full_size_image_url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string full_size_image_url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the fullSizeImageUrl field is set.
    */
   @java.lang.Override
@@ -152,7 +152,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The url to the full size version of the image.
    * </pre>
    *
-   * <code>string full_size_image_url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string full_size_image_url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The fullSizeImageUrl.
    */
   @java.lang.Override
@@ -173,7 +173,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The url to the full size version of the image.
    * </pre>
    *
-   * <code>string full_size_image_url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string full_size_image_url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for fullSizeImageUrl.
    */
   @java.lang.Override
@@ -198,7 +198,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The url to the preview size version of the image.
    * </pre>
    *
-   * <code>string preview_size_image_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string preview_size_image_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the previewSizeImageUrl field is set.
    */
   @java.lang.Override
@@ -210,7 +210,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The url to the preview size version of the image.
    * </pre>
    *
-   * <code>string preview_size_image_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string preview_size_image_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The previewSizeImageUrl.
    */
   @java.lang.Override
@@ -231,7 +231,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The url to the preview size version of the image.
    * </pre>
    *
-   * <code>string preview_size_image_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string preview_size_image_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for previewSizeImageUrl.
    */
   @java.lang.Override
@@ -625,7 +625,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. Raw image data.
      * </pre>
      *
-     * <code>bytes data = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional bytes data = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the data field is set.
      */
     @java.lang.Override
@@ -637,7 +637,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. Raw image data.
      * </pre>
      *
-     * <code>bytes data = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional bytes data = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The data.
      */
     @java.lang.Override
@@ -649,7 +649,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. Raw image data.
      * </pre>
      *
-     * <code>bytes data = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional bytes data = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @param value The data to set.
      * @return This builder for chaining.
      */
@@ -667,7 +667,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. Raw image data.
      * </pre>
      *
-     * <code>bytes data = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional bytes data = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return This builder for chaining.
      */
     public Builder clearData() {
@@ -683,7 +683,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The url to the full size version of the image.
      * </pre>
      *
-     * <code>string full_size_image_url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string full_size_image_url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the fullSizeImageUrl field is set.
      */
     public boolean hasFullSizeImageUrl() {
@@ -694,7 +694,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The url to the full size version of the image.
      * </pre>
      *
-     * <code>string full_size_image_url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string full_size_image_url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The fullSizeImageUrl.
      */
     public java.lang.String getFullSizeImageUrl() {
@@ -714,7 +714,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The url to the full size version of the image.
      * </pre>
      *
-     * <code>string full_size_image_url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string full_size_image_url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for fullSizeImageUrl.
      */
     public com.google.protobuf.ByteString
@@ -735,7 +735,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The url to the full size version of the image.
      * </pre>
      *
-     * <code>string full_size_image_url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string full_size_image_url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The fullSizeImageUrl to set.
      * @return This builder for chaining.
      */
@@ -754,7 +754,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The url to the full size version of the image.
      * </pre>
      *
-     * <code>string full_size_image_url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string full_size_image_url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearFullSizeImageUrl() {
@@ -768,7 +768,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The url to the full size version of the image.
      * </pre>
      *
-     * <code>string full_size_image_url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string full_size_image_url = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for fullSizeImageUrl to set.
      * @return This builder for chaining.
      */
@@ -790,7 +790,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The url to the preview size version of the image.
      * </pre>
      *
-     * <code>string preview_size_image_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string preview_size_image_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the previewSizeImageUrl field is set.
      */
     public boolean hasPreviewSizeImageUrl() {
@@ -801,7 +801,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The url to the preview size version of the image.
      * </pre>
      *
-     * <code>string preview_size_image_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string preview_size_image_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The previewSizeImageUrl.
      */
     public java.lang.String getPreviewSizeImageUrl() {
@@ -821,7 +821,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The url to the preview size version of the image.
      * </pre>
      *
-     * <code>string preview_size_image_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string preview_size_image_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for previewSizeImageUrl.
      */
     public com.google.protobuf.ByteString
@@ -842,7 +842,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The url to the preview size version of the image.
      * </pre>
      *
-     * <code>string preview_size_image_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string preview_size_image_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The previewSizeImageUrl to set.
      * @return This builder for chaining.
      */
@@ -861,7 +861,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The url to the preview size version of the image.
      * </pre>
      *
-     * <code>string preview_size_image_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string preview_size_image_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearPreviewSizeImageUrl() {
@@ -875,7 +875,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The url to the preview size version of the image.
      * </pre>
      *
-     * <code>string preview_size_image_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string preview_size_image_url = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for previewSizeImageUrl to set.
      * @return This builder for chaining.
      */

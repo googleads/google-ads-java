@@ -13,7 +13,7 @@ public interface ProductMetadataOrBuilder extends
    * To list the available plannable product codes use ListPlannableProducts.
    * </pre>
    *
-   * <code>string plannable_product_code = 4;</code>
+   * <code>optional string plannable_product_code = 4;</code>
    * @return Whether the plannableProductCode field is set.
    */
   boolean hasPlannableProductCode();
@@ -23,7 +23,7 @@ public interface ProductMetadataOrBuilder extends
    * To list the available plannable product codes use ListPlannableProducts.
    * </pre>
    *
-   * <code>string plannable_product_code = 4;</code>
+   * <code>optional string plannable_product_code = 4;</code>
    * @return The plannableProductCode.
    */
   java.lang.String getPlannableProductCode();
@@ -33,7 +33,7 @@ public interface ProductMetadataOrBuilder extends
    * To list the available plannable product codes use ListPlannableProducts.
    * </pre>
    *
-   * <code>string plannable_product_code = 4;</code>
+   * <code>optional string plannable_product_code = 4;</code>
    * @return The bytes for plannableProductCode.
    */
   com.google.protobuf.ByteString

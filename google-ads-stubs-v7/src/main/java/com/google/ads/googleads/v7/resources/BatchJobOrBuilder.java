@@ -36,7 +36,7 @@ public interface BatchJobOrBuilder extends
    * Output only. ID of this batch job.
    * </pre>
    *
-   * <code>int64 id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -45,7 +45,7 @@ public interface BatchJobOrBuilder extends
    * Output only. ID of this batch job.
    * </pre>
    *
-   * <code>int64 id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   long getId();
@@ -56,7 +56,7 @@ public interface BatchJobOrBuilder extends
    * batch job status is PENDING.
    * </pre>
    *
-   * <code>string next_add_sequence_token = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string next_add_sequence_token = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the nextAddSequenceToken field is set.
    */
   boolean hasNextAddSequenceToken();
@@ -66,7 +66,7 @@ public interface BatchJobOrBuilder extends
    * batch job status is PENDING.
    * </pre>
    *
-   * <code>string next_add_sequence_token = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string next_add_sequence_token = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The nextAddSequenceToken.
    */
   java.lang.String getNextAddSequenceToken();
@@ -76,7 +76,7 @@ public interface BatchJobOrBuilder extends
    * batch job status is PENDING.
    * </pre>
    *
-   * <code>string next_add_sequence_token = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string next_add_sequence_token = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for nextAddSequenceToken.
    */
   com.google.protobuf.ByteString
@@ -134,7 +134,7 @@ public interface BatchJobOrBuilder extends
    * for completion. Only set when the batch job status is RUNNING or DONE.
    * </pre>
    *
-   * <code>string long_running_operation = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string long_running_operation = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the longRunningOperation field is set.
    */
   boolean hasLongRunningOperation();
@@ -144,7 +144,7 @@ public interface BatchJobOrBuilder extends
    * for completion. Only set when the batch job status is RUNNING or DONE.
    * </pre>
    *
-   * <code>string long_running_operation = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string long_running_operation = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The longRunningOperation.
    */
   java.lang.String getLongRunningOperation();
@@ -154,7 +154,7 @@ public interface BatchJobOrBuilder extends
    * for completion. Only set when the batch job status is RUNNING or DONE.
    * </pre>
    *
-   * <code>string long_running_operation = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string long_running_operation = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for longRunningOperation.
    */
   com.google.protobuf.ByteString

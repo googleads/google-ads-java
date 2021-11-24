@@ -25,7 +25,7 @@ public interface MobileApplicationInfoOrBuilder extends
    * This field is required and must be set in CREATE operations.
    * </pre>
    *
-   * <code>string app_id = 4;</code>
+   * <code>optional string app_id = 4;</code>
    * @return Whether the appId field is set.
    */
   boolean hasAppId();
@@ -47,7 +47,7 @@ public interface MobileApplicationInfoOrBuilder extends
    * This field is required and must be set in CREATE operations.
    * </pre>
    *
-   * <code>string app_id = 4;</code>
+   * <code>optional string app_id = 4;</code>
    * @return The appId.
    */
   java.lang.String getAppId();
@@ -69,7 +69,7 @@ public interface MobileApplicationInfoOrBuilder extends
    * This field is required and must be set in CREATE operations.
    * </pre>
    *
-   * <code>string app_id = 4;</code>
+   * <code>optional string app_id = 4;</code>
    * @return The bytes for appId.
    */
   com.google.protobuf.ByteString
@@ -80,7 +80,7 @@ public interface MobileApplicationInfoOrBuilder extends
    * Name of this mobile application.
    * </pre>
    *
-   * <code>string name = 5;</code>
+   * <code>optional string name = 5;</code>
    * @return Whether the name field is set.
    */
   boolean hasName();
@@ -89,7 +89,7 @@ public interface MobileApplicationInfoOrBuilder extends
    * Name of this mobile application.
    * </pre>
    *
-   * <code>string name = 5;</code>
+   * <code>optional string name = 5;</code>
    * @return The name.
    */
   java.lang.String getName();
@@ -98,7 +98,7 @@ public interface MobileApplicationInfoOrBuilder extends
    * Name of this mobile application.
    * </pre>
    *
-   * <code>string name = 5;</code>
+   * <code>optional string name = 5;</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString

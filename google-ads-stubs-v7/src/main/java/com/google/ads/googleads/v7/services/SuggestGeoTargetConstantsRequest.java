@@ -1607,7 +1607,7 @@ private static final long serialVersionUID = 0L;
    * targets.
    * </pre>
    *
-   * <code>string locale = 6;</code>
+   * <code>optional string locale = 6;</code>
    * @return Whether the locale field is set.
    */
   @java.lang.Override
@@ -1621,7 +1621,7 @@ private static final long serialVersionUID = 0L;
    * targets.
    * </pre>
    *
-   * <code>string locale = 6;</code>
+   * <code>optional string locale = 6;</code>
    * @return The locale.
    */
   @java.lang.Override
@@ -1644,7 +1644,7 @@ private static final long serialVersionUID = 0L;
    * targets.
    * </pre>
    *
-   * <code>string locale = 6;</code>
+   * <code>optional string locale = 6;</code>
    * @return The bytes for locale.
    */
   @java.lang.Override
@@ -1669,7 +1669,7 @@ private static final long serialVersionUID = 0L;
    * Returned geo targets are restricted to this country code.
    * </pre>
    *
-   * <code>string country_code = 7;</code>
+   * <code>optional string country_code = 7;</code>
    * @return Whether the countryCode field is set.
    */
   @java.lang.Override
@@ -1681,7 +1681,7 @@ private static final long serialVersionUID = 0L;
    * Returned geo targets are restricted to this country code.
    * </pre>
    *
-   * <code>string country_code = 7;</code>
+   * <code>optional string country_code = 7;</code>
    * @return The countryCode.
    */
   @java.lang.Override
@@ -1702,7 +1702,7 @@ private static final long serialVersionUID = 0L;
    * Returned geo targets are restricted to this country code.
    * </pre>
    *
-   * <code>string country_code = 7;</code>
+   * <code>optional string country_code = 7;</code>
    * @return The bytes for countryCode.
    */
   @java.lang.Override
@@ -2244,7 +2244,7 @@ private static final long serialVersionUID = 0L;
      * targets.
      * </pre>
      *
-     * <code>string locale = 6;</code>
+     * <code>optional string locale = 6;</code>
      * @return Whether the locale field is set.
      */
     public boolean hasLocale() {
@@ -2257,7 +2257,7 @@ private static final long serialVersionUID = 0L;
      * targets.
      * </pre>
      *
-     * <code>string locale = 6;</code>
+     * <code>optional string locale = 6;</code>
      * @return The locale.
      */
     public java.lang.String getLocale() {
@@ -2279,7 +2279,7 @@ private static final long serialVersionUID = 0L;
      * targets.
      * </pre>
      *
-     * <code>string locale = 6;</code>
+     * <code>optional string locale = 6;</code>
      * @return The bytes for locale.
      */
     public com.google.protobuf.ByteString
@@ -2302,7 +2302,7 @@ private static final long serialVersionUID = 0L;
      * targets.
      * </pre>
      *
-     * <code>string locale = 6;</code>
+     * <code>optional string locale = 6;</code>
      * @param value The locale to set.
      * @return This builder for chaining.
      */
@@ -2323,7 +2323,7 @@ private static final long serialVersionUID = 0L;
      * targets.
      * </pre>
      *
-     * <code>string locale = 6;</code>
+     * <code>optional string locale = 6;</code>
      * @return This builder for chaining.
      */
     public Builder clearLocale() {
@@ -2339,7 +2339,7 @@ private static final long serialVersionUID = 0L;
      * targets.
      * </pre>
      *
-     * <code>string locale = 6;</code>
+     * <code>optional string locale = 6;</code>
      * @param value The bytes for locale to set.
      * @return This builder for chaining.
      */
@@ -2361,7 +2361,7 @@ private static final long serialVersionUID = 0L;
      * Returned geo targets are restricted to this country code.
      * </pre>
      *
-     * <code>string country_code = 7;</code>
+     * <code>optional string country_code = 7;</code>
      * @return Whether the countryCode field is set.
      */
     public boolean hasCountryCode() {
@@ -2372,7 +2372,7 @@ private static final long serialVersionUID = 0L;
      * Returned geo targets are restricted to this country code.
      * </pre>
      *
-     * <code>string country_code = 7;</code>
+     * <code>optional string country_code = 7;</code>
      * @return The countryCode.
      */
     public java.lang.String getCountryCode() {
@@ -2392,7 +2392,7 @@ private static final long serialVersionUID = 0L;
      * Returned geo targets are restricted to this country code.
      * </pre>
      *
-     * <code>string country_code = 7;</code>
+     * <code>optional string country_code = 7;</code>
      * @return The bytes for countryCode.
      */
     public com.google.protobuf.ByteString
@@ -2413,7 +2413,7 @@ private static final long serialVersionUID = 0L;
      * Returned geo targets are restricted to this country code.
      * </pre>
      *
-     * <code>string country_code = 7;</code>
+     * <code>optional string country_code = 7;</code>
      * @param value The countryCode to set.
      * @return This builder for chaining.
      */
@@ -2432,7 +2432,7 @@ private static final long serialVersionUID = 0L;
      * Returned geo targets are restricted to this country code.
      * </pre>
      *
-     * <code>string country_code = 7;</code>
+     * <code>optional string country_code = 7;</code>
      * @return This builder for chaining.
      */
     public Builder clearCountryCode() {
@@ -2446,7 +2446,7 @@ private static final long serialVersionUID = 0L;
      * Returned geo targets are restricted to this country code.
      * </pre>
      *
-     * <code>string country_code = 7;</code>
+     * <code>optional string country_code = 7;</code>
      * @param value The bytes for countryCode to set.
      * @return This builder for chaining.
      */

@@ -1548,7 +1548,7 @@ private static final long serialVersionUID = 0L;
    * Optional. The lowest budget option.
    * </pre>
    *
-   * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption low = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption low = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
    * @return Whether the low field is set.
    */
   @java.lang.Override
@@ -1560,7 +1560,7 @@ private static final long serialVersionUID = 0L;
    * Optional. The lowest budget option.
    * </pre>
    *
-   * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption low = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption low = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
    * @return The low.
    */
   @java.lang.Override
@@ -1572,7 +1572,7 @@ private static final long serialVersionUID = 0L;
    * Optional. The lowest budget option.
    * </pre>
    *
-   * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption low = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption low = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
    */
   @java.lang.Override
   public com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOptionOrBuilder getLowOrBuilder() {
@@ -1586,7 +1586,7 @@ private static final long serialVersionUID = 0L;
    * Optional. The recommended budget option.
    * </pre>
    *
-   * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption recommended = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption recommended = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
    * @return Whether the recommended field is set.
    */
   @java.lang.Override
@@ -1598,7 +1598,7 @@ private static final long serialVersionUID = 0L;
    * Optional. The recommended budget option.
    * </pre>
    *
-   * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption recommended = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption recommended = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
    * @return The recommended.
    */
   @java.lang.Override
@@ -1610,7 +1610,7 @@ private static final long serialVersionUID = 0L;
    * Optional. The recommended budget option.
    * </pre>
    *
-   * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption recommended = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption recommended = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
    */
   @java.lang.Override
   public com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOptionOrBuilder getRecommendedOrBuilder() {
@@ -1624,7 +1624,7 @@ private static final long serialVersionUID = 0L;
    * Optional. The highest budget option.
    * </pre>
    *
-   * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption high = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption high = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
    * @return Whether the high field is set.
    */
   @java.lang.Override
@@ -1636,7 +1636,7 @@ private static final long serialVersionUID = 0L;
    * Optional. The highest budget option.
    * </pre>
    *
-   * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption high = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption high = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
    * @return The high.
    */
   @java.lang.Override
@@ -1648,7 +1648,7 @@ private static final long serialVersionUID = 0L;
    * Optional. The highest budget option.
    * </pre>
    *
-   * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption high = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption high = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
    */
   @java.lang.Override
   public com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOptionOrBuilder getHighOrBuilder() {
@@ -2061,7 +2061,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The lowest budget option.
      * </pre>
      *
-     * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption low = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption low = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
      * @return Whether the low field is set.
      */
     public boolean hasLow() {
@@ -2072,7 +2072,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The lowest budget option.
      * </pre>
      *
-     * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption low = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption low = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
      * @return The low.
      */
     public com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption getLow() {
@@ -2087,7 +2087,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The lowest budget option.
      * </pre>
      *
-     * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption low = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption low = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     public Builder setLow(com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption value) {
       if (lowBuilder_ == null) {
@@ -2107,7 +2107,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The lowest budget option.
      * </pre>
      *
-     * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption low = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption low = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     public Builder setLow(
         com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption.Builder builderForValue) {
@@ -2125,7 +2125,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The lowest budget option.
      * </pre>
      *
-     * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption low = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption low = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     public Builder mergeLow(com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption value) {
       if (lowBuilder_ == null) {
@@ -2149,7 +2149,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The lowest budget option.
      * </pre>
      *
-     * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption low = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption low = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     public Builder clearLow() {
       if (lowBuilder_ == null) {
@@ -2166,7 +2166,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The lowest budget option.
      * </pre>
      *
-     * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption low = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption low = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     public com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption.Builder getLowBuilder() {
       bitField0_ |= 0x00000001;
@@ -2178,7 +2178,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The lowest budget option.
      * </pre>
      *
-     * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption low = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption low = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     public com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOptionOrBuilder getLowOrBuilder() {
       if (lowBuilder_ != null) {
@@ -2193,7 +2193,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The lowest budget option.
      * </pre>
      *
-     * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption low = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption low = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption, com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption.Builder, com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOptionOrBuilder> 
@@ -2217,7 +2217,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The recommended budget option.
      * </pre>
      *
-     * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption recommended = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption recommended = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
      * @return Whether the recommended field is set.
      */
     public boolean hasRecommended() {
@@ -2228,7 +2228,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The recommended budget option.
      * </pre>
      *
-     * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption recommended = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption recommended = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
      * @return The recommended.
      */
     public com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption getRecommended() {
@@ -2243,7 +2243,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The recommended budget option.
      * </pre>
      *
-     * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption recommended = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption recommended = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     public Builder setRecommended(com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption value) {
       if (recommendedBuilder_ == null) {
@@ -2263,7 +2263,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The recommended budget option.
      * </pre>
      *
-     * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption recommended = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption recommended = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     public Builder setRecommended(
         com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption.Builder builderForValue) {
@@ -2281,7 +2281,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The recommended budget option.
      * </pre>
      *
-     * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption recommended = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption recommended = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     public Builder mergeRecommended(com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption value) {
       if (recommendedBuilder_ == null) {
@@ -2305,7 +2305,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The recommended budget option.
      * </pre>
      *
-     * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption recommended = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption recommended = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     public Builder clearRecommended() {
       if (recommendedBuilder_ == null) {
@@ -2322,7 +2322,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The recommended budget option.
      * </pre>
      *
-     * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption recommended = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption recommended = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     public com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption.Builder getRecommendedBuilder() {
       bitField0_ |= 0x00000002;
@@ -2334,7 +2334,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The recommended budget option.
      * </pre>
      *
-     * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption recommended = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption recommended = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     public com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOptionOrBuilder getRecommendedOrBuilder() {
       if (recommendedBuilder_ != null) {
@@ -2349,7 +2349,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The recommended budget option.
      * </pre>
      *
-     * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption recommended = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption recommended = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption, com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption.Builder, com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOptionOrBuilder> 
@@ -2373,7 +2373,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The highest budget option.
      * </pre>
      *
-     * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption high = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption high = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
      * @return Whether the high field is set.
      */
     public boolean hasHigh() {
@@ -2384,7 +2384,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The highest budget option.
      * </pre>
      *
-     * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption high = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption high = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
      * @return The high.
      */
     public com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption getHigh() {
@@ -2399,7 +2399,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The highest budget option.
      * </pre>
      *
-     * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption high = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption high = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     public Builder setHigh(com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption value) {
       if (highBuilder_ == null) {
@@ -2419,7 +2419,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The highest budget option.
      * </pre>
      *
-     * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption high = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption high = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     public Builder setHigh(
         com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption.Builder builderForValue) {
@@ -2437,7 +2437,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The highest budget option.
      * </pre>
      *
-     * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption high = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption high = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     public Builder mergeHigh(com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption value) {
       if (highBuilder_ == null) {
@@ -2461,7 +2461,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The highest budget option.
      * </pre>
      *
-     * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption high = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption high = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     public Builder clearHigh() {
       if (highBuilder_ == null) {
@@ -2478,7 +2478,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The highest budget option.
      * </pre>
      *
-     * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption high = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption high = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     public com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption.Builder getHighBuilder() {
       bitField0_ |= 0x00000004;
@@ -2490,7 +2490,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The highest budget option.
      * </pre>
      *
-     * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption high = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption high = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     public com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOptionOrBuilder getHighOrBuilder() {
       if (highBuilder_ != null) {
@@ -2505,7 +2505,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The highest budget option.
      * </pre>
      *
-     * <code>.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption high = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * <code>optional .google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption high = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption, com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption.Builder, com.google.ads.googleads.v8.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOptionOrBuilder> 

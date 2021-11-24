@@ -114,7 +114,7 @@ private static final long serialVersionUID = 0L;
    * The Google Click ID (gclid) associated with this conversion.
    * </pre>
    *
-   * <code>string gclid = 4;</code>
+   * <code>optional string gclid = 4;</code>
    * @return Whether the gclid field is set.
    */
   @java.lang.Override
@@ -126,7 +126,7 @@ private static final long serialVersionUID = 0L;
    * The Google Click ID (gclid) associated with this conversion.
    * </pre>
    *
-   * <code>string gclid = 4;</code>
+   * <code>optional string gclid = 4;</code>
    * @return The gclid.
    */
   @java.lang.Override
@@ -147,7 +147,7 @@ private static final long serialVersionUID = 0L;
    * The Google Click ID (gclid) associated with this conversion.
    * </pre>
    *
-   * <code>string gclid = 4;</code>
+   * <code>optional string gclid = 4;</code>
    * @return The bytes for gclid.
    */
   @java.lang.Override
@@ -172,7 +172,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the conversion action associated with this conversion.
    * </pre>
    *
-   * <code>string conversion_action = 5;</code>
+   * <code>optional string conversion_action = 5;</code>
    * @return Whether the conversionAction field is set.
    */
   @java.lang.Override
@@ -184,7 +184,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the conversion action associated with this conversion.
    * </pre>
    *
-   * <code>string conversion_action = 5;</code>
+   * <code>optional string conversion_action = 5;</code>
    * @return The conversionAction.
    */
   @java.lang.Override
@@ -205,7 +205,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the conversion action associated with this conversion.
    * </pre>
    *
-   * <code>string conversion_action = 5;</code>
+   * <code>optional string conversion_action = 5;</code>
    * @return The bytes for conversionAction.
    */
   @java.lang.Override
@@ -231,7 +231,7 @@ private static final long serialVersionUID = 0L;
    * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. “2019-01-01 12:32:45-08:00”.
    * </pre>
    *
-   * <code>string conversion_date_time = 6;</code>
+   * <code>optional string conversion_date_time = 6;</code>
    * @return Whether the conversionDateTime field is set.
    */
   @java.lang.Override
@@ -244,7 +244,7 @@ private static final long serialVersionUID = 0L;
    * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. “2019-01-01 12:32:45-08:00”.
    * </pre>
    *
-   * <code>string conversion_date_time = 6;</code>
+   * <code>optional string conversion_date_time = 6;</code>
    * @return The conversionDateTime.
    */
   @java.lang.Override
@@ -266,7 +266,7 @@ private static final long serialVersionUID = 0L;
    * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. “2019-01-01 12:32:45-08:00”.
    * </pre>
    *
-   * <code>string conversion_date_time = 6;</code>
+   * <code>optional string conversion_date_time = 6;</code>
    * @return The bytes for conversionDateTime.
    */
   @java.lang.Override
@@ -661,7 +661,7 @@ private static final long serialVersionUID = 0L;
      * The Google Click ID (gclid) associated with this conversion.
      * </pre>
      *
-     * <code>string gclid = 4;</code>
+     * <code>optional string gclid = 4;</code>
      * @return Whether the gclid field is set.
      */
     public boolean hasGclid() {
@@ -672,7 +672,7 @@ private static final long serialVersionUID = 0L;
      * The Google Click ID (gclid) associated with this conversion.
      * </pre>
      *
-     * <code>string gclid = 4;</code>
+     * <code>optional string gclid = 4;</code>
      * @return The gclid.
      */
     public java.lang.String getGclid() {
@@ -692,7 +692,7 @@ private static final long serialVersionUID = 0L;
      * The Google Click ID (gclid) associated with this conversion.
      * </pre>
      *
-     * <code>string gclid = 4;</code>
+     * <code>optional string gclid = 4;</code>
      * @return The bytes for gclid.
      */
     public com.google.protobuf.ByteString
@@ -713,7 +713,7 @@ private static final long serialVersionUID = 0L;
      * The Google Click ID (gclid) associated with this conversion.
      * </pre>
      *
-     * <code>string gclid = 4;</code>
+     * <code>optional string gclid = 4;</code>
      * @param value The gclid to set.
      * @return This builder for chaining.
      */
@@ -732,7 +732,7 @@ private static final long serialVersionUID = 0L;
      * The Google Click ID (gclid) associated with this conversion.
      * </pre>
      *
-     * <code>string gclid = 4;</code>
+     * <code>optional string gclid = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearGclid() {
@@ -746,7 +746,7 @@ private static final long serialVersionUID = 0L;
      * The Google Click ID (gclid) associated with this conversion.
      * </pre>
      *
-     * <code>string gclid = 4;</code>
+     * <code>optional string gclid = 4;</code>
      * @param value The bytes for gclid to set.
      * @return This builder for chaining.
      */
@@ -768,7 +768,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the conversion action associated with this conversion.
      * </pre>
      *
-     * <code>string conversion_action = 5;</code>
+     * <code>optional string conversion_action = 5;</code>
      * @return Whether the conversionAction field is set.
      */
     public boolean hasConversionAction() {
@@ -779,7 +779,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the conversion action associated with this conversion.
      * </pre>
      *
-     * <code>string conversion_action = 5;</code>
+     * <code>optional string conversion_action = 5;</code>
      * @return The conversionAction.
      */
     public java.lang.String getConversionAction() {
@@ -799,7 +799,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the conversion action associated with this conversion.
      * </pre>
      *
-     * <code>string conversion_action = 5;</code>
+     * <code>optional string conversion_action = 5;</code>
      * @return The bytes for conversionAction.
      */
     public com.google.protobuf.ByteString
@@ -820,7 +820,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the conversion action associated with this conversion.
      * </pre>
      *
-     * <code>string conversion_action = 5;</code>
+     * <code>optional string conversion_action = 5;</code>
      * @param value The conversionAction to set.
      * @return This builder for chaining.
      */
@@ -839,7 +839,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the conversion action associated with this conversion.
      * </pre>
      *
-     * <code>string conversion_action = 5;</code>
+     * <code>optional string conversion_action = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearConversionAction() {
@@ -853,7 +853,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the conversion action associated with this conversion.
      * </pre>
      *
-     * <code>string conversion_action = 5;</code>
+     * <code>optional string conversion_action = 5;</code>
      * @param value The bytes for conversionAction to set.
      * @return This builder for chaining.
      */
@@ -876,7 +876,7 @@ private static final long serialVersionUID = 0L;
      * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. “2019-01-01 12:32:45-08:00”.
      * </pre>
      *
-     * <code>string conversion_date_time = 6;</code>
+     * <code>optional string conversion_date_time = 6;</code>
      * @return Whether the conversionDateTime field is set.
      */
     public boolean hasConversionDateTime() {
@@ -888,7 +888,7 @@ private static final long serialVersionUID = 0L;
      * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. “2019-01-01 12:32:45-08:00”.
      * </pre>
      *
-     * <code>string conversion_date_time = 6;</code>
+     * <code>optional string conversion_date_time = 6;</code>
      * @return The conversionDateTime.
      */
     public java.lang.String getConversionDateTime() {
@@ -909,7 +909,7 @@ private static final long serialVersionUID = 0L;
      * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. “2019-01-01 12:32:45-08:00”.
      * </pre>
      *
-     * <code>string conversion_date_time = 6;</code>
+     * <code>optional string conversion_date_time = 6;</code>
      * @return The bytes for conversionDateTime.
      */
     public com.google.protobuf.ByteString
@@ -931,7 +931,7 @@ private static final long serialVersionUID = 0L;
      * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. “2019-01-01 12:32:45-08:00”.
      * </pre>
      *
-     * <code>string conversion_date_time = 6;</code>
+     * <code>optional string conversion_date_time = 6;</code>
      * @param value The conversionDateTime to set.
      * @return This builder for chaining.
      */
@@ -951,7 +951,7 @@ private static final long serialVersionUID = 0L;
      * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. “2019-01-01 12:32:45-08:00”.
      * </pre>
      *
-     * <code>string conversion_date_time = 6;</code>
+     * <code>optional string conversion_date_time = 6;</code>
      * @return This builder for chaining.
      */
     public Builder clearConversionDateTime() {
@@ -966,7 +966,7 @@ private static final long serialVersionUID = 0L;
      * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. “2019-01-01 12:32:45-08:00”.
      * </pre>
      *
-     * <code>string conversion_date_time = 6;</code>
+     * <code>optional string conversion_date_time = 6;</code>
      * @param value The bytes for conversionDateTime to set.
      * @return This builder for chaining.
      */

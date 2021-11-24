@@ -890,7 +890,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getPromotionTargetBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(promotionTarget_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, promotionTarget_);
     }
     if (discountModifier_ != com.google.ads.googleads.v8.enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier.UNSPECIFIED.getNumber()) {
@@ -909,22 +909,22 @@ private static final long serialVersionUID = 0L;
     if (promotionTriggerCase_ == 6) {
       output.writeMessage(6, (com.google.ads.googleads.v8.common.Money) promotionTrigger_);
     }
-    if (!getRedemptionStartDateBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(redemptionStartDate_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, redemptionStartDate_);
     }
-    if (!getRedemptionEndDateBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(redemptionEndDate_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 8, redemptionEndDate_);
     }
     if (occasion_ != com.google.ads.googleads.v8.enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion.UNSPECIFIED.getNumber()) {
       output.writeEnum(9, occasion_);
     }
-    if (!getLanguageCodeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(languageCode_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 10, languageCode_);
     }
-    if (!getStartDateBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(startDate_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 11, startDate_);
     }
-    if (!getEndDateBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endDate_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 12, endDate_);
     }
     for (int i = 0; i < adScheduleTargets_.size(); i++) {
@@ -939,7 +939,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getPromotionTargetBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(promotionTarget_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, promotionTarget_);
     }
     if (discountModifier_ != com.google.ads.googleads.v8.enums.PromotionExtensionDiscountModifierEnum.PromotionExtensionDiscountModifier.UNSPECIFIED.getNumber()) {
@@ -962,23 +962,23 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, (com.google.ads.googleads.v8.common.Money) promotionTrigger_);
     }
-    if (!getRedemptionStartDateBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(redemptionStartDate_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, redemptionStartDate_);
     }
-    if (!getRedemptionEndDateBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(redemptionEndDate_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, redemptionEndDate_);
     }
     if (occasion_ != com.google.ads.googleads.v8.enums.PromotionExtensionOccasionEnum.PromotionExtensionOccasion.UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(9, occasion_);
     }
-    if (!getLanguageCodeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(languageCode_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, languageCode_);
     }
-    if (!getStartDateBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(startDate_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, startDate_);
     }
-    if (!getEndDateBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endDate_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, endDate_);
     }
     for (int i = 0; i < adScheduleTargets_.size(); i++) {

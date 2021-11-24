@@ -220,7 +220,7 @@ private static final long serialVersionUID = 0L;
    * customer. Accessible only to customers on the allow-list.
    * </pre>
    *
-   * <code>string email_address = 5;</code>
+   * <code>optional string email_address = 5;</code>
    * @return Whether the emailAddress field is set.
    */
   @java.lang.Override
@@ -233,7 +233,7 @@ private static final long serialVersionUID = 0L;
    * customer. Accessible only to customers on the allow-list.
    * </pre>
    *
-   * <code>string email_address = 5;</code>
+   * <code>optional string email_address = 5;</code>
    * @return The emailAddress.
    */
   @java.lang.Override
@@ -255,7 +255,7 @@ private static final long serialVersionUID = 0L;
    * customer. Accessible only to customers on the allow-list.
    * </pre>
    *
-   * <code>string email_address = 5;</code>
+   * <code>optional string email_address = 5;</code>
    * @return The bytes for emailAddress.
    */
   @java.lang.Override
@@ -332,7 +332,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getCustomerIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customerId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, customerId_);
     }
     if (customerClient_ != null) {
@@ -356,7 +356,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getCustomerIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customerId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, customerId_);
     }
     if (customerClient_ != null) {
@@ -985,7 +985,7 @@ private static final long serialVersionUID = 0L;
      * customer. Accessible only to customers on the allow-list.
      * </pre>
      *
-     * <code>string email_address = 5;</code>
+     * <code>optional string email_address = 5;</code>
      * @return Whether the emailAddress field is set.
      */
     public boolean hasEmailAddress() {
@@ -997,7 +997,7 @@ private static final long serialVersionUID = 0L;
      * customer. Accessible only to customers on the allow-list.
      * </pre>
      *
-     * <code>string email_address = 5;</code>
+     * <code>optional string email_address = 5;</code>
      * @return The emailAddress.
      */
     public java.lang.String getEmailAddress() {
@@ -1018,7 +1018,7 @@ private static final long serialVersionUID = 0L;
      * customer. Accessible only to customers on the allow-list.
      * </pre>
      *
-     * <code>string email_address = 5;</code>
+     * <code>optional string email_address = 5;</code>
      * @return The bytes for emailAddress.
      */
     public com.google.protobuf.ByteString
@@ -1040,7 +1040,7 @@ private static final long serialVersionUID = 0L;
      * customer. Accessible only to customers on the allow-list.
      * </pre>
      *
-     * <code>string email_address = 5;</code>
+     * <code>optional string email_address = 5;</code>
      * @param value The emailAddress to set.
      * @return This builder for chaining.
      */
@@ -1060,7 +1060,7 @@ private static final long serialVersionUID = 0L;
      * customer. Accessible only to customers on the allow-list.
      * </pre>
      *
-     * <code>string email_address = 5;</code>
+     * <code>optional string email_address = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearEmailAddress() {
@@ -1075,7 +1075,7 @@ private static final long serialVersionUID = 0L;
      * customer. Accessible only to customers on the allow-list.
      * </pre>
      *
-     * <code>string email_address = 5;</code>
+     * <code>optional string email_address = 5;</code>
      * @param value The bytes for emailAddress to set.
      * @return This builder for chaining.
      */

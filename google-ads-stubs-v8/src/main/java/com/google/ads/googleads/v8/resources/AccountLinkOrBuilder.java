@@ -37,7 +37,7 @@ public interface AccountLinkOrBuilder extends
    * This field is read only.
    * </pre>
    *
-   * <code>int64 account_link_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 account_link_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the accountLinkId field is set.
    */
   boolean hasAccountLinkId();
@@ -47,7 +47,7 @@ public interface AccountLinkOrBuilder extends
    * This field is read only.
    * </pre>
    *
-   * <code>int64 account_link_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 account_link_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The accountLinkId.
    */
   long getAccountLinkId();

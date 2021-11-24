@@ -36,7 +36,7 @@ public interface AccountBudgetProposalOrBuilder extends
    * Output only. The ID of the proposal.
    * </pre>
    *
-   * <code>int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -45,7 +45,7 @@ public interface AccountBudgetProposalOrBuilder extends
    * Output only. The ID of the proposal.
    * </pre>
    *
-   * <code>int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   long getId();
@@ -55,7 +55,7 @@ public interface AccountBudgetProposalOrBuilder extends
    * Immutable. The resource name of the billing setup associated with this proposal.
    * </pre>
    *
-   * <code>string billing_setup = 26 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string billing_setup = 26 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the billingSetup field is set.
    */
   boolean hasBillingSetup();
@@ -64,7 +64,7 @@ public interface AccountBudgetProposalOrBuilder extends
    * Immutable. The resource name of the billing setup associated with this proposal.
    * </pre>
    *
-   * <code>string billing_setup = 26 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string billing_setup = 26 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The billingSetup.
    */
   java.lang.String getBillingSetup();
@@ -73,7 +73,7 @@ public interface AccountBudgetProposalOrBuilder extends
    * Immutable. The resource name of the billing setup associated with this proposal.
    * </pre>
    *
-   * <code>string billing_setup = 26 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string billing_setup = 26 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for billingSetup.
    */
   com.google.protobuf.ByteString
@@ -85,7 +85,7 @@ public interface AccountBudgetProposalOrBuilder extends
    * proposal.
    * </pre>
    *
-   * <code>string account_budget = 27 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string account_budget = 27 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the accountBudget field is set.
    */
   boolean hasAccountBudget();
@@ -95,7 +95,7 @@ public interface AccountBudgetProposalOrBuilder extends
    * proposal.
    * </pre>
    *
-   * <code>string account_budget = 27 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string account_budget = 27 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The accountBudget.
    */
   java.lang.String getAccountBudget();
@@ -105,7 +105,7 @@ public interface AccountBudgetProposalOrBuilder extends
    * proposal.
    * </pre>
    *
-   * <code>string account_budget = 27 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string account_budget = 27 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for accountBudget.
    */
   com.google.protobuf.ByteString
@@ -158,7 +158,7 @@ public interface AccountBudgetProposalOrBuilder extends
    * Immutable. The name to assign to the account-level budget.
    * </pre>
    *
-   * <code>string proposed_name = 28 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string proposed_name = 28 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the proposedName field is set.
    */
   boolean hasProposedName();
@@ -167,7 +167,7 @@ public interface AccountBudgetProposalOrBuilder extends
    * Immutable. The name to assign to the account-level budget.
    * </pre>
    *
-   * <code>string proposed_name = 28 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string proposed_name = 28 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The proposedName.
    */
   java.lang.String getProposedName();
@@ -176,7 +176,7 @@ public interface AccountBudgetProposalOrBuilder extends
    * Immutable. The name to assign to the account-level budget.
    * </pre>
    *
-   * <code>string proposed_name = 28 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string proposed_name = 28 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The bytes for proposedName.
    */
   com.google.protobuf.ByteString
@@ -187,7 +187,7 @@ public interface AccountBudgetProposalOrBuilder extends
    * Output only. The approved start date time in yyyy-mm-dd hh:mm:ss format.
    * </pre>
    *
-   * <code>string approved_start_date_time = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string approved_start_date_time = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the approvedStartDateTime field is set.
    */
   boolean hasApprovedStartDateTime();
@@ -196,7 +196,7 @@ public interface AccountBudgetProposalOrBuilder extends
    * Output only. The approved start date time in yyyy-mm-dd hh:mm:ss format.
    * </pre>
    *
-   * <code>string approved_start_date_time = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string approved_start_date_time = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The approvedStartDateTime.
    */
   java.lang.String getApprovedStartDateTime();
@@ -205,7 +205,7 @@ public interface AccountBudgetProposalOrBuilder extends
    * Output only. The approved start date time in yyyy-mm-dd hh:mm:ss format.
    * </pre>
    *
-   * <code>string approved_start_date_time = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string approved_start_date_time = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for approvedStartDateTime.
    */
   com.google.protobuf.ByteString
@@ -217,7 +217,7 @@ public interface AccountBudgetProposalOrBuilder extends
    * reference this budget in their monthly invoices.
    * </pre>
    *
-   * <code>string proposed_purchase_order_number = 35 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string proposed_purchase_order_number = 35 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the proposedPurchaseOrderNumber field is set.
    */
   boolean hasProposedPurchaseOrderNumber();
@@ -227,7 +227,7 @@ public interface AccountBudgetProposalOrBuilder extends
    * reference this budget in their monthly invoices.
    * </pre>
    *
-   * <code>string proposed_purchase_order_number = 35 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string proposed_purchase_order_number = 35 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The proposedPurchaseOrderNumber.
    */
   java.lang.String getProposedPurchaseOrderNumber();
@@ -237,7 +237,7 @@ public interface AccountBudgetProposalOrBuilder extends
    * reference this budget in their monthly invoices.
    * </pre>
    *
-   * <code>string proposed_purchase_order_number = 35 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string proposed_purchase_order_number = 35 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The bytes for proposedPurchaseOrderNumber.
    */
   com.google.protobuf.ByteString
@@ -248,7 +248,7 @@ public interface AccountBudgetProposalOrBuilder extends
    * Immutable. Notes associated with this budget.
    * </pre>
    *
-   * <code>string proposed_notes = 36 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string proposed_notes = 36 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the proposedNotes field is set.
    */
   boolean hasProposedNotes();
@@ -257,7 +257,7 @@ public interface AccountBudgetProposalOrBuilder extends
    * Immutable. Notes associated with this budget.
    * </pre>
    *
-   * <code>string proposed_notes = 36 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string proposed_notes = 36 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The proposedNotes.
    */
   java.lang.String getProposedNotes();
@@ -266,7 +266,7 @@ public interface AccountBudgetProposalOrBuilder extends
    * Immutable. Notes associated with this budget.
    * </pre>
    *
-   * <code>string proposed_notes = 36 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string proposed_notes = 36 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The bytes for proposedNotes.
    */
   com.google.protobuf.ByteString
@@ -278,7 +278,7 @@ public interface AccountBudgetProposalOrBuilder extends
    * not the same as its approval date time, if applicable.
    * </pre>
    *
-   * <code>string creation_date_time = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string creation_date_time = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the creationDateTime field is set.
    */
   boolean hasCreationDateTime();
@@ -288,7 +288,7 @@ public interface AccountBudgetProposalOrBuilder extends
    * not the same as its approval date time, if applicable.
    * </pre>
    *
-   * <code>string creation_date_time = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string creation_date_time = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The creationDateTime.
    */
   java.lang.String getCreationDateTime();
@@ -298,7 +298,7 @@ public interface AccountBudgetProposalOrBuilder extends
    * not the same as its approval date time, if applicable.
    * </pre>
    *
-   * <code>string creation_date_time = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string creation_date_time = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for creationDateTime.
    */
   com.google.protobuf.ByteString
@@ -309,7 +309,7 @@ public interface AccountBudgetProposalOrBuilder extends
    * Output only. The date time when this account-level budget was approved, if applicable.
    * </pre>
    *
-   * <code>string approval_date_time = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string approval_date_time = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the approvalDateTime field is set.
    */
   boolean hasApprovalDateTime();
@@ -318,7 +318,7 @@ public interface AccountBudgetProposalOrBuilder extends
    * Output only. The date time when this account-level budget was approved, if applicable.
    * </pre>
    *
-   * <code>string approval_date_time = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string approval_date_time = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The approvalDateTime.
    */
   java.lang.String getApprovalDateTime();
@@ -327,7 +327,7 @@ public interface AccountBudgetProposalOrBuilder extends
    * Output only. The date time when this account-level budget was approved, if applicable.
    * </pre>
    *
-   * <code>string approval_date_time = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string approval_date_time = 38 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for approvalDateTime.
    */
   com.google.protobuf.ByteString

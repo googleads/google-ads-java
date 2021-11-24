@@ -213,7 +213,8 @@ public class ReachPlanServiceClient implements BackgroundResource {
    * }</pre>
    *
    * @param plannableLocationId Required. The ID of the selected location for planning. To list the
-   *     available plannable location ids use ListPlannableLocations.
+   *     available plannable location ids use
+   *     [ReachPlanService.ListPlannableLocations][google.ads.googleads.v7.services.ReachPlanService.ListPlannableLocations].
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ListPlannableProductsResponse listPlannableProducts(String plannableLocationId) {
@@ -303,7 +304,7 @@ public class ReachPlanServiceClient implements BackgroundResource {
    *
    * @param customerId Required. The ID of the customer.
    * @param plannableLocationId Required. The ID of the location, this is one of the ids returned by
-   *     ListPlannableLocations.
+   *     [ReachPlanService.ListPlannableLocations][google.ads.googleads.v7.services.ReachPlanService.ListPlannableLocations].
    * @param currencyCode Required. Currency code. Three-character ISO 4217 currency code.
    * @param budgetMicros Required. Total budget. Amount in micros. One million is equivalent to one
    *     unit.

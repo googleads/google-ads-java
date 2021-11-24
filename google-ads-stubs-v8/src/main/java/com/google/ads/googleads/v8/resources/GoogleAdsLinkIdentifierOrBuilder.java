@@ -15,7 +15,7 @@ public interface GoogleAdsLinkIdentifierOrBuilder extends
    * the link.
    * </pre>
    *
-   * <code>string customer = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string customer = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the customer field is set.
    */
   boolean hasCustomer();
@@ -27,7 +27,7 @@ public interface GoogleAdsLinkIdentifierOrBuilder extends
    * the link.
    * </pre>
    *
-   * <code>string customer = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string customer = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The customer.
    */
   java.lang.String getCustomer();
@@ -39,7 +39,7 @@ public interface GoogleAdsLinkIdentifierOrBuilder extends
    * the link.
    * </pre>
    *
-   * <code>string customer = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string customer = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for customer.
    */
   com.google.protobuf.ByteString

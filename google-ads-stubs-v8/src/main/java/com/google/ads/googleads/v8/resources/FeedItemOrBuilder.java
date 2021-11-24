@@ -36,7 +36,7 @@ public interface FeedItemOrBuilder extends
    * Immutable. The feed to which this feed item belongs.
    * </pre>
    *
-   * <code>string feed = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string feed = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the feed field is set.
    */
   boolean hasFeed();
@@ -45,7 +45,7 @@ public interface FeedItemOrBuilder extends
    * Immutable. The feed to which this feed item belongs.
    * </pre>
    *
-   * <code>string feed = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string feed = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The feed.
    */
   java.lang.String getFeed();
@@ -54,7 +54,7 @@ public interface FeedItemOrBuilder extends
    * Immutable. The feed to which this feed item belongs.
    * </pre>
    *
-   * <code>string feed = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string feed = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for feed.
    */
   com.google.protobuf.ByteString
@@ -65,7 +65,7 @@ public interface FeedItemOrBuilder extends
    * Output only. The ID of this feed item.
    * </pre>
    *
-   * <code>int64 id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -74,7 +74,7 @@ public interface FeedItemOrBuilder extends
    * Output only. The ID of this feed item.
    * </pre>
    *
-   * <code>int64 id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   long getId();
@@ -87,7 +87,7 @@ public interface FeedItemOrBuilder extends
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
    *
-   * <code>string start_date_time = 13;</code>
+   * <code>optional string start_date_time = 13;</code>
    * @return Whether the startDateTime field is set.
    */
   boolean hasStartDateTime();
@@ -99,7 +99,7 @@ public interface FeedItemOrBuilder extends
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
    *
-   * <code>string start_date_time = 13;</code>
+   * <code>optional string start_date_time = 13;</code>
    * @return The startDateTime.
    */
   java.lang.String getStartDateTime();
@@ -111,7 +111,7 @@ public interface FeedItemOrBuilder extends
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
    *
-   * <code>string start_date_time = 13;</code>
+   * <code>optional string start_date_time = 13;</code>
    * @return The bytes for startDateTime.
    */
   com.google.protobuf.ByteString
@@ -125,7 +125,7 @@ public interface FeedItemOrBuilder extends
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
    *
-   * <code>string end_date_time = 14;</code>
+   * <code>optional string end_date_time = 14;</code>
    * @return Whether the endDateTime field is set.
    */
   boolean hasEndDateTime();
@@ -137,7 +137,7 @@ public interface FeedItemOrBuilder extends
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
    *
-   * <code>string end_date_time = 14;</code>
+   * <code>optional string end_date_time = 14;</code>
    * @return The endDateTime.
    */
   java.lang.String getEndDateTime();
@@ -149,7 +149,7 @@ public interface FeedItemOrBuilder extends
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
    *
-   * <code>string end_date_time = 14;</code>
+   * <code>optional string end_date_time = 14;</code>
    * @return The bytes for endDateTime.
    */
   com.google.protobuf.ByteString

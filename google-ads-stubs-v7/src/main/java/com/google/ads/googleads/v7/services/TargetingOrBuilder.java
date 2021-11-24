@@ -9,31 +9,31 @@ public interface TargetingOrBuilder extends
 
   /**
    * <pre>
-   * Required. The ID of the selected location.
-   * Plannable locations ID can be obtained from ListPlannableLocations.
+   * Required. The ID of the selected location. Plannable location IDs can be
+   * obtained from [ReachPlanService.ListPlannableLocations][google.ads.googleads.v7.services.ReachPlanService.ListPlannableLocations].
    * </pre>
    *
-   * <code>string plannable_location_id = 6;</code>
+   * <code>optional string plannable_location_id = 6;</code>
    * @return Whether the plannableLocationId field is set.
    */
   boolean hasPlannableLocationId();
   /**
    * <pre>
-   * Required. The ID of the selected location.
-   * Plannable locations ID can be obtained from ListPlannableLocations.
+   * Required. The ID of the selected location. Plannable location IDs can be
+   * obtained from [ReachPlanService.ListPlannableLocations][google.ads.googleads.v7.services.ReachPlanService.ListPlannableLocations].
    * </pre>
    *
-   * <code>string plannable_location_id = 6;</code>
+   * <code>optional string plannable_location_id = 6;</code>
    * @return The plannableLocationId.
    */
   java.lang.String getPlannableLocationId();
   /**
    * <pre>
-   * Required. The ID of the selected location.
-   * Plannable locations ID can be obtained from ListPlannableLocations.
+   * Required. The ID of the selected location. Plannable location IDs can be
+   * obtained from [ReachPlanService.ListPlannableLocations][google.ads.googleads.v7.services.ReachPlanService.ListPlannableLocations].
    * </pre>
    *
-   * <code>string plannable_location_id = 6;</code>
+   * <code>optional string plannable_location_id = 6;</code>
    * @return The bytes for plannableLocationId.
    */
   com.google.protobuf.ByteString
@@ -42,7 +42,7 @@ public interface TargetingOrBuilder extends
   /**
    * <pre>
    * Targeted age range.
-   * If not specified, targets all age ranges.
+   * An unset value is equivalent to targeting all ages.
    * </pre>
    *
    * <code>.google.ads.googleads.v7.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange age_range = 2;</code>
@@ -52,7 +52,7 @@ public interface TargetingOrBuilder extends
   /**
    * <pre>
    * Targeted age range.
-   * If not specified, targets all age ranges.
+   * An unset value is equivalent to targeting all ages.
    * </pre>
    *
    * <code>.google.ads.googleads.v7.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange age_range = 2;</code>
@@ -63,7 +63,7 @@ public interface TargetingOrBuilder extends
   /**
    * <pre>
    * Targeted genders.
-   * If not specified, targets all genders.
+   * An unset value is equivalent to targeting MALE and FEMALE.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v7.common.GenderInfo genders = 3;</code>
@@ -73,7 +73,7 @@ public interface TargetingOrBuilder extends
   /**
    * <pre>
    * Targeted genders.
-   * If not specified, targets all genders.
+   * An unset value is equivalent to targeting MALE and FEMALE.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v7.common.GenderInfo genders = 3;</code>
@@ -82,7 +82,7 @@ public interface TargetingOrBuilder extends
   /**
    * <pre>
    * Targeted genders.
-   * If not specified, targets all genders.
+   * An unset value is equivalent to targeting MALE and FEMALE.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v7.common.GenderInfo genders = 3;</code>
@@ -91,7 +91,7 @@ public interface TargetingOrBuilder extends
   /**
    * <pre>
    * Targeted genders.
-   * If not specified, targets all genders.
+   * An unset value is equivalent to targeting MALE and FEMALE.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v7.common.GenderInfo genders = 3;</code>
@@ -101,7 +101,7 @@ public interface TargetingOrBuilder extends
   /**
    * <pre>
    * Targeted genders.
-   * If not specified, targets all genders.
+   * An unset value is equivalent to targeting MALE and FEMALE.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v7.common.GenderInfo genders = 3;</code>
@@ -113,7 +113,8 @@ public interface TargetingOrBuilder extends
    * <pre>
    * Targeted devices.
    * If not specified, targets all applicable devices. Applicable devices vary
-   * by product and region and can be obtained from ListPlannableProducts.
+   * by product and region and can be obtained from
+   * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v7.services.ReachPlanService.ListPlannableProducts].
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v7.common.DeviceInfo devices = 4;</code>
@@ -124,7 +125,8 @@ public interface TargetingOrBuilder extends
    * <pre>
    * Targeted devices.
    * If not specified, targets all applicable devices. Applicable devices vary
-   * by product and region and can be obtained from ListPlannableProducts.
+   * by product and region and can be obtained from
+   * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v7.services.ReachPlanService.ListPlannableProducts].
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v7.common.DeviceInfo devices = 4;</code>
@@ -134,7 +136,8 @@ public interface TargetingOrBuilder extends
    * <pre>
    * Targeted devices.
    * If not specified, targets all applicable devices. Applicable devices vary
-   * by product and region and can be obtained from ListPlannableProducts.
+   * by product and region and can be obtained from
+   * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v7.services.ReachPlanService.ListPlannableProducts].
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v7.common.DeviceInfo devices = 4;</code>
@@ -144,7 +147,8 @@ public interface TargetingOrBuilder extends
    * <pre>
    * Targeted devices.
    * If not specified, targets all applicable devices. Applicable devices vary
-   * by product and region and can be obtained from ListPlannableProducts.
+   * by product and region and can be obtained from
+   * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v7.services.ReachPlanService.ListPlannableProducts].
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v7.common.DeviceInfo devices = 4;</code>
@@ -155,7 +159,8 @@ public interface TargetingOrBuilder extends
    * <pre>
    * Targeted devices.
    * If not specified, targets all applicable devices. Applicable devices vary
-   * by product and region and can be obtained from ListPlannableProducts.
+   * by product and region and can be obtained from
+   * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v7.services.ReachPlanService.ListPlannableProducts].
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v7.common.DeviceInfo devices = 4;</code>
@@ -167,7 +172,8 @@ public interface TargetingOrBuilder extends
    * <pre>
    * Targetable network for the ad product.
    * If not specified, targets all applicable networks. Applicable networks vary
-   * by product and region and can be obtained from ListPlannableProducts.
+   * by product and region and can be obtained from
+   * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v7.services.ReachPlanService.ListPlannableProducts].
    * </pre>
    *
    * <code>.google.ads.googleads.v7.enums.ReachPlanNetworkEnum.ReachPlanNetwork network = 5;</code>
@@ -178,7 +184,8 @@ public interface TargetingOrBuilder extends
    * <pre>
    * Targetable network for the ad product.
    * If not specified, targets all applicable networks. Applicable networks vary
-   * by product and region and can be obtained from ListPlannableProducts.
+   * by product and region and can be obtained from
+   * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v7.services.ReachPlanService.ListPlannableProducts].
    * </pre>
    *
    * <code>.google.ads.googleads.v7.enums.ReachPlanNetworkEnum.ReachPlanNetwork network = 5;</code>

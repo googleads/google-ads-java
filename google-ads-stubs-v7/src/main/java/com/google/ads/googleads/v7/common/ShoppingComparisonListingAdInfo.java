@@ -101,7 +101,7 @@ private static final long serialVersionUID = 0L;
    * and 45 characters.
    * </pre>
    *
-   * <code>string headline = 2;</code>
+   * <code>optional string headline = 2;</code>
    * @return Whether the headline field is set.
    */
   @java.lang.Override
@@ -114,7 +114,7 @@ private static final long serialVersionUID = 0L;
    * and 45 characters.
    * </pre>
    *
-   * <code>string headline = 2;</code>
+   * <code>optional string headline = 2;</code>
    * @return The headline.
    */
   @java.lang.Override
@@ -136,7 +136,7 @@ private static final long serialVersionUID = 0L;
    * and 45 characters.
    * </pre>
    *
-   * <code>string headline = 2;</code>
+   * <code>optional string headline = 2;</code>
    * @return The bytes for headline.
    */
   @java.lang.Override
@@ -480,7 +480,7 @@ private static final long serialVersionUID = 0L;
      * and 45 characters.
      * </pre>
      *
-     * <code>string headline = 2;</code>
+     * <code>optional string headline = 2;</code>
      * @return Whether the headline field is set.
      */
     public boolean hasHeadline() {
@@ -492,7 +492,7 @@ private static final long serialVersionUID = 0L;
      * and 45 characters.
      * </pre>
      *
-     * <code>string headline = 2;</code>
+     * <code>optional string headline = 2;</code>
      * @return The headline.
      */
     public java.lang.String getHeadline() {
@@ -513,7 +513,7 @@ private static final long serialVersionUID = 0L;
      * and 45 characters.
      * </pre>
      *
-     * <code>string headline = 2;</code>
+     * <code>optional string headline = 2;</code>
      * @return The bytes for headline.
      */
     public com.google.protobuf.ByteString
@@ -535,7 +535,7 @@ private static final long serialVersionUID = 0L;
      * and 45 characters.
      * </pre>
      *
-     * <code>string headline = 2;</code>
+     * <code>optional string headline = 2;</code>
      * @param value The headline to set.
      * @return This builder for chaining.
      */
@@ -555,7 +555,7 @@ private static final long serialVersionUID = 0L;
      * and 45 characters.
      * </pre>
      *
-     * <code>string headline = 2;</code>
+     * <code>optional string headline = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearHeadline() {
@@ -570,7 +570,7 @@ private static final long serialVersionUID = 0L;
      * and 45 characters.
      * </pre>
      *
-     * <code>string headline = 2;</code>
+     * <code>optional string headline = 2;</code>
      * @param value The bytes for headline to set.
      * @return This builder for chaining.
      */

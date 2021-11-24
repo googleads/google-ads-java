@@ -33,7 +33,7 @@ public interface FeedItemValidationErrorOrBuilder extends
    * Output only. The description of the validation error.
    * </pre>
    *
-   * <code>string description = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string description = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the description field is set.
    */
   boolean hasDescription();
@@ -42,7 +42,7 @@ public interface FeedItemValidationErrorOrBuilder extends
    * Output only. The description of the validation error.
    * </pre>
    *
-   * <code>string description = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string description = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The description.
    */
   java.lang.String getDescription();
@@ -51,7 +51,7 @@ public interface FeedItemValidationErrorOrBuilder extends
    * Output only. The description of the validation error.
    * </pre>
    *
-   * <code>string description = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string description = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for description.
    */
   com.google.protobuf.ByteString
@@ -99,7 +99,7 @@ public interface FeedItemValidationErrorOrBuilder extends
    * feed_attribute_id is not mapped). Note that extra_info is not localized.
    * </pre>
    *
-   * <code>string extra_info = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string extra_info = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the extraInfo field is set.
    */
   boolean hasExtraInfo();
@@ -110,7 +110,7 @@ public interface FeedItemValidationErrorOrBuilder extends
    * feed_attribute_id is not mapped). Note that extra_info is not localized.
    * </pre>
    *
-   * <code>string extra_info = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string extra_info = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The extraInfo.
    */
   java.lang.String getExtraInfo();
@@ -121,7 +121,7 @@ public interface FeedItemValidationErrorOrBuilder extends
    * feed_attribute_id is not mapped). Note that extra_info is not localized.
    * </pre>
    *
-   * <code>string extra_info = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string extra_info = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for extraInfo.
    */
   com.google.protobuf.ByteString

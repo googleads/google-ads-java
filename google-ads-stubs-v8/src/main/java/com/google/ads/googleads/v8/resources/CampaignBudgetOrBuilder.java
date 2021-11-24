@@ -40,7 +40,7 @@ public interface CampaignBudgetOrBuilder extends
    * among different campaigns to get optimum results.
    * </pre>
    *
-   * <code>int64 id = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -53,7 +53,7 @@ public interface CampaignBudgetOrBuilder extends
    * among different campaigns to get optimum results.
    * </pre>
    *
-   * <code>int64 id = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   long getId();
@@ -69,7 +69,7 @@ public interface CampaignBudgetOrBuilder extends
    * in UTF-8 bytes, (trimmed).
    * </pre>
    *
-   * <code>string name = 20;</code>
+   * <code>optional string name = 20;</code>
    * @return Whether the name field is set.
    */
   boolean hasName();
@@ -84,7 +84,7 @@ public interface CampaignBudgetOrBuilder extends
    * in UTF-8 bytes, (trimmed).
    * </pre>
    *
-   * <code>string name = 20;</code>
+   * <code>optional string name = 20;</code>
    * @return The name.
    */
   java.lang.String getName();
@@ -99,7 +99,7 @@ public interface CampaignBudgetOrBuilder extends
    * in UTF-8 bytes, (trimmed).
    * </pre>
    *
-   * <code>string name = 20;</code>
+   * <code>optional string name = 20;</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
@@ -112,7 +112,7 @@ public interface CampaignBudgetOrBuilder extends
    * currency unit. Monthly spend is capped at 30.4 times this amount.
    * </pre>
    *
-   * <code>int64 amount_micros = 21;</code>
+   * <code>optional int64 amount_micros = 21;</code>
    * @return Whether the amountMicros field is set.
    */
   boolean hasAmountMicros();
@@ -123,7 +123,7 @@ public interface CampaignBudgetOrBuilder extends
    * currency unit. Monthly spend is capped at 30.4 times this amount.
    * </pre>
    *
-   * <code>int64 amount_micros = 21;</code>
+   * <code>optional int64 amount_micros = 21;</code>
    * @return The amountMicros.
    */
   long getAmountMicros();
@@ -135,7 +135,7 @@ public interface CampaignBudgetOrBuilder extends
    * currency unit.
    * </pre>
    *
-   * <code>int64 total_amount_micros = 22;</code>
+   * <code>optional int64 total_amount_micros = 22;</code>
    * @return Whether the totalAmountMicros field is set.
    */
   boolean hasTotalAmountMicros();
@@ -146,7 +146,7 @@ public interface CampaignBudgetOrBuilder extends
    * currency unit.
    * </pre>
    *
-   * <code>int64 total_amount_micros = 22;</code>
+   * <code>optional int64 total_amount_micros = 22;</code>
    * @return The totalAmountMicros.
    */
   long getTotalAmountMicros();
@@ -208,7 +208,7 @@ public interface CampaignBudgetOrBuilder extends
    * A shared campaign budget can never become non-shared.
    * </pre>
    *
-   * <code>bool explicitly_shared = 23;</code>
+   * <code>optional bool explicitly_shared = 23;</code>
    * @return Whether the explicitlyShared field is set.
    */
   boolean hasExplicitlyShared();
@@ -227,7 +227,7 @@ public interface CampaignBudgetOrBuilder extends
    * A shared campaign budget can never become non-shared.
    * </pre>
    *
-   * <code>bool explicitly_shared = 23;</code>
+   * <code>optional bool explicitly_shared = 23;</code>
    * @return The explicitlyShared.
    */
   boolean getExplicitlyShared();
@@ -238,7 +238,7 @@ public interface CampaignBudgetOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 reference_count = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 reference_count = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the referenceCount field is set.
    */
   boolean hasReferenceCount();
@@ -248,7 +248,7 @@ public interface CampaignBudgetOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 reference_count = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 reference_count = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The referenceCount.
    */
   long getReferenceCount();
@@ -259,7 +259,7 @@ public interface CampaignBudgetOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>bool has_recommended_budget = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool has_recommended_budget = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the hasRecommendedBudget field is set.
    */
   boolean hasHasRecommendedBudget();
@@ -269,7 +269,7 @@ public interface CampaignBudgetOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>bool has_recommended_budget = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool has_recommended_budget = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The hasRecommendedBudget.
    */
   boolean getHasRecommendedBudget();
@@ -283,7 +283,7 @@ public interface CampaignBudgetOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 recommended_budget_amount_micros = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 recommended_budget_amount_micros = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the recommendedBudgetAmountMicros field is set.
    */
   boolean hasRecommendedBudgetAmountMicros();
@@ -296,7 +296,7 @@ public interface CampaignBudgetOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 recommended_budget_amount_micros = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 recommended_budget_amount_micros = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The recommendedBudgetAmountMicros.
    */
   long getRecommendedBudgetAmountMicros();
@@ -326,7 +326,7 @@ public interface CampaignBudgetOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 recommended_budget_estimated_change_weekly_clicks = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 recommended_budget_estimated_change_weekly_clicks = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the recommendedBudgetEstimatedChangeWeeklyClicks field is set.
    */
   boolean hasRecommendedBudgetEstimatedChangeWeeklyClicks();
@@ -336,7 +336,7 @@ public interface CampaignBudgetOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 recommended_budget_estimated_change_weekly_clicks = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 recommended_budget_estimated_change_weekly_clicks = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The recommendedBudgetEstimatedChangeWeeklyClicks.
    */
   long getRecommendedBudgetEstimatedChangeWeeklyClicks();
@@ -348,7 +348,7 @@ public interface CampaignBudgetOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 recommended_budget_estimated_change_weekly_cost_micros = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 recommended_budget_estimated_change_weekly_cost_micros = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the recommendedBudgetEstimatedChangeWeeklyCostMicros field is set.
    */
   boolean hasRecommendedBudgetEstimatedChangeWeeklyCostMicros();
@@ -359,7 +359,7 @@ public interface CampaignBudgetOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 recommended_budget_estimated_change_weekly_cost_micros = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 recommended_budget_estimated_change_weekly_cost_micros = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The recommendedBudgetEstimatedChangeWeeklyCostMicros.
    */
   long getRecommendedBudgetEstimatedChangeWeeklyCostMicros();
@@ -371,7 +371,7 @@ public interface CampaignBudgetOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 recommended_budget_estimated_change_weekly_interactions = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 recommended_budget_estimated_change_weekly_interactions = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the recommendedBudgetEstimatedChangeWeeklyInteractions field is set.
    */
   boolean hasRecommendedBudgetEstimatedChangeWeeklyInteractions();
@@ -382,7 +382,7 @@ public interface CampaignBudgetOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 recommended_budget_estimated_change_weekly_interactions = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 recommended_budget_estimated_change_weekly_interactions = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The recommendedBudgetEstimatedChangeWeeklyInteractions.
    */
   long getRecommendedBudgetEstimatedChangeWeeklyInteractions();
@@ -393,7 +393,7 @@ public interface CampaignBudgetOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 recommended_budget_estimated_change_weekly_views = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 recommended_budget_estimated_change_weekly_views = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the recommendedBudgetEstimatedChangeWeeklyViews field is set.
    */
   boolean hasRecommendedBudgetEstimatedChangeWeeklyViews();
@@ -403,7 +403,7 @@ public interface CampaignBudgetOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 recommended_budget_estimated_change_weekly_views = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 recommended_budget_estimated_change_weekly_views = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The recommendedBudgetEstimatedChangeWeeklyViews.
    */
   long getRecommendedBudgetEstimatedChangeWeeklyViews();

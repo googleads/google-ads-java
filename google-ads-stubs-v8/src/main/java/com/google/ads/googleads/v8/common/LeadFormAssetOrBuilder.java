@@ -140,7 +140,7 @@ public interface LeadFormAssetOrBuilder extends
    * advertiser will follow up with the user.
    * </pre>
    *
-   * <code>string post_submit_headline = 15;</code>
+   * <code>optional string post_submit_headline = 15;</code>
    * @return Whether the postSubmitHeadline field is set.
    */
   boolean hasPostSubmitHeadline();
@@ -150,7 +150,7 @@ public interface LeadFormAssetOrBuilder extends
    * advertiser will follow up with the user.
    * </pre>
    *
-   * <code>string post_submit_headline = 15;</code>
+   * <code>optional string post_submit_headline = 15;</code>
    * @return The postSubmitHeadline.
    */
   java.lang.String getPostSubmitHeadline();
@@ -160,7 +160,7 @@ public interface LeadFormAssetOrBuilder extends
    * advertiser will follow up with the user.
    * </pre>
    *
-   * <code>string post_submit_headline = 15;</code>
+   * <code>optional string post_submit_headline = 15;</code>
    * @return The bytes for postSubmitHeadline.
    */
   com.google.protobuf.ByteString
@@ -172,7 +172,7 @@ public interface LeadFormAssetOrBuilder extends
    * advertiser will follow up with the user.
    * </pre>
    *
-   * <code>string post_submit_description = 16;</code>
+   * <code>optional string post_submit_description = 16;</code>
    * @return Whether the postSubmitDescription field is set.
    */
   boolean hasPostSubmitDescription();
@@ -182,7 +182,7 @@ public interface LeadFormAssetOrBuilder extends
    * advertiser will follow up with the user.
    * </pre>
    *
-   * <code>string post_submit_description = 16;</code>
+   * <code>optional string post_submit_description = 16;</code>
    * @return The postSubmitDescription.
    */
   java.lang.String getPostSubmitDescription();
@@ -192,7 +192,7 @@ public interface LeadFormAssetOrBuilder extends
    * advertiser will follow up with the user.
    * </pre>
    *
-   * <code>string post_submit_description = 16;</code>
+   * <code>optional string post_submit_description = 16;</code>
    * @return The bytes for postSubmitDescription.
    */
   com.google.protobuf.ByteString
@@ -318,7 +318,7 @@ public interface LeadFormAssetOrBuilder extends
    * and the aspect ratio must be 1.91:1 (+-1%).
    * </pre>
    *
-   * <code>string background_image_asset = 20;</code>
+   * <code>optional string background_image_asset = 20;</code>
    * @return Whether the backgroundImageAsset field is set.
    */
   boolean hasBackgroundImageAsset();
@@ -328,7 +328,7 @@ public interface LeadFormAssetOrBuilder extends
    * and the aspect ratio must be 1.91:1 (+-1%).
    * </pre>
    *
-   * <code>string background_image_asset = 20;</code>
+   * <code>optional string background_image_asset = 20;</code>
    * @return The backgroundImageAsset.
    */
   java.lang.String getBackgroundImageAsset();
@@ -338,7 +338,7 @@ public interface LeadFormAssetOrBuilder extends
    * and the aspect ratio must be 1.91:1 (+-1%).
    * </pre>
    *
-   * <code>string background_image_asset = 20;</code>
+   * <code>optional string background_image_asset = 20;</code>
    * @return The bytes for backgroundImageAsset.
    */
   com.google.protobuf.ByteString
@@ -369,7 +369,7 @@ public interface LeadFormAssetOrBuilder extends
    * Accessible to allowed customers only.
    * </pre>
    *
-   * <code>string custom_disclosure = 22;</code>
+   * <code>optional string custom_disclosure = 22;</code>
    * @return Whether the customDisclosure field is set.
    */
   boolean hasCustomDisclosure();
@@ -379,7 +379,7 @@ public interface LeadFormAssetOrBuilder extends
    * Accessible to allowed customers only.
    * </pre>
    *
-   * <code>string custom_disclosure = 22;</code>
+   * <code>optional string custom_disclosure = 22;</code>
    * @return The customDisclosure.
    */
   java.lang.String getCustomDisclosure();
@@ -389,7 +389,7 @@ public interface LeadFormAssetOrBuilder extends
    * Accessible to allowed customers only.
    * </pre>
    *
-   * <code>string custom_disclosure = 22;</code>
+   * <code>optional string custom_disclosure = 22;</code>
    * @return The bytes for customDisclosure.
    */
   com.google.protobuf.ByteString

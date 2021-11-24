@@ -13,7 +13,7 @@ public interface PreferencesOrBuilder extends
    * If not set, default is any value.
    * </pre>
    *
-   * <code>bool is_skippable = 6;</code>
+   * <code>optional bool is_skippable = 6;</code>
    * @return Whether the isSkippable field is set.
    */
   boolean hasIsSkippable();
@@ -23,7 +23,7 @@ public interface PreferencesOrBuilder extends
    * If not set, default is any value.
    * </pre>
    *
-   * <code>bool is_skippable = 6;</code>
+   * <code>optional bool is_skippable = 6;</code>
    * @return The isSkippable.
    */
   boolean getIsSkippable();
@@ -34,7 +34,7 @@ public interface PreferencesOrBuilder extends
    * If not set, default is any value.
    * </pre>
    *
-   * <code>bool starts_with_sound = 7;</code>
+   * <code>optional bool starts_with_sound = 7;</code>
    * @return Whether the startsWithSound field is set.
    */
   boolean hasStartsWithSound();
@@ -44,7 +44,7 @@ public interface PreferencesOrBuilder extends
    * If not set, default is any value.
    * </pre>
    *
-   * <code>bool starts_with_sound = 7;</code>
+   * <code>optional bool starts_with_sound = 7;</code>
    * @return The startsWithSound.
    */
   boolean getStartsWithSound();
@@ -76,7 +76,7 @@ public interface PreferencesOrBuilder extends
    * If not set, default is false.
    * </pre>
    *
-   * <code>bool top_content_only = 8;</code>
+   * <code>optional bool top_content_only = 8;</code>
    * @return Whether the topContentOnly field is set.
    */
   boolean hasTopContentOnly();
@@ -86,7 +86,7 @@ public interface PreferencesOrBuilder extends
    * If not set, default is false.
    * </pre>
    *
-   * <code>bool top_content_only = 8;</code>
+   * <code>optional bool top_content_only = 8;</code>
    * @return The topContentOnly.
    */
   boolean getTopContentOnly();
@@ -98,7 +98,7 @@ public interface PreferencesOrBuilder extends
    * If not set, default is any value.
    * </pre>
    *
-   * <code>bool has_guaranteed_price = 9;</code>
+   * <code>optional bool has_guaranteed_price = 9;</code>
    * @return Whether the hasGuaranteedPrice field is set.
    */
   boolean hasHasGuaranteedPrice();
@@ -109,7 +109,7 @@ public interface PreferencesOrBuilder extends
    * If not set, default is any value.
    * </pre>
    *
-   * <code>bool has_guaranteed_price = 9;</code>
+   * <code>optional bool has_guaranteed_price = 9;</code>
    * @return The hasGuaranteedPrice.
    */
   boolean getHasGuaranteedPrice();

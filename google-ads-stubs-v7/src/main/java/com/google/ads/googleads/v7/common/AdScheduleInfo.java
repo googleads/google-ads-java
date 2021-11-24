@@ -194,7 +194,7 @@ private static final long serialVersionUID = 0L;
    * operations.
    * </pre>
    *
-   * <code>int32 start_hour = 6;</code>
+   * <code>optional int32 start_hour = 6;</code>
    * @return Whether the startHour field is set.
    */
   @java.lang.Override
@@ -209,7 +209,7 @@ private static final long serialVersionUID = 0L;
    * operations.
    * </pre>
    *
-   * <code>int32 start_hour = 6;</code>
+   * <code>optional int32 start_hour = 6;</code>
    * @return The startHour.
    */
   @java.lang.Override
@@ -227,7 +227,7 @@ private static final long serialVersionUID = 0L;
    * operations.
    * </pre>
    *
-   * <code>int32 end_hour = 7;</code>
+   * <code>optional int32 end_hour = 7;</code>
    * @return Whether the endHour field is set.
    */
   @java.lang.Override
@@ -242,7 +242,7 @@ private static final long serialVersionUID = 0L;
    * operations.
    * </pre>
    *
-   * <code>int32 end_hour = 7;</code>
+   * <code>optional int32 end_hour = 7;</code>
    * @return The endHour.
    */
   @java.lang.Override
@@ -857,7 +857,7 @@ private static final long serialVersionUID = 0L;
      * operations.
      * </pre>
      *
-     * <code>int32 start_hour = 6;</code>
+     * <code>optional int32 start_hour = 6;</code>
      * @return Whether the startHour field is set.
      */
     @java.lang.Override
@@ -872,7 +872,7 @@ private static final long serialVersionUID = 0L;
      * operations.
      * </pre>
      *
-     * <code>int32 start_hour = 6;</code>
+     * <code>optional int32 start_hour = 6;</code>
      * @return The startHour.
      */
     @java.lang.Override
@@ -887,7 +887,7 @@ private static final long serialVersionUID = 0L;
      * operations.
      * </pre>
      *
-     * <code>int32 start_hour = 6;</code>
+     * <code>optional int32 start_hour = 6;</code>
      * @param value The startHour to set.
      * @return This builder for chaining.
      */
@@ -905,7 +905,7 @@ private static final long serialVersionUID = 0L;
      * operations.
      * </pre>
      *
-     * <code>int32 start_hour = 6;</code>
+     * <code>optional int32 start_hour = 6;</code>
      * @return This builder for chaining.
      */
     public Builder clearStartHour() {
@@ -924,7 +924,7 @@ private static final long serialVersionUID = 0L;
      * operations.
      * </pre>
      *
-     * <code>int32 end_hour = 7;</code>
+     * <code>optional int32 end_hour = 7;</code>
      * @return Whether the endHour field is set.
      */
     @java.lang.Override
@@ -939,7 +939,7 @@ private static final long serialVersionUID = 0L;
      * operations.
      * </pre>
      *
-     * <code>int32 end_hour = 7;</code>
+     * <code>optional int32 end_hour = 7;</code>
      * @return The endHour.
      */
     @java.lang.Override
@@ -954,7 +954,7 @@ private static final long serialVersionUID = 0L;
      * operations.
      * </pre>
      *
-     * <code>int32 end_hour = 7;</code>
+     * <code>optional int32 end_hour = 7;</code>
      * @param value The endHour to set.
      * @return This builder for chaining.
      */
@@ -972,7 +972,7 @@ private static final long serialVersionUID = 0L;
      * operations.
      * </pre>
      *
-     * <code>int32 end_hour = 7;</code>
+     * <code>optional int32 end_hour = 7;</code>
      * @return This builder for chaining.
      */
     public Builder clearEndHour() {

@@ -3132,7 +3132,7 @@ private static final long serialVersionUID = 0L;
      * The full URL that didn't work.
      * </pre>
      *
-     * <code>string expanded_url = 7;</code>
+     * <code>optional string expanded_url = 7;</code>
      * @return Whether the expandedUrl field is set.
      */
     boolean hasExpandedUrl();
@@ -3141,7 +3141,7 @@ private static final long serialVersionUID = 0L;
      * The full URL that didn't work.
      * </pre>
      *
-     * <code>string expanded_url = 7;</code>
+     * <code>optional string expanded_url = 7;</code>
      * @return The expandedUrl.
      */
     java.lang.String getExpandedUrl();
@@ -3150,7 +3150,7 @@ private static final long serialVersionUID = 0L;
      * The full URL that didn't work.
      * </pre>
      *
-     * <code>string expanded_url = 7;</code>
+     * <code>optional string expanded_url = 7;</code>
      * @return The bytes for expandedUrl.
      */
     com.google.protobuf.ByteString
@@ -3182,7 +3182,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string last_checked_date_time = 8;</code>
+     * <code>optional string last_checked_date_time = 8;</code>
      * @return Whether the lastCheckedDateTime field is set.
      */
     boolean hasLastCheckedDateTime();
@@ -3193,7 +3193,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string last_checked_date_time = 8;</code>
+     * <code>optional string last_checked_date_time = 8;</code>
      * @return The lastCheckedDateTime.
      */
     java.lang.String getLastCheckedDateTime();
@@ -3204,7 +3204,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string last_checked_date_time = 8;</code>
+     * <code>optional string last_checked_date_time = 8;</code>
      * @return The bytes for lastCheckedDateTime.
      */
     com.google.protobuf.ByteString
@@ -3423,7 +3423,7 @@ private static final long serialVersionUID = 0L;
      * The full URL that didn't work.
      * </pre>
      *
-     * <code>string expanded_url = 7;</code>
+     * <code>optional string expanded_url = 7;</code>
      * @return Whether the expandedUrl field is set.
      */
     @java.lang.Override
@@ -3435,7 +3435,7 @@ private static final long serialVersionUID = 0L;
      * The full URL that didn't work.
      * </pre>
      *
-     * <code>string expanded_url = 7;</code>
+     * <code>optional string expanded_url = 7;</code>
      * @return The expandedUrl.
      */
     @java.lang.Override
@@ -3456,7 +3456,7 @@ private static final long serialVersionUID = 0L;
      * The full URL that didn't work.
      * </pre>
      *
-     * <code>string expanded_url = 7;</code>
+     * <code>optional string expanded_url = 7;</code>
      * @return The bytes for expandedUrl.
      */
     @java.lang.Override
@@ -3510,7 +3510,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string last_checked_date_time = 8;</code>
+     * <code>optional string last_checked_date_time = 8;</code>
      * @return Whether the lastCheckedDateTime field is set.
      */
     @java.lang.Override
@@ -3524,7 +3524,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string last_checked_date_time = 8;</code>
+     * <code>optional string last_checked_date_time = 8;</code>
      * @return The lastCheckedDateTime.
      */
     @java.lang.Override
@@ -3547,7 +3547,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string last_checked_date_time = 8;</code>
+     * <code>optional string last_checked_date_time = 8;</code>
      * @return The bytes for lastCheckedDateTime.
      */
     @java.lang.Override
@@ -4085,7 +4085,7 @@ private static final long serialVersionUID = 0L;
        * The full URL that didn't work.
        * </pre>
        *
-       * <code>string expanded_url = 7;</code>
+       * <code>optional string expanded_url = 7;</code>
        * @return Whether the expandedUrl field is set.
        */
       public boolean hasExpandedUrl() {
@@ -4096,7 +4096,7 @@ private static final long serialVersionUID = 0L;
        * The full URL that didn't work.
        * </pre>
        *
-       * <code>string expanded_url = 7;</code>
+       * <code>optional string expanded_url = 7;</code>
        * @return The expandedUrl.
        */
       public java.lang.String getExpandedUrl() {
@@ -4116,7 +4116,7 @@ private static final long serialVersionUID = 0L;
        * The full URL that didn't work.
        * </pre>
        *
-       * <code>string expanded_url = 7;</code>
+       * <code>optional string expanded_url = 7;</code>
        * @return The bytes for expandedUrl.
        */
       public com.google.protobuf.ByteString
@@ -4137,7 +4137,7 @@ private static final long serialVersionUID = 0L;
        * The full URL that didn't work.
        * </pre>
        *
-       * <code>string expanded_url = 7;</code>
+       * <code>optional string expanded_url = 7;</code>
        * @param value The expandedUrl to set.
        * @return This builder for chaining.
        */
@@ -4156,7 +4156,7 @@ private static final long serialVersionUID = 0L;
        * The full URL that didn't work.
        * </pre>
        *
-       * <code>string expanded_url = 7;</code>
+       * <code>optional string expanded_url = 7;</code>
        * @return This builder for chaining.
        */
       public Builder clearExpandedUrl() {
@@ -4170,7 +4170,7 @@ private static final long serialVersionUID = 0L;
        * The full URL that didn't work.
        * </pre>
        *
-       * <code>string expanded_url = 7;</code>
+       * <code>optional string expanded_url = 7;</code>
        * @param value The bytes for expandedUrl to set.
        * @return This builder for chaining.
        */
@@ -4268,7 +4268,7 @@ private static final long serialVersionUID = 0L;
        * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
        * </pre>
        *
-       * <code>string last_checked_date_time = 8;</code>
+       * <code>optional string last_checked_date_time = 8;</code>
        * @return Whether the lastCheckedDateTime field is set.
        */
       public boolean hasLastCheckedDateTime() {
@@ -4281,7 +4281,7 @@ private static final long serialVersionUID = 0L;
        * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
        * </pre>
        *
-       * <code>string last_checked_date_time = 8;</code>
+       * <code>optional string last_checked_date_time = 8;</code>
        * @return The lastCheckedDateTime.
        */
       public java.lang.String getLastCheckedDateTime() {
@@ -4303,7 +4303,7 @@ private static final long serialVersionUID = 0L;
        * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
        * </pre>
        *
-       * <code>string last_checked_date_time = 8;</code>
+       * <code>optional string last_checked_date_time = 8;</code>
        * @return The bytes for lastCheckedDateTime.
        */
       public com.google.protobuf.ByteString
@@ -4326,7 +4326,7 @@ private static final long serialVersionUID = 0L;
        * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
        * </pre>
        *
-       * <code>string last_checked_date_time = 8;</code>
+       * <code>optional string last_checked_date_time = 8;</code>
        * @param value The lastCheckedDateTime to set.
        * @return This builder for chaining.
        */
@@ -4347,7 +4347,7 @@ private static final long serialVersionUID = 0L;
        * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
        * </pre>
        *
-       * <code>string last_checked_date_time = 8;</code>
+       * <code>optional string last_checked_date_time = 8;</code>
        * @return This builder for chaining.
        */
       public Builder clearLastCheckedDateTime() {
@@ -4363,7 +4363,7 @@ private static final long serialVersionUID = 0L;
        * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
        * </pre>
        *
-       * <code>string last_checked_date_time = 8;</code>
+       * <code>optional string last_checked_date_time = 8;</code>
        * @param value The bytes for lastCheckedDateTime to set.
        * @return This builder for chaining.
        */

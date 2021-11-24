@@ -115,7 +115,7 @@ private static final long serialVersionUID = 0L;
    * the link.
    * </pre>
    *
-   * <code>int64 app_analytics_provider_id = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional int64 app_analytics_provider_id = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the appAnalyticsProviderId field is set.
    */
   @java.lang.Override
@@ -130,7 +130,7 @@ private static final long serialVersionUID = 0L;
    * the link.
    * </pre>
    *
-   * <code>int64 app_analytics_provider_id = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional int64 app_analytics_provider_id = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The appAnalyticsProviderId.
    */
   @java.lang.Override
@@ -155,7 +155,7 @@ private static final long serialVersionUID = 0L;
    * the link.
    * </pre>
    *
-   * <code>string app_id = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string app_id = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the appId field is set.
    */
   @java.lang.Override
@@ -177,7 +177,7 @@ private static final long serialVersionUID = 0L;
    * the link.
    * </pre>
    *
-   * <code>string app_id = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string app_id = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The appId.
    */
   @java.lang.Override
@@ -208,7 +208,7 @@ private static final long serialVersionUID = 0L;
    * the link.
    * </pre>
    *
-   * <code>string app_id = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string app_id = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The bytes for appId.
    */
   @java.lang.Override
@@ -629,7 +629,7 @@ private static final long serialVersionUID = 0L;
      * the link.
      * </pre>
      *
-     * <code>int64 app_analytics_provider_id = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional int64 app_analytics_provider_id = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the appAnalyticsProviderId field is set.
      */
     @java.lang.Override
@@ -644,7 +644,7 @@ private static final long serialVersionUID = 0L;
      * the link.
      * </pre>
      *
-     * <code>int64 app_analytics_provider_id = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional int64 app_analytics_provider_id = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The appAnalyticsProviderId.
      */
     @java.lang.Override
@@ -659,7 +659,7 @@ private static final long serialVersionUID = 0L;
      * the link.
      * </pre>
      *
-     * <code>int64 app_analytics_provider_id = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional int64 app_analytics_provider_id = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @param value The appAnalyticsProviderId to set.
      * @return This builder for chaining.
      */
@@ -677,7 +677,7 @@ private static final long serialVersionUID = 0L;
      * the link.
      * </pre>
      *
-     * <code>int64 app_analytics_provider_id = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional int64 app_analytics_provider_id = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return This builder for chaining.
      */
     public Builder clearAppAnalyticsProviderId() {
@@ -703,7 +703,7 @@ private static final long serialVersionUID = 0L;
      * the link.
      * </pre>
      *
-     * <code>string app_id = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string app_id = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the appId field is set.
      */
     public boolean hasAppId() {
@@ -724,7 +724,7 @@ private static final long serialVersionUID = 0L;
      * the link.
      * </pre>
      *
-     * <code>string app_id = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string app_id = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The appId.
      */
     public java.lang.String getAppId() {
@@ -754,7 +754,7 @@ private static final long serialVersionUID = 0L;
      * the link.
      * </pre>
      *
-     * <code>string app_id = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string app_id = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The bytes for appId.
      */
     public com.google.protobuf.ByteString
@@ -785,7 +785,7 @@ private static final long serialVersionUID = 0L;
      * the link.
      * </pre>
      *
-     * <code>string app_id = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string app_id = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @param value The appId to set.
      * @return This builder for chaining.
      */
@@ -814,7 +814,7 @@ private static final long serialVersionUID = 0L;
      * the link.
      * </pre>
      *
-     * <code>string app_id = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string app_id = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return This builder for chaining.
      */
     public Builder clearAppId() {
@@ -838,7 +838,7 @@ private static final long serialVersionUID = 0L;
      * the link.
      * </pre>
      *
-     * <code>string app_id = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string app_id = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @param value The bytes for appId to set.
      * @return This builder for chaining.
      */

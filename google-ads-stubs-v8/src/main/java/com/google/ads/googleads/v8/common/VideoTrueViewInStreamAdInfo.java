@@ -118,7 +118,7 @@ private static final long serialVersionUID = 0L;
    * Required for TrueView for action campaigns, optional otherwise.
    * </pre>
    *
-   * <code>string action_button_label = 4;</code>
+   * <code>optional string action_button_label = 4;</code>
    * @return Whether the actionButtonLabel field is set.
    */
   @java.lang.Override
@@ -132,7 +132,7 @@ private static final long serialVersionUID = 0L;
    * Required for TrueView for action campaigns, optional otherwise.
    * </pre>
    *
-   * <code>string action_button_label = 4;</code>
+   * <code>optional string action_button_label = 4;</code>
    * @return The actionButtonLabel.
    */
   @java.lang.Override
@@ -155,7 +155,7 @@ private static final long serialVersionUID = 0L;
    * Required for TrueView for action campaigns, optional otherwise.
    * </pre>
    *
-   * <code>string action_button_label = 4;</code>
+   * <code>optional string action_button_label = 4;</code>
    * @return The bytes for actionButtonLabel.
    */
   @java.lang.Override
@@ -181,7 +181,7 @@ private static final long serialVersionUID = 0L;
    * context and encourage clicking on the button.
    * </pre>
    *
-   * <code>string action_headline = 5;</code>
+   * <code>optional string action_headline = 5;</code>
    * @return Whether the actionHeadline field is set.
    */
   @java.lang.Override
@@ -194,7 +194,7 @@ private static final long serialVersionUID = 0L;
    * context and encourage clicking on the button.
    * </pre>
    *
-   * <code>string action_headline = 5;</code>
+   * <code>optional string action_headline = 5;</code>
    * @return The actionHeadline.
    */
   @java.lang.Override
@@ -216,7 +216,7 @@ private static final long serialVersionUID = 0L;
    * context and encourage clicking on the button.
    * </pre>
    *
-   * <code>string action_headline = 5;</code>
+   * <code>optional string action_headline = 5;</code>
    * @return The bytes for actionHeadline.
    */
   @java.lang.Override
@@ -241,7 +241,7 @@ private static final long serialVersionUID = 0L;
    * The MediaFile resource name of the companion banner used with the ad.
    * </pre>
    *
-   * <code>string companion_banner = 6;</code>
+   * <code>optional string companion_banner = 6;</code>
    * @return Whether the companionBanner field is set.
    */
   @java.lang.Override
@@ -253,7 +253,7 @@ private static final long serialVersionUID = 0L;
    * The MediaFile resource name of the companion banner used with the ad.
    * </pre>
    *
-   * <code>string companion_banner = 6;</code>
+   * <code>optional string companion_banner = 6;</code>
    * @return The companionBanner.
    */
   @java.lang.Override
@@ -274,7 +274,7 @@ private static final long serialVersionUID = 0L;
    * The MediaFile resource name of the companion banner used with the ad.
    * </pre>
    *
-   * <code>string companion_banner = 6;</code>
+   * <code>optional string companion_banner = 6;</code>
    * @return The bytes for companionBanner.
    */
   @java.lang.Override
@@ -673,7 +673,7 @@ private static final long serialVersionUID = 0L;
      * Required for TrueView for action campaigns, optional otherwise.
      * </pre>
      *
-     * <code>string action_button_label = 4;</code>
+     * <code>optional string action_button_label = 4;</code>
      * @return Whether the actionButtonLabel field is set.
      */
     public boolean hasActionButtonLabel() {
@@ -686,7 +686,7 @@ private static final long serialVersionUID = 0L;
      * Required for TrueView for action campaigns, optional otherwise.
      * </pre>
      *
-     * <code>string action_button_label = 4;</code>
+     * <code>optional string action_button_label = 4;</code>
      * @return The actionButtonLabel.
      */
     public java.lang.String getActionButtonLabel() {
@@ -708,7 +708,7 @@ private static final long serialVersionUID = 0L;
      * Required for TrueView for action campaigns, optional otherwise.
      * </pre>
      *
-     * <code>string action_button_label = 4;</code>
+     * <code>optional string action_button_label = 4;</code>
      * @return The bytes for actionButtonLabel.
      */
     public com.google.protobuf.ByteString
@@ -731,7 +731,7 @@ private static final long serialVersionUID = 0L;
      * Required for TrueView for action campaigns, optional otherwise.
      * </pre>
      *
-     * <code>string action_button_label = 4;</code>
+     * <code>optional string action_button_label = 4;</code>
      * @param value The actionButtonLabel to set.
      * @return This builder for chaining.
      */
@@ -752,7 +752,7 @@ private static final long serialVersionUID = 0L;
      * Required for TrueView for action campaigns, optional otherwise.
      * </pre>
      *
-     * <code>string action_button_label = 4;</code>
+     * <code>optional string action_button_label = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearActionButtonLabel() {
@@ -768,7 +768,7 @@ private static final long serialVersionUID = 0L;
      * Required for TrueView for action campaigns, optional otherwise.
      * </pre>
      *
-     * <code>string action_button_label = 4;</code>
+     * <code>optional string action_button_label = 4;</code>
      * @param value The bytes for actionButtonLabel to set.
      * @return This builder for chaining.
      */
@@ -791,7 +791,7 @@ private static final long serialVersionUID = 0L;
      * context and encourage clicking on the button.
      * </pre>
      *
-     * <code>string action_headline = 5;</code>
+     * <code>optional string action_headline = 5;</code>
      * @return Whether the actionHeadline field is set.
      */
     public boolean hasActionHeadline() {
@@ -803,7 +803,7 @@ private static final long serialVersionUID = 0L;
      * context and encourage clicking on the button.
      * </pre>
      *
-     * <code>string action_headline = 5;</code>
+     * <code>optional string action_headline = 5;</code>
      * @return The actionHeadline.
      */
     public java.lang.String getActionHeadline() {
@@ -824,7 +824,7 @@ private static final long serialVersionUID = 0L;
      * context and encourage clicking on the button.
      * </pre>
      *
-     * <code>string action_headline = 5;</code>
+     * <code>optional string action_headline = 5;</code>
      * @return The bytes for actionHeadline.
      */
     public com.google.protobuf.ByteString
@@ -846,7 +846,7 @@ private static final long serialVersionUID = 0L;
      * context and encourage clicking on the button.
      * </pre>
      *
-     * <code>string action_headline = 5;</code>
+     * <code>optional string action_headline = 5;</code>
      * @param value The actionHeadline to set.
      * @return This builder for chaining.
      */
@@ -866,7 +866,7 @@ private static final long serialVersionUID = 0L;
      * context and encourage clicking on the button.
      * </pre>
      *
-     * <code>string action_headline = 5;</code>
+     * <code>optional string action_headline = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearActionHeadline() {
@@ -881,7 +881,7 @@ private static final long serialVersionUID = 0L;
      * context and encourage clicking on the button.
      * </pre>
      *
-     * <code>string action_headline = 5;</code>
+     * <code>optional string action_headline = 5;</code>
      * @param value The bytes for actionHeadline to set.
      * @return This builder for chaining.
      */
@@ -903,7 +903,7 @@ private static final long serialVersionUID = 0L;
      * The MediaFile resource name of the companion banner used with the ad.
      * </pre>
      *
-     * <code>string companion_banner = 6;</code>
+     * <code>optional string companion_banner = 6;</code>
      * @return Whether the companionBanner field is set.
      */
     public boolean hasCompanionBanner() {
@@ -914,7 +914,7 @@ private static final long serialVersionUID = 0L;
      * The MediaFile resource name of the companion banner used with the ad.
      * </pre>
      *
-     * <code>string companion_banner = 6;</code>
+     * <code>optional string companion_banner = 6;</code>
      * @return The companionBanner.
      */
     public java.lang.String getCompanionBanner() {
@@ -934,7 +934,7 @@ private static final long serialVersionUID = 0L;
      * The MediaFile resource name of the companion banner used with the ad.
      * </pre>
      *
-     * <code>string companion_banner = 6;</code>
+     * <code>optional string companion_banner = 6;</code>
      * @return The bytes for companionBanner.
      */
     public com.google.protobuf.ByteString
@@ -955,7 +955,7 @@ private static final long serialVersionUID = 0L;
      * The MediaFile resource name of the companion banner used with the ad.
      * </pre>
      *
-     * <code>string companion_banner = 6;</code>
+     * <code>optional string companion_banner = 6;</code>
      * @param value The companionBanner to set.
      * @return This builder for chaining.
      */
@@ -974,7 +974,7 @@ private static final long serialVersionUID = 0L;
      * The MediaFile resource name of the companion banner used with the ad.
      * </pre>
      *
-     * <code>string companion_banner = 6;</code>
+     * <code>optional string companion_banner = 6;</code>
      * @return This builder for chaining.
      */
     public Builder clearCompanionBanner() {
@@ -988,7 +988,7 @@ private static final long serialVersionUID = 0L;
      * The MediaFile resource name of the companion banner used with the ad.
      * </pre>
      *
-     * <code>string companion_banner = 6;</code>
+     * <code>optional string companion_banner = 6;</code>
      * @param value The bytes for companionBanner to set.
      * @return This builder for chaining.
      */

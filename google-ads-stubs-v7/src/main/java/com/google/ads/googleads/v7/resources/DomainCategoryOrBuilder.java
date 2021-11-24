@@ -36,7 +36,7 @@ public interface DomainCategoryOrBuilder extends
    * Output only. The campaign this category is recommended for.
    * </pre>
    *
-   * <code>string campaign = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the campaign field is set.
    */
   boolean hasCampaign();
@@ -45,7 +45,7 @@ public interface DomainCategoryOrBuilder extends
    * Output only. The campaign this category is recommended for.
    * </pre>
    *
-   * <code>string campaign = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The campaign.
    */
   java.lang.String getCampaign();
@@ -54,7 +54,7 @@ public interface DomainCategoryOrBuilder extends
    * Output only. The campaign this category is recommended for.
    * </pre>
    *
-   * <code>string campaign = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 10 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for campaign.
    */
   com.google.protobuf.ByteString
@@ -66,7 +66,7 @@ public interface DomainCategoryOrBuilder extends
    * about electronics, the categories could be "cameras", "televisions", etc.
    * </pre>
    *
-   * <code>string category = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string category = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the category field is set.
    */
   boolean hasCategory();
@@ -76,7 +76,7 @@ public interface DomainCategoryOrBuilder extends
    * about electronics, the categories could be "cameras", "televisions", etc.
    * </pre>
    *
-   * <code>string category = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string category = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The category.
    */
   java.lang.String getCategory();
@@ -86,7 +86,7 @@ public interface DomainCategoryOrBuilder extends
    * about electronics, the categories could be "cameras", "televisions", etc.
    * </pre>
    *
-   * <code>string category = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string category = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for category.
    */
   com.google.protobuf.ByteString
@@ -101,7 +101,7 @@ public interface DomainCategoryOrBuilder extends
    * and match searches with.
    * </pre>
    *
-   * <code>string language_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string language_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the languageCode field is set.
    */
   boolean hasLanguageCode();
@@ -114,7 +114,7 @@ public interface DomainCategoryOrBuilder extends
    * and match searches with.
    * </pre>
    *
-   * <code>string language_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string language_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The languageCode.
    */
   java.lang.String getLanguageCode();
@@ -127,7 +127,7 @@ public interface DomainCategoryOrBuilder extends
    * and match searches with.
    * </pre>
    *
-   * <code>string language_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string language_code = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for languageCode.
    */
   com.google.protobuf.ByteString
@@ -139,7 +139,7 @@ public interface DomainCategoryOrBuilder extends
    * DynamicSearchAdsSetting required for dynamic search ads.
    * </pre>
    *
-   * <code>string domain = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string domain = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the domain field is set.
    */
   boolean hasDomain();
@@ -149,7 +149,7 @@ public interface DomainCategoryOrBuilder extends
    * DynamicSearchAdsSetting required for dynamic search ads.
    * </pre>
    *
-   * <code>string domain = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string domain = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The domain.
    */
   java.lang.String getDomain();
@@ -159,7 +159,7 @@ public interface DomainCategoryOrBuilder extends
    * DynamicSearchAdsSetting required for dynamic search ads.
    * </pre>
    *
-   * <code>string domain = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string domain = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for domain.
    */
   com.google.protobuf.ByteString
@@ -170,7 +170,7 @@ public interface DomainCategoryOrBuilder extends
    * Output only. Fraction of pages on your site that this category matches.
    * </pre>
    *
-   * <code>double coverage_fraction = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional double coverage_fraction = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the coverageFraction field is set.
    */
   boolean hasCoverageFraction();
@@ -179,7 +179,7 @@ public interface DomainCategoryOrBuilder extends
    * Output only. Fraction of pages on your site that this category matches.
    * </pre>
    *
-   * <code>double coverage_fraction = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional double coverage_fraction = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The coverageFraction.
    */
   double getCoverageFraction();
@@ -190,7 +190,7 @@ public interface DomainCategoryOrBuilder extends
    * indicate a better match for the domain. null indicates not recommended.
    * </pre>
    *
-   * <code>int64 category_rank = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 category_rank = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the categoryRank field is set.
    */
   boolean hasCategoryRank();
@@ -200,7 +200,7 @@ public interface DomainCategoryOrBuilder extends
    * indicate a better match for the domain. null indicates not recommended.
    * </pre>
    *
-   * <code>int64 category_rank = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 category_rank = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The categoryRank.
    */
   long getCategoryRank();
@@ -210,7 +210,7 @@ public interface DomainCategoryOrBuilder extends
    * Output only. Indicates whether this category has sub-categories.
    * </pre>
    *
-   * <code>bool has_children = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool has_children = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the hasChildren field is set.
    */
   boolean hasHasChildren();
@@ -219,7 +219,7 @@ public interface DomainCategoryOrBuilder extends
    * Output only. Indicates whether this category has sub-categories.
    * </pre>
    *
-   * <code>bool has_children = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool has_children = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The hasChildren.
    */
   boolean getHasChildren();
@@ -229,7 +229,7 @@ public interface DomainCategoryOrBuilder extends
    * Output only. The recommended cost per click for the category.
    * </pre>
    *
-   * <code>int64 recommended_cpc_bid_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 recommended_cpc_bid_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the recommendedCpcBidMicros field is set.
    */
   boolean hasRecommendedCpcBidMicros();
@@ -238,7 +238,7 @@ public interface DomainCategoryOrBuilder extends
    * Output only. The recommended cost per click for the category.
    * </pre>
    *
-   * <code>int64 recommended_cpc_bid_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 recommended_cpc_bid_micros = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The recommendedCpcBidMicros.
    */
   long getRecommendedCpcBidMicros();

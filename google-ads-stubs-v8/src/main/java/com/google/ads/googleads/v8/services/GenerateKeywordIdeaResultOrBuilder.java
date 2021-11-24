@@ -15,7 +15,7 @@ public interface GenerateKeywordIdeaResultOrBuilder extends
    * See KeywordPlanKeywordHistoricalMetrics message in KeywordPlanService.
    * </pre>
    *
-   * <code>string text = 5;</code>
+   * <code>optional string text = 5;</code>
    * @return Whether the text field is set.
    */
   boolean hasText();
@@ -27,7 +27,7 @@ public interface GenerateKeywordIdeaResultOrBuilder extends
    * See KeywordPlanKeywordHistoricalMetrics message in KeywordPlanService.
    * </pre>
    *
-   * <code>string text = 5;</code>
+   * <code>optional string text = 5;</code>
    * @return The text.
    */
   java.lang.String getText();
@@ -39,7 +39,7 @@ public interface GenerateKeywordIdeaResultOrBuilder extends
    * See KeywordPlanKeywordHistoricalMetrics message in KeywordPlanService.
    * </pre>
    *
-   * <code>string text = 5;</code>
+   * <code>optional string text = 5;</code>
    * @return The bytes for text.
    */
   com.google.protobuf.ByteString

@@ -36,7 +36,7 @@ public interface ConversionActionOrBuilder extends
    * Output only. The ID of the conversion action.
    * </pre>
    *
-   * <code>int64 id = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -45,7 +45,7 @@ public interface ConversionActionOrBuilder extends
    * Output only. The ID of the conversion action.
    * </pre>
    *
-   * <code>int64 id = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   long getId();
@@ -57,7 +57,7 @@ public interface ConversionActionOrBuilder extends
    * conversion actions.
    * </pre>
    *
-   * <code>string name = 22;</code>
+   * <code>optional string name = 22;</code>
    * @return Whether the name field is set.
    */
   boolean hasName();
@@ -68,7 +68,7 @@ public interface ConversionActionOrBuilder extends
    * conversion actions.
    * </pre>
    *
-   * <code>string name = 22;</code>
+   * <code>optional string name = 22;</code>
    * @return The name.
    */
   java.lang.String getName();
@@ -79,7 +79,7 @@ public interface ConversionActionOrBuilder extends
    * conversion actions.
    * </pre>
    *
-   * <code>string name = 22;</code>
+   * <code>optional string name = 22;</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
@@ -148,7 +148,7 @@ public interface ConversionActionOrBuilder extends
    * is a system-defined conversion action.
    * </pre>
    *
-   * <code>string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the ownerCustomer field is set.
    */
   boolean hasOwnerCustomer();
@@ -158,7 +158,7 @@ public interface ConversionActionOrBuilder extends
    * is a system-defined conversion action.
    * </pre>
    *
-   * <code>string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The ownerCustomer.
    */
   java.lang.String getOwnerCustomer();
@@ -168,7 +168,7 @@ public interface ConversionActionOrBuilder extends
    * is a system-defined conversion action.
    * </pre>
    *
-   * <code>string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string owner_customer = 23 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for ownerCustomer.
    */
   com.google.protobuf.ByteString
@@ -180,7 +180,7 @@ public interface ConversionActionOrBuilder extends
    * metric.
    * </pre>
    *
-   * <code>bool include_in_conversions_metric = 24;</code>
+   * <code>optional bool include_in_conversions_metric = 24;</code>
    * @return Whether the includeInConversionsMetric field is set.
    */
   boolean hasIncludeInConversionsMetric();
@@ -190,7 +190,7 @@ public interface ConversionActionOrBuilder extends
    * metric.
    * </pre>
    *
-   * <code>bool include_in_conversions_metric = 24;</code>
+   * <code>optional bool include_in_conversions_metric = 24;</code>
    * @return The includeInConversionsMetric.
    */
   boolean getIncludeInConversionsMetric();
@@ -201,7 +201,7 @@ public interface ConversionActionOrBuilder extends
    * (e.g., a click) and a conversion event.
    * </pre>
    *
-   * <code>int64 click_through_lookback_window_days = 25;</code>
+   * <code>optional int64 click_through_lookback_window_days = 25;</code>
    * @return Whether the clickThroughLookbackWindowDays field is set.
    */
   boolean hasClickThroughLookbackWindowDays();
@@ -211,7 +211,7 @@ public interface ConversionActionOrBuilder extends
    * (e.g., a click) and a conversion event.
    * </pre>
    *
-   * <code>int64 click_through_lookback_window_days = 25;</code>
+   * <code>optional int64 click_through_lookback_window_days = 25;</code>
    * @return The clickThroughLookbackWindowDays.
    */
   long getClickThroughLookbackWindowDays();
@@ -222,7 +222,7 @@ public interface ConversionActionOrBuilder extends
    * conversion without an interaction.
    * </pre>
    *
-   * <code>int64 view_through_lookback_window_days = 26;</code>
+   * <code>optional int64 view_through_lookback_window_days = 26;</code>
    * @return Whether the viewThroughLookbackWindowDays field is set.
    */
   boolean hasViewThroughLookbackWindowDays();
@@ -232,7 +232,7 @@ public interface ConversionActionOrBuilder extends
    * conversion without an interaction.
    * </pre>
    *
-   * <code>int64 view_through_lookback_window_days = 26;</code>
+   * <code>optional int64 view_through_lookback_window_days = 26;</code>
    * @return The viewThroughLookbackWindowDays.
    */
   long getViewThroughLookbackWindowDays();
@@ -364,7 +364,7 @@ public interface ConversionActionOrBuilder extends
    * The value must be between 0 and 10000, inclusive.
    * </pre>
    *
-   * <code>int64 phone_call_duration_seconds = 27;</code>
+   * <code>optional int64 phone_call_duration_seconds = 27;</code>
    * @return Whether the phoneCallDurationSeconds field is set.
    */
   boolean hasPhoneCallDurationSeconds();
@@ -375,7 +375,7 @@ public interface ConversionActionOrBuilder extends
    * The value must be between 0 and 10000, inclusive.
    * </pre>
    *
-   * <code>int64 phone_call_duration_seconds = 27;</code>
+   * <code>optional int64 phone_call_duration_seconds = 27;</code>
    * @return The phoneCallDurationSeconds.
    */
   long getPhoneCallDurationSeconds();
@@ -385,7 +385,7 @@ public interface ConversionActionOrBuilder extends
    * App ID for an app conversion action.
    * </pre>
    *
-   * <code>string app_id = 28;</code>
+   * <code>optional string app_id = 28;</code>
    * @return Whether the appId field is set.
    */
   boolean hasAppId();
@@ -394,7 +394,7 @@ public interface ConversionActionOrBuilder extends
    * App ID for an app conversion action.
    * </pre>
    *
-   * <code>string app_id = 28;</code>
+   * <code>optional string app_id = 28;</code>
    * @return The appId.
    */
   java.lang.String getAppId();
@@ -403,7 +403,7 @@ public interface ConversionActionOrBuilder extends
    * App ID for an app conversion action.
    * </pre>
    *
-   * <code>string app_id = 28;</code>
+   * <code>optional string app_id = 28;</code>
    * @return The bytes for appId.
    */
   com.google.protobuf.ByteString

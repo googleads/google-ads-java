@@ -12,7 +12,7 @@ public interface ClickLocationOrBuilder extends
    * The city location criterion associated with the impression.
    * </pre>
    *
-   * <code>string city = 6;</code>
+   * <code>optional string city = 6;</code>
    * @return Whether the city field is set.
    */
   boolean hasCity();
@@ -21,7 +21,7 @@ public interface ClickLocationOrBuilder extends
    * The city location criterion associated with the impression.
    * </pre>
    *
-   * <code>string city = 6;</code>
+   * <code>optional string city = 6;</code>
    * @return The city.
    */
   java.lang.String getCity();
@@ -30,7 +30,7 @@ public interface ClickLocationOrBuilder extends
    * The city location criterion associated with the impression.
    * </pre>
    *
-   * <code>string city = 6;</code>
+   * <code>optional string city = 6;</code>
    * @return The bytes for city.
    */
   com.google.protobuf.ByteString
@@ -41,7 +41,7 @@ public interface ClickLocationOrBuilder extends
    * The country location criterion associated with the impression.
    * </pre>
    *
-   * <code>string country = 7;</code>
+   * <code>optional string country = 7;</code>
    * @return Whether the country field is set.
    */
   boolean hasCountry();
@@ -50,7 +50,7 @@ public interface ClickLocationOrBuilder extends
    * The country location criterion associated with the impression.
    * </pre>
    *
-   * <code>string country = 7;</code>
+   * <code>optional string country = 7;</code>
    * @return The country.
    */
   java.lang.String getCountry();
@@ -59,7 +59,7 @@ public interface ClickLocationOrBuilder extends
    * The country location criterion associated with the impression.
    * </pre>
    *
-   * <code>string country = 7;</code>
+   * <code>optional string country = 7;</code>
    * @return The bytes for country.
    */
   com.google.protobuf.ByteString
@@ -70,7 +70,7 @@ public interface ClickLocationOrBuilder extends
    * The metro location criterion associated with the impression.
    * </pre>
    *
-   * <code>string metro = 8;</code>
+   * <code>optional string metro = 8;</code>
    * @return Whether the metro field is set.
    */
   boolean hasMetro();
@@ -79,7 +79,7 @@ public interface ClickLocationOrBuilder extends
    * The metro location criterion associated with the impression.
    * </pre>
    *
-   * <code>string metro = 8;</code>
+   * <code>optional string metro = 8;</code>
    * @return The metro.
    */
   java.lang.String getMetro();
@@ -88,7 +88,7 @@ public interface ClickLocationOrBuilder extends
    * The metro location criterion associated with the impression.
    * </pre>
    *
-   * <code>string metro = 8;</code>
+   * <code>optional string metro = 8;</code>
    * @return The bytes for metro.
    */
   com.google.protobuf.ByteString
@@ -99,7 +99,7 @@ public interface ClickLocationOrBuilder extends
    * The most specific location criterion associated with the impression.
    * </pre>
    *
-   * <code>string most_specific = 9;</code>
+   * <code>optional string most_specific = 9;</code>
    * @return Whether the mostSpecific field is set.
    */
   boolean hasMostSpecific();
@@ -108,7 +108,7 @@ public interface ClickLocationOrBuilder extends
    * The most specific location criterion associated with the impression.
    * </pre>
    *
-   * <code>string most_specific = 9;</code>
+   * <code>optional string most_specific = 9;</code>
    * @return The mostSpecific.
    */
   java.lang.String getMostSpecific();
@@ -117,7 +117,7 @@ public interface ClickLocationOrBuilder extends
    * The most specific location criterion associated with the impression.
    * </pre>
    *
-   * <code>string most_specific = 9;</code>
+   * <code>optional string most_specific = 9;</code>
    * @return The bytes for mostSpecific.
    */
   com.google.protobuf.ByteString
@@ -128,7 +128,7 @@ public interface ClickLocationOrBuilder extends
    * The region location criterion associated with the impression.
    * </pre>
    *
-   * <code>string region = 10;</code>
+   * <code>optional string region = 10;</code>
    * @return Whether the region field is set.
    */
   boolean hasRegion();
@@ -137,7 +137,7 @@ public interface ClickLocationOrBuilder extends
    * The region location criterion associated with the impression.
    * </pre>
    *
-   * <code>string region = 10;</code>
+   * <code>optional string region = 10;</code>
    * @return The region.
    */
   java.lang.String getRegion();
@@ -146,7 +146,7 @@ public interface ClickLocationOrBuilder extends
    * The region location criterion associated with the impression.
    * </pre>
    *
-   * <code>string region = 10;</code>
+   * <code>optional string region = 10;</code>
    * @return The bytes for region.
    */
   com.google.protobuf.ByteString

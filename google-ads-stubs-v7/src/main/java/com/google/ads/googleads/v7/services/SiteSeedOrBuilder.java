@@ -13,7 +13,7 @@ public interface SiteSeedOrBuilder extends
    * own the site provided only public information is returned.
    * </pre>
    *
-   * <code>string site = 2;</code>
+   * <code>optional string site = 2;</code>
    * @return Whether the site field is set.
    */
   boolean hasSite();
@@ -23,7 +23,7 @@ public interface SiteSeedOrBuilder extends
    * own the site provided only public information is returned.
    * </pre>
    *
-   * <code>string site = 2;</code>
+   * <code>optional string site = 2;</code>
    * @return The site.
    */
   java.lang.String getSite();
@@ -33,7 +33,7 @@ public interface SiteSeedOrBuilder extends
    * own the site provided only public information is returned.
    * </pre>
    *
-   * <code>string site = 2;</code>
+   * <code>optional string site = 2;</code>
    * @return The bytes for site.
    */
   com.google.protobuf.ByteString

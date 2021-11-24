@@ -12,7 +12,7 @@ public interface UserAttributeOrBuilder extends
    * Advertiser defined lifetime value for the user.
    * </pre>
    *
-   * <code>int64 lifetime_value_micros = 1;</code>
+   * <code>optional int64 lifetime_value_micros = 1;</code>
    * @return Whether the lifetimeValueMicros field is set.
    */
   boolean hasLifetimeValueMicros();
@@ -21,7 +21,7 @@ public interface UserAttributeOrBuilder extends
    * Advertiser defined lifetime value for the user.
    * </pre>
    *
-   * <code>int64 lifetime_value_micros = 1;</code>
+   * <code>optional int64 lifetime_value_micros = 1;</code>
    * @return The lifetimeValueMicros.
    */
   long getLifetimeValueMicros();
@@ -33,7 +33,7 @@ public interface UserAttributeOrBuilder extends
    * operation where 0 will also be accepted.
    * </pre>
    *
-   * <code>int32 lifetime_value_bucket = 2;</code>
+   * <code>optional int32 lifetime_value_bucket = 2;</code>
    * @return Whether the lifetimeValueBucket field is set.
    */
   boolean hasLifetimeValueBucket();
@@ -44,7 +44,7 @@ public interface UserAttributeOrBuilder extends
    * operation where 0 will also be accepted.
    * </pre>
    *
-   * <code>int32 lifetime_value_bucket = 2;</code>
+   * <code>optional int32 lifetime_value_bucket = 2;</code>
    * @return The lifetimeValueBucket.
    */
   int getLifetimeValueBucket();

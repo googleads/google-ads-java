@@ -559,7 +559,7 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     getSerializedSize();
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (id_ != 0L) {
@@ -575,13 +575,13 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < dimensions_.size(); i++) {
       output.writeEnumNoTag(dimensions_.get(i));
     }
-    if (!getOwnerCustomerBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerCustomer_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, ownerCustomer_);
     }
     if (attachmentType_ != com.google.ads.googleads.v8.enums.ValueRuleSetAttachmentTypeEnum.ValueRuleSetAttachmentType.UNSPECIFIED.getNumber()) {
       output.writeEnum(6, attachmentType_);
     }
-    if (!getCampaignBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(campaign_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, campaign_);
     }
     if (status_ != com.google.ads.googleads.v8.enums.ConversionValueRuleSetStatusEnum.ConversionValueRuleSetStatus.UNSPECIFIED.getNumber()) {
@@ -596,7 +596,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (id_ != 0L) {
@@ -623,14 +623,14 @@ private static final long serialVersionUID = 0L;
           .computeUInt32SizeNoTag(dataSize);
       }dimensionsMemoizedSerializedSize = dataSize;
     }
-    if (!getOwnerCustomerBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerCustomer_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, ownerCustomer_);
     }
     if (attachmentType_ != com.google.ads.googleads.v8.enums.ValueRuleSetAttachmentTypeEnum.ValueRuleSetAttachmentType.UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(6, attachmentType_);
     }
-    if (!getCampaignBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(campaign_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, campaign_);
     }
     if (status_ != com.google.ads.googleads.v8.enums.ConversionValueRuleSetStatusEnum.ConversionValueRuleSetStatus.UNSPECIFIED.getNumber()) {

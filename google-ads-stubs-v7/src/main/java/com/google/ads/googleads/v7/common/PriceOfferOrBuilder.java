@@ -12,7 +12,7 @@ public interface PriceOfferOrBuilder extends
    * Header text of this offer.
    * </pre>
    *
-   * <code>string header = 7;</code>
+   * <code>optional string header = 7;</code>
    * @return Whether the header field is set.
    */
   boolean hasHeader();
@@ -21,7 +21,7 @@ public interface PriceOfferOrBuilder extends
    * Header text of this offer.
    * </pre>
    *
-   * <code>string header = 7;</code>
+   * <code>optional string header = 7;</code>
    * @return The header.
    */
   java.lang.String getHeader();
@@ -30,7 +30,7 @@ public interface PriceOfferOrBuilder extends
    * Header text of this offer.
    * </pre>
    *
-   * <code>string header = 7;</code>
+   * <code>optional string header = 7;</code>
    * @return The bytes for header.
    */
   com.google.protobuf.ByteString
@@ -41,7 +41,7 @@ public interface PriceOfferOrBuilder extends
    * Description text of this offer.
    * </pre>
    *
-   * <code>string description = 8;</code>
+   * <code>optional string description = 8;</code>
    * @return Whether the description field is set.
    */
   boolean hasDescription();
@@ -50,7 +50,7 @@ public interface PriceOfferOrBuilder extends
    * Description text of this offer.
    * </pre>
    *
-   * <code>string description = 8;</code>
+   * <code>optional string description = 8;</code>
    * @return The description.
    */
   java.lang.String getDescription();
@@ -59,7 +59,7 @@ public interface PriceOfferOrBuilder extends
    * Description text of this offer.
    * </pre>
    *
-   * <code>string description = 8;</code>
+   * <code>optional string description = 8;</code>
    * @return The bytes for description.
    */
   com.google.protobuf.ByteString

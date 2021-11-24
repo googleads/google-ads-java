@@ -12,7 +12,7 @@ public interface KeywordInfoOrBuilder extends
    * The text of the keyword (at most 80 characters and 10 words).
    * </pre>
    *
-   * <code>string text = 3;</code>
+   * <code>optional string text = 3;</code>
    * @return Whether the text field is set.
    */
   boolean hasText();
@@ -21,7 +21,7 @@ public interface KeywordInfoOrBuilder extends
    * The text of the keyword (at most 80 characters and 10 words).
    * </pre>
    *
-   * <code>string text = 3;</code>
+   * <code>optional string text = 3;</code>
    * @return The text.
    */
   java.lang.String getText();
@@ -30,7 +30,7 @@ public interface KeywordInfoOrBuilder extends
    * The text of the keyword (at most 80 characters and 10 words).
    * </pre>
    *
-   * <code>string text = 3;</code>
+   * <code>optional string text = 3;</code>
    * @return The bytes for text.
    */
   com.google.protobuf.ByteString

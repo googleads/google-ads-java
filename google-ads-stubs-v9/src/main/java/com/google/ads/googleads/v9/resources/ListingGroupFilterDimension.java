@@ -2141,808 +2141,6 @@ private static final long serialVersionUID = 0L;
 
   }
 
-  public interface ProductTypeOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * Value of the type.
-     * </pre>
-     *
-     * <code>optional string value = 1;</code>
-     * @return Whether the value field is set.
-     */
-    boolean hasValue();
-    /**
-     * <pre>
-     * Value of the type.
-     * </pre>
-     *
-     * <code>optional string value = 1;</code>
-     * @return The value.
-     */
-    java.lang.String getValue();
-    /**
-     * <pre>
-     * Value of the type.
-     * </pre>
-     *
-     * <code>optional string value = 1;</code>
-     * @return The bytes for value.
-     */
-    com.google.protobuf.ByteString
-        getValueBytes();
-
-    /**
-     * <pre>
-     * Level of the type.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel level = 2;</code>
-     * @return The enum numeric value on the wire for level.
-     */
-    int getLevelValue();
-    /**
-     * <pre>
-     * Level of the type.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel level = 2;</code>
-     * @return The level.
-     */
-    com.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel getLevel();
-  }
-  /**
-   * <pre>
-   * Type of a product offer.
-   * </pre>
-   *
-   * Protobuf type {@code google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType}
-   */
-  public static final class ProductType extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType)
-      ProductTypeOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ProductType.newBuilder() to construct.
-    private ProductType(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private ProductType() {
-      value_ = "";
-      level_ = 0;
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ProductType();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private ProductType(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              value_ = s;
-              break;
-            }
-            case 16: {
-              int rawValue = input.readEnum();
-
-              level_ = rawValue;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.google.ads.googleads.v9.resources.AssetGroupListingGroupFilterProto.internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductType_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.google.ads.googleads.v9.resources.AssetGroupListingGroupFilterProto.internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductType_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType.class, com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType.Builder.class);
-    }
-
-    private int bitField0_;
-    public static final int VALUE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object value_;
-    /**
-     * <pre>
-     * Value of the type.
-     * </pre>
-     *
-     * <code>optional string value = 1;</code>
-     * @return Whether the value field is set.
-     */
-    @java.lang.Override
-    public boolean hasValue() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <pre>
-     * Value of the type.
-     * </pre>
-     *
-     * <code>optional string value = 1;</code>
-     * @return The value.
-     */
-    @java.lang.Override
-    public java.lang.String getValue() {
-      java.lang.Object ref = value_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        value_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Value of the type.
-     * </pre>
-     *
-     * <code>optional string value = 1;</code>
-     * @return The bytes for value.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getValueBytes() {
-      java.lang.Object ref = value_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        value_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int LEVEL_FIELD_NUMBER = 2;
-    private int level_;
-    /**
-     * <pre>
-     * Level of the type.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel level = 2;</code>
-     * @return The enum numeric value on the wire for level.
-     */
-    @java.lang.Override public int getLevelValue() {
-      return level_;
-    }
-    /**
-     * <pre>
-     * Level of the type.
-     * </pre>
-     *
-     * <code>.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel level = 2;</code>
-     * @return The level.
-     */
-    @java.lang.Override public com.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel getLevel() {
-      @SuppressWarnings("deprecation")
-      com.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel result = com.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel.valueOf(level_);
-      return result == null ? com.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel.UNRECOGNIZED : result;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, value_);
-      }
-      if (level_ != com.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel.UNSPECIFIED.getNumber()) {
-        output.writeEnum(2, level_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, value_);
-      }
-      if (level_ != com.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel.UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(2, level_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType)) {
-        return super.equals(obj);
-      }
-      com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType other = (com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType) obj;
-
-      if (hasValue() != other.hasValue()) return false;
-      if (hasValue()) {
-        if (!getValue()
-            .equals(other.getValue())) return false;
-      }
-      if (level_ != other.level_) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasValue()) {
-        hash = (37 * hash) + VALUE_FIELD_NUMBER;
-        hash = (53 * hash) + getValue().hashCode();
-      }
-      hash = (37 * hash) + LEVEL_FIELD_NUMBER;
-      hash = (53 * hash) + level_;
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * Type of a product offer.
-     * </pre>
-     *
-     * Protobuf type {@code google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType)
-        com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductTypeOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.google.ads.googleads.v9.resources.AssetGroupListingGroupFilterProto.internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductType_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.google.ads.googleads.v9.resources.AssetGroupListingGroupFilterProto.internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductType_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType.class, com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType.Builder.class);
-      }
-
-      // Construct using com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        value_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
-        level_ = 0;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.google.ads.googleads.v9.resources.AssetGroupListingGroupFilterProto.internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductType_descriptor;
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType getDefaultInstanceForType() {
-        return com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType build() {
-        com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType buildPartial() {
-        com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType result = new com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.value_ = value_;
-        result.level_ = level_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType) {
-          return mergeFrom((com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType other) {
-        if (other == com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType.getDefaultInstance()) return this;
-        if (other.hasValue()) {
-          bitField0_ |= 0x00000001;
-          value_ = other.value_;
-          onChanged();
-        }
-        if (other.level_ != 0) {
-          setLevelValue(other.getLevelValue());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object value_ = "";
-      /**
-       * <pre>
-       * Value of the type.
-       * </pre>
-       *
-       * <code>optional string value = 1;</code>
-       * @return Whether the value field is set.
-       */
-      public boolean hasValue() {
-        return ((bitField0_ & 0x00000001) != 0);
-      }
-      /**
-       * <pre>
-       * Value of the type.
-       * </pre>
-       *
-       * <code>optional string value = 1;</code>
-       * @return The value.
-       */
-      public java.lang.String getValue() {
-        java.lang.Object ref = value_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          value_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Value of the type.
-       * </pre>
-       *
-       * <code>optional string value = 1;</code>
-       * @return The bytes for value.
-       */
-      public com.google.protobuf.ByteString
-          getValueBytes() {
-        java.lang.Object ref = value_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          value_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Value of the type.
-       * </pre>
-       *
-       * <code>optional string value = 1;</code>
-       * @param value The value to set.
-       * @return This builder for chaining.
-       */
-      public Builder setValue(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        value_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Value of the type.
-       * </pre>
-       *
-       * <code>optional string value = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearValue() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        value_ = getDefaultInstance().getValue();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Value of the type.
-       * </pre>
-       *
-       * <code>optional string value = 1;</code>
-       * @param value The bytes for value to set.
-       * @return This builder for chaining.
-       */
-      public Builder setValueBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        bitField0_ |= 0x00000001;
-        value_ = value;
-        onChanged();
-        return this;
-      }
-
-      private int level_ = 0;
-      /**
-       * <pre>
-       * Level of the type.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel level = 2;</code>
-       * @return The enum numeric value on the wire for level.
-       */
-      @java.lang.Override public int getLevelValue() {
-        return level_;
-      }
-      /**
-       * <pre>
-       * Level of the type.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel level = 2;</code>
-       * @param value The enum numeric value on the wire for level to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLevelValue(int value) {
-        
-        level_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Level of the type.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel level = 2;</code>
-       * @return The level.
-       */
-      @java.lang.Override
-      public com.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel getLevel() {
-        @SuppressWarnings("deprecation")
-        com.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel result = com.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel.valueOf(level_);
-        return result == null ? com.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel.UNRECOGNIZED : result;
-      }
-      /**
-       * <pre>
-       * Level of the type.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel level = 2;</code>
-       * @param value The level to set.
-       * @return This builder for chaining.
-       */
-      public Builder setLevel(com.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        level_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Level of the type.
-       * </pre>
-       *
-       * <code>.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel level = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearLevel() {
-        
-        level_ = 0;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType)
-    }
-
-    // @@protoc_insertion_point(class_scope:google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType)
-    private static final com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType();
-    }
-
-    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<ProductType>
-        PARSER = new com.google.protobuf.AbstractParser<ProductType>() {
-      @java.lang.Override
-      public ProductType parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ProductType(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<ProductType> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ProductType> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface ProductConditionOrBuilder extends
       // @@protoc_insertion_point(interface_extends:google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductCondition)
       com.google.protobuf.MessageOrBuilder {
@@ -3507,665 +2705,6 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductCondition getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface ProductItemIdOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <pre>
-     * Value of the id.
-     * </pre>
-     *
-     * <code>optional string value = 1;</code>
-     * @return Whether the value field is set.
-     */
-    boolean hasValue();
-    /**
-     * <pre>
-     * Value of the id.
-     * </pre>
-     *
-     * <code>optional string value = 1;</code>
-     * @return The value.
-     */
-    java.lang.String getValue();
-    /**
-     * <pre>
-     * Value of the id.
-     * </pre>
-     *
-     * <code>optional string value = 1;</code>
-     * @return The bytes for value.
-     */
-    com.google.protobuf.ByteString
-        getValueBytes();
-  }
-  /**
-   * <pre>
-   * Item id of a product offer.
-   * </pre>
-   *
-   * Protobuf type {@code google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId}
-   */
-  public static final class ProductItemId extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId)
-      ProductItemIdOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use ProductItemId.newBuilder() to construct.
-    private ProductItemId(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private ProductItemId() {
-      value_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ProductItemId();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private ProductItemId(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              value_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.google.ads.googleads.v9.resources.AssetGroupListingGroupFilterProto.internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductItemId_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.google.ads.googleads.v9.resources.AssetGroupListingGroupFilterProto.internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductItemId_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId.class, com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId.Builder.class);
-    }
-
-    private int bitField0_;
-    public static final int VALUE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object value_;
-    /**
-     * <pre>
-     * Value of the id.
-     * </pre>
-     *
-     * <code>optional string value = 1;</code>
-     * @return Whether the value field is set.
-     */
-    @java.lang.Override
-    public boolean hasValue() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <pre>
-     * Value of the id.
-     * </pre>
-     *
-     * <code>optional string value = 1;</code>
-     * @return The value.
-     */
-    @java.lang.Override
-    public java.lang.String getValue() {
-      java.lang.Object ref = value_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        value_ = s;
-        return s;
-      }
-    }
-    /**
-     * <pre>
-     * Value of the id.
-     * </pre>
-     *
-     * <code>optional string value = 1;</code>
-     * @return The bytes for value.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getValueBytes() {
-      java.lang.Object ref = value_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        value_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, value_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, value_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId)) {
-        return super.equals(obj);
-      }
-      com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId other = (com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId) obj;
-
-      if (hasValue() != other.hasValue()) return false;
-      if (hasValue()) {
-        if (!getValue()
-            .equals(other.getValue())) return false;
-      }
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasValue()) {
-        hash = (37 * hash) + VALUE_FIELD_NUMBER;
-        hash = (53 * hash) + getValue().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * <pre>
-     * Item id of a product offer.
-     * </pre>
-     *
-     * Protobuf type {@code google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId)
-        com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemIdOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.google.ads.googleads.v9.resources.AssetGroupListingGroupFilterProto.internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductItemId_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.google.ads.googleads.v9.resources.AssetGroupListingGroupFilterProto.internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductItemId_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId.class, com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId.Builder.class);
-      }
-
-      // Construct using com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        value_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.google.ads.googleads.v9.resources.AssetGroupListingGroupFilterProto.internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductItemId_descriptor;
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId getDefaultInstanceForType() {
-        return com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId build() {
-        com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId buildPartial() {
-        com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId result = new com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.value_ = value_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId) {
-          return mergeFrom((com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId other) {
-        if (other == com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId.getDefaultInstance()) return this;
-        if (other.hasValue()) {
-          bitField0_ |= 0x00000001;
-          value_ = other.value_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object value_ = "";
-      /**
-       * <pre>
-       * Value of the id.
-       * </pre>
-       *
-       * <code>optional string value = 1;</code>
-       * @return Whether the value field is set.
-       */
-      public boolean hasValue() {
-        return ((bitField0_ & 0x00000001) != 0);
-      }
-      /**
-       * <pre>
-       * Value of the id.
-       * </pre>
-       *
-       * <code>optional string value = 1;</code>
-       * @return The value.
-       */
-      public java.lang.String getValue() {
-        java.lang.Object ref = value_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          value_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Value of the id.
-       * </pre>
-       *
-       * <code>optional string value = 1;</code>
-       * @return The bytes for value.
-       */
-      public com.google.protobuf.ByteString
-          getValueBytes() {
-        java.lang.Object ref = value_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          value_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <pre>
-       * Value of the id.
-       * </pre>
-       *
-       * <code>optional string value = 1;</code>
-       * @param value The value to set.
-       * @return This builder for chaining.
-       */
-      public Builder setValue(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        value_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Value of the id.
-       * </pre>
-       *
-       * <code>optional string value = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearValue() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        value_ = getDefaultInstance().getValue();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * Value of the id.
-       * </pre>
-       *
-       * <code>optional string value = 1;</code>
-       * @param value The bytes for value to set.
-       * @return This builder for chaining.
-       */
-      public Builder setValueBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        bitField0_ |= 0x00000001;
-        value_ = value;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId)
-    }
-
-    // @@protoc_insertion_point(class_scope:google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId)
-    private static final com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId();
-    }
-
-    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<ProductItemId>
-        PARSER = new com.google.protobuf.AbstractParser<ProductItemId>() {
-      @java.lang.Override
-      public ProductItemId parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ProductItemId(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<ProductItemId> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<ProductItemId> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4968,6 +3507,1467 @@ private static final long serialVersionUID = 0L;
 
     @java.lang.Override
     public com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductCustomAttribute getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ProductItemIdOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Value of the id.
+     * </pre>
+     *
+     * <code>optional string value = 1;</code>
+     * @return Whether the value field is set.
+     */
+    boolean hasValue();
+    /**
+     * <pre>
+     * Value of the id.
+     * </pre>
+     *
+     * <code>optional string value = 1;</code>
+     * @return The value.
+     */
+    java.lang.String getValue();
+    /**
+     * <pre>
+     * Value of the id.
+     * </pre>
+     *
+     * <code>optional string value = 1;</code>
+     * @return The bytes for value.
+     */
+    com.google.protobuf.ByteString
+        getValueBytes();
+  }
+  /**
+   * <pre>
+   * Item id of a product offer.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId}
+   */
+  public static final class ProductItemId extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId)
+      ProductItemIdOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ProductItemId.newBuilder() to construct.
+    private ProductItemId(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ProductItemId() {
+      value_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ProductItemId();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ProductItemId(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              value_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v9.resources.AssetGroupListingGroupFilterProto.internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductItemId_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v9.resources.AssetGroupListingGroupFilterProto.internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductItemId_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId.class, com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int VALUE_FIELD_NUMBER = 1;
+    private volatile java.lang.Object value_;
+    /**
+     * <pre>
+     * Value of the id.
+     * </pre>
+     *
+     * <code>optional string value = 1;</code>
+     * @return Whether the value field is set.
+     */
+    @java.lang.Override
+    public boolean hasValue() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Value of the id.
+     * </pre>
+     *
+     * <code>optional string value = 1;</code>
+     * @return The value.
+     */
+    @java.lang.Override
+    public java.lang.String getValue() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        value_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Value of the id.
+     * </pre>
+     *
+     * <code>optional string value = 1;</code>
+     * @return The bytes for value.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValueBytes() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        value_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, value_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, value_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId other = (com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId) obj;
+
+      if (hasValue() != other.hasValue()) return false;
+      if (hasValue()) {
+        if (!getValue()
+            .equals(other.getValue())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasValue()) {
+        hash = (37 * hash) + VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + getValue().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Item id of a product offer.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId)
+        com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemIdOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v9.resources.AssetGroupListingGroupFilterProto.internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductItemId_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v9.resources.AssetGroupListingGroupFilterProto.internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductItemId_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId.class, com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        value_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v9.resources.AssetGroupListingGroupFilterProto.internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductItemId_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId getDefaultInstanceForType() {
+        return com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId build() {
+        com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId buildPartial() {
+        com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId result = new com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.value_ = value_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId) {
+          return mergeFrom((com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId other) {
+        if (other == com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId.getDefaultInstance()) return this;
+        if (other.hasValue()) {
+          bitField0_ |= 0x00000001;
+          value_ = other.value_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object value_ = "";
+      /**
+       * <pre>
+       * Value of the id.
+       * </pre>
+       *
+       * <code>optional string value = 1;</code>
+       * @return Whether the value field is set.
+       */
+      public boolean hasValue() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Value of the id.
+       * </pre>
+       *
+       * <code>optional string value = 1;</code>
+       * @return The value.
+       */
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          value_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Value of the id.
+       * </pre>
+       *
+       * <code>optional string value = 1;</code>
+       * @return The bytes for value.
+       */
+      public com.google.protobuf.ByteString
+          getValueBytes() {
+        java.lang.Object ref = value_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          value_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Value of the id.
+       * </pre>
+       *
+       * <code>optional string value = 1;</code>
+       * @param value The value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValue(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        value_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Value of the id.
+       * </pre>
+       *
+       * <code>optional string value = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValue() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        value_ = getDefaultInstance().getValue();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Value of the id.
+       * </pre>
+       *
+       * <code>optional string value = 1;</code>
+       * @param value The bytes for value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        bitField0_ |= 0x00000001;
+        value_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId)
+    private static final com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId();
+    }
+
+    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ProductItemId>
+        PARSER = new com.google.protobuf.AbstractParser<ProductItemId>() {
+      @java.lang.Override
+      public ProductItemId parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ProductItemId(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ProductItemId> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ProductItemId> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductItemId getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ProductTypeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * Value of the type.
+     * </pre>
+     *
+     * <code>optional string value = 1;</code>
+     * @return Whether the value field is set.
+     */
+    boolean hasValue();
+    /**
+     * <pre>
+     * Value of the type.
+     * </pre>
+     *
+     * <code>optional string value = 1;</code>
+     * @return The value.
+     */
+    java.lang.String getValue();
+    /**
+     * <pre>
+     * Value of the type.
+     * </pre>
+     *
+     * <code>optional string value = 1;</code>
+     * @return The bytes for value.
+     */
+    com.google.protobuf.ByteString
+        getValueBytes();
+
+    /**
+     * <pre>
+     * Level of the type.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel level = 2;</code>
+     * @return The enum numeric value on the wire for level.
+     */
+    int getLevelValue();
+    /**
+     * <pre>
+     * Level of the type.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel level = 2;</code>
+     * @return The level.
+     */
+    com.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel getLevel();
+  }
+  /**
+   * <pre>
+   * Type of a product offer.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType}
+   */
+  public static final class ProductType extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType)
+      ProductTypeOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ProductType.newBuilder() to construct.
+    private ProductType(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ProductType() {
+      value_ = "";
+      level_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ProductType();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ProductType(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              value_ = s;
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+
+              level_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v9.resources.AssetGroupListingGroupFilterProto.internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductType_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v9.resources.AssetGroupListingGroupFilterProto.internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductType_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType.class, com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int VALUE_FIELD_NUMBER = 1;
+    private volatile java.lang.Object value_;
+    /**
+     * <pre>
+     * Value of the type.
+     * </pre>
+     *
+     * <code>optional string value = 1;</code>
+     * @return Whether the value field is set.
+     */
+    @java.lang.Override
+    public boolean hasValue() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <pre>
+     * Value of the type.
+     * </pre>
+     *
+     * <code>optional string value = 1;</code>
+     * @return The value.
+     */
+    @java.lang.Override
+    public java.lang.String getValue() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        value_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Value of the type.
+     * </pre>
+     *
+     * <code>optional string value = 1;</code>
+     * @return The bytes for value.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getValueBytes() {
+      java.lang.Object ref = value_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        value_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LEVEL_FIELD_NUMBER = 2;
+    private int level_;
+    /**
+     * <pre>
+     * Level of the type.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel level = 2;</code>
+     * @return The enum numeric value on the wire for level.
+     */
+    @java.lang.Override public int getLevelValue() {
+      return level_;
+    }
+    /**
+     * <pre>
+     * Level of the type.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel level = 2;</code>
+     * @return The level.
+     */
+    @java.lang.Override public com.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel getLevel() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel result = com.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel.valueOf(level_);
+      return result == null ? com.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, value_);
+      }
+      if (level_ != com.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel.UNSPECIFIED.getNumber()) {
+        output.writeEnum(2, level_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, value_);
+      }
+      if (level_ != com.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel.UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, level_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType other = (com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType) obj;
+
+      if (hasValue() != other.hasValue()) return false;
+      if (hasValue()) {
+        if (!getValue()
+            .equals(other.getValue())) return false;
+      }
+      if (level_ != other.level_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasValue()) {
+        hash = (37 * hash) + VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + getValue().hashCode();
+      }
+      hash = (37 * hash) + LEVEL_FIELD_NUMBER;
+      hash = (53 * hash) + level_;
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Type of a product offer.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType)
+        com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductTypeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v9.resources.AssetGroupListingGroupFilterProto.internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductType_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v9.resources.AssetGroupListingGroupFilterProto.internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductType_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType.class, com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        value_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        level_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v9.resources.AssetGroupListingGroupFilterProto.internal_static_google_ads_googleads_v9_resources_ListingGroupFilterDimension_ProductType_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType getDefaultInstanceForType() {
+        return com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType build() {
+        com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType buildPartial() {
+        com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType result = new com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.value_ = value_;
+        result.level_ = level_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType) {
+          return mergeFrom((com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType other) {
+        if (other == com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType.getDefaultInstance()) return this;
+        if (other.hasValue()) {
+          bitField0_ |= 0x00000001;
+          value_ = other.value_;
+          onChanged();
+        }
+        if (other.level_ != 0) {
+          setLevelValue(other.getLevelValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object value_ = "";
+      /**
+       * <pre>
+       * Value of the type.
+       * </pre>
+       *
+       * <code>optional string value = 1;</code>
+       * @return Whether the value field is set.
+       */
+      public boolean hasValue() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <pre>
+       * Value of the type.
+       * </pre>
+       *
+       * <code>optional string value = 1;</code>
+       * @return The value.
+       */
+      public java.lang.String getValue() {
+        java.lang.Object ref = value_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          value_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Value of the type.
+       * </pre>
+       *
+       * <code>optional string value = 1;</code>
+       * @return The bytes for value.
+       */
+      public com.google.protobuf.ByteString
+          getValueBytes() {
+        java.lang.Object ref = value_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          value_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Value of the type.
+       * </pre>
+       *
+       * <code>optional string value = 1;</code>
+       * @param value The value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValue(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        value_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Value of the type.
+       * </pre>
+       *
+       * <code>optional string value = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValue() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        value_ = getDefaultInstance().getValue();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Value of the type.
+       * </pre>
+       *
+       * <code>optional string value = 1;</code>
+       * @param value The bytes for value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValueBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        bitField0_ |= 0x00000001;
+        value_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int level_ = 0;
+      /**
+       * <pre>
+       * Level of the type.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel level = 2;</code>
+       * @return The enum numeric value on the wire for level.
+       */
+      @java.lang.Override public int getLevelValue() {
+        return level_;
+      }
+      /**
+       * <pre>
+       * Level of the type.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel level = 2;</code>
+       * @param value The enum numeric value on the wire for level to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLevelValue(int value) {
+        
+        level_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Level of the type.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel level = 2;</code>
+       * @return The level.
+       */
+      @java.lang.Override
+      public com.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel getLevel() {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel result = com.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel.valueOf(level_);
+        return result == null ? com.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel.UNRECOGNIZED : result;
+      }
+      /**
+       * <pre>
+       * Level of the type.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel level = 2;</code>
+       * @param value The level to set.
+       * @return This builder for chaining.
+       */
+      public Builder setLevel(com.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        level_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Level of the type.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v9.enums.ListingGroupFilterProductTypeLevelEnum.ListingGroupFilterProductTypeLevel level = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearLevel() {
+        
+        level_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType)
+    private static final com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType();
+    }
+
+    public static com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ProductType>
+        PARSER = new com.google.protobuf.AbstractParser<ProductType>() {
+      @java.lang.Override
+      public ProductType parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ProductType(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ProductType> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ProductType> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v9.resources.ListingGroupFilterDimension.ProductType getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 

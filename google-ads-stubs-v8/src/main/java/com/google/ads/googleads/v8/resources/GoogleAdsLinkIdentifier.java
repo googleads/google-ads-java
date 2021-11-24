@@ -103,7 +103,7 @@ private static final long serialVersionUID = 0L;
    * the link.
    * </pre>
    *
-   * <code>string customer = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string customer = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the customer field is set.
    */
   @java.lang.Override
@@ -118,7 +118,7 @@ private static final long serialVersionUID = 0L;
    * the link.
    * </pre>
    *
-   * <code>string customer = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string customer = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The customer.
    */
   @java.lang.Override
@@ -142,7 +142,7 @@ private static final long serialVersionUID = 0L;
    * the link.
    * </pre>
    *
-   * <code>string customer = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string customer = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for customer.
    */
   @java.lang.Override
@@ -488,7 +488,7 @@ private static final long serialVersionUID = 0L;
      * the link.
      * </pre>
      *
-     * <code>string customer = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string customer = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the customer field is set.
      */
     public boolean hasCustomer() {
@@ -502,7 +502,7 @@ private static final long serialVersionUID = 0L;
      * the link.
      * </pre>
      *
-     * <code>string customer = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string customer = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return The customer.
      */
     public java.lang.String getCustomer() {
@@ -525,7 +525,7 @@ private static final long serialVersionUID = 0L;
      * the link.
      * </pre>
      *
-     * <code>string customer = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string customer = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for customer.
      */
     public com.google.protobuf.ByteString
@@ -549,7 +549,7 @@ private static final long serialVersionUID = 0L;
      * the link.
      * </pre>
      *
-     * <code>string customer = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string customer = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @param value The customer to set.
      * @return This builder for chaining.
      */
@@ -571,7 +571,7 @@ private static final long serialVersionUID = 0L;
      * the link.
      * </pre>
      *
-     * <code>string customer = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string customer = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearCustomer() {
@@ -588,7 +588,7 @@ private static final long serialVersionUID = 0L;
      * the link.
      * </pre>
      *
-     * <code>string customer = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string customer = 3 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for customer to set.
      * @return This builder for chaining.
      */

@@ -115,7 +115,7 @@ private static final long serialVersionUID = 0L;
    * The Topic Constant resource name.
    * </pre>
    *
-   * <code>string topic_constant = 3;</code>
+   * <code>optional string topic_constant = 3;</code>
    * @return Whether the topicConstant field is set.
    */
   @java.lang.Override
@@ -127,7 +127,7 @@ private static final long serialVersionUID = 0L;
    * The Topic Constant resource name.
    * </pre>
    *
-   * <code>string topic_constant = 3;</code>
+   * <code>optional string topic_constant = 3;</code>
    * @return The topicConstant.
    */
   @java.lang.Override
@@ -148,7 +148,7 @@ private static final long serialVersionUID = 0L;
    * The Topic Constant resource name.
    * </pre>
    *
-   * <code>string topic_constant = 3;</code>
+   * <code>optional string topic_constant = 3;</code>
    * @return The bytes for topicConstant.
    */
   @java.lang.Override
@@ -590,7 +590,7 @@ private static final long serialVersionUID = 0L;
      * The Topic Constant resource name.
      * </pre>
      *
-     * <code>string topic_constant = 3;</code>
+     * <code>optional string topic_constant = 3;</code>
      * @return Whether the topicConstant field is set.
      */
     public boolean hasTopicConstant() {
@@ -601,7 +601,7 @@ private static final long serialVersionUID = 0L;
      * The Topic Constant resource name.
      * </pre>
      *
-     * <code>string topic_constant = 3;</code>
+     * <code>optional string topic_constant = 3;</code>
      * @return The topicConstant.
      */
     public java.lang.String getTopicConstant() {
@@ -621,7 +621,7 @@ private static final long serialVersionUID = 0L;
      * The Topic Constant resource name.
      * </pre>
      *
-     * <code>string topic_constant = 3;</code>
+     * <code>optional string topic_constant = 3;</code>
      * @return The bytes for topicConstant.
      */
     public com.google.protobuf.ByteString
@@ -642,7 +642,7 @@ private static final long serialVersionUID = 0L;
      * The Topic Constant resource name.
      * </pre>
      *
-     * <code>string topic_constant = 3;</code>
+     * <code>optional string topic_constant = 3;</code>
      * @param value The topicConstant to set.
      * @return This builder for chaining.
      */
@@ -661,7 +661,7 @@ private static final long serialVersionUID = 0L;
      * The Topic Constant resource name.
      * </pre>
      *
-     * <code>string topic_constant = 3;</code>
+     * <code>optional string topic_constant = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearTopicConstant() {
@@ -675,7 +675,7 @@ private static final long serialVersionUID = 0L;
      * The Topic Constant resource name.
      * </pre>
      *
-     * <code>string topic_constant = 3;</code>
+     * <code>optional string topic_constant = 3;</code>
      * @param value The bytes for topicConstant to set.
      * @return This builder for chaining.
      */

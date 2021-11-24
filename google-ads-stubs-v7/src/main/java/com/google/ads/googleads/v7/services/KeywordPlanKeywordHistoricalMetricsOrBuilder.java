@@ -19,7 +19,7 @@ public interface KeywordPlanKeywordHistoricalMetricsOrBuilder extends
    * close_variants field.
    * </pre>
    *
-   * <code>string search_query = 4;</code>
+   * <code>optional string search_query = 4;</code>
    * @return Whether the searchQuery field is set.
    */
   boolean hasSearchQuery();
@@ -35,7 +35,7 @@ public interface KeywordPlanKeywordHistoricalMetricsOrBuilder extends
    * close_variants field.
    * </pre>
    *
-   * <code>string search_query = 4;</code>
+   * <code>optional string search_query = 4;</code>
    * @return The searchQuery.
    */
   java.lang.String getSearchQuery();
@@ -51,7 +51,7 @@ public interface KeywordPlanKeywordHistoricalMetricsOrBuilder extends
    * close_variants field.
    * </pre>
    *
-   * <code>string search_query = 4;</code>
+   * <code>optional string search_query = 4;</code>
    * @return The bytes for searchQuery.
    */
   com.google.protobuf.ByteString

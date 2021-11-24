@@ -13,7 +13,7 @@ public interface YoutubeVideoAssetOrBuilder extends
    * YouTube video URL.
    * </pre>
    *
-   * <code>string youtube_video_id = 2;</code>
+   * <code>optional string youtube_video_id = 2;</code>
    * @return Whether the youtubeVideoId field is set.
    */
   boolean hasYoutubeVideoId();
@@ -23,7 +23,7 @@ public interface YoutubeVideoAssetOrBuilder extends
    * YouTube video URL.
    * </pre>
    *
-   * <code>string youtube_video_id = 2;</code>
+   * <code>optional string youtube_video_id = 2;</code>
    * @return The youtubeVideoId.
    */
   java.lang.String getYoutubeVideoId();
@@ -33,7 +33,7 @@ public interface YoutubeVideoAssetOrBuilder extends
    * YouTube video URL.
    * </pre>
    *
-   * <code>string youtube_video_id = 2;</code>
+   * <code>optional string youtube_video_id = 2;</code>
    * @return The bytes for youtubeVideoId.
    */
   com.google.protobuf.ByteString

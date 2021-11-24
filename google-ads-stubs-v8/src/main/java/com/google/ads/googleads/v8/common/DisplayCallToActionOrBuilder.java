@@ -12,7 +12,7 @@ public interface DisplayCallToActionOrBuilder extends
    * Text for the display-call-to-action.
    * </pre>
    *
-   * <code>string text = 5;</code>
+   * <code>optional string text = 5;</code>
    * @return Whether the text field is set.
    */
   boolean hasText();
@@ -21,7 +21,7 @@ public interface DisplayCallToActionOrBuilder extends
    * Text for the display-call-to-action.
    * </pre>
    *
-   * <code>string text = 5;</code>
+   * <code>optional string text = 5;</code>
    * @return The text.
    */
   java.lang.String getText();
@@ -30,7 +30,7 @@ public interface DisplayCallToActionOrBuilder extends
    * Text for the display-call-to-action.
    * </pre>
    *
-   * <code>string text = 5;</code>
+   * <code>optional string text = 5;</code>
    * @return The bytes for text.
    */
   com.google.protobuf.ByteString
@@ -42,7 +42,7 @@ public interface DisplayCallToActionOrBuilder extends
    * white.
    * </pre>
    *
-   * <code>string text_color = 6;</code>
+   * <code>optional string text_color = 6;</code>
    * @return Whether the textColor field is set.
    */
   boolean hasTextColor();
@@ -52,7 +52,7 @@ public interface DisplayCallToActionOrBuilder extends
    * white.
    * </pre>
    *
-   * <code>string text_color = 6;</code>
+   * <code>optional string text_color = 6;</code>
    * @return The textColor.
    */
   java.lang.String getTextColor();
@@ -62,7 +62,7 @@ public interface DisplayCallToActionOrBuilder extends
    * white.
    * </pre>
    *
-   * <code>string text_color = 6;</code>
+   * <code>optional string text_color = 6;</code>
    * @return The bytes for textColor.
    */
   com.google.protobuf.ByteString
@@ -74,7 +74,7 @@ public interface DisplayCallToActionOrBuilder extends
    * set, the URL defaults to `final_url`.
    * </pre>
    *
-   * <code>string url_collection_id = 7;</code>
+   * <code>optional string url_collection_id = 7;</code>
    * @return Whether the urlCollectionId field is set.
    */
   boolean hasUrlCollectionId();
@@ -84,7 +84,7 @@ public interface DisplayCallToActionOrBuilder extends
    * set, the URL defaults to `final_url`.
    * </pre>
    *
-   * <code>string url_collection_id = 7;</code>
+   * <code>optional string url_collection_id = 7;</code>
    * @return The urlCollectionId.
    */
   java.lang.String getUrlCollectionId();
@@ -94,7 +94,7 @@ public interface DisplayCallToActionOrBuilder extends
    * set, the URL defaults to `final_url`.
    * </pre>
    *
-   * <code>string url_collection_id = 7;</code>
+   * <code>optional string url_collection_id = 7;</code>
    * @return The bytes for urlCollectionId.
    */
   com.google.protobuf.ByteString

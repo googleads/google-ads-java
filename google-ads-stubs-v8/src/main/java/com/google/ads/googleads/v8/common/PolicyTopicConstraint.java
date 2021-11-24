@@ -149,7 +149,7 @@ private static final long serialVersionUID = 0L;
      * Total number of countries targeted by the resource.
      * </pre>
      *
-     * <code>int32 total_targeted_countries = 3;</code>
+     * <code>optional int32 total_targeted_countries = 3;</code>
      * @return Whether the totalTargetedCountries field is set.
      */
     boolean hasTotalTargetedCountries();
@@ -158,7 +158,7 @@ private static final long serialVersionUID = 0L;
      * Total number of countries targeted by the resource.
      * </pre>
      *
-     * <code>int32 total_targeted_countries = 3;</code>
+     * <code>optional int32 total_targeted_countries = 3;</code>
      * @return The totalTargetedCountries.
      */
     int getTotalTargetedCountries();
@@ -315,7 +315,7 @@ private static final long serialVersionUID = 0L;
      * Total number of countries targeted by the resource.
      * </pre>
      *
-     * <code>int32 total_targeted_countries = 3;</code>
+     * <code>optional int32 total_targeted_countries = 3;</code>
      * @return Whether the totalTargetedCountries field is set.
      */
     @java.lang.Override
@@ -327,7 +327,7 @@ private static final long serialVersionUID = 0L;
      * Total number of countries targeted by the resource.
      * </pre>
      *
-     * <code>int32 total_targeted_countries = 3;</code>
+     * <code>optional int32 total_targeted_countries = 3;</code>
      * @return The totalTargetedCountries.
      */
     @java.lang.Override
@@ -774,7 +774,7 @@ private static final long serialVersionUID = 0L;
        * Total number of countries targeted by the resource.
        * </pre>
        *
-       * <code>int32 total_targeted_countries = 3;</code>
+       * <code>optional int32 total_targeted_countries = 3;</code>
        * @return Whether the totalTargetedCountries field is set.
        */
       @java.lang.Override
@@ -786,7 +786,7 @@ private static final long serialVersionUID = 0L;
        * Total number of countries targeted by the resource.
        * </pre>
        *
-       * <code>int32 total_targeted_countries = 3;</code>
+       * <code>optional int32 total_targeted_countries = 3;</code>
        * @return The totalTargetedCountries.
        */
       @java.lang.Override
@@ -798,7 +798,7 @@ private static final long serialVersionUID = 0L;
        * Total number of countries targeted by the resource.
        * </pre>
        *
-       * <code>int32 total_targeted_countries = 3;</code>
+       * <code>optional int32 total_targeted_countries = 3;</code>
        * @param value The totalTargetedCountries to set.
        * @return This builder for chaining.
        */
@@ -813,7 +813,7 @@ private static final long serialVersionUID = 0L;
        * Total number of countries targeted by the resource.
        * </pre>
        *
-       * <code>int32 total_targeted_countries = 3;</code>
+       * <code>optional int32 total_targeted_countries = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearTotalTargetedCountries() {
@@ -1625,7 +1625,7 @@ private static final long serialVersionUID = 0L;
      * constrained.
      * </pre>
      *
-     * <code>string country_criterion = 2;</code>
+     * <code>optional string country_criterion = 2;</code>
      * @return Whether the countryCriterion field is set.
      */
     boolean hasCountryCriterion();
@@ -1635,7 +1635,7 @@ private static final long serialVersionUID = 0L;
      * constrained.
      * </pre>
      *
-     * <code>string country_criterion = 2;</code>
+     * <code>optional string country_criterion = 2;</code>
      * @return The countryCriterion.
      */
     java.lang.String getCountryCriterion();
@@ -1645,7 +1645,7 @@ private static final long serialVersionUID = 0L;
      * constrained.
      * </pre>
      *
-     * <code>string country_criterion = 2;</code>
+     * <code>optional string country_criterion = 2;</code>
      * @return The bytes for countryCriterion.
      */
     com.google.protobuf.ByteString
@@ -1750,7 +1750,7 @@ private static final long serialVersionUID = 0L;
      * constrained.
      * </pre>
      *
-     * <code>string country_criterion = 2;</code>
+     * <code>optional string country_criterion = 2;</code>
      * @return Whether the countryCriterion field is set.
      */
     @java.lang.Override
@@ -1763,7 +1763,7 @@ private static final long serialVersionUID = 0L;
      * constrained.
      * </pre>
      *
-     * <code>string country_criterion = 2;</code>
+     * <code>optional string country_criterion = 2;</code>
      * @return The countryCriterion.
      */
     @java.lang.Override
@@ -1785,7 +1785,7 @@ private static final long serialVersionUID = 0L;
      * constrained.
      * </pre>
      *
-     * <code>string country_criterion = 2;</code>
+     * <code>optional string country_criterion = 2;</code>
      * @return The bytes for countryCriterion.
      */
     @java.lang.Override
@@ -2130,7 +2130,7 @@ private static final long serialVersionUID = 0L;
        * constrained.
        * </pre>
        *
-       * <code>string country_criterion = 2;</code>
+       * <code>optional string country_criterion = 2;</code>
        * @return Whether the countryCriterion field is set.
        */
       public boolean hasCountryCriterion() {
@@ -2142,7 +2142,7 @@ private static final long serialVersionUID = 0L;
        * constrained.
        * </pre>
        *
-       * <code>string country_criterion = 2;</code>
+       * <code>optional string country_criterion = 2;</code>
        * @return The countryCriterion.
        */
       public java.lang.String getCountryCriterion() {
@@ -2163,7 +2163,7 @@ private static final long serialVersionUID = 0L;
        * constrained.
        * </pre>
        *
-       * <code>string country_criterion = 2;</code>
+       * <code>optional string country_criterion = 2;</code>
        * @return The bytes for countryCriterion.
        */
       public com.google.protobuf.ByteString
@@ -2185,7 +2185,7 @@ private static final long serialVersionUID = 0L;
        * constrained.
        * </pre>
        *
-       * <code>string country_criterion = 2;</code>
+       * <code>optional string country_criterion = 2;</code>
        * @param value The countryCriterion to set.
        * @return This builder for chaining.
        */
@@ -2205,7 +2205,7 @@ private static final long serialVersionUID = 0L;
        * constrained.
        * </pre>
        *
-       * <code>string country_criterion = 2;</code>
+       * <code>optional string country_criterion = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearCountryCriterion() {
@@ -2220,7 +2220,7 @@ private static final long serialVersionUID = 0L;
        * constrained.
        * </pre>
        *
-       * <code>string country_criterion = 2;</code>
+       * <code>optional string country_criterion = 2;</code>
        * @param value The bytes for countryCriterion to set.
        * @return This builder for chaining.
        */

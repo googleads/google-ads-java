@@ -195,7 +195,7 @@ private static final long serialVersionUID = 0L;
    * Tracking URL template for all offers of this price extension.
    * </pre>
    *
-   * <code>string tracking_url_template = 7;</code>
+   * <code>optional string tracking_url_template = 7;</code>
    * @return Whether the trackingUrlTemplate field is set.
    */
   @java.lang.Override
@@ -207,7 +207,7 @@ private static final long serialVersionUID = 0L;
    * Tracking URL template for all offers of this price extension.
    * </pre>
    *
-   * <code>string tracking_url_template = 7;</code>
+   * <code>optional string tracking_url_template = 7;</code>
    * @return The trackingUrlTemplate.
    */
   @java.lang.Override
@@ -228,7 +228,7 @@ private static final long serialVersionUID = 0L;
    * Tracking URL template for all offers of this price extension.
    * </pre>
    *
-   * <code>string tracking_url_template = 7;</code>
+   * <code>optional string tracking_url_template = 7;</code>
    * @return The bytes for trackingUrlTemplate.
    */
   @java.lang.Override
@@ -253,7 +253,7 @@ private static final long serialVersionUID = 0L;
    * The code of the language used for this price extension.
    * </pre>
    *
-   * <code>string language_code = 8;</code>
+   * <code>optional string language_code = 8;</code>
    * @return Whether the languageCode field is set.
    */
   @java.lang.Override
@@ -265,7 +265,7 @@ private static final long serialVersionUID = 0L;
    * The code of the language used for this price extension.
    * </pre>
    *
-   * <code>string language_code = 8;</code>
+   * <code>optional string language_code = 8;</code>
    * @return The languageCode.
    */
   @java.lang.Override
@@ -286,7 +286,7 @@ private static final long serialVersionUID = 0L;
    * The code of the language used for this price extension.
    * </pre>
    *
-   * <code>string language_code = 8;</code>
+   * <code>optional string language_code = 8;</code>
    * @return The bytes for languageCode.
    */
   @java.lang.Override
@@ -371,7 +371,7 @@ private static final long serialVersionUID = 0L;
    * Tracking URL template for all offers of this price extension.
    * </pre>
    *
-   * <code>string final_url_suffix = 9;</code>
+   * <code>optional string final_url_suffix = 9;</code>
    * @return Whether the finalUrlSuffix field is set.
    */
   @java.lang.Override
@@ -383,7 +383,7 @@ private static final long serialVersionUID = 0L;
    * Tracking URL template for all offers of this price extension.
    * </pre>
    *
-   * <code>string final_url_suffix = 9;</code>
+   * <code>optional string final_url_suffix = 9;</code>
    * @return The finalUrlSuffix.
    */
   @java.lang.Override
@@ -404,7 +404,7 @@ private static final long serialVersionUID = 0L;
    * Tracking URL template for all offers of this price extension.
    * </pre>
    *
-   * <code>string final_url_suffix = 9;</code>
+   * <code>optional string final_url_suffix = 9;</code>
    * @return The bytes for finalUrlSuffix.
    */
   @java.lang.Override
@@ -1034,7 +1034,7 @@ private static final long serialVersionUID = 0L;
      * Tracking URL template for all offers of this price extension.
      * </pre>
      *
-     * <code>string tracking_url_template = 7;</code>
+     * <code>optional string tracking_url_template = 7;</code>
      * @return Whether the trackingUrlTemplate field is set.
      */
     public boolean hasTrackingUrlTemplate() {
@@ -1045,7 +1045,7 @@ private static final long serialVersionUID = 0L;
      * Tracking URL template for all offers of this price extension.
      * </pre>
      *
-     * <code>string tracking_url_template = 7;</code>
+     * <code>optional string tracking_url_template = 7;</code>
      * @return The trackingUrlTemplate.
      */
     public java.lang.String getTrackingUrlTemplate() {
@@ -1065,7 +1065,7 @@ private static final long serialVersionUID = 0L;
      * Tracking URL template for all offers of this price extension.
      * </pre>
      *
-     * <code>string tracking_url_template = 7;</code>
+     * <code>optional string tracking_url_template = 7;</code>
      * @return The bytes for trackingUrlTemplate.
      */
     public com.google.protobuf.ByteString
@@ -1086,7 +1086,7 @@ private static final long serialVersionUID = 0L;
      * Tracking URL template for all offers of this price extension.
      * </pre>
      *
-     * <code>string tracking_url_template = 7;</code>
+     * <code>optional string tracking_url_template = 7;</code>
      * @param value The trackingUrlTemplate to set.
      * @return This builder for chaining.
      */
@@ -1105,7 +1105,7 @@ private static final long serialVersionUID = 0L;
      * Tracking URL template for all offers of this price extension.
      * </pre>
      *
-     * <code>string tracking_url_template = 7;</code>
+     * <code>optional string tracking_url_template = 7;</code>
      * @return This builder for chaining.
      */
     public Builder clearTrackingUrlTemplate() {
@@ -1119,7 +1119,7 @@ private static final long serialVersionUID = 0L;
      * Tracking URL template for all offers of this price extension.
      * </pre>
      *
-     * <code>string tracking_url_template = 7;</code>
+     * <code>optional string tracking_url_template = 7;</code>
      * @param value The bytes for trackingUrlTemplate to set.
      * @return This builder for chaining.
      */
@@ -1141,7 +1141,7 @@ private static final long serialVersionUID = 0L;
      * The code of the language used for this price extension.
      * </pre>
      *
-     * <code>string language_code = 8;</code>
+     * <code>optional string language_code = 8;</code>
      * @return Whether the languageCode field is set.
      */
     public boolean hasLanguageCode() {
@@ -1152,7 +1152,7 @@ private static final long serialVersionUID = 0L;
      * The code of the language used for this price extension.
      * </pre>
      *
-     * <code>string language_code = 8;</code>
+     * <code>optional string language_code = 8;</code>
      * @return The languageCode.
      */
     public java.lang.String getLanguageCode() {
@@ -1172,7 +1172,7 @@ private static final long serialVersionUID = 0L;
      * The code of the language used for this price extension.
      * </pre>
      *
-     * <code>string language_code = 8;</code>
+     * <code>optional string language_code = 8;</code>
      * @return The bytes for languageCode.
      */
     public com.google.protobuf.ByteString
@@ -1193,7 +1193,7 @@ private static final long serialVersionUID = 0L;
      * The code of the language used for this price extension.
      * </pre>
      *
-     * <code>string language_code = 8;</code>
+     * <code>optional string language_code = 8;</code>
      * @param value The languageCode to set.
      * @return This builder for chaining.
      */
@@ -1212,7 +1212,7 @@ private static final long serialVersionUID = 0L;
      * The code of the language used for this price extension.
      * </pre>
      *
-     * <code>string language_code = 8;</code>
+     * <code>optional string language_code = 8;</code>
      * @return This builder for chaining.
      */
     public Builder clearLanguageCode() {
@@ -1226,7 +1226,7 @@ private static final long serialVersionUID = 0L;
      * The code of the language used for this price extension.
      * </pre>
      *
-     * <code>string language_code = 8;</code>
+     * <code>optional string language_code = 8;</code>
      * @param value The bytes for languageCode to set.
      * @return This builder for chaining.
      */
@@ -1560,7 +1560,7 @@ private static final long serialVersionUID = 0L;
      * Tracking URL template for all offers of this price extension.
      * </pre>
      *
-     * <code>string final_url_suffix = 9;</code>
+     * <code>optional string final_url_suffix = 9;</code>
      * @return Whether the finalUrlSuffix field is set.
      */
     public boolean hasFinalUrlSuffix() {
@@ -1571,7 +1571,7 @@ private static final long serialVersionUID = 0L;
      * Tracking URL template for all offers of this price extension.
      * </pre>
      *
-     * <code>string final_url_suffix = 9;</code>
+     * <code>optional string final_url_suffix = 9;</code>
      * @return The finalUrlSuffix.
      */
     public java.lang.String getFinalUrlSuffix() {
@@ -1591,7 +1591,7 @@ private static final long serialVersionUID = 0L;
      * Tracking URL template for all offers of this price extension.
      * </pre>
      *
-     * <code>string final_url_suffix = 9;</code>
+     * <code>optional string final_url_suffix = 9;</code>
      * @return The bytes for finalUrlSuffix.
      */
     public com.google.protobuf.ByteString
@@ -1612,7 +1612,7 @@ private static final long serialVersionUID = 0L;
      * Tracking URL template for all offers of this price extension.
      * </pre>
      *
-     * <code>string final_url_suffix = 9;</code>
+     * <code>optional string final_url_suffix = 9;</code>
      * @param value The finalUrlSuffix to set.
      * @return This builder for chaining.
      */
@@ -1631,7 +1631,7 @@ private static final long serialVersionUID = 0L;
      * Tracking URL template for all offers of this price extension.
      * </pre>
      *
-     * <code>string final_url_suffix = 9;</code>
+     * <code>optional string final_url_suffix = 9;</code>
      * @return This builder for chaining.
      */
     public Builder clearFinalUrlSuffix() {
@@ -1645,7 +1645,7 @@ private static final long serialVersionUID = 0L;
      * Tracking URL template for all offers of this price extension.
      * </pre>
      *
-     * <code>string final_url_suffix = 9;</code>
+     * <code>optional string final_url_suffix = 9;</code>
      * @param value The bytes for finalUrlSuffix to set.
      * @return This builder for chaining.
      */

@@ -18,7 +18,7 @@ public interface ForecastOrBuilder extends
    * value will be rounded to 0.
    * </pre>
    *
-   * <code>int64 on_target_reach = 5;</code>
+   * <code>optional int64 on_target_reach = 5;</code>
    * @return Whether the onTargetReach field is set.
    */
   boolean hasOnTargetReach();
@@ -33,7 +33,7 @@ public interface ForecastOrBuilder extends
    * value will be rounded to 0.
    * </pre>
    *
-   * <code>int64 on_target_reach = 5;</code>
+   * <code>optional int64 on_target_reach = 5;</code>
    * @return The onTargetReach.
    */
   long getOnTargetReach();
@@ -49,7 +49,7 @@ public interface ForecastOrBuilder extends
    * value will be rounded to 0.
    * </pre>
    *
-   * <code>int64 total_reach = 6;</code>
+   * <code>optional int64 total_reach = 6;</code>
    * @return Whether the totalReach field is set.
    */
   boolean hasTotalReach();
@@ -64,7 +64,7 @@ public interface ForecastOrBuilder extends
    * value will be rounded to 0.
    * </pre>
    *
-   * <code>int64 total_reach = 6;</code>
+   * <code>optional int64 total_reach = 6;</code>
    * @return The totalReach.
    */
   long getTotalReach();
@@ -74,7 +74,7 @@ public interface ForecastOrBuilder extends
    * Number of ad impressions that exactly matches the Targeting.
    * </pre>
    *
-   * <code>int64 on_target_impressions = 7;</code>
+   * <code>optional int64 on_target_impressions = 7;</code>
    * @return Whether the onTargetImpressions field is set.
    */
   boolean hasOnTargetImpressions();
@@ -83,7 +83,7 @@ public interface ForecastOrBuilder extends
    * Number of ad impressions that exactly matches the Targeting.
    * </pre>
    *
-   * <code>int64 on_target_impressions = 7;</code>
+   * <code>optional int64 on_target_impressions = 7;</code>
    * @return The onTargetImpressions.
    */
   long getOnTargetImpressions();
@@ -95,7 +95,7 @@ public interface ForecastOrBuilder extends
    * signed-in users.
    * </pre>
    *
-   * <code>int64 total_impressions = 8;</code>
+   * <code>optional int64 total_impressions = 8;</code>
    * @return Whether the totalImpressions field is set.
    */
   boolean hasTotalImpressions();
@@ -106,7 +106,7 @@ public interface ForecastOrBuilder extends
    * signed-in users.
    * </pre>
    *
-   * <code>int64 total_impressions = 8;</code>
+   * <code>optional int64 total_impressions = 8;</code>
    * @return The totalImpressions.
    */
   long getTotalImpressions();
@@ -119,7 +119,7 @@ public interface ForecastOrBuilder extends
    * viewability is measured.
    * </pre>
    *
-   * <code>int64 viewable_impressions = 9;</code>
+   * <code>optional int64 viewable_impressions = 9;</code>
    * @return Whether the viewableImpressions field is set.
    */
   boolean hasViewableImpressions();
@@ -131,7 +131,7 @@ public interface ForecastOrBuilder extends
    * viewability is measured.
    * </pre>
    *
-   * <code>int64 viewable_impressions = 9;</code>
+   * <code>optional int64 viewable_impressions = 9;</code>
    * @return The viewableImpressions.
    */
   long getViewableImpressions();

@@ -153,7 +153,7 @@ private static final long serialVersionUID = 0L;
    * Header text of this offer.
    * </pre>
    *
-   * <code>string header = 7;</code>
+   * <code>optional string header = 7;</code>
    * @return Whether the header field is set.
    */
   @java.lang.Override
@@ -165,7 +165,7 @@ private static final long serialVersionUID = 0L;
    * Header text of this offer.
    * </pre>
    *
-   * <code>string header = 7;</code>
+   * <code>optional string header = 7;</code>
    * @return The header.
    */
   @java.lang.Override
@@ -186,7 +186,7 @@ private static final long serialVersionUID = 0L;
    * Header text of this offer.
    * </pre>
    *
-   * <code>string header = 7;</code>
+   * <code>optional string header = 7;</code>
    * @return The bytes for header.
    */
   @java.lang.Override
@@ -211,7 +211,7 @@ private static final long serialVersionUID = 0L;
    * Description text of this offer.
    * </pre>
    *
-   * <code>string description = 8;</code>
+   * <code>optional string description = 8;</code>
    * @return Whether the description field is set.
    */
   @java.lang.Override
@@ -223,7 +223,7 @@ private static final long serialVersionUID = 0L;
    * Description text of this offer.
    * </pre>
    *
-   * <code>string description = 8;</code>
+   * <code>optional string description = 8;</code>
    * @return The description.
    */
   @java.lang.Override
@@ -244,7 +244,7 @@ private static final long serialVersionUID = 0L;
    * Description text of this offer.
    * </pre>
    *
-   * <code>string description = 8;</code>
+   * <code>optional string description = 8;</code>
    * @return The bytes for description.
    */
   @java.lang.Override
@@ -894,7 +894,7 @@ private static final long serialVersionUID = 0L;
      * Header text of this offer.
      * </pre>
      *
-     * <code>string header = 7;</code>
+     * <code>optional string header = 7;</code>
      * @return Whether the header field is set.
      */
     public boolean hasHeader() {
@@ -905,7 +905,7 @@ private static final long serialVersionUID = 0L;
      * Header text of this offer.
      * </pre>
      *
-     * <code>string header = 7;</code>
+     * <code>optional string header = 7;</code>
      * @return The header.
      */
     public java.lang.String getHeader() {
@@ -925,7 +925,7 @@ private static final long serialVersionUID = 0L;
      * Header text of this offer.
      * </pre>
      *
-     * <code>string header = 7;</code>
+     * <code>optional string header = 7;</code>
      * @return The bytes for header.
      */
     public com.google.protobuf.ByteString
@@ -946,7 +946,7 @@ private static final long serialVersionUID = 0L;
      * Header text of this offer.
      * </pre>
      *
-     * <code>string header = 7;</code>
+     * <code>optional string header = 7;</code>
      * @param value The header to set.
      * @return This builder for chaining.
      */
@@ -965,7 +965,7 @@ private static final long serialVersionUID = 0L;
      * Header text of this offer.
      * </pre>
      *
-     * <code>string header = 7;</code>
+     * <code>optional string header = 7;</code>
      * @return This builder for chaining.
      */
     public Builder clearHeader() {
@@ -979,7 +979,7 @@ private static final long serialVersionUID = 0L;
      * Header text of this offer.
      * </pre>
      *
-     * <code>string header = 7;</code>
+     * <code>optional string header = 7;</code>
      * @param value The bytes for header to set.
      * @return This builder for chaining.
      */
@@ -1001,7 +1001,7 @@ private static final long serialVersionUID = 0L;
      * Description text of this offer.
      * </pre>
      *
-     * <code>string description = 8;</code>
+     * <code>optional string description = 8;</code>
      * @return Whether the description field is set.
      */
     public boolean hasDescription() {
@@ -1012,7 +1012,7 @@ private static final long serialVersionUID = 0L;
      * Description text of this offer.
      * </pre>
      *
-     * <code>string description = 8;</code>
+     * <code>optional string description = 8;</code>
      * @return The description.
      */
     public java.lang.String getDescription() {
@@ -1032,7 +1032,7 @@ private static final long serialVersionUID = 0L;
      * Description text of this offer.
      * </pre>
      *
-     * <code>string description = 8;</code>
+     * <code>optional string description = 8;</code>
      * @return The bytes for description.
      */
     public com.google.protobuf.ByteString
@@ -1053,7 +1053,7 @@ private static final long serialVersionUID = 0L;
      * Description text of this offer.
      * </pre>
      *
-     * <code>string description = 8;</code>
+     * <code>optional string description = 8;</code>
      * @param value The description to set.
      * @return This builder for chaining.
      */
@@ -1072,7 +1072,7 @@ private static final long serialVersionUID = 0L;
      * Description text of this offer.
      * </pre>
      *
-     * <code>string description = 8;</code>
+     * <code>optional string description = 8;</code>
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
@@ -1086,7 +1086,7 @@ private static final long serialVersionUID = 0L;
      * Description text of this offer.
      * </pre>
      *
-     * <code>string description = 8;</code>
+     * <code>optional string description = 8;</code>
      * @param value The bytes for description to set.
      * @return This builder for chaining.
      */

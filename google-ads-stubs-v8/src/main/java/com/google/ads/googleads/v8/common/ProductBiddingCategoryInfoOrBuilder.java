@@ -14,7 +14,7 @@ public interface ProductBiddingCategoryInfoOrBuilder extends
    * this article: https://support.google.com/merchants/answer/6324436
    * </pre>
    *
-   * <code>int64 id = 4;</code>
+   * <code>optional int64 id = 4;</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -25,7 +25,7 @@ public interface ProductBiddingCategoryInfoOrBuilder extends
    * this article: https://support.google.com/merchants/answer/6324436
    * </pre>
    *
-   * <code>int64 id = 4;</code>
+   * <code>optional int64 id = 4;</code>
    * @return The id.
    */
   long getId();
@@ -36,7 +36,7 @@ public interface ProductBiddingCategoryInfoOrBuilder extends
    * match the campaign.shopping_setting.sales_country field.
    * </pre>
    *
-   * <code>string country_code = 5;</code>
+   * <code>optional string country_code = 5;</code>
    * @return Whether the countryCode field is set.
    */
   boolean hasCountryCode();
@@ -46,7 +46,7 @@ public interface ProductBiddingCategoryInfoOrBuilder extends
    * match the campaign.shopping_setting.sales_country field.
    * </pre>
    *
-   * <code>string country_code = 5;</code>
+   * <code>optional string country_code = 5;</code>
    * @return The countryCode.
    */
   java.lang.String getCountryCode();
@@ -56,7 +56,7 @@ public interface ProductBiddingCategoryInfoOrBuilder extends
    * match the campaign.shopping_setting.sales_country field.
    * </pre>
    *
-   * <code>string country_code = 5;</code>
+   * <code>optional string country_code = 5;</code>
    * @return The bytes for countryCode.
    */
   com.google.protobuf.ByteString

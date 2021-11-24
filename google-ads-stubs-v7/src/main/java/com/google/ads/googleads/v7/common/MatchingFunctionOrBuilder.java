@@ -24,7 +24,7 @@ public interface MatchingFunctionOrBuilder extends
    * mutate request.
    * </pre>
    *
-   * <code>string function_string = 5;</code>
+   * <code>optional string function_string = 5;</code>
    * @return Whether the functionString field is set.
    */
   boolean hasFunctionString();
@@ -45,7 +45,7 @@ public interface MatchingFunctionOrBuilder extends
    * mutate request.
    * </pre>
    *
-   * <code>string function_string = 5;</code>
+   * <code>optional string function_string = 5;</code>
    * @return The functionString.
    */
   java.lang.String getFunctionString();
@@ -66,7 +66,7 @@ public interface MatchingFunctionOrBuilder extends
    * mutate request.
    * </pre>
    *
-   * <code>string function_string = 5;</code>
+   * <code>optional string function_string = 5;</code>
    * @return The bytes for functionString.
    */
   com.google.protobuf.ByteString

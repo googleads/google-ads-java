@@ -277,7 +277,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The feed item to which this feed item target belongs.
    * </pre>
    *
-   * <code>string feed_item = 12 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string feed_item = 12 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the feedItem field is set.
    */
   @java.lang.Override
@@ -289,7 +289,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The feed item to which this feed item target belongs.
    * </pre>
    *
-   * <code>string feed_item = 12 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string feed_item = 12 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The feedItem.
    */
   @java.lang.Override
@@ -310,7 +310,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The feed item to which this feed item target belongs.
    * </pre>
    *
-   * <code>string feed_item = 12 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string feed_item = 12 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for feedItem.
    */
   @java.lang.Override
@@ -362,7 +362,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of the targeted resource. This field is read-only.
    * </pre>
    *
-   * <code>int64 feed_item_target_id = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 feed_item_target_id = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the feedItemTargetId field is set.
    */
   @java.lang.Override
@@ -374,7 +374,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of the targeted resource. This field is read-only.
    * </pre>
    *
-   * <code>int64 feed_item_target_id = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 feed_item_target_id = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The feedItemTargetId.
    */
   @java.lang.Override
@@ -747,7 +747,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (feedItemTargetType_ != com.google.ads.googleads.v8.enums.FeedItemTargetTypeEnum.FeedItemTargetType.UNSPECIFIED.getNumber()) {
@@ -789,7 +789,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (feedItemTargetType_ != com.google.ads.googleads.v8.enums.FeedItemTargetTypeEnum.FeedItemTargetType.UNSPECIFIED.getNumber()) {
@@ -1414,7 +1414,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The feed item to which this feed item target belongs.
      * </pre>
      *
-     * <code>string feed_item = 12 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string feed_item = 12 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the feedItem field is set.
      */
     public boolean hasFeedItem() {
@@ -1425,7 +1425,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The feed item to which this feed item target belongs.
      * </pre>
      *
-     * <code>string feed_item = 12 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string feed_item = 12 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return The feedItem.
      */
     public java.lang.String getFeedItem() {
@@ -1445,7 +1445,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The feed item to which this feed item target belongs.
      * </pre>
      *
-     * <code>string feed_item = 12 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string feed_item = 12 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for feedItem.
      */
     public com.google.protobuf.ByteString
@@ -1466,7 +1466,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The feed item to which this feed item target belongs.
      * </pre>
      *
-     * <code>string feed_item = 12 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string feed_item = 12 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @param value The feedItem to set.
      * @return This builder for chaining.
      */
@@ -1485,7 +1485,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The feed item to which this feed item target belongs.
      * </pre>
      *
-     * <code>string feed_item = 12 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string feed_item = 12 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearFeedItem() {
@@ -1499,7 +1499,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The feed item to which this feed item target belongs.
      * </pre>
      *
-     * <code>string feed_item = 12 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string feed_item = 12 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for feedItem to set.
      * @return This builder for chaining.
      */
@@ -1595,7 +1595,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the targeted resource. This field is read-only.
      * </pre>
      *
-     * <code>int64 feed_item_target_id = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 feed_item_target_id = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the feedItemTargetId field is set.
      */
     @java.lang.Override
@@ -1607,7 +1607,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the targeted resource. This field is read-only.
      * </pre>
      *
-     * <code>int64 feed_item_target_id = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 feed_item_target_id = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The feedItemTargetId.
      */
     @java.lang.Override
@@ -1619,7 +1619,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the targeted resource. This field is read-only.
      * </pre>
      *
-     * <code>int64 feed_item_target_id = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 feed_item_target_id = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The feedItemTargetId to set.
      * @return This builder for chaining.
      */
@@ -1634,7 +1634,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the targeted resource. This field is read-only.
      * </pre>
      *
-     * <code>int64 feed_item_target_id = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 feed_item_target_id = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearFeedItemTargetId() {

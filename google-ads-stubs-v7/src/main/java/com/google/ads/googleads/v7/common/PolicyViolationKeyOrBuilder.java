@@ -12,7 +12,7 @@ public interface PolicyViolationKeyOrBuilder extends
    * Unique ID of the violated policy.
    * </pre>
    *
-   * <code>string policy_name = 3;</code>
+   * <code>optional string policy_name = 3;</code>
    * @return Whether the policyName field is set.
    */
   boolean hasPolicyName();
@@ -21,7 +21,7 @@ public interface PolicyViolationKeyOrBuilder extends
    * Unique ID of the violated policy.
    * </pre>
    *
-   * <code>string policy_name = 3;</code>
+   * <code>optional string policy_name = 3;</code>
    * @return The policyName.
    */
   java.lang.String getPolicyName();
@@ -30,7 +30,7 @@ public interface PolicyViolationKeyOrBuilder extends
    * Unique ID of the violated policy.
    * </pre>
    *
-   * <code>string policy_name = 3;</code>
+   * <code>optional string policy_name = 3;</code>
    * @return The bytes for policyName.
    */
   com.google.protobuf.ByteString
@@ -45,7 +45,7 @@ public interface PolicyViolationKeyOrBuilder extends
    * Must be specified for ad exemptions.
    * </pre>
    *
-   * <code>string violating_text = 4;</code>
+   * <code>optional string violating_text = 4;</code>
    * @return Whether the violatingText field is set.
    */
   boolean hasViolatingText();
@@ -58,7 +58,7 @@ public interface PolicyViolationKeyOrBuilder extends
    * Must be specified for ad exemptions.
    * </pre>
    *
-   * <code>string violating_text = 4;</code>
+   * <code>optional string violating_text = 4;</code>
    * @return The violatingText.
    */
   java.lang.String getViolatingText();
@@ -71,7 +71,7 @@ public interface PolicyViolationKeyOrBuilder extends
    * Must be specified for ad exemptions.
    * </pre>
    *
-   * <code>string violating_text = 4;</code>
+   * <code>optional string violating_text = 4;</code>
    * @return The bytes for violatingText.
    */
   com.google.protobuf.ByteString

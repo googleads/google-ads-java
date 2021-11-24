@@ -172,7 +172,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The campaign to which the campaign shared set belongs.
    * </pre>
    *
-   * <code>string campaign = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the campaign field is set.
    */
   @java.lang.Override
@@ -184,7 +184,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The campaign to which the campaign shared set belongs.
    * </pre>
    *
-   * <code>string campaign = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The campaign.
    */
   @java.lang.Override
@@ -205,7 +205,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The campaign to which the campaign shared set belongs.
    * </pre>
    *
-   * <code>string campaign = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for campaign.
    */
   @java.lang.Override
@@ -235,7 +235,7 @@ private static final long serialVersionUID = 0L;
    * with Display mobile app campaigns.
    * </pre>
    *
-   * <code>string shared_set = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string shared_set = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the sharedSet field is set.
    */
   @java.lang.Override
@@ -252,7 +252,7 @@ private static final long serialVersionUID = 0L;
    * with Display mobile app campaigns.
    * </pre>
    *
-   * <code>string shared_set = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string shared_set = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The sharedSet.
    */
   @java.lang.Override
@@ -278,7 +278,7 @@ private static final long serialVersionUID = 0L;
    * with Display mobile app campaigns.
    * </pre>
    *
-   * <code>string shared_set = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string shared_set = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for sharedSet.
    */
   @java.lang.Override
@@ -337,7 +337,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (status_ != com.google.ads.googleads.v8.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus.UNSPECIFIED.getNumber()) {
@@ -358,7 +358,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (status_ != com.google.ads.googleads.v8.enums.CampaignSharedSetStatusEnum.CampaignSharedSetStatus.UNSPECIFIED.getNumber()) {
@@ -814,7 +814,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The campaign to which the campaign shared set belongs.
      * </pre>
      *
-     * <code>string campaign = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the campaign field is set.
      */
     public boolean hasCampaign() {
@@ -825,7 +825,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The campaign to which the campaign shared set belongs.
      * </pre>
      *
-     * <code>string campaign = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return The campaign.
      */
     public java.lang.String getCampaign() {
@@ -845,7 +845,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The campaign to which the campaign shared set belongs.
      * </pre>
      *
-     * <code>string campaign = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for campaign.
      */
     public com.google.protobuf.ByteString
@@ -866,7 +866,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The campaign to which the campaign shared set belongs.
      * </pre>
      *
-     * <code>string campaign = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @param value The campaign to set.
      * @return This builder for chaining.
      */
@@ -885,7 +885,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The campaign to which the campaign shared set belongs.
      * </pre>
      *
-     * <code>string campaign = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearCampaign() {
@@ -899,7 +899,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The campaign to which the campaign shared set belongs.
      * </pre>
      *
-     * <code>string campaign = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string campaign = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for campaign to set.
      * @return This builder for chaining.
      */
@@ -926,7 +926,7 @@ private static final long serialVersionUID = 0L;
      * with Display mobile app campaigns.
      * </pre>
      *
-     * <code>string shared_set = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string shared_set = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the sharedSet field is set.
      */
     public boolean hasSharedSet() {
@@ -942,7 +942,7 @@ private static final long serialVersionUID = 0L;
      * with Display mobile app campaigns.
      * </pre>
      *
-     * <code>string shared_set = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string shared_set = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return The sharedSet.
      */
     public java.lang.String getSharedSet() {
@@ -967,7 +967,7 @@ private static final long serialVersionUID = 0L;
      * with Display mobile app campaigns.
      * </pre>
      *
-     * <code>string shared_set = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string shared_set = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for sharedSet.
      */
     public com.google.protobuf.ByteString
@@ -993,7 +993,7 @@ private static final long serialVersionUID = 0L;
      * with Display mobile app campaigns.
      * </pre>
      *
-     * <code>string shared_set = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string shared_set = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @param value The sharedSet to set.
      * @return This builder for chaining.
      */
@@ -1017,7 +1017,7 @@ private static final long serialVersionUID = 0L;
      * with Display mobile app campaigns.
      * </pre>
      *
-     * <code>string shared_set = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string shared_set = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearSharedSet() {
@@ -1036,7 +1036,7 @@ private static final long serialVersionUID = 0L;
      * with Display mobile app campaigns.
      * </pre>
      *
-     * <code>string shared_set = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string shared_set = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for sharedSet to set.
      * @return This builder for chaining.
      */

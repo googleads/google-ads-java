@@ -12,7 +12,7 @@ public interface ProductBrandInfoOrBuilder extends
    * String value of the product brand.
    * </pre>
    *
-   * <code>string value = 2;</code>
+   * <code>optional string value = 2;</code>
    * @return Whether the value field is set.
    */
   boolean hasValue();
@@ -21,7 +21,7 @@ public interface ProductBrandInfoOrBuilder extends
    * String value of the product brand.
    * </pre>
    *
-   * <code>string value = 2;</code>
+   * <code>optional string value = 2;</code>
    * @return The value.
    */
   java.lang.String getValue();
@@ -30,7 +30,7 @@ public interface ProductBrandInfoOrBuilder extends
    * String value of the product brand.
    * </pre>
    *
-   * <code>string value = 2;</code>
+   * <code>optional string value = 2;</code>
    * @return The bytes for value.
    */
   com.google.protobuf.ByteString

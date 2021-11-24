@@ -96,7 +96,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the conversion action.
    * </pre>
    *
-   * <code>string conversion_action = 113;</code>
+   * <code>optional string conversion_action = 113;</code>
    * @return Whether the conversionAction field is set.
    */
   boolean hasConversionAction();
@@ -105,7 +105,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the conversion action.
    * </pre>
    *
-   * <code>string conversion_action = 113;</code>
+   * <code>optional string conversion_action = 113;</code>
    * @return The conversionAction.
    */
   java.lang.String getConversionAction();
@@ -114,7 +114,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the conversion action.
    * </pre>
    *
-   * <code>string conversion_action = 113;</code>
+   * <code>optional string conversion_action = 113;</code>
    * @return The bytes for conversionAction.
    */
   com.google.protobuf.ByteString
@@ -144,7 +144,7 @@ public interface SegmentsOrBuilder extends
    * Conversion action name.
    * </pre>
    *
-   * <code>string conversion_action_name = 114;</code>
+   * <code>optional string conversion_action_name = 114;</code>
    * @return Whether the conversionActionName field is set.
    */
   boolean hasConversionActionName();
@@ -153,7 +153,7 @@ public interface SegmentsOrBuilder extends
    * Conversion action name.
    * </pre>
    *
-   * <code>string conversion_action_name = 114;</code>
+   * <code>optional string conversion_action_name = 114;</code>
    * @return The conversionActionName.
    */
   java.lang.String getConversionActionName();
@@ -162,7 +162,7 @@ public interface SegmentsOrBuilder extends
    * Conversion action name.
    * </pre>
    *
-   * <code>string conversion_action_name = 114;</code>
+   * <code>optional string conversion_action_name = 114;</code>
    * @return The bytes for conversionActionName.
    */
   com.google.protobuf.ByteString
@@ -177,7 +177,7 @@ public interface SegmentsOrBuilder extends
    * post-adjustment data.
    * </pre>
    *
-   * <code>bool conversion_adjustment = 115;</code>
+   * <code>optional bool conversion_adjustment = 115;</code>
    * @return Whether the conversionAdjustment field is set.
    */
   boolean hasConversionAdjustment();
@@ -190,7 +190,7 @@ public interface SegmentsOrBuilder extends
    * post-adjustment data.
    * </pre>
    *
-   * <code>bool conversion_adjustment = 115;</code>
+   * <code>optional bool conversion_adjustment = 115;</code>
    * @return The conversionAdjustment.
    */
   boolean getConversionAdjustment();
@@ -262,7 +262,7 @@ public interface SegmentsOrBuilder extends
    * yyyy-MM-dd format, e.g., 2018-04-17.
    * </pre>
    *
-   * <code>string date = 79;</code>
+   * <code>optional string date = 79;</code>
    * @return Whether the date field is set.
    */
   boolean hasDate();
@@ -272,7 +272,7 @@ public interface SegmentsOrBuilder extends
    * yyyy-MM-dd format, e.g., 2018-04-17.
    * </pre>
    *
-   * <code>string date = 79;</code>
+   * <code>optional string date = 79;</code>
    * @return The date.
    */
   java.lang.String getDate();
@@ -282,7 +282,7 @@ public interface SegmentsOrBuilder extends
    * yyyy-MM-dd format, e.g., 2018-04-17.
    * </pre>
    *
-   * <code>string date = 79;</code>
+   * <code>optional string date = 79;</code>
    * @return The bytes for date.
    */
   com.google.protobuf.ByteString
@@ -350,7 +350,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the geo target constant that represents an airport.
    * </pre>
    *
-   * <code>string geo_target_airport = 116;</code>
+   * <code>optional string geo_target_airport = 116;</code>
    * @return Whether the geoTargetAirport field is set.
    */
   boolean hasGeoTargetAirport();
@@ -359,7 +359,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the geo target constant that represents an airport.
    * </pre>
    *
-   * <code>string geo_target_airport = 116;</code>
+   * <code>optional string geo_target_airport = 116;</code>
    * @return The geoTargetAirport.
    */
   java.lang.String getGeoTargetAirport();
@@ -368,7 +368,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the geo target constant that represents an airport.
    * </pre>
    *
-   * <code>string geo_target_airport = 116;</code>
+   * <code>optional string geo_target_airport = 116;</code>
    * @return The bytes for geoTargetAirport.
    */
   com.google.protobuf.ByteString
@@ -379,7 +379,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the geo target constant that represents a canton.
    * </pre>
    *
-   * <code>string geo_target_canton = 117;</code>
+   * <code>optional string geo_target_canton = 117;</code>
    * @return Whether the geoTargetCanton field is set.
    */
   boolean hasGeoTargetCanton();
@@ -388,7 +388,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the geo target constant that represents a canton.
    * </pre>
    *
-   * <code>string geo_target_canton = 117;</code>
+   * <code>optional string geo_target_canton = 117;</code>
    * @return The geoTargetCanton.
    */
   java.lang.String getGeoTargetCanton();
@@ -397,7 +397,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the geo target constant that represents a canton.
    * </pre>
    *
-   * <code>string geo_target_canton = 117;</code>
+   * <code>optional string geo_target_canton = 117;</code>
    * @return The bytes for geoTargetCanton.
    */
   com.google.protobuf.ByteString
@@ -408,7 +408,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the geo target constant that represents a city.
    * </pre>
    *
-   * <code>string geo_target_city = 118;</code>
+   * <code>optional string geo_target_city = 118;</code>
    * @return Whether the geoTargetCity field is set.
    */
   boolean hasGeoTargetCity();
@@ -417,7 +417,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the geo target constant that represents a city.
    * </pre>
    *
-   * <code>string geo_target_city = 118;</code>
+   * <code>optional string geo_target_city = 118;</code>
    * @return The geoTargetCity.
    */
   java.lang.String getGeoTargetCity();
@@ -426,7 +426,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the geo target constant that represents a city.
    * </pre>
    *
-   * <code>string geo_target_city = 118;</code>
+   * <code>optional string geo_target_city = 118;</code>
    * @return The bytes for geoTargetCity.
    */
   com.google.protobuf.ByteString
@@ -437,7 +437,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the geo target constant that represents a country.
    * </pre>
    *
-   * <code>string geo_target_country = 119;</code>
+   * <code>optional string geo_target_country = 119;</code>
    * @return Whether the geoTargetCountry field is set.
    */
   boolean hasGeoTargetCountry();
@@ -446,7 +446,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the geo target constant that represents a country.
    * </pre>
    *
-   * <code>string geo_target_country = 119;</code>
+   * <code>optional string geo_target_country = 119;</code>
    * @return The geoTargetCountry.
    */
   java.lang.String getGeoTargetCountry();
@@ -455,7 +455,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the geo target constant that represents a country.
    * </pre>
    *
-   * <code>string geo_target_country = 119;</code>
+   * <code>optional string geo_target_country = 119;</code>
    * @return The bytes for geoTargetCountry.
    */
   com.google.protobuf.ByteString
@@ -466,7 +466,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the geo target constant that represents a county.
    * </pre>
    *
-   * <code>string geo_target_county = 120;</code>
+   * <code>optional string geo_target_county = 120;</code>
    * @return Whether the geoTargetCounty field is set.
    */
   boolean hasGeoTargetCounty();
@@ -475,7 +475,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the geo target constant that represents a county.
    * </pre>
    *
-   * <code>string geo_target_county = 120;</code>
+   * <code>optional string geo_target_county = 120;</code>
    * @return The geoTargetCounty.
    */
   java.lang.String getGeoTargetCounty();
@@ -484,7 +484,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the geo target constant that represents a county.
    * </pre>
    *
-   * <code>string geo_target_county = 120;</code>
+   * <code>optional string geo_target_county = 120;</code>
    * @return The bytes for geoTargetCounty.
    */
   com.google.protobuf.ByteString
@@ -495,7 +495,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the geo target constant that represents a district.
    * </pre>
    *
-   * <code>string geo_target_district = 121;</code>
+   * <code>optional string geo_target_district = 121;</code>
    * @return Whether the geoTargetDistrict field is set.
    */
   boolean hasGeoTargetDistrict();
@@ -504,7 +504,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the geo target constant that represents a district.
    * </pre>
    *
-   * <code>string geo_target_district = 121;</code>
+   * <code>optional string geo_target_district = 121;</code>
    * @return The geoTargetDistrict.
    */
   java.lang.String getGeoTargetDistrict();
@@ -513,7 +513,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the geo target constant that represents a district.
    * </pre>
    *
-   * <code>string geo_target_district = 121;</code>
+   * <code>optional string geo_target_district = 121;</code>
    * @return The bytes for geoTargetDistrict.
    */
   com.google.protobuf.ByteString
@@ -524,7 +524,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the geo target constant that represents a metro.
    * </pre>
    *
-   * <code>string geo_target_metro = 122;</code>
+   * <code>optional string geo_target_metro = 122;</code>
    * @return Whether the geoTargetMetro field is set.
    */
   boolean hasGeoTargetMetro();
@@ -533,7 +533,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the geo target constant that represents a metro.
    * </pre>
    *
-   * <code>string geo_target_metro = 122;</code>
+   * <code>optional string geo_target_metro = 122;</code>
    * @return The geoTargetMetro.
    */
   java.lang.String getGeoTargetMetro();
@@ -542,7 +542,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the geo target constant that represents a metro.
    * </pre>
    *
-   * <code>string geo_target_metro = 122;</code>
+   * <code>optional string geo_target_metro = 122;</code>
    * @return The bytes for geoTargetMetro.
    */
   com.google.protobuf.ByteString
@@ -554,7 +554,7 @@ public interface SegmentsOrBuilder extends
    * specific location.
    * </pre>
    *
-   * <code>string geo_target_most_specific_location = 123;</code>
+   * <code>optional string geo_target_most_specific_location = 123;</code>
    * @return Whether the geoTargetMostSpecificLocation field is set.
    */
   boolean hasGeoTargetMostSpecificLocation();
@@ -564,7 +564,7 @@ public interface SegmentsOrBuilder extends
    * specific location.
    * </pre>
    *
-   * <code>string geo_target_most_specific_location = 123;</code>
+   * <code>optional string geo_target_most_specific_location = 123;</code>
    * @return The geoTargetMostSpecificLocation.
    */
   java.lang.String getGeoTargetMostSpecificLocation();
@@ -574,7 +574,7 @@ public interface SegmentsOrBuilder extends
    * specific location.
    * </pre>
    *
-   * <code>string geo_target_most_specific_location = 123;</code>
+   * <code>optional string geo_target_most_specific_location = 123;</code>
    * @return The bytes for geoTargetMostSpecificLocation.
    */
   com.google.protobuf.ByteString
@@ -585,7 +585,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the geo target constant that represents a postal code.
    * </pre>
    *
-   * <code>string geo_target_postal_code = 124;</code>
+   * <code>optional string geo_target_postal_code = 124;</code>
    * @return Whether the geoTargetPostalCode field is set.
    */
   boolean hasGeoTargetPostalCode();
@@ -594,7 +594,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the geo target constant that represents a postal code.
    * </pre>
    *
-   * <code>string geo_target_postal_code = 124;</code>
+   * <code>optional string geo_target_postal_code = 124;</code>
    * @return The geoTargetPostalCode.
    */
   java.lang.String getGeoTargetPostalCode();
@@ -603,7 +603,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the geo target constant that represents a postal code.
    * </pre>
    *
-   * <code>string geo_target_postal_code = 124;</code>
+   * <code>optional string geo_target_postal_code = 124;</code>
    * @return The bytes for geoTargetPostalCode.
    */
   com.google.protobuf.ByteString
@@ -614,7 +614,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the geo target constant that represents a province.
    * </pre>
    *
-   * <code>string geo_target_province = 125;</code>
+   * <code>optional string geo_target_province = 125;</code>
    * @return Whether the geoTargetProvince field is set.
    */
   boolean hasGeoTargetProvince();
@@ -623,7 +623,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the geo target constant that represents a province.
    * </pre>
    *
-   * <code>string geo_target_province = 125;</code>
+   * <code>optional string geo_target_province = 125;</code>
    * @return The geoTargetProvince.
    */
   java.lang.String getGeoTargetProvince();
@@ -632,7 +632,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the geo target constant that represents a province.
    * </pre>
    *
-   * <code>string geo_target_province = 125;</code>
+   * <code>optional string geo_target_province = 125;</code>
    * @return The bytes for geoTargetProvince.
    */
   com.google.protobuf.ByteString
@@ -643,7 +643,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the geo target constant that represents a region.
    * </pre>
    *
-   * <code>string geo_target_region = 126;</code>
+   * <code>optional string geo_target_region = 126;</code>
    * @return Whether the geoTargetRegion field is set.
    */
   boolean hasGeoTargetRegion();
@@ -652,7 +652,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the geo target constant that represents a region.
    * </pre>
    *
-   * <code>string geo_target_region = 126;</code>
+   * <code>optional string geo_target_region = 126;</code>
    * @return The geoTargetRegion.
    */
   java.lang.String getGeoTargetRegion();
@@ -661,7 +661,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the geo target constant that represents a region.
    * </pre>
    *
-   * <code>string geo_target_region = 126;</code>
+   * <code>optional string geo_target_region = 126;</code>
    * @return The bytes for geoTargetRegion.
    */
   com.google.protobuf.ByteString
@@ -672,7 +672,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the geo target constant that represents a state.
    * </pre>
    *
-   * <code>string geo_target_state = 127;</code>
+   * <code>optional string geo_target_state = 127;</code>
    * @return Whether the geoTargetState field is set.
    */
   boolean hasGeoTargetState();
@@ -681,7 +681,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the geo target constant that represents a state.
    * </pre>
    *
-   * <code>string geo_target_state = 127;</code>
+   * <code>optional string geo_target_state = 127;</code>
    * @return The geoTargetState.
    */
   java.lang.String getGeoTargetState();
@@ -690,7 +690,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the geo target constant that represents a state.
    * </pre>
    *
-   * <code>string geo_target_state = 127;</code>
+   * <code>optional string geo_target_state = 127;</code>
    * @return The bytes for geoTargetState.
    */
   com.google.protobuf.ByteString
@@ -701,7 +701,7 @@ public interface SegmentsOrBuilder extends
    * Hotel booking window in days.
    * </pre>
    *
-   * <code>int64 hotel_booking_window_days = 135;</code>
+   * <code>optional int64 hotel_booking_window_days = 135;</code>
    * @return Whether the hotelBookingWindowDays field is set.
    */
   boolean hasHotelBookingWindowDays();
@@ -710,7 +710,7 @@ public interface SegmentsOrBuilder extends
    * Hotel booking window in days.
    * </pre>
    *
-   * <code>int64 hotel_booking_window_days = 135;</code>
+   * <code>optional int64 hotel_booking_window_days = 135;</code>
    * @return The hotelBookingWindowDays.
    */
   long getHotelBookingWindowDays();
@@ -720,7 +720,7 @@ public interface SegmentsOrBuilder extends
    * Hotel center ID.
    * </pre>
    *
-   * <code>int64 hotel_center_id = 80;</code>
+   * <code>optional int64 hotel_center_id = 80;</code>
    * @return Whether the hotelCenterId field is set.
    */
   boolean hasHotelCenterId();
@@ -729,7 +729,7 @@ public interface SegmentsOrBuilder extends
    * Hotel center ID.
    * </pre>
    *
-   * <code>int64 hotel_center_id = 80;</code>
+   * <code>optional int64 hotel_center_id = 80;</code>
    * @return The hotelCenterId.
    */
   long getHotelCenterId();
@@ -739,7 +739,7 @@ public interface SegmentsOrBuilder extends
    * Hotel check-in date. Formatted as yyyy-MM-dd.
    * </pre>
    *
-   * <code>string hotel_check_in_date = 81;</code>
+   * <code>optional string hotel_check_in_date = 81;</code>
    * @return Whether the hotelCheckInDate field is set.
    */
   boolean hasHotelCheckInDate();
@@ -748,7 +748,7 @@ public interface SegmentsOrBuilder extends
    * Hotel check-in date. Formatted as yyyy-MM-dd.
    * </pre>
    *
-   * <code>string hotel_check_in_date = 81;</code>
+   * <code>optional string hotel_check_in_date = 81;</code>
    * @return The hotelCheckInDate.
    */
   java.lang.String getHotelCheckInDate();
@@ -757,7 +757,7 @@ public interface SegmentsOrBuilder extends
    * Hotel check-in date. Formatted as yyyy-MM-dd.
    * </pre>
    *
-   * <code>string hotel_check_in_date = 81;</code>
+   * <code>optional string hotel_check_in_date = 81;</code>
    * @return The bytes for hotelCheckInDate.
    */
   com.google.protobuf.ByteString
@@ -787,7 +787,7 @@ public interface SegmentsOrBuilder extends
    * Hotel city.
    * </pre>
    *
-   * <code>string hotel_city = 82;</code>
+   * <code>optional string hotel_city = 82;</code>
    * @return Whether the hotelCity field is set.
    */
   boolean hasHotelCity();
@@ -796,7 +796,7 @@ public interface SegmentsOrBuilder extends
    * Hotel city.
    * </pre>
    *
-   * <code>string hotel_city = 82;</code>
+   * <code>optional string hotel_city = 82;</code>
    * @return The hotelCity.
    */
   java.lang.String getHotelCity();
@@ -805,7 +805,7 @@ public interface SegmentsOrBuilder extends
    * Hotel city.
    * </pre>
    *
-   * <code>string hotel_city = 82;</code>
+   * <code>optional string hotel_city = 82;</code>
    * @return The bytes for hotelCity.
    */
   com.google.protobuf.ByteString
@@ -816,7 +816,7 @@ public interface SegmentsOrBuilder extends
    * Hotel class.
    * </pre>
    *
-   * <code>int32 hotel_class = 83;</code>
+   * <code>optional int32 hotel_class = 83;</code>
    * @return Whether the hotelClass field is set.
    */
   boolean hasHotelClass();
@@ -825,7 +825,7 @@ public interface SegmentsOrBuilder extends
    * Hotel class.
    * </pre>
    *
-   * <code>int32 hotel_class = 83;</code>
+   * <code>optional int32 hotel_class = 83;</code>
    * @return The hotelClass.
    */
   int getHotelClass();
@@ -835,7 +835,7 @@ public interface SegmentsOrBuilder extends
    * Hotel country.
    * </pre>
    *
-   * <code>string hotel_country = 84;</code>
+   * <code>optional string hotel_country = 84;</code>
    * @return Whether the hotelCountry field is set.
    */
   boolean hasHotelCountry();
@@ -844,7 +844,7 @@ public interface SegmentsOrBuilder extends
    * Hotel country.
    * </pre>
    *
-   * <code>string hotel_country = 84;</code>
+   * <code>optional string hotel_country = 84;</code>
    * @return The hotelCountry.
    */
   java.lang.String getHotelCountry();
@@ -853,7 +853,7 @@ public interface SegmentsOrBuilder extends
    * Hotel country.
    * </pre>
    *
-   * <code>string hotel_country = 84;</code>
+   * <code>optional string hotel_country = 84;</code>
    * @return The bytes for hotelCountry.
    */
   com.google.protobuf.ByteString
@@ -883,7 +883,7 @@ public interface SegmentsOrBuilder extends
    * Hotel length of stay.
    * </pre>
    *
-   * <code>int32 hotel_length_of_stay = 85;</code>
+   * <code>optional int32 hotel_length_of_stay = 85;</code>
    * @return Whether the hotelLengthOfStay field is set.
    */
   boolean hasHotelLengthOfStay();
@@ -892,7 +892,7 @@ public interface SegmentsOrBuilder extends
    * Hotel length of stay.
    * </pre>
    *
-   * <code>int32 hotel_length_of_stay = 85;</code>
+   * <code>optional int32 hotel_length_of_stay = 85;</code>
    * @return The hotelLengthOfStay.
    */
   int getHotelLengthOfStay();
@@ -902,7 +902,7 @@ public interface SegmentsOrBuilder extends
    * Hotel rate rule ID.
    * </pre>
    *
-   * <code>string hotel_rate_rule_id = 86;</code>
+   * <code>optional string hotel_rate_rule_id = 86;</code>
    * @return Whether the hotelRateRuleId field is set.
    */
   boolean hasHotelRateRuleId();
@@ -911,7 +911,7 @@ public interface SegmentsOrBuilder extends
    * Hotel rate rule ID.
    * </pre>
    *
-   * <code>string hotel_rate_rule_id = 86;</code>
+   * <code>optional string hotel_rate_rule_id = 86;</code>
    * @return The hotelRateRuleId.
    */
   java.lang.String getHotelRateRuleId();
@@ -920,7 +920,7 @@ public interface SegmentsOrBuilder extends
    * Hotel rate rule ID.
    * </pre>
    *
-   * <code>string hotel_rate_rule_id = 86;</code>
+   * <code>optional string hotel_rate_rule_id = 86;</code>
    * @return The bytes for hotelRateRuleId.
    */
   com.google.protobuf.ByteString
@@ -969,7 +969,7 @@ public interface SegmentsOrBuilder extends
    * Hotel state.
    * </pre>
    *
-   * <code>string hotel_state = 87;</code>
+   * <code>optional string hotel_state = 87;</code>
    * @return Whether the hotelState field is set.
    */
   boolean hasHotelState();
@@ -978,7 +978,7 @@ public interface SegmentsOrBuilder extends
    * Hotel state.
    * </pre>
    *
-   * <code>string hotel_state = 87;</code>
+   * <code>optional string hotel_state = 87;</code>
    * @return The hotelState.
    */
   java.lang.String getHotelState();
@@ -987,7 +987,7 @@ public interface SegmentsOrBuilder extends
    * Hotel state.
    * </pre>
    *
-   * <code>string hotel_state = 87;</code>
+   * <code>optional string hotel_state = 87;</code>
    * @return The bytes for hotelState.
    */
   com.google.protobuf.ByteString
@@ -998,7 +998,7 @@ public interface SegmentsOrBuilder extends
    * Hour of day as a number between 0 and 23, inclusive.
    * </pre>
    *
-   * <code>int32 hour = 88;</code>
+   * <code>optional int32 hour = 88;</code>
    * @return Whether the hour field is set.
    */
   boolean hasHour();
@@ -1007,7 +1007,7 @@ public interface SegmentsOrBuilder extends
    * Hour of day as a number between 0 and 23, inclusive.
    * </pre>
    *
-   * <code>int32 hour = 88;</code>
+   * <code>optional int32 hour = 88;</code>
    * @return The hour.
    */
   int getHour();
@@ -1019,7 +1019,7 @@ public interface SegmentsOrBuilder extends
    * or a different extension or ad unit.
    * </pre>
    *
-   * <code>bool interaction_on_this_extension = 89;</code>
+   * <code>optional bool interaction_on_this_extension = 89;</code>
    * @return Whether the interactionOnThisExtension field is set.
    */
   boolean hasInteractionOnThisExtension();
@@ -1030,7 +1030,7 @@ public interface SegmentsOrBuilder extends
    * or a different extension or ad unit.
    * </pre>
    *
-   * <code>bool interaction_on_this_extension = 89;</code>
+   * <code>optional bool interaction_on_this_extension = 89;</code>
    * @return The interactionOnThisExtension.
    */
   boolean getInteractionOnThisExtension();
@@ -1068,7 +1068,7 @@ public interface SegmentsOrBuilder extends
    * yyyy-MM-dd.
    * </pre>
    *
-   * <code>string month = 90;</code>
+   * <code>optional string month = 90;</code>
    * @return Whether the month field is set.
    */
   boolean hasMonth();
@@ -1078,7 +1078,7 @@ public interface SegmentsOrBuilder extends
    * yyyy-MM-dd.
    * </pre>
    *
-   * <code>string month = 90;</code>
+   * <code>optional string month = 90;</code>
    * @return The month.
    */
   java.lang.String getMonth();
@@ -1088,7 +1088,7 @@ public interface SegmentsOrBuilder extends
    * yyyy-MM-dd.
    * </pre>
    *
-   * <code>string month = 90;</code>
+   * <code>optional string month = 90;</code>
    * @return The bytes for month.
    */
   com.google.protobuf.ByteString
@@ -1118,7 +1118,7 @@ public interface SegmentsOrBuilder extends
    * Partner hotel ID.
    * </pre>
    *
-   * <code>string partner_hotel_id = 91;</code>
+   * <code>optional string partner_hotel_id = 91;</code>
    * @return Whether the partnerHotelId field is set.
    */
   boolean hasPartnerHotelId();
@@ -1127,7 +1127,7 @@ public interface SegmentsOrBuilder extends
    * Partner hotel ID.
    * </pre>
    *
-   * <code>string partner_hotel_id = 91;</code>
+   * <code>optional string partner_hotel_id = 91;</code>
    * @return The partnerHotelId.
    */
   java.lang.String getPartnerHotelId();
@@ -1136,7 +1136,7 @@ public interface SegmentsOrBuilder extends
    * Partner hotel ID.
    * </pre>
    *
-   * <code>string partner_hotel_id = 91;</code>
+   * <code>optional string partner_hotel_id = 91;</code>
    * @return The bytes for partnerHotelId.
    */
   com.google.protobuf.ByteString
@@ -1166,7 +1166,7 @@ public interface SegmentsOrBuilder extends
    * Aggregator ID of the product.
    * </pre>
    *
-   * <code>int64 product_aggregator_id = 132;</code>
+   * <code>optional int64 product_aggregator_id = 132;</code>
    * @return Whether the productAggregatorId field is set.
    */
   boolean hasProductAggregatorId();
@@ -1175,7 +1175,7 @@ public interface SegmentsOrBuilder extends
    * Aggregator ID of the product.
    * </pre>
    *
-   * <code>int64 product_aggregator_id = 132;</code>
+   * <code>optional int64 product_aggregator_id = 132;</code>
    * @return The productAggregatorId.
    */
   long getProductAggregatorId();
@@ -1185,7 +1185,7 @@ public interface SegmentsOrBuilder extends
    * Bidding category (level 1) of the product.
    * </pre>
    *
-   * <code>string product_bidding_category_level1 = 92;</code>
+   * <code>optional string product_bidding_category_level1 = 92;</code>
    * @return Whether the productBiddingCategoryLevel1 field is set.
    */
   boolean hasProductBiddingCategoryLevel1();
@@ -1194,7 +1194,7 @@ public interface SegmentsOrBuilder extends
    * Bidding category (level 1) of the product.
    * </pre>
    *
-   * <code>string product_bidding_category_level1 = 92;</code>
+   * <code>optional string product_bidding_category_level1 = 92;</code>
    * @return The productBiddingCategoryLevel1.
    */
   java.lang.String getProductBiddingCategoryLevel1();
@@ -1203,7 +1203,7 @@ public interface SegmentsOrBuilder extends
    * Bidding category (level 1) of the product.
    * </pre>
    *
-   * <code>string product_bidding_category_level1 = 92;</code>
+   * <code>optional string product_bidding_category_level1 = 92;</code>
    * @return The bytes for productBiddingCategoryLevel1.
    */
   com.google.protobuf.ByteString
@@ -1214,7 +1214,7 @@ public interface SegmentsOrBuilder extends
    * Bidding category (level 2) of the product.
    * </pre>
    *
-   * <code>string product_bidding_category_level2 = 93;</code>
+   * <code>optional string product_bidding_category_level2 = 93;</code>
    * @return Whether the productBiddingCategoryLevel2 field is set.
    */
   boolean hasProductBiddingCategoryLevel2();
@@ -1223,7 +1223,7 @@ public interface SegmentsOrBuilder extends
    * Bidding category (level 2) of the product.
    * </pre>
    *
-   * <code>string product_bidding_category_level2 = 93;</code>
+   * <code>optional string product_bidding_category_level2 = 93;</code>
    * @return The productBiddingCategoryLevel2.
    */
   java.lang.String getProductBiddingCategoryLevel2();
@@ -1232,7 +1232,7 @@ public interface SegmentsOrBuilder extends
    * Bidding category (level 2) of the product.
    * </pre>
    *
-   * <code>string product_bidding_category_level2 = 93;</code>
+   * <code>optional string product_bidding_category_level2 = 93;</code>
    * @return The bytes for productBiddingCategoryLevel2.
    */
   com.google.protobuf.ByteString
@@ -1243,7 +1243,7 @@ public interface SegmentsOrBuilder extends
    * Bidding category (level 3) of the product.
    * </pre>
    *
-   * <code>string product_bidding_category_level3 = 94;</code>
+   * <code>optional string product_bidding_category_level3 = 94;</code>
    * @return Whether the productBiddingCategoryLevel3 field is set.
    */
   boolean hasProductBiddingCategoryLevel3();
@@ -1252,7 +1252,7 @@ public interface SegmentsOrBuilder extends
    * Bidding category (level 3) of the product.
    * </pre>
    *
-   * <code>string product_bidding_category_level3 = 94;</code>
+   * <code>optional string product_bidding_category_level3 = 94;</code>
    * @return The productBiddingCategoryLevel3.
    */
   java.lang.String getProductBiddingCategoryLevel3();
@@ -1261,7 +1261,7 @@ public interface SegmentsOrBuilder extends
    * Bidding category (level 3) of the product.
    * </pre>
    *
-   * <code>string product_bidding_category_level3 = 94;</code>
+   * <code>optional string product_bidding_category_level3 = 94;</code>
    * @return The bytes for productBiddingCategoryLevel3.
    */
   com.google.protobuf.ByteString
@@ -1272,7 +1272,7 @@ public interface SegmentsOrBuilder extends
    * Bidding category (level 4) of the product.
    * </pre>
    *
-   * <code>string product_bidding_category_level4 = 95;</code>
+   * <code>optional string product_bidding_category_level4 = 95;</code>
    * @return Whether the productBiddingCategoryLevel4 field is set.
    */
   boolean hasProductBiddingCategoryLevel4();
@@ -1281,7 +1281,7 @@ public interface SegmentsOrBuilder extends
    * Bidding category (level 4) of the product.
    * </pre>
    *
-   * <code>string product_bidding_category_level4 = 95;</code>
+   * <code>optional string product_bidding_category_level4 = 95;</code>
    * @return The productBiddingCategoryLevel4.
    */
   java.lang.String getProductBiddingCategoryLevel4();
@@ -1290,7 +1290,7 @@ public interface SegmentsOrBuilder extends
    * Bidding category (level 4) of the product.
    * </pre>
    *
-   * <code>string product_bidding_category_level4 = 95;</code>
+   * <code>optional string product_bidding_category_level4 = 95;</code>
    * @return The bytes for productBiddingCategoryLevel4.
    */
   com.google.protobuf.ByteString
@@ -1301,7 +1301,7 @@ public interface SegmentsOrBuilder extends
    * Bidding category (level 5) of the product.
    * </pre>
    *
-   * <code>string product_bidding_category_level5 = 96;</code>
+   * <code>optional string product_bidding_category_level5 = 96;</code>
    * @return Whether the productBiddingCategoryLevel5 field is set.
    */
   boolean hasProductBiddingCategoryLevel5();
@@ -1310,7 +1310,7 @@ public interface SegmentsOrBuilder extends
    * Bidding category (level 5) of the product.
    * </pre>
    *
-   * <code>string product_bidding_category_level5 = 96;</code>
+   * <code>optional string product_bidding_category_level5 = 96;</code>
    * @return The productBiddingCategoryLevel5.
    */
   java.lang.String getProductBiddingCategoryLevel5();
@@ -1319,7 +1319,7 @@ public interface SegmentsOrBuilder extends
    * Bidding category (level 5) of the product.
    * </pre>
    *
-   * <code>string product_bidding_category_level5 = 96;</code>
+   * <code>optional string product_bidding_category_level5 = 96;</code>
    * @return The bytes for productBiddingCategoryLevel5.
    */
   com.google.protobuf.ByteString
@@ -1330,7 +1330,7 @@ public interface SegmentsOrBuilder extends
    * Brand of the product.
    * </pre>
    *
-   * <code>string product_brand = 97;</code>
+   * <code>optional string product_brand = 97;</code>
    * @return Whether the productBrand field is set.
    */
   boolean hasProductBrand();
@@ -1339,7 +1339,7 @@ public interface SegmentsOrBuilder extends
    * Brand of the product.
    * </pre>
    *
-   * <code>string product_brand = 97;</code>
+   * <code>optional string product_brand = 97;</code>
    * @return The productBrand.
    */
   java.lang.String getProductBrand();
@@ -1348,7 +1348,7 @@ public interface SegmentsOrBuilder extends
    * Brand of the product.
    * </pre>
    *
-   * <code>string product_brand = 97;</code>
+   * <code>optional string product_brand = 97;</code>
    * @return The bytes for productBrand.
    */
   com.google.protobuf.ByteString
@@ -1417,7 +1417,7 @@ public interface SegmentsOrBuilder extends
    * product.
    * </pre>
    *
-   * <code>string product_country = 98;</code>
+   * <code>optional string product_country = 98;</code>
    * @return Whether the productCountry field is set.
    */
   boolean hasProductCountry();
@@ -1427,7 +1427,7 @@ public interface SegmentsOrBuilder extends
    * product.
    * </pre>
    *
-   * <code>string product_country = 98;</code>
+   * <code>optional string product_country = 98;</code>
    * @return The productCountry.
    */
   java.lang.String getProductCountry();
@@ -1437,7 +1437,7 @@ public interface SegmentsOrBuilder extends
    * product.
    * </pre>
    *
-   * <code>string product_country = 98;</code>
+   * <code>optional string product_country = 98;</code>
    * @return The bytes for productCountry.
    */
   com.google.protobuf.ByteString
@@ -1448,7 +1448,7 @@ public interface SegmentsOrBuilder extends
    * Custom attribute 0 of the product.
    * </pre>
    *
-   * <code>string product_custom_attribute0 = 99;</code>
+   * <code>optional string product_custom_attribute0 = 99;</code>
    * @return Whether the productCustomAttribute0 field is set.
    */
   boolean hasProductCustomAttribute0();
@@ -1457,7 +1457,7 @@ public interface SegmentsOrBuilder extends
    * Custom attribute 0 of the product.
    * </pre>
    *
-   * <code>string product_custom_attribute0 = 99;</code>
+   * <code>optional string product_custom_attribute0 = 99;</code>
    * @return The productCustomAttribute0.
    */
   java.lang.String getProductCustomAttribute0();
@@ -1466,7 +1466,7 @@ public interface SegmentsOrBuilder extends
    * Custom attribute 0 of the product.
    * </pre>
    *
-   * <code>string product_custom_attribute0 = 99;</code>
+   * <code>optional string product_custom_attribute0 = 99;</code>
    * @return The bytes for productCustomAttribute0.
    */
   com.google.protobuf.ByteString
@@ -1477,7 +1477,7 @@ public interface SegmentsOrBuilder extends
    * Custom attribute 1 of the product.
    * </pre>
    *
-   * <code>string product_custom_attribute1 = 100;</code>
+   * <code>optional string product_custom_attribute1 = 100;</code>
    * @return Whether the productCustomAttribute1 field is set.
    */
   boolean hasProductCustomAttribute1();
@@ -1486,7 +1486,7 @@ public interface SegmentsOrBuilder extends
    * Custom attribute 1 of the product.
    * </pre>
    *
-   * <code>string product_custom_attribute1 = 100;</code>
+   * <code>optional string product_custom_attribute1 = 100;</code>
    * @return The productCustomAttribute1.
    */
   java.lang.String getProductCustomAttribute1();
@@ -1495,7 +1495,7 @@ public interface SegmentsOrBuilder extends
    * Custom attribute 1 of the product.
    * </pre>
    *
-   * <code>string product_custom_attribute1 = 100;</code>
+   * <code>optional string product_custom_attribute1 = 100;</code>
    * @return The bytes for productCustomAttribute1.
    */
   com.google.protobuf.ByteString
@@ -1506,7 +1506,7 @@ public interface SegmentsOrBuilder extends
    * Custom attribute 2 of the product.
    * </pre>
    *
-   * <code>string product_custom_attribute2 = 101;</code>
+   * <code>optional string product_custom_attribute2 = 101;</code>
    * @return Whether the productCustomAttribute2 field is set.
    */
   boolean hasProductCustomAttribute2();
@@ -1515,7 +1515,7 @@ public interface SegmentsOrBuilder extends
    * Custom attribute 2 of the product.
    * </pre>
    *
-   * <code>string product_custom_attribute2 = 101;</code>
+   * <code>optional string product_custom_attribute2 = 101;</code>
    * @return The productCustomAttribute2.
    */
   java.lang.String getProductCustomAttribute2();
@@ -1524,7 +1524,7 @@ public interface SegmentsOrBuilder extends
    * Custom attribute 2 of the product.
    * </pre>
    *
-   * <code>string product_custom_attribute2 = 101;</code>
+   * <code>optional string product_custom_attribute2 = 101;</code>
    * @return The bytes for productCustomAttribute2.
    */
   com.google.protobuf.ByteString
@@ -1535,7 +1535,7 @@ public interface SegmentsOrBuilder extends
    * Custom attribute 3 of the product.
    * </pre>
    *
-   * <code>string product_custom_attribute3 = 102;</code>
+   * <code>optional string product_custom_attribute3 = 102;</code>
    * @return Whether the productCustomAttribute3 field is set.
    */
   boolean hasProductCustomAttribute3();
@@ -1544,7 +1544,7 @@ public interface SegmentsOrBuilder extends
    * Custom attribute 3 of the product.
    * </pre>
    *
-   * <code>string product_custom_attribute3 = 102;</code>
+   * <code>optional string product_custom_attribute3 = 102;</code>
    * @return The productCustomAttribute3.
    */
   java.lang.String getProductCustomAttribute3();
@@ -1553,7 +1553,7 @@ public interface SegmentsOrBuilder extends
    * Custom attribute 3 of the product.
    * </pre>
    *
-   * <code>string product_custom_attribute3 = 102;</code>
+   * <code>optional string product_custom_attribute3 = 102;</code>
    * @return The bytes for productCustomAttribute3.
    */
   com.google.protobuf.ByteString
@@ -1564,7 +1564,7 @@ public interface SegmentsOrBuilder extends
    * Custom attribute 4 of the product.
    * </pre>
    *
-   * <code>string product_custom_attribute4 = 103;</code>
+   * <code>optional string product_custom_attribute4 = 103;</code>
    * @return Whether the productCustomAttribute4 field is set.
    */
   boolean hasProductCustomAttribute4();
@@ -1573,7 +1573,7 @@ public interface SegmentsOrBuilder extends
    * Custom attribute 4 of the product.
    * </pre>
    *
-   * <code>string product_custom_attribute4 = 103;</code>
+   * <code>optional string product_custom_attribute4 = 103;</code>
    * @return The productCustomAttribute4.
    */
   java.lang.String getProductCustomAttribute4();
@@ -1582,7 +1582,7 @@ public interface SegmentsOrBuilder extends
    * Custom attribute 4 of the product.
    * </pre>
    *
-   * <code>string product_custom_attribute4 = 103;</code>
+   * <code>optional string product_custom_attribute4 = 103;</code>
    * @return The bytes for productCustomAttribute4.
    */
   com.google.protobuf.ByteString
@@ -1593,7 +1593,7 @@ public interface SegmentsOrBuilder extends
    * Item ID of the product.
    * </pre>
    *
-   * <code>string product_item_id = 104;</code>
+   * <code>optional string product_item_id = 104;</code>
    * @return Whether the productItemId field is set.
    */
   boolean hasProductItemId();
@@ -1602,7 +1602,7 @@ public interface SegmentsOrBuilder extends
    * Item ID of the product.
    * </pre>
    *
-   * <code>string product_item_id = 104;</code>
+   * <code>optional string product_item_id = 104;</code>
    * @return The productItemId.
    */
   java.lang.String getProductItemId();
@@ -1611,7 +1611,7 @@ public interface SegmentsOrBuilder extends
    * Item ID of the product.
    * </pre>
    *
-   * <code>string product_item_id = 104;</code>
+   * <code>optional string product_item_id = 104;</code>
    * @return The bytes for productItemId.
    */
   com.google.protobuf.ByteString
@@ -1622,7 +1622,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the language constant for the language of the product.
    * </pre>
    *
-   * <code>string product_language = 105;</code>
+   * <code>optional string product_language = 105;</code>
    * @return Whether the productLanguage field is set.
    */
   boolean hasProductLanguage();
@@ -1631,7 +1631,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the language constant for the language of the product.
    * </pre>
    *
-   * <code>string product_language = 105;</code>
+   * <code>optional string product_language = 105;</code>
    * @return The productLanguage.
    */
   java.lang.String getProductLanguage();
@@ -1640,7 +1640,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the language constant for the language of the product.
    * </pre>
    *
-   * <code>string product_language = 105;</code>
+   * <code>optional string product_language = 105;</code>
    * @return The bytes for productLanguage.
    */
   com.google.protobuf.ByteString
@@ -1651,7 +1651,7 @@ public interface SegmentsOrBuilder extends
    * Merchant ID of the product.
    * </pre>
    *
-   * <code>int64 product_merchant_id = 133;</code>
+   * <code>optional int64 product_merchant_id = 133;</code>
    * @return Whether the productMerchantId field is set.
    */
   boolean hasProductMerchantId();
@@ -1660,7 +1660,7 @@ public interface SegmentsOrBuilder extends
    * Merchant ID of the product.
    * </pre>
    *
-   * <code>int64 product_merchant_id = 133;</code>
+   * <code>optional int64 product_merchant_id = 133;</code>
    * @return The productMerchantId.
    */
   long getProductMerchantId();
@@ -1670,7 +1670,7 @@ public interface SegmentsOrBuilder extends
    * Store ID of the product.
    * </pre>
    *
-   * <code>string product_store_id = 106;</code>
+   * <code>optional string product_store_id = 106;</code>
    * @return Whether the productStoreId field is set.
    */
   boolean hasProductStoreId();
@@ -1679,7 +1679,7 @@ public interface SegmentsOrBuilder extends
    * Store ID of the product.
    * </pre>
    *
-   * <code>string product_store_id = 106;</code>
+   * <code>optional string product_store_id = 106;</code>
    * @return The productStoreId.
    */
   java.lang.String getProductStoreId();
@@ -1688,7 +1688,7 @@ public interface SegmentsOrBuilder extends
    * Store ID of the product.
    * </pre>
    *
-   * <code>string product_store_id = 106;</code>
+   * <code>optional string product_store_id = 106;</code>
    * @return The bytes for productStoreId.
    */
   com.google.protobuf.ByteString
@@ -1699,7 +1699,7 @@ public interface SegmentsOrBuilder extends
    * Title of the product.
    * </pre>
    *
-   * <code>string product_title = 107;</code>
+   * <code>optional string product_title = 107;</code>
    * @return Whether the productTitle field is set.
    */
   boolean hasProductTitle();
@@ -1708,7 +1708,7 @@ public interface SegmentsOrBuilder extends
    * Title of the product.
    * </pre>
    *
-   * <code>string product_title = 107;</code>
+   * <code>optional string product_title = 107;</code>
    * @return The productTitle.
    */
   java.lang.String getProductTitle();
@@ -1717,7 +1717,7 @@ public interface SegmentsOrBuilder extends
    * Title of the product.
    * </pre>
    *
-   * <code>string product_title = 107;</code>
+   * <code>optional string product_title = 107;</code>
    * @return The bytes for productTitle.
    */
   com.google.protobuf.ByteString
@@ -1728,7 +1728,7 @@ public interface SegmentsOrBuilder extends
    * Type (level 1) of the product.
    * </pre>
    *
-   * <code>string product_type_l1 = 108;</code>
+   * <code>optional string product_type_l1 = 108;</code>
    * @return Whether the productTypeL1 field is set.
    */
   boolean hasProductTypeL1();
@@ -1737,7 +1737,7 @@ public interface SegmentsOrBuilder extends
    * Type (level 1) of the product.
    * </pre>
    *
-   * <code>string product_type_l1 = 108;</code>
+   * <code>optional string product_type_l1 = 108;</code>
    * @return The productTypeL1.
    */
   java.lang.String getProductTypeL1();
@@ -1746,7 +1746,7 @@ public interface SegmentsOrBuilder extends
    * Type (level 1) of the product.
    * </pre>
    *
-   * <code>string product_type_l1 = 108;</code>
+   * <code>optional string product_type_l1 = 108;</code>
    * @return The bytes for productTypeL1.
    */
   com.google.protobuf.ByteString
@@ -1757,7 +1757,7 @@ public interface SegmentsOrBuilder extends
    * Type (level 2) of the product.
    * </pre>
    *
-   * <code>string product_type_l2 = 109;</code>
+   * <code>optional string product_type_l2 = 109;</code>
    * @return Whether the productTypeL2 field is set.
    */
   boolean hasProductTypeL2();
@@ -1766,7 +1766,7 @@ public interface SegmentsOrBuilder extends
    * Type (level 2) of the product.
    * </pre>
    *
-   * <code>string product_type_l2 = 109;</code>
+   * <code>optional string product_type_l2 = 109;</code>
    * @return The productTypeL2.
    */
   java.lang.String getProductTypeL2();
@@ -1775,7 +1775,7 @@ public interface SegmentsOrBuilder extends
    * Type (level 2) of the product.
    * </pre>
    *
-   * <code>string product_type_l2 = 109;</code>
+   * <code>optional string product_type_l2 = 109;</code>
    * @return The bytes for productTypeL2.
    */
   com.google.protobuf.ByteString
@@ -1786,7 +1786,7 @@ public interface SegmentsOrBuilder extends
    * Type (level 3) of the product.
    * </pre>
    *
-   * <code>string product_type_l3 = 110;</code>
+   * <code>optional string product_type_l3 = 110;</code>
    * @return Whether the productTypeL3 field is set.
    */
   boolean hasProductTypeL3();
@@ -1795,7 +1795,7 @@ public interface SegmentsOrBuilder extends
    * Type (level 3) of the product.
    * </pre>
    *
-   * <code>string product_type_l3 = 110;</code>
+   * <code>optional string product_type_l3 = 110;</code>
    * @return The productTypeL3.
    */
   java.lang.String getProductTypeL3();
@@ -1804,7 +1804,7 @@ public interface SegmentsOrBuilder extends
    * Type (level 3) of the product.
    * </pre>
    *
-   * <code>string product_type_l3 = 110;</code>
+   * <code>optional string product_type_l3 = 110;</code>
    * @return The bytes for productTypeL3.
    */
   com.google.protobuf.ByteString
@@ -1815,7 +1815,7 @@ public interface SegmentsOrBuilder extends
    * Type (level 4) of the product.
    * </pre>
    *
-   * <code>string product_type_l4 = 111;</code>
+   * <code>optional string product_type_l4 = 111;</code>
    * @return Whether the productTypeL4 field is set.
    */
   boolean hasProductTypeL4();
@@ -1824,7 +1824,7 @@ public interface SegmentsOrBuilder extends
    * Type (level 4) of the product.
    * </pre>
    *
-   * <code>string product_type_l4 = 111;</code>
+   * <code>optional string product_type_l4 = 111;</code>
    * @return The productTypeL4.
    */
   java.lang.String getProductTypeL4();
@@ -1833,7 +1833,7 @@ public interface SegmentsOrBuilder extends
    * Type (level 4) of the product.
    * </pre>
    *
-   * <code>string product_type_l4 = 111;</code>
+   * <code>optional string product_type_l4 = 111;</code>
    * @return The bytes for productTypeL4.
    */
   com.google.protobuf.ByteString
@@ -1844,7 +1844,7 @@ public interface SegmentsOrBuilder extends
    * Type (level 5) of the product.
    * </pre>
    *
-   * <code>string product_type_l5 = 112;</code>
+   * <code>optional string product_type_l5 = 112;</code>
    * @return Whether the productTypeL5 field is set.
    */
   boolean hasProductTypeL5();
@@ -1853,7 +1853,7 @@ public interface SegmentsOrBuilder extends
    * Type (level 5) of the product.
    * </pre>
    *
-   * <code>string product_type_l5 = 112;</code>
+   * <code>optional string product_type_l5 = 112;</code>
    * @return The productTypeL5.
    */
   java.lang.String getProductTypeL5();
@@ -1862,7 +1862,7 @@ public interface SegmentsOrBuilder extends
    * Type (level 5) of the product.
    * </pre>
    *
-   * <code>string product_type_l5 = 112;</code>
+   * <code>optional string product_type_l5 = 112;</code>
    * @return The bytes for productTypeL5.
    */
   com.google.protobuf.ByteString
@@ -1875,7 +1875,7 @@ public interface SegmentsOrBuilder extends
    * starts on 2018-04-01. Formatted as yyyy-MM-dd.
    * </pre>
    *
-   * <code>string quarter = 128;</code>
+   * <code>optional string quarter = 128;</code>
    * @return Whether the quarter field is set.
    */
   boolean hasQuarter();
@@ -1886,7 +1886,7 @@ public interface SegmentsOrBuilder extends
    * starts on 2018-04-01. Formatted as yyyy-MM-dd.
    * </pre>
    *
-   * <code>string quarter = 128;</code>
+   * <code>optional string quarter = 128;</code>
    * @return The quarter.
    */
   java.lang.String getQuarter();
@@ -1897,7 +1897,7 @@ public interface SegmentsOrBuilder extends
    * starts on 2018-04-01. Formatted as yyyy-MM-dd.
    * </pre>
    *
-   * <code>string quarter = 128;</code>
+   * <code>optional string quarter = 128;</code>
    * @return The bytes for quarter.
    */
   com.google.protobuf.ByteString
@@ -2015,7 +2015,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the ad group criterion that represents webpage criterion.
    * </pre>
    *
-   * <code>string webpage = 129;</code>
+   * <code>optional string webpage = 129;</code>
    * @return Whether the webpage field is set.
    */
   boolean hasWebpage();
@@ -2024,7 +2024,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the ad group criterion that represents webpage criterion.
    * </pre>
    *
-   * <code>string webpage = 129;</code>
+   * <code>optional string webpage = 129;</code>
    * @return The webpage.
    */
   java.lang.String getWebpage();
@@ -2033,7 +2033,7 @@ public interface SegmentsOrBuilder extends
    * Resource name of the ad group criterion that represents webpage criterion.
    * </pre>
    *
-   * <code>string webpage = 129;</code>
+   * <code>optional string webpage = 129;</code>
    * @return The bytes for webpage.
    */
   com.google.protobuf.ByteString
@@ -2045,7 +2045,7 @@ public interface SegmentsOrBuilder extends
    * Monday. Formatted as yyyy-MM-dd.
    * </pre>
    *
-   * <code>string week = 130;</code>
+   * <code>optional string week = 130;</code>
    * @return Whether the week field is set.
    */
   boolean hasWeek();
@@ -2055,7 +2055,7 @@ public interface SegmentsOrBuilder extends
    * Monday. Formatted as yyyy-MM-dd.
    * </pre>
    *
-   * <code>string week = 130;</code>
+   * <code>optional string week = 130;</code>
    * @return The week.
    */
   java.lang.String getWeek();
@@ -2065,7 +2065,7 @@ public interface SegmentsOrBuilder extends
    * Monday. Formatted as yyyy-MM-dd.
    * </pre>
    *
-   * <code>string week = 130;</code>
+   * <code>optional string week = 130;</code>
    * @return The bytes for week.
    */
   com.google.protobuf.ByteString
@@ -2076,7 +2076,7 @@ public interface SegmentsOrBuilder extends
    * Year, formatted as yyyy.
    * </pre>
    *
-   * <code>int32 year = 131;</code>
+   * <code>optional int32 year = 131;</code>
    * @return Whether the year field is set.
    */
   boolean hasYear();
@@ -2085,7 +2085,7 @@ public interface SegmentsOrBuilder extends
    * Year, formatted as yyyy.
    * </pre>
    *
-   * <code>int32 year = 131;</code>
+   * <code>optional int32 year = 131;</code>
    * @return The year.
    */
   int getYear();
@@ -2096,7 +2096,7 @@ public interface SegmentsOrBuilder extends
    * Null value means this segment is not applicable, e.g. non-iOS campaign.
    * </pre>
    *
-   * <code>int64 sk_ad_network_conversion_value = 137;</code>
+   * <code>optional int64 sk_ad_network_conversion_value = 137;</code>
    * @return Whether the skAdNetworkConversionValue field is set.
    */
   boolean hasSkAdNetworkConversionValue();
@@ -2106,7 +2106,7 @@ public interface SegmentsOrBuilder extends
    * Null value means this segment is not applicable, e.g. non-iOS campaign.
    * </pre>
    *
-   * <code>int64 sk_ad_network_conversion_value = 137;</code>
+   * <code>optional int64 sk_ad_network_conversion_value = 137;</code>
    * @return The skAdNetworkConversionValue.
    */
   long getSkAdNetworkConversionValue();
@@ -2124,7 +2124,7 @@ public interface SegmentsOrBuilder extends
    * other parts of the served ad this asset is served with.
    * </pre>
    *
-   * <code>.google.ads.googleads.v8.common.AssetInteractionTarget asset_interaction_target = 139;</code>
+   * <code>optional .google.ads.googleads.v8.common.AssetInteractionTarget asset_interaction_target = 139;</code>
    * @return Whether the assetInteractionTarget field is set.
    */
   boolean hasAssetInteractionTarget();
@@ -2141,7 +2141,7 @@ public interface SegmentsOrBuilder extends
    * other parts of the served ad this asset is served with.
    * </pre>
    *
-   * <code>.google.ads.googleads.v8.common.AssetInteractionTarget asset_interaction_target = 139;</code>
+   * <code>optional .google.ads.googleads.v8.common.AssetInteractionTarget asset_interaction_target = 139;</code>
    * @return The assetInteractionTarget.
    */
   com.google.ads.googleads.v8.common.AssetInteractionTarget getAssetInteractionTarget();
@@ -2158,7 +2158,7 @@ public interface SegmentsOrBuilder extends
    * other parts of the served ad this asset is served with.
    * </pre>
    *
-   * <code>.google.ads.googleads.v8.common.AssetInteractionTarget asset_interaction_target = 139;</code>
+   * <code>optional .google.ads.googleads.v8.common.AssetInteractionTarget asset_interaction_target = 139;</code>
    */
   com.google.ads.googleads.v8.common.AssetInteractionTargetOrBuilder getAssetInteractionTargetOrBuilder();
 }

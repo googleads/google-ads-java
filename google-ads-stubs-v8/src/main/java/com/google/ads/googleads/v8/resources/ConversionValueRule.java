@@ -4240,7 +4240,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (id_ != 0L) {
@@ -4258,7 +4258,7 @@ private static final long serialVersionUID = 0L;
     if (audienceCondition_ != null) {
       output.writeMessage(6, getAudienceCondition());
     }
-    if (!getOwnerCustomerBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerCustomer_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, ownerCustomer_);
     }
     if (status_ != com.google.ads.googleads.v8.enums.ConversionValueRuleStatusEnum.ConversionValueRuleStatus.UNSPECIFIED.getNumber()) {
@@ -4273,7 +4273,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (id_ != 0L) {
@@ -4296,7 +4296,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getAudienceCondition());
     }
-    if (!getOwnerCustomerBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ownerCustomer_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, ownerCustomer_);
     }
     if (status_ != com.google.ads.googleads.v8.enums.ConversionValueRuleStatusEnum.ConversionValueRuleStatus.UNSPECIFIED.getNumber()) {

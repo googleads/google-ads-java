@@ -36,7 +36,7 @@ public interface CustomerNegativeCriterionOrBuilder extends
    * Output only. The ID of the criterion.
    * </pre>
    *
-   * <code>int64 id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -45,7 +45,7 @@ public interface CustomerNegativeCriterionOrBuilder extends
    * Output only. The ID of the criterion.
    * </pre>
    *
-   * <code>int64 id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   long getId();

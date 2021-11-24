@@ -172,7 +172,7 @@ private static final long serialVersionUID = 0L;
    * ID of the Merchant Center Account.
    * </pre>
    *
-   * <code>int64 merchant_id = 2;</code>
+   * <code>optional int64 merchant_id = 2;</code>
    * @return Whether the merchantId field is set.
    */
   @java.lang.Override
@@ -184,7 +184,7 @@ private static final long serialVersionUID = 0L;
    * ID of the Merchant Center Account.
    * </pre>
    *
-   * <code>int64 merchant_id = 2;</code>
+   * <code>optional int64 merchant_id = 2;</code>
    * @return The merchantId.
    */
   @java.lang.Override
@@ -321,16 +321,16 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getItemIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(itemId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, itemId_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeInt64(2, merchantId_);
     }
-    if (!getCountryCodeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(countryCode_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, countryCode_);
     }
-    if (!getLanguageCodeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(languageCode_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, languageCode_);
     }
     if (quantity_ != 0L) {
@@ -345,17 +345,17 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getItemIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(itemId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, itemId_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, merchantId_);
     }
-    if (!getCountryCodeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(countryCode_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, countryCode_);
     }
-    if (!getLanguageCodeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(languageCode_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, languageCode_);
     }
     if (quantity_ != 0L) {
@@ -802,7 +802,7 @@ private static final long serialVersionUID = 0L;
      * ID of the Merchant Center Account.
      * </pre>
      *
-     * <code>int64 merchant_id = 2;</code>
+     * <code>optional int64 merchant_id = 2;</code>
      * @return Whether the merchantId field is set.
      */
     @java.lang.Override
@@ -814,7 +814,7 @@ private static final long serialVersionUID = 0L;
      * ID of the Merchant Center Account.
      * </pre>
      *
-     * <code>int64 merchant_id = 2;</code>
+     * <code>optional int64 merchant_id = 2;</code>
      * @return The merchantId.
      */
     @java.lang.Override
@@ -826,7 +826,7 @@ private static final long serialVersionUID = 0L;
      * ID of the Merchant Center Account.
      * </pre>
      *
-     * <code>int64 merchant_id = 2;</code>
+     * <code>optional int64 merchant_id = 2;</code>
      * @param value The merchantId to set.
      * @return This builder for chaining.
      */
@@ -841,7 +841,7 @@ private static final long serialVersionUID = 0L;
      * ID of the Merchant Center Account.
      * </pre>
      *
-     * <code>int64 merchant_id = 2;</code>
+     * <code>optional int64 merchant_id = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearMerchantId() {

@@ -122,7 +122,7 @@ private static final long serialVersionUID = 0L;
    * Headline of the teaser.
    * </pre>
    *
-   * <code>string headline = 5;</code>
+   * <code>optional string headline = 5;</code>
    * @return Whether the headline field is set.
    */
   @java.lang.Override
@@ -134,7 +134,7 @@ private static final long serialVersionUID = 0L;
    * Headline of the teaser.
    * </pre>
    *
-   * <code>string headline = 5;</code>
+   * <code>optional string headline = 5;</code>
    * @return The headline.
    */
   @java.lang.Override
@@ -155,7 +155,7 @@ private static final long serialVersionUID = 0L;
    * Headline of the teaser.
    * </pre>
    *
-   * <code>string headline = 5;</code>
+   * <code>optional string headline = 5;</code>
    * @return The bytes for headline.
    */
   @java.lang.Override
@@ -180,7 +180,7 @@ private static final long serialVersionUID = 0L;
    * Description of the teaser.
    * </pre>
    *
-   * <code>string description = 6;</code>
+   * <code>optional string description = 6;</code>
    * @return Whether the description field is set.
    */
   @java.lang.Override
@@ -192,7 +192,7 @@ private static final long serialVersionUID = 0L;
    * Description of the teaser.
    * </pre>
    *
-   * <code>string description = 6;</code>
+   * <code>optional string description = 6;</code>
    * @return The description.
    */
   @java.lang.Override
@@ -213,7 +213,7 @@ private static final long serialVersionUID = 0L;
    * Description of the teaser.
    * </pre>
    *
-   * <code>string description = 6;</code>
+   * <code>optional string description = 6;</code>
    * @return The bytes for description.
    */
   @java.lang.Override
@@ -238,7 +238,7 @@ private static final long serialVersionUID = 0L;
    * Business name of the advertiser.
    * </pre>
    *
-   * <code>string business_name = 7;</code>
+   * <code>optional string business_name = 7;</code>
    * @return Whether the businessName field is set.
    */
   @java.lang.Override
@@ -250,7 +250,7 @@ private static final long serialVersionUID = 0L;
    * Business name of the advertiser.
    * </pre>
    *
-   * <code>string business_name = 7;</code>
+   * <code>optional string business_name = 7;</code>
    * @return The businessName.
    */
   @java.lang.Override
@@ -271,7 +271,7 @@ private static final long serialVersionUID = 0L;
    * Business name of the advertiser.
    * </pre>
    *
-   * <code>string business_name = 7;</code>
+   * <code>optional string business_name = 7;</code>
    * @return The bytes for businessName.
    */
   @java.lang.Override
@@ -298,7 +298,7 @@ private static final long serialVersionUID = 0L;
    * be 1:1 (+-1%).
    * </pre>
    *
-   * <code>string logo_image = 8;</code>
+   * <code>optional string logo_image = 8;</code>
    * @return Whether the logoImage field is set.
    */
   @java.lang.Override
@@ -312,7 +312,7 @@ private static final long serialVersionUID = 0L;
    * be 1:1 (+-1%).
    * </pre>
    *
-   * <code>string logo_image = 8;</code>
+   * <code>optional string logo_image = 8;</code>
    * @return The logoImage.
    */
   @java.lang.Override
@@ -335,7 +335,7 @@ private static final long serialVersionUID = 0L;
    * be 1:1 (+-1%).
    * </pre>
    *
-   * <code>string logo_image = 8;</code>
+   * <code>optional string logo_image = 8;</code>
    * @return The bytes for logoImage.
    */
   @java.lang.Override
@@ -757,7 +757,7 @@ private static final long serialVersionUID = 0L;
      * Headline of the teaser.
      * </pre>
      *
-     * <code>string headline = 5;</code>
+     * <code>optional string headline = 5;</code>
      * @return Whether the headline field is set.
      */
     public boolean hasHeadline() {
@@ -768,7 +768,7 @@ private static final long serialVersionUID = 0L;
      * Headline of the teaser.
      * </pre>
      *
-     * <code>string headline = 5;</code>
+     * <code>optional string headline = 5;</code>
      * @return The headline.
      */
     public java.lang.String getHeadline() {
@@ -788,7 +788,7 @@ private static final long serialVersionUID = 0L;
      * Headline of the teaser.
      * </pre>
      *
-     * <code>string headline = 5;</code>
+     * <code>optional string headline = 5;</code>
      * @return The bytes for headline.
      */
     public com.google.protobuf.ByteString
@@ -809,7 +809,7 @@ private static final long serialVersionUID = 0L;
      * Headline of the teaser.
      * </pre>
      *
-     * <code>string headline = 5;</code>
+     * <code>optional string headline = 5;</code>
      * @param value The headline to set.
      * @return This builder for chaining.
      */
@@ -828,7 +828,7 @@ private static final long serialVersionUID = 0L;
      * Headline of the teaser.
      * </pre>
      *
-     * <code>string headline = 5;</code>
+     * <code>optional string headline = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearHeadline() {
@@ -842,7 +842,7 @@ private static final long serialVersionUID = 0L;
      * Headline of the teaser.
      * </pre>
      *
-     * <code>string headline = 5;</code>
+     * <code>optional string headline = 5;</code>
      * @param value The bytes for headline to set.
      * @return This builder for chaining.
      */
@@ -864,7 +864,7 @@ private static final long serialVersionUID = 0L;
      * Description of the teaser.
      * </pre>
      *
-     * <code>string description = 6;</code>
+     * <code>optional string description = 6;</code>
      * @return Whether the description field is set.
      */
     public boolean hasDescription() {
@@ -875,7 +875,7 @@ private static final long serialVersionUID = 0L;
      * Description of the teaser.
      * </pre>
      *
-     * <code>string description = 6;</code>
+     * <code>optional string description = 6;</code>
      * @return The description.
      */
     public java.lang.String getDescription() {
@@ -895,7 +895,7 @@ private static final long serialVersionUID = 0L;
      * Description of the teaser.
      * </pre>
      *
-     * <code>string description = 6;</code>
+     * <code>optional string description = 6;</code>
      * @return The bytes for description.
      */
     public com.google.protobuf.ByteString
@@ -916,7 +916,7 @@ private static final long serialVersionUID = 0L;
      * Description of the teaser.
      * </pre>
      *
-     * <code>string description = 6;</code>
+     * <code>optional string description = 6;</code>
      * @param value The description to set.
      * @return This builder for chaining.
      */
@@ -935,7 +935,7 @@ private static final long serialVersionUID = 0L;
      * Description of the teaser.
      * </pre>
      *
-     * <code>string description = 6;</code>
+     * <code>optional string description = 6;</code>
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
@@ -949,7 +949,7 @@ private static final long serialVersionUID = 0L;
      * Description of the teaser.
      * </pre>
      *
-     * <code>string description = 6;</code>
+     * <code>optional string description = 6;</code>
      * @param value The bytes for description to set.
      * @return This builder for chaining.
      */
@@ -971,7 +971,7 @@ private static final long serialVersionUID = 0L;
      * Business name of the advertiser.
      * </pre>
      *
-     * <code>string business_name = 7;</code>
+     * <code>optional string business_name = 7;</code>
      * @return Whether the businessName field is set.
      */
     public boolean hasBusinessName() {
@@ -982,7 +982,7 @@ private static final long serialVersionUID = 0L;
      * Business name of the advertiser.
      * </pre>
      *
-     * <code>string business_name = 7;</code>
+     * <code>optional string business_name = 7;</code>
      * @return The businessName.
      */
     public java.lang.String getBusinessName() {
@@ -1002,7 +1002,7 @@ private static final long serialVersionUID = 0L;
      * Business name of the advertiser.
      * </pre>
      *
-     * <code>string business_name = 7;</code>
+     * <code>optional string business_name = 7;</code>
      * @return The bytes for businessName.
      */
     public com.google.protobuf.ByteString
@@ -1023,7 +1023,7 @@ private static final long serialVersionUID = 0L;
      * Business name of the advertiser.
      * </pre>
      *
-     * <code>string business_name = 7;</code>
+     * <code>optional string business_name = 7;</code>
      * @param value The businessName to set.
      * @return This builder for chaining.
      */
@@ -1042,7 +1042,7 @@ private static final long serialVersionUID = 0L;
      * Business name of the advertiser.
      * </pre>
      *
-     * <code>string business_name = 7;</code>
+     * <code>optional string business_name = 7;</code>
      * @return This builder for chaining.
      */
     public Builder clearBusinessName() {
@@ -1056,7 +1056,7 @@ private static final long serialVersionUID = 0L;
      * Business name of the advertiser.
      * </pre>
      *
-     * <code>string business_name = 7;</code>
+     * <code>optional string business_name = 7;</code>
      * @param value The bytes for businessName to set.
      * @return This builder for chaining.
      */
@@ -1080,7 +1080,7 @@ private static final long serialVersionUID = 0L;
      * be 1:1 (+-1%).
      * </pre>
      *
-     * <code>string logo_image = 8;</code>
+     * <code>optional string logo_image = 8;</code>
      * @return Whether the logoImage field is set.
      */
     public boolean hasLogoImage() {
@@ -1093,7 +1093,7 @@ private static final long serialVersionUID = 0L;
      * be 1:1 (+-1%).
      * </pre>
      *
-     * <code>string logo_image = 8;</code>
+     * <code>optional string logo_image = 8;</code>
      * @return The logoImage.
      */
     public java.lang.String getLogoImage() {
@@ -1115,7 +1115,7 @@ private static final long serialVersionUID = 0L;
      * be 1:1 (+-1%).
      * </pre>
      *
-     * <code>string logo_image = 8;</code>
+     * <code>optional string logo_image = 8;</code>
      * @return The bytes for logoImage.
      */
     public com.google.protobuf.ByteString
@@ -1138,7 +1138,7 @@ private static final long serialVersionUID = 0L;
      * be 1:1 (+-1%).
      * </pre>
      *
-     * <code>string logo_image = 8;</code>
+     * <code>optional string logo_image = 8;</code>
      * @param value The logoImage to set.
      * @return This builder for chaining.
      */
@@ -1159,7 +1159,7 @@ private static final long serialVersionUID = 0L;
      * be 1:1 (+-1%).
      * </pre>
      *
-     * <code>string logo_image = 8;</code>
+     * <code>optional string logo_image = 8;</code>
      * @return This builder for chaining.
      */
     public Builder clearLogoImage() {
@@ -1175,7 +1175,7 @@ private static final long serialVersionUID = 0L;
      * be 1:1 (+-1%).
      * </pre>
      *
-     * <code>string logo_image = 8;</code>
+     * <code>optional string logo_image = 8;</code>
      * @param value The bytes for logoImage to set.
      * @return This builder for chaining.
      */

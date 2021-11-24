@@ -13,7 +13,7 @@ public interface SitelinkFeedItemOrBuilder extends
    * The length of this string should be between 1 and 25, inclusive.
    * </pre>
    *
-   * <code>string link_text = 9;</code>
+   * <code>optional string link_text = 9;</code>
    * @return Whether the linkText field is set.
    */
   boolean hasLinkText();
@@ -23,7 +23,7 @@ public interface SitelinkFeedItemOrBuilder extends
    * The length of this string should be between 1 and 25, inclusive.
    * </pre>
    *
-   * <code>string link_text = 9;</code>
+   * <code>optional string link_text = 9;</code>
    * @return The linkText.
    */
   java.lang.String getLinkText();
@@ -33,7 +33,7 @@ public interface SitelinkFeedItemOrBuilder extends
    * The length of this string should be between 1 and 25, inclusive.
    * </pre>
    *
-   * <code>string link_text = 9;</code>
+   * <code>optional string link_text = 9;</code>
    * @return The bytes for linkText.
    */
   com.google.protobuf.ByteString
@@ -46,7 +46,7 @@ public interface SitelinkFeedItemOrBuilder extends
    * The length of this string should be between 0 and 35, inclusive.
    * </pre>
    *
-   * <code>string line1 = 10;</code>
+   * <code>optional string line1 = 10;</code>
    * @return Whether the line1 field is set.
    */
   boolean hasLine1();
@@ -57,7 +57,7 @@ public interface SitelinkFeedItemOrBuilder extends
    * The length of this string should be between 0 and 35, inclusive.
    * </pre>
    *
-   * <code>string line1 = 10;</code>
+   * <code>optional string line1 = 10;</code>
    * @return The line1.
    */
   java.lang.String getLine1();
@@ -68,7 +68,7 @@ public interface SitelinkFeedItemOrBuilder extends
    * The length of this string should be between 0 and 35, inclusive.
    * </pre>
    *
-   * <code>string line1 = 10;</code>
+   * <code>optional string line1 = 10;</code>
    * @return The bytes for line1.
    */
   com.google.protobuf.ByteString
@@ -81,7 +81,7 @@ public interface SitelinkFeedItemOrBuilder extends
    * The length of this string should be between 0 and 35, inclusive.
    * </pre>
    *
-   * <code>string line2 = 11;</code>
+   * <code>optional string line2 = 11;</code>
    * @return Whether the line2 field is set.
    */
   boolean hasLine2();
@@ -92,7 +92,7 @@ public interface SitelinkFeedItemOrBuilder extends
    * The length of this string should be between 0 and 35, inclusive.
    * </pre>
    *
-   * <code>string line2 = 11;</code>
+   * <code>optional string line2 = 11;</code>
    * @return The line2.
    */
   java.lang.String getLine2();
@@ -103,7 +103,7 @@ public interface SitelinkFeedItemOrBuilder extends
    * The length of this string should be between 0 and 35, inclusive.
    * </pre>
    *
-   * <code>string line2 = 11;</code>
+   * <code>optional string line2 = 11;</code>
    * @return The bytes for line2.
    */
   com.google.protobuf.ByteString
@@ -196,7 +196,7 @@ public interface SitelinkFeedItemOrBuilder extends
    * URL template for constructing a tracking URL.
    * </pre>
    *
-   * <code>string tracking_url_template = 14;</code>
+   * <code>optional string tracking_url_template = 14;</code>
    * @return Whether the trackingUrlTemplate field is set.
    */
   boolean hasTrackingUrlTemplate();
@@ -205,7 +205,7 @@ public interface SitelinkFeedItemOrBuilder extends
    * URL template for constructing a tracking URL.
    * </pre>
    *
-   * <code>string tracking_url_template = 14;</code>
+   * <code>optional string tracking_url_template = 14;</code>
    * @return The trackingUrlTemplate.
    */
   java.lang.String getTrackingUrlTemplate();
@@ -214,7 +214,7 @@ public interface SitelinkFeedItemOrBuilder extends
    * URL template for constructing a tracking URL.
    * </pre>
    *
-   * <code>string tracking_url_template = 14;</code>
+   * <code>optional string tracking_url_template = 14;</code>
    * @return The bytes for trackingUrlTemplate.
    */
   com.google.protobuf.ByteString
@@ -275,7 +275,7 @@ public interface SitelinkFeedItemOrBuilder extends
    * parallel tracking.
    * </pre>
    *
-   * <code>string final_url_suffix = 15;</code>
+   * <code>optional string final_url_suffix = 15;</code>
    * @return Whether the finalUrlSuffix field is set.
    */
   boolean hasFinalUrlSuffix();
@@ -285,7 +285,7 @@ public interface SitelinkFeedItemOrBuilder extends
    * parallel tracking.
    * </pre>
    *
-   * <code>string final_url_suffix = 15;</code>
+   * <code>optional string final_url_suffix = 15;</code>
    * @return The finalUrlSuffix.
    */
   java.lang.String getFinalUrlSuffix();
@@ -295,7 +295,7 @@ public interface SitelinkFeedItemOrBuilder extends
    * parallel tracking.
    * </pre>
    *
-   * <code>string final_url_suffix = 15;</code>
+   * <code>optional string final_url_suffix = 15;</code>
    * @return The bytes for finalUrlSuffix.
    */
   com.google.protobuf.ByteString

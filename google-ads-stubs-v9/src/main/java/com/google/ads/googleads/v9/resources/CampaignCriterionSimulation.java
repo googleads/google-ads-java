@@ -9,8 +9,7 @@ package com.google.ads.googleads.v9.resources;
  * channel type, criterion ids, simulation type and simulation modification
  * method is detailed below respectively.
  * 1. SEARCH - 30000,30001,30002 - BID_MODIFIER - UNIFORM
- * 2. SHOPPING - 30000,30001,30002 - BID_MODIFIER - UNIFORM
- * 3. DISPLAY - 30001 - BID_MODIFIER - UNIFORM
+ * 2. DISPLAY - 30001 - BID_MODIFIER - UNIFORM
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v9.resources.CampaignCriterionSimulation}
@@ -774,8 +773,7 @@ private static final long serialVersionUID = 0L;
    * channel type, criterion ids, simulation type and simulation modification
    * method is detailed below respectively.
    * 1. SEARCH - 30000,30001,30002 - BID_MODIFIER - UNIFORM
-   * 2. SHOPPING - 30000,30001,30002 - BID_MODIFIER - UNIFORM
-   * 3. DISPLAY - 30001 - BID_MODIFIER - UNIFORM
+   * 2. DISPLAY - 30001 - BID_MODIFIER - UNIFORM
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v9.resources.CampaignCriterionSimulation}

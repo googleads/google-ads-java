@@ -12,7 +12,7 @@ public interface FeedItemAttributeValueOrBuilder extends
    * Id of the feed attribute for which the value is associated with.
    * </pre>
    *
-   * <code>int64 feed_attribute_id = 11;</code>
+   * <code>optional int64 feed_attribute_id = 11;</code>
    * @return Whether the feedAttributeId field is set.
    */
   boolean hasFeedAttributeId();
@@ -21,7 +21,7 @@ public interface FeedItemAttributeValueOrBuilder extends
    * Id of the feed attribute for which the value is associated with.
    * </pre>
    *
-   * <code>int64 feed_attribute_id = 11;</code>
+   * <code>optional int64 feed_attribute_id = 11;</code>
    * @return The feedAttributeId.
    */
   long getFeedAttributeId();
@@ -32,7 +32,7 @@ public interface FeedItemAttributeValueOrBuilder extends
    * of type INT64.
    * </pre>
    *
-   * <code>int64 integer_value = 12;</code>
+   * <code>optional int64 integer_value = 12;</code>
    * @return Whether the integerValue field is set.
    */
   boolean hasIntegerValue();
@@ -42,7 +42,7 @@ public interface FeedItemAttributeValueOrBuilder extends
    * of type INT64.
    * </pre>
    *
-   * <code>int64 integer_value = 12;</code>
+   * <code>optional int64 integer_value = 12;</code>
    * @return The integerValue.
    */
   long getIntegerValue();
@@ -53,7 +53,7 @@ public interface FeedItemAttributeValueOrBuilder extends
    * of type BOOLEAN.
    * </pre>
    *
-   * <code>bool boolean_value = 13;</code>
+   * <code>optional bool boolean_value = 13;</code>
    * @return Whether the booleanValue field is set.
    */
   boolean hasBooleanValue();
@@ -63,7 +63,7 @@ public interface FeedItemAttributeValueOrBuilder extends
    * of type BOOLEAN.
    * </pre>
    *
-   * <code>bool boolean_value = 13;</code>
+   * <code>optional bool boolean_value = 13;</code>
    * @return The booleanValue.
    */
   boolean getBooleanValue();
@@ -77,7 +77,7 @@ public interface FeedItemAttributeValueOrBuilder extends
    * "YYYYMMDD HHMMSS".
    * </pre>
    *
-   * <code>string string_value = 14;</code>
+   * <code>optional string string_value = 14;</code>
    * @return Whether the stringValue field is set.
    */
   boolean hasStringValue();
@@ -90,7 +90,7 @@ public interface FeedItemAttributeValueOrBuilder extends
    * "YYYYMMDD HHMMSS".
    * </pre>
    *
-   * <code>string string_value = 14;</code>
+   * <code>optional string string_value = 14;</code>
    * @return The stringValue.
    */
   java.lang.String getStringValue();
@@ -103,7 +103,7 @@ public interface FeedItemAttributeValueOrBuilder extends
    * "YYYYMMDD HHMMSS".
    * </pre>
    *
-   * <code>string string_value = 14;</code>
+   * <code>optional string string_value = 14;</code>
    * @return The bytes for stringValue.
    */
   com.google.protobuf.ByteString
@@ -115,7 +115,7 @@ public interface FeedItemAttributeValueOrBuilder extends
    * of type DOUBLE.
    * </pre>
    *
-   * <code>double double_value = 15;</code>
+   * <code>optional double double_value = 15;</code>
    * @return Whether the doubleValue field is set.
    */
   boolean hasDoubleValue();
@@ -125,7 +125,7 @@ public interface FeedItemAttributeValueOrBuilder extends
    * of type DOUBLE.
    * </pre>
    *
-   * <code>double double_value = 15;</code>
+   * <code>optional double double_value = 15;</code>
    * @return The doubleValue.
    */
   double getDoubleValue();

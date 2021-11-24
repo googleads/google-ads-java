@@ -15,7 +15,7 @@ public interface GeoTargetConstantSuggestionOrBuilder extends
    * returned if no translation exists for the locale in the request.
    * </pre>
    *
-   * <code>string locale = 6;</code>
+   * <code>optional string locale = 6;</code>
    * @return Whether the locale field is set.
    */
   boolean hasLocale();
@@ -27,7 +27,7 @@ public interface GeoTargetConstantSuggestionOrBuilder extends
    * returned if no translation exists for the locale in the request.
    * </pre>
    *
-   * <code>string locale = 6;</code>
+   * <code>optional string locale = 6;</code>
    * @return The locale.
    */
   java.lang.String getLocale();
@@ -39,7 +39,7 @@ public interface GeoTargetConstantSuggestionOrBuilder extends
    * returned if no translation exists for the locale in the request.
    * </pre>
    *
-   * <code>string locale = 6;</code>
+   * <code>optional string locale = 6;</code>
    * @return The bytes for locale.
    */
   com.google.protobuf.ByteString
@@ -51,7 +51,7 @@ public interface GeoTargetConstantSuggestionOrBuilder extends
    * nearest 100.
    * </pre>
    *
-   * <code>int64 reach = 7;</code>
+   * <code>optional int64 reach = 7;</code>
    * @return Whether the reach field is set.
    */
   boolean hasReach();
@@ -61,7 +61,7 @@ public interface GeoTargetConstantSuggestionOrBuilder extends
    * nearest 100.
    * </pre>
    *
-   * <code>int64 reach = 7;</code>
+   * <code>optional int64 reach = 7;</code>
    * @return The reach.
    */
   long getReach();
@@ -72,7 +72,7 @@ public interface GeoTargetConstantSuggestionOrBuilder extends
    * matched the geo target.
    * </pre>
    *
-   * <code>string search_term = 8;</code>
+   * <code>optional string search_term = 8;</code>
    * @return Whether the searchTerm field is set.
    */
   boolean hasSearchTerm();
@@ -82,7 +82,7 @@ public interface GeoTargetConstantSuggestionOrBuilder extends
    * matched the geo target.
    * </pre>
    *
-   * <code>string search_term = 8;</code>
+   * <code>optional string search_term = 8;</code>
    * @return The searchTerm.
    */
   java.lang.String getSearchTerm();
@@ -92,7 +92,7 @@ public interface GeoTargetConstantSuggestionOrBuilder extends
    * matched the geo target.
    * </pre>
    *
-   * <code>string search_term = 8;</code>
+   * <code>optional string search_term = 8;</code>
    * @return The bytes for searchTerm.
    */
   com.google.protobuf.ByteString

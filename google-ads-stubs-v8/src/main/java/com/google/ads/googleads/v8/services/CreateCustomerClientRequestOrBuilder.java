@@ -63,7 +63,7 @@ public interface CreateCustomerClientRequestOrBuilder extends
    * customer. Accessible only to customers on the allow-list.
    * </pre>
    *
-   * <code>string email_address = 5;</code>
+   * <code>optional string email_address = 5;</code>
    * @return Whether the emailAddress field is set.
    */
   boolean hasEmailAddress();
@@ -73,7 +73,7 @@ public interface CreateCustomerClientRequestOrBuilder extends
    * customer. Accessible only to customers on the allow-list.
    * </pre>
    *
-   * <code>string email_address = 5;</code>
+   * <code>optional string email_address = 5;</code>
    * @return The emailAddress.
    */
   java.lang.String getEmailAddress();
@@ -83,7 +83,7 @@ public interface CreateCustomerClientRequestOrBuilder extends
    * customer. Accessible only to customers on the allow-list.
    * </pre>
    *
-   * <code>string email_address = 5;</code>
+   * <code>optional string email_address = 5;</code>
    * @return The bytes for emailAddress.
    */
   com.google.protobuf.ByteString

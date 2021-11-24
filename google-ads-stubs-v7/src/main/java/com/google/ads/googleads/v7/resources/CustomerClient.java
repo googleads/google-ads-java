@@ -206,7 +206,7 @@ private static final long serialVersionUID = 0L;
    * the given customer. Read only.
    * </pre>
    *
-   * <code>string client_customer = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string client_customer = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the clientCustomer field is set.
    */
   @java.lang.Override
@@ -219,7 +219,7 @@ private static final long serialVersionUID = 0L;
    * the given customer. Read only.
    * </pre>
    *
-   * <code>string client_customer = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string client_customer = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The clientCustomer.
    */
   @java.lang.Override
@@ -241,7 +241,7 @@ private static final long serialVersionUID = 0L;
    * the given customer. Read only.
    * </pre>
    *
-   * <code>string client_customer = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string client_customer = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for clientCustomer.
    */
   @java.lang.Override
@@ -268,7 +268,7 @@ private static final long serialVersionUID = 0L;
    * Read only.
    * </pre>
    *
-   * <code>bool hidden = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool hidden = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the hidden field is set.
    */
   @java.lang.Override
@@ -282,7 +282,7 @@ private static final long serialVersionUID = 0L;
    * Read only.
    * </pre>
    *
-   * <code>bool hidden = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool hidden = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The hidden.
    */
   @java.lang.Override
@@ -298,7 +298,7 @@ private static final long serialVersionUID = 0L;
    * will be 0. Read only.
    * </pre>
    *
-   * <code>int64 level = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 level = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the level field is set.
    */
   @java.lang.Override
@@ -311,7 +311,7 @@ private static final long serialVersionUID = 0L;
    * will be 0. Read only.
    * </pre>
    *
-   * <code>int64 level = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 level = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The level.
    */
   @java.lang.Override
@@ -327,7 +327,7 @@ private static final long serialVersionUID = 0L;
    * time zone of the client, e.g. America/Los_Angeles. Read only.
    * </pre>
    *
-   * <code>string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the timeZone field is set.
    */
   @java.lang.Override
@@ -340,7 +340,7 @@ private static final long serialVersionUID = 0L;
    * time zone of the client, e.g. America/Los_Angeles. Read only.
    * </pre>
    *
-   * <code>string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The timeZone.
    */
   @java.lang.Override
@@ -362,7 +362,7 @@ private static final long serialVersionUID = 0L;
    * time zone of the client, e.g. America/Los_Angeles. Read only.
    * </pre>
    *
-   * <code>string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for timeZone.
    */
   @java.lang.Override
@@ -387,7 +387,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Identifies if the client is a test account. Read only.
    * </pre>
    *
-   * <code>bool test_account = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool test_account = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the testAccount field is set.
    */
   @java.lang.Override
@@ -399,7 +399,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Identifies if the client is a test account. Read only.
    * </pre>
    *
-   * <code>bool test_account = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool test_account = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The testAccount.
    */
   @java.lang.Override
@@ -414,7 +414,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Identifies if the client is a manager. Read only.
    * </pre>
    *
-   * <code>bool manager = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool manager = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the manager field is set.
    */
   @java.lang.Override
@@ -426,7 +426,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Identifies if the client is a manager. Read only.
    * </pre>
    *
-   * <code>bool manager = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool manager = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The manager.
    */
   @java.lang.Override
@@ -441,7 +441,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Descriptive name for the client. Read only.
    * </pre>
    *
-   * <code>string descriptive_name = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string descriptive_name = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the descriptiveName field is set.
    */
   @java.lang.Override
@@ -453,7 +453,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Descriptive name for the client. Read only.
    * </pre>
    *
-   * <code>string descriptive_name = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string descriptive_name = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The descriptiveName.
    */
   @java.lang.Override
@@ -474,7 +474,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Descriptive name for the client. Read only.
    * </pre>
    *
-   * <code>string descriptive_name = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string descriptive_name = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for descriptiveName.
    */
   @java.lang.Override
@@ -499,7 +499,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Currency code (e.g. 'USD', 'EUR') for the client. Read only.
    * </pre>
    *
-   * <code>string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the currencyCode field is set.
    */
   @java.lang.Override
@@ -511,7 +511,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Currency code (e.g. 'USD', 'EUR') for the client. Read only.
    * </pre>
    *
-   * <code>string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The currencyCode.
    */
   @java.lang.Override
@@ -532,7 +532,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Currency code (e.g. 'USD', 'EUR') for the client. Read only.
    * </pre>
    *
-   * <code>string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for currencyCode.
    */
   @java.lang.Override
@@ -557,7 +557,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of the client customer. Read only.
    * </pre>
    *
-   * <code>int64 id = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   @java.lang.Override
@@ -569,7 +569,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of the client customer. Read only.
    * </pre>
    *
-   * <code>int64 id = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   @java.lang.Override
@@ -591,7 +591,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
@@ -630,7 +630,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
@@ -1236,7 +1236,7 @@ private static final long serialVersionUID = 0L;
      * the given customer. Read only.
      * </pre>
      *
-     * <code>string client_customer = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string client_customer = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the clientCustomer field is set.
      */
     public boolean hasClientCustomer() {
@@ -1248,7 +1248,7 @@ private static final long serialVersionUID = 0L;
      * the given customer. Read only.
      * </pre>
      *
-     * <code>string client_customer = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string client_customer = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The clientCustomer.
      */
     public java.lang.String getClientCustomer() {
@@ -1269,7 +1269,7 @@ private static final long serialVersionUID = 0L;
      * the given customer. Read only.
      * </pre>
      *
-     * <code>string client_customer = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string client_customer = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for clientCustomer.
      */
     public com.google.protobuf.ByteString
@@ -1291,7 +1291,7 @@ private static final long serialVersionUID = 0L;
      * the given customer. Read only.
      * </pre>
      *
-     * <code>string client_customer = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string client_customer = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The clientCustomer to set.
      * @return This builder for chaining.
      */
@@ -1311,7 +1311,7 @@ private static final long serialVersionUID = 0L;
      * the given customer. Read only.
      * </pre>
      *
-     * <code>string client_customer = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string client_customer = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearClientCustomer() {
@@ -1326,7 +1326,7 @@ private static final long serialVersionUID = 0L;
      * the given customer. Read only.
      * </pre>
      *
-     * <code>string client_customer = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string client_customer = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for clientCustomer to set.
      * @return This builder for chaining.
      */
@@ -1350,7 +1350,7 @@ private static final long serialVersionUID = 0L;
      * Read only.
      * </pre>
      *
-     * <code>bool hidden = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool hidden = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the hidden field is set.
      */
     @java.lang.Override
@@ -1364,7 +1364,7 @@ private static final long serialVersionUID = 0L;
      * Read only.
      * </pre>
      *
-     * <code>bool hidden = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool hidden = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The hidden.
      */
     @java.lang.Override
@@ -1378,7 +1378,7 @@ private static final long serialVersionUID = 0L;
      * Read only.
      * </pre>
      *
-     * <code>bool hidden = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool hidden = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The hidden to set.
      * @return This builder for chaining.
      */
@@ -1395,7 +1395,7 @@ private static final long serialVersionUID = 0L;
      * Read only.
      * </pre>
      *
-     * <code>bool hidden = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool hidden = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearHidden() {
@@ -1412,7 +1412,7 @@ private static final long serialVersionUID = 0L;
      * will be 0. Read only.
      * </pre>
      *
-     * <code>int64 level = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 level = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the level field is set.
      */
     @java.lang.Override
@@ -1425,7 +1425,7 @@ private static final long serialVersionUID = 0L;
      * will be 0. Read only.
      * </pre>
      *
-     * <code>int64 level = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 level = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The level.
      */
     @java.lang.Override
@@ -1438,7 +1438,7 @@ private static final long serialVersionUID = 0L;
      * will be 0. Read only.
      * </pre>
      *
-     * <code>int64 level = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 level = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The level to set.
      * @return This builder for chaining.
      */
@@ -1454,7 +1454,7 @@ private static final long serialVersionUID = 0L;
      * will be 0. Read only.
      * </pre>
      *
-     * <code>int64 level = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 level = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearLevel() {
@@ -1471,7 +1471,7 @@ private static final long serialVersionUID = 0L;
      * time zone of the client, e.g. America/Los_Angeles. Read only.
      * </pre>
      *
-     * <code>string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the timeZone field is set.
      */
     public boolean hasTimeZone() {
@@ -1483,7 +1483,7 @@ private static final long serialVersionUID = 0L;
      * time zone of the client, e.g. America/Los_Angeles. Read only.
      * </pre>
      *
-     * <code>string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The timeZone.
      */
     public java.lang.String getTimeZone() {
@@ -1504,7 +1504,7 @@ private static final long serialVersionUID = 0L;
      * time zone of the client, e.g. America/Los_Angeles. Read only.
      * </pre>
      *
-     * <code>string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for timeZone.
      */
     public com.google.protobuf.ByteString
@@ -1526,7 +1526,7 @@ private static final long serialVersionUID = 0L;
      * time zone of the client, e.g. America/Los_Angeles. Read only.
      * </pre>
      *
-     * <code>string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The timeZone to set.
      * @return This builder for chaining.
      */
@@ -1546,7 +1546,7 @@ private static final long serialVersionUID = 0L;
      * time zone of the client, e.g. America/Los_Angeles. Read only.
      * </pre>
      *
-     * <code>string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearTimeZone() {
@@ -1561,7 +1561,7 @@ private static final long serialVersionUID = 0L;
      * time zone of the client, e.g. America/Los_Angeles. Read only.
      * </pre>
      *
-     * <code>string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for timeZone to set.
      * @return This builder for chaining.
      */
@@ -1583,7 +1583,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Identifies if the client is a test account. Read only.
      * </pre>
      *
-     * <code>bool test_account = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool test_account = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the testAccount field is set.
      */
     @java.lang.Override
@@ -1595,7 +1595,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Identifies if the client is a test account. Read only.
      * </pre>
      *
-     * <code>bool test_account = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool test_account = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The testAccount.
      */
     @java.lang.Override
@@ -1607,7 +1607,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Identifies if the client is a test account. Read only.
      * </pre>
      *
-     * <code>bool test_account = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool test_account = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The testAccount to set.
      * @return This builder for chaining.
      */
@@ -1622,7 +1622,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Identifies if the client is a test account. Read only.
      * </pre>
      *
-     * <code>bool test_account = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool test_account = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearTestAccount() {
@@ -1638,7 +1638,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Identifies if the client is a manager. Read only.
      * </pre>
      *
-     * <code>bool manager = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool manager = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the manager field is set.
      */
     @java.lang.Override
@@ -1650,7 +1650,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Identifies if the client is a manager. Read only.
      * </pre>
      *
-     * <code>bool manager = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool manager = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The manager.
      */
     @java.lang.Override
@@ -1662,7 +1662,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Identifies if the client is a manager. Read only.
      * </pre>
      *
-     * <code>bool manager = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool manager = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The manager to set.
      * @return This builder for chaining.
      */
@@ -1677,7 +1677,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Identifies if the client is a manager. Read only.
      * </pre>
      *
-     * <code>bool manager = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool manager = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearManager() {
@@ -1693,7 +1693,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Descriptive name for the client. Read only.
      * </pre>
      *
-     * <code>string descriptive_name = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string descriptive_name = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the descriptiveName field is set.
      */
     public boolean hasDescriptiveName() {
@@ -1704,7 +1704,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Descriptive name for the client. Read only.
      * </pre>
      *
-     * <code>string descriptive_name = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string descriptive_name = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The descriptiveName.
      */
     public java.lang.String getDescriptiveName() {
@@ -1724,7 +1724,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Descriptive name for the client. Read only.
      * </pre>
      *
-     * <code>string descriptive_name = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string descriptive_name = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for descriptiveName.
      */
     public com.google.protobuf.ByteString
@@ -1745,7 +1745,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Descriptive name for the client. Read only.
      * </pre>
      *
-     * <code>string descriptive_name = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string descriptive_name = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The descriptiveName to set.
      * @return This builder for chaining.
      */
@@ -1764,7 +1764,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Descriptive name for the client. Read only.
      * </pre>
      *
-     * <code>string descriptive_name = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string descriptive_name = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearDescriptiveName() {
@@ -1778,7 +1778,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Descriptive name for the client. Read only.
      * </pre>
      *
-     * <code>string descriptive_name = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string descriptive_name = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for descriptiveName to set.
      * @return This builder for chaining.
      */
@@ -1800,7 +1800,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Currency code (e.g. 'USD', 'EUR') for the client. Read only.
      * </pre>
      *
-     * <code>string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the currencyCode field is set.
      */
     public boolean hasCurrencyCode() {
@@ -1811,7 +1811,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Currency code (e.g. 'USD', 'EUR') for the client. Read only.
      * </pre>
      *
-     * <code>string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The currencyCode.
      */
     public java.lang.String getCurrencyCode() {
@@ -1831,7 +1831,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Currency code (e.g. 'USD', 'EUR') for the client. Read only.
      * </pre>
      *
-     * <code>string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for currencyCode.
      */
     public com.google.protobuf.ByteString
@@ -1852,7 +1852,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Currency code (e.g. 'USD', 'EUR') for the client. Read only.
      * </pre>
      *
-     * <code>string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The currencyCode to set.
      * @return This builder for chaining.
      */
@@ -1871,7 +1871,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Currency code (e.g. 'USD', 'EUR') for the client. Read only.
      * </pre>
      *
-     * <code>string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearCurrencyCode() {
@@ -1885,7 +1885,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Currency code (e.g. 'USD', 'EUR') for the client. Read only.
      * </pre>
      *
-     * <code>string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for currencyCode to set.
      * @return This builder for chaining.
      */
@@ -1907,7 +1907,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the client customer. Read only.
      * </pre>
      *
-     * <code>int64 id = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the id field is set.
      */
     @java.lang.Override
@@ -1919,7 +1919,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the client customer. Read only.
      * </pre>
      *
-     * <code>int64 id = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The id.
      */
     @java.lang.Override
@@ -1931,7 +1931,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the client customer. Read only.
      * </pre>
      *
-     * <code>int64 id = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
@@ -1946,7 +1946,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the client customer. Read only.
      * </pre>
      *
-     * <code>int64 id = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {

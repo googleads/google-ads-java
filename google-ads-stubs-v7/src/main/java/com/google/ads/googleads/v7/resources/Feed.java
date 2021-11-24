@@ -211,31 +211,31 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Email address of a Google My Business account or email address of a
-     * manager of the Google My Business account. Required.
+     * Email address of a Business Profile or email address of a
+     * manager of the Business Profile. Required.
      * </pre>
      *
-     * <code>string email_address = 7;</code>
+     * <code>optional string email_address = 7;</code>
      * @return Whether the emailAddress field is set.
      */
     boolean hasEmailAddress();
     /**
      * <pre>
-     * Email address of a Google My Business account or email address of a
-     * manager of the Google My Business account. Required.
+     * Email address of a Business Profile or email address of a
+     * manager of the Business Profile. Required.
      * </pre>
      *
-     * <code>string email_address = 7;</code>
+     * <code>optional string email_address = 7;</code>
      * @return The emailAddress.
      */
     java.lang.String getEmailAddress();
     /**
      * <pre>
-     * Email address of a Google My Business account or email address of a
-     * manager of the Google My Business account. Required.
+     * Email address of a Business Profile or email address of a
+     * manager of the Business Profile. Required.
      * </pre>
      *
-     * <code>string email_address = 7;</code>
+     * <code>optional string email_address = 7;</code>
      * @return The bytes for emailAddress.
      */
     com.google.protobuf.ByteString
@@ -269,34 +269,34 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Used to filter Google My Business listings by business name. If
+     * Used to filter Business Profile listings by business name. If
      * business_name_filter is set, only listings with a matching business name
      * are candidates to be sync'd into FeedItems.
      * </pre>
      *
-     * <code>string business_name_filter = 9;</code>
+     * <code>optional string business_name_filter = 9;</code>
      * @return Whether the businessNameFilter field is set.
      */
     boolean hasBusinessNameFilter();
     /**
      * <pre>
-     * Used to filter Google My Business listings by business name. If
+     * Used to filter Business Profile listings by business name. If
      * business_name_filter is set, only listings with a matching business name
      * are candidates to be sync'd into FeedItems.
      * </pre>
      *
-     * <code>string business_name_filter = 9;</code>
+     * <code>optional string business_name_filter = 9;</code>
      * @return The businessNameFilter.
      */
     java.lang.String getBusinessNameFilter();
     /**
      * <pre>
-     * Used to filter Google My Business listings by business name. If
+     * Used to filter Business Profile listings by business name. If
      * business_name_filter is set, only listings with a matching business name
      * are candidates to be sync'd into FeedItems.
      * </pre>
      *
-     * <code>string business_name_filter = 9;</code>
+     * <code>optional string business_name_filter = 9;</code>
      * @return The bytes for businessNameFilter.
      */
     com.google.protobuf.ByteString
@@ -304,7 +304,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Used to filter Google My Business listings by categories. If entries
+     * Used to filter Business Profile listings by categories. If entries
      * exist in category_filters, only listings that belong to any of the
      * categories are candidates to be sync'd into FeedItems. If no entries
      * exist in category_filters, then all listings are candidates for syncing.
@@ -317,7 +317,7 @@ private static final long serialVersionUID = 0L;
         getCategoryFiltersList();
     /**
      * <pre>
-     * Used to filter Google My Business listings by categories. If entries
+     * Used to filter Business Profile listings by categories. If entries
      * exist in category_filters, only listings that belong to any of the
      * categories are candidates to be sync'd into FeedItems. If no entries
      * exist in category_filters, then all listings are candidates for syncing.
@@ -329,7 +329,7 @@ private static final long serialVersionUID = 0L;
     int getCategoryFiltersCount();
     /**
      * <pre>
-     * Used to filter Google My Business listings by categories. If entries
+     * Used to filter Business Profile listings by categories. If entries
      * exist in category_filters, only listings that belong to any of the
      * categories are candidates to be sync'd into FeedItems. If no entries
      * exist in category_filters, then all listings are candidates for syncing.
@@ -342,7 +342,7 @@ private static final long serialVersionUID = 0L;
     java.lang.String getCategoryFilters(int index);
     /**
      * <pre>
-     * Used to filter Google My Business listings by categories. If entries
+     * Used to filter Business Profile listings by categories. If entries
      * exist in category_filters, only listings that belong to any of the
      * categories are candidates to be sync'd into FeedItems. If no entries
      * exist in category_filters, then all listings are candidates for syncing.
@@ -357,7 +357,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Used to filter Google My Business listings by labels. If entries exist in
+     * Used to filter Business Profile listings by labels. If entries exist in
      * label_filters, only listings that has any of the labels set are
      * candidates to be synchronized into FeedItems. If no entries exist in
      * label_filters, then all listings are candidates for syncing.
@@ -370,7 +370,7 @@ private static final long serialVersionUID = 0L;
         getLabelFiltersList();
     /**
      * <pre>
-     * Used to filter Google My Business listings by labels. If entries exist in
+     * Used to filter Business Profile listings by labels. If entries exist in
      * label_filters, only listings that has any of the labels set are
      * candidates to be synchronized into FeedItems. If no entries exist in
      * label_filters, then all listings are candidates for syncing.
@@ -382,7 +382,7 @@ private static final long serialVersionUID = 0L;
     int getLabelFiltersCount();
     /**
      * <pre>
-     * Used to filter Google My Business listings by labels. If entries exist in
+     * Used to filter Business Profile listings by labels. If entries exist in
      * label_filters, only listings that has any of the labels set are
      * candidates to be synchronized into FeedItems. If no entries exist in
      * label_filters, then all listings are candidates for syncing.
@@ -395,7 +395,7 @@ private static final long serialVersionUID = 0L;
     java.lang.String getLabelFilters(int index);
     /**
      * <pre>
-     * Used to filter Google My Business listings by labels. If entries exist in
+     * Used to filter Business Profile listings by labels. If entries exist in
      * label_filters, only listings that has any of the labels set are
      * candidates to be synchronized into FeedItems. If no entries exist in
      * label_filters, then all listings are candidates for syncing.
@@ -410,8 +410,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Data used to configure a location feed populated from Google My Business
-   * Locations.
+   * Data used to configure a location feed populated from Business Profile.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v7.resources.Feed.PlacesLocationFeedData}
@@ -560,7 +559,7 @@ private static final long serialVersionUID = 0L;
        * The HTTP method used to obtain authorization.
        * </pre>
        *
-       * <code>string http_method = 4;</code>
+       * <code>optional string http_method = 4;</code>
        * @return Whether the httpMethod field is set.
        */
       boolean hasHttpMethod();
@@ -569,7 +568,7 @@ private static final long serialVersionUID = 0L;
        * The HTTP method used to obtain authorization.
        * </pre>
        *
-       * <code>string http_method = 4;</code>
+       * <code>optional string http_method = 4;</code>
        * @return The httpMethod.
        */
       java.lang.String getHttpMethod();
@@ -578,7 +577,7 @@ private static final long serialVersionUID = 0L;
        * The HTTP method used to obtain authorization.
        * </pre>
        *
-       * <code>string http_method = 4;</code>
+       * <code>optional string http_method = 4;</code>
        * @return The bytes for httpMethod.
        */
       com.google.protobuf.ByteString
@@ -589,7 +588,7 @@ private static final long serialVersionUID = 0L;
        * The HTTP request URL used to obtain authorization.
        * </pre>
        *
-       * <code>string http_request_url = 5;</code>
+       * <code>optional string http_request_url = 5;</code>
        * @return Whether the httpRequestUrl field is set.
        */
       boolean hasHttpRequestUrl();
@@ -598,7 +597,7 @@ private static final long serialVersionUID = 0L;
        * The HTTP request URL used to obtain authorization.
        * </pre>
        *
-       * <code>string http_request_url = 5;</code>
+       * <code>optional string http_request_url = 5;</code>
        * @return The httpRequestUrl.
        */
       java.lang.String getHttpRequestUrl();
@@ -607,7 +606,7 @@ private static final long serialVersionUID = 0L;
        * The HTTP request URL used to obtain authorization.
        * </pre>
        *
-       * <code>string http_request_url = 5;</code>
+       * <code>optional string http_request_url = 5;</code>
        * @return The bytes for httpRequestUrl.
        */
       com.google.protobuf.ByteString
@@ -618,7 +617,7 @@ private static final long serialVersionUID = 0L;
        * The HTTP authorization header used to obtain authorization.
        * </pre>
        *
-       * <code>string http_authorization_header = 6;</code>
+       * <code>optional string http_authorization_header = 6;</code>
        * @return Whether the httpAuthorizationHeader field is set.
        */
       boolean hasHttpAuthorizationHeader();
@@ -627,7 +626,7 @@ private static final long serialVersionUID = 0L;
        * The HTTP authorization header used to obtain authorization.
        * </pre>
        *
-       * <code>string http_authorization_header = 6;</code>
+       * <code>optional string http_authorization_header = 6;</code>
        * @return The httpAuthorizationHeader.
        */
       java.lang.String getHttpAuthorizationHeader();
@@ -636,7 +635,7 @@ private static final long serialVersionUID = 0L;
        * The HTTP authorization header used to obtain authorization.
        * </pre>
        *
-       * <code>string http_authorization_header = 6;</code>
+       * <code>optional string http_authorization_header = 6;</code>
        * @return The bytes for httpAuthorizationHeader.
        */
       com.google.protobuf.ByteString
@@ -753,7 +752,7 @@ private static final long serialVersionUID = 0L;
        * The HTTP method used to obtain authorization.
        * </pre>
        *
-       * <code>string http_method = 4;</code>
+       * <code>optional string http_method = 4;</code>
        * @return Whether the httpMethod field is set.
        */
       @java.lang.Override
@@ -765,7 +764,7 @@ private static final long serialVersionUID = 0L;
        * The HTTP method used to obtain authorization.
        * </pre>
        *
-       * <code>string http_method = 4;</code>
+       * <code>optional string http_method = 4;</code>
        * @return The httpMethod.
        */
       @java.lang.Override
@@ -786,7 +785,7 @@ private static final long serialVersionUID = 0L;
        * The HTTP method used to obtain authorization.
        * </pre>
        *
-       * <code>string http_method = 4;</code>
+       * <code>optional string http_method = 4;</code>
        * @return The bytes for httpMethod.
        */
       @java.lang.Override
@@ -811,7 +810,7 @@ private static final long serialVersionUID = 0L;
        * The HTTP request URL used to obtain authorization.
        * </pre>
        *
-       * <code>string http_request_url = 5;</code>
+       * <code>optional string http_request_url = 5;</code>
        * @return Whether the httpRequestUrl field is set.
        */
       @java.lang.Override
@@ -823,7 +822,7 @@ private static final long serialVersionUID = 0L;
        * The HTTP request URL used to obtain authorization.
        * </pre>
        *
-       * <code>string http_request_url = 5;</code>
+       * <code>optional string http_request_url = 5;</code>
        * @return The httpRequestUrl.
        */
       @java.lang.Override
@@ -844,7 +843,7 @@ private static final long serialVersionUID = 0L;
        * The HTTP request URL used to obtain authorization.
        * </pre>
        *
-       * <code>string http_request_url = 5;</code>
+       * <code>optional string http_request_url = 5;</code>
        * @return The bytes for httpRequestUrl.
        */
       @java.lang.Override
@@ -869,7 +868,7 @@ private static final long serialVersionUID = 0L;
        * The HTTP authorization header used to obtain authorization.
        * </pre>
        *
-       * <code>string http_authorization_header = 6;</code>
+       * <code>optional string http_authorization_header = 6;</code>
        * @return Whether the httpAuthorizationHeader field is set.
        */
       @java.lang.Override
@@ -881,7 +880,7 @@ private static final long serialVersionUID = 0L;
        * The HTTP authorization header used to obtain authorization.
        * </pre>
        *
-       * <code>string http_authorization_header = 6;</code>
+       * <code>optional string http_authorization_header = 6;</code>
        * @return The httpAuthorizationHeader.
        */
       @java.lang.Override
@@ -902,7 +901,7 @@ private static final long serialVersionUID = 0L;
        * The HTTP authorization header used to obtain authorization.
        * </pre>
        *
-       * <code>string http_authorization_header = 6;</code>
+       * <code>optional string http_authorization_header = 6;</code>
        * @return The bytes for httpAuthorizationHeader.
        */
       @java.lang.Override
@@ -1297,7 +1296,7 @@ private static final long serialVersionUID = 0L;
          * The HTTP method used to obtain authorization.
          * </pre>
          *
-         * <code>string http_method = 4;</code>
+         * <code>optional string http_method = 4;</code>
          * @return Whether the httpMethod field is set.
          */
         public boolean hasHttpMethod() {
@@ -1308,7 +1307,7 @@ private static final long serialVersionUID = 0L;
          * The HTTP method used to obtain authorization.
          * </pre>
          *
-         * <code>string http_method = 4;</code>
+         * <code>optional string http_method = 4;</code>
          * @return The httpMethod.
          */
         public java.lang.String getHttpMethod() {
@@ -1328,7 +1327,7 @@ private static final long serialVersionUID = 0L;
          * The HTTP method used to obtain authorization.
          * </pre>
          *
-         * <code>string http_method = 4;</code>
+         * <code>optional string http_method = 4;</code>
          * @return The bytes for httpMethod.
          */
         public com.google.protobuf.ByteString
@@ -1349,7 +1348,7 @@ private static final long serialVersionUID = 0L;
          * The HTTP method used to obtain authorization.
          * </pre>
          *
-         * <code>string http_method = 4;</code>
+         * <code>optional string http_method = 4;</code>
          * @param value The httpMethod to set.
          * @return This builder for chaining.
          */
@@ -1368,7 +1367,7 @@ private static final long serialVersionUID = 0L;
          * The HTTP method used to obtain authorization.
          * </pre>
          *
-         * <code>string http_method = 4;</code>
+         * <code>optional string http_method = 4;</code>
          * @return This builder for chaining.
          */
         public Builder clearHttpMethod() {
@@ -1382,7 +1381,7 @@ private static final long serialVersionUID = 0L;
          * The HTTP method used to obtain authorization.
          * </pre>
          *
-         * <code>string http_method = 4;</code>
+         * <code>optional string http_method = 4;</code>
          * @param value The bytes for httpMethod to set.
          * @return This builder for chaining.
          */
@@ -1404,7 +1403,7 @@ private static final long serialVersionUID = 0L;
          * The HTTP request URL used to obtain authorization.
          * </pre>
          *
-         * <code>string http_request_url = 5;</code>
+         * <code>optional string http_request_url = 5;</code>
          * @return Whether the httpRequestUrl field is set.
          */
         public boolean hasHttpRequestUrl() {
@@ -1415,7 +1414,7 @@ private static final long serialVersionUID = 0L;
          * The HTTP request URL used to obtain authorization.
          * </pre>
          *
-         * <code>string http_request_url = 5;</code>
+         * <code>optional string http_request_url = 5;</code>
          * @return The httpRequestUrl.
          */
         public java.lang.String getHttpRequestUrl() {
@@ -1435,7 +1434,7 @@ private static final long serialVersionUID = 0L;
          * The HTTP request URL used to obtain authorization.
          * </pre>
          *
-         * <code>string http_request_url = 5;</code>
+         * <code>optional string http_request_url = 5;</code>
          * @return The bytes for httpRequestUrl.
          */
         public com.google.protobuf.ByteString
@@ -1456,7 +1455,7 @@ private static final long serialVersionUID = 0L;
          * The HTTP request URL used to obtain authorization.
          * </pre>
          *
-         * <code>string http_request_url = 5;</code>
+         * <code>optional string http_request_url = 5;</code>
          * @param value The httpRequestUrl to set.
          * @return This builder for chaining.
          */
@@ -1475,7 +1474,7 @@ private static final long serialVersionUID = 0L;
          * The HTTP request URL used to obtain authorization.
          * </pre>
          *
-         * <code>string http_request_url = 5;</code>
+         * <code>optional string http_request_url = 5;</code>
          * @return This builder for chaining.
          */
         public Builder clearHttpRequestUrl() {
@@ -1489,7 +1488,7 @@ private static final long serialVersionUID = 0L;
          * The HTTP request URL used to obtain authorization.
          * </pre>
          *
-         * <code>string http_request_url = 5;</code>
+         * <code>optional string http_request_url = 5;</code>
          * @param value The bytes for httpRequestUrl to set.
          * @return This builder for chaining.
          */
@@ -1511,7 +1510,7 @@ private static final long serialVersionUID = 0L;
          * The HTTP authorization header used to obtain authorization.
          * </pre>
          *
-         * <code>string http_authorization_header = 6;</code>
+         * <code>optional string http_authorization_header = 6;</code>
          * @return Whether the httpAuthorizationHeader field is set.
          */
         public boolean hasHttpAuthorizationHeader() {
@@ -1522,7 +1521,7 @@ private static final long serialVersionUID = 0L;
          * The HTTP authorization header used to obtain authorization.
          * </pre>
          *
-         * <code>string http_authorization_header = 6;</code>
+         * <code>optional string http_authorization_header = 6;</code>
          * @return The httpAuthorizationHeader.
          */
         public java.lang.String getHttpAuthorizationHeader() {
@@ -1542,7 +1541,7 @@ private static final long serialVersionUID = 0L;
          * The HTTP authorization header used to obtain authorization.
          * </pre>
          *
-         * <code>string http_authorization_header = 6;</code>
+         * <code>optional string http_authorization_header = 6;</code>
          * @return The bytes for httpAuthorizationHeader.
          */
         public com.google.protobuf.ByteString
@@ -1563,7 +1562,7 @@ private static final long serialVersionUID = 0L;
          * The HTTP authorization header used to obtain authorization.
          * </pre>
          *
-         * <code>string http_authorization_header = 6;</code>
+         * <code>optional string http_authorization_header = 6;</code>
          * @param value The httpAuthorizationHeader to set.
          * @return This builder for chaining.
          */
@@ -1582,7 +1581,7 @@ private static final long serialVersionUID = 0L;
          * The HTTP authorization header used to obtain authorization.
          * </pre>
          *
-         * <code>string http_authorization_header = 6;</code>
+         * <code>optional string http_authorization_header = 6;</code>
          * @return This builder for chaining.
          */
         public Builder clearHttpAuthorizationHeader() {
@@ -1596,7 +1595,7 @@ private static final long serialVersionUID = 0L;
          * The HTTP authorization header used to obtain authorization.
          * </pre>
          *
-         * <code>string http_authorization_header = 6;</code>
+         * <code>optional string http_authorization_header = 6;</code>
          * @param value The bytes for httpAuthorizationHeader to set.
          * @return This builder for chaining.
          */
@@ -1713,11 +1712,11 @@ private static final long serialVersionUID = 0L;
     private volatile java.lang.Object emailAddress_;
     /**
      * <pre>
-     * Email address of a Google My Business account or email address of a
-     * manager of the Google My Business account. Required.
+     * Email address of a Business Profile or email address of a
+     * manager of the Business Profile. Required.
      * </pre>
      *
-     * <code>string email_address = 7;</code>
+     * <code>optional string email_address = 7;</code>
      * @return Whether the emailAddress field is set.
      */
     @java.lang.Override
@@ -1726,11 +1725,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Email address of a Google My Business account or email address of a
-     * manager of the Google My Business account. Required.
+     * Email address of a Business Profile or email address of a
+     * manager of the Business Profile. Required.
      * </pre>
      *
-     * <code>string email_address = 7;</code>
+     * <code>optional string email_address = 7;</code>
      * @return The emailAddress.
      */
     @java.lang.Override
@@ -1748,11 +1747,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Email address of a Google My Business account or email address of a
-     * manager of the Google My Business account. Required.
+     * Email address of a Business Profile or email address of a
+     * manager of the Business Profile. Required.
      * </pre>
      *
-     * <code>string email_address = 7;</code>
+     * <code>optional string email_address = 7;</code>
      * @return The bytes for emailAddress.
      */
     @java.lang.Override
@@ -1826,12 +1825,12 @@ private static final long serialVersionUID = 0L;
     private volatile java.lang.Object businessNameFilter_;
     /**
      * <pre>
-     * Used to filter Google My Business listings by business name. If
+     * Used to filter Business Profile listings by business name. If
      * business_name_filter is set, only listings with a matching business name
      * are candidates to be sync'd into FeedItems.
      * </pre>
      *
-     * <code>string business_name_filter = 9;</code>
+     * <code>optional string business_name_filter = 9;</code>
      * @return Whether the businessNameFilter field is set.
      */
     @java.lang.Override
@@ -1840,12 +1839,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Used to filter Google My Business listings by business name. If
+     * Used to filter Business Profile listings by business name. If
      * business_name_filter is set, only listings with a matching business name
      * are candidates to be sync'd into FeedItems.
      * </pre>
      *
-     * <code>string business_name_filter = 9;</code>
+     * <code>optional string business_name_filter = 9;</code>
      * @return The businessNameFilter.
      */
     @java.lang.Override
@@ -1863,12 +1862,12 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Used to filter Google My Business listings by business name. If
+     * Used to filter Business Profile listings by business name. If
      * business_name_filter is set, only listings with a matching business name
      * are candidates to be sync'd into FeedItems.
      * </pre>
      *
-     * <code>string business_name_filter = 9;</code>
+     * <code>optional string business_name_filter = 9;</code>
      * @return The bytes for businessNameFilter.
      */
     @java.lang.Override
@@ -1890,7 +1889,7 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.LazyStringList categoryFilters_;
     /**
      * <pre>
-     * Used to filter Google My Business listings by categories. If entries
+     * Used to filter Business Profile listings by categories. If entries
      * exist in category_filters, only listings that belong to any of the
      * categories are candidates to be sync'd into FeedItems. If no entries
      * exist in category_filters, then all listings are candidates for syncing.
@@ -1905,7 +1904,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Used to filter Google My Business listings by categories. If entries
+     * Used to filter Business Profile listings by categories. If entries
      * exist in category_filters, only listings that belong to any of the
      * categories are candidates to be sync'd into FeedItems. If no entries
      * exist in category_filters, then all listings are candidates for syncing.
@@ -1919,7 +1918,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Used to filter Google My Business listings by categories. If entries
+     * Used to filter Business Profile listings by categories. If entries
      * exist in category_filters, only listings that belong to any of the
      * categories are candidates to be sync'd into FeedItems. If no entries
      * exist in category_filters, then all listings are candidates for syncing.
@@ -1934,7 +1933,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Used to filter Google My Business listings by categories. If entries
+     * Used to filter Business Profile listings by categories. If entries
      * exist in category_filters, only listings that belong to any of the
      * categories are candidates to be sync'd into FeedItems. If no entries
      * exist in category_filters, then all listings are candidates for syncing.
@@ -1953,7 +1952,7 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.LazyStringList labelFilters_;
     /**
      * <pre>
-     * Used to filter Google My Business listings by labels. If entries exist in
+     * Used to filter Business Profile listings by labels. If entries exist in
      * label_filters, only listings that has any of the labels set are
      * candidates to be synchronized into FeedItems. If no entries exist in
      * label_filters, then all listings are candidates for syncing.
@@ -1968,7 +1967,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Used to filter Google My Business listings by labels. If entries exist in
+     * Used to filter Business Profile listings by labels. If entries exist in
      * label_filters, only listings that has any of the labels set are
      * candidates to be synchronized into FeedItems. If no entries exist in
      * label_filters, then all listings are candidates for syncing.
@@ -1982,7 +1981,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Used to filter Google My Business listings by labels. If entries exist in
+     * Used to filter Business Profile listings by labels. If entries exist in
      * label_filters, only listings that has any of the labels set are
      * candidates to be synchronized into FeedItems. If no entries exist in
      * label_filters, then all listings are candidates for syncing.
@@ -1997,7 +1996,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Used to filter Google My Business listings by labels. If entries exist in
+     * Used to filter Business Profile listings by labels. If entries exist in
      * label_filters, only listings that has any of the labels set are
      * candidates to be synchronized into FeedItems. If no entries exist in
      * label_filters, then all listings are candidates for syncing.
@@ -2032,7 +2031,7 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000001) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 7, emailAddress_);
       }
-      if (!getBusinessAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(businessAccountId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, businessAccountId_);
       }
       if (((bitField0_ & 0x00000002) != 0)) {
@@ -2060,7 +2059,7 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, emailAddress_);
       }
-      if (!getBusinessAccountIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(businessAccountId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, businessAccountId_);
       }
       if (((bitField0_ & 0x00000002) != 0)) {
@@ -2248,8 +2247,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Data used to configure a location feed populated from Google My Business
-     * Locations.
+     * Data used to configure a location feed populated from Business Profile.
      * </pre>
      *
      * Protobuf type {@code google.ads.googleads.v7.resources.Feed.PlacesLocationFeedData}
@@ -2649,11 +2647,11 @@ private static final long serialVersionUID = 0L;
       private java.lang.Object emailAddress_ = "";
       /**
        * <pre>
-       * Email address of a Google My Business account or email address of a
-       * manager of the Google My Business account. Required.
+       * Email address of a Business Profile or email address of a
+       * manager of the Business Profile. Required.
        * </pre>
        *
-       * <code>string email_address = 7;</code>
+       * <code>optional string email_address = 7;</code>
        * @return Whether the emailAddress field is set.
        */
       public boolean hasEmailAddress() {
@@ -2661,11 +2659,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Email address of a Google My Business account or email address of a
-       * manager of the Google My Business account. Required.
+       * Email address of a Business Profile or email address of a
+       * manager of the Business Profile. Required.
        * </pre>
        *
-       * <code>string email_address = 7;</code>
+       * <code>optional string email_address = 7;</code>
        * @return The emailAddress.
        */
       public java.lang.String getEmailAddress() {
@@ -2682,11 +2680,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Email address of a Google My Business account or email address of a
-       * manager of the Google My Business account. Required.
+       * Email address of a Business Profile or email address of a
+       * manager of the Business Profile. Required.
        * </pre>
        *
-       * <code>string email_address = 7;</code>
+       * <code>optional string email_address = 7;</code>
        * @return The bytes for emailAddress.
        */
       public com.google.protobuf.ByteString
@@ -2704,11 +2702,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Email address of a Google My Business account or email address of a
-       * manager of the Google My Business account. Required.
+       * Email address of a Business Profile or email address of a
+       * manager of the Business Profile. Required.
        * </pre>
        *
-       * <code>string email_address = 7;</code>
+       * <code>optional string email_address = 7;</code>
        * @param value The emailAddress to set.
        * @return This builder for chaining.
        */
@@ -2724,11 +2722,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Email address of a Google My Business account or email address of a
-       * manager of the Google My Business account. Required.
+       * Email address of a Business Profile or email address of a
+       * manager of the Business Profile. Required.
        * </pre>
        *
-       * <code>string email_address = 7;</code>
+       * <code>optional string email_address = 7;</code>
        * @return This builder for chaining.
        */
       public Builder clearEmailAddress() {
@@ -2739,11 +2737,11 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Email address of a Google My Business account or email address of a
-       * manager of the Google My Business account. Required.
+       * Email address of a Business Profile or email address of a
+       * manager of the Business Profile. Required.
        * </pre>
        *
-       * <code>string email_address = 7;</code>
+       * <code>optional string email_address = 7;</code>
        * @param value The bytes for emailAddress to set.
        * @return This builder for chaining.
        */
@@ -2873,12 +2871,12 @@ private static final long serialVersionUID = 0L;
       private java.lang.Object businessNameFilter_ = "";
       /**
        * <pre>
-       * Used to filter Google My Business listings by business name. If
+       * Used to filter Business Profile listings by business name. If
        * business_name_filter is set, only listings with a matching business name
        * are candidates to be sync'd into FeedItems.
        * </pre>
        *
-       * <code>string business_name_filter = 9;</code>
+       * <code>optional string business_name_filter = 9;</code>
        * @return Whether the businessNameFilter field is set.
        */
       public boolean hasBusinessNameFilter() {
@@ -2886,12 +2884,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to filter Google My Business listings by business name. If
+       * Used to filter Business Profile listings by business name. If
        * business_name_filter is set, only listings with a matching business name
        * are candidates to be sync'd into FeedItems.
        * </pre>
        *
-       * <code>string business_name_filter = 9;</code>
+       * <code>optional string business_name_filter = 9;</code>
        * @return The businessNameFilter.
        */
       public java.lang.String getBusinessNameFilter() {
@@ -2908,12 +2906,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to filter Google My Business listings by business name. If
+       * Used to filter Business Profile listings by business name. If
        * business_name_filter is set, only listings with a matching business name
        * are candidates to be sync'd into FeedItems.
        * </pre>
        *
-       * <code>string business_name_filter = 9;</code>
+       * <code>optional string business_name_filter = 9;</code>
        * @return The bytes for businessNameFilter.
        */
       public com.google.protobuf.ByteString
@@ -2931,12 +2929,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to filter Google My Business listings by business name. If
+       * Used to filter Business Profile listings by business name. If
        * business_name_filter is set, only listings with a matching business name
        * are candidates to be sync'd into FeedItems.
        * </pre>
        *
-       * <code>string business_name_filter = 9;</code>
+       * <code>optional string business_name_filter = 9;</code>
        * @param value The businessNameFilter to set.
        * @return This builder for chaining.
        */
@@ -2952,12 +2950,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to filter Google My Business listings by business name. If
+       * Used to filter Business Profile listings by business name. If
        * business_name_filter is set, only listings with a matching business name
        * are candidates to be sync'd into FeedItems.
        * </pre>
        *
-       * <code>string business_name_filter = 9;</code>
+       * <code>optional string business_name_filter = 9;</code>
        * @return This builder for chaining.
        */
       public Builder clearBusinessNameFilter() {
@@ -2968,12 +2966,12 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to filter Google My Business listings by business name. If
+       * Used to filter Business Profile listings by business name. If
        * business_name_filter is set, only listings with a matching business name
        * are candidates to be sync'd into FeedItems.
        * </pre>
        *
-       * <code>string business_name_filter = 9;</code>
+       * <code>optional string business_name_filter = 9;</code>
        * @param value The bytes for businessNameFilter to set.
        * @return This builder for chaining.
        */
@@ -2998,7 +2996,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to filter Google My Business listings by categories. If entries
+       * Used to filter Business Profile listings by categories. If entries
        * exist in category_filters, only listings that belong to any of the
        * categories are candidates to be sync'd into FeedItems. If no entries
        * exist in category_filters, then all listings are candidates for syncing.
@@ -3013,7 +3011,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to filter Google My Business listings by categories. If entries
+       * Used to filter Business Profile listings by categories. If entries
        * exist in category_filters, only listings that belong to any of the
        * categories are candidates to be sync'd into FeedItems. If no entries
        * exist in category_filters, then all listings are candidates for syncing.
@@ -3027,7 +3025,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to filter Google My Business listings by categories. If entries
+       * Used to filter Business Profile listings by categories. If entries
        * exist in category_filters, only listings that belong to any of the
        * categories are candidates to be sync'd into FeedItems. If no entries
        * exist in category_filters, then all listings are candidates for syncing.
@@ -3042,7 +3040,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to filter Google My Business listings by categories. If entries
+       * Used to filter Business Profile listings by categories. If entries
        * exist in category_filters, only listings that belong to any of the
        * categories are candidates to be sync'd into FeedItems. If no entries
        * exist in category_filters, then all listings are candidates for syncing.
@@ -3058,7 +3056,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to filter Google My Business listings by categories. If entries
+       * Used to filter Business Profile listings by categories. If entries
        * exist in category_filters, only listings that belong to any of the
        * categories are candidates to be sync'd into FeedItems. If no entries
        * exist in category_filters, then all listings are candidates for syncing.
@@ -3081,7 +3079,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to filter Google My Business listings by categories. If entries
+       * Used to filter Business Profile listings by categories. If entries
        * exist in category_filters, only listings that belong to any of the
        * categories are candidates to be sync'd into FeedItems. If no entries
        * exist in category_filters, then all listings are candidates for syncing.
@@ -3103,7 +3101,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to filter Google My Business listings by categories. If entries
+       * Used to filter Business Profile listings by categories. If entries
        * exist in category_filters, only listings that belong to any of the
        * categories are candidates to be sync'd into FeedItems. If no entries
        * exist in category_filters, then all listings are candidates for syncing.
@@ -3123,7 +3121,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to filter Google My Business listings by categories. If entries
+       * Used to filter Business Profile listings by categories. If entries
        * exist in category_filters, only listings that belong to any of the
        * categories are candidates to be sync'd into FeedItems. If no entries
        * exist in category_filters, then all listings are candidates for syncing.
@@ -3140,7 +3138,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to filter Google My Business listings by categories. If entries
+       * Used to filter Business Profile listings by categories. If entries
        * exist in category_filters, only listings that belong to any of the
        * categories are candidates to be sync'd into FeedItems. If no entries
        * exist in category_filters, then all listings are candidates for syncing.
@@ -3171,7 +3169,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to filter Google My Business listings by labels. If entries exist in
+       * Used to filter Business Profile listings by labels. If entries exist in
        * label_filters, only listings that has any of the labels set are
        * candidates to be synchronized into FeedItems. If no entries exist in
        * label_filters, then all listings are candidates for syncing.
@@ -3186,7 +3184,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to filter Google My Business listings by labels. If entries exist in
+       * Used to filter Business Profile listings by labels. If entries exist in
        * label_filters, only listings that has any of the labels set are
        * candidates to be synchronized into FeedItems. If no entries exist in
        * label_filters, then all listings are candidates for syncing.
@@ -3200,7 +3198,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to filter Google My Business listings by labels. If entries exist in
+       * Used to filter Business Profile listings by labels. If entries exist in
        * label_filters, only listings that has any of the labels set are
        * candidates to be synchronized into FeedItems. If no entries exist in
        * label_filters, then all listings are candidates for syncing.
@@ -3215,7 +3213,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to filter Google My Business listings by labels. If entries exist in
+       * Used to filter Business Profile listings by labels. If entries exist in
        * label_filters, only listings that has any of the labels set are
        * candidates to be synchronized into FeedItems. If no entries exist in
        * label_filters, then all listings are candidates for syncing.
@@ -3231,7 +3229,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to filter Google My Business listings by labels. If entries exist in
+       * Used to filter Business Profile listings by labels. If entries exist in
        * label_filters, only listings that has any of the labels set are
        * candidates to be synchronized into FeedItems. If no entries exist in
        * label_filters, then all listings are candidates for syncing.
@@ -3254,7 +3252,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to filter Google My Business listings by labels. If entries exist in
+       * Used to filter Business Profile listings by labels. If entries exist in
        * label_filters, only listings that has any of the labels set are
        * candidates to be synchronized into FeedItems. If no entries exist in
        * label_filters, then all listings are candidates for syncing.
@@ -3276,7 +3274,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to filter Google My Business listings by labels. If entries exist in
+       * Used to filter Business Profile listings by labels. If entries exist in
        * label_filters, only listings that has any of the labels set are
        * candidates to be synchronized into FeedItems. If no entries exist in
        * label_filters, then all listings are candidates for syncing.
@@ -3296,7 +3294,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to filter Google My Business listings by labels. If entries exist in
+       * Used to filter Business Profile listings by labels. If entries exist in
        * label_filters, only listings that has any of the labels set are
        * candidates to be synchronized into FeedItems. If no entries exist in
        * label_filters, then all listings are candidates for syncing.
@@ -3313,7 +3311,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Used to filter Google My Business listings by labels. If entries exist in
+       * Used to filter Business Profile listings by labels. If entries exist in
        * label_filters, only listings that has any of the labels set are
        * candidates to be synchronized into FeedItems. If no entries exist in
        * label_filters, then all listings are candidates for syncing.
@@ -4320,7 +4318,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   @java.lang.Override
@@ -4333,7 +4331,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   @java.lang.Override
@@ -4348,7 +4346,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. Name of the feed. Required.
    * </pre>
    *
-   * <code>string name = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string name = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the name field is set.
    */
   @java.lang.Override
@@ -4360,7 +4358,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. Name of the feed. Required.
    * </pre>
    *
-   * <code>string name = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string name = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The name.
    */
   @java.lang.Override
@@ -4381,7 +4379,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. Name of the feed. Required.
    * </pre>
    *
-   * <code>string name = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string name = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The bytes for name.
    */
   @java.lang.Override
@@ -4598,8 +4596,7 @@ private static final long serialVersionUID = 0L;
   public static final int PLACES_LOCATION_FEED_DATA_FIELD_NUMBER = 6;
   /**
    * <pre>
-   * Data used to configure a location feed populated from Google My Business
-   * Locations.
+   * Data used to configure a location feed populated from Business Profile.
    * </pre>
    *
    * <code>.google.ads.googleads.v7.resources.Feed.PlacesLocationFeedData places_location_feed_data = 6;</code>
@@ -4611,8 +4608,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Data used to configure a location feed populated from Google My Business
-   * Locations.
+   * Data used to configure a location feed populated from Business Profile.
    * </pre>
    *
    * <code>.google.ads.googleads.v7.resources.Feed.PlacesLocationFeedData places_location_feed_data = 6;</code>
@@ -4627,8 +4623,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Data used to configure a location feed populated from Google My Business
-   * Locations.
+   * Data used to configure a location feed populated from Business Profile.
    * </pre>
    *
    * <code>.google.ads.googleads.v7.resources.Feed.PlacesLocationFeedData places_location_feed_data = 6;</code>
@@ -4701,7 +4696,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     for (int i = 0; i < attributes_.size(); i++) {
@@ -4737,7 +4732,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     for (int i = 0; i < attributes_.size(); i++) {
@@ -5388,7 +5383,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the id field is set.
      */
     @java.lang.Override
@@ -5401,7 +5396,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The id.
      */
     @java.lang.Override
@@ -5414,7 +5409,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
@@ -5430,7 +5425,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {
@@ -5446,7 +5441,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. Name of the feed. Required.
      * </pre>
      *
-     * <code>string name = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string name = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the name field is set.
      */
     public boolean hasName() {
@@ -5457,7 +5452,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. Name of the feed. Required.
      * </pre>
      *
-     * <code>string name = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string name = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The name.
      */
     public java.lang.String getName() {
@@ -5477,7 +5472,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. Name of the feed. Required.
      * </pre>
      *
-     * <code>string name = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string name = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
@@ -5498,7 +5493,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. Name of the feed. Required.
      * </pre>
      *
-     * <code>string name = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string name = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @param value The name to set.
      * @return This builder for chaining.
      */
@@ -5517,7 +5512,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. Name of the feed. Required.
      * </pre>
      *
-     * <code>string name = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string name = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
@@ -5531,7 +5526,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. Name of the feed. Required.
      * </pre>
      *
-     * <code>string name = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional string name = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
@@ -6400,8 +6395,7 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v7.resources.Feed.PlacesLocationFeedData, com.google.ads.googleads.v7.resources.Feed.PlacesLocationFeedData.Builder, com.google.ads.googleads.v7.resources.Feed.PlacesLocationFeedDataOrBuilder> placesLocationFeedDataBuilder_;
     /**
      * <pre>
-     * Data used to configure a location feed populated from Google My Business
-     * Locations.
+     * Data used to configure a location feed populated from Business Profile.
      * </pre>
      *
      * <code>.google.ads.googleads.v7.resources.Feed.PlacesLocationFeedData places_location_feed_data = 6;</code>
@@ -6413,8 +6407,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Data used to configure a location feed populated from Google My Business
-     * Locations.
+     * Data used to configure a location feed populated from Business Profile.
      * </pre>
      *
      * <code>.google.ads.googleads.v7.resources.Feed.PlacesLocationFeedData places_location_feed_data = 6;</code>
@@ -6436,8 +6429,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Data used to configure a location feed populated from Google My Business
-     * Locations.
+     * Data used to configure a location feed populated from Business Profile.
      * </pre>
      *
      * <code>.google.ads.googleads.v7.resources.Feed.PlacesLocationFeedData places_location_feed_data = 6;</code>
@@ -6457,8 +6449,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Data used to configure a location feed populated from Google My Business
-     * Locations.
+     * Data used to configure a location feed populated from Business Profile.
      * </pre>
      *
      * <code>.google.ads.googleads.v7.resources.Feed.PlacesLocationFeedData places_location_feed_data = 6;</code>
@@ -6476,8 +6467,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Data used to configure a location feed populated from Google My Business
-     * Locations.
+     * Data used to configure a location feed populated from Business Profile.
      * </pre>
      *
      * <code>.google.ads.googleads.v7.resources.Feed.PlacesLocationFeedData places_location_feed_data = 6;</code>
@@ -6503,8 +6493,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Data used to configure a location feed populated from Google My Business
-     * Locations.
+     * Data used to configure a location feed populated from Business Profile.
      * </pre>
      *
      * <code>.google.ads.googleads.v7.resources.Feed.PlacesLocationFeedData places_location_feed_data = 6;</code>
@@ -6527,8 +6516,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Data used to configure a location feed populated from Google My Business
-     * Locations.
+     * Data used to configure a location feed populated from Business Profile.
      * </pre>
      *
      * <code>.google.ads.googleads.v7.resources.Feed.PlacesLocationFeedData places_location_feed_data = 6;</code>
@@ -6538,8 +6526,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Data used to configure a location feed populated from Google My Business
-     * Locations.
+     * Data used to configure a location feed populated from Business Profile.
      * </pre>
      *
      * <code>.google.ads.googleads.v7.resources.Feed.PlacesLocationFeedData places_location_feed_data = 6;</code>
@@ -6557,8 +6544,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Data used to configure a location feed populated from Google My Business
-     * Locations.
+     * Data used to configure a location feed populated from Business Profile.
      * </pre>
      *
      * <code>.google.ads.googleads.v7.resources.Feed.PlacesLocationFeedData places_location_feed_data = 6;</code>

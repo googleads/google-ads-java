@@ -36,7 +36,7 @@ public interface CampaignCriterionSimulationOrBuilder extends
    * Output only. Campaign ID of the simulation.
    * </pre>
    *
-   * <code>int64 campaign_id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 campaign_id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the campaignId field is set.
    */
   boolean hasCampaignId();
@@ -45,7 +45,7 @@ public interface CampaignCriterionSimulationOrBuilder extends
    * Output only. Campaign ID of the simulation.
    * </pre>
    *
-   * <code>int64 campaign_id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 campaign_id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The campaignId.
    */
   long getCampaignId();
@@ -55,7 +55,7 @@ public interface CampaignCriterionSimulationOrBuilder extends
    * Output only. Criterion ID of the simulation.
    * </pre>
    *
-   * <code>int64 criterion_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 criterion_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the criterionId field is set.
    */
   boolean hasCriterionId();
@@ -64,7 +64,7 @@ public interface CampaignCriterionSimulationOrBuilder extends
    * Output only. Criterion ID of the simulation.
    * </pre>
    *
-   * <code>int64 criterion_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 criterion_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The criterionId.
    */
   long getCriterionId();
@@ -112,7 +112,7 @@ public interface CampaignCriterionSimulationOrBuilder extends
    * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
    * </pre>
    *
-   * <code>string start_date = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string start_date = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the startDate field is set.
    */
   boolean hasStartDate();
@@ -121,7 +121,7 @@ public interface CampaignCriterionSimulationOrBuilder extends
    * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
    * </pre>
    *
-   * <code>string start_date = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string start_date = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The startDate.
    */
   java.lang.String getStartDate();
@@ -130,7 +130,7 @@ public interface CampaignCriterionSimulationOrBuilder extends
    * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
    * </pre>
    *
-   * <code>string start_date = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string start_date = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for startDate.
    */
   com.google.protobuf.ByteString
@@ -141,7 +141,7 @@ public interface CampaignCriterionSimulationOrBuilder extends
    * Output only. Last day on which the simulation is based, in YYYY-MM-DD format.
    * </pre>
    *
-   * <code>string end_date = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string end_date = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the endDate field is set.
    */
   boolean hasEndDate();
@@ -150,7 +150,7 @@ public interface CampaignCriterionSimulationOrBuilder extends
    * Output only. Last day on which the simulation is based, in YYYY-MM-DD format.
    * </pre>
    *
-   * <code>string end_date = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string end_date = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The endDate.
    */
   java.lang.String getEndDate();
@@ -159,7 +159,7 @@ public interface CampaignCriterionSimulationOrBuilder extends
    * Output only. Last day on which the simulation is based, in YYYY-MM-DD format.
    * </pre>
    *
-   * <code>string end_date = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string end_date = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for endDate.
    */
   com.google.protobuf.ByteString

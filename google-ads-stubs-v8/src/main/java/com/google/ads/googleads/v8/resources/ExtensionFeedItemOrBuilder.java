@@ -36,7 +36,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * Output only. The ID of this feed item. Read-only.
    * </pre>
    *
-   * <code>int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -45,7 +45,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * Output only. The ID of this feed item. Read-only.
    * </pre>
    *
-   * <code>int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   long getId();
@@ -79,7 +79,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
    *
-   * <code>string start_date_time = 26;</code>
+   * <code>optional string start_date_time = 26;</code>
    * @return Whether the startDateTime field is set.
    */
   boolean hasStartDateTime();
@@ -91,7 +91,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
    *
-   * <code>string start_date_time = 26;</code>
+   * <code>optional string start_date_time = 26;</code>
    * @return The startDateTime.
    */
   java.lang.String getStartDateTime();
@@ -103,7 +103,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
    *
-   * <code>string start_date_time = 26;</code>
+   * <code>optional string start_date_time = 26;</code>
    * @return The bytes for startDateTime.
    */
   com.google.protobuf.ByteString
@@ -117,7 +117,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
    *
-   * <code>string end_date_time = 27;</code>
+   * <code>optional string end_date_time = 27;</code>
    * @return Whether the endDateTime field is set.
    */
   boolean hasEndDateTime();
@@ -129,7 +129,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
    *
-   * <code>string end_date_time = 27;</code>
+   * <code>optional string end_date_time = 27;</code>
    * @return The endDateTime.
    */
   java.lang.String getEndDateTime();
@@ -141,7 +141,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
    *
-   * <code>string end_date_time = 27;</code>
+   * <code>optional string end_date_time = 27;</code>
    * @return The bytes for endDateTime.
    */
   com.google.protobuf.ByteString
@@ -225,7 +225,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * The targeted geo target constant.
    * </pre>
    *
-   * <code>string targeted_geo_target_constant = 30 [(.google.api.resource_reference) = { ... }</code>
+   * <code>optional string targeted_geo_target_constant = 30 [(.google.api.resource_reference) = { ... }</code>
    * @return Whether the targetedGeoTargetConstant field is set.
    */
   boolean hasTargetedGeoTargetConstant();
@@ -234,7 +234,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * The targeted geo target constant.
    * </pre>
    *
-   * <code>string targeted_geo_target_constant = 30 [(.google.api.resource_reference) = { ... }</code>
+   * <code>optional string targeted_geo_target_constant = 30 [(.google.api.resource_reference) = { ... }</code>
    * @return The targetedGeoTargetConstant.
    */
   java.lang.String getTargetedGeoTargetConstant();
@@ -243,7 +243,7 @@ public interface ExtensionFeedItemOrBuilder extends
    * The targeted geo target constant.
    * </pre>
    *
-   * <code>string targeted_geo_target_constant = 30 [(.google.api.resource_reference) = { ... }</code>
+   * <code>optional string targeted_geo_target_constant = 30 [(.google.api.resource_reference) = { ... }</code>
    * @return The bytes for targetedGeoTargetConstant.
    */
   com.google.protobuf.ByteString
@@ -515,8 +515,8 @@ public interface ExtensionFeedItemOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Location extension. Locations are synced from a GMB account into a feed.
-   * This field is read-only.
+   * Output only. Location extension. Locations are synced from a Business Profile into a
+   * feed. This field is read-only.
    * </pre>
    *
    * <code>.google.ads.googleads.v8.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -525,8 +525,8 @@ public interface ExtensionFeedItemOrBuilder extends
   boolean hasLocationFeedItem();
   /**
    * <pre>
-   * Output only. Location extension. Locations are synced from a GMB account into a feed.
-   * This field is read-only.
+   * Output only. Location extension. Locations are synced from a Business Profile into a
+   * feed. This field is read-only.
    * </pre>
    *
    * <code>.google.ads.googleads.v8.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -535,8 +535,8 @@ public interface ExtensionFeedItemOrBuilder extends
   com.google.ads.googleads.v8.common.LocationFeedItem getLocationFeedItem();
   /**
    * <pre>
-   * Output only. Location extension. Locations are synced from a GMB account into a feed.
-   * This field is read-only.
+   * Output only. Location extension. Locations are synced from a Business Profile into a
+   * feed. This field is read-only.
    * </pre>
    *
    * <code>.google.ads.googleads.v8.common.LocationFeedItem location_feed_item = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

@@ -114,7 +114,7 @@ private static final long serialVersionUID = 0L;
    * `customers/{customer_id}/keywordPlanCampaigns/{keyword_plan_campaign_id}`
    * </pre>
    *
-   * <code>string keyword_plan_campaign = 1;</code>
+   * <code>optional string keyword_plan_campaign = 1;</code>
    * @return Whether the keywordPlanCampaign field is set.
    */
   @java.lang.Override
@@ -127,7 +127,7 @@ private static final long serialVersionUID = 0L;
    * `customers/{customer_id}/keywordPlanCampaigns/{keyword_plan_campaign_id}`
    * </pre>
    *
-   * <code>string keyword_plan_campaign = 1;</code>
+   * <code>optional string keyword_plan_campaign = 1;</code>
    * @return The keywordPlanCampaign.
    */
   @java.lang.Override
@@ -149,7 +149,7 @@ private static final long serialVersionUID = 0L;
    * `customers/{customer_id}/keywordPlanCampaigns/{keyword_plan_campaign_id}`
    * </pre>
    *
-   * <code>string keyword_plan_campaign = 1;</code>
+   * <code>optional string keyword_plan_campaign = 1;</code>
    * @return The bytes for keywordPlanCampaign.
    */
   @java.lang.Override
@@ -608,7 +608,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/keywordPlanCampaigns/{keyword_plan_campaign_id}`
      * </pre>
      *
-     * <code>string keyword_plan_campaign = 1;</code>
+     * <code>optional string keyword_plan_campaign = 1;</code>
      * @return Whether the keywordPlanCampaign field is set.
      */
     public boolean hasKeywordPlanCampaign() {
@@ -620,7 +620,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/keywordPlanCampaigns/{keyword_plan_campaign_id}`
      * </pre>
      *
-     * <code>string keyword_plan_campaign = 1;</code>
+     * <code>optional string keyword_plan_campaign = 1;</code>
      * @return The keywordPlanCampaign.
      */
     public java.lang.String getKeywordPlanCampaign() {
@@ -641,7 +641,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/keywordPlanCampaigns/{keyword_plan_campaign_id}`
      * </pre>
      *
-     * <code>string keyword_plan_campaign = 1;</code>
+     * <code>optional string keyword_plan_campaign = 1;</code>
      * @return The bytes for keywordPlanCampaign.
      */
     public com.google.protobuf.ByteString
@@ -663,7 +663,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/keywordPlanCampaigns/{keyword_plan_campaign_id}`
      * </pre>
      *
-     * <code>string keyword_plan_campaign = 1;</code>
+     * <code>optional string keyword_plan_campaign = 1;</code>
      * @param value The keywordPlanCampaign to set.
      * @return This builder for chaining.
      */
@@ -683,7 +683,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/keywordPlanCampaigns/{keyword_plan_campaign_id}`
      * </pre>
      *
-     * <code>string keyword_plan_campaign = 1;</code>
+     * <code>optional string keyword_plan_campaign = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearKeywordPlanCampaign() {
@@ -698,7 +698,7 @@ private static final long serialVersionUID = 0L;
      * `customers/{customer_id}/keywordPlanCampaigns/{keyword_plan_campaign_id}`
      * </pre>
      *
-     * <code>string keyword_plan_campaign = 1;</code>
+     * <code>optional string keyword_plan_campaign = 1;</code>
      * @param value The bytes for keywordPlanCampaign to set.
      * @return This builder for chaining.
      */

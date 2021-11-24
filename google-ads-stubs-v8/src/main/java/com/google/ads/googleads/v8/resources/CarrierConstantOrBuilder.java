@@ -36,7 +36,7 @@ public interface CarrierConstantOrBuilder extends
    * Output only. The ID of the carrier criterion.
    * </pre>
    *
-   * <code>int64 id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -45,7 +45,7 @@ public interface CarrierConstantOrBuilder extends
    * Output only. The ID of the carrier criterion.
    * </pre>
    *
-   * <code>int64 id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   long getId();
@@ -55,7 +55,7 @@ public interface CarrierConstantOrBuilder extends
    * Output only. The full name of the carrier in English.
    * </pre>
    *
-   * <code>string name = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the name field is set.
    */
   boolean hasName();
@@ -64,7 +64,7 @@ public interface CarrierConstantOrBuilder extends
    * Output only. The full name of the carrier in English.
    * </pre>
    *
-   * <code>string name = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The name.
    */
   java.lang.String getName();
@@ -73,7 +73,7 @@ public interface CarrierConstantOrBuilder extends
    * Output only. The full name of the carrier in English.
    * </pre>
    *
-   * <code>string name = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
@@ -85,7 +85,7 @@ public interface CarrierConstantOrBuilder extends
    * "FR", etc.
    * </pre>
    *
-   * <code>string country_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string country_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the countryCode field is set.
    */
   boolean hasCountryCode();
@@ -95,7 +95,7 @@ public interface CarrierConstantOrBuilder extends
    * "FR", etc.
    * </pre>
    *
-   * <code>string country_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string country_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The countryCode.
    */
   java.lang.String getCountryCode();
@@ -105,7 +105,7 @@ public interface CarrierConstantOrBuilder extends
    * "FR", etc.
    * </pre>
    *
-   * <code>string country_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string country_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for countryCode.
    */
   com.google.protobuf.ByteString

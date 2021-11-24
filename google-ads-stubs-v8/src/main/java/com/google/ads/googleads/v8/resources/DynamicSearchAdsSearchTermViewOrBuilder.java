@@ -37,7 +37,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>string search_term = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string search_term = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the searchTerm field is set.
    */
   boolean hasSearchTerm();
@@ -47,7 +47,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>string search_term = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string search_term = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The searchTerm.
    */
   java.lang.String getSearchTerm();
@@ -57,7 +57,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>string search_term = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string search_term = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for searchTerm.
    */
   com.google.protobuf.ByteString
@@ -69,7 +69,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>string headline = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string headline = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the headline field is set.
    */
   boolean hasHeadline();
@@ -79,7 +79,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>string headline = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string headline = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The headline.
    */
   java.lang.String getHeadline();
@@ -89,7 +89,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>string headline = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string headline = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for headline.
    */
   com.google.protobuf.ByteString
@@ -101,7 +101,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>string landing_page = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string landing_page = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the landingPage field is set.
    */
   boolean hasLandingPage();
@@ -111,7 +111,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>string landing_page = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string landing_page = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The landingPage.
    */
   java.lang.String getLandingPage();
@@ -121,7 +121,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>string landing_page = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string landing_page = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for landingPage.
    */
   com.google.protobuf.ByteString
@@ -133,7 +133,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>string page_url = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string page_url = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the pageUrl field is set.
    */
   boolean hasPageUrl();
@@ -143,7 +143,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>string page_url = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string page_url = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The pageUrl.
    */
   java.lang.String getPageUrl();
@@ -153,7 +153,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>string page_url = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string page_url = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for pageUrl.
    */
   com.google.protobuf.ByteString
@@ -165,7 +165,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>bool has_negative_keyword = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool has_negative_keyword = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the hasNegativeKeyword field is set.
    */
   boolean hasHasNegativeKeyword();
@@ -175,7 +175,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>bool has_negative_keyword = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool has_negative_keyword = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The hasNegativeKeyword.
    */
   boolean getHasNegativeKeyword();
@@ -186,7 +186,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>bool has_matching_keyword = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool has_matching_keyword = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the hasMatchingKeyword field is set.
    */
   boolean hasHasMatchingKeyword();
@@ -196,7 +196,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>bool has_matching_keyword = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool has_matching_keyword = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The hasMatchingKeyword.
    */
   boolean getHasMatchingKeyword();
@@ -207,7 +207,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>bool has_negative_url = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool has_negative_url = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the hasNegativeUrl field is set.
    */
   boolean hasHasNegativeUrl();
@@ -217,7 +217,7 @@ public interface DynamicSearchAdsSearchTermViewOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>bool has_negative_url = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool has_negative_url = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The hasNegativeUrl.
    */
   boolean getHasNegativeUrl();

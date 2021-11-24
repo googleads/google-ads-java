@@ -14,8 +14,8 @@
 
 package com.google.ads.googleads.v7.services;
 
-import com.google.ads.googleads.lib.catalog.annotation.ServiceClientDescriptor;
-import com.google.ads.googleads.annotations.api.VersionDescriptor;
+import com.google.ads.googleads.lib.stubs.annotations.ServiceClientDescriptor;
+import com.google.ads.googleads.lib.stubs.annotations.VersionDescriptor;
 import com.google.ads.googleads.v7.errors.GoogleAdsException;
 
 @VersionDescriptor(versionName = "v7",

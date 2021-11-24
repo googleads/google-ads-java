@@ -1258,7 +1258,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!getBusinessNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(businessName_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, businessName_);
       }
       unknownFields.writeTo(output);
@@ -1270,7 +1270,7 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (!getBusinessNameBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(businessName_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, businessName_);
       }
       size += unknownFields.getSerializedSize();
@@ -2045,11 +2045,11 @@ private static final long serialVersionUID = 0L;
   public static final int BUSINESS_LOCATION_ID_FIELD_NUMBER = 2;
   /**
    * <pre>
-   * Optional. The ID of the Google My Business (GMB) Location.
-   * The location ID can be fetched by GMB API with its form:
+   * Optional. The ID of the Business Profile location.
+   * The location ID can be fetched by Business Profile API with its form:
    * accounts/{accountId}/locations/{locationId}. The last {locationId}
-   * component from the GMB API represents the business_location_id.
-   * See the [Google My Business API]
+   * component from the Business Profile API represents the
+   * business_location_id. See the [Business Profile API]
    * (https://developers.google.com/my-business/reference/rest/v4/accounts.locations)
    * </pre>
    *
@@ -2062,11 +2062,11 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Optional. The ID of the Google My Business (GMB) Location.
-   * The location ID can be fetched by GMB API with its form:
+   * Optional. The ID of the Business Profile location.
+   * The location ID can be fetched by Business Profile API with its form:
    * accounts/{accountId}/locations/{locationId}. The last {locationId}
-   * component from the GMB API represents the business_location_id.
-   * See the [Google My Business API]
+   * component from the Business Profile API represents the
+   * business_location_id. See the [Business Profile API]
    * (https://developers.google.com/my-business/reference/rest/v4/accounts.locations)
    * </pre>
    *
@@ -2181,14 +2181,14 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getFinalUrlBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(finalUrl_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, finalUrl_);
     }
     if (businessSettingCase_ == 2) {
       output.writeInt64(
           2, (long)((java.lang.Long) businessSetting_));
     }
-    if (!getLanguageCodeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(languageCode_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, languageCode_);
     }
     if (geoTargetCase_ == 4) {
@@ -2215,7 +2215,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getFinalUrlBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(finalUrl_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, finalUrl_);
     }
     if (businessSettingCase_ == 2) {
@@ -2223,7 +2223,7 @@ private static final long serialVersionUID = 0L;
         .computeInt64Size(
             2, (long)((java.lang.Long) businessSetting_));
     }
-    if (!getLanguageCodeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(languageCode_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, languageCode_);
     }
     if (geoTargetCase_ == 4) {
@@ -3788,11 +3788,11 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Optional. The ID of the Google My Business (GMB) Location.
-     * The location ID can be fetched by GMB API with its form:
+     * Optional. The ID of the Business Profile location.
+     * The location ID can be fetched by Business Profile API with its form:
      * accounts/{accountId}/locations/{locationId}. The last {locationId}
-     * component from the GMB API represents the business_location_id.
-     * See the [Google My Business API]
+     * component from the Business Profile API represents the
+     * business_location_id. See the [Business Profile API]
      * (https://developers.google.com/my-business/reference/rest/v4/accounts.locations)
      * </pre>
      *
@@ -3804,11 +3804,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. The ID of the Google My Business (GMB) Location.
-     * The location ID can be fetched by GMB API with its form:
+     * Optional. The ID of the Business Profile location.
+     * The location ID can be fetched by Business Profile API with its form:
      * accounts/{accountId}/locations/{locationId}. The last {locationId}
-     * component from the GMB API represents the business_location_id.
-     * See the [Google My Business API]
+     * component from the Business Profile API represents the
+     * business_location_id. See the [Business Profile API]
      * (https://developers.google.com/my-business/reference/rest/v4/accounts.locations)
      * </pre>
      *
@@ -3823,11 +3823,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. The ID of the Google My Business (GMB) Location.
-     * The location ID can be fetched by GMB API with its form:
+     * Optional. The ID of the Business Profile location.
+     * The location ID can be fetched by Business Profile API with its form:
      * accounts/{accountId}/locations/{locationId}. The last {locationId}
-     * component from the GMB API represents the business_location_id.
-     * See the [Google My Business API]
+     * component from the Business Profile API represents the
+     * business_location_id. See the [Business Profile API]
      * (https://developers.google.com/my-business/reference/rest/v4/accounts.locations)
      * </pre>
      *
@@ -3843,11 +3843,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Optional. The ID of the Google My Business (GMB) Location.
-     * The location ID can be fetched by GMB API with its form:
+     * Optional. The ID of the Business Profile location.
+     * The location ID can be fetched by Business Profile API with its form:
      * accounts/{accountId}/locations/{locationId}. The last {locationId}
-     * component from the GMB API represents the business_location_id.
-     * See the [Google My Business API]
+     * component from the Business Profile API represents the
+     * business_location_id. See the [Business Profile API]
      * (https://developers.google.com/my-business/reference/rest/v4/accounts.locations)
      * </pre>
      *

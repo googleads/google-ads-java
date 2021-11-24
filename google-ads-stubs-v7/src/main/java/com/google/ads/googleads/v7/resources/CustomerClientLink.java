@@ -174,7 +174,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The client customer linked to this customer.
    * </pre>
    *
-   * <code>string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the clientCustomer field is set.
    */
   @java.lang.Override
@@ -186,7 +186,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The client customer linked to this customer.
    * </pre>
    *
-   * <code>string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The clientCustomer.
    */
   @java.lang.Override
@@ -207,7 +207,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The client customer linked to this customer.
    * </pre>
    *
-   * <code>string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for clientCustomer.
    */
   @java.lang.Override
@@ -232,7 +232,7 @@ private static final long serialVersionUID = 0L;
    * Output only. This is uniquely identifies a customer client link. Read only.
    * </pre>
    *
-   * <code>int64 manager_link_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 manager_link_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the managerLinkId field is set.
    */
   @java.lang.Override
@@ -244,7 +244,7 @@ private static final long serialVersionUID = 0L;
    * Output only. This is uniquely identifies a customer client link. Read only.
    * </pre>
    *
-   * <code>int64 manager_link_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 manager_link_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The managerLinkId.
    */
   @java.lang.Override
@@ -288,7 +288,7 @@ private static final long serialVersionUID = 0L;
    * Default value is false
    * </pre>
    *
-   * <code>bool hidden = 9;</code>
+   * <code>optional bool hidden = 9;</code>
    * @return Whether the hidden field is set.
    */
   @java.lang.Override
@@ -302,7 +302,7 @@ private static final long serialVersionUID = 0L;
    * Default value is false
    * </pre>
    *
-   * <code>bool hidden = 9;</code>
+   * <code>optional bool hidden = 9;</code>
    * @return The hidden.
    */
   @java.lang.Override
@@ -324,7 +324,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (status_ != com.google.ads.googleads.v7.enums.ManagerLinkStatusEnum.ManagerLinkStatus.UNSPECIFIED.getNumber()) {
@@ -348,7 +348,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (status_ != com.google.ads.googleads.v7.enums.ManagerLinkStatusEnum.ManagerLinkStatus.UNSPECIFIED.getNumber()) {
@@ -826,7 +826,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The client customer linked to this customer.
      * </pre>
      *
-     * <code>string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the clientCustomer field is set.
      */
     public boolean hasClientCustomer() {
@@ -837,7 +837,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The client customer linked to this customer.
      * </pre>
      *
-     * <code>string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return The clientCustomer.
      */
     public java.lang.String getClientCustomer() {
@@ -857,7 +857,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The client customer linked to this customer.
      * </pre>
      *
-     * <code>string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for clientCustomer.
      */
     public com.google.protobuf.ByteString
@@ -878,7 +878,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The client customer linked to this customer.
      * </pre>
      *
-     * <code>string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @param value The clientCustomer to set.
      * @return This builder for chaining.
      */
@@ -897,7 +897,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The client customer linked to this customer.
      * </pre>
      *
-     * <code>string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearClientCustomer() {
@@ -911,7 +911,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The client customer linked to this customer.
      * </pre>
      *
-     * <code>string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string client_customer = 7 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for clientCustomer to set.
      * @return This builder for chaining.
      */
@@ -933,7 +933,7 @@ private static final long serialVersionUID = 0L;
      * Output only. This is uniquely identifies a customer client link. Read only.
      * </pre>
      *
-     * <code>int64 manager_link_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 manager_link_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the managerLinkId field is set.
      */
     @java.lang.Override
@@ -945,7 +945,7 @@ private static final long serialVersionUID = 0L;
      * Output only. This is uniquely identifies a customer client link. Read only.
      * </pre>
      *
-     * <code>int64 manager_link_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 manager_link_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The managerLinkId.
      */
     @java.lang.Override
@@ -957,7 +957,7 @@ private static final long serialVersionUID = 0L;
      * Output only. This is uniquely identifies a customer client link. Read only.
      * </pre>
      *
-     * <code>int64 manager_link_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 manager_link_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The managerLinkId to set.
      * @return This builder for chaining.
      */
@@ -972,7 +972,7 @@ private static final long serialVersionUID = 0L;
      * Output only. This is uniquely identifies a customer client link. Read only.
      * </pre>
      *
-     * <code>int64 manager_link_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 manager_link_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearManagerLinkId() {
@@ -1064,7 +1064,7 @@ private static final long serialVersionUID = 0L;
      * Default value is false
      * </pre>
      *
-     * <code>bool hidden = 9;</code>
+     * <code>optional bool hidden = 9;</code>
      * @return Whether the hidden field is set.
      */
     @java.lang.Override
@@ -1078,7 +1078,7 @@ private static final long serialVersionUID = 0L;
      * Default value is false
      * </pre>
      *
-     * <code>bool hidden = 9;</code>
+     * <code>optional bool hidden = 9;</code>
      * @return The hidden.
      */
     @java.lang.Override
@@ -1092,7 +1092,7 @@ private static final long serialVersionUID = 0L;
      * Default value is false
      * </pre>
      *
-     * <code>bool hidden = 9;</code>
+     * <code>optional bool hidden = 9;</code>
      * @param value The hidden to set.
      * @return This builder for chaining.
      */
@@ -1109,7 +1109,7 @@ private static final long serialVersionUID = 0L;
      * Default value is false
      * </pre>
      *
-     * <code>bool hidden = 9;</code>
+     * <code>optional bool hidden = 9;</code>
      * @return This builder for chaining.
      */
     public Builder clearHidden() {

@@ -12,7 +12,7 @@ public interface RemarketingSettingOrBuilder extends
    * Output only. The Google global site tag.
    * </pre>
    *
-   * <code>string google_global_site_tag = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string google_global_site_tag = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the googleGlobalSiteTag field is set.
    */
   boolean hasGoogleGlobalSiteTag();
@@ -21,7 +21,7 @@ public interface RemarketingSettingOrBuilder extends
    * Output only. The Google global site tag.
    * </pre>
    *
-   * <code>string google_global_site_tag = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string google_global_site_tag = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The googleGlobalSiteTag.
    */
   java.lang.String getGoogleGlobalSiteTag();
@@ -30,7 +30,7 @@ public interface RemarketingSettingOrBuilder extends
    * Output only. The Google global site tag.
    * </pre>
    *
-   * <code>string google_global_site_tag = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string google_global_site_tag = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for googleGlobalSiteTag.
    */
   com.google.protobuf.ByteString

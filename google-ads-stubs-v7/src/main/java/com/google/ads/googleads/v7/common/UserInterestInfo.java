@@ -100,7 +100,7 @@ private static final long serialVersionUID = 0L;
    * The UserInterest resource name.
    * </pre>
    *
-   * <code>string user_interest_category = 2;</code>
+   * <code>optional string user_interest_category = 2;</code>
    * @return Whether the userInterestCategory field is set.
    */
   @java.lang.Override
@@ -112,7 +112,7 @@ private static final long serialVersionUID = 0L;
    * The UserInterest resource name.
    * </pre>
    *
-   * <code>string user_interest_category = 2;</code>
+   * <code>optional string user_interest_category = 2;</code>
    * @return The userInterestCategory.
    */
   @java.lang.Override
@@ -133,7 +133,7 @@ private static final long serialVersionUID = 0L;
    * The UserInterest resource name.
    * </pre>
    *
-   * <code>string user_interest_category = 2;</code>
+   * <code>optional string user_interest_category = 2;</code>
    * @return The bytes for userInterestCategory.
    */
   @java.lang.Override
@@ -476,7 +476,7 @@ private static final long serialVersionUID = 0L;
      * The UserInterest resource name.
      * </pre>
      *
-     * <code>string user_interest_category = 2;</code>
+     * <code>optional string user_interest_category = 2;</code>
      * @return Whether the userInterestCategory field is set.
      */
     public boolean hasUserInterestCategory() {
@@ -487,7 +487,7 @@ private static final long serialVersionUID = 0L;
      * The UserInterest resource name.
      * </pre>
      *
-     * <code>string user_interest_category = 2;</code>
+     * <code>optional string user_interest_category = 2;</code>
      * @return The userInterestCategory.
      */
     public java.lang.String getUserInterestCategory() {
@@ -507,7 +507,7 @@ private static final long serialVersionUID = 0L;
      * The UserInterest resource name.
      * </pre>
      *
-     * <code>string user_interest_category = 2;</code>
+     * <code>optional string user_interest_category = 2;</code>
      * @return The bytes for userInterestCategory.
      */
     public com.google.protobuf.ByteString
@@ -528,7 +528,7 @@ private static final long serialVersionUID = 0L;
      * The UserInterest resource name.
      * </pre>
      *
-     * <code>string user_interest_category = 2;</code>
+     * <code>optional string user_interest_category = 2;</code>
      * @param value The userInterestCategory to set.
      * @return This builder for chaining.
      */
@@ -547,7 +547,7 @@ private static final long serialVersionUID = 0L;
      * The UserInterest resource name.
      * </pre>
      *
-     * <code>string user_interest_category = 2;</code>
+     * <code>optional string user_interest_category = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearUserInterestCategory() {
@@ -561,7 +561,7 @@ private static final long serialVersionUID = 0L;
      * The UserInterest resource name.
      * </pre>
      *
-     * <code>string user_interest_category = 2;</code>
+     * <code>optional string user_interest_category = 2;</code>
      * @param value The bytes for userInterestCategory to set.
      * @return This builder for chaining.
      */

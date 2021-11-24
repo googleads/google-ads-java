@@ -101,7 +101,7 @@ private static final long serialVersionUID = 0L;
    * own the site provided only public information is returned.
    * </pre>
    *
-   * <code>string site = 2;</code>
+   * <code>optional string site = 2;</code>
    * @return Whether the site field is set.
    */
   @java.lang.Override
@@ -114,7 +114,7 @@ private static final long serialVersionUID = 0L;
    * own the site provided only public information is returned.
    * </pre>
    *
-   * <code>string site = 2;</code>
+   * <code>optional string site = 2;</code>
    * @return The site.
    */
   @java.lang.Override
@@ -136,7 +136,7 @@ private static final long serialVersionUID = 0L;
    * own the site provided only public information is returned.
    * </pre>
    *
-   * <code>string site = 2;</code>
+   * <code>optional string site = 2;</code>
    * @return The bytes for site.
    */
   @java.lang.Override
@@ -480,7 +480,7 @@ private static final long serialVersionUID = 0L;
      * own the site provided only public information is returned.
      * </pre>
      *
-     * <code>string site = 2;</code>
+     * <code>optional string site = 2;</code>
      * @return Whether the site field is set.
      */
     public boolean hasSite() {
@@ -492,7 +492,7 @@ private static final long serialVersionUID = 0L;
      * own the site provided only public information is returned.
      * </pre>
      *
-     * <code>string site = 2;</code>
+     * <code>optional string site = 2;</code>
      * @return The site.
      */
     public java.lang.String getSite() {
@@ -513,7 +513,7 @@ private static final long serialVersionUID = 0L;
      * own the site provided only public information is returned.
      * </pre>
      *
-     * <code>string site = 2;</code>
+     * <code>optional string site = 2;</code>
      * @return The bytes for site.
      */
     public com.google.protobuf.ByteString
@@ -535,7 +535,7 @@ private static final long serialVersionUID = 0L;
      * own the site provided only public information is returned.
      * </pre>
      *
-     * <code>string site = 2;</code>
+     * <code>optional string site = 2;</code>
      * @param value The site to set.
      * @return This builder for chaining.
      */
@@ -555,7 +555,7 @@ private static final long serialVersionUID = 0L;
      * own the site provided only public information is returned.
      * </pre>
      *
-     * <code>string site = 2;</code>
+     * <code>optional string site = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearSite() {
@@ -570,7 +570,7 @@ private static final long serialVersionUID = 0L;
      * own the site provided only public information is returned.
      * </pre>
      *
-     * <code>string site = 2;</code>
+     * <code>optional string site = 2;</code>
      * @param value The bytes for site to set.
      * @return This builder for chaining.
      */

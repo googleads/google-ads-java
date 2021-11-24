@@ -110,7 +110,7 @@ private static final long serialVersionUID = 0L;
    * year month range for which search volume is available will be returned.
    * </pre>
    *
-   * <code>.google.ads.googleads.v7.common.YearMonthRange year_month_range = 1;</code>
+   * <code>optional .google.ads.googleads.v7.common.YearMonthRange year_month_range = 1;</code>
    * @return Whether the yearMonthRange field is set.
    */
   @java.lang.Override
@@ -126,7 +126,7 @@ private static final long serialVersionUID = 0L;
    * year month range for which search volume is available will be returned.
    * </pre>
    *
-   * <code>.google.ads.googleads.v7.common.YearMonthRange year_month_range = 1;</code>
+   * <code>optional .google.ads.googleads.v7.common.YearMonthRange year_month_range = 1;</code>
    * @return The yearMonthRange.
    */
   @java.lang.Override
@@ -142,7 +142,7 @@ private static final long serialVersionUID = 0L;
    * year month range for which search volume is available will be returned.
    * </pre>
    *
-   * <code>.google.ads.googleads.v7.common.YearMonthRange year_month_range = 1;</code>
+   * <code>optional .google.ads.googleads.v7.common.YearMonthRange year_month_range = 1;</code>
    */
   @java.lang.Override
   public com.google.ads.googleads.v7.common.YearMonthRangeOrBuilder getYearMonthRangeOrBuilder() {
@@ -488,7 +488,7 @@ private static final long serialVersionUID = 0L;
      * year month range for which search volume is available will be returned.
      * </pre>
      *
-     * <code>.google.ads.googleads.v7.common.YearMonthRange year_month_range = 1;</code>
+     * <code>optional .google.ads.googleads.v7.common.YearMonthRange year_month_range = 1;</code>
      * @return Whether the yearMonthRange field is set.
      */
     public boolean hasYearMonthRange() {
@@ -503,7 +503,7 @@ private static final long serialVersionUID = 0L;
      * year month range for which search volume is available will be returned.
      * </pre>
      *
-     * <code>.google.ads.googleads.v7.common.YearMonthRange year_month_range = 1;</code>
+     * <code>optional .google.ads.googleads.v7.common.YearMonthRange year_month_range = 1;</code>
      * @return The yearMonthRange.
      */
     public com.google.ads.googleads.v7.common.YearMonthRange getYearMonthRange() {
@@ -522,7 +522,7 @@ private static final long serialVersionUID = 0L;
      * year month range for which search volume is available will be returned.
      * </pre>
      *
-     * <code>.google.ads.googleads.v7.common.YearMonthRange year_month_range = 1;</code>
+     * <code>optional .google.ads.googleads.v7.common.YearMonthRange year_month_range = 1;</code>
      */
     public Builder setYearMonthRange(com.google.ads.googleads.v7.common.YearMonthRange value) {
       if (yearMonthRangeBuilder_ == null) {
@@ -546,7 +546,7 @@ private static final long serialVersionUID = 0L;
      * year month range for which search volume is available will be returned.
      * </pre>
      *
-     * <code>.google.ads.googleads.v7.common.YearMonthRange year_month_range = 1;</code>
+     * <code>optional .google.ads.googleads.v7.common.YearMonthRange year_month_range = 1;</code>
      */
     public Builder setYearMonthRange(
         com.google.ads.googleads.v7.common.YearMonthRange.Builder builderForValue) {
@@ -568,7 +568,7 @@ private static final long serialVersionUID = 0L;
      * year month range for which search volume is available will be returned.
      * </pre>
      *
-     * <code>.google.ads.googleads.v7.common.YearMonthRange year_month_range = 1;</code>
+     * <code>optional .google.ads.googleads.v7.common.YearMonthRange year_month_range = 1;</code>
      */
     public Builder mergeYearMonthRange(com.google.ads.googleads.v7.common.YearMonthRange value) {
       if (yearMonthRangeBuilder_ == null) {
@@ -596,7 +596,7 @@ private static final long serialVersionUID = 0L;
      * year month range for which search volume is available will be returned.
      * </pre>
      *
-     * <code>.google.ads.googleads.v7.common.YearMonthRange year_month_range = 1;</code>
+     * <code>optional .google.ads.googleads.v7.common.YearMonthRange year_month_range = 1;</code>
      */
     public Builder clearYearMonthRange() {
       if (yearMonthRangeBuilder_ == null) {
@@ -617,7 +617,7 @@ private static final long serialVersionUID = 0L;
      * year month range for which search volume is available will be returned.
      * </pre>
      *
-     * <code>.google.ads.googleads.v7.common.YearMonthRange year_month_range = 1;</code>
+     * <code>optional .google.ads.googleads.v7.common.YearMonthRange year_month_range = 1;</code>
      */
     public com.google.ads.googleads.v7.common.YearMonthRange.Builder getYearMonthRangeBuilder() {
       bitField0_ |= 0x00000001;
@@ -633,7 +633,7 @@ private static final long serialVersionUID = 0L;
      * year month range for which search volume is available will be returned.
      * </pre>
      *
-     * <code>.google.ads.googleads.v7.common.YearMonthRange year_month_range = 1;</code>
+     * <code>optional .google.ads.googleads.v7.common.YearMonthRange year_month_range = 1;</code>
      */
     public com.google.ads.googleads.v7.common.YearMonthRangeOrBuilder getYearMonthRangeOrBuilder() {
       if (yearMonthRangeBuilder_ != null) {
@@ -652,7 +652,7 @@ private static final long serialVersionUID = 0L;
      * year month range for which search volume is available will be returned.
      * </pre>
      *
-     * <code>.google.ads.googleads.v7.common.YearMonthRange year_month_range = 1;</code>
+     * <code>optional .google.ads.googleads.v7.common.YearMonthRange year_month_range = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v7.common.YearMonthRange, com.google.ads.googleads.v7.common.YearMonthRange.Builder, com.google.ads.googleads.v7.common.YearMonthRangeOrBuilder> 

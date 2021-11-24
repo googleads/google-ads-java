@@ -13,7 +13,7 @@ public interface CallConversionOrBuilder extends
    * in E.164 format with preceding '+' sign. e.g. "+16502531234".
    * </pre>
    *
-   * <code>string caller_id = 7;</code>
+   * <code>optional string caller_id = 7;</code>
    * @return Whether the callerId field is set.
    */
   boolean hasCallerId();
@@ -23,7 +23,7 @@ public interface CallConversionOrBuilder extends
    * in E.164 format with preceding '+' sign. e.g. "+16502531234".
    * </pre>
    *
-   * <code>string caller_id = 7;</code>
+   * <code>optional string caller_id = 7;</code>
    * @return The callerId.
    */
   java.lang.String getCallerId();
@@ -33,7 +33,7 @@ public interface CallConversionOrBuilder extends
    * in E.164 format with preceding '+' sign. e.g. "+16502531234".
    * </pre>
    *
-   * <code>string caller_id = 7;</code>
+   * <code>optional string caller_id = 7;</code>
    * @return The bytes for callerId.
    */
   com.google.protobuf.ByteString
@@ -46,7 +46,7 @@ public interface CallConversionOrBuilder extends
    * e.g. "2019-01-01 12:32:45-08:00".
    * </pre>
    *
-   * <code>string call_start_date_time = 8;</code>
+   * <code>optional string call_start_date_time = 8;</code>
    * @return Whether the callStartDateTime field is set.
    */
   boolean hasCallStartDateTime();
@@ -57,7 +57,7 @@ public interface CallConversionOrBuilder extends
    * e.g. "2019-01-01 12:32:45-08:00".
    * </pre>
    *
-   * <code>string call_start_date_time = 8;</code>
+   * <code>optional string call_start_date_time = 8;</code>
    * @return The callStartDateTime.
    */
   java.lang.String getCallStartDateTime();
@@ -68,7 +68,7 @@ public interface CallConversionOrBuilder extends
    * e.g. "2019-01-01 12:32:45-08:00".
    * </pre>
    *
-   * <code>string call_start_date_time = 8;</code>
+   * <code>optional string call_start_date_time = 8;</code>
    * @return The bytes for callStartDateTime.
    */
   com.google.protobuf.ByteString
@@ -82,7 +82,7 @@ public interface CallConversionOrBuilder extends
    * conversion action id as the sole identifier of the conversion action.
    * </pre>
    *
-   * <code>string conversion_action = 9;</code>
+   * <code>optional string conversion_action = 9;</code>
    * @return Whether the conversionAction field is set.
    */
   boolean hasConversionAction();
@@ -94,7 +94,7 @@ public interface CallConversionOrBuilder extends
    * conversion action id as the sole identifier of the conversion action.
    * </pre>
    *
-   * <code>string conversion_action = 9;</code>
+   * <code>optional string conversion_action = 9;</code>
    * @return The conversionAction.
    */
   java.lang.String getConversionAction();
@@ -106,7 +106,7 @@ public interface CallConversionOrBuilder extends
    * conversion action id as the sole identifier of the conversion action.
    * </pre>
    *
-   * <code>string conversion_action = 9;</code>
+   * <code>optional string conversion_action = 9;</code>
    * @return The bytes for conversionAction.
    */
   com.google.protobuf.ByteString
@@ -119,7 +119,7 @@ public interface CallConversionOrBuilder extends
    * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
    * </pre>
    *
-   * <code>string conversion_date_time = 10;</code>
+   * <code>optional string conversion_date_time = 10;</code>
    * @return Whether the conversionDateTime field is set.
    */
   boolean hasConversionDateTime();
@@ -130,7 +130,7 @@ public interface CallConversionOrBuilder extends
    * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
    * </pre>
    *
-   * <code>string conversion_date_time = 10;</code>
+   * <code>optional string conversion_date_time = 10;</code>
    * @return The conversionDateTime.
    */
   java.lang.String getConversionDateTime();
@@ -141,7 +141,7 @@ public interface CallConversionOrBuilder extends
    * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
    * </pre>
    *
-   * <code>string conversion_date_time = 10;</code>
+   * <code>optional string conversion_date_time = 10;</code>
    * @return The bytes for conversionDateTime.
    */
   com.google.protobuf.ByteString
@@ -152,7 +152,7 @@ public interface CallConversionOrBuilder extends
    * The value of the conversion for the advertiser.
    * </pre>
    *
-   * <code>double conversion_value = 11;</code>
+   * <code>optional double conversion_value = 11;</code>
    * @return Whether the conversionValue field is set.
    */
   boolean hasConversionValue();
@@ -161,7 +161,7 @@ public interface CallConversionOrBuilder extends
    * The value of the conversion for the advertiser.
    * </pre>
    *
-   * <code>double conversion_value = 11;</code>
+   * <code>optional double conversion_value = 11;</code>
    * @return The conversionValue.
    */
   double getConversionValue();
@@ -172,7 +172,7 @@ public interface CallConversionOrBuilder extends
    * 3-character currency code. For example: USD, EUR.
    * </pre>
    *
-   * <code>string currency_code = 12;</code>
+   * <code>optional string currency_code = 12;</code>
    * @return Whether the currencyCode field is set.
    */
   boolean hasCurrencyCode();
@@ -182,7 +182,7 @@ public interface CallConversionOrBuilder extends
    * 3-character currency code. For example: USD, EUR.
    * </pre>
    *
-   * <code>string currency_code = 12;</code>
+   * <code>optional string currency_code = 12;</code>
    * @return The currencyCode.
    */
   java.lang.String getCurrencyCode();
@@ -192,7 +192,7 @@ public interface CallConversionOrBuilder extends
    * 3-character currency code. For example: USD, EUR.
    * </pre>
    *
-   * <code>string currency_code = 12;</code>
+   * <code>optional string currency_code = 12;</code>
    * @return The bytes for currencyCode.
    */
   com.google.protobuf.ByteString

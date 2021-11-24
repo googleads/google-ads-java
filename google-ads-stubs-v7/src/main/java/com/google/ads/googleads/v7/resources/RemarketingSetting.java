@@ -100,7 +100,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The Google global site tag.
    * </pre>
    *
-   * <code>string google_global_site_tag = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string google_global_site_tag = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the googleGlobalSiteTag field is set.
    */
   @java.lang.Override
@@ -112,7 +112,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The Google global site tag.
    * </pre>
    *
-   * <code>string google_global_site_tag = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string google_global_site_tag = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The googleGlobalSiteTag.
    */
   @java.lang.Override
@@ -133,7 +133,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The Google global site tag.
    * </pre>
    *
-   * <code>string google_global_site_tag = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string google_global_site_tag = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for googleGlobalSiteTag.
    */
   @java.lang.Override
@@ -476,7 +476,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The Google global site tag.
      * </pre>
      *
-     * <code>string google_global_site_tag = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string google_global_site_tag = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the googleGlobalSiteTag field is set.
      */
     public boolean hasGoogleGlobalSiteTag() {
@@ -487,7 +487,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The Google global site tag.
      * </pre>
      *
-     * <code>string google_global_site_tag = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string google_global_site_tag = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The googleGlobalSiteTag.
      */
     public java.lang.String getGoogleGlobalSiteTag() {
@@ -507,7 +507,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The Google global site tag.
      * </pre>
      *
-     * <code>string google_global_site_tag = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string google_global_site_tag = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for googleGlobalSiteTag.
      */
     public com.google.protobuf.ByteString
@@ -528,7 +528,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The Google global site tag.
      * </pre>
      *
-     * <code>string google_global_site_tag = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string google_global_site_tag = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The googleGlobalSiteTag to set.
      * @return This builder for chaining.
      */
@@ -547,7 +547,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The Google global site tag.
      * </pre>
      *
-     * <code>string google_global_site_tag = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string google_global_site_tag = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearGoogleGlobalSiteTag() {
@@ -561,7 +561,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The Google global site tag.
      * </pre>
      *
-     * <code>string google_global_site_tag = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string google_global_site_tag = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for googleGlobalSiteTag to set.
      * @return This builder for chaining.
      */

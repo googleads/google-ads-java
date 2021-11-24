@@ -138,8 +138,8 @@ private static final long serialVersionUID = 0L;
     APP(4),
     /**
      * <pre>
-     * Lets you show locations of businesses from your Google My Business
-     * account in your ad. This helps people find your locations by showing your
+     * Lets you show locations of businesses from your Business Profile
+     * in your ad. This helps people find your locations by showing your
      * ads with your address, a map to your location, or the distance to your
      * business. This extension type is useful to draw customers to your
      * brick-and-mortar location.
@@ -337,8 +337,8 @@ private static final long serialVersionUID = 0L;
     public static final int APP_VALUE = 4;
     /**
      * <pre>
-     * Lets you show locations of businesses from your Google My Business
-     * account in your ad. This helps people find your locations by showing your
+     * Lets you show locations of businesses from your Business Profile
+     * in your ad. This helps people find your locations by showing your
      * ads with your address, a map to your location, or the distance to your
      * business. This extension type is useful to draw customers to your
      * brick-and-mortar location.

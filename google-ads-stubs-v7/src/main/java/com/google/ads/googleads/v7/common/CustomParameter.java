@@ -108,7 +108,7 @@ private static final long serialVersionUID = 0L;
    * The key matching the parameter tag name.
    * </pre>
    *
-   * <code>string key = 3;</code>
+   * <code>optional string key = 3;</code>
    * @return Whether the key field is set.
    */
   @java.lang.Override
@@ -120,7 +120,7 @@ private static final long serialVersionUID = 0L;
    * The key matching the parameter tag name.
    * </pre>
    *
-   * <code>string key = 3;</code>
+   * <code>optional string key = 3;</code>
    * @return The key.
    */
   @java.lang.Override
@@ -141,7 +141,7 @@ private static final long serialVersionUID = 0L;
    * The key matching the parameter tag name.
    * </pre>
    *
-   * <code>string key = 3;</code>
+   * <code>optional string key = 3;</code>
    * @return The bytes for key.
    */
   @java.lang.Override
@@ -166,7 +166,7 @@ private static final long serialVersionUID = 0L;
    * The value to be substituted.
    * </pre>
    *
-   * <code>string value = 4;</code>
+   * <code>optional string value = 4;</code>
    * @return Whether the value field is set.
    */
   @java.lang.Override
@@ -178,7 +178,7 @@ private static final long serialVersionUID = 0L;
    * The value to be substituted.
    * </pre>
    *
-   * <code>string value = 4;</code>
+   * <code>optional string value = 4;</code>
    * @return The value.
    */
   @java.lang.Override
@@ -199,7 +199,7 @@ private static final long serialVersionUID = 0L;
    * The value to be substituted.
    * </pre>
    *
-   * <code>string value = 4;</code>
+   * <code>optional string value = 4;</code>
    * @return The bytes for value.
    */
   @java.lang.Override
@@ -569,7 +569,7 @@ private static final long serialVersionUID = 0L;
      * The key matching the parameter tag name.
      * </pre>
      *
-     * <code>string key = 3;</code>
+     * <code>optional string key = 3;</code>
      * @return Whether the key field is set.
      */
     public boolean hasKey() {
@@ -580,7 +580,7 @@ private static final long serialVersionUID = 0L;
      * The key matching the parameter tag name.
      * </pre>
      *
-     * <code>string key = 3;</code>
+     * <code>optional string key = 3;</code>
      * @return The key.
      */
     public java.lang.String getKey() {
@@ -600,7 +600,7 @@ private static final long serialVersionUID = 0L;
      * The key matching the parameter tag name.
      * </pre>
      *
-     * <code>string key = 3;</code>
+     * <code>optional string key = 3;</code>
      * @return The bytes for key.
      */
     public com.google.protobuf.ByteString
@@ -621,7 +621,7 @@ private static final long serialVersionUID = 0L;
      * The key matching the parameter tag name.
      * </pre>
      *
-     * <code>string key = 3;</code>
+     * <code>optional string key = 3;</code>
      * @param value The key to set.
      * @return This builder for chaining.
      */
@@ -640,7 +640,7 @@ private static final long serialVersionUID = 0L;
      * The key matching the parameter tag name.
      * </pre>
      *
-     * <code>string key = 3;</code>
+     * <code>optional string key = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearKey() {
@@ -654,7 +654,7 @@ private static final long serialVersionUID = 0L;
      * The key matching the parameter tag name.
      * </pre>
      *
-     * <code>string key = 3;</code>
+     * <code>optional string key = 3;</code>
      * @param value The bytes for key to set.
      * @return This builder for chaining.
      */
@@ -676,7 +676,7 @@ private static final long serialVersionUID = 0L;
      * The value to be substituted.
      * </pre>
      *
-     * <code>string value = 4;</code>
+     * <code>optional string value = 4;</code>
      * @return Whether the value field is set.
      */
     public boolean hasValue() {
@@ -687,7 +687,7 @@ private static final long serialVersionUID = 0L;
      * The value to be substituted.
      * </pre>
      *
-     * <code>string value = 4;</code>
+     * <code>optional string value = 4;</code>
      * @return The value.
      */
     public java.lang.String getValue() {
@@ -707,7 +707,7 @@ private static final long serialVersionUID = 0L;
      * The value to be substituted.
      * </pre>
      *
-     * <code>string value = 4;</code>
+     * <code>optional string value = 4;</code>
      * @return The bytes for value.
      */
     public com.google.protobuf.ByteString
@@ -728,7 +728,7 @@ private static final long serialVersionUID = 0L;
      * The value to be substituted.
      * </pre>
      *
-     * <code>string value = 4;</code>
+     * <code>optional string value = 4;</code>
      * @param value The value to set.
      * @return This builder for chaining.
      */
@@ -747,7 +747,7 @@ private static final long serialVersionUID = 0L;
      * The value to be substituted.
      * </pre>
      *
-     * <code>string value = 4;</code>
+     * <code>optional string value = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearValue() {
@@ -761,7 +761,7 @@ private static final long serialVersionUID = 0L;
      * The value to be substituted.
      * </pre>
      *
-     * <code>string value = 4;</code>
+     * <code>optional string value = 4;</code>
      * @param value The bytes for value to set.
      * @return This builder for chaining.
      */

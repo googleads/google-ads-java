@@ -50,7 +50,7 @@ public interface WebpageConditionInfoOrBuilder extends
    * Argument of webpage targeting condition.
    * </pre>
    *
-   * <code>string argument = 4;</code>
+   * <code>optional string argument = 4;</code>
    * @return Whether the argument field is set.
    */
   boolean hasArgument();
@@ -59,7 +59,7 @@ public interface WebpageConditionInfoOrBuilder extends
    * Argument of webpage targeting condition.
    * </pre>
    *
-   * <code>string argument = 4;</code>
+   * <code>optional string argument = 4;</code>
    * @return The argument.
    */
   java.lang.String getArgument();
@@ -68,7 +68,7 @@ public interface WebpageConditionInfoOrBuilder extends
    * Argument of webpage targeting condition.
    * </pre>
    *
-   * <code>string argument = 4;</code>
+   * <code>optional string argument = 4;</code>
    * @return The bytes for argument.
    */
   com.google.protobuf.ByteString

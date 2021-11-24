@@ -103,7 +103,7 @@ private static final long serialVersionUID = 0L;
    * achieve the highest possible ROAS for the budget.
    * </pre>
    *
-   * <code>double target_roas = 2;</code>
+   * <code>optional double target_roas = 2;</code>
    * @return Whether the targetRoas field is set.
    */
   @java.lang.Override
@@ -119,7 +119,7 @@ private static final long serialVersionUID = 0L;
    * achieve the highest possible ROAS for the budget.
    * </pre>
    *
-   * <code>double target_roas = 2;</code>
+   * <code>optional double target_roas = 2;</code>
    * @return The targetRoas.
    */
   @java.lang.Override
@@ -458,7 +458,7 @@ private static final long serialVersionUID = 0L;
      * achieve the highest possible ROAS for the budget.
      * </pre>
      *
-     * <code>double target_roas = 2;</code>
+     * <code>optional double target_roas = 2;</code>
      * @return Whether the targetRoas field is set.
      */
     @java.lang.Override
@@ -474,7 +474,7 @@ private static final long serialVersionUID = 0L;
      * achieve the highest possible ROAS for the budget.
      * </pre>
      *
-     * <code>double target_roas = 2;</code>
+     * <code>optional double target_roas = 2;</code>
      * @return The targetRoas.
      */
     @java.lang.Override
@@ -490,7 +490,7 @@ private static final long serialVersionUID = 0L;
      * achieve the highest possible ROAS for the budget.
      * </pre>
      *
-     * <code>double target_roas = 2;</code>
+     * <code>optional double target_roas = 2;</code>
      * @param value The targetRoas to set.
      * @return This builder for chaining.
      */
@@ -509,7 +509,7 @@ private static final long serialVersionUID = 0L;
      * achieve the highest possible ROAS for the budget.
      * </pre>
      *
-     * <code>double target_roas = 2;</code>
+     * <code>optional double target_roas = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearTargetRoas() {

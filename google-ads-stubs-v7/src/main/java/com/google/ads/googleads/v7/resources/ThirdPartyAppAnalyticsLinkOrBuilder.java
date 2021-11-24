@@ -38,7 +38,7 @@ public interface ThirdPartyAppAnalyticsLinkOrBuilder extends
    * method in the ThirdPartyAppAnalyticsLinkService.
    * </pre>
    *
-   * <code>string shareable_link_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string shareable_link_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the shareableLinkId field is set.
    */
   boolean hasShareableLinkId();
@@ -49,7 +49,7 @@ public interface ThirdPartyAppAnalyticsLinkOrBuilder extends
    * method in the ThirdPartyAppAnalyticsLinkService.
    * </pre>
    *
-   * <code>string shareable_link_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string shareable_link_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The shareableLinkId.
    */
   java.lang.String getShareableLinkId();
@@ -60,7 +60,7 @@ public interface ThirdPartyAppAnalyticsLinkOrBuilder extends
    * method in the ThirdPartyAppAnalyticsLinkService.
    * </pre>
    *
-   * <code>string shareable_link_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string shareable_link_id = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for shareableLinkId.
    */
   com.google.protobuf.ByteString

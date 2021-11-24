@@ -34,26 +34,26 @@ public final class ConversionGoalCampaignConfigProto {
       "/googleads/v9/enums/goal_config_level.pr" +
       "oto\032\037google/api/field_behavior.proto\032\031go" +
       "ogle/api/resource.proto\032\034google/api/anno" +
-      "tations.proto\"\350\003\n\034ConversionGoalCampaign" +
+      "tations.proto\"\345\003\n\034ConversionGoalCampaign" +
       "Config\022T\n\rresource_name\030\001 \001(\tB=\340A\005\372A7\n5g" +
       "oogleads.googleapis.com/ConversionGoalCa" +
       "mpaignConfig\022;\n\010campaign\030\002 \001(\tB)\340A\005\372A#\n!" +
       "googleads.googleapis.com/Campaign\022]\n\021goa" +
       "l_config_level\030\003 \001(\0162B.google.ads.google" +
       "ads.v9.enums.GoalConfigLevelEnum.GoalCon" +
-      "figLevel\022U\n\026custom_conversion_goal\030\004 \001(\t" +
-      "B5\340A\005\372A/\n-googleads.googleapis.com/Custo" +
-      "mConversionGoal:\177\352A|\n5googleads.googleap" +
-      "is.com/ConversionGoalCampaignConfig\022Ccus" +
-      "tomers/{customer_id}/conversionGoalCampa" +
-      "ignConfigs/{campaign_id}B\216\002\n%com.google." +
-      "ads.googleads.v9.resourcesB!ConversionGo" +
-      "alCampaignConfigProtoP\001ZJgoogle.golang.o" +
-      "rg/genproto/googleapis/ads/googleads/v9/" +
-      "resources;resources\242\002\003GAA\252\002!Google.Ads.G" +
-      "oogleAds.V9.Resources\312\002!Google\\Ads\\Googl" +
-      "eAds\\V9\\Resources\352\002%Google::Ads::GoogleA" +
-      "ds::V9::Resourcesb\006proto3"
+      "figLevel\022R\n\026custom_conversion_goal\030\004 \001(\t" +
+      "B2\372A/\n-googleads.googleapis.com/CustomCo" +
+      "nversionGoal:\177\352A|\n5googleads.googleapis." +
+      "com/ConversionGoalCampaignConfig\022Ccustom" +
+      "ers/{customer_id}/conversionGoalCampaign" +
+      "Configs/{campaign_id}B\216\002\n%com.google.ads" +
+      ".googleads.v9.resourcesB!ConversionGoalC" +
+      "ampaignConfigProtoP\001ZJgoogle.golang.org/" +
+      "genproto/googleapis/ads/googleads/v9/res" +
+      "ources;resources\242\002\003GAA\252\002!Google.Ads.Goog" +
+      "leAds.V9.Resources\312\002!Google\\Ads\\GoogleAd" +
+      "s\\V9\\Resources\352\002%Google::Ads::GoogleAds:" +
+      ":V9::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

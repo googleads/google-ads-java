@@ -13,7 +13,7 @@ public interface GclidDateTimePairOrBuilder extends
    * adjustment.
    * </pre>
    *
-   * <code>string gclid = 3;</code>
+   * <code>optional string gclid = 3;</code>
    * @return Whether the gclid field is set.
    */
   boolean hasGclid();
@@ -23,7 +23,7 @@ public interface GclidDateTimePairOrBuilder extends
    * adjustment.
    * </pre>
    *
-   * <code>string gclid = 3;</code>
+   * <code>optional string gclid = 3;</code>
    * @return The gclid.
    */
   java.lang.String getGclid();
@@ -33,7 +33,7 @@ public interface GclidDateTimePairOrBuilder extends
    * adjustment.
    * </pre>
    *
-   * <code>string gclid = 3;</code>
+   * <code>optional string gclid = 3;</code>
    * @return The bytes for gclid.
    */
   com.google.protobuf.ByteString
@@ -46,7 +46,7 @@ public interface GclidDateTimePairOrBuilder extends
    * hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
    * </pre>
    *
-   * <code>string conversion_date_time = 4;</code>
+   * <code>optional string conversion_date_time = 4;</code>
    * @return Whether the conversionDateTime field is set.
    */
   boolean hasConversionDateTime();
@@ -57,7 +57,7 @@ public interface GclidDateTimePairOrBuilder extends
    * hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
    * </pre>
    *
-   * <code>string conversion_date_time = 4;</code>
+   * <code>optional string conversion_date_time = 4;</code>
    * @return The conversionDateTime.
    */
   java.lang.String getConversionDateTime();
@@ -68,7 +68,7 @@ public interface GclidDateTimePairOrBuilder extends
    * hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
    * </pre>
    *
-   * <code>string conversion_date_time = 4;</code>
+   * <code>optional string conversion_date_time = 4;</code>
    * @return The bytes for conversionDateTime.
    */
   com.google.protobuf.ByteString

@@ -36,7 +36,7 @@ public interface GoogleAdsFieldOrBuilder extends
    * Output only. The name of the artifact.
    * </pre>
    *
-   * <code>string name = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the name field is set.
    */
   boolean hasName();
@@ -45,7 +45,7 @@ public interface GoogleAdsFieldOrBuilder extends
    * Output only. The name of the artifact.
    * </pre>
    *
-   * <code>string name = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The name.
    */
   java.lang.String getName();
@@ -54,7 +54,7 @@ public interface GoogleAdsFieldOrBuilder extends
    * Output only. The name of the artifact.
    * </pre>
    *
-   * <code>string name = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 21 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
@@ -85,7 +85,7 @@ public interface GoogleAdsFieldOrBuilder extends
    * queries.
    * </pre>
    *
-   * <code>bool selectable = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool selectable = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the selectable field is set.
    */
   boolean hasSelectable();
@@ -95,7 +95,7 @@ public interface GoogleAdsFieldOrBuilder extends
    * queries.
    * </pre>
    *
-   * <code>bool selectable = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool selectable = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The selectable.
    */
   boolean getSelectable();
@@ -106,7 +106,7 @@ public interface GoogleAdsFieldOrBuilder extends
    * queries.
    * </pre>
    *
-   * <code>bool filterable = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool filterable = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the filterable field is set.
    */
   boolean hasFilterable();
@@ -116,7 +116,7 @@ public interface GoogleAdsFieldOrBuilder extends
    * queries.
    * </pre>
    *
-   * <code>bool filterable = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool filterable = 23 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The filterable.
    */
   boolean getFilterable();
@@ -127,7 +127,7 @@ public interface GoogleAdsFieldOrBuilder extends
    * queries.
    * </pre>
    *
-   * <code>bool sortable = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool sortable = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the sortable field is set.
    */
   boolean hasSortable();
@@ -137,7 +137,7 @@ public interface GoogleAdsFieldOrBuilder extends
    * queries.
    * </pre>
    *
-   * <code>bool sortable = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool sortable = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The sortable.
    */
   boolean getSortable();
@@ -413,7 +413,7 @@ public interface GoogleAdsFieldOrBuilder extends
    * Output only. The URL of proto describing the artifact's data type.
    * </pre>
    *
-   * <code>string type_url = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string type_url = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the typeUrl field is set.
    */
   boolean hasTypeUrl();
@@ -422,7 +422,7 @@ public interface GoogleAdsFieldOrBuilder extends
    * Output only. The URL of proto describing the artifact's data type.
    * </pre>
    *
-   * <code>string type_url = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string type_url = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The typeUrl.
    */
   java.lang.String getTypeUrl();
@@ -431,7 +431,7 @@ public interface GoogleAdsFieldOrBuilder extends
    * Output only. The URL of proto describing the artifact's data type.
    * </pre>
    *
-   * <code>string type_url = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string type_url = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for typeUrl.
    */
   com.google.protobuf.ByteString
@@ -442,7 +442,7 @@ public interface GoogleAdsFieldOrBuilder extends
    * Output only. Whether the field artifact is repeated.
    * </pre>
    *
-   * <code>bool is_repeated = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool is_repeated = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the isRepeated field is set.
    */
   boolean hasIsRepeated();
@@ -451,7 +451,7 @@ public interface GoogleAdsFieldOrBuilder extends
    * Output only. Whether the field artifact is repeated.
    * </pre>
    *
-   * <code>bool is_repeated = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool is_repeated = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The isRepeated.
    */
   boolean getIsRepeated();

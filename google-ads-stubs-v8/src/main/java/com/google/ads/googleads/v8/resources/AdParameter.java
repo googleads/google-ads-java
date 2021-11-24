@@ -174,7 +174,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The ad group criterion that this ad parameter belongs to.
    * </pre>
    *
-   * <code>string ad_group_criterion = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_criterion = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the adGroupCriterion field is set.
    */
   @java.lang.Override
@@ -186,7 +186,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The ad group criterion that this ad parameter belongs to.
    * </pre>
    *
-   * <code>string ad_group_criterion = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_criterion = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The adGroupCriterion.
    */
   @java.lang.Override
@@ -207,7 +207,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The ad group criterion that this ad parameter belongs to.
    * </pre>
    *
-   * <code>string ad_group_criterion = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group_criterion = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for adGroupCriterion.
    */
   @java.lang.Override
@@ -232,7 +232,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The unique index of this ad parameter. Must be either 1 or 2.
    * </pre>
    *
-   * <code>int64 parameter_index = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional int64 parameter_index = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the parameterIndex field is set.
    */
   @java.lang.Override
@@ -244,7 +244,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The unique index of this ad parameter. Must be either 1 or 2.
    * </pre>
    *
-   * <code>int64 parameter_index = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional int64 parameter_index = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The parameterIndex.
    */
   @java.lang.Override
@@ -271,7 +271,7 @@ private static final long serialVersionUID = 0L;
    *    valid.
    * </pre>
    *
-   * <code>string insertion_text = 7;</code>
+   * <code>optional string insertion_text = 7;</code>
    * @return Whether the insertionText field is set.
    */
   @java.lang.Override
@@ -295,7 +295,7 @@ private static final long serialVersionUID = 0L;
    *    valid.
    * </pre>
    *
-   * <code>string insertion_text = 7;</code>
+   * <code>optional string insertion_text = 7;</code>
    * @return The insertionText.
    */
   @java.lang.Override
@@ -328,7 +328,7 @@ private static final long serialVersionUID = 0L;
    *    valid.
    * </pre>
    *
-   * <code>string insertion_text = 7;</code>
+   * <code>optional string insertion_text = 7;</code>
    * @return The bytes for insertionText.
    */
   @java.lang.Override
@@ -360,7 +360,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
@@ -381,7 +381,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
@@ -851,7 +851,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The ad group criterion that this ad parameter belongs to.
      * </pre>
      *
-     * <code>string ad_group_criterion = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_criterion = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the adGroupCriterion field is set.
      */
     public boolean hasAdGroupCriterion() {
@@ -862,7 +862,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The ad group criterion that this ad parameter belongs to.
      * </pre>
      *
-     * <code>string ad_group_criterion = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_criterion = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return The adGroupCriterion.
      */
     public java.lang.String getAdGroupCriterion() {
@@ -882,7 +882,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The ad group criterion that this ad parameter belongs to.
      * </pre>
      *
-     * <code>string ad_group_criterion = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_criterion = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for adGroupCriterion.
      */
     public com.google.protobuf.ByteString
@@ -903,7 +903,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The ad group criterion that this ad parameter belongs to.
      * </pre>
      *
-     * <code>string ad_group_criterion = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_criterion = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @param value The adGroupCriterion to set.
      * @return This builder for chaining.
      */
@@ -922,7 +922,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The ad group criterion that this ad parameter belongs to.
      * </pre>
      *
-     * <code>string ad_group_criterion = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_criterion = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearAdGroupCriterion() {
@@ -936,7 +936,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The ad group criterion that this ad parameter belongs to.
      * </pre>
      *
-     * <code>string ad_group_criterion = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string ad_group_criterion = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for adGroupCriterion to set.
      * @return This builder for chaining.
      */
@@ -958,7 +958,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The unique index of this ad parameter. Must be either 1 or 2.
      * </pre>
      *
-     * <code>int64 parameter_index = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional int64 parameter_index = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the parameterIndex field is set.
      */
     @java.lang.Override
@@ -970,7 +970,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The unique index of this ad parameter. Must be either 1 or 2.
      * </pre>
      *
-     * <code>int64 parameter_index = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional int64 parameter_index = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The parameterIndex.
      */
     @java.lang.Override
@@ -982,7 +982,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The unique index of this ad parameter. Must be either 1 or 2.
      * </pre>
      *
-     * <code>int64 parameter_index = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional int64 parameter_index = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @param value The parameterIndex to set.
      * @return This builder for chaining.
      */
@@ -997,7 +997,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The unique index of this ad parameter. Must be either 1 or 2.
      * </pre>
      *
-     * <code>int64 parameter_index = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional int64 parameter_index = 6 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return This builder for chaining.
      */
     public Builder clearParameterIndex() {
@@ -1025,7 +1025,7 @@ private static final long serialVersionUID = 0L;
      *    valid.
      * </pre>
      *
-     * <code>string insertion_text = 7;</code>
+     * <code>optional string insertion_text = 7;</code>
      * @return Whether the insertionText field is set.
      */
     public boolean hasInsertionText() {
@@ -1048,7 +1048,7 @@ private static final long serialVersionUID = 0L;
      *    valid.
      * </pre>
      *
-     * <code>string insertion_text = 7;</code>
+     * <code>optional string insertion_text = 7;</code>
      * @return The insertionText.
      */
     public java.lang.String getInsertionText() {
@@ -1080,7 +1080,7 @@ private static final long serialVersionUID = 0L;
      *    valid.
      * </pre>
      *
-     * <code>string insertion_text = 7;</code>
+     * <code>optional string insertion_text = 7;</code>
      * @return The bytes for insertionText.
      */
     public com.google.protobuf.ByteString
@@ -1113,7 +1113,7 @@ private static final long serialVersionUID = 0L;
      *    valid.
      * </pre>
      *
-     * <code>string insertion_text = 7;</code>
+     * <code>optional string insertion_text = 7;</code>
      * @param value The insertionText to set.
      * @return This builder for chaining.
      */
@@ -1144,7 +1144,7 @@ private static final long serialVersionUID = 0L;
      *    valid.
      * </pre>
      *
-     * <code>string insertion_text = 7;</code>
+     * <code>optional string insertion_text = 7;</code>
      * @return This builder for chaining.
      */
     public Builder clearInsertionText() {
@@ -1170,7 +1170,7 @@ private static final long serialVersionUID = 0L;
      *    valid.
      * </pre>
      *
-     * <code>string insertion_text = 7;</code>
+     * <code>optional string insertion_text = 7;</code>
      * @param value The bytes for insertionText to set.
      * @return This builder for chaining.
      */

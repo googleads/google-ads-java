@@ -13,7 +13,7 @@ public interface LocationGroupInfoOrBuilder extends
    * This is required and must be set in CREATE operations.
    * </pre>
    *
-   * <code>string feed = 5;</code>
+   * <code>optional string feed = 5;</code>
    * @return Whether the feed field is set.
    */
   boolean hasFeed();
@@ -23,7 +23,7 @@ public interface LocationGroupInfoOrBuilder extends
    * This is required and must be set in CREATE operations.
    * </pre>
    *
-   * <code>string feed = 5;</code>
+   * <code>optional string feed = 5;</code>
    * @return The feed.
    */
   java.lang.String getFeed();
@@ -33,7 +33,7 @@ public interface LocationGroupInfoOrBuilder extends
    * This is required and must be set in CREATE operations.
    * </pre>
    *
-   * <code>string feed = 5;</code>
+   * <code>optional string feed = 5;</code>
    * @return The bytes for feed.
    */
   com.google.protobuf.ByteString
@@ -90,7 +90,7 @@ public interface LocationGroupInfoOrBuilder extends
    * This is required and must be set in CREATE operations.
    * </pre>
    *
-   * <code>int64 radius = 7;</code>
+   * <code>optional int64 radius = 7;</code>
    * @return Whether the radius field is set.
    */
   boolean hasRadius();
@@ -100,7 +100,7 @@ public interface LocationGroupInfoOrBuilder extends
    * This is required and must be set in CREATE operations.
    * </pre>
    *
-   * <code>int64 radius = 7;</code>
+   * <code>optional int64 radius = 7;</code>
    * @return The radius.
    */
   long getRadius();

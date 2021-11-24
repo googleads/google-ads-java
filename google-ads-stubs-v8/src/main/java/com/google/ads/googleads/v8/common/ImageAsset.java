@@ -124,7 +124,7 @@ private static final long serialVersionUID = 0L;
    * The raw bytes data of an image. This field is mutate only.
    * </pre>
    *
-   * <code>bytes data = 5;</code>
+   * <code>optional bytes data = 5;</code>
    * @return Whether the data field is set.
    */
   @java.lang.Override
@@ -136,7 +136,7 @@ private static final long serialVersionUID = 0L;
    * The raw bytes data of an image. This field is mutate only.
    * </pre>
    *
-   * <code>bytes data = 5;</code>
+   * <code>optional bytes data = 5;</code>
    * @return The data.
    */
   @java.lang.Override
@@ -151,7 +151,7 @@ private static final long serialVersionUID = 0L;
    * File size of the image asset in bytes.
    * </pre>
    *
-   * <code>int64 file_size = 6;</code>
+   * <code>optional int64 file_size = 6;</code>
    * @return Whether the fileSize field is set.
    */
   @java.lang.Override
@@ -163,7 +163,7 @@ private static final long serialVersionUID = 0L;
    * File size of the image asset in bytes.
    * </pre>
    *
-   * <code>int64 file_size = 6;</code>
+   * <code>optional int64 file_size = 6;</code>
    * @return The fileSize.
    */
   @java.lang.Override
@@ -632,7 +632,7 @@ private static final long serialVersionUID = 0L;
      * The raw bytes data of an image. This field is mutate only.
      * </pre>
      *
-     * <code>bytes data = 5;</code>
+     * <code>optional bytes data = 5;</code>
      * @return Whether the data field is set.
      */
     @java.lang.Override
@@ -644,7 +644,7 @@ private static final long serialVersionUID = 0L;
      * The raw bytes data of an image. This field is mutate only.
      * </pre>
      *
-     * <code>bytes data = 5;</code>
+     * <code>optional bytes data = 5;</code>
      * @return The data.
      */
     @java.lang.Override
@@ -656,7 +656,7 @@ private static final long serialVersionUID = 0L;
      * The raw bytes data of an image. This field is mutate only.
      * </pre>
      *
-     * <code>bytes data = 5;</code>
+     * <code>optional bytes data = 5;</code>
      * @param value The data to set.
      * @return This builder for chaining.
      */
@@ -674,7 +674,7 @@ private static final long serialVersionUID = 0L;
      * The raw bytes data of an image. This field is mutate only.
      * </pre>
      *
-     * <code>bytes data = 5;</code>
+     * <code>optional bytes data = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearData() {
@@ -690,7 +690,7 @@ private static final long serialVersionUID = 0L;
      * File size of the image asset in bytes.
      * </pre>
      *
-     * <code>int64 file_size = 6;</code>
+     * <code>optional int64 file_size = 6;</code>
      * @return Whether the fileSize field is set.
      */
     @java.lang.Override
@@ -702,7 +702,7 @@ private static final long serialVersionUID = 0L;
      * File size of the image asset in bytes.
      * </pre>
      *
-     * <code>int64 file_size = 6;</code>
+     * <code>optional int64 file_size = 6;</code>
      * @return The fileSize.
      */
     @java.lang.Override
@@ -714,7 +714,7 @@ private static final long serialVersionUID = 0L;
      * File size of the image asset in bytes.
      * </pre>
      *
-     * <code>int64 file_size = 6;</code>
+     * <code>optional int64 file_size = 6;</code>
      * @param value The fileSize to set.
      * @return This builder for chaining.
      */
@@ -729,7 +729,7 @@ private static final long serialVersionUID = 0L;
      * File size of the image asset in bytes.
      * </pre>
      *
-     * <code>int64 file_size = 6;</code>
+     * <code>optional int64 file_size = 6;</code>
      * @return This builder for chaining.
      */
     public Builder clearFileSize() {

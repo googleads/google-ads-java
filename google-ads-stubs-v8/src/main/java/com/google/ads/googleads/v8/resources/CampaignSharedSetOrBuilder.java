@@ -36,7 +36,7 @@ public interface CampaignSharedSetOrBuilder extends
    * Immutable. The campaign to which the campaign shared set belongs.
    * </pre>
    *
-   * <code>string campaign = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the campaign field is set.
    */
   boolean hasCampaign();
@@ -45,7 +45,7 @@ public interface CampaignSharedSetOrBuilder extends
    * Immutable. The campaign to which the campaign shared set belongs.
    * </pre>
    *
-   * <code>string campaign = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The campaign.
    */
   java.lang.String getCampaign();
@@ -54,7 +54,7 @@ public interface CampaignSharedSetOrBuilder extends
    * Immutable. The campaign to which the campaign shared set belongs.
    * </pre>
    *
-   * <code>string campaign = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for campaign.
    */
   com.google.protobuf.ByteString
@@ -70,7 +70,7 @@ public interface CampaignSharedSetOrBuilder extends
    * with Display mobile app campaigns.
    * </pre>
    *
-   * <code>string shared_set = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string shared_set = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the sharedSet field is set.
    */
   boolean hasSharedSet();
@@ -84,7 +84,7 @@ public interface CampaignSharedSetOrBuilder extends
    * with Display mobile app campaigns.
    * </pre>
    *
-   * <code>string shared_set = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string shared_set = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The sharedSet.
    */
   java.lang.String getSharedSet();
@@ -98,7 +98,7 @@ public interface CampaignSharedSetOrBuilder extends
    * with Display mobile app campaigns.
    * </pre>
    *
-   * <code>string shared_set = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string shared_set = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for sharedSet.
    */
   com.google.protobuf.ByteString

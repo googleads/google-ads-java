@@ -113,7 +113,7 @@ private static final long serialVersionUID = 0L;
    * The location identifier.
    * </pre>
    *
-   * <code>string id = 4;</code>
+   * <code>optional string id = 4;</code>
    * @return Whether the id field is set.
    */
   @java.lang.Override
@@ -125,7 +125,7 @@ private static final long serialVersionUID = 0L;
    * The location identifier.
    * </pre>
    *
-   * <code>string id = 4;</code>
+   * <code>optional string id = 4;</code>
    * @return The id.
    */
   @java.lang.Override
@@ -146,7 +146,7 @@ private static final long serialVersionUID = 0L;
    * The location identifier.
    * </pre>
    *
-   * <code>string id = 4;</code>
+   * <code>optional string id = 4;</code>
    * @return The bytes for id.
    */
   @java.lang.Override
@@ -171,7 +171,7 @@ private static final long serialVersionUID = 0L;
    * The unique location name in english.
    * </pre>
    *
-   * <code>string name = 5;</code>
+   * <code>optional string name = 5;</code>
    * @return Whether the name field is set.
    */
   @java.lang.Override
@@ -183,7 +183,7 @@ private static final long serialVersionUID = 0L;
    * The unique location name in english.
    * </pre>
    *
-   * <code>string name = 5;</code>
+   * <code>optional string name = 5;</code>
    * @return The name.
    */
   @java.lang.Override
@@ -204,7 +204,7 @@ private static final long serialVersionUID = 0L;
    * The unique location name in english.
    * </pre>
    *
-   * <code>string name = 5;</code>
+   * <code>optional string name = 5;</code>
    * @return The bytes for name.
    */
   @java.lang.Override
@@ -226,13 +226,14 @@ private static final long serialVersionUID = 0L;
   private long parentCountryId_;
   /**
    * <pre>
-   * The parent country code, not present if location is a country.
-   * If present will always be a criterion id: additional information, such as
-   * country name are returned both via ListPlannableLocations or directly by
-   * accessing GeoTargetConstantService with the criterion id.
+   * The parent country, not present if location is a country.
+   * If present will always be a GeoTargetConstant ID. Additional information,
+   * such as country name is provided by
+   * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v8.services.ReachPlanService.ListPlannableLocations] or directly by accessing
+   * [GeoTargetConstantService.GetGeoTargetConstant][google.ads.googleads.v8.services.GeoTargetConstantService.GetGeoTargetConstant].
    * </pre>
    *
-   * <code>int64 parent_country_id = 6;</code>
+   * <code>optional int64 parent_country_id = 6;</code>
    * @return Whether the parentCountryId field is set.
    */
   @java.lang.Override
@@ -241,13 +242,14 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The parent country code, not present if location is a country.
-   * If present will always be a criterion id: additional information, such as
-   * country name are returned both via ListPlannableLocations or directly by
-   * accessing GeoTargetConstantService with the criterion id.
+   * The parent country, not present if location is a country.
+   * If present will always be a GeoTargetConstant ID. Additional information,
+   * such as country name is provided by
+   * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v8.services.ReachPlanService.ListPlannableLocations] or directly by accessing
+   * [GeoTargetConstantService.GetGeoTargetConstant][google.ads.googleads.v8.services.GeoTargetConstantService.GetGeoTargetConstant].
    * </pre>
    *
-   * <code>int64 parent_country_id = 6;</code>
+   * <code>optional int64 parent_country_id = 6;</code>
    * @return The parentCountryId.
    */
   @java.lang.Override
@@ -633,7 +635,7 @@ private static final long serialVersionUID = 0L;
      * The location identifier.
      * </pre>
      *
-     * <code>string id = 4;</code>
+     * <code>optional string id = 4;</code>
      * @return Whether the id field is set.
      */
     public boolean hasId() {
@@ -644,7 +646,7 @@ private static final long serialVersionUID = 0L;
      * The location identifier.
      * </pre>
      *
-     * <code>string id = 4;</code>
+     * <code>optional string id = 4;</code>
      * @return The id.
      */
     public java.lang.String getId() {
@@ -664,7 +666,7 @@ private static final long serialVersionUID = 0L;
      * The location identifier.
      * </pre>
      *
-     * <code>string id = 4;</code>
+     * <code>optional string id = 4;</code>
      * @return The bytes for id.
      */
     public com.google.protobuf.ByteString
@@ -685,7 +687,7 @@ private static final long serialVersionUID = 0L;
      * The location identifier.
      * </pre>
      *
-     * <code>string id = 4;</code>
+     * <code>optional string id = 4;</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
@@ -704,7 +706,7 @@ private static final long serialVersionUID = 0L;
      * The location identifier.
      * </pre>
      *
-     * <code>string id = 4;</code>
+     * <code>optional string id = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {
@@ -718,7 +720,7 @@ private static final long serialVersionUID = 0L;
      * The location identifier.
      * </pre>
      *
-     * <code>string id = 4;</code>
+     * <code>optional string id = 4;</code>
      * @param value The bytes for id to set.
      * @return This builder for chaining.
      */
@@ -740,7 +742,7 @@ private static final long serialVersionUID = 0L;
      * The unique location name in english.
      * </pre>
      *
-     * <code>string name = 5;</code>
+     * <code>optional string name = 5;</code>
      * @return Whether the name field is set.
      */
     public boolean hasName() {
@@ -751,7 +753,7 @@ private static final long serialVersionUID = 0L;
      * The unique location name in english.
      * </pre>
      *
-     * <code>string name = 5;</code>
+     * <code>optional string name = 5;</code>
      * @return The name.
      */
     public java.lang.String getName() {
@@ -771,7 +773,7 @@ private static final long serialVersionUID = 0L;
      * The unique location name in english.
      * </pre>
      *
-     * <code>string name = 5;</code>
+     * <code>optional string name = 5;</code>
      * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
@@ -792,7 +794,7 @@ private static final long serialVersionUID = 0L;
      * The unique location name in english.
      * </pre>
      *
-     * <code>string name = 5;</code>
+     * <code>optional string name = 5;</code>
      * @param value The name to set.
      * @return This builder for chaining.
      */
@@ -811,7 +813,7 @@ private static final long serialVersionUID = 0L;
      * The unique location name in english.
      * </pre>
      *
-     * <code>string name = 5;</code>
+     * <code>optional string name = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
@@ -825,7 +827,7 @@ private static final long serialVersionUID = 0L;
      * The unique location name in english.
      * </pre>
      *
-     * <code>string name = 5;</code>
+     * <code>optional string name = 5;</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
@@ -844,13 +846,14 @@ private static final long serialVersionUID = 0L;
     private long parentCountryId_ ;
     /**
      * <pre>
-     * The parent country code, not present if location is a country.
-     * If present will always be a criterion id: additional information, such as
-     * country name are returned both via ListPlannableLocations or directly by
-     * accessing GeoTargetConstantService with the criterion id.
+     * The parent country, not present if location is a country.
+     * If present will always be a GeoTargetConstant ID. Additional information,
+     * such as country name is provided by
+     * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v8.services.ReachPlanService.ListPlannableLocations] or directly by accessing
+     * [GeoTargetConstantService.GetGeoTargetConstant][google.ads.googleads.v8.services.GeoTargetConstantService.GetGeoTargetConstant].
      * </pre>
      *
-     * <code>int64 parent_country_id = 6;</code>
+     * <code>optional int64 parent_country_id = 6;</code>
      * @return Whether the parentCountryId field is set.
      */
     @java.lang.Override
@@ -859,13 +862,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The parent country code, not present if location is a country.
-     * If present will always be a criterion id: additional information, such as
-     * country name are returned both via ListPlannableLocations or directly by
-     * accessing GeoTargetConstantService with the criterion id.
+     * The parent country, not present if location is a country.
+     * If present will always be a GeoTargetConstant ID. Additional information,
+     * such as country name is provided by
+     * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v8.services.ReachPlanService.ListPlannableLocations] or directly by accessing
+     * [GeoTargetConstantService.GetGeoTargetConstant][google.ads.googleads.v8.services.GeoTargetConstantService.GetGeoTargetConstant].
      * </pre>
      *
-     * <code>int64 parent_country_id = 6;</code>
+     * <code>optional int64 parent_country_id = 6;</code>
      * @return The parentCountryId.
      */
     @java.lang.Override
@@ -874,13 +878,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The parent country code, not present if location is a country.
-     * If present will always be a criterion id: additional information, such as
-     * country name are returned both via ListPlannableLocations or directly by
-     * accessing GeoTargetConstantService with the criterion id.
+     * The parent country, not present if location is a country.
+     * If present will always be a GeoTargetConstant ID. Additional information,
+     * such as country name is provided by
+     * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v8.services.ReachPlanService.ListPlannableLocations] or directly by accessing
+     * [GeoTargetConstantService.GetGeoTargetConstant][google.ads.googleads.v8.services.GeoTargetConstantService.GetGeoTargetConstant].
      * </pre>
      *
-     * <code>int64 parent_country_id = 6;</code>
+     * <code>optional int64 parent_country_id = 6;</code>
      * @param value The parentCountryId to set.
      * @return This builder for chaining.
      */
@@ -892,13 +897,14 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The parent country code, not present if location is a country.
-     * If present will always be a criterion id: additional information, such as
-     * country name are returned both via ListPlannableLocations or directly by
-     * accessing GeoTargetConstantService with the criterion id.
+     * The parent country, not present if location is a country.
+     * If present will always be a GeoTargetConstant ID. Additional information,
+     * such as country name is provided by
+     * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v8.services.ReachPlanService.ListPlannableLocations] or directly by accessing
+     * [GeoTargetConstantService.GetGeoTargetConstant][google.ads.googleads.v8.services.GeoTargetConstantService.GetGeoTargetConstant].
      * </pre>
      *
-     * <code>int64 parent_country_id = 6;</code>
+     * <code>optional int64 parent_country_id = 6;</code>
      * @return This builder for chaining.
      */
     public Builder clearParentCountryId() {

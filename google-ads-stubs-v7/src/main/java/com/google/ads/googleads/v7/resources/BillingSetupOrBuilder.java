@@ -36,7 +36,7 @@ public interface BillingSetupOrBuilder extends
    * Output only. The ID of the billing setup.
    * </pre>
    *
-   * <code>int64 id = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -45,7 +45,7 @@ public interface BillingSetupOrBuilder extends
    * Output only. The ID of the billing setup.
    * </pre>
    *
-   * <code>int64 id = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   long getId();
@@ -80,7 +80,7 @@ public interface BillingSetupOrBuilder extends
    * populated.
    * </pre>
    *
-   * <code>string payments_account = 18 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string payments_account = 18 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the paymentsAccount field is set.
    */
   boolean hasPaymentsAccount();
@@ -95,7 +95,7 @@ public interface BillingSetupOrBuilder extends
    * populated.
    * </pre>
    *
-   * <code>string payments_account = 18 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string payments_account = 18 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The paymentsAccount.
    */
   java.lang.String getPaymentsAccount();
@@ -110,7 +110,7 @@ public interface BillingSetupOrBuilder extends
    * populated.
    * </pre>
    *
-   * <code>string payments_account = 18 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string payments_account = 18 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for paymentsAccount.
    */
   com.google.protobuf.ByteString

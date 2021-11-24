@@ -132,7 +132,7 @@ private static final long serialVersionUID = 0L;
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
    *
-   * <code>string advertiser_upload_date_time = 7;</code>
+   * <code>optional string advertiser_upload_date_time = 7;</code>
    * @return Whether the advertiserUploadDateTime field is set.
    */
   @java.lang.Override
@@ -146,7 +146,7 @@ private static final long serialVersionUID = 0L;
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
    *
-   * <code>string advertiser_upload_date_time = 7;</code>
+   * <code>optional string advertiser_upload_date_time = 7;</code>
    * @return The advertiserUploadDateTime.
    */
   @java.lang.Override
@@ -169,7 +169,7 @@ private static final long serialVersionUID = 0L;
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
    *
-   * <code>string advertiser_upload_date_time = 7;</code>
+   * <code>optional string advertiser_upload_date_time = 7;</code>
    * @return The bytes for advertiserUploadDateTime.
    */
   @java.lang.Override
@@ -197,7 +197,7 @@ private static final long serialVersionUID = 0L;
    * The fraction needs to be between 0 and 1 (excluding 0).
    * </pre>
    *
-   * <code>double valid_transaction_fraction = 8;</code>
+   * <code>optional double valid_transaction_fraction = 8;</code>
    * @return Whether the validTransactionFraction field is set.
    */
   @java.lang.Override
@@ -212,7 +212,7 @@ private static final long serialVersionUID = 0L;
    * The fraction needs to be between 0 and 1 (excluding 0).
    * </pre>
    *
-   * <code>double valid_transaction_fraction = 8;</code>
+   * <code>optional double valid_transaction_fraction = 8;</code>
    * @return The validTransactionFraction.
    */
   @java.lang.Override
@@ -230,7 +230,7 @@ private static final long serialVersionUID = 0L;
    * The fraction needs to be between 0 and 1 (excluding 0).
    * </pre>
    *
-   * <code>double partner_match_fraction = 9;</code>
+   * <code>optional double partner_match_fraction = 9;</code>
    * @return Whether the partnerMatchFraction field is set.
    */
   @java.lang.Override
@@ -245,7 +245,7 @@ private static final long serialVersionUID = 0L;
    * The fraction needs to be between 0 and 1 (excluding 0).
    * </pre>
    *
-   * <code>double partner_match_fraction = 9;</code>
+   * <code>optional double partner_match_fraction = 9;</code>
    * @return The partnerMatchFraction.
    */
   @java.lang.Override
@@ -263,7 +263,7 @@ private static final long serialVersionUID = 0L;
    * The fraction needs to be between 0 and 1 (excluding 0).
    * </pre>
    *
-   * <code>double partner_upload_fraction = 10;</code>
+   * <code>optional double partner_upload_fraction = 10;</code>
    * @return Whether the partnerUploadFraction field is set.
    */
   @java.lang.Override
@@ -278,7 +278,7 @@ private static final long serialVersionUID = 0L;
    * The fraction needs to be between 0 and 1 (excluding 0).
    * </pre>
    *
-   * <code>double partner_upload_fraction = 10;</code>
+   * <code>optional double partner_upload_fraction = 10;</code>
    * @return The partnerUploadFraction.
    */
   @java.lang.Override
@@ -293,7 +293,7 @@ private static final long serialVersionUID = 0L;
    * Version of partner IDs to be used for uploads. Required.
    * </pre>
    *
-   * <code>string bridge_map_version_id = 11;</code>
+   * <code>optional string bridge_map_version_id = 11;</code>
    * @return Whether the bridgeMapVersionId field is set.
    */
   @java.lang.Override
@@ -305,7 +305,7 @@ private static final long serialVersionUID = 0L;
    * Version of partner IDs to be used for uploads. Required.
    * </pre>
    *
-   * <code>string bridge_map_version_id = 11;</code>
+   * <code>optional string bridge_map_version_id = 11;</code>
    * @return The bridgeMapVersionId.
    */
   @java.lang.Override
@@ -326,7 +326,7 @@ private static final long serialVersionUID = 0L;
    * Version of partner IDs to be used for uploads. Required.
    * </pre>
    *
-   * <code>string bridge_map_version_id = 11;</code>
+   * <code>optional string bridge_map_version_id = 11;</code>
    * @return The bytes for bridgeMapVersionId.
    */
   @java.lang.Override
@@ -351,7 +351,7 @@ private static final long serialVersionUID = 0L;
    * ID of the third party partner updating the transaction feed.
    * </pre>
    *
-   * <code>int64 partner_id = 12;</code>
+   * <code>optional int64 partner_id = 12;</code>
    * @return Whether the partnerId field is set.
    */
   @java.lang.Override
@@ -363,7 +363,7 @@ private static final long serialVersionUID = 0L;
    * ID of the third party partner updating the transaction feed.
    * </pre>
    *
-   * <code>int64 partner_id = 12;</code>
+   * <code>optional int64 partner_id = 12;</code>
    * @return The partnerId.
    */
   @java.lang.Override
@@ -834,7 +834,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string advertiser_upload_date_time = 7;</code>
+     * <code>optional string advertiser_upload_date_time = 7;</code>
      * @return Whether the advertiserUploadDateTime field is set.
      */
     public boolean hasAdvertiserUploadDateTime() {
@@ -847,7 +847,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string advertiser_upload_date_time = 7;</code>
+     * <code>optional string advertiser_upload_date_time = 7;</code>
      * @return The advertiserUploadDateTime.
      */
     public java.lang.String getAdvertiserUploadDateTime() {
@@ -869,7 +869,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string advertiser_upload_date_time = 7;</code>
+     * <code>optional string advertiser_upload_date_time = 7;</code>
      * @return The bytes for advertiserUploadDateTime.
      */
     public com.google.protobuf.ByteString
@@ -892,7 +892,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string advertiser_upload_date_time = 7;</code>
+     * <code>optional string advertiser_upload_date_time = 7;</code>
      * @param value The advertiserUploadDateTime to set.
      * @return This builder for chaining.
      */
@@ -913,7 +913,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string advertiser_upload_date_time = 7;</code>
+     * <code>optional string advertiser_upload_date_time = 7;</code>
      * @return This builder for chaining.
      */
     public Builder clearAdvertiserUploadDateTime() {
@@ -929,7 +929,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string advertiser_upload_date_time = 7;</code>
+     * <code>optional string advertiser_upload_date_time = 7;</code>
      * @param value The bytes for advertiserUploadDateTime to set.
      * @return This builder for chaining.
      */
@@ -954,7 +954,7 @@ private static final long serialVersionUID = 0L;
      * The fraction needs to be between 0 and 1 (excluding 0).
      * </pre>
      *
-     * <code>double valid_transaction_fraction = 8;</code>
+     * <code>optional double valid_transaction_fraction = 8;</code>
      * @return Whether the validTransactionFraction field is set.
      */
     @java.lang.Override
@@ -969,7 +969,7 @@ private static final long serialVersionUID = 0L;
      * The fraction needs to be between 0 and 1 (excluding 0).
      * </pre>
      *
-     * <code>double valid_transaction_fraction = 8;</code>
+     * <code>optional double valid_transaction_fraction = 8;</code>
      * @return The validTransactionFraction.
      */
     @java.lang.Override
@@ -984,7 +984,7 @@ private static final long serialVersionUID = 0L;
      * The fraction needs to be between 0 and 1 (excluding 0).
      * </pre>
      *
-     * <code>double valid_transaction_fraction = 8;</code>
+     * <code>optional double valid_transaction_fraction = 8;</code>
      * @param value The validTransactionFraction to set.
      * @return This builder for chaining.
      */
@@ -1002,7 +1002,7 @@ private static final long serialVersionUID = 0L;
      * The fraction needs to be between 0 and 1 (excluding 0).
      * </pre>
      *
-     * <code>double valid_transaction_fraction = 8;</code>
+     * <code>optional double valid_transaction_fraction = 8;</code>
      * @return This builder for chaining.
      */
     public Builder clearValidTransactionFraction() {
@@ -1021,7 +1021,7 @@ private static final long serialVersionUID = 0L;
      * The fraction needs to be between 0 and 1 (excluding 0).
      * </pre>
      *
-     * <code>double partner_match_fraction = 9;</code>
+     * <code>optional double partner_match_fraction = 9;</code>
      * @return Whether the partnerMatchFraction field is set.
      */
     @java.lang.Override
@@ -1036,7 +1036,7 @@ private static final long serialVersionUID = 0L;
      * The fraction needs to be between 0 and 1 (excluding 0).
      * </pre>
      *
-     * <code>double partner_match_fraction = 9;</code>
+     * <code>optional double partner_match_fraction = 9;</code>
      * @return The partnerMatchFraction.
      */
     @java.lang.Override
@@ -1051,7 +1051,7 @@ private static final long serialVersionUID = 0L;
      * The fraction needs to be between 0 and 1 (excluding 0).
      * </pre>
      *
-     * <code>double partner_match_fraction = 9;</code>
+     * <code>optional double partner_match_fraction = 9;</code>
      * @param value The partnerMatchFraction to set.
      * @return This builder for chaining.
      */
@@ -1069,7 +1069,7 @@ private static final long serialVersionUID = 0L;
      * The fraction needs to be between 0 and 1 (excluding 0).
      * </pre>
      *
-     * <code>double partner_match_fraction = 9;</code>
+     * <code>optional double partner_match_fraction = 9;</code>
      * @return This builder for chaining.
      */
     public Builder clearPartnerMatchFraction() {
@@ -1088,7 +1088,7 @@ private static final long serialVersionUID = 0L;
      * The fraction needs to be between 0 and 1 (excluding 0).
      * </pre>
      *
-     * <code>double partner_upload_fraction = 10;</code>
+     * <code>optional double partner_upload_fraction = 10;</code>
      * @return Whether the partnerUploadFraction field is set.
      */
     @java.lang.Override
@@ -1103,7 +1103,7 @@ private static final long serialVersionUID = 0L;
      * The fraction needs to be between 0 and 1 (excluding 0).
      * </pre>
      *
-     * <code>double partner_upload_fraction = 10;</code>
+     * <code>optional double partner_upload_fraction = 10;</code>
      * @return The partnerUploadFraction.
      */
     @java.lang.Override
@@ -1118,7 +1118,7 @@ private static final long serialVersionUID = 0L;
      * The fraction needs to be between 0 and 1 (excluding 0).
      * </pre>
      *
-     * <code>double partner_upload_fraction = 10;</code>
+     * <code>optional double partner_upload_fraction = 10;</code>
      * @param value The partnerUploadFraction to set.
      * @return This builder for chaining.
      */
@@ -1136,7 +1136,7 @@ private static final long serialVersionUID = 0L;
      * The fraction needs to be between 0 and 1 (excluding 0).
      * </pre>
      *
-     * <code>double partner_upload_fraction = 10;</code>
+     * <code>optional double partner_upload_fraction = 10;</code>
      * @return This builder for chaining.
      */
     public Builder clearPartnerUploadFraction() {
@@ -1152,7 +1152,7 @@ private static final long serialVersionUID = 0L;
      * Version of partner IDs to be used for uploads. Required.
      * </pre>
      *
-     * <code>string bridge_map_version_id = 11;</code>
+     * <code>optional string bridge_map_version_id = 11;</code>
      * @return Whether the bridgeMapVersionId field is set.
      */
     public boolean hasBridgeMapVersionId() {
@@ -1163,7 +1163,7 @@ private static final long serialVersionUID = 0L;
      * Version of partner IDs to be used for uploads. Required.
      * </pre>
      *
-     * <code>string bridge_map_version_id = 11;</code>
+     * <code>optional string bridge_map_version_id = 11;</code>
      * @return The bridgeMapVersionId.
      */
     public java.lang.String getBridgeMapVersionId() {
@@ -1183,7 +1183,7 @@ private static final long serialVersionUID = 0L;
      * Version of partner IDs to be used for uploads. Required.
      * </pre>
      *
-     * <code>string bridge_map_version_id = 11;</code>
+     * <code>optional string bridge_map_version_id = 11;</code>
      * @return The bytes for bridgeMapVersionId.
      */
     public com.google.protobuf.ByteString
@@ -1204,7 +1204,7 @@ private static final long serialVersionUID = 0L;
      * Version of partner IDs to be used for uploads. Required.
      * </pre>
      *
-     * <code>string bridge_map_version_id = 11;</code>
+     * <code>optional string bridge_map_version_id = 11;</code>
      * @param value The bridgeMapVersionId to set.
      * @return This builder for chaining.
      */
@@ -1223,7 +1223,7 @@ private static final long serialVersionUID = 0L;
      * Version of partner IDs to be used for uploads. Required.
      * </pre>
      *
-     * <code>string bridge_map_version_id = 11;</code>
+     * <code>optional string bridge_map_version_id = 11;</code>
      * @return This builder for chaining.
      */
     public Builder clearBridgeMapVersionId() {
@@ -1237,7 +1237,7 @@ private static final long serialVersionUID = 0L;
      * Version of partner IDs to be used for uploads. Required.
      * </pre>
      *
-     * <code>string bridge_map_version_id = 11;</code>
+     * <code>optional string bridge_map_version_id = 11;</code>
      * @param value The bytes for bridgeMapVersionId to set.
      * @return This builder for chaining.
      */
@@ -1259,7 +1259,7 @@ private static final long serialVersionUID = 0L;
      * ID of the third party partner updating the transaction feed.
      * </pre>
      *
-     * <code>int64 partner_id = 12;</code>
+     * <code>optional int64 partner_id = 12;</code>
      * @return Whether the partnerId field is set.
      */
     @java.lang.Override
@@ -1271,7 +1271,7 @@ private static final long serialVersionUID = 0L;
      * ID of the third party partner updating the transaction feed.
      * </pre>
      *
-     * <code>int64 partner_id = 12;</code>
+     * <code>optional int64 partner_id = 12;</code>
      * @return The partnerId.
      */
     @java.lang.Override
@@ -1283,7 +1283,7 @@ private static final long serialVersionUID = 0L;
      * ID of the third party partner updating the transaction feed.
      * </pre>
      *
-     * <code>int64 partner_id = 12;</code>
+     * <code>optional int64 partner_id = 12;</code>
      * @param value The partnerId to set.
      * @return This builder for chaining.
      */
@@ -1298,7 +1298,7 @@ private static final long serialVersionUID = 0L;
      * ID of the third party partner updating the transaction feed.
      * </pre>
      *
-     * <code>int64 partner_id = 12;</code>
+     * <code>optional int64 partner_id = 12;</code>
      * @return This builder for chaining.
      */
     public Builder clearPartnerId() {

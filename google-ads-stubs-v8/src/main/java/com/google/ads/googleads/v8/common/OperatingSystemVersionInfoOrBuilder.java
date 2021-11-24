@@ -12,7 +12,7 @@ public interface OperatingSystemVersionInfoOrBuilder extends
    * The operating system version constant resource name.
    * </pre>
    *
-   * <code>string operating_system_version_constant = 2;</code>
+   * <code>optional string operating_system_version_constant = 2;</code>
    * @return Whether the operatingSystemVersionConstant field is set.
    */
   boolean hasOperatingSystemVersionConstant();
@@ -21,7 +21,7 @@ public interface OperatingSystemVersionInfoOrBuilder extends
    * The operating system version constant resource name.
    * </pre>
    *
-   * <code>string operating_system_version_constant = 2;</code>
+   * <code>optional string operating_system_version_constant = 2;</code>
    * @return The operatingSystemVersionConstant.
    */
   java.lang.String getOperatingSystemVersionConstant();
@@ -30,7 +30,7 @@ public interface OperatingSystemVersionInfoOrBuilder extends
    * The operating system version constant resource name.
    * </pre>
    *
-   * <code>string operating_system_version_constant = 2;</code>
+   * <code>optional string operating_system_version_constant = 2;</code>
    * @return The bytes for operatingSystemVersionConstant.
    */
   com.google.protobuf.ByteString

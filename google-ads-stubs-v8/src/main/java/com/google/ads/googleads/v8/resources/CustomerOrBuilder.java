@@ -36,7 +36,7 @@ public interface CustomerOrBuilder extends
    * Output only. The ID of the customer.
    * </pre>
    *
-   * <code>int64 id = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -45,7 +45,7 @@ public interface CustomerOrBuilder extends
    * Output only. The ID of the customer.
    * </pre>
    *
-   * <code>int64 id = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   long getId();
@@ -55,7 +55,7 @@ public interface CustomerOrBuilder extends
    * Optional, non-unique descriptive name of the customer.
    * </pre>
    *
-   * <code>string descriptive_name = 20;</code>
+   * <code>optional string descriptive_name = 20;</code>
    * @return Whether the descriptiveName field is set.
    */
   boolean hasDescriptiveName();
@@ -64,7 +64,7 @@ public interface CustomerOrBuilder extends
    * Optional, non-unique descriptive name of the customer.
    * </pre>
    *
-   * <code>string descriptive_name = 20;</code>
+   * <code>optional string descriptive_name = 20;</code>
    * @return The descriptiveName.
    */
   java.lang.String getDescriptiveName();
@@ -73,7 +73,7 @@ public interface CustomerOrBuilder extends
    * Optional, non-unique descriptive name of the customer.
    * </pre>
    *
-   * <code>string descriptive_name = 20;</code>
+   * <code>optional string descriptive_name = 20;</code>
    * @return The bytes for descriptiveName.
    */
   com.google.protobuf.ByteString
@@ -86,7 +86,7 @@ public interface CustomerOrBuilder extends
    * supported.
    * </pre>
    *
-   * <code>string currency_code = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string currency_code = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the currencyCode field is set.
    */
   boolean hasCurrencyCode();
@@ -97,7 +97,7 @@ public interface CustomerOrBuilder extends
    * supported.
    * </pre>
    *
-   * <code>string currency_code = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string currency_code = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The currencyCode.
    */
   java.lang.String getCurrencyCode();
@@ -108,7 +108,7 @@ public interface CustomerOrBuilder extends
    * supported.
    * </pre>
    *
-   * <code>string currency_code = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string currency_code = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The bytes for currencyCode.
    */
   com.google.protobuf.ByteString
@@ -119,7 +119,7 @@ public interface CustomerOrBuilder extends
    * Immutable. The local timezone ID of the customer.
    * </pre>
    *
-   * <code>string time_zone = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string time_zone = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the timeZone field is set.
    */
   boolean hasTimeZone();
@@ -128,7 +128,7 @@ public interface CustomerOrBuilder extends
    * Immutable. The local timezone ID of the customer.
    * </pre>
    *
-   * <code>string time_zone = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string time_zone = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The timeZone.
    */
   java.lang.String getTimeZone();
@@ -137,7 +137,7 @@ public interface CustomerOrBuilder extends
    * Immutable. The local timezone ID of the customer.
    * </pre>
    *
-   * <code>string time_zone = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional string time_zone = 22 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The bytes for timeZone.
    */
   com.google.protobuf.ByteString
@@ -148,7 +148,7 @@ public interface CustomerOrBuilder extends
    * The URL template for constructing a tracking URL out of parameters.
    * </pre>
    *
-   * <code>string tracking_url_template = 23;</code>
+   * <code>optional string tracking_url_template = 23;</code>
    * @return Whether the trackingUrlTemplate field is set.
    */
   boolean hasTrackingUrlTemplate();
@@ -157,7 +157,7 @@ public interface CustomerOrBuilder extends
    * The URL template for constructing a tracking URL out of parameters.
    * </pre>
    *
-   * <code>string tracking_url_template = 23;</code>
+   * <code>optional string tracking_url_template = 23;</code>
    * @return The trackingUrlTemplate.
    */
   java.lang.String getTrackingUrlTemplate();
@@ -166,7 +166,7 @@ public interface CustomerOrBuilder extends
    * The URL template for constructing a tracking URL out of parameters.
    * </pre>
    *
-   * <code>string tracking_url_template = 23;</code>
+   * <code>optional string tracking_url_template = 23;</code>
    * @return The bytes for trackingUrlTemplate.
    */
   com.google.protobuf.ByteString
@@ -177,7 +177,7 @@ public interface CustomerOrBuilder extends
    * The URL template for appending params to the final URL
    * </pre>
    *
-   * <code>string final_url_suffix = 24;</code>
+   * <code>optional string final_url_suffix = 24;</code>
    * @return Whether the finalUrlSuffix field is set.
    */
   boolean hasFinalUrlSuffix();
@@ -186,7 +186,7 @@ public interface CustomerOrBuilder extends
    * The URL template for appending params to the final URL
    * </pre>
    *
-   * <code>string final_url_suffix = 24;</code>
+   * <code>optional string final_url_suffix = 24;</code>
    * @return The finalUrlSuffix.
    */
   java.lang.String getFinalUrlSuffix();
@@ -195,7 +195,7 @@ public interface CustomerOrBuilder extends
    * The URL template for appending params to the final URL
    * </pre>
    *
-   * <code>string final_url_suffix = 24;</code>
+   * <code>optional string final_url_suffix = 24;</code>
    * @return The bytes for finalUrlSuffix.
    */
   com.google.protobuf.ByteString
@@ -206,7 +206,7 @@ public interface CustomerOrBuilder extends
    * Whether auto-tagging is enabled for the customer.
    * </pre>
    *
-   * <code>bool auto_tagging_enabled = 25;</code>
+   * <code>optional bool auto_tagging_enabled = 25;</code>
    * @return Whether the autoTaggingEnabled field is set.
    */
   boolean hasAutoTaggingEnabled();
@@ -215,7 +215,7 @@ public interface CustomerOrBuilder extends
    * Whether auto-tagging is enabled for the customer.
    * </pre>
    *
-   * <code>bool auto_tagging_enabled = 25;</code>
+   * <code>optional bool auto_tagging_enabled = 25;</code>
    * @return The autoTaggingEnabled.
    */
   boolean getAutoTaggingEnabled();
@@ -227,7 +227,7 @@ public interface CustomerOrBuilder extends
    * information, see https://support.google.com/partners/answer/3125774.
    * </pre>
    *
-   * <code>bool has_partners_badge = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool has_partners_badge = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the hasPartnersBadge field is set.
    */
   boolean hasHasPartnersBadge();
@@ -238,7 +238,7 @@ public interface CustomerOrBuilder extends
    * information, see https://support.google.com/partners/answer/3125774.
    * </pre>
    *
-   * <code>bool has_partners_badge = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool has_partners_badge = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The hasPartnersBadge.
    */
   boolean getHasPartnersBadge();
@@ -248,7 +248,7 @@ public interface CustomerOrBuilder extends
    * Output only. Whether the customer is a manager.
    * </pre>
    *
-   * <code>bool manager = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool manager = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the manager field is set.
    */
   boolean hasManager();
@@ -257,7 +257,7 @@ public interface CustomerOrBuilder extends
    * Output only. Whether the customer is a manager.
    * </pre>
    *
-   * <code>bool manager = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool manager = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The manager.
    */
   boolean getManager();
@@ -267,7 +267,7 @@ public interface CustomerOrBuilder extends
    * Output only. Whether the customer is a test account.
    * </pre>
    *
-   * <code>bool test_account = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool test_account = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the testAccount field is set.
    */
   boolean hasTestAccount();
@@ -276,7 +276,7 @@ public interface CustomerOrBuilder extends
    * Output only. Whether the customer is a test account.
    * </pre>
    *
-   * <code>bool test_account = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool test_account = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The testAccount.
    */
   boolean getTestAccount();
@@ -427,7 +427,7 @@ public interface CustomerOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>double optimization_score = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional double optimization_score = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the optimizationScore field is set.
    */
   boolean hasOptimizationScore();
@@ -442,7 +442,7 @@ public interface CustomerOrBuilder extends
    * This field is read-only.
    * </pre>
    *
-   * <code>double optimization_score = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional double optimization_score = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The optimizationScore.
    */
   double getOptimizationScore();

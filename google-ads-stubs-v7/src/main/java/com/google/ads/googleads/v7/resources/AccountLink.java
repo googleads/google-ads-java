@@ -256,7 +256,7 @@ private static final long serialVersionUID = 0L;
    * This field is read only.
    * </pre>
    *
-   * <code>int64 account_link_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 account_link_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the accountLinkId field is set.
    */
   @java.lang.Override
@@ -269,7 +269,7 @@ private static final long serialVersionUID = 0L;
    * This field is read only.
    * </pre>
    *
-   * <code>int64 account_link_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 account_link_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The accountLinkId.
    */
   @java.lang.Override
@@ -474,7 +474,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (status_ != com.google.ads.googleads.v7.enums.AccountLinkStatusEnum.AccountLinkStatus.UNSPECIFIED.getNumber()) {
@@ -504,7 +504,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (status_ != com.google.ads.googleads.v7.enums.AccountLinkStatusEnum.AccountLinkStatus.UNSPECIFIED.getNumber()) {
@@ -1052,7 +1052,7 @@ private static final long serialVersionUID = 0L;
      * This field is read only.
      * </pre>
      *
-     * <code>int64 account_link_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 account_link_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the accountLinkId field is set.
      */
     @java.lang.Override
@@ -1065,7 +1065,7 @@ private static final long serialVersionUID = 0L;
      * This field is read only.
      * </pre>
      *
-     * <code>int64 account_link_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 account_link_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The accountLinkId.
      */
     @java.lang.Override
@@ -1078,7 +1078,7 @@ private static final long serialVersionUID = 0L;
      * This field is read only.
      * </pre>
      *
-     * <code>int64 account_link_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 account_link_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The accountLinkId to set.
      * @return This builder for chaining.
      */
@@ -1094,7 +1094,7 @@ private static final long serialVersionUID = 0L;
      * This field is read only.
      * </pre>
      *
-     * <code>int64 account_link_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 account_link_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearAccountLinkId() {

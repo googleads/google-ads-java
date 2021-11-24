@@ -133,7 +133,7 @@ private static final long serialVersionUID = 0L;
    * close_variants field.
    * </pre>
    *
-   * <code>string search_query = 4;</code>
+   * <code>optional string search_query = 4;</code>
    * @return Whether the searchQuery field is set.
    */
   @java.lang.Override
@@ -152,7 +152,7 @@ private static final long serialVersionUID = 0L;
    * close_variants field.
    * </pre>
    *
-   * <code>string search_query = 4;</code>
+   * <code>optional string search_query = 4;</code>
    * @return The searchQuery.
    */
   @java.lang.Override
@@ -180,7 +180,7 @@ private static final long serialVersionUID = 0L;
    * close_variants field.
    * </pre>
    *
-   * <code>string search_query = 4;</code>
+   * <code>optional string search_query = 4;</code>
    * @return The bytes for searchQuery.
    */
   @java.lang.Override
@@ -690,7 +690,7 @@ private static final long serialVersionUID = 0L;
      * close_variants field.
      * </pre>
      *
-     * <code>string search_query = 4;</code>
+     * <code>optional string search_query = 4;</code>
      * @return Whether the searchQuery field is set.
      */
     public boolean hasSearchQuery() {
@@ -708,7 +708,7 @@ private static final long serialVersionUID = 0L;
      * close_variants field.
      * </pre>
      *
-     * <code>string search_query = 4;</code>
+     * <code>optional string search_query = 4;</code>
      * @return The searchQuery.
      */
     public java.lang.String getSearchQuery() {
@@ -735,7 +735,7 @@ private static final long serialVersionUID = 0L;
      * close_variants field.
      * </pre>
      *
-     * <code>string search_query = 4;</code>
+     * <code>optional string search_query = 4;</code>
      * @return The bytes for searchQuery.
      */
     public com.google.protobuf.ByteString
@@ -763,7 +763,7 @@ private static final long serialVersionUID = 0L;
      * close_variants field.
      * </pre>
      *
-     * <code>string search_query = 4;</code>
+     * <code>optional string search_query = 4;</code>
      * @param value The searchQuery to set.
      * @return This builder for chaining.
      */
@@ -789,7 +789,7 @@ private static final long serialVersionUID = 0L;
      * close_variants field.
      * </pre>
      *
-     * <code>string search_query = 4;</code>
+     * <code>optional string search_query = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearSearchQuery() {
@@ -810,7 +810,7 @@ private static final long serialVersionUID = 0L;
      * close_variants field.
      * </pre>
      *
-     * <code>string search_query = 4;</code>
+     * <code>optional string search_query = 4;</code>
      * @param value The bytes for searchQuery to set.
      * @return This builder for chaining.
      */

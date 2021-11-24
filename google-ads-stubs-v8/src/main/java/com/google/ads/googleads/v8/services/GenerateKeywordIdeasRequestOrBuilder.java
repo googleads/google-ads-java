@@ -33,7 +33,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
    * Required
    * </pre>
    *
-   * <code>string language = 14;</code>
+   * <code>optional string language = 14;</code>
    * @return Whether the language field is set.
    */
   boolean hasLanguage();
@@ -43,7 +43,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
    * Required
    * </pre>
    *
-   * <code>string language = 14;</code>
+   * <code>optional string language = 14;</code>
    * @return The language.
    */
   java.lang.String getLanguage();
@@ -53,7 +53,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
    * Required
    * </pre>
    *
-   * <code>string language = 14;</code>
+   * <code>optional string language = 14;</code>
    * @return The bytes for language.
    */
   com.google.protobuf.ByteString

@@ -12,7 +12,7 @@ public interface KeywordOrBuilder extends
    * The AdGroupCriterion resource name.
    * </pre>
    *
-   * <code>string ad_group_criterion = 3;</code>
+   * <code>optional string ad_group_criterion = 3;</code>
    * @return Whether the adGroupCriterion field is set.
    */
   boolean hasAdGroupCriterion();
@@ -21,7 +21,7 @@ public interface KeywordOrBuilder extends
    * The AdGroupCriterion resource name.
    * </pre>
    *
-   * <code>string ad_group_criterion = 3;</code>
+   * <code>optional string ad_group_criterion = 3;</code>
    * @return The adGroupCriterion.
    */
   java.lang.String getAdGroupCriterion();
@@ -30,7 +30,7 @@ public interface KeywordOrBuilder extends
    * The AdGroupCriterion resource name.
    * </pre>
    *
-   * <code>string ad_group_criterion = 3;</code>
+   * <code>optional string ad_group_criterion = 3;</code>
    * @return The bytes for adGroupCriterion.
    */
   com.google.protobuf.ByteString

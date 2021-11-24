@@ -187,7 +187,7 @@ private static final long serialVersionUID = 0L;
    * The Keyword Plan ad group to which this keyword belongs.
    * </pre>
    *
-   * <code>string keyword_plan_ad_group = 8 [(.google.api.resource_reference) = { ... }</code>
+   * <code>optional string keyword_plan_ad_group = 8 [(.google.api.resource_reference) = { ... }</code>
    * @return Whether the keywordPlanAdGroup field is set.
    */
   @java.lang.Override
@@ -199,7 +199,7 @@ private static final long serialVersionUID = 0L;
    * The Keyword Plan ad group to which this keyword belongs.
    * </pre>
    *
-   * <code>string keyword_plan_ad_group = 8 [(.google.api.resource_reference) = { ... }</code>
+   * <code>optional string keyword_plan_ad_group = 8 [(.google.api.resource_reference) = { ... }</code>
    * @return The keywordPlanAdGroup.
    */
   @java.lang.Override
@@ -220,7 +220,7 @@ private static final long serialVersionUID = 0L;
    * The Keyword Plan ad group to which this keyword belongs.
    * </pre>
    *
-   * <code>string keyword_plan_ad_group = 8 [(.google.api.resource_reference) = { ... }</code>
+   * <code>optional string keyword_plan_ad_group = 8 [(.google.api.resource_reference) = { ... }</code>
    * @return The bytes for keywordPlanAdGroup.
    */
   @java.lang.Override
@@ -245,7 +245,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of the Keyword Plan keyword.
    * </pre>
    *
-   * <code>int64 id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   @java.lang.Override
@@ -257,7 +257,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of the Keyword Plan keyword.
    * </pre>
    *
-   * <code>int64 id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   @java.lang.Override
@@ -272,7 +272,7 @@ private static final long serialVersionUID = 0L;
    * The keyword text.
    * </pre>
    *
-   * <code>string text = 10;</code>
+   * <code>optional string text = 10;</code>
    * @return Whether the text field is set.
    */
   @java.lang.Override
@@ -284,7 +284,7 @@ private static final long serialVersionUID = 0L;
    * The keyword text.
    * </pre>
    *
-   * <code>string text = 10;</code>
+   * <code>optional string text = 10;</code>
    * @return The text.
    */
   @java.lang.Override
@@ -305,7 +305,7 @@ private static final long serialVersionUID = 0L;
    * The keyword text.
    * </pre>
    *
-   * <code>string text = 10;</code>
+   * <code>optional string text = 10;</code>
    * @return The bytes for text.
    */
   @java.lang.Override
@@ -361,7 +361,7 @@ private static final long serialVersionUID = 0L;
    * This field is Optional.
    * </pre>
    *
-   * <code>int64 cpc_bid_micros = 11;</code>
+   * <code>optional int64 cpc_bid_micros = 11;</code>
    * @return Whether the cpcBidMicros field is set.
    */
   @java.lang.Override
@@ -377,7 +377,7 @@ private static final long serialVersionUID = 0L;
    * This field is Optional.
    * </pre>
    *
-   * <code>int64 cpc_bid_micros = 11;</code>
+   * <code>optional int64 cpc_bid_micros = 11;</code>
    * @return The cpcBidMicros.
    */
   @java.lang.Override
@@ -392,7 +392,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. If true, the keyword is negative.
    * </pre>
    *
-   * <code>bool negative = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional bool negative = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the negative field is set.
    */
   @java.lang.Override
@@ -404,7 +404,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. If true, the keyword is negative.
    * </pre>
    *
-   * <code>bool negative = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional bool negative = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The negative.
    */
   @java.lang.Override
@@ -426,7 +426,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (matchType_ != com.google.ads.googleads.v7.enums.KeywordMatchTypeEnum.KeywordMatchType.UNSPECIFIED.getNumber()) {
@@ -456,7 +456,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (matchType_ != com.google.ads.googleads.v7.enums.KeywordMatchTypeEnum.KeywordMatchType.UNSPECIFIED.getNumber()) {
@@ -981,7 +981,7 @@ private static final long serialVersionUID = 0L;
      * The Keyword Plan ad group to which this keyword belongs.
      * </pre>
      *
-     * <code>string keyword_plan_ad_group = 8 [(.google.api.resource_reference) = { ... }</code>
+     * <code>optional string keyword_plan_ad_group = 8 [(.google.api.resource_reference) = { ... }</code>
      * @return Whether the keywordPlanAdGroup field is set.
      */
     public boolean hasKeywordPlanAdGroup() {
@@ -992,7 +992,7 @@ private static final long serialVersionUID = 0L;
      * The Keyword Plan ad group to which this keyword belongs.
      * </pre>
      *
-     * <code>string keyword_plan_ad_group = 8 [(.google.api.resource_reference) = { ... }</code>
+     * <code>optional string keyword_plan_ad_group = 8 [(.google.api.resource_reference) = { ... }</code>
      * @return The keywordPlanAdGroup.
      */
     public java.lang.String getKeywordPlanAdGroup() {
@@ -1012,7 +1012,7 @@ private static final long serialVersionUID = 0L;
      * The Keyword Plan ad group to which this keyword belongs.
      * </pre>
      *
-     * <code>string keyword_plan_ad_group = 8 [(.google.api.resource_reference) = { ... }</code>
+     * <code>optional string keyword_plan_ad_group = 8 [(.google.api.resource_reference) = { ... }</code>
      * @return The bytes for keywordPlanAdGroup.
      */
     public com.google.protobuf.ByteString
@@ -1033,7 +1033,7 @@ private static final long serialVersionUID = 0L;
      * The Keyword Plan ad group to which this keyword belongs.
      * </pre>
      *
-     * <code>string keyword_plan_ad_group = 8 [(.google.api.resource_reference) = { ... }</code>
+     * <code>optional string keyword_plan_ad_group = 8 [(.google.api.resource_reference) = { ... }</code>
      * @param value The keywordPlanAdGroup to set.
      * @return This builder for chaining.
      */
@@ -1052,7 +1052,7 @@ private static final long serialVersionUID = 0L;
      * The Keyword Plan ad group to which this keyword belongs.
      * </pre>
      *
-     * <code>string keyword_plan_ad_group = 8 [(.google.api.resource_reference) = { ... }</code>
+     * <code>optional string keyword_plan_ad_group = 8 [(.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearKeywordPlanAdGroup() {
@@ -1066,7 +1066,7 @@ private static final long serialVersionUID = 0L;
      * The Keyword Plan ad group to which this keyword belongs.
      * </pre>
      *
-     * <code>string keyword_plan_ad_group = 8 [(.google.api.resource_reference) = { ... }</code>
+     * <code>optional string keyword_plan_ad_group = 8 [(.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for keywordPlanAdGroup to set.
      * @return This builder for chaining.
      */
@@ -1088,7 +1088,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the Keyword Plan keyword.
      * </pre>
      *
-     * <code>int64 id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the id field is set.
      */
     @java.lang.Override
@@ -1100,7 +1100,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the Keyword Plan keyword.
      * </pre>
      *
-     * <code>int64 id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The id.
      */
     @java.lang.Override
@@ -1112,7 +1112,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the Keyword Plan keyword.
      * </pre>
      *
-     * <code>int64 id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
@@ -1127,7 +1127,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of the Keyword Plan keyword.
      * </pre>
      *
-     * <code>int64 id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {
@@ -1143,7 +1143,7 @@ private static final long serialVersionUID = 0L;
      * The keyword text.
      * </pre>
      *
-     * <code>string text = 10;</code>
+     * <code>optional string text = 10;</code>
      * @return Whether the text field is set.
      */
     public boolean hasText() {
@@ -1154,7 +1154,7 @@ private static final long serialVersionUID = 0L;
      * The keyword text.
      * </pre>
      *
-     * <code>string text = 10;</code>
+     * <code>optional string text = 10;</code>
      * @return The text.
      */
     public java.lang.String getText() {
@@ -1174,7 +1174,7 @@ private static final long serialVersionUID = 0L;
      * The keyword text.
      * </pre>
      *
-     * <code>string text = 10;</code>
+     * <code>optional string text = 10;</code>
      * @return The bytes for text.
      */
     public com.google.protobuf.ByteString
@@ -1195,7 +1195,7 @@ private static final long serialVersionUID = 0L;
      * The keyword text.
      * </pre>
      *
-     * <code>string text = 10;</code>
+     * <code>optional string text = 10;</code>
      * @param value The text to set.
      * @return This builder for chaining.
      */
@@ -1214,7 +1214,7 @@ private static final long serialVersionUID = 0L;
      * The keyword text.
      * </pre>
      *
-     * <code>string text = 10;</code>
+     * <code>optional string text = 10;</code>
      * @return This builder for chaining.
      */
     public Builder clearText() {
@@ -1228,7 +1228,7 @@ private static final long serialVersionUID = 0L;
      * The keyword text.
      * </pre>
      *
-     * <code>string text = 10;</code>
+     * <code>optional string text = 10;</code>
      * @param value The bytes for text to set.
      * @return This builder for chaining.
      */
@@ -1328,7 +1328,7 @@ private static final long serialVersionUID = 0L;
      * This field is Optional.
      * </pre>
      *
-     * <code>int64 cpc_bid_micros = 11;</code>
+     * <code>optional int64 cpc_bid_micros = 11;</code>
      * @return Whether the cpcBidMicros field is set.
      */
     @java.lang.Override
@@ -1344,7 +1344,7 @@ private static final long serialVersionUID = 0L;
      * This field is Optional.
      * </pre>
      *
-     * <code>int64 cpc_bid_micros = 11;</code>
+     * <code>optional int64 cpc_bid_micros = 11;</code>
      * @return The cpcBidMicros.
      */
     @java.lang.Override
@@ -1360,7 +1360,7 @@ private static final long serialVersionUID = 0L;
      * This field is Optional.
      * </pre>
      *
-     * <code>int64 cpc_bid_micros = 11;</code>
+     * <code>optional int64 cpc_bid_micros = 11;</code>
      * @param value The cpcBidMicros to set.
      * @return This builder for chaining.
      */
@@ -1379,7 +1379,7 @@ private static final long serialVersionUID = 0L;
      * This field is Optional.
      * </pre>
      *
-     * <code>int64 cpc_bid_micros = 11;</code>
+     * <code>optional int64 cpc_bid_micros = 11;</code>
      * @return This builder for chaining.
      */
     public Builder clearCpcBidMicros() {
@@ -1395,7 +1395,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. If true, the keyword is negative.
      * </pre>
      *
-     * <code>bool negative = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional bool negative = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return Whether the negative field is set.
      */
     @java.lang.Override
@@ -1407,7 +1407,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. If true, the keyword is negative.
      * </pre>
      *
-     * <code>bool negative = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional bool negative = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The negative.
      */
     @java.lang.Override
@@ -1419,7 +1419,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. If true, the keyword is negative.
      * </pre>
      *
-     * <code>bool negative = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional bool negative = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @param value The negative to set.
      * @return This builder for chaining.
      */
@@ -1434,7 +1434,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. If true, the keyword is negative.
      * </pre>
      *
-     * <code>bool negative = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>optional bool negative = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return This builder for chaining.
      */
     public Builder clearNegative() {

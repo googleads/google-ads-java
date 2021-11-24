@@ -37,7 +37,7 @@ public interface CustomerClientOrBuilder extends
    * the given customer. Read only.
    * </pre>
    *
-   * <code>string client_customer = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string client_customer = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the clientCustomer field is set.
    */
   boolean hasClientCustomer();
@@ -47,7 +47,7 @@ public interface CustomerClientOrBuilder extends
    * the given customer. Read only.
    * </pre>
    *
-   * <code>string client_customer = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string client_customer = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The clientCustomer.
    */
   java.lang.String getClientCustomer();
@@ -57,7 +57,7 @@ public interface CustomerClientOrBuilder extends
    * the given customer. Read only.
    * </pre>
    *
-   * <code>string client_customer = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string client_customer = 12 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for clientCustomer.
    */
   com.google.protobuf.ByteString
@@ -70,7 +70,7 @@ public interface CustomerClientOrBuilder extends
    * Read only.
    * </pre>
    *
-   * <code>bool hidden = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool hidden = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the hidden field is set.
    */
   boolean hasHidden();
@@ -81,7 +81,7 @@ public interface CustomerClientOrBuilder extends
    * Read only.
    * </pre>
    *
-   * <code>bool hidden = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool hidden = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The hidden.
    */
   boolean getHidden();
@@ -92,7 +92,7 @@ public interface CustomerClientOrBuilder extends
    * will be 0. Read only.
    * </pre>
    *
-   * <code>int64 level = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 level = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the level field is set.
    */
   boolean hasLevel();
@@ -102,7 +102,7 @@ public interface CustomerClientOrBuilder extends
    * will be 0. Read only.
    * </pre>
    *
-   * <code>int64 level = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 level = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The level.
    */
   long getLevel();
@@ -113,7 +113,7 @@ public interface CustomerClientOrBuilder extends
    * time zone of the client, e.g. America/Los_Angeles. Read only.
    * </pre>
    *
-   * <code>string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the timeZone field is set.
    */
   boolean hasTimeZone();
@@ -123,7 +123,7 @@ public interface CustomerClientOrBuilder extends
    * time zone of the client, e.g. America/Los_Angeles. Read only.
    * </pre>
    *
-   * <code>string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The timeZone.
    */
   java.lang.String getTimeZone();
@@ -133,7 +133,7 @@ public interface CustomerClientOrBuilder extends
    * time zone of the client, e.g. America/Los_Angeles. Read only.
    * </pre>
    *
-   * <code>string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for timeZone.
    */
   com.google.protobuf.ByteString
@@ -144,7 +144,7 @@ public interface CustomerClientOrBuilder extends
    * Output only. Identifies if the client is a test account. Read only.
    * </pre>
    *
-   * <code>bool test_account = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool test_account = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the testAccount field is set.
    */
   boolean hasTestAccount();
@@ -153,7 +153,7 @@ public interface CustomerClientOrBuilder extends
    * Output only. Identifies if the client is a test account. Read only.
    * </pre>
    *
-   * <code>bool test_account = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool test_account = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The testAccount.
    */
   boolean getTestAccount();
@@ -163,7 +163,7 @@ public interface CustomerClientOrBuilder extends
    * Output only. Identifies if the client is a manager. Read only.
    * </pre>
    *
-   * <code>bool manager = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool manager = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the manager field is set.
    */
   boolean hasManager();
@@ -172,7 +172,7 @@ public interface CustomerClientOrBuilder extends
    * Output only. Identifies if the client is a manager. Read only.
    * </pre>
    *
-   * <code>bool manager = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool manager = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The manager.
    */
   boolean getManager();
@@ -182,7 +182,7 @@ public interface CustomerClientOrBuilder extends
    * Output only. Descriptive name for the client. Read only.
    * </pre>
    *
-   * <code>string descriptive_name = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string descriptive_name = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the descriptiveName field is set.
    */
   boolean hasDescriptiveName();
@@ -191,7 +191,7 @@ public interface CustomerClientOrBuilder extends
    * Output only. Descriptive name for the client. Read only.
    * </pre>
    *
-   * <code>string descriptive_name = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string descriptive_name = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The descriptiveName.
    */
   java.lang.String getDescriptiveName();
@@ -200,7 +200,7 @@ public interface CustomerClientOrBuilder extends
    * Output only. Descriptive name for the client. Read only.
    * </pre>
    *
-   * <code>string descriptive_name = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string descriptive_name = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for descriptiveName.
    */
   com.google.protobuf.ByteString
@@ -211,7 +211,7 @@ public interface CustomerClientOrBuilder extends
    * Output only. Currency code (e.g. 'USD', 'EUR') for the client. Read only.
    * </pre>
    *
-   * <code>string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the currencyCode field is set.
    */
   boolean hasCurrencyCode();
@@ -220,7 +220,7 @@ public interface CustomerClientOrBuilder extends
    * Output only. Currency code (e.g. 'USD', 'EUR') for the client. Read only.
    * </pre>
    *
-   * <code>string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The currencyCode.
    */
   java.lang.String getCurrencyCode();
@@ -229,7 +229,7 @@ public interface CustomerClientOrBuilder extends
    * Output only. Currency code (e.g. 'USD', 'EUR') for the client. Read only.
    * </pre>
    *
-   * <code>string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for currencyCode.
    */
   com.google.protobuf.ByteString
@@ -240,7 +240,7 @@ public interface CustomerClientOrBuilder extends
    * Output only. The ID of the client customer. Read only.
    * </pre>
    *
-   * <code>int64 id = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -249,7 +249,7 @@ public interface CustomerClientOrBuilder extends
    * Output only. The ID of the client customer. Read only.
    * </pre>
    *
-   * <code>int64 id = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 20 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   long getId();

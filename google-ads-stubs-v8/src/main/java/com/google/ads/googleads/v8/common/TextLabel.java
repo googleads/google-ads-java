@@ -109,7 +109,7 @@ private static final long serialVersionUID = 0L;
    * Note: The background color may not be visible for manager accounts.
    * </pre>
    *
-   * <code>string background_color = 3;</code>
+   * <code>optional string background_color = 3;</code>
    * @return Whether the backgroundColor field is set.
    */
   @java.lang.Override
@@ -123,7 +123,7 @@ private static final long serialVersionUID = 0L;
    * Note: The background color may not be visible for manager accounts.
    * </pre>
    *
-   * <code>string background_color = 3;</code>
+   * <code>optional string background_color = 3;</code>
    * @return The backgroundColor.
    */
   @java.lang.Override
@@ -146,7 +146,7 @@ private static final long serialVersionUID = 0L;
    * Note: The background color may not be visible for manager accounts.
    * </pre>
    *
-   * <code>string background_color = 3;</code>
+   * <code>optional string background_color = 3;</code>
    * @return The bytes for backgroundColor.
    */
   @java.lang.Override
@@ -172,7 +172,7 @@ private static final long serialVersionUID = 0L;
    * characters.
    * </pre>
    *
-   * <code>string description = 4;</code>
+   * <code>optional string description = 4;</code>
    * @return Whether the description field is set.
    */
   @java.lang.Override
@@ -185,7 +185,7 @@ private static final long serialVersionUID = 0L;
    * characters.
    * </pre>
    *
-   * <code>string description = 4;</code>
+   * <code>optional string description = 4;</code>
    * @return The description.
    */
   @java.lang.Override
@@ -207,7 +207,7 @@ private static final long serialVersionUID = 0L;
    * characters.
    * </pre>
    *
-   * <code>string description = 4;</code>
+   * <code>optional string description = 4;</code>
    * @return The bytes for description.
    */
   @java.lang.Override
@@ -578,7 +578,7 @@ private static final long serialVersionUID = 0L;
      * Note: The background color may not be visible for manager accounts.
      * </pre>
      *
-     * <code>string background_color = 3;</code>
+     * <code>optional string background_color = 3;</code>
      * @return Whether the backgroundColor field is set.
      */
     public boolean hasBackgroundColor() {
@@ -591,7 +591,7 @@ private static final long serialVersionUID = 0L;
      * Note: The background color may not be visible for manager accounts.
      * </pre>
      *
-     * <code>string background_color = 3;</code>
+     * <code>optional string background_color = 3;</code>
      * @return The backgroundColor.
      */
     public java.lang.String getBackgroundColor() {
@@ -613,7 +613,7 @@ private static final long serialVersionUID = 0L;
      * Note: The background color may not be visible for manager accounts.
      * </pre>
      *
-     * <code>string background_color = 3;</code>
+     * <code>optional string background_color = 3;</code>
      * @return The bytes for backgroundColor.
      */
     public com.google.protobuf.ByteString
@@ -636,7 +636,7 @@ private static final long serialVersionUID = 0L;
      * Note: The background color may not be visible for manager accounts.
      * </pre>
      *
-     * <code>string background_color = 3;</code>
+     * <code>optional string background_color = 3;</code>
      * @param value The backgroundColor to set.
      * @return This builder for chaining.
      */
@@ -657,7 +657,7 @@ private static final long serialVersionUID = 0L;
      * Note: The background color may not be visible for manager accounts.
      * </pre>
      *
-     * <code>string background_color = 3;</code>
+     * <code>optional string background_color = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearBackgroundColor() {
@@ -673,7 +673,7 @@ private static final long serialVersionUID = 0L;
      * Note: The background color may not be visible for manager accounts.
      * </pre>
      *
-     * <code>string background_color = 3;</code>
+     * <code>optional string background_color = 3;</code>
      * @param value The bytes for backgroundColor to set.
      * @return This builder for chaining.
      */
@@ -696,7 +696,7 @@ private static final long serialVersionUID = 0L;
      * characters.
      * </pre>
      *
-     * <code>string description = 4;</code>
+     * <code>optional string description = 4;</code>
      * @return Whether the description field is set.
      */
     public boolean hasDescription() {
@@ -708,7 +708,7 @@ private static final long serialVersionUID = 0L;
      * characters.
      * </pre>
      *
-     * <code>string description = 4;</code>
+     * <code>optional string description = 4;</code>
      * @return The description.
      */
     public java.lang.String getDescription() {
@@ -729,7 +729,7 @@ private static final long serialVersionUID = 0L;
      * characters.
      * </pre>
      *
-     * <code>string description = 4;</code>
+     * <code>optional string description = 4;</code>
      * @return The bytes for description.
      */
     public com.google.protobuf.ByteString
@@ -751,7 +751,7 @@ private static final long serialVersionUID = 0L;
      * characters.
      * </pre>
      *
-     * <code>string description = 4;</code>
+     * <code>optional string description = 4;</code>
      * @param value The description to set.
      * @return This builder for chaining.
      */
@@ -771,7 +771,7 @@ private static final long serialVersionUID = 0L;
      * characters.
      * </pre>
      *
-     * <code>string description = 4;</code>
+     * <code>optional string description = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
@@ -786,7 +786,7 @@ private static final long serialVersionUID = 0L;
      * characters.
      * </pre>
      *
-     * <code>string description = 4;</code>
+     * <code>optional string description = 4;</code>
      * @param value The bytes for description to set.
      * @return This builder for chaining.
      */

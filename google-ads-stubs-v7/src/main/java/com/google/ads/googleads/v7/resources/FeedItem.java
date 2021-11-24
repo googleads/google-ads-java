@@ -229,7 +229,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The feed to which this feed item belongs.
    * </pre>
    *
-   * <code>string feed = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string feed = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the feed field is set.
    */
   @java.lang.Override
@@ -241,7 +241,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The feed to which this feed item belongs.
    * </pre>
    *
-   * <code>string feed = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string feed = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The feed.
    */
   @java.lang.Override
@@ -262,7 +262,7 @@ private static final long serialVersionUID = 0L;
    * Immutable. The feed to which this feed item belongs.
    * </pre>
    *
-   * <code>string feed = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string feed = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for feed.
    */
   @java.lang.Override
@@ -287,7 +287,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of this feed item.
    * </pre>
    *
-   * <code>int64 id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   @java.lang.Override
@@ -299,7 +299,7 @@ private static final long serialVersionUID = 0L;
    * Output only. The ID of this feed item.
    * </pre>
    *
-   * <code>int64 id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   @java.lang.Override
@@ -317,7 +317,7 @@ private static final long serialVersionUID = 0L;
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
    *
-   * <code>string start_date_time = 13;</code>
+   * <code>optional string start_date_time = 13;</code>
    * @return Whether the startDateTime field is set.
    */
   @java.lang.Override
@@ -332,7 +332,7 @@ private static final long serialVersionUID = 0L;
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
    *
-   * <code>string start_date_time = 13;</code>
+   * <code>optional string start_date_time = 13;</code>
    * @return The startDateTime.
    */
   @java.lang.Override
@@ -356,7 +356,7 @@ private static final long serialVersionUID = 0L;
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
    *
-   * <code>string start_date_time = 13;</code>
+   * <code>optional string start_date_time = 13;</code>
    * @return The bytes for startDateTime.
    */
   @java.lang.Override
@@ -384,7 +384,7 @@ private static final long serialVersionUID = 0L;
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
    *
-   * <code>string end_date_time = 14;</code>
+   * <code>optional string end_date_time = 14;</code>
    * @return Whether the endDateTime field is set.
    */
   @java.lang.Override
@@ -399,7 +399,7 @@ private static final long serialVersionUID = 0L;
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
    *
-   * <code>string end_date_time = 14;</code>
+   * <code>optional string end_date_time = 14;</code>
    * @return The endDateTime.
    */
   @java.lang.Override
@@ -423,7 +423,7 @@ private static final long serialVersionUID = 0L;
    * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
    * </pre>
    *
-   * <code>string end_date_time = 14;</code>
+   * <code>optional string end_date_time = 14;</code>
    * @return The bytes for endDateTime.
    */
   @java.lang.Override
@@ -723,7 +723,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     for (int i = 0; i < attributeValues_.size(); i++) {
@@ -762,7 +762,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     for (int i = 0; i < attributeValues_.size(); i++) {
@@ -1432,7 +1432,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The feed to which this feed item belongs.
      * </pre>
      *
-     * <code>string feed = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string feed = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return Whether the feed field is set.
      */
     public boolean hasFeed() {
@@ -1443,7 +1443,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The feed to which this feed item belongs.
      * </pre>
      *
-     * <code>string feed = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string feed = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return The feed.
      */
     public java.lang.String getFeed() {
@@ -1463,7 +1463,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The feed to which this feed item belongs.
      * </pre>
      *
-     * <code>string feed = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string feed = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return The bytes for feed.
      */
     public com.google.protobuf.ByteString
@@ -1484,7 +1484,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The feed to which this feed item belongs.
      * </pre>
      *
-     * <code>string feed = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string feed = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @param value The feed to set.
      * @return This builder for chaining.
      */
@@ -1503,7 +1503,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The feed to which this feed item belongs.
      * </pre>
      *
-     * <code>string feed = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string feed = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearFeed() {
@@ -1517,7 +1517,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. The feed to which this feed item belongs.
      * </pre>
      *
-     * <code>string feed = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>optional string feed = 11 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for feed to set.
      * @return This builder for chaining.
      */
@@ -1539,7 +1539,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of this feed item.
      * </pre>
      *
-     * <code>int64 id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the id field is set.
      */
     @java.lang.Override
@@ -1551,7 +1551,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of this feed item.
      * </pre>
      *
-     * <code>int64 id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The id.
      */
     @java.lang.Override
@@ -1563,7 +1563,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of this feed item.
      * </pre>
      *
-     * <code>int64 id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
@@ -1578,7 +1578,7 @@ private static final long serialVersionUID = 0L;
      * Output only. The ID of this feed item.
      * </pre>
      *
-     * <code>int64 id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {
@@ -1597,7 +1597,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string start_date_time = 13;</code>
+     * <code>optional string start_date_time = 13;</code>
      * @return Whether the startDateTime field is set.
      */
     public boolean hasStartDateTime() {
@@ -1611,7 +1611,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string start_date_time = 13;</code>
+     * <code>optional string start_date_time = 13;</code>
      * @return The startDateTime.
      */
     public java.lang.String getStartDateTime() {
@@ -1634,7 +1634,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string start_date_time = 13;</code>
+     * <code>optional string start_date_time = 13;</code>
      * @return The bytes for startDateTime.
      */
     public com.google.protobuf.ByteString
@@ -1658,7 +1658,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string start_date_time = 13;</code>
+     * <code>optional string start_date_time = 13;</code>
      * @param value The startDateTime to set.
      * @return This builder for chaining.
      */
@@ -1680,7 +1680,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string start_date_time = 13;</code>
+     * <code>optional string start_date_time = 13;</code>
      * @return This builder for chaining.
      */
     public Builder clearStartDateTime() {
@@ -1697,7 +1697,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string start_date_time = 13;</code>
+     * <code>optional string start_date_time = 13;</code>
      * @param value The bytes for startDateTime to set.
      * @return This builder for chaining.
      */
@@ -1722,7 +1722,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string end_date_time = 14;</code>
+     * <code>optional string end_date_time = 14;</code>
      * @return Whether the endDateTime field is set.
      */
     public boolean hasEndDateTime() {
@@ -1736,7 +1736,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string end_date_time = 14;</code>
+     * <code>optional string end_date_time = 14;</code>
      * @return The endDateTime.
      */
     public java.lang.String getEndDateTime() {
@@ -1759,7 +1759,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string end_date_time = 14;</code>
+     * <code>optional string end_date_time = 14;</code>
      * @return The bytes for endDateTime.
      */
     public com.google.protobuf.ByteString
@@ -1783,7 +1783,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string end_date_time = 14;</code>
+     * <code>optional string end_date_time = 14;</code>
      * @param value The endDateTime to set.
      * @return This builder for chaining.
      */
@@ -1805,7 +1805,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string end_date_time = 14;</code>
+     * <code>optional string end_date_time = 14;</code>
      * @return This builder for chaining.
      */
     public Builder clearEndDateTime() {
@@ -1822,7 +1822,7 @@ private static final long serialVersionUID = 0L;
      * Examples: "2018-03-05 09:15:00" or "2018-02-01 14:34:30"
      * </pre>
      *
-     * <code>string end_date_time = 14;</code>
+     * <code>optional string end_date_time = 14;</code>
      * @param value The bytes for endDateTime to set.
      * @return This builder for chaining.
      */

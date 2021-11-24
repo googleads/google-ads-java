@@ -12,7 +12,7 @@ public interface ImageAssetOrBuilder extends
    * The raw bytes data of an image. This field is mutate only.
    * </pre>
    *
-   * <code>bytes data = 5;</code>
+   * <code>optional bytes data = 5;</code>
    * @return Whether the data field is set.
    */
   boolean hasData();
@@ -21,7 +21,7 @@ public interface ImageAssetOrBuilder extends
    * The raw bytes data of an image. This field is mutate only.
    * </pre>
    *
-   * <code>bytes data = 5;</code>
+   * <code>optional bytes data = 5;</code>
    * @return The data.
    */
   com.google.protobuf.ByteString getData();
@@ -31,7 +31,7 @@ public interface ImageAssetOrBuilder extends
    * File size of the image asset in bytes.
    * </pre>
    *
-   * <code>int64 file_size = 6;</code>
+   * <code>optional int64 file_size = 6;</code>
    * @return Whether the fileSize field is set.
    */
   boolean hasFileSize();
@@ -40,7 +40,7 @@ public interface ImageAssetOrBuilder extends
    * File size of the image asset in bytes.
    * </pre>
    *
-   * <code>int64 file_size = 6;</code>
+   * <code>optional int64 file_size = 6;</code>
    * @return The fileSize.
    */
   long getFileSize();

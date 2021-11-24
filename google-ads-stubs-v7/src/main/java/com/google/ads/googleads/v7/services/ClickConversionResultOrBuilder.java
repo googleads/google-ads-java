@@ -12,7 +12,7 @@ public interface ClickConversionResultOrBuilder extends
    * The Google Click ID (gclid) associated with this conversion.
    * </pre>
    *
-   * <code>string gclid = 4;</code>
+   * <code>optional string gclid = 4;</code>
    * @return Whether the gclid field is set.
    */
   boolean hasGclid();
@@ -21,7 +21,7 @@ public interface ClickConversionResultOrBuilder extends
    * The Google Click ID (gclid) associated with this conversion.
    * </pre>
    *
-   * <code>string gclid = 4;</code>
+   * <code>optional string gclid = 4;</code>
    * @return The gclid.
    */
   java.lang.String getGclid();
@@ -30,7 +30,7 @@ public interface ClickConversionResultOrBuilder extends
    * The Google Click ID (gclid) associated with this conversion.
    * </pre>
    *
-   * <code>string gclid = 4;</code>
+   * <code>optional string gclid = 4;</code>
    * @return The bytes for gclid.
    */
   com.google.protobuf.ByteString
@@ -41,7 +41,7 @@ public interface ClickConversionResultOrBuilder extends
    * Resource name of the conversion action associated with this conversion.
    * </pre>
    *
-   * <code>string conversion_action = 5;</code>
+   * <code>optional string conversion_action = 5;</code>
    * @return Whether the conversionAction field is set.
    */
   boolean hasConversionAction();
@@ -50,7 +50,7 @@ public interface ClickConversionResultOrBuilder extends
    * Resource name of the conversion action associated with this conversion.
    * </pre>
    *
-   * <code>string conversion_action = 5;</code>
+   * <code>optional string conversion_action = 5;</code>
    * @return The conversionAction.
    */
   java.lang.String getConversionAction();
@@ -59,7 +59,7 @@ public interface ClickConversionResultOrBuilder extends
    * Resource name of the conversion action associated with this conversion.
    * </pre>
    *
-   * <code>string conversion_action = 5;</code>
+   * <code>optional string conversion_action = 5;</code>
    * @return The bytes for conversionAction.
    */
   com.google.protobuf.ByteString
@@ -71,7 +71,7 @@ public interface ClickConversionResultOrBuilder extends
    * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. “2019-01-01 12:32:45-08:00”.
    * </pre>
    *
-   * <code>string conversion_date_time = 6;</code>
+   * <code>optional string conversion_date_time = 6;</code>
    * @return Whether the conversionDateTime field is set.
    */
   boolean hasConversionDateTime();
@@ -81,7 +81,7 @@ public interface ClickConversionResultOrBuilder extends
    * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. “2019-01-01 12:32:45-08:00”.
    * </pre>
    *
-   * <code>string conversion_date_time = 6;</code>
+   * <code>optional string conversion_date_time = 6;</code>
    * @return The conversionDateTime.
    */
   java.lang.String getConversionDateTime();
@@ -91,7 +91,7 @@ public interface ClickConversionResultOrBuilder extends
    * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. “2019-01-01 12:32:45-08:00”.
    * </pre>
    *
-   * <code>string conversion_date_time = 6;</code>
+   * <code>optional string conversion_date_time = 6;</code>
    * @return The bytes for conversionDateTime.
    */
   com.google.protobuf.ByteString

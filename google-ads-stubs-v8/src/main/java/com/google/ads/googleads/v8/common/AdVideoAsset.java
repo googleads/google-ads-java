@@ -100,7 +100,7 @@ private static final long serialVersionUID = 0L;
    * The Asset resource name of this video.
    * </pre>
    *
-   * <code>string asset = 2;</code>
+   * <code>optional string asset = 2;</code>
    * @return Whether the asset field is set.
    */
   @java.lang.Override
@@ -112,7 +112,7 @@ private static final long serialVersionUID = 0L;
    * The Asset resource name of this video.
    * </pre>
    *
-   * <code>string asset = 2;</code>
+   * <code>optional string asset = 2;</code>
    * @return The asset.
    */
   @java.lang.Override
@@ -133,7 +133,7 @@ private static final long serialVersionUID = 0L;
    * The Asset resource name of this video.
    * </pre>
    *
-   * <code>string asset = 2;</code>
+   * <code>optional string asset = 2;</code>
    * @return The bytes for asset.
    */
   @java.lang.Override
@@ -476,7 +476,7 @@ private static final long serialVersionUID = 0L;
      * The Asset resource name of this video.
      * </pre>
      *
-     * <code>string asset = 2;</code>
+     * <code>optional string asset = 2;</code>
      * @return Whether the asset field is set.
      */
     public boolean hasAsset() {
@@ -487,7 +487,7 @@ private static final long serialVersionUID = 0L;
      * The Asset resource name of this video.
      * </pre>
      *
-     * <code>string asset = 2;</code>
+     * <code>optional string asset = 2;</code>
      * @return The asset.
      */
     public java.lang.String getAsset() {
@@ -507,7 +507,7 @@ private static final long serialVersionUID = 0L;
      * The Asset resource name of this video.
      * </pre>
      *
-     * <code>string asset = 2;</code>
+     * <code>optional string asset = 2;</code>
      * @return The bytes for asset.
      */
     public com.google.protobuf.ByteString
@@ -528,7 +528,7 @@ private static final long serialVersionUID = 0L;
      * The Asset resource name of this video.
      * </pre>
      *
-     * <code>string asset = 2;</code>
+     * <code>optional string asset = 2;</code>
      * @param value The asset to set.
      * @return This builder for chaining.
      */
@@ -547,7 +547,7 @@ private static final long serialVersionUID = 0L;
      * The Asset resource name of this video.
      * </pre>
      *
-     * <code>string asset = 2;</code>
+     * <code>optional string asset = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearAsset() {
@@ -561,7 +561,7 @@ private static final long serialVersionUID = 0L;
      * The Asset resource name of this video.
      * </pre>
      *
-     * <code>string asset = 2;</code>
+     * <code>optional string asset = 2;</code>
      * @param value The bytes for asset to set.
      * @return This builder for chaining.
      */

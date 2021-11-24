@@ -12,7 +12,7 @@ public interface MoneyOrBuilder extends
    * Three-character ISO 4217 currency code.
    * </pre>
    *
-   * <code>string currency_code = 3;</code>
+   * <code>optional string currency_code = 3;</code>
    * @return Whether the currencyCode field is set.
    */
   boolean hasCurrencyCode();
@@ -21,7 +21,7 @@ public interface MoneyOrBuilder extends
    * Three-character ISO 4217 currency code.
    * </pre>
    *
-   * <code>string currency_code = 3;</code>
+   * <code>optional string currency_code = 3;</code>
    * @return The currencyCode.
    */
   java.lang.String getCurrencyCode();
@@ -30,7 +30,7 @@ public interface MoneyOrBuilder extends
    * Three-character ISO 4217 currency code.
    * </pre>
    *
-   * <code>string currency_code = 3;</code>
+   * <code>optional string currency_code = 3;</code>
    * @return The bytes for currencyCode.
    */
   com.google.protobuf.ByteString
@@ -41,7 +41,7 @@ public interface MoneyOrBuilder extends
    * Amount in micros. One million is equivalent to one unit.
    * </pre>
    *
-   * <code>int64 amount_micros = 4;</code>
+   * <code>optional int64 amount_micros = 4;</code>
    * @return Whether the amountMicros field is set.
    */
   boolean hasAmountMicros();
@@ -50,7 +50,7 @@ public interface MoneyOrBuilder extends
    * Amount in micros. One million is equivalent to one unit.
    * </pre>
    *
-   * <code>int64 amount_micros = 4;</code>
+   * <code>optional int64 amount_micros = 4;</code>
    * @return The amountMicros.
    */
   long getAmountMicros();

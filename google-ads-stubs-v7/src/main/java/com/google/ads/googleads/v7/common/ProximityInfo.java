@@ -175,7 +175,7 @@ private static final long serialVersionUID = 0L;
    * The radius of the proximity.
    * </pre>
    *
-   * <code>double radius = 5;</code>
+   * <code>optional double radius = 5;</code>
    * @return Whether the radius field is set.
    */
   @java.lang.Override
@@ -187,7 +187,7 @@ private static final long serialVersionUID = 0L;
    * The radius of the proximity.
    * </pre>
    *
-   * <code>double radius = 5;</code>
+   * <code>optional double radius = 5;</code>
    * @return The radius.
    */
   @java.lang.Override
@@ -823,7 +823,7 @@ private static final long serialVersionUID = 0L;
      * The radius of the proximity.
      * </pre>
      *
-     * <code>double radius = 5;</code>
+     * <code>optional double radius = 5;</code>
      * @return Whether the radius field is set.
      */
     @java.lang.Override
@@ -835,7 +835,7 @@ private static final long serialVersionUID = 0L;
      * The radius of the proximity.
      * </pre>
      *
-     * <code>double radius = 5;</code>
+     * <code>optional double radius = 5;</code>
      * @return The radius.
      */
     @java.lang.Override
@@ -847,7 +847,7 @@ private static final long serialVersionUID = 0L;
      * The radius of the proximity.
      * </pre>
      *
-     * <code>double radius = 5;</code>
+     * <code>optional double radius = 5;</code>
      * @param value The radius to set.
      * @return This builder for chaining.
      */
@@ -862,7 +862,7 @@ private static final long serialVersionUID = 0L;
      * The radius of the proximity.
      * </pre>
      *
-     * <code>double radius = 5;</code>
+     * <code>optional double radius = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearRadius() {

@@ -170,7 +170,7 @@ private static final long serialVersionUID = 0L;
    * True to enable partial failure for the offline user data job.
    * </pre>
    *
-   * <code>bool enable_partial_failure = 4;</code>
+   * <code>optional bool enable_partial_failure = 4;</code>
    * @return Whether the enablePartialFailure field is set.
    */
   @java.lang.Override
@@ -182,7 +182,7 @@ private static final long serialVersionUID = 0L;
    * True to enable partial failure for the offline user data job.
    * </pre>
    *
-   * <code>bool enable_partial_failure = 4;</code>
+   * <code>optional bool enable_partial_failure = 4;</code>
    * @return The enablePartialFailure.
    */
   @java.lang.Override
@@ -280,7 +280,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     for (int i = 0; i < operations_.size(); i++) {
@@ -301,7 +301,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     for (int i = 0; i < operations_.size(); i++) {
@@ -778,7 +778,7 @@ private static final long serialVersionUID = 0L;
      * True to enable partial failure for the offline user data job.
      * </pre>
      *
-     * <code>bool enable_partial_failure = 4;</code>
+     * <code>optional bool enable_partial_failure = 4;</code>
      * @return Whether the enablePartialFailure field is set.
      */
     @java.lang.Override
@@ -790,7 +790,7 @@ private static final long serialVersionUID = 0L;
      * True to enable partial failure for the offline user data job.
      * </pre>
      *
-     * <code>bool enable_partial_failure = 4;</code>
+     * <code>optional bool enable_partial_failure = 4;</code>
      * @return The enablePartialFailure.
      */
     @java.lang.Override
@@ -802,7 +802,7 @@ private static final long serialVersionUID = 0L;
      * True to enable partial failure for the offline user data job.
      * </pre>
      *
-     * <code>bool enable_partial_failure = 4;</code>
+     * <code>optional bool enable_partial_failure = 4;</code>
      * @param value The enablePartialFailure to set.
      * @return This builder for chaining.
      */
@@ -817,7 +817,7 @@ private static final long serialVersionUID = 0L;
      * True to enable partial failure for the offline user data job.
      * </pre>
      *
-     * <code>bool enable_partial_failure = 4;</code>
+     * <code>optional bool enable_partial_failure = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearEnablePartialFailure() {

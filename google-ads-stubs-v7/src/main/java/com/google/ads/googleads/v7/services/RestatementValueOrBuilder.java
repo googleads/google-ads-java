@@ -18,7 +18,7 @@ public interface RestatementValueOrBuilder extends
    * and ignored.
    * </pre>
    *
-   * <code>double adjusted_value = 3;</code>
+   * <code>optional double adjusted_value = 3;</code>
    * @return Whether the adjustedValue field is set.
    */
   boolean hasAdjustedValue();
@@ -33,7 +33,7 @@ public interface RestatementValueOrBuilder extends
    * and ignored.
    * </pre>
    *
-   * <code>double adjusted_value = 3;</code>
+   * <code>optional double adjusted_value = 3;</code>
    * @return The adjustedValue.
    */
   double getAdjustedValue();
@@ -46,7 +46,7 @@ public interface RestatementValueOrBuilder extends
    * code e.g. USD or EUR.
    * </pre>
    *
-   * <code>string currency_code = 4;</code>
+   * <code>optional string currency_code = 4;</code>
    * @return Whether the currencyCode field is set.
    */
   boolean hasCurrencyCode();
@@ -58,7 +58,7 @@ public interface RestatementValueOrBuilder extends
    * code e.g. USD or EUR.
    * </pre>
    *
-   * <code>string currency_code = 4;</code>
+   * <code>optional string currency_code = 4;</code>
    * @return The currencyCode.
    */
   java.lang.String getCurrencyCode();
@@ -70,7 +70,7 @@ public interface RestatementValueOrBuilder extends
    * code e.g. USD or EUR.
    * </pre>
    *
-   * <code>string currency_code = 4;</code>
+   * <code>optional string currency_code = 4;</code>
    * @return The bytes for currencyCode.
    */
   com.google.protobuf.ByteString

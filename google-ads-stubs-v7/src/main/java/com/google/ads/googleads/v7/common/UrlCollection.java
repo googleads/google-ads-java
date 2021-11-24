@@ -133,7 +133,7 @@ private static final long serialVersionUID = 0L;
    * Unique identifier for this UrlCollection instance.
    * </pre>
    *
-   * <code>string url_collection_id = 5;</code>
+   * <code>optional string url_collection_id = 5;</code>
    * @return Whether the urlCollectionId field is set.
    */
   @java.lang.Override
@@ -145,7 +145,7 @@ private static final long serialVersionUID = 0L;
    * Unique identifier for this UrlCollection instance.
    * </pre>
    *
-   * <code>string url_collection_id = 5;</code>
+   * <code>optional string url_collection_id = 5;</code>
    * @return The urlCollectionId.
    */
   @java.lang.Override
@@ -166,7 +166,7 @@ private static final long serialVersionUID = 0L;
    * Unique identifier for this UrlCollection instance.
    * </pre>
    *
-   * <code>string url_collection_id = 5;</code>
+   * <code>optional string url_collection_id = 5;</code>
    * @return The bytes for urlCollectionId.
    */
   @java.lang.Override
@@ -293,7 +293,7 @@ private static final long serialVersionUID = 0L;
    * URL template for constructing a tracking URL.
    * </pre>
    *
-   * <code>string tracking_url_template = 8;</code>
+   * <code>optional string tracking_url_template = 8;</code>
    * @return Whether the trackingUrlTemplate field is set.
    */
   @java.lang.Override
@@ -305,7 +305,7 @@ private static final long serialVersionUID = 0L;
    * URL template for constructing a tracking URL.
    * </pre>
    *
-   * <code>string tracking_url_template = 8;</code>
+   * <code>optional string tracking_url_template = 8;</code>
    * @return The trackingUrlTemplate.
    */
   @java.lang.Override
@@ -326,7 +326,7 @@ private static final long serialVersionUID = 0L;
    * URL template for constructing a tracking URL.
    * </pre>
    *
-   * <code>string tracking_url_template = 8;</code>
+   * <code>optional string tracking_url_template = 8;</code>
    * @return The bytes for trackingUrlTemplate.
    */
   @java.lang.Override
@@ -763,7 +763,7 @@ private static final long serialVersionUID = 0L;
      * Unique identifier for this UrlCollection instance.
      * </pre>
      *
-     * <code>string url_collection_id = 5;</code>
+     * <code>optional string url_collection_id = 5;</code>
      * @return Whether the urlCollectionId field is set.
      */
     public boolean hasUrlCollectionId() {
@@ -774,7 +774,7 @@ private static final long serialVersionUID = 0L;
      * Unique identifier for this UrlCollection instance.
      * </pre>
      *
-     * <code>string url_collection_id = 5;</code>
+     * <code>optional string url_collection_id = 5;</code>
      * @return The urlCollectionId.
      */
     public java.lang.String getUrlCollectionId() {
@@ -794,7 +794,7 @@ private static final long serialVersionUID = 0L;
      * Unique identifier for this UrlCollection instance.
      * </pre>
      *
-     * <code>string url_collection_id = 5;</code>
+     * <code>optional string url_collection_id = 5;</code>
      * @return The bytes for urlCollectionId.
      */
     public com.google.protobuf.ByteString
@@ -815,7 +815,7 @@ private static final long serialVersionUID = 0L;
      * Unique identifier for this UrlCollection instance.
      * </pre>
      *
-     * <code>string url_collection_id = 5;</code>
+     * <code>optional string url_collection_id = 5;</code>
      * @param value The urlCollectionId to set.
      * @return This builder for chaining.
      */
@@ -834,7 +834,7 @@ private static final long serialVersionUID = 0L;
      * Unique identifier for this UrlCollection instance.
      * </pre>
      *
-     * <code>string url_collection_id = 5;</code>
+     * <code>optional string url_collection_id = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearUrlCollectionId() {
@@ -848,7 +848,7 @@ private static final long serialVersionUID = 0L;
      * Unique identifier for this UrlCollection instance.
      * </pre>
      *
-     * <code>string url_collection_id = 5;</code>
+     * <code>optional string url_collection_id = 5;</code>
      * @param value The bytes for urlCollectionId to set.
      * @return This builder for chaining.
      */
@@ -1162,7 +1162,7 @@ private static final long serialVersionUID = 0L;
      * URL template for constructing a tracking URL.
      * </pre>
      *
-     * <code>string tracking_url_template = 8;</code>
+     * <code>optional string tracking_url_template = 8;</code>
      * @return Whether the trackingUrlTemplate field is set.
      */
     public boolean hasTrackingUrlTemplate() {
@@ -1173,7 +1173,7 @@ private static final long serialVersionUID = 0L;
      * URL template for constructing a tracking URL.
      * </pre>
      *
-     * <code>string tracking_url_template = 8;</code>
+     * <code>optional string tracking_url_template = 8;</code>
      * @return The trackingUrlTemplate.
      */
     public java.lang.String getTrackingUrlTemplate() {
@@ -1193,7 +1193,7 @@ private static final long serialVersionUID = 0L;
      * URL template for constructing a tracking URL.
      * </pre>
      *
-     * <code>string tracking_url_template = 8;</code>
+     * <code>optional string tracking_url_template = 8;</code>
      * @return The bytes for trackingUrlTemplate.
      */
     public com.google.protobuf.ByteString
@@ -1214,7 +1214,7 @@ private static final long serialVersionUID = 0L;
      * URL template for constructing a tracking URL.
      * </pre>
      *
-     * <code>string tracking_url_template = 8;</code>
+     * <code>optional string tracking_url_template = 8;</code>
      * @param value The trackingUrlTemplate to set.
      * @return This builder for chaining.
      */
@@ -1233,7 +1233,7 @@ private static final long serialVersionUID = 0L;
      * URL template for constructing a tracking URL.
      * </pre>
      *
-     * <code>string tracking_url_template = 8;</code>
+     * <code>optional string tracking_url_template = 8;</code>
      * @return This builder for chaining.
      */
     public Builder clearTrackingUrlTemplate() {
@@ -1247,7 +1247,7 @@ private static final long serialVersionUID = 0L;
      * URL template for constructing a tracking URL.
      * </pre>
      *
-     * <code>string tracking_url_template = 8;</code>
+     * <code>optional string tracking_url_template = 8;</code>
      * @param value The bytes for trackingUrlTemplate to set.
      * @return This builder for chaining.
      */

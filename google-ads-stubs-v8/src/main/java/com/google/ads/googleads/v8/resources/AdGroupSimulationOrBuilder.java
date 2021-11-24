@@ -36,7 +36,7 @@ public interface AdGroupSimulationOrBuilder extends
    * Output only. Ad group id of the simulation.
    * </pre>
    *
-   * <code>int64 ad_group_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 ad_group_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the adGroupId field is set.
    */
   boolean hasAdGroupId();
@@ -45,7 +45,7 @@ public interface AdGroupSimulationOrBuilder extends
    * Output only. Ad group id of the simulation.
    * </pre>
    *
-   * <code>int64 ad_group_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 ad_group_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The adGroupId.
    */
   long getAdGroupId();
@@ -93,7 +93,7 @@ public interface AdGroupSimulationOrBuilder extends
    * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
    * </pre>
    *
-   * <code>string start_date = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string start_date = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the startDate field is set.
    */
   boolean hasStartDate();
@@ -102,7 +102,7 @@ public interface AdGroupSimulationOrBuilder extends
    * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
    * </pre>
    *
-   * <code>string start_date = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string start_date = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The startDate.
    */
   java.lang.String getStartDate();
@@ -111,7 +111,7 @@ public interface AdGroupSimulationOrBuilder extends
    * Output only. First day on which the simulation is based, in YYYY-MM-DD format.
    * </pre>
    *
-   * <code>string start_date = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string start_date = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for startDate.
    */
   com.google.protobuf.ByteString
@@ -122,7 +122,7 @@ public interface AdGroupSimulationOrBuilder extends
    * Output only. Last day on which the simulation is based, in YYYY-MM-DD format
    * </pre>
    *
-   * <code>string end_date = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string end_date = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the endDate field is set.
    */
   boolean hasEndDate();
@@ -131,7 +131,7 @@ public interface AdGroupSimulationOrBuilder extends
    * Output only. Last day on which the simulation is based, in YYYY-MM-DD format
    * </pre>
    *
-   * <code>string end_date = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string end_date = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The endDate.
    */
   java.lang.String getEndDate();
@@ -140,7 +140,7 @@ public interface AdGroupSimulationOrBuilder extends
    * Output only. Last day on which the simulation is based, in YYYY-MM-DD format
    * </pre>
    *
-   * <code>string end_date = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string end_date = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for endDate.
    */
   com.google.protobuf.ByteString

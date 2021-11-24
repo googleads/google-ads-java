@@ -58,7 +58,7 @@ public interface CampaignExtensionSettingOrBuilder extends
    * `customers/{customer_id}/campaigns/{campaign_id}`
    * </pre>
    *
-   * <code>string campaign = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the campaign field is set.
    */
   boolean hasCampaign();
@@ -70,7 +70,7 @@ public interface CampaignExtensionSettingOrBuilder extends
    * `customers/{customer_id}/campaigns/{campaign_id}`
    * </pre>
    *
-   * <code>string campaign = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The campaign.
    */
   java.lang.String getCampaign();
@@ -82,7 +82,7 @@ public interface CampaignExtensionSettingOrBuilder extends
    * `customers/{customer_id}/campaigns/{campaign_id}`
    * </pre>
    *
-   * <code>string campaign = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string campaign = 6 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for campaign.
    */
   com.google.protobuf.ByteString

@@ -36,7 +36,7 @@ public interface KeywordPlanAdGroupKeywordOrBuilder extends
    * The Keyword Plan ad group to which this keyword belongs.
    * </pre>
    *
-   * <code>string keyword_plan_ad_group = 8 [(.google.api.resource_reference) = { ... }</code>
+   * <code>optional string keyword_plan_ad_group = 8 [(.google.api.resource_reference) = { ... }</code>
    * @return Whether the keywordPlanAdGroup field is set.
    */
   boolean hasKeywordPlanAdGroup();
@@ -45,7 +45,7 @@ public interface KeywordPlanAdGroupKeywordOrBuilder extends
    * The Keyword Plan ad group to which this keyword belongs.
    * </pre>
    *
-   * <code>string keyword_plan_ad_group = 8 [(.google.api.resource_reference) = { ... }</code>
+   * <code>optional string keyword_plan_ad_group = 8 [(.google.api.resource_reference) = { ... }</code>
    * @return The keywordPlanAdGroup.
    */
   java.lang.String getKeywordPlanAdGroup();
@@ -54,7 +54,7 @@ public interface KeywordPlanAdGroupKeywordOrBuilder extends
    * The Keyword Plan ad group to which this keyword belongs.
    * </pre>
    *
-   * <code>string keyword_plan_ad_group = 8 [(.google.api.resource_reference) = { ... }</code>
+   * <code>optional string keyword_plan_ad_group = 8 [(.google.api.resource_reference) = { ... }</code>
    * @return The bytes for keywordPlanAdGroup.
    */
   com.google.protobuf.ByteString
@@ -65,7 +65,7 @@ public interface KeywordPlanAdGroupKeywordOrBuilder extends
    * Output only. The ID of the Keyword Plan keyword.
    * </pre>
    *
-   * <code>int64 id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -74,7 +74,7 @@ public interface KeywordPlanAdGroupKeywordOrBuilder extends
    * Output only. The ID of the Keyword Plan keyword.
    * </pre>
    *
-   * <code>int64 id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   long getId();
@@ -84,7 +84,7 @@ public interface KeywordPlanAdGroupKeywordOrBuilder extends
    * The keyword text.
    * </pre>
    *
-   * <code>string text = 10;</code>
+   * <code>optional string text = 10;</code>
    * @return Whether the text field is set.
    */
   boolean hasText();
@@ -93,7 +93,7 @@ public interface KeywordPlanAdGroupKeywordOrBuilder extends
    * The keyword text.
    * </pre>
    *
-   * <code>string text = 10;</code>
+   * <code>optional string text = 10;</code>
    * @return The text.
    */
   java.lang.String getText();
@@ -102,7 +102,7 @@ public interface KeywordPlanAdGroupKeywordOrBuilder extends
    * The keyword text.
    * </pre>
    *
-   * <code>string text = 10;</code>
+   * <code>optional string text = 10;</code>
    * @return The bytes for text.
    */
   com.google.protobuf.ByteString
@@ -136,7 +136,7 @@ public interface KeywordPlanAdGroupKeywordOrBuilder extends
    * This field is Optional.
    * </pre>
    *
-   * <code>int64 cpc_bid_micros = 11;</code>
+   * <code>optional int64 cpc_bid_micros = 11;</code>
    * @return Whether the cpcBidMicros field is set.
    */
   boolean hasCpcBidMicros();
@@ -149,7 +149,7 @@ public interface KeywordPlanAdGroupKeywordOrBuilder extends
    * This field is Optional.
    * </pre>
    *
-   * <code>int64 cpc_bid_micros = 11;</code>
+   * <code>optional int64 cpc_bid_micros = 11;</code>
    * @return The cpcBidMicros.
    */
   long getCpcBidMicros();
@@ -159,7 +159,7 @@ public interface KeywordPlanAdGroupKeywordOrBuilder extends
    * Immutable. If true, the keyword is negative.
    * </pre>
    *
-   * <code>bool negative = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional bool negative = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return Whether the negative field is set.
    */
   boolean hasNegative();
@@ -168,7 +168,7 @@ public interface KeywordPlanAdGroupKeywordOrBuilder extends
    * Immutable. If true, the keyword is negative.
    * </pre>
    *
-   * <code>bool negative = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>optional bool negative = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The negative.
    */
   boolean getNegative();

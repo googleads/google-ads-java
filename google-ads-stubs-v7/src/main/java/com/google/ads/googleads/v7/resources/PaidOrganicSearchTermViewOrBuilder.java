@@ -38,7 +38,7 @@ public interface PaidOrganicSearchTermViewOrBuilder extends
    * Output only. The search term.
    * </pre>
    *
-   * <code>string search_term = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string search_term = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the searchTerm field is set.
    */
   boolean hasSearchTerm();
@@ -47,7 +47,7 @@ public interface PaidOrganicSearchTermViewOrBuilder extends
    * Output only. The search term.
    * </pre>
    *
-   * <code>string search_term = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string search_term = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The searchTerm.
    */
   java.lang.String getSearchTerm();
@@ -56,7 +56,7 @@ public interface PaidOrganicSearchTermViewOrBuilder extends
    * Output only. The search term.
    * </pre>
    *
-   * <code>string search_term = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string search_term = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for searchTerm.
    */
   com.google.protobuf.ByteString

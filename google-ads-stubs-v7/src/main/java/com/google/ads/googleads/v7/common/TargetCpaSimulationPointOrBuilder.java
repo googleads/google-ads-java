@@ -23,7 +23,7 @@ public interface TargetCpaSimulationPointOrBuilder extends
    * Projected number of biddable conversions.
    * </pre>
    *
-   * <code>double biddable_conversions = 9;</code>
+   * <code>optional double biddable_conversions = 9;</code>
    * @return Whether the biddableConversions field is set.
    */
   boolean hasBiddableConversions();
@@ -32,7 +32,7 @@ public interface TargetCpaSimulationPointOrBuilder extends
    * Projected number of biddable conversions.
    * </pre>
    *
-   * <code>double biddable_conversions = 9;</code>
+   * <code>optional double biddable_conversions = 9;</code>
    * @return The biddableConversions.
    */
   double getBiddableConversions();
@@ -42,7 +42,7 @@ public interface TargetCpaSimulationPointOrBuilder extends
    * Projected total value of biddable conversions.
    * </pre>
    *
-   * <code>double biddable_conversions_value = 10;</code>
+   * <code>optional double biddable_conversions_value = 10;</code>
    * @return Whether the biddableConversionsValue field is set.
    */
   boolean hasBiddableConversionsValue();
@@ -51,7 +51,7 @@ public interface TargetCpaSimulationPointOrBuilder extends
    * Projected total value of biddable conversions.
    * </pre>
    *
-   * <code>double biddable_conversions_value = 10;</code>
+   * <code>optional double biddable_conversions_value = 10;</code>
    * @return The biddableConversionsValue.
    */
   double getBiddableConversionsValue();
@@ -81,7 +81,7 @@ public interface TargetCpaSimulationPointOrBuilder extends
    * Projected number of clicks.
    * </pre>
    *
-   * <code>int64 clicks = 11;</code>
+   * <code>optional int64 clicks = 11;</code>
    * @return Whether the clicks field is set.
    */
   boolean hasClicks();
@@ -90,7 +90,7 @@ public interface TargetCpaSimulationPointOrBuilder extends
    * Projected number of clicks.
    * </pre>
    *
-   * <code>int64 clicks = 11;</code>
+   * <code>optional int64 clicks = 11;</code>
    * @return The clicks.
    */
   long getClicks();
@@ -100,7 +100,7 @@ public interface TargetCpaSimulationPointOrBuilder extends
    * Projected cost in micros.
    * </pre>
    *
-   * <code>int64 cost_micros = 12;</code>
+   * <code>optional int64 cost_micros = 12;</code>
    * @return Whether the costMicros field is set.
    */
   boolean hasCostMicros();
@@ -109,7 +109,7 @@ public interface TargetCpaSimulationPointOrBuilder extends
    * Projected cost in micros.
    * </pre>
    *
-   * <code>int64 cost_micros = 12;</code>
+   * <code>optional int64 cost_micros = 12;</code>
    * @return The costMicros.
    */
   long getCostMicros();
@@ -119,7 +119,7 @@ public interface TargetCpaSimulationPointOrBuilder extends
    * Projected number of impressions.
    * </pre>
    *
-   * <code>int64 impressions = 13;</code>
+   * <code>optional int64 impressions = 13;</code>
    * @return Whether the impressions field is set.
    */
   boolean hasImpressions();
@@ -128,7 +128,7 @@ public interface TargetCpaSimulationPointOrBuilder extends
    * Projected number of impressions.
    * </pre>
    *
-   * <code>int64 impressions = 13;</code>
+   * <code>optional int64 impressions = 13;</code>
    * @return The impressions.
    */
   long getImpressions();
@@ -139,7 +139,7 @@ public interface TargetCpaSimulationPointOrBuilder extends
    * Only search advertising channel type supports this field.
    * </pre>
    *
-   * <code>int64 top_slot_impressions = 14;</code>
+   * <code>optional int64 top_slot_impressions = 14;</code>
    * @return Whether the topSlotImpressions field is set.
    */
   boolean hasTopSlotImpressions();
@@ -149,7 +149,7 @@ public interface TargetCpaSimulationPointOrBuilder extends
    * Only search advertising channel type supports this field.
    * </pre>
    *
-   * <code>int64 top_slot_impressions = 14;</code>
+   * <code>optional int64 top_slot_impressions = 14;</code>
    * @return The topSlotImpressions.
    */
   long getTopSlotImpressions();

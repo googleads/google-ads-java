@@ -36,7 +36,7 @@ public interface AdGroupLabelOrBuilder extends
    * Immutable. The ad group to which the label is attached.
    * </pre>
    *
-   * <code>string ad_group = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the adGroup field is set.
    */
   boolean hasAdGroup();
@@ -45,7 +45,7 @@ public interface AdGroupLabelOrBuilder extends
    * Immutable. The ad group to which the label is attached.
    * </pre>
    *
-   * <code>string ad_group = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The adGroup.
    */
   java.lang.String getAdGroup();
@@ -54,7 +54,7 @@ public interface AdGroupLabelOrBuilder extends
    * Immutable. The ad group to which the label is attached.
    * </pre>
    *
-   * <code>string ad_group = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string ad_group = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for adGroup.
    */
   com.google.protobuf.ByteString
@@ -65,7 +65,7 @@ public interface AdGroupLabelOrBuilder extends
    * Immutable. The label assigned to the ad group.
    * </pre>
    *
-   * <code>string label = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string label = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the label field is set.
    */
   boolean hasLabel();
@@ -74,7 +74,7 @@ public interface AdGroupLabelOrBuilder extends
    * Immutable. The label assigned to the ad group.
    * </pre>
    *
-   * <code>string label = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string label = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The label.
    */
   java.lang.String getLabel();
@@ -83,7 +83,7 @@ public interface AdGroupLabelOrBuilder extends
    * Immutable. The label assigned to the ad group.
    * </pre>
    *
-   * <code>string label = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string label = 5 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for label.
    */
   com.google.protobuf.ByteString

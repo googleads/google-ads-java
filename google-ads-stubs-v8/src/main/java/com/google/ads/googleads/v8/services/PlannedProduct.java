@@ -104,10 +104,11 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Required. Selected product for planning.
    * The code associated with the ad product. E.g. Trueview, Bumper
-   * To list the available plannable product codes use ListPlannableProducts.
+   * To list the available plannable product codes use
+   * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v8.services.ReachPlanService.ListPlannableProducts].
    * </pre>
    *
-   * <code>string plannable_product_code = 3;</code>
+   * <code>optional string plannable_product_code = 3;</code>
    * @return Whether the plannableProductCode field is set.
    */
   @java.lang.Override
@@ -118,10 +119,11 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Required. Selected product for planning.
    * The code associated with the ad product. E.g. Trueview, Bumper
-   * To list the available plannable product codes use ListPlannableProducts.
+   * To list the available plannable product codes use
+   * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v8.services.ReachPlanService.ListPlannableProducts].
    * </pre>
    *
-   * <code>string plannable_product_code = 3;</code>
+   * <code>optional string plannable_product_code = 3;</code>
    * @return The plannableProductCode.
    */
   @java.lang.Override
@@ -141,10 +143,11 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Required. Selected product for planning.
    * The code associated with the ad product. E.g. Trueview, Bumper
-   * To list the available plannable product codes use ListPlannableProducts.
+   * To list the available plannable product codes use
+   * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v8.services.ReachPlanService.ListPlannableProducts].
    * </pre>
    *
-   * <code>string plannable_product_code = 3;</code>
+   * <code>optional string plannable_product_code = 3;</code>
    * @return The bytes for plannableProductCode.
    */
   @java.lang.Override
@@ -171,7 +174,7 @@ private static final long serialVersionUID = 0L;
    * E.g. 1 000 000$ = 1 000 000 000 000 micros.
    * </pre>
    *
-   * <code>int64 budget_micros = 4;</code>
+   * <code>optional int64 budget_micros = 4;</code>
    * @return Whether the budgetMicros field is set.
    */
   @java.lang.Override
@@ -185,7 +188,7 @@ private static final long serialVersionUID = 0L;
    * E.g. 1 000 000$ = 1 000 000 000 000 micros.
    * </pre>
    *
-   * <code>int64 budget_micros = 4;</code>
+   * <code>optional int64 budget_micros = 4;</code>
    * @return The budgetMicros.
    */
   @java.lang.Override
@@ -543,10 +546,11 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Required. Selected product for planning.
      * The code associated with the ad product. E.g. Trueview, Bumper
-     * To list the available plannable product codes use ListPlannableProducts.
+     * To list the available plannable product codes use
+     * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v8.services.ReachPlanService.ListPlannableProducts].
      * </pre>
      *
-     * <code>string plannable_product_code = 3;</code>
+     * <code>optional string plannable_product_code = 3;</code>
      * @return Whether the plannableProductCode field is set.
      */
     public boolean hasPlannableProductCode() {
@@ -556,10 +560,11 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Required. Selected product for planning.
      * The code associated with the ad product. E.g. Trueview, Bumper
-     * To list the available plannable product codes use ListPlannableProducts.
+     * To list the available plannable product codes use
+     * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v8.services.ReachPlanService.ListPlannableProducts].
      * </pre>
      *
-     * <code>string plannable_product_code = 3;</code>
+     * <code>optional string plannable_product_code = 3;</code>
      * @return The plannableProductCode.
      */
     public java.lang.String getPlannableProductCode() {
@@ -578,10 +583,11 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Required. Selected product for planning.
      * The code associated with the ad product. E.g. Trueview, Bumper
-     * To list the available plannable product codes use ListPlannableProducts.
+     * To list the available plannable product codes use
+     * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v8.services.ReachPlanService.ListPlannableProducts].
      * </pre>
      *
-     * <code>string plannable_product_code = 3;</code>
+     * <code>optional string plannable_product_code = 3;</code>
      * @return The bytes for plannableProductCode.
      */
     public com.google.protobuf.ByteString
@@ -601,10 +607,11 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Required. Selected product for planning.
      * The code associated with the ad product. E.g. Trueview, Bumper
-     * To list the available plannable product codes use ListPlannableProducts.
+     * To list the available plannable product codes use
+     * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v8.services.ReachPlanService.ListPlannableProducts].
      * </pre>
      *
-     * <code>string plannable_product_code = 3;</code>
+     * <code>optional string plannable_product_code = 3;</code>
      * @param value The plannableProductCode to set.
      * @return This builder for chaining.
      */
@@ -622,10 +629,11 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Required. Selected product for planning.
      * The code associated with the ad product. E.g. Trueview, Bumper
-     * To list the available plannable product codes use ListPlannableProducts.
+     * To list the available plannable product codes use
+     * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v8.services.ReachPlanService.ListPlannableProducts].
      * </pre>
      *
-     * <code>string plannable_product_code = 3;</code>
+     * <code>optional string plannable_product_code = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearPlannableProductCode() {
@@ -638,10 +646,11 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Required. Selected product for planning.
      * The code associated with the ad product. E.g. Trueview, Bumper
-     * To list the available plannable product codes use ListPlannableProducts.
+     * To list the available plannable product codes use
+     * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v8.services.ReachPlanService.ListPlannableProducts].
      * </pre>
      *
-     * <code>string plannable_product_code = 3;</code>
+     * <code>optional string plannable_product_code = 3;</code>
      * @param value The bytes for plannableProductCode to set.
      * @return This builder for chaining.
      */
@@ -665,7 +674,7 @@ private static final long serialVersionUID = 0L;
      * E.g. 1 000 000$ = 1 000 000 000 000 micros.
      * </pre>
      *
-     * <code>int64 budget_micros = 4;</code>
+     * <code>optional int64 budget_micros = 4;</code>
      * @return Whether the budgetMicros field is set.
      */
     @java.lang.Override
@@ -679,7 +688,7 @@ private static final long serialVersionUID = 0L;
      * E.g. 1 000 000$ = 1 000 000 000 000 micros.
      * </pre>
      *
-     * <code>int64 budget_micros = 4;</code>
+     * <code>optional int64 budget_micros = 4;</code>
      * @return The budgetMicros.
      */
     @java.lang.Override
@@ -693,7 +702,7 @@ private static final long serialVersionUID = 0L;
      * E.g. 1 000 000$ = 1 000 000 000 000 micros.
      * </pre>
      *
-     * <code>int64 budget_micros = 4;</code>
+     * <code>optional int64 budget_micros = 4;</code>
      * @param value The budgetMicros to set.
      * @return This builder for chaining.
      */
@@ -710,7 +719,7 @@ private static final long serialVersionUID = 0L;
      * E.g. 1 000 000$ = 1 000 000 000 000 micros.
      * </pre>
      *
-     * <code>int64 budget_micros = 4;</code>
+     * <code>optional int64 budget_micros = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearBudgetMicros() {

@@ -36,7 +36,7 @@ public interface PaymentsAccountOrBuilder extends
    * Output only. A 16 digit ID used to identify a payments account.
    * </pre>
    *
-   * <code>string payments_account_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string payments_account_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the paymentsAccountId field is set.
    */
   boolean hasPaymentsAccountId();
@@ -45,7 +45,7 @@ public interface PaymentsAccountOrBuilder extends
    * Output only. A 16 digit ID used to identify a payments account.
    * </pre>
    *
-   * <code>string payments_account_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string payments_account_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The paymentsAccountId.
    */
   java.lang.String getPaymentsAccountId();
@@ -54,7 +54,7 @@ public interface PaymentsAccountOrBuilder extends
    * Output only. A 16 digit ID used to identify a payments account.
    * </pre>
    *
-   * <code>string payments_account_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string payments_account_id = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for paymentsAccountId.
    */
   com.google.protobuf.ByteString
@@ -65,7 +65,7 @@ public interface PaymentsAccountOrBuilder extends
    * Output only. The name of the payments account.
    * </pre>
    *
-   * <code>string name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the name field is set.
    */
   boolean hasName();
@@ -74,7 +74,7 @@ public interface PaymentsAccountOrBuilder extends
    * Output only. The name of the payments account.
    * </pre>
    *
-   * <code>string name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The name.
    */
   java.lang.String getName();
@@ -83,7 +83,7 @@ public interface PaymentsAccountOrBuilder extends
    * Output only. The name of the payments account.
    * </pre>
    *
-   * <code>string name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
@@ -96,7 +96,7 @@ public interface PaymentsAccountOrBuilder extends
    * supported.
    * </pre>
    *
-   * <code>string currency_code = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string currency_code = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the currencyCode field is set.
    */
   boolean hasCurrencyCode();
@@ -107,7 +107,7 @@ public interface PaymentsAccountOrBuilder extends
    * supported.
    * </pre>
    *
-   * <code>string currency_code = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string currency_code = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The currencyCode.
    */
   java.lang.String getCurrencyCode();
@@ -118,7 +118,7 @@ public interface PaymentsAccountOrBuilder extends
    * supported.
    * </pre>
    *
-   * <code>string currency_code = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string currency_code = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for currencyCode.
    */
   com.google.protobuf.ByteString
@@ -130,7 +130,7 @@ public interface PaymentsAccountOrBuilder extends
    * payments account.
    * </pre>
    *
-   * <code>string payments_profile_id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string payments_profile_id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the paymentsProfileId field is set.
    */
   boolean hasPaymentsProfileId();
@@ -140,7 +140,7 @@ public interface PaymentsAccountOrBuilder extends
    * payments account.
    * </pre>
    *
-   * <code>string payments_profile_id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string payments_profile_id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The paymentsProfileId.
    */
   java.lang.String getPaymentsProfileId();
@@ -150,7 +150,7 @@ public interface PaymentsAccountOrBuilder extends
    * payments account.
    * </pre>
    *
-   * <code>string payments_profile_id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string payments_profile_id = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for paymentsProfileId.
    */
   com.google.protobuf.ByteString
@@ -162,7 +162,7 @@ public interface PaymentsAccountOrBuilder extends
    * when a sequential liability agreement has been arranged.
    * </pre>
    *
-   * <code>string secondary_payments_profile_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string secondary_payments_profile_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the secondaryPaymentsProfileId field is set.
    */
   boolean hasSecondaryPaymentsProfileId();
@@ -172,7 +172,7 @@ public interface PaymentsAccountOrBuilder extends
    * when a sequential liability agreement has been arranged.
    * </pre>
    *
-   * <code>string secondary_payments_profile_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string secondary_payments_profile_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The secondaryPaymentsProfileId.
    */
   java.lang.String getSecondaryPaymentsProfileId();
@@ -182,7 +182,7 @@ public interface PaymentsAccountOrBuilder extends
    * when a sequential liability agreement has been arranged.
    * </pre>
    *
-   * <code>string secondary_payments_profile_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string secondary_payments_profile_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for secondaryPaymentsProfileId.
    */
   com.google.protobuf.ByteString
@@ -193,7 +193,7 @@ public interface PaymentsAccountOrBuilder extends
    * Output only. Paying manager of this payment account.
    * </pre>
    *
-   * <code>string paying_manager_customer = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string paying_manager_customer = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return Whether the payingManagerCustomer field is set.
    */
   boolean hasPayingManagerCustomer();
@@ -202,7 +202,7 @@ public interface PaymentsAccountOrBuilder extends
    * Output only. Paying manager of this payment account.
    * </pre>
    *
-   * <code>string paying_manager_customer = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string paying_manager_customer = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The payingManagerCustomer.
    */
   java.lang.String getPayingManagerCustomer();
@@ -211,7 +211,7 @@ public interface PaymentsAccountOrBuilder extends
    * Output only. Paying manager of this payment account.
    * </pre>
    *
-   * <code>string paying_manager_customer = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * <code>optional string paying_manager_customer = 13 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
    * @return The bytes for payingManagerCustomer.
    */
   com.google.protobuf.ByteString

@@ -100,7 +100,7 @@ private static final long serialVersionUID = 0L;
    * The mobile app category constant resource name.
    * </pre>
    *
-   * <code>string mobile_app_category_constant = 2;</code>
+   * <code>optional string mobile_app_category_constant = 2;</code>
    * @return Whether the mobileAppCategoryConstant field is set.
    */
   @java.lang.Override
@@ -112,7 +112,7 @@ private static final long serialVersionUID = 0L;
    * The mobile app category constant resource name.
    * </pre>
    *
-   * <code>string mobile_app_category_constant = 2;</code>
+   * <code>optional string mobile_app_category_constant = 2;</code>
    * @return The mobileAppCategoryConstant.
    */
   @java.lang.Override
@@ -133,7 +133,7 @@ private static final long serialVersionUID = 0L;
    * The mobile app category constant resource name.
    * </pre>
    *
-   * <code>string mobile_app_category_constant = 2;</code>
+   * <code>optional string mobile_app_category_constant = 2;</code>
    * @return The bytes for mobileAppCategoryConstant.
    */
   @java.lang.Override
@@ -476,7 +476,7 @@ private static final long serialVersionUID = 0L;
      * The mobile app category constant resource name.
      * </pre>
      *
-     * <code>string mobile_app_category_constant = 2;</code>
+     * <code>optional string mobile_app_category_constant = 2;</code>
      * @return Whether the mobileAppCategoryConstant field is set.
      */
     public boolean hasMobileAppCategoryConstant() {
@@ -487,7 +487,7 @@ private static final long serialVersionUID = 0L;
      * The mobile app category constant resource name.
      * </pre>
      *
-     * <code>string mobile_app_category_constant = 2;</code>
+     * <code>optional string mobile_app_category_constant = 2;</code>
      * @return The mobileAppCategoryConstant.
      */
     public java.lang.String getMobileAppCategoryConstant() {
@@ -507,7 +507,7 @@ private static final long serialVersionUID = 0L;
      * The mobile app category constant resource name.
      * </pre>
      *
-     * <code>string mobile_app_category_constant = 2;</code>
+     * <code>optional string mobile_app_category_constant = 2;</code>
      * @return The bytes for mobileAppCategoryConstant.
      */
     public com.google.protobuf.ByteString
@@ -528,7 +528,7 @@ private static final long serialVersionUID = 0L;
      * The mobile app category constant resource name.
      * </pre>
      *
-     * <code>string mobile_app_category_constant = 2;</code>
+     * <code>optional string mobile_app_category_constant = 2;</code>
      * @param value The mobileAppCategoryConstant to set.
      * @return This builder for chaining.
      */
@@ -547,7 +547,7 @@ private static final long serialVersionUID = 0L;
      * The mobile app category constant resource name.
      * </pre>
      *
-     * <code>string mobile_app_category_constant = 2;</code>
+     * <code>optional string mobile_app_category_constant = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearMobileAppCategoryConstant() {
@@ -561,7 +561,7 @@ private static final long serialVersionUID = 0L;
      * The mobile app category constant resource name.
      * </pre>
      *
-     * <code>string mobile_app_category_constant = 2;</code>
+     * <code>optional string mobile_app_category_constant = 2;</code>
      * @param value The bytes for mobileAppCategoryConstant to set.
      * @return This builder for chaining.
      */

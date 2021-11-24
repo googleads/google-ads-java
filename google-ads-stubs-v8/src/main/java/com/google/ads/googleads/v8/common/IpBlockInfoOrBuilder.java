@@ -12,7 +12,7 @@ public interface IpBlockInfoOrBuilder extends
    * The IP address of this IP block.
    * </pre>
    *
-   * <code>string ip_address = 2;</code>
+   * <code>optional string ip_address = 2;</code>
    * @return Whether the ipAddress field is set.
    */
   boolean hasIpAddress();
@@ -21,7 +21,7 @@ public interface IpBlockInfoOrBuilder extends
    * The IP address of this IP block.
    * </pre>
    *
-   * <code>string ip_address = 2;</code>
+   * <code>optional string ip_address = 2;</code>
    * @return The ipAddress.
    */
   java.lang.String getIpAddress();
@@ -30,7 +30,7 @@ public interface IpBlockInfoOrBuilder extends
    * The IP address of this IP block.
    * </pre>
    *
-   * <code>string ip_address = 2;</code>
+   * <code>optional string ip_address = 2;</code>
    * @return The bytes for ipAddress.
    */
   com.google.protobuf.ByteString

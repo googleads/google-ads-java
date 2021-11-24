@@ -36,7 +36,7 @@ public interface OperatingSystemVersionConstantOrBuilder extends
    * Output only. The ID of the operating system version.
    * </pre>
    *
-   * <code>int64 id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   boolean hasId();
@@ -45,7 +45,7 @@ public interface OperatingSystemVersionConstantOrBuilder extends
    * Output only. The ID of the operating system version.
    * </pre>
    *
-   * <code>int64 id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   long getId();
@@ -55,7 +55,7 @@ public interface OperatingSystemVersionConstantOrBuilder extends
    * Output only. Name of the operating system.
    * </pre>
    *
-   * <code>string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the name field is set.
    */
   boolean hasName();
@@ -64,7 +64,7 @@ public interface OperatingSystemVersionConstantOrBuilder extends
    * Output only. Name of the operating system.
    * </pre>
    *
-   * <code>string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The name.
    */
   java.lang.String getName();
@@ -73,7 +73,7 @@ public interface OperatingSystemVersionConstantOrBuilder extends
    * Output only. Name of the operating system.
    * </pre>
    *
-   * <code>string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
@@ -84,7 +84,7 @@ public interface OperatingSystemVersionConstantOrBuilder extends
    * Output only. The OS Major Version number.
    * </pre>
    *
-   * <code>int32 os_major_version = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int32 os_major_version = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the osMajorVersion field is set.
    */
   boolean hasOsMajorVersion();
@@ -93,7 +93,7 @@ public interface OperatingSystemVersionConstantOrBuilder extends
    * Output only. The OS Major Version number.
    * </pre>
    *
-   * <code>int32 os_major_version = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int32 os_major_version = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The osMajorVersion.
    */
   int getOsMajorVersion();
@@ -103,7 +103,7 @@ public interface OperatingSystemVersionConstantOrBuilder extends
    * Output only. The OS Minor Version number.
    * </pre>
    *
-   * <code>int32 os_minor_version = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int32 os_minor_version = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the osMinorVersion field is set.
    */
   boolean hasOsMinorVersion();
@@ -112,7 +112,7 @@ public interface OperatingSystemVersionConstantOrBuilder extends
    * Output only. The OS Minor Version number.
    * </pre>
    *
-   * <code>int32 os_minor_version = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int32 os_minor_version = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The osMinorVersion.
    */
   int getOsMinorVersion();

@@ -203,7 +203,7 @@ private static final long serialVersionUID = 0L;
    * Number of time units the cap lasts.
    * </pre>
    *
-   * <code>int32 time_length = 5;</code>
+   * <code>optional int32 time_length = 5;</code>
    * @return Whether the timeLength field is set.
    */
   @java.lang.Override
@@ -215,7 +215,7 @@ private static final long serialVersionUID = 0L;
    * Number of time units the cap lasts.
    * </pre>
    *
-   * <code>int32 time_length = 5;</code>
+   * <code>optional int32 time_length = 5;</code>
    * @return The timeLength.
    */
   @java.lang.Override
@@ -823,7 +823,7 @@ private static final long serialVersionUID = 0L;
      * Number of time units the cap lasts.
      * </pre>
      *
-     * <code>int32 time_length = 5;</code>
+     * <code>optional int32 time_length = 5;</code>
      * @return Whether the timeLength field is set.
      */
     @java.lang.Override
@@ -835,7 +835,7 @@ private static final long serialVersionUID = 0L;
      * Number of time units the cap lasts.
      * </pre>
      *
-     * <code>int32 time_length = 5;</code>
+     * <code>optional int32 time_length = 5;</code>
      * @return The timeLength.
      */
     @java.lang.Override
@@ -847,7 +847,7 @@ private static final long serialVersionUID = 0L;
      * Number of time units the cap lasts.
      * </pre>
      *
-     * <code>int32 time_length = 5;</code>
+     * <code>optional int32 time_length = 5;</code>
      * @param value The timeLength to set.
      * @return This builder for chaining.
      */
@@ -862,7 +862,7 @@ private static final long serialVersionUID = 0L;
      * Number of time units the cap lasts.
      * </pre>
      *
-     * <code>int32 time_length = 5;</code>
+     * <code>optional int32 time_length = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearTimeLength() {

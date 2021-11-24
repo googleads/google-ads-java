@@ -244,7 +244,7 @@ private static final long serialVersionUID = 0L;
    * among different campaigns to get optimum results.
    * </pre>
    *
-   * <code>int64 id = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the id field is set.
    */
   @java.lang.Override
@@ -260,7 +260,7 @@ private static final long serialVersionUID = 0L;
    * among different campaigns to get optimum results.
    * </pre>
    *
-   * <code>int64 id = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 id = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The id.
    */
   @java.lang.Override
@@ -281,7 +281,7 @@ private static final long serialVersionUID = 0L;
    * in UTF-8 bytes, (trimmed).
    * </pre>
    *
-   * <code>string name = 20;</code>
+   * <code>optional string name = 20;</code>
    * @return Whether the name field is set.
    */
   @java.lang.Override
@@ -299,7 +299,7 @@ private static final long serialVersionUID = 0L;
    * in UTF-8 bytes, (trimmed).
    * </pre>
    *
-   * <code>string name = 20;</code>
+   * <code>optional string name = 20;</code>
    * @return The name.
    */
   @java.lang.Override
@@ -326,7 +326,7 @@ private static final long serialVersionUID = 0L;
    * in UTF-8 bytes, (trimmed).
    * </pre>
    *
-   * <code>string name = 20;</code>
+   * <code>optional string name = 20;</code>
    * @return The bytes for name.
    */
   @java.lang.Override
@@ -353,7 +353,7 @@ private static final long serialVersionUID = 0L;
    * currency unit. Monthly spend is capped at 30.4 times this amount.
    * </pre>
    *
-   * <code>int64 amount_micros = 21;</code>
+   * <code>optional int64 amount_micros = 21;</code>
    * @return Whether the amountMicros field is set.
    */
   @java.lang.Override
@@ -367,7 +367,7 @@ private static final long serialVersionUID = 0L;
    * currency unit. Monthly spend is capped at 30.4 times this amount.
    * </pre>
    *
-   * <code>int64 amount_micros = 21;</code>
+   * <code>optional int64 amount_micros = 21;</code>
    * @return The amountMicros.
    */
   @java.lang.Override
@@ -384,7 +384,7 @@ private static final long serialVersionUID = 0L;
    * currency unit.
    * </pre>
    *
-   * <code>int64 total_amount_micros = 22;</code>
+   * <code>optional int64 total_amount_micros = 22;</code>
    * @return Whether the totalAmountMicros field is set.
    */
   @java.lang.Override
@@ -398,7 +398,7 @@ private static final long serialVersionUID = 0L;
    * currency unit.
    * </pre>
    *
-   * <code>int64 total_amount_micros = 22;</code>
+   * <code>optional int64 total_amount_micros = 22;</code>
    * @return The totalAmountMicros.
    */
   @java.lang.Override
@@ -481,7 +481,7 @@ private static final long serialVersionUID = 0L;
    * A shared campaign budget can never become non-shared.
    * </pre>
    *
-   * <code>bool explicitly_shared = 23;</code>
+   * <code>optional bool explicitly_shared = 23;</code>
    * @return Whether the explicitlyShared field is set.
    */
   @java.lang.Override
@@ -503,7 +503,7 @@ private static final long serialVersionUID = 0L;
    * A shared campaign budget can never become non-shared.
    * </pre>
    *
-   * <code>bool explicitly_shared = 23;</code>
+   * <code>optional bool explicitly_shared = 23;</code>
    * @return The explicitlyShared.
    */
   @java.lang.Override
@@ -519,7 +519,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 reference_count = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 reference_count = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the referenceCount field is set.
    */
   @java.lang.Override
@@ -532,7 +532,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 reference_count = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 reference_count = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The referenceCount.
    */
   @java.lang.Override
@@ -548,7 +548,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>bool has_recommended_budget = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool has_recommended_budget = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the hasRecommendedBudget field is set.
    */
   @java.lang.Override
@@ -561,7 +561,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>bool has_recommended_budget = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional bool has_recommended_budget = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The hasRecommendedBudget.
    */
   @java.lang.Override
@@ -580,7 +580,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 recommended_budget_amount_micros = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 recommended_budget_amount_micros = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the recommendedBudgetAmountMicros field is set.
    */
   @java.lang.Override
@@ -596,7 +596,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 recommended_budget_amount_micros = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 recommended_budget_amount_micros = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The recommendedBudgetAmountMicros.
    */
   @java.lang.Override
@@ -639,7 +639,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 recommended_budget_estimated_change_weekly_clicks = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 recommended_budget_estimated_change_weekly_clicks = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the recommendedBudgetEstimatedChangeWeeklyClicks field is set.
    */
   @java.lang.Override
@@ -652,7 +652,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 recommended_budget_estimated_change_weekly_clicks = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 recommended_budget_estimated_change_weekly_clicks = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The recommendedBudgetEstimatedChangeWeeklyClicks.
    */
   @java.lang.Override
@@ -669,7 +669,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 recommended_budget_estimated_change_weekly_cost_micros = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 recommended_budget_estimated_change_weekly_cost_micros = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the recommendedBudgetEstimatedChangeWeeklyCostMicros field is set.
    */
   @java.lang.Override
@@ -683,7 +683,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 recommended_budget_estimated_change_weekly_cost_micros = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 recommended_budget_estimated_change_weekly_cost_micros = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The recommendedBudgetEstimatedChangeWeeklyCostMicros.
    */
   @java.lang.Override
@@ -700,7 +700,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 recommended_budget_estimated_change_weekly_interactions = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 recommended_budget_estimated_change_weekly_interactions = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the recommendedBudgetEstimatedChangeWeeklyInteractions field is set.
    */
   @java.lang.Override
@@ -714,7 +714,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 recommended_budget_estimated_change_weekly_interactions = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 recommended_budget_estimated_change_weekly_interactions = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The recommendedBudgetEstimatedChangeWeeklyInteractions.
    */
   @java.lang.Override
@@ -730,7 +730,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 recommended_budget_estimated_change_weekly_views = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 recommended_budget_estimated_change_weekly_views = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the recommendedBudgetEstimatedChangeWeeklyViews field is set.
    */
   @java.lang.Override
@@ -743,7 +743,7 @@ private static final long serialVersionUID = 0L;
    * This field is read-only.
    * </pre>
    *
-   * <code>int64 recommended_budget_estimated_change_weekly_views = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 recommended_budget_estimated_change_weekly_views = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The recommendedBudgetEstimatedChangeWeeklyViews.
    */
   @java.lang.Override
@@ -792,7 +792,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (status_ != com.google.ads.googleads.v7.enums.BudgetStatusEnum.BudgetStatus.UNSPECIFIED.getNumber()) {
@@ -852,7 +852,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (status_ != com.google.ads.googleads.v7.enums.BudgetStatusEnum.BudgetStatus.UNSPECIFIED.getNumber()) {
@@ -1580,7 +1580,7 @@ private static final long serialVersionUID = 0L;
      * among different campaigns to get optimum results.
      * </pre>
      *
-     * <code>int64 id = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the id field is set.
      */
     @java.lang.Override
@@ -1596,7 +1596,7 @@ private static final long serialVersionUID = 0L;
      * among different campaigns to get optimum results.
      * </pre>
      *
-     * <code>int64 id = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The id.
      */
     @java.lang.Override
@@ -1612,7 +1612,7 @@ private static final long serialVersionUID = 0L;
      * among different campaigns to get optimum results.
      * </pre>
      *
-     * <code>int64 id = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The id to set.
      * @return This builder for chaining.
      */
@@ -1631,7 +1631,7 @@ private static final long serialVersionUID = 0L;
      * among different campaigns to get optimum results.
      * </pre>
      *
-     * <code>int64 id = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 id = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearId() {
@@ -1653,7 +1653,7 @@ private static final long serialVersionUID = 0L;
      * in UTF-8 bytes, (trimmed).
      * </pre>
      *
-     * <code>string name = 20;</code>
+     * <code>optional string name = 20;</code>
      * @return Whether the name field is set.
      */
     public boolean hasName() {
@@ -1670,7 +1670,7 @@ private static final long serialVersionUID = 0L;
      * in UTF-8 bytes, (trimmed).
      * </pre>
      *
-     * <code>string name = 20;</code>
+     * <code>optional string name = 20;</code>
      * @return The name.
      */
     public java.lang.String getName() {
@@ -1696,7 +1696,7 @@ private static final long serialVersionUID = 0L;
      * in UTF-8 bytes, (trimmed).
      * </pre>
      *
-     * <code>string name = 20;</code>
+     * <code>optional string name = 20;</code>
      * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
@@ -1723,7 +1723,7 @@ private static final long serialVersionUID = 0L;
      * in UTF-8 bytes, (trimmed).
      * </pre>
      *
-     * <code>string name = 20;</code>
+     * <code>optional string name = 20;</code>
      * @param value The name to set.
      * @return This builder for chaining.
      */
@@ -1748,7 +1748,7 @@ private static final long serialVersionUID = 0L;
      * in UTF-8 bytes, (trimmed).
      * </pre>
      *
-     * <code>string name = 20;</code>
+     * <code>optional string name = 20;</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
@@ -1768,7 +1768,7 @@ private static final long serialVersionUID = 0L;
      * in UTF-8 bytes, (trimmed).
      * </pre>
      *
-     * <code>string name = 20;</code>
+     * <code>optional string name = 20;</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
@@ -1792,7 +1792,7 @@ private static final long serialVersionUID = 0L;
      * currency unit. Monthly spend is capped at 30.4 times this amount.
      * </pre>
      *
-     * <code>int64 amount_micros = 21;</code>
+     * <code>optional int64 amount_micros = 21;</code>
      * @return Whether the amountMicros field is set.
      */
     @java.lang.Override
@@ -1806,7 +1806,7 @@ private static final long serialVersionUID = 0L;
      * currency unit. Monthly spend is capped at 30.4 times this amount.
      * </pre>
      *
-     * <code>int64 amount_micros = 21;</code>
+     * <code>optional int64 amount_micros = 21;</code>
      * @return The amountMicros.
      */
     @java.lang.Override
@@ -1820,7 +1820,7 @@ private static final long serialVersionUID = 0L;
      * currency unit. Monthly spend is capped at 30.4 times this amount.
      * </pre>
      *
-     * <code>int64 amount_micros = 21;</code>
+     * <code>optional int64 amount_micros = 21;</code>
      * @param value The amountMicros to set.
      * @return This builder for chaining.
      */
@@ -1837,7 +1837,7 @@ private static final long serialVersionUID = 0L;
      * currency unit. Monthly spend is capped at 30.4 times this amount.
      * </pre>
      *
-     * <code>int64 amount_micros = 21;</code>
+     * <code>optional int64 amount_micros = 21;</code>
      * @return This builder for chaining.
      */
     public Builder clearAmountMicros() {
@@ -1855,7 +1855,7 @@ private static final long serialVersionUID = 0L;
      * currency unit.
      * </pre>
      *
-     * <code>int64 total_amount_micros = 22;</code>
+     * <code>optional int64 total_amount_micros = 22;</code>
      * @return Whether the totalAmountMicros field is set.
      */
     @java.lang.Override
@@ -1869,7 +1869,7 @@ private static final long serialVersionUID = 0L;
      * currency unit.
      * </pre>
      *
-     * <code>int64 total_amount_micros = 22;</code>
+     * <code>optional int64 total_amount_micros = 22;</code>
      * @return The totalAmountMicros.
      */
     @java.lang.Override
@@ -1883,7 +1883,7 @@ private static final long serialVersionUID = 0L;
      * currency unit.
      * </pre>
      *
-     * <code>int64 total_amount_micros = 22;</code>
+     * <code>optional int64 total_amount_micros = 22;</code>
      * @param value The totalAmountMicros to set.
      * @return This builder for chaining.
      */
@@ -1900,7 +1900,7 @@ private static final long serialVersionUID = 0L;
      * currency unit.
      * </pre>
      *
-     * <code>int64 total_amount_micros = 22;</code>
+     * <code>optional int64 total_amount_micros = 22;</code>
      * @return This builder for chaining.
      */
     public Builder clearTotalAmountMicros() {
@@ -2084,7 +2084,7 @@ private static final long serialVersionUID = 0L;
      * A shared campaign budget can never become non-shared.
      * </pre>
      *
-     * <code>bool explicitly_shared = 23;</code>
+     * <code>optional bool explicitly_shared = 23;</code>
      * @return Whether the explicitlyShared field is set.
      */
     @java.lang.Override
@@ -2106,7 +2106,7 @@ private static final long serialVersionUID = 0L;
      * A shared campaign budget can never become non-shared.
      * </pre>
      *
-     * <code>bool explicitly_shared = 23;</code>
+     * <code>optional bool explicitly_shared = 23;</code>
      * @return The explicitlyShared.
      */
     @java.lang.Override
@@ -2128,7 +2128,7 @@ private static final long serialVersionUID = 0L;
      * A shared campaign budget can never become non-shared.
      * </pre>
      *
-     * <code>bool explicitly_shared = 23;</code>
+     * <code>optional bool explicitly_shared = 23;</code>
      * @param value The explicitlyShared to set.
      * @return This builder for chaining.
      */
@@ -2153,7 +2153,7 @@ private static final long serialVersionUID = 0L;
      * A shared campaign budget can never become non-shared.
      * </pre>
      *
-     * <code>bool explicitly_shared = 23;</code>
+     * <code>optional bool explicitly_shared = 23;</code>
      * @return This builder for chaining.
      */
     public Builder clearExplicitlyShared() {
@@ -2170,7 +2170,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 reference_count = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 reference_count = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the referenceCount field is set.
      */
     @java.lang.Override
@@ -2183,7 +2183,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 reference_count = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 reference_count = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The referenceCount.
      */
     @java.lang.Override
@@ -2196,7 +2196,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 reference_count = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 reference_count = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The referenceCount to set.
      * @return This builder for chaining.
      */
@@ -2212,7 +2212,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 reference_count = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 reference_count = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearReferenceCount() {
@@ -2229,7 +2229,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>bool has_recommended_budget = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool has_recommended_budget = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the hasRecommendedBudget field is set.
      */
     @java.lang.Override
@@ -2242,7 +2242,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>bool has_recommended_budget = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool has_recommended_budget = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The hasRecommendedBudget.
      */
     @java.lang.Override
@@ -2255,7 +2255,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>bool has_recommended_budget = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool has_recommended_budget = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The hasRecommendedBudget to set.
      * @return This builder for chaining.
      */
@@ -2271,7 +2271,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>bool has_recommended_budget = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional bool has_recommended_budget = 25 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearHasRecommendedBudget() {
@@ -2291,7 +2291,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 recommended_budget_amount_micros = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 recommended_budget_amount_micros = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the recommendedBudgetAmountMicros field is set.
      */
     @java.lang.Override
@@ -2307,7 +2307,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 recommended_budget_amount_micros = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 recommended_budget_amount_micros = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The recommendedBudgetAmountMicros.
      */
     @java.lang.Override
@@ -2323,7 +2323,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 recommended_budget_amount_micros = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 recommended_budget_amount_micros = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The recommendedBudgetAmountMicros to set.
      * @return This builder for chaining.
      */
@@ -2342,7 +2342,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 recommended_budget_amount_micros = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 recommended_budget_amount_micros = 26 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearRecommendedBudgetAmountMicros() {
@@ -2433,7 +2433,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 recommended_budget_estimated_change_weekly_clicks = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 recommended_budget_estimated_change_weekly_clicks = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the recommendedBudgetEstimatedChangeWeeklyClicks field is set.
      */
     @java.lang.Override
@@ -2446,7 +2446,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 recommended_budget_estimated_change_weekly_clicks = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 recommended_budget_estimated_change_weekly_clicks = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The recommendedBudgetEstimatedChangeWeeklyClicks.
      */
     @java.lang.Override
@@ -2459,7 +2459,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 recommended_budget_estimated_change_weekly_clicks = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 recommended_budget_estimated_change_weekly_clicks = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The recommendedBudgetEstimatedChangeWeeklyClicks to set.
      * @return This builder for chaining.
      */
@@ -2475,7 +2475,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 recommended_budget_estimated_change_weekly_clicks = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 recommended_budget_estimated_change_weekly_clicks = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearRecommendedBudgetEstimatedChangeWeeklyClicks() {
@@ -2493,7 +2493,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 recommended_budget_estimated_change_weekly_cost_micros = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 recommended_budget_estimated_change_weekly_cost_micros = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the recommendedBudgetEstimatedChangeWeeklyCostMicros field is set.
      */
     @java.lang.Override
@@ -2507,7 +2507,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 recommended_budget_estimated_change_weekly_cost_micros = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 recommended_budget_estimated_change_weekly_cost_micros = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The recommendedBudgetEstimatedChangeWeeklyCostMicros.
      */
     @java.lang.Override
@@ -2521,7 +2521,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 recommended_budget_estimated_change_weekly_cost_micros = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 recommended_budget_estimated_change_weekly_cost_micros = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The recommendedBudgetEstimatedChangeWeeklyCostMicros to set.
      * @return This builder for chaining.
      */
@@ -2538,7 +2538,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 recommended_budget_estimated_change_weekly_cost_micros = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 recommended_budget_estimated_change_weekly_cost_micros = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearRecommendedBudgetEstimatedChangeWeeklyCostMicros() {
@@ -2556,7 +2556,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 recommended_budget_estimated_change_weekly_interactions = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 recommended_budget_estimated_change_weekly_interactions = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the recommendedBudgetEstimatedChangeWeeklyInteractions field is set.
      */
     @java.lang.Override
@@ -2570,7 +2570,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 recommended_budget_estimated_change_weekly_interactions = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 recommended_budget_estimated_change_weekly_interactions = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The recommendedBudgetEstimatedChangeWeeklyInteractions.
      */
     @java.lang.Override
@@ -2584,7 +2584,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 recommended_budget_estimated_change_weekly_interactions = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 recommended_budget_estimated_change_weekly_interactions = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The recommendedBudgetEstimatedChangeWeeklyInteractions to set.
      * @return This builder for chaining.
      */
@@ -2601,7 +2601,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 recommended_budget_estimated_change_weekly_interactions = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 recommended_budget_estimated_change_weekly_interactions = 29 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearRecommendedBudgetEstimatedChangeWeeklyInteractions() {
@@ -2618,7 +2618,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 recommended_budget_estimated_change_weekly_views = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 recommended_budget_estimated_change_weekly_views = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the recommendedBudgetEstimatedChangeWeeklyViews field is set.
      */
     @java.lang.Override
@@ -2631,7 +2631,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 recommended_budget_estimated_change_weekly_views = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 recommended_budget_estimated_change_weekly_views = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The recommendedBudgetEstimatedChangeWeeklyViews.
      */
     @java.lang.Override
@@ -2644,7 +2644,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 recommended_budget_estimated_change_weekly_views = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 recommended_budget_estimated_change_weekly_views = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The recommendedBudgetEstimatedChangeWeeklyViews to set.
      * @return This builder for chaining.
      */
@@ -2660,7 +2660,7 @@ private static final long serialVersionUID = 0L;
      * This field is read-only.
      * </pre>
      *
-     * <code>int64 recommended_budget_estimated_change_weekly_views = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 recommended_budget_estimated_change_weekly_views = 30 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearRecommendedBudgetEstimatedChangeWeeklyViews() {

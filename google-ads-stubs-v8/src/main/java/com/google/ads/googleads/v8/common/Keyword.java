@@ -113,7 +113,7 @@ private static final long serialVersionUID = 0L;
    * The AdGroupCriterion resource name.
    * </pre>
    *
-   * <code>string ad_group_criterion = 3;</code>
+   * <code>optional string ad_group_criterion = 3;</code>
    * @return Whether the adGroupCriterion field is set.
    */
   @java.lang.Override
@@ -125,7 +125,7 @@ private static final long serialVersionUID = 0L;
    * The AdGroupCriterion resource name.
    * </pre>
    *
-   * <code>string ad_group_criterion = 3;</code>
+   * <code>optional string ad_group_criterion = 3;</code>
    * @return The adGroupCriterion.
    */
   @java.lang.Override
@@ -146,7 +146,7 @@ private static final long serialVersionUID = 0L;
    * The AdGroupCriterion resource name.
    * </pre>
    *
-   * <code>string ad_group_criterion = 3;</code>
+   * <code>optional string ad_group_criterion = 3;</code>
    * @return The bytes for adGroupCriterion.
    */
   @java.lang.Override
@@ -557,7 +557,7 @@ private static final long serialVersionUID = 0L;
      * The AdGroupCriterion resource name.
      * </pre>
      *
-     * <code>string ad_group_criterion = 3;</code>
+     * <code>optional string ad_group_criterion = 3;</code>
      * @return Whether the adGroupCriterion field is set.
      */
     public boolean hasAdGroupCriterion() {
@@ -568,7 +568,7 @@ private static final long serialVersionUID = 0L;
      * The AdGroupCriterion resource name.
      * </pre>
      *
-     * <code>string ad_group_criterion = 3;</code>
+     * <code>optional string ad_group_criterion = 3;</code>
      * @return The adGroupCriterion.
      */
     public java.lang.String getAdGroupCriterion() {
@@ -588,7 +588,7 @@ private static final long serialVersionUID = 0L;
      * The AdGroupCriterion resource name.
      * </pre>
      *
-     * <code>string ad_group_criterion = 3;</code>
+     * <code>optional string ad_group_criterion = 3;</code>
      * @return The bytes for adGroupCriterion.
      */
     public com.google.protobuf.ByteString
@@ -609,7 +609,7 @@ private static final long serialVersionUID = 0L;
      * The AdGroupCriterion resource name.
      * </pre>
      *
-     * <code>string ad_group_criterion = 3;</code>
+     * <code>optional string ad_group_criterion = 3;</code>
      * @param value The adGroupCriterion to set.
      * @return This builder for chaining.
      */
@@ -628,7 +628,7 @@ private static final long serialVersionUID = 0L;
      * The AdGroupCriterion resource name.
      * </pre>
      *
-     * <code>string ad_group_criterion = 3;</code>
+     * <code>optional string ad_group_criterion = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearAdGroupCriterion() {
@@ -642,7 +642,7 @@ private static final long serialVersionUID = 0L;
      * The AdGroupCriterion resource name.
      * </pre>
      *
-     * <code>string ad_group_criterion = 3;</code>
+     * <code>optional string ad_group_criterion = 3;</code>
      * @param value The bytes for adGroupCriterion to set.
      * @return This builder for chaining.
      */

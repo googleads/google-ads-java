@@ -12,7 +12,7 @@ public interface ManualCpcOrBuilder extends
    * Whether bids are to be enhanced based on conversion optimizer data.
    * </pre>
    *
-   * <code>bool enhanced_cpc_enabled = 2;</code>
+   * <code>optional bool enhanced_cpc_enabled = 2;</code>
    * @return Whether the enhancedCpcEnabled field is set.
    */
   boolean hasEnhancedCpcEnabled();
@@ -21,7 +21,7 @@ public interface ManualCpcOrBuilder extends
    * Whether bids are to be enhanced based on conversion optimizer data.
    * </pre>
    *
-   * <code>bool enhanced_cpc_enabled = 2;</code>
+   * <code>optional bool enhanced_cpc_enabled = 2;</code>
    * @return The enhancedCpcEnabled.
    */
   boolean getEnhancedCpcEnabled();

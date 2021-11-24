@@ -10,6 +10,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v9/services/asset_group_listing_group_filter_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class AssetGroupListingGroupFilterServiceGrpc {
 
   private AssetGroupListingGroupFilterServiceGrpc() {}

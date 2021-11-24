@@ -173,7 +173,7 @@ private static final long serialVersionUID = 0L;
    * The country code in the ad.
    * </pre>
    *
-   * <code>string country_code = 13;</code>
+   * <code>optional string country_code = 13;</code>
    * @return Whether the countryCode field is set.
    */
   @java.lang.Override
@@ -185,7 +185,7 @@ private static final long serialVersionUID = 0L;
    * The country code in the ad.
    * </pre>
    *
-   * <code>string country_code = 13;</code>
+   * <code>optional string country_code = 13;</code>
    * @return The countryCode.
    */
   @java.lang.Override
@@ -206,7 +206,7 @@ private static final long serialVersionUID = 0L;
    * The country code in the ad.
    * </pre>
    *
-   * <code>string country_code = 13;</code>
+   * <code>optional string country_code = 13;</code>
    * @return The bytes for countryCode.
    */
   @java.lang.Override
@@ -231,7 +231,7 @@ private static final long serialVersionUID = 0L;
    * The phone number in the ad.
    * </pre>
    *
-   * <code>string phone_number = 14;</code>
+   * <code>optional string phone_number = 14;</code>
    * @return Whether the phoneNumber field is set.
    */
   @java.lang.Override
@@ -243,7 +243,7 @@ private static final long serialVersionUID = 0L;
    * The phone number in the ad.
    * </pre>
    *
-   * <code>string phone_number = 14;</code>
+   * <code>optional string phone_number = 14;</code>
    * @return The phoneNumber.
    */
   @java.lang.Override
@@ -264,7 +264,7 @@ private static final long serialVersionUID = 0L;
    * The phone number in the ad.
    * </pre>
    *
-   * <code>string phone_number = 14;</code>
+   * <code>optional string phone_number = 14;</code>
    * @return The bytes for phoneNumber.
    */
   @java.lang.Override
@@ -289,7 +289,7 @@ private static final long serialVersionUID = 0L;
    * The business name in the ad.
    * </pre>
    *
-   * <code>string business_name = 15;</code>
+   * <code>optional string business_name = 15;</code>
    * @return Whether the businessName field is set.
    */
   @java.lang.Override
@@ -301,7 +301,7 @@ private static final long serialVersionUID = 0L;
    * The business name in the ad.
    * </pre>
    *
-   * <code>string business_name = 15;</code>
+   * <code>optional string business_name = 15;</code>
    * @return The businessName.
    */
   @java.lang.Override
@@ -322,7 +322,7 @@ private static final long serialVersionUID = 0L;
    * The business name in the ad.
    * </pre>
    *
-   * <code>string business_name = 15;</code>
+   * <code>optional string business_name = 15;</code>
    * @return The bytes for businessName.
    */
   @java.lang.Override
@@ -347,7 +347,7 @@ private static final long serialVersionUID = 0L;
    * First headline in the ad.
    * </pre>
    *
-   * <code>string headline1 = 16;</code>
+   * <code>optional string headline1 = 16;</code>
    * @return Whether the headline1 field is set.
    */
   @java.lang.Override
@@ -359,7 +359,7 @@ private static final long serialVersionUID = 0L;
    * First headline in the ad.
    * </pre>
    *
-   * <code>string headline1 = 16;</code>
+   * <code>optional string headline1 = 16;</code>
    * @return The headline1.
    */
   @java.lang.Override
@@ -380,7 +380,7 @@ private static final long serialVersionUID = 0L;
    * First headline in the ad.
    * </pre>
    *
-   * <code>string headline1 = 16;</code>
+   * <code>optional string headline1 = 16;</code>
    * @return The bytes for headline1.
    */
   @java.lang.Override
@@ -405,7 +405,7 @@ private static final long serialVersionUID = 0L;
    * Second headline in the ad.
    * </pre>
    *
-   * <code>string headline2 = 17;</code>
+   * <code>optional string headline2 = 17;</code>
    * @return Whether the headline2 field is set.
    */
   @java.lang.Override
@@ -417,7 +417,7 @@ private static final long serialVersionUID = 0L;
    * Second headline in the ad.
    * </pre>
    *
-   * <code>string headline2 = 17;</code>
+   * <code>optional string headline2 = 17;</code>
    * @return The headline2.
    */
   @java.lang.Override
@@ -438,7 +438,7 @@ private static final long serialVersionUID = 0L;
    * Second headline in the ad.
    * </pre>
    *
-   * <code>string headline2 = 17;</code>
+   * <code>optional string headline2 = 17;</code>
    * @return The bytes for headline2.
    */
   @java.lang.Override
@@ -463,7 +463,7 @@ private static final long serialVersionUID = 0L;
    * The first line of the ad's description.
    * </pre>
    *
-   * <code>string description1 = 18;</code>
+   * <code>optional string description1 = 18;</code>
    * @return Whether the description1 field is set.
    */
   @java.lang.Override
@@ -475,7 +475,7 @@ private static final long serialVersionUID = 0L;
    * The first line of the ad's description.
    * </pre>
    *
-   * <code>string description1 = 18;</code>
+   * <code>optional string description1 = 18;</code>
    * @return The description1.
    */
   @java.lang.Override
@@ -496,7 +496,7 @@ private static final long serialVersionUID = 0L;
    * The first line of the ad's description.
    * </pre>
    *
-   * <code>string description1 = 18;</code>
+   * <code>optional string description1 = 18;</code>
    * @return The bytes for description1.
    */
   @java.lang.Override
@@ -521,7 +521,7 @@ private static final long serialVersionUID = 0L;
    * The second line of the ad's description.
    * </pre>
    *
-   * <code>string description2 = 19;</code>
+   * <code>optional string description2 = 19;</code>
    * @return Whether the description2 field is set.
    */
   @java.lang.Override
@@ -533,7 +533,7 @@ private static final long serialVersionUID = 0L;
    * The second line of the ad's description.
    * </pre>
    *
-   * <code>string description2 = 19;</code>
+   * <code>optional string description2 = 19;</code>
    * @return The description2.
    */
   @java.lang.Override
@@ -554,7 +554,7 @@ private static final long serialVersionUID = 0L;
    * The second line of the ad's description.
    * </pre>
    *
-   * <code>string description2 = 19;</code>
+   * <code>optional string description2 = 19;</code>
    * @return The bytes for description2.
    */
   @java.lang.Override
@@ -580,7 +580,7 @@ private static final long serialVersionUID = 0L;
    * tracking also enables call conversions.
    * </pre>
    *
-   * <code>bool call_tracked = 20;</code>
+   * <code>optional bool call_tracked = 20;</code>
    * @return Whether the callTracked field is set.
    */
   @java.lang.Override
@@ -593,7 +593,7 @@ private static final long serialVersionUID = 0L;
    * tracking also enables call conversions.
    * </pre>
    *
-   * <code>bool call_tracked = 20;</code>
+   * <code>optional bool call_tracked = 20;</code>
    * @return The callTracked.
    */
   @java.lang.Override
@@ -611,7 +611,7 @@ private static final long serialVersionUID = 0L;
    * If `call_tracked` is `false`, this field is ignored.
    * </pre>
    *
-   * <code>bool disable_call_conversion = 21;</code>
+   * <code>optional bool disable_call_conversion = 21;</code>
    * @return Whether the disableCallConversion field is set.
    */
   @java.lang.Override
@@ -626,7 +626,7 @@ private static final long serialVersionUID = 0L;
    * If `call_tracked` is `false`, this field is ignored.
    * </pre>
    *
-   * <code>bool disable_call_conversion = 21;</code>
+   * <code>optional bool disable_call_conversion = 21;</code>
    * @return The disableCallConversion.
    */
   @java.lang.Override
@@ -641,7 +641,7 @@ private static final long serialVersionUID = 0L;
    * The URL to be used for phone number verification.
    * </pre>
    *
-   * <code>string phone_number_verification_url = 22;</code>
+   * <code>optional string phone_number_verification_url = 22;</code>
    * @return Whether the phoneNumberVerificationUrl field is set.
    */
   @java.lang.Override
@@ -653,7 +653,7 @@ private static final long serialVersionUID = 0L;
    * The URL to be used for phone number verification.
    * </pre>
    *
-   * <code>string phone_number_verification_url = 22;</code>
+   * <code>optional string phone_number_verification_url = 22;</code>
    * @return The phoneNumberVerificationUrl.
    */
   @java.lang.Override
@@ -674,7 +674,7 @@ private static final long serialVersionUID = 0L;
    * The URL to be used for phone number verification.
    * </pre>
    *
-   * <code>string phone_number_verification_url = 22;</code>
+   * <code>optional string phone_number_verification_url = 22;</code>
    * @return The bytes for phoneNumberVerificationUrl.
    */
   @java.lang.Override
@@ -701,7 +701,7 @@ private static final long serialVersionUID = 0L;
    * `call_tracked` is set to `true`. Otherwise this field is ignored.
    * </pre>
    *
-   * <code>string conversion_action = 23;</code>
+   * <code>optional string conversion_action = 23;</code>
    * @return Whether the conversionAction field is set.
    */
   @java.lang.Override
@@ -715,7 +715,7 @@ private static final long serialVersionUID = 0L;
    * `call_tracked` is set to `true`. Otherwise this field is ignored.
    * </pre>
    *
-   * <code>string conversion_action = 23;</code>
+   * <code>optional string conversion_action = 23;</code>
    * @return The conversionAction.
    */
   @java.lang.Override
@@ -738,7 +738,7 @@ private static final long serialVersionUID = 0L;
    * `call_tracked` is set to `true`. Otherwise this field is ignored.
    * </pre>
    *
-   * <code>string conversion_action = 23;</code>
+   * <code>optional string conversion_action = 23;</code>
    * @return The bytes for conversionAction.
    */
   @java.lang.Override
@@ -1386,7 +1386,7 @@ private static final long serialVersionUID = 0L;
      * The country code in the ad.
      * </pre>
      *
-     * <code>string country_code = 13;</code>
+     * <code>optional string country_code = 13;</code>
      * @return Whether the countryCode field is set.
      */
     public boolean hasCountryCode() {
@@ -1397,7 +1397,7 @@ private static final long serialVersionUID = 0L;
      * The country code in the ad.
      * </pre>
      *
-     * <code>string country_code = 13;</code>
+     * <code>optional string country_code = 13;</code>
      * @return The countryCode.
      */
     public java.lang.String getCountryCode() {
@@ -1417,7 +1417,7 @@ private static final long serialVersionUID = 0L;
      * The country code in the ad.
      * </pre>
      *
-     * <code>string country_code = 13;</code>
+     * <code>optional string country_code = 13;</code>
      * @return The bytes for countryCode.
      */
     public com.google.protobuf.ByteString
@@ -1438,7 +1438,7 @@ private static final long serialVersionUID = 0L;
      * The country code in the ad.
      * </pre>
      *
-     * <code>string country_code = 13;</code>
+     * <code>optional string country_code = 13;</code>
      * @param value The countryCode to set.
      * @return This builder for chaining.
      */
@@ -1457,7 +1457,7 @@ private static final long serialVersionUID = 0L;
      * The country code in the ad.
      * </pre>
      *
-     * <code>string country_code = 13;</code>
+     * <code>optional string country_code = 13;</code>
      * @return This builder for chaining.
      */
     public Builder clearCountryCode() {
@@ -1471,7 +1471,7 @@ private static final long serialVersionUID = 0L;
      * The country code in the ad.
      * </pre>
      *
-     * <code>string country_code = 13;</code>
+     * <code>optional string country_code = 13;</code>
      * @param value The bytes for countryCode to set.
      * @return This builder for chaining.
      */
@@ -1493,7 +1493,7 @@ private static final long serialVersionUID = 0L;
      * The phone number in the ad.
      * </pre>
      *
-     * <code>string phone_number = 14;</code>
+     * <code>optional string phone_number = 14;</code>
      * @return Whether the phoneNumber field is set.
      */
     public boolean hasPhoneNumber() {
@@ -1504,7 +1504,7 @@ private static final long serialVersionUID = 0L;
      * The phone number in the ad.
      * </pre>
      *
-     * <code>string phone_number = 14;</code>
+     * <code>optional string phone_number = 14;</code>
      * @return The phoneNumber.
      */
     public java.lang.String getPhoneNumber() {
@@ -1524,7 +1524,7 @@ private static final long serialVersionUID = 0L;
      * The phone number in the ad.
      * </pre>
      *
-     * <code>string phone_number = 14;</code>
+     * <code>optional string phone_number = 14;</code>
      * @return The bytes for phoneNumber.
      */
     public com.google.protobuf.ByteString
@@ -1545,7 +1545,7 @@ private static final long serialVersionUID = 0L;
      * The phone number in the ad.
      * </pre>
      *
-     * <code>string phone_number = 14;</code>
+     * <code>optional string phone_number = 14;</code>
      * @param value The phoneNumber to set.
      * @return This builder for chaining.
      */
@@ -1564,7 +1564,7 @@ private static final long serialVersionUID = 0L;
      * The phone number in the ad.
      * </pre>
      *
-     * <code>string phone_number = 14;</code>
+     * <code>optional string phone_number = 14;</code>
      * @return This builder for chaining.
      */
     public Builder clearPhoneNumber() {
@@ -1578,7 +1578,7 @@ private static final long serialVersionUID = 0L;
      * The phone number in the ad.
      * </pre>
      *
-     * <code>string phone_number = 14;</code>
+     * <code>optional string phone_number = 14;</code>
      * @param value The bytes for phoneNumber to set.
      * @return This builder for chaining.
      */
@@ -1600,7 +1600,7 @@ private static final long serialVersionUID = 0L;
      * The business name in the ad.
      * </pre>
      *
-     * <code>string business_name = 15;</code>
+     * <code>optional string business_name = 15;</code>
      * @return Whether the businessName field is set.
      */
     public boolean hasBusinessName() {
@@ -1611,7 +1611,7 @@ private static final long serialVersionUID = 0L;
      * The business name in the ad.
      * </pre>
      *
-     * <code>string business_name = 15;</code>
+     * <code>optional string business_name = 15;</code>
      * @return The businessName.
      */
     public java.lang.String getBusinessName() {
@@ -1631,7 +1631,7 @@ private static final long serialVersionUID = 0L;
      * The business name in the ad.
      * </pre>
      *
-     * <code>string business_name = 15;</code>
+     * <code>optional string business_name = 15;</code>
      * @return The bytes for businessName.
      */
     public com.google.protobuf.ByteString
@@ -1652,7 +1652,7 @@ private static final long serialVersionUID = 0L;
      * The business name in the ad.
      * </pre>
      *
-     * <code>string business_name = 15;</code>
+     * <code>optional string business_name = 15;</code>
      * @param value The businessName to set.
      * @return This builder for chaining.
      */
@@ -1671,7 +1671,7 @@ private static final long serialVersionUID = 0L;
      * The business name in the ad.
      * </pre>
      *
-     * <code>string business_name = 15;</code>
+     * <code>optional string business_name = 15;</code>
      * @return This builder for chaining.
      */
     public Builder clearBusinessName() {
@@ -1685,7 +1685,7 @@ private static final long serialVersionUID = 0L;
      * The business name in the ad.
      * </pre>
      *
-     * <code>string business_name = 15;</code>
+     * <code>optional string business_name = 15;</code>
      * @param value The bytes for businessName to set.
      * @return This builder for chaining.
      */
@@ -1707,7 +1707,7 @@ private static final long serialVersionUID = 0L;
      * First headline in the ad.
      * </pre>
      *
-     * <code>string headline1 = 16;</code>
+     * <code>optional string headline1 = 16;</code>
      * @return Whether the headline1 field is set.
      */
     public boolean hasHeadline1() {
@@ -1718,7 +1718,7 @@ private static final long serialVersionUID = 0L;
      * First headline in the ad.
      * </pre>
      *
-     * <code>string headline1 = 16;</code>
+     * <code>optional string headline1 = 16;</code>
      * @return The headline1.
      */
     public java.lang.String getHeadline1() {
@@ -1738,7 +1738,7 @@ private static final long serialVersionUID = 0L;
      * First headline in the ad.
      * </pre>
      *
-     * <code>string headline1 = 16;</code>
+     * <code>optional string headline1 = 16;</code>
      * @return The bytes for headline1.
      */
     public com.google.protobuf.ByteString
@@ -1759,7 +1759,7 @@ private static final long serialVersionUID = 0L;
      * First headline in the ad.
      * </pre>
      *
-     * <code>string headline1 = 16;</code>
+     * <code>optional string headline1 = 16;</code>
      * @param value The headline1 to set.
      * @return This builder for chaining.
      */
@@ -1778,7 +1778,7 @@ private static final long serialVersionUID = 0L;
      * First headline in the ad.
      * </pre>
      *
-     * <code>string headline1 = 16;</code>
+     * <code>optional string headline1 = 16;</code>
      * @return This builder for chaining.
      */
     public Builder clearHeadline1() {
@@ -1792,7 +1792,7 @@ private static final long serialVersionUID = 0L;
      * First headline in the ad.
      * </pre>
      *
-     * <code>string headline1 = 16;</code>
+     * <code>optional string headline1 = 16;</code>
      * @param value The bytes for headline1 to set.
      * @return This builder for chaining.
      */
@@ -1814,7 +1814,7 @@ private static final long serialVersionUID = 0L;
      * Second headline in the ad.
      * </pre>
      *
-     * <code>string headline2 = 17;</code>
+     * <code>optional string headline2 = 17;</code>
      * @return Whether the headline2 field is set.
      */
     public boolean hasHeadline2() {
@@ -1825,7 +1825,7 @@ private static final long serialVersionUID = 0L;
      * Second headline in the ad.
      * </pre>
      *
-     * <code>string headline2 = 17;</code>
+     * <code>optional string headline2 = 17;</code>
      * @return The headline2.
      */
     public java.lang.String getHeadline2() {
@@ -1845,7 +1845,7 @@ private static final long serialVersionUID = 0L;
      * Second headline in the ad.
      * </pre>
      *
-     * <code>string headline2 = 17;</code>
+     * <code>optional string headline2 = 17;</code>
      * @return The bytes for headline2.
      */
     public com.google.protobuf.ByteString
@@ -1866,7 +1866,7 @@ private static final long serialVersionUID = 0L;
      * Second headline in the ad.
      * </pre>
      *
-     * <code>string headline2 = 17;</code>
+     * <code>optional string headline2 = 17;</code>
      * @param value The headline2 to set.
      * @return This builder for chaining.
      */
@@ -1885,7 +1885,7 @@ private static final long serialVersionUID = 0L;
      * Second headline in the ad.
      * </pre>
      *
-     * <code>string headline2 = 17;</code>
+     * <code>optional string headline2 = 17;</code>
      * @return This builder for chaining.
      */
     public Builder clearHeadline2() {
@@ -1899,7 +1899,7 @@ private static final long serialVersionUID = 0L;
      * Second headline in the ad.
      * </pre>
      *
-     * <code>string headline2 = 17;</code>
+     * <code>optional string headline2 = 17;</code>
      * @param value The bytes for headline2 to set.
      * @return This builder for chaining.
      */
@@ -1921,7 +1921,7 @@ private static final long serialVersionUID = 0L;
      * The first line of the ad's description.
      * </pre>
      *
-     * <code>string description1 = 18;</code>
+     * <code>optional string description1 = 18;</code>
      * @return Whether the description1 field is set.
      */
     public boolean hasDescription1() {
@@ -1932,7 +1932,7 @@ private static final long serialVersionUID = 0L;
      * The first line of the ad's description.
      * </pre>
      *
-     * <code>string description1 = 18;</code>
+     * <code>optional string description1 = 18;</code>
      * @return The description1.
      */
     public java.lang.String getDescription1() {
@@ -1952,7 +1952,7 @@ private static final long serialVersionUID = 0L;
      * The first line of the ad's description.
      * </pre>
      *
-     * <code>string description1 = 18;</code>
+     * <code>optional string description1 = 18;</code>
      * @return The bytes for description1.
      */
     public com.google.protobuf.ByteString
@@ -1973,7 +1973,7 @@ private static final long serialVersionUID = 0L;
      * The first line of the ad's description.
      * </pre>
      *
-     * <code>string description1 = 18;</code>
+     * <code>optional string description1 = 18;</code>
      * @param value The description1 to set.
      * @return This builder for chaining.
      */
@@ -1992,7 +1992,7 @@ private static final long serialVersionUID = 0L;
      * The first line of the ad's description.
      * </pre>
      *
-     * <code>string description1 = 18;</code>
+     * <code>optional string description1 = 18;</code>
      * @return This builder for chaining.
      */
     public Builder clearDescription1() {
@@ -2006,7 +2006,7 @@ private static final long serialVersionUID = 0L;
      * The first line of the ad's description.
      * </pre>
      *
-     * <code>string description1 = 18;</code>
+     * <code>optional string description1 = 18;</code>
      * @param value The bytes for description1 to set.
      * @return This builder for chaining.
      */
@@ -2028,7 +2028,7 @@ private static final long serialVersionUID = 0L;
      * The second line of the ad's description.
      * </pre>
      *
-     * <code>string description2 = 19;</code>
+     * <code>optional string description2 = 19;</code>
      * @return Whether the description2 field is set.
      */
     public boolean hasDescription2() {
@@ -2039,7 +2039,7 @@ private static final long serialVersionUID = 0L;
      * The second line of the ad's description.
      * </pre>
      *
-     * <code>string description2 = 19;</code>
+     * <code>optional string description2 = 19;</code>
      * @return The description2.
      */
     public java.lang.String getDescription2() {
@@ -2059,7 +2059,7 @@ private static final long serialVersionUID = 0L;
      * The second line of the ad's description.
      * </pre>
      *
-     * <code>string description2 = 19;</code>
+     * <code>optional string description2 = 19;</code>
      * @return The bytes for description2.
      */
     public com.google.protobuf.ByteString
@@ -2080,7 +2080,7 @@ private static final long serialVersionUID = 0L;
      * The second line of the ad's description.
      * </pre>
      *
-     * <code>string description2 = 19;</code>
+     * <code>optional string description2 = 19;</code>
      * @param value The description2 to set.
      * @return This builder for chaining.
      */
@@ -2099,7 +2099,7 @@ private static final long serialVersionUID = 0L;
      * The second line of the ad's description.
      * </pre>
      *
-     * <code>string description2 = 19;</code>
+     * <code>optional string description2 = 19;</code>
      * @return This builder for chaining.
      */
     public Builder clearDescription2() {
@@ -2113,7 +2113,7 @@ private static final long serialVersionUID = 0L;
      * The second line of the ad's description.
      * </pre>
      *
-     * <code>string description2 = 19;</code>
+     * <code>optional string description2 = 19;</code>
      * @param value The bytes for description2 to set.
      * @return This builder for chaining.
      */
@@ -2136,7 +2136,7 @@ private static final long serialVersionUID = 0L;
      * tracking also enables call conversions.
      * </pre>
      *
-     * <code>bool call_tracked = 20;</code>
+     * <code>optional bool call_tracked = 20;</code>
      * @return Whether the callTracked field is set.
      */
     @java.lang.Override
@@ -2149,7 +2149,7 @@ private static final long serialVersionUID = 0L;
      * tracking also enables call conversions.
      * </pre>
      *
-     * <code>bool call_tracked = 20;</code>
+     * <code>optional bool call_tracked = 20;</code>
      * @return The callTracked.
      */
     @java.lang.Override
@@ -2162,7 +2162,7 @@ private static final long serialVersionUID = 0L;
      * tracking also enables call conversions.
      * </pre>
      *
-     * <code>bool call_tracked = 20;</code>
+     * <code>optional bool call_tracked = 20;</code>
      * @param value The callTracked to set.
      * @return This builder for chaining.
      */
@@ -2178,7 +2178,7 @@ private static final long serialVersionUID = 0L;
      * tracking also enables call conversions.
      * </pre>
      *
-     * <code>bool call_tracked = 20;</code>
+     * <code>optional bool call_tracked = 20;</code>
      * @return This builder for chaining.
      */
     public Builder clearCallTracked() {
@@ -2197,7 +2197,7 @@ private static final long serialVersionUID = 0L;
      * If `call_tracked` is `false`, this field is ignored.
      * </pre>
      *
-     * <code>bool disable_call_conversion = 21;</code>
+     * <code>optional bool disable_call_conversion = 21;</code>
      * @return Whether the disableCallConversion field is set.
      */
     @java.lang.Override
@@ -2212,7 +2212,7 @@ private static final long serialVersionUID = 0L;
      * If `call_tracked` is `false`, this field is ignored.
      * </pre>
      *
-     * <code>bool disable_call_conversion = 21;</code>
+     * <code>optional bool disable_call_conversion = 21;</code>
      * @return The disableCallConversion.
      */
     @java.lang.Override
@@ -2227,7 +2227,7 @@ private static final long serialVersionUID = 0L;
      * If `call_tracked` is `false`, this field is ignored.
      * </pre>
      *
-     * <code>bool disable_call_conversion = 21;</code>
+     * <code>optional bool disable_call_conversion = 21;</code>
      * @param value The disableCallConversion to set.
      * @return This builder for chaining.
      */
@@ -2245,7 +2245,7 @@ private static final long serialVersionUID = 0L;
      * If `call_tracked` is `false`, this field is ignored.
      * </pre>
      *
-     * <code>bool disable_call_conversion = 21;</code>
+     * <code>optional bool disable_call_conversion = 21;</code>
      * @return This builder for chaining.
      */
     public Builder clearDisableCallConversion() {
@@ -2261,7 +2261,7 @@ private static final long serialVersionUID = 0L;
      * The URL to be used for phone number verification.
      * </pre>
      *
-     * <code>string phone_number_verification_url = 22;</code>
+     * <code>optional string phone_number_verification_url = 22;</code>
      * @return Whether the phoneNumberVerificationUrl field is set.
      */
     public boolean hasPhoneNumberVerificationUrl() {
@@ -2272,7 +2272,7 @@ private static final long serialVersionUID = 0L;
      * The URL to be used for phone number verification.
      * </pre>
      *
-     * <code>string phone_number_verification_url = 22;</code>
+     * <code>optional string phone_number_verification_url = 22;</code>
      * @return The phoneNumberVerificationUrl.
      */
     public java.lang.String getPhoneNumberVerificationUrl() {
@@ -2292,7 +2292,7 @@ private static final long serialVersionUID = 0L;
      * The URL to be used for phone number verification.
      * </pre>
      *
-     * <code>string phone_number_verification_url = 22;</code>
+     * <code>optional string phone_number_verification_url = 22;</code>
      * @return The bytes for phoneNumberVerificationUrl.
      */
     public com.google.protobuf.ByteString
@@ -2313,7 +2313,7 @@ private static final long serialVersionUID = 0L;
      * The URL to be used for phone number verification.
      * </pre>
      *
-     * <code>string phone_number_verification_url = 22;</code>
+     * <code>optional string phone_number_verification_url = 22;</code>
      * @param value The phoneNumberVerificationUrl to set.
      * @return This builder for chaining.
      */
@@ -2332,7 +2332,7 @@ private static final long serialVersionUID = 0L;
      * The URL to be used for phone number verification.
      * </pre>
      *
-     * <code>string phone_number_verification_url = 22;</code>
+     * <code>optional string phone_number_verification_url = 22;</code>
      * @return This builder for chaining.
      */
     public Builder clearPhoneNumberVerificationUrl() {
@@ -2346,7 +2346,7 @@ private static final long serialVersionUID = 0L;
      * The URL to be used for phone number verification.
      * </pre>
      *
-     * <code>string phone_number_verification_url = 22;</code>
+     * <code>optional string phone_number_verification_url = 22;</code>
      * @param value The bytes for phoneNumberVerificationUrl to set.
      * @return This builder for chaining.
      */
@@ -2370,7 +2370,7 @@ private static final long serialVersionUID = 0L;
      * `call_tracked` is set to `true`. Otherwise this field is ignored.
      * </pre>
      *
-     * <code>string conversion_action = 23;</code>
+     * <code>optional string conversion_action = 23;</code>
      * @return Whether the conversionAction field is set.
      */
     public boolean hasConversionAction() {
@@ -2383,7 +2383,7 @@ private static final long serialVersionUID = 0L;
      * `call_tracked` is set to `true`. Otherwise this field is ignored.
      * </pre>
      *
-     * <code>string conversion_action = 23;</code>
+     * <code>optional string conversion_action = 23;</code>
      * @return The conversionAction.
      */
     public java.lang.String getConversionAction() {
@@ -2405,7 +2405,7 @@ private static final long serialVersionUID = 0L;
      * `call_tracked` is set to `true`. Otherwise this field is ignored.
      * </pre>
      *
-     * <code>string conversion_action = 23;</code>
+     * <code>optional string conversion_action = 23;</code>
      * @return The bytes for conversionAction.
      */
     public com.google.protobuf.ByteString
@@ -2428,7 +2428,7 @@ private static final long serialVersionUID = 0L;
      * `call_tracked` is set to `true`. Otherwise this field is ignored.
      * </pre>
      *
-     * <code>string conversion_action = 23;</code>
+     * <code>optional string conversion_action = 23;</code>
      * @param value The conversionAction to set.
      * @return This builder for chaining.
      */
@@ -2449,7 +2449,7 @@ private static final long serialVersionUID = 0L;
      * `call_tracked` is set to `true`. Otherwise this field is ignored.
      * </pre>
      *
-     * <code>string conversion_action = 23;</code>
+     * <code>optional string conversion_action = 23;</code>
      * @return This builder for chaining.
      */
     public Builder clearConversionAction() {
@@ -2465,7 +2465,7 @@ private static final long serialVersionUID = 0L;
      * `call_tracked` is set to `true`. Otherwise this field is ignored.
      * </pre>
      *
-     * <code>string conversion_action = 23;</code>
+     * <code>optional string conversion_action = 23;</code>
      * @param value The bytes for conversionAction to set.
      * @return This builder for chaining.
      */

@@ -122,7 +122,7 @@ private static final long serialVersionUID = 0L;
    * must be 1:1 (+-1%).
    * </pre>
    *
-   * <code>string product_image = 4;</code>
+   * <code>optional string product_image = 4;</code>
    * @return Whether the productImage field is set.
    */
   @java.lang.Override
@@ -136,7 +136,7 @@ private static final long serialVersionUID = 0L;
    * must be 1:1 (+-1%).
    * </pre>
    *
-   * <code>string product_image = 4;</code>
+   * <code>optional string product_image = 4;</code>
    * @return The productImage.
    */
   @java.lang.Override
@@ -159,7 +159,7 @@ private static final long serialVersionUID = 0L;
    * must be 1:1 (+-1%).
    * </pre>
    *
-   * <code>string product_image = 4;</code>
+   * <code>optional string product_image = 4;</code>
    * @return The bytes for productImage.
    */
   @java.lang.Override
@@ -184,7 +184,7 @@ private static final long serialVersionUID = 0L;
    * Description of the product.
    * </pre>
    *
-   * <code>string description = 5;</code>
+   * <code>optional string description = 5;</code>
    * @return Whether the description field is set.
    */
   @java.lang.Override
@@ -196,7 +196,7 @@ private static final long serialVersionUID = 0L;
    * Description of the product.
    * </pre>
    *
-   * <code>string description = 5;</code>
+   * <code>optional string description = 5;</code>
    * @return The description.
    */
   @java.lang.Override
@@ -217,7 +217,7 @@ private static final long serialVersionUID = 0L;
    * Description of the product.
    * </pre>
    *
-   * <code>string description = 5;</code>
+   * <code>optional string description = 5;</code>
    * @return The bytes for description.
    */
   @java.lang.Override
@@ -656,7 +656,7 @@ private static final long serialVersionUID = 0L;
      * must be 1:1 (+-1%).
      * </pre>
      *
-     * <code>string product_image = 4;</code>
+     * <code>optional string product_image = 4;</code>
      * @return Whether the productImage field is set.
      */
     public boolean hasProductImage() {
@@ -669,7 +669,7 @@ private static final long serialVersionUID = 0L;
      * must be 1:1 (+-1%).
      * </pre>
      *
-     * <code>string product_image = 4;</code>
+     * <code>optional string product_image = 4;</code>
      * @return The productImage.
      */
     public java.lang.String getProductImage() {
@@ -691,7 +691,7 @@ private static final long serialVersionUID = 0L;
      * must be 1:1 (+-1%).
      * </pre>
      *
-     * <code>string product_image = 4;</code>
+     * <code>optional string product_image = 4;</code>
      * @return The bytes for productImage.
      */
     public com.google.protobuf.ByteString
@@ -714,7 +714,7 @@ private static final long serialVersionUID = 0L;
      * must be 1:1 (+-1%).
      * </pre>
      *
-     * <code>string product_image = 4;</code>
+     * <code>optional string product_image = 4;</code>
      * @param value The productImage to set.
      * @return This builder for chaining.
      */
@@ -735,7 +735,7 @@ private static final long serialVersionUID = 0L;
      * must be 1:1 (+-1%).
      * </pre>
      *
-     * <code>string product_image = 4;</code>
+     * <code>optional string product_image = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearProductImage() {
@@ -751,7 +751,7 @@ private static final long serialVersionUID = 0L;
      * must be 1:1 (+-1%).
      * </pre>
      *
-     * <code>string product_image = 4;</code>
+     * <code>optional string product_image = 4;</code>
      * @param value The bytes for productImage to set.
      * @return This builder for chaining.
      */
@@ -773,7 +773,7 @@ private static final long serialVersionUID = 0L;
      * Description of the product.
      * </pre>
      *
-     * <code>string description = 5;</code>
+     * <code>optional string description = 5;</code>
      * @return Whether the description field is set.
      */
     public boolean hasDescription() {
@@ -784,7 +784,7 @@ private static final long serialVersionUID = 0L;
      * Description of the product.
      * </pre>
      *
-     * <code>string description = 5;</code>
+     * <code>optional string description = 5;</code>
      * @return The description.
      */
     public java.lang.String getDescription() {
@@ -804,7 +804,7 @@ private static final long serialVersionUID = 0L;
      * Description of the product.
      * </pre>
      *
-     * <code>string description = 5;</code>
+     * <code>optional string description = 5;</code>
      * @return The bytes for description.
      */
     public com.google.protobuf.ByteString
@@ -825,7 +825,7 @@ private static final long serialVersionUID = 0L;
      * Description of the product.
      * </pre>
      *
-     * <code>string description = 5;</code>
+     * <code>optional string description = 5;</code>
      * @param value The description to set.
      * @return This builder for chaining.
      */
@@ -844,7 +844,7 @@ private static final long serialVersionUID = 0L;
      * Description of the product.
      * </pre>
      *
-     * <code>string description = 5;</code>
+     * <code>optional string description = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
@@ -858,7 +858,7 @@ private static final long serialVersionUID = 0L;
      * Description of the product.
      * </pre>
      *
-     * <code>string description = 5;</code>
+     * <code>optional string description = 5;</code>
      * @param value The bytes for description to set.
      * @return This builder for chaining.
      */

@@ -13,7 +13,7 @@ public interface ConversionAdjustmentResultOrBuilder extends
    * adjustment.
    * </pre>
    *
-   * <code>string conversion_action = 7;</code>
+   * <code>optional string conversion_action = 7;</code>
    * @return Whether the conversionAction field is set.
    */
   boolean hasConversionAction();
@@ -23,7 +23,7 @@ public interface ConversionAdjustmentResultOrBuilder extends
    * adjustment.
    * </pre>
    *
-   * <code>string conversion_action = 7;</code>
+   * <code>optional string conversion_action = 7;</code>
    * @return The conversionAction.
    */
   java.lang.String getConversionAction();
@@ -33,7 +33,7 @@ public interface ConversionAdjustmentResultOrBuilder extends
    * adjustment.
    * </pre>
    *
-   * <code>string conversion_action = 7;</code>
+   * <code>optional string conversion_action = 7;</code>
    * @return The bytes for conversionAction.
    */
   com.google.protobuf.ByteString
@@ -45,7 +45,7 @@ public interface ConversionAdjustmentResultOrBuilder extends
    * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
    * </pre>
    *
-   * <code>string adjustment_date_time = 8;</code>
+   * <code>optional string adjustment_date_time = 8;</code>
    * @return Whether the adjustmentDateTime field is set.
    */
   boolean hasAdjustmentDateTime();
@@ -55,7 +55,7 @@ public interface ConversionAdjustmentResultOrBuilder extends
    * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
    * </pre>
    *
-   * <code>string adjustment_date_time = 8;</code>
+   * <code>optional string adjustment_date_time = 8;</code>
    * @return The adjustmentDateTime.
    */
   java.lang.String getAdjustmentDateTime();
@@ -65,7 +65,7 @@ public interface ConversionAdjustmentResultOrBuilder extends
    * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
    * </pre>
    *
-   * <code>string adjustment_date_time = 8;</code>
+   * <code>optional string adjustment_date_time = 8;</code>
    * @return The bytes for adjustmentDateTime.
    */
   com.google.protobuf.ByteString

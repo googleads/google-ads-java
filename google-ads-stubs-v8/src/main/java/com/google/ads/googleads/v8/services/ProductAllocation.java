@@ -104,10 +104,10 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Selected product for planning. The product codes returned are within the
    * set of the ones returned by ListPlannableProducts when using the same
-   * location id.
+   * location ID.
    * </pre>
    *
-   * <code>string plannable_product_code = 3;</code>
+   * <code>optional string plannable_product_code = 3;</code>
    * @return Whether the plannableProductCode field is set.
    */
   @java.lang.Override
@@ -118,10 +118,10 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Selected product for planning. The product codes returned are within the
    * set of the ones returned by ListPlannableProducts when using the same
-   * location id.
+   * location ID.
    * </pre>
    *
-   * <code>string plannable_product_code = 3;</code>
+   * <code>optional string plannable_product_code = 3;</code>
    * @return The plannableProductCode.
    */
   @java.lang.Override
@@ -141,10 +141,10 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Selected product for planning. The product codes returned are within the
    * set of the ones returned by ListPlannableProducts when using the same
-   * location id.
+   * location ID.
    * </pre>
    *
-   * <code>string plannable_product_code = 3;</code>
+   * <code>optional string plannable_product_code = 3;</code>
    * @return The bytes for plannableProductCode.
    */
   @java.lang.Override
@@ -170,7 +170,7 @@ private static final long serialVersionUID = 0L;
    * Amount in micros. One million is equivalent to one unit.
    * </pre>
    *
-   * <code>int64 budget_micros = 4;</code>
+   * <code>optional int64 budget_micros = 4;</code>
    * @return Whether the budgetMicros field is set.
    */
   @java.lang.Override
@@ -183,7 +183,7 @@ private static final long serialVersionUID = 0L;
    * Amount in micros. One million is equivalent to one unit.
    * </pre>
    *
-   * <code>int64 budget_micros = 4;</code>
+   * <code>optional int64 budget_micros = 4;</code>
    * @return The budgetMicros.
    */
   @java.lang.Override
@@ -541,10 +541,10 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Selected product for planning. The product codes returned are within the
      * set of the ones returned by ListPlannableProducts when using the same
-     * location id.
+     * location ID.
      * </pre>
      *
-     * <code>string plannable_product_code = 3;</code>
+     * <code>optional string plannable_product_code = 3;</code>
      * @return Whether the plannableProductCode field is set.
      */
     public boolean hasPlannableProductCode() {
@@ -554,10 +554,10 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Selected product for planning. The product codes returned are within the
      * set of the ones returned by ListPlannableProducts when using the same
-     * location id.
+     * location ID.
      * </pre>
      *
-     * <code>string plannable_product_code = 3;</code>
+     * <code>optional string plannable_product_code = 3;</code>
      * @return The plannableProductCode.
      */
     public java.lang.String getPlannableProductCode() {
@@ -576,10 +576,10 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Selected product for planning. The product codes returned are within the
      * set of the ones returned by ListPlannableProducts when using the same
-     * location id.
+     * location ID.
      * </pre>
      *
-     * <code>string plannable_product_code = 3;</code>
+     * <code>optional string plannable_product_code = 3;</code>
      * @return The bytes for plannableProductCode.
      */
     public com.google.protobuf.ByteString
@@ -599,10 +599,10 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Selected product for planning. The product codes returned are within the
      * set of the ones returned by ListPlannableProducts when using the same
-     * location id.
+     * location ID.
      * </pre>
      *
-     * <code>string plannable_product_code = 3;</code>
+     * <code>optional string plannable_product_code = 3;</code>
      * @param value The plannableProductCode to set.
      * @return This builder for chaining.
      */
@@ -620,10 +620,10 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Selected product for planning. The product codes returned are within the
      * set of the ones returned by ListPlannableProducts when using the same
-     * location id.
+     * location ID.
      * </pre>
      *
-     * <code>string plannable_product_code = 3;</code>
+     * <code>optional string plannable_product_code = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearPlannableProductCode() {
@@ -636,10 +636,10 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Selected product for planning. The product codes returned are within the
      * set of the ones returned by ListPlannableProducts when using the same
-     * location id.
+     * location ID.
      * </pre>
      *
-     * <code>string plannable_product_code = 3;</code>
+     * <code>optional string plannable_product_code = 3;</code>
      * @param value The bytes for plannableProductCode to set.
      * @return This builder for chaining.
      */
@@ -662,7 +662,7 @@ private static final long serialVersionUID = 0L;
      * Amount in micros. One million is equivalent to one unit.
      * </pre>
      *
-     * <code>int64 budget_micros = 4;</code>
+     * <code>optional int64 budget_micros = 4;</code>
      * @return Whether the budgetMicros field is set.
      */
     @java.lang.Override
@@ -675,7 +675,7 @@ private static final long serialVersionUID = 0L;
      * Amount in micros. One million is equivalent to one unit.
      * </pre>
      *
-     * <code>int64 budget_micros = 4;</code>
+     * <code>optional int64 budget_micros = 4;</code>
      * @return The budgetMicros.
      */
     @java.lang.Override
@@ -688,7 +688,7 @@ private static final long serialVersionUID = 0L;
      * Amount in micros. One million is equivalent to one unit.
      * </pre>
      *
-     * <code>int64 budget_micros = 4;</code>
+     * <code>optional int64 budget_micros = 4;</code>
      * @param value The budgetMicros to set.
      * @return This builder for chaining.
      */
@@ -704,7 +704,7 @@ private static final long serialVersionUID = 0L;
      * Amount in micros. One million is equivalent to one unit.
      * </pre>
      *
-     * <code>int64 budget_micros = 4;</code>
+     * <code>optional int64 budget_micros = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearBudgetMicros() {

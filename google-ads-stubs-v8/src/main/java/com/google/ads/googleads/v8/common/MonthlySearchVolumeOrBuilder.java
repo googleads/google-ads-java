@@ -12,7 +12,7 @@ public interface MonthlySearchVolumeOrBuilder extends
    * The year of the search volume (e.g. 2020).
    * </pre>
    *
-   * <code>int64 year = 4;</code>
+   * <code>optional int64 year = 4;</code>
    * @return Whether the year field is set.
    */
   boolean hasYear();
@@ -21,7 +21,7 @@ public interface MonthlySearchVolumeOrBuilder extends
    * The year of the search volume (e.g. 2020).
    * </pre>
    *
-   * <code>int64 year = 4;</code>
+   * <code>optional int64 year = 4;</code>
    * @return The year.
    */
   long getYear();
@@ -52,7 +52,7 @@ public interface MonthlySearchVolumeOrBuilder extends
    * that month.
    * </pre>
    *
-   * <code>int64 monthly_searches = 5;</code>
+   * <code>optional int64 monthly_searches = 5;</code>
    * @return Whether the monthlySearches field is set.
    */
   boolean hasMonthlySearches();
@@ -63,7 +63,7 @@ public interface MonthlySearchVolumeOrBuilder extends
    * that month.
    * </pre>
    *
-   * <code>int64 monthly_searches = 5;</code>
+   * <code>optional int64 monthly_searches = 5;</code>
    * @return The monthlySearches.
    */
   long getMonthlySearches();

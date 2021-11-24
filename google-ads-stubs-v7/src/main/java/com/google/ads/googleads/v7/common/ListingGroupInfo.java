@@ -189,7 +189,7 @@ private static final long serialVersionUID = 0L;
    * subdivision. Null for the root group.
    * </pre>
    *
-   * <code>string parent_ad_group_criterion = 4;</code>
+   * <code>optional string parent_ad_group_criterion = 4;</code>
    * @return Whether the parentAdGroupCriterion field is set.
    */
   @java.lang.Override
@@ -202,7 +202,7 @@ private static final long serialVersionUID = 0L;
    * subdivision. Null for the root group.
    * </pre>
    *
-   * <code>string parent_ad_group_criterion = 4;</code>
+   * <code>optional string parent_ad_group_criterion = 4;</code>
    * @return The parentAdGroupCriterion.
    */
   @java.lang.Override
@@ -224,7 +224,7 @@ private static final long serialVersionUID = 0L;
    * subdivision. Null for the root group.
    * </pre>
    *
-   * <code>string parent_ad_group_criterion = 4;</code>
+   * <code>optional string parent_ad_group_criterion = 4;</code>
    * @return The bytes for parentAdGroupCriterion.
    */
   @java.lang.Override
@@ -852,7 +852,7 @@ private static final long serialVersionUID = 0L;
      * subdivision. Null for the root group.
      * </pre>
      *
-     * <code>string parent_ad_group_criterion = 4;</code>
+     * <code>optional string parent_ad_group_criterion = 4;</code>
      * @return Whether the parentAdGroupCriterion field is set.
      */
     public boolean hasParentAdGroupCriterion() {
@@ -864,7 +864,7 @@ private static final long serialVersionUID = 0L;
      * subdivision. Null for the root group.
      * </pre>
      *
-     * <code>string parent_ad_group_criterion = 4;</code>
+     * <code>optional string parent_ad_group_criterion = 4;</code>
      * @return The parentAdGroupCriterion.
      */
     public java.lang.String getParentAdGroupCriterion() {
@@ -885,7 +885,7 @@ private static final long serialVersionUID = 0L;
      * subdivision. Null for the root group.
      * </pre>
      *
-     * <code>string parent_ad_group_criterion = 4;</code>
+     * <code>optional string parent_ad_group_criterion = 4;</code>
      * @return The bytes for parentAdGroupCriterion.
      */
     public com.google.protobuf.ByteString
@@ -907,7 +907,7 @@ private static final long serialVersionUID = 0L;
      * subdivision. Null for the root group.
      * </pre>
      *
-     * <code>string parent_ad_group_criterion = 4;</code>
+     * <code>optional string parent_ad_group_criterion = 4;</code>
      * @param value The parentAdGroupCriterion to set.
      * @return This builder for chaining.
      */
@@ -927,7 +927,7 @@ private static final long serialVersionUID = 0L;
      * subdivision. Null for the root group.
      * </pre>
      *
-     * <code>string parent_ad_group_criterion = 4;</code>
+     * <code>optional string parent_ad_group_criterion = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearParentAdGroupCriterion() {
@@ -942,7 +942,7 @@ private static final long serialVersionUID = 0L;
      * subdivision. Null for the root group.
      * </pre>
      *
-     * <code>string parent_ad_group_criterion = 4;</code>
+     * <code>optional string parent_ad_group_criterion = 4;</code>
      * @param value The bytes for parentAdGroupCriterion to set.
      * @return This builder for chaining.
      */

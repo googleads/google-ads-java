@@ -10,6 +10,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
     comments = "Source: google/ads/googleads/v9/services/campaign_criterion_simulation_service.proto")
+@io.grpc.stub.annotations.GrpcGenerated
 public final class CampaignCriterionSimulationServiceGrpc {
 
   private CampaignCriterionSimulationServiceGrpc() {}

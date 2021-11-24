@@ -239,10 +239,10 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object customConversionGoal_;
   /**
    * <pre>
-   * Immutable. The custom conversion goal the campaign is using for optimization.
+   * The custom conversion goal the campaign is using for optimization.
    * </pre>
    *
-   * <code>string custom_conversion_goal = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>string custom_conversion_goal = 4 [(.google.api.resource_reference) = { ... }</code>
    * @return The customConversionGoal.
    */
   @java.lang.Override
@@ -260,10 +260,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. The custom conversion goal the campaign is using for optimization.
+   * The custom conversion goal the campaign is using for optimization.
    * </pre>
    *
-   * <code>string custom_conversion_goal = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * <code>string custom_conversion_goal = 4 [(.google.api.resource_reference) = { ... }</code>
    * @return The bytes for customConversionGoal.
    */
   @java.lang.Override
@@ -916,10 +916,10 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object customConversionGoal_ = "";
     /**
      * <pre>
-     * Immutable. The custom conversion goal the campaign is using for optimization.
+     * The custom conversion goal the campaign is using for optimization.
      * </pre>
      *
-     * <code>string custom_conversion_goal = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>string custom_conversion_goal = 4 [(.google.api.resource_reference) = { ... }</code>
      * @return The customConversionGoal.
      */
     public java.lang.String getCustomConversionGoal() {
@@ -936,10 +936,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The custom conversion goal the campaign is using for optimization.
+     * The custom conversion goal the campaign is using for optimization.
      * </pre>
      *
-     * <code>string custom_conversion_goal = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>string custom_conversion_goal = 4 [(.google.api.resource_reference) = { ... }</code>
      * @return The bytes for customConversionGoal.
      */
     public com.google.protobuf.ByteString
@@ -957,10 +957,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The custom conversion goal the campaign is using for optimization.
+     * The custom conversion goal the campaign is using for optimization.
      * </pre>
      *
-     * <code>string custom_conversion_goal = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>string custom_conversion_goal = 4 [(.google.api.resource_reference) = { ... }</code>
      * @param value The customConversionGoal to set.
      * @return This builder for chaining.
      */
@@ -976,10 +976,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The custom conversion goal the campaign is using for optimization.
+     * The custom conversion goal the campaign is using for optimization.
      * </pre>
      *
-     * <code>string custom_conversion_goal = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>string custom_conversion_goal = 4 [(.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearCustomConversionGoal() {
@@ -990,10 +990,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The custom conversion goal the campaign is using for optimization.
+     * The custom conversion goal the campaign is using for optimization.
      * </pre>
      *
-     * <code>string custom_conversion_goal = 4 [(.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * <code>string custom_conversion_goal = 4 [(.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for customConversionGoal to set.
      * @return This builder for chaining.
      */

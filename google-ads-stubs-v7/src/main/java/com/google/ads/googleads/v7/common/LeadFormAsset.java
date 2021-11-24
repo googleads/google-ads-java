@@ -469,7 +469,7 @@ private static final long serialVersionUID = 0L;
    * advertiser will follow up with the user.
    * </pre>
    *
-   * <code>string post_submit_headline = 15;</code>
+   * <code>optional string post_submit_headline = 15;</code>
    * @return Whether the postSubmitHeadline field is set.
    */
   @java.lang.Override
@@ -482,7 +482,7 @@ private static final long serialVersionUID = 0L;
    * advertiser will follow up with the user.
    * </pre>
    *
-   * <code>string post_submit_headline = 15;</code>
+   * <code>optional string post_submit_headline = 15;</code>
    * @return The postSubmitHeadline.
    */
   @java.lang.Override
@@ -504,7 +504,7 @@ private static final long serialVersionUID = 0L;
    * advertiser will follow up with the user.
    * </pre>
    *
-   * <code>string post_submit_headline = 15;</code>
+   * <code>optional string post_submit_headline = 15;</code>
    * @return The bytes for postSubmitHeadline.
    */
   @java.lang.Override
@@ -530,7 +530,7 @@ private static final long serialVersionUID = 0L;
    * advertiser will follow up with the user.
    * </pre>
    *
-   * <code>string post_submit_description = 16;</code>
+   * <code>optional string post_submit_description = 16;</code>
    * @return Whether the postSubmitDescription field is set.
    */
   @java.lang.Override
@@ -543,7 +543,7 @@ private static final long serialVersionUID = 0L;
    * advertiser will follow up with the user.
    * </pre>
    *
-   * <code>string post_submit_description = 16;</code>
+   * <code>optional string post_submit_description = 16;</code>
    * @return The postSubmitDescription.
    */
   @java.lang.Override
@@ -565,7 +565,7 @@ private static final long serialVersionUID = 0L;
    * advertiser will follow up with the user.
    * </pre>
    *
-   * <code>string post_submit_description = 16;</code>
+   * <code>optional string post_submit_description = 16;</code>
    * @return The bytes for postSubmitDescription.
    */
   @java.lang.Override
@@ -745,7 +745,7 @@ private static final long serialVersionUID = 0L;
    * and the aspect ratio must be 1.91:1 (+-1%).
    * </pre>
    *
-   * <code>string background_image_asset = 20;</code>
+   * <code>optional string background_image_asset = 20;</code>
    * @return Whether the backgroundImageAsset field is set.
    */
   @java.lang.Override
@@ -758,7 +758,7 @@ private static final long serialVersionUID = 0L;
    * and the aspect ratio must be 1.91:1 (+-1%).
    * </pre>
    *
-   * <code>string background_image_asset = 20;</code>
+   * <code>optional string background_image_asset = 20;</code>
    * @return The backgroundImageAsset.
    */
   @java.lang.Override
@@ -780,7 +780,7 @@ private static final long serialVersionUID = 0L;
    * and the aspect ratio must be 1.91:1 (+-1%).
    * </pre>
    *
-   * <code>string background_image_asset = 20;</code>
+   * <code>optional string background_image_asset = 20;</code>
    * @return The bytes for backgroundImageAsset.
    */
   @java.lang.Override
@@ -833,7 +833,7 @@ private static final long serialVersionUID = 0L;
    * Accessible to allowed customers only.
    * </pre>
    *
-   * <code>string custom_disclosure = 22;</code>
+   * <code>optional string custom_disclosure = 22;</code>
    * @return Whether the customDisclosure field is set.
    */
   @java.lang.Override
@@ -846,7 +846,7 @@ private static final long serialVersionUID = 0L;
    * Accessible to allowed customers only.
    * </pre>
    *
-   * <code>string custom_disclosure = 22;</code>
+   * <code>optional string custom_disclosure = 22;</code>
    * @return The customDisclosure.
    */
   @java.lang.Override
@@ -868,7 +868,7 @@ private static final long serialVersionUID = 0L;
    * Accessible to allowed customers only.
    * </pre>
    *
-   * <code>string custom_disclosure = 22;</code>
+   * <code>optional string custom_disclosure = 22;</code>
    * @return The bytes for customDisclosure.
    */
   @java.lang.Override
@@ -906,16 +906,16 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < deliveryMethods_.size(); i++) {
       output.writeMessage(9, deliveryMethods_.get(i));
     }
-    if (!getBusinessNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(businessName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 10, businessName_);
     }
-    if (!getHeadlineBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(headline_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 12, headline_);
     }
-    if (!getDescriptionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 13, description_);
     }
-    if (!getPrivacyPolicyUrlBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privacyPolicyUrl_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 14, privacyPolicyUrl_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
@@ -927,7 +927,7 @@ private static final long serialVersionUID = 0L;
     if (callToActionType_ != com.google.ads.googleads.v7.enums.LeadFormCallToActionTypeEnum.LeadFormCallToActionType.UNSPECIFIED.getNumber()) {
       output.writeEnum(17, callToActionType_);
     }
-    if (!getCallToActionDescriptionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callToActionDescription_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 18, callToActionDescription_);
     }
     if (postSubmitCallToActionType_ != com.google.ads.googleads.v7.enums.LeadFormPostSubmitCallToActionTypeEnum.LeadFormPostSubmitCallToActionType.UNSPECIFIED.getNumber()) {
@@ -959,16 +959,16 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(9, deliveryMethods_.get(i));
     }
-    if (!getBusinessNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(businessName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, businessName_);
     }
-    if (!getHeadlineBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(headline_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, headline_);
     }
-    if (!getDescriptionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, description_);
     }
-    if (!getPrivacyPolicyUrlBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(privacyPolicyUrl_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, privacyPolicyUrl_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
@@ -981,7 +981,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(17, callToActionType_);
     }
-    if (!getCallToActionDescriptionBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callToActionDescription_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, callToActionDescription_);
     }
     if (postSubmitCallToActionType_ != com.google.ads.googleads.v7.enums.LeadFormPostSubmitCallToActionTypeEnum.LeadFormPostSubmitCallToActionType.UNSPECIFIED.getNumber()) {
@@ -2107,7 +2107,7 @@ private static final long serialVersionUID = 0L;
      * advertiser will follow up with the user.
      * </pre>
      *
-     * <code>string post_submit_headline = 15;</code>
+     * <code>optional string post_submit_headline = 15;</code>
      * @return Whether the postSubmitHeadline field is set.
      */
     public boolean hasPostSubmitHeadline() {
@@ -2119,7 +2119,7 @@ private static final long serialVersionUID = 0L;
      * advertiser will follow up with the user.
      * </pre>
      *
-     * <code>string post_submit_headline = 15;</code>
+     * <code>optional string post_submit_headline = 15;</code>
      * @return The postSubmitHeadline.
      */
     public java.lang.String getPostSubmitHeadline() {
@@ -2140,7 +2140,7 @@ private static final long serialVersionUID = 0L;
      * advertiser will follow up with the user.
      * </pre>
      *
-     * <code>string post_submit_headline = 15;</code>
+     * <code>optional string post_submit_headline = 15;</code>
      * @return The bytes for postSubmitHeadline.
      */
     public com.google.protobuf.ByteString
@@ -2162,7 +2162,7 @@ private static final long serialVersionUID = 0L;
      * advertiser will follow up with the user.
      * </pre>
      *
-     * <code>string post_submit_headline = 15;</code>
+     * <code>optional string post_submit_headline = 15;</code>
      * @param value The postSubmitHeadline to set.
      * @return This builder for chaining.
      */
@@ -2182,7 +2182,7 @@ private static final long serialVersionUID = 0L;
      * advertiser will follow up with the user.
      * </pre>
      *
-     * <code>string post_submit_headline = 15;</code>
+     * <code>optional string post_submit_headline = 15;</code>
      * @return This builder for chaining.
      */
     public Builder clearPostSubmitHeadline() {
@@ -2197,7 +2197,7 @@ private static final long serialVersionUID = 0L;
      * advertiser will follow up with the user.
      * </pre>
      *
-     * <code>string post_submit_headline = 15;</code>
+     * <code>optional string post_submit_headline = 15;</code>
      * @param value The bytes for postSubmitHeadline to set.
      * @return This builder for chaining.
      */
@@ -2220,7 +2220,7 @@ private static final long serialVersionUID = 0L;
      * advertiser will follow up with the user.
      * </pre>
      *
-     * <code>string post_submit_description = 16;</code>
+     * <code>optional string post_submit_description = 16;</code>
      * @return Whether the postSubmitDescription field is set.
      */
     public boolean hasPostSubmitDescription() {
@@ -2232,7 +2232,7 @@ private static final long serialVersionUID = 0L;
      * advertiser will follow up with the user.
      * </pre>
      *
-     * <code>string post_submit_description = 16;</code>
+     * <code>optional string post_submit_description = 16;</code>
      * @return The postSubmitDescription.
      */
     public java.lang.String getPostSubmitDescription() {
@@ -2253,7 +2253,7 @@ private static final long serialVersionUID = 0L;
      * advertiser will follow up with the user.
      * </pre>
      *
-     * <code>string post_submit_description = 16;</code>
+     * <code>optional string post_submit_description = 16;</code>
      * @return The bytes for postSubmitDescription.
      */
     public com.google.protobuf.ByteString
@@ -2275,7 +2275,7 @@ private static final long serialVersionUID = 0L;
      * advertiser will follow up with the user.
      * </pre>
      *
-     * <code>string post_submit_description = 16;</code>
+     * <code>optional string post_submit_description = 16;</code>
      * @param value The postSubmitDescription to set.
      * @return This builder for chaining.
      */
@@ -2295,7 +2295,7 @@ private static final long serialVersionUID = 0L;
      * advertiser will follow up with the user.
      * </pre>
      *
-     * <code>string post_submit_description = 16;</code>
+     * <code>optional string post_submit_description = 16;</code>
      * @return This builder for chaining.
      */
     public Builder clearPostSubmitDescription() {
@@ -2310,7 +2310,7 @@ private static final long serialVersionUID = 0L;
      * advertiser will follow up with the user.
      * </pre>
      *
-     * <code>string post_submit_description = 16;</code>
+     * <code>optional string post_submit_description = 16;</code>
      * @param value The bytes for postSubmitDescription to set.
      * @return This builder for chaining.
      */
@@ -3054,7 +3054,7 @@ private static final long serialVersionUID = 0L;
      * and the aspect ratio must be 1.91:1 (+-1%).
      * </pre>
      *
-     * <code>string background_image_asset = 20;</code>
+     * <code>optional string background_image_asset = 20;</code>
      * @return Whether the backgroundImageAsset field is set.
      */
     public boolean hasBackgroundImageAsset() {
@@ -3066,7 +3066,7 @@ private static final long serialVersionUID = 0L;
      * and the aspect ratio must be 1.91:1 (+-1%).
      * </pre>
      *
-     * <code>string background_image_asset = 20;</code>
+     * <code>optional string background_image_asset = 20;</code>
      * @return The backgroundImageAsset.
      */
     public java.lang.String getBackgroundImageAsset() {
@@ -3087,7 +3087,7 @@ private static final long serialVersionUID = 0L;
      * and the aspect ratio must be 1.91:1 (+-1%).
      * </pre>
      *
-     * <code>string background_image_asset = 20;</code>
+     * <code>optional string background_image_asset = 20;</code>
      * @return The bytes for backgroundImageAsset.
      */
     public com.google.protobuf.ByteString
@@ -3109,7 +3109,7 @@ private static final long serialVersionUID = 0L;
      * and the aspect ratio must be 1.91:1 (+-1%).
      * </pre>
      *
-     * <code>string background_image_asset = 20;</code>
+     * <code>optional string background_image_asset = 20;</code>
      * @param value The backgroundImageAsset to set.
      * @return This builder for chaining.
      */
@@ -3129,7 +3129,7 @@ private static final long serialVersionUID = 0L;
      * and the aspect ratio must be 1.91:1 (+-1%).
      * </pre>
      *
-     * <code>string background_image_asset = 20;</code>
+     * <code>optional string background_image_asset = 20;</code>
      * @return This builder for chaining.
      */
     public Builder clearBackgroundImageAsset() {
@@ -3144,7 +3144,7 @@ private static final long serialVersionUID = 0L;
      * and the aspect ratio must be 1.91:1 (+-1%).
      * </pre>
      *
-     * <code>string background_image_asset = 20;</code>
+     * <code>optional string background_image_asset = 20;</code>
      * @param value The bytes for backgroundImageAsset to set.
      * @return This builder for chaining.
      */
@@ -3241,7 +3241,7 @@ private static final long serialVersionUID = 0L;
      * Accessible to allowed customers only.
      * </pre>
      *
-     * <code>string custom_disclosure = 22;</code>
+     * <code>optional string custom_disclosure = 22;</code>
      * @return Whether the customDisclosure field is set.
      */
     public boolean hasCustomDisclosure() {
@@ -3253,7 +3253,7 @@ private static final long serialVersionUID = 0L;
      * Accessible to allowed customers only.
      * </pre>
      *
-     * <code>string custom_disclosure = 22;</code>
+     * <code>optional string custom_disclosure = 22;</code>
      * @return The customDisclosure.
      */
     public java.lang.String getCustomDisclosure() {
@@ -3274,7 +3274,7 @@ private static final long serialVersionUID = 0L;
      * Accessible to allowed customers only.
      * </pre>
      *
-     * <code>string custom_disclosure = 22;</code>
+     * <code>optional string custom_disclosure = 22;</code>
      * @return The bytes for customDisclosure.
      */
     public com.google.protobuf.ByteString
@@ -3296,7 +3296,7 @@ private static final long serialVersionUID = 0L;
      * Accessible to allowed customers only.
      * </pre>
      *
-     * <code>string custom_disclosure = 22;</code>
+     * <code>optional string custom_disclosure = 22;</code>
      * @param value The customDisclosure to set.
      * @return This builder for chaining.
      */
@@ -3316,7 +3316,7 @@ private static final long serialVersionUID = 0L;
      * Accessible to allowed customers only.
      * </pre>
      *
-     * <code>string custom_disclosure = 22;</code>
+     * <code>optional string custom_disclosure = 22;</code>
      * @return This builder for chaining.
      */
     public Builder clearCustomDisclosure() {
@@ -3331,7 +3331,7 @@ private static final long serialVersionUID = 0L;
      * Accessible to allowed customers only.
      * </pre>
      *
-     * <code>string custom_disclosure = 22;</code>
+     * <code>optional string custom_disclosure = 22;</code>
      * @param value The bytes for customDisclosure to set.
      * @return This builder for chaining.
      */

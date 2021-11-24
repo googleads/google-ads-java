@@ -147,7 +147,7 @@ private static final long serialVersionUID = 0L;
    * in E.164 format with preceding '+' sign. e.g. "+16502531234".
    * </pre>
    *
-   * <code>string caller_id = 7;</code>
+   * <code>optional string caller_id = 7;</code>
    * @return Whether the callerId field is set.
    */
   @java.lang.Override
@@ -160,7 +160,7 @@ private static final long serialVersionUID = 0L;
    * in E.164 format with preceding '+' sign. e.g. "+16502531234".
    * </pre>
    *
-   * <code>string caller_id = 7;</code>
+   * <code>optional string caller_id = 7;</code>
    * @return The callerId.
    */
   @java.lang.Override
@@ -182,7 +182,7 @@ private static final long serialVersionUID = 0L;
    * in E.164 format with preceding '+' sign. e.g. "+16502531234".
    * </pre>
    *
-   * <code>string caller_id = 7;</code>
+   * <code>optional string caller_id = 7;</code>
    * @return The bytes for callerId.
    */
   @java.lang.Override
@@ -209,7 +209,7 @@ private static final long serialVersionUID = 0L;
    * e.g. "2019-01-01 12:32:45-08:00".
    * </pre>
    *
-   * <code>string call_start_date_time = 8;</code>
+   * <code>optional string call_start_date_time = 8;</code>
    * @return Whether the callStartDateTime field is set.
    */
   @java.lang.Override
@@ -223,7 +223,7 @@ private static final long serialVersionUID = 0L;
    * e.g. "2019-01-01 12:32:45-08:00".
    * </pre>
    *
-   * <code>string call_start_date_time = 8;</code>
+   * <code>optional string call_start_date_time = 8;</code>
    * @return The callStartDateTime.
    */
   @java.lang.Override
@@ -246,7 +246,7 @@ private static final long serialVersionUID = 0L;
    * e.g. "2019-01-01 12:32:45-08:00".
    * </pre>
    *
-   * <code>string call_start_date_time = 8;</code>
+   * <code>optional string call_start_date_time = 8;</code>
    * @return The bytes for callStartDateTime.
    */
   @java.lang.Override
@@ -274,7 +274,7 @@ private static final long serialVersionUID = 0L;
    * conversion action id as the sole identifier of the conversion action.
    * </pre>
    *
-   * <code>string conversion_action = 9;</code>
+   * <code>optional string conversion_action = 9;</code>
    * @return Whether the conversionAction field is set.
    */
   @java.lang.Override
@@ -289,7 +289,7 @@ private static final long serialVersionUID = 0L;
    * conversion action id as the sole identifier of the conversion action.
    * </pre>
    *
-   * <code>string conversion_action = 9;</code>
+   * <code>optional string conversion_action = 9;</code>
    * @return The conversionAction.
    */
   @java.lang.Override
@@ -313,7 +313,7 @@ private static final long serialVersionUID = 0L;
    * conversion action id as the sole identifier of the conversion action.
    * </pre>
    *
-   * <code>string conversion_action = 9;</code>
+   * <code>optional string conversion_action = 9;</code>
    * @return The bytes for conversionAction.
    */
   @java.lang.Override
@@ -340,7 +340,7 @@ private static final long serialVersionUID = 0L;
    * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
    * </pre>
    *
-   * <code>string conversion_date_time = 10;</code>
+   * <code>optional string conversion_date_time = 10;</code>
    * @return Whether the conversionDateTime field is set.
    */
   @java.lang.Override
@@ -354,7 +354,7 @@ private static final long serialVersionUID = 0L;
    * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
    * </pre>
    *
-   * <code>string conversion_date_time = 10;</code>
+   * <code>optional string conversion_date_time = 10;</code>
    * @return The conversionDateTime.
    */
   @java.lang.Override
@@ -377,7 +377,7 @@ private static final long serialVersionUID = 0L;
    * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
    * </pre>
    *
-   * <code>string conversion_date_time = 10;</code>
+   * <code>optional string conversion_date_time = 10;</code>
    * @return The bytes for conversionDateTime.
    */
   @java.lang.Override
@@ -402,7 +402,7 @@ private static final long serialVersionUID = 0L;
    * The value of the conversion for the advertiser.
    * </pre>
    *
-   * <code>double conversion_value = 11;</code>
+   * <code>optional double conversion_value = 11;</code>
    * @return Whether the conversionValue field is set.
    */
   @java.lang.Override
@@ -414,7 +414,7 @@ private static final long serialVersionUID = 0L;
    * The value of the conversion for the advertiser.
    * </pre>
    *
-   * <code>double conversion_value = 11;</code>
+   * <code>optional double conversion_value = 11;</code>
    * @return The conversionValue.
    */
   @java.lang.Override
@@ -430,7 +430,7 @@ private static final long serialVersionUID = 0L;
    * 3-character currency code. For example: USD, EUR.
    * </pre>
    *
-   * <code>string currency_code = 12;</code>
+   * <code>optional string currency_code = 12;</code>
    * @return Whether the currencyCode field is set.
    */
   @java.lang.Override
@@ -443,7 +443,7 @@ private static final long serialVersionUID = 0L;
    * 3-character currency code. For example: USD, EUR.
    * </pre>
    *
-   * <code>string currency_code = 12;</code>
+   * <code>optional string currency_code = 12;</code>
    * @return The currencyCode.
    */
   @java.lang.Override
@@ -465,7 +465,7 @@ private static final long serialVersionUID = 0L;
    * 3-character currency code. For example: USD, EUR.
    * </pre>
    *
-   * <code>string currency_code = 12;</code>
+   * <code>optional string currency_code = 12;</code>
    * @return The bytes for currencyCode.
    */
   @java.lang.Override
@@ -1055,7 +1055,7 @@ private static final long serialVersionUID = 0L;
      * in E.164 format with preceding '+' sign. e.g. "+16502531234".
      * </pre>
      *
-     * <code>string caller_id = 7;</code>
+     * <code>optional string caller_id = 7;</code>
      * @return Whether the callerId field is set.
      */
     public boolean hasCallerId() {
@@ -1067,7 +1067,7 @@ private static final long serialVersionUID = 0L;
      * in E.164 format with preceding '+' sign. e.g. "+16502531234".
      * </pre>
      *
-     * <code>string caller_id = 7;</code>
+     * <code>optional string caller_id = 7;</code>
      * @return The callerId.
      */
     public java.lang.String getCallerId() {
@@ -1088,7 +1088,7 @@ private static final long serialVersionUID = 0L;
      * in E.164 format with preceding '+' sign. e.g. "+16502531234".
      * </pre>
      *
-     * <code>string caller_id = 7;</code>
+     * <code>optional string caller_id = 7;</code>
      * @return The bytes for callerId.
      */
     public com.google.protobuf.ByteString
@@ -1110,7 +1110,7 @@ private static final long serialVersionUID = 0L;
      * in E.164 format with preceding '+' sign. e.g. "+16502531234".
      * </pre>
      *
-     * <code>string caller_id = 7;</code>
+     * <code>optional string caller_id = 7;</code>
      * @param value The callerId to set.
      * @return This builder for chaining.
      */
@@ -1130,7 +1130,7 @@ private static final long serialVersionUID = 0L;
      * in E.164 format with preceding '+' sign. e.g. "+16502531234".
      * </pre>
      *
-     * <code>string caller_id = 7;</code>
+     * <code>optional string caller_id = 7;</code>
      * @return This builder for chaining.
      */
     public Builder clearCallerId() {
@@ -1145,7 +1145,7 @@ private static final long serialVersionUID = 0L;
      * in E.164 format with preceding '+' sign. e.g. "+16502531234".
      * </pre>
      *
-     * <code>string caller_id = 7;</code>
+     * <code>optional string caller_id = 7;</code>
      * @param value The bytes for callerId to set.
      * @return This builder for chaining.
      */
@@ -1169,7 +1169,7 @@ private static final long serialVersionUID = 0L;
      * e.g. "2019-01-01 12:32:45-08:00".
      * </pre>
      *
-     * <code>string call_start_date_time = 8;</code>
+     * <code>optional string call_start_date_time = 8;</code>
      * @return Whether the callStartDateTime field is set.
      */
     public boolean hasCallStartDateTime() {
@@ -1182,7 +1182,7 @@ private static final long serialVersionUID = 0L;
      * e.g. "2019-01-01 12:32:45-08:00".
      * </pre>
      *
-     * <code>string call_start_date_time = 8;</code>
+     * <code>optional string call_start_date_time = 8;</code>
      * @return The callStartDateTime.
      */
     public java.lang.String getCallStartDateTime() {
@@ -1204,7 +1204,7 @@ private static final long serialVersionUID = 0L;
      * e.g. "2019-01-01 12:32:45-08:00".
      * </pre>
      *
-     * <code>string call_start_date_time = 8;</code>
+     * <code>optional string call_start_date_time = 8;</code>
      * @return The bytes for callStartDateTime.
      */
     public com.google.protobuf.ByteString
@@ -1227,7 +1227,7 @@ private static final long serialVersionUID = 0L;
      * e.g. "2019-01-01 12:32:45-08:00".
      * </pre>
      *
-     * <code>string call_start_date_time = 8;</code>
+     * <code>optional string call_start_date_time = 8;</code>
      * @param value The callStartDateTime to set.
      * @return This builder for chaining.
      */
@@ -1248,7 +1248,7 @@ private static final long serialVersionUID = 0L;
      * e.g. "2019-01-01 12:32:45-08:00".
      * </pre>
      *
-     * <code>string call_start_date_time = 8;</code>
+     * <code>optional string call_start_date_time = 8;</code>
      * @return This builder for chaining.
      */
     public Builder clearCallStartDateTime() {
@@ -1264,7 +1264,7 @@ private static final long serialVersionUID = 0L;
      * e.g. "2019-01-01 12:32:45-08:00".
      * </pre>
      *
-     * <code>string call_start_date_time = 8;</code>
+     * <code>optional string call_start_date_time = 8;</code>
      * @param value The bytes for callStartDateTime to set.
      * @return This builder for chaining.
      */
@@ -1289,7 +1289,7 @@ private static final long serialVersionUID = 0L;
      * conversion action id as the sole identifier of the conversion action.
      * </pre>
      *
-     * <code>string conversion_action = 9;</code>
+     * <code>optional string conversion_action = 9;</code>
      * @return Whether the conversionAction field is set.
      */
     public boolean hasConversionAction() {
@@ -1303,7 +1303,7 @@ private static final long serialVersionUID = 0L;
      * conversion action id as the sole identifier of the conversion action.
      * </pre>
      *
-     * <code>string conversion_action = 9;</code>
+     * <code>optional string conversion_action = 9;</code>
      * @return The conversionAction.
      */
     public java.lang.String getConversionAction() {
@@ -1326,7 +1326,7 @@ private static final long serialVersionUID = 0L;
      * conversion action id as the sole identifier of the conversion action.
      * </pre>
      *
-     * <code>string conversion_action = 9;</code>
+     * <code>optional string conversion_action = 9;</code>
      * @return The bytes for conversionAction.
      */
     public com.google.protobuf.ByteString
@@ -1350,7 +1350,7 @@ private static final long serialVersionUID = 0L;
      * conversion action id as the sole identifier of the conversion action.
      * </pre>
      *
-     * <code>string conversion_action = 9;</code>
+     * <code>optional string conversion_action = 9;</code>
      * @param value The conversionAction to set.
      * @return This builder for chaining.
      */
@@ -1372,7 +1372,7 @@ private static final long serialVersionUID = 0L;
      * conversion action id as the sole identifier of the conversion action.
      * </pre>
      *
-     * <code>string conversion_action = 9;</code>
+     * <code>optional string conversion_action = 9;</code>
      * @return This builder for chaining.
      */
     public Builder clearConversionAction() {
@@ -1389,7 +1389,7 @@ private static final long serialVersionUID = 0L;
      * conversion action id as the sole identifier of the conversion action.
      * </pre>
      *
-     * <code>string conversion_action = 9;</code>
+     * <code>optional string conversion_action = 9;</code>
      * @param value The bytes for conversionAction to set.
      * @return This builder for chaining.
      */
@@ -1413,7 +1413,7 @@ private static final long serialVersionUID = 0L;
      * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
      * </pre>
      *
-     * <code>string conversion_date_time = 10;</code>
+     * <code>optional string conversion_date_time = 10;</code>
      * @return Whether the conversionDateTime field is set.
      */
     public boolean hasConversionDateTime() {
@@ -1426,7 +1426,7 @@ private static final long serialVersionUID = 0L;
      * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
      * </pre>
      *
-     * <code>string conversion_date_time = 10;</code>
+     * <code>optional string conversion_date_time = 10;</code>
      * @return The conversionDateTime.
      */
     public java.lang.String getConversionDateTime() {
@@ -1448,7 +1448,7 @@ private static final long serialVersionUID = 0L;
      * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
      * </pre>
      *
-     * <code>string conversion_date_time = 10;</code>
+     * <code>optional string conversion_date_time = 10;</code>
      * @return The bytes for conversionDateTime.
      */
     public com.google.protobuf.ByteString
@@ -1471,7 +1471,7 @@ private static final long serialVersionUID = 0L;
      * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
      * </pre>
      *
-     * <code>string conversion_date_time = 10;</code>
+     * <code>optional string conversion_date_time = 10;</code>
      * @param value The conversionDateTime to set.
      * @return This builder for chaining.
      */
@@ -1492,7 +1492,7 @@ private static final long serialVersionUID = 0L;
      * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
      * </pre>
      *
-     * <code>string conversion_date_time = 10;</code>
+     * <code>optional string conversion_date_time = 10;</code>
      * @return This builder for chaining.
      */
     public Builder clearConversionDateTime() {
@@ -1508,7 +1508,7 @@ private static final long serialVersionUID = 0L;
      * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
      * </pre>
      *
-     * <code>string conversion_date_time = 10;</code>
+     * <code>optional string conversion_date_time = 10;</code>
      * @param value The bytes for conversionDateTime to set.
      * @return This builder for chaining.
      */
@@ -1530,7 +1530,7 @@ private static final long serialVersionUID = 0L;
      * The value of the conversion for the advertiser.
      * </pre>
      *
-     * <code>double conversion_value = 11;</code>
+     * <code>optional double conversion_value = 11;</code>
      * @return Whether the conversionValue field is set.
      */
     @java.lang.Override
@@ -1542,7 +1542,7 @@ private static final long serialVersionUID = 0L;
      * The value of the conversion for the advertiser.
      * </pre>
      *
-     * <code>double conversion_value = 11;</code>
+     * <code>optional double conversion_value = 11;</code>
      * @return The conversionValue.
      */
     @java.lang.Override
@@ -1554,7 +1554,7 @@ private static final long serialVersionUID = 0L;
      * The value of the conversion for the advertiser.
      * </pre>
      *
-     * <code>double conversion_value = 11;</code>
+     * <code>optional double conversion_value = 11;</code>
      * @param value The conversionValue to set.
      * @return This builder for chaining.
      */
@@ -1569,7 +1569,7 @@ private static final long serialVersionUID = 0L;
      * The value of the conversion for the advertiser.
      * </pre>
      *
-     * <code>double conversion_value = 11;</code>
+     * <code>optional double conversion_value = 11;</code>
      * @return This builder for chaining.
      */
     public Builder clearConversionValue() {
@@ -1586,7 +1586,7 @@ private static final long serialVersionUID = 0L;
      * 3-character currency code. For example: USD, EUR.
      * </pre>
      *
-     * <code>string currency_code = 12;</code>
+     * <code>optional string currency_code = 12;</code>
      * @return Whether the currencyCode field is set.
      */
     public boolean hasCurrencyCode() {
@@ -1598,7 +1598,7 @@ private static final long serialVersionUID = 0L;
      * 3-character currency code. For example: USD, EUR.
      * </pre>
      *
-     * <code>string currency_code = 12;</code>
+     * <code>optional string currency_code = 12;</code>
      * @return The currencyCode.
      */
     public java.lang.String getCurrencyCode() {
@@ -1619,7 +1619,7 @@ private static final long serialVersionUID = 0L;
      * 3-character currency code. For example: USD, EUR.
      * </pre>
      *
-     * <code>string currency_code = 12;</code>
+     * <code>optional string currency_code = 12;</code>
      * @return The bytes for currencyCode.
      */
     public com.google.protobuf.ByteString
@@ -1641,7 +1641,7 @@ private static final long serialVersionUID = 0L;
      * 3-character currency code. For example: USD, EUR.
      * </pre>
      *
-     * <code>string currency_code = 12;</code>
+     * <code>optional string currency_code = 12;</code>
      * @param value The currencyCode to set.
      * @return This builder for chaining.
      */
@@ -1661,7 +1661,7 @@ private static final long serialVersionUID = 0L;
      * 3-character currency code. For example: USD, EUR.
      * </pre>
      *
-     * <code>string currency_code = 12;</code>
+     * <code>optional string currency_code = 12;</code>
      * @return This builder for chaining.
      */
     public Builder clearCurrencyCode() {
@@ -1676,7 +1676,7 @@ private static final long serialVersionUID = 0L;
      * 3-character currency code. For example: USD, EUR.
      * </pre>
      *
-     * <code>string currency_code = 12;</code>
+     * <code>optional string currency_code = 12;</code>
      * @param value The bytes for currencyCode to set.
      * @return This builder for chaining.
      */

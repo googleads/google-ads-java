@@ -141,7 +141,7 @@ private static final long serialVersionUID = 0L;
    * returned if no translation exists for the locale in the request.
    * </pre>
    *
-   * <code>string locale = 6;</code>
+   * <code>optional string locale = 6;</code>
    * @return Whether the locale field is set.
    */
   @java.lang.Override
@@ -156,7 +156,7 @@ private static final long serialVersionUID = 0L;
    * returned if no translation exists for the locale in the request.
    * </pre>
    *
-   * <code>string locale = 6;</code>
+   * <code>optional string locale = 6;</code>
    * @return The locale.
    */
   @java.lang.Override
@@ -180,7 +180,7 @@ private static final long serialVersionUID = 0L;
    * returned if no translation exists for the locale in the request.
    * </pre>
    *
-   * <code>string locale = 6;</code>
+   * <code>optional string locale = 6;</code>
    * @return The bytes for locale.
    */
   @java.lang.Override
@@ -206,7 +206,7 @@ private static final long serialVersionUID = 0L;
    * nearest 100.
    * </pre>
    *
-   * <code>int64 reach = 7;</code>
+   * <code>optional int64 reach = 7;</code>
    * @return Whether the reach field is set.
    */
   @java.lang.Override
@@ -219,7 +219,7 @@ private static final long serialVersionUID = 0L;
    * nearest 100.
    * </pre>
    *
-   * <code>int64 reach = 7;</code>
+   * <code>optional int64 reach = 7;</code>
    * @return The reach.
    */
   @java.lang.Override
@@ -235,7 +235,7 @@ private static final long serialVersionUID = 0L;
    * matched the geo target.
    * </pre>
    *
-   * <code>string search_term = 8;</code>
+   * <code>optional string search_term = 8;</code>
    * @return Whether the searchTerm field is set.
    */
   @java.lang.Override
@@ -248,7 +248,7 @@ private static final long serialVersionUID = 0L;
    * matched the geo target.
    * </pre>
    *
-   * <code>string search_term = 8;</code>
+   * <code>optional string search_term = 8;</code>
    * @return The searchTerm.
    */
   @java.lang.Override
@@ -270,7 +270,7 @@ private static final long serialVersionUID = 0L;
    * matched the geo target.
    * </pre>
    *
-   * <code>string search_term = 8;</code>
+   * <code>optional string search_term = 8;</code>
    * @return The bytes for searchTerm.
    */
   @java.lang.Override
@@ -851,7 +851,7 @@ private static final long serialVersionUID = 0L;
      * returned if no translation exists for the locale in the request.
      * </pre>
      *
-     * <code>string locale = 6;</code>
+     * <code>optional string locale = 6;</code>
      * @return Whether the locale field is set.
      */
     public boolean hasLocale() {
@@ -865,7 +865,7 @@ private static final long serialVersionUID = 0L;
      * returned if no translation exists for the locale in the request.
      * </pre>
      *
-     * <code>string locale = 6;</code>
+     * <code>optional string locale = 6;</code>
      * @return The locale.
      */
     public java.lang.String getLocale() {
@@ -888,7 +888,7 @@ private static final long serialVersionUID = 0L;
      * returned if no translation exists for the locale in the request.
      * </pre>
      *
-     * <code>string locale = 6;</code>
+     * <code>optional string locale = 6;</code>
      * @return The bytes for locale.
      */
     public com.google.protobuf.ByteString
@@ -912,7 +912,7 @@ private static final long serialVersionUID = 0L;
      * returned if no translation exists for the locale in the request.
      * </pre>
      *
-     * <code>string locale = 6;</code>
+     * <code>optional string locale = 6;</code>
      * @param value The locale to set.
      * @return This builder for chaining.
      */
@@ -934,7 +934,7 @@ private static final long serialVersionUID = 0L;
      * returned if no translation exists for the locale in the request.
      * </pre>
      *
-     * <code>string locale = 6;</code>
+     * <code>optional string locale = 6;</code>
      * @return This builder for chaining.
      */
     public Builder clearLocale() {
@@ -951,7 +951,7 @@ private static final long serialVersionUID = 0L;
      * returned if no translation exists for the locale in the request.
      * </pre>
      *
-     * <code>string locale = 6;</code>
+     * <code>optional string locale = 6;</code>
      * @param value The bytes for locale to set.
      * @return This builder for chaining.
      */
@@ -974,7 +974,7 @@ private static final long serialVersionUID = 0L;
      * nearest 100.
      * </pre>
      *
-     * <code>int64 reach = 7;</code>
+     * <code>optional int64 reach = 7;</code>
      * @return Whether the reach field is set.
      */
     @java.lang.Override
@@ -987,7 +987,7 @@ private static final long serialVersionUID = 0L;
      * nearest 100.
      * </pre>
      *
-     * <code>int64 reach = 7;</code>
+     * <code>optional int64 reach = 7;</code>
      * @return The reach.
      */
     @java.lang.Override
@@ -1000,7 +1000,7 @@ private static final long serialVersionUID = 0L;
      * nearest 100.
      * </pre>
      *
-     * <code>int64 reach = 7;</code>
+     * <code>optional int64 reach = 7;</code>
      * @param value The reach to set.
      * @return This builder for chaining.
      */
@@ -1016,7 +1016,7 @@ private static final long serialVersionUID = 0L;
      * nearest 100.
      * </pre>
      *
-     * <code>int64 reach = 7;</code>
+     * <code>optional int64 reach = 7;</code>
      * @return This builder for chaining.
      */
     public Builder clearReach() {
@@ -1033,7 +1033,7 @@ private static final long serialVersionUID = 0L;
      * matched the geo target.
      * </pre>
      *
-     * <code>string search_term = 8;</code>
+     * <code>optional string search_term = 8;</code>
      * @return Whether the searchTerm field is set.
      */
     public boolean hasSearchTerm() {
@@ -1045,7 +1045,7 @@ private static final long serialVersionUID = 0L;
      * matched the geo target.
      * </pre>
      *
-     * <code>string search_term = 8;</code>
+     * <code>optional string search_term = 8;</code>
      * @return The searchTerm.
      */
     public java.lang.String getSearchTerm() {
@@ -1066,7 +1066,7 @@ private static final long serialVersionUID = 0L;
      * matched the geo target.
      * </pre>
      *
-     * <code>string search_term = 8;</code>
+     * <code>optional string search_term = 8;</code>
      * @return The bytes for searchTerm.
      */
     public com.google.protobuf.ByteString
@@ -1088,7 +1088,7 @@ private static final long serialVersionUID = 0L;
      * matched the geo target.
      * </pre>
      *
-     * <code>string search_term = 8;</code>
+     * <code>optional string search_term = 8;</code>
      * @param value The searchTerm to set.
      * @return This builder for chaining.
      */
@@ -1108,7 +1108,7 @@ private static final long serialVersionUID = 0L;
      * matched the geo target.
      * </pre>
      *
-     * <code>string search_term = 8;</code>
+     * <code>optional string search_term = 8;</code>
      * @return This builder for chaining.
      */
     public Builder clearSearchTerm() {
@@ -1123,7 +1123,7 @@ private static final long serialVersionUID = 0L;
      * matched the geo target.
      * </pre>
      *
-     * <code>string search_term = 8;</code>
+     * <code>optional string search_term = 8;</code>
      * @param value The bytes for searchTerm to set.
      * @return This builder for chaining.
      */

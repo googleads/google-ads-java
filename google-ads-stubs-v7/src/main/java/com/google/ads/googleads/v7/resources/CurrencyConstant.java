@@ -176,7 +176,7 @@ private static final long serialVersionUID = 0L;
    * Output only. ISO 4217 three-letter currency code, e.g. "USD"
    * </pre>
    *
-   * <code>string code = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string code = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the code field is set.
    */
   @java.lang.Override
@@ -188,7 +188,7 @@ private static final long serialVersionUID = 0L;
    * Output only. ISO 4217 three-letter currency code, e.g. "USD"
    * </pre>
    *
-   * <code>string code = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string code = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The code.
    */
   @java.lang.Override
@@ -209,7 +209,7 @@ private static final long serialVersionUID = 0L;
    * Output only. ISO 4217 three-letter currency code, e.g. "USD"
    * </pre>
    *
-   * <code>string code = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string code = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for code.
    */
   @java.lang.Override
@@ -234,7 +234,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Full English name of the currency.
    * </pre>
    *
-   * <code>string name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the name field is set.
    */
   @java.lang.Override
@@ -246,7 +246,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Full English name of the currency.
    * </pre>
    *
-   * <code>string name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The name.
    */
   @java.lang.Override
@@ -267,7 +267,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Full English name of the currency.
    * </pre>
    *
-   * <code>string name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for name.
    */
   @java.lang.Override
@@ -292,7 +292,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Standard symbol for describing this currency, e.g. '$' for US Dollars.
    * </pre>
    *
-   * <code>string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the symbol field is set.
    */
   @java.lang.Override
@@ -304,7 +304,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Standard symbol for describing this currency, e.g. '$' for US Dollars.
    * </pre>
    *
-   * <code>string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The symbol.
    */
   @java.lang.Override
@@ -325,7 +325,7 @@ private static final long serialVersionUID = 0L;
    * Output only. Standard symbol for describing this currency, e.g. '$' for US Dollars.
    * </pre>
    *
-   * <code>string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for symbol.
    */
   @java.lang.Override
@@ -351,7 +351,7 @@ private static final long serialVersionUID = 0L;
    * this value.
    * </pre>
    *
-   * <code>int64 billable_unit_micros = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 billable_unit_micros = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the billableUnitMicros field is set.
    */
   @java.lang.Override
@@ -364,7 +364,7 @@ private static final long serialVersionUID = 0L;
    * this value.
    * </pre>
    *
-   * <code>int64 billable_unit_micros = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * <code>optional int64 billable_unit_micros = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The billableUnitMicros.
    */
   @java.lang.Override
@@ -386,7 +386,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
@@ -410,7 +410,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
     if (((bitField0_ & 0x00000001) != 0)) {
@@ -898,7 +898,7 @@ private static final long serialVersionUID = 0L;
      * Output only. ISO 4217 three-letter currency code, e.g. "USD"
      * </pre>
      *
-     * <code>string code = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string code = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the code field is set.
      */
     public boolean hasCode() {
@@ -909,7 +909,7 @@ private static final long serialVersionUID = 0L;
      * Output only. ISO 4217 three-letter currency code, e.g. "USD"
      * </pre>
      *
-     * <code>string code = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string code = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The code.
      */
     public java.lang.String getCode() {
@@ -929,7 +929,7 @@ private static final long serialVersionUID = 0L;
      * Output only. ISO 4217 three-letter currency code, e.g. "USD"
      * </pre>
      *
-     * <code>string code = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string code = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for code.
      */
     public com.google.protobuf.ByteString
@@ -950,7 +950,7 @@ private static final long serialVersionUID = 0L;
      * Output only. ISO 4217 three-letter currency code, e.g. "USD"
      * </pre>
      *
-     * <code>string code = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string code = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The code to set.
      * @return This builder for chaining.
      */
@@ -969,7 +969,7 @@ private static final long serialVersionUID = 0L;
      * Output only. ISO 4217 three-letter currency code, e.g. "USD"
      * </pre>
      *
-     * <code>string code = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string code = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearCode() {
@@ -983,7 +983,7 @@ private static final long serialVersionUID = 0L;
      * Output only. ISO 4217 three-letter currency code, e.g. "USD"
      * </pre>
      *
-     * <code>string code = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string code = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for code to set.
      * @return This builder for chaining.
      */
@@ -1005,7 +1005,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Full English name of the currency.
      * </pre>
      *
-     * <code>string name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the name field is set.
      */
     public boolean hasName() {
@@ -1016,7 +1016,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Full English name of the currency.
      * </pre>
      *
-     * <code>string name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The name.
      */
     public java.lang.String getName() {
@@ -1036,7 +1036,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Full English name of the currency.
      * </pre>
      *
-     * <code>string name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
@@ -1057,7 +1057,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Full English name of the currency.
      * </pre>
      *
-     * <code>string name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The name to set.
      * @return This builder for chaining.
      */
@@ -1076,7 +1076,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Full English name of the currency.
      * </pre>
      *
-     * <code>string name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
@@ -1090,7 +1090,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Full English name of the currency.
      * </pre>
      *
-     * <code>string name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string name = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
@@ -1112,7 +1112,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Standard symbol for describing this currency, e.g. '$' for US Dollars.
      * </pre>
      *
-     * <code>string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the symbol field is set.
      */
     public boolean hasSymbol() {
@@ -1123,7 +1123,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Standard symbol for describing this currency, e.g. '$' for US Dollars.
      * </pre>
      *
-     * <code>string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The symbol.
      */
     public java.lang.String getSymbol() {
@@ -1143,7 +1143,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Standard symbol for describing this currency, e.g. '$' for US Dollars.
      * </pre>
      *
-     * <code>string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for symbol.
      */
     public com.google.protobuf.ByteString
@@ -1164,7 +1164,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Standard symbol for describing this currency, e.g. '$' for US Dollars.
      * </pre>
      *
-     * <code>string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The symbol to set.
      * @return This builder for chaining.
      */
@@ -1183,7 +1183,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Standard symbol for describing this currency, e.g. '$' for US Dollars.
      * </pre>
      *
-     * <code>string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearSymbol() {
@@ -1197,7 +1197,7 @@ private static final long serialVersionUID = 0L;
      * Output only. Standard symbol for describing this currency, e.g. '$' for US Dollars.
      * </pre>
      *
-     * <code>string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for symbol to set.
      * @return This builder for chaining.
      */
@@ -1220,7 +1220,7 @@ private static final long serialVersionUID = 0L;
      * this value.
      * </pre>
      *
-     * <code>int64 billable_unit_micros = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 billable_unit_micros = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the billableUnitMicros field is set.
      */
     @java.lang.Override
@@ -1233,7 +1233,7 @@ private static final long serialVersionUID = 0L;
      * this value.
      * </pre>
      *
-     * <code>int64 billable_unit_micros = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 billable_unit_micros = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The billableUnitMicros.
      */
     @java.lang.Override
@@ -1246,7 +1246,7 @@ private static final long serialVersionUID = 0L;
      * this value.
      * </pre>
      *
-     * <code>int64 billable_unit_micros = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 billable_unit_micros = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The billableUnitMicros to set.
      * @return This builder for chaining.
      */
@@ -1262,7 +1262,7 @@ private static final long serialVersionUID = 0L;
      * this value.
      * </pre>
      *
-     * <code>int64 billable_unit_micros = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * <code>optional int64 billable_unit_micros = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearBillableUnitMicros() {

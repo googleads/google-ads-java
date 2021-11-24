@@ -159,7 +159,7 @@ private static final long serialVersionUID = 0L;
    * The Google click ID (gclid) associated with this conversion.
    * </pre>
    *
-   * <code>string gclid = 9;</code>
+   * <code>optional string gclid = 9;</code>
    * @return Whether the gclid field is set.
    */
   @java.lang.Override
@@ -171,7 +171,7 @@ private static final long serialVersionUID = 0L;
    * The Google click ID (gclid) associated with this conversion.
    * </pre>
    *
-   * <code>string gclid = 9;</code>
+   * <code>optional string gclid = 9;</code>
    * @return The gclid.
    */
   @java.lang.Override
@@ -192,7 +192,7 @@ private static final long serialVersionUID = 0L;
    * The Google click ID (gclid) associated with this conversion.
    * </pre>
    *
-   * <code>string gclid = 9;</code>
+   * <code>optional string gclid = 9;</code>
    * @return The bytes for gclid.
    */
   @java.lang.Override
@@ -220,7 +220,7 @@ private static final long serialVersionUID = 0L;
    * conversion action id as the sole identifier of the conversion action.
    * </pre>
    *
-   * <code>string conversion_action = 10;</code>
+   * <code>optional string conversion_action = 10;</code>
    * @return Whether the conversionAction field is set.
    */
   @java.lang.Override
@@ -235,7 +235,7 @@ private static final long serialVersionUID = 0L;
    * conversion action id as the sole identifier of the conversion action.
    * </pre>
    *
-   * <code>string conversion_action = 10;</code>
+   * <code>optional string conversion_action = 10;</code>
    * @return The conversionAction.
    */
   @java.lang.Override
@@ -259,7 +259,7 @@ private static final long serialVersionUID = 0L;
    * conversion action id as the sole identifier of the conversion action.
    * </pre>
    *
-   * <code>string conversion_action = 10;</code>
+   * <code>optional string conversion_action = 10;</code>
    * @return The bytes for conversionAction.
    */
   @java.lang.Override
@@ -286,7 +286,7 @@ private static final long serialVersionUID = 0L;
    * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. “2019-01-01 12:32:45-08:00”.
    * </pre>
    *
-   * <code>string conversion_date_time = 11;</code>
+   * <code>optional string conversion_date_time = 11;</code>
    * @return Whether the conversionDateTime field is set.
    */
   @java.lang.Override
@@ -300,7 +300,7 @@ private static final long serialVersionUID = 0L;
    * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. “2019-01-01 12:32:45-08:00”.
    * </pre>
    *
-   * <code>string conversion_date_time = 11;</code>
+   * <code>optional string conversion_date_time = 11;</code>
    * @return The conversionDateTime.
    */
   @java.lang.Override
@@ -323,7 +323,7 @@ private static final long serialVersionUID = 0L;
    * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. “2019-01-01 12:32:45-08:00”.
    * </pre>
    *
-   * <code>string conversion_date_time = 11;</code>
+   * <code>optional string conversion_date_time = 11;</code>
    * @return The bytes for conversionDateTime.
    */
   @java.lang.Override
@@ -348,7 +348,7 @@ private static final long serialVersionUID = 0L;
    * The value of the conversion for the advertiser.
    * </pre>
    *
-   * <code>double conversion_value = 12;</code>
+   * <code>optional double conversion_value = 12;</code>
    * @return Whether the conversionValue field is set.
    */
   @java.lang.Override
@@ -360,7 +360,7 @@ private static final long serialVersionUID = 0L;
    * The value of the conversion for the advertiser.
    * </pre>
    *
-   * <code>double conversion_value = 12;</code>
+   * <code>optional double conversion_value = 12;</code>
    * @return The conversionValue.
    */
   @java.lang.Override
@@ -376,7 +376,7 @@ private static final long serialVersionUID = 0L;
    * 3-character currency code. For example: USD, EUR.
    * </pre>
    *
-   * <code>string currency_code = 13;</code>
+   * <code>optional string currency_code = 13;</code>
    * @return Whether the currencyCode field is set.
    */
   @java.lang.Override
@@ -389,7 +389,7 @@ private static final long serialVersionUID = 0L;
    * 3-character currency code. For example: USD, EUR.
    * </pre>
    *
-   * <code>string currency_code = 13;</code>
+   * <code>optional string currency_code = 13;</code>
    * @return The currencyCode.
    */
   @java.lang.Override
@@ -411,7 +411,7 @@ private static final long serialVersionUID = 0L;
    * 3-character currency code. For example: USD, EUR.
    * </pre>
    *
-   * <code>string currency_code = 13;</code>
+   * <code>optional string currency_code = 13;</code>
    * @return The bytes for currencyCode.
    */
   @java.lang.Override
@@ -437,7 +437,7 @@ private static final long serialVersionUID = 0L;
    * for one conversion per conversion action.
    * </pre>
    *
-   * <code>string order_id = 14;</code>
+   * <code>optional string order_id = 14;</code>
    * @return Whether the orderId field is set.
    */
   @java.lang.Override
@@ -450,7 +450,7 @@ private static final long serialVersionUID = 0L;
    * for one conversion per conversion action.
    * </pre>
    *
-   * <code>string order_id = 14;</code>
+   * <code>optional string order_id = 14;</code>
    * @return The orderId.
    */
   @java.lang.Override
@@ -472,7 +472,7 @@ private static final long serialVersionUID = 0L;
    * for one conversion per conversion action.
    * </pre>
    *
-   * <code>string order_id = 14;</code>
+   * <code>optional string order_id = 14;</code>
    * @return The bytes for orderId.
    */
   @java.lang.Override
@@ -1135,7 +1135,7 @@ private static final long serialVersionUID = 0L;
      * The Google click ID (gclid) associated with this conversion.
      * </pre>
      *
-     * <code>string gclid = 9;</code>
+     * <code>optional string gclid = 9;</code>
      * @return Whether the gclid field is set.
      */
     public boolean hasGclid() {
@@ -1146,7 +1146,7 @@ private static final long serialVersionUID = 0L;
      * The Google click ID (gclid) associated with this conversion.
      * </pre>
      *
-     * <code>string gclid = 9;</code>
+     * <code>optional string gclid = 9;</code>
      * @return The gclid.
      */
     public java.lang.String getGclid() {
@@ -1166,7 +1166,7 @@ private static final long serialVersionUID = 0L;
      * The Google click ID (gclid) associated with this conversion.
      * </pre>
      *
-     * <code>string gclid = 9;</code>
+     * <code>optional string gclid = 9;</code>
      * @return The bytes for gclid.
      */
     public com.google.protobuf.ByteString
@@ -1187,7 +1187,7 @@ private static final long serialVersionUID = 0L;
      * The Google click ID (gclid) associated with this conversion.
      * </pre>
      *
-     * <code>string gclid = 9;</code>
+     * <code>optional string gclid = 9;</code>
      * @param value The gclid to set.
      * @return This builder for chaining.
      */
@@ -1206,7 +1206,7 @@ private static final long serialVersionUID = 0L;
      * The Google click ID (gclid) associated with this conversion.
      * </pre>
      *
-     * <code>string gclid = 9;</code>
+     * <code>optional string gclid = 9;</code>
      * @return This builder for chaining.
      */
     public Builder clearGclid() {
@@ -1220,7 +1220,7 @@ private static final long serialVersionUID = 0L;
      * The Google click ID (gclid) associated with this conversion.
      * </pre>
      *
-     * <code>string gclid = 9;</code>
+     * <code>optional string gclid = 9;</code>
      * @param value The bytes for gclid to set.
      * @return This builder for chaining.
      */
@@ -1245,7 +1245,7 @@ private static final long serialVersionUID = 0L;
      * conversion action id as the sole identifier of the conversion action.
      * </pre>
      *
-     * <code>string conversion_action = 10;</code>
+     * <code>optional string conversion_action = 10;</code>
      * @return Whether the conversionAction field is set.
      */
     public boolean hasConversionAction() {
@@ -1259,7 +1259,7 @@ private static final long serialVersionUID = 0L;
      * conversion action id as the sole identifier of the conversion action.
      * </pre>
      *
-     * <code>string conversion_action = 10;</code>
+     * <code>optional string conversion_action = 10;</code>
      * @return The conversionAction.
      */
     public java.lang.String getConversionAction() {
@@ -1282,7 +1282,7 @@ private static final long serialVersionUID = 0L;
      * conversion action id as the sole identifier of the conversion action.
      * </pre>
      *
-     * <code>string conversion_action = 10;</code>
+     * <code>optional string conversion_action = 10;</code>
      * @return The bytes for conversionAction.
      */
     public com.google.protobuf.ByteString
@@ -1306,7 +1306,7 @@ private static final long serialVersionUID = 0L;
      * conversion action id as the sole identifier of the conversion action.
      * </pre>
      *
-     * <code>string conversion_action = 10;</code>
+     * <code>optional string conversion_action = 10;</code>
      * @param value The conversionAction to set.
      * @return This builder for chaining.
      */
@@ -1328,7 +1328,7 @@ private static final long serialVersionUID = 0L;
      * conversion action id as the sole identifier of the conversion action.
      * </pre>
      *
-     * <code>string conversion_action = 10;</code>
+     * <code>optional string conversion_action = 10;</code>
      * @return This builder for chaining.
      */
     public Builder clearConversionAction() {
@@ -1345,7 +1345,7 @@ private static final long serialVersionUID = 0L;
      * conversion action id as the sole identifier of the conversion action.
      * </pre>
      *
-     * <code>string conversion_action = 10;</code>
+     * <code>optional string conversion_action = 10;</code>
      * @param value The bytes for conversionAction to set.
      * @return This builder for chaining.
      */
@@ -1369,7 +1369,7 @@ private static final long serialVersionUID = 0L;
      * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. “2019-01-01 12:32:45-08:00”.
      * </pre>
      *
-     * <code>string conversion_date_time = 11;</code>
+     * <code>optional string conversion_date_time = 11;</code>
      * @return Whether the conversionDateTime field is set.
      */
     public boolean hasConversionDateTime() {
@@ -1382,7 +1382,7 @@ private static final long serialVersionUID = 0L;
      * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. “2019-01-01 12:32:45-08:00”.
      * </pre>
      *
-     * <code>string conversion_date_time = 11;</code>
+     * <code>optional string conversion_date_time = 11;</code>
      * @return The conversionDateTime.
      */
     public java.lang.String getConversionDateTime() {
@@ -1404,7 +1404,7 @@ private static final long serialVersionUID = 0L;
      * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. “2019-01-01 12:32:45-08:00”.
      * </pre>
      *
-     * <code>string conversion_date_time = 11;</code>
+     * <code>optional string conversion_date_time = 11;</code>
      * @return The bytes for conversionDateTime.
      */
     public com.google.protobuf.ByteString
@@ -1427,7 +1427,7 @@ private static final long serialVersionUID = 0L;
      * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. “2019-01-01 12:32:45-08:00”.
      * </pre>
      *
-     * <code>string conversion_date_time = 11;</code>
+     * <code>optional string conversion_date_time = 11;</code>
      * @param value The conversionDateTime to set.
      * @return This builder for chaining.
      */
@@ -1448,7 +1448,7 @@ private static final long serialVersionUID = 0L;
      * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. “2019-01-01 12:32:45-08:00”.
      * </pre>
      *
-     * <code>string conversion_date_time = 11;</code>
+     * <code>optional string conversion_date_time = 11;</code>
      * @return This builder for chaining.
      */
     public Builder clearConversionDateTime() {
@@ -1464,7 +1464,7 @@ private static final long serialVersionUID = 0L;
      * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. “2019-01-01 12:32:45-08:00”.
      * </pre>
      *
-     * <code>string conversion_date_time = 11;</code>
+     * <code>optional string conversion_date_time = 11;</code>
      * @param value The bytes for conversionDateTime to set.
      * @return This builder for chaining.
      */
@@ -1486,7 +1486,7 @@ private static final long serialVersionUID = 0L;
      * The value of the conversion for the advertiser.
      * </pre>
      *
-     * <code>double conversion_value = 12;</code>
+     * <code>optional double conversion_value = 12;</code>
      * @return Whether the conversionValue field is set.
      */
     @java.lang.Override
@@ -1498,7 +1498,7 @@ private static final long serialVersionUID = 0L;
      * The value of the conversion for the advertiser.
      * </pre>
      *
-     * <code>double conversion_value = 12;</code>
+     * <code>optional double conversion_value = 12;</code>
      * @return The conversionValue.
      */
     @java.lang.Override
@@ -1510,7 +1510,7 @@ private static final long serialVersionUID = 0L;
      * The value of the conversion for the advertiser.
      * </pre>
      *
-     * <code>double conversion_value = 12;</code>
+     * <code>optional double conversion_value = 12;</code>
      * @param value The conversionValue to set.
      * @return This builder for chaining.
      */
@@ -1525,7 +1525,7 @@ private static final long serialVersionUID = 0L;
      * The value of the conversion for the advertiser.
      * </pre>
      *
-     * <code>double conversion_value = 12;</code>
+     * <code>optional double conversion_value = 12;</code>
      * @return This builder for chaining.
      */
     public Builder clearConversionValue() {
@@ -1542,7 +1542,7 @@ private static final long serialVersionUID = 0L;
      * 3-character currency code. For example: USD, EUR.
      * </pre>
      *
-     * <code>string currency_code = 13;</code>
+     * <code>optional string currency_code = 13;</code>
      * @return Whether the currencyCode field is set.
      */
     public boolean hasCurrencyCode() {
@@ -1554,7 +1554,7 @@ private static final long serialVersionUID = 0L;
      * 3-character currency code. For example: USD, EUR.
      * </pre>
      *
-     * <code>string currency_code = 13;</code>
+     * <code>optional string currency_code = 13;</code>
      * @return The currencyCode.
      */
     public java.lang.String getCurrencyCode() {
@@ -1575,7 +1575,7 @@ private static final long serialVersionUID = 0L;
      * 3-character currency code. For example: USD, EUR.
      * </pre>
      *
-     * <code>string currency_code = 13;</code>
+     * <code>optional string currency_code = 13;</code>
      * @return The bytes for currencyCode.
      */
     public com.google.protobuf.ByteString
@@ -1597,7 +1597,7 @@ private static final long serialVersionUID = 0L;
      * 3-character currency code. For example: USD, EUR.
      * </pre>
      *
-     * <code>string currency_code = 13;</code>
+     * <code>optional string currency_code = 13;</code>
      * @param value The currencyCode to set.
      * @return This builder for chaining.
      */
@@ -1617,7 +1617,7 @@ private static final long serialVersionUID = 0L;
      * 3-character currency code. For example: USD, EUR.
      * </pre>
      *
-     * <code>string currency_code = 13;</code>
+     * <code>optional string currency_code = 13;</code>
      * @return This builder for chaining.
      */
     public Builder clearCurrencyCode() {
@@ -1632,7 +1632,7 @@ private static final long serialVersionUID = 0L;
      * 3-character currency code. For example: USD, EUR.
      * </pre>
      *
-     * <code>string currency_code = 13;</code>
+     * <code>optional string currency_code = 13;</code>
      * @param value The bytes for currencyCode to set.
      * @return This builder for chaining.
      */
@@ -1655,7 +1655,7 @@ private static final long serialVersionUID = 0L;
      * for one conversion per conversion action.
      * </pre>
      *
-     * <code>string order_id = 14;</code>
+     * <code>optional string order_id = 14;</code>
      * @return Whether the orderId field is set.
      */
     public boolean hasOrderId() {
@@ -1667,7 +1667,7 @@ private static final long serialVersionUID = 0L;
      * for one conversion per conversion action.
      * </pre>
      *
-     * <code>string order_id = 14;</code>
+     * <code>optional string order_id = 14;</code>
      * @return The orderId.
      */
     public java.lang.String getOrderId() {
@@ -1688,7 +1688,7 @@ private static final long serialVersionUID = 0L;
      * for one conversion per conversion action.
      * </pre>
      *
-     * <code>string order_id = 14;</code>
+     * <code>optional string order_id = 14;</code>
      * @return The bytes for orderId.
      */
     public com.google.protobuf.ByteString
@@ -1710,7 +1710,7 @@ private static final long serialVersionUID = 0L;
      * for one conversion per conversion action.
      * </pre>
      *
-     * <code>string order_id = 14;</code>
+     * <code>optional string order_id = 14;</code>
      * @param value The orderId to set.
      * @return This builder for chaining.
      */
@@ -1730,7 +1730,7 @@ private static final long serialVersionUID = 0L;
      * for one conversion per conversion action.
      * </pre>
      *
-     * <code>string order_id = 14;</code>
+     * <code>optional string order_id = 14;</code>
      * @return This builder for chaining.
      */
     public Builder clearOrderId() {
@@ -1745,7 +1745,7 @@ private static final long serialVersionUID = 0L;
      * for one conversion per conversion action.
      * </pre>
      *
-     * <code>string order_id = 14;</code>
+     * <code>optional string order_id = 14;</code>
      * @param value The bytes for orderId to set.
      * @return This builder for chaining.
      */

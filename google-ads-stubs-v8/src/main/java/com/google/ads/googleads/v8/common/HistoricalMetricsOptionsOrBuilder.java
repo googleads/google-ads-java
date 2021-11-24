@@ -16,7 +16,7 @@ public interface HistoricalMetricsOptionsOrBuilder extends
    * year month range for which search volume is available will be returned.
    * </pre>
    *
-   * <code>.google.ads.googleads.v8.common.YearMonthRange year_month_range = 1;</code>
+   * <code>optional .google.ads.googleads.v8.common.YearMonthRange year_month_range = 1;</code>
    * @return Whether the yearMonthRange field is set.
    */
   boolean hasYearMonthRange();
@@ -29,7 +29,7 @@ public interface HistoricalMetricsOptionsOrBuilder extends
    * year month range for which search volume is available will be returned.
    * </pre>
    *
-   * <code>.google.ads.googleads.v8.common.YearMonthRange year_month_range = 1;</code>
+   * <code>optional .google.ads.googleads.v8.common.YearMonthRange year_month_range = 1;</code>
    * @return The yearMonthRange.
    */
   com.google.ads.googleads.v8.common.YearMonthRange getYearMonthRange();
@@ -42,7 +42,7 @@ public interface HistoricalMetricsOptionsOrBuilder extends
    * year month range for which search volume is available will be returned.
    * </pre>
    *
-   * <code>.google.ads.googleads.v8.common.YearMonthRange year_month_range = 1;</code>
+   * <code>optional .google.ads.googleads.v8.common.YearMonthRange year_month_range = 1;</code>
    */
   com.google.ads.googleads.v8.common.YearMonthRangeOrBuilder getYearMonthRangeOrBuilder();
 }

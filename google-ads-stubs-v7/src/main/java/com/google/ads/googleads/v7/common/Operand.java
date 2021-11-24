@@ -1303,7 +1303,7 @@ private static final long serialVersionUID = 0L;
      * The associated feed. Required.
      * </pre>
      *
-     * <code>int64 feed_id = 3;</code>
+     * <code>optional int64 feed_id = 3;</code>
      * @return Whether the feedId field is set.
      */
     boolean hasFeedId();
@@ -1312,7 +1312,7 @@ private static final long serialVersionUID = 0L;
      * The associated feed. Required.
      * </pre>
      *
-     * <code>int64 feed_id = 3;</code>
+     * <code>optional int64 feed_id = 3;</code>
      * @return The feedId.
      */
     long getFeedId();
@@ -1322,7 +1322,7 @@ private static final long serialVersionUID = 0L;
      * Id of the referenced feed attribute. Required.
      * </pre>
      *
-     * <code>int64 feed_attribute_id = 4;</code>
+     * <code>optional int64 feed_attribute_id = 4;</code>
      * @return Whether the feedAttributeId field is set.
      */
     boolean hasFeedAttributeId();
@@ -1331,7 +1331,7 @@ private static final long serialVersionUID = 0L;
      * Id of the referenced feed attribute. Required.
      * </pre>
      *
-     * <code>int64 feed_attribute_id = 4;</code>
+     * <code>optional int64 feed_attribute_id = 4;</code>
      * @return The feedAttributeId.
      */
     long getFeedAttributeId();
@@ -1437,7 +1437,7 @@ private static final long serialVersionUID = 0L;
      * The associated feed. Required.
      * </pre>
      *
-     * <code>int64 feed_id = 3;</code>
+     * <code>optional int64 feed_id = 3;</code>
      * @return Whether the feedId field is set.
      */
     @java.lang.Override
@@ -1449,7 +1449,7 @@ private static final long serialVersionUID = 0L;
      * The associated feed. Required.
      * </pre>
      *
-     * <code>int64 feed_id = 3;</code>
+     * <code>optional int64 feed_id = 3;</code>
      * @return The feedId.
      */
     @java.lang.Override
@@ -1464,7 +1464,7 @@ private static final long serialVersionUID = 0L;
      * Id of the referenced feed attribute. Required.
      * </pre>
      *
-     * <code>int64 feed_attribute_id = 4;</code>
+     * <code>optional int64 feed_attribute_id = 4;</code>
      * @return Whether the feedAttributeId field is set.
      */
     @java.lang.Override
@@ -1476,7 +1476,7 @@ private static final long serialVersionUID = 0L;
      * Id of the referenced feed attribute. Required.
      * </pre>
      *
-     * <code>int64 feed_attribute_id = 4;</code>
+     * <code>optional int64 feed_attribute_id = 4;</code>
      * @return The feedAttributeId.
      */
     @java.lang.Override
@@ -1836,7 +1836,7 @@ private static final long serialVersionUID = 0L;
        * The associated feed. Required.
        * </pre>
        *
-       * <code>int64 feed_id = 3;</code>
+       * <code>optional int64 feed_id = 3;</code>
        * @return Whether the feedId field is set.
        */
       @java.lang.Override
@@ -1848,7 +1848,7 @@ private static final long serialVersionUID = 0L;
        * The associated feed. Required.
        * </pre>
        *
-       * <code>int64 feed_id = 3;</code>
+       * <code>optional int64 feed_id = 3;</code>
        * @return The feedId.
        */
       @java.lang.Override
@@ -1860,7 +1860,7 @@ private static final long serialVersionUID = 0L;
        * The associated feed. Required.
        * </pre>
        *
-       * <code>int64 feed_id = 3;</code>
+       * <code>optional int64 feed_id = 3;</code>
        * @param value The feedId to set.
        * @return This builder for chaining.
        */
@@ -1875,7 +1875,7 @@ private static final long serialVersionUID = 0L;
        * The associated feed. Required.
        * </pre>
        *
-       * <code>int64 feed_id = 3;</code>
+       * <code>optional int64 feed_id = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearFeedId() {
@@ -1891,7 +1891,7 @@ private static final long serialVersionUID = 0L;
        * Id of the referenced feed attribute. Required.
        * </pre>
        *
-       * <code>int64 feed_attribute_id = 4;</code>
+       * <code>optional int64 feed_attribute_id = 4;</code>
        * @return Whether the feedAttributeId field is set.
        */
       @java.lang.Override
@@ -1903,7 +1903,7 @@ private static final long serialVersionUID = 0L;
        * Id of the referenced feed attribute. Required.
        * </pre>
        *
-       * <code>int64 feed_attribute_id = 4;</code>
+       * <code>optional int64 feed_attribute_id = 4;</code>
        * @return The feedAttributeId.
        */
       @java.lang.Override
@@ -1915,7 +1915,7 @@ private static final long serialVersionUID = 0L;
        * Id of the referenced feed attribute. Required.
        * </pre>
        *
-       * <code>int64 feed_attribute_id = 4;</code>
+       * <code>optional int64 feed_attribute_id = 4;</code>
        * @param value The feedAttributeId to set.
        * @return This builder for chaining.
        */
@@ -1930,7 +1930,7 @@ private static final long serialVersionUID = 0L;
        * Id of the referenced feed attribute. Required.
        * </pre>
        *
-       * <code>int64 feed_attribute_id = 4;</code>
+       * <code>optional int64 feed_attribute_id = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearFeedAttributeId() {

@@ -492,22 +492,22 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
-    if (!getCallerCountryCodeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callerCountryCode_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, callerCountryCode_);
     }
-    if (!getCallerAreaCodeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callerAreaCode_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, callerAreaCode_);
     }
     if (callDurationSeconds_ != 0L) {
       output.writeInt64(4, callDurationSeconds_);
     }
-    if (!getStartCallDateTimeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(startCallDateTime_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, startCallDateTime_);
     }
-    if (!getEndCallDateTimeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endCallDateTime_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, endCallDateTime_);
     }
     if (callTrackingDisplayLocation_ != com.google.ads.googleads.v8.enums.CallTrackingDisplayLocationEnum.CallTrackingDisplayLocation.UNSPECIFIED.getNumber()) {
@@ -528,23 +528,23 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getResourceNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
     }
-    if (!getCallerCountryCodeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callerCountryCode_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, callerCountryCode_);
     }
-    if (!getCallerAreaCodeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(callerAreaCode_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, callerAreaCode_);
     }
     if (callDurationSeconds_ != 0L) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(4, callDurationSeconds_);
     }
-    if (!getStartCallDateTimeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(startCallDateTime_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, startCallDateTime_);
     }
-    if (!getEndCallDateTimeBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(endCallDateTime_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, endCallDateTime_);
     }
     if (callTrackingDisplayLocation_ != com.google.ads.googleads.v8.enums.CallTrackingDisplayLocationEnum.CallTrackingDisplayLocation.UNSPECIFIED.getNumber()) {

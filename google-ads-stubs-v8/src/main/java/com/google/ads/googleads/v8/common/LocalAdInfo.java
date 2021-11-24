@@ -600,7 +600,7 @@ private static final long serialVersionUID = 0L;
    * First part of optional text that can be appended to the URL in the ad.
    * </pre>
    *
-   * <code>string path1 = 9;</code>
+   * <code>optional string path1 = 9;</code>
    * @return Whether the path1 field is set.
    */
   @java.lang.Override
@@ -612,7 +612,7 @@ private static final long serialVersionUID = 0L;
    * First part of optional text that can be appended to the URL in the ad.
    * </pre>
    *
-   * <code>string path1 = 9;</code>
+   * <code>optional string path1 = 9;</code>
    * @return The path1.
    */
   @java.lang.Override
@@ -633,7 +633,7 @@ private static final long serialVersionUID = 0L;
    * First part of optional text that can be appended to the URL in the ad.
    * </pre>
    *
-   * <code>string path1 = 9;</code>
+   * <code>optional string path1 = 9;</code>
    * @return The bytes for path1.
    */
   @java.lang.Override
@@ -659,7 +659,7 @@ private static final long serialVersionUID = 0L;
    * This field can only be set when `path1` is also set.
    * </pre>
    *
-   * <code>string path2 = 10;</code>
+   * <code>optional string path2 = 10;</code>
    * @return Whether the path2 field is set.
    */
   @java.lang.Override
@@ -672,7 +672,7 @@ private static final long serialVersionUID = 0L;
    * This field can only be set when `path1` is also set.
    * </pre>
    *
-   * <code>string path2 = 10;</code>
+   * <code>optional string path2 = 10;</code>
    * @return The path2.
    */
   @java.lang.Override
@@ -694,7 +694,7 @@ private static final long serialVersionUID = 0L;
    * This field can only be set when `path1` is also set.
    * </pre>
    *
-   * <code>string path2 = 10;</code>
+   * <code>optional string path2 = 10;</code>
    * @return The bytes for path2.
    */
   @java.lang.Override
@@ -3463,7 +3463,7 @@ private static final long serialVersionUID = 0L;
      * First part of optional text that can be appended to the URL in the ad.
      * </pre>
      *
-     * <code>string path1 = 9;</code>
+     * <code>optional string path1 = 9;</code>
      * @return Whether the path1 field is set.
      */
     public boolean hasPath1() {
@@ -3474,7 +3474,7 @@ private static final long serialVersionUID = 0L;
      * First part of optional text that can be appended to the URL in the ad.
      * </pre>
      *
-     * <code>string path1 = 9;</code>
+     * <code>optional string path1 = 9;</code>
      * @return The path1.
      */
     public java.lang.String getPath1() {
@@ -3494,7 +3494,7 @@ private static final long serialVersionUID = 0L;
      * First part of optional text that can be appended to the URL in the ad.
      * </pre>
      *
-     * <code>string path1 = 9;</code>
+     * <code>optional string path1 = 9;</code>
      * @return The bytes for path1.
      */
     public com.google.protobuf.ByteString
@@ -3515,7 +3515,7 @@ private static final long serialVersionUID = 0L;
      * First part of optional text that can be appended to the URL in the ad.
      * </pre>
      *
-     * <code>string path1 = 9;</code>
+     * <code>optional string path1 = 9;</code>
      * @param value The path1 to set.
      * @return This builder for chaining.
      */
@@ -3534,7 +3534,7 @@ private static final long serialVersionUID = 0L;
      * First part of optional text that can be appended to the URL in the ad.
      * </pre>
      *
-     * <code>string path1 = 9;</code>
+     * <code>optional string path1 = 9;</code>
      * @return This builder for chaining.
      */
     public Builder clearPath1() {
@@ -3548,7 +3548,7 @@ private static final long serialVersionUID = 0L;
      * First part of optional text that can be appended to the URL in the ad.
      * </pre>
      *
-     * <code>string path1 = 9;</code>
+     * <code>optional string path1 = 9;</code>
      * @param value The bytes for path1 to set.
      * @return This builder for chaining.
      */
@@ -3571,7 +3571,7 @@ private static final long serialVersionUID = 0L;
      * This field can only be set when `path1` is also set.
      * </pre>
      *
-     * <code>string path2 = 10;</code>
+     * <code>optional string path2 = 10;</code>
      * @return Whether the path2 field is set.
      */
     public boolean hasPath2() {
@@ -3583,7 +3583,7 @@ private static final long serialVersionUID = 0L;
      * This field can only be set when `path1` is also set.
      * </pre>
      *
-     * <code>string path2 = 10;</code>
+     * <code>optional string path2 = 10;</code>
      * @return The path2.
      */
     public java.lang.String getPath2() {
@@ -3604,7 +3604,7 @@ private static final long serialVersionUID = 0L;
      * This field can only be set when `path1` is also set.
      * </pre>
      *
-     * <code>string path2 = 10;</code>
+     * <code>optional string path2 = 10;</code>
      * @return The bytes for path2.
      */
     public com.google.protobuf.ByteString
@@ -3626,7 +3626,7 @@ private static final long serialVersionUID = 0L;
      * This field can only be set when `path1` is also set.
      * </pre>
      *
-     * <code>string path2 = 10;</code>
+     * <code>optional string path2 = 10;</code>
      * @param value The path2 to set.
      * @return This builder for chaining.
      */
@@ -3646,7 +3646,7 @@ private static final long serialVersionUID = 0L;
      * This field can only be set when `path1` is also set.
      * </pre>
      *
-     * <code>string path2 = 10;</code>
+     * <code>optional string path2 = 10;</code>
      * @return This builder for chaining.
      */
     public Builder clearPath2() {
@@ -3661,7 +3661,7 @@ private static final long serialVersionUID = 0L;
      * This field can only be set when `path1` is also set.
      * </pre>
      *
-     * <code>string path2 = 10;</code>
+     * <code>optional string path2 = 10;</code>
      * @param value The bytes for path2 to set.
      * @return This builder for chaining.
      */

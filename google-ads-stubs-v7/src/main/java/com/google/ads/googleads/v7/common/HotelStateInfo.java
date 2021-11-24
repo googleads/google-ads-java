@@ -100,7 +100,7 @@ private static final long serialVersionUID = 0L;
    * The Geo Target Constant resource name.
    * </pre>
    *
-   * <code>string state_criterion = 2;</code>
+   * <code>optional string state_criterion = 2;</code>
    * @return Whether the stateCriterion field is set.
    */
   @java.lang.Override
@@ -112,7 +112,7 @@ private static final long serialVersionUID = 0L;
    * The Geo Target Constant resource name.
    * </pre>
    *
-   * <code>string state_criterion = 2;</code>
+   * <code>optional string state_criterion = 2;</code>
    * @return The stateCriterion.
    */
   @java.lang.Override
@@ -133,7 +133,7 @@ private static final long serialVersionUID = 0L;
    * The Geo Target Constant resource name.
    * </pre>
    *
-   * <code>string state_criterion = 2;</code>
+   * <code>optional string state_criterion = 2;</code>
    * @return The bytes for stateCriterion.
    */
   @java.lang.Override
@@ -476,7 +476,7 @@ private static final long serialVersionUID = 0L;
      * The Geo Target Constant resource name.
      * </pre>
      *
-     * <code>string state_criterion = 2;</code>
+     * <code>optional string state_criterion = 2;</code>
      * @return Whether the stateCriterion field is set.
      */
     public boolean hasStateCriterion() {
@@ -487,7 +487,7 @@ private static final long serialVersionUID = 0L;
      * The Geo Target Constant resource name.
      * </pre>
      *
-     * <code>string state_criterion = 2;</code>
+     * <code>optional string state_criterion = 2;</code>
      * @return The stateCriterion.
      */
     public java.lang.String getStateCriterion() {
@@ -507,7 +507,7 @@ private static final long serialVersionUID = 0L;
      * The Geo Target Constant resource name.
      * </pre>
      *
-     * <code>string state_criterion = 2;</code>
+     * <code>optional string state_criterion = 2;</code>
      * @return The bytes for stateCriterion.
      */
     public com.google.protobuf.ByteString
@@ -528,7 +528,7 @@ private static final long serialVersionUID = 0L;
      * The Geo Target Constant resource name.
      * </pre>
      *
-     * <code>string state_criterion = 2;</code>
+     * <code>optional string state_criterion = 2;</code>
      * @param value The stateCriterion to set.
      * @return This builder for chaining.
      */
@@ -547,7 +547,7 @@ private static final long serialVersionUID = 0L;
      * The Geo Target Constant resource name.
      * </pre>
      *
-     * <code>string state_criterion = 2;</code>
+     * <code>optional string state_criterion = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearStateCriterion() {
@@ -561,7 +561,7 @@ private static final long serialVersionUID = 0L;
      * The Geo Target Constant resource name.
      * </pre>
      *
-     * <code>string state_criterion = 2;</code>
+     * <code>optional string state_criterion = 2;</code>
      * @param value The bytes for stateCriterion to set.
      * @return This builder for chaining.
      */

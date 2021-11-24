@@ -31,7 +31,7 @@ public interface KeywordPlanDeviceSearchesOrBuilder extends
    * The total searches for the device.
    * </pre>
    *
-   * <code>int64 search_count = 2;</code>
+   * <code>optional int64 search_count = 2;</code>
    * @return Whether the searchCount field is set.
    */
   boolean hasSearchCount();
@@ -40,7 +40,7 @@ public interface KeywordPlanDeviceSearchesOrBuilder extends
    * The total searches for the device.
    * </pre>
    *
-   * <code>int64 search_count = 2;</code>
+   * <code>optional int64 search_count = 2;</code>
    * @return The searchCount.
    */
   long getSearchCount();
