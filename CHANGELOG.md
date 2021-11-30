@@ -1,4 +1,4 @@
-16.0.1 - 2021-11-24
+16.0.1 - 2021-11-30
 -------------------
 - Fix #507 compatibility issue with buck.build.
 - Remove maven build files. The library is now built with gradle.
