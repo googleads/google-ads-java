@@ -1,3 +1,8 @@
+16.0.1 - 2021-11-30
+-------------------
+- Fix #507 compatibility issue with buck.build.
+- Remove maven build files. The library is now built with gradle.
+
 16.0.0 - 2021-11-11
 -------------------
 - Added support and examples for Google Ads API v9.0.
