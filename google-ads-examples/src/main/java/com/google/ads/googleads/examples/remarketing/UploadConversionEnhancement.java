@@ -27,6 +27,7 @@ import com.google.ads.googleads.v9.errors.GoogleAdsException;
 import com.google.ads.googleads.v9.services.ConversionAdjustment;
 import com.google.ads.googleads.v9.services.ConversionAdjustmentResult;
 import com.google.ads.googleads.v9.services.ConversionAdjustmentUploadServiceClient;
+import com.google.ads.googleads.v9.services.GclidDateTimePair;
 import com.google.ads.googleads.v9.services.RestatementValue;
 import com.google.ads.googleads.v9.services.UploadConversionAdjustmentsRequest;
 import com.google.ads.googleads.v9.services.UploadConversionAdjustmentsResponse;
@@ -53,6 +54,16 @@ public class UploadConversionEnhancement {
     @Parameter(names = ArgumentNames.ORDER_ID, required = true)
     private String orderId;
 
+    @Parameter(
+        names = ArgumentNames.CONVERSION_DATE_TIME,
+        required = false,
+        description =
+            "The date time at which the conversion with the specified order ID occurred. "
+                + "Must be after the click time, and must include the time zone offset. "
+                + "The format is  'yyyy-mm-dd hh:mm:ss+|-hh:mm', e.g. '2019-01-01 12:32:45-08:00'. "
+                + "Setting this field is optional, but recommended.")
+    private String conversionDateTime;
+
     @Parameter(names = ArgumentNames.USER_AGENT, required = false)
     private String userAgent;
 
@@ -77,7 +88,9 @@ public class UploadConversionEnhancement {
       params.conversionActionId = Long.parseLong("INSERT_CONVERSION_ACTION_ID_HERE");
       params.orderId = "INSERT_ORDER_ID_HERE";
 
-      // Optional: Specify the user agent, restatement value and restatement currency code.
+      // Optional: Specify the conversion date/time, user agent, restatement value, and restatement
+      // currency code.
+      params.conversionDateTime = null;
       params.userAgent = null;
       params.restatementValue = null;
       params.currencyCode = null;
@@ -102,6 +115,7 @@ public class UploadConversionEnhancement {
               params.customerId,
               params.conversionActionId,
               params.orderId,
+              params.conversionDateTime,
               params.userAgent,
               params.restatementValue,
               params.currencyCode);
@@ -128,6 +142,7 @@ public class UploadConversionEnhancement {
    * @param customerId the client customer ID.
    * @param conversionActionId conversion action ID associated with this conversion.
    * @param orderId unique order ID (transaction ID) of the conversion.
+   * @param conversionDateTime
    * @param userAgent the HTTP user agent of the conversion.
    * @param restatementValue the enhancement value.
    * @param restatementCurrencyCode the currency of the enhancement value.
@@ -138,6 +153,7 @@ public class UploadConversionEnhancement {
       long customerId,
       long conversionActionId,
       String orderId,
+      String conversionDateTime,
       String userAgent,
       Double restatementValue,
       String restatementCurrencyCode)
@@ -150,6 +166,13 @@ public class UploadConversionEnhancement {
             .setAdjustmentType(ConversionAdjustmentType.ENHANCEMENT)
             // Enhancements MUST use order ID instead of GCLID date/time pair.
             .setOrderId(orderId);
+
+    // Sets the conversion date and time if provided. Providing this value is optional but
+    // recommended.
+    if (conversionDateTime != null) {
+      enhancementBuilder.setGclidDateTimePair(
+          GclidDateTimePair.newBuilder().setConversionDateTime(conversionDateTime));
+    }
 
     // Creates a SHA256 message digest for hashing user identifiers in a privacy-safe way, as
     // described at https://support.google.com/google-ads/answer/9888656.
