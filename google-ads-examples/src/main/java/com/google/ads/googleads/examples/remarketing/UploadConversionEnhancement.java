@@ -88,7 +88,7 @@ public class UploadConversionEnhancement {
       params.conversionActionId = Long.parseLong("INSERT_CONVERSION_ACTION_ID_HERE");
       params.orderId = "INSERT_ORDER_ID_HERE";
 
-      // Optional: Specify the conversion date/time, user agent, restatement value and restatement
+      // Optional: Specify the conversion date/time, user agent, restatement value, and restatement
       // currency code.
       params.conversionDateTime = null;
       params.userAgent = null;
