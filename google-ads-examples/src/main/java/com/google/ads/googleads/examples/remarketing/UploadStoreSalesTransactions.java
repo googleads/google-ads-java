@@ -488,6 +488,7 @@ public class UploadStoreSalesTransactions {
           userDataJobOperations.size(),
           response.getPartialFailureError().getMessage());
 
+      // [START enable_warnings_2]
       // Checks if any warnings occurred and displays details.
       if (response.hasWarning()) {
         // Converts the Any in response back to a GoogleAdsFailure object.
@@ -498,6 +499,7 @@ public class UploadStoreSalesTransactions {
             System.out.printf(
                 "Encountered %d warning(s).%n", warningsFailure.getErrorsCount()));
       }
+      // [END enable_warnings_2]
     } else {
       System.out.printf(
           "Successfully added %d operations to the offline user data job.%n",
