@@ -16,6 +16,7 @@
  * These are shared settings common to all Google Ads Java library subprojects.
  */
 
+
 import org.gradle.api.DefaultTask
 import groovy.io.FileType
 import groovy.io.FileVisitResult
@@ -55,8 +56,6 @@ javadoc {
   options.addStringOption('Xdoclint:none', '-quiet')
 }
 
-final def sonatypeCredentialsConfig = file(System.properties['user.home'] + '/.sonatype-creds')
-
 publishing {
   publications {
     maven(MavenPublication) {
@@ -67,14 +66,11 @@ publishing {
     maven {
       url 'https://oss.sonatype.org/service/local/staging/deploy/maven2'
       name = "sonatype"
-
-      if (sonatypeCredentialsConfig.exists()) {
-        def props = new Properties()
-        sonatypeCredentialsConfig.withInputStream { props.load(it) }
-        credentials {
-          username props['username']
-          password props['password']
-        }
+      credentials {
+        // Avoids storing Sonatype credentials in plain-text. Specify these on
+        // the command line: -PsonatypeUser=foo
+        username project.properties.get("sonatypeUser")
+        password project.properties.get("sonatypePassword")
       }
     }
   }
@@ -84,8 +80,13 @@ publishing {
 tasks.findAll {
   if (it.name.matches("publish.+ToSonatypeRepository")) {
     it.doFirst {
-      if (!sonatypeCredentialsConfig.exists()) {
-        throw new GradleException("Unable to load Sonatype credentials from ${sonatypeCredentialsConfig}.")
+      def user = project.properties.get("sonatypeUser")
+      def pass = project.properties.get("sonatypePassword")
+      if (user == null || user.length() == 0) {
+        throw new GradleException("Missing property for sonatype username, try -PsonatypeUser=foo")
+      }
+      if (pass == null || pass.length() == 0) {
+        throw new GradleException("Missing property for sonatype password, try -PsonatypePassword=foo")
       }
     }
   }
