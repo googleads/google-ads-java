@@ -71,8 +71,8 @@ public final class ArgumentNames {
   public static final String FREEFORM_KEYWORD_TEXT = "--freeformKeywordText";
   public static final String GCLID = "--gclid";
   public static final String GEO_TARGET_CONSTANT_ID = "--geoTargetConstantId";
-  public static final String GMB_ACCESS_TOKEN = "--gmbAccessToken";
-  public static final String GMB_EMAIL_ADDRESS = "--gmbEmailAddress";
+  public static final String BUSINESS_PROFILE_ACCESS_TOKEN = "--businessProfileAccessToken";
+  public static final String BUSINESS_PROFILE_EMAIL_ADDRESS = "--businessProfileEmailAddress";
   public static final String HOTEL_CENTER_ACCOUNT_ID = "--hotelCenterAccountId";
   public static final String IMAGE_ASSET_ID = "--imageAssetId";
   public static final String ITEM_ID = "--itemId";
