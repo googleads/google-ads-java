@@ -187,7 +187,8 @@ public class AddAffiliateLocationExtensions {
     // Removes a location extension feed. Does this with the following steps:
     //   1. Retrieves the existing CustomerFeed links.
     //   2. Removes the CustomerFeed so that the location extensions from the feed stop serving.
-    //   3. Removes the feed so that Google Ads will no longer sync from the GMB account.
+    //   3. Removes the feed so that Google Ads will no longer sync from the Business Profile
+    // account.
     List<CustomerFeed> oldCustomerFeeds =
         getLocationExtensionCustomerFeeds(googleAdsClient, customerId);
     if (oldCustomerFeeds.isEmpty()) {

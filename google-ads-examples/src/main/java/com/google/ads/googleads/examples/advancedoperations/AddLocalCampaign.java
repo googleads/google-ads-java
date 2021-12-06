@@ -72,7 +72,7 @@ import java.net.URL;
  * Adds an Local campaign.
  *
  * <p>Prerequisite: To create a Local campaign, you need to define the store locations you want to
- * promote by linking your Google My Business account or selecting affiliate locations. More
+ * promote by linking your Business Profile account or selecting affiliate locations. More
  * information about Local campaigns can be found at:
  * https://support.google.com/google-ads/answer/9118422.
  */
@@ -208,7 +208,7 @@ public class AddLocalCampaign {
             // Configures the Local campaign setting.
             .setLocalCampaignSetting(
                 LocalCampaignSetting.newBuilder()
-                    // Use the locations associated with the customer's linked Google My Business
+                    // Use the locations associated with the customer's linked Business Profile
                     // account.
                     .setLocationSourceType(LocationSourceType.GOOGLE_MY_BUSINESS))
             .setOptimizationGoalSetting(

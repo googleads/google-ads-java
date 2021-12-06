@@ -112,15 +112,15 @@ public class AddSmartCampaign {
     @Parameter(
         names = ArgumentNames.BUSINESS_LOCATION_ID,
         description =
-            "The ID of a Google My Business (GMB) location. This is required if a business name is"
-                + " not provided. It can be retrieved using the GMB API, for details see:"
+            "The ID of a Business Profile location. This is required if a business name is not"
+                + " provided. It can be retrieved using the Business Profile API, for details see:"
                 + " https://developers.google.com/my-business/reference/rest/v4/accounts.locations")
     private String locationId;
 
     @Parameter(
         names = ArgumentNames.BUSINESS_NAME,
         description =
-            "The name of a Google My Business (GMB) business. This is required if a business"
+            "The name of a Business Profile business. This is required if a business"
                 + " location ID is not provided.")
     private String businessName;
   }
