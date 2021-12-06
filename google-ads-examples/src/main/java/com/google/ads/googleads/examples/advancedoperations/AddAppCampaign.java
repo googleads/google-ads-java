@@ -33,7 +33,6 @@ import com.google.ads.googleads.v9.enums.AppCampaignAppStoreEnum.AppCampaignAppS
 import com.google.ads.googleads.v9.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType;
 import com.google.ads.googleads.v9.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
 import com.google.ads.googleads.v9.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v9.enums.CriterionTypeEnum.CriterionType;
 import com.google.ads.googleads.v9.errors.GoogleAdsError;
 import com.google.ads.googleads.v9.errors.GoogleAdsException;
 import com.google.ads.googleads.v9.resources.Ad;
@@ -269,7 +268,6 @@ public class AddAppCampaign {
       CampaignCriterion campaignCriterion =
           CampaignCriterion.newBuilder()
               .setCampaign(campaignResourceName)
-              .setType(CriterionType.LOCATION)
               .setLocation(
                   LocationInfo.newBuilder()
                       .setGeoTargetConstant(ResourceNames.geoTargetConstant(locationId))
@@ -295,7 +293,6 @@ public class AddAppCampaign {
       CampaignCriterion campaignCriterion =
           CampaignCriterion.newBuilder()
               .setCampaign(campaignResourceName)
-              .setType(CriterionType.LANGUAGE)
               .setLanguage(
                   LanguageInfo.newBuilder()
                       .setLanguageConstant(ResourceNames.languageConstant(languageId))
