@@ -66,11 +66,11 @@ import java.util.List;
  * operations consecutively, and all of the operations contained herein are meant of for
  * illustrative purposes.
  */
-public class SetupRemarketing {
+public class SetUpRemarketing {
 
   private static final int PAGE_SIZE = 1000;
 
-  private static class SetupRemarketingParams extends CodeSampleParams {
+  private static class SetUpRemarketingParams extends CodeSampleParams {
 
     @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
     private Long customerId;
@@ -87,7 +87,7 @@ public class SetupRemarketing {
   }
 
   public static void main(String[] args) {
-    SetupRemarketingParams params = new SetupRemarketingParams();
+    SetUpRemarketingParams params = new SetUpRemarketingParams();
     if (!params.parseArguments(args)) {
 
       // Either pass the required parameters for this example on the command line, or insert them
@@ -113,7 +113,7 @@ public class SetupRemarketing {
     }
 
     try {
-      new SetupRemarketing()
+      new SetUpRemarketing()
           .runExample(
               googleAdsClient,
               params.customerId,

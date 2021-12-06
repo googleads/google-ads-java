@@ -47,16 +47,16 @@ import java.io.IOException;
  * Creates a rule-based user list defined by an expression rule for users who have either checked
  * out in November or December OR visited the checkout page with more than one item in their cart.
  */
-public class SetupAdvancedRemarketing {
+public class SetUpAdvancedRemarketing {
 
-  private static class SetupAdvancedRemarketingParams extends CodeSampleParams {
+  private static class SetUpAdvancedRemarketingParams extends CodeSampleParams {
 
     @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
     private Long customerId;
   }
 
   public static void main(String[] args) {
-    SetupAdvancedRemarketingParams params = new SetupAdvancedRemarketingParams();
+    SetUpAdvancedRemarketingParams params = new SetUpAdvancedRemarketingParams();
     if (!params.parseArguments(args)) {
 
       // Either pass the required parameters for this example on the command line, or insert them
@@ -77,7 +77,7 @@ public class SetupAdvancedRemarketing {
     }
 
     try {
-      new SetupAdvancedRemarketing().runExample(googleAdsClient, params.customerId);
+      new SetUpAdvancedRemarketing().runExample(googleAdsClient, params.customerId);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
