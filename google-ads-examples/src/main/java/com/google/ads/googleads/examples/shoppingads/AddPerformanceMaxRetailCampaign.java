@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.google.ads.googleads.examples.advancedoperations;
+package com.google.ads.googleads.examples.shoppingads;
 
 import static com.google.ads.googleads.examples.utils.CodeSampleHelper.getPrintableDateTime;
 
@@ -20,6 +20,7 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
+import com.google.ads.googleads.lib.utils.FieldMasks;
 import com.google.ads.googleads.v9.common.ImageAsset;
 import com.google.ads.googleads.v9.common.LanguageInfo;
 import com.google.ads.googleads.v9.common.LocationInfo;
@@ -31,21 +32,29 @@ import com.google.ads.googleads.v9.enums.AssetGroupStatusEnum.AssetGroupStatus;
 import com.google.ads.googleads.v9.enums.BiddingStrategyTypeEnum.BiddingStrategyType;
 import com.google.ads.googleads.v9.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
 import com.google.ads.googleads.v9.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v9.enums.ConversionActionCategoryEnum.ConversionActionCategory;
+import com.google.ads.googleads.v9.enums.ConversionOriginEnum.ConversionOrigin;
 import com.google.ads.googleads.v9.errors.GoogleAdsError;
 import com.google.ads.googleads.v9.errors.GoogleAdsException;
 import com.google.ads.googleads.v9.resources.Asset;
 import com.google.ads.googleads.v9.resources.AssetGroup;
 import com.google.ads.googleads.v9.resources.AssetGroupAsset;
 import com.google.ads.googleads.v9.resources.Campaign;
+import com.google.ads.googleads.v9.resources.Campaign.ShoppingSetting;
 import com.google.ads.googleads.v9.resources.CampaignBudget;
+import com.google.ads.googleads.v9.resources.CampaignConversionGoal;
 import com.google.ads.googleads.v9.resources.CampaignCriterion;
+import com.google.ads.googleads.v9.resources.CustomerConversionGoal;
 import com.google.ads.googleads.v9.services.AssetGroupAssetOperation;
 import com.google.ads.googleads.v9.services.AssetGroupOperation;
 import com.google.ads.googleads.v9.services.AssetOperation;
 import com.google.ads.googleads.v9.services.CampaignBudgetOperation;
+import com.google.ads.googleads.v9.services.CampaignConversionGoalOperation;
 import com.google.ads.googleads.v9.services.CampaignCriterionOperation;
 import com.google.ads.googleads.v9.services.CampaignOperation;
+import com.google.ads.googleads.v9.services.GoogleAdsRow;
 import com.google.ads.googleads.v9.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v9.services.GoogleAdsServiceClient.SearchPagedResponse;
 import com.google.ads.googleads.v9.services.MutateGoogleAdsResponse;
 import com.google.ads.googleads.v9.services.MutateOperation;
 import com.google.ads.googleads.v9.services.MutateOperationResponse;
@@ -64,19 +73,24 @@ import java.util.stream.Collectors;
 import org.joda.time.DateTime;
 
 /**
- * This example shows how to create a Performance Max campaign.
+ * This example shows how to create a Performance Max retail campaign.
  *
- * <p>For more information about Performance Max campaigns, see
- * https://developers.google.com/google-ads/api/docs/performance-max/overview
+ * <p>This will be created for "All products".
  *
- * <p>Prerequisites: - You must have at least one conversion action in the account. For more about
- * conversion actions, see
+ * <p>For more information about Performance Max retail campaigns, see
+ * https://developers.google.com/google-ads/api/docs/performance-max/retail
+ *
+ * <p>Prerequisites: - You need to have access to a Merchant Center account. You can find
+ * instructions to create a Merchant Center account here:
+ * https://support.google.com/merchants/answer/188924. This account must be linked to your Google
+ * Ads account. The integration instructions can be found at:
+ * https://developers.google.com/google-ads/api/docs/shopping-ads/merchant-center - You need your
+ * Google Ads account to track conversions. The different ways to track conversions can be found
+ * here: https://support.google.com/google-ads/answer/1722054. - You must have at least one
+ * conversion action in the account. For more about conversion actions, see
  * https://developers.google.com/google-ads/api/docs/conversions/overview#conversion_actions
- *
- * <p>This example uses the default customer conversion goals. For an example of setting
- * campaign-specific conversion goals, see {@link AddPerformanceMaxCampaign}.
  */
-public class AddPerformanceMaxCampaign {
+public class AddPerformanceMaxRetailCampaign {
 
   // We specify temporary IDs that are specific to a single mutate request. Temporary IDs are always
   // negative and unique within one mutate request.
@@ -93,19 +107,33 @@ public class AddPerformanceMaxCampaign {
   // need to be fixed temporary IDs because they are referenced only once.
   private static long temporaryId = ASSET_GROUP_TEMPORARY_ID - 1;
 
-  private static class AddPerformanceMaxCampaignParams extends CodeSampleParams {
+  private static class AddPerformanceMaxRetailCampaignParams extends CodeSampleParams {
 
     @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
     private Long customerId;
+
+    @Parameter(
+        names = ArgumentNames.MERCHANT_CENTER_ACCOUNT_ID,
+        required = true,
+        description = "The Merchant Center account ID.")
+    private long merchantCenterAccountId;
+
+    @Parameter(
+        names = ArgumentNames.COUNTRY_CODE,
+        required = true,
+        description = "The sales country of products to include in the campaign.")
+    private String countryCode;
   }
 
   public static void main(String[] args) throws IOException {
-    AddPerformanceMaxCampaignParams params = new AddPerformanceMaxCampaignParams();
+    AddPerformanceMaxRetailCampaignParams params = new AddPerformanceMaxRetailCampaignParams();
     if (!params.parseArguments(args)) {
 
       // Either pass the required parameters for this example on the command line, or insert them
       // into the code here. See the parameter class definition above for descriptions.
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
+      params.merchantCenterAccountId = Long.parseLong("INSERT_MERCHANT_CENTER_ACCOUNT_ID_HERE");
+      params.countryCode = "INSERT_COUNTRY_CODE_HERE";
     }
 
     GoogleAdsClient googleAdsClient = null;
@@ -121,7 +149,12 @@ public class AddPerformanceMaxCampaign {
     }
 
     try {
-      new AddPerformanceMaxCampaign().runExample(googleAdsClient, params.customerId);
+      new AddPerformanceMaxRetailCampaign()
+          .runExample(
+              googleAdsClient,
+              params.customerId,
+              params.merchantCenterAccountId,
+              params.countryCode);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -138,15 +171,27 @@ public class AddPerformanceMaxCampaign {
     }
   }
 
-  // [START add_performance_max_campaign]
+  // [START add_performance_max_retail_campaign]
   /**
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
+   * @param merchantCenterAccountId the Merchant Center account ID.
+   * @param countryCode sales country of products to include in the campaign.
    */
-  private void runExample(GoogleAdsClient googleAdsClient, long customerId) throws IOException {
-    // [START add_performance_max_campaign_1]
+  private void runExample(
+      GoogleAdsClient googleAdsClient,
+      long customerId,
+      long merchantCenterAccountId,
+      String countryCode)
+      throws IOException {
+    // [START add_performance_max_retail_campaign_1]
+    // This campaign will override the customer conversion goals.
+    // Retrieve the current list of customer conversion goals.
+    List<CustomerConversionGoal> customerConversionGoals =
+        getCustomerConversionGoals(googleAdsClient, customerId);
+
     // Performance Max campaigns require that repeated assets such as headlines
     // and descriptions be created before the campaign.
     // For the list of required assets for a Performance Max campaign, see
@@ -170,11 +215,13 @@ public class AddPerformanceMaxCampaign {
     // https://developers.google.com/google-ads/api/docs/mutating/overview
     List<MutateOperation> mutateOperations = new ArrayList<>();
     mutateOperations.add(createCampaignBudgetOperation(customerId));
-    mutateOperations.add(createPerformanceMaxCampaignOperation(customerId));
+    mutateOperations.add(
+        createPerformanceMaxCampaignOperation(customerId, merchantCenterAccountId, countryCode));
     mutateOperations.addAll(createCampaignCriterionOperations(customerId));
     mutateOperations.addAll(
         createAssetGroupOperations(
             customerId, headlineAssetResourceNames, descriptionAssetResourceNames));
+    mutateOperations.addAll(createConversionGoalOperations(customerId, customerConversionGoals));
 
     try (GoogleAdsServiceClient googleAdsServiceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
@@ -182,15 +229,15 @@ public class AddPerformanceMaxCampaign {
           googleAdsServiceClient.mutate(Long.toString(customerId), mutateOperations);
       printResponseDetails(response);
     }
-    // [END add_performance_max_campaign_1]
+    // [END add_performance_max_retail_campaign_1]
   }
 
-  // [START add_performance_max_campaign_2]
+  // [START add_performance_max_retail_campaign_2]
   /** Creates a MutateOperation that creates a new CampaignBudget. */
   private MutateOperation createCampaignBudgetOperation(long customerId) {
     CampaignBudget campaignBudget =
         CampaignBudget.newBuilder()
-            .setName("Performance Max campaign budget #" + getPrintableDateTime())
+            .setName("Performance Max retail campaign budget #" + getPrintableDateTime())
             // The budget period already defaults to DAILY.
             .setAmountMicros(50_000_000)
             .setDeliveryMethod(BudgetDeliveryMethod.STANDARD)
@@ -206,14 +253,15 @@ public class AddPerformanceMaxCampaign {
             CampaignBudgetOperation.newBuilder().setCreate(campaignBudget).build())
         .build();
   }
-  // [END add_performance_max_campaign_2]
+  // [END add_performance_max_retail_campaign_2]
 
-  // [START add_performance_max_campaign_3]
+  // [START add_performance_max_retail_campaign_3]
   /** Creates a MutateOperation that creates a new Performance Max campaign. */
-  private MutateOperation createPerformanceMaxCampaignOperation(long customerId) {
+  private MutateOperation createPerformanceMaxCampaignOperation(
+      long customerId, long merchantCenterAccountId, String countryCode) {
     Campaign performanceMaxCampaign =
         Campaign.newBuilder()
-            .setName("Performance Max campaign #" + getPrintableDateTime())
+            .setName("Performance Max retail campaign #" + getPrintableDateTime())
             // Sets the campaign status as PAUSED. The campaign is the only entity in
             // the mutate request that should have its status set.
             .setStatus(CampaignStatus.PAUSED)
@@ -233,6 +281,12 @@ public class AddPerformanceMaxCampaign {
             .setBiddingStrategyType(BiddingStrategyType.MAXIMIZE_CONVERSION_VALUE)
             .setMaximizeConversionValue(
                 MaximizeConversionValue.newBuilder().setTargetRoas(3.5).build())
+            // Sets the shopping settings.
+            .setShoppingSetting(
+                ShoppingSetting.newBuilder()
+                    .setMerchantId(merchantCenterAccountId)
+                    .setSalesCountry(countryCode)
+                    .build())
             // Sets the Final URL expansion opt out. This flag is specific to
             // Performance Max campaigns. If opted out (True), only the final URLs in
             // the asset group or URLs specified in the advertiser's Google Merchant
@@ -256,9 +310,9 @@ public class AddPerformanceMaxCampaign {
             CampaignOperation.newBuilder().setCreate(performanceMaxCampaign).build())
         .build();
   }
-  // [END add_performance_max_campaign_3]
+  // [END add_performance_max_retail_campaign_3]
 
-  // [START add_performance_max_campaign_4]
+  // [START add_performance_max_retail_campaign_4]
   /** Creates a list of MutateOperations that create new campaign criteria. */
   private List<MutateOperation> createCampaignCriterionOperations(long customerId) {
     String campaignResourceName =
@@ -315,9 +369,9 @@ public class AddPerformanceMaxCampaign {
                     .build())
         .collect(Collectors.toList());
   }
-  // [END add_performance_max_campaign_4]
+  // [END add_performance_max_retail_campaign_4]
 
-  // [START add_performance_max_campaign_5]
+  // [START add_performance_max_retail_campaign_5]
   /** Creates multiple text assets and returns the list of resource names. */
   private List<String> createMultipleTextAssets(
       GoogleAdsClient googleAdsClient, long customerId, List<String> texts) {
@@ -344,9 +398,9 @@ public class AddPerformanceMaxCampaign {
     }
     return assetResourceNames;
   }
-  // [END add_performance_max_campaign_5]
+  // [END add_performance_max_retail_campaign_5]
 
-  // [START add_performance_max_campaign_6]
+  // [START add_performance_max_retail_campaign_6]
   /** Creates a list of MutateOperations that create a new AssetGroup. */
   private List<MutateOperation> createAssetGroupOperations(
       long customerId,
@@ -360,7 +414,7 @@ public class AddPerformanceMaxCampaign {
     // Creates the AssetGroup.
     AssetGroup assetGroup =
         AssetGroup.newBuilder()
-            .setName("Performance Max asset group #" + getPrintableDateTime())
+            .setName("Performance Max retail asset group #" + getPrintableDateTime())
             .setCampaign(campaignResourceName)
             .addFinalUrls("http://www.example.com")
             .addFinalMobileUrls("http://www.example.com")
@@ -449,9 +503,9 @@ public class AddPerformanceMaxCampaign {
 
     return mutateOperations;
   }
-  // [END add_performance_max_campaign_6]
+  // [END add_performance_max_retail_campaign_6]
 
-  // [START add_performance_max_campaign_7]
+  // [START add_performance_max_retail_campaign_7]
   /** Creates a list of MutateOperations that create a new linked text asset. */
   List<MutateOperation> createAndLinkTextAsset(
       long customerId, String text, AssetFieldType assetFieldType) {
@@ -480,9 +534,9 @@ public class AddPerformanceMaxCampaign {
 
     return mutateOperations;
   }
-  // [END add_performance_max_campaign_7]
+  // [END add_performance_max_retail_campaign_7]
 
-  // [START add_performance_max_campaign_8]
+  // [START add_performance_max_retail_campaign_8]
   /** Creates a list of MutateOperations that create a new linked text asset. */
   List<MutateOperation> createAndLinkImageAsset(
       long customerId, String url, AssetFieldType assetFieldType) throws IOException {
@@ -514,7 +568,73 @@ public class AddPerformanceMaxCampaign {
 
     return mutateOperations;
   }
-  // [END add_performance_max_campaign_8]
+  // [END add_performance_max_retail_campaign_8]
+
+  // [START add_performance_max_retail_campaign_9]
+  /** Retrieves the list of customer conversion goals. */
+  private static List<CustomerConversionGoal> getCustomerConversionGoals(
+      GoogleAdsClient googleAdsClient, long customerId) {
+    String query =
+        "SELECT customer_conversion_goal.category, customer_conversion_goal.origin "
+            + "FROM customer_conversion_goal";
+
+    List<CustomerConversionGoal> customerConversionGoals = new ArrayList<>();
+    try (GoogleAdsServiceClient googleAdsServiceClient =
+        googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
+      // The number of conversion goals is typically less than 50, so we use
+      // GoogleAdsService.search instead of search_stream.
+      SearchPagedResponse response =
+          googleAdsServiceClient.search(Long.toString(customerId), query);
+      for (GoogleAdsRow googleAdsRow : response.iterateAll()) {
+        customerConversionGoals.add(googleAdsRow.getCustomerConversionGoal());
+      }
+    }
+
+    return customerConversionGoals;
+  }
+
+  /** Creates a list of MutateOperations that override customer conversion goals. */
+  private static List<MutateOperation> createConversionGoalOperations(
+      long customerId, List<CustomerConversionGoal> customerConversionGoals) {
+    List<MutateOperation> mutateOperations = new ArrayList<>();
+    // To override the customer conversion goals, we will change the
+    // biddability of each of the customer conversion goals so that only
+    // the desired conversion goal is biddable in this campaign.
+    for (CustomerConversionGoal customerConversionGoal : customerConversionGoals) {
+      ConversionActionCategory category = customerConversionGoal.getCategory();
+      ConversionOrigin origin = customerConversionGoal.getOrigin();
+      String campaignConversionGoalResourceName =
+          ResourceNames.campaignConversionGoal(
+              customerId, PERFORMANCE_MAX_CAMPAIGN_TEMPORARY_ID, category, origin);
+      CampaignConversionGoal.Builder campaignConversionGoalBuilder =
+          CampaignConversionGoal.newBuilder().setResourceName(campaignConversionGoalResourceName);
+      // Change the biddability for the campaign conversion goal.
+      // Set biddability to True for the desired (category, origin).
+      // Set biddability to False for all other conversion goals.
+      // Note:
+      //  1- It is assumed that this Conversion Action
+      //     (category=PURCHASE, origin=WEBSITE) exists in this account.
+      //  2- More than one goal can be biddable if desired. This example
+      //     shows only one.
+      if (category == ConversionActionCategory.PURCHASE && origin == ConversionOrigin.WEBSITE) {
+        campaignConversionGoalBuilder.setBiddable(true);
+      } else {
+        campaignConversionGoalBuilder.setBiddable(false);
+      }
+      CampaignConversionGoal campaignConversionGoal = campaignConversionGoalBuilder.build();
+      CampaignConversionGoalOperation campaignConversionGoalOperation =
+          CampaignConversionGoalOperation.newBuilder()
+              .setUpdate(campaignConversionGoal)
+              .setUpdateMask(FieldMasks.allSetFieldsOf(campaignConversionGoal))
+              .build();
+      mutateOperations.add(
+          MutateOperation.newBuilder()
+              .setCampaignConversionGoalOperation(campaignConversionGoalOperation)
+              .build());
+    }
+    return mutateOperations;
+  }
+  // [END add_performance_max_retail_campaign_9]
 
   /**
    * Prints the details of a MutateGoogleAdsResponse.
@@ -542,5 +662,5 @@ public class AddPerformanceMaxCampaign {
   private long getNextTemporaryId() {
     return temporaryId--;
   }
-  // [END add_performance_max_campaign]
+  // [END add_performance_max_retail_campaign]
 }
