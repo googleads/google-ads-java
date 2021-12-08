@@ -50,6 +50,7 @@ public final class ArgumentNames {
   public static final String CONVERSION_DATE_TIME = "--conversionDateTime";
   public static final String CONVERSION_RATE_MODIFIER = "--conversionRateModifier";
   public static final String CONVERSION_VALUE = "--conversionValue";
+  public static final String CUSTOMIZER_ATTRIBUTE_NAME = "--customizerAttributeName";
   public static final String COUNTRY_CODE = "--countryCode";
   public static final String CPC_BID_CEILING_MICRO_AMOUNT = "--cpcBidCeilingMicroAmount";
   public static final String CPC_BID_MICRO_AMOUNT = "--cpcBidMicroAmount";
