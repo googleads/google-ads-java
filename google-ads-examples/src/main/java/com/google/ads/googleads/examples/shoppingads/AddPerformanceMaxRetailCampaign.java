@@ -187,7 +187,8 @@ public class AddPerformanceMaxRetailCampaign {
       String countryCode)
       throws IOException {
     // [START add_performance_max_retail_campaign_1]
-    // This campaign will override the customer conversion goals.
+    // This campaign will override the customer conversion goals. For more information see
+    // https://developers.google.com/google-ads/api/docs/conversions/goals/campaign-goals.
     // Retrieve the current list of customer conversion goals.
     List<CustomerConversionGoal> customerConversionGoals =
         getCustomerConversionGoals(googleAdsClient, customerId);
