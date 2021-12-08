@@ -29,8 +29,8 @@ publishing {
     publications {
         maven(MavenPublication) { publication ->
             configurePom(publication,
-                    "Google Ads API client library for Java - main library",
-                    "Annotations + processor for code generation")
+                    "Google Ads API client library for Java - stubs library",
+                    "Common components for handling GAAPI stubs")
         }
     }
 }

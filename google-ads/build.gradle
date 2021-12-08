@@ -327,7 +327,7 @@ task testShadowJar {
                             shadowJar.outputs.files)
 
             // Allows the smoke tests to pass unless we're publishing to sonatype.
-            ignoreExitValue = !gradle.taskGraph.hasTask("publishMavenPublicationToSonatypeRepository")
+            ignoreExitValue = !project.properties.containsKey("release")
         }
     }
 }

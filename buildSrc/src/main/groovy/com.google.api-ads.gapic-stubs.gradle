@@ -35,3 +35,13 @@ dependencies {
 configurations.testImplementation.extendsFrom(configurations.testFixturesImplementation)
 // Required to expose GAX, gRPC etc.
 configurations.testFixturesImplementation.extendsFrom(configurations.implementation)
+
+publishing {
+    publications {
+        maven(MavenPublication) { publication ->
+            configurePom(publication,
+                    "Google Ads API client library for Java - " + project.name,
+                    "Stubs for GAAPI version " + project.name)
+        }
+    }
+}
