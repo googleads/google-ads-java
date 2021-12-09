@@ -144,6 +144,8 @@ public class AddResponsiveSearchAdWithAdCustomizer {
     CustomizerAttribute customizerAttribute =
         CustomizerAttribute.newBuilder()
             .setName(customizerAttributeName)
+            // Specifies the type to be 'PRICE' so that we can dynamically customize the part of the
+            // ad's description that is a price of a product/service we advertise.
             .setType(CustomizerAttributeType.PRICE)
             .build();
     // Creates a customizer attribute operation for creating a customizer attribute.
@@ -216,6 +218,12 @@ public class AddResponsiveSearchAdWithAdCustomizer {
     List<String> descriptions =
         ImmutableList.of(
             "Buy your tickets now",
+            // Creates this particular description using the ad customizer.
+            // Visit
+            // https://developers.google.com/google-ads/api/docs/ads/customize-responsive-search-ads#ad_customizers_in_responsive_search_ads
+            // for details about the placeholder format.
+            // The ad customizer replaces the placeholder with the value we previously
+            // created and linked to the customer using CustomerCustomizer.
             String.format("Just {CUSTOMIZER.%s:10USD}", customizerAttributeName));
     List<AdTextAsset> descriptionAssets =
         descriptions.stream()
