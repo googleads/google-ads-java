@@ -1,0 +1,98 @@
+plugins {
+    id 'com.google.api-ads.java-conventions'
+    id 'com.github.johnrengelman.shadow' version '6.1.0'
+}
+
+configurations {
+    shadeTest
+    functionalTestImplementation.extendsFrom testImplementation
+    functionalTestRuntimeOnly.extendsFrom testRuntimeOnly
+}
+
+dependencies {
+    implementation project(":google-ads")
+    shadeTest 'junit:junit:4.13.1'
+}
+
+// Provides functional tests that can be bypassed (e.g. when running
+// without an ads.properties file).
+sourceSets {
+    functionalTest {
+        java {
+            srcDir 'src/test/functional/java'
+        }
+        resources {
+            srcDir 'src/test/functional/resources'
+        }
+        compileClasspath += sourceSets.main.output
+        runtimeClasspath += sourceSets.main.output
+    }
+}
+
+task functionalTest(type: Test) {
+    description = "Runs functional tests"
+    testClassesDirs = sourceSets.functionalTest.output.classesDirs
+    classpath = sourceSets.functionalTest.runtimeClasspath
+}
+
+shadowJar {
+    description = "Generates a jar with dependencies"
+
+    // Removes the default -all classifier.
+    archiveClassifier = ''
+
+    // Updates the META-INF/services directory with the services from dependencies
+    mergeServiceFiles()
+
+    finalizedBy 'testShadowJar'
+}
+
+task testShadowJar {
+    description = "Executes functional tests for shadow jar"
+
+    dependsOn shadowJar
+    dependsOn functionalTestClasses
+
+    doLast {
+        javaexec {
+            // Runs the JUnit main method.
+            mainClass = "org.junit.runner.JUnitCore"
+
+            // Passes the class name of the test to run.
+            args "com.google.ads.googleads.lib.SmokeTest"
+
+            // Uses a special configuration to run the smoke tests. Allows us to
+            // replace the google-ads dependency with the shaded artifact so we can
+            // test it. Otherwise we'd just run end up running the smoke tests on
+            // the normal jar twice.
+            classpath = project.configurations.shadeTest +
+                    // Uses the compiler output directly, rather than getting the
+                    // dependencies from the configuration (since this would include
+                    // the artifact we're trying to ignore).
+                    files(sourceSets.functionalTest.output.classesDirs.files,
+                            shadowJar.outputs.files)
+
+            // Allows the smoke tests to pass unless we're publishing to sonatype.
+            ignoreExitValue = !project.properties.containsKey("release")
+        }
+    }
+}
+
+publishing {
+    publications {
+        shadow(MavenPublication) { publication ->
+            project.shadow.component(publication)
+            // Publishes the javadoc + sources with the shadowjar.
+            configurations.javadocElements.artifacts.each {
+                artifact it
+            }
+            configurations.sourcesElements.artifacts.each {
+                artifact it
+            }
+
+            configurePom(publication,
+                    "Google Ads API client library for java - shadow jar",
+                    "Provides a jar with all dependencies")
+        }
+    }
+}
