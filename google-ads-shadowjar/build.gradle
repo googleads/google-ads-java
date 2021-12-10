@@ -80,16 +80,7 @@ task testShadowJar {
 
 publishing {
     publications {
-        shadow(MavenPublication) { publication ->
-            project.shadow.component(publication)
-            // Publishes the javadoc + sources with the shadowjar.
-            configurations.javadocElements.artifacts.each {
-                artifact it
-            }
-            configurations.sourcesElements.artifacts.each {
-                artifact it
-            }
-
+        maven(MavenPublication) { publication ->
             configurePom(publication,
                     "Google Ads API client library for java - shadow jar",
                     "Provides a jar with all dependencies")
