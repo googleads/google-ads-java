@@ -41,7 +41,7 @@ import org.threeten.bp.Duration;
  *
  * <p>Only depends on a basic configuration file with devtoken, OAuth etc.
  *
- * <p>Retrieves all accessible customers and iterates through all their campaigns.
+ * <p>Retrieves all accessible customers and issues a search request for each customer.
  */
 @RunWith(JUnit4.class)
 public class SmokeTest {
@@ -49,7 +49,7 @@ public class SmokeTest {
   @Rule public Timeout timeout = new Timeout(20_000, TimeUnit.MILLISECONDS);
 
   @Test
-  public void ensureCanReadAllAvailableCustomersCampaigns() throws IOException {
+  public void ensureCanReadAllAvailableCustomers() throws IOException {
     GoogleAdsClient client =
         GoogleAdsClient.newBuilder()
             .fromPropertiesFile()
