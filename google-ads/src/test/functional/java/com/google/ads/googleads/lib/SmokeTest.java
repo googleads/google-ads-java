@@ -54,14 +54,11 @@ public class SmokeTest {
         GoogleAdsClient.newBuilder()
             .fromPropertiesFile()
             // Sets the login-customer-id to null. If this is set in the properties file, then
-            // attempts
-            // to issue requests against accessible accounts in a different manager account
-            // hierarchy
-            // will fail. With login-customer-id not set, the Google Ads API will set it to the
-            // customer
-            // ID in each search request, which will result in a successful request because this
-            // test
-            // only queries customers who are directly accessible with the provided credentials.
+            // attempts to issue requests against accessible accounts in a different manager account
+            // hierarchy will fail. With login-customer-id not set, the Google Ads API will set it
+            // to the customer ID in each search request, which will result in a successful request
+            // because this test only queries customers who are directly accessible with the
+            // provided credentials.
             .setLoginCustomerId(null)
             .build();
     List<String> accessibleCustomerIds = getAvailableCustomerIds(client);
