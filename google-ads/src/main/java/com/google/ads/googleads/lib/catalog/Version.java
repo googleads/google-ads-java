@@ -14,7 +14,7 @@
 
 package com.google.ads.googleads.lib.catalog;
 
-import com.google.ads.googleads.lib.BaseGoogleAdsException;
+import com.google.ads.googleads.lib.stubs.exceptions.BaseGoogleAdsException;
 import com.google.common.base.Preconditions;
 import com.google.protobuf.Message;
 import java.util.Objects;

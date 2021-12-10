@@ -19,6 +19,7 @@ import static org.junit.Assert.assertEquals;
 import com.google.ads.googleads.lib.callables.GoogleAdsExceptionTransformation;
 import com.google.ads.googleads.lib.catalog.ApiCatalog;
 import com.google.ads.googleads.lib.catalog.Version;
+import com.google.ads.googleads.lib.stubs.exceptions.BaseGoogleAdsException;
 import com.google.api.gax.grpc.GrpcStatusCode;
 import com.google.api.gax.rpc.ApiException;
 import com.google.protobuf.Message;

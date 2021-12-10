@@ -21,326 +21,342 @@ import com.google.common.collect.Sets
  */
 
 plugins {
-  id 'com.google.api-ads.java-conventions'
-  id 'com.google.protobuf' version '0.8.15'
-  id "com.github.hierynomus.license-report" version "0.15.0"
-  id 'com.github.johnrengelman.shadow' version '6.1.0'
+    id 'com.google.api-ads.java-conventions'
+    id 'com.google.protobuf' version '0.8.15'
+    id "com.github.hierynomus.license-report" version "0.15.0"
+    id 'com.github.johnrengelman.shadow' version '6.1.0'
 }
 
 description = 'Google Ads API client library for Java'
 
 sourceSets {
-  test {
-    proto {
-      srcDir 'src/test/resources/protos/'
+    main {
+        java {
+            // Includes the generated classes from the google-ads-codegen module
+            // to be compiled by google-ads. The generated sources depend on
+            // imports from google-ads, so are not compiled with
+            // google-ads-codegen. Confusingly we have an api dependency on
+            // google-ads-codegen here, however this only exposes the stubs to
+            // the main library.
+            srcDir new File(project.parent.findProject("google-ads-codegen").buildDir, "generated/catalog")
+        }
     }
-  }
-  // Provides functional tests that can be bypassed (e.g. when running
-  // without an ads.properties file).
-  functionalTest {
-    java {
-      srcDir 'src/test/functional/java'
+    test {
+        proto {
+            srcDir 'src/test/resources/protos/'
+        }
     }
-    resources {
-      srcDir 'src/test/functional/resources'
+    // Provides functional tests that can be bypassed (e.g. when running
+    // without an ads.properties file).
+    functionalTest {
+        java {
+            srcDir 'src/test/functional/java'
+        }
+        resources {
+            srcDir 'src/test/functional/resources'
+        }
+        compileClasspath += sourceSets.main.output
+        runtimeClasspath += sourceSets.main.output
     }
-    compileClasspath += sourceSets.main.output
-    runtimeClasspath += sourceSets.main.output
-  }
 }
 sourceSets.test.java.srcDir new File(buildDir, 'generated/source/proto/test')
 
 protobuf {
-  protoc {
-    artifact = 'com.google.protobuf:protoc:3.15.0-rc-1'
-  }
+    protoc {
+        artifact = 'com.google.protobuf:protoc:3.15.0-rc-1'
+    }
 }
 
 configurations {
-  shadeTest
-  functionalTestImplementation.extendsFrom testImplementation
-  functionalTestRuntimeOnly.extendsFrom testRuntimeOnly
+    shadeTest
+    functionalTestImplementation.extendsFrom testImplementation
+    functionalTestRuntimeOnly.extendsFrom testRuntimeOnly
 }
 
 dependencies {
-  implementation 'io.netty:netty-tcnative-boringssl-static:2.0.26.Final'
-  implementation 'org.slf4j:slf4j-api:1.7.25'
-  implementation 'javax.annotation:javax.annotation-api:1.3.2'
-  implementation project(':google-ads-annotation-processing')
-  annotationProcessor project(':google-ads-annotation-processing')
-  annotationProcessor 'com.google.auto.value:auto-value:1.7.3'
-  testImplementation 'org.hamcrest:java-hamcrest:2.0.0.0'
-  testImplementation 'org.mockito:mockito-all:1.9.5'
-  testImplementation 'com.google.api:gax-grpc::testlib'
-  testImplementation 'io.grpc:grpc-context:1.30.0'
-  testImplementation 'com.google.truth:truth:0.27'
-  implementation 'com.google.auto.value:auto-value-annotations:1.7.3'
-  testImplementation 'com.google.auto.value:auto-value-annotations:1.7.3'
-  shadeTest 'junit:junit:4.13.1'
+    api project(':google-ads-codegen')
+    implementation 'io.netty:netty-tcnative-boringssl-static:2.0.26.Final'
+    implementation 'org.slf4j:slf4j-api:1.7.25'
+    annotationProcessor 'com.google.auto.value:auto-value:1.7.3'
+    testImplementation 'org.hamcrest:java-hamcrest:2.0.0.0'
+    testImplementation 'org.mockito:mockito-all:1.9.5'
+    testImplementation 'com.google.api:gax-grpc::testlib'
+    testImplementation 'io.grpc:grpc-context:1.30.0'
+    testImplementation 'com.google.truth:truth:0.27'
+    implementation 'com.google.auto.value:auto-value-annotations:1.7.3'
+    testImplementation 'com.google.auto.value:auto-value-annotations:1.7.3'
+    testImplementation testFixtures(project(':google-ads-codegen'))
+    shadeTest 'junit:junit:4.13.1'
+}
+
+compileJava {
+    dependsOn(":google-ads-codegen:generateCode")
 }
 
 task functionalTest(type: Test) {
-  description = "Runs functional tests"
-  testClassesDirs = sourceSets.functionalTest.output.classesDirs
-  classpath = sourceSets.functionalTest.runtimeClasspath
+    description = "Runs functional tests"
+    testClassesDirs = sourceSets.functionalTest.output.classesDirs
+    classpath = sourceSets.functionalTest.runtimeClasspath
 }
 
 // --------------------- third_party directory generation ----------------------
 
 task generateThirdPartyDirectory() {
-  description = "Generates the third_party directory (containing dependencies" +
-      " + licenses)"
+    description = "Generates the third_party directory (containing dependencies" +
+            " + licenses)"
 
-  ext {
-    thirdPartyDir = file '../third_party'
-  }
-  dependsOn 'createThirdPartyDirectory'
-  dependsOn 'copyThirdPartySources'
-  dependsOn 'copyThirdPartyBinaries'
-  dependsOn 'copyLicenses'
+    ext {
+        thirdPartyDir = file '../third_party'
+    }
+    dependsOn 'createThirdPartyDirectory'
+    dependsOn 'copyThirdPartySources'
+    dependsOn 'copyThirdPartyBinaries'
+    dependsOn 'copyLicenses'
 }
 
 task createThirdPartyDirectory() {
-  doLast {
-    def thirdPartyDir = tasks.generateThirdPartyDirectory.thirdPartyDir
-    if (thirdPartyDir.exists() && !thirdPartyDir.deleteDir()) {
-      throw new GradleException('third_party exists but failed to delete')
+    doLast {
+        def thirdPartyDir = tasks.generateThirdPartyDirectory.thirdPartyDir
+        if (thirdPartyDir.exists() && !thirdPartyDir.deleteDir()) {
+            throw new GradleException('third_party exists but failed to delete')
+        }
+        if (!thirdPartyDir.mkdir()) {
+            throw new GradleException("Failed to create third_party directory")
+        }
     }
-    if (!thirdPartyDir.mkdir()) {
-      throw new GradleException("Failed to create third_party directory")
-    }
-  }
 }
 
 task generateLicenses(type: nl.javadude.gradle.plugins.license.DownloadLicenses) {
-  description = "Copies the license report into the third_party directory"
+    description = "Copies the license report into the third_party directory"
 
-  includeProjectDependencies = true
+    includeProjectDependencies = true
 
-  // Works around issue where the plugin looks at the deprecated 'compile'
-  // configuration by default.
-  dependencyConfiguration = 'runtimeClasspath'
+    // Works around issue where the plugin looks at the deprecated 'compile'
+    // configuration by default.
+    dependencyConfiguration = 'runtimeClasspath'
 }
 
 task verifyLicenses() {
-  description = "Verifies that the licenses used by 3P dependencies are allowed"
-  dependsOn 'generateLicenses'
+    description = "Verifies that the licenses used by 3P dependencies are allowed"
+    dependsOn 'generateLicenses'
 
-  doLast {
-    // Reads the dependency-license.json file generated by generateLicenses.
-    def inputFile = tasks.generateLicenses.outputs.files.files.find { it.path.endsWith(".json") }
-    def json = new JsonSlurper().parseText(inputFile.text)
-    // Gets all the licenses except those for ourselves (which aren't set yet).
-    def licenses = json
-        .dependencies
-        .findAll { !it.name.startsWith("com.google.api-ads") }
-        .licenses
-        .name
-        .flatten() as Set
-    // Defines licenses which are allowed. Update this list if you need to add
-    // a new license.
-    def allowedLicenses = [
-        "Apache License, Version 2.0",
-        "The Apache License, Version 2.0",
-        "The Apache Software License, Version 2.0",
-        "Apache 2.0",
-        "Apache-2.0",
-        "Apache 2",
-        "BSD",
-        "BSD 3-clause",
-        "3-Clause BSD License",
-        "The MIT License",
-        "MIT License",
-        "MIT license",
-        "BSD New license",
-        "GNU General Public License, version 2 (GPL2), with the classpath exception",
-        "CDDL + GPLv2 with classpath exception"
-    ] as Set
-    // Computes which licenses are in use but not permitted.
-    def notAllowed = Sets.difference(licenses, allowedLicenses)
-    if (!notAllowed.empty) {
-      throw new GradleException(
-          """Licenses found which were not allowed: ${notAllowed}
+    doLast {
+        // Reads the dependency-license.json file generated by generateLicenses.
+        def inputFile = tasks.generateLicenses.outputs.files.files.find { it.path.endsWith(".json") }
+        def json = new JsonSlurper().parseText(inputFile.text)
+        // Gets all the licenses except those for ourselves (which aren't set yet).
+        def licenses = json
+                .dependencies
+                .findAll { !it.name.startsWith("com.google.api-ads") }
+                .licenses
+                .name
+                .flatten() as Set
+        // Defines licenses which are allowed. Update this list if you need to add
+        // a new license.
+        def allowedLicenses = [
+                "Apache License, Version 2.0",
+                "The Apache License, Version 2.0",
+                "The Apache Software License, Version 2.0",
+                "Apache 2.0",
+                "Apache-2.0",
+                "Apache 2",
+                "BSD",
+                "BSD 3-clause",
+                "3-Clause BSD License",
+                "The MIT License",
+                "MIT License",
+                "MIT license",
+                "BSD New license",
+                "GNU General Public License, version 2 (GPL2), with the classpath exception",
+                "CDDL + GPLv2 with classpath exception"
+        ] as Set
+        // Computes which licenses are in use but not permitted.
+        def notAllowed = Sets.difference(licenses, allowedLicenses)
+        if (!notAllowed.empty) {
+            throw new GradleException(
+                    """Licenses found which were not allowed: ${notAllowed}
 - Note that this script is not very smart. It doesn't attempt to do partial
 string comparison on the license name. It is possible that the new license is
 already allowed with a different spelling. If the new license is already allowed
 just add the new spelling to google-ads/build.gradle.
 - Otherwise you need to consider if we should accept this new license. For 
 Googlers, there is a company policy for this available internally.""")
+        }
     }
-  }
 }
 
 task copyLicenses(type: Copy) {
-  description = "Copies licenses from build directory to third_party"
-  dependsOn 'generateLicenses'
-  mustRunAfter 'createThirdPartyDirectory'
+    description = "Copies licenses from build directory to third_party"
+    dependsOn 'generateLicenses'
+    mustRunAfter 'createThirdPartyDirectory'
 
-  from new File(tasks.generateLicenses.xmlDestination.getAbsolutePath(), "dependency-license.json"),
-          new File(tasks.generateLicenses.xmlDestination.getAbsolutePath(), "dependency-license.html"),
-          new File(tasks.generateLicenses.xmlDestination.getAbsolutePath(), "dependency-license.xml")
-  into tasks.generateThirdPartyDirectory.thirdPartyDir
-  eachFile {
-    if (!path.contains("dependency-license")) {
-      throw new GradleException(
-          "Expecting files named dependency-license.*, found: " + path)
+    from new File(tasks.generateLicenses.xmlDestination.getAbsolutePath(), "dependency-license.json"),
+            new File(tasks.generateLicenses.xmlDestination.getAbsolutePath(), "dependency-license.html"),
+            new File(tasks.generateLicenses.xmlDestination.getAbsolutePath(), "dependency-license.xml")
+    into tasks.generateThirdPartyDirectory.thirdPartyDir
+    eachFile {
+        if (!path.contains("dependency-license")) {
+            throw new GradleException(
+                    "Expecting files named dependency-license.*, found: " + path)
+        }
+        path = path.replace("dependency-license", "LICENSES")
     }
-    path = path.replace("dependency-license", "LICENSES")
-  }
-  doLast {
-    // Fails the build if we didn't copy everything. Gradle will fail silently if
-    // it cannot copy one of the inputs which is dangerous when you're dealing
-    // with legal obligations.
-    //
-    // We're expecting exactly 3 input files, a JSON, XML and HTML version of
-    // the license report.
-    if (3 != inputs.sourceFiles.size()) {
-      throw new GradleException(
-          "Failed to locate files to copy from. Expected: 3 but was: "
-                  + inputs.sourceFiles.toList())
+    doLast {
+        // Fails the build if we didn't copy everything. Gradle will fail silently if
+        // it cannot copy one of the inputs which is dangerous when you're dealing
+        // with legal obligations.
+        //
+        // We're expecting exactly 3 input files, a JSON, XML and HTML version of
+        // the license report.
+        if (3 != inputs.sourceFiles.size()) {
+            throw new GradleException(
+                    "Failed to locate files to copy from. Expected: 3 but was: "
+                            + inputs.sourceFiles.toList())
+        }
     }
-  }
 }
 
 task copyThirdPartySources(type: Copy) {
-  description = "Copies the sources and binaries of dependencies to third_party"
-  mustRunAfter 'createThirdPartyDirectory'
+    description = "Copies the sources and binaries of dependencies to third_party"
+    mustRunAfter 'createThirdPartyDirectory'
 
-  // Requires that this task is always run since it's hard to detect when the
-  // dependencies have changed.
-  outputs.upToDateWhen { false }
+    // Requires that this task is always run since it's hard to detect when the
+    // dependencies have changed.
+    outputs.upToDateWhen { false }
 
-  def componentIds = configurations.runtimeClasspath
-      .incoming
-      .resolutionResult
-      .allDependencies
-      .stream()
-      // Avoids failing the build with cryptic errors when a bad dependency is
-      // added.
-      .filter { it.hasProperty("selected") != null}
-      // Avoids attempting to download sources for projects in the build.
-      .filter { !(it.selected.id instanceof ProjectComponentIdentifier) }
-      // Avoids attempting to download sources for Maven BOMs.
-      .filter { !it.getResolvedVariant().getDisplayName().equals("platform-runtime") }
-      .collect { it.selected.id } as Set
+    def componentIds = configurations.runtimeClasspath
+            .incoming
+            .resolutionResult
+            .allDependencies
+            .stream()
+    // Avoids failing the build with cryptic errors when a bad dependency is
+    // added.
+            .filter { it.hasProperty("selected") != null }
+    // Avoids attempting to download sources for projects in the build.
+            .filter { !(it.selected.id instanceof ProjectComponentIdentifier) }
+    // Avoids attempting to download sources for Maven BOMs.
+            .filter { !it.getResolvedVariant().getDisplayName().equals("platform-runtime") }
+            .collect { it.selected.id } as Set
 
-  def resolvedComponents = project.dependencies.createArtifactResolutionQuery()
-      .forComponents(componentIds)
-      .withArtifacts(JvmLibrary, SourcesArtifact)
-      .execute()
-      .resolvedComponents
+    def resolvedComponents = project.dependencies.createArtifactResolutionQuery()
+            .forComponents(componentIds)
+            .withArtifacts(JvmLibrary, SourcesArtifact)
+            .execute()
+            .resolvedComponents
 
-  // Allows a dependency to be excluded from having its sources cached.
-  // There should be a _very_ good reason for anything being in here.
-  final def exemptionEligible = [
-      // Google owned dummy module which doens't need any code.
-      "com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava"
-  ]
+    // Allows a dependency to be excluded from having its sources cached.
+    // There should be a _very_ good reason for anything being in here.
+    final def exemptionEligible = [
+            // Google owned dummy module which doens't need any code.
+            "com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava"
+    ]
 
-  // Grabs the source jars.
-  def files = []
-  for (componentId in componentIds) {
-    def resolvedComponentsForId = resolvedComponents.findAll { (it.id == componentId) }
-    if (resolvedComponentsForId.size() != 1) {
-      throw new GradleException("Failed to resolve component for ${componentId}. Got: " + resolvedComponentsForId)
+    // Grabs the source jars.
+    def files = []
+    for (componentId in componentIds) {
+        def resolvedComponentsForId = resolvedComponents.findAll { (it.id == componentId) }
+        if (resolvedComponentsForId.size() != 1) {
+            throw new GradleException("Failed to resolve component for ${componentId}. Got: " + resolvedComponentsForId)
+        }
+        def sources = resolvedComponentsForId[0].getArtifacts(SourcesArtifact)
+        if (sources.size() == 1) {
+            files.add(sources[0].file)
+        } else if (exemptionEligible.contains(componentId.toString())) {
+            logger.debug("Allowing exemption for ${componentId}")
+        } else {
+            throw new RuntimeException("Unable to resolve sources for ${componentId}. Got: ${sources}")
+        }
     }
-    def sources = resolvedComponentsForId[0].getArtifacts(SourcesArtifact)
-    if (sources.size() == 1) {
-      files.add(sources[0].file)
-    } else if (exemptionEligible.contains(componentId.toString())) {
-      logger.debug("Allowing exemption for ${componentId}")
-    } else {
-      throw new RuntimeException("Unable to resolve sources for ${componentId}. Got: ${sources}")
+    from files
+    into tasks.generateThirdPartyDirectory.thirdPartyDir
+    doLast {
+        logger.info('Resolved third party sources')
+        files.each {
+            logger.debug(" - ${it.path}")
+        }
     }
-  }
-  from files
-  into tasks.generateThirdPartyDirectory.thirdPartyDir
-  doLast {
-    logger.info('Resolved third party sources')
-    files.each {
-      logger.debug(" - ${it.path}")
-    }
-  }
 }
 
 // Copies the third party binaries to the third_party folder.
 task copyThirdPartyBinaries(type: Copy) {
-  from configurations.runtimeClasspath
-  into tasks.generateThirdPartyDirectory.thirdPartyDir
+    from configurations.runtimeClasspath
+    into tasks.generateThirdPartyDirectory.thirdPartyDir
 }
 
 // ------------------------------ Shadow jar -----------------------------------
 
 shadowJar {
-  description = "Generates a jar with dependencies"
+    description = "Generates a jar with dependencies"
 
-  // Removes the default -all classifier.
-  archiveClassifier = ''
+    // Removes the default -all classifier.
+    archiveClassifier = ''
 
-  // Updates the META-INF/services directory with the services from dependencies
-  mergeServiceFiles()
+    // Updates the META-INF/services directory with the services from dependencies
+    mergeServiceFiles()
 
-  // Includes the license report with the shadow jar.
-  dependsOn 'generateLicenses'
-  from tasks.generateLicenses.outputs
+    // Includes the license report with the shadow jar.
+    dependsOn 'generateLicenses'
+    from tasks.generateLicenses.outputs
 
-  finalizedBy 'testShadowJar'
+    finalizedBy 'testShadowJar'
 }
 
 task testShadowJar {
-  description = "Executes functional tests for shadow jar"
+    description = "Executes functional tests for shadow jar"
 
-  dependsOn shadowJar
-  dependsOn functionalTestClasses
+    dependsOn shadowJar
+    dependsOn functionalTestClasses
 
-  doLast {
-    javaexec {
-      // Runs the JUnit main method.
-      mainClass = "org.junit.runner.JUnitCore"
+    doLast {
+        javaexec {
+            // Runs the JUnit main method.
+            mainClass = "org.junit.runner.JUnitCore"
 
-      // Passes the class name of the test to run.
-      args "com.google.ads.googleads.lib.SmokeTest"
+            // Passes the class name of the test to run.
+            args "com.google.ads.googleads.lib.SmokeTest"
 
-      // Uses a special configuration to run the smoke tests. Allows us to
-      // replace the google-ads dependency with the shaded artifact so we can
-      // test it. Otherwise we'd just run end up running the smoke tests on
-      // the normal jar twice.
-      classpath = project.configurations.shadeTest +
-              // Uses the compiler output directly, rather than getting the
-              // dependencies from the configuration (since this would include
-              // the artifact we're trying to ignore).
-              files(sourceSets.functionalTest.output.classesDirs.files,
-                      shadowJar.outputs.files)
+            // Uses a special configuration to run the smoke tests. Allows us to
+            // replace the google-ads dependency with the shaded artifact so we can
+            // test it. Otherwise we'd just run end up running the smoke tests on
+            // the normal jar twice.
+            classpath = project.configurations.shadeTest +
+                    // Uses the compiler output directly, rather than getting the
+                    // dependencies from the configuration (since this would include
+                    // the artifact we're trying to ignore).
+                    files(sourceSets.functionalTest.output.classesDirs.files,
+                            shadowJar.outputs.files)
 
-      // Allows the smoke tests to pass unless we're publishing to sonatype.
-      ignoreExitValue = !gradle.taskGraph.hasTask("publishMavenPublicationToSonatypeRepository")
+            // Allows the smoke tests to pass unless we're publishing to sonatype.
+            ignoreExitValue = !project.properties.containsKey("release")
+        }
     }
-  }
 }
 
+// --------------------------- Publishing --------------------------------------
+
 publishing {
-  publications {
-    maven(MavenPublication) { publication ->
-      configurePom(publication,
-          "Google Ads API client library for Java - main library",
-          "Main library for the Google Ads API client library for Java")
-    }
-    shadow(MavenPublication) { publication ->
-      project.shadow.component(publication)
-      // Publishes the javadoc + sources with the shadowjar.
-      configurations.javadocElements.artifacts.each {
-        artifact it
-      }
-      configurations.sourcesElements.artifacts.each {
-        artifact it
-      }
+    publications {
+        maven(MavenPublication) { publication ->
+            configurePom(publication,
+                    "Google Ads API client library for Java - main library",
+                    "Main library for the Google Ads API client library for Java")
+        }
+        shadow(MavenPublication) { publication ->
+            project.shadow.component(publication)
+            // Publishes the javadoc + sources with the shadowjar.
+            configurations.javadocElements.artifacts.each {
+                artifact it
+            }
+            configurations.sourcesElements.artifacts.each {
+                artifact it
+            }
 
-      groupId = 'com.google.api-ads'
-      artifactId = 'google-ads-shadowjar'
+            groupId = 'com.google.api-ads'
+            artifactId = 'google-ads-shadowjar'
 
-      configurePom(publication,
-          "Google Ads API client library for java - shadow jar",
-          "Provides a jar with all dependencies")
+            configurePom(publication,
+                    "Google Ads API client library for java - shadow jar",
+                    "Provides a jar with all dependencies")
+        }
     }
-  }
 }
