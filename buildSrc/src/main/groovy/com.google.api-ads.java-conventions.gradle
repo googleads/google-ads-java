@@ -148,15 +148,15 @@ tasks.withType(JavaCompile) {
 }
 
 dependencies {
+  api 'com.google.api:gax'
+  api 'com.google.api:gax-grpc'
+  api 'com.google.protobuf:protobuf-java'
+  api 'io.grpc:grpc-stub'
+  api 'io.grpc:grpc-protobuf'
+  api 'com.google.auth:google-auth-library-oauth2-http'
   implementation platform('com.google.cloud:google-cloud-shared-dependencies:2.4.0')
   implementation 'com.google.guava:guava:30.0-android'
   implementation 'com.google.auto.service:auto-service:1.0-rc2'
-  implementation 'com.google.api:gax'
-  implementation 'com.google.api:gax-grpc'
-  implementation 'com.google.protobuf:protobuf-java'
-  implementation 'io.grpc:grpc-stub'
-  implementation 'io.grpc:grpc-protobuf'
-  implementation 'com.google.auth:google-auth-library-oauth2-http'
   annotationProcessor 'com.google.auto.service:auto-service:1.0-rc2'
   testImplementation 'junit:junit:4.13.1'
 }
