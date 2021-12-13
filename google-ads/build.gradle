@@ -24,7 +24,6 @@ plugins {
   id 'com.google.api-ads.java-conventions'
   id 'com.google.protobuf' version '0.8.15'
   id "com.github.hierynomus.license-report" version "0.15.0"
-  id 'com.github.johnrengelman.shadow' version '6.1.0'
 }
 
 description = 'Google Ads API client library for Java'
@@ -35,18 +34,6 @@ sourceSets {
       srcDir 'src/test/resources/protos/'
     }
   }
-  // Provides functional tests that can be bypassed (e.g. when running
-  // without an ads.properties file).
-  functionalTest {
-    java {
-      srcDir 'src/test/functional/java'
-    }
-    resources {
-      srcDir 'src/test/functional/resources'
-    }
-    compileClasspath += sourceSets.main.output
-    runtimeClasspath += sourceSets.main.output
-  }
 }
 sourceSets.test.java.srcDir new File(buildDir, 'generated/source/proto/test')
 
@@ -54,12 +41,6 @@ protobuf {
   protoc {
     artifact = 'com.google.protobuf:protoc:3.15.0-rc-1'
   }
-}
-
-configurations {
-  shadeTest
-  functionalTestImplementation.extendsFrom testImplementation
-  functionalTestRuntimeOnly.extendsFrom testRuntimeOnly
 }
 
 dependencies {
@@ -76,14 +57,8 @@ dependencies {
   testImplementation 'com.google.truth:truth:0.27'
   implementation 'com.google.auto.value:auto-value-annotations:1.7.3'
   testImplementation 'com.google.auto.value:auto-value-annotations:1.7.3'
-  shadeTest 'junit:junit:4.13.1'
 }
 
-task functionalTest(type: Test) {
-  description = "Runs functional tests"
-  testClassesDirs = sourceSets.functionalTest.output.classesDirs
-  classpath = sourceSets.functionalTest.runtimeClasspath
-}
 
 // --------------------- third_party directory generation ----------------------
 
@@ -269,78 +244,12 @@ task copyThirdPartyBinaries(type: Copy) {
   into tasks.generateThirdPartyDirectory.thirdPartyDir
 }
 
-// ------------------------------ Shadow jar -----------------------------------
-
-shadowJar {
-  description = "Generates a jar with dependencies"
-
-  // Removes the default -all classifier.
-  archiveClassifier = ''
-
-  // Updates the META-INF/services directory with the services from dependencies
-  mergeServiceFiles()
-
-  // Includes the license report with the shadow jar.
-  dependsOn 'generateLicenses'
-  from tasks.generateLicenses.outputs
-
-  finalizedBy 'testShadowJar'
-}
-
-task testShadowJar {
-  description = "Executes functional tests for shadow jar"
-
-  dependsOn shadowJar
-  dependsOn functionalTestClasses
-
-  doLast {
-    javaexec {
-      // Runs the JUnit main method.
-      mainClass = "org.junit.runner.JUnitCore"
-
-      // Passes the class name of the test to run.
-      args "com.google.ads.googleads.lib.SmokeTest"
-
-      // Uses a special configuration to run the smoke tests. Allows us to
-      // replace the google-ads dependency with the shaded artifact so we can
-      // test it. Otherwise we'd just run end up running the smoke tests on
-      // the normal jar twice.
-      classpath = project.configurations.shadeTest +
-              // Uses the compiler output directly, rather than getting the
-              // dependencies from the configuration (since this would include
-              // the artifact we're trying to ignore).
-              files(sourceSets.functionalTest.output.classesDirs.files,
-                      shadowJar.outputs.files)
-
-      // Allows the smoke tests to pass unless we're publishing to sonatype.
-      ignoreExitValue = !gradle.taskGraph.hasTask("publishMavenPublicationToSonatypeRepository")
-    }
-  }
-}
-
 publishing {
   publications {
     maven(MavenPublication) { publication ->
       configurePom(publication,
           "Google Ads API client library for Java - main library",
           "Main library for the Google Ads API client library for Java")
-    }
-    shadow(MavenPublication) { publication ->
-      project.shadow.component(publication)
-      // Publishes the javadoc + sources with the shadowjar.
-      configurations.javadocElements.artifacts.each {
-        artifact it
-      }
-      configurations.sourcesElements.artifacts.each {
-        artifact it
-      }
-
-      groupId = 'com.google.api-ads'
-      artifactId = 'google-ads-shadowjar'
-
-      configurePom(publication,
-          "Google Ads API client library for java - shadow jar",
-          "Provides a jar with all dependencies")
     }
   }
 }
