@@ -194,7 +194,7 @@ public class AddSmartCampaign {
     // [START add_smart_campaign_14]
     // Converts the location ID to unsigned long (potentially contains IDs with the most significant
     // bit set).
-    Long locationIdParsed = (locationId != null ? Long.parseUnsignedLong(locationId) : null);
+    Long locationIdParsed = (locationId == null ? null : Long.parseUnsignedLong(locationId));
     // [END add_smart_campaign_14]
 
     // [START add_smart_campaign_12]
