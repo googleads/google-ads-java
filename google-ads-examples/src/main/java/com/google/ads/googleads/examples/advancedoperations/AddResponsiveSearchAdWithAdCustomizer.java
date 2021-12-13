@@ -66,8 +66,10 @@ public class AddResponsiveSearchAdWithAdCustomizer {
     // Visit
     // https://developers.google.com/google-ads/api/docs/ads/customize-responsive-search-ads?hl=en#rules_and_limitations
     // for details.
+    //
+    // Specify the customizer attribute name here or the default specified below will be used.
     @Parameter(names = ArgumentNames.CUSTOMIZER_ATTRIBUTE_NAME)
-    private String customizerAttributeName;
+    private String customizerAttributeName = "Price";
   }
 
   public static void main(String[] args) {
@@ -79,9 +81,9 @@ public class AddResponsiveSearchAdWithAdCustomizer {
       // into the code here. See the parameter class definition above for descriptions.
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
       params.adGroupId = Long.parseLong("INSERT_AD_GROUP_ID_HERE");
-
-      // Optional: Specify a customizerAttributeName. The default value in this example is "Price".
-      params.customizerAttributeName = "Price";
+      // Optional: To use a different customizer attribute name from the default ("Price"),
+      // uncomment the line below and insert the desired customizer attribute name.
+      // params.customizerAttributeName = "INSERT_CUSTOMIZER_ATTRIBUTE_NAME_HERE";
     }
 
     GoogleAdsClient googleAdsClient = null;
