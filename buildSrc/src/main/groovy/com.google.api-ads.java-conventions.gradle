@@ -60,8 +60,6 @@ publishing {
   publications {
     maven(MavenPublication) {
       from(components.java)
-      suppressPomMetadataWarningsFor('testFixturesApiElements')
-      suppressPomMetadataWarningsFor('testFixturesRuntimeElements')
     }
   }
   repositories {
@@ -77,6 +75,9 @@ publishing {
     }
   }
 }
+
+components.java.withVariantsFromConfiguration(configurations.testFixturesApiElements) { skip() }
+components.java.withVariantsFromConfiguration(configurations.testFixturesRuntimeElements) { skip() }
 
 // Provide a helpful error message for missing sonatype credentials.
 tasks.findAll {
