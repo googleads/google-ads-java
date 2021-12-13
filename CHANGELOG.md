@@ -1,3 +1,8 @@
+16.0.2 - 2021-12-13
+-------------------
+- Fix #525 shadow jar replaces main jar.
+- Correctly classify api/implementation dependencies to expose the correct developer surface (#536).
+
 16.0.1 - 2021-11-30
 -------------------
 - Fix #507 compatibility issue with buck.build.
