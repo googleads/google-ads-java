@@ -41,7 +41,7 @@ import org.threeten.bp.Duration;
  *
  * <p>Only depends on a basic configuration file with devtoken, OAuth etc.
  *
- * <p>Retrieves all accessible customers and iterates through all their campaigns.
+ * <p>Retrieves all accessible customers and issues a search request for each customer.
  */
 @RunWith(JUnit4.class)
 public class SmokeTest {
@@ -49,8 +49,18 @@ public class SmokeTest {
   @Rule public Timeout timeout = new Timeout(20_000, TimeUnit.MILLISECONDS);
 
   @Test
-  public void ensureCanReadAllAvailableCustomersCampaigns() throws IOException {
-    GoogleAdsClient client = GoogleAdsClient.newBuilder().fromPropertiesFile().build();
+  public void ensureCanReadAllAvailableCustomers() throws IOException {
+    GoogleAdsClient client =
+        GoogleAdsClient.newBuilder()
+            .fromPropertiesFile()
+            // Sets the login-customer-id to null. If this is set in the properties file, then
+            // attempts to issue requests against accessible accounts in a different manager account
+            // hierarchy will fail. With login-customer-id not set, the Google Ads API will set it
+            // to the customer ID in each search request, which will result in a successful request
+            // because this test only queries customers who are directly accessible with the
+            // provided credentials.
+            .setLoginCustomerId(null)
+            .build();
     List<String> accessibleCustomerIds = getAvailableCustomerIds(client);
     if (accessibleCustomerIds.isEmpty()) {
       fail(
@@ -58,7 +68,7 @@ public class SmokeTest {
               + " provide a refresh token which has access to customers in order to run functional"
               + " tests");
     }
-    fetchAllCampaigns(client, accessibleCustomerIds);
+    fetchAllCustomers(client, accessibleCustomerIds);
   }
 
   private static List<String> getAvailableCustomerIds(GoogleAdsClient client) {
@@ -76,22 +86,22 @@ public class SmokeTest {
     }
   }
 
-  private static void fetchAllCampaigns(
+  /** Fetches the {@code Customer} object for each accessible customer. */
+  private static void fetchAllCustomers(
       GoogleAdsClient client, List<String> accessibleCustomerIds) {
-    int numCampaigns = 0;
+    int numCustomers = 0;
     try (GoogleAdsServiceClient googleAdsServiceClient =
         client.getLatestVersion().createGoogleAdsServiceClient()) {
       for (String customerId : accessibleCustomerIds) {
         SearchPagedResponse response =
             googleAdsServiceClient.search(
                 customerId,
-                "SELECT campaign.id, campaign.status, campaign.start_date "
-                    + "FROM campaign "
-                    + "WHERE campaign.status != 'REMOVED'");
-        numCampaigns += StreamSupport.stream(response.iterateAll().spliterator(), false).count();
+                "SELECT customer.id, customer.manager, customer.currency_code,"
+                    + " customer.descriptive_name FROM customer");
+        numCustomers += StreamSupport.stream(response.iterateAll().spliterator(), false).count();
       }
     }
-    System.out.println("Retrieved " + numCampaigns + " campaigns");
-    assertTrue("Expected to read at least one campaign for smoke test.", numCampaigns > 0);
+    System.out.println("Retrieved " + numCustomers + " customers");
+    assertTrue("Expected to read at least one customer for smoke test.", numCustomers > 0);
   }
 }

@@ -21,6 +21,7 @@ rootProject.name = 'google-ads-parent'
 
 include ':google-ads-codegen'
 include ':google-ads'
+include ':google-ads-shadowjar'
 include ':google-ads-stubs-lib'
 
 // Enables the examples project only if we're not deploying to Sonatype.
