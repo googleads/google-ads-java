@@ -120,9 +120,13 @@ public class AddPerformanceMaxRetailCampaign {
 
     @Parameter(
         names = ArgumentNames.COUNTRY_CODE,
-        required = true,
         description = "The sales country of products to include in the campaign.")
-    private String countryCode;
+    private String countryCode = "US";
+
+    @Parameter(
+        names = ArgumentNames.FINAL_URL,
+        description = "The final URL for the asset group of the campaign.")
+    private String finalUrl = "http://www.example.com";
   }
 
   public static void main(String[] args) throws IOException {
@@ -133,7 +137,10 @@ public class AddPerformanceMaxRetailCampaign {
       // into the code here. See the parameter class definition above for descriptions.
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
       params.merchantCenterAccountId = Long.parseLong("INSERT_MERCHANT_CENTER_ACCOUNT_ID_HERE");
-      params.countryCode = "INSERT_COUNTRY_CODE_HERE";
+
+      // Optionally set custom values for the parameters below.
+      // params.countryCode = "INSERT_COUNTRY_CODE_HERE";
+      // params.finalUrl = "INSERT_FINAL_URL_HERE";
     }
 
     GoogleAdsClient googleAdsClient = null;
@@ -154,7 +161,8 @@ public class AddPerformanceMaxRetailCampaign {
               googleAdsClient,
               params.customerId,
               params.merchantCenterAccountId,
-              params.countryCode);
+              params.countryCode,
+              params.finalUrl);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -179,12 +187,14 @@ public class AddPerformanceMaxRetailCampaign {
    * @param customerId the client customer ID.
    * @param merchantCenterAccountId the Merchant Center account ID.
    * @param countryCode sales country of products to include in the campaign.
+   * @param finalUrl final URL for the asset group of the campaign.
    */
   private void runExample(
       GoogleAdsClient googleAdsClient,
       long customerId,
       long merchantCenterAccountId,
-      String countryCode)
+      String countryCode,
+      String finalUrl)
       throws IOException {
     // [START add_performance_max_retail_campaign_1]
     // This campaign will override the customer conversion goals. For more information see
@@ -221,7 +231,7 @@ public class AddPerformanceMaxRetailCampaign {
     mutateOperations.addAll(createCampaignCriterionOperations(customerId));
     mutateOperations.addAll(
         createAssetGroupOperations(
-            customerId, headlineAssetResourceNames, descriptionAssetResourceNames));
+            customerId, headlineAssetResourceNames, descriptionAssetResourceNames, finalUrl));
     mutateOperations.addAll(createConversionGoalOperations(customerId, customerConversionGoals));
 
     try (GoogleAdsServiceClient googleAdsServiceClient =
@@ -279,7 +289,6 @@ public class AddPerformanceMaxRetailCampaign {
             // For more information on Maximize Conversion Value, see the support
             // article: http://support.google.com/google-ads/answer/7684216.
             // A targetRoas of 3.5 corresponds to a 350% return on ad spend.
-            .setBiddingStrategyType(BiddingStrategyType.MAXIMIZE_CONVERSION_VALUE)
             .setMaximizeConversionValue(
                 MaximizeConversionValue.newBuilder().setTargetRoas(3.5).build())
             // Sets the shopping settings.
@@ -406,7 +415,8 @@ public class AddPerformanceMaxRetailCampaign {
   private List<MutateOperation> createAssetGroupOperations(
       long customerId,
       List<String> headlineAssetResourceNames,
-      List<String> descriptionAssetResourceNames)
+      List<String> descriptionAssetResourceNames,
+      String finalUrl)
       throws IOException {
     List<MutateOperation> mutateOperations = new ArrayList<>();
     String campaignResourceName =
@@ -417,8 +427,8 @@ public class AddPerformanceMaxRetailCampaign {
         AssetGroup.newBuilder()
             .setName("Performance Max retail asset group #" + getPrintableDateTime())
             .setCampaign(campaignResourceName)
-            .addFinalUrls("http://www.example.com")
-            .addFinalMobileUrls("http://www.example.com")
+            .addFinalUrls(finalUrl)
+            .addFinalMobileUrls(finalUrl)
             .setStatus(AssetGroupStatus.PAUSED)
             .setResourceName(assetGroupResourceName)
             .build();
@@ -538,7 +548,7 @@ public class AddPerformanceMaxRetailCampaign {
   // [END add_performance_max_retail_campaign_7]
 
   // [START add_performance_max_retail_campaign_8]
-  /** Creates a list of MutateOperations that create a new linked text asset. */
+  /** Creates a list of MutateOperations that create a new linked image asset. */
   List<MutateOperation> createAndLinkImageAsset(
       long customerId, String url, AssetFieldType assetFieldType) throws IOException {
     List<MutateOperation> mutateOperations = new ArrayList<>();

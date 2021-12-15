@@ -74,7 +74,8 @@ import org.joda.time.DateTime;
  * https://developers.google.com/google-ads/api/docs/conversions/overview#conversion_actions
  *
  * <p>This example uses the default customer conversion goals. For an example of setting
- * campaign-specific conversion goals, see {@link AddPerformanceMaxCampaign}.
+ * campaign-specific conversion goals, see {@link
+ * com.google.ads.googleads.examples.shoppingads.AddPerformanceMaxRetailCampaign}.
  */
 public class AddPerformanceMaxCampaign {
 
@@ -230,7 +231,6 @@ public class AddPerformanceMaxCampaign {
             // For more information on Maximize Conversion Value, see the support
             // article: http://support.google.com/google-ads/answer/7684216.
             // A targetRoas of 3.5 corresponds to a 350% return on ad spend.
-            .setBiddingStrategyType(BiddingStrategyType.MAXIMIZE_CONVERSION_VALUE)
             .setMaximizeConversionValue(
                 MaximizeConversionValue.newBuilder().setTargetRoas(3.5).build())
             // Sets the Final URL expansion opt out. This flag is specific to
@@ -483,7 +483,7 @@ public class AddPerformanceMaxCampaign {
   // [END add_performance_max_campaign_7]
 
   // [START add_performance_max_campaign_8]
-  /** Creates a list of MutateOperations that create a new linked text asset. */
+  /** Creates a list of MutateOperations that create a new linked image asset. */
   List<MutateOperation> createAndLinkImageAsset(
       long customerId, String url, AssetFieldType assetFieldType) throws IOException {
     List<MutateOperation> mutateOperations = new ArrayList<>();
