@@ -29,7 +29,6 @@ import com.google.ads.googleads.v9.common.TextAsset;
 import com.google.ads.googleads.v9.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
 import com.google.ads.googleads.v9.enums.AssetFieldTypeEnum.AssetFieldType;
 import com.google.ads.googleads.v9.enums.AssetGroupStatusEnum.AssetGroupStatus;
-import com.google.ads.googleads.v9.enums.BiddingStrategyTypeEnum.BiddingStrategyType;
 import com.google.ads.googleads.v9.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
 import com.google.ads.googleads.v9.enums.CampaignStatusEnum.CampaignStatus;
 import com.google.ads.googleads.v9.enums.ConversionActionCategoryEnum.ConversionActionCategory;
