@@ -2,6 +2,7 @@
 -------------------
 - Fix #525 shadow jar replaces main jar.
 - Correctly classify api/implementation dependencies to expose the correct developer surface (#536).
+- Upgraded to log4j 2.16.0 in examples.
 
 16.0.1 - 2021-11-30
 -------------------
