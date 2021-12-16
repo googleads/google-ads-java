@@ -200,10 +200,10 @@ public class UploadConversionWithIdentifiers {
       // Prints the result.
       ClickConversionResult result = response.getResults(0);
       // Only prints valid results.
-      if (result.hasGclid()) {
+      if (result.hasConversionDateTime()) {
         System.out.printf(
-            "Uploaded conversion that occurred at '%s' from Google Click ID '%s' to '%s'.%n",
-            result.getConversionDateTime(), result.getGclid(), result.getConversionAction());
+            "Uploaded conversion that occurred at '%s' to '%s'.%n",
+            result.getConversionDateTime(), result.getConversionAction());
       }
     }
   }
