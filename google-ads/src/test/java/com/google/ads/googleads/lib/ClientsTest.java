@@ -16,8 +16,8 @@ package com.google.ads.googleads.lib;
 
 import static org.junit.Assert.assertTrue;
 
-import com.google.ads.googleads.lib.catalog.annotation.ServiceClientDescriptor;
-import com.google.ads.googleads.annotations.api.VersionDescriptor;
+import com.google.ads.googleads.lib.stubs.annotations.ServiceClientDescriptor;
+import com.google.ads.googleads.lib.stubs.annotations.VersionDescriptor;
 import java.lang.reflect.Method;
 import org.junit.Test;
 import org.junit.runner.RunWith;

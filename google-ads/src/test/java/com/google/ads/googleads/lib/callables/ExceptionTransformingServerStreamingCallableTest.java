@@ -17,6 +17,7 @@ package com.google.ads.googleads.lib.callables;
 import static org.mockito.Matchers.argThat;
 import static org.mockito.Mockito.verify;
 
+import com.google.ads.googleads.lib.stubs.callables.ExceptionTransformingServerStreamingCallable;
 import com.google.api.gax.grpc.GrpcCallContext;
 import com.google.api.gax.rpc.ApiCallContext;
 import com.google.api.gax.rpc.ResponseObserver;

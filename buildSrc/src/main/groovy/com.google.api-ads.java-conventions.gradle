@@ -25,6 +25,7 @@ import java.util.regex.Matcher
 plugins {
   id 'java-library'
   id 'maven-publish'
+  id 'java-test-fixtures'
   id 'signing'
 }
 
@@ -75,6 +76,9 @@ publishing {
     }
   }
 }
+
+components.java.withVariantsFromConfiguration(configurations.testFixturesApiElements) { skip() }
+components.java.withVariantsFromConfiguration(configurations.testFixturesRuntimeElements) { skip() }
 
 // Provide a helpful error message for missing sonatype credentials.
 tasks.findAll {
@@ -154,9 +158,10 @@ dependencies {
   api 'io.grpc:grpc-stub'
   api 'io.grpc:grpc-protobuf'
   api 'com.google.auth:google-auth-library-oauth2-http'
-  implementation platform('com.google.cloud:google-cloud-shared-dependencies:2.4.0')
+  api platform('com.google.cloud:google-cloud-shared-dependencies:2.4.0')
   implementation 'com.google.guava:guava:30.0-android'
   implementation 'com.google.auto.service:auto-service:1.0-rc2'
+  implementation 'javax.annotation:javax.annotation-api'
   annotationProcessor 'com.google.auto.service:auto-service:1.0-rc2'
   testImplementation 'junit:junit:4.13.1'
 }

@@ -19,9 +19,10 @@
 
 rootProject.name = 'google-ads-parent'
 
-include ':google-ads-annotation-processing'
+include ':google-ads-codegen'
 include ':google-ads'
 include ':google-ads-shadowjar'
+include ':google-ads-stubs-lib'
 
 // Enables the examples project only if we're not deploying to Sonatype.
 if (!startParameter.projectProperties.containsKey("release")) {
@@ -29,3 +30,8 @@ if (!startParameter.projectProperties.containsKey("release")) {
 	include ':google-ads-migration-examples'
 }
 
+// Keep the stubs modules at the end of this file. The stubs generator will
+// append new modules here as required. There should *not* be a newline at EOF.
+include ':google-ads-stubs-v7'
+include ':google-ads-stubs-v8'
+include ':google-ads-stubs-v9'

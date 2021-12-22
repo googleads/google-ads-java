@@ -14,7 +14,7 @@
 
 package com.google.ads.googleads.lib.logging;
 
-import com.google.ads.googleads.lib.BaseGoogleAdsException.Factory;
+import com.google.ads.googleads.lib.stubs.exceptions.BaseGoogleAdsException.Factory;
 import com.google.ads.googleads.lib.catalog.ApiCatalog;
 import com.google.ads.googleads.lib.catalog.Version;
 import com.google.auto.value.AutoValue;
