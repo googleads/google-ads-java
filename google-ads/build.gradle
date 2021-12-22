@@ -40,6 +40,11 @@ sourceSets {
             srcDir new File(project.parent.findProject("google-ads-codegen").buildDir, "generated/catalog")
         }
     }
+    test {
+        proto {
+            srcDir 'src/test/resources/protos/'
+        }
+    }
 }
 sourceSets.test.java.srcDir new File(buildDir, 'generated/source/proto/test')
 
