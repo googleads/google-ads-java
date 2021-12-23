@@ -39,7 +39,12 @@ import com.google.api.client.util.Key
 import com.google.api.client.xml.XmlNamespaceDictionary
 import com.google.api.client.xml.XmlObjectParser
 
-/** Defines data binding class for sending HTTP basic auth headers. */
+import java.util.concurrent.ConcurrentHashMap
+
+// ---------------- Google HTTP client data binding classes --------------------
+// Uses the powerful data-binding in Google HTTP client to avoid handling XML.
+
+/** Defines data binding class for HTTP basic auth headers. */
 class AuthHeaders extends HttpHeaders {
     @Key("Authorization")
     public String authorization
@@ -68,52 +73,99 @@ class AuthHeaders extends HttpHeaders {
  *     </promoteRequest>
  * </pre>
  */
-class PromoteRequest {
-    @Key
-    public PromoteRequestData data
-
-    PromoteRequest() {}
-
-    PromoteRequest(String description) {
-        data = new PromoteRequestData(description)
+class PromoteRequestXmlContent extends XmlHttpContent {
+    PromoteRequestXmlContent(namespaceDictionary, description) {
+        super(namespaceDictionary,
+                "promoteRequest",
+                new PromoteRequest(description))
     }
 
-    static class PromoteRequestData {
-        /** Appears next to the staging repo in the Nexus UI. */
+    /** Defines top-level payload of PromoteRequest. */
+    static class PromoteRequest {
         @Key
-        public String description
+        public PromoteRequestData data
 
-        /** Returned by Nexus. This is the newly created repository ID. */
-        @Key
-        public String stagedRepositoryId
+        PromoteRequest() {}
 
-        PromoteRequestData() {}
+        PromoteRequest(String description) {
+            data = new PromoteRequestData(description)
+        }
 
-        PromoteRequestData(String description) {
-            this.description = description
+        static class PromoteRequestData {
+            /** Appears next to the staging repo in the Nexus UI. */
+            @Key
+            public String description
+
+            /** Returned by Nexus. This is the newly created repository ID. */
+            @Key
+            public String stagedRepositoryId
+
+            PromoteRequestData() {}
+
+            PromoteRequestData(String description) {
+                this.description = description
+            }
         }
     }
 }
-
 
 // Global variables for the created repository URL are stored in the root
 // project. It isn't declared in SonatypeClient, since Gradle may reuse the
 // VM instance (and its classloader) and so would reuse the previous
 // staging repository ID.
-project.rootProject.ext.NEXUS_CLIENT_LOCK = new Object();
-project.rootProject.ext.STAGING_REPO_URL = null
+//project.rootProject.ext.STAGING_REPO_URL = null
 
-/** Defines a class which implements a client for Sonatype Nexus. */
+// -------------------------- Nexus client implementation ----------------------
+
+
+/**
+ * Implements a client for Sonatype Nexus.
+ *
+ * Pass --info to gradle to see the HTTP traffic.
+ * Logging of raw HTTP is handled by the the HTTP client (google-java-http-client) which uses JUL.
+ *
+ * This implementation is based on:
+ * https://support.sonatype.com/hc/en-us/articles/213465868-Uploading-to-a-Staging-Repository-via
+ * -REST-API
+ *
+ * Note that there are two versions of Nexus: v2 and v3. The OSS instance
+ * (which hosts our project) uses v2.
+ *
+ * The Nexus docs are here: https://help.sonatype.com/repomanager2
+ * The REST docs are here: https://repository.sonatype
+ * .org/nexus-restlet1x-plugin/default/docs/index.html
+ * Warning: the docs are very patchy!
+ */
 class SonatypeClient {
 
     private static final logger = org.slf4j.LoggerFactory.getLogger(SonatypeClient.class)
-    private static final AUTO_STAGING_URL = "https://oss.sonatype.org/service/local/staging/deploy/maven2"
-    private static final DEPLOY_BY_REPO_URL_STEM = "https://oss.sonatype.org/service/local/staging/deployByRepositoryId/"
-    private static final STAGING_START_URL = "https://oss.sonatype.org/service/local/staging/profiles/171a30b2ab63be/start"
+    private static final AUTO_STAGING_URL = "https://oss.sonatype" +
+            ".org/service/local/staging/deploy/maven2"
+    private static final DEPLOY_BY_REPO_URL_STEM = "https://oss.sonatype" +
+            ".org/service/local/staging/deployByRepositoryId/"
+    // Uses the Staging Profile on Nexus that Sonatype folks created.
+    // Hard-codes the ID since there is only one. Retrieve this with:
+    // curl -X GET \
+    //   --header 'Authorization: Basic <base64 encoded user:pass>' \
+    //   'https://oss.sonatype.org/service/local/staging/profiles'
+    // Needs to be updated if we move to a new Nexus instance.
+    private static final STAGING_START_URL = new GenericUrl("https://oss.sonatype" +
+            ".org/service/local/staging/profiles/171a30b2ab63be/start")
+    private static final NAMESPACE_DICTIONARY = new XmlNamespaceDictionary().set("", "")
+    /**
+     * Global storage of URLs for a rootProject. Gradle may reuse the demon
+     * (hence its classloader) so we cannot just store this in a simple static
+     * field.
+     */
+    private static final STAGING_URL_CACHE = new ConcurrentHashMap();
     private final project
+    private final authHeaders
 
     SonatypeClient(project) {
         this.project = project
+        this.authHeaders = new AuthHeaders(
+                project.properties.get("sonatypeUser"),
+                project.properties.get("sonatypePassword"))
     }
 
     /**
@@ -121,11 +173,11 @@ class SonatypeClient {
      *
      * <p/>
      *
-     * Attempts to create a named staging repository to avoid using Nexus
-     * auto-staging if possible. Based on the observation that auto-staging's
-     * heuristic for which artifacts belong in the same repository is often
-     * confused by Gradle's publish mechanism, which appears to create a new TCP
-     * connection for each artifact.
+     * Attempts to create a named staging repository to avoid using Nexus auto-staging if
+     * possible. Based on the observation that auto-staging's heuristic for which artifacts
+     * belong in the same repository is often confused by Gradle's publish mechanism, which
+     * appears to create a new TCP connection for each artifact. This also appears to be flaky
+     * based on the sonatype server load.
      */
     def discoverSonatypeRepositoryUrl() {
         // Catches any unexpected exceptions.
@@ -137,96 +189,60 @@ class SonatypeClient {
             // Ensures that we don't create spurious repositories if we're not
             // running a release.
             if (project.properties.containsKey("release")) {
-                // Avoids creating the staging repository more than once.
-                // Implements double checked locking to initialize STAGING_REPO_URL.
-                // Initializes the URL on the first execution.
-                if (project.rootProject.ext.STAGING_REPO_URL == null) {
-                    synchronized (project.rootProject.ext.NEXUS_CLIENT_LOCK) {
-                        return project.rootProject.ext.STAGING_REPO_URL = createStagingRepository()
-                    }
-                } else {
-                    // On subsequent executions we can use the initialized URL.
-                    return project.rootProject.ext.STAGING_REPO_URL
-                }
+                return STAGING_URL_CACHE.computeIfAbsent(
+                        project.rootProject, { project -> this.createStagingRepository() })
             }
         } catch (Exception ex) {
             // Handles unexpected exception by falling back to auto-staging.
             // Tells the user they should look into this, but it's not blocking
             // for their release (assuming Nexus and Gradle get it right without
             // babysitting).
-            logger.warn("BUG BUG BUG! Failed to create new staging repo. "
-                    + "I'll attempt to deploy with auto-staging. "
-                    + "The release *may* complete as planned. "
-                    + "You can proceed by making sure that all release artifacts are present in the same staging repository. "
-                    + "Please investigate why staging failed to create when able.", ex)
+            logger.warn("BUG BUG BUG! Failed to create new staging repo. I'll attempt to deploy " +
+                    "with auto-staging. The release *may* complete as planned. You can proceed by" +
+                    " making sure that all release artifacts are present in the same staging " +
+                    "repository. Please investigate why staging failed to create.", ex)
             return AUTO_STAGING_URL
         }
     }
 
     /** Creates a staging repository on Sonatype. */
     private def createStagingRepository() {
-        // Implements the REST call to create a staging repository.
-        // Note that there are two versions of Nexus: v2 and v3. The OSS instance
-        // (which hosts our project) uses v2.
-
-        // The Nexus docs are here: https://help.sonatype.com/repomanager2
-        // The REST docs are here: https://repository.sonatype.org/nexus-restlet1x-plugin/default/docs/index.html
-        // Warning: the docs are very patchy!
-        // This implementation is based on:
-        //   https://support.sonatype.com/hc/en-us/articles/213465868-Uploading-to-a-Staging-Repository-via-REST-API
-
-        // Configures Google HTTP client.
-        // Logging of raw HTTP is handled by the client. Enable it by setting
-        //   -Djava.util.logging.config.file=$(readlink -f logging.properties)
-        // Create logging.properties with the contents:
-        //   handlers=java.util.logging.ConsoleHandler
-        //   java.util.logging.ConsoleHandler.level=ALL
-        //   com.google.api.client.http.level=ALL
-        def namespaceDictionary = new XmlNamespaceDictionary().set("", "")
+        logger.info("Creating staging repository")
         def requestFactory = new NetHttpTransport()
                 .createRequestFactory(new HttpRequestInitializer() {
                     @Override
                     void initialize(HttpRequest request) throws IOException {
-                        request.setParser(new XmlObjectParser(namespaceDictionary))
+                        request.setParser(new XmlObjectParser(NAMESPACE_DICTIONARY))
                     }
                 })
-        def authHeaders = new AuthHeaders(
-                project.properties.get("sonatypeUser"),
-                project.properties.get("sonatypePassword"))
-        // Uses the Staging Profile on Nexus that Sonatype folks created.
-        // Hard-codes the ID since there is only one. Retrieve this with:
-        // curl -X GET \
-        //   --header 'Authorization: Basic <base64 encoded user:pass>' \
-        //   'https://oss.sonatype.org/service/local/staging/profiles'
-        // Needs to be updated if we move to a new Nexus instance.
-        def startStagingUrl = new GenericUrl(STAGING_START_URL)
-        // Creates and executes a request to add a new staging repository.
-        def content = new XmlHttpContent(
-                namespaceDictionary,
-                "promoteRequest",
-                new PromoteRequest(
-                        "Release of Google Ads API v${project.version} " +
-                                "on ${InetAddress.getLocalHost().getCanonicalHostName()} " +
-                                "${new Date()}"))
-        logger.info("Creating staging repository")
+        def content = new PromoteRequestXmlContent(NAMESPACE_DICTIONARY, generateStagingRepoName())
         def response = requestFactory
-                .buildPostRequest(startStagingUrl, content)
+                .buildPostRequest(STAGING_START_URL, content)
                 .setHeaders(authHeaders)
                 .execute()
         // Checks the response and returns the repository URL, falling back to
         // auto-staging if something went wrong.
         if (response.getStatusCode() == 201) { // HTTP 201 = Created
-            def parsed = response.parseAs(PromoteRequest.class)
+            def parsed = response.parseAs(PromoteRequestXmlContent.PromoteRequest.class)
             logger.info("Staging repository created with ID ${parsed.data.stagedRepositoryId}")
             return DEPLOY_BY_REPO_URL_STEM + parsed.data.stagedRepositoryId
         } else {
-            logger.info("Unable to create staging repository, falling back to auto-staging")
+            logger.warn("Nexus failed to create staging repo: " +
+                    "${response.getStatusCode()}: ${response.getStatusMessage()}")
             return AUTO_STAGING_URL
         }
     }
+
+    private def generateStagingRepoName() {
+        return "Release of Google Ads API v${project.version} " +
+                "on ${InetAddress.getLocalHost().getCanonicalHostName()} " +
+                "${new Date()}"
+    }
 }
 
-// Configures gradle's native publishing now that debacle is done.
+// ----------------------- Gradle project configuration ------------------------
+
+// Configures gradle's native publishing now that debacle is over.
 publishing {
     publications {
         maven(MavenPublication) {
