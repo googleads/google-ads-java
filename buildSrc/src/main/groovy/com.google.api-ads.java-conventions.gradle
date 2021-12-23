@@ -24,7 +24,7 @@ import java.util.regex.Matcher
 
 plugins {
   id 'java-library'
-  id 'maven-publish'
+  id 'com.google.api-ads.nexus-publish'
   id 'java-test-fixtures'
   id 'signing'
 }
@@ -55,26 +55,6 @@ jar {
 
 javadoc {
   options.addStringOption('Xdoclint:none', '-quiet')
-}
-
-publishing {
-  publications {
-    maven(MavenPublication) {
-      from(components.java)
-    }
-  }
-  repositories {
-    maven {
-      url 'https://oss.sonatype.org/service/local/staging/deploy/maven2'
-      name = "sonatype"
-      credentials {
-        // Avoids storing Sonatype credentials in plain-text. Specify these on
-        // the command line: -PsonatypeUser=foo
-        username project.properties.get("sonatypeUser")
-        password project.properties.get("sonatypePassword")
-      }
-    }
-  }
 }
 
 components.java.withVariantsFromConfiguration(configurations.testFixturesApiElements) { skip() }

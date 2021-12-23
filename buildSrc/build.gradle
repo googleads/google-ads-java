@@ -24,3 +24,8 @@ plugins {
 repositories {
     gradlePluginPortal()
 }
+
+dependencies {
+    implementation "com.google.http-client:google-http-client:1.40.1"
+    implementation "com.google.http-client:google-http-client-xml:1.40.1"
+}
