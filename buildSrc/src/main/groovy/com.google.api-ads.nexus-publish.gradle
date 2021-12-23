@@ -134,7 +134,8 @@ class SonatypeClient {
         // goes awry.
         try {
             // Guards the creation of a staging repo on the release property.
-            // Ensures that we don't create spurious repositories.
+            // Ensures that we don't create spurious repositories if we're not
+            // running a release.
             if (project.properties.containsKey("release")) {
                 // Avoids creating the staging repository more than once.
                 // Implements double checked locking to initialize STAGING_REPO_URL.
@@ -165,12 +166,14 @@ class SonatypeClient {
     /** Creates a staging repository on Sonatype. */
     private def createStagingRepository() {
         // Implements the REST call to create a staging repository.
-        // See https://support.sonatype.com/hc/en-us/articles/213465868-Uploading-to-a-Staging-Repository-via-REST-API
-        // Note that there are two versions of Nexus v2 and v3 and the OSS instance
-        // uses v2.
+        // Note that there are two versions of Nexus: v2 and v3. The OSS instance
+        // (which hosts our project) uses v2.
+
         // The Nexus docs are here: https://help.sonatype.com/repomanager2
         // The REST docs are here: https://repository.sonatype.org/nexus-restlet1x-plugin/default/docs/index.html
         // Warning: the docs are very patchy!
+        // This implementation is based on:
+        //   https://support.sonatype.com/hc/en-us/articles/213465868-Uploading-to-a-Staging-Repository-via-REST-API
 
         // Configures Google HTTP client.
         // Logging of raw HTTP is handled by the client. Enable it by setting
