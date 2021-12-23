@@ -128,10 +128,15 @@ class SonatypeClient {
      * connection for each artifact.
      */
     def createSonatypeRepositoryUrl() {
-        // Avoids creating the staging repository more than once.
+        // Catches any unexpected exceptions.
+        // In theory nothing should throw and we should gracefully fall back to
+        // auto-staging. Catch-all here ensures that happens even if something
+        // goes awry.
         try {
             // Guards the creation of a staging repo on the release property.
+            // Ensures that we don't create spurious repositories.
             if (project.properties.containsKey("release")) {
+                // Avoids creating the staging repository more than once.
                 // Implements double checked locking to initialize STAGING_REPO_URL.
                 // Initializes the URL on the first execution.
                 if (project.rootProject.ext.STAGING_REPO_URL == null) {
@@ -144,7 +149,10 @@ class SonatypeClient {
                 }
             }
         } catch (Exception ex) {
-            logger.warn("Failed to create new staging repo, falling back to auto-staging")
+            logger.warn("BUG BUG BUG! Failed to create new staging repo. "
+                    + "I'll attempt to deploy with auto-staging. "
+                    + "The release *may* complete as planned. "
+                    + "Please investigate when able.", ex)
             return AUTO_STAGING_URL
         }
     }
