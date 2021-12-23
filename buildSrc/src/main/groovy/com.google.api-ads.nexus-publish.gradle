@@ -127,7 +127,7 @@ class SonatypeClient {
      * confused by Gradle's publish mechanism, which appears to create a new TCP
      * connection for each artifact.
      */
-    def createSonatypeRepositoryUrl() {
+    def discoverSonatypeRepositoryUrl() {
         // Catches any unexpected exceptions.
         // In theory nothing should throw and we should gracefully fall back to
         // auto-staging. Catch-all here ensures that happens even if something
@@ -149,10 +149,15 @@ class SonatypeClient {
                 }
             }
         } catch (Exception ex) {
+            // Handles unexpected exception by falling back to auto-staging.
+            // Tells the user they should look into this, but it's not blocking
+            // for their release (assuming Nexus and Gradle get it right without
+            // babysitting).
             logger.warn("BUG BUG BUG! Failed to create new staging repo. "
                     + "I'll attempt to deploy with auto-staging. "
                     + "The release *may* complete as planned. "
-                    + "Please investigate when able.", ex)
+                    + "You can proceed by making sure that all release artifacts are present in the same staging repository. "
+                    + "Please investigate why staging failed to create when able.", ex)
             return AUTO_STAGING_URL
         }
     }
@@ -227,7 +232,7 @@ publishing {
     }
     repositories {
         maven {
-            url new SonatypeClient(project).createSonatypeRepositoryUrl()
+            url new SonatypeClient(project).discoverSonatypeRepositoryUrl()
             name = "sonatype"
             credentials {
                 // Avoids storing Sonatype credentials in plain-text. Specify these on
