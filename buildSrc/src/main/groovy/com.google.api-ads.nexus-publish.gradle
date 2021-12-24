@@ -25,8 +25,6 @@ plugins {
     id 'maven-publish'
 }
 
-import java.nio.charset.StandardCharsets
-
 import com.google.api.client.http.GenericUrl
 import com.google.api.client.http.HttpHeaders
 import com.google.api.client.http.HttpRequest
@@ -36,8 +34,9 @@ import com.google.api.client.http.xml.XmlHttpContent
 import com.google.api.client.util.Key
 import com.google.api.client.xml.XmlNamespaceDictionary
 import com.google.api.client.xml.XmlObjectParser
-
+import java.nio.charset.StandardCharsets
 import java.util.concurrent.ConcurrentHashMap
+import org.gradle.api.GradleException
 
 // ---------------- Google HTTP client data binding classes --------------------
 // Nexus REST API uses XML over HTTP - yey!
@@ -52,8 +51,7 @@ class AuthHeaders extends HttpHeaders {
         // Generates the base 64 encoded version of user:pass which is specified
         // in headers.
         def encodedCredential = Base64.encoder.encode("${user}:${password}".bytes)
-        this.authorization = "Basic " +
-                new String(encodedCredential, StandardCharsets.UTF_8)
+        this.authorization = "Basic " + new String(encodedCredential, StandardCharsets.UTF_8)
     }
 }
 
@@ -171,15 +169,16 @@ class SonatypeClient {
      * Provides the Sonatype repository URL to use for deploying releases.
      *
      * Attempts to create a named staging repository to avoid using Nexus auto-staging if
-     * possible. Based on the observation that auto-staging's heuristic for which artifacts
+     * possible. If not possible to create a named staging repository, falls back to auto-staging.
+     *
+     * This is motivated by the observation that auto-staging's heuristic for which artifacts
      * belong in the same repository is often confused by Gradle's publish mechanism, which
      * appears to create a new TCP connection for each artifact. This also appears to be flaky
      * based on the sonatype server load.
      */
     def discoverSonatypeRepositoryUrl() {
         try {
-            // Ensures that we don't create spurious repositories if we're not
-            // running a release.
+            // Ensures that we don't create spurious repositories if we're not running a release.
             if (project.properties.containsKey("release")) {
                 // Gradle may reuse the demon (hence its classloader) so this uses a map to store
                 // the staging repo for each build.
@@ -190,9 +189,9 @@ class SonatypeClient {
                 return AUTO_STAGING_URL
             }
         } catch (Exception ex) {
-            // Handles unexpected exception by falling back to auto-staging.
-            logger.warn("BUG BUG BUG! Failed to create new staging repo. I'll attempt to deploy " +
-                    "with auto-staging. The release *may* complete as planned. You can proceed by" +
+            // Handles issues by falling back to auto-staging.
+            logger.warn("Failed to create new staging repo. Attempting to deploy with " +
+                    "auto-staging. The release *may* complete as planned. You can proceed by" +
                     " making sure that all release artifacts are present in the auto-staging " +
                     "repository. Please investigate why staging failed to create.", ex)
             return AUTO_STAGING_URL
@@ -209,21 +208,21 @@ class SonatypeClient {
             logger.warn("Found multiple staging profiles, using the first one")
         }
         def stagingStartUrl = new GenericUrl(stagingProfileUrls[0] + "/start")
-        def content = new PromoteRequestXmlContent(NAMESPACE_DICTIONARY, generateStagingRepoDescription())
+        def content = new PromoteRequestXmlContent(
+                NAMESPACE_DICTIONARY, generateStagingRepoDescription())
         def response = REQUEST_FACTORY
                 .buildPostRequest(stagingStartUrl, content)
                 .setHeaders(authHeaders)
                 .execute()
-        // Checks the response and returns the repository URL, falling back to
-        // auto-staging if something went wrong.
+        // Checks the response and returns the repository URL, falling back to auto-staging if
+        // something went wrong.
         if (response.getStatusCode() == 201) { // HTTP 201 = Created
             def parsed = response.parseAs(PromoteRequestXmlContent.PromoteRequest.class)
             logger.info("Staging repository created with ID ${parsed.data.stagedRepositoryId}")
             return DEPLOY_BY_REPO_URL_STEM + parsed.data.stagedRepositoryId
         } else {
-            logger.warn("Nexus failed to create staging repo: " +
+            throw new GradleException("Nexus failed to create staging repo: " +
                     "${response.getStatusCode()}: ${response.getStatusMessage()}")
-            return AUTO_STAGING_URL
         }
     }
 
