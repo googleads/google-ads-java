@@ -59,6 +59,29 @@ class AuthHeaders extends HttpHeaders {
 }
 
 /**
+ * Defines data-binding to retrieve the staging profiles from sonatype. Staging repositories are
+ * created from a staging profile.
+ */
+class StagingProfiles {
+    @Key
+    public StagingProfilesData data
+
+    static class StagingProfilesData {
+        @Key
+        public List<StagingProfile> stagingProfile
+
+        static class StagingProfile {
+            @Key
+            public String resourceURI
+        }
+    }
+
+    def getStagingProfileUrls() {
+        return data.stagingProfile.collect { it.resourceURI }
+    }
+}
+
+/**
  * Defines data binding class for Nexus POST request to create staging repo.
  *
  * <p/>
@@ -109,14 +132,7 @@ class PromoteRequestXmlContent extends XmlHttpContent {
     }
 }
 
-// Global variables for the created repository URL are stored in the root
-// project. It isn't declared in SonatypeClient, since Gradle may reuse the
-// VM instance (and its classloader) and so would reuse the previous
-// staging repository ID.
-//project.rootProject.ext.STAGING_REPO_URL = null
-
 // -------------------------- Nexus client implementation ----------------------
-
 
 /**
  * Implements a client for Sonatype Nexus.
@@ -139,19 +155,20 @@ class PromoteRequestXmlContent extends XmlHttpContent {
 class SonatypeClient {
 
     private static final logger = org.slf4j.LoggerFactory.getLogger(SonatypeClient.class)
-    private static final AUTO_STAGING_URL = "https://oss.sonatype" +
-            ".org/service/local/staging/deploy/maven2"
-    private static final DEPLOY_BY_REPO_URL_STEM = "https://oss.sonatype" +
-            ".org/service/local/staging/deployByRepositoryId/"
-    // Uses the Staging Profile on Nexus that Sonatype folks created.
-    // Hard-codes the ID since there is only one. Retrieve this with:
-    // curl -X GET \
-    //   --header 'Authorization: Basic <base64 encoded user:pass>' \
-    //   'https://oss.sonatype.org/service/local/staging/profiles'
-    // Needs to be updated if we move to a new Nexus instance.
-    private static final STAGING_START_URL = new GenericUrl("https://oss.sonatype" +
-            ".org/service/local/staging/profiles/171a30b2ab63be/start")
+    private static final AUTO_STAGING_URL =
+            "https://oss.sonatype.org/service/local/staging/deploy/maven2"
+    private static final DEPLOY_BY_REPO_URL_STEM =
+            "https://oss.sonatype.org/service/local/staging/deployByRepositoryId/"
+    private static final STAGING_PROFILES_URL = new GenericUrl(
+            "https://oss.sonatype.org/service/local/staging/profiles")
     private static final NAMESPACE_DICTIONARY = new XmlNamespaceDictionary().set("", "")
+    private static final REQUEST_FACTORY = new NetHttpTransport()
+            .createRequestFactory(new HttpRequestInitializer() {
+                @Override
+                void initialize(HttpRequest request) throws IOException {
+                    request.setParser(new XmlObjectParser(NAMESPACE_DICTIONARY))
+                }
+            })
     /**
      * Global storage of URLs for a rootProject. Gradle may reuse the demon
      * (hence its classloader) so we cannot just store this in a simple static
@@ -180,26 +197,19 @@ class SonatypeClient {
      * based on the sonatype server load.
      */
     def discoverSonatypeRepositoryUrl() {
-        // Catches any unexpected exceptions.
-        // In theory nothing should throw and we should gracefully fall back to
-        // auto-staging. Catch-all here ensures that happens even if something
-        // goes awry.
         try {
-            // Guards the creation of a staging repo on the release property.
             // Ensures that we don't create spurious repositories if we're not
             // running a release.
             if (project.properties.containsKey("release")) {
+                // Creates a staging repository exactly once per root project.
                 return STAGING_URL_CACHE.computeIfAbsent(
                         project.rootProject, { project -> this.createStagingRepository() })
             }
         } catch (Exception ex) {
             // Handles unexpected exception by falling back to auto-staging.
-            // Tells the user they should look into this, but it's not blocking
-            // for their release (assuming Nexus and Gradle get it right without
-            // babysitting).
             logger.warn("BUG BUG BUG! Failed to create new staging repo. I'll attempt to deploy " +
                     "with auto-staging. The release *may* complete as planned. You can proceed by" +
-                    " making sure that all release artifacts are present in the same staging " +
+                    " making sure that all release artifacts are present in the auto-staging " +
                     "repository. Please investigate why staging failed to create.", ex)
             return AUTO_STAGING_URL
         }
@@ -208,16 +218,16 @@ class SonatypeClient {
     /** Creates a staging repository on Sonatype. */
     private def createStagingRepository() {
         logger.info("Creating staging repository")
-        def requestFactory = new NetHttpTransport()
-                .createRequestFactory(new HttpRequestInitializer() {
-                    @Override
-                    void initialize(HttpRequest request) throws IOException {
-                        request.setParser(new XmlObjectParser(NAMESPACE_DICTIONARY))
-                    }
-                })
-        def content = new PromoteRequestXmlContent(NAMESPACE_DICTIONARY, generateStagingRepoName())
-        def response = requestFactory
-                .buildPostRequest(STAGING_START_URL, content)
+        def stagingProfileUrls = getStagingProfileUrls()
+        if (stagingProfileUrls.size() == 0) {
+            throw new GradleException("No staging profiles found")
+        } else if (stagingProfileUrls.size() > 1) {
+            logger.warn("Found multiple staging profiles, using the first one")
+        }
+        def stagingStartUrl = new GenericUrl(stagingProfileUrls[0] + "/start")
+        def content = new PromoteRequestXmlContent(NAMESPACE_DICTIONARY, generateStagingRepoDescription())
+        def response = REQUEST_FACTORY
+                .buildPostRequest(stagingStartUrl, content)
                 .setHeaders(authHeaders)
                 .execute()
         // Checks the response and returns the repository URL, falling back to
@@ -233,7 +243,24 @@ class SonatypeClient {
         }
     }
 
-    private def generateStagingRepoName() {
+    /** Retrieves the staging profiles from Nexus. */
+    private def getStagingProfileUrls() {
+        logger.debug("Retrieving staging profiles")
+        def response = REQUEST_FACTORY
+                .buildGetRequest(STAGING_PROFILES_URL)
+                .setHeaders(authHeaders)
+                .execute()
+        if (response.getStatusCode() == 200) {
+            def parsed = response.parseAs(StagingProfiles.class)
+            return parsed.getStagingProfileUrls()
+        } else {
+            throw new GradleException("Failed to retrieve staging profiles: HTTP " +
+                    "${response.getStatusCode()}: ${response.getStatusMessage()}")
+        }
+    }
+
+    /** Generates a pseudo-unique and human readable description for a staging repo. */
+    private def generateStagingRepoDescription() {
         return "Release of Google Ads API v${project.version} " +
                 "on ${InetAddress.getLocalHost().getCanonicalHostName()} " +
                 "${new Date()}"
