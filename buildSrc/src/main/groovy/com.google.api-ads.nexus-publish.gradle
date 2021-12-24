@@ -126,16 +126,15 @@ class PromoteRequestXmlContent extends XmlHttpContent {
  * Logging of raw HTTP is handled by the the HTTP client (google-java-http-client) which uses JUL.
  *
  * This implementation is based on:
- * https://support.sonatype.com/hc/en-us/articles/213465868-Uploading-to-a-Staging-Repository-via
- * -REST-API
+ * https://support.sonatype.com/hc/en-us/articles/213465868-Uploading-to-a-Staging-Repository-via-REST-API
  *
- * Note that there are two versions of Nexus: v2 and v3. The OSS instance
- * (which hosts our project) uses v2.
+ * Note that there are two versions of Nexus: v2 and v3. The OSS instance (which hosts our project)
+ * uses v2.
  *
  * The Nexus docs are here: https://help.sonatype.com/repomanager2
  * The REST docs are here: https://repository.sonatype
  * .org/nexus-restlet1x-plugin/default/docs/index.html
- * Warning: the docs are very patchy!
+ * The docs are very patchy!
  */
 class SonatypeClient {
 
@@ -155,9 +154,7 @@ class SonatypeClient {
                 }
             })
     /**
-     * Global storage of URLs for a rootProject. Gradle may reuse the demon
-     * (hence its classloader) so we cannot just store this in a simple static
-     * field.
+     * Global storage of URLs for a rootProject.
      */
     private static final STAGING_URL_CACHE = new ConcurrentHashMap();
     private final project
@@ -184,7 +181,8 @@ class SonatypeClient {
             // Ensures that we don't create spurious repositories if we're not
             // running a release.
             if (project.properties.containsKey("release")) {
-                // Creates a staging repository exactly once per root project.
+                // Gradle may reuse the demon (hence its classloader) so this uses a map to store
+                // the staging repo for each build.
                 return STAGING_URL_CACHE.computeIfAbsent(
                         project.rootProject, { project -> this.createStagingRepository() })
             }
