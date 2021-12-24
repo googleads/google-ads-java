@@ -185,6 +185,9 @@ class SonatypeClient {
                 // the staging repo for each build.
                 return STAGING_URL_CACHE.computeIfAbsent(
                         project.rootProject, { project -> this.createStagingRepository() })
+            } else {
+                logger.debug("Release not enabled, defaulting to auto-staging")
+                return AUTO_STAGING_URL
             }
         } catch (Exception ex) {
             // Handles unexpected exception by falling back to auto-staging.
