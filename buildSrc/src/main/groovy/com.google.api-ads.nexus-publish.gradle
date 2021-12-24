@@ -17,8 +17,6 @@
 /**
  * Defines a plugin which will automatically configure gradle publish.
  *
- * <p/>
- *
  * Test this class by setting a non-snapshot version in gradle.properties.
  * Nexus rejects snapshot artifacts with HTTP 400 (and little else).
  */
@@ -42,7 +40,8 @@ import com.google.api.client.xml.XmlObjectParser
 import java.util.concurrent.ConcurrentHashMap
 
 // ---------------- Google HTTP client data binding classes --------------------
-// Uses the powerful data-binding in Google HTTP client to avoid handling XML.
+// Nexus REST API uses XML over HTTP - yey!
+// Leverages the data-binding in google-java-http-client to avoid handling XML.
 
 /** Defines data binding class for HTTP basic auth headers. */
 class AuthHeaders extends HttpHeaders {
@@ -81,21 +80,7 @@ class StagingProfiles {
     }
 }
 
-/**
- * Defines data binding class for Nexus POST request to create staging repo.
- *
- * <p/>
- *
- * Serializes as XML and will look like the following:
- *
- * <pre>
- *     <promoteRequest>
- *         <data>
- *             <description>some description here</description>
- *         </data>
- *     </promoteRequest>
- * </pre>
- */
+/** Defines data binding class for Nexus POST request to create staging repo. */
 class PromoteRequestXmlContent extends XmlHttpContent {
     PromoteRequestXmlContent(namespaceDictionary, description) {
         super(namespaceDictionary,
@@ -187,8 +172,6 @@ class SonatypeClient {
 
     /**
      * Provides the Sonatype repository URL to use for deploying releases.
-     *
-     * <p/>
      *
      * Attempts to create a named staging repository to avoid using Nexus auto-staging if
      * possible. Based on the observation that auto-staging's heuristic for which artifacts
