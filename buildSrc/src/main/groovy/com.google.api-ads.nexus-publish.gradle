@@ -130,8 +130,7 @@ class PromoteRequestXmlContent extends XmlHttpContent {
  * uses v2.
  *
  * The Nexus docs are here: https://help.sonatype.com/repomanager2
- * The REST docs are here: https://repository.sonatype
- * .org/nexus-restlet1x-plugin/default/docs/index.html
+ * The REST docs are here: https://repository.sonatype.org/nexus-restlet1x-plugin/default/docs/index.html
  * The docs are very patchy!
  */
 class SonatypeClient {
@@ -214,8 +213,8 @@ class SonatypeClient {
                 .buildPostRequest(stagingStartUrl, content)
                 .setHeaders(authHeaders)
                 .execute()
-        // Checks the response and returns the repository URL, falling back to auto-staging if
-        // something went wrong.
+        // Checks the response and returns the repository URL, throwing if we
+        // didn't get a valid response.
         if (response.getStatusCode() == 201) { // HTTP 201 = Created
             def parsed = response.parseAs(PromoteRequestXmlContent.PromoteRequest.class)
             logger.info("Staging repository created with ID ${parsed.data.stagedRepositoryId}")
