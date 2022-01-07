@@ -1,3 +1,11 @@
+16.0.3 - 2022-01-10
+-------------------
+- Fix #543 to correctly classify the `google-cloud-shared-dependencies` dependency.
+- Split project into multiple sub-modules to improve build times and separate
+  generated code from core library code. No changes are required for projects
+  with a dependency on the `google-ads` artifact.
+- Customize the client used to upload artifacts to Sonatype Nexus during library releases (#544).
+
 16.0.2 - 2021-12-15
 -------------------
 - Fix #525 shadow jar replaces main jar.
