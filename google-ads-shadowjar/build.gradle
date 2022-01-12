@@ -1,3 +1,10 @@
+buildscript {
+  dependencies {
+    // Overrides the log4j dependency from the shadow plugin.
+    classpath 'org.apache.logging.log4j:log4j-core:2.16.0'
+  }
+}
+
 plugins {
     id 'com.google.api-ads.java-conventions'
     id 'com.github.johnrengelman.shadow' version '6.1.0'
