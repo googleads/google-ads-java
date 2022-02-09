@@ -18,20 +18,24 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v9.common.KeywordInfo;
-import com.google.ads.googleads.v9.errors.GoogleAdsError;
-import com.google.ads.googleads.v9.errors.GoogleAdsException;
-import com.google.ads.googleads.v9.resources.AdGroup;
-import com.google.ads.googleads.v9.resources.AdGroupCriterion;
-import com.google.ads.googleads.v9.services.GoogleAdsRow;
-import com.google.ads.googleads.v9.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v9.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v9.services.SearchGoogleAdsRequest;
+import com.google.ads.googleads.v10.common.KeywordInfo;
+import com.google.ads.googleads.v10.errors.GoogleAdsError;
+import com.google.ads.googleads.v10.errors.GoogleAdsException;
+import com.google.ads.googleads.v10.resources.AdGroup;
+import com.google.ads.googleads.v10.resources.AdGroupCriterion;
+import com.google.ads.googleads.v10.services.GoogleAdsRow;
+import com.google.ads.googleads.v10.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v10.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v10.services.SearchGoogleAdsRequest;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import javax.annotation.Nullable;
 
-/** Gets keywords from ad group criteria. */
+/**
+ * Retrieves keywords for a customer or for a specific ad group, and also demonstrates how to use
+ * the {@code omit_unselected_resource_names} option in the Google Ads Query Language (GAQL) to
+ * reduce payload size.
+ */
 public class GetKeywords {
 
   private static final int PAGE_SIZE = 1_000;
@@ -43,6 +47,9 @@ public class GetKeywords {
 
     @Parameter(names = ArgumentNames.AD_GROUP_ID)
     private Long adGroupId;
+
+    @Parameter(names = ArgumentNames.OMIT_UNSELECTED_RESOURCE_NAMES, arity = 1)
+    private Boolean omitUnselectedResourceNames;
   }
 
   public static void main(String[] args) throws IOException {
@@ -55,6 +62,10 @@ public class GetKeywords {
 
       // Optional: Specify an ad group ID to restrict search to only a given ad group.
       params.adGroupId = null;
+
+      // Optional: Add omit_unselected_resource_names=true to the PARAMETERS clause in the GAQL
+      // query of the search request.
+      params.omitUnselectedResourceNames = false;
     }
 
     GoogleAdsClient googleAdsClient = null;
@@ -70,7 +81,12 @@ public class GetKeywords {
     }
 
     try {
-      new GetKeywords().runExample(googleAdsClient, params.customerId, params.adGroupId);
+      new GetKeywords()
+          .runExample(
+              googleAdsClient,
+              params.customerId,
+              params.adGroupId,
+              params.omitUnselectedResourceNames);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -98,7 +114,10 @@ public class GetKeywords {
    * @throws Exception if the example failed due to other errors.
    */
   private void runExample(
-      GoogleAdsClient googleAdsClient, long customerId, @Nullable Long adGroupId) {
+      GoogleAdsClient googleAdsClient,
+      long customerId,
+      @Nullable Long adGroupId,
+      boolean omitUnselectedResourceNames) {
     try (GoogleAdsServiceClient googleAdsServiceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
       String searchQuery =
@@ -111,6 +130,17 @@ public class GetKeywords {
               + "WHERE ad_group_criterion.type = KEYWORD ";
       if (adGroupId != null) {
         searchQuery += String.format("AND ad_group.id = %d", adGroupId);
+      }
+      // Adds omit_unselected_resource_names=true to the PARAMETERS clause of the GAQL query, which
+      // excludes the resource names of all resources that aren't explicitly requested in the SELECT
+      // clause. Enabling this option reduces payload size, but if you plan to use a returned
+      // object in subsequent mutate operations, make sure you explicitly request its
+      // "resource_name" field in your SELECT clause.
+      //
+      // Read more about PARAMETERS:
+      // https://developers.google.com/google-ads/api/docs/query/structure#parameters
+      if (omitUnselectedResourceNames) {
+        searchQuery += " PARAMETERS omit_unselected_resource_names=true";
       }
 
       // Creates a request that will retrieve all keywords using pages of the specified page size.
@@ -128,14 +158,19 @@ public class GetKeywords {
         AdGroup adGroup = googleAdsRow.getAdGroup();
         AdGroupCriterion adGroupCriterion = googleAdsRow.getAdGroupCriterion();
         KeywordInfo keywordInfo = adGroupCriterion.getKeyword();
+        String adGroupResourceNameStr =
+            (!omitUnselectedResourceNames)
+                ? String.format(" and resource name '%s'", adGroup.getResourceName())
+                : "";
         System.out.printf(
             "Keyword with text '%s', match type '%s', criteria type '%s', and ID %d "
-                + "was found in ad group with ID %d.%n",
+                + "was found in ad group with ID %d%s.%n",
             keywordInfo.getText(),
             keywordInfo.getMatchType(),
             adGroupCriterion.getType(),
             adGroupCriterion.getCriterionId(),
-            adGroup.getId());
+            adGroup.getId(),
+            adGroupResourceNameStr);
       }
     }
   }

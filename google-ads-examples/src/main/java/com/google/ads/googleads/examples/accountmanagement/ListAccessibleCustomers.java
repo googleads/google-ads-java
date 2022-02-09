@@ -15,11 +15,11 @@
 package com.google.ads.googleads.examples.accountmanagement;
 
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v9.errors.GoogleAdsError;
-import com.google.ads.googleads.v9.errors.GoogleAdsException;
-import com.google.ads.googleads.v9.services.CustomerServiceClient;
-import com.google.ads.googleads.v9.services.ListAccessibleCustomersRequest;
-import com.google.ads.googleads.v9.services.ListAccessibleCustomersResponse;
+import com.google.ads.googleads.v10.errors.GoogleAdsError;
+import com.google.ads.googleads.v10.errors.GoogleAdsException;
+import com.google.ads.googleads.v10.services.CustomerServiceClient;
+import com.google.ads.googleads.v10.services.ListAccessibleCustomersRequest;
+import com.google.ads.googleads.v10.services.ListAccessibleCustomersResponse;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 

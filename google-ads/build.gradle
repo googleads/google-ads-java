@@ -56,7 +56,6 @@ protobuf {
 
 dependencies {
     api project(':google-ads-codegen')
-    implementation 'io.netty:netty-tcnative-boringssl-static:2.0.26.Final'
     implementation 'org.slf4j:slf4j-api:1.7.25'
     annotationProcessor 'com.google.auto.value:auto-value:1.7.3'
     testImplementation 'org.hamcrest:java-hamcrest:2.0.0.0'

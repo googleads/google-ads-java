@@ -35,3 +35,4 @@ if (!startParameter.projectProperties.containsKey("release")) {
 include ':google-ads-stubs-v7'
 include ':google-ads-stubs-v8'
 include ':google-ads-stubs-v9'
+include ':google-ads-stubs-v10'

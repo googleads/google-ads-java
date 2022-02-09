@@ -21,43 +21,43 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.utils.FieldMasks;
-import com.google.ads.googleads.v9.common.ImageAsset;
-import com.google.ads.googleads.v9.common.LanguageInfo;
-import com.google.ads.googleads.v9.common.LocationInfo;
-import com.google.ads.googleads.v9.common.MaximizeConversionValue;
-import com.google.ads.googleads.v9.common.TextAsset;
-import com.google.ads.googleads.v9.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
-import com.google.ads.googleads.v9.enums.AssetFieldTypeEnum.AssetFieldType;
-import com.google.ads.googleads.v9.enums.AssetGroupStatusEnum.AssetGroupStatus;
-import com.google.ads.googleads.v9.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
-import com.google.ads.googleads.v9.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v9.enums.ConversionActionCategoryEnum.ConversionActionCategory;
-import com.google.ads.googleads.v9.enums.ConversionOriginEnum.ConversionOrigin;
-import com.google.ads.googleads.v9.errors.GoogleAdsError;
-import com.google.ads.googleads.v9.errors.GoogleAdsException;
-import com.google.ads.googleads.v9.resources.Asset;
-import com.google.ads.googleads.v9.resources.AssetGroup;
-import com.google.ads.googleads.v9.resources.AssetGroupAsset;
-import com.google.ads.googleads.v9.resources.Campaign;
-import com.google.ads.googleads.v9.resources.Campaign.ShoppingSetting;
-import com.google.ads.googleads.v9.resources.CampaignBudget;
-import com.google.ads.googleads.v9.resources.CampaignConversionGoal;
-import com.google.ads.googleads.v9.resources.CampaignCriterion;
-import com.google.ads.googleads.v9.resources.CustomerConversionGoal;
-import com.google.ads.googleads.v9.services.AssetGroupAssetOperation;
-import com.google.ads.googleads.v9.services.AssetGroupOperation;
-import com.google.ads.googleads.v9.services.AssetOperation;
-import com.google.ads.googleads.v9.services.CampaignBudgetOperation;
-import com.google.ads.googleads.v9.services.CampaignConversionGoalOperation;
-import com.google.ads.googleads.v9.services.CampaignCriterionOperation;
-import com.google.ads.googleads.v9.services.CampaignOperation;
-import com.google.ads.googleads.v9.services.GoogleAdsRow;
-import com.google.ads.googleads.v9.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v9.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v9.services.MutateGoogleAdsResponse;
-import com.google.ads.googleads.v9.services.MutateOperation;
-import com.google.ads.googleads.v9.services.MutateOperationResponse;
-import com.google.ads.googleads.v9.utils.ResourceNames;
+import com.google.ads.googleads.v10.common.ImageAsset;
+import com.google.ads.googleads.v10.common.LanguageInfo;
+import com.google.ads.googleads.v10.common.LocationInfo;
+import com.google.ads.googleads.v10.common.MaximizeConversionValue;
+import com.google.ads.googleads.v10.common.TextAsset;
+import com.google.ads.googleads.v10.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
+import com.google.ads.googleads.v10.enums.AssetFieldTypeEnum.AssetFieldType;
+import com.google.ads.googleads.v10.enums.AssetGroupStatusEnum.AssetGroupStatus;
+import com.google.ads.googleads.v10.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
+import com.google.ads.googleads.v10.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v10.enums.ConversionActionCategoryEnum.ConversionActionCategory;
+import com.google.ads.googleads.v10.enums.ConversionOriginEnum.ConversionOrigin;
+import com.google.ads.googleads.v10.errors.GoogleAdsError;
+import com.google.ads.googleads.v10.errors.GoogleAdsException;
+import com.google.ads.googleads.v10.resources.Asset;
+import com.google.ads.googleads.v10.resources.AssetGroup;
+import com.google.ads.googleads.v10.resources.AssetGroupAsset;
+import com.google.ads.googleads.v10.resources.Campaign;
+import com.google.ads.googleads.v10.resources.Campaign.ShoppingSetting;
+import com.google.ads.googleads.v10.resources.CampaignBudget;
+import com.google.ads.googleads.v10.resources.CampaignConversionGoal;
+import com.google.ads.googleads.v10.resources.CampaignCriterion;
+import com.google.ads.googleads.v10.resources.CustomerConversionGoal;
+import com.google.ads.googleads.v10.services.AssetGroupAssetOperation;
+import com.google.ads.googleads.v10.services.AssetGroupOperation;
+import com.google.ads.googleads.v10.services.AssetOperation;
+import com.google.ads.googleads.v10.services.CampaignBudgetOperation;
+import com.google.ads.googleads.v10.services.CampaignConversionGoalOperation;
+import com.google.ads.googleads.v10.services.CampaignCriterionOperation;
+import com.google.ads.googleads.v10.services.CampaignOperation;
+import com.google.ads.googleads.v10.services.GoogleAdsRow;
+import com.google.ads.googleads.v10.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v10.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v10.services.MutateGoogleAdsResponse;
+import com.google.ads.googleads.v10.services.MutateOperation;
+import com.google.ads.googleads.v10.services.MutateOperationResponse;
+import com.google.ads.googleads.v10.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import com.google.common.io.ByteStreams;
 import com.google.protobuf.ByteString;
@@ -496,19 +496,26 @@ public class AddPerformanceMaxRetailCampaign {
 
     // Creates and links the Logo Asset.
     createAndLinkTextAssetOperations =
-        createAndLinkImageAsset(customerId, "https://gaagl.page.link/bjYi", AssetFieldType.LOGO);
+        createAndLinkImageAsset(
+            customerId, "https://gaagl.page.link/bjYi", AssetFieldType.LOGO, "Logo Image");
     mutateOperations.addAll(createAndLinkTextAssetOperations);
 
     // Creates and links the Marketing Image Asset.
     createAndLinkTextAssetOperations =
         createAndLinkImageAsset(
-            customerId, "https://gaagl.page.link/Eit5", AssetFieldType.MARKETING_IMAGE);
+            customerId,
+            "https://gaagl.page.link/Eit5",
+            AssetFieldType.MARKETING_IMAGE,
+            "Marketing Image");
     mutateOperations.addAll(createAndLinkTextAssetOperations);
 
     // Creates and links the Square Marketing Image Asset.
     createAndLinkTextAssetOperations =
         createAndLinkImageAsset(
-            customerId, "https://gaagl.page.link/bjYi", AssetFieldType.SQUARE_MARKETING_IMAGE);
+            customerId,
+            "https://gaagl.page.link/bjYi",
+            AssetFieldType.SQUARE_MARKETING_IMAGE,
+            "Square Marketing Image");
     mutateOperations.addAll(createAndLinkTextAssetOperations);
 
     return mutateOperations;
@@ -549,7 +556,8 @@ public class AddPerformanceMaxRetailCampaign {
   // [START add_performance_max_retail_campaign_8]
   /** Creates a list of MutateOperations that create a new linked image asset. */
   List<MutateOperation> createAndLinkImageAsset(
-      long customerId, String url, AssetFieldType assetFieldType) throws IOException {
+      long customerId, String url, AssetFieldType assetFieldType, String assetName)
+      throws IOException {
     List<MutateOperation> mutateOperations = new ArrayList<>();
     String assetResourceName = ResourceNames.asset(customerId, getNextTemporaryId());
     // Creates a media file.
@@ -560,6 +568,10 @@ public class AddPerformanceMaxRetailCampaign {
         Asset.newBuilder()
             .setResourceName(assetResourceName)
             .setImageAsset(ImageAsset.newBuilder().setData(ByteString.copyFrom(assetBytes)).build())
+            // Provides a unique friendly name to identify your asset. When there is an existing
+            // image asset with the same content but a different name, the new name will be dropped
+            // silently.
+            .setName(assetName)
             .build();
     AssetOperation assetOperation = AssetOperation.newBuilder().setCreate(asset).build();
     mutateOperations.add(MutateOperation.newBuilder().setAssetOperation(assetOperation).build());

@@ -27,22 +27,23 @@ import com.google.ads.googleads.lib.GoogleAdsClient.Builder;
 import com.google.ads.googleads.lib.GoogleAdsClient.Builder.AdsEnvironmentVariable;
 import com.google.ads.googleads.lib.GoogleAdsClient.Builder.ConfigPropertyKey;
 import com.google.ads.googleads.lib.catalog.ApiCatalog;
-import com.google.ads.googleads.v9.errors.GoogleAdsError;
-import com.google.ads.googleads.v9.errors.GoogleAdsException;
-import com.google.ads.googleads.v9.errors.GoogleAdsFailure;
-import com.google.ads.googleads.v9.services.GoogleAdsRow;
-import com.google.ads.googleads.v9.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v9.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v9.services.MockGoogleAdsService;
-import com.google.ads.googleads.v9.services.SearchGoogleAdsResponse;
-import com.google.ads.googleads.v9.services.SearchGoogleAdsStreamRequest;
-import com.google.ads.googleads.v9.services.SearchGoogleAdsStreamResponse;
+import com.google.ads.googleads.v10.errors.GoogleAdsError;
+import com.google.ads.googleads.v10.errors.GoogleAdsException;
+import com.google.ads.googleads.v10.errors.GoogleAdsFailure;
+import com.google.ads.googleads.v10.services.GoogleAdsRow;
+import com.google.ads.googleads.v10.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v10.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v10.services.MockGoogleAdsService;
+import com.google.ads.googleads.v10.services.SearchGoogleAdsResponse;
+import com.google.ads.googleads.v10.services.SearchGoogleAdsStreamRequest;
+import com.google.ads.googleads.v10.services.SearchGoogleAdsStreamResponse;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.GrpcStatusCode;
 import com.google.api.gax.grpc.testing.LocalChannelProvider;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.ApiException;
+import com.google.api.gax.rpc.TransportChannelProvider;
 import com.google.auth.Credentials;
 import com.google.auth.oauth2.ServiceAccountCredentials;
 import com.google.auth.oauth2.UserCredentials;
@@ -58,6 +59,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.nio.charset.StandardCharsets;
 import java.util.Collections;
@@ -903,5 +905,178 @@ public class GoogleAdsClientTest {
             StandardCharsets.UTF_8)
         .copyTo(Files.asCharSink(secretsFile, StandardCharsets.UTF_8));
     return secretsFile;
+  }
+
+  /**
+   * Tests that the GoogleAdsClient, TransportChannelProvider, and InterceptorProvider all update
+   * the loginCustomerId if it is set after the GoogleAdsClient.Builder is initially built, and a
+   * custom transport channel provider is not used.
+   */
+  @Test
+  public void testLoginCustomerIdSetAfterCreatingClient()
+      throws IOException, NoSuchFieldException, IllegalAccessException {
+    // Create a properties file in the temporary folder.
+    File propertiesFile = folder.newFile("ads.properties");
+    try (FileWriter propertiesFileWriter = new FileWriter(propertiesFile)) {
+      testProperties.store(propertiesFileWriter, null);
+    }
+
+    // Build a new client from the file.
+    GoogleAdsClient client =
+        GoogleAdsClient.newBuilder().fromPropertiesFile(propertiesFile).build();
+    // Create a new GoogleAdsClient with a new loginCustomerId.
+    long loginCustomerId = 987654321L;
+    client = client.toBuilder().setLoginCustomerId(loginCustomerId).build();
+    assertGoogleAdsClient(client, loginCustomerId, true);
+    assertEquals(client.getLoginCustomerId().longValue(), loginCustomerId);
+
+    Long transportLoginCustomerId =
+        getTransportLoginCustomerId(client.getTransportChannelProvider());
+    assertEquals(transportLoginCustomerId.longValue(), loginCustomerId);
+    Long interceptorLoginCustomerId =
+        getInterceptorLoginCustomerId(client.getTransportChannelProvider());
+    assertEquals(interceptorLoginCustomerId.longValue(), loginCustomerId);
+  }
+
+  /**
+   * Tests that the GoogleAdsClient, TransportChannelProvider, and InterceptorProvider all update
+   * the loginCustomerId if it is set after the GoogleAdsClient.Builder is initially built, and a
+   * custom transport channel provider is not used when chaining together multiple builders.
+   */
+  @Test
+  public void testLoginCustomerIdSetAfterCreatingClientWithMultipleBuilders()
+      throws IOException, NoSuchFieldException, IllegalAccessException {
+    // Create a properties file in the temporary folder.
+    File propertiesFile = folder.newFile("ads.properties");
+    try (FileWriter propertiesFileWriter = new FileWriter(propertiesFile)) {
+      testProperties.store(propertiesFileWriter, null);
+    }
+
+    // Build a new client from the file.
+    long loginCustomerId = 987654321L;
+    GoogleAdsClient client =
+        GoogleAdsClient.newBuilder().fromPropertiesFile(propertiesFile).build().toBuilder()
+            .build()
+            .toBuilder()
+            .build()
+            .toBuilder()
+            .setLoginCustomerId(loginCustomerId)
+            .build();
+    assertGoogleAdsClient(client, loginCustomerId, true);
+    assertEquals(client.getLoginCustomerId().longValue(), loginCustomerId);
+
+    Long transportLoginCustomerId =
+        getTransportLoginCustomerId(client.getTransportChannelProvider());
+    assertEquals(transportLoginCustomerId.longValue(), loginCustomerId);
+    Long interceptorLoginCustomerId =
+        getInterceptorLoginCustomerId(client.getTransportChannelProvider());
+    assertEquals(interceptorLoginCustomerId.longValue(), loginCustomerId);
+  }
+
+  /**
+   * Tests that the two separate GoogleAdsClients, TransportChannelProviders, and Interceptor
+   * providers all update the loginCustomerId if it is set after the GoogleAdsClient.Builder is
+   * initially built, and a custom transport channel provider is not used.
+   */
+  @Test
+  public void testMultipleLoginCustomerIdsSetAfterCreatingClient()
+      throws IOException, NoSuchFieldException, IllegalAccessException {
+    // Create a properties file in the temporary folder.
+    File propertiesFile = folder.newFile("ads.properties");
+    try (FileWriter propertiesFileWriter = new FileWriter(propertiesFile)) {
+      testProperties.store(propertiesFileWriter, null);
+    }
+
+    // Build a new client from the file.
+    GoogleAdsClient client1 =
+        GoogleAdsClient.newBuilder().fromPropertiesFile(propertiesFile).build();
+    GoogleAdsClient client2 =
+        GoogleAdsClient.newBuilder().fromPropertiesFile(propertiesFile).build();
+    // Create a new GoogleAdsClient with a new loginCustomerId.
+    long loginCustomerId1 = 111111111L;
+    client1 = client1.toBuilder().setLoginCustomerId(loginCustomerId1).build();
+    assertGoogleAdsClient(client1, loginCustomerId1, true);
+    assertEquals(client1.getLoginCustomerId().longValue(), loginCustomerId1);
+
+    long loginCustomerId2 = 222222222L;
+    client2 = client2.toBuilder().setLoginCustomerId(loginCustomerId2).build();
+    assertGoogleAdsClient(client2, loginCustomerId2, true);
+    assertEquals(client2.getLoginCustomerId().longValue(), loginCustomerId2);
+
+    Long transportLoginCustomerId1 =
+        getTransportLoginCustomerId(client1.getTransportChannelProvider());
+    assertEquals(transportLoginCustomerId1.longValue(), loginCustomerId1);
+    Long interceptorLoginCustomerId1 =
+        getInterceptorLoginCustomerId(client1.getTransportChannelProvider());
+    assertEquals(interceptorLoginCustomerId1.longValue(), loginCustomerId1);
+
+    Long transportLoginCustomerId2 =
+        getTransportLoginCustomerId(client2.getTransportChannelProvider());
+    assertEquals(transportLoginCustomerId2.longValue(), loginCustomerId2);
+    Long interceptorLoginCustomerId2 =
+        getInterceptorLoginCustomerId(client2.getTransportChannelProvider());
+    assertEquals(interceptorLoginCustomerId2.longValue(), loginCustomerId2);
+  }
+
+  /**
+   * Tests that the GoogleAdsClient.Builder updates the loginCustomerId, but the
+   * TransportChannelProvider does not when the loginCustomerID is set after the
+   * GoogleAdsClient.Builder is initially built, but a custom transport channel provider is used. In
+   * this case, we do not test the InterceptorProvider because the LocalChannelProvider does not
+   * allow for one.
+   */
+  @Test
+  public void testLoginCustomerIdNotSetAfterCreatingClient()
+      throws IOException, NoSuchFieldException, IllegalAccessException {
+    // Create a properties file in the temporary folder.
+    File propertiesFile = folder.newFile("ads.properties");
+    try (FileWriter propertiesFileWriter = new FileWriter(propertiesFile)) {
+      testProperties.store(propertiesFileWriter, null);
+    }
+
+    // Build a new client from the file.
+    GoogleAdsClient client =
+        GoogleAdsClient.newBuilder()
+            .fromPropertiesFile(propertiesFile)
+            .setTransportChannelProvider(localChannelProvider)
+            .build();
+    // Create a new GoogleAdsClient with a new loginCustomerId.
+    long loginCustomerId = 987654321L;
+    client = client.toBuilder().setLoginCustomerId(loginCustomerId).build();
+    assertGoogleAdsClient(client, loginCustomerId, true);
+    assertEquals(client.getLoginCustomerId().longValue(), loginCustomerId);
+
+    Long transportLoginCustomerId =
+        getTransportLoginCustomerId(client.getTransportChannelProvider());
+    assertEquals(transportLoginCustomerId.longValue(), LOGIN_CUSTOMER_ID);
+  }
+
+  /** Returns the loginCustomerId from a TransportChannelProvider * */
+  private static Long getTransportLoginCustomerId(TransportChannelProvider transportChannelProvider)
+      throws NoSuchFieldException, IllegalAccessException {
+    Field headerProvider = transportChannelProvider.getClass().getDeclaredField("headerProvider");
+    headerProvider.setAccessible(true);
+    Object headerProviderObj = headerProvider.get(transportChannelProvider);
+    Field headers = headerProviderObj.getClass().getDeclaredField("headers");
+    headers.setAccessible(true);
+    Object headersObj = headers.get(headerProviderObj);
+    ImmutableMap<String, String> headersMap = (ImmutableMap<String, String>) headersObj;
+    return Long.valueOf(headersMap.get("login-customer-id"));
+  }
+
+  /** Returns the loginCustomerId from the InterceptorProvider of a TransportChannelProvider * */
+  private static Long getInterceptorLoginCustomerId(
+      TransportChannelProvider transportChannelProvider)
+      throws NoSuchFieldException, IllegalAccessException {
+    Field interceptorProvider =
+        transportChannelProvider.getClass().getDeclaredField("interceptorProvider");
+    interceptorProvider.setAccessible(true);
+    Object interceptorProviderObj = interceptorProvider.get(transportChannelProvider);
+    Field arg1 = interceptorProviderObj.getClass().getDeclaredField("arg$1");
+    arg1.setAccessible(true);
+    Object arg1Obj = arg1.get(interceptorProviderObj);
+    Field ipLoginCustomerId = arg1Obj.getClass().getDeclaredField("loginCustomerId");
+    ipLoginCustomerId.setAccessible(true);
+    return (Long) ipLoginCustomerId.get(arg1Obj);
   }
 }

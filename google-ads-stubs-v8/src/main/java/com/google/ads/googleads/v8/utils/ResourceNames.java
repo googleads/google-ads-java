@@ -47,6 +47,8 @@ import com.google.ads.googleads.v8.resources.AgeRangeViewName;
 import com.google.ads.googleads.v8.resources.AssetFieldTypeViewName;
 import com.google.ads.googleads.v8.resources.AssetName;
 import com.google.ads.googleads.v8.resources.BatchJobName;
+import com.google.ads.googleads.v8.resources.BiddingDataExclusionName;
+import com.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustmentName;
 import com.google.ads.googleads.v8.resources.BiddingStrategyName;
 import com.google.ads.googleads.v8.resources.BiddingStrategySimulationName;
 import com.google.ads.googleads.v8.resources.BillingSetupName;
@@ -131,6 +133,7 @@ import com.google.ads.googleads.v8.resources.OfflineUserDataJobName;
 import com.google.ads.googleads.v8.resources.OperatingSystemVersionConstantName;
 import com.google.ads.googleads.v8.resources.PaidOrganicSearchTermViewName;
 import com.google.ads.googleads.v8.resources.ParentalStatusViewName;
+import com.google.ads.googleads.v8.resources.PaymentsAccountName;
 import com.google.ads.googleads.v8.resources.ProductBiddingCategoryConstantName;
 import com.google.ads.googleads.v8.resources.ProductGroupViewName;
 import com.google.ads.googleads.v8.resources.RecommendationName;
@@ -149,8 +152,6 @@ import com.google.ads.googleads.v8.resources.UserListName;
 import com.google.ads.googleads.v8.resources.UserLocationViewName;
 import com.google.ads.googleads.v8.resources.VideoName;
 import com.google.ads.googleads.v8.resources.WebpageViewName;
-import com.google.ads.googleads.v8.resources.BiddingDataExclusionName;
-import com.google.ads.googleads.v8.resources.BiddingSeasonalityAdjustmentName;
 
 /**
  * Utilities for generating resource names. Offers several advantages over the utilities in the
@@ -925,8 +926,7 @@ public class ResourceNames {
 
   /** Returns the payments account resource name for the specified components. */
   public static String paymentsAccount(long customerId, String paymentsAccountId) {
-    return String.format(
-        "customers/%s/paymentsAccounts/%s", String.valueOf(customerId), paymentsAccountId);
+    return PaymentsAccountName.format(String.valueOf(customerId), paymentsAccountId);
   }
 
   /** Returns the product bidding category constant for the specified components. */

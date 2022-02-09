@@ -16,17 +16,15 @@ package com.google.ads.googleads.lib.logging.scrub;
 
 import static org.junit.Assert.assertEquals;
 
-import com.google.ads.googleads.v7.resources.CustomerUserAccessInvitation;
-import com.google.ads.googleads.v7.services.CreateCustomerClientRequest;
-import com.google.ads.googleads.v7.services.SearchGoogleAdsResponse;
-import com.google.ads.googleads.v7.services.SearchGoogleAdsStreamResponse;
-import com.google.common.collect.ImmutableList;
+import com.google.ads.googleads.v10.resources.CustomerUserAccessInvitation;
+import com.google.ads.googleads.v10.services.CreateCustomerClientRequest;
+import com.google.ads.googleads.v10.services.SearchGoogleAdsResponse;
+import com.google.ads.googleads.v10.services.SearchGoogleAdsStreamResponse;
 import com.google.common.io.Resources;
 import com.google.protobuf.Message;
 import com.google.protobuf.TextFormat;
 import java.io.IOException;
 import java.nio.charset.Charset;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import org.junit.Test;
@@ -46,51 +44,51 @@ public class LogScrubberTest {
   public static List<Object[]> parameters() {
     return Arrays.asList(
         new Object[] {
-          "v7 search stream scrubs email",
-          "searchStream_v7_email_expected.textpb",
-          "searchStream_v7_email_input.textpb",
+          "v10 search stream scrubs email",
+          "searchStream_v10_email_expected.textpb",
+          "searchStream_v10_email_input.textpb",
           SearchGoogleAdsStreamResponse.class
         },
         new Object[] {
-          "v7 search stream scrubs inviter email",
-          "searchStream_v7_inviter_email_expected.textpb",
-          "searchStream_v7_inviter_email_input.textpb",
+          "v10 search stream scrubs inviter email",
+          "searchStream_v10_inviter_email_expected.textpb",
+          "searchStream_v10_inviter_email_input.textpb",
           SearchGoogleAdsStreamResponse.class
         },
         new Object[] {
-          "v7 search stream ignores when not present",
-          "searchStream_v7_ignoresWhenNotPresent_expected.textpb",
-          "searchStream_v7_ignoresWhenNotPresent_input.textpb",
+          "v10 search stream ignores when not present",
+          "searchStream_v10_ignoresWhenNotPresent_expected.textpb",
+          "searchStream_v10_ignoresWhenNotPresent_input.textpb",
           SearchGoogleAdsStreamResponse.class
         },
         new Object[] {
-          "v7 ignores other message",
-          "searchStream_v7_ignoresOtherMessage_expected.textpb",
-          "searchStream_v7_ignoresOtherMessage_input.textpb",
+          "v10 ignores other message",
+          "searchStream_v10_ignoresOtherMessage_expected.textpb",
+          "searchStream_v10_ignoresOtherMessage_input.textpb",
           SearchGoogleAdsStreamResponse.class
         },
         new Object[] {
-          "v7 search stream scrubs email",
-          "searchStream_v7_email_expected.textpb",
-          "searchStream_v7_email_input.textpb",
+          "v10 search stream scrubs email",
+          "searchStream_v10_email_expected.textpb",
+          "searchStream_v10_email_input.textpb",
           SearchGoogleAdsResponse.class
         },
         new Object[] {
-          "v7 search stream scrubs inviter email",
-          "searchStream_v7_inviter_email_expected.textpb",
-          "searchStream_v7_inviter_email_input.textpb",
+          "v10 search stream scrubs inviter email",
+          "searchStream_v10_inviter_email_expected.textpb",
+          "searchStream_v10_inviter_email_input.textpb",
           SearchGoogleAdsResponse.class
         },
         new Object[] {
-          "v7 search stream ignores when not present",
-          "searchStream_v7_ignoresWhenNotPresent_expected.textpb",
-          "searchStream_v7_ignoresWhenNotPresent_input.textpb",
+          "v10 search stream ignores when not present",
+          "searchStream_v10_ignoresWhenNotPresent_expected.textpb",
+          "searchStream_v10_ignoresWhenNotPresent_input.textpb",
           SearchGoogleAdsResponse.class
         },
         new Object[] {
-          "v7 ignores other message",
-          "searchStream_v7_ignoresOtherMessage_expected.textpb",
-          "searchStream_v7_ignoresOtherMessage_input.textpb",
+          "v10 ignores other message",
+          "searchStream_v10_ignoresOtherMessage_expected.textpb",
+          "searchStream_v10_ignoresOtherMessage_input.textpb",
           SearchGoogleAdsResponse.class
         },
         new Object[] {
@@ -107,14 +105,14 @@ public class LogScrubberTest {
         },
         new Object[] {
           "search stream masks invitation email address",
-          "searchStream_v7_scrubsInvitationEmailAddress_expected.textpb",
-          "searchStream_v7_scrubsInvitationEmailAddress_input.textpb",
+          "searchStream_v10_scrubsInvitationEmailAddress_expected.textpb",
+          "searchStream_v10_scrubsInvitationEmailAddress_input.textpb",
           SearchGoogleAdsStreamResponse.class
         },
         new Object[] {
           "search stream masks invitation email address",
-          "searchStream_v7_scrubsInvitationEmailAddress_expected.textpb",
-          "searchStream_v7_scrubsInvitationEmailAddress_input.textpb",
+          "searchStream_v10_scrubsInvitationEmailAddress_expected.textpb",
+          "searchStream_v10_scrubsInvitationEmailAddress_input.textpb",
           SearchGoogleAdsResponse.class
         },
         new Object[] {

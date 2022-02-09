@@ -3,13 +3,13 @@ package com.google.ads.googleads.lib.utils;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 
-import com.google.ads.googleads.v7.common.ManualCpc;
-import com.google.ads.googleads.v7.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v7.resources.Campaign;
-import com.google.ads.googleads.v7.common.ManualCpm;
-import com.google.ads.googleads.v7.resources.Campaign.DynamicSearchAdsSetting;
-import com.google.ads.googleads.v7.resources.Campaign.SelectiveOptimization;
-import com.google.ads.googleads.v7.resources.Campaign.TrackingSetting;
+import com.google.ads.googleads.v10.common.ManualCpc;
+import com.google.ads.googleads.v10.common.ManualCpm;
+import com.google.ads.googleads.v10.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v10.resources.Campaign;
+import com.google.ads.googleads.v10.resources.Campaign.DynamicSearchAdsSetting;
+import com.google.ads.googleads.v10.resources.Campaign.SelectiveOptimization;
+import com.google.ads.googleads.v10.resources.Campaign.TrackingSetting;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.Descriptors.EnumValueDescriptor;
 import java.util.Arrays;
@@ -132,7 +132,7 @@ public class FieldMasksTest {
               FieldMasks.getFieldValue("status.paused", campaign);
             });
     assertEquals(
-        "Unable to access subfield of google.ads.googleads.v7.resources.Campaign.status which is"
+        "Unable to access subfield of google.ads.googleads.v10.resources.Campaign.status which is"
             + " not a Message",
         exception.getMessage());
   }
