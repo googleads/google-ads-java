@@ -154,6 +154,7 @@ import com.google.ads.googleads.v9.resources.OfflineUserDataJobName;
 import com.google.ads.googleads.v9.resources.OperatingSystemVersionConstantName;
 import com.google.ads.googleads.v9.resources.PaidOrganicSearchTermViewName;
 import com.google.ads.googleads.v9.resources.ParentalStatusViewName;
+import com.google.ads.googleads.v9.resources.PaymentsAccountName;
 import com.google.ads.googleads.v9.resources.ProductBiddingCategoryConstantName;
 import com.google.ads.googleads.v9.resources.ProductGroupViewName;
 import com.google.ads.googleads.v9.resources.RecommendationName;
@@ -1081,8 +1082,7 @@ public class ResourceNames {
 
   /** Returns the payments account resource name for the specified components. */
   public static String paymentsAccount(long customerId, String paymentsAccountId) {
-    return String.format(
-        "customers/%s/paymentsAccounts/%s", String.valueOf(customerId), paymentsAccountId);
+    return PaymentsAccountName.format(String.valueOf(customerId), paymentsAccountId);
   }
 
   /** Returns the product bidding category constant for the specified components. */

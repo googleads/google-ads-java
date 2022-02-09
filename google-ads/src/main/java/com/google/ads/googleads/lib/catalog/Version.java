@@ -65,7 +65,7 @@ public final class Version implements Comparable<Version> {
    */
   @Override
   public int compareTo(Version o) {
-    return o.versionName.compareTo(versionName);
+    return o.getVersionNumber() - getVersionNumber();
   }
 
   /** Returns a class which enumerates the service clients for this version. */

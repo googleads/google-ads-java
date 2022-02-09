@@ -14,7 +14,7 @@
 
 package com.google.ads.googleads.lib;
 
-import com.google.ads.googleads.v7.services.stub.GoogleAdsServiceStubSettings;
+import com.google.ads.googleads.v10.services.stub.GoogleAdsServiceStubSettings;
 import com.google.api.gax.core.GaxProperties;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
@@ -79,8 +79,8 @@ public abstract class GoogleAdsHeaderProvider implements HeaderProvider {
   }
 
   private static String getLibraryVersion() {
-    String implementationVersion = GoogleAdsHeaderProvider.class.getPackage()
-        .getImplementationVersion();
+    String implementationVersion =
+        GoogleAdsHeaderProvider.class.getPackage().getImplementationVersion();
     return implementationVersion == null ? "0.0.0" : implementationVersion;
   }
 

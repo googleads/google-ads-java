@@ -97,7 +97,8 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
             .build();
     clientBuilder
         .setEndpoint(DEFAULT_ENDPOINT)
-        .setTransportChannelProvider(transportChannelProvider);
+        .setTransportChannelProvider(transportChannelProvider)
+        .setDefaultTransportChannelProvider(transportChannelProvider);
     return clientBuilder;
   }
 
@@ -132,6 +133,9 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
 
   /** Returns the configured transport provider. */
   abstract TransportChannelProvider getTransportChannelProvider();
+
+  /** Returns the default transport provider. */
+  abstract TransportChannelProvider getDefaultTransportChannelProvider();
 
   /**
    * Builder for configuring and creating an instance of {@link GoogleAdsClient}.
@@ -351,6 +355,13 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
     /** Sets the TransportChannelProvider to use. */
     abstract Builder setTransportChannelProvider(TransportChannelProvider transportChannelProvider);
 
+    /** Returns the default TransportChannelProvider currently configured. */
+    abstract TransportChannelProvider getDefaultTransportChannelProvider();
+
+    /** Sets the default TransportChannelProvider to use. */
+    abstract Builder setDefaultTransportChannelProvider(
+        TransportChannelProvider transportChannelProvider);
+
     /** Returns the developer token currently configured. */
     public abstract String getDeveloperToken();
 
@@ -423,7 +434,8 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
     public abstract String getEndpoint();
 
     /**
-     * Optional: Overrides the default endpoint. For the default value see {@link GoogleAdsClient#DEFAULT_ENDPOINT}.
+     * Optional: Overrides the default endpoint. For the default value see {@link
+     * GoogleAdsClient#DEFAULT_ENDPOINT}.
      */
     public abstract Builder setEndpoint(String endpoint);
 
@@ -552,6 +564,28 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
       Primer.getInstance().ifPresent(p -> p.primeCredentialsAsync(getCredentials()));
       // Proceeds with creating the client library instance.
       TransportChannelProvider transportChannelProvider = getTransportChannelProvider();
+      // Updates the headers in the transportChannelProvider and nested logging interceptor with the
+      // current client's headers if a custom transportChannelProvider was not used.
+      boolean transportChannelProviderIsDefault =
+          getTransportChannelProvider() == getDefaultTransportChannelProvider();
+      // Checks if the transportChannelProvider being used is the default version provided by this
+      // library. If so, we will update the headers used in the transportChannelProvider and
+      // loggingInterceptor to match the headers used in the GoogleAdsClient. If the client has used
+      // a custom transportChannelProvider, the following statement will evaluate false, and we will
+      // not update the transportChannelProvider or loggingInterceptor, as not to clobber the
+      // provided transportChannelProvider. If a client uses a customer transportChannelProvider,
+      // the client is responsible for updating the headers in the transportChannelProvider and
+      // loggingInterceptor.
+      if (transportChannelProviderIsDefault) {
+        transportChannelProvider =
+            InstantiatingGrpcChannelProvider.newBuilder()
+                .setInterceptorProvider(
+                    () ->
+                        ImmutableList.of(
+                            new LoggingInterceptor(
+                                new RequestLogger(), getHeaders(), getEndpoint())))
+                .build();
+      }
       if (transportChannelProvider.needsHeaders()) {
         transportChannelProvider = transportChannelProvider.withHeaders(getHeaders());
       }
@@ -559,6 +593,9 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
         transportChannelProvider = transportChannelProvider.withEndpoint(getEndpoint());
       }
       setTransportChannelProvider(transportChannelProvider);
+      if (transportChannelProviderIsDefault) {
+        setDefaultTransportChannelProvider(transportChannelProvider);
+      }
 
       GoogleAdsAllVersions allVersionsClient =
           ApiCatalog.getDefault()

@@ -18,11 +18,12 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v9.errors.GoogleAdsError;
-import com.google.ads.googleads.v9.errors.GoogleAdsException;
-import com.google.ads.googleads.v9.resources.Customer;
-import com.google.ads.googleads.v9.services.CustomerServiceClient;
-import com.google.ads.googleads.v9.utils.ResourceNames;
+import com.google.ads.googleads.v10.errors.GoogleAdsError;
+import com.google.ads.googleads.v10.errors.GoogleAdsException;
+import com.google.ads.googleads.v10.resources.Customer;
+import com.google.ads.googleads.v10.services.GoogleAdsRow;
+import com.google.ads.googleads.v10.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v10.services.GoogleAdsServiceClient.SearchPagedResponse;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -85,10 +86,26 @@ public class GetAccountInformation {
    * @throws GoogleAdsException if an API request failed with one or more service errors.
    */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId) {
-    try (CustomerServiceClient customerServiceClient =
-        googleAdsClient.getLatestVersion().createCustomerServiceClient()) {
-      String customerResourceName = ResourceNames.customer(customerId);
-      Customer customer = customerServiceClient.getCustomer(customerResourceName);
+    try (GoogleAdsServiceClient googleAdsServiceClient =
+        googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
+      // Constructs a query to retrieve the customer.
+      String query =
+          "SELECT customer.id, "
+              + "customer.descriptive_name, "
+              + "customer.currency_code, "
+              + "customer.time_zone, "
+              + "customer.tracking_url_template, "
+              + "customer.auto_tagging_enabled "
+              + "FROM customer "
+              // Limits to 1 to clarify that selecting from the customer resource
+              // will always return only one row, which will be for the customer
+              // ID specified in the request.
+              + "LIMIT 1";
+      // Executes the query and gets the Customer object from the single row of the response.
+      SearchPagedResponse response =
+          googleAdsServiceClient.search(Long.toString(customerId), query);
+      GoogleAdsRow googleAdsRow = response.iterateAll().iterator().next();
+      Customer customer = googleAdsRow.getCustomer();
       // Prints account information.
       System.out.printf(
           "Customer with ID %d, descriptive name '%s', currency code '%s', timezone '%s', "

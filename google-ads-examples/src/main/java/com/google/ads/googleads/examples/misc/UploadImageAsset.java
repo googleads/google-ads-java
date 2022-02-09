@@ -18,14 +18,14 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v9.common.ImageAsset;
-import com.google.ads.googleads.v9.enums.AssetTypeEnum.AssetType;
-import com.google.ads.googleads.v9.errors.GoogleAdsError;
-import com.google.ads.googleads.v9.errors.GoogleAdsException;
-import com.google.ads.googleads.v9.resources.Asset;
-import com.google.ads.googleads.v9.services.AssetOperation;
-import com.google.ads.googleads.v9.services.AssetServiceClient;
-import com.google.ads.googleads.v9.services.MutateAssetsResponse;
+import com.google.ads.googleads.v10.common.ImageAsset;
+import com.google.ads.googleads.v10.enums.AssetTypeEnum.AssetType;
+import com.google.ads.googleads.v10.errors.GoogleAdsError;
+import com.google.ads.googleads.v10.errors.GoogleAdsException;
+import com.google.ads.googleads.v10.resources.Asset;
+import com.google.ads.googleads.v10.services.AssetOperation;
+import com.google.ads.googleads.v10.services.AssetServiceClient;
+import com.google.ads.googleads.v10.services.MutateAssetsResponse;
 import com.google.common.collect.ImmutableList;
 import com.google.common.io.ByteStreams;
 import com.google.protobuf.ByteString;
@@ -100,11 +100,10 @@ public class UploadImageAsset {
     // Creates an asset.
     Asset asset =
         Asset.newBuilder()
-            // Optional: Provide a unique friendly name to identify your asset.
-            // If you specify the name field, then both the asset name and the image being
-            // uploaded should be unique, and should not match another ACTIVE asset in this
-            // customer account.
-            // .setName("Jupiter Trip # " + getPrintableDateTime())
+            // Provide a unique friendly name to identify your asset.
+            // When there is an existing image asset with the same content but a different name, the
+            // new name will be dropped silently.
+            .setName("Marketing Image")
             .setType(AssetType.IMAGE)
             .setImageAsset(imageAsset)
             .build();
