@@ -1,19 +1,15 @@
 <dependencies>
-  <dependency name='com.google.api-ads:google-ads-stubs-v8:16.0.3'>
-    <file>google-ads-stubs-v8-16.0.3.jar</file>
-    <license name='No license found' />
-  </dependency>
   <dependency name='commons-logging:commons-logging:1.2'>
     <file>commons-logging-1.2.jar</file>
     <license name='The Apache Software License, Version 2.0' url='http://www.apache.org/licenses/LICENSE-2.0.txt' />
   </dependency>
-  <dependency name='com.google.api-ads:google-ads-codegen:16.0.3'>
-    <file>google-ads-codegen-16.0.3.jar</file>
-    <license name='No license found' />
-  </dependency>
   <dependency name='com.google.protobuf:protobuf-java:3.18.1'>
     <file>protobuf-java-3.18.1.jar</file>
     <license name='3-Clause BSD License' url='https://opensource.org/licenses/BSD-3-Clause' />
+  </dependency>
+  <dependency name='com.google.api-ads:google-ads-stubs-v7:17.0.0'>
+    <file>google-ads-stubs-v7-17.0.0.jar</file>
+    <license name='No license found' />
   </dependency>
   <dependency name='io.grpc:grpc-auth:1.41.0'>
     <file>grpc-auth-1.41.0.jar</file>
@@ -43,6 +39,10 @@
     <file>reflections-0.9.11.jar</file>
     <license name='WTFPL' url='http://www.wtfpl.net/' />
     <license name='The New BSD License' url='http://www.opensource.org/licenses/bsd-license.html' />
+  </dependency>
+  <dependency name='com.google.api-ads:google-ads-stubs-v10:17.0.0'>
+    <file>google-ads-stubs-v10-17.0.0.jar</file>
+    <license name='No license found' />
   </dependency>
   <dependency name='com.google.api.grpc:proto-google-common-protos:2.6.0'>
     <file>proto-google-common-protos-2.6.0.jar</file>
@@ -88,10 +88,6 @@
     <file>google-auth-library-credentials-1.2.1.jar</file>
     <license name='BSD New license' url='http://opensource.org/licenses/BSD-3-Clause' />
   </dependency>
-  <dependency name='io.netty:netty-tcnative-boringssl-static:2.0.26.Final'>
-    <file>netty-tcnative-boringssl-static-2.0.26.Final.jar</file>
-    <license name='Apache License, Version 2.0' url='http://www.apache.org/licenses/LICENSE-2.0' />
-  </dependency>
   <dependency name='org.slf4j:slf4j-api:1.7.25'>
     <file>slf4j-api-1.7.25.jar</file>
     <license name='MIT License' url='http://www.opensource.org/licenses/mit-license.php' />
@@ -115,10 +111,6 @@
   <dependency name='io.perfmark:perfmark-api:0.23.0'>
     <file>perfmark-api-0.23.0.jar</file>
     <license name='Apache 2.0' url='https://opensource.org/licenses/Apache-2.0' />
-  </dependency>
-  <dependency name='com.google.api-ads:google-ads-stubs-lib:16.0.3'>
-    <file>google-ads-stubs-lib-16.0.3.jar</file>
-    <license name='No license found' />
   </dependency>
   <dependency name='org.javassist:javassist:3.21.0-GA'>
     <file>javassist-3.21.0-GA.jar</file>
@@ -146,8 +138,8 @@
     <file>annotations-4.1.1.4.jar</file>
     <license name='Apache 2.0' url='http://www.apache.org/licenses/LICENSE-2.0' />
   </dependency>
-  <dependency name='com.google.api-ads:google-ads-stubs-v7:16.0.3'>
-    <file>google-ads-stubs-v7-16.0.3.jar</file>
+  <dependency name='com.google.api-ads:google-ads-stubs-v8:17.0.0'>
+    <file>google-ads-stubs-v8-17.0.0.jar</file>
     <license name='No license found' />
   </dependency>
   <dependency name='org.threeten:threetenbp:1.5.1'>
@@ -178,17 +170,25 @@
     <file>conscrypt-openjdk-uber-2.5.1.jar</file>
     <license name='Apache 2' url='https://www.apache.org/licenses/LICENSE-2.0' />
   </dependency>
+  <dependency name='com.google.api-ads:google-ads-stubs-lib:17.0.0'>
+    <file>google-ads-stubs-lib-17.0.0.jar</file>
+    <license name='No license found' />
+  </dependency>
+  <dependency name='com.google.api-ads:google-ads-stubs-v9:17.0.0'>
+    <file>google-ads-stubs-v9-17.0.0.jar</file>
+    <license name='No license found' />
+  </dependency>
   <dependency name='io.grpc:grpc-netty-shaded:1.41.0'>
     <file>grpc-netty-shaded-1.41.0.jar</file>
     <license name='Apache 2.0' url='https://opensource.org/licenses/Apache-2.0' />
   </dependency>
-  <dependency name='com.google.api-ads:google-ads-stubs-v9:16.0.3'>
-    <file>google-ads-stubs-v9-16.0.3.jar</file>
-    <license name='No license found' />
-  </dependency>
   <dependency name='com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava'>
     <file>listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar</file>
     <license name='The Apache Software License, Version 2.0' url='http://www.apache.org/licenses/LICENSE-2.0.txt' />
+  </dependency>
+  <dependency name='com.google.api-ads:google-ads-codegen:17.0.0'>
+    <file>google-ads-codegen-17.0.0.jar</file>
+    <license name='No license found' />
   </dependency>
   <dependency name='org.codehaus.mojo:animal-sniffer-annotations:1.20'>
     <file>animal-sniffer-annotations-1.20.jar</file>
