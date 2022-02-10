@@ -1,3 +1,17 @@
+17.0.0 - 2022-02-10
+-------------------
+- Add support and examples for Google Ads API v10.0.
+- Remove support for Google Ads API v7.
+- Remove dependency on `io.netty:netty-tcnative-boringssl-static` (#557, #440).
+- Fix #174 to pass new login customer ID header after
+  `GoogleAdsClient.toBuilder().setLoginCustomerId().build()`.
+- Update examples using image asset and media bundle to include asset names.
+- Add asset names to AddDisplayUploadAd and UploadImageAsset.
+- Add call ads examples.
+- Update `GetKeywords` example to demonstrate `omit_unselected_resource_names`
+  usage.
+
+
 16.0.3 - 2022-01-10
 -------------------
 - Fix #543 to correctly classify the `google-cloud-shared-dependencies` dependency.
