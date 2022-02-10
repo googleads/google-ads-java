@@ -49,7 +49,7 @@ public class GetKeywords {
     private Long adGroupId;
 
     @Parameter(names = ArgumentNames.OMIT_UNSELECTED_RESOURCE_NAMES, arity = 1)
-    private Boolean omitUnselectedResourceNames;
+    private Boolean omitUnselectedResourceNames = false;
   }
 
   public static void main(String[] args) throws IOException {
