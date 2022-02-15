@@ -890,11 +890,11 @@ public class GoogleAdsClientTest {
           (InstantiatingGrpcChannelProvider) client.getTransportChannelProvider();
       assertEquals(
           "Max inbound metadata size",
-          GoogleAdsClient.DEFAULT_INBOUND_METADATA_SIZE,
+          GoogleAdsClient.DEFAULT_MAX_INBOUND_METADATA_SIZE,
           channelProvider.getMaxInboundMetadataSize());
       assertEquals(
           "Max inbound message size",
-          GoogleAdsClient.DEFAULT_INBOUND_MESSAGE_SIZE,
+          GoogleAdsClient.DEFAULT_MAX_INBOUND_MESSAGE_SIZE,
           // For some reason, this setting is only available on the builder.
           channelProvider.toBuilder().getMaxInboundMessageSize());
     }

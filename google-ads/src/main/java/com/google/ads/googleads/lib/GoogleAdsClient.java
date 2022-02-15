@@ -74,13 +74,13 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
    * Default max inbound metadata (headers) size. Inbound headers for the Google Ads API may exceed
    * the default max of 8KB.
    */
-  @VisibleForTesting static final Integer DEFAULT_INBOUND_METADATA_SIZE = 16 * 1024 * 1024;
+  @VisibleForTesting static final Integer DEFAULT_MAX_INBOUND_METADATA_SIZE = 16 * 1024 * 1024;
 
   /**
    * Default max inbound message (response) size. Large response will often exceed the default of
    * 4MB.
    */
-  @VisibleForTesting static final Integer DEFAULT_INBOUND_MESSAGE_SIZE = 64 * 1024 * 1024;
+  @VisibleForTesting static final Integer DEFAULT_MAX_INBOUND_MESSAGE_SIZE = 64 * 1024 * 1024;
 
   static {
     // Alpha feature to optimize the client startup time.
@@ -100,8 +100,8 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
                             new RequestLogger(),
                             clientBuilder.getHeaders(),
                             clientBuilder.getEndpoint())))
-            .setMaxInboundMetadataSize(DEFAULT_INBOUND_METADATA_SIZE)
-            .setMaxInboundMessageSize(DEFAULT_INBOUND_MESSAGE_SIZE)
+            .setMaxInboundMetadataSize(DEFAULT_MAX_INBOUND_METADATA_SIZE)
+            .setMaxInboundMessageSize(DEFAULT_MAX_INBOUND_MESSAGE_SIZE)
             .build();
     clientBuilder
         .setEndpoint(DEFAULT_ENDPOINT)
@@ -592,8 +592,8 @@ public abstract class GoogleAdsClient extends AbstractGoogleAdsClient {
                         ImmutableList.of(
                             new LoggingInterceptor(
                                 new RequestLogger(), getHeaders(), getEndpoint())))
-                .setMaxInboundMetadataSize(DEFAULT_INBOUND_METADATA_SIZE)
-                .setMaxInboundMessageSize(DEFAULT_INBOUND_MESSAGE_SIZE)
+                .setMaxInboundMetadataSize(DEFAULT_MAX_INBOUND_METADATA_SIZE)
+                .setMaxInboundMessageSize(DEFAULT_MAX_INBOUND_MESSAGE_SIZE)
                 .build();
       }
       if (transportChannelProvider.needsHeaders()) {
