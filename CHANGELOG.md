@@ -1,3 +1,7 @@
+17.0.1 - 2022-02-16
+-------------------
+- Fix #565 to properly set the max inbound message size and metadata size.
+
 17.0.0 - 2022-02-10
 -------------------
 - Add support and examples for Google Ads API v10.0.
