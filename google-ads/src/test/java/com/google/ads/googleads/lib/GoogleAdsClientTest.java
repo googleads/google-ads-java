@@ -39,6 +39,7 @@ import com.google.ads.googleads.v10.services.SearchGoogleAdsStreamRequest;
 import com.google.ads.googleads.v10.services.SearchGoogleAdsStreamResponse;
 import com.google.api.gax.grpc.GaxGrpcProperties;
 import com.google.api.gax.grpc.GrpcStatusCode;
+import com.google.api.gax.grpc.InstantiatingGrpcChannelProvider;
 import com.google.api.gax.grpc.testing.LocalChannelProvider;
 import com.google.api.gax.grpc.testing.MockServiceHelper;
 import com.google.api.gax.rpc.ApiClientHeaderProvider;
@@ -190,10 +191,7 @@ public class GoogleAdsClientTest {
 
     // Build a new client from the file.
     GoogleAdsClient client =
-        GoogleAdsClient.newBuilder()
-            .fromPropertiesFile(propertiesFile)
-            .setTransportChannelProvider(localChannelProvider)
-            .build();
+        GoogleAdsClient.newBuilder().fromPropertiesFile(propertiesFile).build();
     assertGoogleAdsClient(client, null, true);
   }
 
@@ -253,7 +251,7 @@ public class GoogleAdsClientTest {
 
   /** Tests building a client without the use of a properties file. */
   @Test
-  public void buildWithoutPropertiesFile_supportsAllFields() throws IOException {
+  public void buildWithoutPropertiesFile_supportsAllFields() {
     Credentials credentials =
         UserCredentials.newBuilder()
             .setClientId(CLIENT_ID)
@@ -265,7 +263,6 @@ public class GoogleAdsClientTest {
             .setCredentials(credentials)
             .setDeveloperToken(DEVELOPER_TOKEN)
             .setLoginCustomerId(LOGIN_CUSTOMER_ID)
-            .setTransportChannelProvider(localChannelProvider)
             .build();
     assertGoogleAdsClient(client, true);
   }
@@ -886,6 +883,20 @@ public class GoogleAdsClientTest {
           "Scope",
           Collections.singleton("https://www.googleapis.com/auth/adwords"),
           serviceAccountCredentials.getScopes());
+    }
+
+    if (client.getTransportChannelProvider() == client.getDefaultTransportChannelProvider()) {
+      InstantiatingGrpcChannelProvider channelProvider =
+          (InstantiatingGrpcChannelProvider) client.getTransportChannelProvider();
+      assertEquals(
+          "Max inbound metadata size",
+          GoogleAdsClient.DEFAULT_MAX_INBOUND_METADATA_SIZE,
+          channelProvider.getMaxInboundMetadataSize());
+      assertEquals(
+          "Max inbound message size",
+          GoogleAdsClient.DEFAULT_MAX_INBOUND_MESSAGE_SIZE,
+          // For some reason, this setting is only available on the builder.
+          channelProvider.toBuilder().getMaxInboundMessageSize());
     }
 
     assertEquals("Developer token", DEVELOPER_TOKEN, client.getDeveloperToken());
