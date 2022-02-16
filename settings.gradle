@@ -32,7 +32,6 @@ if (!startParameter.projectProperties.containsKey("release")) {
 
 // Keep the stubs modules at the end of this file. The stubs generator will
 // append new modules here as required. There should *not* be a newline at EOF.
-include ':google-ads-stubs-v7'
 include ':google-ads-stubs-v8'
 include ':google-ads-stubs-v9'
 include ':google-ads-stubs-v10'
