@@ -104,6 +104,7 @@ public final class ArgumentNames {
   public static final String PHONE_NUMBER = "--phoneNumber";
   public static final String QUANTITY = "--quantity";
   public static final String RECOMMENDATION_ID = "--recommendationId";
+  public static final String RECOMMENDATION_TYPES = "--recommendationTypes";
   public static final String REPLACE_EXISTING_TREE = "--replaceExistingTree";
   public static final String RESTATEMENT_VALUE = "--restatementValue";
   public static final String SITELINK_TEXT = "--sitelinkText";
