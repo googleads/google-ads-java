@@ -209,7 +209,7 @@ public class UploadOfflineConversion {
     // See https://developers.google.com/google-ads/api/docs/conversions/upload-clicks for details.
     long numberOfIdsSpecified =
         Arrays.asList(gclid, gbraid, wbraid).stream().filter(idField -> idField != null).count();
-    if (numberOfIdsSpecified > 1) {
+    if (numberOfIdsSpecified != 1) {
       throw new IllegalArgumentException(
           "Exactly 1 of gclid, gbraid, or wbraid is required, but "
               + numberOfIdsSpecified
