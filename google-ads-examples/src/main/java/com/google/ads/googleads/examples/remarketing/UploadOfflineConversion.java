@@ -171,7 +171,12 @@ public class UploadOfflineConversion {
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
    * @param conversionActionId conversion action ID associated with this conversion.
-   * @param gclid the GCLID for the conversion.
+   * @param gclid the GCLID for the conversion. If set, {@code gbraid} and {@code wbraid} must be
+   *     null.
+   * @param gbraid the GBRAID fot the iOS app conversion. If set, {@code gclid} and {@code wbraid}
+   *     must be null.
+   * @param wbraid the WBRAID for the iOS web conversion. If set, {@code gclid} and {@code gbraid}
+   *     must be null.
    * @param conversionDateTime date and time of the conversion.
    * @param conversionValue the value of the conversion.
    * @param conversionCustomVariableId the ID of the conversion custom variable to associate with
@@ -193,18 +198,6 @@ public class UploadOfflineConversion {
       Long conversionCustomVariableId,
       String conversionCustomVariableValue,
       String orderId) {
-    // Gets the conversion action resource name.
-    String conversionActionResourceName =
-        ResourceNames.conversionAction(customerId, conversionActionId);
-
-    // Creates the click conversion.
-    ClickConversion.Builder clickConversionBuilder =
-        ClickConversion.newBuilder()
-            .setConversionAction(conversionActionResourceName)
-            .setConversionDateTime(conversionDateTime)
-            .setConversionValue(conversionValue)
-            .setCurrencyCode("USD");
-
     // Verifies that exactly one of gclid, gbraid, and wbraid is specified, as required.
     // See https://developers.google.com/google-ads/api/docs/conversions/upload-clicks for details.
     long numberOfIdsSpecified =
@@ -215,6 +208,18 @@ public class UploadOfflineConversion {
               + numberOfIdsSpecified
               + " ID values were provided");
     }
+
+    // Constructs the conversion action resource name from the customer and conversion action IDs.
+    String conversionActionResourceName =
+        ResourceNames.conversionAction(customerId, conversionActionId);
+
+    // Creates the click conversion.
+    ClickConversion.Builder clickConversionBuilder =
+        ClickConversion.newBuilder()
+            .setConversionAction(conversionActionResourceName)
+            .setConversionDateTime(conversionDateTime)
+            .setConversionValue(conversionValue)
+            .setCurrencyCode("USD");
 
     // Sets the single specified ID field.
     if (gclid != null) {
