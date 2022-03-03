@@ -173,7 +173,7 @@ public class UploadOfflineConversion {
    * @param conversionActionId conversion action ID associated with this conversion.
    * @param gclid the GCLID for the conversion. If set, {@code gbraid} and {@code wbraid} must be
    *     null.
-   * @param gbraid the GBRAID fot the iOS app conversion. If set, {@code gclid} and {@code wbraid}
+   * @param gbraid the GBRAID for the iOS app conversion. If set, {@code gclid} and {@code wbraid}
    *     must be null.
    * @param wbraid the WBRAID for the iOS web conversion. If set, {@code gclid} and {@code gbraid}
    *     must be null.
