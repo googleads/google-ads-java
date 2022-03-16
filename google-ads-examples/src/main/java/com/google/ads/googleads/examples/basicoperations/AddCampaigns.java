@@ -145,7 +145,7 @@ public class AddCampaigns {
           NetworkSettings.newBuilder()
               .setTargetGoogleSearch(true)
               .setTargetSearchNetwork(true)
-              // Enable Display Expansion on Search campaigns. See
+              // Enables Display Expansion on Search campaigns. See
               // https://support.google.com/google-ads/answer/7193800 to learn more.
               .setTargetContentNetwork(true)
               .setTargetPartnerSearchNetwork(false)
