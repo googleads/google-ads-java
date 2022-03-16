@@ -31,6 +31,7 @@ import com.google.ads.googleads.v10.utils.ErrorUtils;
 import com.google.ads.googleads.v10.utils.ResourceNames;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Arrays;
 
 /** Imports offline conversion values for specific clicks to an account. */
 public class UploadOfflineConversion {
@@ -42,8 +43,38 @@ public class UploadOfflineConversion {
     @Parameter(names = ArgumentNames.CONVERSION_ACTION_ID, required = true)
     private long conversionActionId;
 
-    @Parameter(names = ArgumentNames.GCLID, required = true)
+    @Parameter(
+        names = ArgumentNames.GCLID,
+        required = false,
+        description =
+            "The Google Click identifier. If setting this value, do not set "
+                + ArgumentNames.GBRAID
+                + " or "
+                + ArgumentNames.WBRAID
+                + ".")
     private String gclid;
+
+    @Parameter(
+        names = ArgumentNames.GBRAID,
+        required = false,
+        description =
+            "The GBRAID identifier for an iOS app conversion. If setting this value, do not set "
+                + ArgumentNames.GCLID
+                + " or "
+                + ArgumentNames.WBRAID
+                + ".")
+    private String gbraid;
+
+    @Parameter(
+        names = ArgumentNames.WBRAID,
+        required = false,
+        description =
+            "The WBRAID identifer for an iOS web conversion. If setting this value, do not set "
+                + ArgumentNames.GCLID
+                + " or "
+                + ArgumentNames.GBRAID
+                + ".")
+    private String wbraid;
 
     @Parameter(
         names = ArgumentNames.CONVERSION_DATE_TIME,
@@ -78,7 +109,10 @@ public class UploadOfflineConversion {
       // into the code here. See the parameter class definition above for descriptions.
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
       params.conversionActionId = Long.parseLong("INSERT_CONVERSION_ACTION_ID_HERE");
-      params.gclid = "INSERT_GCL_ID_HERE";
+      // Set exactly one of gclid, gbraid, or wbraid.
+      params.gclid = "INSERT_GCLID_HERE";
+      params.gbraid = null;
+      params.wbraid = null;
       params.conversionDateTime = "INSERT_CONVERSION_DATE_TIME_HERE";
       params.conversionValue = Double.parseDouble("INSERT_CONVERSION_VALUE_HERE");
       // Optionally specify the conversion custom variable ID and value you want to
@@ -108,6 +142,8 @@ public class UploadOfflineConversion {
               params.customerId,
               params.conversionActionId,
               params.gclid,
+              params.gbraid,
+              params.wbraid,
               params.conversionDateTime,
               params.conversionValue,
               params.conversionCustomVariableId,
@@ -135,7 +171,12 @@ public class UploadOfflineConversion {
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
    * @param conversionActionId conversion action ID associated with this conversion.
-   * @param gclid the GCLID for the conversion.
+   * @param gclid the GCLID for the conversion. If set, {@code gbraid} and {@code wbraid} must be
+   *     null.
+   * @param gbraid the GBRAID for the iOS app conversion. If set, {@code gclid} and {@code wbraid}
+   *     must be null.
+   * @param wbraid the WBRAID for the iOS web conversion. If set, {@code gclid} and {@code gbraid}
+   *     must be null.
    * @param conversionDateTime date and time of the conversion.
    * @param conversionValue the value of the conversion.
    * @param conversionCustomVariableId the ID of the conversion custom variable to associate with
@@ -150,12 +191,25 @@ public class UploadOfflineConversion {
       long customerId,
       long conversionActionId,
       String gclid,
+      String gbraid,
+      String wbraid,
       String conversionDateTime,
       Double conversionValue,
       Long conversionCustomVariableId,
       String conversionCustomVariableValue,
       String orderId) {
-    // Gets the conversion action resource name.
+    // Verifies that exactly one of gclid, gbraid, and wbraid is specified, as required.
+    // See https://developers.google.com/google-ads/api/docs/conversions/upload-clicks for details.
+    long numberOfIdsSpecified =
+        Arrays.asList(gclid, gbraid, wbraid).stream().filter(idField -> idField != null).count();
+    if (numberOfIdsSpecified != 1) {
+      throw new IllegalArgumentException(
+          "Exactly 1 of gclid, gbraid, or wbraid is required, but "
+              + numberOfIdsSpecified
+              + " ID values were provided");
+    }
+
+    // Constructs the conversion action resource name from the customer and conversion action IDs.
     String conversionActionResourceName =
         ResourceNames.conversionAction(customerId, conversionActionId);
 
@@ -165,8 +219,16 @@ public class UploadOfflineConversion {
             .setConversionAction(conversionActionResourceName)
             .setConversionDateTime(conversionDateTime)
             .setConversionValue(conversionValue)
-            .setCurrencyCode("USD")
-            .setGclid(gclid);
+            .setCurrencyCode("USD");
+
+    // Sets the single specified ID field.
+    if (gclid != null) {
+      clickConversionBuilder.setGclid(gclid);
+    } else if (gbraid != null) {
+      clickConversionBuilder.setGbraid(gbraid);
+    } else {
+      clickConversionBuilder.setWbraid(wbraid);
+    }
 
     if (conversionCustomVariableId != null && conversionCustomVariableValue != null) {
       // Sets the custom variable and value, if provided.
