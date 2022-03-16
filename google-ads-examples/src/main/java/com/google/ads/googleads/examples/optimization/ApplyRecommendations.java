@@ -14,6 +14,10 @@
 
 package com.google.ads.googleads.examples.optimization;
 
+import static com.google.ads.googleads.examples.optimization.AcquireOptimizations.OPTI_SCORE_CSV;
+import static com.google.ads.googleads.examples.optimization.AcquireOptimizations.RECOMMENDATIONS_CSV;
+import static com.google.ads.googleads.examples.optimization.AcquireOptimizations.RECOMMENDATION_DIR_PREFIX;
+
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
@@ -55,6 +59,8 @@ import java.util.Optional;
 
 public class ApplyRecommendations {
 
+  static final String OPTIMIZATION_DIR_PREFIX = "optimization_";
+
   private static class ApplyRecommendationsParams extends CodeSampleParams {
 
     @Parameter(
@@ -73,13 +79,14 @@ public class ApplyRecommendations {
     @Parameter(
         names = "--reportDirectory",
         description =
-            "Optionally specify the path of directory to read recommendation reports and store"
-                + " generated optimization reports.")
-    private String reportDirectory = ".";
+            "Optionally specify the path of directory to read the recommendation reports and"
+                + " persist the generated optimization reports.")
+    private String reportDirectory =
+        Paths.get(System.getProperty("user.home"), "opti-reports").toString();
   }
 
   /**
-   * Represents Recommendation, Campaign, AdGroup, CampaignBudget and the recommendation's
+   * Represents a recommendation, campaign, ad group, campaign budget and the recommendation's
    * description string. This is used to hold a recommendation together with other related
    * information.
    */
@@ -87,13 +94,13 @@ public class ApplyRecommendations {
 
     private final Recommendation recommendation;
     private final Campaign campaign;
-    private final String descriptions;
+    private final String description;
 
     private AggregatedRecommendation(
-        Recommendation recommendation, Campaign campaign, String descriptions) {
+        Recommendation recommendation, Campaign campaign, String description) {
       this.recommendation = recommendation;
       this.campaign = campaign;
-      this.descriptions = descriptions;
+      this.description = description;
     }
   }
 
@@ -150,15 +157,15 @@ public class ApplyRecommendations {
    * Runs the example.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerIds the list of customerIds to apply recommendations to.
+   * @param customerIds the customer IDs to apply recommendations to.
    * @param reportDirectory the path of directory to read and generate reports.
    * @throws IOException if a failure occurs when trying to read or generate reports.
    */
   private void runExample(
       GoogleAdsClient googleAdsClient, List<Long> customerIds, String reportDirectory)
       throws IOException {
-    Path dir = Paths.get(reportDirectory);
-    if (!Files.isDirectory(dir)) {
+    Path reportDir = Paths.get(reportDirectory);
+    if (!Files.isDirectory(reportDir)) {
       throw new RuntimeException("Not a directory: " + reportDirectory);
     }
 
@@ -171,14 +178,14 @@ public class ApplyRecommendations {
             applyRecommendationsToCustomer(googleAdsClient, reportDirectory, customerId);
       }
       System.out.printf(
-          "Applied %s recommendations totally for %s customers. %n",
+          "Applied %s recommendations totally to %s customers.%n",
           numRecommendations, customerIds.size());
     }
   }
 
   /**
-   * Applies all suggested recommendations found in optimization reports from reportDirectory, and
-   * generates optimization reports.
+   * Applies all suggested recommendations found in reportDirectory, and generates optimization
+   * reports.
    *
    * @param googleAdsClient the Google Ads API client.
    * @param reportDirectory the path of directory to read and generate reports.
@@ -186,14 +193,13 @@ public class ApplyRecommendations {
    */
   private void applyAllRecommendations(GoogleAdsClient googleAdsClient, String reportDirectory)
       throws IOException {
-    int numCustomers = 0, numSkips = 0, numRecommendations = 0;
+    int numCustomers = 0;
+    int numSkips = 0;
+    int numRecommendations = 0;
     for (File file : new File(reportDirectory).listFiles()) {
-      if (file.isDirectory() && file.getName().startsWith("recommendation_")) {
+      if (file.isDirectory() && file.getName().startsWith(RECOMMENDATION_DIR_PREFIX)) {
         String folderName = file.getName();
-        long customerId =
-            Long.parseLong(
-                folderName.substring(
-                    folderName.indexOf("recommendation_") + "recommendation_".length()));
+        long customerId = Long.parseLong(folderName.substring(RECOMMENDATION_DIR_PREFIX.length()));
         numRecommendations +=
             applyRecommendationsToCustomer(googleAdsClient, reportDirectory, customerId);
         numCustomers++;
@@ -202,6 +208,7 @@ public class ApplyRecommendations {
         System.out.println(file + " is skipped.");
       }
     }
+
     System.out.printf(
         "Skipped %s files totally in %s.%nApplied %s recommendations totally for %s customers.%n",
         numSkips, reportDirectory, numRecommendations, numCustomers);
@@ -221,10 +228,10 @@ public class ApplyRecommendations {
       GoogleAdsClient googleAdsClient, String reportDirectory, Long customerId) throws IOException {
     Customer originalCustomer =
         getOriginalCustomer(
-            Paths.get(reportDirectory, "recommendation_" + customerId, "optiScore.csv"));
+            Paths.get(reportDirectory, RECOMMENDATION_DIR_PREFIX + customerId, OPTI_SCORE_CSV));
     Map<String, AggregatedRecommendation> aggregatedRecommendationMap =
-        getRecommendationsFromReports(
-            Paths.get(reportDirectory, "recommendation_" + customerId, "recommendations.csv"),
+        getRecommendationsFromReport(
+            Paths.get(reportDirectory, RECOMMENDATION_DIR_PREFIX + customerId, RECOMMENDATIONS_CSV),
             customerId);
     List<ApplyRecommendationResult> results =
         applyRecommendations(
@@ -237,16 +244,16 @@ public class ApplyRecommendations {
   /**
    * Constructs an original customer with customerId, name and optiScore from optiScore.csv.
    *
-   * @param path the path of optiScore.csv.
-   * @return the original customer.
+   * @param path the path to optiScore.csv.
+   * @return the original information of the customer.
    * @throws IOException if a failure occurs when trying to read CSV files.
    * @throws RuntimeException if the first row of NamedCsv is not present.
    */
   private Customer getOriginalCustomer(Path path) throws IOException {
-    final Optional<NamedCsvRow> first =
+    final Optional<NamedCsvRow> csv =
         NamedCsvReader.builder().build(path, StandardCharsets.UTF_8).stream().findFirst();
-    if (first.isPresent()) {
-      NamedCsvRow row = first.get();
+    if (csv.isPresent()) {
+      NamedCsvRow row = csv.get();
       String customerId = row.getField("CID");
       return Customer.newBuilder()
           .setResourceName(CustomerName.format(customerId))
@@ -255,9 +262,7 @@ public class ApplyRecommendations {
           .setOptimizationScore(Double.parseDouble(row.getField("OptiScore")))
           .build();
     } else {
-      throw new RuntimeException(
-          "Failed to construct a customer from optiScore.csv. Expected a CSV file specifying CID,"
-              + " AccountName, OptiScore.");
+      throw new RuntimeException("Failed to construct a customer from " + path);
     }
   }
 
@@ -270,7 +275,7 @@ public class ApplyRecommendations {
    * @return a map between a recommendation ID and its aggregated recommendation.
    * @throws IOException if a failure occurs when trying to read recommendations.csv.
    */
-  private Map<String, AggregatedRecommendation> getRecommendationsFromReports(
+  private Map<String, AggregatedRecommendation> getRecommendationsFromReport(
       Path path, long customerId) throws IOException {
     Map<String, AggregatedRecommendation> aggregatedRecommendationMap = new HashMap<>();
     NamedCsvReader.builder()
@@ -281,7 +286,7 @@ public class ApplyRecommendations {
               String recommendationType = row.getField("Type");
               String campaignId = row.getField("CampaignId");
               String campaignOptiScore = row.getField("CampaignOptiScore");
-              String descriptions = row.getField("Details");
+              String description = row.getField("Details");
               Recommendation recommendation =
                   Recommendation.newBuilder()
                       .setResourceName(
@@ -296,16 +301,16 @@ public class ApplyRecommendations {
                       .build();
               aggregatedRecommendationMap.put(
                   recommendationId,
-                  new AggregatedRecommendation(recommendation, campaign, descriptions));
+                  new AggregatedRecommendation(recommendation, campaign, description));
             });
     return aggregatedRecommendationMap;
   }
 
   /**
-   * Applies provided recommendations to customer ID.
+   * Applies the provided recommendations to a customer.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customerId the customer ID to apply recommendations.
+   * @param customerId the customer ID to apply recommendations to.
    * @param aggregatedRecommendations the list of aggregated recommendations.
    * @return a list of results of applying recommendations.
    */
@@ -320,6 +325,7 @@ public class ApplyRecommendations {
               .setResourceName(aggregatedRecommendation.recommendation.getResourceName())
               .build());
     }
+
     try (RecommendationServiceClient recommendationServiceClient =
         googleAdsClient.getLatestVersion().createRecommendationServiceClient()) {
       ApplyRecommendationResponse response =
@@ -329,10 +335,10 @@ public class ApplyRecommendations {
   }
 
   /**
-   * Generates optimization reports to report directory for successfully applied recommendations.
+   * Generates optimization reports to the report directory for the applied recommendations.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customer the customer to be reported with original otiScore before optimization.
+   * @param customer the customer to be reported with original optiScore before optimization.
    * @param reportDirectory the path of directory to generate reports.
    * @param results the list of ApplyRecommendationResult.
    * @param aggregatedRecommendationMap the map between a recommendation ID and its aggregated
@@ -346,12 +352,12 @@ public class ApplyRecommendations {
       List<ApplyRecommendationResult> results,
       Map<String, AggregatedRecommendation> aggregatedRecommendationMap)
       throws IOException {
-    Path dir = Paths.get(reportDirectory, "optimization_" + customer.getId());
-    if (!Files.exists(dir)) {
-      Files.createDirectories(dir);
+    Path optiDir = Paths.get(reportDirectory, OPTIMIZATION_DIR_PREFIX + customer.getId());
+    if (!Files.exists(optiDir)) {
+      Files.createDirectories(optiDir);
     }
 
-    Path path = Paths.get(dir.toString(), "optiScore.csv");
+    Path path = Paths.get(optiDir.toString(), OPTI_SCORE_CSV);
     try (CsvWriter csv = CsvWriter.builder().build(path, StandardCharsets.UTF_8)) {
       csv.writeRow("CID", "AccountName", "OldOptiScore", "NewOptiScore")
           .writeRow(
@@ -361,16 +367,17 @@ public class ApplyRecommendations {
               String.valueOf(
                   getOptiScoreOfCustomer(googleAdsClient, String.valueOf(customer.getId()))));
     }
+
     generateReportsForRecommendations(
         googleAdsClient,
         customer.getId(),
         results,
         aggregatedRecommendationMap,
-        Paths.get(dir.toString(), "recommendations.csv"));
+        Paths.get(optiDir.toString(), RECOMMENDATIONS_CSV));
   }
 
   /**
-   * Gets the optimization score of a customer.
+   * Gets the optimization score for a customer.
    *
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
@@ -385,6 +392,7 @@ public class ApplyRecommendations {
               .setCustomerId(customerId)
               .setQuery(query)
               .build();
+
       ServerStream<SearchGoogleAdsStreamResponse> stream =
           googleAdsServiceClient.searchStreamCallable().call(request);
       for (SearchGoogleAdsStreamResponse response : stream) {
@@ -393,19 +401,20 @@ public class ApplyRecommendations {
         }
       }
     }
-    throw new RuntimeException("Failed to lookup customer" + customerId);
+
+    throw new RuntimeException("Customer not found with ID " + customerId);
   }
 
   /**
-   * Generates recommendations.csv to store the results of the successfully applied recommendations
-   * line by line.
+   * Generates recommendations.csv to persist the results of the successfully applied
+   * recommendations line by line.
    *
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the customer ID to generate reports for.
    * @param results the list of results of successfully applied recommendations.
    * @param aggregatedRecommendationMap the map between a recommendationID and its
    *     aggregatedRecommendation.
-   * @param path the Path object of recommendations.csv file.
+   * @param path the path to recommendations.csv.
    * @throws IOException if a failure occurs when trying to write CSV files.
    */
   private void generateReportsForRecommendations(
@@ -424,13 +433,13 @@ public class ApplyRecommendations {
         Recommendation recommendation = aggregatedRecommendation.recommendation;
         Campaign oldCampaign = aggregatedRecommendation.campaign;
         // The campaign field of Recommendation will be set only when the recommendation affects a
-        // single campaign. Otherwise, the query for recommendations will return campaigns whose Id
+        // single campaign. Otherwise, the query for recommendations will return campaigns whose ID
         // are 0, then all the columns about campaign in recommendations reports will be set 0.0. In
         // that case, just set NewOptiScore to 0.0 in optimization reports.
         csv.writeRow(
             RecommendationName.parse(recommendation.getResourceName()).getRecommendationId(),
             recommendation.getType().toString(),
-            aggregatedRecommendation.descriptions,
+            aggregatedRecommendation.description,
             String.valueOf(oldCampaign.getId()),
             String.valueOf(oldCampaign.getOptimizationScore()),
             String.valueOf(
@@ -463,6 +472,7 @@ public class ApplyRecommendations {
               .setCustomerId(customerId)
               .setQuery(query)
               .build();
+
       ServerStream<SearchGoogleAdsStreamResponse> stream =
           googleAdsServiceClient.searchStreamCallable().call(request);
       for (SearchGoogleAdsStreamResponse response : stream) {
