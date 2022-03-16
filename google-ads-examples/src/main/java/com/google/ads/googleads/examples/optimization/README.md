@@ -1,4 +1,4 @@
-# Google Ads Client Library for Java - Optimizer examples
+# Google Ads Account Optimization Examples
 
 This folder contains code examples that illustrate how to programmatically
 retrieve and apply Google Ads API Recommendations to improve the overall
@@ -11,12 +11,6 @@ results to a csv file. Before running the examples, make sure you have an
 The following code examples are provided.
 
 ## Acquire Optimizations
-
-1.  Change into the `google-ads-examples` directory:
-
-    ```
-     cd google-ads-examples
-    ```
 
 1.  Retrieve suggested optimizations by running the `AcquireOptimizations`
     class, and the following arguments should be passed in:
@@ -38,7 +32,7 @@ The following code examples are provided.
         `"CAMPAIGN_BUDGET,KEYWORD,TEXT_AD,TARGET_CPA_OPT_IN"`. There can only be
         commas among values, redundant characters, e.g. spaces, will cause the
         parse to fail. Refer to
-        [RecommendationType](https://developers.google.com/google-ads/api/reference/rpc/v8/RecommendationTypeEnum.RecommendationType)
+        [RecommendationType](https://developers.google.com/google-ads/api/reference/rpc/latest/RecommendationTypeEnum.RecommendationType)
         for all valid values.
 
     *   **[optional] --reportDirectory** The path of directory in which to
@@ -48,7 +42,7 @@ The following code examples are provided.
     Here's an example with generic argument values:
 
     ```
-    mvn compile exec:java -Dexec.mainClass="com.google.ads.googleads.examples.optimizer.AcquireOptimizations"  -Dexec.args="--recommendationTypes CAMPAIGN_BUDGET,KEYWORD --customerIds 111111,222222 --loginCustomerId 333333 --reportDirectory ./"
+    ./gradlew -q runExample --example="optimization.AcquireOptimizations --recommendationTypes CAMPAIGN_BUDGET,KEYWORD --customerIds 111111,222222 --loginCustomerId 333333 --reportDirectory ./"
     ```
 
 1.  Check out and revise the reports generated in **--reportDirectory** as
@@ -174,7 +168,7 @@ The following code examples are provided.
     Here's an example with generic argument values:
 
     ```
-    mvn compile exec:java -Dexec.mainClass="com.google.ads.googleads.examples.optimizer.ApplyRecommendations"  -Dexec.args="--customerIds 111111,222222 --loginCustomerId 333333 --reportDirectory ./"
+    ./gradlew -q runExample --example="optimization.ApplyRecommendations --recommendationTypes CAMPAIGN_BUDGET,KEYWORD --customerIds 111111,222222 --loginCustomerId 333333 --reportDirectory ./"
     ```
 
 1.  Check out the reports generated in **--reportDirectory** as specified above.
