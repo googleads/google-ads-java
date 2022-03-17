@@ -107,22 +107,33 @@ public class AcquireOptimizations {
 
     @Parameter(
         names = "--reportDirectory",
-        description = "Optionally specify the path of directory to persist the generated reports.")
+        description =
+            "Optionally specify the path of directory to persist the generated recommendation"
+                + " reports.")
     private String reportDirectory = DEFAULT_REPORT_DIRECTORY;
   }
 
   /**
-   * Represents a recommendation and its related campaign, ad group, campaign budget, etc. This is
-   * used to hold a recommendation together with the related resources.
+   * Represents a recommendation, campaign, ad group, campaign budget and the recommendation's
+   * description string. This is used to hold a recommendation together with other related
+   * information.
    */
-  private static class AggregatedRecommendation {
+  static class AggregatedRecommendation {
 
-    private final Recommendation recommendation;
-    private final Campaign campaign;
+    final Recommendation recommendation;
+    final Campaign campaign;
+    final String description;
 
     private AggregatedRecommendation(Recommendation recommendation, Campaign campaign) {
       this.recommendation = recommendation;
       this.campaign = campaign;
+      this.description = null;
+    }
+
+    AggregatedRecommendation(Recommendation recommendation, Campaign campaign, String description) {
+      this.recommendation = recommendation;
+      this.campaign = campaign;
+      this.description = description;
     }
   }
 
@@ -223,7 +234,7 @@ public class AcquireOptimizations {
             getSubAccountIDs(googleAdsServiceClient, googleAdsClient.getLoginCustomerId());
       }
 
-      for (Long customerId : customerIds) {
+      for (long customerId : customerIds) {
         Customer customer = getCustomerInformation(googleAdsServiceClient, customerId);
         List<AggregatedRecommendation> aggregatedRecommendations =
             getRecommendations(googleAdsServiceClient, customerId, recommendationTypes);
@@ -243,7 +254,7 @@ public class AcquireOptimizations {
    * @return a list of sub-account IDs.
    */
   private List<Long> getSubAccountIDs(
-      GoogleAdsServiceClient googleAdsServiceClient, Long loginCustomerId) {
+      GoogleAdsServiceClient googleAdsServiceClient, long loginCustomerId) {
     List<Long> customerIds = new ArrayList<>();
 
     // Creates a query that retrieves all sub-accounts under the manager account specified with
@@ -274,7 +285,7 @@ public class AcquireOptimizations {
    * @param customerId the client customer ID.
    * @return a {@link Customer} instance.
    */
-  Customer getCustomerInformation(GoogleAdsServiceClient googleAdsServiceClient, Long customerId) {
+  Customer getCustomerInformation(GoogleAdsServiceClient googleAdsServiceClient, long customerId) {
     String query =
         "SELECT customer.id, customer.descriptive_name, customer.optimization_score FROM customer";
 
@@ -296,7 +307,7 @@ public class AcquireOptimizations {
    */
   private List<AggregatedRecommendation> getRecommendations(
       GoogleAdsServiceClient googleAdsServiceClient,
-      Long customerId,
+      long customerId,
       List<RecommendationType> recommendationTypes) {
     List<AggregatedRecommendation> aggregatedRecommendations = new ArrayList<>();
     String query =
