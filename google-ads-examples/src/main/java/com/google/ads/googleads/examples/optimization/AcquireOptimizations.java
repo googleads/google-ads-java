@@ -58,8 +58,10 @@ public class AcquireOptimizations {
       Paths.get(System.getProperty("user.home"), "opti-reports").toString();
 
   static final String RECOMMENDATION_DIR_PREFIX = "recommendation_";
+
   static final String RECO_OPTIMIZATION_SCORE_CSV = "optiScore.csv";
   static final String[] RECO_OPTIMIZATION_SCORE_CSV_COLUMNS = {"CID", "AccountName", "OptiScore"};
+
   static final String RECO_RECOMMENDATIONS_CSV = "recommendations.csv";
   static final String[] RECO_RECOMMENDATIONS_CSV_COLUMNS = {
     "ID",
