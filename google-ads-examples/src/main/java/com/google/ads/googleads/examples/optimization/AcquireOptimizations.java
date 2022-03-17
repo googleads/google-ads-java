@@ -31,9 +31,7 @@ import com.google.ads.googleads.v10.resources.Recommendation.RecommendationMetri
 import com.google.ads.googleads.v10.resources.RecommendationName;
 import com.google.ads.googleads.v10.services.GoogleAdsRow;
 import com.google.ads.googleads.v10.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v10.services.SearchGoogleAdsStreamRequest;
-import com.google.ads.googleads.v10.services.SearchGoogleAdsStreamResponse;
-import com.google.api.gax.rpc.ServerStream;
+import com.google.ads.googleads.v10.services.GoogleAdsServiceClient.SearchPagedResponse;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.FieldMask;
 import de.siegmar.fastcsv.writer.CsvWriter;
@@ -48,17 +46,39 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Acquires suggested recommendations using the Google Ads Query Language (GAQL) and saves them to a
- * CSV file.
+ * Acquires the suggested optimizations (optimization scores and recommendations) using the Google
+ * Ads Query Language (GAQL) and saves them into the recommendation reports of CSV format.
  *
- * <p>This is intended to be used with ApplyRecommendations.java which reads the CSV file and
- * applies any optimizations it found.
+ * <p>This is intended to be used with ApplyRecommendations.java which reads the recommendation
+ * reports and applies the loaded recommendations.
  */
 public class AcquireOptimizations {
 
+  static final String DEFAULT_REPORT_DIRECTORY =
+      Paths.get(System.getProperty("user.home"), "opti-reports").toString();
+
   static final String RECOMMENDATION_DIR_PREFIX = "recommendation_";
-  static final String OPTI_SCORE_CSV = "optiScore.csv";
-  static final String RECOMMENDATIONS_CSV = "recommendations.csv";
+  static final String RECO_OPTI_SCORE_CSV = "optiScore.csv";
+  static final String[] RECO_OPTI_SCORE_CSV_COLUMNS = {"CID", "AccountName", "OptiScore"};
+  static final String RECO_RECOMMENDATIONS_CSV = "recommendations.csv";
+  static final String[] RECO_RECOMMENDATIONS_CSV_COLUMNS = {
+    "ID",
+    "Type",
+    "Impact",
+    "Details",
+    "CampaignId",
+    "CampaignOptiScore",
+    "BaseImpressions",
+    "PotentialImpressions",
+    "BaseClicks",
+    "PotentialClicks",
+    "BaseCost",
+    "PotentialCost",
+    "BaseConversions",
+    "PotentialConversions",
+    "BaseVideoViews",
+    "PotentialVideoViews"
+  };
 
   private static class AcquireOptimizationsParams extends CodeSampleParams {
 
@@ -88,8 +108,7 @@ public class AcquireOptimizations {
     @Parameter(
         names = "--reportDirectory",
         description = "Optionally specify the path of directory to persist the generated reports.")
-    private String reportDirectory =
-        Paths.get(System.getProperty("user.home"), "opti-reports").toString();
+    private String reportDirectory = DEFAULT_REPORT_DIRECTORY;
   }
 
   /**
@@ -114,10 +133,19 @@ public class AcquireOptimizations {
       // Either pass the required parameters for this example on the command line, or insert them
       // into the code here. See the parameter class definition above for descriptions.
       params.customerIds = ImmutableList.of(Long.valueOf("INSERT_CUSTOMER_ID_HERE"));
-      params.loginCustomerId = Long.valueOf("INSERT_LOGIN_CUSTOMER_ID_HERE");
-      params.recommendationTypes =
-          ImmutableList.of(RecommendationType.valueOf("INSERT_RECOMMENDATION_TYPE_HERE"));
-      params.reportDirectory = "INSERT_REPORT_DIRECTORY_HERE";
+
+      // Optional: Specify the login customer ID if your access to the CIDs is via a manager
+      // account.
+      // params.loginCustomerId = Long.valueOf("INSERT_LOGIN_CUSTOMER_ID_HERE");
+
+      // Optional: To use different recommendation types from the default specified above,
+      // uncomment the line below and insert the desired values.
+      // params.recommendationTypes =
+      //     ImmutableList.of(RecommendationType.valueOf("INSERT_RECOMMENDATION_TYPE_HERE"));
+
+      // Optional: To use a different report directory value from the default specified above,
+      // uncomment the line below and insert the desired value.
+      // params.reportDirectory = "INSERT_REPORT_DIRECTORY_HERE";
     }
 
     GoogleAdsClient googleAdsClient = null;
@@ -136,12 +164,16 @@ public class AcquireOptimizations {
       System.exit(1);
     }
 
+    if (params.customerIds == null && googleAdsClient.getLoginCustomerId() == null) {
+      System.err.println("loginCustomerId must be provided if customerIds are not provided.");
+      System.exit(1);
+    }
+
     try {
       new AcquireOptimizations()
           .runExample(
               googleAdsClient,
               params.customerIds,
-              params.loginCustomerId,
               params.recommendationTypes,
               params.reportDirectory);
     } catch (GoogleAdsException gae) {
@@ -168,15 +200,13 @@ public class AcquireOptimizations {
    *
    * @param googleAdsClient the Google Ads API client.
    * @param customerIds the customer IDs to retrieve recommendations from.
-   * @param loginCustomerId the manager account ID which provides access to the customer IDs.
    * @param recommendationTypes the types of recommendations to retrieve.
-   * @param reportDirectory the path of directory to persist the generated reports.
-   * @throws IOException if a failure occurs when trying to generate reports.
+   * @param reportDirectory the path of the directory to persist the generated reports.
+   * @throws IOException if a failure occurs when trying to generate recommendation reports.
    */
   private void runExample(
       GoogleAdsClient googleAdsClient,
       List<Long> customerIds,
-      Long loginCustomerId,
       List<RecommendationType> recommendationTypes,
       String reportDirectory)
       throws IOException {
@@ -185,28 +215,28 @@ public class AcquireOptimizations {
       Files.createDirectories(reportDir);
     }
 
-    // Retrieves recommendations and generates reports.
+    // Retrieves recommendations and generates the recommendation reports.
     try (GoogleAdsServiceClient googleAdsServiceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
       if (customerIds == null) {
-        customerIds = getSubAccountIDs(googleAdsServiceClient, loginCustomerId);
+        customerIds =
+            getSubAccountIDs(googleAdsServiceClient, googleAdsClient.getLoginCustomerId());
       }
 
       for (Long customerId : customerIds) {
         Customer customer = getCustomerInformation(googleAdsServiceClient, customerId);
         List<AggregatedRecommendation> aggregatedRecommendations =
             getRecommendations(googleAdsServiceClient, customerId, recommendationTypes);
-        generateReports(customer, aggregatedRecommendations, reportDirectory);
+        generateRecommendationReports(customer, aggregatedRecommendations, reportDirectory);
       }
     }
     System.out.printf(
-        "Succeeded to generate recommendation reports for %d customers to %s.%n",
+        "Generated recommendation reports for %d customers totally to %s.%n",
         customerIds.size(), reportDirectory);
   }
 
   /**
-   * Retrieves the customer IDs of all direct and indirect sub-accounts under the manager account
-   * specified with loginCustomerId.
+   * Retrieves the customer IDs of all direct and indirect sub-accounts under the manager account.
    *
    * @param googleAdsServiceClient the Google Ads Service client.
    * @param loginCustomerId the ID of manager account.
@@ -216,26 +246,22 @@ public class AcquireOptimizations {
       GoogleAdsServiceClient googleAdsServiceClient, Long loginCustomerId) {
     List<Long> customerIds = new ArrayList<>();
 
-    // Creates a query that retrieves all nested accounts of the manager account specified with
-    // loginCustomerId. level = 0 means self link, e.g. the manager itself, so it's excluded.
-    // level = 1 means directly linked customers, level > 1 means indirectly linked customers. So
-    // level >= 1 is included in the query to retrieve all nested accounts.
+    // Creates a query that retrieves all sub-accounts under the manager account specified with
+    // loginCustomerId.
+    // 1. level = 0 means self link, e.g. the manager account itself, so it's excluded.
+    // 2. level = 1 means directly linked customers.
+    // 3. level > 1 means indirectly linked customers.
+    //
+    // So level >= 1 is used in the query to retrieve all sub-accounts.
     String query =
         "SELECT customer_client.id FROM customer_client WHERE customer_client.level >= 1";
-    SearchGoogleAdsStreamRequest request =
-        SearchGoogleAdsStreamRequest.newBuilder()
-            .setCustomerId(String.valueOf(loginCustomerId))
-            .setQuery(query)
-            .build();
 
-    ServerStream<SearchGoogleAdsStreamResponse> stream =
-        googleAdsServiceClient.searchStreamCallable().call(request);
-    for (SearchGoogleAdsStreamResponse response : stream) {
-      for (GoogleAdsRow googleAdsRow : response.getResultsList()) {
-        CustomerClient customerClient = googleAdsRow.getCustomerClient();
-        customerIds.add(customerClient.getId());
-        System.out.printf("Found customer account with ID %d.%n", customerClient.getId());
-      }
+    SearchPagedResponse response =
+        googleAdsServiceClient.search(String.valueOf(loginCustomerId), query);
+    for (GoogleAdsRow googleAdsRow : response.iterateAll()) {
+      CustomerClient customerClient = googleAdsRow.getCustomerClient();
+      customerIds.add(customerClient.getId());
+      System.out.printf("Found customer account with ID %d.%n", customerClient.getId());
     }
 
     return customerIds;
@@ -246,78 +272,67 @@ public class AcquireOptimizations {
    *
    * @param googleAdsServiceClient the Google Ads Service client.
    * @param customerId the client customer ID.
-   * @return a Customer instance.
+   * @return a {@link Customer} instance.
    */
-  private Customer getCustomerInformation(
-      GoogleAdsServiceClient googleAdsServiceClient, Long customerId) {
+  Customer getCustomerInformation(GoogleAdsServiceClient googleAdsServiceClient, Long customerId) {
     String query =
         "SELECT customer.id, customer.descriptive_name, customer.optimization_score FROM customer";
-    SearchGoogleAdsStreamRequest request =
-        SearchGoogleAdsStreamRequest.newBuilder()
-            .setCustomerId(String.valueOf(customerId))
-            .setQuery(query)
-            .build();
 
-    ServerStream<SearchGoogleAdsStreamResponse> stream =
-        googleAdsServiceClient.searchStreamCallable().call(request);
-    for (SearchGoogleAdsStreamResponse response : stream) {
-      for (GoogleAdsRow googleAdsRow : response.getResultsList()) {
-        return googleAdsRow.getCustomer();
-      }
+    SearchPagedResponse response = googleAdsServiceClient.search(String.valueOf(customerId), query);
+    for (GoogleAdsRow googleAdsRow : response.iterateAll()) {
+      return googleAdsRow.getCustomer();
     }
 
     throw new RuntimeException("Customer not found with ID " + customerId);
   }
 
   /**
-   * Retrieves recommendations and the targeted campaigns of a customer with specified types.
+   * Retrieves recommendations with specified types and the targeted campaigns from a customer.
    *
    * @param googleAdsServiceClient the Google Ads Service client.
    * @param customerId the client customer ID.
    * @param recommendationTypes the list of recommendation types.
-   * @return a list of AggregatedRecommendation instances containing Recommendation and Campaign.
+   * @return a list of {@link AggregatedRecommendation} instances.
    */
   private List<AggregatedRecommendation> getRecommendations(
       GoogleAdsServiceClient googleAdsServiceClient,
       Long customerId,
       List<RecommendationType> recommendationTypes) {
     List<AggregatedRecommendation> aggregatedRecommendations = new ArrayList<>();
-    for (RecommendationType recommendationType : recommendationTypes) {
-      String query =
-          String.format(
-              "SELECT recommendation.resource_name, recommendation.type, recommendation.impact,"
-                  + " recommendation.%s_recommendation, campaign.id, campaign.optimization_score"
-                  + " FROM recommendation WHERE recommendation.type = '%s'",
-              recommendationType.toString().toLowerCase(), recommendationType);
-      SearchGoogleAdsStreamRequest request =
-          SearchGoogleAdsStreamRequest.newBuilder()
-              .setCustomerId(String.valueOf(customerId))
-              .setQuery(query)
-              .build();
+    String query =
+        String.format(
+            "SELECT recommendation.resource_name, recommendation.type, recommendation.impact,"
+                + " %s, campaign.id, campaign.optimization_score"
+                + " FROM recommendation WHERE recommendation.type in (%s)",
+            recommendationTypes.stream()
+                .map(
+                    type ->
+                        String.format(
+                            "recommendation.%s_recommendation", type.toString().toLowerCase()))
+                .collect(Collectors.joining(", ")),
+            recommendationTypes.stream()
+                .map(type -> String.format("'%s'", type))
+                .collect(Collectors.joining(", ")));
 
-      ServerStream<SearchGoogleAdsStreamResponse> stream =
-          googleAdsServiceClient.searchStreamCallable().call(request);
-      for (SearchGoogleAdsStreamResponse response : stream) {
-        for (GoogleAdsRow googleAdsRow : response.getResultsList()) {
-          aggregatedRecommendations.add(
-              new AggregatedRecommendation(
-                  googleAdsRow.getRecommendation(), googleAdsRow.getCampaign()));
-        }
-      }
+    SearchPagedResponse response = googleAdsServiceClient.search(String.valueOf(customerId), query);
+    for (GoogleAdsRow googleAdsRow : response.iterateAll()) {
+      aggregatedRecommendations.add(
+          new AggregatedRecommendation(
+              googleAdsRow.getRecommendation(), googleAdsRow.getCampaign()));
     }
 
     return aggregatedRecommendations;
   }
 
   /**
-   * Generates recommendation reports to the report directory.
+   * Generates the recommendation reports to the report directory.
    *
-   * @param customer the customer to be reported.
-   * @param aggregatedRecommendations the list of AggregatedRecommendation instances.
+   * @param customer the {@link Customer} to be reported.
+   * @param aggregatedRecommendations the list of {@link AggregatedRecommendation} instances.
    * @param reportDirectory the path of the report directory.
-   * @throws IOException if a failure occurs when trying to create and write CSV files.
+   * @throws IOException if a failure occurs when trying to create or write CSV files.
    */
-  private void generateReports(
+  private void generateRecommendationReports(
       Customer customer,
       List<AggregatedRecommendation> aggregatedRecommendations,
       String reportDirectory)
@@ -327,36 +342,20 @@ public class AcquireOptimizations {
       Files.createDirectories(recoDir);
     }
 
-    // Generates optiScore.csv to persist the customer's account-level information.
-    Path path = recoDir.resolve(OPTI_SCORE_CSV);
+    // Generates 'optiScore.csv' to persist the customer's account-level information.
+    Path path = recoDir.resolve(RECO_OPTI_SCORE_CSV);
     try (CsvWriter csv = CsvWriter.builder().build(path, StandardCharsets.UTF_8)) {
-      csv.writeRow("CID", "AccountName", "OptiScore")
+      csv.writeRow(RECO_OPTI_SCORE_CSV_COLUMNS)
           .writeRow(
               String.valueOf(customer.getId()),
               customer.getDescriptiveName(),
               String.valueOf(customer.getOptimizationScore()));
     }
 
-    // Generates recommendations.csv to persist the retrieved recommendations line by line.
-    path = recoDir.resolve(RECOMMENDATIONS_CSV);
+    // Generates 'recommendations.csv' to persist the acquired recommendations line by line.
+    path = recoDir.resolve(RECO_RECOMMENDATIONS_CSV);
     try (CsvWriter csv = CsvWriter.builder().build(path, StandardCharsets.UTF_8)) {
-      csv.writeRow(
-          "ID",
-          "Type",
-          "Impact",
-          "Details",
-          "CampaignId",
-          "CampaignOptiScore",
-          "BaseImpressions",
-          "PotentialImpressions",
-          "BaseClicks",
-          "PotentialClicks",
-          "BaseCost",
-          "PotentialCost",
-          "BaseConversions",
-          "PotentialConversions",
-          "BaseVideoViews",
-          "PotentialVideoViews");
+      csv.writeRow(RECO_RECOMMENDATIONS_CSV_COLUMNS);
       for (AggregatedRecommendation aggregatedRecommendation : aggregatedRecommendations) {
         Recommendation recommendation = aggregatedRecommendation.recommendation;
         Campaign campaign = aggregatedRecommendation.campaign;
@@ -385,9 +384,9 @@ public class AcquireOptimizations {
   }
 
   /**
-   * Gets the human-readable description of the impact .
+   * Gets the human-readable description of a {@link RecommendationImpact}.
    *
-   * @param impact the impact of the change as described in the retrieve recommendation.
+   * @param impact the impact of the change as described in the retrieved recommendation.
    * @return a human-readable description of the impact.
    */
   private String getHumanReadableDescription(RecommendationImpact impact) {
@@ -404,7 +403,7 @@ public class AcquireOptimizations {
   }
 
   /**
-   * Gets the human-readable description of a recommendation.
+   * Gets the human-readable description of a {@link Recommendation}.
    *
    * @param recommendation the retrieved recommendation.
    * @return a human-readable description of the recommendation.
