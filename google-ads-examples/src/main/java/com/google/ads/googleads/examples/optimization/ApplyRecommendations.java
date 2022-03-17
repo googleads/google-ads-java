@@ -66,10 +66,12 @@ import java.util.Optional;
 public class ApplyRecommendations {
 
   private static final String OPTIMIZATION_DIR_PREFIX = "optimization_";
+
   private static final String OPTI_OPTIMIZATION_SCORE_CSV = "optiScore.csv";
   private static final String[] OPTI_OPTIMIZATION_SCORE_CSV_COLUMNS = {
     "CID", "AccountName", "OldOptiScore", "NewOptiScore"
   };
+
   private static final String OPTI_RECOMMENDATIONS_CSV = "recommendations.csv";
   private static final String[] OPTI_RECOMMENDATIONS_CSV_COLUMNS = {
     "ID", "Type", "Details", "CampaignId", "OldOptiScore", "NewOptiScore"
