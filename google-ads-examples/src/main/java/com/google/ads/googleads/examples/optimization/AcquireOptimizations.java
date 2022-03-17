@@ -58,8 +58,8 @@ public class AcquireOptimizations {
       Paths.get(System.getProperty("user.home"), "opti-reports").toString();
 
   static final String RECOMMENDATION_DIR_PREFIX = "recommendation_";
-  static final String RECO_OPTI_SCORE_CSV = "optiScore.csv";
-  static final String[] RECO_OPTI_SCORE_CSV_COLUMNS = {"CID", "AccountName", "OptiScore"};
+  static final String RECO_OPTIMIZATION_SCORE_CSV = "optiScore.csv";
+  static final String[] RECO_OPTIMIZATION_SCORE_CSV_COLUMNS = {"CID", "AccountName", "OptiScore"};
   static final String RECO_RECOMMENDATIONS_CSV = "recommendations.csv";
   static final String[] RECO_RECOMMENDATIONS_CSV_COLUMNS = {
     "ID",
@@ -108,15 +108,13 @@ public class AcquireOptimizations {
     @Parameter(
         names = "--reportDirectory",
         description =
-            "Optionally specify the path of directory to persist the generated recommendation"
-                + " reports.")
+            "Optionally specify the path of the directory to persist the generated reports.")
     private String reportDirectory = DEFAULT_REPORT_DIRECTORY;
   }
 
   /**
-   * Represents a recommendation, campaign, ad group, campaign budget and the recommendation's
-   * description string. This is used to hold a recommendation together with other related
-   * information.
+   * Represents a recommendation, the related campaign and the recommendation's description string.
+   * This is used to hold a recommendation together with other related information.
    */
   static class AggregatedRecommendation {
 
@@ -149,8 +147,8 @@ public class AcquireOptimizations {
       // account.
       // params.loginCustomerId = Long.valueOf("INSERT_LOGIN_CUSTOMER_ID_HERE");
 
-      // Optional: To use different recommendation types from the default specified above,
-      // uncomment the line below and insert the desired values.
+      // Optional: To use different recommendation types from the default specified above, uncomment
+      // the line below and insert the desired values.
       // params.recommendationTypes =
       //     ImmutableList.of(RecommendationType.valueOf("INSERT_RECOMMENDATION_TYPE_HERE"));
 
@@ -176,7 +174,7 @@ public class AcquireOptimizations {
     }
 
     if (params.customerIds == null && googleAdsClient.getLoginCustomerId() == null) {
-      System.err.println("loginCustomerId must be provided if customerIds are not provided.");
+      System.err.println("loginCustomerId must be set if customerIds are not provided.");
       System.exit(1);
     }
 
@@ -211,7 +209,7 @@ public class AcquireOptimizations {
    *
    * @param googleAdsClient the Google Ads API client.
    * @param customerIds the customer IDs to retrieve recommendations from.
-   * @param recommendationTypes the types of recommendations to retrieve.
+   * @param recommendationTypes the recommendation types to retrieve.
    * @param reportDirectory the path of the directory to persist the generated reports.
    * @throws IOException if a failure occurs when trying to generate recommendation reports.
    */
@@ -226,7 +224,6 @@ public class AcquireOptimizations {
       Files.createDirectories(reportDir);
     }
 
-    // Retrieves recommendations and generates the recommendation reports.
     try (GoogleAdsServiceClient googleAdsServiceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
       if (customerIds == null) {
@@ -234,13 +231,17 @@ public class AcquireOptimizations {
             getSubAccountIDs(googleAdsServiceClient, googleAdsClient.getLoginCustomerId());
       }
 
+      // Retrieves optimization scores and recommendations, then generates the recommendation
+      // reports.
       for (long customerId : customerIds) {
-        Customer customer = getCustomerInformation(googleAdsServiceClient, customerId);
+        Customer customer = getCustomerInfo(googleAdsServiceClient, customerId);
         List<AggregatedRecommendation> aggregatedRecommendations =
             getRecommendations(googleAdsServiceClient, customerId, recommendationTypes);
+
         generateRecommendationReports(customer, aggregatedRecommendations, reportDirectory);
       }
     }
+
     System.out.printf(
         "Generated recommendation reports for %d customers totally to %s.%n",
         customerIds.size(), reportDirectory);
@@ -250,7 +251,7 @@ public class AcquireOptimizations {
    * Retrieves the customer IDs of all direct and indirect sub-accounts under the manager account.
    *
    * @param googleAdsServiceClient the Google Ads Service client.
-   * @param loginCustomerId the ID of manager account.
+   * @param loginCustomerId the ID of the manager account.
    * @return a list of sub-account IDs.
    */
   private List<Long> getSubAccountIDs(
@@ -259,7 +260,7 @@ public class AcquireOptimizations {
 
     // Creates a query that retrieves all sub-accounts under the manager account specified with
     // loginCustomerId.
-    // 1. level = 0 means self link, e.g. the manager account itself, so it's excluded.
+    // 1. level = 0 means self link, i.e. the manager account itself.
     // 2. level = 1 means directly linked customers.
     // 3. level > 1 means indirectly linked customers.
     //
@@ -279,13 +280,13 @@ public class AcquireOptimizations {
   }
 
   /**
-   * Gets the account-level information of a customer.
+   * Gets the account-level information of a {@link Customer}.
    *
    * @param googleAdsServiceClient the Google Ads Service client.
    * @param customerId the client customer ID.
    * @return a {@link Customer} instance.
    */
-  Customer getCustomerInformation(GoogleAdsServiceClient googleAdsServiceClient, long customerId) {
+  Customer getCustomerInfo(GoogleAdsServiceClient googleAdsServiceClient, long customerId) {
     String query =
         "SELECT customer.id, customer.descriptive_name, customer.optimization_score FROM customer";
 
@@ -340,7 +341,7 @@ public class AcquireOptimizations {
    *
    * @param customer the {@link Customer} to be reported.
    * @param aggregatedRecommendations the list of {@link AggregatedRecommendation} instances.
-   * @param reportDirectory the path of the report directory.
+   * @param reportDirectory the path of the directory to persist the generated reports.
    * @throws IOException if a failure occurs when trying to create or write CSV files.
    */
   private void generateRecommendationReports(
@@ -354,9 +355,9 @@ public class AcquireOptimizations {
     }
 
     // Generates 'optiScore.csv' to persist the customer's account-level information.
-    Path path = recoDir.resolve(RECO_OPTI_SCORE_CSV);
-    try (CsvWriter csv = CsvWriter.builder().build(path, StandardCharsets.UTF_8)) {
-      csv.writeRow(RECO_OPTI_SCORE_CSV_COLUMNS)
+    Path csvPath = recoDir.resolve(RECO_OPTIMIZATION_SCORE_CSV);
+    try (CsvWriter csv = CsvWriter.builder().build(csvPath, StandardCharsets.UTF_8)) {
+      csv.writeRow(RECO_OPTIMIZATION_SCORE_CSV_COLUMNS)
           .writeRow(
               String.valueOf(customer.getId()),
               customer.getDescriptiveName(),
@@ -364,8 +365,8 @@ public class AcquireOptimizations {
     }
 
     // Generates 'recommendations.csv' to persist the acquired recommendations line by line.
-    path = recoDir.resolve(RECO_RECOMMENDATIONS_CSV);
-    try (CsvWriter csv = CsvWriter.builder().build(path, StandardCharsets.UTF_8)) {
+    csvPath = recoDir.resolve(RECO_RECOMMENDATIONS_CSV);
+    try (CsvWriter csv = CsvWriter.builder().build(csvPath, StandardCharsets.UTF_8)) {
       csv.writeRow(RECO_RECOMMENDATIONS_CSV_COLUMNS);
       for (AggregatedRecommendation aggregatedRecommendation : aggregatedRecommendations) {
         Recommendation recommendation = aggregatedRecommendation.recommendation;
@@ -373,6 +374,7 @@ public class AcquireOptimizations {
         RecommendationImpact impact = recommendation.getImpact();
         RecommendationMetrics baseMetrics = impact.getBaseMetrics();
         RecommendationMetrics potentialMetrics = impact.getPotentialMetrics();
+
         csv.writeRow(
             RecommendationName.parse(recommendation.getResourceName()).getRecommendationId(),
             recommendation.getType().toString(),
@@ -404,8 +406,8 @@ public class AcquireOptimizations {
     RecommendationMetrics baseMetrics = impact.getBaseMetrics();
     RecommendationMetrics potentialMetrics = impact.getPotentialMetrics();
     return String.format(
-        "Increase Impressions by %s, Clicks by %s, Cost(in micros) by %s, Conversions by %s, Video"
-            + " views by %s.",
+        "Increase Impressions by %.2f, Clicks by %.2f, Cost(in micros) by %d, Conversions by %.2f,"
+            + " Video views by %.2f.",
         potentialMetrics.getImpressions() - baseMetrics.getImpressions(),
         potentialMetrics.getClicks() - baseMetrics.getClicks(),
         potentialMetrics.getCostMicros() - baseMetrics.getCostMicros(),
