@@ -3,7 +3,7 @@
 This folder contains the code examples that illustrate how to programmatically
 retrieve the recommendations and optimization scores from the Google Ads API,
 and apply the recommendations to improve the overall performance and efficiency
-of the customer accounts. These examples will:
+of the Google Ads accounts. These examples will:
 
 *   Download the recommendations and optimization scores for the specified
     Google Ads accounts.
@@ -49,9 +49,9 @@ for more details.
         [RecommendationType](https://developers.google.com/google-ads/api/reference/rpc/latest/RecommendationTypeEnum.RecommendationType)
         for all the valid values.
 
-    *   **[optional] --reportDirectory** The path of the directory in which to
-        generate the *recommendation reports*. If not provided, it will default
-        to `$HOME/opti-reports`.
+    *   **[optional] --reportDirectory** The path of the directory to persist
+        the generated reports. If not provided, it will default to
+        `$HOME/opti-reports`.
 
     Here's an example with generic argument values:
 
@@ -174,28 +174,15 @@ for more details.
         *if and only if* your access to the customer IDs is via a manager
         account.
 
-    *   **[optional] --reportDirectory** The path of the directory to load the
-        *recommendation reports* and generate the *optimization reports*. If not
-        provided, it will default to`$HOME/opti-reports`.
+    *   **[optional] --reportDirectory** The path of the directory to persist
+        the generated reports. If not provided, it will default to
+        `$HOME/opti-reports`.
 
     Here's an example with generic argument values:
 
     ```
     ./gradlew -q runExample --example="optimization.ApplyRecommendations --recommendationTypes CAMPAIGN_BUDGET,KEYWORD --customerIds 111111,222222 --loginCustomerId 333333 --reportDirectory ./opti-reports"
     ```
-
-1.  Review and revise the reports generated in the **--reportDirectory** as
-    specified above.
-
-    After running the command, the *recommendation reports* will be generated in
-    the CSV format for each customer ID separately in a subdirectory under
-    **--reportDirectory**, named as `recommendation_{CID}`. The subdirectory
-    will contain two files named as `optiScore.csv` and `recommendations.csv`.
-
-    Note: You can review and modify `recommendations.csv` manually, deleting the
-    rows of the recommendations which you don't think applicable.
-
-    The subdirectory for a sample customer ID is structured as:
 
 1.  Check out the reports generated in **--reportDirectory** as specified above.
 
