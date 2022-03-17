@@ -78,7 +78,7 @@ for more details.
     |-- recommendations.csv
     ```
 
-    The contnet of the CSV files are as:
+    The content of the CSV files are as:
 
     *   **recommendation_111111/optiScore.csv**:
 
@@ -199,7 +199,7 @@ for more details.
 
 1.  Check out the reports generated in **--reportDirectory** as specified above.
 
-    After running the command, this code example loads the the *recommendation
+    After running the command, this code example loads the *recommendation
     reports*, applies the recommendations and generates *optimization reports*
     in the CSV format for each customer ID separately in a subdirectory under
     **--reportDirectory**, named as `optimization_{CID}`. The subdirectory will
@@ -215,7 +215,7 @@ for more details.
     |-- recommendations.csv
     ```
 
-    The contnet of the CSV files are as:
+    The content of the CSV files are as:
 
     *   **optimization_111111/optiScore.csv**:
 
