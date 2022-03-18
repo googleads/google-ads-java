@@ -66,12 +66,10 @@ import java.util.Optional;
 public class ApplyRecommendations {
 
   private static final String OPTIMIZATION_DIR_PREFIX = "optimization_";
-
   private static final String OPTI_OPTIMIZATION_SCORE_CSV = "optiScore.csv";
   private static final String[] OPTI_OPTIMIZATION_SCORE_CSV_COLUMNS = {
     "CID", "AccountName", "OldOptiScore", "NewOptiScore"
   };
-
   private static final String OPTI_RECOMMENDATIONS_CSV = "recommendations.csv";
   private static final String[] OPTI_RECOMMENDATIONS_CSV_COLUMNS = {
     "ID", "Type", "Details", "CampaignId", "OldOptiScore", "NewOptiScore"
@@ -171,6 +169,8 @@ public class ApplyRecommendations {
     }
 
     if (customerIds == null) {
+      // If 'customerIds' is not provided, applies the recommendations for all customers found in
+      // the report directory.
       applyRecommendationsToAllCustomers(googleAdsClient, reportDirectory);
     } else {
       int numRecommendations = 0;
@@ -312,7 +312,8 @@ public class ApplyRecommendations {
         .forEach(
             row -> {
               String recommendationId = row.getField(RECO_RECOMMENDATIONS_CSV_COLUMNS[0]);
-              String recommendationType = row.getField(RECO_RECOMMENDATIONS_CSV_COLUMNS[1]);
+              RecommendationType recommendationType =
+                  RecommendationType.valueOf(row.getField(RECO_RECOMMENDATIONS_CSV_COLUMNS[1]));
               long campaignId = Long.parseLong(row.getField(RECO_RECOMMENDATIONS_CSV_COLUMNS[4]));
               double campaignOptiScore =
                   Double.parseDouble(row.getField(RECO_RECOMMENDATIONS_CSV_COLUMNS[5]));
@@ -321,7 +322,7 @@ public class ApplyRecommendations {
               Recommendation recommendation =
                   Recommendation.newBuilder()
                       .setResourceName(ResourceNames.recommendation(customerId, recommendationId))
-                      .setType(RecommendationType.valueOf(recommendationType))
+                      .setType(recommendationType)
                       .build();
 
               Campaign campaign =
@@ -343,7 +344,7 @@ public class ApplyRecommendations {
    * Generates the optimization reports to the report directory.
    *
    * @param googleAdsClient the Google Ads API client.
-   * @param customer the {@link Customer} to be reported.
+   * @param customer the {@link Customer} to generate for.
    * @param applyRecommendationResults the list of {@link ApplyRecommendationResult}.
    * @param aggregatedRecommendations the map between a recommendation ID and its {@link
    *     AggregatedRecommendation}.
@@ -386,7 +387,7 @@ public class ApplyRecommendations {
 
         // The Recommendation.campaign field will be set only when the recommendation affects a
         // single campaign. Otherwise, the query for recommendations will return 0 as the campaign
-        // ID. In that case, just set the NewOptiScore column to 0.0 in the optimization reports.
+        // ID. In that case, just set the 'NewOptiScore' column to 0.0 in the optimization reports.
         csv.writeRow(
             RecommendationName.parse(recommendation.getResourceName()).getRecommendationId(),
             recommendation.getType().toString(),

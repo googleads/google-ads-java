@@ -47,7 +47,7 @@ import java.util.stream.Collectors;
 
 /**
  * Acquires the suggested optimizations (optimization scores and recommendations) using the Google
- * Ads Query Language (GAQL) and saves them into the recommendation reports of CSV format.
+ * Ads Query Language (GAQL), and saves them into the recommendation reports of CSV format.
  *
  * <p>This is intended to be used with ApplyRecommendations.java which reads the recommendation
  * reports and applies the loaded recommendations.
@@ -58,10 +58,8 @@ public class AcquireOptimizations {
       Paths.get(System.getProperty("user.home"), "opti-reports").toString();
 
   static final String RECOMMENDATION_DIR_PREFIX = "recommendation_";
-
   static final String RECO_OPTIMIZATION_SCORE_CSV = "optiScore.csv";
   static final String[] RECO_OPTIMIZATION_SCORE_CSV_COLUMNS = {"CID", "AccountName", "OptiScore"};
-
   static final String RECO_RECOMMENDATIONS_CSV = "recommendations.csv";
   static final String[] RECO_RECOMMENDATIONS_CSV_COLUMNS = {
     "ID",
@@ -116,7 +114,7 @@ public class AcquireOptimizations {
 
   /**
    * Represents a recommendation, the related campaign and the recommendation's description string.
-   * This is used to hold a recommendation together with other related information.
+   * This is used to hold a recommendation together with its related information.
    */
   static class AggregatedRecommendation {
 
@@ -154,8 +152,8 @@ public class AcquireOptimizations {
       // params.recommendationTypes =
       //     ImmutableList.of(RecommendationType.valueOf("INSERT_RECOMMENDATION_TYPE_HERE"));
 
-      // Optional: To use a different report directory value from the default specified above,
-      // uncomment the line below and insert the desired value.
+      // Optional: To use a different report directory from the default specified above, uncomment
+      // the line below and insert the desired value.
       // params.reportDirectory = "INSERT_REPORT_DIRECTORY_HERE";
     }
 
@@ -211,7 +209,7 @@ public class AcquireOptimizations {
    *
    * @param googleAdsClient the Google Ads API client.
    * @param customerIds the customer IDs to retrieve recommendations from.
-   * @param recommendationTypes the recommendation types to retrieve.
+   * @param recommendationTypes the desired recommendation types.
    * @param reportDirectory the path of the directory to persist the generated reports.
    * @throws IOException if a failure occurs when trying to generate recommendation reports.
    */
@@ -229,6 +227,8 @@ public class AcquireOptimizations {
     try (GoogleAdsServiceClient googleAdsServiceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
       if (customerIds == null) {
+        // If 'customerIds' is not provided, sets it to all the sub-accounts under the managed
+        // account specified by 'loginCustomerId'.
         customerIds =
             getSubAccountIDs(googleAdsServiceClient, googleAdsClient.getLoginCustomerId());
       }
@@ -260,8 +260,8 @@ public class AcquireOptimizations {
       GoogleAdsServiceClient googleAdsServiceClient, long loginCustomerId) {
     List<Long> customerIds = new ArrayList<>();
 
-    // Creates a query that retrieves all sub-accounts under the manager account specified with
-    // loginCustomerId.
+    // Creates a query that retrieves all sub-accounts under the manager account specified by
+    // 'loginCustomerId'.
     // 1. level = 0 means self link, i.e. the manager account itself.
     // 2. level = 1 means directly linked customers.
     // 3. level > 1 means indirectly linked customers.
@@ -301,7 +301,7 @@ public class AcquireOptimizations {
   }
 
   /**
-   * Retrieves recommendations with specified types and the targeted campaigns from a customer.
+   * Retrieves recommendations with specified types and its targeted campaigns from a customer.
    *
    * @param googleAdsServiceClient the Google Ads Service client.
    * @param customerId the client customer ID.
@@ -315,9 +315,9 @@ public class AcquireOptimizations {
     List<AggregatedRecommendation> aggregatedRecommendations = new ArrayList<>();
     String query =
         String.format(
-            "SELECT recommendation.resource_name, recommendation.type, recommendation.impact,"
-                + " %s, campaign.id, campaign.optimization_score"
-                + " FROM recommendation WHERE recommendation.type in (%s)",
+            "SELECT recommendation.resource_name, recommendation.type, recommendation.impact, "
+                + "%s, campaign.id, campaign.optimization_score "
+                + "FROM recommendation WHERE recommendation.type in (%s)",
             recommendationTypes.stream()
                 .map(
                     type ->
@@ -341,7 +341,7 @@ public class AcquireOptimizations {
   /**
    * Generates the recommendation reports to the report directory.
    *
-   * @param customer the {@link Customer} to be reported.
+   * @param customer the {@link Customer} to generate for.
    * @param aggregatedRecommendations the list of {@link AggregatedRecommendation} instances.
    * @param reportDirectory the path of the directory to persist the generated reports.
    * @throws IOException if a failure occurs when trying to create or write CSV files.
@@ -424,8 +424,8 @@ public class AcquireOptimizations {
    * @return a human-readable description of the recommendation.
    */
   private String getHumanReadableDescription(Recommendation recommendation) {
-    FieldMask allSetFieldsOf = FieldMasks.allSetFieldsOf(recommendation);
-    return allSetFieldsOf.getPathsList().stream()
+    FieldMask allSetFields = FieldMasks.allSetFieldsOf(recommendation);
+    return allSetFields.getPathsList().stream()
         .filter(
             path ->
                 !(path.equals("resource_name") || path.equals("type") || path.startsWith("impact")))
