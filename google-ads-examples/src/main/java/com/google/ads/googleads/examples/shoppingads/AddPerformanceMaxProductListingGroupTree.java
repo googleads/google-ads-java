@@ -249,7 +249,7 @@ public class AddPerformanceMaxProductListingGroupTree {
               // .setParentListingGroupFilter("PARENT_FILTER_NAME")
               //
               // Unlike AddPerformanceMaxRetailCampaign, the type for the root node here must be
-              // Subdivision because it will have child partitions under it.
+              // SUBDIVISION because it will have child partitions under it.
               .setType(ListingGroupFilterType.SUBDIVISION)
               // Specifies that this is in the shopping vertical because it is a Performance Max
               // campaign for retail.
@@ -285,7 +285,7 @@ public class AddPerformanceMaxProductListingGroupTree {
               .setAssetGroup(ResourceNames.assetGroup(customerId, assetGroupId))
               .setParentListingGroupFilter(
                   ResourceNames.assetGroupListingGroupFilter(customerId, assetGroupId, parent))
-              // Uses the Subdivision type to indicate that the AssetGroupListingGroupFilter
+              // Uses the SUBDIVISION type to indicate that the AssetGroupListingGroupFilter
               // will have children.
               .setType(ListingGroupFilterType.SUBDIVISION)
               // Specifies that this is in the shopping vertical because it is a Performance Max
@@ -322,7 +322,7 @@ public class AddPerformanceMaxProductListingGroupTree {
               .setAssetGroup(ResourceNames.assetGroup(customerId, assetGroupId))
               .setParentListingGroupFilter(
                   ResourceNames.assetGroupListingGroupFilter(customerId, assetGroupId, parent))
-              // Uses the UnitIncluded type to indicate that the AssetGroupListingGroupFilter
+              // Uses the UNIT_INCLUDED type to indicate that the AssetGroupListingGroupFilter
               // won't have children.
               .setType(ListingGroupFilterType.UNIT_INCLUDED)
               // Specifies that this is in the shopping vertical because it is a Performance Max
