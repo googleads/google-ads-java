@@ -162,7 +162,6 @@ public class AddPerformanceMaxProductListingGroupTree {
           Set<String> siblings =
               this.parentsToChildren.computeIfAbsent(parentResourceName, p -> new HashSet<>());
           siblings.add(filter.getResourceName());
-          this.parentsToChildren.put(parentResourceName, siblings);
         }
       }
     }
@@ -247,7 +246,7 @@ public class AddPerformanceMaxProductListingGroupTree {
               .setAssetGroup(ResourceNames.assetGroup(customerId, assetGroupId))
               // Since this is the root node, do not set the ParentListingGroupFilter. For all other
               // nodes, this would refer to the parent listing group filter resource name.
-              // ParentListingGroupFilter = "<PARENT FILTER NAME>"
+              // .setParentListingGroupFilter("PARENT_FILTER_NAME")
               //
               // Unlike AddPerformanceMaxRetailCampaign, the type for the root node here must be
               // Subdivision because it will have child partitions under it.
