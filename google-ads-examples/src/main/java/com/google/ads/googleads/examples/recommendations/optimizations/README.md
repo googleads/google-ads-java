@@ -54,7 +54,7 @@ Before executing the code examples, make sure that you have a
     Here's an example with generic argument values:
 
     ```
-    ./gradlew -q runExample --example="recommendations.optimizations.AcquireOptimizations --recommendationTypes CAMPAIGN_BUDGET,KEYWORD --customerIds 111111,222222 --loginCustomerId 333333 --reportDirectory $HOME/opti-reports"
+    ./gradlew -q runExample --example="recommendations.optimizations.AcquireOptimizations --recommendationTypes CAMPAIGN_BUDGET,KEYWORD --customerIds 1111111,2222222 --loginCustomerId 3333333 --reportDirectory $HOME/opti-reports"
     ```
 
 1.  Review and revise the reports generated in **--reportDirectory** as
@@ -72,25 +72,25 @@ Before executing the code examples, make sure that you have a
     The subdirectory for the *recommendation reports* is structured as:
 
     ```
-    recommendation_111111
+    recommendation_1111111
     |-- optiScore.csv
     |-- recommendations.csv
     ```
 
     The content of the CSV files are as:
 
-    *   **recommendation_111111/optiScore.csv**:
+    *   **recommendation_1111111/optiScore.csv**:
 
         ```
         CID,AccountName,OptiScore
-        111111,My Google Ads account,0.8225589
+        1111111,My Google Ads account,0.8225589
         ```
 
-    *   **recommendation_111111/recommendations.csv**:
+    *   **recommendation_1111111/recommendations.csv**:
 
         ```
         ID,Type,Impact,Details,CampaignId,CampaignOptiScore,BaseImpressions,PotentialImpressions,BaseClicks,PotentialClicks,BaseCost,PotentialCost,BaseConversions,PotentialConversions,BaseVideoViews,PotentialVideoViews
-        444444,KEYWORD,"Increase Impressions by 13.0, Clicks by 1.0, Cost(in micros) by 452494, Conversions by 0.08, Video views by 0.0.","keyword.text: [java coding examples]
+        6666666,KEYWORD,"Increase Impressions by 13.0, Clicks by 1.0, Cost(in micros) by 452494, Conversions by 0.08, Video views by 0.0.","keyword.text: [java coding examples]
         keyword.match_type: [BROAD]",9999999,0.534451804270263,600.0,613.0,31.0,32.0,5740000,6192494,0.0,0.08,0.0,0.0
         ```
 
@@ -143,11 +143,11 @@ Before executing the code examples, make sure that you have a
             recommended_extensions: [link_text: "About"
             line1: ""
             line2: ""
-            final_urls: "http://example.com/about"
+            final_urls: "http://www.example.com/about"
             , link_text: "Join Now To View"
             line1: ""
             line2: ""
-            final_urls: "http://example.com/join"
+            final_urls: "http://www.example.com/join"
             ]
             ```
 
@@ -180,7 +180,7 @@ Before executing the code examples, make sure that you have a
     Here's an example with generic argument values:
 
     ```
-    ./gradlew -q runExample --example="recommendations.optimizations.ApplyRecommendations --recommendationTypes CAMPAIGN_BUDGET,KEYWORD --customerIds 111111,222222 --loginCustomerId 333333 --reportDirectory $HOME/opti-reports"
+    ./gradlew -q runExample --example="recommendations.optimizations.ApplyRecommendations --recommendationTypes CAMPAIGN_BUDGET,KEYWORD --customerIds 1111111,2222222 --loginCustomerId 3333333 --reportDirectory $HOME/opti-reports"
     ```
 
 1.  Check out the reports generated in **--reportDirectory** as specified above.
@@ -196,23 +196,23 @@ Before executing the code examples, make sure that you have a
     The subdirectory for the *optimization reports* is structured as:
 
     ```
-    optimization_111111
+    optimization_1111111
     |-- optiScore.csv
     |-- recommendations.csv
     ```
 
     The content of the CSV files are as:
 
-    *   **optimization_111111/optiScore.csv**:
+    *   **optimization_1111111/optiScore.csv**:
 
     ```
     CID,AccountName,OldOptiScore,NewOptiScore
-    111111,My Google Ads account,0.8225589,0.8282797
+    1111111,My Google Ads account,0.8225589,0.8282797
     ```
 
-    *   **optimization_111111/recommendations.csv**:
+    *   **optimization_1111111/recommendations.csv**:
 
     ```
     ID,Type,Details,CampaignId,OldOptiScore,NewOptiScore
-    444444,CAMPAIGN_BUDGET,Increase budget(in micros) from 5750000000 to 8400000000,9999999,0.0,0.0
+    6666666,CAMPAIGN_BUDGET,Increase budget(in micros) from 5750000000 to 8400000000,9999999,0.0,0.0
     ```

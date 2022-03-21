@@ -210,7 +210,7 @@ public class ApplyRecommendations {
     }
 
     System.out.printf(
-        "Skipped %d files totally in %s.%nApplied %d recommendations in total to %d customers.%n",
+        "Skipped %d files in total in %s.%nApplied %d recommendations in total to %d customers.%n",
         numSkips, reportDirectory, numRecommendations, numCustomers);
   }
 
