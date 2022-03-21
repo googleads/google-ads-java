@@ -16,10 +16,8 @@ Ads accounts. These examples will:
 *   Generate the ***optimization reports*** in the CSV format with the apply
     results and the latest optimization scores.
 
-Before executing the code examples, make sure that you have an `ads.properties`
-file configured properly with your credentials. See
-[Configuration](https://developers.google.com/google-ads/api/docs/client-libs/java/config-file)
-for more details.
+Before executing the code examples, make sure that you have a
+[file configured properly with your credentials](https://developers.google.com/google-ads/api/docs/client-libs/java/config-file).
 
 ## Acquire optimizations
 
@@ -85,7 +83,7 @@ for more details.
 
         ```
         CID,AccountName,OptiScore
-        111111,Overstock - PLA,0.8225589
+        111111,My Google Ads account,0.8225589
         ```
 
     *   **recommendation_111111/recommendations.csv**:
@@ -93,7 +91,7 @@ for more details.
         ```
         ID,Type,Impact,Details,CampaignId,CampaignOptiScore,BaseImpressions,PotentialImpressions,BaseClicks,PotentialClicks,BaseCost,PotentialCost,BaseConversions,PotentialConversions,BaseVideoViews,PotentialVideoViews
         444444,KEYWORD,"Increase Impressions by 13.0, Clicks by 1.0, Cost(in micros) by 452494, Conversions by 0.08, Video views by 0.0.","keyword.text: [java coding examples]
-        keyword.match_type: [BROAD]",1747308875,0.534451804270263,600.0,613.0,31.0,32.0,5740000,6192494,0.0,0.08,0.0,0.0
+        keyword.match_type: [BROAD]",9999999,0.534451804270263,600.0,613.0,31.0,32.0,5740000,6192494,0.0,0.08,0.0,0.0
         ```
 
         The `Details` column is the human-readable description of the
@@ -145,11 +143,11 @@ for more details.
             recommended_extensions: [link_text: "About"
             line1: ""
             line2: ""
-            final_urls: "https://about.linkedin.com/?trk=public_profile_v3_mobile_footer-about"
+            final_urls: "http://example.com/about"
             , link_text: "Join Now To View"
             line1: ""
             line2: ""
-            final_urls: "https://www.linkedin.com/signup/public-profile-join?vieweeVanityName=pierrick-voulet&trk=public_profile_recommendations"
+            final_urls: "http://example.com/join"
             ]
             ```
 
@@ -209,12 +207,12 @@ for more details.
 
     ```
     CID,AccountName,OldOptiScore,NewOptiScore
-    111111,Overstock - PLA,0.8225589,0.8282797
+    111111,My Google Ads account,0.8225589,0.8282797
     ```
 
     *   **optimization_111111/recommendations.csv**:
 
     ```
     ID,Type,Details,CampaignId,OldOptiScore,NewOptiScore
-    444444,CAMPAIGN_BUDGET,Increase budget(in micros) from 5750000000 to 8400000000,0,0.0,0.0
+    444444,CAMPAIGN_BUDGET,Increase budget(in micros) from 5750000000 to 8400000000,9999999,0.0,0.0
     ```

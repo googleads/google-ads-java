@@ -179,7 +179,7 @@ public class ApplyRecommendations {
             applyRecommendationsToCustomer(googleAdsClient, customerId, reportDirectory);
       }
       System.out.printf(
-          "Applied %d recommendations totally to %d customers.%n",
+          "Applied %d recommendations in total to %d customers.%n",
           numRecommendations, customerIds.size());
     }
   }
@@ -210,7 +210,7 @@ public class ApplyRecommendations {
     }
 
     System.out.printf(
-        "Skipped %d files totally in %s.%nApplied %d recommendations totally to %d customers.%n",
+        "Skipped %d files totally in %s.%nApplied %d recommendations in total to %d customers.%n",
         numSkips, reportDirectory, numRecommendations, numCustomers);
   }
 
@@ -306,7 +306,7 @@ public class ApplyRecommendations {
    */
   private Map<String, AggregatedRecommendation> loadRetrievedRecommendations(
       Path csvPath, long customerId) throws IOException {
-    Map<String, AggregatedRecommendation> aggregatedRecommendatios = new HashMap<>();
+    Map<String, AggregatedRecommendation> aggregatedRecommendations = new HashMap<>();
     NamedCsvReader.builder()
         .build(csvPath, StandardCharsets.UTF_8)
         .forEach(
@@ -332,12 +332,12 @@ public class ApplyRecommendations {
                       .setOptimizationScore(campaignOptiScore)
                       .build();
 
-              aggregatedRecommendatios.put(
+              aggregatedRecommendations.put(
                   recommendationId,
                   new AggregatedRecommendation(recommendation, campaign, description));
             });
 
-    return aggregatedRecommendatios;
+    return aggregatedRecommendations;
   }
 
   /**

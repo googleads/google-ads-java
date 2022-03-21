@@ -245,7 +245,7 @@ public class AcquireOptimizations {
     }
 
     System.out.printf(
-        "Generated recommendation reports for %d customers totally to %s.%n",
+        "Generated recommendation reports for %d customers in total to %s.%n",
         customerIds.size(), reportDirectory);
   }
 
