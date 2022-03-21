@@ -85,8 +85,12 @@ public class AcquireOptimizations {
     @Parameter(
         names = ArgumentNames.CUSTOMER_IDS,
         description =
-            "Optionally specify a comma-separated list of customer IDs to retrieve recommendations"
-                + " from.")
+            "Specify a comma-separated list of customer IDs to retrieve recommendations from. You"
+                + " must provide at least one of "
+                + ArgumentNames.CUSTOMER_IDS
+                + " or "
+                + ArgumentNames.LOGIN_CUSTOMER_ID
+                + ".")
     private List<Long> customerIds;
 
     @Parameter(
@@ -97,7 +101,7 @@ public class AcquireOptimizations {
 
     @Parameter(
         names = ArgumentNames.RECOMMENDATION_TYPES,
-        description = "Optionally specify the types of recommendations to retrieve.")
+        description = "The types of recommendations to retrieve.")
     private List<RecommendationType> recommendationTypes =
         ImmutableList.of(
             RecommendationType.CAMPAIGN_BUDGET,
@@ -107,8 +111,7 @@ public class AcquireOptimizations {
 
     @Parameter(
         names = "--reportDirectory",
-        description =
-            "Optionally specify the path of the directory to persist the generated reports.")
+        description = "The path of the directory to persist the generated reports.")
     private String reportDirectory = DEFAULT_REPORT_DIRECTORY;
   }
 

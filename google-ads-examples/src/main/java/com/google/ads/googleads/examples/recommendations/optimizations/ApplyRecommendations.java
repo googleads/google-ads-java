@@ -80,8 +80,9 @@ public class ApplyRecommendations {
     @Parameter(
         names = ArgumentNames.CUSTOMER_IDS,
         description =
-            "Optionally specify a comma-separated list of customer IDs to apply recommendations"
-                + " to.")
+            "Specify a comma-separated list of customer IDs to apply recommendations to. If not"
+                + " provided, the recommendations for all the customers found in"
+                + " the --reportDirectory will be applied.")
     private List<Long> customerIds;
 
     @Parameter(
@@ -92,8 +93,7 @@ public class ApplyRecommendations {
 
     @Parameter(
         names = "--reportDirectory",
-        description =
-            "Optionally specify the path of the directory to persist the generated reports.")
+        description = "The path of the directory to persist the generated reports.")
     private String reportDirectory = DEFAULT_REPORT_DIRECTORY;
   }
 

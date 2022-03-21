@@ -54,7 +54,7 @@ Before executing the code examples, make sure that you have a
     Here's an example with generic argument values:
 
     ```
-    ./gradlew -q runExample --example="recommendations.optimizations.AcquireOptimizations --recommendationTypes CAMPAIGN_BUDGET,KEYWORD --customerIds 111111,222222 --loginCustomerId 333333 --reportDirectory ./opti-reports"
+    ./gradlew -q runExample --example="recommendations.optimizations.AcquireOptimizations --recommendationTypes CAMPAIGN_BUDGET,KEYWORD --customerIds 111111,222222 --loginCustomerId 333333 --reportDirectory $HOME/opti-reports"
     ```
 
 1.  Review and revise the reports generated in **--reportDirectory** as
@@ -180,7 +180,7 @@ Before executing the code examples, make sure that you have a
     Here's an example with generic argument values:
 
     ```
-    ./gradlew -q runExample --example="recommendations.optimizations.ApplyRecommendations --recommendationTypes CAMPAIGN_BUDGET,KEYWORD --customerIds 111111,222222 --loginCustomerId 333333 --reportDirectory ./opti-reports"
+    ./gradlew -q runExample --example="recommendations.optimizations.ApplyRecommendations --recommendationTypes CAMPAIGN_BUDGET,KEYWORD --customerIds 111111,222222 --loginCustomerId 333333 --reportDirectory $HOME/opti-reports"
     ```
 
 1.  Check out the reports generated in **--reportDirectory** as specified above.
