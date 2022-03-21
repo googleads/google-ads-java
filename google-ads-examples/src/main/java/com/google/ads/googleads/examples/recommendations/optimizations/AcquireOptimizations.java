@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.google.ads.googleads.examples.optimization;
+package com.google.ads.googleads.examples.recommendations.optimizations;
 
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
@@ -297,7 +297,7 @@ public class AcquireOptimizations {
       return googleAdsRow.getCustomer();
     }
 
-    throw new RuntimeException("Customer not found with ID " + customerId);
+    throw new IllegalArgumentException("Customer not found with ID " + customerId);
   }
 
   /**

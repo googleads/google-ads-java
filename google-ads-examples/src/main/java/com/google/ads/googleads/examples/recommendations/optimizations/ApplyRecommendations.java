@@ -12,17 +12,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.google.ads.googleads.examples.optimization;
+package com.google.ads.googleads.examples.recommendations.optimizations;
 
-import static com.google.ads.googleads.examples.optimization.AcquireOptimizations.DEFAULT_REPORT_DIRECTORY;
-import static com.google.ads.googleads.examples.optimization.AcquireOptimizations.RECOMMENDATION_DIR_PREFIX;
-import static com.google.ads.googleads.examples.optimization.AcquireOptimizations.RECO_OPTIMIZATION_SCORE_CSV;
-import static com.google.ads.googleads.examples.optimization.AcquireOptimizations.RECO_OPTIMIZATION_SCORE_CSV_COLUMNS;
-import static com.google.ads.googleads.examples.optimization.AcquireOptimizations.RECO_RECOMMENDATIONS_CSV;
-import static com.google.ads.googleads.examples.optimization.AcquireOptimizations.RECO_RECOMMENDATIONS_CSV_COLUMNS;
+import static com.google.ads.googleads.examples.recommendations.optimizations.AcquireOptimizations.DEFAULT_REPORT_DIRECTORY;
+import static com.google.ads.googleads.examples.recommendations.optimizations.AcquireOptimizations.RECOMMENDATION_DIR_PREFIX;
+import static com.google.ads.googleads.examples.recommendations.optimizations.AcquireOptimizations.RECO_OPTIMIZATION_SCORE_CSV;
+import static com.google.ads.googleads.examples.recommendations.optimizations.AcquireOptimizations.RECO_OPTIMIZATION_SCORE_CSV_COLUMNS;
+import static com.google.ads.googleads.examples.recommendations.optimizations.AcquireOptimizations.RECO_RECOMMENDATIONS_CSV;
+import static com.google.ads.googleads.examples.recommendations.optimizations.AcquireOptimizations.RECO_RECOMMENDATIONS_CSV_COLUMNS;
 
 import com.beust.jcommander.Parameter;
-import com.google.ads.googleads.examples.optimization.AcquireOptimizations.AggregatedRecommendation;
+import com.google.ads.googleads.examples.recommendations.optimizations.AcquireOptimizations.AggregatedRecommendation;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
@@ -165,7 +165,7 @@ public class ApplyRecommendations {
       throws IOException {
     Path reportDir = Paths.get(reportDirectory);
     if (!Files.isDirectory(reportDir)) {
-      throw new RuntimeException("Not a directory: " + reportDirectory);
+      throw new IllegalArgumentException("Not a directory: " + reportDirectory);
     }
 
     if (customerIds == null) {
@@ -274,7 +274,6 @@ public class ApplyRecommendations {
    * @param csvPath the path to 'optiScore.csv' of the recommendation reports.
    * @return a {@link Customer} instance.
    * @throws IOException if a failure occurs when trying to read CSV files.
-   * @throws RuntimeException if the first row of the CSV file is not present.
    */
   private Customer loadCustomerInfo(Path csvPath) throws IOException {
     final Optional<NamedCsvRow> firstRow =
@@ -290,7 +289,7 @@ public class ApplyRecommendations {
               Double.parseDouble(row.getField(RECO_OPTIMIZATION_SCORE_CSV_COLUMNS[2])))
           .build();
     } else {
-      throw new RuntimeException("Failed to construct a customer from " + csvPath);
+      throw new IllegalArgumentException("Failed to construct a customer from " + csvPath);
     }
   }
 
@@ -440,7 +439,7 @@ public class ApplyRecommendations {
       }
     }
 
-    throw new RuntimeException(
+    throw new IllegalArgumentException(
         String.format("Campaign not found with ID %d on customer %d", campaignId, customerId));
   }
 }
