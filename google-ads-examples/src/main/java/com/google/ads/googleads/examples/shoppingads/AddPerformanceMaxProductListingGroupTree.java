@@ -43,7 +43,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.stream.LongStream;
 import org.apache.commons.lang3.StringUtils;
 
 /**
@@ -84,9 +88,8 @@ public class AddPerformanceMaxProductListingGroupTree {
       params.assetGroupId = Long.parseLong("INSERT_AD_GROUP_ID_HERE");
       // Optional: To replace the existing listing group tree from the asset group set this
       // parameter to true.
-      // The option to remove the existing listing group tree. If the current AssetGroup already has
-      // a tree of ListingGroupFilters, and you try to add a new set of ListingGroupFilters
-      // including a root filter, you'll receive an
+      // If the current AssetGroup already has a tree of ListingGroupFilters, attempting to add a
+      // new set of ListingGroupFilters including a root filter will result in an
       // 'ASSET_GROUP_LISTING_GROUP_FILTER_ERROR_MULTIPLE_ROOTS' error. Setting this option to true
       // will remove the existing tree and prevent this error.
       params.replaceExistingTree = Boolean.parseBoolean("INSERT_REPLACE_EXISTING_TREE_HERE");
@@ -136,35 +139,31 @@ public class AddPerformanceMaxProductListingGroupTree {
    */
   private static class AssetGroupListingGroupFilterRemoveOperationFactory {
     private String rootResourceName = "";
-    private final HashMap<String, HashSet<String>> parentsToChildren = new HashMap<>();
+    private final Map<String, Set<String>> parentsToChildren = new HashMap<>();
 
-    public AssetGroupListingGroupFilterRemoveOperationFactory(
+    private AssetGroupListingGroupFilterRemoveOperationFactory(
         List<AssetGroupListingGroupFilter> resources) throws Exception {
       if (resources.isEmpty()) {
         throw new Exception("No listing group filters to remove");
       }
 
       for (AssetGroupListingGroupFilter filter : resources) {
-        // When the node has no parent, it means it's the root node, which is treated differently.
         if (filter.getParentListingGroupFilter().isEmpty() && !this.rootResourceName.isEmpty()) {
-          throw new Exception("More than one root node");
+          // A node with no parent is the root node, but there can only be a single root node.
+          throw new IllegalStateException("More than one root node");
         } else if (filter.getParentListingGroupFilter().isEmpty()) {
+          // Sets the root node.
           this.rootResourceName = filter.getResourceName();
-          continue;
-        }
-
-        String parentResourceName = filter.getParentListingGroupFilter();
-        HashSet<String> siblings;
-        // Check to see if we've already visited a sibling in this group, and fetch or create a new
-        // set as required.
-        if (this.parentsToChildren.containsKey(parentResourceName)) {
-          siblings = this.parentsToChildren.get(parentResourceName);
         } else {
-          siblings = new HashSet<>();
+          // Adds an entry to the parentsToChildren map for each non-root node.
+          String parentResourceName = filter.getParentListingGroupFilter();
+          // Checks to see if a sibling in this group has already been visited, and fetches or
+          // creates a new set as required.
+          Set<String> siblings =
+              this.parentsToChildren.computeIfAbsent(parentResourceName, p -> new HashSet<>());
+          siblings.add(filter.getResourceName());
+          this.parentsToChildren.put(parentResourceName, siblings);
         }
-
-        siblings.add(filter.getResourceName());
-        this.parentsToChildren.put(parentResourceName, siblings);
       }
     }
 
@@ -173,7 +172,7 @@ public class AddPerformanceMaxProductListingGroupTree {
      * Creates a list of MutateOperations that remove all of the resources in the tree originally
      * used to create this factory object.
      */
-    public List<MutateOperation> removeAll() {
+    private List<MutateOperation> removeAll() {
       return removeDescendantsAndFilter(rootResourceName);
     }
     // [END add_performance_max_product_listing_group_tree_2]
@@ -185,16 +184,20 @@ public class AddPerformanceMaxProductListingGroupTree {
      * children (and their children, recursively) are removed first. Then, the node itself is
      * removed.
      */
-    public List<MutateOperation> removeDescendantsAndFilter(String resourceName) {
+    private List<MutateOperation> removeDescendantsAndFilter(String resourceName) {
       List<MutateOperation> operations = new ArrayList<>();
 
       if (this.parentsToChildren.containsKey(resourceName)) {
-        HashSet<String> children = parentsToChildren.get(resourceName);
+        Set<String> children = parentsToChildren.get(resourceName);
         for (String child : children) {
+          // Recursively adds operations to the return value that remove each of the child nodes of
+          // the current node from the tree.
           operations.addAll(removeDescendantsAndFilter(child));
         }
       }
 
+      // Creates and adds an operation to the return value that will remove the current node from
+      // the tree.
       AssetGroupListingGroupFilterOperation operation =
           AssetGroupListingGroupFilterOperation.newBuilder().setRemove(resourceName).build();
       operations.add(
@@ -215,23 +218,17 @@ public class AddPerformanceMaxProductListingGroupTree {
     private final long customerId;
     private final long assetGroupId;
     private final long rootListingGroupId;
-    private long nextId;
+    private static Iterator<Long> idGenerator;
 
-    public AssetGroupListingGroupFilterCreateOperationFactory(
+    private AssetGroupListingGroupFilterCreateOperationFactory(
         long customerId, long assetGroupId, long rootListingGroupId) {
       this.customerId = customerId;
       this.assetGroupId = assetGroupId;
       this.rootListingGroupId = rootListingGroupId;
-      this.nextId = this.rootListingGroupId;
-    }
-
-    /**
-     * Returns a new temporary ID to be used for a resource name in a MutateOperation. See
-     * https://developers.google.com/google-ads/api/docs/mutating/best-practices#temporary_resource_names
-     * for details about temporary IDs.
-     */
-    public long getNextId() {
-      return --nextId;
+      // Generates a new temporary ID to be used for a resource name in a MutateOperation. See
+      // https://developers.google.com/google-ads/api/docs/mutating/best-practices#temporary_resource_names
+      // for details about temporary IDs.
+      idGenerator = LongStream.iterate(rootListingGroupId - 1, prev -> prev - 1).iterator();
     }
 
     // [START add_performance_max_product_listing_group_tree_4]
@@ -241,7 +238,7 @@ public class AddPerformanceMaxProductListingGroupTree {
      *
      * <p>The root node or partition is the default, which is displayed as "All Products".
      */
-    public MutateOperation createRoot() {
+    private MutateOperation createRoot() {
       AssetGroupListingGroupFilter listingGroupFilter =
           AssetGroupListingGroupFilter.newBuilder()
               .setResourceName(
@@ -253,10 +250,10 @@ public class AddPerformanceMaxProductListingGroupTree {
               // ParentListingGroupFilter = "<PARENT FILTER NAME>"
               //
               // Unlike AddPerformanceMaxRetailCampaign, the type for the root node here must be
-              // Subdivision because we add child partitions under it.
+              // Subdivision because it will have child partitions under it.
               .setType(ListingGroupFilterType.SUBDIVISION)
-              // Because this is a Performance Max campaign for retail, we need to specify that this
-              // is in the shopping vertical.
+              // Specifies that this is in the shopping vertical because it is a Performance Max
+              // campaign for retail.
               .setVertical(ListingGroupFilterVertical.SHOPPING)
               // Note the case_value is not set because it should be undefined for the root node.
               .build();
@@ -273,14 +270,14 @@ public class AddPerformanceMaxProductListingGroupTree {
      * Creates a MutateOperation that creates an intermediate AssetGroupListingGroupFilter for the
      * factory's AssetGroup.
      *
-     * <p>Use this method if the filter will have child filters. Otherwise, use the CreateUnit
-     * method.
+     * <p>Use this method if the filter will have child filters. Otherwise, use the {@link
+     * #createUnit(long, long, ListingGroupFilterDimension), createUnit} method.
      *
      * @param parent the ID of the parent AssetGroupListingGroupFilter.
      * @param id the ID of AssetGroupListingGroupFilter that will be created.
      * @param dimension the dimension to associate with the AssetGroupListingGroupFilter.
      */
-    public MutateOperation createSubdivision(
+    private MutateOperation createSubdivision(
         long parent, long id, ListingGroupFilterDimension dimension) {
       AssetGroupListingGroupFilter listingGroupFilter =
           AssetGroupListingGroupFilter.newBuilder()
@@ -289,11 +286,11 @@ public class AddPerformanceMaxProductListingGroupTree {
               .setAssetGroup(ResourceNames.assetGroup(customerId, assetGroupId))
               .setParentListingGroupFilter(
                   ResourceNames.assetGroupListingGroupFilter(customerId, assetGroupId, parent))
-              // We must use the Subdivision type to indicate that the AssetGroupListingGroupFilter
+              // Uses the Subdivision type to indicate that the AssetGroupListingGroupFilter
               // will have children.
               .setType(ListingGroupFilterType.SUBDIVISION)
-              // Because this is a Performance Max campaign for retail, we need to specify that this
-              // is in the shopping vertical.
+              // Specifies that this is in the shopping vertical because it is a Performance Max
+              // campaign for retail.
               .setVertical(ListingGroupFilterVertical.SHOPPING)
               .setCaseValue(dimension)
               .build();
@@ -310,14 +307,15 @@ public class AddPerformanceMaxProductListingGroupTree {
      * Creates a MutateOperation that creates a child AssetGroupListingGroupFilter for the factory's
      * AssetGroup.
      *
-     * <p>Use this method if the filter won't have child filters. Otherwise, use the
-     * createSubdivision method.
+     * <p>Use this method if the filter won't have child filters. Otherwise, use the {@link
+     * #createSubdivision(long, long, ListingGroupFilterDimension), createSubdivision} method.
      *
      * @param parent the ID of the parent AssetGroupListingGroupFilter.
      * @param id the ID of AssetGroupListingGroupFilter that will be created.
      * @param dimension the dimension to associate with the AssetGroupListingGroupFilter.
      */
-    public MutateOperation createUnit(long parent, long id, ListingGroupFilterDimension dimension) {
+    private MutateOperation createUnit(
+        long parent, long id, ListingGroupFilterDimension dimension) {
       AssetGroupListingGroupFilter listingGroupFilter =
           AssetGroupListingGroupFilter.newBuilder()
               .setResourceName(
@@ -325,11 +323,11 @@ public class AddPerformanceMaxProductListingGroupTree {
               .setAssetGroup(ResourceNames.assetGroup(customerId, assetGroupId))
               .setParentListingGroupFilter(
                   ResourceNames.assetGroupListingGroupFilter(customerId, assetGroupId, parent))
-              // We must use the UnitIncluded type to indicate that the AssetGroupListingGroupFilter
+              // Uses the UnitIncluded type to indicate that the AssetGroupListingGroupFilter
               // won't have children.
               .setType(ListingGroupFilterType.UNIT_INCLUDED)
-              // Because this is a Performance Max campaign for retail, we need to specify that this
-              // is in the shopping vertical.
+              // Specifies that this is in the shopping vertical because it is a Performance Max
+              // campaign for retail.
               .setVertical(ListingGroupFilterVertical.SHOPPING)
               .setCaseValue(dimension)
               .build();
@@ -378,12 +376,12 @@ public class AddPerformanceMaxProductListingGroupTree {
       }
     }
 
-    // We use a factory to create all the MutateOperations that manipulate a specific
+    // Uses a factory to create all the MutateOperations that manipulate a specific
     // AssetGroup for a specific customer. The operations returned by the factory's methods
     // are used to construct a new tree of filters. These filters can have parent-child
     // relationships, and also include a special root that includes all children.
     //
-    // When creating these filters, we use temporary IDs to create the hierarchy between
+    // When creating these filters, temporary IDs are used to create the hierarchy between
     // each of the nodes in the tree, beginning with the root listing group filter.
     //
     // The factory created below is specific to a customerId and assetGroupId.
@@ -405,7 +403,7 @@ public class AddPerformanceMaxProductListingGroupTree {
     operations.add(
         createOperationFactory.createUnit(
             TEMPORARY_ID_LISTING_GROUP_ROOT,
-            createOperationFactory.getNextId(),
+            AssetGroupListingGroupFilterCreateOperationFactory.idGenerator.next(),
             newProductDimension));
 
     // Creates an operation to add a leaf node for used products.
@@ -419,13 +417,13 @@ public class AddPerformanceMaxProductListingGroupTree {
     operations.add(
         createOperationFactory.createUnit(
             TEMPORARY_ID_LISTING_GROUP_ROOT,
-            createOperationFactory.getNextId(),
+            AssetGroupListingGroupFilterCreateOperationFactory.idGenerator.next(),
             usedProductDimension));
 
-    // This represents the ID of the "other" category in the ProductCondition subdivision. We save
-    // this ID because the node with this ID will be further partitioned, and this ID will serve as
+    // This represents the ID of the "other" category in the ProductCondition subdivision. This ID
+    // is saved because the node with this ID will be further partitioned, and this ID will serve as
     // the parent ID for subsequent child nodes of the "other" category.
-    long otherSubdivisionId = createOperationFactory.getNextId();
+    long otherSubdivisionId = AssetGroupListingGroupFilterCreateOperationFactory.idGenerator.next();
 
     // Creates an operation to add a subdivision node for other products in the ProductCondition
     // subdivision.
@@ -434,7 +432,7 @@ public class AddPerformanceMaxProductListingGroupTree {
             .setProductCondition(ProductCondition.newBuilder().build())
             .build();
     operations.add(
-        // We call createSubdivision because this listing group will have children.
+        // Calls createSubdivision because this listing group will have children.
         createOperationFactory.createSubdivision(
             TEMPORARY_ID_LISTING_GROUP_ROOT, otherSubdivisionId, otherProductDimension));
 
@@ -445,7 +443,9 @@ public class AddPerformanceMaxProductListingGroupTree {
             .build();
     operations.add(
         createOperationFactory.createUnit(
-            otherSubdivisionId, createOperationFactory.getNextId(), coolBrandProductDimension));
+            otherSubdivisionId,
+            AssetGroupListingGroupFilterCreateOperationFactory.idGenerator.next(),
+            coolBrandProductDimension));
 
     // Creates an operation to add a leaf node for products with the brand "CheapBrand".
     ListingGroupFilterDimension cheapBrandProductDimension =
@@ -454,7 +454,9 @@ public class AddPerformanceMaxProductListingGroupTree {
             .build();
     operations.add(
         createOperationFactory.createUnit(
-            otherSubdivisionId, createOperationFactory.getNextId(), cheapBrandProductDimension));
+            otherSubdivisionId,
+            AssetGroupListingGroupFilterCreateOperationFactory.idGenerator.next(),
+            cheapBrandProductDimension));
 
     // Creates an operation to add a leaf node for other products in the ProductBrand subdivision.
     ListingGroupFilterDimension otherBrandProductDimension =
@@ -463,7 +465,9 @@ public class AddPerformanceMaxProductListingGroupTree {
             .build();
     operations.add(
         createOperationFactory.createUnit(
-            otherSubdivisionId, createOperationFactory.getNextId(), otherBrandProductDimension));
+            otherSubdivisionId,
+            AssetGroupListingGroupFilterCreateOperationFactory.idGenerator.next(),
+            otherBrandProductDimension));
 
     try (GoogleAdsServiceClient googleAdsServiceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
@@ -529,7 +533,6 @@ public class AddPerformanceMaxProductListingGroupTree {
     for (int i = 0; i < response.getMutateOperationResponsesCount(); i++) {
       MutateOperation operationRequest = request.getMutateOperations(i);
       MutateOperationResponse operationResponse = response.getMutateOperationResponses(i);
-
 
       if (operationResponse.getResponseCase()
           != ResponseCase.ASSET_GROUP_LISTING_GROUP_FILTER_RESULT) {
