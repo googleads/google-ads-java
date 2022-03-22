@@ -27,22 +27,21 @@ import com.google.ads.googleads.v10.services.GoogleAdsServiceClient.SearchPagedR
 import com.google.ads.googleads.v10.services.SearchGoogleAdsRequest;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.SortedMap;
+import java.util.TreeMap;
 
 /**
  * GoogleAdsService.Search results are paginated, but they can only be retrieved in sequence
  * starting by the first page. More details at
  * https://developers.google.com/google-ads/api/docs/reporting/paging.
  *
- * <p>This example searches campaigns illustrating how GoogleAdsService.Search result page tokens
+ * <p>This example searches campaigns illustrating how GoogleAdsService.search result page tokens
  * can be cached and reused to retrieve previous pages. This is useful when you need to request
  * pages that were already requested in the past without starting over from the first page. For
  * example, it can be used to implement an interactive application that displays a page of results
  * at a time without caching all the results first.
  *
- * <p>To add campaigns, {@link com.google.ads.googleads.examples.basicoperations.AddCampaigns}.
+ * <p>To add campaigns, run {@link com.google.ads.googleads.examples.basicoperations.AddCampaigns}.
  */
 public class NavigateSearchResultPagesCachingTokens {
 
@@ -106,9 +105,8 @@ public class NavigateSearchResultPagesCachingTokens {
   private static void runExample(GoogleAdsClient googleAdsClient, long customerId) {
     // The cache of page tokens. It is stored in-memory and in ascendant order of page number.
     // The first page's token is always an empty string.
-    List<String> pageTokens = new ArrayList<>(Collections.singletonList(""));
-
-    System.out.println("--- 0. Fetch page 1 to get metadata:");
+    SortedMap<Integer, String> pageTokens = new TreeMap<>();
+    pageTokens.put(1, "");
 
     // Creates a query that retrieves the campaigns.
     String query =
@@ -128,9 +126,10 @@ public class NavigateSearchResultPagesCachingTokens {
     int totalNumberOfPages;
     try (GoogleAdsServiceClient googleAdsServiceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
+      System.out.println("--- 0. Fetching page 1 to get metadata:");
       // Issues a paginated search request.
       SearchPagedResponse response = googleAdsServiceClient.search(request);
-      cacheNextPageToken(pageTokens, response.getPage(), 1);
+      cacheNextPageToken(pageTokens, response.getPage(), 2);
 
       // Determines the total number of results and prints it.
       // The total results count does not take into consideration the LIMIT clause of the query,
@@ -140,25 +139,25 @@ public class NavigateSearchResultPagesCachingTokens {
       System.out.printf("Total number of campaigns found: %d.%n", totalNumberOfResults);
 
       // Determines the total number of pages and prints it.
-      totalNumberOfPages = (int) Math.ceil((double) totalNumberOfResults / (double) PAGE_SIZE);
+      totalNumberOfPages = (int) Math.ceil(totalNumberOfResults / (double) PAGE_SIZE);
       System.out.printf("Total number of pages: %d.%n", totalNumberOfPages);
       if (totalNumberOfPages == 0) {
         System.out.println("Could not find any campaigns.");
-        System.exit(1);
+        return;
       }
     }
 
     // Demonstrates how the logic works when iterating pages forward. We select a page that is
     // in the middle of the result set so that only a subset of the page tokens will be cached.
-    int middlePageNumber = (int) Math.ceil((double) totalNumberOfPages / 2.0);
-    System.out.printf("--- 1. Print results of the middle page (page %d):%n", middlePageNumber);
+    int middlePageNumber = (int) Math.ceil(totalNumberOfPages / 2.0);
+    System.out.printf("--- 1. Printing results of the middle page (page %d):%n", middlePageNumber);
     fetchAndPrintPageResults(googleAdsClient, customerId, query, middlePageNumber, pageTokens);
 
     // Demonstrates how the logic works when iterating pages backward with some page tokens that
     // are not already cached.
-    System.out.println("--- 2. Print results from the last page to the first:");
+    System.out.println("--- 2. Printing results of the last page to the first:");
     for (int pageNumber = totalNumberOfPages; pageNumber > 0; pageNumber--) {
-      System.out.printf("-- Printing results for page %d:%n", pageNumber);
+      System.out.printf("-- Page %d results:%n", pageNumber);
       fetchAndPrintPageResults(googleAdsClient, customerId, query, pageNumber, pageTokens);
     }
   }
@@ -178,10 +177,10 @@ public class NavigateSearchResultPagesCachingTokens {
       long customerId,
       String query,
       int pageNumber,
-      List<String> pageTokens) {
+      SortedMap<Integer, String> pageTokens) {
     int currentPageNumber;
     // There is no need to fetch the pages we already know the page tokens for.
-    if (pageTokens.size() >= pageNumber) {
+    if (pageTokens.containsKey(pageNumber)) {
       System.out.println(
           "The token of the requested page was cached, we will use it to get the results.");
       currentPageNumber = pageNumber;
@@ -190,7 +189,7 @@ public class NavigateSearchResultPagesCachingTokens {
           "The token of the requested page was never cached, we will use the closest page we know"
               + " the token for (page %d) and sequentially get pages from there.%n",
           pageTokens.size());
-      currentPageNumber = pageTokens.size();
+      currentPageNumber = pageTokens.lastKey();
     }
 
     // Fetches next pages in sequence and caches their tokens until the requested page results
@@ -205,12 +204,12 @@ public class NavigateSearchResultPagesCachingTokens {
               .setQuery(query)
               .setReturnTotalResultsCount(true)
               // Uses the page token cached for the current page number.
-              .setPageToken(pageTokens.get(currentPageNumber - 1))
+              .setPageToken(pageTokens.get(currentPageNumber))
               .build();
       try (GoogleAdsServiceClient googleAdsServiceClient =
           googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
         SearchPagedResponse response = googleAdsServiceClient.search(request);
-        cacheNextPageToken(pageTokens, response.getPage(), currentPageNumber);
+        cacheNextPageToken(pageTokens, response.getPage(), currentPageNumber + 1);
 
         // Prints only the results for the requested page.
         if (currentPageNumber == pageNumber) {
@@ -234,13 +233,13 @@ public class NavigateSearchResultPagesCachingTokens {
    *
    * @param pageTokens the cache of page tokens to update.
    * @param page the page that was retrieved.
-   * @param pageNumber the number of the page that was retrieved.
+   * @param pageNumber the number of the page the cached token will retrieve.
    */
-  private static void cacheNextPageToken(List<String> pageTokens, SearchPage page, int pageNumber) {
-    if (page.hasNextPage() && pageTokens.size() < pageNumber + 1) {
+  private static void cacheNextPageToken(
+      SortedMap<Integer, String> pageTokens, SearchPage page, int pageNumber) {
+    if (page.hasNextPage() && !pageTokens.containsKey(pageNumber)) {
       // Updates the cache with the next page token if it is not set yet.
-      pageTokens.add(page.getNextPageToken());
-      // Prints in green color for better console readability.
+      pageTokens.put(pageNumber, page.getNextPageToken());
       System.out.printf("Cached token for page %d.%n", pageNumber);
     }
   }
