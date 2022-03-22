@@ -31,7 +31,7 @@ import java.util.SortedMap;
 import java.util.TreeMap;
 
 /**
- * GoogleAdsService.Search results are paginated, but they can only be retrieved in sequence
+ * GoogleAdsService.search results are paginated, but they can only be retrieved in sequence
  * starting by the first page. More details at
  * https://developers.google.com/google-ads/api/docs/reporting/paging.
  *
