@@ -20,6 +20,7 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
+import com.google.ads.googleads.v10.common.AudienceInfo;
 import com.google.ads.googleads.v10.common.ImageAsset;
 import com.google.ads.googleads.v10.common.LanguageInfo;
 import com.google.ads.googleads.v10.common.LocationInfo;
@@ -35,11 +36,13 @@ import com.google.ads.googleads.v10.errors.GoogleAdsException;
 import com.google.ads.googleads.v10.resources.Asset;
 import com.google.ads.googleads.v10.resources.AssetGroup;
 import com.google.ads.googleads.v10.resources.AssetGroupAsset;
+import com.google.ads.googleads.v10.resources.AssetGroupSignal;
 import com.google.ads.googleads.v10.resources.Campaign;
 import com.google.ads.googleads.v10.resources.CampaignBudget;
 import com.google.ads.googleads.v10.resources.CampaignCriterion;
 import com.google.ads.googleads.v10.services.AssetGroupAssetOperation;
 import com.google.ads.googleads.v10.services.AssetGroupOperation;
+import com.google.ads.googleads.v10.services.AssetGroupSignalOperation;
 import com.google.ads.googleads.v10.services.AssetOperation;
 import com.google.ads.googleads.v10.services.CampaignBudgetOperation;
 import com.google.ads.googleads.v10.services.CampaignCriterionOperation;
@@ -97,6 +100,12 @@ public class AddPerformanceMaxCampaign {
 
     @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
     private Long customerId;
+
+    @Parameter(
+        names = ArgumentNames.AUDIENCE_ID,
+        description =
+            "An audience ID to use to improve the targeting of the Performance Max campaign")
+    private Long audienceId;
   }
 
   public static void main(String[] args) throws IOException {
@@ -106,6 +115,9 @@ public class AddPerformanceMaxCampaign {
       // Either pass the required parameters for this example on the command line, or insert them
       // into the code here. See the parameter class definition above for descriptions.
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
+
+      // Optional: Specify an audience ID.
+      // params.audienceId = Long.parseLong("INSERT_AUDIENCE_ID_HERE");
     }
 
     GoogleAdsClient googleAdsClient = null;
@@ -121,7 +133,8 @@ public class AddPerformanceMaxCampaign {
     }
 
     try {
-      new AddPerformanceMaxCampaign().runExample(googleAdsClient, params.customerId);
+      new AddPerformanceMaxCampaign()
+          .runExample(googleAdsClient, params.customerId, params.audienceId);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -144,8 +157,10 @@ public class AddPerformanceMaxCampaign {
    *
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
+   * @param audienceId the optional audience ID.
    */
-  private void runExample(GoogleAdsClient googleAdsClient, long customerId) throws IOException {
+  private void runExample(GoogleAdsClient googleAdsClient, long customerId, Long audienceId)
+      throws IOException {
     // [START add_performance_max_campaign_1]
     // Performance Max campaigns require that repeated assets such as headlines
     // and descriptions be created before the campaign.
@@ -172,9 +187,17 @@ public class AddPerformanceMaxCampaign {
     mutateOperations.add(createCampaignBudgetOperation(customerId));
     mutateOperations.add(createPerformanceMaxCampaignOperation(customerId));
     mutateOperations.addAll(createCampaignCriterionOperations(customerId));
+    String assetGroupResourceName = ResourceNames.assetGroup(customerId, ASSET_GROUP_TEMPORARY_ID);
     mutateOperations.addAll(
         createAssetGroupOperations(
-            customerId, headlineAssetResourceNames, descriptionAssetResourceNames));
+            customerId,
+            assetGroupResourceName,
+            headlineAssetResourceNames,
+            descriptionAssetResourceNames));
+    if (audienceId != null) {
+      mutateOperations.addAll(
+          createAssetGroupSignalOperations(customerId, assetGroupResourceName, audienceId));
+    }
 
     try (GoogleAdsServiceClient googleAdsServiceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
@@ -349,13 +372,13 @@ public class AddPerformanceMaxCampaign {
   /** Creates a list of MutateOperations that create a new AssetGroup. */
   private List<MutateOperation> createAssetGroupOperations(
       long customerId,
+      String assetGroupResourceName,
       List<String> headlineAssetResourceNames,
       List<String> descriptionAssetResourceNames)
       throws IOException {
     List<MutateOperation> mutateOperations = new ArrayList<>();
     String campaignResourceName =
         ResourceNames.campaign(customerId, PERFORMANCE_MAX_CAMPAIGN_TEMPORARY_ID);
-    String assetGroupResourceName = ResourceNames.assetGroup(customerId, ASSET_GROUP_TEMPORARY_ID);
     // Creates the AssetGroup.
     AssetGroup assetGroup =
         AssetGroup.newBuilder()
@@ -526,6 +549,31 @@ public class AddPerformanceMaxCampaign {
     return mutateOperations;
   }
   // [END add_performance_max_campaign_8]
+
+  // [START add_performance_max_campaign_9]
+  /**
+   * Creates a list of MutateOperations that create {@link
+   * com.google.ads.googleads.v10.resources.AssetGroupSignal} objects.
+   */
+  private List<MutateOperation> createAssetGroupSignalOperations(
+      long customerId, String assetGroupResourceName, Long audienceId) {
+    List<MutateOperation> mutateOperations = new ArrayList<>();
+    AssetGroupSignal assetGroupSignal =
+        AssetGroupSignal.newBuilder()
+            .setAssetGroup(assetGroupResourceName)
+            .setAudience(
+                AudienceInfo.newBuilder()
+                    .setAudience(ResourceNames.audience(customerId, audienceId)))
+            .build();
+    // Adds an operation to the list to create the asset group signal.
+    mutateOperations.add(
+        MutateOperation.newBuilder()
+            .setAssetGroupSignalOperation(
+                AssetGroupSignalOperation.newBuilder().setCreate(assetGroupSignal))
+            .build());
+    return mutateOperations;
+  }
+  // [END add_performance_max_campaign_9]
 
   /**
    * Prints the details of a MutateGoogleAdsResponse.

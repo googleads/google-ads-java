@@ -709,7 +709,7 @@ public class AddPerformanceMaxRetailCampaign {
             .setVertical(ListingGroupFilterVertical.SHOPPING)
             .build();
 
-    // Builds an operation to create the listing group filter.
+    // Adds an operation to the list to create the listing group filter.
     mutateOperations.add(
         MutateOperation.newBuilder()
             .setAssetGroupListingGroupFilterOperation(
@@ -718,6 +718,7 @@ public class AddPerformanceMaxRetailCampaign {
 
     return mutateOperations;
   }
+  // [END add_performance_max_retail_campaign_10]
 
   /**
    * Prints the details of a MutateGoogleAdsResponse.
