@@ -33,11 +33,14 @@ import com.google.ads.googleads.v10.enums.BudgetDeliveryMethodEnum.BudgetDeliver
 import com.google.ads.googleads.v10.enums.CampaignStatusEnum.CampaignStatus;
 import com.google.ads.googleads.v10.enums.ConversionActionCategoryEnum.ConversionActionCategory;
 import com.google.ads.googleads.v10.enums.ConversionOriginEnum.ConversionOrigin;
+import com.google.ads.googleads.v10.enums.ListingGroupFilterTypeEnum.ListingGroupFilterType;
+import com.google.ads.googleads.v10.enums.ListingGroupFilterVerticalEnum.ListingGroupFilterVertical;
 import com.google.ads.googleads.v10.errors.GoogleAdsError;
 import com.google.ads.googleads.v10.errors.GoogleAdsException;
 import com.google.ads.googleads.v10.resources.Asset;
 import com.google.ads.googleads.v10.resources.AssetGroup;
 import com.google.ads.googleads.v10.resources.AssetGroupAsset;
+import com.google.ads.googleads.v10.resources.AssetGroupListingGroupFilter;
 import com.google.ads.googleads.v10.resources.Campaign;
 import com.google.ads.googleads.v10.resources.Campaign.ShoppingSetting;
 import com.google.ads.googleads.v10.resources.CampaignBudget;
@@ -45,6 +48,7 @@ import com.google.ads.googleads.v10.resources.CampaignConversionGoal;
 import com.google.ads.googleads.v10.resources.CampaignCriterion;
 import com.google.ads.googleads.v10.resources.CustomerConversionGoal;
 import com.google.ads.googleads.v10.services.AssetGroupAssetOperation;
+import com.google.ads.googleads.v10.services.AssetGroupListingGroupFilterOperation;
 import com.google.ads.googleads.v10.services.AssetGroupOperation;
 import com.google.ads.googleads.v10.services.AssetOperation;
 import com.google.ads.googleads.v10.services.CampaignBudgetOperation;
@@ -124,8 +128,11 @@ public class AddPerformanceMaxRetailCampaign {
 
     @Parameter(
         names = ArgumentNames.FINAL_URL,
-        description = "The final URL for the asset group of the campaign.")
-    private String finalUrl = "http://www.example.com";
+        required = true,
+        description =
+            "The final url for the generated ads. Must have the same domain as the Merchant Center"
+                + " account.")
+    private String finalUrl;
   }
 
   public static void main(String[] args) throws IOException {
@@ -136,10 +143,10 @@ public class AddPerformanceMaxRetailCampaign {
       // into the code here. See the parameter class definition above for descriptions.
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
       params.merchantCenterAccountId = Long.parseLong("INSERT_MERCHANT_CENTER_ACCOUNT_ID_HERE");
+      params.finalUrl = "INSERT_FINAL_URL_HERE";
 
-      // Optionally set custom values for the parameters below.
+      // Optionally set the country code.
       // params.countryCode = "INSERT_COUNTRY_CODE_HERE";
-      // params.finalUrl = "INSERT_FINAL_URL_HERE";
     }
 
     GoogleAdsClient googleAdsClient = null;
@@ -228,10 +235,18 @@ public class AddPerformanceMaxRetailCampaign {
     mutateOperations.add(
         createPerformanceMaxCampaignOperation(customerId, merchantCenterAccountId, countryCode));
     mutateOperations.addAll(createCampaignCriterionOperations(customerId));
+    String assetGroupResourceName = ResourceNames.assetGroup(customerId, ASSET_GROUP_TEMPORARY_ID);
     mutateOperations.addAll(
         createAssetGroupOperations(
-            customerId, headlineAssetResourceNames, descriptionAssetResourceNames, finalUrl));
+            customerId,
+            assetGroupResourceName,
+            headlineAssetResourceNames,
+            descriptionAssetResourceNames,
+            finalUrl));
     mutateOperations.addAll(createConversionGoalOperations(customerId, customerConversionGoals));
+    // Retail Performance Max campaigns require listing groups, which are created via the
+    // AssetGroupListingGroupFilter resource.
+    mutateOperations.addAll(createAssetGroupListingGroupOperations(assetGroupResourceName));
 
     try (GoogleAdsServiceClient googleAdsServiceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
@@ -297,13 +312,17 @@ public class AddPerformanceMaxRetailCampaign {
                     .setSalesCountry(countryCode)
                     .build())
             // Sets the Final URL expansion opt out. This flag is specific to
-            // Performance Max campaigns. If opted out (True), only the final URLs in
+            // Performance Max campaigns. If opted out (true), only the final URLs in
             // the asset group or URLs specified in the advertiser's Google Merchant
             // Center or business data feeds are targeted.
-            // If opted in (False), the entire domain will be targeted. For best
+            //
+            // If opted in (false), the entire domain will be targeted. For best
             // results, set this value to false to opt in and allow URL expansions. You
             // can optionally add exclusions to limit traffic to parts of your website.
-            .setUrlExpansionOptOut(false)
+            //
+            // Sets to true for this Retail campaign so the final URLs will be limited to those
+            // explicitly surfaced via Google Merchant Center.
+            .setUrlExpansionOptOut(true)
             // Assigns the resource name with a temporary ID.
             .setResourceName(
                 ResourceNames.campaign(customerId, PERFORMANCE_MAX_CAMPAIGN_TEMPORARY_ID))
@@ -413,6 +432,7 @@ public class AddPerformanceMaxRetailCampaign {
   /** Creates a list of MutateOperations that create a new AssetGroup. */
   private List<MutateOperation> createAssetGroupOperations(
       long customerId,
+      String assetGroupResourceName,
       List<String> headlineAssetResourceNames,
       List<String> descriptionAssetResourceNames,
       String finalUrl)
@@ -420,7 +440,6 @@ public class AddPerformanceMaxRetailCampaign {
     List<MutateOperation> mutateOperations = new ArrayList<>();
     String campaignResourceName =
         ResourceNames.campaign(customerId, PERFORMANCE_MAX_CAMPAIGN_TEMPORARY_ID);
-    String assetGroupResourceName = ResourceNames.assetGroup(customerId, ASSET_GROUP_TEMPORARY_ID);
     // Creates the AssetGroup.
     AssetGroup assetGroup =
         AssetGroup.newBuilder()
@@ -483,40 +502,46 @@ public class AddPerformanceMaxRetailCampaign {
     }
 
     // Creates and links the long headline text asset.
-    List<MutateOperation> createAndLinkTextAssetOperations =
-        createAndLinkTextAsset(customerId, "Travel the World", AssetFieldType.LONG_HEADLINE);
-    mutateOperations.addAll(createAndLinkTextAssetOperations);
+    mutateOperations.addAll(
+        createAndLinkTextAsset(
+            customerId, assetGroupResourceName, "Travel the World", AssetFieldType.LONG_HEADLINE));
 
     // Creates and links the business name text asset.
-    createAndLinkTextAssetOperations =
-        createAndLinkTextAsset(customerId, "Interplanetary Cruises", AssetFieldType.BUSINESS_NAME);
-    mutateOperations.addAll(createAndLinkTextAssetOperations);
+    mutateOperations.addAll(
+        createAndLinkTextAsset(
+            customerId,
+            assetGroupResourceName,
+            "Interplanetary Cruises",
+            AssetFieldType.BUSINESS_NAME));
 
     // Creates and links the image assets.
 
     // Creates and links the Logo Asset.
-    createAndLinkTextAssetOperations =
+    mutateOperations.addAll(
         createAndLinkImageAsset(
-            customerId, "https://gaagl.page.link/bjYi", AssetFieldType.LOGO, "Logo Image");
-    mutateOperations.addAll(createAndLinkTextAssetOperations);
+            customerId,
+            assetGroupResourceName,
+            "https://gaagl.page.link/bjYi",
+            AssetFieldType.LOGO,
+            "Logo Image"));
 
     // Creates and links the Marketing Image Asset.
-    createAndLinkTextAssetOperations =
+    mutateOperations.addAll(
         createAndLinkImageAsset(
             customerId,
+            assetGroupResourceName,
             "https://gaagl.page.link/Eit5",
             AssetFieldType.MARKETING_IMAGE,
-            "Marketing Image");
-    mutateOperations.addAll(createAndLinkTextAssetOperations);
+            "Marketing Image"));
 
     // Creates and links the Square Marketing Image Asset.
-    createAndLinkTextAssetOperations =
+    mutateOperations.addAll(
         createAndLinkImageAsset(
             customerId,
+            assetGroupResourceName,
             "https://gaagl.page.link/bjYi",
             AssetFieldType.SQUARE_MARKETING_IMAGE,
-            "Square Marketing Image");
-    mutateOperations.addAll(createAndLinkTextAssetOperations);
+            "Square Marketing Image"));
 
     return mutateOperations;
   }
@@ -525,7 +550,7 @@ public class AddPerformanceMaxRetailCampaign {
   // [START add_performance_max_retail_campaign_7]
   /** Creates a list of MutateOperations that create a new linked text asset. */
   List<MutateOperation> createAndLinkTextAsset(
-      long customerId, String text, AssetFieldType assetFieldType) {
+      long customerId, String assetGroupResourceName, String text, AssetFieldType assetFieldType) {
     List<MutateOperation> mutateOperations = new ArrayList<>();
     String assetResourceName = ResourceNames.asset(customerId, getNextTemporaryId());
     // Creates the Text Asset.
@@ -541,7 +566,7 @@ public class AddPerformanceMaxRetailCampaign {
     AssetGroupAsset assetGroupAsset =
         AssetGroupAsset.newBuilder()
             .setFieldType(assetFieldType)
-            .setAssetGroup(ResourceNames.assetGroup(customerId, ASSET_GROUP_TEMPORARY_ID))
+            .setAssetGroup(assetGroupResourceName)
             .setAsset(assetResourceName)
             .build();
     AssetGroupAssetOperation assetGroupAssetOperation =
@@ -556,7 +581,11 @@ public class AddPerformanceMaxRetailCampaign {
   // [START add_performance_max_retail_campaign_8]
   /** Creates a list of MutateOperations that create a new linked image asset. */
   List<MutateOperation> createAndLinkImageAsset(
-      long customerId, String url, AssetFieldType assetFieldType, String assetName)
+      long customerId,
+      String assetGroupResourceName,
+      String url,
+      AssetFieldType assetFieldType,
+      String assetName)
       throws IOException {
     List<MutateOperation> mutateOperations = new ArrayList<>();
     String assetResourceName = ResourceNames.asset(customerId, getNextTemporaryId());
@@ -580,7 +609,7 @@ public class AddPerformanceMaxRetailCampaign {
     AssetGroupAsset assetGroupAsset =
         AssetGroupAsset.newBuilder()
             .setFieldType(assetFieldType)
-            .setAssetGroup(ResourceNames.assetGroup(customerId, ASSET_GROUP_TEMPORARY_ID))
+            .setAssetGroup(assetGroupResourceName)
             .setAsset(assetResourceName)
             .build();
     AssetGroupAssetOperation assetGroupAssetOperation =
@@ -657,6 +686,38 @@ public class AddPerformanceMaxRetailCampaign {
     return mutateOperations;
   }
   // [END add_performance_max_retail_campaign_9]
+
+  // [START add_performance_max_retail_campaign_10]
+  /** Creates a list of MutateOperations that create a new asset group. */
+  private List<MutateOperation> createAssetGroupListingGroupOperations(
+      String assetGroupResourceName) {
+    List<MutateOperation> mutateOperations = new ArrayList<>();
+
+    // Creates a new asset group listing group filter containing the "default" listing group (All
+    // products).
+    AssetGroupListingGroupFilter listingGroupFilter =
+        AssetGroupListingGroupFilter.newBuilder()
+            .setAssetGroup(assetGroupResourceName)
+            // Does not set the parentListingGroupFilter since this is the root node. For all other
+            // nodes, this would refer to the parent listing group filter resource name.
+            // .setParentListingGroupFilter("<PARENT FILTER RESOURCE NAME>")
+
+            // Sets the type to UNIT_INCLUDED since this node has no children.
+            .setType(ListingGroupFilterType.UNIT_INCLUDED)
+            // Specifies that this is in the shopping vertical, as required for a Performance Max
+            // retail campaign.
+            .setVertical(ListingGroupFilterVertical.SHOPPING)
+            .build();
+
+    // Builds an operation to create the listing group filter.
+    mutateOperations.add(
+        MutateOperation.newBuilder()
+            .setAssetGroupListingGroupFilterOperation(
+                AssetGroupListingGroupFilterOperation.newBuilder().setCreate(listingGroupFilter))
+            .build());
+
+    return mutateOperations;
+  }
 
   /**
    * Prints the details of a MutateGoogleAdsResponse.
