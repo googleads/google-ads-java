@@ -246,7 +246,7 @@ public class AddPerformanceMaxRetailCampaign {
     mutateOperations.addAll(createConversionGoalOperations(customerId, customerConversionGoals));
     // Retail Performance Max campaigns require listing groups, which are created via the
     // AssetGroupListingGroupFilter resource.
-    mutateOperations.addAll(createAssetGroupListingGroupOperations(assetGroupResourceName));
+    mutateOperations.addAll(createAssetGroupListingGroupFilterOperations(assetGroupResourceName));
 
     try (GoogleAdsServiceClient googleAdsServiceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
@@ -688,8 +688,8 @@ public class AddPerformanceMaxRetailCampaign {
   // [END add_performance_max_retail_campaign_9]
 
   // [START add_performance_max_retail_campaign_10]
-  /** Creates a list of MutateOperations that create a new asset group. */
-  private List<MutateOperation> createAssetGroupListingGroupOperations(
+  /** Creates a list of MutateOperations that create a new asset group listing group filter. */
+  private List<MutateOperation> createAssetGroupListingGroupFilterOperations(
       String assetGroupResourceName) {
     List<MutateOperation> mutateOperations = new ArrayList<>();
 
