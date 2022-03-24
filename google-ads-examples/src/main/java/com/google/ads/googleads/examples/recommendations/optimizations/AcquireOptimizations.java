@@ -42,6 +42,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -248,7 +249,7 @@ public class AcquireOptimizations {
     }
 
     System.out.printf(
-        "Generated recommendation reports for %d customers in total to %s.%n",
+        "Generated recommendation reports for %d customers in total to '%s'.%n",
         customerIds.size(), reportDirectory);
   }
 
@@ -296,8 +297,9 @@ public class AcquireOptimizations {
         "SELECT customer.id, customer.descriptive_name, customer.optimization_score FROM customer";
 
     SearchPagedResponse response = googleAdsServiceClient.search(String.valueOf(customerId), query);
-    for (GoogleAdsRow googleAdsRow : response.iterateAll()) {
-      return googleAdsRow.getCustomer();
+    Iterator<GoogleAdsRow> iterator = response.iterateAll().iterator();
+    if (iterator.hasNext()) {
+      return iterator.next().getCustomer();
     }
 
     throw new IllegalArgumentException("Customer not found with ID " + customerId);
@@ -411,7 +413,7 @@ public class AcquireOptimizations {
     RecommendationMetrics baseMetrics = impact.getBaseMetrics();
     RecommendationMetrics potentialMetrics = impact.getPotentialMetrics();
     return String.format(
-        "Increase Impressions by %.2f, Clicks by %.2f, Cost(in micros) by %d, Conversions by %.2f,"
+        "Increases Impressions by %.2f, Clicks by %.2f, Cost(in micros) by %d, Conversions by %.2f,"
             + " Video views by %.2f.",
         potentialMetrics.getImpressions() - baseMetrics.getImpressions(),
         potentialMetrics.getClicks() - baseMetrics.getClicks(),
