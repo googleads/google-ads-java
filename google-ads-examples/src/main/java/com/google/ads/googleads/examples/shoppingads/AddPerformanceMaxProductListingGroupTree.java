@@ -230,6 +230,10 @@ public class AddPerformanceMaxProductListingGroupTree {
       idGenerator = LongStream.iterate(rootListingGroupId - 1, prev -> prev - 1).iterator();
     }
 
+    private Long nextId() {
+      return idGenerator.next();
+    }
+
     // [START add_performance_max_product_listing_group_tree_4]
     /**
      * Creates a MutateOperation that creates a root AssetGroupListingGroupFilter for the factory's
@@ -402,7 +406,7 @@ public class AddPerformanceMaxProductListingGroupTree {
     operations.add(
         createOperationFactory.createUnit(
             TEMPORARY_ID_LISTING_GROUP_ROOT,
-            AssetGroupListingGroupFilterCreateOperationFactory.idGenerator.next(),
+            createOperationFactory.nextId(),
             newProductDimension));
 
     // Creates an operation to add a leaf node for used products.
@@ -416,13 +420,13 @@ public class AddPerformanceMaxProductListingGroupTree {
     operations.add(
         createOperationFactory.createUnit(
             TEMPORARY_ID_LISTING_GROUP_ROOT,
-            AssetGroupListingGroupFilterCreateOperationFactory.idGenerator.next(),
+            createOperationFactory.nextId(),
             usedProductDimension));
 
     // This represents the ID of the "other" category in the ProductCondition subdivision. This ID
     // is saved because the node with this ID will be further partitioned, and this ID will serve as
     // the parent ID for subsequent child nodes of the "other" category.
-    long otherSubdivisionId = AssetGroupListingGroupFilterCreateOperationFactory.idGenerator.next();
+    long otherSubdivisionId = createOperationFactory.nextId();
 
     // Creates an operation to add a subdivision node for other products in the ProductCondition
     // subdivision.
@@ -443,7 +447,7 @@ public class AddPerformanceMaxProductListingGroupTree {
     operations.add(
         createOperationFactory.createUnit(
             otherSubdivisionId,
-            AssetGroupListingGroupFilterCreateOperationFactory.idGenerator.next(),
+            createOperationFactory.nextId(),
             coolBrandProductDimension));
 
     // Creates an operation to add a leaf node for products with the brand "CheapBrand".
@@ -454,7 +458,7 @@ public class AddPerformanceMaxProductListingGroupTree {
     operations.add(
         createOperationFactory.createUnit(
             otherSubdivisionId,
-            AssetGroupListingGroupFilterCreateOperationFactory.idGenerator.next(),
+            createOperationFactory.nextId(),
             cheapBrandProductDimension));
 
     // Creates an operation to add a leaf node for other products in the ProductBrand subdivision.
@@ -465,7 +469,7 @@ public class AddPerformanceMaxProductListingGroupTree {
     operations.add(
         createOperationFactory.createUnit(
             otherSubdivisionId,
-            AssetGroupListingGroupFilterCreateOperationFactory.idGenerator.next(),
+            createOperationFactory.nextId(),
             otherBrandProductDimension));
 
     try (GoogleAdsServiceClient googleAdsServiceClient =
