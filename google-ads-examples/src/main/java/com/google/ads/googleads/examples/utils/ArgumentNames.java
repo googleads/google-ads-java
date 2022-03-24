@@ -26,6 +26,7 @@ public final class ArgumentNames {
   public static final String ADJUSTMENT_TYPE = "--adjustmentType";
   public static final String ADVERTISER_UPLOAD_DATE_TIME = "--advertiserUploadDateTime";
   public static final String ARTIFACT_NAME = "--artifactName";
+  public static final String ASSET_GROUP_ID = "--assetGroupId";
   public static final String ATTRIBUTE_VALUE = "--attributeValue";
   public static final String BASE_CAMPAIGN_ID = "--baseCampaignId";
   public static final String BID_MODIFIER_VALUE = "--bidModifierValue";
