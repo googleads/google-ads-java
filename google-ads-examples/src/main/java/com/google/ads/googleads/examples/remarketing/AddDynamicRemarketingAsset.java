@@ -19,15 +19,15 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleHelper;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
+import com.google.ads.googleads.v10.common.DynamicEducationAsset;
 import com.google.ads.googleads.v10.enums.AssetSetTypeEnum.AssetSetType;
+import com.google.ads.googleads.v10.errors.GoogleAdsError;
+import com.google.ads.googleads.v10.errors.GoogleAdsException;
+import com.google.ads.googleads.v10.resources.Asset;
 import com.google.ads.googleads.v10.resources.AssetSet;
 import com.google.ads.googleads.v10.resources.AssetSetAsset;
 import com.google.ads.googleads.v10.resources.CampaignAssetSet;
 import com.google.ads.googleads.v10.services.AssetOperation;
-import com.google.ads.googleads.v10.common.DynamicEducationAsset;
-import com.google.ads.googleads.v10.errors.GoogleAdsError;
-import com.google.ads.googleads.v10.errors.GoogleAdsException;
-import com.google.ads.googleads.v10.resources.Asset;
 import com.google.ads.googleads.v10.services.AssetServiceClient;
 import com.google.ads.googleads.v10.services.AssetSetAssetOperation;
 import com.google.ads.googleads.v10.services.AssetSetAssetServiceClient;
@@ -137,7 +137,11 @@ public class AddDynamicRemarketingAsset {
             .setIosAppLink("exampleApp://content/page")
             .setIosAppStoreId(123L)
             .build();
-    Asset asset = Asset.newBuilder().setDynamicEducationAsset(educationAsset).build();
+    Asset asset =
+        Asset.newBuilder()
+            .setDynamicEducationAsset(educationAsset)
+            .addFinalUrls("https://www.example.com")
+            .build();
     // Creates an operation to add the asset.
     AssetOperation operation = AssetOperation.newBuilder().setCreate(asset).build();
     // Connects to the API.
@@ -230,8 +234,8 @@ public class AddDynamicRemarketingAsset {
     try (CampaignAssetSetServiceClient client =
         googleAdsClient.getLatestVersion().createCampaignAssetSetServiceClient()) {
       // Issues the mutate request.
-      MutateCampaignAssetSetsResponse response = client
-          .mutateCampaignAssetSets(
+      MutateCampaignAssetSetsResponse response =
+          client.mutateCampaignAssetSets(
               String.valueOf(params.customerId), ImmutableList.of(operation));
       String resourceName = response.getResults(0).getResourceName();
       System.out.printf("Created a CampaignAssetSet with resource name %s.%n", resourceName);
