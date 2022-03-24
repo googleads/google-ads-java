@@ -709,11 +709,10 @@ public class AddPerformanceMaxRetailCampaign {
             .build();
 
     // Returns an operation to the list to create the listing group filter.
-    return
-        MutateOperation.newBuilder()
-            .setAssetGroupListingGroupFilterOperation(
-                AssetGroupListingGroupFilterOperation.newBuilder().setCreate(listingGroupFilter))
-            .build());
+    return MutateOperation.newBuilder()
+        .setAssetGroupListingGroupFilterOperation(
+            AssetGroupListingGroupFilterOperation.newBuilder().setCreate(listingGroupFilter))
+        .build();
   }
   // [END add_performance_max_retail_campaign_10]
 
