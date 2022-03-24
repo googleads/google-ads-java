@@ -246,7 +246,7 @@ public class AddPerformanceMaxRetailCampaign {
     mutateOperations.addAll(createConversionGoalOperations(customerId, customerConversionGoals));
     // Retail Performance Max campaigns require listing groups, which are created via the
     // AssetGroupListingGroupFilter resource.
-    mutateOperations.addAll(createAssetGroupListingGroupFilterOperations(assetGroupResourceName));
+    mutateOperations.add(createAssetGroupListingGroupFilterOperation(assetGroupResourceName));
 
     try (GoogleAdsServiceClient googleAdsServiceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
@@ -688,10 +688,9 @@ public class AddPerformanceMaxRetailCampaign {
   // [END add_performance_max_retail_campaign_9]
 
   // [START add_performance_max_retail_campaign_10]
-  /** Creates a list of MutateOperations that create a new asset group listing group filter. */
-  private List<MutateOperation> createAssetGroupListingGroupFilterOperations(
+  /** Creates a MutateOperation that creates a new asset group listing group filter. */
+  private MutateOperation createAssetGroupListingGroupFilterOperation(
       String assetGroupResourceName) {
-    List<MutateOperation> mutateOperations = new ArrayList<>();
 
     // Creates a new asset group listing group filter containing the "default" listing group (All
     // products).
@@ -704,19 +703,17 @@ public class AddPerformanceMaxRetailCampaign {
 
             // Sets the type to UNIT_INCLUDED since this node has no children.
             .setType(ListingGroupFilterType.UNIT_INCLUDED)
-            // Specifies that this is in the shopping vertical, as required for a Performance Max
+            // Specifies that this is in the SHOPPING vertical, as required for a Performance Max
             // retail campaign.
             .setVertical(ListingGroupFilterVertical.SHOPPING)
             .build();
 
-    // Adds an operation to the list to create the listing group filter.
-    mutateOperations.add(
+    // Returns an operation to the list to create the listing group filter.
+    return
         MutateOperation.newBuilder()
             .setAssetGroupListingGroupFilterOperation(
                 AssetGroupListingGroupFilterOperation.newBuilder().setCreate(listingGroupFilter))
             .build());
-
-    return mutateOperations;
   }
   // [END add_performance_max_retail_campaign_10]
 
