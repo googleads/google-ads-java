@@ -292,7 +292,7 @@ public class AcquireOptimizations {
    * @param customerId the client customer ID.
    * @return a {@link Customer} instance.
    */
-  Customer getCustomerInfo(GoogleAdsServiceClient googleAdsServiceClient, long customerId) {
+  static Customer getCustomerInfo(GoogleAdsServiceClient googleAdsServiceClient, long customerId) {
     String query =
         "SELECT customer.id, customer.descriptive_name, customer.optimization_score FROM customer";
 

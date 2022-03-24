@@ -20,6 +20,7 @@ import static com.google.ads.googleads.examples.recommendations.optimizations.Ac
 import static com.google.ads.googleads.examples.recommendations.optimizations.AcquireOptimizations.RECO_OPTIMIZATION_SCORE_CSV_COLUMNS;
 import static com.google.ads.googleads.examples.recommendations.optimizations.AcquireOptimizations.RECO_RECOMMENDATIONS_CSV;
 import static com.google.ads.googleads.examples.recommendations.optimizations.AcquireOptimizations.RECO_RECOMMENDATIONS_CSV_COLUMNS;
+import static com.google.ads.googleads.examples.recommendations.optimizations.AcquireOptimizations.getCustomerInfo;
 
 import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.recommendations.optimizations.AcquireOptimizations.AggregatedRecommendation;
@@ -197,6 +198,8 @@ public class ApplyRecommendations {
     int numSkips = 0;
     int numRecommendations = 0;
     for (File file : new File(reportDirectory).listFiles()) {
+      // The recommendation reports subdirectory is named as `recommendation_{CID}`, so it's able to
+      // parse the customer ID from the folder name.
       if (file.isDirectory() && file.getName().startsWith(RECOMMENDATION_DIR_PREFIX)) {
         String folderName = file.getName();
         long customerId = Long.parseLong(folderName.substring(RECOMMENDATION_DIR_PREFIX.length()));
@@ -412,9 +415,7 @@ public class ApplyRecommendations {
   private double getCustomerOptiScore(GoogleAdsClient googleAdsClient, long customerId) {
     try (GoogleAdsServiceClient googleAdsServiceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
-      return new AcquireOptimizations()
-          .getCustomerInfo(googleAdsServiceClient, customerId)
-          .getOptimizationScore();
+      return getCustomerInfo(googleAdsServiceClient, customerId).getOptimizationScore();
     }
   }
 
