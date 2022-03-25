@@ -109,6 +109,7 @@ public final class ArgumentNames {
   public static final String RECOMMENDATION_ID = "--recommendationId";
   public static final String REPLACE_EXISTING_TREE = "--replaceExistingTree";
   public static final String RESTATEMENT_VALUE = "--restatementValue";
+  public static final String SALES_COUNTRY = "--salesCountry";
   public static final String SITELINK_TEXT = "--sitelinkText";
   public static final String SQUARE_MARKETING_IMAGE_ID = "--squareMarketingImageAssetId";
   public static final String START_DATE_TIME = "--startDateTime";
