@@ -122,9 +122,9 @@ public class AddPerformanceMaxRetailCampaign {
     private long merchantCenterAccountId;
 
     @Parameter(
-        names = ArgumentNames.COUNTRY_CODE,
+        names = ArgumentNames.SALES_COUNTRY,
         description = "The sales country of products to include in the campaign.")
-    private String countryCode = "US";
+    private String salesCountry = "US";
 
     @Parameter(
         names = ArgumentNames.FINAL_URL,
@@ -145,8 +145,8 @@ public class AddPerformanceMaxRetailCampaign {
       params.merchantCenterAccountId = Long.parseLong("INSERT_MERCHANT_CENTER_ACCOUNT_ID_HERE");
       params.finalUrl = "INSERT_FINAL_URL_HERE";
 
-      // Optionally set the country code.
-      // params.countryCode = "INSERT_COUNTRY_CODE_HERE";
+      // Optionally set the sales country.
+      // params.salesCountry = "INSERT_SALES_COUNTRY_HERE";
     }
 
     GoogleAdsClient googleAdsClient = null;
@@ -167,7 +167,7 @@ public class AddPerformanceMaxRetailCampaign {
               googleAdsClient,
               params.customerId,
               params.merchantCenterAccountId,
-              params.countryCode,
+              params.salesCountry,
               params.finalUrl);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
@@ -192,14 +192,14 @@ public class AddPerformanceMaxRetailCampaign {
    * @param googleAdsClient the Google Ads API client.
    * @param customerId the client customer ID.
    * @param merchantCenterAccountId the Merchant Center account ID.
-   * @param countryCode sales country of products to include in the campaign.
+   * @param salesCountry sales country of products to include in the campaign.
    * @param finalUrl final URL for the asset group of the campaign.
    */
   private void runExample(
       GoogleAdsClient googleAdsClient,
       long customerId,
       long merchantCenterAccountId,
-      String countryCode,
+      String salesCountry,
       String finalUrl)
       throws IOException {
     // [START add_performance_max_retail_campaign_1]
@@ -233,7 +233,7 @@ public class AddPerformanceMaxRetailCampaign {
     List<MutateOperation> mutateOperations = new ArrayList<>();
     mutateOperations.add(createCampaignBudgetOperation(customerId));
     mutateOperations.add(
-        createPerformanceMaxCampaignOperation(customerId, merchantCenterAccountId, countryCode));
+        createPerformanceMaxCampaignOperation(customerId, merchantCenterAccountId, salesCountry));
     mutateOperations.addAll(createCampaignCriterionOperations(customerId));
     String assetGroupResourceName = ResourceNames.assetGroup(customerId, ASSET_GROUP_TEMPORARY_ID);
     mutateOperations.addAll(
@@ -283,7 +283,7 @@ public class AddPerformanceMaxRetailCampaign {
   // [START add_performance_max_retail_campaign_3]
   /** Creates a MutateOperation that creates a new Performance Max campaign. */
   private MutateOperation createPerformanceMaxCampaignOperation(
-      long customerId, long merchantCenterAccountId, String countryCode) {
+      long customerId, long merchantCenterAccountId, String salesCountry) {
     Campaign performanceMaxCampaign =
         Campaign.newBuilder()
             .setName("Performance Max retail campaign #" + getPrintableDateTime())
@@ -309,7 +309,7 @@ public class AddPerformanceMaxRetailCampaign {
             .setShoppingSetting(
                 ShoppingSetting.newBuilder()
                     .setMerchantId(merchantCenterAccountId)
-                    .setSalesCountry(countryCode)
+                    .setSalesCountry(salesCountry)
                     .build())
             // Sets the Final URL expansion opt out. This flag is specific to
             // Performance Max campaigns. If opted out (true), only the final URLs in
