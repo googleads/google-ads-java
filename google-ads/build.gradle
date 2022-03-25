@@ -108,6 +108,13 @@ task generateLicenses(type: nl.javadude.gradle.plugins.license.DownloadLicenses)
     // Works around issue where the plugin looks at the deprecated 'compile'
     // configuration by default.
     dependencyConfiguration = 'runtimeClasspath'
+
+    // Excludes dependencies on subprojects. These should not be in the license
+    // report since they are part of this library. The license-report plugin
+    // will accept regexes here as well, but explicitly listing projects ensures
+    // the exclusion is precise.
+    excludeDependencies = rootProject.allprojects
+            .collect { it.group + ':' + it.name + ':' + it.version }
 }
 
 task verifyLicenses() {
