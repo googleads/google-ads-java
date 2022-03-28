@@ -260,7 +260,12 @@ task copyThirdPartySources(type: Copy) {
 
 // Copies the third party binaries to the third_party folder.
 task copyThirdPartyBinaries(type: Copy) {
-    from configurations.runtimeClasspath
+    from configurations.runtimeClasspath {
+        // Excludes JARs for the root project and its subprojects.
+        exclude(
+                rootProject.allprojects.collect { it.name + "-" + it.version + ".jar" }
+        )
+    }
     into tasks.generateThirdPartyDirectory.thirdPartyDir
 }
 
