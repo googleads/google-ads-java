@@ -108,6 +108,13 @@ task generateLicenses(type: nl.javadude.gradle.plugins.license.DownloadLicenses)
     // Works around issue where the plugin looks at the deprecated 'compile'
     // configuration by default.
     dependencyConfiguration = 'runtimeClasspath'
+
+    // Excludes dependencies on subprojects. These should not be in the license
+    // report since they are part of this library. The license-report plugin
+    // will accept regexes here as well, but explicitly listing projects ensures
+    // the exclusion is precise.
+    excludeDependencies = rootProject.allprojects
+            .collect { it.group + ':' + it.name + ':' + it.version }
 }
 
 task verifyLicenses() {
@@ -253,7 +260,12 @@ task copyThirdPartySources(type: Copy) {
 
 // Copies the third party binaries to the third_party folder.
 task copyThirdPartyBinaries(type: Copy) {
-    from configurations.runtimeClasspath
+    from configurations.runtimeClasspath {
+        // Excludes JARs for the root project and its subprojects.
+        exclude(
+                rootProject.allprojects.collect { it.name + "-" + it.version + ".jar" }
+        )
+    }
     into tasks.generateThirdPartyDirectory.thirdPartyDir
 }
 
