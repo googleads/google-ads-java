@@ -5,8 +5,7 @@ package com.google.ads.googleads.v10.services;
 
 /**
  * <pre>
- * A plannable location: a country, a DMA, a metro region, a tv region,
- * a province.
+ * A plannable location: country, metro region, province, etc.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v10.services.PlannableLocation}
@@ -98,6 +97,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -182,7 +183,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object name_;
   /**
    * <pre>
-   * The unique location name in english.
+   * The unique location name in English.
    * </pre>
    *
    * <code>optional string name = 5;</code>
@@ -194,7 +195,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The unique location name in english.
+   * The unique location name in English.
    * </pre>
    *
    * <code>optional string name = 5;</code>
@@ -215,7 +216,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The unique location name in english.
+   * The unique location name in English.
    * </pre>
    *
    * <code>optional string name = 5;</code>
@@ -240,8 +241,8 @@ private static final long serialVersionUID = 0L;
   private long parentCountryId_;
   /**
    * <pre>
-   * The parent country, not present if location is a country.
-   * If present will always be a GeoTargetConstant ID. Additional information,
+   * The parent country (not present if location is a country).
+   * If present, will always be a GeoTargetConstant ID. Additional information
    * such as country name is provided by
    * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v10.services.ReachPlanService.ListPlannableLocations] or
    * [GoogleAdsService.Search/SearchStream][].
@@ -256,8 +257,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The parent country, not present if location is a country.
-   * If present will always be a GeoTargetConstant ID. Additional information,
+   * The parent country (not present if location is a country).
+   * If present, will always be a GeoTargetConstant ID. Additional information
    * such as country name is provided by
    * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v10.services.ReachPlanService.ListPlannableLocations] or
    * [GoogleAdsService.Search/SearchStream][].
@@ -613,8 +614,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A plannable location: a country, a DMA, a metro region, a tv region,
-   * a province.
+   * A plannable location: country, metro region, province, etc.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v10.services.PlannableLocation}
@@ -924,7 +924,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object name_ = "";
     /**
      * <pre>
-     * The unique location name in english.
+     * The unique location name in English.
      * </pre>
      *
      * <code>optional string name = 5;</code>
@@ -935,7 +935,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The unique location name in english.
+     * The unique location name in English.
      * </pre>
      *
      * <code>optional string name = 5;</code>
@@ -955,7 +955,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The unique location name in english.
+     * The unique location name in English.
      * </pre>
      *
      * <code>optional string name = 5;</code>
@@ -976,7 +976,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The unique location name in english.
+     * The unique location name in English.
      * </pre>
      *
      * <code>optional string name = 5;</code>
@@ -995,7 +995,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The unique location name in english.
+     * The unique location name in English.
      * </pre>
      *
      * <code>optional string name = 5;</code>
@@ -1009,7 +1009,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The unique location name in english.
+     * The unique location name in English.
      * </pre>
      *
      * <code>optional string name = 5;</code>
@@ -1031,8 +1031,8 @@ private static final long serialVersionUID = 0L;
     private long parentCountryId_ ;
     /**
      * <pre>
-     * The parent country, not present if location is a country.
-     * If present will always be a GeoTargetConstant ID. Additional information,
+     * The parent country (not present if location is a country).
+     * If present, will always be a GeoTargetConstant ID. Additional information
      * such as country name is provided by
      * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v10.services.ReachPlanService.ListPlannableLocations] or
      * [GoogleAdsService.Search/SearchStream][].
@@ -1047,8 +1047,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The parent country, not present if location is a country.
-     * If present will always be a GeoTargetConstant ID. Additional information,
+     * The parent country (not present if location is a country).
+     * If present, will always be a GeoTargetConstant ID. Additional information
      * such as country name is provided by
      * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v10.services.ReachPlanService.ListPlannableLocations] or
      * [GoogleAdsService.Search/SearchStream][].
@@ -1063,8 +1063,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The parent country, not present if location is a country.
-     * If present will always be a GeoTargetConstant ID. Additional information,
+     * The parent country (not present if location is a country).
+     * If present, will always be a GeoTargetConstant ID. Additional information
      * such as country name is provided by
      * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v10.services.ReachPlanService.ListPlannableLocations] or
      * [GoogleAdsService.Search/SearchStream][].
@@ -1082,8 +1082,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The parent country, not present if location is a country.
-     * If present will always be a GeoTargetConstant ID. Additional information,
+     * The parent country (not present if location is a country).
+     * If present, will always be a GeoTargetConstant ID. Additional information
      * such as country name is provided by
      * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v10.services.ReachPlanService.ListPlannableLocations] or
      * [GoogleAdsService.Search/SearchStream][].

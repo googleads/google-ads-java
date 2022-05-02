@@ -30,25 +30,24 @@ public final class UserListStringRuleItemOperatorProto {
     java.lang.String[] descriptorData = {
       "\nHgoogle/ads/googleads/v10/enums/user_li" +
       "st_string_rule_item_operator.proto\022\036goog" +
-      "le.ads.googleads.v10.enums\032\034google/api/a" +
-      "nnotations.proto\"\351\001\n\"UserListStringRuleI" +
-      "temOperatorEnum\"\302\001\n\036UserListStringRuleIt" +
-      "emOperator\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001" +
-      "\022\014\n\010CONTAINS\020\002\022\n\n\006EQUALS\020\003\022\017\n\013STARTS_WIT" +
-      "H\020\004\022\r\n\tENDS_WITH\020\005\022\016\n\nNOT_EQUALS\020\006\022\020\n\014NO" +
-      "T_CONTAINS\020\007\022\023\n\017NOT_STARTS_WITH\020\010\022\021\n\rNOT" +
-      "_ENDS_WITH\020\tB\375\001\n\"com.google.ads.googlead" +
-      "s.v10.enumsB#UserListStringRuleItemOpera" +
-      "torProtoP\001ZCgoogle.golang.org/genproto/g" +
-      "oogleapis/ads/googleads/v10/enums;enums\242" +
-      "\002\003GAA\252\002\036Google.Ads.GoogleAds.V10.Enums\312\002" +
-      "\036Google\\Ads\\GoogleAds\\V10\\Enums\352\002\"Google" +
-      "::Ads::GoogleAds::V10::Enumsb\006proto3"
+      "le.ads.googleads.v10.enums\"\351\001\n\"UserListS" +
+      "tringRuleItemOperatorEnum\"\302\001\n\036UserListSt" +
+      "ringRuleItemOperator\022\017\n\013UNSPECIFIED\020\000\022\013\n" +
+      "\007UNKNOWN\020\001\022\014\n\010CONTAINS\020\002\022\n\n\006EQUALS\020\003\022\017\n\013" +
+      "STARTS_WITH\020\004\022\r\n\tENDS_WITH\020\005\022\016\n\nNOT_EQUA" +
+      "LS\020\006\022\020\n\014NOT_CONTAINS\020\007\022\023\n\017NOT_STARTS_WIT" +
+      "H\020\010\022\021\n\rNOT_ENDS_WITH\020\tB\375\001\n\"com.google.ad" +
+      "s.googleads.v10.enumsB#UserListStringRul" +
+      "eItemOperatorProtoP\001ZCgoogle.golang.org/" +
+      "genproto/googleapis/ads/googleads/v10/en" +
+      "ums;enums\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V" +
+      "10.Enums\312\002\036Google\\Ads\\GoogleAds\\V10\\Enum" +
+      "s\352\002\"Google::Ads::GoogleAds::V10::Enumsb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_UserListStringRuleItemOperatorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -56,7 +55,6 @@ public final class UserListStringRuleItemOperatorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_UserListStringRuleItemOperatorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

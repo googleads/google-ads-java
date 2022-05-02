@@ -63,6 +63,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -245,6 +247,70 @@ private static final long serialVersionUID = 0L;
      * <code>CALL_TO_ACTION = 18;</code>
      */
     CALL_TO_ACTION(18),
+    /**
+     * <pre>
+     * Dynamic real estate asset.
+     * </pre>
+     *
+     * <code>DYNAMIC_REAL_ESTATE = 19;</code>
+     */
+    DYNAMIC_REAL_ESTATE(19),
+    /**
+     * <pre>
+     * Dynamic custom asset.
+     * </pre>
+     *
+     * <code>DYNAMIC_CUSTOM = 20;</code>
+     */
+    DYNAMIC_CUSTOM(20),
+    /**
+     * <pre>
+     * Dynamic hotels and rentals asset.
+     * </pre>
+     *
+     * <code>DYNAMIC_HOTELS_AND_RENTALS = 21;</code>
+     */
+    DYNAMIC_HOTELS_AND_RENTALS(21),
+    /**
+     * <pre>
+     * Dynamic flights asset.
+     * </pre>
+     *
+     * <code>DYNAMIC_FLIGHTS = 22;</code>
+     */
+    DYNAMIC_FLIGHTS(22),
+    /**
+     * <pre>
+     * Discovery Carousel Card asset.
+     * </pre>
+     *
+     * <code>DISCOVERY_CAROUSEL_CARD = 23;</code>
+     */
+    DISCOVERY_CAROUSEL_CARD(23),
+    /**
+     * <pre>
+     * Dynamic travel asset.
+     * </pre>
+     *
+     * <code>DYNAMIC_TRAVEL = 24;</code>
+     */
+    DYNAMIC_TRAVEL(24),
+    /**
+     * <pre>
+     * Dynamic local asset.
+     * </pre>
+     *
+     * <code>DYNAMIC_LOCAL = 25;</code>
+     */
+    DYNAMIC_LOCAL(25),
+    /**
+     * <pre>
+     * Dynamic jobs asset.
+     * </pre>
+     *
+     * <code>DYNAMIC_JOBS = 26;</code>
+     */
+    DYNAMIC_JOBS(26),
     UNRECOGNIZED(-1),
     ;
 
@@ -400,6 +466,70 @@ private static final long serialVersionUID = 0L;
      * <code>CALL_TO_ACTION = 18;</code>
      */
     public static final int CALL_TO_ACTION_VALUE = 18;
+    /**
+     * <pre>
+     * Dynamic real estate asset.
+     * </pre>
+     *
+     * <code>DYNAMIC_REAL_ESTATE = 19;</code>
+     */
+    public static final int DYNAMIC_REAL_ESTATE_VALUE = 19;
+    /**
+     * <pre>
+     * Dynamic custom asset.
+     * </pre>
+     *
+     * <code>DYNAMIC_CUSTOM = 20;</code>
+     */
+    public static final int DYNAMIC_CUSTOM_VALUE = 20;
+    /**
+     * <pre>
+     * Dynamic hotels and rentals asset.
+     * </pre>
+     *
+     * <code>DYNAMIC_HOTELS_AND_RENTALS = 21;</code>
+     */
+    public static final int DYNAMIC_HOTELS_AND_RENTALS_VALUE = 21;
+    /**
+     * <pre>
+     * Dynamic flights asset.
+     * </pre>
+     *
+     * <code>DYNAMIC_FLIGHTS = 22;</code>
+     */
+    public static final int DYNAMIC_FLIGHTS_VALUE = 22;
+    /**
+     * <pre>
+     * Discovery Carousel Card asset.
+     * </pre>
+     *
+     * <code>DISCOVERY_CAROUSEL_CARD = 23;</code>
+     */
+    public static final int DISCOVERY_CAROUSEL_CARD_VALUE = 23;
+    /**
+     * <pre>
+     * Dynamic travel asset.
+     * </pre>
+     *
+     * <code>DYNAMIC_TRAVEL = 24;</code>
+     */
+    public static final int DYNAMIC_TRAVEL_VALUE = 24;
+    /**
+     * <pre>
+     * Dynamic local asset.
+     * </pre>
+     *
+     * <code>DYNAMIC_LOCAL = 25;</code>
+     */
+    public static final int DYNAMIC_LOCAL_VALUE = 25;
+    /**
+     * <pre>
+     * Dynamic jobs asset.
+     * </pre>
+     *
+     * <code>DYNAMIC_JOBS = 26;</code>
+     */
+    public static final int DYNAMIC_JOBS_VALUE = 26;
 
 
     public final int getNumber() {
@@ -445,6 +575,14 @@ private static final long serialVersionUID = 0L;
         case 16: return CALL;
         case 17: return PRICE;
         case 18: return CALL_TO_ACTION;
+        case 19: return DYNAMIC_REAL_ESTATE;
+        case 20: return DYNAMIC_CUSTOM;
+        case 21: return DYNAMIC_HOTELS_AND_RENTALS;
+        case 22: return DYNAMIC_FLIGHTS;
+        case 23: return DISCOVERY_CAROUSEL_CARD;
+        case 24: return DYNAMIC_TRAVEL;
+        case 25: return DYNAMIC_LOCAL;
+        case 26: return DYNAMIC_JOBS;
         default: return null;
       }
     }

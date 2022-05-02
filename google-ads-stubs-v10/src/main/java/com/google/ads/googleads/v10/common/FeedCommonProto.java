@@ -30,21 +30,19 @@ public final class FeedCommonProto {
     java.lang.String[] descriptorData = {
       "\n1google/ads/googleads/v10/common/feed_c" +
       "ommon.proto\022\037google.ads.googleads.v10.co" +
-      "mmon\032\034google/api/annotations.proto\"c\n\005Mo" +
-      "ney\022\032\n\rcurrency_code\030\003 \001(\tH\000\210\001\001\022\032\n\ramoun" +
-      "t_micros\030\004 \001(\003H\001\210\001\001B\020\n\016_currency_codeB\020\n" +
-      "\016_amount_microsB\357\001\n#com.google.ads.googl" +
-      "eads.v10.commonB\017FeedCommonProtoP\001ZEgoog" +
-      "le.golang.org/genproto/googleapis/ads/go" +
-      "ogleads/v10/common;common\242\002\003GAA\252\002\037Google" +
-      ".Ads.GoogleAds.V10.Common\312\002\037Google\\Ads\\G" +
-      "oogleAds\\V10\\Common\352\002#Google::Ads::Googl" +
-      "eAds::V10::Commonb\006proto3"
+      "mmon\"c\n\005Money\022\032\n\rcurrency_code\030\003 \001(\tH\000\210\001" +
+      "\001\022\032\n\ramount_micros\030\004 \001(\003H\001\210\001\001B\020\n\016_curren" +
+      "cy_codeB\020\n\016_amount_microsB\357\001\n#com.google" +
+      ".ads.googleads.v10.commonB\017FeedCommonPro" +
+      "toP\001ZEgoogle.golang.org/genproto/googlea" +
+      "pis/ads/googleads/v10/common;common\242\002\003GA" +
+      "A\252\002\037Google.Ads.GoogleAds.V10.Common\312\002\037Go" +
+      "ogle\\Ads\\GoogleAds\\V10\\Common\352\002#Google::" +
+      "Ads::GoogleAds::V10::Commonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_common_Money_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -52,7 +50,6 @@ public final class FeedCommonProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_common_Money_descriptor,
         new java.lang.String[] { "CurrencyCode", "AmountMicros", "CurrencyCode", "AmountMicros", });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

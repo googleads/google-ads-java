@@ -30,22 +30,21 @@ public final class CustomizerAttributeTypeProto {
     java.lang.String[] descriptorData = {
       "\n>google/ads/googleads/v10/enums/customi" +
       "zer_attribute_type.proto\022\036google.ads.goo" +
-      "gleads.v10.enums\032\034google/api/annotations" +
-      ".proto\"\204\001\n\033CustomizerAttributeTypeEnum\"e" +
-      "\n\027CustomizerAttributeType\022\017\n\013UNSPECIFIED" +
-      "\020\000\022\013\n\007UNKNOWN\020\001\022\010\n\004TEXT\020\002\022\n\n\006NUMBER\020\003\022\t\n" +
-      "\005PRICE\020\004\022\013\n\007PERCENT\020\005B\366\001\n\"com.google.ads" +
-      ".googleads.v10.enumsB\034CustomizerAttribut" +
-      "eTypeProtoP\001ZCgoogle.golang.org/genproto" +
-      "/googleapis/ads/googleads/v10/enums;enum" +
-      "s\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V10.Enums" +
-      "\312\002\036Google\\Ads\\GoogleAds\\V10\\Enums\352\002\"Goog" +
-      "le::Ads::GoogleAds::V10::Enumsb\006proto3"
+      "gleads.v10.enums\"\204\001\n\033CustomizerAttribute" +
+      "TypeEnum\"e\n\027CustomizerAttributeType\022\017\n\013U" +
+      "NSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\010\n\004TEXT\020\002\022\n\n\006N" +
+      "UMBER\020\003\022\t\n\005PRICE\020\004\022\013\n\007PERCENT\020\005B\366\001\n\"com." +
+      "google.ads.googleads.v10.enumsB\034Customiz" +
+      "erAttributeTypeProtoP\001ZCgoogle.golang.or" +
+      "g/genproto/googleapis/ads/googleads/v10/" +
+      "enums;enums\242\002\003GAA\252\002\036Google.Ads.GoogleAds" +
+      ".V10.Enums\312\002\036Google\\Ads\\GoogleAds\\V10\\En" +
+      "ums\352\002\"Google::Ads::GoogleAds::V10::Enums" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_CustomizerAttributeTypeEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -53,7 +52,6 @@ public final class CustomizerAttributeTypeProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_CustomizerAttributeTypeEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

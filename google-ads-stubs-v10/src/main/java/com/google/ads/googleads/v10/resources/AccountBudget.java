@@ -171,18 +171,18 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 240: {
-            proposedSpendingLimitCase_ = 30;
             proposedSpendingLimit_ = input.readInt64();
+            proposedSpendingLimitCase_ = 30;
             break;
           }
           case 248: {
-            approvedSpendingLimitCase_ = 31;
             approvedSpendingLimit_ = input.readInt64();
+            approvedSpendingLimitCase_ = 31;
             break;
           }
           case 256: {
-            adjustedSpendingLimitCase_ = 32;
             adjustedSpendingLimit_ = input.readInt64();
+            adjustedSpendingLimitCase_ = 32;
             break;
           }
           case 264: {
@@ -218,6 +218,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -661,8 +663,8 @@ private static final long serialVersionUID = 0L;
               break;
             }
             case 128: {
-              spendingLimitCase_ = 16;
               spendingLimit_ = input.readInt64();
+              spendingLimitCase_ = 16;
               break;
             }
             case 138: {
@@ -694,6 +696,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);

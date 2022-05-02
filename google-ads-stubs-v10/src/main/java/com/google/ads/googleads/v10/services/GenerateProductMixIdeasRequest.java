@@ -102,6 +102,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -173,7 +175,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object plannableLocationId_;
   /**
    * <pre>
-   * Required. The ID of the location, this is one of the ids returned by
+   * Required. The ID of the location, this is one of the IDs returned by
    * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v10.services.ReachPlanService.ListPlannableLocations].
    * </pre>
    *
@@ -195,7 +197,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. The ID of the location, this is one of the ids returned by
+   * Required. The ID of the location, this is one of the IDs returned by
    * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v10.services.ReachPlanService.ListPlannableLocations].
    * </pre>
    *
@@ -812,7 +814,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object plannableLocationId_ = "";
     /**
      * <pre>
-     * Required. The ID of the location, this is one of the ids returned by
+     * Required. The ID of the location, this is one of the IDs returned by
      * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v10.services.ReachPlanService.ListPlannableLocations].
      * </pre>
      *
@@ -833,7 +835,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The ID of the location, this is one of the ids returned by
+     * Required. The ID of the location, this is one of the IDs returned by
      * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v10.services.ReachPlanService.ListPlannableLocations].
      * </pre>
      *
@@ -855,7 +857,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The ID of the location, this is one of the ids returned by
+     * Required. The ID of the location, this is one of the IDs returned by
      * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v10.services.ReachPlanService.ListPlannableLocations].
      * </pre>
      *
@@ -875,7 +877,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The ID of the location, this is one of the ids returned by
+     * Required. The ID of the location, this is one of the IDs returned by
      * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v10.services.ReachPlanService.ListPlannableLocations].
      * </pre>
      *
@@ -890,7 +892,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The ID of the location, this is one of the ids returned by
+     * Required. The ID of the location, this is one of the IDs returned by
      * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v10.services.ReachPlanService.ListPlannableLocations].
      * </pre>
      *

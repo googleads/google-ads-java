@@ -30,21 +30,20 @@ public final class UserListClosingReasonProto {
     java.lang.String[] descriptorData = {
       "\n=google/ads/googleads/v10/enums/user_li" +
       "st_closing_reason.proto\022\036google.ads.goog" +
-      "leads.v10.enums\032\034google/api/annotations." +
-      "proto\"^\n\031UserListClosingReasonEnum\"A\n\025Us" +
-      "erListClosingReason\022\017\n\013UNSPECIFIED\020\000\022\013\n\007" +
-      "UNKNOWN\020\001\022\n\n\006UNUSED\020\002B\364\001\n\"com.google.ads" +
-      ".googleads.v10.enumsB\032UserListClosingRea" +
-      "sonProtoP\001ZCgoogle.golang.org/genproto/g" +
-      "oogleapis/ads/googleads/v10/enums;enums\242" +
-      "\002\003GAA\252\002\036Google.Ads.GoogleAds.V10.Enums\312\002" +
-      "\036Google\\Ads\\GoogleAds\\V10\\Enums\352\002\"Google" +
-      "::Ads::GoogleAds::V10::Enumsb\006proto3"
+      "leads.v10.enums\"^\n\031UserListClosingReason" +
+      "Enum\"A\n\025UserListClosingReason\022\017\n\013UNSPECI" +
+      "FIED\020\000\022\013\n\007UNKNOWN\020\001\022\n\n\006UNUSED\020\002B\364\001\n\"com." +
+      "google.ads.googleads.v10.enumsB\032UserList" +
+      "ClosingReasonProtoP\001ZCgoogle.golang.org/" +
+      "genproto/googleapis/ads/googleads/v10/en" +
+      "ums;enums\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V" +
+      "10.Enums\312\002\036Google\\Ads\\GoogleAds\\V10\\Enum" +
+      "s\352\002\"Google::Ads::GoogleAds::V10::Enumsb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_UserListClosingReasonEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -52,7 +51,6 @@ public final class UserListClosingReasonProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_UserListClosingReasonEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

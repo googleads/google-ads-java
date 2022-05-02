@@ -30,23 +30,21 @@ public final class ContextErrorProto {
     java.lang.String[] descriptorData = {
       "\n3google/ads/googleads/v10/errors/contex" +
       "t_error.proto\022\037google.ads.googleads.v10." +
-      "errors\032\034google/api/annotations.proto\"\234\001\n" +
-      "\020ContextErrorEnum\"\207\001\n\014ContextError\022\017\n\013UN" +
-      "SPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\'\n#OPERATION_NO" +
-      "T_PERMITTED_FOR_CONTEXT\020\002\0220\n,OPERATION_N" +
-      "OT_PERMITTED_FOR_REMOVED_RESOURCE\020\003B\361\001\n#" +
-      "com.google.ads.googleads.v10.errorsB\021Con" +
-      "textErrorProtoP\001ZEgoogle.golang.org/genp" +
-      "roto/googleapis/ads/googleads/v10/errors" +
-      ";errors\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V10" +
-      ".Errors\312\002\037Google\\Ads\\GoogleAds\\V10\\Error" +
-      "s\352\002#Google::Ads::GoogleAds::V10::Errorsb" +
-      "\006proto3"
+      "errors\"\234\001\n\020ContextErrorEnum\"\207\001\n\014ContextE" +
+      "rror\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\'\n#OP" +
+      "ERATION_NOT_PERMITTED_FOR_CONTEXT\020\002\0220\n,O" +
+      "PERATION_NOT_PERMITTED_FOR_REMOVED_RESOU" +
+      "RCE\020\003B\361\001\n#com.google.ads.googleads.v10.e" +
+      "rrorsB\021ContextErrorProtoP\001ZEgoogle.golan" +
+      "g.org/genproto/googleapis/ads/googleads/" +
+      "v10/errors;errors\242\002\003GAA\252\002\037Google.Ads.Goo" +
+      "gleAds.V10.Errors\312\002\037Google\\Ads\\GoogleAds" +
+      "\\V10\\Errors\352\002#Google::Ads::GoogleAds::V1" +
+      "0::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_ContextErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -54,7 +52,6 @@ public final class ContextErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_ContextErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

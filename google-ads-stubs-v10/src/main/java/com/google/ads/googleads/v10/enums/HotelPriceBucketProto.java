@@ -30,22 +30,21 @@ public final class HotelPriceBucketProto {
     java.lang.String[] descriptorData = {
       "\n7google/ads/googleads/v10/enums/hotel_p" +
       "rice_bucket.proto\022\036google.ads.googleads." +
-      "v10.enums\032\034google/api/annotations.proto\"" +
-      "\224\001\n\024HotelPriceBucketEnum\"|\n\020HotelPriceBu" +
-      "cket\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\021\n\rLO" +
-      "WEST_UNIQUE\020\002\022\017\n\013LOWEST_TIED\020\003\022\016\n\nNOT_LO" +
-      "WEST\020\004\022\026\n\022ONLY_PARTNER_SHOWN\020\005B\357\001\n\"com.g" +
-      "oogle.ads.googleads.v10.enumsB\025HotelPric" +
-      "eBucketProtoP\001ZCgoogle.golang.org/genpro" +
-      "to/googleapis/ads/googleads/v10/enums;en" +
-      "ums\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V10.Enu" +
-      "ms\312\002\036Google\\Ads\\GoogleAds\\V10\\Enums\352\002\"Go" +
-      "ogle::Ads::GoogleAds::V10::Enumsb\006proto3"
+      "v10.enums\"\224\001\n\024HotelPriceBucketEnum\"|\n\020Ho" +
+      "telPriceBucket\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNO" +
+      "WN\020\001\022\021\n\rLOWEST_UNIQUE\020\002\022\017\n\013LOWEST_TIED\020\003" +
+      "\022\016\n\nNOT_LOWEST\020\004\022\026\n\022ONLY_PARTNER_SHOWN\020\005" +
+      "B\357\001\n\"com.google.ads.googleads.v10.enumsB" +
+      "\025HotelPriceBucketProtoP\001ZCgoogle.golang." +
+      "org/genproto/googleapis/ads/googleads/v1" +
+      "0/enums;enums\242\002\003GAA\252\002\036Google.Ads.GoogleA" +
+      "ds.V10.Enums\312\002\036Google\\Ads\\GoogleAds\\V10\\" +
+      "Enums\352\002\"Google::Ads::GoogleAds::V10::Enu" +
+      "msb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_HotelPriceBucketEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -53,7 +52,6 @@ public final class HotelPriceBucketProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_HotelPriceBucketEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

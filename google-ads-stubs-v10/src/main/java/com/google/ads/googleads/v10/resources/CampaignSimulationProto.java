@@ -34,44 +34,43 @@ public final class CampaignSimulationProto {
       "/v10/common/simulation.proto\032Cgoogle/ads" +
       "/googleads/v10/enums/simulation_modifica" +
       "tion_method.proto\0324google/ads/googleads/" +
-      "v10/enums/simulation_type.proto\032\034google/" +
-      "api/annotations.proto\032\037google/api/field_" +
-      "behavior.proto\032\031google/api/resource.prot" +
-      "o\"\272\010\n\022CampaignSimulation\022J\n\rresource_nam" +
-      "e\030\001 \001(\tB3\340A\003\372A-\n+googleads.googleapis.co" +
-      "m/CampaignSimulation\022\030\n\013campaign_id\030\002 \001(" +
-      "\003B\003\340A\003\022T\n\004type\030\003 \001(\0162A.google.ads.google" +
-      "ads.v10.enums.SimulationTypeEnum.Simulat" +
-      "ionTypeB\003\340A\003\022\177\n\023modification_method\030\004 \001(" +
-      "\0162].google.ads.googleads.v10.enums.Simul" +
-      "ationModificationMethodEnum.SimulationMo" +
-      "dificationMethodB\003\340A\003\022\027\n\nstart_date\030\005 \001(" +
-      "\tB\003\340A\003\022\025\n\010end_date\030\006 \001(\tB\003\340A\003\022]\n\022cpc_bid" +
-      "_point_list\030\007 \001(\0132:.google.ads.googleads" +
-      ".v10.common.CpcBidSimulationPointListB\003\340" +
-      "A\003H\000\022c\n\025target_cpa_point_list\030\010 \001(\0132=.go" +
-      "ogle.ads.googleads.v10.common.TargetCpaS" +
-      "imulationPointListB\003\340A\003H\000\022e\n\026target_roas" +
-      "_point_list\030\t \001(\0132>.google.ads.googleads" +
-      ".v10.common.TargetRoasSimulationPointLis" +
-      "tB\003\340A\003H\000\022|\n\"target_impression_share_poin" +
-      "t_list\030\n \001(\0132I.google.ads.googleads.v10." +
-      "common.TargetImpressionShareSimulationPo" +
-      "intListB\003\340A\003H\000\022\\\n\021budget_point_list\030\013 \001(" +
-      "\0132:.google.ads.googleads.v10.common.Budg" +
-      "etSimulationPointListB\003\340A\003H\000:\241\001\352A\235\001\n+goo" +
-      "gleads.googleapis.com/CampaignSimulation" +
-      "\022ncustomers/{customer_id}/campaignSimula" +
-      "tions/{campaign_id}~{type}~{modification" +
-      "_method}~{start_date}~{end_date}B\014\n\npoin" +
-      "t_listB\211\002\n&com.google.ads.googleads.v10." +
-      "resourcesB\027CampaignSimulationProtoP\001ZKgo" +
-      "ogle.golang.org/genproto/googleapis/ads/" +
-      "googleads/v10/resources;resources\242\002\003GAA\252" +
-      "\002\"Google.Ads.GoogleAds.V10.Resources\312\002\"G" +
-      "oogle\\Ads\\GoogleAds\\V10\\Resources\352\002&Goog" +
-      "le::Ads::GoogleAds::V10::Resourcesb\006prot" +
-      "o3"
+      "v10/enums/simulation_type.proto\032\037google/" +
+      "api/field_behavior.proto\032\031google/api/res" +
+      "ource.proto\"\272\010\n\022CampaignSimulation\022J\n\rre" +
+      "source_name\030\001 \001(\tB3\340A\003\372A-\n+googleads.goo" +
+      "gleapis.com/CampaignSimulation\022\030\n\013campai" +
+      "gn_id\030\002 \001(\003B\003\340A\003\022T\n\004type\030\003 \001(\0162A.google." +
+      "ads.googleads.v10.enums.SimulationTypeEn" +
+      "um.SimulationTypeB\003\340A\003\022\177\n\023modification_m" +
+      "ethod\030\004 \001(\0162].google.ads.googleads.v10.e" +
+      "nums.SimulationModificationMethodEnum.Si" +
+      "mulationModificationMethodB\003\340A\003\022\027\n\nstart" +
+      "_date\030\005 \001(\tB\003\340A\003\022\025\n\010end_date\030\006 \001(\tB\003\340A\003\022" +
+      "]\n\022cpc_bid_point_list\030\007 \001(\0132:.google.ads" +
+      ".googleads.v10.common.CpcBidSimulationPo" +
+      "intListB\003\340A\003H\000\022c\n\025target_cpa_point_list\030" +
+      "\010 \001(\0132=.google.ads.googleads.v10.common." +
+      "TargetCpaSimulationPointListB\003\340A\003H\000\022e\n\026t" +
+      "arget_roas_point_list\030\t \001(\0132>.google.ads" +
+      ".googleads.v10.common.TargetRoasSimulati" +
+      "onPointListB\003\340A\003H\000\022|\n\"target_impression_" +
+      "share_point_list\030\n \001(\0132I.google.ads.goog" +
+      "leads.v10.common.TargetImpressionShareSi" +
+      "mulationPointListB\003\340A\003H\000\022\\\n\021budget_point" +
+      "_list\030\013 \001(\0132:.google.ads.googleads.v10.c" +
+      "ommon.BudgetSimulationPointListB\003\340A\003H\000:\241" +
+      "\001\352A\235\001\n+googleads.googleapis.com/Campaign" +
+      "Simulation\022ncustomers/{customer_id}/camp" +
+      "aignSimulations/{campaign_id}~{type}~{mo" +
+      "dification_method}~{start_date}~{end_dat" +
+      "e}B\014\n\npoint_listB\211\002\n&com.google.ads.goog" +
+      "leads.v10.resourcesB\027CampaignSimulationP" +
+      "rotoP\001ZKgoogle.golang.org/genproto/googl" +
+      "eapis/ads/googleads/v10/resources;resour" +
+      "ces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V10.Res" +
+      "ources\312\002\"Google\\Ads\\GoogleAds\\V10\\Resour" +
+      "ces\352\002&Google::Ads::GoogleAds::V10::Resou" +
+      "rcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -79,7 +78,6 @@ public final class CampaignSimulationProto {
           com.google.ads.googleads.v10.common.SimulationProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.SimulationModificationMethodProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.SimulationTypeProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -99,7 +97,6 @@ public final class CampaignSimulationProto {
     com.google.ads.googleads.v10.common.SimulationProto.getDescriptor();
     com.google.ads.googleads.v10.enums.SimulationModificationMethodProto.getDescriptor();
     com.google.ads.googleads.v10.enums.SimulationTypeProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

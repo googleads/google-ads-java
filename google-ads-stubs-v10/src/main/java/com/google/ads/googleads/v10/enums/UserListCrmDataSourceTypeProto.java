@@ -30,23 +30,22 @@ public final class UserListCrmDataSourceTypeProto {
     java.lang.String[] descriptorData = {
       "\nCgoogle/ads/googleads/v10/enums/user_li" +
       "st_crm_data_source_type.proto\022\036google.ad" +
-      "s.googleads.v10.enums\032\034google/api/annota" +
-      "tions.proto\"\247\001\n\035UserListCrmDataSourceTyp" +
-      "eEnum\"\205\001\n\031UserListCrmDataSourceType\022\017\n\013U" +
-      "NSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\017\n\013FIRST_PARTY" +
-      "\020\002\022\035\n\031THIRD_PARTY_CREDIT_BUREAU\020\003\022\032\n\026THI" +
-      "RD_PARTY_VOTER_FILE\020\004B\370\001\n\"com.google.ads" +
-      ".googleads.v10.enumsB\036UserListCrmDataSou" +
-      "rceTypeProtoP\001ZCgoogle.golang.org/genpro" +
-      "to/googleapis/ads/googleads/v10/enums;en" +
-      "ums\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V10.Enu" +
-      "ms\312\002\036Google\\Ads\\GoogleAds\\V10\\Enums\352\002\"Go" +
-      "ogle::Ads::GoogleAds::V10::Enumsb\006proto3"
+      "s.googleads.v10.enums\"\247\001\n\035UserListCrmDat" +
+      "aSourceTypeEnum\"\205\001\n\031UserListCrmDataSourc" +
+      "eType\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\017\n\013F" +
+      "IRST_PARTY\020\002\022\035\n\031THIRD_PARTY_CREDIT_BUREA" +
+      "U\020\003\022\032\n\026THIRD_PARTY_VOTER_FILE\020\004B\370\001\n\"com." +
+      "google.ads.googleads.v10.enumsB\036UserList" +
+      "CrmDataSourceTypeProtoP\001ZCgoogle.golang." +
+      "org/genproto/googleapis/ads/googleads/v1" +
+      "0/enums;enums\242\002\003GAA\252\002\036Google.Ads.GoogleA" +
+      "ds.V10.Enums\312\002\036Google\\Ads\\GoogleAds\\V10\\" +
+      "Enums\352\002\"Google::Ads::GoogleAds::V10::Enu" +
+      "msb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_UserListCrmDataSourceTypeEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -54,7 +53,6 @@ public final class UserListCrmDataSourceTypeProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_UserListCrmDataSourceTypeEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

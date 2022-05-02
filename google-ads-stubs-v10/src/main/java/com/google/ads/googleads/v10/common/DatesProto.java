@@ -41,28 +41,26 @@ public final class DatesProto {
       "\n+google/ads/googleads/v10/common/dates." +
       "proto\022\037google.ads.googleads.v10.common\0322" +
       "google/ads/googleads/v10/enums/month_of_" +
-      "year.proto\032\034google/api/annotations.proto" +
-      "\"W\n\tDateRange\022\027\n\nstart_date\030\003 \001(\tH\000\210\001\001\022\025" +
-      "\n\010end_date\030\004 \001(\tH\001\210\001\001B\r\n\013_start_dateB\013\n\t" +
-      "_end_date\"\204\001\n\016YearMonthRange\0229\n\005start\030\001 " +
-      "\001(\0132*.google.ads.googleads.v10.common.Ye" +
-      "arMonth\0227\n\003end\030\002 \001(\0132*.google.ads.google" +
-      "ads.v10.common.YearMonth\"e\n\tYearMonth\022\014\n" +
-      "\004year\030\001 \001(\003\022J\n\005month\030\002 \001(\0162;.google.ads." +
-      "googleads.v10.enums.MonthOfYearEnum.Mont" +
-      "hOfYearB\352\001\n#com.google.ads.googleads.v10" +
-      ".commonB\nDatesProtoP\001ZEgoogle.golang.org" +
-      "/genproto/googleapis/ads/googleads/v10/c" +
-      "ommon;common\242\002\003GAA\252\002\037Google.Ads.GoogleAd" +
-      "s.V10.Common\312\002\037Google\\Ads\\GoogleAds\\V10\\" +
-      "Common\352\002#Google::Ads::GoogleAds::V10::Co" +
-      "mmonb\006proto3"
+      "year.proto\"W\n\tDateRange\022\027\n\nstart_date\030\003 " +
+      "\001(\tH\000\210\001\001\022\025\n\010end_date\030\004 \001(\tH\001\210\001\001B\r\n\013_star" +
+      "t_dateB\013\n\t_end_date\"\204\001\n\016YearMonthRange\0229" +
+      "\n\005start\030\001 \001(\0132*.google.ads.googleads.v10" +
+      ".common.YearMonth\0227\n\003end\030\002 \001(\0132*.google." +
+      "ads.googleads.v10.common.YearMonth\"e\n\tYe" +
+      "arMonth\022\014\n\004year\030\001 \001(\003\022J\n\005month\030\002 \001(\0162;.g" +
+      "oogle.ads.googleads.v10.enums.MonthOfYea" +
+      "rEnum.MonthOfYearB\352\001\n#com.google.ads.goo" +
+      "gleads.v10.commonB\nDatesProtoP\001ZEgoogle." +
+      "golang.org/genproto/googleapis/ads/googl" +
+      "eads/v10/common;common\242\002\003GAA\252\002\037Google.Ad" +
+      "s.GoogleAds.V10.Common\312\002\037Google\\Ads\\Goog" +
+      "leAds\\V10\\Common\352\002#Google::Ads::GoogleAd" +
+      "s::V10::Commonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.enums.MonthOfYearProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_common_DateRange_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -83,7 +81,6 @@ public final class DatesProto {
         internal_static_google_ads_googleads_v10_common_YearMonth_descriptor,
         new java.lang.String[] { "Year", "Month", });
     com.google.ads.googleads.v10.enums.MonthOfYearProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

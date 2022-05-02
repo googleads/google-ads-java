@@ -30,23 +30,21 @@ public final class ConversionAdjustmentTypeProto {
     java.lang.String[] descriptorData = {
       "\n?google/ads/googleads/v10/enums/convers" +
       "ion_adjustment_type.proto\022\036google.ads.go" +
-      "ogleads.v10.enums\032\034google/api/annotation" +
-      "s.proto\"\212\001\n\034ConversionAdjustmentTypeEnum" +
-      "\"j\n\030ConversionAdjustmentType\022\017\n\013UNSPECIF" +
-      "IED\020\000\022\013\n\007UNKNOWN\020\001\022\016\n\nRETRACTION\020\002\022\017\n\013RE" +
-      "STATEMENT\020\003\022\017\n\013ENHANCEMENT\020\004B\367\001\n\"com.goo" +
-      "gle.ads.googleads.v10.enumsB\035ConversionA" +
-      "djustmentTypeProtoP\001ZCgoogle.golang.org/" +
-      "genproto/googleapis/ads/googleads/v10/en" +
-      "ums;enums\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V" +
-      "10.Enums\312\002\036Google\\Ads\\GoogleAds\\V10\\Enum" +
-      "s\352\002\"Google::Ads::GoogleAds::V10::Enumsb\006" +
-      "proto3"
+      "ogleads.v10.enums\"\212\001\n\034ConversionAdjustme" +
+      "ntTypeEnum\"j\n\030ConversionAdjustmentType\022\017" +
+      "\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\016\n\nRETRACTI" +
+      "ON\020\002\022\017\n\013RESTATEMENT\020\003\022\017\n\013ENHANCEMENT\020\004B\367" +
+      "\001\n\"com.google.ads.googleads.v10.enumsB\035C" +
+      "onversionAdjustmentTypeProtoP\001ZCgoogle.g" +
+      "olang.org/genproto/googleapis/ads/google" +
+      "ads/v10/enums;enums\242\002\003GAA\252\002\036Google.Ads.G" +
+      "oogleAds.V10.Enums\312\002\036Google\\Ads\\GoogleAd" +
+      "s\\V10\\Enums\352\002\"Google::Ads::GoogleAds::V1" +
+      "0::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_ConversionAdjustmentTypeEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -54,7 +52,6 @@ public final class ConversionAdjustmentTypeProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_ConversionAdjustmentTypeEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

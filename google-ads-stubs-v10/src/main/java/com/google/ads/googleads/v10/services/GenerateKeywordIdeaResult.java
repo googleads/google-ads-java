@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
   }
   private GenerateKeywordIdeaResult() {
     text_ = "";
+    closeVariants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
   }
 
   @java.lang.Override
@@ -86,6 +87,15 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 58: {
+            java.lang.String s = input.readStringRequireUtf8();
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              closeVariants_ = new com.google.protobuf.LazyStringArrayList();
+              mutable_bitField0_ |= 0x00000002;
+            }
+            closeVariants_.add(s);
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -97,10 +107,15 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+        closeVariants_ = closeVariants_.getUnmodifiableView();
+      }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
@@ -265,6 +280,69 @@ private static final long serialVersionUID = 0L;
     return getKeywordAnnotations();
   }
 
+  public static final int CLOSE_VARIANTS_FIELD_NUMBER = 7;
+  private com.google.protobuf.LazyStringList closeVariants_;
+  /**
+   * <pre>
+   * The list of close variants from the requested keywords that
+   * are combined into this GenerateKeywordIdeaResult. See
+   * https://support.google.com/google-ads/answer/9342105 for the
+   * definition of "close variants".
+   * </pre>
+   *
+   * <code>repeated string close_variants = 7;</code>
+   * @return A list containing the closeVariants.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getCloseVariantsList() {
+    return closeVariants_;
+  }
+  /**
+   * <pre>
+   * The list of close variants from the requested keywords that
+   * are combined into this GenerateKeywordIdeaResult. See
+   * https://support.google.com/google-ads/answer/9342105 for the
+   * definition of "close variants".
+   * </pre>
+   *
+   * <code>repeated string close_variants = 7;</code>
+   * @return The count of closeVariants.
+   */
+  public int getCloseVariantsCount() {
+    return closeVariants_.size();
+  }
+  /**
+   * <pre>
+   * The list of close variants from the requested keywords that
+   * are combined into this GenerateKeywordIdeaResult. See
+   * https://support.google.com/google-ads/answer/9342105 for the
+   * definition of "close variants".
+   * </pre>
+   *
+   * <code>repeated string close_variants = 7;</code>
+   * @param index The index of the element to return.
+   * @return The closeVariants at the given index.
+   */
+  public java.lang.String getCloseVariants(int index) {
+    return closeVariants_.get(index);
+  }
+  /**
+   * <pre>
+   * The list of close variants from the requested keywords that
+   * are combined into this GenerateKeywordIdeaResult. See
+   * https://support.google.com/google-ads/answer/9342105 for the
+   * definition of "close variants".
+   * </pre>
+   *
+   * <code>repeated string close_variants = 7;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the closeVariants at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getCloseVariantsBytes(int index) {
+    return closeVariants_.getByteString(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -288,6 +366,9 @@ private static final long serialVersionUID = 0L;
     if (keywordAnnotations_ != null) {
       output.writeMessage(6, getKeywordAnnotations());
     }
+    for (int i = 0; i < closeVariants_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, closeVariants_.getRaw(i));
+    }
     unknownFields.writeTo(output);
   }
 
@@ -307,6 +388,14 @@ private static final long serialVersionUID = 0L;
     if (keywordAnnotations_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, getKeywordAnnotations());
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < closeVariants_.size(); i++) {
+        dataSize += computeStringSizeNoTag(closeVariants_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getCloseVariantsList().size();
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -338,6 +427,8 @@ private static final long serialVersionUID = 0L;
       if (!getKeywordAnnotations()
           .equals(other.getKeywordAnnotations())) return false;
     }
+    if (!getCloseVariantsList()
+        .equals(other.getCloseVariantsList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -360,6 +451,10 @@ private static final long serialVersionUID = 0L;
     if (hasKeywordAnnotations()) {
       hash = (37 * hash) + KEYWORD_ANNOTATIONS_FIELD_NUMBER;
       hash = (53 * hash) + getKeywordAnnotations().hashCode();
+    }
+    if (getCloseVariantsCount() > 0) {
+      hash = (37 * hash) + CLOSE_VARIANTS_FIELD_NUMBER;
+      hash = (53 * hash) + getCloseVariantsList().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -512,6 +607,8 @@ private static final long serialVersionUID = 0L;
         keywordAnnotations_ = null;
         keywordAnnotationsBuilder_ = null;
       }
+      closeVariants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -554,6 +651,11 @@ private static final long serialVersionUID = 0L;
       } else {
         result.keywordAnnotations_ = keywordAnnotationsBuilder_.build();
       }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        closeVariants_ = closeVariants_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000002);
+      }
+      result.closeVariants_ = closeVariants_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -613,6 +715,16 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasKeywordAnnotations()) {
         mergeKeywordAnnotations(other.getKeywordAnnotations());
+      }
+      if (!other.closeVariants_.isEmpty()) {
+        if (closeVariants_.isEmpty()) {
+          closeVariants_ = other.closeVariants_;
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          ensureCloseVariantsIsMutable();
+          closeVariants_.addAll(other.closeVariants_);
+        }
+        onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1086,6 +1198,179 @@ private static final long serialVersionUID = 0L;
         keywordAnnotations_ = null;
       }
       return keywordAnnotationsBuilder_;
+    }
+
+    private com.google.protobuf.LazyStringList closeVariants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private void ensureCloseVariantsIsMutable() {
+      if (!((bitField0_ & 0x00000002) != 0)) {
+        closeVariants_ = new com.google.protobuf.LazyStringArrayList(closeVariants_);
+        bitField0_ |= 0x00000002;
+       }
+    }
+    /**
+     * <pre>
+     * The list of close variants from the requested keywords that
+     * are combined into this GenerateKeywordIdeaResult. See
+     * https://support.google.com/google-ads/answer/9342105 for the
+     * definition of "close variants".
+     * </pre>
+     *
+     * <code>repeated string close_variants = 7;</code>
+     * @return A list containing the closeVariants.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getCloseVariantsList() {
+      return closeVariants_.getUnmodifiableView();
+    }
+    /**
+     * <pre>
+     * The list of close variants from the requested keywords that
+     * are combined into this GenerateKeywordIdeaResult. See
+     * https://support.google.com/google-ads/answer/9342105 for the
+     * definition of "close variants".
+     * </pre>
+     *
+     * <code>repeated string close_variants = 7;</code>
+     * @return The count of closeVariants.
+     */
+    public int getCloseVariantsCount() {
+      return closeVariants_.size();
+    }
+    /**
+     * <pre>
+     * The list of close variants from the requested keywords that
+     * are combined into this GenerateKeywordIdeaResult. See
+     * https://support.google.com/google-ads/answer/9342105 for the
+     * definition of "close variants".
+     * </pre>
+     *
+     * <code>repeated string close_variants = 7;</code>
+     * @param index The index of the element to return.
+     * @return The closeVariants at the given index.
+     */
+    public java.lang.String getCloseVariants(int index) {
+      return closeVariants_.get(index);
+    }
+    /**
+     * <pre>
+     * The list of close variants from the requested keywords that
+     * are combined into this GenerateKeywordIdeaResult. See
+     * https://support.google.com/google-ads/answer/9342105 for the
+     * definition of "close variants".
+     * </pre>
+     *
+     * <code>repeated string close_variants = 7;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the closeVariants at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getCloseVariantsBytes(int index) {
+      return closeVariants_.getByteString(index);
+    }
+    /**
+     * <pre>
+     * The list of close variants from the requested keywords that
+     * are combined into this GenerateKeywordIdeaResult. See
+     * https://support.google.com/google-ads/answer/9342105 for the
+     * definition of "close variants".
+     * </pre>
+     *
+     * <code>repeated string close_variants = 7;</code>
+     * @param index The index to set the value at.
+     * @param value The closeVariants to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCloseVariants(
+        int index, java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureCloseVariantsIsMutable();
+      closeVariants_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of close variants from the requested keywords that
+     * are combined into this GenerateKeywordIdeaResult. See
+     * https://support.google.com/google-ads/answer/9342105 for the
+     * definition of "close variants".
+     * </pre>
+     *
+     * <code>repeated string close_variants = 7;</code>
+     * @param value The closeVariants to add.
+     * @return This builder for chaining.
+     */
+    public Builder addCloseVariants(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureCloseVariantsIsMutable();
+      closeVariants_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of close variants from the requested keywords that
+     * are combined into this GenerateKeywordIdeaResult. See
+     * https://support.google.com/google-ads/answer/9342105 for the
+     * definition of "close variants".
+     * </pre>
+     *
+     * <code>repeated string close_variants = 7;</code>
+     * @param values The closeVariants to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllCloseVariants(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureCloseVariantsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, closeVariants_);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of close variants from the requested keywords that
+     * are combined into this GenerateKeywordIdeaResult. See
+     * https://support.google.com/google-ads/answer/9342105 for the
+     * definition of "close variants".
+     * </pre>
+     *
+     * <code>repeated string close_variants = 7;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCloseVariants() {
+      closeVariants_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The list of close variants from the requested keywords that
+     * are combined into this GenerateKeywordIdeaResult. See
+     * https://support.google.com/google-ads/answer/9342105 for the
+     * definition of "close variants".
+     * </pre>
+     *
+     * <code>repeated string close_variants = 7;</code>
+     * @param value The bytes of the closeVariants to add.
+     * @return This builder for chaining.
+     */
+    public Builder addCloseVariantsBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      ensureCloseVariantsIsMutable();
+      closeVariants_.add(value);
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

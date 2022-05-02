@@ -30,22 +30,20 @@ public final class GeoTargetConstantStatusProto {
     java.lang.String[] descriptorData = {
       "\n?google/ads/googleads/v10/enums/geo_tar" +
       "get_constant_status.proto\022\036google.ads.go" +
-      "ogleads.v10.enums\032\034google/api/annotation" +
-      "s.proto\"x\n\033GeoTargetConstantStatusEnum\"Y" +
-      "\n\027GeoTargetConstantStatus\022\017\n\013UNSPECIFIED" +
-      "\020\000\022\013\n\007UNKNOWN\020\001\022\013\n\007ENABLED\020\002\022\023\n\017REMOVAL_" +
-      "PLANNED\020\003B\366\001\n\"com.google.ads.googleads.v" +
-      "10.enumsB\034GeoTargetConstantStatusProtoP\001" +
-      "ZCgoogle.golang.org/genproto/googleapis/" +
-      "ads/googleads/v10/enums;enums\242\002\003GAA\252\002\036Go" +
-      "ogle.Ads.GoogleAds.V10.Enums\312\002\036Google\\Ad" +
-      "s\\GoogleAds\\V10\\Enums\352\002\"Google::Ads::Goo" +
-      "gleAds::V10::Enumsb\006proto3"
+      "ogleads.v10.enums\"x\n\033GeoTargetConstantSt" +
+      "atusEnum\"Y\n\027GeoTargetConstantStatus\022\017\n\013U" +
+      "NSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\013\n\007ENABLED\020\002\022\023" +
+      "\n\017REMOVAL_PLANNED\020\003B\366\001\n\"com.google.ads.g" +
+      "oogleads.v10.enumsB\034GeoTargetConstantSta" +
+      "tusProtoP\001ZCgoogle.golang.org/genproto/g" +
+      "oogleapis/ads/googleads/v10/enums;enums\242" +
+      "\002\003GAA\252\002\036Google.Ads.GoogleAds.V10.Enums\312\002" +
+      "\036Google\\Ads\\GoogleAds\\V10\\Enums\352\002\"Google" +
+      "::Ads::GoogleAds::V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_GeoTargetConstantStatusEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -53,7 +51,6 @@ public final class GeoTargetConstantStatusProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_GeoTargetConstantStatusEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

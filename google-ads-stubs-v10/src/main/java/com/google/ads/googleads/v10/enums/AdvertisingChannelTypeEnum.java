@@ -63,6 +63,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -191,6 +193,14 @@ private static final long serialVersionUID = 0L;
      * <code>LOCAL_SERVICES = 11;</code>
      */
     LOCAL_SERVICES(11),
+    /**
+     * <pre>
+     * Discovery campaigns.
+     * </pre>
+     *
+     * <code>DISCOVERY = 12;</code>
+     */
+    DISCOVERY(12),
     UNRECOGNIZED(-1),
     ;
 
@@ -292,6 +302,14 @@ private static final long serialVersionUID = 0L;
      * <code>LOCAL_SERVICES = 11;</code>
      */
     public static final int LOCAL_SERVICES_VALUE = 11;
+    /**
+     * <pre>
+     * Discovery campaigns.
+     * </pre>
+     *
+     * <code>DISCOVERY = 12;</code>
+     */
+    public static final int DISCOVERY_VALUE = 12;
 
 
     public final int getNumber() {
@@ -330,6 +348,7 @@ private static final long serialVersionUID = 0L;
         case 9: return SMART;
         case 10: return PERFORMANCE_MAX;
         case 11: return LOCAL_SERVICES;
+        case 12: return DISCOVERY;
         default: return null;
       }
     }

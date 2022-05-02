@@ -63,6 +63,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -135,6 +137,22 @@ private static final long serialVersionUID = 0L;
      * <code>CANNOT_REMOVE_LINKED_CUSTOM_CONVERSION_GOAL = 4;</code>
      */
     CANNOT_REMOVE_LINKED_CUSTOM_CONVERSION_GOAL(4),
+    /**
+     * <pre>
+     * Custom goal with the same name already exists.
+     * </pre>
+     *
+     * <code>CUSTOM_GOAL_DUPLICATE_NAME = 5;</code>
+     */
+    CUSTOM_GOAL_DUPLICATE_NAME(5),
+    /**
+     * <pre>
+     * Custom goal with the same conversion action list already exists.
+     * </pre>
+     *
+     * <code>DUPLICATE_CONVERSION_ACTION_LIST = 6;</code>
+     */
+    DUPLICATE_CONVERSION_ACTION_LIST(6),
     UNRECOGNIZED(-1),
     ;
 
@@ -180,6 +198,22 @@ private static final long serialVersionUID = 0L;
      * <code>CANNOT_REMOVE_LINKED_CUSTOM_CONVERSION_GOAL = 4;</code>
      */
     public static final int CANNOT_REMOVE_LINKED_CUSTOM_CONVERSION_GOAL_VALUE = 4;
+    /**
+     * <pre>
+     * Custom goal with the same name already exists.
+     * </pre>
+     *
+     * <code>CUSTOM_GOAL_DUPLICATE_NAME = 5;</code>
+     */
+    public static final int CUSTOM_GOAL_DUPLICATE_NAME_VALUE = 5;
+    /**
+     * <pre>
+     * Custom goal with the same conversion action list already exists.
+     * </pre>
+     *
+     * <code>DUPLICATE_CONVERSION_ACTION_LIST = 6;</code>
+     */
+    public static final int DUPLICATE_CONVERSION_ACTION_LIST_VALUE = 6;
 
 
     public final int getNumber() {
@@ -211,6 +245,8 @@ private static final long serialVersionUID = 0L;
         case 2: return INVALID_CONVERSION_ACTION;
         case 3: return CONVERSION_ACTION_NOT_ENABLED;
         case 4: return CANNOT_REMOVE_LINKED_CUSTOM_CONVERSION_GOAL;
+        case 5: return CUSTOM_GOAL_DUPLICATE_NAME;
+        case 6: return DUPLICATE_CONVERSION_ACTION_LIST;
         default: return null;
       }
     }

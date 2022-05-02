@@ -31,33 +31,32 @@ public final class CampaignAssetSetProto {
       "\n;google/ads/googleads/v10/resources/cam" +
       "paign_asset_set.proto\022\"google.ads.google" +
       "ads.v10.resources\032:google/ads/googleads/" +
-      "v10/enums/asset_set_link_status.proto\032\034g" +
-      "oogle/api/annotations.proto\032\037google/api/" +
-      "field_behavior.proto\032\031google/api/resourc" +
-      "e.proto\"\257\003\n\020CampaignAssetSet\022H\n\rresource" +
-      "_name\030\001 \001(\tB1\340A\005\372A+\n)googleads.googleapi" +
-      "s.com/CampaignAssetSet\022;\n\010campaign\030\002 \001(\t" +
-      "B)\340A\005\372A#\n!googleads.googleapis.com/Campa" +
-      "ign\022<\n\tasset_set\030\003 \001(\tB)\340A\005\372A#\n!googlead" +
-      "s.googleapis.com/AssetSet\022^\n\006status\030\004 \001(" +
-      "\0162I.google.ads.googleads.v10.enums.Asset" +
-      "SetLinkStatusEnum.AssetSetLinkStatusB\003\340A" +
-      "\003:v\352As\n)googleads.googleapis.com/Campaig" +
-      "nAssetSet\022Fcustomers/{customer_id}/campa" +
-      "ignAssetSets/{campaign_id}~{asset_set_id" +
-      "}B\207\002\n&com.google.ads.googleads.v10.resou" +
-      "rcesB\025CampaignAssetSetProtoP\001ZKgoogle.go" +
-      "lang.org/genproto/googleapis/ads/googlea" +
-      "ds/v10/resources;resources\242\002\003GAA\252\002\"Googl" +
-      "e.Ads.GoogleAds.V10.Resources\312\002\"Google\\A" +
-      "ds\\GoogleAds\\V10\\Resources\352\002&Google::Ads" +
-      "::GoogleAds::V10::Resourcesb\006proto3"
+      "v10/enums/asset_set_link_status.proto\032\037g" +
+      "oogle/api/field_behavior.proto\032\031google/a" +
+      "pi/resource.proto\"\257\003\n\020CampaignAssetSet\022H" +
+      "\n\rresource_name\030\001 \001(\tB1\340A\005\372A+\n)googleads" +
+      ".googleapis.com/CampaignAssetSet\022;\n\010camp" +
+      "aign\030\002 \001(\tB)\340A\005\372A#\n!googleads.googleapis" +
+      ".com/Campaign\022<\n\tasset_set\030\003 \001(\tB)\340A\005\372A#" +
+      "\n!googleads.googleapis.com/AssetSet\022^\n\006s" +
+      "tatus\030\004 \001(\0162I.google.ads.googleads.v10.e" +
+      "nums.AssetSetLinkStatusEnum.AssetSetLink" +
+      "StatusB\003\340A\003:v\352As\n)googleads.googleapis.c" +
+      "om/CampaignAssetSet\022Fcustomers/{customer" +
+      "_id}/campaignAssetSets/{campaign_id}~{as" +
+      "set_set_id}B\207\002\n&com.google.ads.googleads" +
+      ".v10.resourcesB\025CampaignAssetSetProtoP\001Z" +
+      "Kgoogle.golang.org/genproto/googleapis/a" +
+      "ds/googleads/v10/resources;resources\242\002\003G" +
+      "AA\252\002\"Google.Ads.GoogleAds.V10.Resources\312" +
+      "\002\"Google\\Ads\\GoogleAds\\V10\\Resources\352\002&G" +
+      "oogle::Ads::GoogleAds::V10::Resourcesb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.enums.AssetSetLinkStatusProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -75,7 +74,6 @@ public final class CampaignAssetSetProto {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.enums.AssetSetLinkStatusProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

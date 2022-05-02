@@ -30,29 +30,27 @@ public final class FunctionParsingErrorProto {
     java.lang.String[] descriptorData = {
       "\n<google/ads/googleads/v10/errors/functi" +
       "on_parsing_error.proto\022\037google.ads.googl" +
-      "eads.v10.errors\032\034google/api/annotations." +
-      "proto\"\202\003\n\030FunctionParsingErrorEnum\"\345\002\n\024F" +
-      "unctionParsingError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007" +
-      "UNKNOWN\020\001\022\021\n\rNO_MORE_INPUT\020\002\022\026\n\022EXPECTED" +
-      "_CHARACTER\020\003\022\030\n\024UNEXPECTED_SEPARATOR\020\004\022\032" +
-      "\n\026UNMATCHED_LEFT_BRACKET\020\005\022\033\n\027UNMATCHED_" +
-      "RIGHT_BRACKET\020\006\022\035\n\031TOO_MANY_NESTED_FUNCT" +
-      "IONS\020\007\022\036\n\032MISSING_RIGHT_HAND_OPERAND\020\010\022\031" +
-      "\n\025INVALID_OPERATOR_NAME\020\t\022/\n+FEED_ATTRIB" +
-      "UTE_OPERAND_ARGUMENT_NOT_INTEGER\020\n\022\017\n\013NO" +
-      "_OPERANDS\020\013\022\025\n\021TOO_MANY_OPERANDS\020\014B\371\001\n#c" +
-      "om.google.ads.googleads.v10.errorsB\031Func" +
-      "tionParsingErrorProtoP\001ZEgoogle.golang.o" +
-      "rg/genproto/googleapis/ads/googleads/v10" +
-      "/errors;errors\242\002\003GAA\252\002\037Google.Ads.Google" +
-      "Ads.V10.Errors\312\002\037Google\\Ads\\GoogleAds\\V1" +
-      "0\\Errors\352\002#Google::Ads::GoogleAds::V10::" +
-      "Errorsb\006proto3"
+      "eads.v10.errors\"\202\003\n\030FunctionParsingError" +
+      "Enum\"\345\002\n\024FunctionParsingError\022\017\n\013UNSPECI" +
+      "FIED\020\000\022\013\n\007UNKNOWN\020\001\022\021\n\rNO_MORE_INPUT\020\002\022\026" +
+      "\n\022EXPECTED_CHARACTER\020\003\022\030\n\024UNEXPECTED_SEP" +
+      "ARATOR\020\004\022\032\n\026UNMATCHED_LEFT_BRACKET\020\005\022\033\n\027" +
+      "UNMATCHED_RIGHT_BRACKET\020\006\022\035\n\031TOO_MANY_NE" +
+      "STED_FUNCTIONS\020\007\022\036\n\032MISSING_RIGHT_HAND_O" +
+      "PERAND\020\010\022\031\n\025INVALID_OPERATOR_NAME\020\t\022/\n+F" +
+      "EED_ATTRIBUTE_OPERAND_ARGUMENT_NOT_INTEG" +
+      "ER\020\n\022\017\n\013NO_OPERANDS\020\013\022\025\n\021TOO_MANY_OPERAN" +
+      "DS\020\014B\371\001\n#com.google.ads.googleads.v10.er" +
+      "rorsB\031FunctionParsingErrorProtoP\001ZEgoogl" +
+      "e.golang.org/genproto/googleapis/ads/goo" +
+      "gleads/v10/errors;errors\242\002\003GAA\252\002\037Google." +
+      "Ads.GoogleAds.V10.Errors\312\002\037Google\\Ads\\Go" +
+      "ogleAds\\V10\\Errors\352\002#Google::Ads::Google" +
+      "Ads::V10::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_FunctionParsingErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -60,7 +58,6 @@ public final class FunctionParsingErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_FunctionParsingErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

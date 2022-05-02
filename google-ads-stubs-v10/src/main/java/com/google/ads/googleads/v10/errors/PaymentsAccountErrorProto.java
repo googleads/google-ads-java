@@ -30,22 +30,20 @@ public final class PaymentsAccountErrorProto {
     java.lang.String[] descriptorData = {
       "\n<google/ads/googleads/v10/errors/paymen" +
       "ts_account_error.proto\022\037google.ads.googl" +
-      "eads.v10.errors\032\034google/api/annotations." +
-      "proto\"x\n\030PaymentsAccountErrorEnum\"\\\n\024Pay" +
-      "mentsAccountError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UN" +
-      "KNOWN\020\001\022&\n\"NOT_SUPPORTED_FOR_MANAGER_CUS" +
-      "TOMER\020\002B\371\001\n#com.google.ads.googleads.v10" +
-      ".errorsB\031PaymentsAccountErrorProtoP\001ZEgo" +
-      "ogle.golang.org/genproto/googleapis/ads/" +
-      "googleads/v10/errors;errors\242\002\003GAA\252\002\037Goog" +
-      "le.Ads.GoogleAds.V10.Errors\312\002\037Google\\Ads" +
-      "\\GoogleAds\\V10\\Errors\352\002#Google::Ads::Goo" +
-      "gleAds::V10::Errorsb\006proto3"
+      "eads.v10.errors\"x\n\030PaymentsAccountErrorE" +
+      "num\"\\\n\024PaymentsAccountError\022\017\n\013UNSPECIFI" +
+      "ED\020\000\022\013\n\007UNKNOWN\020\001\022&\n\"NOT_SUPPORTED_FOR_M" +
+      "ANAGER_CUSTOMER\020\002B\371\001\n#com.google.ads.goo" +
+      "gleads.v10.errorsB\031PaymentsAccountErrorP" +
+      "rotoP\001ZEgoogle.golang.org/genproto/googl" +
+      "eapis/ads/googleads/v10/errors;errors\242\002\003" +
+      "GAA\252\002\037Google.Ads.GoogleAds.V10.Errors\312\002\037" +
+      "Google\\Ads\\GoogleAds\\V10\\Errors\352\002#Google" +
+      "::Ads::GoogleAds::V10::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_PaymentsAccountErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -53,7 +51,6 @@ public final class PaymentsAccountErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_PaymentsAccountErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -221,6 +221,19 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 202: {
+            com.google.ads.googleads.v10.resources.CampaignGroup.Builder subBuilder = null;
+            if (campaignGroup_ != null) {
+              subBuilder = campaignGroup_.toBuilder();
+            }
+            campaignGroup_ = input.readMessage(com.google.ads.googleads.v10.resources.CampaignGroup.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(campaignGroup_);
+              campaignGroup_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           case 210: {
             com.google.ads.googleads.v10.resources.CampaignBidModifier.Builder subBuilder = null;
             if (campaignBidModifier_ != null) {
@@ -2002,6 +2015,19 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 1538: {
+            com.google.ads.googleads.v10.resources.LeadFormSubmissionData.Builder subBuilder = null;
+            if (leadFormSubmissionData_ != null) {
+              subBuilder = leadFormSubmissionData_.toBuilder();
+            }
+            leadFormSubmissionData_ = input.readMessage(com.google.ads.googleads.v10.resources.LeadFormSubmissionData.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(leadFormSubmissionData_);
+              leadFormSubmissionData_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           case 1546: {
             com.google.ads.googleads.v10.resources.AdGroupAdAssetCombinationView.Builder subBuilder = null;
             if (adGroupAdAssetCombinationView_ != null) {
@@ -2026,6 +2052,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -4097,6 +4125,44 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public com.google.ads.googleads.v10.resources.CampaignFeedOrBuilder getCampaignFeedOrBuilder() {
     return getCampaignFeed();
+  }
+
+  public static final int CAMPAIGN_GROUP_FIELD_NUMBER = 25;
+  private com.google.ads.googleads.v10.resources.CampaignGroup campaignGroup_;
+  /**
+   * <pre>
+   * Campaign Group referenced in AWQL query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.resources.CampaignGroup campaign_group = 25;</code>
+   * @return Whether the campaignGroup field is set.
+   */
+  @java.lang.Override
+  public boolean hasCampaignGroup() {
+    return campaignGroup_ != null;
+  }
+  /**
+   * <pre>
+   * Campaign Group referenced in AWQL query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.resources.CampaignGroup campaign_group = 25;</code>
+   * @return The campaignGroup.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.resources.CampaignGroup getCampaignGroup() {
+    return campaignGroup_ == null ? com.google.ads.googleads.v10.resources.CampaignGroup.getDefaultInstance() : campaignGroup_;
+  }
+  /**
+   * <pre>
+   * Campaign Group referenced in AWQL query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.resources.CampaignGroup campaign_group = 25;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.resources.CampaignGroupOrBuilder getCampaignGroupOrBuilder() {
+    return getCampaignGroup();
   }
 
   public static final int CAMPAIGN_LABEL_FIELD_NUMBER = 108;
@@ -7709,6 +7775,44 @@ private static final long serialVersionUID = 0L;
     return getWebpageView();
   }
 
+  public static final int LEAD_FORM_SUBMISSION_DATA_FIELD_NUMBER = 192;
+  private com.google.ads.googleads.v10.resources.LeadFormSubmissionData leadFormSubmissionData_;
+  /**
+   * <pre>
+   * The lead form user submission referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.resources.LeadFormSubmissionData lead_form_submission_data = 192;</code>
+   * @return Whether the leadFormSubmissionData field is set.
+   */
+  @java.lang.Override
+  public boolean hasLeadFormSubmissionData() {
+    return leadFormSubmissionData_ != null;
+  }
+  /**
+   * <pre>
+   * The lead form user submission referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.resources.LeadFormSubmissionData lead_form_submission_data = 192;</code>
+   * @return The leadFormSubmissionData.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.resources.LeadFormSubmissionData getLeadFormSubmissionData() {
+    return leadFormSubmissionData_ == null ? com.google.ads.googleads.v10.resources.LeadFormSubmissionData.getDefaultInstance() : leadFormSubmissionData_;
+  }
+  /**
+   * <pre>
+   * The lead form user submission referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.resources.LeadFormSubmissionData lead_form_submission_data = 192;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.resources.LeadFormSubmissionDataOrBuilder getLeadFormSubmissionDataOrBuilder() {
+    return getLeadFormSubmissionData();
+  }
+
   public static final int METRICS_FIELD_NUMBER = 4;
   private com.google.ads.googleads.v10.common.Metrics metrics_;
   /**
@@ -7837,6 +7941,9 @@ private static final long serialVersionUID = 0L;
     }
     if (adGroupBidModifier_ != null) {
       output.writeMessage(24, getAdGroupBidModifier());
+    }
+    if (campaignGroup_ != null) {
+      output.writeMessage(25, getCampaignGroup());
     }
     if (campaignBidModifier_ != null) {
       output.writeMessage(26, getCampaignBidModifier());
@@ -8249,6 +8356,9 @@ private static final long serialVersionUID = 0L;
     if (assetGroupSignal_ != null) {
       output.writeMessage(191, getAssetGroupSignal());
     }
+    if (leadFormSubmissionData_ != null) {
+      output.writeMessage(192, getLeadFormSubmissionData());
+    }
     if (adGroupAdAssetCombinationView_ != null) {
       output.writeMessage(193, getAdGroupAdAssetCombinationView());
     }
@@ -8312,6 +8422,10 @@ private static final long serialVersionUID = 0L;
     if (adGroupBidModifier_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(24, getAdGroupBidModifier());
+    }
+    if (campaignGroup_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(25, getCampaignGroup());
     }
     if (campaignBidModifier_ != null) {
       size += com.google.protobuf.CodedOutputStream
@@ -8861,6 +8975,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(191, getAssetGroupSignal());
     }
+    if (leadFormSubmissionData_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(192, getLeadFormSubmissionData());
+    }
     if (adGroupAdAssetCombinationView_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(193, getAdGroupAdAssetCombinationView());
@@ -9149,6 +9267,11 @@ private static final long serialVersionUID = 0L;
     if (hasCampaignFeed()) {
       if (!getCampaignFeed()
           .equals(other.getCampaignFeed())) return false;
+    }
+    if (hasCampaignGroup() != other.hasCampaignGroup()) return false;
+    if (hasCampaignGroup()) {
+      if (!getCampaignGroup()
+          .equals(other.getCampaignGroup())) return false;
     }
     if (hasCampaignLabel() != other.hasCampaignLabel()) return false;
     if (hasCampaignLabel()) {
@@ -9625,6 +9748,11 @@ private static final long serialVersionUID = 0L;
       if (!getWebpageView()
           .equals(other.getWebpageView())) return false;
     }
+    if (hasLeadFormSubmissionData() != other.hasLeadFormSubmissionData()) return false;
+    if (hasLeadFormSubmissionData()) {
+      if (!getLeadFormSubmissionData()
+          .equals(other.getLeadFormSubmissionData())) return false;
+    }
     if (hasMetrics() != other.hasMetrics()) return false;
     if (hasMetrics()) {
       if (!getMetrics()
@@ -9861,6 +9989,10 @@ private static final long serialVersionUID = 0L;
     if (hasCampaignFeed()) {
       hash = (37 * hash) + CAMPAIGN_FEED_FIELD_NUMBER;
       hash = (53 * hash) + getCampaignFeed().hashCode();
+    }
+    if (hasCampaignGroup()) {
+      hash = (37 * hash) + CAMPAIGN_GROUP_FIELD_NUMBER;
+      hash = (53 * hash) + getCampaignGroup().hashCode();
     }
     if (hasCampaignLabel()) {
       hash = (37 * hash) + CAMPAIGN_LABEL_FIELD_NUMBER;
@@ -10241,6 +10373,10 @@ private static final long serialVersionUID = 0L;
     if (hasWebpageView()) {
       hash = (37 * hash) + WEBPAGE_VIEW_FIELD_NUMBER;
       hash = (53 * hash) + getWebpageView().hashCode();
+    }
+    if (hasLeadFormSubmissionData()) {
+      hash = (37 * hash) + LEAD_FORM_SUBMISSION_DATA_FIELD_NUMBER;
+      hash = (53 * hash) + getLeadFormSubmissionData().hashCode();
     }
     if (hasMetrics()) {
       hash = (37 * hash) + METRICS_FIELD_NUMBER;
@@ -10710,6 +10846,12 @@ private static final long serialVersionUID = 0L;
       } else {
         campaignFeed_ = null;
         campaignFeedBuilder_ = null;
+      }
+      if (campaignGroupBuilder_ == null) {
+        campaignGroup_ = null;
+      } else {
+        campaignGroup_ = null;
+        campaignGroupBuilder_ = null;
       }
       if (campaignLabelBuilder_ == null) {
         campaignLabel_ = null;
@@ -11281,6 +11423,12 @@ private static final long serialVersionUID = 0L;
         webpageView_ = null;
         webpageViewBuilder_ = null;
       }
+      if (leadFormSubmissionDataBuilder_ == null) {
+        leadFormSubmissionData_ = null;
+      } else {
+        leadFormSubmissionData_ = null;
+        leadFormSubmissionDataBuilder_ = null;
+      }
       if (metricsBuilder_ == null) {
         metrics_ = null;
       } else {
@@ -11588,6 +11736,11 @@ private static final long serialVersionUID = 0L;
         result.campaignFeed_ = campaignFeed_;
       } else {
         result.campaignFeed_ = campaignFeedBuilder_.build();
+      }
+      if (campaignGroupBuilder_ == null) {
+        result.campaignGroup_ = campaignGroup_;
+      } else {
+        result.campaignGroup_ = campaignGroupBuilder_.build();
       }
       if (campaignLabelBuilder_ == null) {
         result.campaignLabel_ = campaignLabel_;
@@ -12064,6 +12217,11 @@ private static final long serialVersionUID = 0L;
       } else {
         result.webpageView_ = webpageViewBuilder_.build();
       }
+      if (leadFormSubmissionDataBuilder_ == null) {
+        result.leadFormSubmissionData_ = leadFormSubmissionData_;
+      } else {
+        result.leadFormSubmissionData_ = leadFormSubmissionDataBuilder_.build();
+      }
       if (metricsBuilder_ == null) {
         result.metrics_ = metrics_;
       } else {
@@ -12283,6 +12441,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasCampaignFeed()) {
         mergeCampaignFeed(other.getCampaignFeed());
+      }
+      if (other.hasCampaignGroup()) {
+        mergeCampaignGroup(other.getCampaignGroup());
       }
       if (other.hasCampaignLabel()) {
         mergeCampaignLabel(other.getCampaignLabel());
@@ -12568,6 +12729,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasWebpageView()) {
         mergeWebpageView(other.getWebpageView());
+      }
+      if (other.hasLeadFormSubmissionData()) {
+        mergeLeadFormSubmissionData(other.getLeadFormSubmissionData());
       }
       if (other.hasMetrics()) {
         mergeMetrics(other.getMetrics());
@@ -20972,6 +21136,161 @@ private static final long serialVersionUID = 0L;
         campaignFeed_ = null;
       }
       return campaignFeedBuilder_;
+    }
+
+    private com.google.ads.googleads.v10.resources.CampaignGroup campaignGroup_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v10.resources.CampaignGroup, com.google.ads.googleads.v10.resources.CampaignGroup.Builder, com.google.ads.googleads.v10.resources.CampaignGroupOrBuilder> campaignGroupBuilder_;
+    /**
+     * <pre>
+     * Campaign Group referenced in AWQL query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.CampaignGroup campaign_group = 25;</code>
+     * @return Whether the campaignGroup field is set.
+     */
+    public boolean hasCampaignGroup() {
+      return campaignGroupBuilder_ != null || campaignGroup_ != null;
+    }
+    /**
+     * <pre>
+     * Campaign Group referenced in AWQL query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.CampaignGroup campaign_group = 25;</code>
+     * @return The campaignGroup.
+     */
+    public com.google.ads.googleads.v10.resources.CampaignGroup getCampaignGroup() {
+      if (campaignGroupBuilder_ == null) {
+        return campaignGroup_ == null ? com.google.ads.googleads.v10.resources.CampaignGroup.getDefaultInstance() : campaignGroup_;
+      } else {
+        return campaignGroupBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Campaign Group referenced in AWQL query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.CampaignGroup campaign_group = 25;</code>
+     */
+    public Builder setCampaignGroup(com.google.ads.googleads.v10.resources.CampaignGroup value) {
+      if (campaignGroupBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        campaignGroup_ = value;
+        onChanged();
+      } else {
+        campaignGroupBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Campaign Group referenced in AWQL query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.CampaignGroup campaign_group = 25;</code>
+     */
+    public Builder setCampaignGroup(
+        com.google.ads.googleads.v10.resources.CampaignGroup.Builder builderForValue) {
+      if (campaignGroupBuilder_ == null) {
+        campaignGroup_ = builderForValue.build();
+        onChanged();
+      } else {
+        campaignGroupBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Campaign Group referenced in AWQL query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.CampaignGroup campaign_group = 25;</code>
+     */
+    public Builder mergeCampaignGroup(com.google.ads.googleads.v10.resources.CampaignGroup value) {
+      if (campaignGroupBuilder_ == null) {
+        if (campaignGroup_ != null) {
+          campaignGroup_ =
+            com.google.ads.googleads.v10.resources.CampaignGroup.newBuilder(campaignGroup_).mergeFrom(value).buildPartial();
+        } else {
+          campaignGroup_ = value;
+        }
+        onChanged();
+      } else {
+        campaignGroupBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Campaign Group referenced in AWQL query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.CampaignGroup campaign_group = 25;</code>
+     */
+    public Builder clearCampaignGroup() {
+      if (campaignGroupBuilder_ == null) {
+        campaignGroup_ = null;
+        onChanged();
+      } else {
+        campaignGroup_ = null;
+        campaignGroupBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Campaign Group referenced in AWQL query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.CampaignGroup campaign_group = 25;</code>
+     */
+    public com.google.ads.googleads.v10.resources.CampaignGroup.Builder getCampaignGroupBuilder() {
+      
+      onChanged();
+      return getCampaignGroupFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Campaign Group referenced in AWQL query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.CampaignGroup campaign_group = 25;</code>
+     */
+    public com.google.ads.googleads.v10.resources.CampaignGroupOrBuilder getCampaignGroupOrBuilder() {
+      if (campaignGroupBuilder_ != null) {
+        return campaignGroupBuilder_.getMessageOrBuilder();
+      } else {
+        return campaignGroup_ == null ?
+            com.google.ads.googleads.v10.resources.CampaignGroup.getDefaultInstance() : campaignGroup_;
+      }
+    }
+    /**
+     * <pre>
+     * Campaign Group referenced in AWQL query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.CampaignGroup campaign_group = 25;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v10.resources.CampaignGroup, com.google.ads.googleads.v10.resources.CampaignGroup.Builder, com.google.ads.googleads.v10.resources.CampaignGroupOrBuilder> 
+        getCampaignGroupFieldBuilder() {
+      if (campaignGroupBuilder_ == null) {
+        campaignGroupBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v10.resources.CampaignGroup, com.google.ads.googleads.v10.resources.CampaignGroup.Builder, com.google.ads.googleads.v10.resources.CampaignGroupOrBuilder>(
+                getCampaignGroup(),
+                getParentForChildren(),
+                isClean());
+        campaignGroup_ = null;
+      }
+      return campaignGroupBuilder_;
     }
 
     private com.google.ads.googleads.v10.resources.CampaignLabel campaignLabel_;
@@ -35697,6 +36016,161 @@ private static final long serialVersionUID = 0L;
         webpageView_ = null;
       }
       return webpageViewBuilder_;
+    }
+
+    private com.google.ads.googleads.v10.resources.LeadFormSubmissionData leadFormSubmissionData_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v10.resources.LeadFormSubmissionData, com.google.ads.googleads.v10.resources.LeadFormSubmissionData.Builder, com.google.ads.googleads.v10.resources.LeadFormSubmissionDataOrBuilder> leadFormSubmissionDataBuilder_;
+    /**
+     * <pre>
+     * The lead form user submission referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.LeadFormSubmissionData lead_form_submission_data = 192;</code>
+     * @return Whether the leadFormSubmissionData field is set.
+     */
+    public boolean hasLeadFormSubmissionData() {
+      return leadFormSubmissionDataBuilder_ != null || leadFormSubmissionData_ != null;
+    }
+    /**
+     * <pre>
+     * The lead form user submission referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.LeadFormSubmissionData lead_form_submission_data = 192;</code>
+     * @return The leadFormSubmissionData.
+     */
+    public com.google.ads.googleads.v10.resources.LeadFormSubmissionData getLeadFormSubmissionData() {
+      if (leadFormSubmissionDataBuilder_ == null) {
+        return leadFormSubmissionData_ == null ? com.google.ads.googleads.v10.resources.LeadFormSubmissionData.getDefaultInstance() : leadFormSubmissionData_;
+      } else {
+        return leadFormSubmissionDataBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The lead form user submission referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.LeadFormSubmissionData lead_form_submission_data = 192;</code>
+     */
+    public Builder setLeadFormSubmissionData(com.google.ads.googleads.v10.resources.LeadFormSubmissionData value) {
+      if (leadFormSubmissionDataBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        leadFormSubmissionData_ = value;
+        onChanged();
+      } else {
+        leadFormSubmissionDataBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The lead form user submission referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.LeadFormSubmissionData lead_form_submission_data = 192;</code>
+     */
+    public Builder setLeadFormSubmissionData(
+        com.google.ads.googleads.v10.resources.LeadFormSubmissionData.Builder builderForValue) {
+      if (leadFormSubmissionDataBuilder_ == null) {
+        leadFormSubmissionData_ = builderForValue.build();
+        onChanged();
+      } else {
+        leadFormSubmissionDataBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The lead form user submission referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.LeadFormSubmissionData lead_form_submission_data = 192;</code>
+     */
+    public Builder mergeLeadFormSubmissionData(com.google.ads.googleads.v10.resources.LeadFormSubmissionData value) {
+      if (leadFormSubmissionDataBuilder_ == null) {
+        if (leadFormSubmissionData_ != null) {
+          leadFormSubmissionData_ =
+            com.google.ads.googleads.v10.resources.LeadFormSubmissionData.newBuilder(leadFormSubmissionData_).mergeFrom(value).buildPartial();
+        } else {
+          leadFormSubmissionData_ = value;
+        }
+        onChanged();
+      } else {
+        leadFormSubmissionDataBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The lead form user submission referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.LeadFormSubmissionData lead_form_submission_data = 192;</code>
+     */
+    public Builder clearLeadFormSubmissionData() {
+      if (leadFormSubmissionDataBuilder_ == null) {
+        leadFormSubmissionData_ = null;
+        onChanged();
+      } else {
+        leadFormSubmissionData_ = null;
+        leadFormSubmissionDataBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * The lead form user submission referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.LeadFormSubmissionData lead_form_submission_data = 192;</code>
+     */
+    public com.google.ads.googleads.v10.resources.LeadFormSubmissionData.Builder getLeadFormSubmissionDataBuilder() {
+      
+      onChanged();
+      return getLeadFormSubmissionDataFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The lead form user submission referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.LeadFormSubmissionData lead_form_submission_data = 192;</code>
+     */
+    public com.google.ads.googleads.v10.resources.LeadFormSubmissionDataOrBuilder getLeadFormSubmissionDataOrBuilder() {
+      if (leadFormSubmissionDataBuilder_ != null) {
+        return leadFormSubmissionDataBuilder_.getMessageOrBuilder();
+      } else {
+        return leadFormSubmissionData_ == null ?
+            com.google.ads.googleads.v10.resources.LeadFormSubmissionData.getDefaultInstance() : leadFormSubmissionData_;
+      }
+    }
+    /**
+     * <pre>
+     * The lead form user submission referenced in the query.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.LeadFormSubmissionData lead_form_submission_data = 192;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v10.resources.LeadFormSubmissionData, com.google.ads.googleads.v10.resources.LeadFormSubmissionData.Builder, com.google.ads.googleads.v10.resources.LeadFormSubmissionDataOrBuilder> 
+        getLeadFormSubmissionDataFieldBuilder() {
+      if (leadFormSubmissionDataBuilder_ == null) {
+        leadFormSubmissionDataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v10.resources.LeadFormSubmissionData, com.google.ads.googleads.v10.resources.LeadFormSubmissionData.Builder, com.google.ads.googleads.v10.resources.LeadFormSubmissionDataOrBuilder>(
+                getLeadFormSubmissionData(),
+                getParentForChildren(),
+                isClean());
+        leadFormSubmissionData_ = null;
+      }
+      return leadFormSubmissionDataBuilder_;
     }
 
     private com.google.ads.googleads.v10.common.Metrics metrics_;

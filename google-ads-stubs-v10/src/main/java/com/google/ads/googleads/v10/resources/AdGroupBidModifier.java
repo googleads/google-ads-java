@@ -200,6 +200,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -2118,8 +2120,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 5) {
           hotelDateSelectionTypeBuilder_.mergeFrom(value);
+        } else {
+          hotelDateSelectionTypeBuilder_.setMessage(value);
         }
-        hotelDateSelectionTypeBuilder_.setMessage(value);
       }
       criterionCase_ = 5;
       return this;
@@ -2295,8 +2298,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 6) {
           hotelAdvanceBookingWindowBuilder_.mergeFrom(value);
+        } else {
+          hotelAdvanceBookingWindowBuilder_.setMessage(value);
         }
-        hotelAdvanceBookingWindowBuilder_.setMessage(value);
       }
       criterionCase_ = 6;
       return this;
@@ -2472,8 +2476,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 7) {
           hotelLengthOfStayBuilder_.mergeFrom(value);
+        } else {
+          hotelLengthOfStayBuilder_.setMessage(value);
         }
-        hotelLengthOfStayBuilder_.setMessage(value);
       }
       criterionCase_ = 7;
       return this;
@@ -2649,8 +2654,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 8) {
           hotelCheckInDayBuilder_.mergeFrom(value);
+        } else {
+          hotelCheckInDayBuilder_.setMessage(value);
         }
-        hotelCheckInDayBuilder_.setMessage(value);
       }
       criterionCase_ = 8;
       return this;
@@ -2826,8 +2832,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 11) {
           deviceBuilder_.mergeFrom(value);
+        } else {
+          deviceBuilder_.setMessage(value);
         }
-        deviceBuilder_.setMessage(value);
       }
       criterionCase_ = 11;
       return this;
@@ -3003,8 +3010,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 12) {
           preferredContentBuilder_.mergeFrom(value);
+        } else {
+          preferredContentBuilder_.setMessage(value);
         }
-        preferredContentBuilder_.setMessage(value);
       }
       criterionCase_ = 12;
       return this;
@@ -3180,8 +3188,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 17) {
           hotelCheckInDateRangeBuilder_.mergeFrom(value);
+        } else {
+          hotelCheckInDateRangeBuilder_.setMessage(value);
         }
-        hotelCheckInDateRangeBuilder_.setMessage(value);
       }
       criterionCase_ = 17;
       return this;

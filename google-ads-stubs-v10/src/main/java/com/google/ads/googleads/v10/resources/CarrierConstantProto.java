@@ -30,28 +30,26 @@ public final class CarrierConstantProto {
     java.lang.String[] descriptorData = {
       "\n9google/ads/googleads/v10/resources/car" +
       "rier_constant.proto\022\"google.ads.googlead" +
-      "s.v10.resources\032\034google/api/annotations." +
-      "proto\032\037google/api/field_behavior.proto\032\031" +
-      "google/api/resource.proto\"\231\002\n\017CarrierCon" +
-      "stant\022G\n\rresource_name\030\001 \001(\tB0\340A\003\372A*\n(go" +
-      "ogleads.googleapis.com/CarrierConstant\022\024" +
-      "\n\002id\030\005 \001(\003B\003\340A\003H\000\210\001\001\022\026\n\004name\030\006 \001(\tB\003\340A\003H" +
-      "\001\210\001\001\022\036\n\014country_code\030\007 \001(\tB\003\340A\003H\002\210\001\001:N\352A" +
-      "K\n(googleads.googleapis.com/CarrierConst" +
-      "ant\022\037carrierConstants/{criterion_id}B\005\n\003" +
-      "_idB\007\n\005_nameB\017\n\r_country_codeB\206\002\n&com.go" +
-      "ogle.ads.googleads.v10.resourcesB\024Carrie" +
-      "rConstantProtoP\001ZKgoogle.golang.org/genp" +
-      "roto/googleapis/ads/googleads/v10/resour" +
-      "ces;resources\242\002\003GAA\252\002\"Google.Ads.GoogleA" +
-      "ds.V10.Resources\312\002\"Google\\Ads\\GoogleAds\\" +
-      "V10\\Resources\352\002&Google::Ads::GoogleAds::" +
-      "V10::Resourcesb\006proto3"
+      "s.v10.resources\032\037google/api/field_behavi" +
+      "or.proto\032\031google/api/resource.proto\"\231\002\n\017" +
+      "CarrierConstant\022G\n\rresource_name\030\001 \001(\tB0" +
+      "\340A\003\372A*\n(googleads.googleapis.com/Carrier" +
+      "Constant\022\024\n\002id\030\005 \001(\003B\003\340A\003H\000\210\001\001\022\026\n\004name\030\006" +
+      " \001(\tB\003\340A\003H\001\210\001\001\022\036\n\014country_code\030\007 \001(\tB\003\340A" +
+      "\003H\002\210\001\001:N\352AK\n(googleads.googleapis.com/Ca" +
+      "rrierConstant\022\037carrierConstants/{criteri" +
+      "on_id}B\005\n\003_idB\007\n\005_nameB\017\n\r_country_codeB" +
+      "\206\002\n&com.google.ads.googleads.v10.resourc" +
+      "esB\024CarrierConstantProtoP\001ZKgoogle.golan" +
+      "g.org/genproto/googleapis/ads/googleads/" +
+      "v10/resources;resources\242\002\003GAA\252\002\"Google.A" +
+      "ds.GoogleAds.V10.Resources\312\002\"Google\\Ads\\" +
+      "GoogleAds\\V10\\Resources\352\002&Google::Ads::G" +
+      "oogleAds::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -68,7 +66,6 @@ public final class CarrierConstantProto {
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

@@ -31,25 +31,23 @@ public final class CustomizerValueProto {
       "\n6google/ads/googleads/v10/common/custom" +
       "izer_value.proto\022\037google.ads.googleads.v" +
       "10.common\032>google/ads/googleads/v10/enum" +
-      "s/customizer_attribute_type.proto\032\034googl" +
-      "e/api/annotations.proto\032\037google/api/fiel" +
-      "d_behavior.proto\"\224\001\n\017CustomizerValue\022f\n\004" +
-      "type\030\001 \001(\0162S.google.ads.googleads.v10.en" +
-      "ums.CustomizerAttributeTypeEnum.Customiz" +
-      "erAttributeTypeB\003\340A\002\022\031\n\014string_value\030\002 \001" +
-      "(\tB\003\340A\002B\364\001\n#com.google.ads.googleads.v10" +
-      ".commonB\024CustomizerValueProtoP\001ZEgoogle." +
-      "golang.org/genproto/googleapis/ads/googl" +
-      "eads/v10/common;common\242\002\003GAA\252\002\037Google.Ad" +
-      "s.GoogleAds.V10.Common\312\002\037Google\\Ads\\Goog" +
-      "leAds\\V10\\Common\352\002#Google::Ads::GoogleAd" +
-      "s::V10::Commonb\006proto3"
+      "s/customizer_attribute_type.proto\032\037googl" +
+      "e/api/field_behavior.proto\"\224\001\n\017Customize" +
+      "rValue\022f\n\004type\030\001 \001(\0162S.google.ads.google" +
+      "ads.v10.enums.CustomizerAttributeTypeEnu" +
+      "m.CustomizerAttributeTypeB\003\340A\002\022\031\n\014string" +
+      "_value\030\002 \001(\tB\003\340A\002B\364\001\n#com.google.ads.goo" +
+      "gleads.v10.commonB\024CustomizerValueProtoP" +
+      "\001ZEgoogle.golang.org/genproto/googleapis" +
+      "/ads/googleads/v10/common;common\242\002\003GAA\252\002" +
+      "\037Google.Ads.GoogleAds.V10.Common\312\002\037Googl" +
+      "e\\Ads\\GoogleAds\\V10\\Common\352\002#Google::Ads" +
+      "::GoogleAds::V10::Commonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.enums.CustomizerAttributeTypeProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_common_CustomizerValue_descriptor =
@@ -64,7 +62,6 @@ public final class CustomizerValueProto {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.enums.CustomizerAttributeTypeProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
   }
 

@@ -31,34 +31,33 @@ public final class MobileDeviceConstantProto {
       "\n?google/ads/googleads/v10/resources/mob" +
       "ile_device_constant.proto\022\"google.ads.go" +
       "ogleads.v10.resources\0327google/ads/google" +
-      "ads/v10/enums/mobile_device_type.proto\032\034" +
-      "google/api/annotations.proto\032\037google/api" +
-      "/field_behavior.proto\032\031google/api/resour" +
-      "ce.proto\"\324\003\n\024MobileDeviceConstant\022L\n\rres" +
-      "ource_name\030\001 \001(\tB5\340A\003\372A/\n-googleads.goog" +
-      "leapis.com/MobileDeviceConstant\022\024\n\002id\030\007 " +
-      "\001(\003B\003\340A\003H\000\210\001\001\022\026\n\004name\030\010 \001(\tB\003\340A\003H\001\210\001\001\022#\n" +
-      "\021manufacturer_name\030\t \001(\tB\003\340A\003H\002\210\001\001\022\'\n\025op" +
-      "erating_system_name\030\n \001(\tB\003\340A\003H\003\210\001\001\022X\n\004t" +
-      "ype\030\006 \001(\0162E.google.ads.googleads.v10.enu" +
-      "ms.MobileDeviceTypeEnum.MobileDeviceType" +
-      "B\003\340A\003:X\352AU\n-googleads.googleapis.com/Mob" +
-      "ileDeviceConstant\022$mobileDeviceConstants" +
-      "/{criterion_id}B\005\n\003_idB\007\n\005_nameB\024\n\022_manu" +
-      "facturer_nameB\030\n\026_operating_system_nameB" +
-      "\213\002\n&com.google.ads.googleads.v10.resourc" +
-      "esB\031MobileDeviceConstantProtoP\001ZKgoogle." +
-      "golang.org/genproto/googleapis/ads/googl" +
-      "eads/v10/resources;resources\242\002\003GAA\252\002\"Goo" +
-      "gle.Ads.GoogleAds.V10.Resources\312\002\"Google" +
-      "\\Ads\\GoogleAds\\V10\\Resources\352\002&Google::A" +
-      "ds::GoogleAds::V10::Resourcesb\006proto3"
+      "ads/v10/enums/mobile_device_type.proto\032\037" +
+      "google/api/field_behavior.proto\032\031google/" +
+      "api/resource.proto\"\324\003\n\024MobileDeviceConst" +
+      "ant\022L\n\rresource_name\030\001 \001(\tB5\340A\003\372A/\n-goog" +
+      "leads.googleapis.com/MobileDeviceConstan" +
+      "t\022\024\n\002id\030\007 \001(\003B\003\340A\003H\000\210\001\001\022\026\n\004name\030\010 \001(\tB\003\340" +
+      "A\003H\001\210\001\001\022#\n\021manufacturer_name\030\t \001(\tB\003\340A\003H" +
+      "\002\210\001\001\022\'\n\025operating_system_name\030\n \001(\tB\003\340A\003" +
+      "H\003\210\001\001\022X\n\004type\030\006 \001(\0162E.google.ads.googlea" +
+      "ds.v10.enums.MobileDeviceTypeEnum.Mobile" +
+      "DeviceTypeB\003\340A\003:X\352AU\n-googleads.googleap" +
+      "is.com/MobileDeviceConstant\022$mobileDevic" +
+      "eConstants/{criterion_id}B\005\n\003_idB\007\n\005_nam" +
+      "eB\024\n\022_manufacturer_nameB\030\n\026_operating_sy" +
+      "stem_nameB\213\002\n&com.google.ads.googleads.v" +
+      "10.resourcesB\031MobileDeviceConstantProtoP" +
+      "\001ZKgoogle.golang.org/genproto/googleapis" +
+      "/ads/googleads/v10/resources;resources\242\002" +
+      "\003GAA\252\002\"Google.Ads.GoogleAds.V10.Resource" +
+      "s\312\002\"Google\\Ads\\GoogleAds\\V10\\Resources\352\002" +
+      "&Google::Ads::GoogleAds::V10::Resourcesb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.enums.MobileDeviceTypeProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -76,7 +75,6 @@ public final class MobileDeviceConstantProto {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.enums.MobileDeviceTypeProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

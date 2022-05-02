@@ -30,22 +30,20 @@ public final class AccountBudgetStatusProto {
     java.lang.String[] descriptorData = {
       "\n:google/ads/googleads/v10/enums/account" +
       "_budget_status.proto\022\036google.ads.googlea" +
-      "ds.v10.enums\032\034google/api/annotations.pro" +
-      "to\"x\n\027AccountBudgetStatusEnum\"]\n\023Account" +
-      "BudgetStatus\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN" +
-      "\020\001\022\013\n\007PENDING\020\002\022\014\n\010APPROVED\020\003\022\r\n\tCANCELL" +
-      "ED\020\004B\362\001\n\"com.google.ads.googleads.v10.en" +
-      "umsB\030AccountBudgetStatusProtoP\001ZCgoogle." +
-      "golang.org/genproto/googleapis/ads/googl" +
-      "eads/v10/enums;enums\242\002\003GAA\252\002\036Google.Ads." +
-      "GoogleAds.V10.Enums\312\002\036Google\\Ads\\GoogleA" +
-      "ds\\V10\\Enums\352\002\"Google::Ads::GoogleAds::V" +
-      "10::Enumsb\006proto3"
+      "ds.v10.enums\"x\n\027AccountBudgetStatusEnum\"" +
+      "]\n\023AccountBudgetStatus\022\017\n\013UNSPECIFIED\020\000\022" +
+      "\013\n\007UNKNOWN\020\001\022\013\n\007PENDING\020\002\022\014\n\010APPROVED\020\003\022" +
+      "\r\n\tCANCELLED\020\004B\362\001\n\"com.google.ads.google" +
+      "ads.v10.enumsB\030AccountBudgetStatusProtoP" +
+      "\001ZCgoogle.golang.org/genproto/googleapis" +
+      "/ads/googleads/v10/enums;enums\242\002\003GAA\252\002\036G" +
+      "oogle.Ads.GoogleAds.V10.Enums\312\002\036Google\\A" +
+      "ds\\GoogleAds\\V10\\Enums\352\002\"Google::Ads::Go" +
+      "ogleAds::V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_AccountBudgetStatusEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -53,7 +51,6 @@ public final class AccountBudgetStatusProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_AccountBudgetStatusEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

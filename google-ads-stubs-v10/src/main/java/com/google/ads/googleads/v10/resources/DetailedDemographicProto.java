@@ -32,33 +32,31 @@ public final class DetailedDemographicProto {
       "ailed_demographic.proto\022\"google.ads.goog" +
       "leads.v10.resources\032Egoogle/ads/googlead" +
       "s/v10/common/criterion_category_availabi" +
-      "lity.proto\032\034google/api/annotations.proto" +
-      "\032\037google/api/field_behavior.proto\032\031googl" +
-      "e/api/resource.proto\"\302\003\n\023DetailedDemogra" +
-      "phic\022K\n\rresource_name\030\001 \001(\tB4\340A\003\372A.\n,goo" +
-      "gleads.googleapis.com/DetailedDemographi" +
-      "c\022\017\n\002id\030\002 \001(\003B\003\340A\003\022\021\n\004name\030\003 \001(\tB\003\340A\003\022D\n" +
-      "\006parent\030\004 \001(\tB4\340A\003\372A.\n,googleads.googlea" +
-      "pis.com/DetailedDemographic\022\034\n\017launched_" +
-      "to_all\030\005 \001(\010B\003\340A\003\022[\n\016availabilities\030\006 \003(" +
-      "\0132>.google.ads.googleads.v10.common.Crit" +
-      "erionCategoryAvailabilityB\003\340A\003:y\352Av\n,goo" +
-      "gleads.googleapis.com/DetailedDemographi" +
-      "c\022Fcustomers/{customer_id}/detailedDemog" +
-      "raphics/{detailed_demographic_id}B\212\002\n&co" +
-      "m.google.ads.googleads.v10.resourcesB\030De" +
-      "tailedDemographicProtoP\001ZKgoogle.golang." +
-      "org/genproto/googleapis/ads/googleads/v1" +
-      "0/resources;resources\242\002\003GAA\252\002\"Google.Ads" +
-      ".GoogleAds.V10.Resources\312\002\"Google\\Ads\\Go" +
-      "ogleAds\\V10\\Resources\352\002&Google::Ads::Goo" +
-      "gleAds::V10::Resourcesb\006proto3"
+      "lity.proto\032\037google/api/field_behavior.pr" +
+      "oto\032\031google/api/resource.proto\"\302\003\n\023Detai" +
+      "ledDemographic\022K\n\rresource_name\030\001 \001(\tB4\340" +
+      "A\003\372A.\n,googleads.googleapis.com/Detailed" +
+      "Demographic\022\017\n\002id\030\002 \001(\003B\003\340A\003\022\021\n\004name\030\003 \001" +
+      "(\tB\003\340A\003\022D\n\006parent\030\004 \001(\tB4\340A\003\372A.\n,googlea" +
+      "ds.googleapis.com/DetailedDemographic\022\034\n" +
+      "\017launched_to_all\030\005 \001(\010B\003\340A\003\022[\n\016availabil" +
+      "ities\030\006 \003(\0132>.google.ads.googleads.v10.c" +
+      "ommon.CriterionCategoryAvailabilityB\003\340A\003" +
+      ":y\352Av\n,googleads.googleapis.com/Detailed" +
+      "Demographic\022Fcustomers/{customer_id}/det" +
+      "ailedDemographics/{detailed_demographic_" +
+      "id}B\212\002\n&com.google.ads.googleads.v10.res" +
+      "ourcesB\030DetailedDemographicProtoP\001ZKgoog" +
+      "le.golang.org/genproto/googleapis/ads/go" +
+      "ogleads/v10/resources;resources\242\002\003GAA\252\002\"" +
+      "Google.Ads.GoogleAds.V10.Resources\312\002\"Goo" +
+      "gle\\Ads\\GoogleAds\\V10\\Resources\352\002&Google" +
+      "::Ads::GoogleAds::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.common.CriterionCategoryAvailabilityProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -76,7 +74,6 @@ public final class DetailedDemographicProto {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.common.CriterionCategoryAvailabilityProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

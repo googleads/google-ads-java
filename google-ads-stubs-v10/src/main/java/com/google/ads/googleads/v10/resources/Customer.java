@@ -211,6 +211,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -1073,7 +1075,7 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000400) != 0)) {
       output.writeDouble(29, optimizationScore_);
     }
-    if (optimizationScoreWeight_ != 0D) {
+    if (java.lang.Double.doubleToRawLongBits(optimizationScoreWeight_) != 0) {
       output.writeDouble(30, optimizationScoreWeight_);
     }
     if (status_ != com.google.ads.googleads.v10.enums.CustomerStatusEnum.CustomerStatus.UNSPECIFIED.getNumber()) {
@@ -1154,7 +1156,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(29, optimizationScore_);
     }
-    if (optimizationScoreWeight_ != 0D) {
+    if (java.lang.Double.doubleToRawLongBits(optimizationScoreWeight_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(30, optimizationScoreWeight_);
     }

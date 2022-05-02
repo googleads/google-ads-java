@@ -31,35 +31,33 @@ public final class CampaignBidModifierProto {
       "\n>google/ads/googleads/v10/resources/cam" +
       "paign_bid_modifier.proto\022\"google.ads.goo" +
       "gleads.v10.resources\032.google/ads/googlea" +
-      "ds/v10/common/criteria.proto\032\034google/api" +
-      "/annotations.proto\032\037google/api/field_beh" +
-      "avior.proto\032\031google/api/resource.proto\"\360" +
-      "\003\n\023CampaignBidModifier\022K\n\rresource_name\030" +
-      "\001 \001(\tB4\340A\005\372A.\n,googleads.googleapis.com/" +
-      "CampaignBidModifier\022@\n\010campaign\030\006 \001(\tB)\340" +
-      "A\003\372A#\n!googleads.googleapis.com/Campaign" +
-      "H\001\210\001\001\022\036\n\014criterion_id\030\007 \001(\003B\003\340A\003H\002\210\001\001\022\031\n" +
-      "\014bid_modifier\030\010 \001(\001H\003\210\001\001\022U\n\020interaction_" +
-      "type\030\005 \001(\01324.google.ads.googleads.v10.co" +
-      "mmon.InteractionTypeInfoB\003\340A\005H\000:|\352Ay\n,go" +
-      "ogleads.googleapis.com/CampaignBidModifi" +
-      "er\022Icustomers/{customer_id}/campaignBidM" +
-      "odifiers/{campaign_id}~{criterion_id}B\013\n" +
-      "\tcriterionB\013\n\t_campaignB\017\n\r_criterion_id" +
-      "B\017\n\r_bid_modifierB\212\002\n&com.google.ads.goo" +
-      "gleads.v10.resourcesB\030CampaignBidModifie" +
-      "rProtoP\001ZKgoogle.golang.org/genproto/goo" +
-      "gleapis/ads/googleads/v10/resources;reso" +
-      "urces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V10.R" +
-      "esources\312\002\"Google\\Ads\\GoogleAds\\V10\\Reso" +
-      "urces\352\002&Google::Ads::GoogleAds::V10::Res" +
-      "ourcesb\006proto3"
+      "ds/v10/common/criteria.proto\032\037google/api" +
+      "/field_behavior.proto\032\031google/api/resour" +
+      "ce.proto\"\360\003\n\023CampaignBidModifier\022K\n\rreso" +
+      "urce_name\030\001 \001(\tB4\340A\005\372A.\n,googleads.googl" +
+      "eapis.com/CampaignBidModifier\022@\n\010campaig" +
+      "n\030\006 \001(\tB)\340A\003\372A#\n!googleads.googleapis.co" +
+      "m/CampaignH\001\210\001\001\022\036\n\014criterion_id\030\007 \001(\003B\003\340" +
+      "A\003H\002\210\001\001\022\031\n\014bid_modifier\030\010 \001(\001H\003\210\001\001\022U\n\020in" +
+      "teraction_type\030\005 \001(\01324.google.ads.google" +
+      "ads.v10.common.InteractionTypeInfoB\003\340A\005H" +
+      "\000:|\352Ay\n,googleads.googleapis.com/Campaig" +
+      "nBidModifier\022Icustomers/{customer_id}/ca" +
+      "mpaignBidModifiers/{campaign_id}~{criter" +
+      "ion_id}B\013\n\tcriterionB\013\n\t_campaignB\017\n\r_cr" +
+      "iterion_idB\017\n\r_bid_modifierB\212\002\n&com.goog" +
+      "le.ads.googleads.v10.resourcesB\030Campaign" +
+      "BidModifierProtoP\001ZKgoogle.golang.org/ge" +
+      "nproto/googleapis/ads/googleads/v10/reso" +
+      "urces;resources\242\002\003GAA\252\002\"Google.Ads.Googl" +
+      "eAds.V10.Resources\312\002\"Google\\Ads\\GoogleAd" +
+      "s\\V10\\Resources\352\002&Google::Ads::GoogleAds" +
+      "::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.common.CriteriaProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -77,7 +75,6 @@ public final class CampaignBidModifierProto {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.common.CriteriaProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

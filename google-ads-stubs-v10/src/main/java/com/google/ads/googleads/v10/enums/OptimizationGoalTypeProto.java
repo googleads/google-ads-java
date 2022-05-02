@@ -30,23 +30,21 @@ public final class OptimizationGoalTypeProto {
     java.lang.String[] descriptorData = {
       "\n;google/ads/googleads/v10/enums/optimiz" +
       "ation_goal_type.proto\022\036google.ads.google" +
-      "ads.v10.enums\032\034google/api/annotations.pr" +
-      "oto\"\223\001\n\030OptimizationGoalTypeEnum\"w\n\024Opti" +
-      "mizationGoalType\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNK" +
-      "NOWN\020\001\022\017\n\013CALL_CLICKS\020\002\022\026\n\022DRIVING_DIREC" +
-      "TIONS\020\003\022\030\n\024APP_PRE_REGISTRATION\020\004B\363\001\n\"co" +
-      "m.google.ads.googleads.v10.enumsB\031Optimi" +
-      "zationGoalTypeProtoP\001ZCgoogle.golang.org" +
-      "/genproto/googleapis/ads/googleads/v10/e" +
-      "nums;enums\242\002\003GAA\252\002\036Google.Ads.GoogleAds." +
-      "V10.Enums\312\002\036Google\\Ads\\GoogleAds\\V10\\Enu" +
-      "ms\352\002\"Google::Ads::GoogleAds::V10::Enumsb" +
-      "\006proto3"
+      "ads.v10.enums\"\223\001\n\030OptimizationGoalTypeEn" +
+      "um\"w\n\024OptimizationGoalType\022\017\n\013UNSPECIFIE" +
+      "D\020\000\022\013\n\007UNKNOWN\020\001\022\017\n\013CALL_CLICKS\020\002\022\026\n\022DRI" +
+      "VING_DIRECTIONS\020\003\022\030\n\024APP_PRE_REGISTRATIO" +
+      "N\020\004B\363\001\n\"com.google.ads.googleads.v10.enu" +
+      "msB\031OptimizationGoalTypeProtoP\001ZCgoogle." +
+      "golang.org/genproto/googleapis/ads/googl" +
+      "eads/v10/enums;enums\242\002\003GAA\252\002\036Google.Ads." +
+      "GoogleAds.V10.Enums\312\002\036Google\\Ads\\GoogleA" +
+      "ds\\V10\\Enums\352\002\"Google::Ads::GoogleAds::V" +
+      "10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_OptimizationGoalTypeEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -54,7 +52,6 @@ public final class OptimizationGoalTypeProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_OptimizationGoalTypeEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

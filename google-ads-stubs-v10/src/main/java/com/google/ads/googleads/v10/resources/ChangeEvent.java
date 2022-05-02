@@ -192,6 +192,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -648,6 +650,87 @@ private static final long serialVersionUID = 0L;
      * <code>.google.ads.googleads.v10.resources.AdGroupAsset ad_group_asset = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     com.google.ads.googleads.v10.resources.AdGroupAssetOrBuilder getAdGroupAssetOrBuilder();
+
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == ASSET_SET.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.AssetSet asset_set = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the assetSet field is set.
+     */
+    boolean hasAssetSet();
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == ASSET_SET.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.AssetSet asset_set = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The assetSet.
+     */
+    com.google.ads.googleads.v10.resources.AssetSet getAssetSet();
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == ASSET_SET.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.AssetSet asset_set = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    com.google.ads.googleads.v10.resources.AssetSetOrBuilder getAssetSetOrBuilder();
+
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == ASSET_SET_ASSET.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.AssetSetAsset asset_set_asset = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the assetSetAsset field is set.
+     */
+    boolean hasAssetSetAsset();
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == ASSET_SET_ASSET.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.AssetSetAsset asset_set_asset = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The assetSetAsset.
+     */
+    com.google.ads.googleads.v10.resources.AssetSetAsset getAssetSetAsset();
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == ASSET_SET_ASSET.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.AssetSetAsset asset_set_asset = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    com.google.ads.googleads.v10.resources.AssetSetAssetOrBuilder getAssetSetAssetOrBuilder();
+
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == CAMPAIGN_ASSET_SET.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.CampaignAssetSet campaign_asset_set = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the campaignAssetSet field is set.
+     */
+    boolean hasCampaignAssetSet();
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == CAMPAIGN_ASSET_SET.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.CampaignAssetSet campaign_asset_set = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The campaignAssetSet.
+     */
+    com.google.ads.googleads.v10.resources.CampaignAssetSet getCampaignAssetSet();
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == CAMPAIGN_ASSET_SET.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.CampaignAssetSet campaign_asset_set = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    com.google.ads.googleads.v10.resources.CampaignAssetSetOrBuilder getCampaignAssetSetOrBuilder();
   }
   /**
    * <pre>
@@ -907,6 +990,45 @@ private static final long serialVersionUID = 0L;
 
               break;
             }
+            case 138: {
+              com.google.ads.googleads.v10.resources.AssetSet.Builder subBuilder = null;
+              if (assetSet_ != null) {
+                subBuilder = assetSet_.toBuilder();
+              }
+              assetSet_ = input.readMessage(com.google.ads.googleads.v10.resources.AssetSet.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(assetSet_);
+                assetSet_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 146: {
+              com.google.ads.googleads.v10.resources.AssetSetAsset.Builder subBuilder = null;
+              if (assetSetAsset_ != null) {
+                subBuilder = assetSetAsset_.toBuilder();
+              }
+              assetSetAsset_ = input.readMessage(com.google.ads.googleads.v10.resources.AssetSetAsset.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(assetSetAsset_);
+                assetSetAsset_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 154: {
+              com.google.ads.googleads.v10.resources.CampaignAssetSet.Builder subBuilder = null;
+              if (campaignAssetSet_ != null) {
+                subBuilder = campaignAssetSet_.toBuilder();
+              }
+              campaignAssetSet_ = input.readMessage(com.google.ads.googleads.v10.resources.CampaignAssetSet.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(campaignAssetSet_);
+                campaignAssetSet_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -918,6 +1040,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -1547,6 +1671,120 @@ private static final long serialVersionUID = 0L;
       return getAdGroupAsset();
     }
 
+    public static final int ASSET_SET_FIELD_NUMBER = 17;
+    private com.google.ads.googleads.v10.resources.AssetSet assetSet_;
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == ASSET_SET.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.AssetSet asset_set = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the assetSet field is set.
+     */
+    @java.lang.Override
+    public boolean hasAssetSet() {
+      return assetSet_ != null;
+    }
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == ASSET_SET.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.AssetSet asset_set = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The assetSet.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.resources.AssetSet getAssetSet() {
+      return assetSet_ == null ? com.google.ads.googleads.v10.resources.AssetSet.getDefaultInstance() : assetSet_;
+    }
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == ASSET_SET.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.AssetSet asset_set = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.resources.AssetSetOrBuilder getAssetSetOrBuilder() {
+      return getAssetSet();
+    }
+
+    public static final int ASSET_SET_ASSET_FIELD_NUMBER = 18;
+    private com.google.ads.googleads.v10.resources.AssetSetAsset assetSetAsset_;
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == ASSET_SET_ASSET.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.AssetSetAsset asset_set_asset = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the assetSetAsset field is set.
+     */
+    @java.lang.Override
+    public boolean hasAssetSetAsset() {
+      return assetSetAsset_ != null;
+    }
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == ASSET_SET_ASSET.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.AssetSetAsset asset_set_asset = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The assetSetAsset.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.resources.AssetSetAsset getAssetSetAsset() {
+      return assetSetAsset_ == null ? com.google.ads.googleads.v10.resources.AssetSetAsset.getDefaultInstance() : assetSetAsset_;
+    }
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == ASSET_SET_ASSET.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.AssetSetAsset asset_set_asset = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.resources.AssetSetAssetOrBuilder getAssetSetAssetOrBuilder() {
+      return getAssetSetAsset();
+    }
+
+    public static final int CAMPAIGN_ASSET_SET_FIELD_NUMBER = 19;
+    private com.google.ads.googleads.v10.resources.CampaignAssetSet campaignAssetSet_;
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == CAMPAIGN_ASSET_SET.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.CampaignAssetSet campaign_asset_set = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the campaignAssetSet field is set.
+     */
+    @java.lang.Override
+    public boolean hasCampaignAssetSet() {
+      return campaignAssetSet_ != null;
+    }
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == CAMPAIGN_ASSET_SET.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.CampaignAssetSet campaign_asset_set = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The campaignAssetSet.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.resources.CampaignAssetSet getCampaignAssetSet() {
+      return campaignAssetSet_ == null ? com.google.ads.googleads.v10.resources.CampaignAssetSet.getDefaultInstance() : campaignAssetSet_;
+    }
+    /**
+     * <pre>
+     * Output only. Set if change_resource_type == CAMPAIGN_ASSET_SET.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.CampaignAssetSet campaign_asset_set = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.resources.CampaignAssetSetOrBuilder getCampaignAssetSetOrBuilder() {
+      return getCampaignAssetSet();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1608,6 +1846,15 @@ private static final long serialVersionUID = 0L;
       }
       if (adGroupAsset_ != null) {
         output.writeMessage(16, getAdGroupAsset());
+      }
+      if (assetSet_ != null) {
+        output.writeMessage(17, getAssetSet());
+      }
+      if (assetSetAsset_ != null) {
+        output.writeMessage(18, getAssetSetAsset());
+      }
+      if (campaignAssetSet_ != null) {
+        output.writeMessage(19, getCampaignAssetSet());
       }
       unknownFields.writeTo(output);
     }
@@ -1681,6 +1928,18 @@ private static final long serialVersionUID = 0L;
       if (adGroupAsset_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(16, getAdGroupAsset());
+      }
+      if (assetSet_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(17, getAssetSet());
+      }
+      if (assetSetAsset_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(18, getAssetSetAsset());
+      }
+      if (campaignAssetSet_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(19, getCampaignAssetSet());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1777,6 +2036,21 @@ private static final long serialVersionUID = 0L;
         if (!getAdGroupAsset()
             .equals(other.getAdGroupAsset())) return false;
       }
+      if (hasAssetSet() != other.hasAssetSet()) return false;
+      if (hasAssetSet()) {
+        if (!getAssetSet()
+            .equals(other.getAssetSet())) return false;
+      }
+      if (hasAssetSetAsset() != other.hasAssetSetAsset()) return false;
+      if (hasAssetSetAsset()) {
+        if (!getAssetSetAsset()
+            .equals(other.getAssetSetAsset())) return false;
+      }
+      if (hasCampaignAssetSet() != other.hasCampaignAssetSet()) return false;
+      if (hasCampaignAssetSet()) {
+        if (!getCampaignAssetSet()
+            .equals(other.getCampaignAssetSet())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1851,6 +2125,18 @@ private static final long serialVersionUID = 0L;
       if (hasAdGroupAsset()) {
         hash = (37 * hash) + AD_GROUP_ASSET_FIELD_NUMBER;
         hash = (53 * hash) + getAdGroupAsset().hashCode();
+      }
+      if (hasAssetSet()) {
+        hash = (37 * hash) + ASSET_SET_FIELD_NUMBER;
+        hash = (53 * hash) + getAssetSet().hashCode();
+      }
+      if (hasAssetSetAsset()) {
+        hash = (37 * hash) + ASSET_SET_ASSET_FIELD_NUMBER;
+        hash = (53 * hash) + getAssetSetAsset().hashCode();
+      }
+      if (hasCampaignAssetSet()) {
+        hash = (37 * hash) + CAMPAIGN_ASSET_SET_FIELD_NUMBER;
+        hash = (53 * hash) + getCampaignAssetSet().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -2086,6 +2372,24 @@ private static final long serialVersionUID = 0L;
           adGroupAsset_ = null;
           adGroupAssetBuilder_ = null;
         }
+        if (assetSetBuilder_ == null) {
+          assetSet_ = null;
+        } else {
+          assetSet_ = null;
+          assetSetBuilder_ = null;
+        }
+        if (assetSetAssetBuilder_ == null) {
+          assetSetAsset_ = null;
+        } else {
+          assetSetAsset_ = null;
+          assetSetAssetBuilder_ = null;
+        }
+        if (campaignAssetSetBuilder_ == null) {
+          campaignAssetSet_ = null;
+        } else {
+          campaignAssetSet_ = null;
+          campaignAssetSetBuilder_ = null;
+        }
         return this;
       }
 
@@ -2192,6 +2496,21 @@ private static final long serialVersionUID = 0L;
         } else {
           result.adGroupAsset_ = adGroupAssetBuilder_.build();
         }
+        if (assetSetBuilder_ == null) {
+          result.assetSet_ = assetSet_;
+        } else {
+          result.assetSet_ = assetSetBuilder_.build();
+        }
+        if (assetSetAssetBuilder_ == null) {
+          result.assetSetAsset_ = assetSetAsset_;
+        } else {
+          result.assetSetAsset_ = assetSetAssetBuilder_.build();
+        }
+        if (campaignAssetSetBuilder_ == null) {
+          result.campaignAssetSet_ = campaignAssetSet_;
+        } else {
+          result.campaignAssetSet_ = campaignAssetSetBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -2287,6 +2606,15 @@ private static final long serialVersionUID = 0L;
         }
         if (other.hasAdGroupAsset()) {
           mergeAdGroupAsset(other.getAdGroupAsset());
+        }
+        if (other.hasAssetSet()) {
+          mergeAssetSet(other.getAssetSet());
+        }
+        if (other.hasAssetSetAsset()) {
+          mergeAssetSetAsset(other.getAssetSetAsset());
+        }
+        if (other.hasCampaignAssetSet()) {
+          mergeCampaignAssetSet(other.getCampaignAssetSet());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4795,6 +5123,471 @@ private static final long serialVersionUID = 0L;
           adGroupAsset_ = null;
         }
         return adGroupAssetBuilder_;
+      }
+
+      private com.google.ads.googleads.v10.resources.AssetSet assetSet_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.ads.googleads.v10.resources.AssetSet, com.google.ads.googleads.v10.resources.AssetSet.Builder, com.google.ads.googleads.v10.resources.AssetSetOrBuilder> assetSetBuilder_;
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == ASSET_SET.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v10.resources.AssetSet asset_set = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the assetSet field is set.
+       */
+      public boolean hasAssetSet() {
+        return assetSetBuilder_ != null || assetSet_ != null;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == ASSET_SET.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v10.resources.AssetSet asset_set = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The assetSet.
+       */
+      public com.google.ads.googleads.v10.resources.AssetSet getAssetSet() {
+        if (assetSetBuilder_ == null) {
+          return assetSet_ == null ? com.google.ads.googleads.v10.resources.AssetSet.getDefaultInstance() : assetSet_;
+        } else {
+          return assetSetBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == ASSET_SET.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v10.resources.AssetSet asset_set = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setAssetSet(com.google.ads.googleads.v10.resources.AssetSet value) {
+        if (assetSetBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          assetSet_ = value;
+          onChanged();
+        } else {
+          assetSetBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == ASSET_SET.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v10.resources.AssetSet asset_set = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setAssetSet(
+          com.google.ads.googleads.v10.resources.AssetSet.Builder builderForValue) {
+        if (assetSetBuilder_ == null) {
+          assetSet_ = builderForValue.build();
+          onChanged();
+        } else {
+          assetSetBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == ASSET_SET.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v10.resources.AssetSet asset_set = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder mergeAssetSet(com.google.ads.googleads.v10.resources.AssetSet value) {
+        if (assetSetBuilder_ == null) {
+          if (assetSet_ != null) {
+            assetSet_ =
+              com.google.ads.googleads.v10.resources.AssetSet.newBuilder(assetSet_).mergeFrom(value).buildPartial();
+          } else {
+            assetSet_ = value;
+          }
+          onChanged();
+        } else {
+          assetSetBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == ASSET_SET.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v10.resources.AssetSet asset_set = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder clearAssetSet() {
+        if (assetSetBuilder_ == null) {
+          assetSet_ = null;
+          onChanged();
+        } else {
+          assetSet_ = null;
+          assetSetBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == ASSET_SET.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v10.resources.AssetSet asset_set = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.ads.googleads.v10.resources.AssetSet.Builder getAssetSetBuilder() {
+        
+        onChanged();
+        return getAssetSetFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == ASSET_SET.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v10.resources.AssetSet asset_set = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.ads.googleads.v10.resources.AssetSetOrBuilder getAssetSetOrBuilder() {
+        if (assetSetBuilder_ != null) {
+          return assetSetBuilder_.getMessageOrBuilder();
+        } else {
+          return assetSet_ == null ?
+              com.google.ads.googleads.v10.resources.AssetSet.getDefaultInstance() : assetSet_;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == ASSET_SET.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v10.resources.AssetSet asset_set = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.ads.googleads.v10.resources.AssetSet, com.google.ads.googleads.v10.resources.AssetSet.Builder, com.google.ads.googleads.v10.resources.AssetSetOrBuilder> 
+          getAssetSetFieldBuilder() {
+        if (assetSetBuilder_ == null) {
+          assetSetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.ads.googleads.v10.resources.AssetSet, com.google.ads.googleads.v10.resources.AssetSet.Builder, com.google.ads.googleads.v10.resources.AssetSetOrBuilder>(
+                  getAssetSet(),
+                  getParentForChildren(),
+                  isClean());
+          assetSet_ = null;
+        }
+        return assetSetBuilder_;
+      }
+
+      private com.google.ads.googleads.v10.resources.AssetSetAsset assetSetAsset_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.ads.googleads.v10.resources.AssetSetAsset, com.google.ads.googleads.v10.resources.AssetSetAsset.Builder, com.google.ads.googleads.v10.resources.AssetSetAssetOrBuilder> assetSetAssetBuilder_;
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == ASSET_SET_ASSET.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v10.resources.AssetSetAsset asset_set_asset = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the assetSetAsset field is set.
+       */
+      public boolean hasAssetSetAsset() {
+        return assetSetAssetBuilder_ != null || assetSetAsset_ != null;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == ASSET_SET_ASSET.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v10.resources.AssetSetAsset asset_set_asset = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The assetSetAsset.
+       */
+      public com.google.ads.googleads.v10.resources.AssetSetAsset getAssetSetAsset() {
+        if (assetSetAssetBuilder_ == null) {
+          return assetSetAsset_ == null ? com.google.ads.googleads.v10.resources.AssetSetAsset.getDefaultInstance() : assetSetAsset_;
+        } else {
+          return assetSetAssetBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == ASSET_SET_ASSET.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v10.resources.AssetSetAsset asset_set_asset = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setAssetSetAsset(com.google.ads.googleads.v10.resources.AssetSetAsset value) {
+        if (assetSetAssetBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          assetSetAsset_ = value;
+          onChanged();
+        } else {
+          assetSetAssetBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == ASSET_SET_ASSET.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v10.resources.AssetSetAsset asset_set_asset = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setAssetSetAsset(
+          com.google.ads.googleads.v10.resources.AssetSetAsset.Builder builderForValue) {
+        if (assetSetAssetBuilder_ == null) {
+          assetSetAsset_ = builderForValue.build();
+          onChanged();
+        } else {
+          assetSetAssetBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == ASSET_SET_ASSET.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v10.resources.AssetSetAsset asset_set_asset = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder mergeAssetSetAsset(com.google.ads.googleads.v10.resources.AssetSetAsset value) {
+        if (assetSetAssetBuilder_ == null) {
+          if (assetSetAsset_ != null) {
+            assetSetAsset_ =
+              com.google.ads.googleads.v10.resources.AssetSetAsset.newBuilder(assetSetAsset_).mergeFrom(value).buildPartial();
+          } else {
+            assetSetAsset_ = value;
+          }
+          onChanged();
+        } else {
+          assetSetAssetBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == ASSET_SET_ASSET.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v10.resources.AssetSetAsset asset_set_asset = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder clearAssetSetAsset() {
+        if (assetSetAssetBuilder_ == null) {
+          assetSetAsset_ = null;
+          onChanged();
+        } else {
+          assetSetAsset_ = null;
+          assetSetAssetBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == ASSET_SET_ASSET.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v10.resources.AssetSetAsset asset_set_asset = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.ads.googleads.v10.resources.AssetSetAsset.Builder getAssetSetAssetBuilder() {
+        
+        onChanged();
+        return getAssetSetAssetFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == ASSET_SET_ASSET.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v10.resources.AssetSetAsset asset_set_asset = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.ads.googleads.v10.resources.AssetSetAssetOrBuilder getAssetSetAssetOrBuilder() {
+        if (assetSetAssetBuilder_ != null) {
+          return assetSetAssetBuilder_.getMessageOrBuilder();
+        } else {
+          return assetSetAsset_ == null ?
+              com.google.ads.googleads.v10.resources.AssetSetAsset.getDefaultInstance() : assetSetAsset_;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == ASSET_SET_ASSET.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v10.resources.AssetSetAsset asset_set_asset = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.ads.googleads.v10.resources.AssetSetAsset, com.google.ads.googleads.v10.resources.AssetSetAsset.Builder, com.google.ads.googleads.v10.resources.AssetSetAssetOrBuilder> 
+          getAssetSetAssetFieldBuilder() {
+        if (assetSetAssetBuilder_ == null) {
+          assetSetAssetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.ads.googleads.v10.resources.AssetSetAsset, com.google.ads.googleads.v10.resources.AssetSetAsset.Builder, com.google.ads.googleads.v10.resources.AssetSetAssetOrBuilder>(
+                  getAssetSetAsset(),
+                  getParentForChildren(),
+                  isClean());
+          assetSetAsset_ = null;
+        }
+        return assetSetAssetBuilder_;
+      }
+
+      private com.google.ads.googleads.v10.resources.CampaignAssetSet campaignAssetSet_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.ads.googleads.v10.resources.CampaignAssetSet, com.google.ads.googleads.v10.resources.CampaignAssetSet.Builder, com.google.ads.googleads.v10.resources.CampaignAssetSetOrBuilder> campaignAssetSetBuilder_;
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == CAMPAIGN_ASSET_SET.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v10.resources.CampaignAssetSet campaign_asset_set = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return Whether the campaignAssetSet field is set.
+       */
+      public boolean hasCampaignAssetSet() {
+        return campaignAssetSetBuilder_ != null || campaignAssetSet_ != null;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == CAMPAIGN_ASSET_SET.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v10.resources.CampaignAssetSet campaign_asset_set = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The campaignAssetSet.
+       */
+      public com.google.ads.googleads.v10.resources.CampaignAssetSet getCampaignAssetSet() {
+        if (campaignAssetSetBuilder_ == null) {
+          return campaignAssetSet_ == null ? com.google.ads.googleads.v10.resources.CampaignAssetSet.getDefaultInstance() : campaignAssetSet_;
+        } else {
+          return campaignAssetSetBuilder_.getMessage();
+        }
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == CAMPAIGN_ASSET_SET.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v10.resources.CampaignAssetSet campaign_asset_set = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setCampaignAssetSet(com.google.ads.googleads.v10.resources.CampaignAssetSet value) {
+        if (campaignAssetSetBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          campaignAssetSet_ = value;
+          onChanged();
+        } else {
+          campaignAssetSetBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == CAMPAIGN_ASSET_SET.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v10.resources.CampaignAssetSet campaign_asset_set = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder setCampaignAssetSet(
+          com.google.ads.googleads.v10.resources.CampaignAssetSet.Builder builderForValue) {
+        if (campaignAssetSetBuilder_ == null) {
+          campaignAssetSet_ = builderForValue.build();
+          onChanged();
+        } else {
+          campaignAssetSetBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == CAMPAIGN_ASSET_SET.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v10.resources.CampaignAssetSet campaign_asset_set = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder mergeCampaignAssetSet(com.google.ads.googleads.v10.resources.CampaignAssetSet value) {
+        if (campaignAssetSetBuilder_ == null) {
+          if (campaignAssetSet_ != null) {
+            campaignAssetSet_ =
+              com.google.ads.googleads.v10.resources.CampaignAssetSet.newBuilder(campaignAssetSet_).mergeFrom(value).buildPartial();
+          } else {
+            campaignAssetSet_ = value;
+          }
+          onChanged();
+        } else {
+          campaignAssetSetBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == CAMPAIGN_ASSET_SET.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v10.resources.CampaignAssetSet campaign_asset_set = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public Builder clearCampaignAssetSet() {
+        if (campaignAssetSetBuilder_ == null) {
+          campaignAssetSet_ = null;
+          onChanged();
+        } else {
+          campaignAssetSet_ = null;
+          campaignAssetSetBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == CAMPAIGN_ASSET_SET.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v10.resources.CampaignAssetSet campaign_asset_set = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.ads.googleads.v10.resources.CampaignAssetSet.Builder getCampaignAssetSetBuilder() {
+        
+        onChanged();
+        return getCampaignAssetSetFieldBuilder().getBuilder();
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == CAMPAIGN_ASSET_SET.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v10.resources.CampaignAssetSet campaign_asset_set = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      public com.google.ads.googleads.v10.resources.CampaignAssetSetOrBuilder getCampaignAssetSetOrBuilder() {
+        if (campaignAssetSetBuilder_ != null) {
+          return campaignAssetSetBuilder_.getMessageOrBuilder();
+        } else {
+          return campaignAssetSet_ == null ?
+              com.google.ads.googleads.v10.resources.CampaignAssetSet.getDefaultInstance() : campaignAssetSet_;
+        }
+      }
+      /**
+       * <pre>
+       * Output only. Set if change_resource_type == CAMPAIGN_ASSET_SET.
+       * </pre>
+       *
+       * <code>.google.ads.googleads.v10.resources.CampaignAssetSet campaign_asset_set = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.ads.googleads.v10.resources.CampaignAssetSet, com.google.ads.googleads.v10.resources.CampaignAssetSet.Builder, com.google.ads.googleads.v10.resources.CampaignAssetSetOrBuilder> 
+          getCampaignAssetSetFieldBuilder() {
+        if (campaignAssetSetBuilder_ == null) {
+          campaignAssetSetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.ads.googleads.v10.resources.CampaignAssetSet, com.google.ads.googleads.v10.resources.CampaignAssetSet.Builder, com.google.ads.googleads.v10.resources.CampaignAssetSetOrBuilder>(
+                  getCampaignAssetSet(),
+                  getParentForChildren(),
+                  isClean());
+          campaignAssetSet_ = null;
+        }
+        return campaignAssetSetBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(

@@ -30,22 +30,24 @@ public final class AssetSetTypeProto {
     java.lang.String[] descriptorData = {
       "\n3google/ads/googleads/v10/enums/asset_s" +
       "et_type.proto\022\036google.ads.googleads.v10." +
-      "enums\032\034google/api/annotations.proto\"\200\001\n\020" +
-      "AssetSetTypeEnum\"l\n\014AssetSetType\022\017\n\013UNSP" +
-      "ECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\r\n\tPAGE_FEED\020\002\022\025\n" +
-      "\021DYNAMIC_EDUCATION\020\003\022\030\n\024MERCHANT_CENTER_" +
-      "FEED\020\004B\353\001\n\"com.google.ads.googleads.v10." +
-      "enumsB\021AssetSetTypeProtoP\001ZCgoogle.golan" +
-      "g.org/genproto/googleapis/ads/googleads/" +
-      "v10/enums;enums\242\002\003GAA\252\002\036Google.Ads.Googl" +
-      "eAds.V10.Enums\312\002\036Google\\Ads\\GoogleAds\\V1" +
-      "0\\Enums\352\002\"Google::Ads::GoogleAds::V10::E" +
-      "numsb\006proto3"
+      "enums\"\234\002\n\020AssetSetTypeEnum\"\207\002\n\014AssetSetT" +
+      "ype\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\r\n\tPAG" +
+      "E_FEED\020\002\022\025\n\021DYNAMIC_EDUCATION\020\003\022\030\n\024MERCH" +
+      "ANT_CENTER_FEED\020\004\022\027\n\023DYNAMIC_REAL_ESTATE" +
+      "\020\005\022\022\n\016DYNAMIC_CUSTOM\020\006\022\036\n\032DYNAMIC_HOTELS" +
+      "_AND_RENTALS\020\007\022\023\n\017DYNAMIC_FLIGHTS\020\010\022\022\n\016D" +
+      "YNAMIC_TRAVEL\020\t\022\021\n\rDYNAMIC_LOCAL\020\n\022\020\n\014DY" +
+      "NAMIC_JOBS\020\013B\353\001\n\"com.google.ads.googlead" +
+      "s.v10.enumsB\021AssetSetTypeProtoP\001ZCgoogle" +
+      ".golang.org/genproto/googleapis/ads/goog" +
+      "leads/v10/enums;enums\242\002\003GAA\252\002\036Google.Ads" +
+      ".GoogleAds.V10.Enums\312\002\036Google\\Ads\\Google" +
+      "Ads\\V10\\Enums\352\002\"Google::Ads::GoogleAds::" +
+      "V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_AssetSetTypeEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -53,7 +55,6 @@ public final class AssetSetTypeProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_AssetSetTypeEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -30,27 +30,25 @@ public final class ParentalStatusViewProto {
     java.lang.String[] descriptorData = {
       "\n=google/ads/googleads/v10/resources/par" +
       "ental_status_view.proto\022\"google.ads.goog" +
-      "leads.v10.resources\032\034google/api/annotati" +
-      "ons.proto\032\037google/api/field_behavior.pro" +
-      "to\032\031google/api/resource.proto\"\334\001\n\022Parent" +
-      "alStatusView\022J\n\rresource_name\030\001 \001(\tB3\340A\003" +
-      "\372A-\n+googleads.googleapis.com/ParentalSt" +
-      "atusView:z\352Aw\n+googleads.googleapis.com/" +
-      "ParentalStatusView\022Hcustomers/{customer_" +
-      "id}/parentalStatusViews/{ad_group_id}~{c" +
-      "riterion_id}B\211\002\n&com.google.ads.googlead" +
-      "s.v10.resourcesB\027ParentalStatusViewProto" +
-      "P\001ZKgoogle.golang.org/genproto/googleapi" +
-      "s/ads/googleads/v10/resources;resources\242" +
-      "\002\003GAA\252\002\"Google.Ads.GoogleAds.V10.Resourc" +
-      "es\312\002\"Google\\Ads\\GoogleAds\\V10\\Resources\352" +
-      "\002&Google::Ads::GoogleAds::V10::Resources" +
-      "b\006proto3"
+      "leads.v10.resources\032\037google/api/field_be" +
+      "havior.proto\032\031google/api/resource.proto\"" +
+      "\334\001\n\022ParentalStatusView\022J\n\rresource_name\030" +
+      "\001 \001(\tB3\340A\003\372A-\n+googleads.googleapis.com/" +
+      "ParentalStatusView:z\352Aw\n+googleads.googl" +
+      "eapis.com/ParentalStatusView\022Hcustomers/" +
+      "{customer_id}/parentalStatusViews/{ad_gr" +
+      "oup_id}~{criterion_id}B\211\002\n&com.google.ad" +
+      "s.googleads.v10.resourcesB\027ParentalStatu" +
+      "sViewProtoP\001ZKgoogle.golang.org/genproto" +
+      "/googleapis/ads/googleads/v10/resources;" +
+      "resources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V" +
+      "10.Resources\312\002\"Google\\Ads\\GoogleAds\\V10\\" +
+      "Resources\352\002&Google::Ads::GoogleAds::V10:" +
+      ":Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -67,7 +65,6 @@ public final class ParentalStatusViewProto {
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

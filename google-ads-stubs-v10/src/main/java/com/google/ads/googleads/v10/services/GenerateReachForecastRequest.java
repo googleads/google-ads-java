@@ -150,6 +150,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -324,11 +326,11 @@ private static final long serialVersionUID = 0L;
   private int cookieFrequencyCap_;
   /**
    * <pre>
-   * Desired cookie frequency cap that will be applied to each planned product.
+   * Desired cookie frequency cap to be applied to each planned product.
    * This is equivalent to the frequency cap exposed in Google Ads when creating
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user.
-   * If not specified no cap is applied.
+   * If not specified, no cap is applied.
    * This field is deprecated in v4 and will eventually be removed.
    * Please use cookie_frequency_cap_setting instead.
    * </pre>
@@ -342,11 +344,11 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Desired cookie frequency cap that will be applied to each planned product.
+   * Desired cookie frequency cap to be applied to each planned product.
    * This is equivalent to the frequency cap exposed in Google Ads when creating
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user.
-   * If not specified no cap is applied.
+   * If not specified, no cap is applied.
    * This field is deprecated in v4 and will eventually be removed.
    * Please use cookie_frequency_cap_setting instead.
    * </pre>
@@ -363,7 +365,7 @@ private static final long serialVersionUID = 0L;
   private com.google.ads.googleads.v10.services.FrequencyCap cookieFrequencyCapSetting_;
   /**
    * <pre>
-   * Desired cookie frequency cap that will be applied to each planned product.
+   * Desired cookie frequency cap to be applied to each planned product.
    * This is equivalent to the frequency cap exposed in Google Ads when creating
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user during a specified time interval.
@@ -380,7 +382,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Desired cookie frequency cap that will be applied to each planned product.
+   * Desired cookie frequency cap to be applied to each planned product.
    * This is equivalent to the frequency cap exposed in Google Ads when creating
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user during a specified time interval.
@@ -397,7 +399,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Desired cookie frequency cap that will be applied to each planned product.
+   * Desired cookie frequency cap to be applied to each planned product.
    * This is equivalent to the frequency cap exposed in Google Ads when creating
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user during a specified time interval.
@@ -1550,11 +1552,11 @@ private static final long serialVersionUID = 0L;
     private int cookieFrequencyCap_ ;
     /**
      * <pre>
-     * Desired cookie frequency cap that will be applied to each planned product.
+     * Desired cookie frequency cap to be applied to each planned product.
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user.
-     * If not specified no cap is applied.
+     * If not specified, no cap is applied.
      * This field is deprecated in v4 and will eventually be removed.
      * Please use cookie_frequency_cap_setting instead.
      * </pre>
@@ -1568,11 +1570,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Desired cookie frequency cap that will be applied to each planned product.
+     * Desired cookie frequency cap to be applied to each planned product.
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user.
-     * If not specified no cap is applied.
+     * If not specified, no cap is applied.
      * This field is deprecated in v4 and will eventually be removed.
      * Please use cookie_frequency_cap_setting instead.
      * </pre>
@@ -1586,11 +1588,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Desired cookie frequency cap that will be applied to each planned product.
+     * Desired cookie frequency cap to be applied to each planned product.
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user.
-     * If not specified no cap is applied.
+     * If not specified, no cap is applied.
      * This field is deprecated in v4 and will eventually be removed.
      * Please use cookie_frequency_cap_setting instead.
      * </pre>
@@ -1607,11 +1609,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Desired cookie frequency cap that will be applied to each planned product.
+     * Desired cookie frequency cap to be applied to each planned product.
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user.
-     * If not specified no cap is applied.
+     * If not specified, no cap is applied.
      * This field is deprecated in v4 and will eventually be removed.
      * Please use cookie_frequency_cap_setting instead.
      * </pre>
@@ -1631,7 +1633,7 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v10.services.FrequencyCap, com.google.ads.googleads.v10.services.FrequencyCap.Builder, com.google.ads.googleads.v10.services.FrequencyCapOrBuilder> cookieFrequencyCapSettingBuilder_;
     /**
      * <pre>
-     * Desired cookie frequency cap that will be applied to each planned product.
+     * Desired cookie frequency cap to be applied to each planned product.
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user during a specified time interval.
@@ -1647,7 +1649,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Desired cookie frequency cap that will be applied to each planned product.
+     * Desired cookie frequency cap to be applied to each planned product.
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user during a specified time interval.
@@ -1667,7 +1669,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Desired cookie frequency cap that will be applied to each planned product.
+     * Desired cookie frequency cap to be applied to each planned product.
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user during a specified time interval.
@@ -1692,7 +1694,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Desired cookie frequency cap that will be applied to each planned product.
+     * Desired cookie frequency cap to be applied to each planned product.
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user during a specified time interval.
@@ -1715,7 +1717,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Desired cookie frequency cap that will be applied to each planned product.
+     * Desired cookie frequency cap to be applied to each planned product.
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user during a specified time interval.
@@ -1742,7 +1744,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Desired cookie frequency cap that will be applied to each planned product.
+     * Desired cookie frequency cap to be applied to each planned product.
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user during a specified time interval.
@@ -1765,7 +1767,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Desired cookie frequency cap that will be applied to each planned product.
+     * Desired cookie frequency cap to be applied to each planned product.
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user during a specified time interval.
@@ -1782,7 +1784,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Desired cookie frequency cap that will be applied to each planned product.
+     * Desired cookie frequency cap to be applied to each planned product.
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user during a specified time interval.
@@ -1802,7 +1804,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Desired cookie frequency cap that will be applied to each planned product.
+     * Desired cookie frequency cap to be applied to each planned product.
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user during a specified time interval.

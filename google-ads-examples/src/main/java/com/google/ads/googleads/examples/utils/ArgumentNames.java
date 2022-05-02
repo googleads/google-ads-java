@@ -91,10 +91,13 @@ public final class ArgumentNames {
   public static final String LOCATION_ID = "--locationId";
   public static final String LOCATION_IDS = "--locationIds";
   public static final String LOGIN_CUSTOMER_ID = "--loginCustomerId";
+  public static final String LOGIN_EMAIL_ADDRESS_HINT = "--loginEmailAddressHint";
   public static final String MANAGER_CUSTOMER_ID = "--managerCustomerId";
   public static final String MANAGER_ID = "--managerId";
   public static final String MARKETING_IMAGE_ASSET_ID = "--marketingImageAssetId";
   public static final String MERCHANT_CENTER_ACCOUNT_ID = "--merchantCenterAccountId";
+  public static final String OAUTH_CLIENT_FILE = "--oAuthClientFile";
+  public static final String OAUTH_SCOPES = "--oAuthScopes";
   public static final String OFFLINE_USER_DATA_JOB_TYPE = "--offlineUserDataJobType";
   public static final String OMIT_UNSELECTED_RESOURCE_NAMES = "--omitUnselectedResourceNames";
   public static final String ORDER_ID = "--orderId";

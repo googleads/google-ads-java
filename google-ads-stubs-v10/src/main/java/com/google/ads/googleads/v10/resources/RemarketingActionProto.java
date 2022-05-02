@@ -31,31 +31,29 @@ public final class RemarketingActionProto {
       "\n;google/ads/googleads/v10/resources/rem" +
       "arketing_action.proto\022\"google.ads.google" +
       "ads.v10.resources\0321google/ads/googleads/" +
-      "v10/common/tag_snippet.proto\032\034google/api" +
-      "/annotations.proto\032\037google/api/field_beh" +
-      "avior.proto\032\031google/api/resource.proto\"\324" +
-      "\002\n\021RemarketingAction\022I\n\rresource_name\030\001 " +
-      "\001(\tB2\340A\005\372A,\n*googleads.googleapis.com/Re" +
-      "marketingAction\022\024\n\002id\030\005 \001(\003B\003\340A\003H\000\210\001\001\022\021\n" +
-      "\004name\030\006 \001(\tH\001\210\001\001\022F\n\014tag_snippets\030\004 \003(\0132+" +
-      ".google.ads.googleads.v10.common.TagSnip" +
-      "petB\003\340A\003:s\352Ap\n*googleads.googleapis.com/" +
-      "RemarketingAction\022Bcustomers/{customer_i" +
-      "d}/remarketingActions/{remarketing_actio" +
-      "n_id}B\005\n\003_idB\007\n\005_nameB\210\002\n&com.google.ads" +
-      ".googleads.v10.resourcesB\026RemarketingAct" +
-      "ionProtoP\001ZKgoogle.golang.org/genproto/g" +
-      "oogleapis/ads/googleads/v10/resources;re" +
-      "sources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V10" +
-      ".Resources\312\002\"Google\\Ads\\GoogleAds\\V10\\Re" +
-      "sources\352\002&Google::Ads::GoogleAds::V10::R" +
-      "esourcesb\006proto3"
+      "v10/common/tag_snippet.proto\032\037google/api" +
+      "/field_behavior.proto\032\031google/api/resour" +
+      "ce.proto\"\324\002\n\021RemarketingAction\022I\n\rresour" +
+      "ce_name\030\001 \001(\tB2\340A\005\372A,\n*googleads.googlea" +
+      "pis.com/RemarketingAction\022\024\n\002id\030\005 \001(\003B\003\340" +
+      "A\003H\000\210\001\001\022\021\n\004name\030\006 \001(\tH\001\210\001\001\022F\n\014tag_snippe" +
+      "ts\030\004 \003(\0132+.google.ads.googleads.v10.comm" +
+      "on.TagSnippetB\003\340A\003:s\352Ap\n*googleads.googl" +
+      "eapis.com/RemarketingAction\022Bcustomers/{" +
+      "customer_id}/remarketingActions/{remarke" +
+      "ting_action_id}B\005\n\003_idB\007\n\005_nameB\210\002\n&com." +
+      "google.ads.googleads.v10.resourcesB\026Rema" +
+      "rketingActionProtoP\001ZKgoogle.golang.org/" +
+      "genproto/googleapis/ads/googleads/v10/re" +
+      "sources;resources\242\002\003GAA\252\002\"Google.Ads.Goo" +
+      "gleAds.V10.Resources\312\002\"Google\\Ads\\Google" +
+      "Ads\\V10\\Resources\352\002&Google::Ads::GoogleA" +
+      "ds::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.common.TagSnippetProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -73,7 +71,6 @@ public final class RemarketingActionProto {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.common.TagSnippetProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

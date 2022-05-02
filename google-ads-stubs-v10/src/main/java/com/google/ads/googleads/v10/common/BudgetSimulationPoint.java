@@ -103,6 +103,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -267,10 +269,10 @@ private static final long serialVersionUID = 0L;
     if (requiredCpcBidCeilingMicros_ != 0L) {
       output.writeInt64(2, requiredCpcBidCeilingMicros_);
     }
-    if (biddableConversions_ != 0D) {
+    if (java.lang.Double.doubleToRawLongBits(biddableConversions_) != 0) {
       output.writeDouble(3, biddableConversions_);
     }
-    if (biddableConversionsValue_ != 0D) {
+    if (java.lang.Double.doubleToRawLongBits(biddableConversionsValue_) != 0) {
       output.writeDouble(4, biddableConversionsValue_);
     }
     if (clicks_ != 0L) {
@@ -302,11 +304,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(2, requiredCpcBidCeilingMicros_);
     }
-    if (biddableConversions_ != 0D) {
+    if (java.lang.Double.doubleToRawLongBits(biddableConversions_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(3, biddableConversions_);
     }
-    if (biddableConversionsValue_ != 0D) {
+    if (java.lang.Double.doubleToRawLongBits(biddableConversionsValue_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(4, biddableConversionsValue_);
     }

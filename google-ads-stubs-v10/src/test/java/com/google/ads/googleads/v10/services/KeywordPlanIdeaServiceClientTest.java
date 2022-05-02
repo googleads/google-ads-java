@@ -167,4 +167,57 @@ public class KeywordPlanIdeaServiceClientTest {
       // Expected exception.
     }
   }
+
+  @Test
+  public void generateKeywordHistoricalMetricsTest() throws Exception {
+    GenerateKeywordHistoricalMetricsResponse expectedResponse =
+        GenerateKeywordHistoricalMetricsResponse.newBuilder()
+            .addAllResults(new ArrayList<GenerateKeywordHistoricalMetricsResult>())
+            .build();
+    mockKeywordPlanIdeaService.addResponse(expectedResponse);
+
+    GenerateKeywordHistoricalMetricsRequest request =
+        GenerateKeywordHistoricalMetricsRequest.newBuilder()
+            .setCustomerId("customerId-1581184615")
+            .addAllKeywords(new ArrayList<String>())
+            .setHistoricalMetricsOptions(HistoricalMetricsOptions.newBuilder().build())
+            .build();
+
+    GenerateKeywordHistoricalMetricsResponse actualResponse =
+        client.generateKeywordHistoricalMetrics(request);
+    Assert.assertEquals(expectedResponse, actualResponse);
+
+    List<AbstractMessage> actualRequests = mockKeywordPlanIdeaService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    GenerateKeywordHistoricalMetricsRequest actualRequest =
+        ((GenerateKeywordHistoricalMetricsRequest) actualRequests.get(0));
+
+    Assert.assertEquals(request.getCustomerId(), actualRequest.getCustomerId());
+    Assert.assertEquals(request.getKeywordsList(), actualRequest.getKeywordsList());
+    Assert.assertEquals(
+        request.getHistoricalMetricsOptions(), actualRequest.getHistoricalMetricsOptions());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void generateKeywordHistoricalMetricsExceptionTest() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockKeywordPlanIdeaService.addException(exception);
+
+    try {
+      GenerateKeywordHistoricalMetricsRequest request =
+          GenerateKeywordHistoricalMetricsRequest.newBuilder()
+              .setCustomerId("customerId-1581184615")
+              .addAllKeywords(new ArrayList<String>())
+              .setHistoricalMetricsOptions(HistoricalMetricsOptions.newBuilder().build())
+              .build();
+      client.generateKeywordHistoricalMetrics(request);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
 }

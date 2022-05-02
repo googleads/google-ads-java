@@ -30,22 +30,20 @@ public final class WebpageConditionOperatorProto {
     java.lang.String[] descriptorData = {
       "\n?google/ads/googleads/v10/enums/webpage" +
       "_condition_operator.proto\022\036google.ads.go" +
-      "ogleads.v10.enums\032\034google/api/annotation" +
-      "s.proto\"r\n\034WebpageConditionOperatorEnum\"" +
-      "R\n\030WebpageConditionOperator\022\017\n\013UNSPECIFI" +
-      "ED\020\000\022\013\n\007UNKNOWN\020\001\022\n\n\006EQUALS\020\002\022\014\n\010CONTAIN" +
-      "S\020\003B\367\001\n\"com.google.ads.googleads.v10.enu" +
-      "msB\035WebpageConditionOperatorProtoP\001ZCgoo" +
-      "gle.golang.org/genproto/googleapis/ads/g" +
-      "oogleads/v10/enums;enums\242\002\003GAA\252\002\036Google." +
-      "Ads.GoogleAds.V10.Enums\312\002\036Google\\Ads\\Goo" +
-      "gleAds\\V10\\Enums\352\002\"Google::Ads::GoogleAd" +
-      "s::V10::Enumsb\006proto3"
+      "ogleads.v10.enums\"r\n\034WebpageConditionOpe" +
+      "ratorEnum\"R\n\030WebpageConditionOperator\022\017\n" +
+      "\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\n\n\006EQUALS\020\002\022" +
+      "\014\n\010CONTAINS\020\003B\367\001\n\"com.google.ads.googlea" +
+      "ds.v10.enumsB\035WebpageConditionOperatorPr" +
+      "otoP\001ZCgoogle.golang.org/genproto/google" +
+      "apis/ads/googleads/v10/enums;enums\242\002\003GAA" +
+      "\252\002\036Google.Ads.GoogleAds.V10.Enums\312\002\036Goog" +
+      "le\\Ads\\GoogleAds\\V10\\Enums\352\002\"Google::Ads" +
+      "::GoogleAds::V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_WebpageConditionOperatorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -53,7 +51,6 @@ public final class WebpageConditionOperatorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_WebpageConditionOperatorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

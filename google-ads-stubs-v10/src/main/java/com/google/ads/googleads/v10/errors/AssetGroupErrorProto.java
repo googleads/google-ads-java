@@ -30,30 +30,28 @@ public final class AssetGroupErrorProto {
     java.lang.String[] descriptorData = {
       "\n7google/ads/googleads/v10/errors/asset_" +
       "group_error.proto\022\037google.ads.googleads." +
-      "v10.errors\032\034google/api/annotations.proto" +
-      "\"\276\003\n\023AssetGroupErrorEnum\"\246\003\n\017AssetGroupE" +
-      "rror\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\022\n\016DU" +
-      "PLICATE_NAME\020\002\022,\n(CANNOT_ADD_ASSET_GROUP" +
-      "_FOR_CAMPAIGN_TYPE\020\003\022\035\n\031NOT_ENOUGH_HEADL" +
-      "INE_ASSET\020\004\022\"\n\036NOT_ENOUGH_LONG_HEADLINE_" +
-      "ASSET\020\005\022 \n\034NOT_ENOUGH_DESCRIPTION_ASSET\020" +
-      "\006\022\"\n\036NOT_ENOUGH_BUSINESS_NAME_ASSET\020\007\022$\n" +
-      " NOT_ENOUGH_MARKETING_IMAGE_ASSET\020\010\022+\n\'N" +
-      "OT_ENOUGH_SQUARE_MARKETING_IMAGE_ASSET\020\t" +
-      "\022\031\n\025NOT_ENOUGH_LOGO_ASSET\020\n\022<\n8FINAL_URL" +
-      "_SHOPPING_MERCHANT_HOME_PAGE_URL_DOMAINS" +
-      "_DIFFER\020\013B\364\001\n#com.google.ads.googleads.v" +
-      "10.errorsB\024AssetGroupErrorProtoP\001ZEgoogl" +
-      "e.golang.org/genproto/googleapis/ads/goo" +
-      "gleads/v10/errors;errors\242\002\003GAA\252\002\037Google." +
-      "Ads.GoogleAds.V10.Errors\312\002\037Google\\Ads\\Go" +
-      "ogleAds\\V10\\Errors\352\002#Google::Ads::Google" +
-      "Ads::V10::Errorsb\006proto3"
+      "v10.errors\"\276\003\n\023AssetGroupErrorEnum\"\246\003\n\017A" +
+      "ssetGroupError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNO" +
+      "WN\020\001\022\022\n\016DUPLICATE_NAME\020\002\022,\n(CANNOT_ADD_A" +
+      "SSET_GROUP_FOR_CAMPAIGN_TYPE\020\003\022\035\n\031NOT_EN" +
+      "OUGH_HEADLINE_ASSET\020\004\022\"\n\036NOT_ENOUGH_LONG" +
+      "_HEADLINE_ASSET\020\005\022 \n\034NOT_ENOUGH_DESCRIPT" +
+      "ION_ASSET\020\006\022\"\n\036NOT_ENOUGH_BUSINESS_NAME_" +
+      "ASSET\020\007\022$\n NOT_ENOUGH_MARKETING_IMAGE_AS" +
+      "SET\020\010\022+\n\'NOT_ENOUGH_SQUARE_MARKETING_IMA" +
+      "GE_ASSET\020\t\022\031\n\025NOT_ENOUGH_LOGO_ASSET\020\n\022<\n" +
+      "8FINAL_URL_SHOPPING_MERCHANT_HOME_PAGE_U" +
+      "RL_DOMAINS_DIFFER\020\013B\364\001\n#com.google.ads.g" +
+      "oogleads.v10.errorsB\024AssetGroupErrorProt" +
+      "oP\001ZEgoogle.golang.org/genproto/googleap" +
+      "is/ads/googleads/v10/errors;errors\242\002\003GAA" +
+      "\252\002\037Google.Ads.GoogleAds.V10.Errors\312\002\037Goo" +
+      "gle\\Ads\\GoogleAds\\V10\\Errors\352\002#Google::A" +
+      "ds::GoogleAds::V10::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_AssetGroupErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -61,7 +59,6 @@ public final class AssetGroupErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_AssetGroupErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

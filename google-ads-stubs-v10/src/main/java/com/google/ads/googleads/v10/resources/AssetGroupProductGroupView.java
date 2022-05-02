@@ -21,6 +21,8 @@ private static final long serialVersionUID = 0L;
   }
   private AssetGroupProductGroupView() {
     resourceName_ = "";
+    assetGroup_ = "";
+    assetGroupListingGroupFilter_ = "";
   }
 
   @java.lang.Override
@@ -59,6 +61,18 @@ private static final long serialVersionUID = 0L;
             resourceName_ = s;
             break;
           }
+          case 18: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            assetGroup_ = s;
+            break;
+          }
+          case 34: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            assetGroupListingGroupFilter_ = s;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -70,6 +84,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -141,6 +157,98 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int ASSET_GROUP_FIELD_NUMBER = 2;
+  private volatile java.lang.Object assetGroup_;
+  /**
+   * <pre>
+   * Output only. The asset group associated with the listing group filter.
+   * </pre>
+   *
+   * <code>string asset_group = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The assetGroup.
+   */
+  @java.lang.Override
+  public java.lang.String getAssetGroup() {
+    java.lang.Object ref = assetGroup_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      assetGroup_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Output only. The asset group associated with the listing group filter.
+   * </pre>
+   *
+   * <code>string asset_group = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for assetGroup.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getAssetGroupBytes() {
+    java.lang.Object ref = assetGroup_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      assetGroup_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int ASSET_GROUP_LISTING_GROUP_FILTER_FIELD_NUMBER = 4;
+  private volatile java.lang.Object assetGroupListingGroupFilter_;
+  /**
+   * <pre>
+   * Output only. The resource name of the asset group listing group filter.
+   * </pre>
+   *
+   * <code>string asset_group_listing_group_filter = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The assetGroupListingGroupFilter.
+   */
+  @java.lang.Override
+  public java.lang.String getAssetGroupListingGroupFilter() {
+    java.lang.Object ref = assetGroupListingGroupFilter_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      assetGroupListingGroupFilter_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Output only. The resource name of the asset group listing group filter.
+   * </pre>
+   *
+   * <code>string asset_group_listing_group_filter = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for assetGroupListingGroupFilter.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getAssetGroupListingGroupFilterBytes() {
+    java.lang.Object ref = assetGroupListingGroupFilter_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      assetGroupListingGroupFilter_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -158,6 +266,12 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, resourceName_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(assetGroup_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, assetGroup_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(assetGroupListingGroupFilter_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, assetGroupListingGroupFilter_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -169,6 +283,12 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(resourceName_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, resourceName_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(assetGroup_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, assetGroup_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(assetGroupListingGroupFilter_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, assetGroupListingGroupFilter_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -187,6 +307,10 @@ private static final long serialVersionUID = 0L;
 
     if (!getResourceName()
         .equals(other.getResourceName())) return false;
+    if (!getAssetGroup()
+        .equals(other.getAssetGroup())) return false;
+    if (!getAssetGroupListingGroupFilter()
+        .equals(other.getAssetGroupListingGroupFilter())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -200,6 +324,10 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + RESOURCE_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getResourceName().hashCode();
+    hash = (37 * hash) + ASSET_GROUP_FIELD_NUMBER;
+    hash = (53 * hash) + getAssetGroup().hashCode();
+    hash = (37 * hash) + ASSET_GROUP_LISTING_GROUP_FILTER_FIELD_NUMBER;
+    hash = (53 * hash) + getAssetGroupListingGroupFilter().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -339,6 +467,10 @@ private static final long serialVersionUID = 0L;
       super.clear();
       resourceName_ = "";
 
+      assetGroup_ = "";
+
+      assetGroupListingGroupFilter_ = "";
+
       return this;
     }
 
@@ -366,6 +498,8 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v10.resources.AssetGroupProductGroupView buildPartial() {
       com.google.ads.googleads.v10.resources.AssetGroupProductGroupView result = new com.google.ads.googleads.v10.resources.AssetGroupProductGroupView(this);
       result.resourceName_ = resourceName_;
+      result.assetGroup_ = assetGroup_;
+      result.assetGroupListingGroupFilter_ = assetGroupListingGroupFilter_;
       onBuilt();
       return result;
     }
@@ -416,6 +550,14 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v10.resources.AssetGroupProductGroupView.getDefaultInstance()) return this;
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
+        onChanged();
+      }
+      if (!other.getAssetGroup().isEmpty()) {
+        assetGroup_ = other.assetGroup_;
+        onChanged();
+      }
+      if (!other.getAssetGroupListingGroupFilter().isEmpty()) {
+        assetGroupListingGroupFilter_ = other.assetGroupListingGroupFilter_;
         onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
@@ -549,6 +691,198 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
       
       resourceName_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object assetGroup_ = "";
+    /**
+     * <pre>
+     * Output only. The asset group associated with the listing group filter.
+     * </pre>
+     *
+     * <code>string asset_group = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The assetGroup.
+     */
+    public java.lang.String getAssetGroup() {
+      java.lang.Object ref = assetGroup_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        assetGroup_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The asset group associated with the listing group filter.
+     * </pre>
+     *
+     * <code>string asset_group = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for assetGroup.
+     */
+    public com.google.protobuf.ByteString
+        getAssetGroupBytes() {
+      java.lang.Object ref = assetGroup_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        assetGroup_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The asset group associated with the listing group filter.
+     * </pre>
+     *
+     * <code>string asset_group = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The assetGroup to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAssetGroup(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      assetGroup_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The asset group associated with the listing group filter.
+     * </pre>
+     *
+     * <code>string asset_group = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAssetGroup() {
+      
+      assetGroup_ = getDefaultInstance().getAssetGroup();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The asset group associated with the listing group filter.
+     * </pre>
+     *
+     * <code>string asset_group = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for assetGroup to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAssetGroupBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      assetGroup_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object assetGroupListingGroupFilter_ = "";
+    /**
+     * <pre>
+     * Output only. The resource name of the asset group listing group filter.
+     * </pre>
+     *
+     * <code>string asset_group_listing_group_filter = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The assetGroupListingGroupFilter.
+     */
+    public java.lang.String getAssetGroupListingGroupFilter() {
+      java.lang.Object ref = assetGroupListingGroupFilter_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        assetGroupListingGroupFilter_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The resource name of the asset group listing group filter.
+     * </pre>
+     *
+     * <code>string asset_group_listing_group_filter = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for assetGroupListingGroupFilter.
+     */
+    public com.google.protobuf.ByteString
+        getAssetGroupListingGroupFilterBytes() {
+      java.lang.Object ref = assetGroupListingGroupFilter_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        assetGroupListingGroupFilter_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The resource name of the asset group listing group filter.
+     * </pre>
+     *
+     * <code>string asset_group_listing_group_filter = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The assetGroupListingGroupFilter to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAssetGroupListingGroupFilter(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      assetGroupListingGroupFilter_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The resource name of the asset group listing group filter.
+     * </pre>
+     *
+     * <code>string asset_group_listing_group_filter = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAssetGroupListingGroupFilter() {
+      
+      assetGroupListingGroupFilter_ = getDefaultInstance().getAssetGroupListingGroupFilter();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The resource name of the asset group listing group filter.
+     * </pre>
+     *
+     * <code>string asset_group_listing_group_filter = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for assetGroupListingGroupFilter to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAssetGroupListingGroupFilterBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      assetGroupListingGroupFilter_ = value;
       onChanged();
       return this;
     }

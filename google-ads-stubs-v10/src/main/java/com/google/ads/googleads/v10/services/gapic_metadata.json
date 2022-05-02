@@ -521,6 +521,18 @@
         }
       }
     },
+    "CampaignGroupService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CampaignGroupServiceClient",
+          "rpcs": {
+            "MutateCampaignGroups": {
+              "methods": ["mutateCampaignGroups", "mutateCampaignGroups", "mutateCampaignGroupsCallable"]
+            }
+          }
+        }
+      }
+    },
     "CampaignLabelService": {
       "clients": {
         "grpc": {
@@ -1078,6 +1090,9 @@
         "grpc": {
           "libraryClient": "KeywordPlanIdeaServiceClient",
           "rpcs": {
+            "GenerateKeywordHistoricalMetrics": {
+              "methods": ["generateKeywordHistoricalMetrics", "generateKeywordHistoricalMetricsCallable"]
+            },
             "GenerateKeywordIdeas": {
               "methods": ["generateKeywordIdeas", "generateKeywordIdeasPagedCallable", "generateKeywordIdeasCallable"]
             }

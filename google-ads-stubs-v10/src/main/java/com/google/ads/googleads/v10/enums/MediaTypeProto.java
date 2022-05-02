@@ -30,22 +30,20 @@ public final class MediaTypeProto {
     java.lang.String[] descriptorData = {
       "\n/google/ads/googleads/v10/enums/media_t" +
       "ype.proto\022\036google.ads.googleads.v10.enum" +
-      "s\032\034google/api/annotations.proto\"\212\001\n\rMedi" +
-      "aTypeEnum\"y\n\tMediaType\022\017\n\013UNSPECIFIED\020\000\022" +
-      "\013\n\007UNKNOWN\020\001\022\t\n\005IMAGE\020\002\022\010\n\004ICON\020\003\022\020\n\014MED" +
-      "IA_BUNDLE\020\004\022\t\n\005AUDIO\020\005\022\t\n\005VIDEO\020\006\022\021\n\rDYN" +
-      "AMIC_IMAGE\020\007B\350\001\n\"com.google.ads.googlead" +
-      "s.v10.enumsB\016MediaTypeProtoP\001ZCgoogle.go" +
-      "lang.org/genproto/googleapis/ads/googlea" +
-      "ds/v10/enums;enums\242\002\003GAA\252\002\036Google.Ads.Go" +
-      "ogleAds.V10.Enums\312\002\036Google\\Ads\\GoogleAds" +
-      "\\V10\\Enums\352\002\"Google::Ads::GoogleAds::V10" +
-      "::Enumsb\006proto3"
+      "s\"\212\001\n\rMediaTypeEnum\"y\n\tMediaType\022\017\n\013UNSP" +
+      "ECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\t\n\005IMAGE\020\002\022\010\n\004ICO" +
+      "N\020\003\022\020\n\014MEDIA_BUNDLE\020\004\022\t\n\005AUDIO\020\005\022\t\n\005VIDE" +
+      "O\020\006\022\021\n\rDYNAMIC_IMAGE\020\007B\350\001\n\"com.google.ad" +
+      "s.googleads.v10.enumsB\016MediaTypeProtoP\001Z" +
+      "Cgoogle.golang.org/genproto/googleapis/a" +
+      "ds/googleads/v10/enums;enums\242\002\003GAA\252\002\036Goo" +
+      "gle.Ads.GoogleAds.V10.Enums\312\002\036Google\\Ads" +
+      "\\GoogleAds\\V10\\Enums\352\002\"Google::Ads::Goog" +
+      "leAds::V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_MediaTypeEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -53,7 +51,6 @@ public final class MediaTypeProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_MediaTypeEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

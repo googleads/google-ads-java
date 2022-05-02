@@ -185,10 +185,16 @@ public class GetChangeDetails {
         return Optional.of(resource.getAdGroupAsset());
       case ASSET:
         return Optional.of(resource.getAsset());
+      case ASSET_SET:
+        return Optional.of(resource.getAssetSet());
+      case ASSET_SET_ASSET:
+        return Optional.of(resource.getAssetSetAsset());
       case CAMPAIGN:
         return Optional.of(resource.getCampaign());
       case CAMPAIGN_ASSET:
         return Optional.of(resource.getCampaignAsset());
+      case CAMPAIGN_ASSET_SET:
+        return Optional.of(resource.getCampaignAssetSet());
       case CAMPAIGN_BUDGET:
         return Optional.of(resource.getCampaignBudget());
       case CAMPAIGN_CRITERION:

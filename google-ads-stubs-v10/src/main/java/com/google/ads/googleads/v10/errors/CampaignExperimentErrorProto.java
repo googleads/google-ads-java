@@ -30,32 +30,30 @@ public final class CampaignExperimentErrorProto {
     java.lang.String[] descriptorData = {
       "\n?google/ads/googleads/v10/errors/campai" +
       "gn_experiment_error.proto\022\037google.ads.go" +
-      "ogleads.v10.errors\032\034google/api/annotatio" +
-      "ns.proto\"\200\004\n\033CampaignExperimentErrorEnum" +
-      "\"\340\003\n\027CampaignExperimentError\022\017\n\013UNSPECIF" +
-      "IED\020\000\022\013\n\007UNKNOWN\020\001\022\022\n\016DUPLICATE_NAME\020\002\022\026" +
-      "\n\022INVALID_TRANSITION\020\003\022/\n+CANNOT_CREATE_" +
-      "EXPERIMENT_WITH_SHARED_BUDGET\020\004\0226\n2CANNO" +
-      "T_CREATE_EXPERIMENT_FOR_REMOVED_BASE_CAM" +
-      "PAIGN\020\005\0223\n/CANNOT_CREATE_EXPERIMENT_FOR_" +
-      "NON_PROPOSED_DRAFT\020\006\022%\n!CUSTOMER_CANNOT_" +
-      "CREATE_EXPERIMENT\020\007\022%\n!CAMPAIGN_CANNOT_C" +
-      "REATE_EXPERIMENT\020\010\022)\n%EXPERIMENT_DURATIO" +
-      "NS_MUST_NOT_OVERLAP\020\t\0228\n4EXPERIMENT_DURA" +
-      "TION_MUST_BE_WITHIN_CAMPAIGN_DURATION\020\n\022" +
-      "*\n&CANNOT_MUTATE_EXPERIMENT_DUE_TO_STATU" +
-      "S\020\013B\374\001\n#com.google.ads.googleads.v10.err" +
-      "orsB\034CampaignExperimentErrorProtoP\001ZEgoo" +
-      "gle.golang.org/genproto/googleapis/ads/g" +
-      "oogleads/v10/errors;errors\242\002\003GAA\252\002\037Googl" +
-      "e.Ads.GoogleAds.V10.Errors\312\002\037Google\\Ads\\" +
-      "GoogleAds\\V10\\Errors\352\002#Google::Ads::Goog" +
-      "leAds::V10::Errorsb\006proto3"
+      "ogleads.v10.errors\"\200\004\n\033CampaignExperimen" +
+      "tErrorEnum\"\340\003\n\027CampaignExperimentError\022\017" +
+      "\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\022\n\016DUPLICAT" +
+      "E_NAME\020\002\022\026\n\022INVALID_TRANSITION\020\003\022/\n+CANN" +
+      "OT_CREATE_EXPERIMENT_WITH_SHARED_BUDGET\020" +
+      "\004\0226\n2CANNOT_CREATE_EXPERIMENT_FOR_REMOVE" +
+      "D_BASE_CAMPAIGN\020\005\0223\n/CANNOT_CREATE_EXPER" +
+      "IMENT_FOR_NON_PROPOSED_DRAFT\020\006\022%\n!CUSTOM" +
+      "ER_CANNOT_CREATE_EXPERIMENT\020\007\022%\n!CAMPAIG" +
+      "N_CANNOT_CREATE_EXPERIMENT\020\010\022)\n%EXPERIME" +
+      "NT_DURATIONS_MUST_NOT_OVERLAP\020\t\0228\n4EXPER" +
+      "IMENT_DURATION_MUST_BE_WITHIN_CAMPAIGN_D" +
+      "URATION\020\n\022*\n&CANNOT_MUTATE_EXPERIMENT_DU" +
+      "E_TO_STATUS\020\013B\374\001\n#com.google.ads.googlea" +
+      "ds.v10.errorsB\034CampaignExperimentErrorPr" +
+      "otoP\001ZEgoogle.golang.org/genproto/google" +
+      "apis/ads/googleads/v10/errors;errors\242\002\003G" +
+      "AA\252\002\037Google.Ads.GoogleAds.V10.Errors\312\002\037G" +
+      "oogle\\Ads\\GoogleAds\\V10\\Errors\352\002#Google:" +
+      ":Ads::GoogleAds::V10::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_CampaignExperimentErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -63,7 +61,6 @@ public final class CampaignExperimentErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_CampaignExperimentErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

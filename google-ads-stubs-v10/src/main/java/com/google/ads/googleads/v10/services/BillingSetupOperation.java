@@ -84,6 +84,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -735,8 +737,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 2) {
           createBuilder_.mergeFrom(value);
+        } else {
+          createBuilder_.setMessage(value);
         }
-        createBuilder_.setMessage(value);
       }
       operationCase_ = 2;
       return this;

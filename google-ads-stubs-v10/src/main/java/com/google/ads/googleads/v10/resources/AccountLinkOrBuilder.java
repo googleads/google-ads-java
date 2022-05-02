@@ -171,5 +171,32 @@ public interface AccountLinkOrBuilder extends
    */
   com.google.ads.googleads.v10.resources.GoogleAdsLinkIdentifierOrBuilder getGoogleAdsOrBuilder();
 
+  /**
+   * <pre>
+   * Output only. Hotel link
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier hotel_center = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the hotelCenter field is set.
+   */
+  boolean hasHotelCenter();
+  /**
+   * <pre>
+   * Output only. Hotel link
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier hotel_center = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The hotelCenter.
+   */
+  com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier getHotelCenter();
+  /**
+   * <pre>
+   * Output only. Hotel link
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier hotel_center = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifierOrBuilder getHotelCenterOrBuilder();
+
   public com.google.ads.googleads.v10.resources.AccountLink.LinkedAccountCase getLinkedAccountCase();
 }

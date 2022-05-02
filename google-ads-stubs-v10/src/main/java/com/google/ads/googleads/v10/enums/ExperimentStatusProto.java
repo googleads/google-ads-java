@@ -30,23 +30,21 @@ public final class ExperimentStatusProto {
     java.lang.String[] descriptorData = {
       "\n6google/ads/googleads/v10/enums/experim" +
       "ent_status.proto\022\036google.ads.googleads.v" +
-      "10.enums\032\034google/api/annotations.proto\"\246" +
-      "\001\n\024ExperimentStatusEnum\"\215\001\n\020ExperimentSt" +
-      "atus\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\013\n\007EN" +
-      "ABLED\020\002\022\013\n\007REMOVED\020\003\022\n\n\006HALTED\020\004\022\014\n\010PROM" +
-      "OTED\020\005\022\t\n\005SETUP\020\006\022\r\n\tINITIATED\020\007\022\r\n\tGRAD" +
-      "UATED\020\010B\357\001\n\"com.google.ads.googleads.v10" +
-      ".enumsB\025ExperimentStatusProtoP\001ZCgoogle." +
-      "golang.org/genproto/googleapis/ads/googl" +
-      "eads/v10/enums;enums\242\002\003GAA\252\002\036Google.Ads." +
-      "GoogleAds.V10.Enums\312\002\036Google\\Ads\\GoogleA" +
-      "ds\\V10\\Enums\352\002\"Google::Ads::GoogleAds::V" +
-      "10::Enumsb\006proto3"
+      "10.enums\"\246\001\n\024ExperimentStatusEnum\"\215\001\n\020Ex" +
+      "perimentStatus\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNO" +
+      "WN\020\001\022\013\n\007ENABLED\020\002\022\013\n\007REMOVED\020\003\022\n\n\006HALTED" +
+      "\020\004\022\014\n\010PROMOTED\020\005\022\t\n\005SETUP\020\006\022\r\n\tINITIATED" +
+      "\020\007\022\r\n\tGRADUATED\020\010B\357\001\n\"com.google.ads.goo" +
+      "gleads.v10.enumsB\025ExperimentStatusProtoP" +
+      "\001ZCgoogle.golang.org/genproto/googleapis" +
+      "/ads/googleads/v10/enums;enums\242\002\003GAA\252\002\036G" +
+      "oogle.Ads.GoogleAds.V10.Enums\312\002\036Google\\A" +
+      "ds\\GoogleAds\\V10\\Enums\352\002\"Google::Ads::Go" +
+      "ogleAds::V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_ExperimentStatusEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -54,7 +52,6 @@ public final class ExperimentStatusProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_ExperimentStatusEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -30,42 +30,41 @@ public final class ExperimentErrorProto {
     java.lang.String[] descriptorData = {
       "\n6google/ads/googleads/v10/errors/experi" +
       "ment_error.proto\022\037google.ads.googleads.v" +
-      "10.errors\032\034google/api/annotations.proto\"" +
-      "\245\007\n\023ExperimentErrorEnum\"\215\007\n\017ExperimentEr" +
-      "ror\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022!\n\035CAN" +
-      "NOT_SET_START_DATE_IN_PAST\020\002\022\036\n\032END_DATE" +
-      "_BEFORE_START_DATE\020\003\022 \n\034START_DATE_TOO_F" +
-      "AR_IN_FUTURE\020\004\022\035\n\031DUPLICATE_EXPERIMENT_N" +
-      "AME\020\005\022$\n CANNOT_MODIFY_REMOVED_EXPERIMEN" +
-      "T\020\006\022\035\n\031START_DATE_ALREADY_PASSED\020\007\022\037\n\033CA" +
-      "NNOT_SET_END_DATE_IN_PAST\020\010\022 \n\034CANNOT_SE" +
-      "T_STATUS_TO_REMOVED\020\t\022\037\n\033CANNOT_MODIFY_P" +
-      "AST_END_DATE\020\n\022\022\n\016INVALID_STATUS\020\013\022!\n\035IN" +
-      "VALID_CAMPAIGN_CHANNEL_TYPE\020\014\022&\n\"OVERLAP" +
-      "PING_MEMBERS_AND_DATE_RANGE\020\r\022#\n\037INVALID" +
-      "_TRIAL_ARM_TRAFFIC_SPLIT\020\016\022\035\n\031TRAFFIC_SP" +
-      "LIT_OVERLAPPING\020\017\022E\nASUM_TRIAL_ARM_TRAFF" +
-      "IC_UNEQUALS_TO_TRIAL_TRAFFIC_SPLIT_DENOM" +
-      "INATOR\020\020\022+\n\'CANNOT_MODIFY_TRAFFIC_SPLIT_" +
-      "AFTER_START\020\021\022\030\n\024EXPERIMENT_NOT_FOUND\020\022\022" +
-      "\036\n\032EXPERIMENT_NOT_YET_STARTED\020\023\022%\n!CANNO" +
-      "T_HAVE_MULTIPLE_CONTROL_ARMS\020\024\022\037\n\033IN_DES" +
-      "IGN_CAMPAIGNS_NOT_SET\020\025\022\"\n\036CANNOT_SET_ST" +
-      "ATUS_TO_GRADUATED\020\026\0228\n4CANNOT_CREATE_EXP" +
-      "ERIMENT_CAMPAIGN_WITH_SHARED_BUDGET\020\027\0228\n" +
-      "4CANNOT_CREATE_EXPERIMENT_CAMPAIGN_WITH_" +
-      "CUSTOM_BUDGET\020\030B\364\001\n#com.google.ads.googl" +
-      "eads.v10.errorsB\024ExperimentErrorProtoP\001Z" +
-      "Egoogle.golang.org/genproto/googleapis/a" +
-      "ds/googleads/v10/errors;errors\242\002\003GAA\252\002\037G" +
-      "oogle.Ads.GoogleAds.V10.Errors\312\002\037Google\\" +
-      "Ads\\GoogleAds\\V10\\Errors\352\002#Google::Ads::" +
-      "GoogleAds::V10::Errorsb\006proto3"
+      "10.errors\"\304\007\n\023ExperimentErrorEnum\"\254\007\n\017Ex" +
+      "perimentError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOW" +
+      "N\020\001\022!\n\035CANNOT_SET_START_DATE_IN_PAST\020\002\022\036" +
+      "\n\032END_DATE_BEFORE_START_DATE\020\003\022 \n\034START_" +
+      "DATE_TOO_FAR_IN_FUTURE\020\004\022\035\n\031DUPLICATE_EX" +
+      "PERIMENT_NAME\020\005\022$\n CANNOT_MODIFY_REMOVED" +
+      "_EXPERIMENT\020\006\022\035\n\031START_DATE_ALREADY_PASS" +
+      "ED\020\007\022\037\n\033CANNOT_SET_END_DATE_IN_PAST\020\010\022 \n" +
+      "\034CANNOT_SET_STATUS_TO_REMOVED\020\t\022\037\n\033CANNO" +
+      "T_MODIFY_PAST_END_DATE\020\n\022\022\n\016INVALID_STAT" +
+      "US\020\013\022!\n\035INVALID_CAMPAIGN_CHANNEL_TYPE\020\014\022" +
+      "&\n\"OVERLAPPING_MEMBERS_AND_DATE_RANGE\020\r\022" +
+      "#\n\037INVALID_TRIAL_ARM_TRAFFIC_SPLIT\020\016\022\035\n\031" +
+      "TRAFFIC_SPLIT_OVERLAPPING\020\017\022E\nASUM_TRIAL" +
+      "_ARM_TRAFFIC_UNEQUALS_TO_TRIAL_TRAFFIC_S" +
+      "PLIT_DENOMINATOR\020\020\022+\n\'CANNOT_MODIFY_TRAF" +
+      "FIC_SPLIT_AFTER_START\020\021\022\030\n\024EXPERIMENT_NO" +
+      "T_FOUND\020\022\022\036\n\032EXPERIMENT_NOT_YET_STARTED\020" +
+      "\023\022%\n!CANNOT_HAVE_MULTIPLE_CONTROL_ARMS\020\024" +
+      "\022\037\n\033IN_DESIGN_CAMPAIGNS_NOT_SET\020\025\022\"\n\036CAN" +
+      "NOT_SET_STATUS_TO_GRADUATED\020\026\0228\n4CANNOT_" +
+      "CREATE_EXPERIMENT_CAMPAIGN_WITH_SHARED_B" +
+      "UDGET\020\027\0228\n4CANNOT_CREATE_EXPERIMENT_CAMP" +
+      "AIGN_WITH_CUSTOM_BUDGET\020\030\022\035\n\031STATUS_TRAN" +
+      "SITION_INVALID\020\031B\364\001\n#com.google.ads.goog" +
+      "leads.v10.errorsB\024ExperimentErrorProtoP\001" +
+      "ZEgoogle.golang.org/genproto/googleapis/" +
+      "ads/googleads/v10/errors;errors\242\002\003GAA\252\002\037" +
+      "Google.Ads.GoogleAds.V10.Errors\312\002\037Google" +
+      "\\Ads\\GoogleAds\\V10\\Errors\352\002#Google::Ads:" +
+      ":GoogleAds::V10::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_ExperimentErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -73,7 +72,6 @@ public final class ExperimentErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_ExperimentErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -34,31 +34,30 @@ public final class AdGroupFeedProto {
       "ommon/matching_function.proto\0325google/ad" +
       "s/googleads/v10/enums/feed_link_status.p" +
       "roto\0325google/ads/googleads/v10/enums/pla" +
-      "ceholder_type.proto\032\034google/api/annotati" +
-      "ons.proto\032\037google/api/field_behavior.pro" +
-      "to\032\031google/api/resource.proto\"\322\004\n\013AdGrou" +
-      "pFeed\022C\n\rresource_name\030\001 \001(\tB,\340A\005\372A&\n$go" +
-      "ogleads.googleapis.com/AdGroupFeed\0228\n\004fe" +
-      "ed\030\007 \001(\tB%\340A\005\372A\037\n\035googleads.googleapis.c" +
-      "om/FeedH\000\210\001\001\022?\n\010ad_group\030\010 \001(\tB(\340A\005\372A\"\n " +
-      "googleads.googleapis.com/AdGroupH\001\210\001\001\022^\n" +
-      "\021placeholder_types\030\004 \003(\0162C.google.ads.go" +
-      "ogleads.v10.enums.PlaceholderTypeEnum.Pl" +
-      "aceholderType\022L\n\021matching_function\030\005 \001(\013" +
-      "21.google.ads.googleads.v10.common.Match" +
-      "ingFunction\022V\n\006status\030\006 \001(\0162A.google.ads" +
-      ".googleads.v10.enums.FeedLinkStatusEnum." +
-      "FeedLinkStatusB\003\340A\003:g\352Ad\n$googleads.goog" +
-      "leapis.com/AdGroupFeed\022<customers/{custo" +
-      "mer_id}/adGroupFeeds/{ad_group_id}~{feed" +
-      "_id}B\007\n\005_feedB\013\n\t_ad_groupB\202\002\n&com.googl" +
-      "e.ads.googleads.v10.resourcesB\020AdGroupFe" +
-      "edProtoP\001ZKgoogle.golang.org/genproto/go" +
-      "ogleapis/ads/googleads/v10/resources;res" +
-      "ources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V10." +
-      "Resources\312\002\"Google\\Ads\\GoogleAds\\V10\\Res" +
-      "ources\352\002&Google::Ads::GoogleAds::V10::Re" +
-      "sourcesb\006proto3"
+      "ceholder_type.proto\032\037google/api/field_be" +
+      "havior.proto\032\031google/api/resource.proto\"" +
+      "\322\004\n\013AdGroupFeed\022C\n\rresource_name\030\001 \001(\tB," +
+      "\340A\005\372A&\n$googleads.googleapis.com/AdGroup" +
+      "Feed\0228\n\004feed\030\007 \001(\tB%\340A\005\372A\037\n\035googleads.go" +
+      "ogleapis.com/FeedH\000\210\001\001\022?\n\010ad_group\030\010 \001(\t" +
+      "B(\340A\005\372A\"\n googleads.googleapis.com/AdGro" +
+      "upH\001\210\001\001\022^\n\021placeholder_types\030\004 \003(\0162C.goo" +
+      "gle.ads.googleads.v10.enums.PlaceholderT" +
+      "ypeEnum.PlaceholderType\022L\n\021matching_func" +
+      "tion\030\005 \001(\01321.google.ads.googleads.v10.co" +
+      "mmon.MatchingFunction\022V\n\006status\030\006 \001(\0162A." +
+      "google.ads.googleads.v10.enums.FeedLinkS" +
+      "tatusEnum.FeedLinkStatusB\003\340A\003:g\352Ad\n$goog" +
+      "leads.googleapis.com/AdGroupFeed\022<custom" +
+      "ers/{customer_id}/adGroupFeeds/{ad_group" +
+      "_id}~{feed_id}B\007\n\005_feedB\013\n\t_ad_groupB\202\002\n" +
+      "&com.google.ads.googleads.v10.resourcesB" +
+      "\020AdGroupFeedProtoP\001ZKgoogle.golang.org/g" +
+      "enproto/googleapis/ads/googleads/v10/res" +
+      "ources;resources\242\002\003GAA\252\002\"Google.Ads.Goog" +
+      "leAds.V10.Resources\312\002\"Google\\Ads\\GoogleA" +
+      "ds\\V10\\Resources\352\002&Google::Ads::GoogleAd" +
+      "s::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -66,7 +65,6 @@ public final class AdGroupFeedProto {
           com.google.ads.googleads.v10.common.MatchingFunctionProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.FeedLinkStatusProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.PlaceholderTypeProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -86,7 +84,6 @@ public final class AdGroupFeedProto {
     com.google.ads.googleads.v10.common.MatchingFunctionProto.getDescriptor();
     com.google.ads.googleads.v10.enums.FeedLinkStatusProto.getDescriptor();
     com.google.ads.googleads.v10.enums.PlaceholderTypeProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

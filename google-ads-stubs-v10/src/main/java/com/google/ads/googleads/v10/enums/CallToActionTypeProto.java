@@ -30,24 +30,22 @@ public final class CallToActionTypeProto {
     java.lang.String[] descriptorData = {
       "\n8google/ads/googleads/v10/enums/call_to" +
       "_action_type.proto\022\036google.ads.googleads" +
-      ".v10.enums\032\034google/api/annotations.proto" +
-      "\"\315\001\n\024CallToActionTypeEnum\"\264\001\n\020CallToActi" +
-      "onType\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\016\n\n" +
-      "LEARN_MORE\020\002\022\r\n\tGET_QUOTE\020\003\022\r\n\tAPPLY_NOW" +
-      "\020\004\022\013\n\007SIGN_UP\020\005\022\016\n\nCONTACT_US\020\006\022\r\n\tSUBSC" +
-      "RIBE\020\007\022\014\n\010DOWNLOAD\020\010\022\014\n\010BOOK_NOW\020\t\022\014\n\010SH" +
-      "OP_NOW\020\nB\357\001\n\"com.google.ads.googleads.v1" +
-      "0.enumsB\025CallToActionTypeProtoP\001ZCgoogle" +
-      ".golang.org/genproto/googleapis/ads/goog" +
-      "leads/v10/enums;enums\242\002\003GAA\252\002\036Google.Ads" +
-      ".GoogleAds.V10.Enums\312\002\036Google\\Ads\\Google" +
-      "Ads\\V10\\Enums\352\002\"Google::Ads::GoogleAds::" +
-      "V10::Enumsb\006proto3"
+      ".v10.enums\"\315\001\n\024CallToActionTypeEnum\"\264\001\n\020" +
+      "CallToActionType\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNK" +
+      "NOWN\020\001\022\016\n\nLEARN_MORE\020\002\022\r\n\tGET_QUOTE\020\003\022\r\n" +
+      "\tAPPLY_NOW\020\004\022\013\n\007SIGN_UP\020\005\022\016\n\nCONTACT_US\020" +
+      "\006\022\r\n\tSUBSCRIBE\020\007\022\014\n\010DOWNLOAD\020\010\022\014\n\010BOOK_N" +
+      "OW\020\t\022\014\n\010SHOP_NOW\020\nB\357\001\n\"com.google.ads.go" +
+      "ogleads.v10.enumsB\025CallToActionTypeProto" +
+      "P\001ZCgoogle.golang.org/genproto/googleapi" +
+      "s/ads/googleads/v10/enums;enums\242\002\003GAA\252\002\036" +
+      "Google.Ads.GoogleAds.V10.Enums\312\002\036Google\\" +
+      "Ads\\GoogleAds\\V10\\Enums\352\002\"Google::Ads::G" +
+      "oogleAds::V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_CallToActionTypeEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -55,7 +53,6 @@ public final class CallToActionTypeProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_CallToActionTypeEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

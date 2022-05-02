@@ -30,23 +30,21 @@ public final class KeywordPlanConceptGroupTypeProto {
     java.lang.String[] descriptorData = {
       "\nDgoogle/ads/googleads/v10/enums/keyword" +
       "_plan_concept_group_type.proto\022\036google.a" +
-      "ds.googleads.v10.enums\032\034google/api/annot" +
-      "ations.proto\"\212\001\n\037KeywordPlanConceptGroup" +
-      "TypeEnum\"g\n\033KeywordPlanConceptGroupType\022" +
-      "\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\t\n\005BRAND\020\002" +
-      "\022\020\n\014OTHER_BRANDS\020\003\022\r\n\tNON_BRAND\020\004B\372\001\n\"co" +
-      "m.google.ads.googleads.v10.enumsB Keywor" +
-      "dPlanConceptGroupTypeProtoP\001ZCgoogle.gol" +
-      "ang.org/genproto/googleapis/ads/googlead" +
-      "s/v10/enums;enums\242\002\003GAA\252\002\036Google.Ads.Goo" +
-      "gleAds.V10.Enums\312\002\036Google\\Ads\\GoogleAds\\" +
-      "V10\\Enums\352\002\"Google::Ads::GoogleAds::V10:" +
-      ":Enumsb\006proto3"
+      "ds.googleads.v10.enums\"\212\001\n\037KeywordPlanCo" +
+      "nceptGroupTypeEnum\"g\n\033KeywordPlanConcept" +
+      "GroupType\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022" +
+      "\t\n\005BRAND\020\002\022\020\n\014OTHER_BRANDS\020\003\022\r\n\tNON_BRAN" +
+      "D\020\004B\372\001\n\"com.google.ads.googleads.v10.enu" +
+      "msB KeywordPlanConceptGroupTypeProtoP\001ZC" +
+      "google.golang.org/genproto/googleapis/ad" +
+      "s/googleads/v10/enums;enums\242\002\003GAA\252\002\036Goog" +
+      "le.Ads.GoogleAds.V10.Enums\312\002\036Google\\Ads\\" +
+      "GoogleAds\\V10\\Enums\352\002\"Google::Ads::Googl" +
+      "eAds::V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_KeywordPlanConceptGroupTypeEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -54,7 +52,6 @@ public final class KeywordPlanConceptGroupTypeProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_KeywordPlanConceptGroupTypeEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

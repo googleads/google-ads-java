@@ -74,6 +74,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -102,11 +104,10 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.google.ads.googleads.v10.services.PlannableLocation> plannableLocations_;
   /**
    * <pre>
-   * The list of locations available for planning (Countries, DMAs,
-   * sub-countries).
-   * For locations like Countries and DMAs see
-   * https://developers.google.com/google-ads/api/reference/data/geotargets for
-   * more information.
+   * The list of locations available for planning.
+   * See
+   * https://developers.google.com/google-ads/api/reference/data/geotargets
+   * for sample locations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.services.PlannableLocation plannable_locations = 1;</code>
@@ -117,11 +118,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The list of locations available for planning (Countries, DMAs,
-   * sub-countries).
-   * For locations like Countries and DMAs see
-   * https://developers.google.com/google-ads/api/reference/data/geotargets for
-   * more information.
+   * The list of locations available for planning.
+   * See
+   * https://developers.google.com/google-ads/api/reference/data/geotargets
+   * for sample locations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.services.PlannableLocation plannable_locations = 1;</code>
@@ -133,11 +133,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The list of locations available for planning (Countries, DMAs,
-   * sub-countries).
-   * For locations like Countries and DMAs see
-   * https://developers.google.com/google-ads/api/reference/data/geotargets for
-   * more information.
+   * The list of locations available for planning.
+   * See
+   * https://developers.google.com/google-ads/api/reference/data/geotargets
+   * for sample locations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.services.PlannableLocation plannable_locations = 1;</code>
@@ -148,11 +147,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The list of locations available for planning (Countries, DMAs,
-   * sub-countries).
-   * For locations like Countries and DMAs see
-   * https://developers.google.com/google-ads/api/reference/data/geotargets for
-   * more information.
+   * The list of locations available for planning.
+   * See
+   * https://developers.google.com/google-ads/api/reference/data/geotargets
+   * for sample locations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.services.PlannableLocation plannable_locations = 1;</code>
@@ -163,11 +161,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The list of locations available for planning (Countries, DMAs,
-   * sub-countries).
-   * For locations like Countries and DMAs see
-   * https://developers.google.com/google-ads/api/reference/data/geotargets for
-   * more information.
+   * The list of locations available for planning.
+   * See
+   * https://developers.google.com/google-ads/api/reference/data/geotargets
+   * for sample locations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.services.PlannableLocation plannable_locations = 1;</code>
@@ -538,11 +535,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The list of locations available for planning (Countries, DMAs,
-     * sub-countries).
-     * For locations like Countries and DMAs see
-     * https://developers.google.com/google-ads/api/reference/data/geotargets for
-     * more information.
+     * The list of locations available for planning.
+     * See
+     * https://developers.google.com/google-ads/api/reference/data/geotargets
+     * for sample locations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.services.PlannableLocation plannable_locations = 1;</code>
@@ -556,11 +552,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of locations available for planning (Countries, DMAs,
-     * sub-countries).
-     * For locations like Countries and DMAs see
-     * https://developers.google.com/google-ads/api/reference/data/geotargets for
-     * more information.
+     * The list of locations available for planning.
+     * See
+     * https://developers.google.com/google-ads/api/reference/data/geotargets
+     * for sample locations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.services.PlannableLocation plannable_locations = 1;</code>
@@ -574,11 +569,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of locations available for planning (Countries, DMAs,
-     * sub-countries).
-     * For locations like Countries and DMAs see
-     * https://developers.google.com/google-ads/api/reference/data/geotargets for
-     * more information.
+     * The list of locations available for planning.
+     * See
+     * https://developers.google.com/google-ads/api/reference/data/geotargets
+     * for sample locations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.services.PlannableLocation plannable_locations = 1;</code>
@@ -592,11 +586,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of locations available for planning (Countries, DMAs,
-     * sub-countries).
-     * For locations like Countries and DMAs see
-     * https://developers.google.com/google-ads/api/reference/data/geotargets for
-     * more information.
+     * The list of locations available for planning.
+     * See
+     * https://developers.google.com/google-ads/api/reference/data/geotargets
+     * for sample locations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.services.PlannableLocation plannable_locations = 1;</code>
@@ -617,11 +610,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of locations available for planning (Countries, DMAs,
-     * sub-countries).
-     * For locations like Countries and DMAs see
-     * https://developers.google.com/google-ads/api/reference/data/geotargets for
-     * more information.
+     * The list of locations available for planning.
+     * See
+     * https://developers.google.com/google-ads/api/reference/data/geotargets
+     * for sample locations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.services.PlannableLocation plannable_locations = 1;</code>
@@ -639,11 +631,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of locations available for planning (Countries, DMAs,
-     * sub-countries).
-     * For locations like Countries and DMAs see
-     * https://developers.google.com/google-ads/api/reference/data/geotargets for
-     * more information.
+     * The list of locations available for planning.
+     * See
+     * https://developers.google.com/google-ads/api/reference/data/geotargets
+     * for sample locations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.services.PlannableLocation plannable_locations = 1;</code>
@@ -663,11 +654,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of locations available for planning (Countries, DMAs,
-     * sub-countries).
-     * For locations like Countries and DMAs see
-     * https://developers.google.com/google-ads/api/reference/data/geotargets for
-     * more information.
+     * The list of locations available for planning.
+     * See
+     * https://developers.google.com/google-ads/api/reference/data/geotargets
+     * for sample locations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.services.PlannableLocation plannable_locations = 1;</code>
@@ -688,11 +678,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of locations available for planning (Countries, DMAs,
-     * sub-countries).
-     * For locations like Countries and DMAs see
-     * https://developers.google.com/google-ads/api/reference/data/geotargets for
-     * more information.
+     * The list of locations available for planning.
+     * See
+     * https://developers.google.com/google-ads/api/reference/data/geotargets
+     * for sample locations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.services.PlannableLocation plannable_locations = 1;</code>
@@ -710,11 +699,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of locations available for planning (Countries, DMAs,
-     * sub-countries).
-     * For locations like Countries and DMAs see
-     * https://developers.google.com/google-ads/api/reference/data/geotargets for
-     * more information.
+     * The list of locations available for planning.
+     * See
+     * https://developers.google.com/google-ads/api/reference/data/geotargets
+     * for sample locations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.services.PlannableLocation plannable_locations = 1;</code>
@@ -732,11 +720,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of locations available for planning (Countries, DMAs,
-     * sub-countries).
-     * For locations like Countries and DMAs see
-     * https://developers.google.com/google-ads/api/reference/data/geotargets for
-     * more information.
+     * The list of locations available for planning.
+     * See
+     * https://developers.google.com/google-ads/api/reference/data/geotargets
+     * for sample locations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.services.PlannableLocation plannable_locations = 1;</code>
@@ -755,11 +742,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of locations available for planning (Countries, DMAs,
-     * sub-countries).
-     * For locations like Countries and DMAs see
-     * https://developers.google.com/google-ads/api/reference/data/geotargets for
-     * more information.
+     * The list of locations available for planning.
+     * See
+     * https://developers.google.com/google-ads/api/reference/data/geotargets
+     * for sample locations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.services.PlannableLocation plannable_locations = 1;</code>
@@ -776,11 +762,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of locations available for planning (Countries, DMAs,
-     * sub-countries).
-     * For locations like Countries and DMAs see
-     * https://developers.google.com/google-ads/api/reference/data/geotargets for
-     * more information.
+     * The list of locations available for planning.
+     * See
+     * https://developers.google.com/google-ads/api/reference/data/geotargets
+     * for sample locations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.services.PlannableLocation plannable_locations = 1;</code>
@@ -797,11 +782,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of locations available for planning (Countries, DMAs,
-     * sub-countries).
-     * For locations like Countries and DMAs see
-     * https://developers.google.com/google-ads/api/reference/data/geotargets for
-     * more information.
+     * The list of locations available for planning.
+     * See
+     * https://developers.google.com/google-ads/api/reference/data/geotargets
+     * for sample locations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.services.PlannableLocation plannable_locations = 1;</code>
@@ -812,11 +796,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of locations available for planning (Countries, DMAs,
-     * sub-countries).
-     * For locations like Countries and DMAs see
-     * https://developers.google.com/google-ads/api/reference/data/geotargets for
-     * more information.
+     * The list of locations available for planning.
+     * See
+     * https://developers.google.com/google-ads/api/reference/data/geotargets
+     * for sample locations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.services.PlannableLocation plannable_locations = 1;</code>
@@ -830,11 +813,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of locations available for planning (Countries, DMAs,
-     * sub-countries).
-     * For locations like Countries and DMAs see
-     * https://developers.google.com/google-ads/api/reference/data/geotargets for
-     * more information.
+     * The list of locations available for planning.
+     * See
+     * https://developers.google.com/google-ads/api/reference/data/geotargets
+     * for sample locations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.services.PlannableLocation plannable_locations = 1;</code>
@@ -849,11 +831,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of locations available for planning (Countries, DMAs,
-     * sub-countries).
-     * For locations like Countries and DMAs see
-     * https://developers.google.com/google-ads/api/reference/data/geotargets for
-     * more information.
+     * The list of locations available for planning.
+     * See
+     * https://developers.google.com/google-ads/api/reference/data/geotargets
+     * for sample locations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.services.PlannableLocation plannable_locations = 1;</code>
@@ -864,11 +845,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of locations available for planning (Countries, DMAs,
-     * sub-countries).
-     * For locations like Countries and DMAs see
-     * https://developers.google.com/google-ads/api/reference/data/geotargets for
-     * more information.
+     * The list of locations available for planning.
+     * See
+     * https://developers.google.com/google-ads/api/reference/data/geotargets
+     * for sample locations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.services.PlannableLocation plannable_locations = 1;</code>
@@ -880,11 +860,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The list of locations available for planning (Countries, DMAs,
-     * sub-countries).
-     * For locations like Countries and DMAs see
-     * https://developers.google.com/google-ads/api/reference/data/geotargets for
-     * more information.
+     * The list of locations available for planning.
+     * See
+     * https://developers.google.com/google-ads/api/reference/data/geotargets
+     * for sample locations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.services.PlannableLocation plannable_locations = 1;</code>

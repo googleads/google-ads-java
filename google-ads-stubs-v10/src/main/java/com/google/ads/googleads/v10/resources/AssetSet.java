@@ -94,6 +94,11 @@ private static final long serialVersionUID = 0L;
 
             break;
           }
+          case 48: {
+
+            id_ = input.readInt64();
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -105,6 +110,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -242,6 +249,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -876,6 +885,21 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public static final int ID_FIELD_NUMBER = 6;
+  private long id_;
+  /**
+   * <pre>
+   * Output only. The ID of the asset set.
+   * </pre>
+   *
+   * <code>int64 id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
+   */
+  @java.lang.Override
+  public long getId() {
+    return id_;
+  }
+
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
   private volatile java.lang.Object resourceName_;
   /**
@@ -1095,6 +1119,9 @@ private static final long serialVersionUID = 0L;
     if (merchantCenterFeed_ != null) {
       output.writeMessage(5, getMerchantCenterFeed());
     }
+    if (id_ != 0L) {
+      output.writeInt64(6, id_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -1122,6 +1149,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getMerchantCenterFeed());
     }
+    if (id_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(6, id_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1137,6 +1168,8 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v10.resources.AssetSet other = (com.google.ads.googleads.v10.resources.AssetSet) obj;
 
+    if (getId()
+        != other.getId()) return false;
     if (!getResourceName()
         .equals(other.getResourceName())) return false;
     if (!getName()
@@ -1159,6 +1192,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + ID_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getId());
     hash = (37 * hash) + RESOURCE_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getResourceName().hashCode();
     hash = (37 * hash) + NAME_FIELD_NUMBER;
@@ -1309,6 +1345,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      id_ = 0L;
+
       resourceName_ = "";
 
       name_ = "";
@@ -1349,6 +1387,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.ads.googleads.v10.resources.AssetSet buildPartial() {
       com.google.ads.googleads.v10.resources.AssetSet result = new com.google.ads.googleads.v10.resources.AssetSet(this);
+      result.id_ = id_;
       result.resourceName_ = resourceName_;
       result.name_ = name_;
       result.type_ = type_;
@@ -1406,6 +1445,9 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.google.ads.googleads.v10.resources.AssetSet other) {
       if (other == com.google.ads.googleads.v10.resources.AssetSet.getDefaultInstance()) return this;
+      if (other.getId() != 0L) {
+        setId(other.getId());
+      }
       if (!other.getResourceName().isEmpty()) {
         resourceName_ = other.resourceName_;
         onChanged();
@@ -1449,6 +1491,49 @@ private static final long serialVersionUID = 0L;
           mergeFrom(parsedMessage);
         }
       }
+      return this;
+    }
+
+    private long id_ ;
+    /**
+     * <pre>
+     * Output only. The ID of the asset set.
+     * </pre>
+     *
+     * <code>int64 id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public long getId() {
+      return id_;
+    }
+    /**
+     * <pre>
+     * Output only. The ID of the asset set.
+     * </pre>
+     *
+     * <code>int64 id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The id to set.
+     * @return This builder for chaining.
+     */
+    public Builder setId(long value) {
+      
+      id_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The ID of the asset set.
+     * </pre>
+     *
+     * <code>int64 id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearId() {
+      
+      id_ = 0L;
+      onChanged();
       return this;
     }
 

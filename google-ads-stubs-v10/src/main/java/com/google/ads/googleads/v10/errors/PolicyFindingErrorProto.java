@@ -30,22 +30,20 @@ public final class PolicyFindingErrorProto {
     java.lang.String[] descriptorData = {
       "\n:google/ads/googleads/v10/errors/policy" +
       "_finding_error.proto\022\037google.ads.googlea" +
-      "ds.v10.errors\032\034google/api/annotations.pr" +
-      "oto\"|\n\026PolicyFindingErrorEnum\"b\n\022PolicyF" +
-      "indingError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020" +
-      "\001\022\022\n\016POLICY_FINDING\020\002\022\032\n\026POLICY_TOPIC_NO" +
-      "T_FOUND\020\003B\367\001\n#com.google.ads.googleads.v" +
-      "10.errorsB\027PolicyFindingErrorProtoP\001ZEgo" +
-      "ogle.golang.org/genproto/googleapis/ads/" +
-      "googleads/v10/errors;errors\242\002\003GAA\252\002\037Goog" +
-      "le.Ads.GoogleAds.V10.Errors\312\002\037Google\\Ads" +
-      "\\GoogleAds\\V10\\Errors\352\002#Google::Ads::Goo" +
-      "gleAds::V10::Errorsb\006proto3"
+      "ds.v10.errors\"|\n\026PolicyFindingErrorEnum\"" +
+      "b\n\022PolicyFindingError\022\017\n\013UNSPECIFIED\020\000\022\013" +
+      "\n\007UNKNOWN\020\001\022\022\n\016POLICY_FINDING\020\002\022\032\n\026POLIC" +
+      "Y_TOPIC_NOT_FOUND\020\003B\367\001\n#com.google.ads.g" +
+      "oogleads.v10.errorsB\027PolicyFindingErrorP" +
+      "rotoP\001ZEgoogle.golang.org/genproto/googl" +
+      "eapis/ads/googleads/v10/errors;errors\242\002\003" +
+      "GAA\252\002\037Google.Ads.GoogleAds.V10.Errors\312\002\037" +
+      "Google\\Ads\\GoogleAds\\V10\\Errors\352\002#Google" +
+      "::Ads::GoogleAds::V10::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_PolicyFindingErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -53,7 +51,6 @@ public final class PolicyFindingErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_PolicyFindingErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

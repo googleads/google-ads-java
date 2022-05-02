@@ -63,6 +63,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -482,6 +484,14 @@ private static final long serialVersionUID = 0L;
     LOGICAL_USER_LISTS_PER_CUSTOMER(48),
     /**
      * <pre>
+     * Number of open rule based user lists per customer.
+     * </pre>
+     *
+     * <code>RULE_BASED_USER_LISTS_PER_CUSTOMER = 153;</code>
+     */
+    RULE_BASED_USER_LISTS_PER_CUSTOMER(153),
+    /**
+     * <pre>
      * Number of ENABLED and PAUSED ad group ads across all base campaigns for a
      * customer.
      * </pre>
@@ -803,6 +813,119 @@ private static final long serialVersionUID = 0L;
      * <code>ASSETS_PER_DYNAMIC_EDUCATION_FEED_ASSET_SET = 160;</code>
      */
     ASSETS_PER_DYNAMIC_EDUCATION_FEED_ASSET_SET(160),
+    /**
+     * <pre>
+     * Number of ENABLED dynamic real estate asset sets per customer.
+     * </pre>
+     *
+     * <code>DYNAMIC_REAL_ESTATE_ASSET_SETS_PER_CUSTOMER = 161;</code>
+     */
+    DYNAMIC_REAL_ESTATE_ASSET_SETS_PER_CUSTOMER(161),
+    /**
+     * <pre>
+     * Number of ENABLED assets per dynamic real estate asset set.
+     * </pre>
+     *
+     * <code>ASSETS_PER_DYNAMIC_REAL_ESTATE_ASSET_SET = 162;</code>
+     */
+    ASSETS_PER_DYNAMIC_REAL_ESTATE_ASSET_SET(162),
+    /**
+     * <pre>
+     * Number of ENABLED dynamic custom asset sets per customer.
+     * </pre>
+     *
+     * <code>DYNAMIC_CUSTOM_ASSET_SETS_PER_CUSTOMER = 163;</code>
+     */
+    DYNAMIC_CUSTOM_ASSET_SETS_PER_CUSTOMER(163),
+    /**
+     * <pre>
+     * Number of ENABLED assets per dynamic custom asset set.
+     * </pre>
+     *
+     * <code>ASSETS_PER_DYNAMIC_CUSTOM_ASSET_SET = 164;</code>
+     */
+    ASSETS_PER_DYNAMIC_CUSTOM_ASSET_SET(164),
+    /**
+     * <pre>
+     * Number of ENABLED dynamic hotels and rentals asset sets per
+     * customer.
+     * </pre>
+     *
+     * <code>DYNAMIC_HOTELS_AND_RENTALS_ASSET_SETS_PER_CUSTOMER = 165;</code>
+     */
+    DYNAMIC_HOTELS_AND_RENTALS_ASSET_SETS_PER_CUSTOMER(165),
+    /**
+     * <pre>
+     * Number of ENABLED assets per dynamic hotels and rentals asset set.
+     * </pre>
+     *
+     * <code>ASSETS_PER_DYNAMIC_HOTELS_AND_RENTALS_ASSET_SET = 166;</code>
+     */
+    ASSETS_PER_DYNAMIC_HOTELS_AND_RENTALS_ASSET_SET(166),
+    /**
+     * <pre>
+     * Number of ENABLED dynamic local asset sets per customer.
+     * </pre>
+     *
+     * <code>DYNAMIC_LOCAL_ASSET_SETS_PER_CUSTOMER = 167;</code>
+     */
+    DYNAMIC_LOCAL_ASSET_SETS_PER_CUSTOMER(167),
+    /**
+     * <pre>
+     * Number of ENABLED assets per dynamic local asset set.
+     * </pre>
+     *
+     * <code>ASSETS_PER_DYNAMIC_LOCAL_ASSET_SET = 168;</code>
+     */
+    ASSETS_PER_DYNAMIC_LOCAL_ASSET_SET(168),
+    /**
+     * <pre>
+     * Number of ENABLED dynamic flights asset sets per customer.
+     * </pre>
+     *
+     * <code>DYNAMIC_FLIGHTS_ASSET_SETS_PER_CUSTOMER = 169;</code>
+     */
+    DYNAMIC_FLIGHTS_ASSET_SETS_PER_CUSTOMER(169),
+    /**
+     * <pre>
+     * Number of ENABLED assets per dynamic flights asset set.
+     * </pre>
+     *
+     * <code>ASSETS_PER_DYNAMIC_FLIGHTS_ASSET_SET = 170;</code>
+     */
+    ASSETS_PER_DYNAMIC_FLIGHTS_ASSET_SET(170),
+    /**
+     * <pre>
+     * Number of ENABLED dynamic travel asset sets per customer.
+     * </pre>
+     *
+     * <code>DYNAMIC_TRAVEL_ASSET_SETS_PER_CUSTOMER = 171;</code>
+     */
+    DYNAMIC_TRAVEL_ASSET_SETS_PER_CUSTOMER(171),
+    /**
+     * <pre>
+     * Number of ENABLED assets per dynamic travel asset set.
+     * </pre>
+     *
+     * <code>ASSETS_PER_DYNAMIC_TRAVEL_ASSET_SET = 172;</code>
+     */
+    ASSETS_PER_DYNAMIC_TRAVEL_ASSET_SET(172),
+    /**
+     * <pre>
+     * Number of ENABLED dynamic jobs asset sets per customer.
+     * </pre>
+     *
+     * <code>DYNAMIC_JOBS_ASSET_SETS_PER_CUSTOMER = 173;</code>
+     */
+    DYNAMIC_JOBS_ASSET_SETS_PER_CUSTOMER(173),
+    /**
+     * <pre>
+     * Number of ENABLED assets per dynamic jobs asset set.
+     * </pre>
+     *
+     * <code>ASSETS_PER_DYNAMIC_JOBS_ASSET_SET = 174;</code>
+     */
+    ASSETS_PER_DYNAMIC_JOBS_ASSET_SET(174),
     /**
      * <pre>
      * Number of versions per ad.
@@ -1451,6 +1574,14 @@ private static final long serialVersionUID = 0L;
     public static final int LOGICAL_USER_LISTS_PER_CUSTOMER_VALUE = 48;
     /**
      * <pre>
+     * Number of open rule based user lists per customer.
+     * </pre>
+     *
+     * <code>RULE_BASED_USER_LISTS_PER_CUSTOMER = 153;</code>
+     */
+    public static final int RULE_BASED_USER_LISTS_PER_CUSTOMER_VALUE = 153;
+    /**
+     * <pre>
      * Number of ENABLED and PAUSED ad group ads across all base campaigns for a
      * customer.
      * </pre>
@@ -1772,6 +1903,119 @@ private static final long serialVersionUID = 0L;
      * <code>ASSETS_PER_DYNAMIC_EDUCATION_FEED_ASSET_SET = 160;</code>
      */
     public static final int ASSETS_PER_DYNAMIC_EDUCATION_FEED_ASSET_SET_VALUE = 160;
+    /**
+     * <pre>
+     * Number of ENABLED dynamic real estate asset sets per customer.
+     * </pre>
+     *
+     * <code>DYNAMIC_REAL_ESTATE_ASSET_SETS_PER_CUSTOMER = 161;</code>
+     */
+    public static final int DYNAMIC_REAL_ESTATE_ASSET_SETS_PER_CUSTOMER_VALUE = 161;
+    /**
+     * <pre>
+     * Number of ENABLED assets per dynamic real estate asset set.
+     * </pre>
+     *
+     * <code>ASSETS_PER_DYNAMIC_REAL_ESTATE_ASSET_SET = 162;</code>
+     */
+    public static final int ASSETS_PER_DYNAMIC_REAL_ESTATE_ASSET_SET_VALUE = 162;
+    /**
+     * <pre>
+     * Number of ENABLED dynamic custom asset sets per customer.
+     * </pre>
+     *
+     * <code>DYNAMIC_CUSTOM_ASSET_SETS_PER_CUSTOMER = 163;</code>
+     */
+    public static final int DYNAMIC_CUSTOM_ASSET_SETS_PER_CUSTOMER_VALUE = 163;
+    /**
+     * <pre>
+     * Number of ENABLED assets per dynamic custom asset set.
+     * </pre>
+     *
+     * <code>ASSETS_PER_DYNAMIC_CUSTOM_ASSET_SET = 164;</code>
+     */
+    public static final int ASSETS_PER_DYNAMIC_CUSTOM_ASSET_SET_VALUE = 164;
+    /**
+     * <pre>
+     * Number of ENABLED dynamic hotels and rentals asset sets per
+     * customer.
+     * </pre>
+     *
+     * <code>DYNAMIC_HOTELS_AND_RENTALS_ASSET_SETS_PER_CUSTOMER = 165;</code>
+     */
+    public static final int DYNAMIC_HOTELS_AND_RENTALS_ASSET_SETS_PER_CUSTOMER_VALUE = 165;
+    /**
+     * <pre>
+     * Number of ENABLED assets per dynamic hotels and rentals asset set.
+     * </pre>
+     *
+     * <code>ASSETS_PER_DYNAMIC_HOTELS_AND_RENTALS_ASSET_SET = 166;</code>
+     */
+    public static final int ASSETS_PER_DYNAMIC_HOTELS_AND_RENTALS_ASSET_SET_VALUE = 166;
+    /**
+     * <pre>
+     * Number of ENABLED dynamic local asset sets per customer.
+     * </pre>
+     *
+     * <code>DYNAMIC_LOCAL_ASSET_SETS_PER_CUSTOMER = 167;</code>
+     */
+    public static final int DYNAMIC_LOCAL_ASSET_SETS_PER_CUSTOMER_VALUE = 167;
+    /**
+     * <pre>
+     * Number of ENABLED assets per dynamic local asset set.
+     * </pre>
+     *
+     * <code>ASSETS_PER_DYNAMIC_LOCAL_ASSET_SET = 168;</code>
+     */
+    public static final int ASSETS_PER_DYNAMIC_LOCAL_ASSET_SET_VALUE = 168;
+    /**
+     * <pre>
+     * Number of ENABLED dynamic flights asset sets per customer.
+     * </pre>
+     *
+     * <code>DYNAMIC_FLIGHTS_ASSET_SETS_PER_CUSTOMER = 169;</code>
+     */
+    public static final int DYNAMIC_FLIGHTS_ASSET_SETS_PER_CUSTOMER_VALUE = 169;
+    /**
+     * <pre>
+     * Number of ENABLED assets per dynamic flights asset set.
+     * </pre>
+     *
+     * <code>ASSETS_PER_DYNAMIC_FLIGHTS_ASSET_SET = 170;</code>
+     */
+    public static final int ASSETS_PER_DYNAMIC_FLIGHTS_ASSET_SET_VALUE = 170;
+    /**
+     * <pre>
+     * Number of ENABLED dynamic travel asset sets per customer.
+     * </pre>
+     *
+     * <code>DYNAMIC_TRAVEL_ASSET_SETS_PER_CUSTOMER = 171;</code>
+     */
+    public static final int DYNAMIC_TRAVEL_ASSET_SETS_PER_CUSTOMER_VALUE = 171;
+    /**
+     * <pre>
+     * Number of ENABLED assets per dynamic travel asset set.
+     * </pre>
+     *
+     * <code>ASSETS_PER_DYNAMIC_TRAVEL_ASSET_SET = 172;</code>
+     */
+    public static final int ASSETS_PER_DYNAMIC_TRAVEL_ASSET_SET_VALUE = 172;
+    /**
+     * <pre>
+     * Number of ENABLED dynamic jobs asset sets per customer.
+     * </pre>
+     *
+     * <code>DYNAMIC_JOBS_ASSET_SETS_PER_CUSTOMER = 173;</code>
+     */
+    public static final int DYNAMIC_JOBS_ASSET_SETS_PER_CUSTOMER_VALUE = 173;
+    /**
+     * <pre>
+     * Number of ENABLED assets per dynamic jobs asset set.
+     * </pre>
+     *
+     * <code>ASSETS_PER_DYNAMIC_JOBS_ASSET_SET = 174;</code>
+     */
+    public static final int ASSETS_PER_DYNAMIC_JOBS_ASSET_SET_VALUE = 174;
     /**
      * <pre>
      * Number of versions per ad.
@@ -2100,6 +2344,7 @@ private static final long serialVersionUID = 0L;
         case 45: return BIDDING_STRATEGIES_PER_CUSTOMER;
         case 47: return BASIC_USER_LISTS_PER_CUSTOMER;
         case 48: return LOGICAL_USER_LISTS_PER_CUSTOMER;
+        case 153: return RULE_BASED_USER_LISTS_PER_CUSTOMER;
         case 53: return BASE_AD_GROUP_ADS_PER_CUSTOMER;
         case 54: return EXPERIMENT_AD_GROUP_ADS_PER_CUSTOMER;
         case 55: return AD_GROUP_ADS_PER_CAMPAIGN;
@@ -2140,6 +2385,20 @@ private static final long serialVersionUID = 0L;
         case 158: return DYNAMIC_EDUCATION_FEED_ASSET_SETS_PER_CUSTOMER;
         case 159: return ASSETS_PER_PAGE_FEED_ASSET_SET;
         case 160: return ASSETS_PER_DYNAMIC_EDUCATION_FEED_ASSET_SET;
+        case 161: return DYNAMIC_REAL_ESTATE_ASSET_SETS_PER_CUSTOMER;
+        case 162: return ASSETS_PER_DYNAMIC_REAL_ESTATE_ASSET_SET;
+        case 163: return DYNAMIC_CUSTOM_ASSET_SETS_PER_CUSTOMER;
+        case 164: return ASSETS_PER_DYNAMIC_CUSTOM_ASSET_SET;
+        case 165: return DYNAMIC_HOTELS_AND_RENTALS_ASSET_SETS_PER_CUSTOMER;
+        case 166: return ASSETS_PER_DYNAMIC_HOTELS_AND_RENTALS_ASSET_SET;
+        case 167: return DYNAMIC_LOCAL_ASSET_SETS_PER_CUSTOMER;
+        case 168: return ASSETS_PER_DYNAMIC_LOCAL_ASSET_SET;
+        case 169: return DYNAMIC_FLIGHTS_ASSET_SETS_PER_CUSTOMER;
+        case 170: return ASSETS_PER_DYNAMIC_FLIGHTS_ASSET_SET;
+        case 171: return DYNAMIC_TRAVEL_ASSET_SETS_PER_CUSTOMER;
+        case 172: return ASSETS_PER_DYNAMIC_TRAVEL_ASSET_SET;
+        case 173: return DYNAMIC_JOBS_ASSET_SETS_PER_CUSTOMER;
+        case 174: return ASSETS_PER_DYNAMIC_JOBS_ASSET_SET;
         case 82: return VERSIONS_PER_AD;
         case 90: return USER_FEEDS_PER_CUSTOMER;
         case 91: return SYSTEM_FEEDS_PER_CUSTOMER;

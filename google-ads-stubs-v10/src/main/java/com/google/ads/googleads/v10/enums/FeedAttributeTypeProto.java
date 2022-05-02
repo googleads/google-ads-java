@@ -30,25 +30,24 @@ public final class FeedAttributeTypeProto {
     java.lang.String[] descriptorData = {
       "\n8google/ads/googleads/v10/enums/feed_at" +
       "tribute_type.proto\022\036google.ads.googleads" +
-      ".v10.enums\032\034google/api/annotations.proto" +
-      "\"\204\002\n\025FeedAttributeTypeEnum\"\352\001\n\021FeedAttri" +
-      "buteType\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\t" +
-      "\n\005INT64\020\002\022\n\n\006DOUBLE\020\003\022\n\n\006STRING\020\004\022\013\n\007BOO" +
-      "LEAN\020\005\022\007\n\003URL\020\006\022\r\n\tDATE_TIME\020\007\022\016\n\nINT64_" +
-      "LIST\020\010\022\017\n\013DOUBLE_LIST\020\t\022\017\n\013STRING_LIST\020\n" +
-      "\022\020\n\014BOOLEAN_LIST\020\013\022\014\n\010URL_LIST\020\014\022\022\n\016DATE" +
-      "_TIME_LIST\020\r\022\t\n\005PRICE\020\016B\360\001\n\"com.google.a" +
-      "ds.googleads.v10.enumsB\026FeedAttributeTyp" +
-      "eProtoP\001ZCgoogle.golang.org/genproto/goo" +
-      "gleapis/ads/googleads/v10/enums;enums\242\002\003" +
-      "GAA\252\002\036Google.Ads.GoogleAds.V10.Enums\312\002\036G" +
-      "oogle\\Ads\\GoogleAds\\V10\\Enums\352\002\"Google::" +
-      "Ads::GoogleAds::V10::Enumsb\006proto3"
+      ".v10.enums\"\204\002\n\025FeedAttributeTypeEnum\"\352\001\n" +
+      "\021FeedAttributeType\022\017\n\013UNSPECIFIED\020\000\022\013\n\007U" +
+      "NKNOWN\020\001\022\t\n\005INT64\020\002\022\n\n\006DOUBLE\020\003\022\n\n\006STRIN" +
+      "G\020\004\022\013\n\007BOOLEAN\020\005\022\007\n\003URL\020\006\022\r\n\tDATE_TIME\020\007" +
+      "\022\016\n\nINT64_LIST\020\010\022\017\n\013DOUBLE_LIST\020\t\022\017\n\013STR" +
+      "ING_LIST\020\n\022\020\n\014BOOLEAN_LIST\020\013\022\014\n\010URL_LIST" +
+      "\020\014\022\022\n\016DATE_TIME_LIST\020\r\022\t\n\005PRICE\020\016B\360\001\n\"co" +
+      "m.google.ads.googleads.v10.enumsB\026FeedAt" +
+      "tributeTypeProtoP\001ZCgoogle.golang.org/ge" +
+      "nproto/googleapis/ads/googleads/v10/enum" +
+      "s;enums\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V10" +
+      ".Enums\312\002\036Google\\Ads\\GoogleAds\\V10\\Enums\352" +
+      "\002\"Google::Ads::GoogleAds::V10::Enumsb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_FeedAttributeTypeEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -56,7 +55,6 @@ public final class FeedAttributeTypeProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_FeedAttributeTypeEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

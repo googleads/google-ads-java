@@ -30,21 +30,20 @@ public final class ReachPlanErrorProto {
     java.lang.String[] descriptorData = {
       "\n6google/ads/googleads/v10/errors/reach_" +
       "plan_error.proto\022\037google.ads.googleads.v" +
-      "10.errors\032\034google/api/annotations.proto\"" +
-      "g\n\022ReachPlanErrorEnum\"Q\n\016ReachPlanError\022" +
-      "\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022!\n\035NOT_FOR" +
-      "ECASTABLE_MISSING_RATE\020\002B\363\001\n#com.google." +
-      "ads.googleads.v10.errorsB\023ReachPlanError" +
-      "ProtoP\001ZEgoogle.golang.org/genproto/goog" +
-      "leapis/ads/googleads/v10/errors;errors\242\002" +
-      "\003GAA\252\002\037Google.Ads.GoogleAds.V10.Errors\312\002" +
-      "\037Google\\Ads\\GoogleAds\\V10\\Errors\352\002#Googl" +
-      "e::Ads::GoogleAds::V10::Errorsb\006proto3"
+      "10.errors\"g\n\022ReachPlanErrorEnum\"Q\n\016Reach" +
+      "PlanError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022" +
+      "!\n\035NOT_FORECASTABLE_MISSING_RATE\020\002B\363\001\n#c" +
+      "om.google.ads.googleads.v10.errorsB\023Reac" +
+      "hPlanErrorProtoP\001ZEgoogle.golang.org/gen" +
+      "proto/googleapis/ads/googleads/v10/error" +
+      "s;errors\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V1" +
+      "0.Errors\312\002\037Google\\Ads\\GoogleAds\\V10\\Erro" +
+      "rs\352\002#Google::Ads::GoogleAds::V10::Errors" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_ReachPlanErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -52,7 +51,6 @@ public final class ReachPlanErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_ReachPlanErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

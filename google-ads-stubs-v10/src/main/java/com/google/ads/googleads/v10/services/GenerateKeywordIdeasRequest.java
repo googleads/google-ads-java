@@ -218,6 +218,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -2827,8 +2829,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (seedCase_ == 2) {
           keywordAndUrlSeedBuilder_.mergeFrom(value);
+        } else {
+          keywordAndUrlSeedBuilder_.setMessage(value);
         }
-        keywordAndUrlSeedBuilder_.setMessage(value);
       }
       seedCase_ = 2;
       return this;
@@ -3008,8 +3011,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (seedCase_ == 3) {
           keywordSeedBuilder_.mergeFrom(value);
+        } else {
+          keywordSeedBuilder_.setMessage(value);
         }
-        keywordSeedBuilder_.setMessage(value);
       }
       seedCase_ = 3;
       return this;
@@ -3185,8 +3189,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (seedCase_ == 5) {
           urlSeedBuilder_.mergeFrom(value);
+        } else {
+          urlSeedBuilder_.setMessage(value);
         }
-        urlSeedBuilder_.setMessage(value);
       }
       seedCase_ = 5;
       return this;
@@ -3362,8 +3367,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (seedCase_ == 11) {
           siteSeedBuilder_.mergeFrom(value);
+        } else {
+          siteSeedBuilder_.setMessage(value);
         }
-        siteSeedBuilder_.setMessage(value);
       }
       seedCase_ = 11;
       return this;

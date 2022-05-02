@@ -183,6 +183,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -853,7 +855,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < devices_.size(); i++) {
       output.writeEnumNoTag(devices_.get(i));
     }
-    if (conversionRateModifier_ != 0D) {
+    if (java.lang.Double.doubleToRawLongBits(conversionRateModifier_) != 0) {
       output.writeDouble(10, conversionRateModifier_);
     }
     for (int i = 0; i < campaigns_.size(); i++) {
@@ -914,7 +916,7 @@ private static final long serialVersionUID = 0L;
           .computeUInt32SizeNoTag(dataSize);
       }devicesMemoizedSerializedSize = dataSize;
     }
-    if (conversionRateModifier_ != 0D) {
+    if (java.lang.Double.doubleToRawLongBits(conversionRateModifier_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(10, conversionRateModifier_);
     }

@@ -30,22 +30,20 @@ public final class SeasonalityEventScopeProto {
     java.lang.String[] descriptorData = {
       "\n<google/ads/googleads/v10/enums/seasona" +
       "lity_event_scope.proto\022\036google.ads.googl" +
-      "eads.v10.enums\032\034google/api/annotations.p" +
-      "roto\"{\n\031SeasonalityEventScopeEnum\"^\n\025Sea" +
-      "sonalityEventScope\022\017\n\013UNSPECIFIED\020\000\022\013\n\007U" +
-      "NKNOWN\020\001\022\014\n\010CUSTOMER\020\002\022\014\n\010CAMPAIGN\020\004\022\013\n\007" +
-      "CHANNEL\020\005B\364\001\n\"com.google.ads.googleads.v" +
-      "10.enumsB\032SeasonalityEventScopeProtoP\001ZC" +
-      "google.golang.org/genproto/googleapis/ad" +
-      "s/googleads/v10/enums;enums\242\002\003GAA\252\002\036Goog" +
-      "le.Ads.GoogleAds.V10.Enums\312\002\036Google\\Ads\\" +
-      "GoogleAds\\V10\\Enums\352\002\"Google::Ads::Googl" +
-      "eAds::V10::Enumsb\006proto3"
+      "eads.v10.enums\"{\n\031SeasonalityEventScopeE" +
+      "num\"^\n\025SeasonalityEventScope\022\017\n\013UNSPECIF" +
+      "IED\020\000\022\013\n\007UNKNOWN\020\001\022\014\n\010CUSTOMER\020\002\022\014\n\010CAMP" +
+      "AIGN\020\004\022\013\n\007CHANNEL\020\005B\364\001\n\"com.google.ads.g" +
+      "oogleads.v10.enumsB\032SeasonalityEventScop" +
+      "eProtoP\001ZCgoogle.golang.org/genproto/goo" +
+      "gleapis/ads/googleads/v10/enums;enums\242\002\003" +
+      "GAA\252\002\036Google.Ads.GoogleAds.V10.Enums\312\002\036G" +
+      "oogle\\Ads\\GoogleAds\\V10\\Enums\352\002\"Google::" +
+      "Ads::GoogleAds::V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_SeasonalityEventScopeEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -53,7 +51,6 @@ public final class SeasonalityEventScopeProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_SeasonalityEventScopeEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

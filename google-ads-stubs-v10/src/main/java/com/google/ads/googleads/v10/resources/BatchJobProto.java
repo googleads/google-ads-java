@@ -36,45 +36,43 @@ public final class BatchJobProto {
       "\n2google/ads/googleads/v10/resources/bat" +
       "ch_job.proto\022\"google.ads.googleads.v10.r" +
       "esources\0325google/ads/googleads/v10/enums" +
-      "/batch_job_status.proto\032\034google/api/anno" +
-      "tations.proto\032\037google/api/field_behavior" +
-      ".proto\032\031google/api/resource.proto\"\224\007\n\010Ba" +
-      "tchJob\022@\n\rresource_name\030\001 \001(\tB)\340A\005\372A#\n!g" +
-      "oogleads.googleapis.com/BatchJob\022\024\n\002id\030\007" +
-      " \001(\003B\003\340A\003H\000\210\001\001\022)\n\027next_add_sequence_toke" +
-      "n\030\010 \001(\tB\003\340A\003H\001\210\001\001\022T\n\010metadata\030\004 \001(\0132=.go" +
-      "ogle.ads.googleads.v10.resources.BatchJo" +
-      "b.BatchJobMetadataB\003\340A\003\022V\n\006status\030\005 \001(\0162" +
-      "A.google.ads.googleads.v10.enums.BatchJo" +
-      "bStatusEnum.BatchJobStatusB\003\340A\003\022(\n\026long_" +
-      "running_operation\030\t \001(\tB\003\340A\003H\002\210\001\001\032\224\003\n\020Ba" +
-      "tchJobMetadata\022$\n\022creation_date_time\030\010 \001" +
-      "(\tB\003\340A\003H\000\210\001\001\022!\n\017start_date_time\030\007 \001(\tB\003\340" +
-      "A\003H\001\210\001\001\022&\n\024completion_date_time\030\t \001(\tB\003\340" +
-      "A\003H\002\210\001\001\022,\n\032estimated_completion_ratio\030\n " +
-      "\001(\001B\003\340A\003H\003\210\001\001\022!\n\017operation_count\030\013 \001(\003B\003" +
-      "\340A\003H\004\210\001\001\022*\n\030executed_operation_count\030\014 \001" +
-      "(\003B\003\340A\003H\005\210\001\001B\025\n\023_creation_date_timeB\022\n\020_" +
-      "start_date_timeB\027\n\025_completion_date_time" +
-      "B\035\n\033_estimated_completion_ratioB\022\n\020_oper" +
-      "ation_countB\033\n\031_executed_operation_count" +
-      ":X\352AU\n!googleads.googleapis.com/BatchJob" +
-      "\0220customers/{customer_id}/batchJobs/{bat" +
-      "ch_job_id}B\005\n\003_idB\032\n\030_next_add_sequence_" +
-      "tokenB\031\n\027_long_running_operationB\377\001\n&com" +
-      ".google.ads.googleads.v10.resourcesB\rBat" +
-      "chJobProtoP\001ZKgoogle.golang.org/genproto" +
-      "/googleapis/ads/googleads/v10/resources;" +
-      "resources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V" +
-      "10.Resources\312\002\"Google\\Ads\\GoogleAds\\V10\\" +
-      "Resources\352\002&Google::Ads::GoogleAds::V10:" +
-      ":Resourcesb\006proto3"
+      "/batch_job_status.proto\032\037google/api/fiel" +
+      "d_behavior.proto\032\031google/api/resource.pr" +
+      "oto\"\224\007\n\010BatchJob\022@\n\rresource_name\030\001 \001(\tB" +
+      ")\340A\005\372A#\n!googleads.googleapis.com/BatchJ" +
+      "ob\022\024\n\002id\030\007 \001(\003B\003\340A\003H\000\210\001\001\022)\n\027next_add_seq" +
+      "uence_token\030\010 \001(\tB\003\340A\003H\001\210\001\001\022T\n\010metadata\030" +
+      "\004 \001(\0132=.google.ads.googleads.v10.resourc" +
+      "es.BatchJob.BatchJobMetadataB\003\340A\003\022V\n\006sta" +
+      "tus\030\005 \001(\0162A.google.ads.googleads.v10.enu" +
+      "ms.BatchJobStatusEnum.BatchJobStatusB\003\340A" +
+      "\003\022(\n\026long_running_operation\030\t \001(\tB\003\340A\003H\002" +
+      "\210\001\001\032\224\003\n\020BatchJobMetadata\022$\n\022creation_dat" +
+      "e_time\030\010 \001(\tB\003\340A\003H\000\210\001\001\022!\n\017start_date_tim" +
+      "e\030\007 \001(\tB\003\340A\003H\001\210\001\001\022&\n\024completion_date_tim" +
+      "e\030\t \001(\tB\003\340A\003H\002\210\001\001\022,\n\032estimated_completio" +
+      "n_ratio\030\n \001(\001B\003\340A\003H\003\210\001\001\022!\n\017operation_cou" +
+      "nt\030\013 \001(\003B\003\340A\003H\004\210\001\001\022*\n\030executed_operation" +
+      "_count\030\014 \001(\003B\003\340A\003H\005\210\001\001B\025\n\023_creation_date" +
+      "_timeB\022\n\020_start_date_timeB\027\n\025_completion" +
+      "_date_timeB\035\n\033_estimated_completion_rati" +
+      "oB\022\n\020_operation_countB\033\n\031_executed_opera" +
+      "tion_count:X\352AU\n!googleads.googleapis.co" +
+      "m/BatchJob\0220customers/{customer_id}/batc" +
+      "hJobs/{batch_job_id}B\005\n\003_idB\032\n\030_next_add" +
+      "_sequence_tokenB\031\n\027_long_running_operati" +
+      "onB\377\001\n&com.google.ads.googleads.v10.reso" +
+      "urcesB\rBatchJobProtoP\001ZKgoogle.golang.or" +
+      "g/genproto/googleapis/ads/googleads/v10/" +
+      "resources;resources\242\002\003GAA\252\002\"Google.Ads.G" +
+      "oogleAds.V10.Resources\312\002\"Google\\Ads\\Goog" +
+      "leAds\\V10\\Resources\352\002&Google::Ads::Googl" +
+      "eAds::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.enums.BatchJobStatusProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -98,7 +96,6 @@ public final class BatchJobProto {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.enums.BatchJobStatusProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

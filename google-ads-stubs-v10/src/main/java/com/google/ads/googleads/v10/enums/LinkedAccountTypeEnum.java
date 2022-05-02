@@ -63,6 +63,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -134,6 +136,14 @@ private static final long serialVersionUID = 0L;
      * <code>GOOGLE_ADS = 4;</code>
      */
     GOOGLE_ADS(4),
+    /**
+     * <pre>
+     * A link to Hotel Center.
+     * </pre>
+     *
+     * <code>HOTEL_CENTER = 5;</code>
+     */
+    HOTEL_CENTER(5),
     UNRECOGNIZED(-1),
     ;
 
@@ -177,6 +187,14 @@ private static final long serialVersionUID = 0L;
      * <code>GOOGLE_ADS = 4;</code>
      */
     public static final int GOOGLE_ADS_VALUE = 4;
+    /**
+     * <pre>
+     * A link to Hotel Center.
+     * </pre>
+     *
+     * <code>HOTEL_CENTER = 5;</code>
+     */
+    public static final int HOTEL_CENTER_VALUE = 5;
 
 
     public final int getNumber() {
@@ -208,6 +226,7 @@ private static final long serialVersionUID = 0L;
         case 2: return THIRD_PARTY_APP_ANALYTICS;
         case 3: return DATA_PARTNER;
         case 4: return GOOGLE_ADS;
+        case 5: return HOTEL_CENTER;
         default: return null;
       }
     }

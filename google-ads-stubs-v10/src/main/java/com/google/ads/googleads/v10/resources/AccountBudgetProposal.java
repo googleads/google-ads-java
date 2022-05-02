@@ -166,13 +166,13 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 264: {
-            proposedSpendingLimitCase_ = 33;
             proposedSpendingLimit_ = input.readInt64();
+            proposedSpendingLimitCase_ = 33;
             break;
           }
           case 272: {
-            approvedSpendingLimitCase_ = 34;
             approvedSpendingLimit_ = input.readInt64();
+            approvedSpendingLimitCase_ = 34;
             break;
           }
           case 282: {
@@ -210,6 +210,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);

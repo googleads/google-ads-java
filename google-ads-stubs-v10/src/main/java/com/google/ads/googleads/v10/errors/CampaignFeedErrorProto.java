@@ -30,28 +30,26 @@ public final class CampaignFeedErrorProto {
     java.lang.String[] descriptorData = {
       "\n9google/ads/googleads/v10/errors/campai" +
       "gn_feed_error.proto\022\037google.ads.googlead" +
-      "s.v10.errors\032\034google/api/annotations.pro" +
-      "to\"\354\002\n\025CampaignFeedErrorEnum\"\322\002\n\021Campaig" +
-      "nFeedError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001" +
-      "\022,\n(FEED_ALREADY_EXISTS_FOR_PLACEHOLDER_" +
-      "TYPE\020\002\022\"\n\036CANNOT_CREATE_FOR_REMOVED_FEED" +
-      "\020\004\0220\n,CANNOT_CREATE_ALREADY_EXISTING_CAM" +
-      "PAIGN_FEED\020\005\022\'\n#CANNOT_MODIFY_REMOVED_CA" +
-      "MPAIGN_FEED\020\006\022\034\n\030INVALID_PLACEHOLDER_TYP" +
-      "E\020\007\022,\n(MISSING_FEEDMAPPING_FOR_PLACEHOLD" +
-      "ER_TYPE\020\010\022&\n\"NO_EXISTING_LOCATION_CUSTOM" +
-      "ER_FEED\020\tB\366\001\n#com.google.ads.googleads.v" +
-      "10.errorsB\026CampaignFeedErrorProtoP\001ZEgoo" +
-      "gle.golang.org/genproto/googleapis/ads/g" +
-      "oogleads/v10/errors;errors\242\002\003GAA\252\002\037Googl" +
-      "e.Ads.GoogleAds.V10.Errors\312\002\037Google\\Ads\\" +
-      "GoogleAds\\V10\\Errors\352\002#Google::Ads::Goog" +
-      "leAds::V10::Errorsb\006proto3"
+      "s.v10.errors\"\354\002\n\025CampaignFeedErrorEnum\"\322" +
+      "\002\n\021CampaignFeedError\022\017\n\013UNSPECIFIED\020\000\022\013\n" +
+      "\007UNKNOWN\020\001\022,\n(FEED_ALREADY_EXISTS_FOR_PL" +
+      "ACEHOLDER_TYPE\020\002\022\"\n\036CANNOT_CREATE_FOR_RE" +
+      "MOVED_FEED\020\004\0220\n,CANNOT_CREATE_ALREADY_EX" +
+      "ISTING_CAMPAIGN_FEED\020\005\022\'\n#CANNOT_MODIFY_" +
+      "REMOVED_CAMPAIGN_FEED\020\006\022\034\n\030INVALID_PLACE" +
+      "HOLDER_TYPE\020\007\022,\n(MISSING_FEEDMAPPING_FOR" +
+      "_PLACEHOLDER_TYPE\020\010\022&\n\"NO_EXISTING_LOCAT" +
+      "ION_CUSTOMER_FEED\020\tB\366\001\n#com.google.ads.g" +
+      "oogleads.v10.errorsB\026CampaignFeedErrorPr" +
+      "otoP\001ZEgoogle.golang.org/genproto/google" +
+      "apis/ads/googleads/v10/errors;errors\242\002\003G" +
+      "AA\252\002\037Google.Ads.GoogleAds.V10.Errors\312\002\037G" +
+      "oogle\\Ads\\GoogleAds\\V10\\Errors\352\002#Google:" +
+      ":Ads::GoogleAds::V10::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_CampaignFeedErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -59,7 +57,6 @@ public final class CampaignFeedErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_CampaignFeedErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

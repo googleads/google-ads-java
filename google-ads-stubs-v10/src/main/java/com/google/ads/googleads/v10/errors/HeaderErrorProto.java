@@ -30,22 +30,20 @@ public final class HeaderErrorProto {
     java.lang.String[] descriptorData = {
       "\n2google/ads/googleads/v10/errors/header" +
       "_error.proto\022\037google.ads.googleads.v10.e" +
-      "rrors\032\034google/api/annotations.proto\"}\n\017H" +
-      "eaderErrorEnum\"j\n\013HeaderError\022\017\n\013UNSPECI" +
-      "FIED\020\000\022\013\n\007UNKNOWN\020\001\022\035\n\031INVALID_LOGIN_CUS" +
-      "TOMER_ID\020\003\022\036\n\032INVALID_LINKED_CUSTOMER_ID" +
-      "\020\007B\360\001\n#com.google.ads.googleads.v10.erro" +
-      "rsB\020HeaderErrorProtoP\001ZEgoogle.golang.or" +
-      "g/genproto/googleapis/ads/googleads/v10/" +
-      "errors;errors\242\002\003GAA\252\002\037Google.Ads.GoogleA" +
-      "ds.V10.Errors\312\002\037Google\\Ads\\GoogleAds\\V10" +
-      "\\Errors\352\002#Google::Ads::GoogleAds::V10::E" +
-      "rrorsb\006proto3"
+      "rrors\"}\n\017HeaderErrorEnum\"j\n\013HeaderError\022" +
+      "\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\035\n\031INVALID" +
+      "_LOGIN_CUSTOMER_ID\020\003\022\036\n\032INVALID_LINKED_C" +
+      "USTOMER_ID\020\007B\360\001\n#com.google.ads.googlead" +
+      "s.v10.errorsB\020HeaderErrorProtoP\001ZEgoogle" +
+      ".golang.org/genproto/googleapis/ads/goog" +
+      "leads/v10/errors;errors\242\002\003GAA\252\002\037Google.A" +
+      "ds.GoogleAds.V10.Errors\312\002\037Google\\Ads\\Goo" +
+      "gleAds\\V10\\Errors\352\002#Google::Ads::GoogleA" +
+      "ds::V10::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_HeaderErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -53,7 +51,6 @@ public final class HeaderErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_HeaderErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

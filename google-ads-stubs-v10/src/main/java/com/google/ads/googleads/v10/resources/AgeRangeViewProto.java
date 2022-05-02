@@ -30,26 +30,24 @@ public final class AgeRangeViewProto {
     java.lang.String[] descriptorData = {
       "\n7google/ads/googleads/v10/resources/age" +
       "_range_view.proto\022\"google.ads.googleads." +
-      "v10.resources\032\034google/api/annotations.pr" +
-      "oto\032\037google/api/field_behavior.proto\032\031go" +
-      "ogle/api/resource.proto\"\304\001\n\014AgeRangeView" +
-      "\022D\n\rresource_name\030\001 \001(\tB-\340A\003\372A\'\n%googlea" +
-      "ds.googleapis.com/AgeRangeView:n\352Ak\n%goo" +
-      "gleads.googleapis.com/AgeRangeView\022Bcust" +
-      "omers/{customer_id}/ageRangeViews/{ad_gr" +
-      "oup_id}~{criterion_id}B\203\002\n&com.google.ad" +
-      "s.googleads.v10.resourcesB\021AgeRangeViewP" +
-      "rotoP\001ZKgoogle.golang.org/genproto/googl" +
-      "eapis/ads/googleads/v10/resources;resour" +
-      "ces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V10.Res" +
-      "ources\312\002\"Google\\Ads\\GoogleAds\\V10\\Resour" +
-      "ces\352\002&Google::Ads::GoogleAds::V10::Resou" +
-      "rcesb\006proto3"
+      "v10.resources\032\037google/api/field_behavior" +
+      ".proto\032\031google/api/resource.proto\"\304\001\n\014Ag" +
+      "eRangeView\022D\n\rresource_name\030\001 \001(\tB-\340A\003\372A" +
+      "\'\n%googleads.googleapis.com/AgeRangeView" +
+      ":n\352Ak\n%googleads.googleapis.com/AgeRange" +
+      "View\022Bcustomers/{customer_id}/ageRangeVi" +
+      "ews/{ad_group_id}~{criterion_id}B\203\002\n&com" +
+      ".google.ads.googleads.v10.resourcesB\021Age" +
+      "RangeViewProtoP\001ZKgoogle.golang.org/genp" +
+      "roto/googleapis/ads/googleads/v10/resour" +
+      "ces;resources\242\002\003GAA\252\002\"Google.Ads.GoogleA" +
+      "ds.V10.Resources\312\002\"Google\\Ads\\GoogleAds\\" +
+      "V10\\Resources\352\002&Google::Ads::GoogleAds::" +
+      "V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -66,7 +64,6 @@ public final class AgeRangeViewProto {
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

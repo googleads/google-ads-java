@@ -30,23 +30,21 @@ public final class AdGroupCriterionCustomizerErrorProto {
     java.lang.String[] descriptorData = {
       "\nIgoogle/ads/googleads/v10/errors/ad_gro" +
       "up_criterion_customizer_error.proto\022\037goo" +
-      "gle.ads.googleads.v10.errors\032\034google/api" +
-      "/annotations.proto\"\204\001\n#AdGroupCriterionC" +
-      "ustomizerErrorEnum\"]\n\037AdGroupCriterionCu" +
-      "stomizerError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOW" +
-      "N\020\001\022\034\n\030CRITERION_IS_NOT_KEYWORD\020\002B\204\002\n#co" +
-      "m.google.ads.googleads.v10.errorsB$AdGro" +
-      "upCriterionCustomizerErrorProtoP\001ZEgoogl" +
-      "e.golang.org/genproto/googleapis/ads/goo" +
-      "gleads/v10/errors;errors\242\002\003GAA\252\002\037Google." +
-      "Ads.GoogleAds.V10.Errors\312\002\037Google\\Ads\\Go" +
-      "ogleAds\\V10\\Errors\352\002#Google::Ads::Google" +
-      "Ads::V10::Errorsb\006proto3"
+      "gle.ads.googleads.v10.errors\"\204\001\n#AdGroup" +
+      "CriterionCustomizerErrorEnum\"]\n\037AdGroupC" +
+      "riterionCustomizerError\022\017\n\013UNSPECIFIED\020\000" +
+      "\022\013\n\007UNKNOWN\020\001\022\034\n\030CRITERION_IS_NOT_KEYWOR" +
+      "D\020\002B\204\002\n#com.google.ads.googleads.v10.err" +
+      "orsB$AdGroupCriterionCustomizerErrorProt" +
+      "oP\001ZEgoogle.golang.org/genproto/googleap" +
+      "is/ads/googleads/v10/errors;errors\242\002\003GAA" +
+      "\252\002\037Google.Ads.GoogleAds.V10.Errors\312\002\037Goo" +
+      "gle\\Ads\\GoogleAds\\V10\\Errors\352\002#Google::A" +
+      "ds::GoogleAds::V10::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_AdGroupCriterionCustomizerErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -54,7 +52,6 @@ public final class AdGroupCriterionCustomizerErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_AdGroupCriterionCustomizerErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -30,21 +30,19 @@ public final class RangeErrorProto {
     java.lang.String[] descriptorData = {
       "\n1google/ads/googleads/v10/errors/range_" +
       "error.proto\022\037google.ads.googleads.v10.er" +
-      "rors\032\034google/api/annotations.proto\"W\n\016Ra" +
-      "ngeErrorEnum\"E\n\nRangeError\022\017\n\013UNSPECIFIE" +
-      "D\020\000\022\013\n\007UNKNOWN\020\001\022\013\n\007TOO_LOW\020\002\022\014\n\010TOO_HIG" +
-      "H\020\003B\357\001\n#com.google.ads.googleads.v10.err" +
-      "orsB\017RangeErrorProtoP\001ZEgoogle.golang.or" +
-      "g/genproto/googleapis/ads/googleads/v10/" +
-      "errors;errors\242\002\003GAA\252\002\037Google.Ads.GoogleA" +
-      "ds.V10.Errors\312\002\037Google\\Ads\\GoogleAds\\V10" +
-      "\\Errors\352\002#Google::Ads::GoogleAds::V10::E" +
-      "rrorsb\006proto3"
+      "rors\"W\n\016RangeErrorEnum\"E\n\nRangeError\022\017\n\013" +
+      "UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\013\n\007TOO_LOW\020\002\022" +
+      "\014\n\010TOO_HIGH\020\003B\357\001\n#com.google.ads.googlea" +
+      "ds.v10.errorsB\017RangeErrorProtoP\001ZEgoogle" +
+      ".golang.org/genproto/googleapis/ads/goog" +
+      "leads/v10/errors;errors\242\002\003GAA\252\002\037Google.A" +
+      "ds.GoogleAds.V10.Errors\312\002\037Google\\Ads\\Goo" +
+      "gleAds\\V10\\Errors\352\002#Google::Ads::GoogleA" +
+      "ds::V10::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_RangeErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -52,7 +50,6 @@ public final class RangeErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_RangeErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

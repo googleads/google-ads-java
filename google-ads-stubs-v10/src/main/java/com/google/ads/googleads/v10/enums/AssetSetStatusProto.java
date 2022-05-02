@@ -30,21 +30,19 @@ public final class AssetSetStatusProto {
     java.lang.String[] descriptorData = {
       "\n5google/ads/googleads/v10/enums/asset_s" +
       "et_status.proto\022\036google.ads.googleads.v1" +
-      "0.enums\032\034google/api/annotations.proto\"^\n" +
-      "\022AssetSetStatusEnum\"H\n\016AssetSetStatus\022\017\n" +
-      "\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\013\n\007ENABLED\020\002" +
-      "\022\013\n\007REMOVED\020\003B\355\001\n\"com.google.ads.googlea" +
-      "ds.v10.enumsB\023AssetSetStatusProtoP\001ZCgoo" +
-      "gle.golang.org/genproto/googleapis/ads/g" +
-      "oogleads/v10/enums;enums\242\002\003GAA\252\002\036Google." +
-      "Ads.GoogleAds.V10.Enums\312\002\036Google\\Ads\\Goo" +
-      "gleAds\\V10\\Enums\352\002\"Google::Ads::GoogleAd" +
-      "s::V10::Enumsb\006proto3"
+      "0.enums\"^\n\022AssetSetStatusEnum\"H\n\016AssetSe" +
+      "tStatus\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\013\n" +
+      "\007ENABLED\020\002\022\013\n\007REMOVED\020\003B\355\001\n\"com.google.a" +
+      "ds.googleads.v10.enumsB\023AssetSetStatusPr" +
+      "otoP\001ZCgoogle.golang.org/genproto/google" +
+      "apis/ads/googleads/v10/enums;enums\242\002\003GAA" +
+      "\252\002\036Google.Ads.GoogleAds.V10.Enums\312\002\036Goog" +
+      "le\\Ads\\GoogleAds\\V10\\Enums\352\002\"Google::Ads" +
+      "::GoogleAds::V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_AssetSetStatusEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -52,7 +50,6 @@ public final class AssetSetStatusProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_AssetSetStatusEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

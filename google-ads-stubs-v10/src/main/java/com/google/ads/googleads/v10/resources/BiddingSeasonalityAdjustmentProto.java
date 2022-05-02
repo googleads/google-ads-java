@@ -36,38 +36,37 @@ public final class BiddingSeasonalityAdjustmentProto {
       "nums/device.proto\032<google/ads/googleads/" +
       "v10/enums/seasonality_event_scope.proto\032" +
       "=google/ads/googleads/v10/enums/seasonal" +
-      "ity_event_status.proto\032\034google/api/annot" +
-      "ations.proto\032\037google/api/field_behavior." +
-      "proto\032\031google/api/resource.proto\"\344\006\n\034Bid" +
-      "dingSeasonalityAdjustment\022T\n\rresource_na" +
-      "me\030\001 \001(\tB=\340A\005\372A7\n5googleads.googleapis.c" +
-      "om/BiddingSeasonalityAdjustment\022&\n\031seaso" +
-      "nality_adjustment_id\030\002 \001(\003B\003\340A\003\022^\n\005scope" +
-      "\030\003 \001(\0162O.google.ads.googleads.v10.enums." +
-      "SeasonalityEventScopeEnum.SeasonalityEve" +
-      "ntScope\022f\n\006status\030\004 \001(\0162Q.google.ads.goo" +
-      "gleads.v10.enums.SeasonalityEventStatusE" +
-      "num.SeasonalityEventStatusB\003\340A\003\022\034\n\017start" +
-      "_date_time\030\005 \001(\tB\003\340A\002\022\032\n\rend_date_time\030\006" +
-      " \001(\tB\003\340A\002\022\014\n\004name\030\007 \001(\t\022\023\n\013description\030\010" +
-      " \001(\t\022B\n\007devices\030\t \003(\01621.google.ads.googl" +
-      "eads.v10.enums.DeviceEnum.Device\022 \n\030conv" +
-      "ersion_rate_modifier\030\n \001(\001\0229\n\tcampaigns\030" +
-      "\013 \003(\tB&\372A#\n!googleads.googleapis.com/Cam" +
-      "paign\022t\n\031advertising_channel_types\030\014 \003(\016" +
-      "2Q.google.ads.googleads.v10.enums.Advert" +
-      "isingChannelTypeEnum.AdvertisingChannelT" +
-      "ype:\211\001\352A\205\001\n5googleads.googleapis.com/Bid" +
-      "dingSeasonalityAdjustment\022Lcustomers/{cu" +
-      "stomer_id}/biddingSeasonalityAdjustments" +
-      "/{seasonality_event_id}B\223\002\n&com.google.a" +
-      "ds.googleads.v10.resourcesB!BiddingSeaso" +
-      "nalityAdjustmentProtoP\001ZKgoogle.golang.o" +
-      "rg/genproto/googleapis/ads/googleads/v10" +
-      "/resources;resources\242\002\003GAA\252\002\"Google.Ads." +
-      "GoogleAds.V10.Resources\312\002\"Google\\Ads\\Goo" +
-      "gleAds\\V10\\Resources\352\002&Google::Ads::Goog" +
-      "leAds::V10::Resourcesb\006proto3"
+      "ity_event_status.proto\032\037google/api/field" +
+      "_behavior.proto\032\031google/api/resource.pro" +
+      "to\"\344\006\n\034BiddingSeasonalityAdjustment\022T\n\rr" +
+      "esource_name\030\001 \001(\tB=\340A\005\372A7\n5googleads.go" +
+      "ogleapis.com/BiddingSeasonalityAdjustmen" +
+      "t\022&\n\031seasonality_adjustment_id\030\002 \001(\003B\003\340A" +
+      "\003\022^\n\005scope\030\003 \001(\0162O.google.ads.googleads." +
+      "v10.enums.SeasonalityEventScopeEnum.Seas" +
+      "onalityEventScope\022f\n\006status\030\004 \001(\0162Q.goog" +
+      "le.ads.googleads.v10.enums.SeasonalityEv" +
+      "entStatusEnum.SeasonalityEventStatusB\003\340A" +
+      "\003\022\034\n\017start_date_time\030\005 \001(\tB\003\340A\002\022\032\n\rend_d" +
+      "ate_time\030\006 \001(\tB\003\340A\002\022\014\n\004name\030\007 \001(\t\022\023\n\013des" +
+      "cription\030\010 \001(\t\022B\n\007devices\030\t \003(\01621.google" +
+      ".ads.googleads.v10.enums.DeviceEnum.Devi" +
+      "ce\022 \n\030conversion_rate_modifier\030\n \001(\001\0229\n\t" +
+      "campaigns\030\013 \003(\tB&\372A#\n!googleads.googleap" +
+      "is.com/Campaign\022t\n\031advertising_channel_t" +
+      "ypes\030\014 \003(\0162Q.google.ads.googleads.v10.en" +
+      "ums.AdvertisingChannelTypeEnum.Advertisi" +
+      "ngChannelType:\211\001\352A\205\001\n5googleads.googleap" +
+      "is.com/BiddingSeasonalityAdjustment\022Lcus" +
+      "tomers/{customer_id}/biddingSeasonalityA" +
+      "djustments/{seasonality_event_id}B\223\002\n&co" +
+      "m.google.ads.googleads.v10.resourcesB!Bi" +
+      "ddingSeasonalityAdjustmentProtoP\001ZKgoogl" +
+      "e.golang.org/genproto/googleapis/ads/goo" +
+      "gleads/v10/resources;resources\242\002\003GAA\252\002\"G" +
+      "oogle.Ads.GoogleAds.V10.Resources\312\002\"Goog" +
+      "le\\Ads\\GoogleAds\\V10\\Resources\352\002&Google:" +
+      ":Ads::GoogleAds::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -76,7 +75,6 @@ public final class BiddingSeasonalityAdjustmentProto {
           com.google.ads.googleads.v10.enums.DeviceProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.SeasonalityEventScopeProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.SeasonalityEventStatusProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -97,7 +95,6 @@ public final class BiddingSeasonalityAdjustmentProto {
     com.google.ads.googleads.v10.enums.DeviceProto.getDescriptor();
     com.google.ads.googleads.v10.enums.SeasonalityEventScopeProto.getDescriptor();
     com.google.ads.googleads.v10.enums.SeasonalityEventStatusProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

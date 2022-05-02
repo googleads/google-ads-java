@@ -32,36 +32,34 @@ public final class KeywordPlanCampaignKeywordProto {
       "word_plan_campaign_keyword.proto\022\"google" +
       ".ads.googleads.v10.resources\0327google/ads" +
       "/googleads/v10/enums/keyword_match_type." +
-      "proto\032\034google/api/annotations.proto\032\037goo" +
-      "gle/api/field_behavior.proto\032\031google/api" +
-      "/resource.proto\"\262\004\n\032KeywordPlanCampaignK" +
-      "eyword\022R\n\rresource_name\030\001 \001(\tB;\340A\005\372A5\n3g" +
-      "oogleads.googleapis.com/KeywordPlanCampa" +
-      "ignKeyword\022U\n\025keyword_plan_campaign\030\010 \001(" +
-      "\tB1\372A.\n,googleads.googleapis.com/Keyword" +
-      "PlanCampaignH\000\210\001\001\022\024\n\002id\030\t \001(\003B\003\340A\003H\001\210\001\001\022" +
-      "\021\n\004text\030\n \001(\tH\002\210\001\001\022Y\n\nmatch_type\030\005 \001(\0162E" +
-      ".google.ads.googleads.v10.enums.KeywordM" +
-      "atchTypeEnum.KeywordMatchType\022\032\n\010negativ" +
-      "e\030\013 \001(\010B\003\340A\005H\003\210\001\001:\221\001\352A\215\001\n3googleads.goog" +
-      "leapis.com/KeywordPlanCampaignKeyword\022Vc" +
-      "ustomers/{customer_id}/keywordPlanCampai" +
-      "gnKeywords/{keyword_plan_campaign_keywor" +
-      "d_id}B\030\n\026_keyword_plan_campaignB\005\n\003_idB\007" +
-      "\n\005_textB\013\n\t_negativeB\221\002\n&com.google.ads." +
-      "googleads.v10.resourcesB\037KeywordPlanCamp" +
-      "aignKeywordProtoP\001ZKgoogle.golang.org/ge" +
-      "nproto/googleapis/ads/googleads/v10/reso" +
-      "urces;resources\242\002\003GAA\252\002\"Google.Ads.Googl" +
-      "eAds.V10.Resources\312\002\"Google\\Ads\\GoogleAd" +
-      "s\\V10\\Resources\352\002&Google::Ads::GoogleAds" +
-      "::V10::Resourcesb\006proto3"
+      "proto\032\037google/api/field_behavior.proto\032\031" +
+      "google/api/resource.proto\"\262\004\n\032KeywordPla" +
+      "nCampaignKeyword\022R\n\rresource_name\030\001 \001(\tB" +
+      ";\340A\005\372A5\n3googleads.googleapis.com/Keywor" +
+      "dPlanCampaignKeyword\022U\n\025keyword_plan_cam" +
+      "paign\030\010 \001(\tB1\372A.\n,googleads.googleapis.c" +
+      "om/KeywordPlanCampaignH\000\210\001\001\022\024\n\002id\030\t \001(\003B" +
+      "\003\340A\003H\001\210\001\001\022\021\n\004text\030\n \001(\tH\002\210\001\001\022Y\n\nmatch_ty" +
+      "pe\030\005 \001(\0162E.google.ads.googleads.v10.enum" +
+      "s.KeywordMatchTypeEnum.KeywordMatchType\022" +
+      "\032\n\010negative\030\013 \001(\010B\003\340A\005H\003\210\001\001:\221\001\352A\215\001\n3goog" +
+      "leads.googleapis.com/KeywordPlanCampaign" +
+      "Keyword\022Vcustomers/{customer_id}/keyword" +
+      "PlanCampaignKeywords/{keyword_plan_campa" +
+      "ign_keyword_id}B\030\n\026_keyword_plan_campaig" +
+      "nB\005\n\003_idB\007\n\005_textB\013\n\t_negativeB\221\002\n&com.g" +
+      "oogle.ads.googleads.v10.resourcesB\037Keywo" +
+      "rdPlanCampaignKeywordProtoP\001ZKgoogle.gol" +
+      "ang.org/genproto/googleapis/ads/googlead" +
+      "s/v10/resources;resources\242\002\003GAA\252\002\"Google" +
+      ".Ads.GoogleAds.V10.Resources\312\002\"Google\\Ad" +
+      "s\\GoogleAds\\V10\\Resources\352\002&Google::Ads:" +
+      ":GoogleAds::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.enums.KeywordMatchTypeProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -79,7 +77,6 @@ public final class KeywordPlanCampaignKeywordProto {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.enums.KeywordMatchTypeProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

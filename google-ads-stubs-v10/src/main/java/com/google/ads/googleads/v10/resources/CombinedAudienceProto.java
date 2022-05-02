@@ -32,31 +32,29 @@ public final class CombinedAudienceProto {
       "bined_audience.proto\022\"google.ads.googlea" +
       "ds.v10.resources\032=google/ads/googleads/v" +
       "10/enums/combined_audience_status.proto\032" +
-      "\034google/api/annotations.proto\032\037google/ap" +
-      "i/field_behavior.proto\032\031google/api/resou" +
-      "rce.proto\"\364\002\n\020CombinedAudience\022H\n\rresour" +
-      "ce_name\030\001 \001(\tB1\340A\005\372A+\n)googleads.googlea" +
-      "pis.com/CombinedAudience\022\017\n\002id\030\002 \001(\003B\003\340A" +
-      "\003\022f\n\006status\030\003 \001(\0162Q.google.ads.googleads" +
-      ".v10.enums.CombinedAudienceStatusEnum.Co" +
-      "mbinedAudienceStatusB\003\340A\003\022\021\n\004name\030\004 \001(\tB" +
-      "\003\340A\003\022\030\n\013description\030\005 \001(\tB\003\340A\003:p\352Am\n)goo" +
-      "gleads.googleapis.com/CombinedAudience\022@" +
-      "customers/{customer_id}/combinedAudience" +
-      "s/{combined_audience_id}B\207\002\n&com.google." +
-      "ads.googleads.v10.resourcesB\025CombinedAud" +
-      "ienceProtoP\001ZKgoogle.golang.org/genproto" +
-      "/googleapis/ads/googleads/v10/resources;" +
-      "resources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V" +
-      "10.Resources\312\002\"Google\\Ads\\GoogleAds\\V10\\" +
-      "Resources\352\002&Google::Ads::GoogleAds::V10:" +
-      ":Resourcesb\006proto3"
+      "\037google/api/field_behavior.proto\032\031google" +
+      "/api/resource.proto\"\364\002\n\020CombinedAudience" +
+      "\022H\n\rresource_name\030\001 \001(\tB1\340A\005\372A+\n)googlea" +
+      "ds.googleapis.com/CombinedAudience\022\017\n\002id" +
+      "\030\002 \001(\003B\003\340A\003\022f\n\006status\030\003 \001(\0162Q.google.ads" +
+      ".googleads.v10.enums.CombinedAudienceSta" +
+      "tusEnum.CombinedAudienceStatusB\003\340A\003\022\021\n\004n" +
+      "ame\030\004 \001(\tB\003\340A\003\022\030\n\013description\030\005 \001(\tB\003\340A\003" +
+      ":p\352Am\n)googleads.googleapis.com/Combined" +
+      "Audience\022@customers/{customer_id}/combin" +
+      "edAudiences/{combined_audience_id}B\207\002\n&c" +
+      "om.google.ads.googleads.v10.resourcesB\025C" +
+      "ombinedAudienceProtoP\001ZKgoogle.golang.or" +
+      "g/genproto/googleapis/ads/googleads/v10/" +
+      "resources;resources\242\002\003GAA\252\002\"Google.Ads.G" +
+      "oogleAds.V10.Resources\312\002\"Google\\Ads\\Goog" +
+      "leAds\\V10\\Resources\352\002&Google::Ads::Googl" +
+      "eAds::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.enums.CombinedAudienceStatusProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -74,7 +72,6 @@ public final class CombinedAudienceProto {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.enums.CombinedAudienceStatusProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

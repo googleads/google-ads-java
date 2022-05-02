@@ -112,6 +112,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -995,8 +997,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (ruleBasedUserListCase_ == 2) {
           combinedRuleUserListBuilder_.mergeFrom(value);
+        } else {
+          combinedRuleUserListBuilder_.setMessage(value);
         }
-        combinedRuleUserListBuilder_.setMessage(value);
       }
       ruleBasedUserListCase_ = 2;
       return this;
@@ -1200,8 +1203,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (ruleBasedUserListCase_ == 3) {
           dateSpecificRuleUserListBuilder_.mergeFrom(value);
+        } else {
+          dateSpecificRuleUserListBuilder_.setMessage(value);
         }
-        dateSpecificRuleUserListBuilder_.setMessage(value);
       }
       ruleBasedUserListCase_ = 3;
       return this;
@@ -1398,8 +1402,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (ruleBasedUserListCase_ == 4) {
           expressionRuleUserListBuilder_.mergeFrom(value);
+        } else {
+          expressionRuleUserListBuilder_.setMessage(value);
         }
-        expressionRuleUserListBuilder_.setMessage(value);
       }
       ruleBasedUserListCase_ = 4;
       return this;

@@ -88,11 +88,11 @@ public interface GenerateReachForecastRequestOrBuilder extends
 
   /**
    * <pre>
-   * Desired cookie frequency cap that will be applied to each planned product.
+   * Desired cookie frequency cap to be applied to each planned product.
    * This is equivalent to the frequency cap exposed in Google Ads when creating
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user.
-   * If not specified no cap is applied.
+   * If not specified, no cap is applied.
    * This field is deprecated in v4 and will eventually be removed.
    * Please use cookie_frequency_cap_setting instead.
    * </pre>
@@ -103,11 +103,11 @@ public interface GenerateReachForecastRequestOrBuilder extends
   boolean hasCookieFrequencyCap();
   /**
    * <pre>
-   * Desired cookie frequency cap that will be applied to each planned product.
+   * Desired cookie frequency cap to be applied to each planned product.
    * This is equivalent to the frequency cap exposed in Google Ads when creating
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user.
-   * If not specified no cap is applied.
+   * If not specified, no cap is applied.
    * This field is deprecated in v4 and will eventually be removed.
    * Please use cookie_frequency_cap_setting instead.
    * </pre>
@@ -119,7 +119,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
 
   /**
    * <pre>
-   * Desired cookie frequency cap that will be applied to each planned product.
+   * Desired cookie frequency cap to be applied to each planned product.
    * This is equivalent to the frequency cap exposed in Google Ads when creating
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user during a specified time interval.
@@ -133,7 +133,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
   boolean hasCookieFrequencyCapSetting();
   /**
    * <pre>
-   * Desired cookie frequency cap that will be applied to each planned product.
+   * Desired cookie frequency cap to be applied to each planned product.
    * This is equivalent to the frequency cap exposed in Google Ads when creating
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user during a specified time interval.
@@ -147,7 +147,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
   com.google.ads.googleads.v10.services.FrequencyCap getCookieFrequencyCapSetting();
   /**
    * <pre>
-   * Desired cookie frequency cap that will be applied to each planned product.
+   * Desired cookie frequency cap to be applied to each planned product.
    * This is equivalent to the frequency cap exposed in Google Ads when creating
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user during a specified time interval.

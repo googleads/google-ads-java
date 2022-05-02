@@ -30,35 +30,33 @@ public final class AuthenticationErrorProto {
     java.lang.String[] descriptorData = {
       "\n:google/ads/googleads/v10/errors/authen" +
       "tication_error.proto\022\037google.ads.googlea" +
-      "ds.v10.errors\032\034google/api/annotations.pr" +
-      "oto\"\350\004\n\027AuthenticationErrorEnum\"\314\004\n\023Auth" +
-      "enticationError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKN" +
-      "OWN\020\001\022\030\n\024AUTHENTICATION_ERROR\020\002\022\036\n\032CLIEN" +
-      "T_CUSTOMER_ID_INVALID\020\005\022\026\n\022CUSTOMER_NOT_" +
-      "FOUND\020\010\022\032\n\026GOOGLE_ACCOUNT_DELETED\020\t\022!\n\035G" +
-      "OOGLE_ACCOUNT_COOKIE_INVALID\020\n\022(\n$GOOGLE" +
-      "_ACCOUNT_AUTHENTICATION_FAILED\020\031\022-\n)GOOG" +
-      "LE_ACCOUNT_USER_AND_ADS_USER_MISMATCH\020\014\022" +
-      "\031\n\025LOGIN_COOKIE_REQUIRED\020\r\022\020\n\014NOT_ADS_US" +
-      "ER\020\016\022\027\n\023OAUTH_TOKEN_INVALID\020\017\022\027\n\023OAUTH_T" +
-      "OKEN_EXPIRED\020\020\022\030\n\024OAUTH_TOKEN_DISABLED\020\021" +
-      "\022\027\n\023OAUTH_TOKEN_REVOKED\020\022\022\036\n\032OAUTH_TOKEN" +
-      "_HEADER_INVALID\020\023\022\030\n\024LOGIN_COOKIE_INVALI" +
-      "D\020\024\022\023\n\017USER_ID_INVALID\020\026\022&\n\"TWO_STEP_VER" +
-      "IFICATION_NOT_ENROLLED\020\027\022$\n ADVANCED_PRO" +
-      "TECTION_NOT_ENROLLED\020\030B\370\001\n#com.google.ad" +
-      "s.googleads.v10.errorsB\030AuthenticationEr" +
-      "rorProtoP\001ZEgoogle.golang.org/genproto/g" +
-      "oogleapis/ads/googleads/v10/errors;error" +
-      "s\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V10.Error" +
-      "s\312\002\037Google\\Ads\\GoogleAds\\V10\\Errors\352\002#Go" +
-      "ogle::Ads::GoogleAds::V10::Errorsb\006proto" +
-      "3"
+      "ds.v10.errors\"\350\004\n\027AuthenticationErrorEnu" +
+      "m\"\314\004\n\023AuthenticationError\022\017\n\013UNSPECIFIED" +
+      "\020\000\022\013\n\007UNKNOWN\020\001\022\030\n\024AUTHENTICATION_ERROR\020" +
+      "\002\022\036\n\032CLIENT_CUSTOMER_ID_INVALID\020\005\022\026\n\022CUS" +
+      "TOMER_NOT_FOUND\020\010\022\032\n\026GOOGLE_ACCOUNT_DELE" +
+      "TED\020\t\022!\n\035GOOGLE_ACCOUNT_COOKIE_INVALID\020\n" +
+      "\022(\n$GOOGLE_ACCOUNT_AUTHENTICATION_FAILED" +
+      "\020\031\022-\n)GOOGLE_ACCOUNT_USER_AND_ADS_USER_M" +
+      "ISMATCH\020\014\022\031\n\025LOGIN_COOKIE_REQUIRED\020\r\022\020\n\014" +
+      "NOT_ADS_USER\020\016\022\027\n\023OAUTH_TOKEN_INVALID\020\017\022" +
+      "\027\n\023OAUTH_TOKEN_EXPIRED\020\020\022\030\n\024OAUTH_TOKEN_" +
+      "DISABLED\020\021\022\027\n\023OAUTH_TOKEN_REVOKED\020\022\022\036\n\032O" +
+      "AUTH_TOKEN_HEADER_INVALID\020\023\022\030\n\024LOGIN_COO" +
+      "KIE_INVALID\020\024\022\023\n\017USER_ID_INVALID\020\026\022&\n\"TW" +
+      "O_STEP_VERIFICATION_NOT_ENROLLED\020\027\022$\n AD" +
+      "VANCED_PROTECTION_NOT_ENROLLED\020\030B\370\001\n#com" +
+      ".google.ads.googleads.v10.errorsB\030Authen" +
+      "ticationErrorProtoP\001ZEgoogle.golang.org/" +
+      "genproto/googleapis/ads/googleads/v10/er" +
+      "rors;errors\242\002\003GAA\252\002\037Google.Ads.GoogleAds" +
+      ".V10.Errors\312\002\037Google\\Ads\\GoogleAds\\V10\\E" +
+      "rrors\352\002#Google::Ads::GoogleAds::V10::Err" +
+      "orsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_AuthenticationErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -66,7 +64,6 @@ public final class AuthenticationErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_AuthenticationErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

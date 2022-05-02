@@ -52,57 +52,55 @@ public final class MediaFileProto {
       "ia_file.proto\022\"google.ads.googleads.v10." +
       "resources\032/google/ads/googleads/v10/enum" +
       "s/media_type.proto\032.google/ads/googleads" +
-      "/v10/enums/mime_type.proto\032\034google/api/a" +
-      "nnotations.proto\032\037google/api/field_behav" +
-      "ior.proto\032\031google/api/resource.proto\"\211\006\n" +
-      "\tMediaFile\022A\n\rresource_name\030\001 \001(\tB*\340A\005\372A" +
-      "$\n\"googleads.googleapis.com/MediaFile\022\024\n" +
-      "\002id\030\014 \001(\003B\003\340A\003H\001\210\001\001\022J\n\004type\030\005 \001(\01627.goog" +
-      "le.ads.googleads.v10.enums.MediaTypeEnum" +
-      ".MediaTypeB\003\340A\005\022M\n\tmime_type\030\006 \001(\01625.goo" +
-      "gle.ads.googleads.v10.enums.MimeTypeEnum" +
-      ".MimeTypeB\003\340A\003\022\034\n\nsource_url\030\r \001(\tB\003\340A\005H" +
-      "\002\210\001\001\022\026\n\004name\030\016 \001(\tB\003\340A\005H\003\210\001\001\022\033\n\tfile_siz" +
-      "e\030\017 \001(\003B\003\340A\003H\004\210\001\001\022D\n\005image\030\003 \001(\0132..googl" +
-      "e.ads.googleads.v10.resources.MediaImage" +
-      "B\003\340A\005H\000\022L\n\014media_bundle\030\004 \001(\0132/.google.a" +
-      "ds.googleads.v10.resources.MediaBundleB\003" +
-      "\340A\005H\000\022D\n\005audio\030\n \001(\0132..google.ads.google" +
-      "ads.v10.resources.MediaAudioB\003\340A\003H\000\022D\n\005v" +
-      "ideo\030\013 \001(\0132..google.ads.googleads.v10.re" +
-      "sources.MediaVideoB\003\340A\005H\000:[\352AX\n\"googlead" +
-      "s.googleapis.com/MediaFile\0222customers/{c" +
-      "ustomer_id}/mediaFiles/{media_file_id}B\013" +
-      "\n\tmediatypeB\005\n\003_idB\r\n\013_source_urlB\007\n\005_na" +
-      "meB\014\n\n_file_size\"\261\001\n\nMediaImage\022\026\n\004data\030" +
-      "\004 \001(\014B\003\340A\005H\000\210\001\001\022%\n\023full_size_image_url\030\002" +
-      " \001(\tB\003\340A\003H\001\210\001\001\022(\n\026preview_size_image_url" +
-      "\030\003 \001(\tB\003\340A\003H\002\210\001\001B\007\n\005_dataB\026\n\024_full_size_" +
-      "image_urlB\031\n\027_preview_size_image_url\"M\n\013" +
-      "MediaBundle\022\026\n\004data\030\003 \001(\014B\003\340A\005H\000\210\001\001\022\025\n\003u" +
-      "rl\030\002 \001(\tB\003\340A\003H\001\210\001\001B\007\n\005_dataB\006\n\004_url\"I\n\nM" +
-      "ediaAudio\022$\n\022ad_duration_millis\030\002 \001(\003B\003\340" +
-      "A\003H\000\210\001\001B\025\n\023_ad_duration_millis\"\354\001\n\nMedia" +
-      "Video\022$\n\022ad_duration_millis\030\005 \001(\003B\003\340A\003H\000" +
-      "\210\001\001\022\"\n\020youtube_video_id\030\006 \001(\tB\003\340A\005H\001\210\001\001\022" +
-      "%\n\023advertising_id_code\030\007 \001(\tB\003\340A\003H\002\210\001\001\022\033" +
-      "\n\tisci_code\030\010 \001(\tB\003\340A\003H\003\210\001\001B\025\n\023_ad_durat" +
-      "ion_millisB\023\n\021_youtube_video_idB\026\n\024_adve" +
-      "rtising_id_codeB\014\n\n_isci_codeB\200\002\n&com.go" +
-      "ogle.ads.googleads.v10.resourcesB\016MediaF" +
-      "ileProtoP\001ZKgoogle.golang.org/genproto/g" +
-      "oogleapis/ads/googleads/v10/resources;re" +
-      "sources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V10" +
-      ".Resources\312\002\"Google\\Ads\\GoogleAds\\V10\\Re" +
-      "sources\352\002&Google::Ads::GoogleAds::V10::R" +
-      "esourcesb\006proto3"
+      "/v10/enums/mime_type.proto\032\037google/api/f" +
+      "ield_behavior.proto\032\031google/api/resource" +
+      ".proto\"\211\006\n\tMediaFile\022A\n\rresource_name\030\001 " +
+      "\001(\tB*\340A\005\372A$\n\"googleads.googleapis.com/Me" +
+      "diaFile\022\024\n\002id\030\014 \001(\003B\003\340A\003H\001\210\001\001\022J\n\004type\030\005 " +
+      "\001(\01627.google.ads.googleads.v10.enums.Med" +
+      "iaTypeEnum.MediaTypeB\003\340A\005\022M\n\tmime_type\030\006" +
+      " \001(\01625.google.ads.googleads.v10.enums.Mi" +
+      "meTypeEnum.MimeTypeB\003\340A\003\022\034\n\nsource_url\030\r" +
+      " \001(\tB\003\340A\005H\002\210\001\001\022\026\n\004name\030\016 \001(\tB\003\340A\005H\003\210\001\001\022\033" +
+      "\n\tfile_size\030\017 \001(\003B\003\340A\003H\004\210\001\001\022D\n\005image\030\003 \001" +
+      "(\0132..google.ads.googleads.v10.resources." +
+      "MediaImageB\003\340A\005H\000\022L\n\014media_bundle\030\004 \001(\0132" +
+      "/.google.ads.googleads.v10.resources.Med" +
+      "iaBundleB\003\340A\005H\000\022D\n\005audio\030\n \001(\0132..google." +
+      "ads.googleads.v10.resources.MediaAudioB\003" +
+      "\340A\003H\000\022D\n\005video\030\013 \001(\0132..google.ads.google" +
+      "ads.v10.resources.MediaVideoB\003\340A\005H\000:[\352AX" +
+      "\n\"googleads.googleapis.com/MediaFile\0222cu" +
+      "stomers/{customer_id}/mediaFiles/{media_" +
+      "file_id}B\013\n\tmediatypeB\005\n\003_idB\r\n\013_source_" +
+      "urlB\007\n\005_nameB\014\n\n_file_size\"\261\001\n\nMediaImag" +
+      "e\022\026\n\004data\030\004 \001(\014B\003\340A\005H\000\210\001\001\022%\n\023full_size_i" +
+      "mage_url\030\002 \001(\tB\003\340A\003H\001\210\001\001\022(\n\026preview_size" +
+      "_image_url\030\003 \001(\tB\003\340A\003H\002\210\001\001B\007\n\005_dataB\026\n\024_" +
+      "full_size_image_urlB\031\n\027_preview_size_ima" +
+      "ge_url\"M\n\013MediaBundle\022\026\n\004data\030\003 \001(\014B\003\340A\005" +
+      "H\000\210\001\001\022\025\n\003url\030\002 \001(\tB\003\340A\003H\001\210\001\001B\007\n\005_dataB\006\n" +
+      "\004_url\"I\n\nMediaAudio\022$\n\022ad_duration_milli" +
+      "s\030\002 \001(\003B\003\340A\003H\000\210\001\001B\025\n\023_ad_duration_millis" +
+      "\"\354\001\n\nMediaVideo\022$\n\022ad_duration_millis\030\005 " +
+      "\001(\003B\003\340A\003H\000\210\001\001\022\"\n\020youtube_video_id\030\006 \001(\tB" +
+      "\003\340A\005H\001\210\001\001\022%\n\023advertising_id_code\030\007 \001(\tB\003" +
+      "\340A\003H\002\210\001\001\022\033\n\tisci_code\030\010 \001(\tB\003\340A\003H\003\210\001\001B\025\n" +
+      "\023_ad_duration_millisB\023\n\021_youtube_video_i" +
+      "dB\026\n\024_advertising_id_codeB\014\n\n_isci_codeB" +
+      "\200\002\n&com.google.ads.googleads.v10.resourc" +
+      "esB\016MediaFileProtoP\001ZKgoogle.golang.org/" +
+      "genproto/googleapis/ads/googleads/v10/re" +
+      "sources;resources\242\002\003GAA\252\002\"Google.Ads.Goo" +
+      "gleAds.V10.Resources\312\002\"Google\\Ads\\Google" +
+      "Ads\\V10\\Resources\352\002&Google::Ads::GoogleA" +
+      "ds::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.enums.MediaTypeProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.MimeTypeProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -145,7 +143,6 @@ public final class MediaFileProto {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.enums.MediaTypeProto.getDescriptor();
     com.google.ads.googleads.v10.enums.MimeTypeProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

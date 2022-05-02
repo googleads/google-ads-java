@@ -63,6 +63,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -299,6 +301,14 @@ private static final long serialVersionUID = 0L;
      * <code>CANNOT_CREATE_EXPERIMENT_CAMPAIGN_WITH_CUSTOM_BUDGET = 24;</code>
      */
     CANNOT_CREATE_EXPERIMENT_CAMPAIGN_WITH_CUSTOM_BUDGET(24),
+    /**
+     * <pre>
+     * Invalid status transition.
+     * </pre>
+     *
+     * <code>STATUS_TRANSITION_INVALID = 25;</code>
+     */
+    STATUS_TRANSITION_INVALID(25),
     UNRECOGNIZED(-1),
     ;
 
@@ -508,6 +518,14 @@ private static final long serialVersionUID = 0L;
      * <code>CANNOT_CREATE_EXPERIMENT_CAMPAIGN_WITH_CUSTOM_BUDGET = 24;</code>
      */
     public static final int CANNOT_CREATE_EXPERIMENT_CAMPAIGN_WITH_CUSTOM_BUDGET_VALUE = 24;
+    /**
+     * <pre>
+     * Invalid status transition.
+     * </pre>
+     *
+     * <code>STATUS_TRANSITION_INVALID = 25;</code>
+     */
+    public static final int STATUS_TRANSITION_INVALID_VALUE = 25;
 
 
     public final int getNumber() {
@@ -559,6 +577,7 @@ private static final long serialVersionUID = 0L;
         case 22: return CANNOT_SET_STATUS_TO_GRADUATED;
         case 23: return CANNOT_CREATE_EXPERIMENT_CAMPAIGN_WITH_SHARED_BUDGET;
         case 24: return CANNOT_CREATE_EXPERIMENT_CAMPAIGN_WITH_CUSTOM_BUDGET;
+        case 25: return STATUS_TRANSITION_INVALID;
         default: return null;
       }
     }

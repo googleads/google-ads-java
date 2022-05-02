@@ -251,6 +251,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -3720,8 +3722,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (userListCase_ == 19) {
           crmBasedUserListBuilder_.mergeFrom(value);
+        } else {
+          crmBasedUserListBuilder_.setMessage(value);
         }
-        crmBasedUserListBuilder_.setMessage(value);
       }
       userListCase_ = 19;
       return this;
@@ -3902,8 +3905,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (userListCase_ == 20) {
           similarUserListBuilder_.mergeFrom(value);
+        } else {
+          similarUserListBuilder_.setMessage(value);
         }
-        similarUserListBuilder_.setMessage(value);
       }
       userListCase_ = 20;
       return this;
@@ -4083,8 +4087,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (userListCase_ == 21) {
           ruleBasedUserListBuilder_.mergeFrom(value);
+        } else {
+          ruleBasedUserListBuilder_.setMessage(value);
         }
-        ruleBasedUserListBuilder_.setMessage(value);
       }
       userListCase_ = 21;
       return this;
@@ -4260,8 +4265,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (userListCase_ == 22) {
           logicalUserListBuilder_.mergeFrom(value);
+        } else {
+          logicalUserListBuilder_.setMessage(value);
         }
-        logicalUserListBuilder_.setMessage(value);
       }
       userListCase_ = 22;
       return this;
@@ -4437,8 +4443,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (userListCase_ == 23) {
           basicUserListBuilder_.mergeFrom(value);
+        } else {
+          basicUserListBuilder_.setMessage(value);
         }
-        basicUserListBuilder_.setMessage(value);
       }
       userListCase_ = 23;
       return this;

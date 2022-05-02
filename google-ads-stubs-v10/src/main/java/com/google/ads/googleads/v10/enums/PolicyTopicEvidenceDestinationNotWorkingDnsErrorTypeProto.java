@@ -31,25 +31,23 @@ public final class PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeProto {
       "\nagoogle/ads/googleads/v10/enums/policy_" +
       "topic_evidence_destination_not_working_d" +
       "ns_error_type.proto\022\036google.ads.googlead" +
-      "s.v10.enums\032\034google/api/annotations.prot" +
-      "o\"\307\001\n8PolicyTopicEvidenceDestinationNotW" +
-      "orkingDnsErrorTypeEnum\"\212\001\n4PolicyTopicEv" +
-      "idenceDestinationNotWorkingDnsErrorType\022" +
-      "\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\026\n\022HOSTNAM" +
-      "E_NOT_FOUND\020\002\022\034\n\030GOOGLE_CRAWLER_DNS_ISSU" +
-      "E\020\003B\223\002\n\"com.google.ads.googleads.v10.enu" +
-      "msB9PolicyTopicEvidenceDestinationNotWor" +
-      "kingDnsErrorTypeProtoP\001ZCgoogle.golang.o" +
-      "rg/genproto/googleapis/ads/googleads/v10" +
-      "/enums;enums\242\002\003GAA\252\002\036Google.Ads.GoogleAd" +
-      "s.V10.Enums\312\002\036Google\\Ads\\GoogleAds\\V10\\E" +
-      "nums\352\002\"Google::Ads::GoogleAds::V10::Enum" +
-      "sb\006proto3"
+      "s.v10.enums\"\307\001\n8PolicyTopicEvidenceDesti" +
+      "nationNotWorkingDnsErrorTypeEnum\"\212\001\n4Pol" +
+      "icyTopicEvidenceDestinationNotWorkingDns" +
+      "ErrorType\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022" +
+      "\026\n\022HOSTNAME_NOT_FOUND\020\002\022\034\n\030GOOGLE_CRAWLE" +
+      "R_DNS_ISSUE\020\003B\223\002\n\"com.google.ads.googlea" +
+      "ds.v10.enumsB9PolicyTopicEvidenceDestina" +
+      "tionNotWorkingDnsErrorTypeProtoP\001ZCgoogl" +
+      "e.golang.org/genproto/googleapis/ads/goo" +
+      "gleads/v10/enums;enums\242\002\003GAA\252\002\036Google.Ad" +
+      "s.GoogleAds.V10.Enums\312\002\036Google\\Ads\\Googl" +
+      "eAds\\V10\\Enums\352\002\"Google::Ads::GoogleAds:" +
+      ":V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -57,7 +55,6 @@ public final class PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

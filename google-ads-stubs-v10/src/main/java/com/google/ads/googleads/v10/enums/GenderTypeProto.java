@@ -30,21 +30,19 @@ public final class GenderTypeProto {
     java.lang.String[] descriptorData = {
       "\n0google/ads/googleads/v10/enums/gender_" +
       "type.proto\022\036google.ads.googleads.v10.enu" +
-      "ms\032\034google/api/annotations.proto\"d\n\016Gend" +
-      "erTypeEnum\"R\n\nGenderType\022\017\n\013UNSPECIFIED\020" +
-      "\000\022\013\n\007UNKNOWN\020\001\022\010\n\004MALE\020\n\022\n\n\006FEMALE\020\013\022\020\n\014" +
-      "UNDETERMINED\020\024B\351\001\n\"com.google.ads.google" +
-      "ads.v10.enumsB\017GenderTypeProtoP\001ZCgoogle" +
-      ".golang.org/genproto/googleapis/ads/goog" +
-      "leads/v10/enums;enums\242\002\003GAA\252\002\036Google.Ads" +
-      ".GoogleAds.V10.Enums\312\002\036Google\\Ads\\Google" +
-      "Ads\\V10\\Enums\352\002\"Google::Ads::GoogleAds::" +
-      "V10::Enumsb\006proto3"
+      "ms\"d\n\016GenderTypeEnum\"R\n\nGenderType\022\017\n\013UN" +
+      "SPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\010\n\004MALE\020\n\022\n\n\006FE" +
+      "MALE\020\013\022\020\n\014UNDETERMINED\020\024B\351\001\n\"com.google." +
+      "ads.googleads.v10.enumsB\017GenderTypeProto" +
+      "P\001ZCgoogle.golang.org/genproto/googleapi" +
+      "s/ads/googleads/v10/enums;enums\242\002\003GAA\252\002\036" +
+      "Google.Ads.GoogleAds.V10.Enums\312\002\036Google\\" +
+      "Ads\\GoogleAds\\V10\\Enums\352\002\"Google::Ads::G" +
+      "oogleAds::V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_GenderTypeEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -52,7 +50,6 @@ public final class GenderTypeProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_GenderTypeEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

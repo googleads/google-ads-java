@@ -50,69 +50,69 @@ public final class CustomerProto {
       "oogle/ads/googleads/v10/enums/customer_p" +
       "ay_per_conversion_eligibility_failure_re" +
       "ason.proto\0324google/ads/googleads/v10/enu" +
-      "ms/customer_status.proto\032\034google/api/ann" +
-      "otations.proto\032\037google/api/field_behavio" +
-      "r.proto\032\031google/api/resource.proto\"\237\n\n\010C" +
-      "ustomer\022@\n\rresource_name\030\001 \001(\tB)\340A\005\372A#\n!" +
-      "googleads.googleapis.com/Customer\022\024\n\002id\030" +
-      "\023 \001(\003B\003\340A\003H\000\210\001\001\022\035\n\020descriptive_name\030\024 \001(" +
-      "\tH\001\210\001\001\022\037\n\rcurrency_code\030\025 \001(\tB\003\340A\005H\002\210\001\001\022" +
-      "\033\n\ttime_zone\030\026 \001(\tB\003\340A\005H\003\210\001\001\022\"\n\025tracking" +
-      "_url_template\030\027 \001(\tH\004\210\001\001\022\035\n\020final_url_su" +
-      "ffix\030\030 \001(\tH\005\210\001\001\022!\n\024auto_tagging_enabled\030" +
-      "\031 \001(\010H\006\210\001\001\022$\n\022has_partners_badge\030\032 \001(\010B\003" +
-      "\340A\003H\007\210\001\001\022\031\n\007manager\030\033 \001(\010B\003\340A\003H\010\210\001\001\022\036\n\014t" +
-      "est_account\030\034 \001(\010B\003\340A\003H\t\210\001\001\022X\n\026call_repo" +
-      "rting_setting\030\n \001(\01328.google.ads.googlea" +
-      "ds.v10.resources.CallReportingSetting\022g\n" +
-      "\033conversion_tracking_setting\030\016 \001(\0132=.goo" +
-      "gle.ads.googleads.v10.resources.Conversi" +
-      "onTrackingSettingB\003\340A\003\022X\n\023remarketing_se" +
-      "tting\030\017 \001(\01326.google.ads.googleads.v10.r" +
-      "esources.RemarketingSettingB\003\340A\003\022\303\001\n.pay" +
-      "_per_conversion_eligibility_failure_reas" +
-      "ons\030\020 \003(\0162\205\001.google.ads.googleads.v10.en" +
-      "ums.CustomerPayPerConversionEligibilityF" +
-      "ailureReasonEnum.CustomerPayPerConversio" +
-      "nEligibilityFailureReasonB\003\340A\003\022$\n\022optimi" +
-      "zation_score\030\035 \001(\001B\003\340A\003H\n\210\001\001\022&\n\031optimiza" +
-      "tion_score_weight\030\036 \001(\001B\003\340A\003\022V\n\006status\030$" +
-      " \001(\0162A.google.ads.googleads.v10.enums.Cu" +
-      "stomerStatusEnum.CustomerStatusB\003\340A\003:?\352A" +
-      "<\n!googleads.googleapis.com/Customer\022\027cu" +
-      "stomers/{customer_id}B\005\n\003_idB\023\n\021_descrip" +
-      "tive_nameB\020\n\016_currency_codeB\014\n\n_time_zon" +
-      "eB\030\n\026_tracking_url_templateB\023\n\021_final_ur" +
-      "l_suffixB\027\n\025_auto_tagging_enabledB\025\n\023_ha" +
-      "s_partners_badgeB\n\n\010_managerB\017\n\r_test_ac" +
-      "countB\025\n\023_optimization_score\"\234\002\n\024CallRep" +
-      "ortingSetting\022#\n\026call_reporting_enabled\030" +
-      "\n \001(\010H\000\210\001\001\022.\n!call_conversion_reporting_" +
-      "enabled\030\013 \001(\010H\001\210\001\001\022S\n\026call_conversion_ac" +
-      "tion\030\014 \001(\tB.\372A+\n)googleads.googleapis.co" +
-      "m/ConversionActionH\002\210\001\001B\031\n\027_call_reporti" +
-      "ng_enabledB$\n\"_call_conversion_reporting" +
-      "_enabledB\031\n\027_call_conversion_action\"\241\003\n\031" +
-      "ConversionTrackingSetting\022(\n\026conversion_" +
-      "tracking_id\030\003 \001(\003B\003\340A\003H\000\210\001\001\0226\n$cross_acc" +
-      "ount_conversion_tracking_id\030\004 \001(\003B\003\340A\003H\001" +
-      "\210\001\001\022)\n\034accepted_customer_data_terms\030\005 \001(" +
-      "\010B\003\340A\003\022~\n\032conversion_tracking_status\030\006 \001" +
-      "(\0162U.google.ads.googleads.v10.enums.Conv" +
-      "ersionTrackingStatusEnum.ConversionTrack" +
-      "ingStatusB\003\340A\003\0223\n&enhanced_conversions_f" +
-      "or_leads_enabled\030\007 \001(\010B\003\340A\003B\031\n\027_conversi" +
-      "on_tracking_idB\'\n%_cross_account_convers" +
-      "ion_tracking_id\"Y\n\022RemarketingSetting\022(\n" +
-      "\026google_global_site_tag\030\002 \001(\tB\003\340A\003H\000\210\001\001B" +
-      "\031\n\027_google_global_site_tagB\377\001\n&com.googl" +
-      "e.ads.googleads.v10.resourcesB\rCustomerP" +
-      "rotoP\001ZKgoogle.golang.org/genproto/googl" +
-      "eapis/ads/googleads/v10/resources;resour" +
-      "ces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V10.Res" +
-      "ources\312\002\"Google\\Ads\\GoogleAds\\V10\\Resour" +
-      "ces\352\002&Google::Ads::GoogleAds::V10::Resou" +
-      "rcesb\006proto3"
+      "ms/customer_status.proto\032\037google/api/fie" +
+      "ld_behavior.proto\032\031google/api/resource.p" +
+      "roto\"\237\n\n\010Customer\022@\n\rresource_name\030\001 \001(\t" +
+      "B)\340A\005\372A#\n!googleads.googleapis.com/Custo" +
+      "mer\022\024\n\002id\030\023 \001(\003B\003\340A\003H\000\210\001\001\022\035\n\020descriptive" +
+      "_name\030\024 \001(\tH\001\210\001\001\022\037\n\rcurrency_code\030\025 \001(\tB" +
+      "\003\340A\005H\002\210\001\001\022\033\n\ttime_zone\030\026 \001(\tB\003\340A\005H\003\210\001\001\022\"" +
+      "\n\025tracking_url_template\030\027 \001(\tH\004\210\001\001\022\035\n\020fi" +
+      "nal_url_suffix\030\030 \001(\tH\005\210\001\001\022!\n\024auto_taggin" +
+      "g_enabled\030\031 \001(\010H\006\210\001\001\022$\n\022has_partners_bad" +
+      "ge\030\032 \001(\010B\003\340A\003H\007\210\001\001\022\031\n\007manager\030\033 \001(\010B\003\340A\003" +
+      "H\010\210\001\001\022\036\n\014test_account\030\034 \001(\010B\003\340A\003H\t\210\001\001\022X\n" +
+      "\026call_reporting_setting\030\n \001(\01328.google.a" +
+      "ds.googleads.v10.resources.CallReporting" +
+      "Setting\022g\n\033conversion_tracking_setting\030\016" +
+      " \001(\0132=.google.ads.googleads.v10.resource" +
+      "s.ConversionTrackingSettingB\003\340A\003\022X\n\023rema" +
+      "rketing_setting\030\017 \001(\01326.google.ads.googl" +
+      "eads.v10.resources.RemarketingSettingB\003\340" +
+      "A\003\022\303\001\n.pay_per_conversion_eligibility_fa" +
+      "ilure_reasons\030\020 \003(\0162\205\001.google.ads.google" +
+      "ads.v10.enums.CustomerPayPerConversionEl" +
+      "igibilityFailureReasonEnum.CustomerPayPe" +
+      "rConversionEligibilityFailureReasonB\003\340A\003" +
+      "\022$\n\022optimization_score\030\035 \001(\001B\003\340A\003H\n\210\001\001\022&" +
+      "\n\031optimization_score_weight\030\036 \001(\001B\003\340A\003\022V" +
+      "\n\006status\030$ \001(\0162A.google.ads.googleads.v1" +
+      "0.enums.CustomerStatusEnum.CustomerStatu" +
+      "sB\003\340A\003:?\352A<\n!googleads.googleapis.com/Cu" +
+      "stomer\022\027customers/{customer_id}B\005\n\003_idB\023" +
+      "\n\021_descriptive_nameB\020\n\016_currency_codeB\014\n" +
+      "\n_time_zoneB\030\n\026_tracking_url_templateB\023\n" +
+      "\021_final_url_suffixB\027\n\025_auto_tagging_enab" +
+      "ledB\025\n\023_has_partners_badgeB\n\n\010_managerB\017" +
+      "\n\r_test_accountB\025\n\023_optimization_score\"\234" +
+      "\002\n\024CallReportingSetting\022#\n\026call_reportin" +
+      "g_enabled\030\n \001(\010H\000\210\001\001\022.\n!call_conversion_" +
+      "reporting_enabled\030\013 \001(\010H\001\210\001\001\022S\n\026call_con" +
+      "version_action\030\014 \001(\tB.\372A+\n)googleads.goo" +
+      "gleapis.com/ConversionActionH\002\210\001\001B\031\n\027_ca" +
+      "ll_reporting_enabledB$\n\"_call_conversion" +
+      "_reporting_enabledB\031\n\027_call_conversion_a" +
+      "ction\"\316\003\n\031ConversionTrackingSetting\022(\n\026c" +
+      "onversion_tracking_id\030\003 \001(\003B\003\340A\003H\000\210\001\001\0226\n" +
+      "$cross_account_conversion_tracking_id\030\004 " +
+      "\001(\003B\003\340A\003H\001\210\001\001\022)\n\034accepted_customer_data_" +
+      "terms\030\005 \001(\010B\003\340A\003\022~\n\032conversion_tracking_" +
+      "status\030\006 \001(\0162U.google.ads.googleads.v10." +
+      "enums.ConversionTrackingStatusEnum.Conve" +
+      "rsionTrackingStatusB\003\340A\003\0223\n&enhanced_con" +
+      "versions_for_leads_enabled\030\007 \001(\010B\003\340A\003\022+\n" +
+      "\036google_ads_conversion_customer\030\010 \001(\tB\003\340" +
+      "A\003B\031\n\027_conversion_tracking_idB\'\n%_cross_" +
+      "account_conversion_tracking_id\"Y\n\022Remark" +
+      "etingSetting\022(\n\026google_global_site_tag\030\002" +
+      " \001(\tB\003\340A\003H\000\210\001\001B\031\n\027_google_global_site_ta" +
+      "gB\377\001\n&com.google.ads.googleads.v10.resou" +
+      "rcesB\rCustomerProtoP\001ZKgoogle.golang.org" +
+      "/genproto/googleapis/ads/googleads/v10/r" +
+      "esources;resources\242\002\003GAA\252\002\"Google.Ads.Go" +
+      "ogleAds.V10.Resources\312\002\"Google\\Ads\\Googl" +
+      "eAds\\V10\\Resources\352\002&Google::Ads::Google" +
+      "Ads::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -120,7 +120,6 @@ public final class CustomerProto {
           com.google.ads.googleads.v10.enums.ConversionTrackingStatusEnumProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.CustomerPayPerConversionEligibilityFailureReasonProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.CustomerStatusProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -141,7 +140,7 @@ public final class CustomerProto {
     internal_static_google_ads_googleads_v10_resources_ConversionTrackingSetting_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_resources_ConversionTrackingSetting_descriptor,
-        new java.lang.String[] { "ConversionTrackingId", "CrossAccountConversionTrackingId", "AcceptedCustomerDataTerms", "ConversionTrackingStatus", "EnhancedConversionsForLeadsEnabled", "ConversionTrackingId", "CrossAccountConversionTrackingId", });
+        new java.lang.String[] { "ConversionTrackingId", "CrossAccountConversionTrackingId", "AcceptedCustomerDataTerms", "ConversionTrackingStatus", "EnhancedConversionsForLeadsEnabled", "GoogleAdsConversionCustomer", "ConversionTrackingId", "CrossAccountConversionTrackingId", });
     internal_static_google_ads_googleads_v10_resources_RemarketingSetting_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_google_ads_googleads_v10_resources_RemarketingSetting_fieldAccessorTable = new
@@ -158,7 +157,6 @@ public final class CustomerProto {
     com.google.ads.googleads.v10.enums.ConversionTrackingStatusEnumProto.getDescriptor();
     com.google.ads.googleads.v10.enums.CustomerPayPerConversionEligibilityFailureReasonProto.getDescriptor();
     com.google.ads.googleads.v10.enums.CustomerStatusProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

@@ -30,21 +30,20 @@ public final class MinuteOfHourProto {
     java.lang.String[] descriptorData = {
       "\n3google/ads/googleads/v10/enums/minute_" +
       "of_hour.proto\022\036google.ads.googleads.v10." +
-      "enums\032\034google/api/annotations.proto\"s\n\020M" +
-      "inuteOfHourEnum\"_\n\014MinuteOfHour\022\017\n\013UNSPE" +
-      "CIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\010\n\004ZERO\020\002\022\013\n\007FIFTE" +
-      "EN\020\003\022\n\n\006THIRTY\020\004\022\016\n\nFORTY_FIVE\020\005B\353\001\n\"com" +
-      ".google.ads.googleads.v10.enumsB\021MinuteO" +
-      "fHourProtoP\001ZCgoogle.golang.org/genproto" +
-      "/googleapis/ads/googleads/v10/enums;enum" +
-      "s\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V10.Enums" +
-      "\312\002\036Google\\Ads\\GoogleAds\\V10\\Enums\352\002\"Goog" +
-      "le::Ads::GoogleAds::V10::Enumsb\006proto3"
+      "enums\"s\n\020MinuteOfHourEnum\"_\n\014MinuteOfHou" +
+      "r\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\010\n\004ZERO\020" +
+      "\002\022\013\n\007FIFTEEN\020\003\022\n\n\006THIRTY\020\004\022\016\n\nFORTY_FIVE" +
+      "\020\005B\353\001\n\"com.google.ads.googleads.v10.enum" +
+      "sB\021MinuteOfHourProtoP\001ZCgoogle.golang.or" +
+      "g/genproto/googleapis/ads/googleads/v10/" +
+      "enums;enums\242\002\003GAA\252\002\036Google.Ads.GoogleAds" +
+      ".V10.Enums\312\002\036Google\\Ads\\GoogleAds\\V10\\En" +
+      "ums\352\002\"Google::Ads::GoogleAds::V10::Enums" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_MinuteOfHourEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -52,7 +51,6 @@ public final class MinuteOfHourProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_MinuteOfHourEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

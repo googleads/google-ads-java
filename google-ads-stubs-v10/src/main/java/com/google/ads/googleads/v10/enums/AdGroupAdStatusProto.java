@@ -30,21 +30,20 @@ public final class AdGroupAdStatusProto {
     java.lang.String[] descriptorData = {
       "\n7google/ads/googleads/v10/enums/ad_grou" +
       "p_ad_status.proto\022\036google.ads.googleads." +
-      "v10.enums\032\034google/api/annotations.proto\"" +
-      "l\n\023AdGroupAdStatusEnum\"U\n\017AdGroupAdStatu" +
-      "s\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\013\n\007ENABL" +
-      "ED\020\002\022\n\n\006PAUSED\020\003\022\013\n\007REMOVED\020\004B\356\001\n\"com.go" +
-      "ogle.ads.googleads.v10.enumsB\024AdGroupAdS" +
-      "tatusProtoP\001ZCgoogle.golang.org/genproto" +
-      "/googleapis/ads/googleads/v10/enums;enum" +
-      "s\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V10.Enums" +
-      "\312\002\036Google\\Ads\\GoogleAds\\V10\\Enums\352\002\"Goog" +
-      "le::Ads::GoogleAds::V10::Enumsb\006proto3"
+      "v10.enums\"l\n\023AdGroupAdStatusEnum\"U\n\017AdGr" +
+      "oupAdStatus\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020" +
+      "\001\022\013\n\007ENABLED\020\002\022\n\n\006PAUSED\020\003\022\013\n\007REMOVED\020\004B" +
+      "\356\001\n\"com.google.ads.googleads.v10.enumsB\024" +
+      "AdGroupAdStatusProtoP\001ZCgoogle.golang.or" +
+      "g/genproto/googleapis/ads/googleads/v10/" +
+      "enums;enums\242\002\003GAA\252\002\036Google.Ads.GoogleAds" +
+      ".V10.Enums\312\002\036Google\\Ads\\GoogleAds\\V10\\En" +
+      "ums\352\002\"Google::Ads::GoogleAds::V10::Enums" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_AdGroupAdStatusEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -52,7 +51,6 @@ public final class AdGroupAdStatusProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_AdGroupAdStatusEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -33,39 +33,38 @@ public final class UserInterestProto {
       "10.resources\032Egoogle/ads/googleads/v10/c" +
       "ommon/criterion_category_availability.pr" +
       "oto\032@google/ads/googleads/v10/enums/user" +
-      "_interest_taxonomy_type.proto\032\034google/ap" +
-      "i/annotations.proto\032\037google/api/field_be" +
-      "havior.proto\032\031google/api/resource.proto\"" +
-      "\206\005\n\014UserInterest\022D\n\rresource_name\030\001 \001(\tB" +
-      "-\340A\003\372A\'\n%googleads.googleapis.com/UserIn" +
-      "terest\022q\n\rtaxonomy_type\030\002 \001(\0162U.google.a" +
-      "ds.googleads.v10.enums.UserInterestTaxon" +
-      "omyTypeEnum.UserInterestTaxonomyTypeB\003\340A" +
-      "\003\022\"\n\020user_interest_id\030\010 \001(\003B\003\340A\003H\000\210\001\001\022\026\n" +
-      "\004name\030\t \001(\tB\003\340A\003H\001\210\001\001\022P\n\024user_interest_p" +
-      "arent\030\n \001(\tB-\340A\003\372A\'\n%googleads.googleapi" +
-      "s.com/UserInterestH\002\210\001\001\022!\n\017launched_to_a" +
-      "ll\030\013 \001(\010B\003\340A\003H\003\210\001\001\022[\n\016availabilities\030\007 \003" +
-      "(\0132>.google.ads.googleads.v10.common.Cri" +
-      "terionCategoryAvailabilityB\003\340A\003:d\352Aa\n%go" +
-      "ogleads.googleapis.com/UserInterest\0228cus" +
-      "tomers/{customer_id}/userInterests/{user" +
-      "_interest_id}B\023\n\021_user_interest_idB\007\n\005_n" +
-      "ameB\027\n\025_user_interest_parentB\022\n\020_launche" +
-      "d_to_allB\203\002\n&com.google.ads.googleads.v1" +
-      "0.resourcesB\021UserInterestProtoP\001ZKgoogle" +
-      ".golang.org/genproto/googleapis/ads/goog" +
-      "leads/v10/resources;resources\242\002\003GAA\252\002\"Go" +
-      "ogle.Ads.GoogleAds.V10.Resources\312\002\"Googl" +
-      "e\\Ads\\GoogleAds\\V10\\Resources\352\002&Google::" +
-      "Ads::GoogleAds::V10::Resourcesb\006proto3"
+      "_interest_taxonomy_type.proto\032\037google/ap" +
+      "i/field_behavior.proto\032\031google/api/resou" +
+      "rce.proto\"\206\005\n\014UserInterest\022D\n\rresource_n" +
+      "ame\030\001 \001(\tB-\340A\003\372A\'\n%googleads.googleapis." +
+      "com/UserInterest\022q\n\rtaxonomy_type\030\002 \001(\0162" +
+      "U.google.ads.googleads.v10.enums.UserInt" +
+      "erestTaxonomyTypeEnum.UserInterestTaxono" +
+      "myTypeB\003\340A\003\022\"\n\020user_interest_id\030\010 \001(\003B\003\340" +
+      "A\003H\000\210\001\001\022\026\n\004name\030\t \001(\tB\003\340A\003H\001\210\001\001\022P\n\024user_" +
+      "interest_parent\030\n \001(\tB-\340A\003\372A\'\n%googleads" +
+      ".googleapis.com/UserInterestH\002\210\001\001\022!\n\017lau" +
+      "nched_to_all\030\013 \001(\010B\003\340A\003H\003\210\001\001\022[\n\016availabi" +
+      "lities\030\007 \003(\0132>.google.ads.googleads.v10." +
+      "common.CriterionCategoryAvailabilityB\003\340A" +
+      "\003:d\352Aa\n%googleads.googleapis.com/UserInt" +
+      "erest\0228customers/{customer_id}/userInter" +
+      "ests/{user_interest_id}B\023\n\021_user_interes" +
+      "t_idB\007\n\005_nameB\027\n\025_user_interest_parentB\022" +
+      "\n\020_launched_to_allB\203\002\n&com.google.ads.go" +
+      "ogleads.v10.resourcesB\021UserInterestProto" +
+      "P\001ZKgoogle.golang.org/genproto/googleapi" +
+      "s/ads/googleads/v10/resources;resources\242" +
+      "\002\003GAA\252\002\"Google.Ads.GoogleAds.V10.Resourc" +
+      "es\312\002\"Google\\Ads\\GoogleAds\\V10\\Resources\352" +
+      "\002&Google::Ads::GoogleAds::V10::Resources" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.common.CriterionCategoryAvailabilityProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.UserInterestTaxonomyTypeProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -84,7 +83,6 @@ public final class UserInterestProto {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.common.CriterionCategoryAvailabilityProto.getDescriptor();
     com.google.ads.googleads.v10.enums.UserInterestTaxonomyTypeProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

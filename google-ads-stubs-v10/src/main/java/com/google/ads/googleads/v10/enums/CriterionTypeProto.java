@@ -30,35 +30,34 @@ public final class CriterionTypeProto {
     java.lang.String[] descriptorData = {
       "\n3google/ads/googleads/v10/enums/criteri" +
       "on_type.proto\022\036google.ads.googleads.v10." +
-      "enums\032\034google/api/annotations.proto\"\241\005\n\021" +
-      "CriterionTypeEnum\"\213\005\n\rCriterionType\022\017\n\013U" +
-      "NSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\013\n\007KEYWORD\020\002\022\r" +
-      "\n\tPLACEMENT\020\003\022\027\n\023MOBILE_APP_CATEGORY\020\004\022\026" +
-      "\n\022MOBILE_APPLICATION\020\005\022\n\n\006DEVICE\020\006\022\014\n\010LO" +
-      "CATION\020\007\022\021\n\rLISTING_GROUP\020\010\022\017\n\013AD_SCHEDU" +
-      "LE\020\t\022\r\n\tAGE_RANGE\020\n\022\n\n\006GENDER\020\013\022\020\n\014INCOM" +
-      "E_RANGE\020\014\022\023\n\017PARENTAL_STATUS\020\r\022\021\n\rYOUTUB" +
-      "E_VIDEO\020\016\022\023\n\017YOUTUBE_CHANNEL\020\017\022\r\n\tUSER_L" +
-      "IST\020\020\022\r\n\tPROXIMITY\020\021\022\t\n\005TOPIC\020\022\022\021\n\rLISTI" +
-      "NG_SCOPE\020\023\022\014\n\010LANGUAGE\020\024\022\014\n\010IP_BLOCK\020\025\022\021" +
-      "\n\rCONTENT_LABEL\020\026\022\013\n\007CARRIER\020\027\022\021\n\rUSER_I" +
-      "NTEREST\020\030\022\013\n\007WEBPAGE\020\031\022\034\n\030OPERATING_SYST" +
-      "EM_VERSION\020\032\022\025\n\021APP_PAYMENT_MODEL\020\033\022\021\n\rM" +
-      "OBILE_DEVICE\020\034\022\023\n\017CUSTOM_AFFINITY\020\035\022\021\n\rC" +
-      "USTOM_INTENT\020\036\022\022\n\016LOCATION_GROUP\020\037\022\023\n\017CU" +
-      "STOM_AUDIENCE\020 \022\025\n\021COMBINED_AUDIENCE\020!\022\021" +
-      "\n\rKEYWORD_THEME\020\"\022\014\n\010AUDIENCE\020#B\354\001\n\"com." +
-      "google.ads.googleads.v10.enumsB\022Criterio" +
-      "nTypeProtoP\001ZCgoogle.golang.org/genproto" +
-      "/googleapis/ads/googleads/v10/enums;enum" +
-      "s\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V10.Enums" +
-      "\312\002\036Google\\Ads\\GoogleAds\\V10\\Enums\352\002\"Goog" +
-      "le::Ads::GoogleAds::V10::Enumsb\006proto3"
+      "enums\"\241\005\n\021CriterionTypeEnum\"\213\005\n\rCriterio" +
+      "nType\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\013\n\007K" +
+      "EYWORD\020\002\022\r\n\tPLACEMENT\020\003\022\027\n\023MOBILE_APP_CA" +
+      "TEGORY\020\004\022\026\n\022MOBILE_APPLICATION\020\005\022\n\n\006DEVI" +
+      "CE\020\006\022\014\n\010LOCATION\020\007\022\021\n\rLISTING_GROUP\020\010\022\017\n" +
+      "\013AD_SCHEDULE\020\t\022\r\n\tAGE_RANGE\020\n\022\n\n\006GENDER\020" +
+      "\013\022\020\n\014INCOME_RANGE\020\014\022\023\n\017PARENTAL_STATUS\020\r" +
+      "\022\021\n\rYOUTUBE_VIDEO\020\016\022\023\n\017YOUTUBE_CHANNEL\020\017" +
+      "\022\r\n\tUSER_LIST\020\020\022\r\n\tPROXIMITY\020\021\022\t\n\005TOPIC\020" +
+      "\022\022\021\n\rLISTING_SCOPE\020\023\022\014\n\010LANGUAGE\020\024\022\014\n\010IP" +
+      "_BLOCK\020\025\022\021\n\rCONTENT_LABEL\020\026\022\013\n\007CARRIER\020\027" +
+      "\022\021\n\rUSER_INTEREST\020\030\022\013\n\007WEBPAGE\020\031\022\034\n\030OPER" +
+      "ATING_SYSTEM_VERSION\020\032\022\025\n\021APP_PAYMENT_MO" +
+      "DEL\020\033\022\021\n\rMOBILE_DEVICE\020\034\022\023\n\017CUSTOM_AFFIN" +
+      "ITY\020\035\022\021\n\rCUSTOM_INTENT\020\036\022\022\n\016LOCATION_GRO" +
+      "UP\020\037\022\023\n\017CUSTOM_AUDIENCE\020 \022\025\n\021COMBINED_AU" +
+      "DIENCE\020!\022\021\n\rKEYWORD_THEME\020\"\022\014\n\010AUDIENCE\020" +
+      "#B\354\001\n\"com.google.ads.googleads.v10.enums" +
+      "B\022CriterionTypeProtoP\001ZCgoogle.golang.or" +
+      "g/genproto/googleapis/ads/googleads/v10/" +
+      "enums;enums\242\002\003GAA\252\002\036Google.Ads.GoogleAds" +
+      ".V10.Enums\312\002\036Google\\Ads\\GoogleAds\\V10\\En" +
+      "ums\352\002\"Google::Ads::GoogleAds::V10::Enums" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_CriterionTypeEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -66,7 +65,6 @@ public final class CriterionTypeProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_CriterionTypeEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

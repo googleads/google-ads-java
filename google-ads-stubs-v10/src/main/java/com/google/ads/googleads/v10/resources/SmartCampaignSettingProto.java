@@ -35,36 +35,35 @@ public final class SmartCampaignSettingProto {
     java.lang.String[] descriptorData = {
       "\n?google/ads/googleads/v10/resources/sma" +
       "rt_campaign_setting.proto\022\"google.ads.go" +
-      "ogleads.v10.resources\032\034google/api/annota" +
-      "tions.proto\032\037google/api/field_behavior.p" +
-      "roto\032\031google/api/resource.proto\"\330\004\n\024Smar" +
-      "tCampaignSetting\022L\n\rresource_name\030\001 \001(\tB" +
-      "5\340A\005\372A/\n-googleads.googleapis.com/SmartC" +
-      "ampaignSetting\022;\n\010campaign\030\002 \001(\tB)\340A\003\372A#" +
-      "\n!googleads.googleapis.com/Campaign\022Z\n\014p" +
-      "hone_number\030\003 \001(\0132D.google.ads.googleads" +
-      ".v10.resources.SmartCampaignSetting.Phon" +
-      "eNumber\022\021\n\tfinal_url\030\004 \001(\t\022!\n\031advertisin" +
-      "g_language_code\030\007 \001(\t\022\027\n\rbusiness_name\030\005" +
-      " \001(\tH\000\022\036\n\024business_location_id\030\006 \001(\003H\000\032e" +
-      "\n\013PhoneNumber\022\031\n\014phone_number\030\001 \001(\tH\000\210\001\001" +
-      "\022\031\n\014country_code\030\002 \001(\tH\001\210\001\001B\017\n\r_phone_nu" +
-      "mberB\017\n\r_country_code:o\352Al\n-googleads.go" +
-      "ogleapis.com/SmartCampaignSetting\022;custo" +
-      "mers/{customer_id}/smartCampaignSettings" +
-      "/{campaign_id}B\022\n\020business_settingB\213\002\n&c" +
-      "om.google.ads.googleads.v10.resourcesB\031S" +
-      "martCampaignSettingProtoP\001ZKgoogle.golan" +
-      "g.org/genproto/googleapis/ads/googleads/" +
-      "v10/resources;resources\242\002\003GAA\252\002\"Google.A" +
-      "ds.GoogleAds.V10.Resources\312\002\"Google\\Ads\\" +
-      "GoogleAds\\V10\\Resources\352\002&Google::Ads::G" +
-      "oogleAds::V10::Resourcesb\006proto3"
+      "ogleads.v10.resources\032\037google/api/field_" +
+      "behavior.proto\032\031google/api/resource.prot" +
+      "o\"\330\004\n\024SmartCampaignSetting\022L\n\rresource_n" +
+      "ame\030\001 \001(\tB5\340A\005\372A/\n-googleads.googleapis." +
+      "com/SmartCampaignSetting\022;\n\010campaign\030\002 \001" +
+      "(\tB)\340A\003\372A#\n!googleads.googleapis.com/Cam" +
+      "paign\022Z\n\014phone_number\030\003 \001(\0132D.google.ads" +
+      ".googleads.v10.resources.SmartCampaignSe" +
+      "tting.PhoneNumber\022\021\n\tfinal_url\030\004 \001(\t\022!\n\031" +
+      "advertising_language_code\030\007 \001(\t\022\027\n\rbusin" +
+      "ess_name\030\005 \001(\tH\000\022\036\n\024business_location_id" +
+      "\030\006 \001(\003H\000\032e\n\013PhoneNumber\022\031\n\014phone_number\030" +
+      "\001 \001(\tH\000\210\001\001\022\031\n\014country_code\030\002 \001(\tH\001\210\001\001B\017\n" +
+      "\r_phone_numberB\017\n\r_country_code:o\352Al\n-go" +
+      "ogleads.googleapis.com/SmartCampaignSett" +
+      "ing\022;customers/{customer_id}/smartCampai" +
+      "gnSettings/{campaign_id}B\022\n\020business_set" +
+      "tingB\213\002\n&com.google.ads.googleads.v10.re" +
+      "sourcesB\031SmartCampaignSettingProtoP\001ZKgo" +
+      "ogle.golang.org/genproto/googleapis/ads/" +
+      "googleads/v10/resources;resources\242\002\003GAA\252" +
+      "\002\"Google.Ads.GoogleAds.V10.Resources\312\002\"G" +
+      "oogle\\Ads\\GoogleAds\\V10\\Resources\352\002&Goog" +
+      "le::Ads::GoogleAds::V10::Resourcesb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -87,7 +86,6 @@ public final class SmartCampaignSettingProto {
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

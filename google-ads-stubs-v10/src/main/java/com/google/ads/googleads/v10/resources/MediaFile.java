@@ -165,6 +165,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -1950,8 +1952,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (mediatypeCase_ == 3) {
           imageBuilder_.mergeFrom(value);
+        } else {
+          imageBuilder_.setMessage(value);
         }
-        imageBuilder_.setMessage(value);
       }
       mediatypeCase_ = 3;
       return this;
@@ -2127,8 +2130,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (mediatypeCase_ == 4) {
           mediaBundleBuilder_.mergeFrom(value);
+        } else {
+          mediaBundleBuilder_.setMessage(value);
         }
-        mediaBundleBuilder_.setMessage(value);
       }
       mediatypeCase_ = 4;
       return this;
@@ -2304,8 +2308,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (mediatypeCase_ == 10) {
           audioBuilder_.mergeFrom(value);
+        } else {
+          audioBuilder_.setMessage(value);
         }
-        audioBuilder_.setMessage(value);
       }
       mediatypeCase_ = 10;
       return this;
@@ -2481,8 +2486,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (mediatypeCase_ == 11) {
           videoBuilder_.mergeFrom(value);
+        } else {
+          videoBuilder_.setMessage(value);
         }
-        videoBuilder_.setMessage(value);
       }
       mediatypeCase_ = 11;
       return this;

@@ -36,6 +36,7 @@ private static final long serialVersionUID = 0L;
     biddingStrategyType_ = 0;
     accessibleBiddingStrategy_ = "";
     startDate_ = "";
+    campaignGroup_ = "";
     endDate_ = "";
     finalUrlSuffix_ = "";
     frequencyCaps_ = java.util.Collections.emptyList();
@@ -324,9 +325,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 322: {
-            if (!((mutable_bitField0_ & 0x00000800) != 0)) {
+            if (!((mutable_bitField0_ & 0x00001000) != 0)) {
               frequencyCaps_ = new java.util.ArrayList<com.google.ads.googleads.v10.common.FrequencyCapEntry>();
-              mutable_bitField0_ |= 0x00000800;
+              mutable_bitField0_ |= 0x00001000;
             }
             frequencyCaps_.add(
                 input.readMessage(com.google.ads.googleads.v10.common.FrequencyCapEntry.parser(), extensionRegistry));
@@ -536,18 +537,18 @@ private static final long serialVersionUID = 0L;
           }
           case 514: {
             java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000080;
+            bitField0_ |= 0x00000100;
             endDate_ = s;
             break;
           }
           case 522: {
             java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000100;
+            bitField0_ |= 0x00000200;
             finalUrlSuffix_ = s;
             break;
           }
           case 529: {
-            bitField0_ |= 0x00000200;
+            bitField0_ |= 0x00000400;
             optimizationScore_ = input.readDouble();
             break;
           }
@@ -559,9 +560,9 @@ private static final long serialVersionUID = 0L;
           }
           case 552: {
             int rawValue = input.readEnum();
-            if (!((mutable_bitField0_ & 0x00002000) != 0)) {
+            if (!((mutable_bitField0_ & 0x00004000) != 0)) {
               excludedParentAssetFieldTypes_ = new java.util.ArrayList<java.lang.Integer>();
-              mutable_bitField0_ |= 0x00002000;
+              mutable_bitField0_ |= 0x00004000;
             }
             excludedParentAssetFieldTypes_.add(rawValue);
             break;
@@ -571,9 +572,9 @@ private static final long serialVersionUID = 0L;
             int oldLimit = input.pushLimit(length);
             while(input.getBytesUntilLimit() > 0) {
               int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00002000) != 0)) {
+              if (!((mutable_bitField0_ & 0x00004000) != 0)) {
                 excludedParentAssetFieldTypes_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00002000;
+                mutable_bitField0_ |= 0x00004000;
               }
               excludedParentAssetFieldTypes_.add(rawValue);
             }
@@ -587,7 +588,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 576: {
-            bitField0_ |= 0x00000400;
+            bitField0_ |= 0x00000800;
             urlExpansionOptOut_ = input.readBool();
             break;
           }
@@ -604,6 +605,12 @@ private static final long serialVersionUID = 0L;
             bitField0_ |= 0x00000008;
             break;
           }
+          case 610: {
+            java.lang.String s = input.readStringRequireUtf8();
+            bitField0_ |= 0x00000080;
+            campaignGroup_ = s;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -615,6 +622,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -622,13 +631,13 @@ private static final long serialVersionUID = 0L;
       if (((mutable_bitField0_ & 0x00000008) != 0)) {
         urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
       }
-      if (((mutable_bitField0_ & 0x00000800) != 0)) {
+      if (((mutable_bitField0_ & 0x00001000) != 0)) {
         frequencyCaps_ = java.util.Collections.unmodifiableList(frequencyCaps_);
       }
       if (((mutable_bitField0_ & 0x00000020) != 0)) {
         labels_ = labels_.getUnmodifiableView();
       }
-      if (((mutable_bitField0_ & 0x00002000) != 0)) {
+      if (((mutable_bitField0_ & 0x00004000) != 0)) {
         excludedParentAssetFieldTypes_ = java.util.Collections.unmodifiableList(excludedParentAssetFieldTypes_);
       }
       this.unknownFields = unknownFields.build();
@@ -815,6 +824,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -1721,6 +1732,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -2392,6 +2405,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -3639,6 +3654,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -4768,6 +4785,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -5442,6 +5461,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -6128,6 +6149,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -6762,6 +6785,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -7679,6 +7704,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -8399,6 +8426,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -9137,6 +9166,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -9904,6 +9935,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -11613,6 +11646,64 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int CAMPAIGN_GROUP_FIELD_NUMBER = 76;
+  private volatile java.lang.Object campaignGroup_;
+  /**
+   * <pre>
+   * The campaign group this campaign belongs to.
+   * </pre>
+   *
+   * <code>optional string campaign_group = 76 [(.google.api.resource_reference) = { ... }</code>
+   * @return Whether the campaignGroup field is set.
+   */
+  @java.lang.Override
+  public boolean hasCampaignGroup() {
+    return ((bitField0_ & 0x00000080) != 0);
+  }
+  /**
+   * <pre>
+   * The campaign group this campaign belongs to.
+   * </pre>
+   *
+   * <code>optional string campaign_group = 76 [(.google.api.resource_reference) = { ... }</code>
+   * @return The campaignGroup.
+   */
+  @java.lang.Override
+  public java.lang.String getCampaignGroup() {
+    java.lang.Object ref = campaignGroup_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      campaignGroup_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The campaign group this campaign belongs to.
+   * </pre>
+   *
+   * <code>optional string campaign_group = 76 [(.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for campaignGroup.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getCampaignGroupBytes() {
+    java.lang.Object ref = campaignGroup_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      campaignGroup_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   public static final int END_DATE_FIELD_NUMBER = 64;
   private volatile java.lang.Object endDate_;
   /**
@@ -11626,7 +11717,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasEndDate() {
-    return ((bitField0_ & 0x00000080) != 0);
+    return ((bitField0_ & 0x00000100) != 0);
   }
   /**
    * <pre>
@@ -11687,7 +11778,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasFinalUrlSuffix() {
-    return ((bitField0_ & 0x00000100) != 0);
+    return ((bitField0_ & 0x00000200) != 0);
   }
   /**
    * <pre>
@@ -12026,7 +12117,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasOptimizationScore() {
-    return ((bitField0_ & 0x00000200) != 0);
+    return ((bitField0_ & 0x00000400) != 0);
   }
   /**
    * <pre>
@@ -12153,7 +12244,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasUrlExpansionOptOut() {
-    return ((bitField0_ & 0x00000400) != 0);
+    return ((bitField0_ & 0x00000800) != 0);
   }
   /**
    * <pre>
@@ -12939,13 +13030,13 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000040) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 63, startDate_);
     }
-    if (((bitField0_ & 0x00000080) != 0)) {
+    if (((bitField0_ & 0x00000100) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 64, endDate_);
     }
-    if (((bitField0_ & 0x00000100) != 0)) {
+    if (((bitField0_ & 0x00000200) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 65, finalUrlSuffix_);
     }
-    if (((bitField0_ & 0x00000200) != 0)) {
+    if (((bitField0_ & 0x00000400) != 0)) {
       output.writeDouble(66, optimizationScore_);
     }
     if (campaignBiddingStrategyCase_ == 67) {
@@ -12961,11 +13052,14 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessibleBiddingStrategy_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 71, accessibleBiddingStrategy_);
     }
-    if (((bitField0_ & 0x00000400) != 0)) {
+    if (((bitField0_ & 0x00000800) != 0)) {
       output.writeBool(72, urlExpansionOptOut_);
     }
     if (((bitField0_ & 0x00000008) != 0)) {
       output.writeMessage(73, getAudienceSetting());
+    }
+    if (((bitField0_ & 0x00000080) != 0)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 76, campaignGroup_);
     }
     unknownFields.writeTo(output);
   }
@@ -13150,13 +13244,13 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000040) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(63, startDate_);
     }
-    if (((bitField0_ & 0x00000080) != 0)) {
+    if (((bitField0_ & 0x00000100) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(64, endDate_);
     }
-    if (((bitField0_ & 0x00000100) != 0)) {
+    if (((bitField0_ & 0x00000200) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(65, finalUrlSuffix_);
     }
-    if (((bitField0_ & 0x00000200) != 0)) {
+    if (((bitField0_ & 0x00000400) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(66, optimizationScore_);
     }
@@ -13178,13 +13272,16 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(accessibleBiddingStrategy_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(71, accessibleBiddingStrategy_);
     }
-    if (((bitField0_ & 0x00000400) != 0)) {
+    if (((bitField0_ & 0x00000800) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(72, urlExpansionOptOut_);
     }
     if (((bitField0_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(73, getAudienceSetting());
+    }
+    if (((bitField0_ & 0x00000080) != 0)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(76, campaignGroup_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -13295,6 +13392,11 @@ private static final long serialVersionUID = 0L;
     if (hasStartDate()) {
       if (!getStartDate()
           .equals(other.getStartDate())) return false;
+    }
+    if (hasCampaignGroup() != other.hasCampaignGroup()) return false;
+    if (hasCampaignGroup()) {
+      if (!getCampaignGroup()
+          .equals(other.getCampaignGroup())) return false;
     }
     if (hasEndDate() != other.hasEndDate()) return false;
     if (hasEndDate()) {
@@ -13500,6 +13602,10 @@ private static final long serialVersionUID = 0L;
     if (hasStartDate()) {
       hash = (37 * hash) + START_DATE_FIELD_NUMBER;
       hash = (53 * hash) + getStartDate().hashCode();
+    }
+    if (hasCampaignGroup()) {
+      hash = (37 * hash) + CAMPAIGN_GROUP_FIELD_NUMBER;
+      hash = (53 * hash) + getCampaignGroup().hashCode();
     }
     if (hasEndDate()) {
       hash = (37 * hash) + END_DATE_FIELD_NUMBER;
@@ -13841,13 +13947,15 @@ private static final long serialVersionUID = 0L;
 
       startDate_ = "";
       bitField0_ = (bitField0_ & ~0x00000100);
-      endDate_ = "";
+      campaignGroup_ = "";
       bitField0_ = (bitField0_ & ~0x00000200);
-      finalUrlSuffix_ = "";
+      endDate_ = "";
       bitField0_ = (bitField0_ & ~0x00000400);
+      finalUrlSuffix_ = "";
+      bitField0_ = (bitField0_ & ~0x00000800);
       if (frequencyCapsBuilder_ == null) {
         frequencyCaps_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00001000);
       } else {
         frequencyCapsBuilder_.clear();
       }
@@ -13880,11 +13988,11 @@ private static final long serialVersionUID = 0L;
       paymentMode_ = 0;
 
       optimizationScore_ = 0D;
-      bitField0_ = (bitField0_ & ~0x00001000);
-      excludedParentAssetFieldTypes_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00002000);
-      urlExpansionOptOut_ = false;
+      excludedParentAssetFieldTypes_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00004000);
+      urlExpansionOptOut_ = false;
+      bitField0_ = (bitField0_ & ~0x00008000);
       campaignBiddingStrategyCase_ = 0;
       campaignBiddingStrategy_ = null;
       return this;
@@ -14018,15 +14126,19 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000200) != 0)) {
         to_bitField0_ |= 0x00000080;
       }
-      result.endDate_ = endDate_;
+      result.campaignGroup_ = campaignGroup_;
       if (((from_bitField0_ & 0x00000400) != 0)) {
         to_bitField0_ |= 0x00000100;
       }
+      result.endDate_ = endDate_;
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        to_bitField0_ |= 0x00000200;
+      }
       result.finalUrlSuffix_ = finalUrlSuffix_;
       if (frequencyCapsBuilder_ == null) {
-        if (((bitField0_ & 0x00000800) != 0)) {
+        if (((bitField0_ & 0x00001000) != 0)) {
           frequencyCaps_ = java.util.Collections.unmodifiableList(frequencyCaps_);
-          bitField0_ = (bitField0_ & ~0x00000800);
+          bitField0_ = (bitField0_ & ~0x00001000);
         }
         result.frequencyCaps_ = frequencyCaps_;
       } else {
@@ -14054,18 +14166,18 @@ private static final long serialVersionUID = 0L;
         result.trackingSetting_ = trackingSettingBuilder_.build();
       }
       result.paymentMode_ = paymentMode_;
-      if (((from_bitField0_ & 0x00001000) != 0)) {
+      if (((from_bitField0_ & 0x00002000) != 0)) {
         result.optimizationScore_ = optimizationScore_;
-        to_bitField0_ |= 0x00000200;
+        to_bitField0_ |= 0x00000400;
       }
-      if (((bitField0_ & 0x00002000) != 0)) {
+      if (((bitField0_ & 0x00004000) != 0)) {
         excludedParentAssetFieldTypes_ = java.util.Collections.unmodifiableList(excludedParentAssetFieldTypes_);
-        bitField0_ = (bitField0_ & ~0x00002000);
+        bitField0_ = (bitField0_ & ~0x00004000);
       }
       result.excludedParentAssetFieldTypes_ = excludedParentAssetFieldTypes_;
-      if (((from_bitField0_ & 0x00004000) != 0)) {
+      if (((from_bitField0_ & 0x00008000) != 0)) {
         result.urlExpansionOptOut_ = urlExpansionOptOut_;
-        to_bitField0_ |= 0x00000400;
+        to_bitField0_ |= 0x00000800;
       }
       if (campaignBiddingStrategyCase_ == 67) {
         result.campaignBiddingStrategy_ = campaignBiddingStrategy_;
@@ -14327,13 +14439,18 @@ private static final long serialVersionUID = 0L;
         startDate_ = other.startDate_;
         onChanged();
       }
-      if (other.hasEndDate()) {
+      if (other.hasCampaignGroup()) {
         bitField0_ |= 0x00000200;
+        campaignGroup_ = other.campaignGroup_;
+        onChanged();
+      }
+      if (other.hasEndDate()) {
+        bitField0_ |= 0x00000400;
         endDate_ = other.endDate_;
         onChanged();
       }
       if (other.hasFinalUrlSuffix()) {
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00000800;
         finalUrlSuffix_ = other.finalUrlSuffix_;
         onChanged();
       }
@@ -14341,7 +14458,7 @@ private static final long serialVersionUID = 0L;
         if (!other.frequencyCaps_.isEmpty()) {
           if (frequencyCaps_.isEmpty()) {
             frequencyCaps_ = other.frequencyCaps_;
-            bitField0_ = (bitField0_ & ~0x00000800);
+            bitField0_ = (bitField0_ & ~0x00001000);
           } else {
             ensureFrequencyCapsIsMutable();
             frequencyCaps_.addAll(other.frequencyCaps_);
@@ -14354,7 +14471,7 @@ private static final long serialVersionUID = 0L;
             frequencyCapsBuilder_.dispose();
             frequencyCapsBuilder_ = null;
             frequencyCaps_ = other.frequencyCaps_;
-            bitField0_ = (bitField0_ & ~0x00000800);
+            bitField0_ = (bitField0_ & ~0x00001000);
             frequencyCapsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getFrequencyCapsFieldBuilder() : null;
@@ -14387,7 +14504,7 @@ private static final long serialVersionUID = 0L;
       if (!other.excludedParentAssetFieldTypes_.isEmpty()) {
         if (excludedParentAssetFieldTypes_.isEmpty()) {
           excludedParentAssetFieldTypes_ = other.excludedParentAssetFieldTypes_;
-          bitField0_ = (bitField0_ & ~0x00002000);
+          bitField0_ = (bitField0_ & ~0x00004000);
         } else {
           ensureExcludedParentAssetFieldTypesIsMutable();
           excludedParentAssetFieldTypes_.addAll(other.excludedParentAssetFieldTypes_);
@@ -17994,6 +18111,113 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private java.lang.Object campaignGroup_ = "";
+    /**
+     * <pre>
+     * The campaign group this campaign belongs to.
+     * </pre>
+     *
+     * <code>optional string campaign_group = 76 [(.google.api.resource_reference) = { ... }</code>
+     * @return Whether the campaignGroup field is set.
+     */
+    public boolean hasCampaignGroup() {
+      return ((bitField0_ & 0x00000200) != 0);
+    }
+    /**
+     * <pre>
+     * The campaign group this campaign belongs to.
+     * </pre>
+     *
+     * <code>optional string campaign_group = 76 [(.google.api.resource_reference) = { ... }</code>
+     * @return The campaignGroup.
+     */
+    public java.lang.String getCampaignGroup() {
+      java.lang.Object ref = campaignGroup_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        campaignGroup_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The campaign group this campaign belongs to.
+     * </pre>
+     *
+     * <code>optional string campaign_group = 76 [(.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for campaignGroup.
+     */
+    public com.google.protobuf.ByteString
+        getCampaignGroupBytes() {
+      java.lang.Object ref = campaignGroup_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        campaignGroup_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The campaign group this campaign belongs to.
+     * </pre>
+     *
+     * <code>optional string campaign_group = 76 [(.google.api.resource_reference) = { ... }</code>
+     * @param value The campaignGroup to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCampaignGroup(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000200;
+      campaignGroup_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The campaign group this campaign belongs to.
+     * </pre>
+     *
+     * <code>optional string campaign_group = 76 [(.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCampaignGroup() {
+      bitField0_ = (bitField0_ & ~0x00000200);
+      campaignGroup_ = getDefaultInstance().getCampaignGroup();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The campaign group this campaign belongs to.
+     * </pre>
+     *
+     * <code>optional string campaign_group = 76 [(.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for campaignGroup to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCampaignGroupBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      bitField0_ |= 0x00000200;
+      campaignGroup_ = value;
+      onChanged();
+      return this;
+    }
+
     private java.lang.Object endDate_ = "";
     /**
      * <pre>
@@ -18005,7 +18229,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the endDate field is set.
      */
     public boolean hasEndDate() {
-      return ((bitField0_ & 0x00000200) != 0);
+      return ((bitField0_ & 0x00000400) != 0);
     }
     /**
      * <pre>
@@ -18065,7 +18289,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000200;
+  bitField0_ |= 0x00000400;
       endDate_ = value;
       onChanged();
       return this;
@@ -18080,7 +18304,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearEndDate() {
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00000400);
       endDate_ = getDefaultInstance().getEndDate();
       onChanged();
       return this;
@@ -18101,7 +18325,7 @@ private static final long serialVersionUID = 0L;
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000400;
       endDate_ = value;
       onChanged();
       return this;
@@ -18118,7 +18342,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the finalUrlSuffix field is set.
      */
     public boolean hasFinalUrlSuffix() {
-      return ((bitField0_ & 0x00000400) != 0);
+      return ((bitField0_ & 0x00000800) != 0);
     }
     /**
      * <pre>
@@ -18178,7 +18402,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000400;
+  bitField0_ |= 0x00000800;
       finalUrlSuffix_ = value;
       onChanged();
       return this;
@@ -18193,7 +18417,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearFinalUrlSuffix() {
-      bitField0_ = (bitField0_ & ~0x00000400);
+      bitField0_ = (bitField0_ & ~0x00000800);
       finalUrlSuffix_ = getDefaultInstance().getFinalUrlSuffix();
       onChanged();
       return this;
@@ -18214,7 +18438,7 @@ private static final long serialVersionUID = 0L;
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000400;
+      bitField0_ |= 0x00000800;
       finalUrlSuffix_ = value;
       onChanged();
       return this;
@@ -18223,9 +18447,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.google.ads.googleads.v10.common.FrequencyCapEntry> frequencyCaps_ =
       java.util.Collections.emptyList();
     private void ensureFrequencyCapsIsMutable() {
-      if (!((bitField0_ & 0x00000800) != 0)) {
+      if (!((bitField0_ & 0x00001000) != 0)) {
         frequencyCaps_ = new java.util.ArrayList<com.google.ads.googleads.v10.common.FrequencyCapEntry>(frequencyCaps_);
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00001000;
        }
     }
 
@@ -18419,7 +18643,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearFrequencyCaps() {
       if (frequencyCapsBuilder_ == null) {
         frequencyCaps_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00001000);
         onChanged();
       } else {
         frequencyCapsBuilder_.clear();
@@ -18524,7 +18748,7 @@ private static final long serialVersionUID = 0L;
         frequencyCapsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v10.common.FrequencyCapEntry, com.google.ads.googleads.v10.common.FrequencyCapEntry.Builder, com.google.ads.googleads.v10.common.FrequencyCapEntryOrBuilder>(
                 frequencyCaps_,
-                ((bitField0_ & 0x00000800) != 0),
+                ((bitField0_ & 0x00001000) != 0),
                 getParentForChildren(),
                 isClean());
         frequencyCaps_ = null;
@@ -19336,7 +19560,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasOptimizationScore() {
-      return ((bitField0_ & 0x00001000) != 0);
+      return ((bitField0_ & 0x00002000) != 0);
     }
     /**
      * <pre>
@@ -19374,7 +19598,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setOptimizationScore(double value) {
-      bitField0_ |= 0x00001000;
+      bitField0_ |= 0x00002000;
       optimizationScore_ = value;
       onChanged();
       return this;
@@ -19395,7 +19619,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOptimizationScore() {
-      bitField0_ = (bitField0_ & ~0x00001000);
+      bitField0_ = (bitField0_ & ~0x00002000);
       optimizationScore_ = 0D;
       onChanged();
       return this;
@@ -19404,9 +19628,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<java.lang.Integer> excludedParentAssetFieldTypes_ =
       java.util.Collections.emptyList();
     private void ensureExcludedParentAssetFieldTypesIsMutable() {
-      if (!((bitField0_ & 0x00002000) != 0)) {
+      if (!((bitField0_ & 0x00004000) != 0)) {
         excludedParentAssetFieldTypes_ = new java.util.ArrayList<java.lang.Integer>(excludedParentAssetFieldTypes_);
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00004000;
       }
     }
     /**
@@ -19524,7 +19748,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearExcludedParentAssetFieldTypes() {
       excludedParentAssetFieldTypes_ = java.util.Collections.emptyList();
-      bitField0_ = (bitField0_ & ~0x00002000);
+      bitField0_ = (bitField0_ & ~0x00004000);
       onChanged();
       return this;
     }
@@ -19629,7 +19853,7 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Override
     public boolean hasUrlExpansionOptOut() {
-      return ((bitField0_ & 0x00004000) != 0);
+      return ((bitField0_ & 0x00008000) != 0);
     }
     /**
      * <pre>
@@ -19663,7 +19887,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setUrlExpansionOptOut(boolean value) {
-      bitField0_ |= 0x00004000;
+      bitField0_ |= 0x00008000;
       urlExpansionOptOut_ = value;
       onChanged();
       return this;
@@ -19682,7 +19906,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearUrlExpansionOptOut() {
-      bitField0_ = (bitField0_ & ~0x00004000);
+      bitField0_ = (bitField0_ & ~0x00008000);
       urlExpansionOptOut_ = false;
       onChanged();
       return this;
@@ -19908,8 +20132,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (campaignBiddingStrategyCase_ == 49) {
           commissionBuilder_.mergeFrom(value);
+        } else {
+          commissionBuilder_.setMessage(value);
         }
-        commissionBuilder_.setMessage(value);
       }
       campaignBiddingStrategyCase_ = 49;
       return this;
@@ -20094,8 +20319,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (campaignBiddingStrategyCase_ == 24) {
           manualCpcBuilder_.mergeFrom(value);
+        } else {
+          manualCpcBuilder_.setMessage(value);
         }
-        manualCpcBuilder_.setMessage(value);
       }
       campaignBiddingStrategyCase_ = 24;
       return this;
@@ -20285,8 +20511,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (campaignBiddingStrategyCase_ == 25) {
           manualCpmBuilder_.mergeFrom(value);
+        } else {
+          manualCpmBuilder_.setMessage(value);
         }
-        manualCpmBuilder_.setMessage(value);
       }
       campaignBiddingStrategyCase_ = 25;
       return this;
@@ -20470,8 +20697,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (campaignBiddingStrategyCase_ == 37) {
           manualCpvBuilder_.mergeFrom(value);
+        } else {
+          manualCpvBuilder_.setMessage(value);
         }
-        manualCpvBuilder_.setMessage(value);
       }
       campaignBiddingStrategyCase_ = 37;
       return this;
@@ -20652,8 +20880,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (campaignBiddingStrategyCase_ == 30) {
           maximizeConversionsBuilder_.mergeFrom(value);
+        } else {
+          maximizeConversionsBuilder_.setMessage(value);
         }
-        maximizeConversionsBuilder_.setMessage(value);
       }
       campaignBiddingStrategyCase_ = 30;
       return this;
@@ -20838,8 +21067,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (campaignBiddingStrategyCase_ == 31) {
           maximizeConversionValueBuilder_.mergeFrom(value);
+        } else {
+          maximizeConversionValueBuilder_.setMessage(value);
         }
-        maximizeConversionValueBuilder_.setMessage(value);
       }
       campaignBiddingStrategyCase_ = 31;
       return this;
@@ -21029,8 +21259,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (campaignBiddingStrategyCase_ == 26) {
           targetCpaBuilder_.mergeFrom(value);
+        } else {
+          targetCpaBuilder_.setMessage(value);
         }
-        targetCpaBuilder_.setMessage(value);
       }
       campaignBiddingStrategyCase_ = 26;
       return this;
@@ -21219,8 +21450,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (campaignBiddingStrategyCase_ == 48) {
           targetImpressionShareBuilder_.mergeFrom(value);
+        } else {
+          targetImpressionShareBuilder_.setMessage(value);
         }
-        targetImpressionShareBuilder_.setMessage(value);
       }
       campaignBiddingStrategyCase_ = 48;
       return this;
@@ -21405,8 +21637,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (campaignBiddingStrategyCase_ == 29) {
           targetRoasBuilder_.mergeFrom(value);
+        } else {
+          targetRoasBuilder_.setMessage(value);
         }
-        targetRoasBuilder_.setMessage(value);
       }
       campaignBiddingStrategyCase_ = 29;
       return this;
@@ -21591,8 +21824,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (campaignBiddingStrategyCase_ == 27) {
           targetSpendBuilder_.mergeFrom(value);
+        } else {
+          targetSpendBuilder_.setMessage(value);
         }
-        targetSpendBuilder_.setMessage(value);
       }
       campaignBiddingStrategyCase_ = 27;
       return this;
@@ -21777,8 +22011,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (campaignBiddingStrategyCase_ == 34) {
           percentCpcBuilder_.mergeFrom(value);
+        } else {
+          percentCpcBuilder_.setMessage(value);
         }
-        percentCpcBuilder_.setMessage(value);
       }
       campaignBiddingStrategyCase_ = 34;
       return this;
@@ -21963,8 +22198,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (campaignBiddingStrategyCase_ == 41) {
           targetCpmBuilder_.mergeFrom(value);
+        } else {
+          targetCpmBuilder_.setMessage(value);
         }
-        targetCpmBuilder_.setMessage(value);
       }
       campaignBiddingStrategyCase_ = 41;
       return this;

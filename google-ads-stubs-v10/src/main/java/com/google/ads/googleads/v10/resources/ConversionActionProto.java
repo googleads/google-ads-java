@@ -63,80 +63,80 @@ public final class ConversionActionProto {
       "eads/v10/enums/conversion_origin.proto\032=" +
       "google/ads/googleads/v10/enums/data_driv" +
       "en_model_status.proto\0326google/ads/google" +
-      "ads/v10/enums/mobile_app_vendor.proto\032\034g" +
-      "oogle/api/annotations.proto\032\037google/api/" +
-      "field_behavior.proto\032\031google/api/resourc" +
-      "e.proto\"\370\023\n\020ConversionAction\022H\n\rresource" +
-      "_name\030\001 \001(\tB1\340A\005\372A+\n)googleads.googleapi" +
-      "s.com/ConversionAction\022\024\n\002id\030\025 \001(\003B\003\340A\003H" +
-      "\000\210\001\001\022\021\n\004name\030\026 \001(\tH\001\210\001\001\022a\n\006status\030\004 \001(\0162" +
-      "Q.google.ads.googleads.v10.enums.Convers" +
-      "ionActionStatusEnum.ConversionActionStat" +
-      "us\022`\n\004type\030\005 \001(\0162M.google.ads.googleads." +
-      "v10.enums.ConversionActionTypeEnum.Conve" +
-      "rsionActionTypeB\003\340A\005\022Z\n\006origin\030\036 \001(\0162E.g" +
-      "oogle.ads.googleads.v10.enums.Conversion" +
-      "OriginEnum.ConversionOriginB\003\340A\003\022\035\n\020prim" +
-      "ary_for_goal\030\037 \001(\010H\002\210\001\001\022g\n\010category\030\006 \001(" +
-      "\0162U.google.ads.googleads.v10.enums.Conve" +
-      "rsionActionCategoryEnum.ConversionAction" +
-      "Category\022F\n\016owner_customer\030\027 \001(\tB)\340A\003\372A#" +
-      "\n!googleads.googleapis.com/CustomerH\003\210\001\001" +
-      "\022*\n\035include_in_conversions_metric\030\030 \001(\010H" +
-      "\004\210\001\001\022/\n\"click_through_lookback_window_da" +
-      "ys\030\031 \001(\003H\005\210\001\001\022.\n!view_through_lookback_w" +
-      "indow_days\030\032 \001(\003H\006\210\001\001\022Z\n\016value_settings\030" +
-      "\013 \001(\0132B.google.ads.googleads.v10.resourc" +
-      "es.ConversionAction.ValueSettings\022t\n\rcou" +
-      "nting_type\030\014 \001(\0162].google.ads.googleads." +
-      "v10.enums.ConversionActionCountingTypeEn" +
-      "um.ConversionActionCountingType\022q\n\032attri" +
-      "bution_model_settings\030\r \001(\0132M.google.ads" +
-      ".googleads.v10.resources.ConversionActio" +
-      "n.AttributionModelSettings\022F\n\014tag_snippe" +
-      "ts\030\016 \003(\0132+.google.ads.googleads.v10.comm" +
-      "on.TagSnippetB\003\340A\003\022(\n\033phone_call_duratio" +
-      "n_seconds\030\033 \001(\003H\007\210\001\001\022\023\n\006app_id\030\034 \001(\tH\010\210\001" +
-      "\001\022c\n\021mobile_app_vendor\030\021 \001(\0162C.google.ad" +
-      "s.googleads.v10.enums.MobileAppVendorEnu" +
-      "m.MobileAppVendorB\003\340A\003\022e\n\021firebase_setti" +
-      "ngs\030\022 \001(\0132E.google.ads.googleads.v10.res" +
-      "ources.ConversionAction.FirebaseSettings" +
-      "B\003\340A\003\022\204\001\n\"third_party_app_analytics_sett" +
-      "ings\030\023 \001(\0132S.google.ads.googleads.v10.re" +
-      "sources.ConversionAction.ThirdPartyAppAn" +
-      "alyticsSettingsB\003\340A\003\032\364\001\n\030AttributionMode" +
-      "lSettings\022`\n\021attribution_model\030\001 \001(\0162E.g" +
-      "oogle.ads.googleads.v10.enums.Attributio" +
-      "nModelEnum.AttributionModel\022v\n\030data_driv" +
-      "en_model_status\030\002 \001(\0162O.google.ads.googl" +
-      "eads.v10.enums.DataDrivenModelStatusEnum" +
-      ".DataDrivenModelStatusB\003\340A\003\032\277\001\n\rValueSet" +
-      "tings\022\032\n\rdefault_value\030\004 \001(\001H\000\210\001\001\022\"\n\025def" +
-      "ault_currency_code\030\005 \001(\tH\001\210\001\001\022%\n\030always_" +
-      "use_default_value\030\006 \001(\010H\002\210\001\001B\020\n\016_default" +
-      "_valueB\030\n\026_default_currency_codeB\033\n\031_alw" +
-      "ays_use_default_value\032i\n\036ThirdPartyAppAn" +
-      "alyticsSettings\022\034\n\nevent_name\030\002 \001(\tB\003\340A\003" +
-      "H\000\210\001\001\022\032\n\rprovider_name\030\003 \001(\tB\003\340A\003B\r\n\013_ev" +
-      "ent_name\032l\n\020FirebaseSettings\022\034\n\nevent_na" +
-      "me\030\003 \001(\tB\003\340A\003H\000\210\001\001\022\034\n\nproject_id\030\004 \001(\tB\003" +
-      "\340A\003H\001\210\001\001B\r\n\013_event_nameB\r\n\013_project_id:p" +
-      "\352Am\n)googleads.googleapis.com/Conversion" +
-      "Action\022@customers/{customer_id}/conversi" +
-      "onActions/{conversion_action_id}B\005\n\003_idB" +
-      "\007\n\005_nameB\023\n\021_primary_for_goalB\021\n\017_owner_" +
-      "customerB \n\036_include_in_conversions_metr" +
-      "icB%\n#_click_through_lookback_window_day" +
-      "sB$\n\"_view_through_lookback_window_daysB" +
-      "\036\n\034_phone_call_duration_secondsB\t\n\007_app_" +
-      "idB\207\002\n&com.google.ads.googleads.v10.reso" +
-      "urcesB\025ConversionActionProtoP\001ZKgoogle.g" +
-      "olang.org/genproto/googleapis/ads/google" +
-      "ads/v10/resources;resources\242\002\003GAA\252\002\"Goog" +
-      "le.Ads.GoogleAds.V10.Resources\312\002\"Google\\" +
-      "Ads\\GoogleAds\\V10\\Resources\352\002&Google::Ad" +
-      "s::GoogleAds::V10::Resourcesb\006proto3"
+      "ads/v10/enums/mobile_app_vendor.proto\032\037g" +
+      "oogle/api/field_behavior.proto\032\031google/a" +
+      "pi/resource.proto\"\370\023\n\020ConversionAction\022H" +
+      "\n\rresource_name\030\001 \001(\tB1\340A\005\372A+\n)googleads" +
+      ".googleapis.com/ConversionAction\022\024\n\002id\030\025" +
+      " \001(\003B\003\340A\003H\000\210\001\001\022\021\n\004name\030\026 \001(\tH\001\210\001\001\022a\n\006sta" +
+      "tus\030\004 \001(\0162Q.google.ads.googleads.v10.enu" +
+      "ms.ConversionActionStatusEnum.Conversion" +
+      "ActionStatus\022`\n\004type\030\005 \001(\0162M.google.ads." +
+      "googleads.v10.enums.ConversionActionType" +
+      "Enum.ConversionActionTypeB\003\340A\005\022Z\n\006origin" +
+      "\030\036 \001(\0162E.google.ads.googleads.v10.enums." +
+      "ConversionOriginEnum.ConversionOriginB\003\340" +
+      "A\003\022\035\n\020primary_for_goal\030\037 \001(\010H\002\210\001\001\022g\n\010cat" +
+      "egory\030\006 \001(\0162U.google.ads.googleads.v10.e" +
+      "nums.ConversionActionCategoryEnum.Conver" +
+      "sionActionCategory\022F\n\016owner_customer\030\027 \001" +
+      "(\tB)\340A\003\372A#\n!googleads.googleapis.com/Cus" +
+      "tomerH\003\210\001\001\022*\n\035include_in_conversions_met" +
+      "ric\030\030 \001(\010H\004\210\001\001\022/\n\"click_through_lookback" +
+      "_window_days\030\031 \001(\003H\005\210\001\001\022.\n!view_through_" +
+      "lookback_window_days\030\032 \001(\003H\006\210\001\001\022Z\n\016value" +
+      "_settings\030\013 \001(\0132B.google.ads.googleads.v" +
+      "10.resources.ConversionAction.ValueSetti" +
+      "ngs\022t\n\rcounting_type\030\014 \001(\0162].google.ads." +
+      "googleads.v10.enums.ConversionActionCoun" +
+      "tingTypeEnum.ConversionActionCountingTyp" +
+      "e\022q\n\032attribution_model_settings\030\r \001(\0132M." +
+      "google.ads.googleads.v10.resources.Conve" +
+      "rsionAction.AttributionModelSettings\022F\n\014" +
+      "tag_snippets\030\016 \003(\0132+.google.ads.googlead" +
+      "s.v10.common.TagSnippetB\003\340A\003\022(\n\033phone_ca" +
+      "ll_duration_seconds\030\033 \001(\003H\007\210\001\001\022\023\n\006app_id" +
+      "\030\034 \001(\tH\010\210\001\001\022c\n\021mobile_app_vendor\030\021 \001(\0162C" +
+      ".google.ads.googleads.v10.enums.MobileAp" +
+      "pVendorEnum.MobileAppVendorB\003\340A\003\022e\n\021fire" +
+      "base_settings\030\022 \001(\0132E.google.ads.googlea" +
+      "ds.v10.resources.ConversionAction.Fireba" +
+      "seSettingsB\003\340A\003\022\204\001\n\"third_party_app_anal" +
+      "ytics_settings\030\023 \001(\0132S.google.ads.google" +
+      "ads.v10.resources.ConversionAction.Third" +
+      "PartyAppAnalyticsSettingsB\003\340A\003\032\364\001\n\030Attri" +
+      "butionModelSettings\022`\n\021attribution_model" +
+      "\030\001 \001(\0162E.google.ads.googleads.v10.enums." +
+      "AttributionModelEnum.AttributionModel\022v\n" +
+      "\030data_driven_model_status\030\002 \001(\0162O.google" +
+      ".ads.googleads.v10.enums.DataDrivenModel" +
+      "StatusEnum.DataDrivenModelStatusB\003\340A\003\032\277\001" +
+      "\n\rValueSettings\022\032\n\rdefault_value\030\004 \001(\001H\000" +
+      "\210\001\001\022\"\n\025default_currency_code\030\005 \001(\tH\001\210\001\001\022" +
+      "%\n\030always_use_default_value\030\006 \001(\010H\002\210\001\001B\020" +
+      "\n\016_default_valueB\030\n\026_default_currency_co" +
+      "deB\033\n\031_always_use_default_value\032i\n\036Third" +
+      "PartyAppAnalyticsSettings\022\034\n\nevent_name\030" +
+      "\002 \001(\tB\003\340A\003H\000\210\001\001\022\032\n\rprovider_name\030\003 \001(\tB\003" +
+      "\340A\003B\r\n\013_event_name\032l\n\020FirebaseSettings\022\034" +
+      "\n\nevent_name\030\003 \001(\tB\003\340A\003H\000\210\001\001\022\034\n\nproject_" +
+      "id\030\004 \001(\tB\003\340A\003H\001\210\001\001B\r\n\013_event_nameB\r\n\013_pr" +
+      "oject_id:p\352Am\n)googleads.googleapis.com/" +
+      "ConversionAction\022@customers/{customer_id" +
+      "}/conversionActions/{conversion_action_i" +
+      "d}B\005\n\003_idB\007\n\005_nameB\023\n\021_primary_for_goalB" +
+      "\021\n\017_owner_customerB \n\036_include_in_conver" +
+      "sions_metricB%\n#_click_through_lookback_" +
+      "window_daysB$\n\"_view_through_lookback_wi" +
+      "ndow_daysB\036\n\034_phone_call_duration_second" +
+      "sB\t\n\007_app_idB\207\002\n&com.google.ads.googlead" +
+      "s.v10.resourcesB\025ConversionActionProtoP\001" +
+      "ZKgoogle.golang.org/genproto/googleapis/" +
+      "ads/googleads/v10/resources;resources\242\002\003" +
+      "GAA\252\002\"Google.Ads.GoogleAds.V10.Resources" +
+      "\312\002\"Google\\Ads\\GoogleAds\\V10\\Resources\352\002&" +
+      "Google::Ads::GoogleAds::V10::Resourcesb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -150,7 +150,6 @@ public final class ConversionActionProto {
           com.google.ads.googleads.v10.enums.ConversionOriginProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.DataDrivenModelStatusProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.MobileAppVendorProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -200,7 +199,6 @@ public final class ConversionActionProto {
     com.google.ads.googleads.v10.enums.ConversionOriginProto.getDescriptor();
     com.google.ads.googleads.v10.enums.DataDrivenModelStatusProto.getDescriptor();
     com.google.ads.googleads.v10.enums.MobileAppVendorProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

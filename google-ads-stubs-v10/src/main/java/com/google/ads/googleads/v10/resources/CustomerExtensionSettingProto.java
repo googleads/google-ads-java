@@ -33,36 +33,34 @@ public final class CustomerExtensionSettingProto {
       "s.googleads.v10.resources\032=google/ads/go" +
       "ogleads/v10/enums/extension_setting_devi" +
       "ce.proto\0323google/ads/googleads/v10/enums" +
-      "/extension_type.proto\032\034google/api/annota" +
-      "tions.proto\032\037google/api/field_behavior.p" +
-      "roto\032\031google/api/resource.proto\"\370\003\n\030Cust" +
-      "omerExtensionSetting\022P\n\rresource_name\030\001 " +
-      "\001(\tB9\340A\005\372A3\n1googleads.googleapis.com/Cu" +
-      "stomerExtensionSetting\022\\\n\016extension_type" +
-      "\030\002 \001(\0162?.google.ads.googleads.v10.enums." +
-      "ExtensionTypeEnum.ExtensionTypeB\003\340A\005\022M\n\024" +
-      "extension_feed_items\030\005 \003(\tB/\372A,\n*googlea" +
-      "ds.googleapis.com/ExtensionFeedItem\022a\n\006d" +
-      "evice\030\004 \001(\0162Q.google.ads.googleads.v10.e" +
-      "nums.ExtensionSettingDeviceEnum.Extensio" +
-      "nSettingDevice:z\352Aw\n1googleads.googleapi" +
-      "s.com/CustomerExtensionSetting\022Bcustomer" +
-      "s/{customer_id}/customerExtensionSetting" +
-      "s/{extension_type}B\217\002\n&com.google.ads.go" +
-      "ogleads.v10.resourcesB\035CustomerExtension" +
-      "SettingProtoP\001ZKgoogle.golang.org/genpro" +
-      "to/googleapis/ads/googleads/v10/resource" +
-      "s;resources\242\002\003GAA\252\002\"Google.Ads.GoogleAds" +
-      ".V10.Resources\312\002\"Google\\Ads\\GoogleAds\\V1" +
-      "0\\Resources\352\002&Google::Ads::GoogleAds::V1" +
-      "0::Resourcesb\006proto3"
+      "/extension_type.proto\032\037google/api/field_" +
+      "behavior.proto\032\031google/api/resource.prot" +
+      "o\"\370\003\n\030CustomerExtensionSetting\022P\n\rresour" +
+      "ce_name\030\001 \001(\tB9\340A\005\372A3\n1googleads.googlea" +
+      "pis.com/CustomerExtensionSetting\022\\\n\016exte" +
+      "nsion_type\030\002 \001(\0162?.google.ads.googleads." +
+      "v10.enums.ExtensionTypeEnum.ExtensionTyp" +
+      "eB\003\340A\005\022M\n\024extension_feed_items\030\005 \003(\tB/\372A" +
+      ",\n*googleads.googleapis.com/ExtensionFee" +
+      "dItem\022a\n\006device\030\004 \001(\0162Q.google.ads.googl" +
+      "eads.v10.enums.ExtensionSettingDeviceEnu" +
+      "m.ExtensionSettingDevice:z\352Aw\n1googleads" +
+      ".googleapis.com/CustomerExtensionSetting" +
+      "\022Bcustomers/{customer_id}/customerExtens" +
+      "ionSettings/{extension_type}B\217\002\n&com.goo" +
+      "gle.ads.googleads.v10.resourcesB\035Custome" +
+      "rExtensionSettingProtoP\001ZKgoogle.golang." +
+      "org/genproto/googleapis/ads/googleads/v1" +
+      "0/resources;resources\242\002\003GAA\252\002\"Google.Ads" +
+      ".GoogleAds.V10.Resources\312\002\"Google\\Ads\\Go" +
+      "ogleAds\\V10\\Resources\352\002&Google::Ads::Goo" +
+      "gleAds::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.enums.ExtensionSettingDeviceProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.ExtensionTypeProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -81,7 +79,6 @@ public final class CustomerExtensionSettingProto {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.enums.ExtensionSettingDeviceProto.getDescriptor();
     com.google.ads.googleads.v10.enums.ExtensionTypeProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

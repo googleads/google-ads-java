@@ -534,6 +534,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -4249,8 +4251,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 8) {
           keywordBuilder_.mergeFrom(value);
+        } else {
+          keywordBuilder_.setMessage(value);
         }
-        keywordBuilder_.setMessage(value);
       }
       criterionCase_ = 8;
       return this;
@@ -4426,8 +4429,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 9) {
           placementBuilder_.mergeFrom(value);
+        } else {
+          placementBuilder_.setMessage(value);
         }
-        placementBuilder_.setMessage(value);
       }
       criterionCase_ = 9;
       return this;
@@ -4603,8 +4607,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 10) {
           mobileAppCategoryBuilder_.mergeFrom(value);
+        } else {
+          mobileAppCategoryBuilder_.setMessage(value);
         }
-        mobileAppCategoryBuilder_.setMessage(value);
       }
       criterionCase_ = 10;
       return this;
@@ -4780,8 +4785,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 11) {
           mobileApplicationBuilder_.mergeFrom(value);
+        } else {
+          mobileApplicationBuilder_.setMessage(value);
         }
-        mobileApplicationBuilder_.setMessage(value);
       }
       criterionCase_ = 11;
       return this;
@@ -4957,8 +4963,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 12) {
           locationBuilder_.mergeFrom(value);
+        } else {
+          locationBuilder_.setMessage(value);
         }
-        locationBuilder_.setMessage(value);
       }
       criterionCase_ = 12;
       return this;
@@ -5134,8 +5141,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 13) {
           deviceBuilder_.mergeFrom(value);
+        } else {
+          deviceBuilder_.setMessage(value);
         }
-        deviceBuilder_.setMessage(value);
       }
       criterionCase_ = 13;
       return this;
@@ -5311,8 +5319,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 15) {
           adScheduleBuilder_.mergeFrom(value);
+        } else {
+          adScheduleBuilder_.setMessage(value);
         }
-        adScheduleBuilder_.setMessage(value);
       }
       criterionCase_ = 15;
       return this;
@@ -5488,8 +5497,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 16) {
           ageRangeBuilder_.mergeFrom(value);
+        } else {
+          ageRangeBuilder_.setMessage(value);
         }
-        ageRangeBuilder_.setMessage(value);
       }
       criterionCase_ = 16;
       return this;
@@ -5665,8 +5675,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 17) {
           genderBuilder_.mergeFrom(value);
+        } else {
+          genderBuilder_.setMessage(value);
         }
-        genderBuilder_.setMessage(value);
       }
       criterionCase_ = 17;
       return this;
@@ -5842,8 +5853,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 18) {
           incomeRangeBuilder_.mergeFrom(value);
+        } else {
+          incomeRangeBuilder_.setMessage(value);
         }
-        incomeRangeBuilder_.setMessage(value);
       }
       criterionCase_ = 18;
       return this;
@@ -6019,8 +6031,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 19) {
           parentalStatusBuilder_.mergeFrom(value);
+        } else {
+          parentalStatusBuilder_.setMessage(value);
         }
-        parentalStatusBuilder_.setMessage(value);
       }
       criterionCase_ = 19;
       return this;
@@ -6196,8 +6209,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 22) {
           userListBuilder_.mergeFrom(value);
+        } else {
+          userListBuilder_.setMessage(value);
         }
-        userListBuilder_.setMessage(value);
       }
       criterionCase_ = 22;
       return this;
@@ -6373,8 +6387,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 20) {
           youtubeVideoBuilder_.mergeFrom(value);
+        } else {
+          youtubeVideoBuilder_.setMessage(value);
         }
-        youtubeVideoBuilder_.setMessage(value);
       }
       criterionCase_ = 20;
       return this;
@@ -6550,8 +6565,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 21) {
           youtubeChannelBuilder_.mergeFrom(value);
+        } else {
+          youtubeChannelBuilder_.setMessage(value);
         }
-        youtubeChannelBuilder_.setMessage(value);
       }
       criterionCase_ = 21;
       return this;
@@ -6727,8 +6743,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 23) {
           proximityBuilder_.mergeFrom(value);
+        } else {
+          proximityBuilder_.setMessage(value);
         }
-        proximityBuilder_.setMessage(value);
       }
       criterionCase_ = 23;
       return this;
@@ -6904,8 +6921,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 24) {
           topicBuilder_.mergeFrom(value);
+        } else {
+          topicBuilder_.setMessage(value);
         }
-        topicBuilder_.setMessage(value);
       }
       criterionCase_ = 24;
       return this;
@@ -7081,8 +7099,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 25) {
           listingScopeBuilder_.mergeFrom(value);
+        } else {
+          listingScopeBuilder_.setMessage(value);
         }
-        listingScopeBuilder_.setMessage(value);
       }
       criterionCase_ = 25;
       return this;
@@ -7258,8 +7277,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 26) {
           languageBuilder_.mergeFrom(value);
+        } else {
+          languageBuilder_.setMessage(value);
         }
-        languageBuilder_.setMessage(value);
       }
       criterionCase_ = 26;
       return this;
@@ -7435,8 +7455,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 27) {
           ipBlockBuilder_.mergeFrom(value);
+        } else {
+          ipBlockBuilder_.setMessage(value);
         }
-        ipBlockBuilder_.setMessage(value);
       }
       criterionCase_ = 27;
       return this;
@@ -7612,8 +7633,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 28) {
           contentLabelBuilder_.mergeFrom(value);
+        } else {
+          contentLabelBuilder_.setMessage(value);
         }
-        contentLabelBuilder_.setMessage(value);
       }
       criterionCase_ = 28;
       return this;
@@ -7789,8 +7811,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 29) {
           carrierBuilder_.mergeFrom(value);
+        } else {
+          carrierBuilder_.setMessage(value);
         }
-        carrierBuilder_.setMessage(value);
       }
       criterionCase_ = 29;
       return this;
@@ -7966,8 +7989,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 30) {
           userInterestBuilder_.mergeFrom(value);
+        } else {
+          userInterestBuilder_.setMessage(value);
         }
-        userInterestBuilder_.setMessage(value);
       }
       criterionCase_ = 30;
       return this;
@@ -8143,8 +8167,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 31) {
           webpageBuilder_.mergeFrom(value);
+        } else {
+          webpageBuilder_.setMessage(value);
         }
-        webpageBuilder_.setMessage(value);
       }
       criterionCase_ = 31;
       return this;
@@ -8320,8 +8345,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 32) {
           operatingSystemVersionBuilder_.mergeFrom(value);
+        } else {
+          operatingSystemVersionBuilder_.setMessage(value);
         }
-        operatingSystemVersionBuilder_.setMessage(value);
       }
       criterionCase_ = 32;
       return this;
@@ -8497,8 +8523,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 33) {
           mobileDeviceBuilder_.mergeFrom(value);
+        } else {
+          mobileDeviceBuilder_.setMessage(value);
         }
-        mobileDeviceBuilder_.setMessage(value);
       }
       criterionCase_ = 33;
       return this;
@@ -8674,8 +8701,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 34) {
           locationGroupBuilder_.mergeFrom(value);
+        } else {
+          locationGroupBuilder_.setMessage(value);
         }
-        locationGroupBuilder_.setMessage(value);
       }
       criterionCase_ = 34;
       return this;
@@ -8851,8 +8879,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 36) {
           customAffinityBuilder_.mergeFrom(value);
+        } else {
+          customAffinityBuilder_.setMessage(value);
         }
-        customAffinityBuilder_.setMessage(value);
       }
       criterionCase_ = 36;
       return this;
@@ -9028,8 +9057,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 41) {
           customAudienceBuilder_.mergeFrom(value);
+        } else {
+          customAudienceBuilder_.setMessage(value);
         }
-        customAudienceBuilder_.setMessage(value);
       }
       criterionCase_ = 41;
       return this;
@@ -9205,8 +9235,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 42) {
           combinedAudienceBuilder_.mergeFrom(value);
+        } else {
+          combinedAudienceBuilder_.setMessage(value);
         }
-        combinedAudienceBuilder_.setMessage(value);
       }
       criterionCase_ = 42;
       return this;
@@ -9382,8 +9413,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 45) {
           keywordThemeBuilder_.mergeFrom(value);
+        } else {
+          keywordThemeBuilder_.setMessage(value);
         }
-        keywordThemeBuilder_.setMessage(value);
       }
       criterionCase_ = 45;
       return this;

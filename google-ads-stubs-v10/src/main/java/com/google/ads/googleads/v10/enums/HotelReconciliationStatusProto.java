@@ -30,24 +30,22 @@ public final class HotelReconciliationStatusProto {
     java.lang.String[] descriptorData = {
       "\n@google/ads/googleads/v10/enums/hotel_r" +
       "econciliation_status.proto\022\036google.ads.g" +
-      "oogleads.v10.enums\032\034google/api/annotatio" +
-      "ns.proto\"\255\001\n\035HotelReconciliationStatusEn" +
-      "um\"\213\001\n\031HotelReconciliationStatus\022\017\n\013UNSP" +
-      "ECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\027\n\023RESERVATION_EN" +
-      "ABLED\020\002\022\031\n\025RECONCILIATION_NEEDED\020\003\022\016\n\nRE" +
-      "CONCILED\020\004\022\014\n\010CANCELED\020\005B\370\001\n\"com.google." +
-      "ads.googleads.v10.enumsB\036HotelReconcilia" +
-      "tionStatusProtoP\001ZCgoogle.golang.org/gen" +
-      "proto/googleapis/ads/googleads/v10/enums" +
-      ";enums\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V10." +
-      "Enums\312\002\036Google\\Ads\\GoogleAds\\V10\\Enums\352\002" +
-      "\"Google::Ads::GoogleAds::V10::Enumsb\006pro" +
-      "to3"
+      "oogleads.v10.enums\"\255\001\n\035HotelReconciliati" +
+      "onStatusEnum\"\213\001\n\031HotelReconciliationStat" +
+      "us\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\027\n\023RESE" +
+      "RVATION_ENABLED\020\002\022\031\n\025RECONCILIATION_NEED" +
+      "ED\020\003\022\016\n\nRECONCILED\020\004\022\014\n\010CANCELED\020\005B\370\001\n\"c" +
+      "om.google.ads.googleads.v10.enumsB\036Hotel" +
+      "ReconciliationStatusProtoP\001ZCgoogle.gola" +
+      "ng.org/genproto/googleapis/ads/googleads" +
+      "/v10/enums;enums\242\002\003GAA\252\002\036Google.Ads.Goog" +
+      "leAds.V10.Enums\312\002\036Google\\Ads\\GoogleAds\\V" +
+      "10\\Enums\352\002\"Google::Ads::GoogleAds::V10::" +
+      "Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_HotelReconciliationStatusEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -55,7 +53,6 @@ public final class HotelReconciliationStatusProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_HotelReconciliationStatusEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

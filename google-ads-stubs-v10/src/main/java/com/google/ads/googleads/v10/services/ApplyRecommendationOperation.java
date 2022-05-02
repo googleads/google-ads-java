@@ -239,6 +239,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -351,6 +353,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -939,6 +943,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -1689,6 +1695,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -2593,6 +2601,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -3299,6 +3309,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -4014,6 +4026,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -4927,6 +4941,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -5840,6 +5856,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -6725,6 +6743,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -7311,6 +7331,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -8001,6 +8023,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -8675,6 +8699,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -10628,8 +10654,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (applyParametersCase_ == 2) {
           campaignBudgetBuilder_.mergeFrom(value);
+        } else {
+          campaignBudgetBuilder_.setMessage(value);
         }
-        campaignBudgetBuilder_.setMessage(value);
       }
       applyParametersCase_ = 2;
       return this;
@@ -10809,8 +10836,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (applyParametersCase_ == 3) {
           textAdBuilder_.mergeFrom(value);
+        } else {
+          textAdBuilder_.setMessage(value);
         }
-        textAdBuilder_.setMessage(value);
       }
       applyParametersCase_ = 3;
       return this;
@@ -10986,8 +11014,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (applyParametersCase_ == 4) {
           keywordBuilder_.mergeFrom(value);
+        } else {
+          keywordBuilder_.setMessage(value);
         }
-        keywordBuilder_.setMessage(value);
       }
       applyParametersCase_ = 4;
       return this;
@@ -11168,8 +11197,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (applyParametersCase_ == 5) {
           targetCpaOptInBuilder_.mergeFrom(value);
+        } else {
+          targetCpaOptInBuilder_.setMessage(value);
         }
-        targetCpaOptInBuilder_.setMessage(value);
       }
       applyParametersCase_ = 5;
       return this;
@@ -11354,8 +11384,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (applyParametersCase_ == 10) {
           targetRoasOptInBuilder_.mergeFrom(value);
+        } else {
+          targetRoasOptInBuilder_.setMessage(value);
         }
-        targetRoasOptInBuilder_.setMessage(value);
       }
       applyParametersCase_ = 10;
       return this;
@@ -11535,8 +11566,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (applyParametersCase_ == 6) {
           calloutExtensionBuilder_.mergeFrom(value);
+        } else {
+          calloutExtensionBuilder_.setMessage(value);
         }
-        calloutExtensionBuilder_.setMessage(value);
       }
       applyParametersCase_ = 6;
       return this;
@@ -11712,8 +11744,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (applyParametersCase_ == 7) {
           callExtensionBuilder_.mergeFrom(value);
+        } else {
+          callExtensionBuilder_.setMessage(value);
         }
-        callExtensionBuilder_.setMessage(value);
       }
       applyParametersCase_ = 7;
       return this;
@@ -11889,8 +11922,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (applyParametersCase_ == 8) {
           sitelinkExtensionBuilder_.mergeFrom(value);
+        } else {
+          sitelinkExtensionBuilder_.setMessage(value);
         }
-        sitelinkExtensionBuilder_.setMessage(value);
       }
       applyParametersCase_ = 8;
       return this;
@@ -12066,8 +12100,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (applyParametersCase_ == 9) {
           moveUnusedBudgetBuilder_.mergeFrom(value);
+        } else {
+          moveUnusedBudgetBuilder_.setMessage(value);
         }
-        moveUnusedBudgetBuilder_.setMessage(value);
       }
       applyParametersCase_ = 9;
       return this;
@@ -12243,8 +12278,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (applyParametersCase_ == 11) {
           responsiveSearchAdBuilder_.mergeFrom(value);
+        } else {
+          responsiveSearchAdBuilder_.setMessage(value);
         }
-        responsiveSearchAdBuilder_.setMessage(value);
       }
       applyParametersCase_ = 11;
       return this;
@@ -12420,8 +12456,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (applyParametersCase_ == 12) {
           useBroadMatchKeywordBuilder_.mergeFrom(value);
+        } else {
+          useBroadMatchKeywordBuilder_.setMessage(value);
         }
-        useBroadMatchKeywordBuilder_.setMessage(value);
       }
       applyParametersCase_ = 12;
       return this;
@@ -12597,8 +12634,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (applyParametersCase_ == 13) {
           responsiveSearchAdAssetBuilder_.mergeFrom(value);
+        } else {
+          responsiveSearchAdAssetBuilder_.setMessage(value);
         }
-        responsiveSearchAdAssetBuilder_.setMessage(value);
       }
       applyParametersCase_ = 13;
       return this;

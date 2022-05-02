@@ -30,29 +30,27 @@ public final class ExpandedLandingPageViewProto {
     java.lang.String[] descriptorData = {
       "\nCgoogle/ads/googleads/v10/resources/exp" +
       "anded_landing_page_view.proto\022\"google.ad" +
-      "s.googleads.v10.resources\032\034google/api/an" +
-      "notations.proto\032\037google/api/field_behavi" +
-      "or.proto\032\031google/api/resource.proto\"\263\002\n\027" +
-      "ExpandedLandingPageView\022O\n\rresource_name" +
-      "\030\001 \001(\tB8\340A\003\372A2\n0googleads.googleapis.com" +
-      "/ExpandedLandingPageView\022$\n\022expanded_fin" +
-      "al_url\030\003 \001(\tB\003\340A\003H\000\210\001\001:\211\001\352A\205\001\n0googleads" +
-      ".googleapis.com/ExpandedLandingPageView\022" +
-      "Qcustomers/{customer_id}/expandedLanding" +
-      "PageViews/{expanded_final_url_fingerprin" +
-      "t}B\025\n\023_expanded_final_urlB\216\002\n&com.google" +
-      ".ads.googleads.v10.resourcesB\034ExpandedLa" +
-      "ndingPageViewProtoP\001ZKgoogle.golang.org/" +
-      "genproto/googleapis/ads/googleads/v10/re" +
-      "sources;resources\242\002\003GAA\252\002\"Google.Ads.Goo" +
-      "gleAds.V10.Resources\312\002\"Google\\Ads\\Google" +
-      "Ads\\V10\\Resources\352\002&Google::Ads::GoogleA" +
-      "ds::V10::Resourcesb\006proto3"
+      "s.googleads.v10.resources\032\037google/api/fi" +
+      "eld_behavior.proto\032\031google/api/resource." +
+      "proto\"\263\002\n\027ExpandedLandingPageView\022O\n\rres" +
+      "ource_name\030\001 \001(\tB8\340A\003\372A2\n0googleads.goog" +
+      "leapis.com/ExpandedLandingPageView\022$\n\022ex" +
+      "panded_final_url\030\003 \001(\tB\003\340A\003H\000\210\001\001:\211\001\352A\205\001\n" +
+      "0googleads.googleapis.com/ExpandedLandin" +
+      "gPageView\022Qcustomers/{customer_id}/expan" +
+      "dedLandingPageViews/{expanded_final_url_" +
+      "fingerprint}B\025\n\023_expanded_final_urlB\216\002\n&" +
+      "com.google.ads.googleads.v10.resourcesB\034" +
+      "ExpandedLandingPageViewProtoP\001ZKgoogle.g" +
+      "olang.org/genproto/googleapis/ads/google" +
+      "ads/v10/resources;resources\242\002\003GAA\252\002\"Goog" +
+      "le.Ads.GoogleAds.V10.Resources\312\002\"Google\\" +
+      "Ads\\GoogleAds\\V10\\Resources\352\002&Google::Ad" +
+      "s::GoogleAds::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -69,7 +67,6 @@ public final class ExpandedLandingPageViewProto {
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

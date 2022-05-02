@@ -30,35 +30,34 @@ public final class UserListSizeRangeProto {
     java.lang.String[] descriptorData = {
       "\n9google/ads/googleads/v10/enums/user_li" +
       "st_size_range.proto\022\036google.ads.googlead" +
-      "s.v10.enums\032\034google/api/annotations.prot" +
-      "o\"\224\005\n\025UserListSizeRangeEnum\"\372\004\n\021UserList" +
-      "SizeRange\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022" +
-      "\032\n\026LESS_THAN_FIVE_HUNDRED\020\002\022\032\n\026LESS_THAN" +
-      "_ONE_THOUSAND\020\003\022 \n\034ONE_THOUSAND_TO_TEN_T" +
-      "HOUSAND\020\004\022\"\n\036TEN_THOUSAND_TO_FIFTY_THOUS" +
-      "AND\020\005\022*\n&FIFTY_THOUSAND_TO_ONE_HUNDRED_T" +
-      "HOUSAND\020\006\0222\n.ONE_HUNDRED_THOUSAND_TO_THR" +
-      "EE_HUNDRED_THOUSAND\020\007\0223\n/THREE_HUNDRED_T" +
-      "HOUSAND_TO_FIVE_HUNDRED_THOUSAND\020\010\022(\n$FI" +
-      "VE_HUNDRED_THOUSAND_TO_ONE_MILLION\020\t\022\036\n\032" +
-      "ONE_MILLION_TO_TWO_MILLION\020\n\022 \n\034TWO_MILL" +
-      "ION_TO_THREE_MILLION\020\013\022!\n\035THREE_MILLION_" +
-      "TO_FIVE_MILLION\020\014\022\037\n\033FIVE_MILLION_TO_TEN" +
-      "_MILLION\020\r\022!\n\035TEN_MILLION_TO_TWENTY_MILL" +
-      "ION\020\016\022$\n TWENTY_MILLION_TO_THIRTY_MILLIO" +
-      "N\020\017\022#\n\037THIRTY_MILLION_TO_FIFTY_MILLION\020\020" +
-      "\022\026\n\022OVER_FIFTY_MILLION\020\021B\360\001\n\"com.google." +
-      "ads.googleads.v10.enumsB\026UserListSizeRan" +
-      "geProtoP\001ZCgoogle.golang.org/genproto/go" +
-      "ogleapis/ads/googleads/v10/enums;enums\242\002" +
-      "\003GAA\252\002\036Google.Ads.GoogleAds.V10.Enums\312\002\036" +
-      "Google\\Ads\\GoogleAds\\V10\\Enums\352\002\"Google:" +
-      ":Ads::GoogleAds::V10::Enumsb\006proto3"
+      "s.v10.enums\"\224\005\n\025UserListSizeRangeEnum\"\372\004" +
+      "\n\021UserListSizeRange\022\017\n\013UNSPECIFIED\020\000\022\013\n\007" +
+      "UNKNOWN\020\001\022\032\n\026LESS_THAN_FIVE_HUNDRED\020\002\022\032\n" +
+      "\026LESS_THAN_ONE_THOUSAND\020\003\022 \n\034ONE_THOUSAN" +
+      "D_TO_TEN_THOUSAND\020\004\022\"\n\036TEN_THOUSAND_TO_F" +
+      "IFTY_THOUSAND\020\005\022*\n&FIFTY_THOUSAND_TO_ONE" +
+      "_HUNDRED_THOUSAND\020\006\0222\n.ONE_HUNDRED_THOUS" +
+      "AND_TO_THREE_HUNDRED_THOUSAND\020\007\0223\n/THREE" +
+      "_HUNDRED_THOUSAND_TO_FIVE_HUNDRED_THOUSA" +
+      "ND\020\010\022(\n$FIVE_HUNDRED_THOUSAND_TO_ONE_MIL" +
+      "LION\020\t\022\036\n\032ONE_MILLION_TO_TWO_MILLION\020\n\022 " +
+      "\n\034TWO_MILLION_TO_THREE_MILLION\020\013\022!\n\035THRE" +
+      "E_MILLION_TO_FIVE_MILLION\020\014\022\037\n\033FIVE_MILL" +
+      "ION_TO_TEN_MILLION\020\r\022!\n\035TEN_MILLION_TO_T" +
+      "WENTY_MILLION\020\016\022$\n TWENTY_MILLION_TO_THI" +
+      "RTY_MILLION\020\017\022#\n\037THIRTY_MILLION_TO_FIFTY" +
+      "_MILLION\020\020\022\026\n\022OVER_FIFTY_MILLION\020\021B\360\001\n\"c" +
+      "om.google.ads.googleads.v10.enumsB\026UserL" +
+      "istSizeRangeProtoP\001ZCgoogle.golang.org/g" +
+      "enproto/googleapis/ads/googleads/v10/enu" +
+      "ms;enums\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V1" +
+      "0.Enums\312\002\036Google\\Ads\\GoogleAds\\V10\\Enums" +
+      "\352\002\"Google::Ads::GoogleAds::V10::Enumsb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_UserListSizeRangeEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -66,7 +65,6 @@ public final class UserListSizeRangeProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_UserListSizeRangeEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

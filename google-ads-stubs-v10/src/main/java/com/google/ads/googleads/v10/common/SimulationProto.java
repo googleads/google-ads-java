@@ -105,127 +105,125 @@ public final class SimulationProto {
     java.lang.String[] descriptorData = {
       "\n0google/ads/googleads/v10/common/simula" +
       "tion.proto\022\037google.ads.googleads.v10.com" +
-      "mon\032\034google/api/annotations.proto\"m\n\036Bid" +
-      "ModifierSimulationPointList\022K\n\006points\030\001 " +
-      "\003(\0132;.google.ads.googleads.v10.common.Bi" +
-      "dModifierSimulationPoint\"c\n\031CpcBidSimula" +
-      "tionPointList\022F\n\006points\030\001 \003(\01326.google.a" +
-      "ds.googleads.v10.common.CpcBidSimulation" +
-      "Point\"c\n\031CpvBidSimulationPointList\022F\n\006po" +
-      "ints\030\001 \003(\01326.google.ads.googleads.v10.co" +
-      "mmon.CpvBidSimulationPoint\"i\n\034TargetCpaS" +
-      "imulationPointList\022I\n\006points\030\001 \003(\01329.goo" +
-      "gle.ads.googleads.v10.common.TargetCpaSi" +
-      "mulationPoint\"k\n\035TargetRoasSimulationPoi" +
-      "ntList\022J\n\006points\030\001 \003(\0132:.google.ads.goog" +
-      "leads.v10.common.TargetRoasSimulationPoi" +
-      "nt\"q\n PercentCpcBidSimulationPointList\022M" +
-      "\n\006points\030\001 \003(\0132=.google.ads.googleads.v1" +
-      "0.common.PercentCpcBidSimulationPoint\"c\n" +
-      "\031BudgetSimulationPointList\022F\n\006points\030\001 \003" +
-      "(\01326.google.ads.googleads.v10.common.Bud" +
-      "getSimulationPoint\"\201\001\n(TargetImpressionS" +
-      "hareSimulationPointList\022U\n\006points\030\001 \003(\0132" +
-      "E.google.ads.googleads.v10.common.Target" +
-      "ImpressionShareSimulationPoint\"\322\006\n\032BidMo" +
-      "difierSimulationPoint\022\031\n\014bid_modifier\030\017 " +
-      "\001(\001H\000\210\001\001\022!\n\024biddable_conversions\030\020 \001(\001H\001" +
-      "\210\001\001\022\'\n\032biddable_conversions_value\030\021 \001(\001H" +
-      "\002\210\001\001\022\023\n\006clicks\030\022 \001(\003H\003\210\001\001\022\030\n\013cost_micros" +
-      "\030\023 \001(\003H\004\210\001\001\022\030\n\013impressions\030\024 \001(\003H\005\210\001\001\022!\n" +
-      "\024top_slot_impressions\030\025 \001(\003H\006\210\001\001\022(\n\033pare" +
-      "nt_biddable_conversions\030\026 \001(\001H\007\210\001\001\022.\n!pa" +
-      "rent_biddable_conversions_value\030\027 \001(\001H\010\210" +
-      "\001\001\022\032\n\rparent_clicks\030\030 \001(\003H\t\210\001\001\022\037\n\022parent" +
-      "_cost_micros\030\031 \001(\003H\n\210\001\001\022\037\n\022parent_impres" +
-      "sions\030\032 \001(\003H\013\210\001\001\022(\n\033parent_top_slot_impr" +
-      "essions\030\033 \001(\003H\014\210\001\001\022*\n\035parent_required_bu" +
-      "dget_micros\030\034 \001(\003H\r\210\001\001B\017\n\r_bid_modifierB" +
-      "\027\n\025_biddable_conversionsB\035\n\033_biddable_co" +
-      "nversions_valueB\t\n\007_clicksB\016\n\014_cost_micr" +
-      "osB\016\n\014_impressionsB\027\n\025_top_slot_impressi" +
-      "onsB\036\n\034_parent_biddable_conversionsB$\n\"_" +
-      "parent_biddable_conversions_valueB\020\n\016_pa" +
-      "rent_clicksB\025\n\023_parent_cost_microsB\025\n\023_p" +
-      "arent_impressionsB\036\n\034_parent_top_slot_im" +
-      "pressionsB \n\036_parent_required_budget_mic" +
-      "ros\"\314\003\n\025CpcBidSimulationPoint\022%\n\035require" +
-      "d_budget_amount_micros\030\021 \001(\003\022!\n\024biddable" +
-      "_conversions\030\t \001(\001H\001\210\001\001\022\'\n\032biddable_conv" +
-      "ersions_value\030\n \001(\001H\002\210\001\001\022\023\n\006clicks\030\013 \001(\003" +
-      "H\003\210\001\001\022\030\n\013cost_micros\030\014 \001(\003H\004\210\001\001\022\030\n\013impre" +
-      "ssions\030\r \001(\003H\005\210\001\001\022!\n\024top_slot_impression" +
-      "s\030\016 \001(\003H\006\210\001\001\022\030\n\016cpc_bid_micros\030\017 \001(\003H\000\022\"" +
-      "\n\030cpc_bid_scaling_modifier\030\020 \001(\001H\000B\032\n\030cp" +
-      "c_simulation_key_valueB\027\n\025_biddable_conv" +
-      "ersionsB\035\n\033_biddable_conversions_valueB\t" +
-      "\n\007_clicksB\016\n\014_cost_microsB\016\n\014_impression" +
-      "sB\027\n\025_top_slot_impressions\"\271\001\n\025CpvBidSim" +
-      "ulationPoint\022\033\n\016cpv_bid_micros\030\005 \001(\003H\000\210\001" +
-      "\001\022\030\n\013cost_micros\030\006 \001(\003H\001\210\001\001\022\030\n\013impressio" +
-      "ns\030\007 \001(\003H\002\210\001\001\022\022\n\005views\030\010 \001(\003H\003\210\001\001B\021\n\017_cp" +
-      "v_bid_microsB\016\n\014_cost_microsB\016\n\014_impress" +
-      "ionsB\010\n\006_views\"\212\004\n\030TargetCpaSimulationPo" +
-      "int\022%\n\035required_budget_amount_micros\030\023 \001" +
-      "(\003\022!\n\024biddable_conversions\030\t \001(\001H\001\210\001\001\022\'\n" +
-      "\032biddable_conversions_value\030\n \001(\001H\002\210\001\001\022\024" +
-      "\n\014app_installs\030\017 \001(\001\022\026\n\016in_app_actions\030\020" +
-      " \001(\001\022\023\n\006clicks\030\013 \001(\003H\003\210\001\001\022\030\n\013cost_micros" +
-      "\030\014 \001(\003H\004\210\001\001\022\030\n\013impressions\030\r \001(\003H\005\210\001\001\022!\n" +
-      "\024top_slot_impressions\030\016 \001(\003H\006\210\001\001\022\033\n\021targ" +
-      "et_cpa_micros\030\021 \001(\003H\000\022%\n\033target_cpa_scal" +
-      "ing_modifier\030\022 \001(\001H\000B!\n\037target_cpa_simul" +
-      "ation_key_valueB\027\n\025_biddable_conversions" +
-      "B\035\n\033_biddable_conversions_valueB\t\n\007_clic" +
-      "ksB\016\n\014_cost_microsB\016\n\014_impressionsB\027\n\025_t" +
-      "op_slot_impressions\"\240\003\n\031TargetRoasSimula" +
-      "tionPoint\022\030\n\013target_roas\030\010 \001(\001H\000\210\001\001\022%\n\035r" +
-      "equired_budget_amount_micros\030\017 \001(\003\022!\n\024bi" +
-      "ddable_conversions\030\t \001(\001H\001\210\001\001\022\'\n\032biddabl" +
-      "e_conversions_value\030\n \001(\001H\002\210\001\001\022\023\n\006clicks" +
-      "\030\013 \001(\003H\003\210\001\001\022\030\n\013cost_micros\030\014 \001(\003H\004\210\001\001\022\030\n" +
-      "\013impressions\030\r \001(\003H\005\210\001\001\022!\n\024top_slot_impr" +
-      "essions\030\016 \001(\003H\006\210\001\001B\016\n\014_target_roasB\027\n\025_b" +
-      "iddable_conversionsB\035\n\033_biddable_convers" +
-      "ions_valueB\t\n\007_clicksB\016\n\014_cost_microsB\016\n" +
-      "\014_impressionsB\027\n\025_top_slot_impressions\"\222" +
-      "\003\n\034PercentCpcBidSimulationPoint\022#\n\026perce" +
-      "nt_cpc_bid_micros\030\001 \001(\003H\000\210\001\001\022!\n\024biddable" +
-      "_conversions\030\002 \001(\001H\001\210\001\001\022\'\n\032biddable_conv" +
-      "ersions_value\030\003 \001(\001H\002\210\001\001\022\023\n\006clicks\030\004 \001(\003" +
-      "H\003\210\001\001\022\030\n\013cost_micros\030\005 \001(\003H\004\210\001\001\022\030\n\013impre" +
-      "ssions\030\006 \001(\003H\005\210\001\001\022!\n\024top_slot_impression" +
-      "s\030\007 \001(\003H\006\210\001\001B\031\n\027_percent_cpc_bid_microsB" +
-      "\027\n\025_biddable_conversionsB\035\n\033_biddable_co" +
-      "nversions_valueB\t\n\007_clicksB\016\n\014_cost_micr" +
-      "osB\016\n\014_impressionsB\027\n\025_top_slot_impressi" +
-      "ons\"\370\001\n\025BudgetSimulationPoint\022\034\n\024budget_" +
-      "amount_micros\030\001 \001(\003\022\'\n\037required_cpc_bid_" +
-      "ceiling_micros\030\002 \001(\003\022\034\n\024biddable_convers" +
-      "ions\030\003 \001(\001\022\"\n\032biddable_conversions_value" +
-      "\030\004 \001(\001\022\016\n\006clicks\030\005 \001(\003\022\023\n\013cost_micros\030\006 " +
-      "\001(\003\022\023\n\013impressions\030\007 \001(\003\022\034\n\024top_slot_imp" +
-      "ressions\030\010 \001(\003\"\332\002\n$TargetImpressionShare" +
-      "SimulationPoint\022&\n\036target_impression_sha" +
-      "re_micros\030\001 \001(\003\022\'\n\037required_cpc_bid_ceil" +
-      "ing_micros\030\002 \001(\003\022%\n\035required_budget_amou" +
-      "nt_micros\030\003 \001(\003\022\034\n\024biddable_conversions\030" +
-      "\004 \001(\001\022\"\n\032biddable_conversions_value\030\005 \001(" +
-      "\001\022\016\n\006clicks\030\006 \001(\003\022\023\n\013cost_micros\030\007 \001(\003\022\023" +
-      "\n\013impressions\030\010 \001(\003\022\034\n\024top_slot_impressi" +
-      "ons\030\t \001(\003\022 \n\030absolute_top_impressions\030\n " +
-      "\001(\003B\357\001\n#com.google.ads.googleads.v10.com" +
-      "monB\017SimulationProtoP\001ZEgoogle.golang.or" +
-      "g/genproto/googleapis/ads/googleads/v10/" +
-      "common;common\242\002\003GAA\252\002\037Google.Ads.GoogleA" +
-      "ds.V10.Common\312\002\037Google\\Ads\\GoogleAds\\V10" +
-      "\\Common\352\002#Google::Ads::GoogleAds::V10::C" +
-      "ommonb\006proto3"
+      "mon\"m\n\036BidModifierSimulationPointList\022K\n" +
+      "\006points\030\001 \003(\0132;.google.ads.googleads.v10" +
+      ".common.BidModifierSimulationPoint\"c\n\031Cp" +
+      "cBidSimulationPointList\022F\n\006points\030\001 \003(\0132" +
+      "6.google.ads.googleads.v10.common.CpcBid" +
+      "SimulationPoint\"c\n\031CpvBidSimulationPoint" +
+      "List\022F\n\006points\030\001 \003(\01326.google.ads.google" +
+      "ads.v10.common.CpvBidSimulationPoint\"i\n\034" +
+      "TargetCpaSimulationPointList\022I\n\006points\030\001" +
+      " \003(\01329.google.ads.googleads.v10.common.T" +
+      "argetCpaSimulationPoint\"k\n\035TargetRoasSim" +
+      "ulationPointList\022J\n\006points\030\001 \003(\0132:.googl" +
+      "e.ads.googleads.v10.common.TargetRoasSim" +
+      "ulationPoint\"q\n PercentCpcBidSimulationP" +
+      "ointList\022M\n\006points\030\001 \003(\0132=.google.ads.go" +
+      "ogleads.v10.common.PercentCpcBidSimulati" +
+      "onPoint\"c\n\031BudgetSimulationPointList\022F\n\006" +
+      "points\030\001 \003(\01326.google.ads.googleads.v10." +
+      "common.BudgetSimulationPoint\"\201\001\n(TargetI" +
+      "mpressionShareSimulationPointList\022U\n\006poi" +
+      "nts\030\001 \003(\0132E.google.ads.googleads.v10.com" +
+      "mon.TargetImpressionShareSimulationPoint" +
+      "\"\322\006\n\032BidModifierSimulationPoint\022\031\n\014bid_m" +
+      "odifier\030\017 \001(\001H\000\210\001\001\022!\n\024biddable_conversio" +
+      "ns\030\020 \001(\001H\001\210\001\001\022\'\n\032biddable_conversions_va" +
+      "lue\030\021 \001(\001H\002\210\001\001\022\023\n\006clicks\030\022 \001(\003H\003\210\001\001\022\030\n\013c" +
+      "ost_micros\030\023 \001(\003H\004\210\001\001\022\030\n\013impressions\030\024 \001" +
+      "(\003H\005\210\001\001\022!\n\024top_slot_impressions\030\025 \001(\003H\006\210" +
+      "\001\001\022(\n\033parent_biddable_conversions\030\026 \001(\001H" +
+      "\007\210\001\001\022.\n!parent_biddable_conversions_valu" +
+      "e\030\027 \001(\001H\010\210\001\001\022\032\n\rparent_clicks\030\030 \001(\003H\t\210\001\001" +
+      "\022\037\n\022parent_cost_micros\030\031 \001(\003H\n\210\001\001\022\037\n\022par" +
+      "ent_impressions\030\032 \001(\003H\013\210\001\001\022(\n\033parent_top" +
+      "_slot_impressions\030\033 \001(\003H\014\210\001\001\022*\n\035parent_r" +
+      "equired_budget_micros\030\034 \001(\003H\r\210\001\001B\017\n\r_bid" +
+      "_modifierB\027\n\025_biddable_conversionsB\035\n\033_b" +
+      "iddable_conversions_valueB\t\n\007_clicksB\016\n\014" +
+      "_cost_microsB\016\n\014_impressionsB\027\n\025_top_slo" +
+      "t_impressionsB\036\n\034_parent_biddable_conver" +
+      "sionsB$\n\"_parent_biddable_conversions_va" +
+      "lueB\020\n\016_parent_clicksB\025\n\023_parent_cost_mi" +
+      "crosB\025\n\023_parent_impressionsB\036\n\034_parent_t" +
+      "op_slot_impressionsB \n\036_parent_required_" +
+      "budget_micros\"\314\003\n\025CpcBidSimulationPoint\022" +
+      "%\n\035required_budget_amount_micros\030\021 \001(\003\022!" +
+      "\n\024biddable_conversions\030\t \001(\001H\001\210\001\001\022\'\n\032bid" +
+      "dable_conversions_value\030\n \001(\001H\002\210\001\001\022\023\n\006cl" +
+      "icks\030\013 \001(\003H\003\210\001\001\022\030\n\013cost_micros\030\014 \001(\003H\004\210\001" +
+      "\001\022\030\n\013impressions\030\r \001(\003H\005\210\001\001\022!\n\024top_slot_" +
+      "impressions\030\016 \001(\003H\006\210\001\001\022\030\n\016cpc_bid_micros" +
+      "\030\017 \001(\003H\000\022\"\n\030cpc_bid_scaling_modifier\030\020 \001" +
+      "(\001H\000B\032\n\030cpc_simulation_key_valueB\027\n\025_bid" +
+      "dable_conversionsB\035\n\033_biddable_conversio" +
+      "ns_valueB\t\n\007_clicksB\016\n\014_cost_microsB\016\n\014_" +
+      "impressionsB\027\n\025_top_slot_impressions\"\271\001\n" +
+      "\025CpvBidSimulationPoint\022\033\n\016cpv_bid_micros" +
+      "\030\005 \001(\003H\000\210\001\001\022\030\n\013cost_micros\030\006 \001(\003H\001\210\001\001\022\030\n" +
+      "\013impressions\030\007 \001(\003H\002\210\001\001\022\022\n\005views\030\010 \001(\003H\003" +
+      "\210\001\001B\021\n\017_cpv_bid_microsB\016\n\014_cost_microsB\016" +
+      "\n\014_impressionsB\010\n\006_views\"\212\004\n\030TargetCpaSi" +
+      "mulationPoint\022%\n\035required_budget_amount_" +
+      "micros\030\023 \001(\003\022!\n\024biddable_conversions\030\t \001" +
+      "(\001H\001\210\001\001\022\'\n\032biddable_conversions_value\030\n " +
+      "\001(\001H\002\210\001\001\022\024\n\014app_installs\030\017 \001(\001\022\026\n\016in_app" +
+      "_actions\030\020 \001(\001\022\023\n\006clicks\030\013 \001(\003H\003\210\001\001\022\030\n\013c" +
+      "ost_micros\030\014 \001(\003H\004\210\001\001\022\030\n\013impressions\030\r \001" +
+      "(\003H\005\210\001\001\022!\n\024top_slot_impressions\030\016 \001(\003H\006\210" +
+      "\001\001\022\033\n\021target_cpa_micros\030\021 \001(\003H\000\022%\n\033targe" +
+      "t_cpa_scaling_modifier\030\022 \001(\001H\000B!\n\037target" +
+      "_cpa_simulation_key_valueB\027\n\025_biddable_c" +
+      "onversionsB\035\n\033_biddable_conversions_valu" +
+      "eB\t\n\007_clicksB\016\n\014_cost_microsB\016\n\014_impress" +
+      "ionsB\027\n\025_top_slot_impressions\"\240\003\n\031Target" +
+      "RoasSimulationPoint\022\030\n\013target_roas\030\010 \001(\001" +
+      "H\000\210\001\001\022%\n\035required_budget_amount_micros\030\017" +
+      " \001(\003\022!\n\024biddable_conversions\030\t \001(\001H\001\210\001\001\022" +
+      "\'\n\032biddable_conversions_value\030\n \001(\001H\002\210\001\001" +
+      "\022\023\n\006clicks\030\013 \001(\003H\003\210\001\001\022\030\n\013cost_micros\030\014 \001" +
+      "(\003H\004\210\001\001\022\030\n\013impressions\030\r \001(\003H\005\210\001\001\022!\n\024top" +
+      "_slot_impressions\030\016 \001(\003H\006\210\001\001B\016\n\014_target_" +
+      "roasB\027\n\025_biddable_conversionsB\035\n\033_biddab" +
+      "le_conversions_valueB\t\n\007_clicksB\016\n\014_cost" +
+      "_microsB\016\n\014_impressionsB\027\n\025_top_slot_imp" +
+      "ressions\"\222\003\n\034PercentCpcBidSimulationPoin" +
+      "t\022#\n\026percent_cpc_bid_micros\030\001 \001(\003H\000\210\001\001\022!" +
+      "\n\024biddable_conversions\030\002 \001(\001H\001\210\001\001\022\'\n\032bid" +
+      "dable_conversions_value\030\003 \001(\001H\002\210\001\001\022\023\n\006cl" +
+      "icks\030\004 \001(\003H\003\210\001\001\022\030\n\013cost_micros\030\005 \001(\003H\004\210\001" +
+      "\001\022\030\n\013impressions\030\006 \001(\003H\005\210\001\001\022!\n\024top_slot_" +
+      "impressions\030\007 \001(\003H\006\210\001\001B\031\n\027_percent_cpc_b" +
+      "id_microsB\027\n\025_biddable_conversionsB\035\n\033_b" +
+      "iddable_conversions_valueB\t\n\007_clicksB\016\n\014" +
+      "_cost_microsB\016\n\014_impressionsB\027\n\025_top_slo" +
+      "t_impressions\"\370\001\n\025BudgetSimulationPoint\022" +
+      "\034\n\024budget_amount_micros\030\001 \001(\003\022\'\n\037require" +
+      "d_cpc_bid_ceiling_micros\030\002 \001(\003\022\034\n\024biddab" +
+      "le_conversions\030\003 \001(\001\022\"\n\032biddable_convers" +
+      "ions_value\030\004 \001(\001\022\016\n\006clicks\030\005 \001(\003\022\023\n\013cost" +
+      "_micros\030\006 \001(\003\022\023\n\013impressions\030\007 \001(\003\022\034\n\024to" +
+      "p_slot_impressions\030\010 \001(\003\"\332\002\n$TargetImpre" +
+      "ssionShareSimulationPoint\022&\n\036target_impr" +
+      "ession_share_micros\030\001 \001(\003\022\'\n\037required_cp" +
+      "c_bid_ceiling_micros\030\002 \001(\003\022%\n\035required_b" +
+      "udget_amount_micros\030\003 \001(\003\022\034\n\024biddable_co" +
+      "nversions\030\004 \001(\001\022\"\n\032biddable_conversions_" +
+      "value\030\005 \001(\001\022\016\n\006clicks\030\006 \001(\003\022\023\n\013cost_micr" +
+      "os\030\007 \001(\003\022\023\n\013impressions\030\010 \001(\003\022\034\n\024top_slo" +
+      "t_impressions\030\t \001(\003\022 \n\030absolute_top_impr" +
+      "essions\030\n \001(\003B\357\001\n#com.google.ads.googlea" +
+      "ds.v10.commonB\017SimulationProtoP\001ZEgoogle" +
+      ".golang.org/genproto/googleapis/ads/goog" +
+      "leads/v10/common;common\242\002\003GAA\252\002\037Google.A" +
+      "ds.GoogleAds.V10.Common\312\002\037Google\\Ads\\Goo" +
+      "gleAds\\V10\\Common\352\002#Google::Ads::GoogleA" +
+      "ds::V10::Commonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_common_BidModifierSimulationPointList_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -323,7 +321,6 @@ public final class SimulationProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_common_TargetImpressionShareSimulationPoint_descriptor,
         new java.lang.String[] { "TargetImpressionShareMicros", "RequiredCpcBidCeilingMicros", "RequiredBudgetAmountMicros", "BiddableConversions", "BiddableConversionsValue", "Clicks", "CostMicros", "Impressions", "TopSlotImpressions", "AbsoluteTopImpressions", });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

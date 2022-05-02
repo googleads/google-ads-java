@@ -63,79 +63,78 @@ public final class FeedItemProto {
       "tus.proto\0329google/ads/googleads/v10/enum" +
       "s/policy_review_status.proto\032@google/ads" +
       "/googleads/v10/errors/feed_item_validati" +
-      "on_error.proto\032\034google/api/annotations.p" +
-      "roto\032\037google/api/field_behavior.proto\032\031g" +
-      "oogle/api/resource.proto\"\305\006\n\010FeedItem\022@\n" +
-      "\rresource_name\030\001 \001(\tB)\340A\005\372A#\n!googleads." +
-      "googleapis.com/FeedItem\0228\n\004feed\030\013 \001(\tB%\340" +
-      "A\005\372A\037\n\035googleads.googleapis.com/FeedH\000\210\001" +
-      "\001\022\024\n\002id\030\014 \001(\003B\003\340A\003H\001\210\001\001\022\034\n\017start_date_ti" +
-      "me\030\r \001(\tH\002\210\001\001\022\032\n\rend_date_time\030\016 \001(\tH\003\210\001" +
-      "\001\022T\n\020attribute_values\030\006 \003(\0132:.google.ads" +
-      ".googleads.v10.resources.FeedItemAttribu" +
-      "teValue\022v\n\031geo_targeting_restriction\030\007 \001" +
-      "(\0162S.google.ads.googleads.v10.enums.GeoT" +
-      "argetingRestrictionEnum.GeoTargetingRest" +
-      "riction\022O\n\025url_custom_parameters\030\010 \003(\01320" +
-      ".google.ads.googleads.v10.common.CustomP" +
-      "arameter\022V\n\006status\030\t \001(\0162A.google.ads.go" +
-      "ogleads.v10.enums.FeedItemStatusEnum.Fee" +
-      "dItemStatusB\003\340A\003\022\\\n\014policy_infos\030\n \003(\0132A" +
-      ".google.ads.googleads.v10.resources.Feed" +
-      "ItemPlaceholderPolicyInfoB\003\340A\003:b\352A_\n!goo" +
-      "gleads.googleapis.com/FeedItem\022:customer" +
-      "s/{customer_id}/feedItems/{feed_id}~{fee" +
-      "d_item_id}B\007\n\005_feedB\005\n\003_idB\022\n\020_start_dat" +
-      "e_timeB\020\n\016_end_date_time\"\235\003\n\026FeedItemAtt" +
-      "ributeValue\022\036\n\021feed_attribute_id\030\013 \001(\003H\000" +
-      "\210\001\001\022\032\n\rinteger_value\030\014 \001(\003H\001\210\001\001\022\032\n\rboole" +
-      "an_value\030\r \001(\010H\002\210\001\001\022\031\n\014string_value\030\016 \001(" +
-      "\tH\003\210\001\001\022\031\n\014double_value\030\017 \001(\001H\004\210\001\001\022;\n\013pri" +
-      "ce_value\030\006 \001(\0132&.google.ads.googleads.v1" +
-      "0.common.Money\022\026\n\016integer_values\030\020 \003(\003\022\026" +
-      "\n\016boolean_values\030\021 \003(\010\022\025\n\rstring_values\030" +
-      "\022 \003(\t\022\025\n\rdouble_values\030\023 \003(\001B\024\n\022_feed_at" +
-      "tribute_idB\020\n\016_integer_valueB\020\n\016_boolean" +
-      "_valueB\017\n\r_string_valueB\017\n\r_double_value" +
-      "\"\355\007\n\035FeedItemPlaceholderPolicyInfo\022g\n\025pl" +
-      "aceholder_type_enum\030\n \001(\0162C.google.ads.g" +
-      "oogleads.v10.enums.PlaceholderTypeEnum.P" +
-      "laceholderTypeB\003\340A\003\022,\n\032feed_mapping_reso" +
-      "urce_name\030\013 \001(\tB\003\340A\003H\000\210\001\001\022e\n\rreview_stat" +
-      "us\030\003 \001(\0162I.google.ads.googleads.v10.enum" +
-      "s.PolicyReviewStatusEnum.PolicyReviewSta" +
-      "tusB\003\340A\003\022k\n\017approval_status\030\004 \001(\0162M.goog" +
-      "le.ads.googleads.v10.enums.PolicyApprova" +
-      "lStatusEnum.PolicyApprovalStatusB\003\340A\003\022T\n" +
-      "\024policy_topic_entries\030\005 \003(\01321.google.ads" +
-      ".googleads.v10.common.PolicyTopicEntryB\003" +
-      "\340A\003\022u\n\021validation_status\030\006 \001(\0162U.google." +
-      "ads.googleads.v10.enums.FeedItemValidati" +
-      "onStatusEnum.FeedItemValidationStatusB\003\340" +
-      "A\003\022[\n\021validation_errors\030\007 \003(\0132;.google.a" +
-      "ds.googleads.v10.resources.FeedItemValid" +
-      "ationErrorB\003\340A\003\022\205\001\n\027quality_approval_sta" +
-      "tus\030\010 \001(\0162_.google.ads.googleads.v10.enu" +
-      "ms.FeedItemQualityApprovalStatusEnum.Fee" +
-      "dItemQualityApprovalStatusB\003\340A\003\022\217\001\n\033qual" +
-      "ity_disapproval_reasons\030\t \003(\0162e.google.a" +
-      "ds.googleads.v10.enums.FeedItemQualityDi" +
-      "sapprovalReasonEnum.FeedItemQualityDisap" +
-      "provalReasonB\003\340A\003B\035\n\033_feed_mapping_resou" +
-      "rce_name\"\213\002\n\027FeedItemValidationError\022s\n\020" +
-      "validation_error\030\001 \001(\0162T.google.ads.goog" +
-      "leads.v10.errors.FeedItemValidationError" +
-      "Enum.FeedItemValidationErrorB\003\340A\003\022\035\n\013des" +
-      "cription\030\006 \001(\tB\003\340A\003H\000\210\001\001\022\037\n\022feed_attribu" +
-      "te_ids\030\007 \003(\003B\003\340A\003\022\034\n\nextra_info\030\010 \001(\tB\003\340" +
-      "A\003H\001\210\001\001B\016\n\014_descriptionB\r\n\013_extra_infoB\377" +
-      "\001\n&com.google.ads.googleads.v10.resource" +
-      "sB\rFeedItemProtoP\001ZKgoogle.golang.org/ge" +
-      "nproto/googleapis/ads/googleads/v10/reso" +
-      "urces;resources\242\002\003GAA\252\002\"Google.Ads.Googl" +
-      "eAds.V10.Resources\312\002\"Google\\Ads\\GoogleAd" +
-      "s\\V10\\Resources\352\002&Google::Ads::GoogleAds" +
-      "::V10::Resourcesb\006proto3"
+      "on_error.proto\032\037google/api/field_behavio" +
+      "r.proto\032\031google/api/resource.proto\"\305\006\n\010F" +
+      "eedItem\022@\n\rresource_name\030\001 \001(\tB)\340A\005\372A#\n!" +
+      "googleads.googleapis.com/FeedItem\0228\n\004fee" +
+      "d\030\013 \001(\tB%\340A\005\372A\037\n\035googleads.googleapis.co" +
+      "m/FeedH\000\210\001\001\022\024\n\002id\030\014 \001(\003B\003\340A\003H\001\210\001\001\022\034\n\017sta" +
+      "rt_date_time\030\r \001(\tH\002\210\001\001\022\032\n\rend_date_time" +
+      "\030\016 \001(\tH\003\210\001\001\022T\n\020attribute_values\030\006 \003(\0132:." +
+      "google.ads.googleads.v10.resources.FeedI" +
+      "temAttributeValue\022v\n\031geo_targeting_restr" +
+      "iction\030\007 \001(\0162S.google.ads.googleads.v10." +
+      "enums.GeoTargetingRestrictionEnum.GeoTar" +
+      "getingRestriction\022O\n\025url_custom_paramete" +
+      "rs\030\010 \003(\01320.google.ads.googleads.v10.comm" +
+      "on.CustomParameter\022V\n\006status\030\t \001(\0162A.goo" +
+      "gle.ads.googleads.v10.enums.FeedItemStat" +
+      "usEnum.FeedItemStatusB\003\340A\003\022\\\n\014policy_inf" +
+      "os\030\n \003(\0132A.google.ads.googleads.v10.reso" +
+      "urces.FeedItemPlaceholderPolicyInfoB\003\340A\003" +
+      ":b\352A_\n!googleads.googleapis.com/FeedItem" +
+      "\022:customers/{customer_id}/feedItems/{fee" +
+      "d_id}~{feed_item_id}B\007\n\005_feedB\005\n\003_idB\022\n\020" +
+      "_start_date_timeB\020\n\016_end_date_time\"\235\003\n\026F" +
+      "eedItemAttributeValue\022\036\n\021feed_attribute_" +
+      "id\030\013 \001(\003H\000\210\001\001\022\032\n\rinteger_value\030\014 \001(\003H\001\210\001" +
+      "\001\022\032\n\rboolean_value\030\r \001(\010H\002\210\001\001\022\031\n\014string_" +
+      "value\030\016 \001(\tH\003\210\001\001\022\031\n\014double_value\030\017 \001(\001H\004" +
+      "\210\001\001\022;\n\013price_value\030\006 \001(\0132&.google.ads.go" +
+      "ogleads.v10.common.Money\022\026\n\016integer_valu" +
+      "es\030\020 \003(\003\022\026\n\016boolean_values\030\021 \003(\010\022\025\n\rstri" +
+      "ng_values\030\022 \003(\t\022\025\n\rdouble_values\030\023 \003(\001B\024" +
+      "\n\022_feed_attribute_idB\020\n\016_integer_valueB\020" +
+      "\n\016_boolean_valueB\017\n\r_string_valueB\017\n\r_do" +
+      "uble_value\"\355\007\n\035FeedItemPlaceholderPolicy" +
+      "Info\022g\n\025placeholder_type_enum\030\n \001(\0162C.go" +
+      "ogle.ads.googleads.v10.enums.Placeholder" +
+      "TypeEnum.PlaceholderTypeB\003\340A\003\022,\n\032feed_ma" +
+      "pping_resource_name\030\013 \001(\tB\003\340A\003H\000\210\001\001\022e\n\rr" +
+      "eview_status\030\003 \001(\0162I.google.ads.googlead" +
+      "s.v10.enums.PolicyReviewStatusEnum.Polic" +
+      "yReviewStatusB\003\340A\003\022k\n\017approval_status\030\004 " +
+      "\001(\0162M.google.ads.googleads.v10.enums.Pol" +
+      "icyApprovalStatusEnum.PolicyApprovalStat" +
+      "usB\003\340A\003\022T\n\024policy_topic_entries\030\005 \003(\01321." +
+      "google.ads.googleads.v10.common.PolicyTo" +
+      "picEntryB\003\340A\003\022u\n\021validation_status\030\006 \001(\016" +
+      "2U.google.ads.googleads.v10.enums.FeedIt" +
+      "emValidationStatusEnum.FeedItemValidatio" +
+      "nStatusB\003\340A\003\022[\n\021validation_errors\030\007 \003(\0132" +
+      ";.google.ads.googleads.v10.resources.Fee" +
+      "dItemValidationErrorB\003\340A\003\022\205\001\n\027quality_ap" +
+      "proval_status\030\010 \001(\0162_.google.ads.googlea" +
+      "ds.v10.enums.FeedItemQualityApprovalStat" +
+      "usEnum.FeedItemQualityApprovalStatusB\003\340A" +
+      "\003\022\217\001\n\033quality_disapproval_reasons\030\t \003(\0162" +
+      "e.google.ads.googleads.v10.enums.FeedIte" +
+      "mQualityDisapprovalReasonEnum.FeedItemQu" +
+      "alityDisapprovalReasonB\003\340A\003B\035\n\033_feed_map" +
+      "ping_resource_name\"\213\002\n\027FeedItemValidatio" +
+      "nError\022s\n\020validation_error\030\001 \001(\0162T.googl" +
+      "e.ads.googleads.v10.errors.FeedItemValid" +
+      "ationErrorEnum.FeedItemValidationErrorB\003" +
+      "\340A\003\022\035\n\013description\030\006 \001(\tB\003\340A\003H\000\210\001\001\022\037\n\022fe" +
+      "ed_attribute_ids\030\007 \003(\003B\003\340A\003\022\034\n\nextra_inf" +
+      "o\030\010 \001(\tB\003\340A\003H\001\210\001\001B\016\n\014_descriptionB\r\n\013_ex" +
+      "tra_infoB\377\001\n&com.google.ads.googleads.v1" +
+      "0.resourcesB\rFeedItemProtoP\001ZKgoogle.gol" +
+      "ang.org/genproto/googleapis/ads/googlead" +
+      "s/v10/resources;resources\242\002\003GAA\252\002\"Google" +
+      ".Ads.GoogleAds.V10.Resources\312\002\"Google\\Ad" +
+      "s\\GoogleAds\\V10\\Resources\352\002&Google::Ads:" +
+      ":GoogleAds::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -152,7 +151,6 @@ public final class FeedItemProto {
           com.google.ads.googleads.v10.enums.PolicyApprovalStatusProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.PolicyReviewStatusProto.getDescriptor(),
           com.google.ads.googleads.v10.errors.FeedItemValidationErrorProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -199,7 +197,6 @@ public final class FeedItemProto {
     com.google.ads.googleads.v10.enums.PolicyApprovalStatusProto.getDescriptor();
     com.google.ads.googleads.v10.enums.PolicyReviewStatusProto.getDescriptor();
     com.google.ads.googleads.v10.errors.FeedItemValidationErrorProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

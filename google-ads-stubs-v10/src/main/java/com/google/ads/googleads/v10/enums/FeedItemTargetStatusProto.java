@@ -30,22 +30,20 @@ public final class FeedItemTargetStatusProto {
     java.lang.String[] descriptorData = {
       "\n<google/ads/googleads/v10/enums/feed_it" +
       "em_target_status.proto\022\036google.ads.googl" +
-      "eads.v10.enums\032\034google/api/annotations.p" +
-      "roto\"j\n\030FeedItemTargetStatusEnum\"N\n\024Feed" +
-      "ItemTargetStatus\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNK" +
-      "NOWN\020\001\022\013\n\007ENABLED\020\002\022\013\n\007REMOVED\020\003B\363\001\n\"com" +
-      ".google.ads.googleads.v10.enumsB\031FeedIte" +
-      "mTargetStatusProtoP\001ZCgoogle.golang.org/" +
-      "genproto/googleapis/ads/googleads/v10/en" +
-      "ums;enums\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V" +
-      "10.Enums\312\002\036Google\\Ads\\GoogleAds\\V10\\Enum" +
-      "s\352\002\"Google::Ads::GoogleAds::V10::Enumsb\006" +
-      "proto3"
+      "eads.v10.enums\"j\n\030FeedItemTargetStatusEn" +
+      "um\"N\n\024FeedItemTargetStatus\022\017\n\013UNSPECIFIE" +
+      "D\020\000\022\013\n\007UNKNOWN\020\001\022\013\n\007ENABLED\020\002\022\013\n\007REMOVED" +
+      "\020\003B\363\001\n\"com.google.ads.googleads.v10.enum" +
+      "sB\031FeedItemTargetStatusProtoP\001ZCgoogle.g" +
+      "olang.org/genproto/googleapis/ads/google" +
+      "ads/v10/enums;enums\242\002\003GAA\252\002\036Google.Ads.G" +
+      "oogleAds.V10.Enums\312\002\036Google\\Ads\\GoogleAd" +
+      "s\\V10\\Enums\352\002\"Google::Ads::GoogleAds::V1" +
+      "0::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_FeedItemTargetStatusEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -53,7 +51,6 @@ public final class FeedItemTargetStatusProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_FeedItemTargetStatusEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

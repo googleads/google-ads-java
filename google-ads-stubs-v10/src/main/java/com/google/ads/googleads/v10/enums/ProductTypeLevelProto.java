@@ -30,22 +30,20 @@ public final class ProductTypeLevelProto {
     java.lang.String[] descriptorData = {
       "\n7google/ads/googleads/v10/enums/product" +
       "_type_level.proto\022\036google.ads.googleads." +
-      "v10.enums\032\034google/api/annotations.proto\"" +
-      "\204\001\n\024ProductTypeLevelEnum\"l\n\020ProductTypeL" +
-      "evel\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\n\n\006LE" +
-      "VEL1\020\007\022\n\n\006LEVEL2\020\010\022\n\n\006LEVEL3\020\t\022\n\n\006LEVEL4" +
-      "\020\n\022\n\n\006LEVEL5\020\013B\357\001\n\"com.google.ads.google" +
-      "ads.v10.enumsB\025ProductTypeLevelProtoP\001ZC" +
-      "google.golang.org/genproto/googleapis/ad" +
-      "s/googleads/v10/enums;enums\242\002\003GAA\252\002\036Goog" +
-      "le.Ads.GoogleAds.V10.Enums\312\002\036Google\\Ads\\" +
-      "GoogleAds\\V10\\Enums\352\002\"Google::Ads::Googl" +
-      "eAds::V10::Enumsb\006proto3"
+      "v10.enums\"\204\001\n\024ProductTypeLevelEnum\"l\n\020Pr" +
+      "oductTypeLevel\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNO" +
+      "WN\020\001\022\n\n\006LEVEL1\020\007\022\n\n\006LEVEL2\020\010\022\n\n\006LEVEL3\020\t" +
+      "\022\n\n\006LEVEL4\020\n\022\n\n\006LEVEL5\020\013B\357\001\n\"com.google." +
+      "ads.googleads.v10.enumsB\025ProductTypeLeve" +
+      "lProtoP\001ZCgoogle.golang.org/genproto/goo" +
+      "gleapis/ads/googleads/v10/enums;enums\242\002\003" +
+      "GAA\252\002\036Google.Ads.GoogleAds.V10.Enums\312\002\036G" +
+      "oogle\\Ads\\GoogleAds\\V10\\Enums\352\002\"Google::" +
+      "Ads::GoogleAds::V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_ProductTypeLevelEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -53,7 +51,6 @@ public final class ProductTypeLevelProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_ProductTypeLevelEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

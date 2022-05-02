@@ -30,4 +30,44 @@ public interface AssetGroupProductGroupViewOrBuilder extends
    */
   com.google.protobuf.ByteString
       getResourceNameBytes();
+
+  /**
+   * <pre>
+   * Output only. The asset group associated with the listing group filter.
+   * </pre>
+   *
+   * <code>string asset_group = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The assetGroup.
+   */
+  java.lang.String getAssetGroup();
+  /**
+   * <pre>
+   * Output only. The asset group associated with the listing group filter.
+   * </pre>
+   *
+   * <code>string asset_group = 2 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for assetGroup.
+   */
+  com.google.protobuf.ByteString
+      getAssetGroupBytes();
+
+  /**
+   * <pre>
+   * Output only. The resource name of the asset group listing group filter.
+   * </pre>
+   *
+   * <code>string asset_group_listing_group_filter = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The assetGroupListingGroupFilter.
+   */
+  java.lang.String getAssetGroupListingGroupFilter();
+  /**
+   * <pre>
+   * Output only. The resource name of the asset group listing group filter.
+   * </pre>
+   *
+   * <code>string asset_group_listing_group_filter = 4 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for assetGroupListingGroupFilter.
+   */
+  com.google.protobuf.ByteString
+      getAssetGroupListingGroupFilterBytes();
 }

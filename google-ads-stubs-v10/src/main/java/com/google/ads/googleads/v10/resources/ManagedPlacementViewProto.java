@@ -30,27 +30,25 @@ public final class ManagedPlacementViewProto {
     java.lang.String[] descriptorData = {
       "\n?google/ads/googleads/v10/resources/man" +
       "aged_placement_view.proto\022\"google.ads.go" +
-      "ogleads.v10.resources\032\034google/api/annota" +
-      "tions.proto\032\037google/api/field_behavior.p" +
-      "roto\032\031google/api/resource.proto\"\344\001\n\024Mana" +
-      "gedPlacementView\022L\n\rresource_name\030\001 \001(\tB" +
-      "5\340A\003\372A/\n-googleads.googleapis.com/Manage" +
-      "dPlacementView:~\352A{\n-googleads.googleapi" +
-      "s.com/ManagedPlacementView\022Jcustomers/{c" +
-      "ustomer_id}/managedPlacementViews/{ad_gr" +
-      "oup_id}~{criterion_id}B\213\002\n&com.google.ad" +
-      "s.googleads.v10.resourcesB\031ManagedPlacem" +
-      "entViewProtoP\001ZKgoogle.golang.org/genpro" +
-      "to/googleapis/ads/googleads/v10/resource" +
-      "s;resources\242\002\003GAA\252\002\"Google.Ads.GoogleAds" +
-      ".V10.Resources\312\002\"Google\\Ads\\GoogleAds\\V1" +
-      "0\\Resources\352\002&Google::Ads::GoogleAds::V1" +
-      "0::Resourcesb\006proto3"
+      "ogleads.v10.resources\032\037google/api/field_" +
+      "behavior.proto\032\031google/api/resource.prot" +
+      "o\"\344\001\n\024ManagedPlacementView\022L\n\rresource_n" +
+      "ame\030\001 \001(\tB5\340A\003\372A/\n-googleads.googleapis." +
+      "com/ManagedPlacementView:~\352A{\n-googleads" +
+      ".googleapis.com/ManagedPlacementView\022Jcu" +
+      "stomers/{customer_id}/managedPlacementVi" +
+      "ews/{ad_group_id}~{criterion_id}B\213\002\n&com" +
+      ".google.ads.googleads.v10.resourcesB\031Man" +
+      "agedPlacementViewProtoP\001ZKgoogle.golang." +
+      "org/genproto/googleapis/ads/googleads/v1" +
+      "0/resources;resources\242\002\003GAA\252\002\"Google.Ads" +
+      ".GoogleAds.V10.Resources\312\002\"Google\\Ads\\Go" +
+      "ogleAds\\V10\\Resources\352\002&Google::Ads::Goo" +
+      "gleAds::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -67,7 +65,6 @@ public final class ManagedPlacementViewProto {
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

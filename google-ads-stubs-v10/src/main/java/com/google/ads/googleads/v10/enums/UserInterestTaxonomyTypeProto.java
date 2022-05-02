@@ -30,24 +30,22 @@ public final class UserInterestTaxonomyTypeProto {
     java.lang.String[] descriptorData = {
       "\n@google/ads/googleads/v10/enums/user_in" +
       "terest_taxonomy_type.proto\022\036google.ads.g" +
-      "oogleads.v10.enums\032\034google/api/annotatio" +
-      "ns.proto\"\277\001\n\034UserInterestTaxonomyTypeEnu" +
-      "m\"\236\001\n\030UserInterestTaxonomyType\022\017\n\013UNSPEC" +
-      "IFIED\020\000\022\013\n\007UNKNOWN\020\001\022\014\n\010AFFINITY\020\002\022\r\n\tIN" +
-      "_MARKET\020\003\022\033\n\027MOBILE_APP_INSTALL_USER\020\004\022\020" +
-      "\n\014VERTICAL_GEO\020\005\022\030\n\024NEW_SMART_PHONE_USER" +
-      "\020\006B\367\001\n\"com.google.ads.googleads.v10.enum" +
-      "sB\035UserInterestTaxonomyTypeProtoP\001ZCgoog" +
-      "le.golang.org/genproto/googleapis/ads/go" +
-      "ogleads/v10/enums;enums\242\002\003GAA\252\002\036Google.A" +
-      "ds.GoogleAds.V10.Enums\312\002\036Google\\Ads\\Goog" +
-      "leAds\\V10\\Enums\352\002\"Google::Ads::GoogleAds" +
-      "::V10::Enumsb\006proto3"
+      "oogleads.v10.enums\"\277\001\n\034UserInterestTaxon" +
+      "omyTypeEnum\"\236\001\n\030UserInterestTaxonomyType" +
+      "\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\014\n\010AFFINI" +
+      "TY\020\002\022\r\n\tIN_MARKET\020\003\022\033\n\027MOBILE_APP_INSTAL" +
+      "L_USER\020\004\022\020\n\014VERTICAL_GEO\020\005\022\030\n\024NEW_SMART_" +
+      "PHONE_USER\020\006B\367\001\n\"com.google.ads.googlead" +
+      "s.v10.enumsB\035UserInterestTaxonomyTypePro" +
+      "toP\001ZCgoogle.golang.org/genproto/googlea" +
+      "pis/ads/googleads/v10/enums;enums\242\002\003GAA\252" +
+      "\002\036Google.Ads.GoogleAds.V10.Enums\312\002\036Googl" +
+      "e\\Ads\\GoogleAds\\V10\\Enums\352\002\"Google::Ads:" +
+      ":GoogleAds::V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_UserInterestTaxonomyTypeEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -55,7 +53,6 @@ public final class UserInterestTaxonomyTypeProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_UserInterestTaxonomyTypeEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

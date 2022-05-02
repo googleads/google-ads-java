@@ -30,22 +30,21 @@ public final class LocationGroupRadiusUnitsProto {
     java.lang.String[] descriptorData = {
       "\n@google/ads/googleads/v10/enums/locatio" +
       "n_group_radius_units.proto\022\036google.ads.g" +
-      "oogleads.v10.enums\032\034google/api/annotatio" +
-      "ns.proto\"\200\001\n\034LocationGroupRadiusUnitsEnu" +
-      "m\"`\n\030LocationGroupRadiusUnits\022\017\n\013UNSPECI" +
-      "FIED\020\000\022\013\n\007UNKNOWN\020\001\022\n\n\006METERS\020\002\022\t\n\005MILES" +
-      "\020\003\022\017\n\013MILLI_MILES\020\004B\367\001\n\"com.google.ads.g" +
-      "oogleads.v10.enumsB\035LocationGroupRadiusU" +
-      "nitsProtoP\001ZCgoogle.golang.org/genproto/" +
-      "googleapis/ads/googleads/v10/enums;enums" +
-      "\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V10.Enums\312" +
-      "\002\036Google\\Ads\\GoogleAds\\V10\\Enums\352\002\"Googl" +
-      "e::Ads::GoogleAds::V10::Enumsb\006proto3"
+      "oogleads.v10.enums\"\200\001\n\034LocationGroupRadi" +
+      "usUnitsEnum\"`\n\030LocationGroupRadiusUnits\022" +
+      "\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\n\n\006METERS\020" +
+      "\002\022\t\n\005MILES\020\003\022\017\n\013MILLI_MILES\020\004B\367\001\n\"com.go" +
+      "ogle.ads.googleads.v10.enumsB\035LocationGr" +
+      "oupRadiusUnitsProtoP\001ZCgoogle.golang.org" +
+      "/genproto/googleapis/ads/googleads/v10/e" +
+      "nums;enums\242\002\003GAA\252\002\036Google.Ads.GoogleAds." +
+      "V10.Enums\312\002\036Google\\Ads\\GoogleAds\\V10\\Enu" +
+      "ms\352\002\"Google::Ads::GoogleAds::V10::Enumsb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_LocationGroupRadiusUnitsEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -53,7 +52,6 @@ public final class LocationGroupRadiusUnitsProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_LocationGroupRadiusUnitsEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

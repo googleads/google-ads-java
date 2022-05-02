@@ -1467,6 +1467,33 @@ public interface GoogleAdsRowOrBuilder extends
 
   /**
    * <pre>
+   * Campaign Group referenced in AWQL query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.resources.CampaignGroup campaign_group = 25;</code>
+   * @return Whether the campaignGroup field is set.
+   */
+  boolean hasCampaignGroup();
+  /**
+   * <pre>
+   * Campaign Group referenced in AWQL query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.resources.CampaignGroup campaign_group = 25;</code>
+   * @return The campaignGroup.
+   */
+  com.google.ads.googleads.v10.resources.CampaignGroup getCampaignGroup();
+  /**
+   * <pre>
+   * Campaign Group referenced in AWQL query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.resources.CampaignGroup campaign_group = 25;</code>
+   */
+  com.google.ads.googleads.v10.resources.CampaignGroupOrBuilder getCampaignGroupOrBuilder();
+
+  /**
+   * <pre>
    * The campaign label referenced in the query.
    * </pre>
    *
@@ -4029,6 +4056,33 @@ public interface GoogleAdsRowOrBuilder extends
    * <code>.google.ads.googleads.v10.resources.WebpageView webpage_view = 162;</code>
    */
   com.google.ads.googleads.v10.resources.WebpageViewOrBuilder getWebpageViewOrBuilder();
+
+  /**
+   * <pre>
+   * The lead form user submission referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.resources.LeadFormSubmissionData lead_form_submission_data = 192;</code>
+   * @return Whether the leadFormSubmissionData field is set.
+   */
+  boolean hasLeadFormSubmissionData();
+  /**
+   * <pre>
+   * The lead form user submission referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.resources.LeadFormSubmissionData lead_form_submission_data = 192;</code>
+   * @return The leadFormSubmissionData.
+   */
+  com.google.ads.googleads.v10.resources.LeadFormSubmissionData getLeadFormSubmissionData();
+  /**
+   * <pre>
+   * The lead form user submission referenced in the query.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.resources.LeadFormSubmissionData lead_form_submission_data = 192;</code>
+   */
+  com.google.ads.googleads.v10.resources.LeadFormSubmissionDataOrBuilder getLeadFormSubmissionDataOrBuilder();
 
   /**
    * <pre>

@@ -30,22 +30,21 @@ public final class InteractionEventTypeProto {
     java.lang.String[] descriptorData = {
       "\n;google/ads/googleads/v10/enums/interac" +
       "tion_event_type.proto\022\036google.ads.google" +
-      "ads.v10.enums\032\034google/api/annotations.pr" +
-      "oto\"\205\001\n\030InteractionEventTypeEnum\"i\n\024Inte" +
-      "ractionEventType\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNK" +
-      "NOWN\020\001\022\t\n\005CLICK\020\002\022\016\n\nENGAGEMENT\020\003\022\016\n\nVID" +
-      "EO_VIEW\020\004\022\010\n\004NONE\020\005B\363\001\n\"com.google.ads.g" +
-      "oogleads.v10.enumsB\031InteractionEventType" +
-      "ProtoP\001ZCgoogle.golang.org/genproto/goog" +
-      "leapis/ads/googleads/v10/enums;enums\242\002\003G" +
-      "AA\252\002\036Google.Ads.GoogleAds.V10.Enums\312\002\036Go" +
-      "ogle\\Ads\\GoogleAds\\V10\\Enums\352\002\"Google::A" +
-      "ds::GoogleAds::V10::Enumsb\006proto3"
+      "ads.v10.enums\"\205\001\n\030InteractionEventTypeEn" +
+      "um\"i\n\024InteractionEventType\022\017\n\013UNSPECIFIE" +
+      "D\020\000\022\013\n\007UNKNOWN\020\001\022\t\n\005CLICK\020\002\022\016\n\nENGAGEMEN" +
+      "T\020\003\022\016\n\nVIDEO_VIEW\020\004\022\010\n\004NONE\020\005B\363\001\n\"com.go" +
+      "ogle.ads.googleads.v10.enumsB\031Interactio" +
+      "nEventTypeProtoP\001ZCgoogle.golang.org/gen" +
+      "proto/googleapis/ads/googleads/v10/enums" +
+      ";enums\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V10." +
+      "Enums\312\002\036Google\\Ads\\GoogleAds\\V10\\Enums\352\002" +
+      "\"Google::Ads::GoogleAds::V10::Enumsb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_InteractionEventTypeEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -53,7 +52,6 @@ public final class InteractionEventTypeProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_InteractionEventTypeEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

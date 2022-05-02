@@ -63,6 +63,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -533,6 +535,14 @@ private static final long serialVersionUID = 0L;
      * <code>SHOPPING_COMPARISON_LISTING = 56;</code>
      */
     SHOPPING_COMPARISON_LISTING(56),
+    /**
+     * <pre>
+     * Cross-network. From Performance Max and Discovery Campaigns.
+     * </pre>
+     *
+     * <code>CROSS_NETWORK = 57;</code>
+     */
+    CROSS_NETWORK(57),
     UNRECOGNIZED(-1),
     ;
 
@@ -976,6 +986,14 @@ private static final long serialVersionUID = 0L;
      * <code>SHOPPING_COMPARISON_LISTING = 56;</code>
      */
     public static final int SHOPPING_COMPARISON_LISTING_VALUE = 56;
+    /**
+     * <pre>
+     * Cross-network. From Performance Max and Discovery Campaigns.
+     * </pre>
+     *
+     * <code>CROSS_NETWORK = 57;</code>
+     */
+    public static final int CROSS_NETWORK_VALUE = 57;
 
 
     public final int getNumber() {
@@ -1057,6 +1075,7 @@ private static final long serialVersionUID = 0L;
         case 54: return PRICE_EXTENSION;
         case 55: return HOTEL_BOOK_ON_GOOGLE_ROOM_SELECTION;
         case 56: return SHOPPING_COMPARISON_LISTING;
+        case 57: return CROSS_NETWORK;
         default: return null;
       }
     }

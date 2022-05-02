@@ -149,7 +149,7 @@ public class CustomerManagerLinkServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
-   * Creates or updates customer manager links. Operation statuses are returned.
+   * Updates customer manager links. Operation statuses are returned.
    *
    * <p>List of thrown errors: [AuthenticationError]() [AuthorizationError]() [DatabaseError]()
    * [FieldError]() [FieldMaskError]() [HeaderError]() [InternalError]() [ManagerLinkError]()
@@ -185,7 +185,7 @@ public class CustomerManagerLinkServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
-   * Creates or updates customer manager links. Operation statuses are returned.
+   * Updates customer manager links. Operation statuses are returned.
    *
    * <p>List of thrown errors: [AuthenticationError]() [AuthorizationError]() [DatabaseError]()
    * [FieldError]() [FieldMaskError]() [HeaderError]() [InternalError]() [ManagerLinkError]()
@@ -217,7 +217,7 @@ public class CustomerManagerLinkServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
-   * Creates or updates customer manager links. Operation statuses are returned.
+   * Updates customer manager links. Operation statuses are returned.
    *
    * <p>List of thrown errors: [AuthenticationError]() [AuthorizationError]() [DatabaseError]()
    * [FieldError]() [FieldMaskError]() [HeaderError]() [InternalError]() [ManagerLinkError]()

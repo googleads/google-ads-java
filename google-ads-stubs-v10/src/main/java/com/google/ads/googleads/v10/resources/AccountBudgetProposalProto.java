@@ -36,64 +36,64 @@ public final class AccountBudgetProposalProto {
       "ums/account_budget_proposal_type.proto\0328" +
       "google/ads/googleads/v10/enums/spending_" +
       "limit_type.proto\032.google/ads/googleads/v" +
-      "10/enums/time_type.proto\032\034google/api/ann" +
-      "otations.proto\032\037google/api/field_behavio" +
-      "r.proto\032\031google/api/resource.proto\"\376\016\n\025A" +
-      "ccountBudgetProposal\022M\n\rresource_name\030\001 " +
-      "\001(\tB6\340A\005\372A0\n.googleads.googleapis.com/Ac" +
-      "countBudgetProposal\022\024\n\002id\030\031 \001(\003B\003\340A\003H\005\210\001" +
-      "\001\022I\n\rbilling_setup\030\032 \001(\tB-\340A\005\372A\'\n%google" +
-      "ads.googleapis.com/BillingSetupH\006\210\001\001\022K\n\016" +
-      "account_budget\030\033 \001(\tB.\340A\005\372A(\n&googleads." +
-      "googleapis.com/AccountBudgetH\007\210\001\001\022s\n\rpro" +
-      "posal_type\030\004 \001(\0162W.google.ads.googleads." +
-      "v10.enums.AccountBudgetProposalTypeEnum." +
-      "AccountBudgetProposalTypeB\003\340A\005\022p\n\006status" +
-      "\030\017 \001(\0162[.google.ads.googleads.v10.enums." +
-      "AccountBudgetProposalStatusEnum.AccountB" +
-      "udgetProposalStatusB\003\340A\003\022\037\n\rproposed_nam" +
-      "e\030\034 \001(\tB\003\340A\005H\010\210\001\001\022*\n\030approved_start_date" +
-      "_time\030\036 \001(\tB\003\340A\003H\t\210\001\001\0220\n\036proposed_purcha" +
-      "se_order_number\030# \001(\tB\003\340A\005H\n\210\001\001\022 \n\016propo" +
-      "sed_notes\030$ \001(\tB\003\340A\005H\013\210\001\001\022$\n\022creation_da" +
-      "te_time\030% \001(\tB\003\340A\003H\014\210\001\001\022$\n\022approval_date" +
-      "_time\030& \001(\tB\003\340A\003H\r\210\001\001\022\'\n\030proposed_start_" +
-      "date_time\030\035 \001(\tB\003\340A\005H\000\022^\n\030proposed_start" +
-      "_time_type\030\007 \001(\01625.google.ads.googleads." +
-      "v10.enums.TimeTypeEnum.TimeTypeB\003\340A\005H\000\022%" +
-      "\n\026proposed_end_date_time\030\037 \001(\tB\003\340A\005H\001\022\\\n" +
-      "\026proposed_end_time_type\030\t \001(\01625.google.a" +
-      "ds.googleads.v10.enums.TimeTypeEnum.Time" +
-      "TypeB\003\340A\005H\001\022%\n\026approved_end_date_time\030  " +
-      "\001(\tB\003\340A\003H\002\022\\\n\026approved_end_time_type\030\026 \001" +
-      "(\01625.google.ads.googleads.v10.enums.Time" +
-      "TypeEnum.TimeTypeB\003\340A\003H\002\022-\n\036proposed_spe" +
-      "nding_limit_micros\030! \001(\003B\003\340A\005H\003\022t\n\034propo" +
-      "sed_spending_limit_type\030\013 \001(\0162G.google.a" +
-      "ds.googleads.v10.enums.SpendingLimitType" +
-      "Enum.SpendingLimitTypeB\003\340A\005H\003\022-\n\036approve" +
-      "d_spending_limit_micros\030\" \001(\003B\003\340A\003H\004\022t\n\034" +
-      "approved_spending_limit_type\030\030 \001(\0162G.goo" +
-      "gle.ads.googleads.v10.enums.SpendingLimi" +
-      "tTypeEnum.SpendingLimitTypeB\003\340A\003H\004:\200\001\352A}" +
-      "\n.googleads.googleapis.com/AccountBudget" +
-      "Proposal\022Kcustomers/{customer_id}/accoun" +
-      "tBudgetProposals/{account_budget_proposa" +
-      "l_id}B\025\n\023proposed_start_timeB\023\n\021proposed" +
-      "_end_timeB\023\n\021approved_end_timeB\031\n\027propos" +
-      "ed_spending_limitB\031\n\027approved_spending_l" +
-      "imitB\005\n\003_idB\020\n\016_billing_setupB\021\n\017_accoun" +
-      "t_budgetB\020\n\016_proposed_nameB\033\n\031_approved_" +
-      "start_date_timeB!\n\037_proposed_purchase_or" +
-      "der_numberB\021\n\017_proposed_notesB\025\n\023_creati" +
-      "on_date_timeB\025\n\023_approval_date_timeB\214\002\n&" +
-      "com.google.ads.googleads.v10.resourcesB\032" +
-      "AccountBudgetProposalProtoP\001ZKgoogle.gol" +
-      "ang.org/genproto/googleapis/ads/googlead" +
-      "s/v10/resources;resources\242\002\003GAA\252\002\"Google" +
-      ".Ads.GoogleAds.V10.Resources\312\002\"Google\\Ad" +
-      "s\\GoogleAds\\V10\\Resources\352\002&Google::Ads:" +
-      ":GoogleAds::V10::Resourcesb\006proto3"
+      "10/enums/time_type.proto\032\037google/api/fie" +
+      "ld_behavior.proto\032\031google/api/resource.p" +
+      "roto\"\376\016\n\025AccountBudgetProposal\022M\n\rresour" +
+      "ce_name\030\001 \001(\tB6\340A\005\372A0\n.googleads.googlea" +
+      "pis.com/AccountBudgetProposal\022\024\n\002id\030\031 \001(" +
+      "\003B\003\340A\003H\005\210\001\001\022I\n\rbilling_setup\030\032 \001(\tB-\340A\005\372" +
+      "A\'\n%googleads.googleapis.com/BillingSetu" +
+      "pH\006\210\001\001\022K\n\016account_budget\030\033 \001(\tB.\340A\005\372A(\n&" +
+      "googleads.googleapis.com/AccountBudgetH\007" +
+      "\210\001\001\022s\n\rproposal_type\030\004 \001(\0162W.google.ads." +
+      "googleads.v10.enums.AccountBudgetProposa" +
+      "lTypeEnum.AccountBudgetProposalTypeB\003\340A\005" +
+      "\022p\n\006status\030\017 \001(\0162[.google.ads.googleads." +
+      "v10.enums.AccountBudgetProposalStatusEnu" +
+      "m.AccountBudgetProposalStatusB\003\340A\003\022\037\n\rpr" +
+      "oposed_name\030\034 \001(\tB\003\340A\005H\010\210\001\001\022*\n\030approved_" +
+      "start_date_time\030\036 \001(\tB\003\340A\003H\t\210\001\001\0220\n\036propo" +
+      "sed_purchase_order_number\030# \001(\tB\003\340A\005H\n\210\001" +
+      "\001\022 \n\016proposed_notes\030$ \001(\tB\003\340A\005H\013\210\001\001\022$\n\022c" +
+      "reation_date_time\030% \001(\tB\003\340A\003H\014\210\001\001\022$\n\022app" +
+      "roval_date_time\030& \001(\tB\003\340A\003H\r\210\001\001\022\'\n\030propo" +
+      "sed_start_date_time\030\035 \001(\tB\003\340A\005H\000\022^\n\030prop" +
+      "osed_start_time_type\030\007 \001(\01625.google.ads." +
+      "googleads.v10.enums.TimeTypeEnum.TimeTyp" +
+      "eB\003\340A\005H\000\022%\n\026proposed_end_date_time\030\037 \001(\t" +
+      "B\003\340A\005H\001\022\\\n\026proposed_end_time_type\030\t \001(\0162" +
+      "5.google.ads.googleads.v10.enums.TimeTyp" +
+      "eEnum.TimeTypeB\003\340A\005H\001\022%\n\026approved_end_da" +
+      "te_time\030  \001(\tB\003\340A\003H\002\022\\\n\026approved_end_tim" +
+      "e_type\030\026 \001(\01625.google.ads.googleads.v10." +
+      "enums.TimeTypeEnum.TimeTypeB\003\340A\003H\002\022-\n\036pr" +
+      "oposed_spending_limit_micros\030! \001(\003B\003\340A\005H" +
+      "\003\022t\n\034proposed_spending_limit_type\030\013 \001(\0162" +
+      "G.google.ads.googleads.v10.enums.Spendin" +
+      "gLimitTypeEnum.SpendingLimitTypeB\003\340A\005H\003\022" +
+      "-\n\036approved_spending_limit_micros\030\" \001(\003B" +
+      "\003\340A\003H\004\022t\n\034approved_spending_limit_type\030\030" +
+      " \001(\0162G.google.ads.googleads.v10.enums.Sp" +
+      "endingLimitTypeEnum.SpendingLimitTypeB\003\340" +
+      "A\003H\004:\200\001\352A}\n.googleads.googleapis.com/Acc" +
+      "ountBudgetProposal\022Kcustomers/{customer_" +
+      "id}/accountBudgetProposals/{account_budg" +
+      "et_proposal_id}B\025\n\023proposed_start_timeB\023" +
+      "\n\021proposed_end_timeB\023\n\021approved_end_time" +
+      "B\031\n\027proposed_spending_limitB\031\n\027approved_" +
+      "spending_limitB\005\n\003_idB\020\n\016_billing_setupB" +
+      "\021\n\017_account_budgetB\020\n\016_proposed_nameB\033\n\031" +
+      "_approved_start_date_timeB!\n\037_proposed_p" +
+      "urchase_order_numberB\021\n\017_proposed_notesB" +
+      "\025\n\023_creation_date_timeB\025\n\023_approval_date" +
+      "_timeB\214\002\n&com.google.ads.googleads.v10.r" +
+      "esourcesB\032AccountBudgetProposalProtoP\001ZK" +
+      "google.golang.org/genproto/googleapis/ad" +
+      "s/googleads/v10/resources;resources\242\002\003GA" +
+      "A\252\002\"Google.Ads.GoogleAds.V10.Resources\312\002" +
+      "\"Google\\Ads\\GoogleAds\\V10\\Resources\352\002&Go" +
+      "ogle::Ads::GoogleAds::V10::Resourcesb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -102,7 +102,6 @@ public final class AccountBudgetProposalProto {
           com.google.ads.googleads.v10.enums.AccountBudgetProposalTypeProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.SpendingLimitTypeProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.TimeTypeProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -123,7 +122,6 @@ public final class AccountBudgetProposalProto {
     com.google.ads.googleads.v10.enums.AccountBudgetProposalTypeProto.getDescriptor();
     com.google.ads.googleads.v10.enums.SpendingLimitTypeProto.getDescriptor();
     com.google.ads.googleads.v10.enums.TimeTypeProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

@@ -31,35 +31,33 @@ public final class CustomerManagerLinkProto {
       "\n>google/ads/googleads/v10/resources/cus" +
       "tomer_manager_link.proto\022\"google.ads.goo" +
       "gleads.v10.resources\0328google/ads/googlea" +
-      "ds/v10/enums/manager_link_status.proto\032\034" +
-      "google/api/annotations.proto\032\037google/api" +
-      "/field_behavior.proto\032\031google/api/resour" +
-      "ce.proto\"\334\003\n\023CustomerManagerLink\022K\n\rreso" +
-      "urce_name\030\001 \001(\tB4\340A\005\372A.\n,googleads.googl" +
-      "eapis.com/CustomerManagerLink\022H\n\020manager" +
-      "_customer\030\006 \001(\tB)\340A\003\372A#\n!googleads.googl" +
-      "eapis.com/CustomerH\000\210\001\001\022!\n\017manager_link_" +
-      "id\030\007 \001(\003B\003\340A\003H\001\210\001\001\022W\n\006status\030\005 \001(\0162G.goo" +
-      "gle.ads.googleads.v10.enums.ManagerLinkS" +
-      "tatusEnum.ManagerLinkStatus:\210\001\352A\204\001\n,goog" +
-      "leads.googleapis.com/CustomerManagerLink" +
-      "\022Tcustomers/{customer_id}/customerManage" +
-      "rLinks/{manager_customer_id}~{manager_li" +
-      "nk_id}B\023\n\021_manager_customerB\022\n\020_manager_" +
-      "link_idB\212\002\n&com.google.ads.googleads.v10" +
-      ".resourcesB\030CustomerManagerLinkProtoP\001ZK" +
-      "google.golang.org/genproto/googleapis/ad" +
-      "s/googleads/v10/resources;resources\242\002\003GA" +
-      "A\252\002\"Google.Ads.GoogleAds.V10.Resources\312\002" +
-      "\"Google\\Ads\\GoogleAds\\V10\\Resources\352\002&Go" +
-      "ogle::Ads::GoogleAds::V10::Resourcesb\006pr" +
-      "oto3"
+      "ds/v10/enums/manager_link_status.proto\032\037" +
+      "google/api/field_behavior.proto\032\031google/" +
+      "api/resource.proto\"\334\003\n\023CustomerManagerLi" +
+      "nk\022K\n\rresource_name\030\001 \001(\tB4\340A\005\372A.\n,googl" +
+      "eads.googleapis.com/CustomerManagerLink\022" +
+      "H\n\020manager_customer\030\006 \001(\tB)\340A\003\372A#\n!googl" +
+      "eads.googleapis.com/CustomerH\000\210\001\001\022!\n\017man" +
+      "ager_link_id\030\007 \001(\003B\003\340A\003H\001\210\001\001\022W\n\006status\030\005" +
+      " \001(\0162G.google.ads.googleads.v10.enums.Ma" +
+      "nagerLinkStatusEnum.ManagerLinkStatus:\210\001" +
+      "\352A\204\001\n,googleads.googleapis.com/CustomerM" +
+      "anagerLink\022Tcustomers/{customer_id}/cust" +
+      "omerManagerLinks/{manager_customer_id}~{" +
+      "manager_link_id}B\023\n\021_manager_customerB\022\n" +
+      "\020_manager_link_idB\212\002\n&com.google.ads.goo" +
+      "gleads.v10.resourcesB\030CustomerManagerLin" +
+      "kProtoP\001ZKgoogle.golang.org/genproto/goo" +
+      "gleapis/ads/googleads/v10/resources;reso" +
+      "urces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V10.R" +
+      "esources\312\002\"Google\\Ads\\GoogleAds\\V10\\Reso" +
+      "urces\352\002&Google::Ads::GoogleAds::V10::Res" +
+      "ourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.enums.ManagerLinkStatusProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -77,7 +75,6 @@ public final class CustomerManagerLinkProto {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.enums.ManagerLinkStatusProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

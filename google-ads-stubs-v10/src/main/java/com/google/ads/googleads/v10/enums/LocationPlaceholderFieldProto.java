@@ -30,25 +30,23 @@ public final class LocationPlaceholderFieldProto {
     java.lang.String[] descriptorData = {
       "\n?google/ads/googleads/v10/enums/locatio" +
       "n_placeholder_field.proto\022\036google.ads.go" +
-      "ogleads.v10.enums\032\034google/api/annotation" +
-      "s.proto\"\341\001\n\034LocationPlaceholderFieldEnum" +
-      "\"\300\001\n\030LocationPlaceholderField\022\017\n\013UNSPECI" +
-      "FIED\020\000\022\013\n\007UNKNOWN\020\001\022\021\n\rBUSINESS_NAME\020\002\022\022" +
-      "\n\016ADDRESS_LINE_1\020\003\022\022\n\016ADDRESS_LINE_2\020\004\022\010" +
-      "\n\004CITY\020\005\022\014\n\010PROVINCE\020\006\022\017\n\013POSTAL_CODE\020\007\022" +
-      "\020\n\014COUNTRY_CODE\020\010\022\020\n\014PHONE_NUMBER\020\tB\367\001\n\"" +
-      "com.google.ads.googleads.v10.enumsB\035Loca" +
-      "tionPlaceholderFieldProtoP\001ZCgoogle.gola" +
-      "ng.org/genproto/googleapis/ads/googleads" +
-      "/v10/enums;enums\242\002\003GAA\252\002\036Google.Ads.Goog" +
-      "leAds.V10.Enums\312\002\036Google\\Ads\\GoogleAds\\V" +
-      "10\\Enums\352\002\"Google::Ads::GoogleAds::V10::" +
-      "Enumsb\006proto3"
+      "ogleads.v10.enums\"\341\001\n\034LocationPlaceholde" +
+      "rFieldEnum\"\300\001\n\030LocationPlaceholderField\022" +
+      "\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\021\n\rBUSINES" +
+      "S_NAME\020\002\022\022\n\016ADDRESS_LINE_1\020\003\022\022\n\016ADDRESS_" +
+      "LINE_2\020\004\022\010\n\004CITY\020\005\022\014\n\010PROVINCE\020\006\022\017\n\013POST" +
+      "AL_CODE\020\007\022\020\n\014COUNTRY_CODE\020\010\022\020\n\014PHONE_NUM" +
+      "BER\020\tB\367\001\n\"com.google.ads.googleads.v10.e" +
+      "numsB\035LocationPlaceholderFieldProtoP\001ZCg" +
+      "oogle.golang.org/genproto/googleapis/ads" +
+      "/googleads/v10/enums;enums\242\002\003GAA\252\002\036Googl" +
+      "e.Ads.GoogleAds.V10.Enums\312\002\036Google\\Ads\\G" +
+      "oogleAds\\V10\\Enums\352\002\"Google::Ads::Google" +
+      "Ads::V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_LocationPlaceholderFieldEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -56,7 +54,6 @@ public final class LocationPlaceholderFieldProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_LocationPlaceholderFieldEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

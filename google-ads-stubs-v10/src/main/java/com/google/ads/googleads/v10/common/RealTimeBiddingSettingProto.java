@@ -30,21 +30,19 @@ public final class RealTimeBiddingSettingProto {
     java.lang.String[] descriptorData = {
       "\n?google/ads/googleads/v10/common/real_t" +
       "ime_bidding_setting.proto\022\037google.ads.go" +
-      "ogleads.v10.common\032\034google/api/annotatio" +
-      "ns.proto\"8\n\026RealTimeBiddingSetting\022\023\n\006op" +
-      "t_in\030\002 \001(\010H\000\210\001\001B\t\n\007_opt_inB\373\001\n#com.googl" +
-      "e.ads.googleads.v10.commonB\033RealTimeBidd" +
-      "ingSettingProtoP\001ZEgoogle.golang.org/gen" +
-      "proto/googleapis/ads/googleads/v10/commo" +
-      "n;common\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V1" +
-      "0.Common\312\002\037Google\\Ads\\GoogleAds\\V10\\Comm" +
-      "on\352\002#Google::Ads::GoogleAds::V10::Common" +
-      "b\006proto3"
+      "ogleads.v10.common\"8\n\026RealTimeBiddingSet" +
+      "ting\022\023\n\006opt_in\030\002 \001(\010H\000\210\001\001B\t\n\007_opt_inB\373\001\n" +
+      "#com.google.ads.googleads.v10.commonB\033Re" +
+      "alTimeBiddingSettingProtoP\001ZEgoogle.gola" +
+      "ng.org/genproto/googleapis/ads/googleads" +
+      "/v10/common;common\242\002\003GAA\252\002\037Google.Ads.Go" +
+      "ogleAds.V10.Common\312\002\037Google\\Ads\\GoogleAd" +
+      "s\\V10\\Common\352\002#Google::Ads::GoogleAds::V" +
+      "10::Commonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_common_RealTimeBiddingSetting_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -52,7 +50,6 @@ public final class RealTimeBiddingSettingProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_common_RealTimeBiddingSetting_descriptor,
         new java.lang.String[] { "OptIn", "OptIn", });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -150,6 +150,20 @@ private static final long serialVersionUID = 0L;
             responseCase_ = 8;
             break;
           }
+          case 74: {
+            com.google.ads.googleads.v10.services.MutateCampaignGroupResult.Builder subBuilder = null;
+            if (responseCase_ == 9) {
+              subBuilder = ((com.google.ads.googleads.v10.services.MutateCampaignGroupResult) response_).toBuilder();
+            }
+            response_ =
+                input.readMessage(com.google.ads.googleads.v10.services.MutateCampaignGroupResult.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateCampaignGroupResult) response_);
+              response_ = subBuilder.buildPartial();
+            }
+            responseCase_ = 9;
+            break;
+          }
           case 82: {
             com.google.ads.googleads.v10.services.MutateCampaignResult.Builder subBuilder = null;
             if (responseCase_ == 10) {
@@ -1085,6 +1099,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -1147,6 +1163,7 @@ private static final long serialVersionUID = 0L;
     CAMPAIGN_EXPERIMENT_RESULT(25),
     CAMPAIGN_EXTENSION_SETTING_RESULT(26),
     CAMPAIGN_FEED_RESULT(27),
+    CAMPAIGN_GROUP_RESULT(9),
     CAMPAIGN_LABEL_RESULT(28),
     CAMPAIGN_RESULT(10),
     CAMPAIGN_SHARED_SET_RESULT(11),
@@ -1237,6 +1254,7 @@ private static final long serialVersionUID = 0L;
         case 25: return CAMPAIGN_EXPERIMENT_RESULT;
         case 26: return CAMPAIGN_EXTENSION_SETTING_RESULT;
         case 27: return CAMPAIGN_FEED_RESULT;
+        case 9: return CAMPAIGN_GROUP_RESULT;
         case 28: return CAMPAIGN_LABEL_RESULT;
         case 10: return CAMPAIGN_RESULT;
         case 11: return CAMPAIGN_SHARED_SET_RESULT;
@@ -2835,6 +2853,49 @@ private static final long serialVersionUID = 0L;
        return (com.google.ads.googleads.v10.services.MutateCampaignFeedResult) response_;
     }
     return com.google.ads.googleads.v10.services.MutateCampaignFeedResult.getDefaultInstance();
+  }
+
+  public static final int CAMPAIGN_GROUP_RESULT_FIELD_NUMBER = 9;
+  /**
+   * <pre>
+   * The result for the campaign group mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.services.MutateCampaignGroupResult campaign_group_result = 9;</code>
+   * @return Whether the campaignGroupResult field is set.
+   */
+  @java.lang.Override
+  public boolean hasCampaignGroupResult() {
+    return responseCase_ == 9;
+  }
+  /**
+   * <pre>
+   * The result for the campaign group mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.services.MutateCampaignGroupResult campaign_group_result = 9;</code>
+   * @return The campaignGroupResult.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.services.MutateCampaignGroupResult getCampaignGroupResult() {
+    if (responseCase_ == 9) {
+       return (com.google.ads.googleads.v10.services.MutateCampaignGroupResult) response_;
+    }
+    return com.google.ads.googleads.v10.services.MutateCampaignGroupResult.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * The result for the campaign group mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.services.MutateCampaignGroupResult campaign_group_result = 9;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.services.MutateCampaignGroupResultOrBuilder getCampaignGroupResultOrBuilder() {
+    if (responseCase_ == 9) {
+       return (com.google.ads.googleads.v10.services.MutateCampaignGroupResult) response_;
+    }
+    return com.google.ads.googleads.v10.services.MutateCampaignGroupResult.getDefaultInstance();
   }
 
   public static final int CAMPAIGN_LABEL_RESULT_FIELD_NUMBER = 28;
@@ -4463,6 +4524,9 @@ private static final long serialVersionUID = 0L;
     if (responseCase_ == 8) {
       output.writeMessage(8, (com.google.ads.googleads.v10.services.MutateCampaignBudgetResult) response_);
     }
+    if (responseCase_ == 9) {
+      output.writeMessage(9, (com.google.ads.googleads.v10.services.MutateCampaignGroupResult) response_);
+    }
     if (responseCase_ == 10) {
       output.writeMessage(10, (com.google.ads.googleads.v10.services.MutateCampaignResult) response_);
     }
@@ -4697,6 +4761,10 @@ private static final long serialVersionUID = 0L;
     if (responseCase_ == 8) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, (com.google.ads.googleads.v10.services.MutateCampaignBudgetResult) response_);
+    }
+    if (responseCase_ == 9) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, (com.google.ads.googleads.v10.services.MutateCampaignGroupResult) response_);
     }
     if (responseCase_ == 10) {
       size += com.google.protobuf.CodedOutputStream
@@ -5123,6 +5191,10 @@ private static final long serialVersionUID = 0L;
         if (!getCampaignFeedResult()
             .equals(other.getCampaignFeedResult())) return false;
         break;
+      case 9:
+        if (!getCampaignGroupResult()
+            .equals(other.getCampaignGroupResult())) return false;
+        break;
       case 28:
         if (!getCampaignLabelResult()
             .equals(other.getCampaignLabelResult())) return false;
@@ -5429,6 +5501,10 @@ private static final long serialVersionUID = 0L;
       case 27:
         hash = (37 * hash) + CAMPAIGN_FEED_RESULT_FIELD_NUMBER;
         hash = (53 * hash) + getCampaignFeedResult().hashCode();
+        break;
+      case 9:
+        hash = (37 * hash) + CAMPAIGN_GROUP_RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + getCampaignGroupResult().hashCode();
         break;
       case 28:
         hash = (37 * hash) + CAMPAIGN_LABEL_RESULT_FIELD_NUMBER;
@@ -5998,6 +6074,13 @@ private static final long serialVersionUID = 0L;
           result.response_ = campaignFeedResultBuilder_.build();
         }
       }
+      if (responseCase_ == 9) {
+        if (campaignGroupResultBuilder_ == null) {
+          result.response_ = response_;
+        } else {
+          result.response_ = campaignGroupResultBuilder_.build();
+        }
+      }
       if (responseCase_ == 28) {
         if (campaignLabelResultBuilder_ == null) {
           result.response_ = response_;
@@ -6451,6 +6534,10 @@ private static final long serialVersionUID = 0L;
           mergeCampaignFeedResult(other.getCampaignFeedResult());
           break;
         }
+        case CAMPAIGN_GROUP_RESULT: {
+          mergeCampaignGroupResult(other.getCampaignGroupResult());
+          break;
+        }
         case CAMPAIGN_LABEL_RESULT: {
           mergeCampaignLabelResult(other.getCampaignLabelResult());
           break;
@@ -6741,8 +6828,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 17) {
           adGroupAdLabelResultBuilder_.mergeFrom(value);
+        } else {
+          adGroupAdLabelResultBuilder_.setMessage(value);
         }
-        adGroupAdLabelResultBuilder_.setMessage(value);
       }
       responseCase_ = 17;
       return this;
@@ -6918,8 +7006,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 1) {
           adGroupAdResultBuilder_.mergeFrom(value);
+        } else {
+          adGroupAdResultBuilder_.setMessage(value);
         }
-        adGroupAdResultBuilder_.setMessage(value);
       }
       responseCase_ = 1;
       return this;
@@ -7095,8 +7184,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 56) {
           adGroupAssetResultBuilder_.mergeFrom(value);
+        } else {
+          adGroupAssetResultBuilder_.setMessage(value);
         }
-        adGroupAssetResultBuilder_.setMessage(value);
       }
       responseCase_ = 56;
       return this;
@@ -7272,8 +7362,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 2) {
           adGroupBidModifierResultBuilder_.mergeFrom(value);
+        } else {
+          adGroupBidModifierResultBuilder_.setMessage(value);
         }
-        adGroupBidModifierResultBuilder_.setMessage(value);
       }
       responseCase_ = 2;
       return this;
@@ -7449,8 +7540,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 77) {
           adGroupCriterionCustomizerResultBuilder_.mergeFrom(value);
+        } else {
+          adGroupCriterionCustomizerResultBuilder_.setMessage(value);
         }
-        adGroupCriterionCustomizerResultBuilder_.setMessage(value);
       }
       responseCase_ = 77;
       return this;
@@ -7626,8 +7718,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 18) {
           adGroupCriterionLabelResultBuilder_.mergeFrom(value);
+        } else {
+          adGroupCriterionLabelResultBuilder_.setMessage(value);
         }
-        adGroupCriterionLabelResultBuilder_.setMessage(value);
       }
       responseCase_ = 18;
       return this;
@@ -7803,8 +7896,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 3) {
           adGroupCriterionResultBuilder_.mergeFrom(value);
+        } else {
+          adGroupCriterionResultBuilder_.setMessage(value);
         }
-        adGroupCriterionResultBuilder_.setMessage(value);
       }
       responseCase_ = 3;
       return this;
@@ -7980,8 +8074,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 75) {
           adGroupCustomizerResultBuilder_.mergeFrom(value);
+        } else {
+          adGroupCustomizerResultBuilder_.setMessage(value);
         }
-        adGroupCustomizerResultBuilder_.setMessage(value);
       }
       responseCase_ = 75;
       return this;
@@ -8157,8 +8252,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 19) {
           adGroupExtensionSettingResultBuilder_.mergeFrom(value);
+        } else {
+          adGroupExtensionSettingResultBuilder_.setMessage(value);
         }
-        adGroupExtensionSettingResultBuilder_.setMessage(value);
       }
       responseCase_ = 19;
       return this;
@@ -8334,8 +8430,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 20) {
           adGroupFeedResultBuilder_.mergeFrom(value);
+        } else {
+          adGroupFeedResultBuilder_.setMessage(value);
         }
-        adGroupFeedResultBuilder_.setMessage(value);
       }
       responseCase_ = 20;
       return this;
@@ -8511,8 +8608,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 21) {
           adGroupLabelResultBuilder_.mergeFrom(value);
+        } else {
+          adGroupLabelResultBuilder_.setMessage(value);
         }
-        adGroupLabelResultBuilder_.setMessage(value);
       }
       responseCase_ = 21;
       return this;
@@ -8688,8 +8786,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 5) {
           adGroupResultBuilder_.mergeFrom(value);
+        } else {
+          adGroupResultBuilder_.setMessage(value);
         }
-        adGroupResultBuilder_.setMessage(value);
       }
       responseCase_ = 5;
       return this;
@@ -8865,8 +8964,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 22) {
           adParameterResultBuilder_.mergeFrom(value);
+        } else {
+          adParameterResultBuilder_.setMessage(value);
         }
-        adParameterResultBuilder_.setMessage(value);
       }
       responseCase_ = 22;
       return this;
@@ -9042,8 +9142,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 49) {
           adResultBuilder_.mergeFrom(value);
+        } else {
+          adResultBuilder_.setMessage(value);
         }
-        adResultBuilder_.setMessage(value);
       }
       responseCase_ = 49;
       return this;
@@ -9219,8 +9320,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 23) {
           assetResultBuilder_.mergeFrom(value);
+        } else {
+          assetResultBuilder_.setMessage(value);
         }
-        assetResultBuilder_.setMessage(value);
       }
       responseCase_ = 23;
       return this;
@@ -9396,8 +9498,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 65) {
           assetGroupAssetResultBuilder_.mergeFrom(value);
+        } else {
+          assetGroupAssetResultBuilder_.setMessage(value);
         }
-        assetGroupAssetResultBuilder_.setMessage(value);
       }
       responseCase_ = 65;
       return this;
@@ -9573,8 +9676,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 78) {
           assetGroupListingGroupFilterResultBuilder_.mergeFrom(value);
+        } else {
+          assetGroupListingGroupFilterResultBuilder_.setMessage(value);
         }
-        assetGroupListingGroupFilterResultBuilder_.setMessage(value);
       }
       responseCase_ = 78;
       return this;
@@ -9750,8 +9854,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 79) {
           assetGroupSignalResultBuilder_.mergeFrom(value);
+        } else {
+          assetGroupSignalResultBuilder_.setMessage(value);
         }
-        assetGroupSignalResultBuilder_.setMessage(value);
       }
       responseCase_ = 79;
       return this;
@@ -9927,8 +10032,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 62) {
           assetGroupResultBuilder_.mergeFrom(value);
+        } else {
+          assetGroupResultBuilder_.setMessage(value);
         }
-        assetGroupResultBuilder_.setMessage(value);
       }
       responseCase_ = 62;
       return this;
@@ -10104,8 +10210,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 71) {
           assetSetAssetResultBuilder_.mergeFrom(value);
+        } else {
+          assetSetAssetResultBuilder_.setMessage(value);
         }
-        assetSetAssetResultBuilder_.setMessage(value);
       }
       responseCase_ = 71;
       return this;
@@ -10281,8 +10388,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 72) {
           assetSetResultBuilder_.mergeFrom(value);
+        } else {
+          assetSetResultBuilder_.setMessage(value);
         }
-        assetSetResultBuilder_.setMessage(value);
       }
       responseCase_ = 72;
       return this;
@@ -10458,8 +10566,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 80) {
           audienceResultBuilder_.mergeFrom(value);
+        } else {
+          audienceResultBuilder_.setMessage(value);
         }
-        audienceResultBuilder_.setMessage(value);
       }
       responseCase_ = 80;
       return this;
@@ -10635,8 +10744,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 58) {
           biddingDataExclusionResultBuilder_.mergeFrom(value);
+        } else {
+          biddingDataExclusionResultBuilder_.setMessage(value);
         }
-        biddingDataExclusionResultBuilder_.setMessage(value);
       }
       responseCase_ = 58;
       return this;
@@ -10812,8 +10922,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 59) {
           biddingSeasonalityAdjustmentResultBuilder_.mergeFrom(value);
+        } else {
+          biddingSeasonalityAdjustmentResultBuilder_.setMessage(value);
         }
-        biddingSeasonalityAdjustmentResultBuilder_.setMessage(value);
       }
       responseCase_ = 59;
       return this;
@@ -10989,8 +11100,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 6) {
           biddingStrategyResultBuilder_.mergeFrom(value);
+        } else {
+          biddingStrategyResultBuilder_.setMessage(value);
         }
-        biddingStrategyResultBuilder_.setMessage(value);
       }
       responseCase_ = 6;
       return this;
@@ -11166,8 +11278,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 52) {
           campaignAssetResultBuilder_.mergeFrom(value);
+        } else {
+          campaignAssetResultBuilder_.setMessage(value);
         }
-        campaignAssetResultBuilder_.setMessage(value);
       }
       responseCase_ = 52;
       return this;
@@ -11343,8 +11456,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 73) {
           campaignAssetSetResultBuilder_.mergeFrom(value);
+        } else {
+          campaignAssetSetResultBuilder_.setMessage(value);
         }
-        campaignAssetSetResultBuilder_.setMessage(value);
       }
       responseCase_ = 73;
       return this;
@@ -11520,8 +11634,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 7) {
           campaignBidModifierResultBuilder_.mergeFrom(value);
+        } else {
+          campaignBidModifierResultBuilder_.setMessage(value);
         }
-        campaignBidModifierResultBuilder_.setMessage(value);
       }
       responseCase_ = 7;
       return this;
@@ -11697,8 +11812,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 8) {
           campaignBudgetResultBuilder_.mergeFrom(value);
+        } else {
+          campaignBudgetResultBuilder_.setMessage(value);
         }
-        campaignBudgetResultBuilder_.setMessage(value);
       }
       responseCase_ = 8;
       return this;
@@ -11874,8 +11990,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 67) {
           campaignConversionGoalResultBuilder_.mergeFrom(value);
+        } else {
+          campaignConversionGoalResultBuilder_.setMessage(value);
         }
-        campaignConversionGoalResultBuilder_.setMessage(value);
       }
       responseCase_ = 67;
       return this;
@@ -12051,8 +12168,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 13) {
           campaignCriterionResultBuilder_.mergeFrom(value);
+        } else {
+          campaignCriterionResultBuilder_.setMessage(value);
         }
-        campaignCriterionResultBuilder_.setMessage(value);
       }
       responseCase_ = 13;
       return this;
@@ -12228,8 +12346,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 76) {
           campaignCustomizerResultBuilder_.mergeFrom(value);
+        } else {
+          campaignCustomizerResultBuilder_.setMessage(value);
         }
-        campaignCustomizerResultBuilder_.setMessage(value);
       }
       responseCase_ = 76;
       return this;
@@ -12405,8 +12524,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 24) {
           campaignDraftResultBuilder_.mergeFrom(value);
+        } else {
+          campaignDraftResultBuilder_.setMessage(value);
         }
-        campaignDraftResultBuilder_.setMessage(value);
       }
       responseCase_ = 24;
       return this;
@@ -12582,8 +12702,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 25) {
           campaignExperimentResultBuilder_.mergeFrom(value);
+        } else {
+          campaignExperimentResultBuilder_.setMessage(value);
         }
-        campaignExperimentResultBuilder_.setMessage(value);
       }
       responseCase_ = 25;
       return this;
@@ -12759,8 +12880,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 26) {
           campaignExtensionSettingResultBuilder_.mergeFrom(value);
+        } else {
+          campaignExtensionSettingResultBuilder_.setMessage(value);
         }
-        campaignExtensionSettingResultBuilder_.setMessage(value);
       }
       responseCase_ = 26;
       return this;
@@ -12936,8 +13058,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 27) {
           campaignFeedResultBuilder_.mergeFrom(value);
+        } else {
+          campaignFeedResultBuilder_.setMessage(value);
         }
-        campaignFeedResultBuilder_.setMessage(value);
       }
       responseCase_ = 27;
       return this;
@@ -13017,6 +13140,184 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 27;
       onChanged();;
       return campaignFeedResultBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v10.services.MutateCampaignGroupResult, com.google.ads.googleads.v10.services.MutateCampaignGroupResult.Builder, com.google.ads.googleads.v10.services.MutateCampaignGroupResultOrBuilder> campaignGroupResultBuilder_;
+    /**
+     * <pre>
+     * The result for the campaign group mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.services.MutateCampaignGroupResult campaign_group_result = 9;</code>
+     * @return Whether the campaignGroupResult field is set.
+     */
+    @java.lang.Override
+    public boolean hasCampaignGroupResult() {
+      return responseCase_ == 9;
+    }
+    /**
+     * <pre>
+     * The result for the campaign group mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.services.MutateCampaignGroupResult campaign_group_result = 9;</code>
+     * @return The campaignGroupResult.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.services.MutateCampaignGroupResult getCampaignGroupResult() {
+      if (campaignGroupResultBuilder_ == null) {
+        if (responseCase_ == 9) {
+          return (com.google.ads.googleads.v10.services.MutateCampaignGroupResult) response_;
+        }
+        return com.google.ads.googleads.v10.services.MutateCampaignGroupResult.getDefaultInstance();
+      } else {
+        if (responseCase_ == 9) {
+          return campaignGroupResultBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v10.services.MutateCampaignGroupResult.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * The result for the campaign group mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.services.MutateCampaignGroupResult campaign_group_result = 9;</code>
+     */
+    public Builder setCampaignGroupResult(com.google.ads.googleads.v10.services.MutateCampaignGroupResult value) {
+      if (campaignGroupResultBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        response_ = value;
+        onChanged();
+      } else {
+        campaignGroupResultBuilder_.setMessage(value);
+      }
+      responseCase_ = 9;
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the campaign group mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.services.MutateCampaignGroupResult campaign_group_result = 9;</code>
+     */
+    public Builder setCampaignGroupResult(
+        com.google.ads.googleads.v10.services.MutateCampaignGroupResult.Builder builderForValue) {
+      if (campaignGroupResultBuilder_ == null) {
+        response_ = builderForValue.build();
+        onChanged();
+      } else {
+        campaignGroupResultBuilder_.setMessage(builderForValue.build());
+      }
+      responseCase_ = 9;
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the campaign group mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.services.MutateCampaignGroupResult campaign_group_result = 9;</code>
+     */
+    public Builder mergeCampaignGroupResult(com.google.ads.googleads.v10.services.MutateCampaignGroupResult value) {
+      if (campaignGroupResultBuilder_ == null) {
+        if (responseCase_ == 9 &&
+            response_ != com.google.ads.googleads.v10.services.MutateCampaignGroupResult.getDefaultInstance()) {
+          response_ = com.google.ads.googleads.v10.services.MutateCampaignGroupResult.newBuilder((com.google.ads.googleads.v10.services.MutateCampaignGroupResult) response_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          response_ = value;
+        }
+        onChanged();
+      } else {
+        if (responseCase_ == 9) {
+          campaignGroupResultBuilder_.mergeFrom(value);
+        } else {
+          campaignGroupResultBuilder_.setMessage(value);
+        }
+      }
+      responseCase_ = 9;
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the campaign group mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.services.MutateCampaignGroupResult campaign_group_result = 9;</code>
+     */
+    public Builder clearCampaignGroupResult() {
+      if (campaignGroupResultBuilder_ == null) {
+        if (responseCase_ == 9) {
+          responseCase_ = 0;
+          response_ = null;
+          onChanged();
+        }
+      } else {
+        if (responseCase_ == 9) {
+          responseCase_ = 0;
+          response_ = null;
+        }
+        campaignGroupResultBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the campaign group mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.services.MutateCampaignGroupResult campaign_group_result = 9;</code>
+     */
+    public com.google.ads.googleads.v10.services.MutateCampaignGroupResult.Builder getCampaignGroupResultBuilder() {
+      return getCampaignGroupResultFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The result for the campaign group mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.services.MutateCampaignGroupResult campaign_group_result = 9;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.services.MutateCampaignGroupResultOrBuilder getCampaignGroupResultOrBuilder() {
+      if ((responseCase_ == 9) && (campaignGroupResultBuilder_ != null)) {
+        return campaignGroupResultBuilder_.getMessageOrBuilder();
+      } else {
+        if (responseCase_ == 9) {
+          return (com.google.ads.googleads.v10.services.MutateCampaignGroupResult) response_;
+        }
+        return com.google.ads.googleads.v10.services.MutateCampaignGroupResult.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * The result for the campaign group mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.services.MutateCampaignGroupResult campaign_group_result = 9;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v10.services.MutateCampaignGroupResult, com.google.ads.googleads.v10.services.MutateCampaignGroupResult.Builder, com.google.ads.googleads.v10.services.MutateCampaignGroupResultOrBuilder> 
+        getCampaignGroupResultFieldBuilder() {
+      if (campaignGroupResultBuilder_ == null) {
+        if (!(responseCase_ == 9)) {
+          response_ = com.google.ads.googleads.v10.services.MutateCampaignGroupResult.getDefaultInstance();
+        }
+        campaignGroupResultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v10.services.MutateCampaignGroupResult, com.google.ads.googleads.v10.services.MutateCampaignGroupResult.Builder, com.google.ads.googleads.v10.services.MutateCampaignGroupResultOrBuilder>(
+                (com.google.ads.googleads.v10.services.MutateCampaignGroupResult) response_,
+                getParentForChildren(),
+                isClean());
+        response_ = null;
+      }
+      responseCase_ = 9;
+      onChanged();;
+      return campaignGroupResultBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -13113,8 +13414,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 28) {
           campaignLabelResultBuilder_.mergeFrom(value);
+        } else {
+          campaignLabelResultBuilder_.setMessage(value);
         }
-        campaignLabelResultBuilder_.setMessage(value);
       }
       responseCase_ = 28;
       return this;
@@ -13290,8 +13592,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 10) {
           campaignResultBuilder_.mergeFrom(value);
+        } else {
+          campaignResultBuilder_.setMessage(value);
         }
-        campaignResultBuilder_.setMessage(value);
       }
       responseCase_ = 10;
       return this;
@@ -13467,8 +13770,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 11) {
           campaignSharedSetResultBuilder_.mergeFrom(value);
+        } else {
+          campaignSharedSetResultBuilder_.setMessage(value);
         }
-        campaignSharedSetResultBuilder_.setMessage(value);
       }
       responseCase_ = 11;
       return this;
@@ -13644,8 +13948,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 12) {
           conversionActionResultBuilder_.mergeFrom(value);
+        } else {
+          conversionActionResultBuilder_.setMessage(value);
         }
-        conversionActionResultBuilder_.setMessage(value);
       }
       responseCase_ = 12;
       return this;
@@ -13821,8 +14126,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 55) {
           conversionCustomVariableResultBuilder_.mergeFrom(value);
+        } else {
+          conversionCustomVariableResultBuilder_.setMessage(value);
         }
-        conversionCustomVariableResultBuilder_.setMessage(value);
       }
       responseCase_ = 55;
       return this;
@@ -13998,8 +14304,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 69) {
           conversionGoalCampaignConfigResultBuilder_.mergeFrom(value);
+        } else {
+          conversionGoalCampaignConfigResultBuilder_.setMessage(value);
         }
-        conversionGoalCampaignConfigResultBuilder_.setMessage(value);
       }
       responseCase_ = 69;
       return this;
@@ -14175,8 +14482,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 63) {
           conversionValueRuleResultBuilder_.mergeFrom(value);
+        } else {
+          conversionValueRuleResultBuilder_.setMessage(value);
         }
-        conversionValueRuleResultBuilder_.setMessage(value);
       }
       responseCase_ = 63;
       return this;
@@ -14352,8 +14660,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 64) {
           conversionValueRuleSetResultBuilder_.mergeFrom(value);
+        } else {
+          conversionValueRuleSetResultBuilder_.setMessage(value);
         }
-        conversionValueRuleSetResultBuilder_.setMessage(value);
       }
       responseCase_ = 64;
       return this;
@@ -14529,8 +14838,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 68) {
           customConversionGoalResultBuilder_.mergeFrom(value);
+        } else {
+          customConversionGoalResultBuilder_.setMessage(value);
         }
-        customConversionGoalResultBuilder_.setMessage(value);
       }
       responseCase_ = 68;
       return this;
@@ -14706,8 +15016,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 57) {
           customerAssetResultBuilder_.mergeFrom(value);
+        } else {
+          customerAssetResultBuilder_.setMessage(value);
         }
-        customerAssetResultBuilder_.setMessage(value);
       }
       responseCase_ = 57;
       return this;
@@ -14883,8 +15194,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 66) {
           customerConversionGoalResultBuilder_.mergeFrom(value);
+        } else {
+          customerConversionGoalResultBuilder_.setMessage(value);
         }
-        customerConversionGoalResultBuilder_.setMessage(value);
       }
       responseCase_ = 66;
       return this;
@@ -15060,8 +15372,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 74) {
           customerCustomizerResultBuilder_.mergeFrom(value);
+        } else {
+          customerCustomizerResultBuilder_.setMessage(value);
         }
-        customerCustomizerResultBuilder_.setMessage(value);
       }
       responseCase_ = 74;
       return this;
@@ -15237,8 +15550,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 30) {
           customerExtensionSettingResultBuilder_.mergeFrom(value);
+        } else {
+          customerExtensionSettingResultBuilder_.setMessage(value);
         }
-        customerExtensionSettingResultBuilder_.setMessage(value);
       }
       responseCase_ = 30;
       return this;
@@ -15414,8 +15728,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 31) {
           customerFeedResultBuilder_.mergeFrom(value);
+        } else {
+          customerFeedResultBuilder_.setMessage(value);
         }
-        customerFeedResultBuilder_.setMessage(value);
       }
       responseCase_ = 31;
       return this;
@@ -15591,8 +15906,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 32) {
           customerLabelResultBuilder_.mergeFrom(value);
+        } else {
+          customerLabelResultBuilder_.setMessage(value);
         }
-        customerLabelResultBuilder_.setMessage(value);
       }
       responseCase_ = 32;
       return this;
@@ -15768,8 +16084,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 34) {
           customerNegativeCriterionResultBuilder_.mergeFrom(value);
+        } else {
+          customerNegativeCriterionResultBuilder_.setMessage(value);
         }
-        customerNegativeCriterionResultBuilder_.setMessage(value);
       }
       responseCase_ = 34;
       return this;
@@ -15945,8 +16262,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 35) {
           customerResultBuilder_.mergeFrom(value);
+        } else {
+          customerResultBuilder_.setMessage(value);
         }
-        customerResultBuilder_.setMessage(value);
       }
       responseCase_ = 35;
       return this;
@@ -16122,8 +16440,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 70) {
           customizerAttributeResultBuilder_.mergeFrom(value);
+        } else {
+          customizerAttributeResultBuilder_.setMessage(value);
         }
-        customizerAttributeResultBuilder_.setMessage(value);
       }
       responseCase_ = 70;
       return this;
@@ -16299,8 +16618,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 36) {
           extensionFeedItemResultBuilder_.mergeFrom(value);
+        } else {
+          extensionFeedItemResultBuilder_.setMessage(value);
         }
-        extensionFeedItemResultBuilder_.setMessage(value);
       }
       responseCase_ = 36;
       return this;
@@ -16476,8 +16796,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 37) {
           feedItemResultBuilder_.mergeFrom(value);
+        } else {
+          feedItemResultBuilder_.setMessage(value);
         }
-        feedItemResultBuilder_.setMessage(value);
       }
       responseCase_ = 37;
       return this;
@@ -16653,8 +16974,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 53) {
           feedItemSetResultBuilder_.mergeFrom(value);
+        } else {
+          feedItemSetResultBuilder_.setMessage(value);
         }
-        feedItemSetResultBuilder_.setMessage(value);
       }
       responseCase_ = 53;
       return this;
@@ -16830,8 +17152,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 54) {
           feedItemSetLinkResultBuilder_.mergeFrom(value);
+        } else {
+          feedItemSetLinkResultBuilder_.setMessage(value);
         }
-        feedItemSetLinkResultBuilder_.setMessage(value);
       }
       responseCase_ = 54;
       return this;
@@ -17007,8 +17330,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 38) {
           feedItemTargetResultBuilder_.mergeFrom(value);
+        } else {
+          feedItemTargetResultBuilder_.setMessage(value);
         }
-        feedItemTargetResultBuilder_.setMessage(value);
       }
       responseCase_ = 38;
       return this;
@@ -17184,8 +17508,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 39) {
           feedMappingResultBuilder_.mergeFrom(value);
+        } else {
+          feedMappingResultBuilder_.setMessage(value);
         }
-        feedMappingResultBuilder_.setMessage(value);
       }
       responseCase_ = 39;
       return this;
@@ -17361,8 +17686,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 40) {
           feedResultBuilder_.mergeFrom(value);
+        } else {
+          feedResultBuilder_.setMessage(value);
         }
-        feedResultBuilder_.setMessage(value);
       }
       responseCase_ = 40;
       return this;
@@ -17538,8 +17864,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 44) {
           keywordPlanAdGroupResultBuilder_.mergeFrom(value);
+        } else {
+          keywordPlanAdGroupResultBuilder_.setMessage(value);
         }
-        keywordPlanAdGroupResultBuilder_.setMessage(value);
       }
       responseCase_ = 44;
       return this;
@@ -17715,8 +18042,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 45) {
           keywordPlanCampaignResultBuilder_.mergeFrom(value);
+        } else {
+          keywordPlanCampaignResultBuilder_.setMessage(value);
         }
-        keywordPlanCampaignResultBuilder_.setMessage(value);
       }
       responseCase_ = 45;
       return this;
@@ -17892,8 +18220,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 50) {
           keywordPlanAdGroupKeywordResultBuilder_.mergeFrom(value);
+        } else {
+          keywordPlanAdGroupKeywordResultBuilder_.setMessage(value);
         }
-        keywordPlanAdGroupKeywordResultBuilder_.setMessage(value);
       }
       responseCase_ = 50;
       return this;
@@ -18069,8 +18398,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 51) {
           keywordPlanCampaignKeywordResultBuilder_.mergeFrom(value);
+        } else {
+          keywordPlanCampaignKeywordResultBuilder_.setMessage(value);
         }
-        keywordPlanCampaignKeywordResultBuilder_.setMessage(value);
       }
       responseCase_ = 51;
       return this;
@@ -18246,8 +18576,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 48) {
           keywordPlanResultBuilder_.mergeFrom(value);
+        } else {
+          keywordPlanResultBuilder_.setMessage(value);
         }
-        keywordPlanResultBuilder_.setMessage(value);
       }
       responseCase_ = 48;
       return this;
@@ -18423,8 +18754,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 41) {
           labelResultBuilder_.mergeFrom(value);
+        } else {
+          labelResultBuilder_.setMessage(value);
         }
-        labelResultBuilder_.setMessage(value);
       }
       responseCase_ = 41;
       return this;
@@ -18600,8 +18932,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 42) {
           mediaFileResultBuilder_.mergeFrom(value);
+        } else {
+          mediaFileResultBuilder_.setMessage(value);
         }
-        mediaFileResultBuilder_.setMessage(value);
       }
       responseCase_ = 42;
       return this;
@@ -18777,8 +19110,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 43) {
           remarketingActionResultBuilder_.mergeFrom(value);
+        } else {
+          remarketingActionResultBuilder_.setMessage(value);
         }
-        remarketingActionResultBuilder_.setMessage(value);
       }
       responseCase_ = 43;
       return this;
@@ -18954,8 +19288,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 14) {
           sharedCriterionResultBuilder_.mergeFrom(value);
+        } else {
+          sharedCriterionResultBuilder_.setMessage(value);
         }
-        sharedCriterionResultBuilder_.setMessage(value);
       }
       responseCase_ = 14;
       return this;
@@ -19131,8 +19466,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 15) {
           sharedSetResultBuilder_.mergeFrom(value);
+        } else {
+          sharedSetResultBuilder_.setMessage(value);
         }
-        sharedSetResultBuilder_.setMessage(value);
       }
       responseCase_ = 15;
       return this;
@@ -19308,8 +19644,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 61) {
           smartCampaignSettingResultBuilder_.mergeFrom(value);
+        } else {
+          smartCampaignSettingResultBuilder_.setMessage(value);
         }
-        smartCampaignSettingResultBuilder_.setMessage(value);
       }
       responseCase_ = 61;
       return this;
@@ -19485,8 +19822,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (responseCase_ == 16) {
           userListResultBuilder_.mergeFrom(value);
+        } else {
+          userListResultBuilder_.setMessage(value);
         }
-        userListResultBuilder_.setMessage(value);
       }
       responseCase_ = 16;
       return this;

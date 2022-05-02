@@ -38,7 +38,7 @@ public interface PlannableLocationOrBuilder extends
 
   /**
    * <pre>
-   * The unique location name in english.
+   * The unique location name in English.
    * </pre>
    *
    * <code>optional string name = 5;</code>
@@ -47,7 +47,7 @@ public interface PlannableLocationOrBuilder extends
   boolean hasName();
   /**
    * <pre>
-   * The unique location name in english.
+   * The unique location name in English.
    * </pre>
    *
    * <code>optional string name = 5;</code>
@@ -56,7 +56,7 @@ public interface PlannableLocationOrBuilder extends
   java.lang.String getName();
   /**
    * <pre>
-   * The unique location name in english.
+   * The unique location name in English.
    * </pre>
    *
    * <code>optional string name = 5;</code>
@@ -67,8 +67,8 @@ public interface PlannableLocationOrBuilder extends
 
   /**
    * <pre>
-   * The parent country, not present if location is a country.
-   * If present will always be a GeoTargetConstant ID. Additional information,
+   * The parent country (not present if location is a country).
+   * If present, will always be a GeoTargetConstant ID. Additional information
    * such as country name is provided by
    * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v10.services.ReachPlanService.ListPlannableLocations] or
    * [GoogleAdsService.Search/SearchStream][].
@@ -80,8 +80,8 @@ public interface PlannableLocationOrBuilder extends
   boolean hasParentCountryId();
   /**
    * <pre>
-   * The parent country, not present if location is a country.
-   * If present will always be a GeoTargetConstant ID. Additional information,
+   * The parent country (not present if location is a country).
+   * If present, will always be a GeoTargetConstant ID. Additional information
    * such as country name is provided by
    * [ReachPlanService.ListPlannableLocations][google.ads.googleads.v10.services.ReachPlanService.ListPlannableLocations] or
    * [GoogleAdsService.Search/SearchStream][].

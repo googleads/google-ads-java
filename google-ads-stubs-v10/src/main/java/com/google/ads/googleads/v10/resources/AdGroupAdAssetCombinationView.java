@@ -72,6 +72,11 @@ private static final long serialVersionUID = 0L;
                 input.readMessage(com.google.ads.googleads.v10.common.AssetUsage.parser(), extensionRegistry));
             break;
           }
+          case 24: {
+            bitField0_ |= 0x00000001;
+            enabled_ = input.readBool();
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -83,6 +88,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -107,6 +114,7 @@ private static final long serialVersionUID = 0L;
             com.google.ads.googleads.v10.resources.AdGroupAdAssetCombinationView.class, com.google.ads.googleads.v10.resources.AdGroupAdAssetCombinationView.Builder.class);
   }
 
+  private int bitField0_;
   public static final int RESOURCE_NAME_FIELD_NUMBER = 1;
   private volatile java.lang.Object resourceName_;
   /**
@@ -223,6 +231,39 @@ private static final long serialVersionUID = 0L;
     return servedAssets_.get(index);
   }
 
+  public static final int ENABLED_FIELD_NUMBER = 3;
+  private boolean enabled_;
+  /**
+   * <pre>
+   * Output only. The status between the asset combination and the latest version of the ad.
+   * If true, the asset combination is linked to the latest version of the ad.
+   * If false, it means the link once existed but has been removed and is no
+   * longer present in the latest version of the ad.
+   * </pre>
+   *
+   * <code>optional bool enabled = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the enabled field is set.
+   */
+  @java.lang.Override
+  public boolean hasEnabled() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <pre>
+   * Output only. The status between the asset combination and the latest version of the ad.
+   * If true, the asset combination is linked to the latest version of the ad.
+   * If false, it means the link once existed but has been removed and is no
+   * longer present in the latest version of the ad.
+   * </pre>
+   *
+   * <code>optional bool enabled = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enabled.
+   */
+  @java.lang.Override
+  public boolean getEnabled() {
+    return enabled_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -243,6 +284,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < servedAssets_.size(); i++) {
       output.writeMessage(2, servedAssets_.get(i));
     }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeBool(3, enabled_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -258,6 +302,10 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < servedAssets_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, servedAssets_.get(i));
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(3, enabled_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -278,6 +326,11 @@ private static final long serialVersionUID = 0L;
         .equals(other.getResourceName())) return false;
     if (!getServedAssetsList()
         .equals(other.getServedAssetsList())) return false;
+    if (hasEnabled() != other.hasEnabled()) return false;
+    if (hasEnabled()) {
+      if (getEnabled()
+          != other.getEnabled()) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -294,6 +347,11 @@ private static final long serialVersionUID = 0L;
     if (getServedAssetsCount() > 0) {
       hash = (37 * hash) + SERVED_ASSETS_FIELD_NUMBER;
       hash = (53 * hash) + getServedAssetsList().hashCode();
+    }
+    if (hasEnabled()) {
+      hash = (37 * hash) + ENABLED_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getEnabled());
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -443,6 +501,8 @@ private static final long serialVersionUID = 0L;
       } else {
         servedAssetsBuilder_.clear();
       }
+      enabled_ = false;
+      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -470,6 +530,7 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v10.resources.AdGroupAdAssetCombinationView buildPartial() {
       com.google.ads.googleads.v10.resources.AdGroupAdAssetCombinationView result = new com.google.ads.googleads.v10.resources.AdGroupAdAssetCombinationView(this);
       int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       result.resourceName_ = resourceName_;
       if (servedAssetsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
@@ -480,6 +541,11 @@ private static final long serialVersionUID = 0L;
       } else {
         result.servedAssets_ = servedAssetsBuilder_.build();
       }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.enabled_ = enabled_;
+        to_bitField0_ |= 0x00000001;
+      }
+      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -557,6 +623,9 @@ private static final long serialVersionUID = 0L;
             servedAssetsBuilder_.addAllMessages(other.servedAssets_);
           }
         }
+      }
+      if (other.hasEnabled()) {
+        setEnabled(other.getEnabled());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1019,6 +1088,73 @@ private static final long serialVersionUID = 0L;
         servedAssets_ = null;
       }
       return servedAssetsBuilder_;
+    }
+
+    private boolean enabled_ ;
+    /**
+     * <pre>
+     * Output only. The status between the asset combination and the latest version of the ad.
+     * If true, the asset combination is linked to the latest version of the ad.
+     * If false, it means the link once existed but has been removed and is no
+     * longer present in the latest version of the ad.
+     * </pre>
+     *
+     * <code>optional bool enabled = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the enabled field is set.
+     */
+    @java.lang.Override
+    public boolean hasEnabled() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * Output only. The status between the asset combination and the latest version of the ad.
+     * If true, the asset combination is linked to the latest version of the ad.
+     * If false, it means the link once existed but has been removed and is no
+     * longer present in the latest version of the ad.
+     * </pre>
+     *
+     * <code>optional bool enabled = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enabled.
+     */
+    @java.lang.Override
+    public boolean getEnabled() {
+      return enabled_;
+    }
+    /**
+     * <pre>
+     * Output only. The status between the asset combination and the latest version of the ad.
+     * If true, the asset combination is linked to the latest version of the ad.
+     * If false, it means the link once existed but has been removed and is no
+     * longer present in the latest version of the ad.
+     * </pre>
+     *
+     * <code>optional bool enabled = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enabled to set.
+     * @return This builder for chaining.
+     */
+    public Builder setEnabled(boolean value) {
+      bitField0_ |= 0x00000002;
+      enabled_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The status between the asset combination and the latest version of the ad.
+     * If true, the asset combination is linked to the latest version of the ad.
+     * If false, it means the link once existed but has been removed and is no
+     * longer present in the latest version of the ad.
+     * </pre>
+     *
+     * <code>optional bool enabled = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearEnabled() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      enabled_ = false;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

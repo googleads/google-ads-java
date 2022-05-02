@@ -30,23 +30,21 @@ public final class UserListDateRuleItemOperatorProto {
     java.lang.String[] descriptorData = {
       "\nFgoogle/ads/googleads/v10/enums/user_li" +
       "st_date_rule_item_operator.proto\022\036google" +
-      ".ads.googleads.v10.enums\032\034google/api/ann" +
-      "otations.proto\"\223\001\n UserListDateRuleItemO" +
-      "peratorEnum\"o\n\034UserListDateRuleItemOpera" +
-      "tor\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\n\n\006EQU" +
-      "ALS\020\002\022\016\n\nNOT_EQUALS\020\003\022\n\n\006BEFORE\020\004\022\t\n\005AFT" +
-      "ER\020\005B\373\001\n\"com.google.ads.googleads.v10.en" +
-      "umsB!UserListDateRuleItemOperatorProtoP\001" +
-      "ZCgoogle.golang.org/genproto/googleapis/" +
-      "ads/googleads/v10/enums;enums\242\002\003GAA\252\002\036Go" +
-      "ogle.Ads.GoogleAds.V10.Enums\312\002\036Google\\Ad" +
-      "s\\GoogleAds\\V10\\Enums\352\002\"Google::Ads::Goo" +
-      "gleAds::V10::Enumsb\006proto3"
+      ".ads.googleads.v10.enums\"\223\001\n UserListDat" +
+      "eRuleItemOperatorEnum\"o\n\034UserListDateRul" +
+      "eItemOperator\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOW" +
+      "N\020\001\022\n\n\006EQUALS\020\002\022\016\n\nNOT_EQUALS\020\003\022\n\n\006BEFOR" +
+      "E\020\004\022\t\n\005AFTER\020\005B\373\001\n\"com.google.ads.google" +
+      "ads.v10.enumsB!UserListDateRuleItemOpera" +
+      "torProtoP\001ZCgoogle.golang.org/genproto/g" +
+      "oogleapis/ads/googleads/v10/enums;enums\242" +
+      "\002\003GAA\252\002\036Google.Ads.GoogleAds.V10.Enums\312\002" +
+      "\036Google\\Ads\\GoogleAds\\V10\\Enums\352\002\"Google" +
+      "::Ads::GoogleAds::V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_UserListDateRuleItemOperatorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -54,7 +52,6 @@ public final class UserListDateRuleItemOperatorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_UserListDateRuleItemOperatorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

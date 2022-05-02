@@ -35,36 +35,35 @@ public final class BiddingStrategySimulationProto {
       "ogle/ads/googleads/v10/enums/simulation_" +
       "modification_method.proto\0324google/ads/go" +
       "ogleads/v10/enums/simulation_type.proto\032" +
-      "\034google/api/annotations.proto\032\037google/ap" +
-      "i/field_behavior.proto\032\031google/api/resou" +
-      "rce.proto\"\253\006\n\031BiddingStrategySimulation\022" +
-      "Q\n\rresource_name\030\001 \001(\tB:\340A\003\372A4\n2googlead" +
-      "s.googleapis.com/BiddingStrategySimulati" +
-      "on\022 \n\023bidding_strategy_id\030\002 \001(\003B\003\340A\003\022T\n\004" +
-      "type\030\003 \001(\0162A.google.ads.googleads.v10.en" +
-      "ums.SimulationTypeEnum.SimulationTypeB\003\340" +
-      "A\003\022\177\n\023modification_method\030\004 \001(\0162].google" +
-      ".ads.googleads.v10.enums.SimulationModif" +
-      "icationMethodEnum.SimulationModification" +
-      "MethodB\003\340A\003\022\027\n\nstart_date\030\005 \001(\tB\003\340A\003\022\025\n\010" +
-      "end_date\030\006 \001(\tB\003\340A\003\022c\n\025target_cpa_point_" +
-      "list\030\007 \001(\0132=.google.ads.googleads.v10.co" +
-      "mmon.TargetCpaSimulationPointListB\003\340A\003H\000" +
-      "\022e\n\026target_roas_point_list\030\010 \001(\0132>.googl" +
-      "e.ads.googleads.v10.common.TargetRoasSim" +
-      "ulationPointListB\003\340A\003H\000:\267\001\352A\263\001\n2googlead" +
-      "s.googleapis.com/BiddingStrategySimulati" +
-      "on\022}customers/{customer_id}/biddingStrat" +
-      "egySimulations/{bidding_strategy_id}~{ty" +
-      "pe}~{modification_method}~{start_date}~{" +
-      "end_date}B\014\n\npoint_listB\220\002\n&com.google.a" +
-      "ds.googleads.v10.resourcesB\036BiddingStrat" +
-      "egySimulationProtoP\001ZKgoogle.golang.org/" +
-      "genproto/googleapis/ads/googleads/v10/re" +
-      "sources;resources\242\002\003GAA\252\002\"Google.Ads.Goo" +
-      "gleAds.V10.Resources\312\002\"Google\\Ads\\Google" +
-      "Ads\\V10\\Resources\352\002&Google::Ads::GoogleA" +
-      "ds::V10::Resourcesb\006proto3"
+      "\037google/api/field_behavior.proto\032\031google" +
+      "/api/resource.proto\"\253\006\n\031BiddingStrategyS" +
+      "imulation\022Q\n\rresource_name\030\001 \001(\tB:\340A\003\372A4" +
+      "\n2googleads.googleapis.com/BiddingStrate" +
+      "gySimulation\022 \n\023bidding_strategy_id\030\002 \001(" +
+      "\003B\003\340A\003\022T\n\004type\030\003 \001(\0162A.google.ads.google" +
+      "ads.v10.enums.SimulationTypeEnum.Simulat" +
+      "ionTypeB\003\340A\003\022\177\n\023modification_method\030\004 \001(" +
+      "\0162].google.ads.googleads.v10.enums.Simul" +
+      "ationModificationMethodEnum.SimulationMo" +
+      "dificationMethodB\003\340A\003\022\027\n\nstart_date\030\005 \001(" +
+      "\tB\003\340A\003\022\025\n\010end_date\030\006 \001(\tB\003\340A\003\022c\n\025target_" +
+      "cpa_point_list\030\007 \001(\0132=.google.ads.google" +
+      "ads.v10.common.TargetCpaSimulationPointL" +
+      "istB\003\340A\003H\000\022e\n\026target_roas_point_list\030\010 \001" +
+      "(\0132>.google.ads.googleads.v10.common.Tar" +
+      "getRoasSimulationPointListB\003\340A\003H\000:\267\001\352A\263\001" +
+      "\n2googleads.googleapis.com/BiddingStrate" +
+      "gySimulation\022}customers/{customer_id}/bi" +
+      "ddingStrategySimulations/{bidding_strate" +
+      "gy_id}~{type}~{modification_method}~{sta" +
+      "rt_date}~{end_date}B\014\n\npoint_listB\220\002\n&co" +
+      "m.google.ads.googleads.v10.resourcesB\036Bi" +
+      "ddingStrategySimulationProtoP\001ZKgoogle.g" +
+      "olang.org/genproto/googleapis/ads/google" +
+      "ads/v10/resources;resources\242\002\003GAA\252\002\"Goog" +
+      "le.Ads.GoogleAds.V10.Resources\312\002\"Google\\" +
+      "Ads\\GoogleAds\\V10\\Resources\352\002&Google::Ad" +
+      "s::GoogleAds::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -72,7 +71,6 @@ public final class BiddingStrategySimulationProto {
           com.google.ads.googleads.v10.common.SimulationProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.SimulationModificationMethodProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.SimulationTypeProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -92,7 +90,6 @@ public final class BiddingStrategySimulationProto {
     com.google.ads.googleads.v10.common.SimulationProto.getDescriptor();
     com.google.ads.googleads.v10.enums.SimulationModificationMethodProto.getDescriptor();
     com.google.ads.googleads.v10.enums.SimulationTypeProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

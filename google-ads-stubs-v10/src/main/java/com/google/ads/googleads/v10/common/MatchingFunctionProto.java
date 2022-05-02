@@ -58,51 +58,50 @@ public final class MatchingFunctionProto {
       "v10.common\032Cgoogle/ads/googleads/v10/enu" +
       "ms/matching_function_context_type.proto\032" +
       "?google/ads/googleads/v10/enums/matching" +
-      "_function_operator.proto\032\034google/api/ann" +
-      "otations.proto\"\260\002\n\020MatchingFunction\022\034\n\017f" +
-      "unction_string\030\005 \001(\tH\000\210\001\001\022g\n\010operator\030\004 " +
-      "\001(\0162U.google.ads.googleads.v10.enums.Mat" +
-      "chingFunctionOperatorEnum.MatchingFuncti" +
-      "onOperator\022?\n\rleft_operands\030\002 \003(\0132(.goog" +
-      "le.ads.googleads.v10.common.Operand\022@\n\016r" +
-      "ight_operands\030\003 \003(\0132(.google.ads.googlea" +
-      "ds.v10.common.OperandB\022\n\020_function_strin" +
-      "g\"\201\007\n\007Operand\022T\n\020constant_operand\030\001 \001(\0132" +
-      "8.google.ads.googleads.v10.common.Operan" +
-      "d.ConstantOperandH\000\022_\n\026feed_attribute_op" +
-      "erand\030\002 \001(\0132=.google.ads.googleads.v10.c" +
-      "ommon.Operand.FeedAttributeOperandH\000\022T\n\020" +
-      "function_operand\030\003 \001(\01328.google.ads.goog" +
-      "leads.v10.common.Operand.FunctionOperand" +
-      "H\000\022a\n\027request_context_operand\030\004 \001(\0132>.go" +
-      "ogle.ads.googleads.v10.common.Operand.Re" +
-      "questContextOperandH\000\032\212\001\n\017ConstantOperan" +
-      "d\022\026\n\014string_value\030\005 \001(\tH\000\022\024\n\nlong_value\030" +
-      "\006 \001(\003H\000\022\027\n\rboolean_value\030\007 \001(\010H\000\022\026\n\014doub" +
-      "le_value\030\010 \001(\001H\000B\030\n\026constant_operand_val" +
-      "ue\032n\n\024FeedAttributeOperand\022\024\n\007feed_id\030\003 " +
-      "\001(\003H\000\210\001\001\022\036\n\021feed_attribute_id\030\004 \001(\003H\001\210\001\001" +
-      "B\n\n\010_feed_idB\024\n\022_feed_attribute_id\032_\n\017Fu" +
-      "nctionOperand\022L\n\021matching_function\030\001 \001(\013" +
-      "21.google.ads.googleads.v10.common.Match" +
-      "ingFunction\032\212\001\n\025RequestContextOperand\022q\n" +
-      "\014context_type\030\001 \001(\0162[.google.ads.googlea" +
-      "ds.v10.enums.MatchingFunctionContextType" +
-      "Enum.MatchingFunctionContextTypeB\033\n\031func" +
-      "tion_argument_operandB\365\001\n#com.google.ads" +
-      ".googleads.v10.commonB\025MatchingFunctionP" +
-      "rotoP\001ZEgoogle.golang.org/genproto/googl" +
-      "eapis/ads/googleads/v10/common;common\242\002\003" +
-      "GAA\252\002\037Google.Ads.GoogleAds.V10.Common\312\002\037" +
-      "Google\\Ads\\GoogleAds\\V10\\Common\352\002#Google" +
-      "::Ads::GoogleAds::V10::Commonb\006proto3"
+      "_function_operator.proto\"\260\002\n\020MatchingFun" +
+      "ction\022\034\n\017function_string\030\005 \001(\tH\000\210\001\001\022g\n\010o" +
+      "perator\030\004 \001(\0162U.google.ads.googleads.v10" +
+      ".enums.MatchingFunctionOperatorEnum.Matc" +
+      "hingFunctionOperator\022?\n\rleft_operands\030\002 " +
+      "\003(\0132(.google.ads.googleads.v10.common.Op" +
+      "erand\022@\n\016right_operands\030\003 \003(\0132(.google.a" +
+      "ds.googleads.v10.common.OperandB\022\n\020_func" +
+      "tion_string\"\201\007\n\007Operand\022T\n\020constant_oper" +
+      "and\030\001 \001(\01328.google.ads.googleads.v10.com" +
+      "mon.Operand.ConstantOperandH\000\022_\n\026feed_at" +
+      "tribute_operand\030\002 \001(\0132=.google.ads.googl" +
+      "eads.v10.common.Operand.FeedAttributeOpe" +
+      "randH\000\022T\n\020function_operand\030\003 \001(\01328.googl" +
+      "e.ads.googleads.v10.common.Operand.Funct" +
+      "ionOperandH\000\022a\n\027request_context_operand\030" +
+      "\004 \001(\0132>.google.ads.googleads.v10.common." +
+      "Operand.RequestContextOperandH\000\032\212\001\n\017Cons" +
+      "tantOperand\022\026\n\014string_value\030\005 \001(\tH\000\022\024\n\nl" +
+      "ong_value\030\006 \001(\003H\000\022\027\n\rboolean_value\030\007 \001(\010" +
+      "H\000\022\026\n\014double_value\030\010 \001(\001H\000B\030\n\026constant_o" +
+      "perand_value\032n\n\024FeedAttributeOperand\022\024\n\007" +
+      "feed_id\030\003 \001(\003H\000\210\001\001\022\036\n\021feed_attribute_id\030" +
+      "\004 \001(\003H\001\210\001\001B\n\n\010_feed_idB\024\n\022_feed_attribut" +
+      "e_id\032_\n\017FunctionOperand\022L\n\021matching_func" +
+      "tion\030\001 \001(\01321.google.ads.googleads.v10.co" +
+      "mmon.MatchingFunction\032\212\001\n\025RequestContext" +
+      "Operand\022q\n\014context_type\030\001 \001(\0162[.google.a" +
+      "ds.googleads.v10.enums.MatchingFunctionC" +
+      "ontextTypeEnum.MatchingFunctionContextTy" +
+      "peB\033\n\031function_argument_operandB\365\001\n#com." +
+      "google.ads.googleads.v10.commonB\025Matchin" +
+      "gFunctionProtoP\001ZEgoogle.golang.org/genp" +
+      "roto/googleapis/ads/googleads/v10/common" +
+      ";common\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V10" +
+      ".Common\312\002\037Google\\Ads\\GoogleAds\\V10\\Commo" +
+      "n\352\002#Google::Ads::GoogleAds::V10::Commonb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.enums.MatchingFunctionContextTypeProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.MatchingFunctionOperatorProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_common_MatchingFunction_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -142,7 +141,6 @@ public final class MatchingFunctionProto {
         new java.lang.String[] { "ContextType", });
     com.google.ads.googleads.v10.enums.MatchingFunctionContextTypeProto.getDescriptor();
     com.google.ads.googleads.v10.enums.MatchingFunctionOperatorProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

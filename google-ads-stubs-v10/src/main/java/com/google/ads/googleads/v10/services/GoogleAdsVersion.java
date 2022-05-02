@@ -142,6 +142,9 @@ public interface GoogleAdsVersion {
         @ServiceClientDescriptor(settingsClass = CampaignFeedServiceSettings.class)
         CampaignFeedServiceClient createCampaignFeedServiceClient();
          
+        @ServiceClientDescriptor(settingsClass = CampaignGroupServiceSettings.class)
+        CampaignGroupServiceClient createCampaignGroupServiceClient();
+         
         @ServiceClientDescriptor(settingsClass = CampaignLabelServiceSettings.class)
         CampaignLabelServiceClient createCampaignLabelServiceClient();
          

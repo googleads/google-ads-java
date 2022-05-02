@@ -30,23 +30,21 @@ public final class StructuredSnippetPlaceholderFieldProto {
     java.lang.String[] descriptorData = {
       "\nIgoogle/ads/googleads/v10/enums/structu" +
       "red_snippet_placeholder_field.proto\022\036goo" +
-      "gle.ads.googleads.v10.enums\032\034google/api/" +
-      "annotations.proto\"\204\001\n%StructuredSnippetP" +
-      "laceholderFieldEnum\"[\n!StructuredSnippet" +
-      "PlaceholderField\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNK" +
-      "NOWN\020\001\022\n\n\006HEADER\020\002\022\014\n\010SNIPPETS\020\003B\200\002\n\"com" +
-      ".google.ads.googleads.v10.enumsB&Structu" +
-      "redSnippetPlaceholderFieldProtoP\001ZCgoogl" +
-      "e.golang.org/genproto/googleapis/ads/goo" +
-      "gleads/v10/enums;enums\242\002\003GAA\252\002\036Google.Ad" +
-      "s.GoogleAds.V10.Enums\312\002\036Google\\Ads\\Googl" +
-      "eAds\\V10\\Enums\352\002\"Google::Ads::GoogleAds:" +
-      ":V10::Enumsb\006proto3"
+      "gle.ads.googleads.v10.enums\"\204\001\n%Structur" +
+      "edSnippetPlaceholderFieldEnum\"[\n!Structu" +
+      "redSnippetPlaceholderField\022\017\n\013UNSPECIFIE" +
+      "D\020\000\022\013\n\007UNKNOWN\020\001\022\n\n\006HEADER\020\002\022\014\n\010SNIPPETS" +
+      "\020\003B\200\002\n\"com.google.ads.googleads.v10.enum" +
+      "sB&StructuredSnippetPlaceholderFieldProt" +
+      "oP\001ZCgoogle.golang.org/genproto/googleap" +
+      "is/ads/googleads/v10/enums;enums\242\002\003GAA\252\002" +
+      "\036Google.Ads.GoogleAds.V10.Enums\312\002\036Google" +
+      "\\Ads\\GoogleAds\\V10\\Enums\352\002\"Google::Ads::" +
+      "GoogleAds::V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_StructuredSnippetPlaceholderFieldEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -54,7 +52,6 @@ public final class StructuredSnippetPlaceholderFieldProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_StructuredSnippetPlaceholderFieldEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

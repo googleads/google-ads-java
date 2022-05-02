@@ -150,6 +150,20 @@ private static final long serialVersionUID = 0L;
             operationCase_ = 8;
             break;
           }
+          case 74: {
+            com.google.ads.googleads.v10.services.CampaignGroupOperation.Builder subBuilder = null;
+            if (operationCase_ == 9) {
+              subBuilder = ((com.google.ads.googleads.v10.services.CampaignGroupOperation) operation_).toBuilder();
+            }
+            operation_ =
+                input.readMessage(com.google.ads.googleads.v10.services.CampaignGroupOperation.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.CampaignGroupOperation) operation_);
+              operation_ = subBuilder.buildPartial();
+            }
+            operationCase_ = 9;
+            break;
+          }
           case 82: {
             com.google.ads.googleads.v10.services.CampaignOperation.Builder subBuilder = null;
             if (operationCase_ == 10) {
@@ -1113,6 +1127,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -1175,6 +1191,7 @@ private static final long serialVersionUID = 0L;
     CAMPAIGN_EXPERIMENT_OPERATION(25),
     CAMPAIGN_EXTENSION_SETTING_OPERATION(26),
     CAMPAIGN_FEED_OPERATION(27),
+    CAMPAIGN_GROUP_OPERATION(9),
     CAMPAIGN_LABEL_OPERATION(28),
     CAMPAIGN_OPERATION(10),
     CAMPAIGN_SHARED_SET_OPERATION(11),
@@ -1267,6 +1284,7 @@ private static final long serialVersionUID = 0L;
         case 25: return CAMPAIGN_EXPERIMENT_OPERATION;
         case 26: return CAMPAIGN_EXTENSION_SETTING_OPERATION;
         case 27: return CAMPAIGN_FEED_OPERATION;
+        case 9: return CAMPAIGN_GROUP_OPERATION;
         case 28: return CAMPAIGN_LABEL_OPERATION;
         case 10: return CAMPAIGN_OPERATION;
         case 11: return CAMPAIGN_SHARED_SET_OPERATION;
@@ -2867,6 +2885,49 @@ private static final long serialVersionUID = 0L;
        return (com.google.ads.googleads.v10.services.CampaignFeedOperation) operation_;
     }
     return com.google.ads.googleads.v10.services.CampaignFeedOperation.getDefaultInstance();
+  }
+
+  public static final int CAMPAIGN_GROUP_OPERATION_FIELD_NUMBER = 9;
+  /**
+   * <pre>
+   * A campaign group mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.services.CampaignGroupOperation campaign_group_operation = 9;</code>
+   * @return Whether the campaignGroupOperation field is set.
+   */
+  @java.lang.Override
+  public boolean hasCampaignGroupOperation() {
+    return operationCase_ == 9;
+  }
+  /**
+   * <pre>
+   * A campaign group mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.services.CampaignGroupOperation campaign_group_operation = 9;</code>
+   * @return The campaignGroupOperation.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.services.CampaignGroupOperation getCampaignGroupOperation() {
+    if (operationCase_ == 9) {
+       return (com.google.ads.googleads.v10.services.CampaignGroupOperation) operation_;
+    }
+    return com.google.ads.googleads.v10.services.CampaignGroupOperation.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * A campaign group mutate operation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.services.CampaignGroupOperation campaign_group_operation = 9;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.services.CampaignGroupOperationOrBuilder getCampaignGroupOperationOrBuilder() {
+    if (operationCase_ == 9) {
+       return (com.google.ads.googleads.v10.services.CampaignGroupOperation) operation_;
+    }
+    return com.google.ads.googleads.v10.services.CampaignGroupOperation.getDefaultInstance();
   }
 
   public static final int CAMPAIGN_LABEL_OPERATION_FIELD_NUMBER = 28;
@@ -4581,6 +4642,9 @@ private static final long serialVersionUID = 0L;
     if (operationCase_ == 8) {
       output.writeMessage(8, (com.google.ads.googleads.v10.services.CampaignBudgetOperation) operation_);
     }
+    if (operationCase_ == 9) {
+      output.writeMessage(9, (com.google.ads.googleads.v10.services.CampaignGroupOperation) operation_);
+    }
     if (operationCase_ == 10) {
       output.writeMessage(10, (com.google.ads.googleads.v10.services.CampaignOperation) operation_);
     }
@@ -4821,6 +4885,10 @@ private static final long serialVersionUID = 0L;
     if (operationCase_ == 8) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, (com.google.ads.googleads.v10.services.CampaignBudgetOperation) operation_);
+    }
+    if (operationCase_ == 9) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, (com.google.ads.googleads.v10.services.CampaignGroupOperation) operation_);
     }
     if (operationCase_ == 10) {
       size += com.google.protobuf.CodedOutputStream
@@ -5255,6 +5323,10 @@ private static final long serialVersionUID = 0L;
         if (!getCampaignFeedOperation()
             .equals(other.getCampaignFeedOperation())) return false;
         break;
+      case 9:
+        if (!getCampaignGroupOperation()
+            .equals(other.getCampaignGroupOperation())) return false;
+        break;
       case 28:
         if (!getCampaignLabelOperation()
             .equals(other.getCampaignLabelOperation())) return false;
@@ -5569,6 +5641,10 @@ private static final long serialVersionUID = 0L;
       case 27:
         hash = (37 * hash) + CAMPAIGN_FEED_OPERATION_FIELD_NUMBER;
         hash = (53 * hash) + getCampaignFeedOperation().hashCode();
+        break;
+      case 9:
+        hash = (37 * hash) + CAMPAIGN_GROUP_OPERATION_FIELD_NUMBER;
+        hash = (53 * hash) + getCampaignGroupOperation().hashCode();
         break;
       case 28:
         hash = (37 * hash) + CAMPAIGN_LABEL_OPERATION_FIELD_NUMBER;
@@ -6146,6 +6222,13 @@ private static final long serialVersionUID = 0L;
           result.operation_ = campaignFeedOperationBuilder_.build();
         }
       }
+      if (operationCase_ == 9) {
+        if (campaignGroupOperationBuilder_ == null) {
+          result.operation_ = operation_;
+        } else {
+          result.operation_ = campaignGroupOperationBuilder_.build();
+        }
+      }
       if (operationCase_ == 28) {
         if (campaignLabelOperationBuilder_ == null) {
           result.operation_ = operation_;
@@ -6613,6 +6696,10 @@ private static final long serialVersionUID = 0L;
           mergeCampaignFeedOperation(other.getCampaignFeedOperation());
           break;
         }
+        case CAMPAIGN_GROUP_OPERATION: {
+          mergeCampaignGroupOperation(other.getCampaignGroupOperation());
+          break;
+        }
         case CAMPAIGN_LABEL_OPERATION: {
           mergeCampaignLabelOperation(other.getCampaignLabelOperation());
           break;
@@ -6911,8 +6998,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 17) {
           adGroupAdLabelOperationBuilder_.mergeFrom(value);
+        } else {
+          adGroupAdLabelOperationBuilder_.setMessage(value);
         }
-        adGroupAdLabelOperationBuilder_.setMessage(value);
       }
       operationCase_ = 17;
       return this;
@@ -7088,8 +7176,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 1) {
           adGroupAdOperationBuilder_.mergeFrom(value);
+        } else {
+          adGroupAdOperationBuilder_.setMessage(value);
         }
-        adGroupAdOperationBuilder_.setMessage(value);
       }
       operationCase_ = 1;
       return this;
@@ -7265,8 +7354,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 56) {
           adGroupAssetOperationBuilder_.mergeFrom(value);
+        } else {
+          adGroupAssetOperationBuilder_.setMessage(value);
         }
-        adGroupAssetOperationBuilder_.setMessage(value);
       }
       operationCase_ = 56;
       return this;
@@ -7442,8 +7532,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 2) {
           adGroupBidModifierOperationBuilder_.mergeFrom(value);
+        } else {
+          adGroupBidModifierOperationBuilder_.setMessage(value);
         }
-        adGroupBidModifierOperationBuilder_.setMessage(value);
       }
       operationCase_ = 2;
       return this;
@@ -7619,8 +7710,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 77) {
           adGroupCriterionCustomizerOperationBuilder_.mergeFrom(value);
+        } else {
+          adGroupCriterionCustomizerOperationBuilder_.setMessage(value);
         }
-        adGroupCriterionCustomizerOperationBuilder_.setMessage(value);
       }
       operationCase_ = 77;
       return this;
@@ -7796,8 +7888,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 18) {
           adGroupCriterionLabelOperationBuilder_.mergeFrom(value);
+        } else {
+          adGroupCriterionLabelOperationBuilder_.setMessage(value);
         }
-        adGroupCriterionLabelOperationBuilder_.setMessage(value);
       }
       operationCase_ = 18;
       return this;
@@ -7973,8 +8066,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 3) {
           adGroupCriterionOperationBuilder_.mergeFrom(value);
+        } else {
+          adGroupCriterionOperationBuilder_.setMessage(value);
         }
-        adGroupCriterionOperationBuilder_.setMessage(value);
       }
       operationCase_ = 3;
       return this;
@@ -8150,8 +8244,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 75) {
           adGroupCustomizerOperationBuilder_.mergeFrom(value);
+        } else {
+          adGroupCustomizerOperationBuilder_.setMessage(value);
         }
-        adGroupCustomizerOperationBuilder_.setMessage(value);
       }
       operationCase_ = 75;
       return this;
@@ -8327,8 +8422,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 19) {
           adGroupExtensionSettingOperationBuilder_.mergeFrom(value);
+        } else {
+          adGroupExtensionSettingOperationBuilder_.setMessage(value);
         }
-        adGroupExtensionSettingOperationBuilder_.setMessage(value);
       }
       operationCase_ = 19;
       return this;
@@ -8504,8 +8600,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 20) {
           adGroupFeedOperationBuilder_.mergeFrom(value);
+        } else {
+          adGroupFeedOperationBuilder_.setMessage(value);
         }
-        adGroupFeedOperationBuilder_.setMessage(value);
       }
       operationCase_ = 20;
       return this;
@@ -8681,8 +8778,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 21) {
           adGroupLabelOperationBuilder_.mergeFrom(value);
+        } else {
+          adGroupLabelOperationBuilder_.setMessage(value);
         }
-        adGroupLabelOperationBuilder_.setMessage(value);
       }
       operationCase_ = 21;
       return this;
@@ -8858,8 +8956,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 5) {
           adGroupOperationBuilder_.mergeFrom(value);
+        } else {
+          adGroupOperationBuilder_.setMessage(value);
         }
-        adGroupOperationBuilder_.setMessage(value);
       }
       operationCase_ = 5;
       return this;
@@ -9035,8 +9134,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 49) {
           adOperationBuilder_.mergeFrom(value);
+        } else {
+          adOperationBuilder_.setMessage(value);
         }
-        adOperationBuilder_.setMessage(value);
       }
       operationCase_ = 49;
       return this;
@@ -9212,8 +9312,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 22) {
           adParameterOperationBuilder_.mergeFrom(value);
+        } else {
+          adParameterOperationBuilder_.setMessage(value);
         }
-        adParameterOperationBuilder_.setMessage(value);
       }
       operationCase_ = 22;
       return this;
@@ -9389,8 +9490,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 23) {
           assetOperationBuilder_.mergeFrom(value);
+        } else {
+          assetOperationBuilder_.setMessage(value);
         }
-        assetOperationBuilder_.setMessage(value);
       }
       operationCase_ = 23;
       return this;
@@ -9566,8 +9668,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 65) {
           assetGroupAssetOperationBuilder_.mergeFrom(value);
+        } else {
+          assetGroupAssetOperationBuilder_.setMessage(value);
         }
-        assetGroupAssetOperationBuilder_.setMessage(value);
       }
       operationCase_ = 65;
       return this;
@@ -9743,8 +9846,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 78) {
           assetGroupListingGroupFilterOperationBuilder_.mergeFrom(value);
+        } else {
+          assetGroupListingGroupFilterOperationBuilder_.setMessage(value);
         }
-        assetGroupListingGroupFilterOperationBuilder_.setMessage(value);
       }
       operationCase_ = 78;
       return this;
@@ -9920,8 +10024,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 80) {
           assetGroupSignalOperationBuilder_.mergeFrom(value);
+        } else {
+          assetGroupSignalOperationBuilder_.setMessage(value);
         }
-        assetGroupSignalOperationBuilder_.setMessage(value);
       }
       operationCase_ = 80;
       return this;
@@ -10097,8 +10202,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 62) {
           assetGroupOperationBuilder_.mergeFrom(value);
+        } else {
+          assetGroupOperationBuilder_.setMessage(value);
         }
-        assetGroupOperationBuilder_.setMessage(value);
       }
       operationCase_ = 62;
       return this;
@@ -10274,8 +10380,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 71) {
           assetSetAssetOperationBuilder_.mergeFrom(value);
+        } else {
+          assetSetAssetOperationBuilder_.setMessage(value);
         }
-        assetSetAssetOperationBuilder_.setMessage(value);
       }
       operationCase_ = 71;
       return this;
@@ -10451,8 +10558,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 72) {
           assetSetOperationBuilder_.mergeFrom(value);
+        } else {
+          assetSetOperationBuilder_.setMessage(value);
         }
-        assetSetOperationBuilder_.setMessage(value);
       }
       operationCase_ = 72;
       return this;
@@ -10628,8 +10736,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 81) {
           audienceOperationBuilder_.mergeFrom(value);
+        } else {
+          audienceOperationBuilder_.setMessage(value);
         }
-        audienceOperationBuilder_.setMessage(value);
       }
       operationCase_ = 81;
       return this;
@@ -10805,8 +10914,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 58) {
           biddingDataExclusionOperationBuilder_.mergeFrom(value);
+        } else {
+          biddingDataExclusionOperationBuilder_.setMessage(value);
         }
-        biddingDataExclusionOperationBuilder_.setMessage(value);
       }
       operationCase_ = 58;
       return this;
@@ -10982,8 +11092,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 59) {
           biddingSeasonalityAdjustmentOperationBuilder_.mergeFrom(value);
+        } else {
+          biddingSeasonalityAdjustmentOperationBuilder_.setMessage(value);
         }
-        biddingSeasonalityAdjustmentOperationBuilder_.setMessage(value);
       }
       operationCase_ = 59;
       return this;
@@ -11159,8 +11270,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 6) {
           biddingStrategyOperationBuilder_.mergeFrom(value);
+        } else {
+          biddingStrategyOperationBuilder_.setMessage(value);
         }
-        biddingStrategyOperationBuilder_.setMessage(value);
       }
       operationCase_ = 6;
       return this;
@@ -11336,8 +11448,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 52) {
           campaignAssetOperationBuilder_.mergeFrom(value);
+        } else {
+          campaignAssetOperationBuilder_.setMessage(value);
         }
-        campaignAssetOperationBuilder_.setMessage(value);
       }
       operationCase_ = 52;
       return this;
@@ -11513,8 +11626,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 73) {
           campaignAssetSetOperationBuilder_.mergeFrom(value);
+        } else {
+          campaignAssetSetOperationBuilder_.setMessage(value);
         }
-        campaignAssetSetOperationBuilder_.setMessage(value);
       }
       operationCase_ = 73;
       return this;
@@ -11690,8 +11804,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 7) {
           campaignBidModifierOperationBuilder_.mergeFrom(value);
+        } else {
+          campaignBidModifierOperationBuilder_.setMessage(value);
         }
-        campaignBidModifierOperationBuilder_.setMessage(value);
       }
       operationCase_ = 7;
       return this;
@@ -11867,8 +11982,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 8) {
           campaignBudgetOperationBuilder_.mergeFrom(value);
+        } else {
+          campaignBudgetOperationBuilder_.setMessage(value);
         }
-        campaignBudgetOperationBuilder_.setMessage(value);
       }
       operationCase_ = 8;
       return this;
@@ -12044,8 +12160,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 67) {
           campaignConversionGoalOperationBuilder_.mergeFrom(value);
+        } else {
+          campaignConversionGoalOperationBuilder_.setMessage(value);
         }
-        campaignConversionGoalOperationBuilder_.setMessage(value);
       }
       operationCase_ = 67;
       return this;
@@ -12221,8 +12338,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 13) {
           campaignCriterionOperationBuilder_.mergeFrom(value);
+        } else {
+          campaignCriterionOperationBuilder_.setMessage(value);
         }
-        campaignCriterionOperationBuilder_.setMessage(value);
       }
       operationCase_ = 13;
       return this;
@@ -12398,8 +12516,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 76) {
           campaignCustomizerOperationBuilder_.mergeFrom(value);
+        } else {
+          campaignCustomizerOperationBuilder_.setMessage(value);
         }
-        campaignCustomizerOperationBuilder_.setMessage(value);
       }
       operationCase_ = 76;
       return this;
@@ -12575,8 +12694,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 24) {
           campaignDraftOperationBuilder_.mergeFrom(value);
+        } else {
+          campaignDraftOperationBuilder_.setMessage(value);
         }
-        campaignDraftOperationBuilder_.setMessage(value);
       }
       operationCase_ = 24;
       return this;
@@ -12752,8 +12872,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 25) {
           campaignExperimentOperationBuilder_.mergeFrom(value);
+        } else {
+          campaignExperimentOperationBuilder_.setMessage(value);
         }
-        campaignExperimentOperationBuilder_.setMessage(value);
       }
       operationCase_ = 25;
       return this;
@@ -12929,8 +13050,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 26) {
           campaignExtensionSettingOperationBuilder_.mergeFrom(value);
+        } else {
+          campaignExtensionSettingOperationBuilder_.setMessage(value);
         }
-        campaignExtensionSettingOperationBuilder_.setMessage(value);
       }
       operationCase_ = 26;
       return this;
@@ -13106,8 +13228,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 27) {
           campaignFeedOperationBuilder_.mergeFrom(value);
+        } else {
+          campaignFeedOperationBuilder_.setMessage(value);
         }
-        campaignFeedOperationBuilder_.setMessage(value);
       }
       operationCase_ = 27;
       return this;
@@ -13187,6 +13310,184 @@ private static final long serialVersionUID = 0L;
       operationCase_ = 27;
       onChanged();;
       return campaignFeedOperationBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v10.services.CampaignGroupOperation, com.google.ads.googleads.v10.services.CampaignGroupOperation.Builder, com.google.ads.googleads.v10.services.CampaignGroupOperationOrBuilder> campaignGroupOperationBuilder_;
+    /**
+     * <pre>
+     * A campaign group mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.services.CampaignGroupOperation campaign_group_operation = 9;</code>
+     * @return Whether the campaignGroupOperation field is set.
+     */
+    @java.lang.Override
+    public boolean hasCampaignGroupOperation() {
+      return operationCase_ == 9;
+    }
+    /**
+     * <pre>
+     * A campaign group mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.services.CampaignGroupOperation campaign_group_operation = 9;</code>
+     * @return The campaignGroupOperation.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.services.CampaignGroupOperation getCampaignGroupOperation() {
+      if (campaignGroupOperationBuilder_ == null) {
+        if (operationCase_ == 9) {
+          return (com.google.ads.googleads.v10.services.CampaignGroupOperation) operation_;
+        }
+        return com.google.ads.googleads.v10.services.CampaignGroupOperation.getDefaultInstance();
+      } else {
+        if (operationCase_ == 9) {
+          return campaignGroupOperationBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v10.services.CampaignGroupOperation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * A campaign group mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.services.CampaignGroupOperation campaign_group_operation = 9;</code>
+     */
+    public Builder setCampaignGroupOperation(com.google.ads.googleads.v10.services.CampaignGroupOperation value) {
+      if (campaignGroupOperationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        operation_ = value;
+        onChanged();
+      } else {
+        campaignGroupOperationBuilder_.setMessage(value);
+      }
+      operationCase_ = 9;
+      return this;
+    }
+    /**
+     * <pre>
+     * A campaign group mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.services.CampaignGroupOperation campaign_group_operation = 9;</code>
+     */
+    public Builder setCampaignGroupOperation(
+        com.google.ads.googleads.v10.services.CampaignGroupOperation.Builder builderForValue) {
+      if (campaignGroupOperationBuilder_ == null) {
+        operation_ = builderForValue.build();
+        onChanged();
+      } else {
+        campaignGroupOperationBuilder_.setMessage(builderForValue.build());
+      }
+      operationCase_ = 9;
+      return this;
+    }
+    /**
+     * <pre>
+     * A campaign group mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.services.CampaignGroupOperation campaign_group_operation = 9;</code>
+     */
+    public Builder mergeCampaignGroupOperation(com.google.ads.googleads.v10.services.CampaignGroupOperation value) {
+      if (campaignGroupOperationBuilder_ == null) {
+        if (operationCase_ == 9 &&
+            operation_ != com.google.ads.googleads.v10.services.CampaignGroupOperation.getDefaultInstance()) {
+          operation_ = com.google.ads.googleads.v10.services.CampaignGroupOperation.newBuilder((com.google.ads.googleads.v10.services.CampaignGroupOperation) operation_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          operation_ = value;
+        }
+        onChanged();
+      } else {
+        if (operationCase_ == 9) {
+          campaignGroupOperationBuilder_.mergeFrom(value);
+        } else {
+          campaignGroupOperationBuilder_.setMessage(value);
+        }
+      }
+      operationCase_ = 9;
+      return this;
+    }
+    /**
+     * <pre>
+     * A campaign group mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.services.CampaignGroupOperation campaign_group_operation = 9;</code>
+     */
+    public Builder clearCampaignGroupOperation() {
+      if (campaignGroupOperationBuilder_ == null) {
+        if (operationCase_ == 9) {
+          operationCase_ = 0;
+          operation_ = null;
+          onChanged();
+        }
+      } else {
+        if (operationCase_ == 9) {
+          operationCase_ = 0;
+          operation_ = null;
+        }
+        campaignGroupOperationBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A campaign group mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.services.CampaignGroupOperation campaign_group_operation = 9;</code>
+     */
+    public com.google.ads.googleads.v10.services.CampaignGroupOperation.Builder getCampaignGroupOperationBuilder() {
+      return getCampaignGroupOperationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * A campaign group mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.services.CampaignGroupOperation campaign_group_operation = 9;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.services.CampaignGroupOperationOrBuilder getCampaignGroupOperationOrBuilder() {
+      if ((operationCase_ == 9) && (campaignGroupOperationBuilder_ != null)) {
+        return campaignGroupOperationBuilder_.getMessageOrBuilder();
+      } else {
+        if (operationCase_ == 9) {
+          return (com.google.ads.googleads.v10.services.CampaignGroupOperation) operation_;
+        }
+        return com.google.ads.googleads.v10.services.CampaignGroupOperation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * A campaign group mutate operation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.services.CampaignGroupOperation campaign_group_operation = 9;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v10.services.CampaignGroupOperation, com.google.ads.googleads.v10.services.CampaignGroupOperation.Builder, com.google.ads.googleads.v10.services.CampaignGroupOperationOrBuilder> 
+        getCampaignGroupOperationFieldBuilder() {
+      if (campaignGroupOperationBuilder_ == null) {
+        if (!(operationCase_ == 9)) {
+          operation_ = com.google.ads.googleads.v10.services.CampaignGroupOperation.getDefaultInstance();
+        }
+        campaignGroupOperationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v10.services.CampaignGroupOperation, com.google.ads.googleads.v10.services.CampaignGroupOperation.Builder, com.google.ads.googleads.v10.services.CampaignGroupOperationOrBuilder>(
+                (com.google.ads.googleads.v10.services.CampaignGroupOperation) operation_,
+                getParentForChildren(),
+                isClean());
+        operation_ = null;
+      }
+      operationCase_ = 9;
+      onChanged();;
+      return campaignGroupOperationBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -13283,8 +13584,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 28) {
           campaignLabelOperationBuilder_.mergeFrom(value);
+        } else {
+          campaignLabelOperationBuilder_.setMessage(value);
         }
-        campaignLabelOperationBuilder_.setMessage(value);
       }
       operationCase_ = 28;
       return this;
@@ -13460,8 +13762,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 10) {
           campaignOperationBuilder_.mergeFrom(value);
+        } else {
+          campaignOperationBuilder_.setMessage(value);
         }
-        campaignOperationBuilder_.setMessage(value);
       }
       operationCase_ = 10;
       return this;
@@ -13637,8 +13940,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 11) {
           campaignSharedSetOperationBuilder_.mergeFrom(value);
+        } else {
+          campaignSharedSetOperationBuilder_.setMessage(value);
         }
-        campaignSharedSetOperationBuilder_.setMessage(value);
       }
       operationCase_ = 11;
       return this;
@@ -13814,8 +14118,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 12) {
           conversionActionOperationBuilder_.mergeFrom(value);
+        } else {
+          conversionActionOperationBuilder_.setMessage(value);
         }
-        conversionActionOperationBuilder_.setMessage(value);
       }
       operationCase_ = 12;
       return this;
@@ -13991,8 +14296,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 55) {
           conversionCustomVariableOperationBuilder_.mergeFrom(value);
+        } else {
+          conversionCustomVariableOperationBuilder_.setMessage(value);
         }
-        conversionCustomVariableOperationBuilder_.setMessage(value);
       }
       operationCase_ = 55;
       return this;
@@ -14168,8 +14474,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 69) {
           conversionGoalCampaignConfigOperationBuilder_.mergeFrom(value);
+        } else {
+          conversionGoalCampaignConfigOperationBuilder_.setMessage(value);
         }
-        conversionGoalCampaignConfigOperationBuilder_.setMessage(value);
       }
       operationCase_ = 69;
       return this;
@@ -14345,8 +14652,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 63) {
           conversionValueRuleOperationBuilder_.mergeFrom(value);
+        } else {
+          conversionValueRuleOperationBuilder_.setMessage(value);
         }
-        conversionValueRuleOperationBuilder_.setMessage(value);
       }
       operationCase_ = 63;
       return this;
@@ -14522,8 +14830,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 64) {
           conversionValueRuleSetOperationBuilder_.mergeFrom(value);
+        } else {
+          conversionValueRuleSetOperationBuilder_.setMessage(value);
         }
-        conversionValueRuleSetOperationBuilder_.setMessage(value);
       }
       operationCase_ = 64;
       return this;
@@ -14699,8 +15008,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 68) {
           customConversionGoalOperationBuilder_.mergeFrom(value);
+        } else {
+          customConversionGoalOperationBuilder_.setMessage(value);
         }
-        customConversionGoalOperationBuilder_.setMessage(value);
       }
       operationCase_ = 68;
       return this;
@@ -14876,8 +15186,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 57) {
           customerAssetOperationBuilder_.mergeFrom(value);
+        } else {
+          customerAssetOperationBuilder_.setMessage(value);
         }
-        customerAssetOperationBuilder_.setMessage(value);
       }
       operationCase_ = 57;
       return this;
@@ -15053,8 +15364,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 66) {
           customerConversionGoalOperationBuilder_.mergeFrom(value);
+        } else {
+          customerConversionGoalOperationBuilder_.setMessage(value);
         }
-        customerConversionGoalOperationBuilder_.setMessage(value);
       }
       operationCase_ = 66;
       return this;
@@ -15230,8 +15542,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 79) {
           customerCustomizerOperationBuilder_.mergeFrom(value);
+        } else {
+          customerCustomizerOperationBuilder_.setMessage(value);
         }
-        customerCustomizerOperationBuilder_.setMessage(value);
       }
       operationCase_ = 79;
       return this;
@@ -15407,8 +15720,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 30) {
           customerExtensionSettingOperationBuilder_.mergeFrom(value);
+        } else {
+          customerExtensionSettingOperationBuilder_.setMessage(value);
         }
-        customerExtensionSettingOperationBuilder_.setMessage(value);
       }
       operationCase_ = 30;
       return this;
@@ -15584,8 +15898,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 31) {
           customerFeedOperationBuilder_.mergeFrom(value);
+        } else {
+          customerFeedOperationBuilder_.setMessage(value);
         }
-        customerFeedOperationBuilder_.setMessage(value);
       }
       operationCase_ = 31;
       return this;
@@ -15761,8 +16076,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 32) {
           customerLabelOperationBuilder_.mergeFrom(value);
+        } else {
+          customerLabelOperationBuilder_.setMessage(value);
         }
-        customerLabelOperationBuilder_.setMessage(value);
       }
       operationCase_ = 32;
       return this;
@@ -15938,8 +16254,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 34) {
           customerNegativeCriterionOperationBuilder_.mergeFrom(value);
+        } else {
+          customerNegativeCriterionOperationBuilder_.setMessage(value);
         }
-        customerNegativeCriterionOperationBuilder_.setMessage(value);
       }
       operationCase_ = 34;
       return this;
@@ -16115,8 +16432,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 35) {
           customerOperationBuilder_.mergeFrom(value);
+        } else {
+          customerOperationBuilder_.setMessage(value);
         }
-        customerOperationBuilder_.setMessage(value);
       }
       operationCase_ = 35;
       return this;
@@ -16292,8 +16610,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 70) {
           customizerAttributeOperationBuilder_.mergeFrom(value);
+        } else {
+          customizerAttributeOperationBuilder_.setMessage(value);
         }
-        customizerAttributeOperationBuilder_.setMessage(value);
       }
       operationCase_ = 70;
       return this;
@@ -16469,8 +16788,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 82) {
           experimentOperationBuilder_.mergeFrom(value);
+        } else {
+          experimentOperationBuilder_.setMessage(value);
         }
-        experimentOperationBuilder_.setMessage(value);
       }
       operationCase_ = 82;
       return this;
@@ -16646,8 +16966,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 83) {
           experimentArmOperationBuilder_.mergeFrom(value);
+        } else {
+          experimentArmOperationBuilder_.setMessage(value);
         }
-        experimentArmOperationBuilder_.setMessage(value);
       }
       operationCase_ = 83;
       return this;
@@ -16823,8 +17144,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 36) {
           extensionFeedItemOperationBuilder_.mergeFrom(value);
+        } else {
+          extensionFeedItemOperationBuilder_.setMessage(value);
         }
-        extensionFeedItemOperationBuilder_.setMessage(value);
       }
       operationCase_ = 36;
       return this;
@@ -17000,8 +17322,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 37) {
           feedItemOperationBuilder_.mergeFrom(value);
+        } else {
+          feedItemOperationBuilder_.setMessage(value);
         }
-        feedItemOperationBuilder_.setMessage(value);
       }
       operationCase_ = 37;
       return this;
@@ -17177,8 +17500,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 53) {
           feedItemSetOperationBuilder_.mergeFrom(value);
+        } else {
+          feedItemSetOperationBuilder_.setMessage(value);
         }
-        feedItemSetOperationBuilder_.setMessage(value);
       }
       operationCase_ = 53;
       return this;
@@ -17354,8 +17678,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 54) {
           feedItemSetLinkOperationBuilder_.mergeFrom(value);
+        } else {
+          feedItemSetLinkOperationBuilder_.setMessage(value);
         }
-        feedItemSetLinkOperationBuilder_.setMessage(value);
       }
       operationCase_ = 54;
       return this;
@@ -17531,8 +17856,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 38) {
           feedItemTargetOperationBuilder_.mergeFrom(value);
+        } else {
+          feedItemTargetOperationBuilder_.setMessage(value);
         }
-        feedItemTargetOperationBuilder_.setMessage(value);
       }
       operationCase_ = 38;
       return this;
@@ -17708,8 +18034,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 39) {
           feedMappingOperationBuilder_.mergeFrom(value);
+        } else {
+          feedMappingOperationBuilder_.setMessage(value);
         }
-        feedMappingOperationBuilder_.setMessage(value);
       }
       operationCase_ = 39;
       return this;
@@ -17885,8 +18212,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 40) {
           feedOperationBuilder_.mergeFrom(value);
+        } else {
+          feedOperationBuilder_.setMessage(value);
         }
-        feedOperationBuilder_.setMessage(value);
       }
       operationCase_ = 40;
       return this;
@@ -18062,8 +18390,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 44) {
           keywordPlanAdGroupOperationBuilder_.mergeFrom(value);
+        } else {
+          keywordPlanAdGroupOperationBuilder_.setMessage(value);
         }
-        keywordPlanAdGroupOperationBuilder_.setMessage(value);
       }
       operationCase_ = 44;
       return this;
@@ -18239,8 +18568,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 50) {
           keywordPlanAdGroupKeywordOperationBuilder_.mergeFrom(value);
+        } else {
+          keywordPlanAdGroupKeywordOperationBuilder_.setMessage(value);
         }
-        keywordPlanAdGroupKeywordOperationBuilder_.setMessage(value);
       }
       operationCase_ = 50;
       return this;
@@ -18416,8 +18746,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 51) {
           keywordPlanCampaignKeywordOperationBuilder_.mergeFrom(value);
+        } else {
+          keywordPlanCampaignKeywordOperationBuilder_.setMessage(value);
         }
-        keywordPlanCampaignKeywordOperationBuilder_.setMessage(value);
       }
       operationCase_ = 51;
       return this;
@@ -18593,8 +18924,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 45) {
           keywordPlanCampaignOperationBuilder_.mergeFrom(value);
+        } else {
+          keywordPlanCampaignOperationBuilder_.setMessage(value);
         }
-        keywordPlanCampaignOperationBuilder_.setMessage(value);
       }
       operationCase_ = 45;
       return this;
@@ -18770,8 +19102,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 48) {
           keywordPlanOperationBuilder_.mergeFrom(value);
+        } else {
+          keywordPlanOperationBuilder_.setMessage(value);
         }
-        keywordPlanOperationBuilder_.setMessage(value);
       }
       operationCase_ = 48;
       return this;
@@ -18947,8 +19280,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 41) {
           labelOperationBuilder_.mergeFrom(value);
+        } else {
+          labelOperationBuilder_.setMessage(value);
         }
-        labelOperationBuilder_.setMessage(value);
       }
       operationCase_ = 41;
       return this;
@@ -19124,8 +19458,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 42) {
           mediaFileOperationBuilder_.mergeFrom(value);
+        } else {
+          mediaFileOperationBuilder_.setMessage(value);
         }
-        mediaFileOperationBuilder_.setMessage(value);
       }
       operationCase_ = 42;
       return this;
@@ -19301,8 +19636,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 43) {
           remarketingActionOperationBuilder_.mergeFrom(value);
+        } else {
+          remarketingActionOperationBuilder_.setMessage(value);
         }
-        remarketingActionOperationBuilder_.setMessage(value);
       }
       operationCase_ = 43;
       return this;
@@ -19478,8 +19814,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 14) {
           sharedCriterionOperationBuilder_.mergeFrom(value);
+        } else {
+          sharedCriterionOperationBuilder_.setMessage(value);
         }
-        sharedCriterionOperationBuilder_.setMessage(value);
       }
       operationCase_ = 14;
       return this;
@@ -19655,8 +19992,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 15) {
           sharedSetOperationBuilder_.mergeFrom(value);
+        } else {
+          sharedSetOperationBuilder_.setMessage(value);
         }
-        sharedSetOperationBuilder_.setMessage(value);
       }
       operationCase_ = 15;
       return this;
@@ -19832,8 +20170,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 61) {
           smartCampaignSettingOperationBuilder_.mergeFrom(value);
+        } else {
+          smartCampaignSettingOperationBuilder_.setMessage(value);
         }
-        smartCampaignSettingOperationBuilder_.setMessage(value);
       }
       operationCase_ = 61;
       return this;
@@ -20009,8 +20348,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 16) {
           userListOperationBuilder_.mergeFrom(value);
+        } else {
+          userListOperationBuilder_.setMessage(value);
         }
-        userListOperationBuilder_.setMessage(value);
       }
       operationCase_ = 16;
       return this;

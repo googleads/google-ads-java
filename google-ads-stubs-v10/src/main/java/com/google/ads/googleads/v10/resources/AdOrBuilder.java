@@ -1117,5 +1117,59 @@ public interface AdOrBuilder extends
    */
   com.google.ads.googleads.v10.common.AppPreRegistrationAdInfoOrBuilder getAppPreRegistrationAdOrBuilder();
 
+  /**
+   * <pre>
+   * Details pertaining to a discovery multi asset ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo discovery_multi_asset_ad = 51;</code>
+   * @return Whether the discoveryMultiAssetAd field is set.
+   */
+  boolean hasDiscoveryMultiAssetAd();
+  /**
+   * <pre>
+   * Details pertaining to a discovery multi asset ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo discovery_multi_asset_ad = 51;</code>
+   * @return The discoveryMultiAssetAd.
+   */
+  com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo getDiscoveryMultiAssetAd();
+  /**
+   * <pre>
+   * Details pertaining to a discovery multi asset ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo discovery_multi_asset_ad = 51;</code>
+   */
+  com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfoOrBuilder getDiscoveryMultiAssetAdOrBuilder();
+
+  /**
+   * <pre>
+   * Details pertaining to a discovery carousel ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo discovery_carousel_ad = 52;</code>
+   * @return Whether the discoveryCarouselAd field is set.
+   */
+  boolean hasDiscoveryCarouselAd();
+  /**
+   * <pre>
+   * Details pertaining to a discovery carousel ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo discovery_carousel_ad = 52;</code>
+   * @return The discoveryCarouselAd.
+   */
+  com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo getDiscoveryCarouselAd();
+  /**
+   * <pre>
+   * Details pertaining to a discovery carousel ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo discovery_carousel_ad = 52;</code>
+   */
+  com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfoOrBuilder getDiscoveryCarouselAdOrBuilder();
+
   public com.google.ads.googleads.v10.resources.Ad.AdDataCase getAdDataCase();
 }

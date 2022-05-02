@@ -63,6 +63,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -349,8 +351,8 @@ private static final long serialVersionUID = 0L;
     CUSTOM_VARIABLE_NOT_ENABLED(28),
     /**
      * <pre>
-     * The value of the custom variable contains private customer data, such
-     * as email addresses or phone numbers.
+     * The value of the custom variable contains personally identifiable
+     * information (PII), such as an email address or phone number.
      * </pre>
      *
      * <code>CUSTOM_VARIABLE_VALUE_CONTAINS_PII = 29;</code>
@@ -462,6 +464,25 @@ private static final long serialVersionUID = 0L;
      * <code>ONE_PER_CLICK_CONVERSION_ACTION_NOT_PERMITTED_WITH_BRAID = 46;</code>
      */
     ONE_PER_CLICK_CONVERSION_ACTION_NOT_PERMITTED_WITH_BRAID(46),
+    /**
+     * <pre>
+     * Per our customer data policies, enhanced conversions have been prohibited
+     * in your account. If you have any questions, please contact your Google
+     * representative.
+     * </pre>
+     *
+     * <code>CUSTOMER_DATA_POLICY_PROHIBITS_ENHANCED_CONVERSIONS = 47;</code>
+     */
+    CUSTOMER_DATA_POLICY_PROHIBITS_ENHANCED_CONVERSIONS(47),
+    /**
+     * <pre>
+     * The customer has not accepted the customer data terms in the conversion
+     * settings page.
+     * </pre>
+     *
+     * <code>CUSTOMER_NOT_ACCEPTED_CUSTOMER_DATA_TERMS = 48;</code>
+     */
+    CUSTOMER_NOT_ACCEPTED_CUSTOMER_DATA_TERMS(48),
     UNRECOGNIZED(-1),
     ;
 
@@ -721,8 +742,8 @@ private static final long serialVersionUID = 0L;
     public static final int CUSTOM_VARIABLE_NOT_ENABLED_VALUE = 28;
     /**
      * <pre>
-     * The value of the custom variable contains private customer data, such
-     * as email addresses or phone numbers.
+     * The value of the custom variable contains personally identifiable
+     * information (PII), such as an email address or phone number.
      * </pre>
      *
      * <code>CUSTOM_VARIABLE_VALUE_CONTAINS_PII = 29;</code>
@@ -834,6 +855,25 @@ private static final long serialVersionUID = 0L;
      * <code>ONE_PER_CLICK_CONVERSION_ACTION_NOT_PERMITTED_WITH_BRAID = 46;</code>
      */
     public static final int ONE_PER_CLICK_CONVERSION_ACTION_NOT_PERMITTED_WITH_BRAID_VALUE = 46;
+    /**
+     * <pre>
+     * Per our customer data policies, enhanced conversions have been prohibited
+     * in your account. If you have any questions, please contact your Google
+     * representative.
+     * </pre>
+     *
+     * <code>CUSTOMER_DATA_POLICY_PROHIBITS_ENHANCED_CONVERSIONS = 47;</code>
+     */
+    public static final int CUSTOMER_DATA_POLICY_PROHIBITS_ENHANCED_CONVERSIONS_VALUE = 47;
+    /**
+     * <pre>
+     * The customer has not accepted the customer data terms in the conversion
+     * settings page.
+     * </pre>
+     *
+     * <code>CUSTOMER_NOT_ACCEPTED_CUSTOMER_DATA_TERMS = 48;</code>
+     */
+    public static final int CUSTOMER_NOT_ACCEPTED_CUSTOMER_DATA_TERMS_VALUE = 48;
 
 
     public final int getNumber() {
@@ -901,6 +941,8 @@ private static final long serialVersionUID = 0L;
         case 40: return UNPARSEABLE_GBRAID;
         case 41: return EXTERNALLY_ATTRIBUTED_CONVERSION_TYPE_NOT_PERMITTED_WITH_BRAID;
         case 46: return ONE_PER_CLICK_CONVERSION_ACTION_NOT_PERMITTED_WITH_BRAID;
+        case 47: return CUSTOMER_DATA_POLICY_PROHIBITS_ENHANCED_CONVERSIONS;
+        case 48: return CUSTOMER_NOT_ACCEPTED_CUSTOMER_DATA_TERMS;
         default: return null;
       }
     }

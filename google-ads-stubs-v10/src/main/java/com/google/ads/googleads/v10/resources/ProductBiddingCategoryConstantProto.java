@@ -34,44 +34,42 @@ public final class ProductBiddingCategoryConstantProto {
       "/ads/googleads/v10/enums/product_bidding" +
       "_category_level.proto\032Dgoogle/ads/google" +
       "ads/v10/enums/product_bidding_category_s" +
-      "tatus.proto\032\034google/api/annotations.prot" +
-      "o\032\037google/api/field_behavior.proto\032\031goog" +
-      "le/api/resource.proto\"\263\006\n\036ProductBidding" +
-      "CategoryConstant\022V\n\rresource_name\030\001 \001(\tB" +
-      "?\340A\003\372A9\n7googleads.googleapis.com/Produc" +
-      "tBiddingCategoryConstant\022\024\n\002id\030\n \001(\003B\003\340A" +
-      "\003H\000\210\001\001\022\036\n\014country_code\030\013 \001(\tB\003\340A\003H\001\210\001\001\022v" +
-      "\n(product_bidding_category_constant_pare" +
-      "nt\030\014 \001(\tB?\340A\003\372A9\n7googleads.googleapis.c" +
-      "om/ProductBiddingCategoryConstantH\002\210\001\001\022o" +
-      "\n\005level\030\005 \001(\0162[.google.ads.googleads.v10" +
-      ".enums.ProductBiddingCategoryLevelEnum.P" +
-      "roductBiddingCategoryLevelB\003\340A\003\022r\n\006statu" +
-      "s\030\006 \001(\0162].google.ads.googleads.v10.enums" +
-      ".ProductBiddingCategoryStatusEnum.Produc" +
-      "tBiddingCategoryStatusB\003\340A\003\022\037\n\rlanguage_" +
-      "code\030\r \001(\tB\003\340A\003H\003\210\001\001\022 \n\016localized_name\030\016" +
-      " \001(\tB\003\340A\003H\004\210\001\001:y\352Av\n7googleads.googleapi" +
-      "s.com/ProductBiddingCategoryConstant\022;pr" +
-      "oductBiddingCategoryConstants/{country_c" +
-      "ode}~{level}~{id}B\005\n\003_idB\017\n\r_country_cod" +
-      "eB+\n)_product_bidding_category_constant_" +
-      "parentB\020\n\016_language_codeB\021\n\017_localized_n" +
-      "ameB\225\002\n&com.google.ads.googleads.v10.res" +
-      "ourcesB#ProductBiddingCategoryConstantPr" +
-      "otoP\001ZKgoogle.golang.org/genproto/google" +
-      "apis/ads/googleads/v10/resources;resourc" +
-      "es\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V10.Reso" +
-      "urces\312\002\"Google\\Ads\\GoogleAds\\V10\\Resourc" +
-      "es\352\002&Google::Ads::GoogleAds::V10::Resour" +
-      "cesb\006proto3"
+      "tatus.proto\032\037google/api/field_behavior.p" +
+      "roto\032\031google/api/resource.proto\"\263\006\n\036Prod" +
+      "uctBiddingCategoryConstant\022V\n\rresource_n" +
+      "ame\030\001 \001(\tB?\340A\003\372A9\n7googleads.googleapis." +
+      "com/ProductBiddingCategoryConstant\022\024\n\002id" +
+      "\030\n \001(\003B\003\340A\003H\000\210\001\001\022\036\n\014country_code\030\013 \001(\tB\003" +
+      "\340A\003H\001\210\001\001\022v\n(product_bidding_category_con" +
+      "stant_parent\030\014 \001(\tB?\340A\003\372A9\n7googleads.go" +
+      "ogleapis.com/ProductBiddingCategoryConst" +
+      "antH\002\210\001\001\022o\n\005level\030\005 \001(\0162[.google.ads.goo" +
+      "gleads.v10.enums.ProductBiddingCategoryL" +
+      "evelEnum.ProductBiddingCategoryLevelB\003\340A" +
+      "\003\022r\n\006status\030\006 \001(\0162].google.ads.googleads" +
+      ".v10.enums.ProductBiddingCategoryStatusE" +
+      "num.ProductBiddingCategoryStatusB\003\340A\003\022\037\n" +
+      "\rlanguage_code\030\r \001(\tB\003\340A\003H\003\210\001\001\022 \n\016locali" +
+      "zed_name\030\016 \001(\tB\003\340A\003H\004\210\001\001:y\352Av\n7googleads" +
+      ".googleapis.com/ProductBiddingCategoryCo" +
+      "nstant\022;productBiddingCategoryConstants/" +
+      "{country_code}~{level}~{id}B\005\n\003_idB\017\n\r_c" +
+      "ountry_codeB+\n)_product_bidding_category" +
+      "_constant_parentB\020\n\016_language_codeB\021\n\017_l" +
+      "ocalized_nameB\225\002\n&com.google.ads.googlea" +
+      "ds.v10.resourcesB#ProductBiddingCategory" +
+      "ConstantProtoP\001ZKgoogle.golang.org/genpr" +
+      "oto/googleapis/ads/googleads/v10/resourc" +
+      "es;resources\242\002\003GAA\252\002\"Google.Ads.GoogleAd" +
+      "s.V10.Resources\312\002\"Google\\Ads\\GoogleAds\\V" +
+      "10\\Resources\352\002&Google::Ads::GoogleAds::V" +
+      "10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.enums.ProductBiddingCategoryLevelProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.ProductBiddingCategoryStatusProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -90,7 +88,6 @@ public final class ProductBiddingCategoryConstantProto {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.enums.ProductBiddingCategoryLevelProto.getDescriptor();
     com.google.ads.googleads.v10.enums.ProductBiddingCategoryStatusProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

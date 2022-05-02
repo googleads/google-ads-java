@@ -30,32 +30,30 @@ public final class OperationAccessDeniedErrorProto {
     java.lang.String[] descriptorData = {
       "\nCgoogle/ads/googleads/v10/errors/operat" +
       "ion_access_denied_error.proto\022\037google.ad" +
-      "s.googleads.v10.errors\032\034google/api/annot" +
-      "ations.proto\"\353\003\n\036OperationAccessDeniedEr" +
-      "rorEnum\"\310\003\n\032OperationAccessDeniedError\022\017" +
-      "\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\030\n\024ACTION_N" +
-      "OT_PERMITTED\020\002\022\"\n\036CREATE_OPERATION_NOT_P" +
-      "ERMITTED\020\003\022\"\n\036REMOVE_OPERATION_NOT_PERMI" +
-      "TTED\020\004\022\"\n\036UPDATE_OPERATION_NOT_PERMITTED" +
-      "\020\005\022*\n&MUTATE_ACTION_NOT_PERMITTED_FOR_CL" +
-      "IENT\020\006\022-\n)OPERATION_NOT_PERMITTED_FOR_CA" +
-      "MPAIGN_TYPE\020\007\022#\n\037CREATE_AS_REMOVED_NOT_P" +
-      "ERMITTED\020\010\0220\n,OPERATION_NOT_PERMITTED_FO" +
-      "R_REMOVED_RESOURCE\020\t\022-\n)OPERATION_NOT_PE" +
-      "RMITTED_FOR_AD_GROUP_TYPE\020\n\022%\n!MUTATE_NO" +
-      "T_PERMITTED_FOR_CUSTOMER\020\013B\377\001\n#com.googl" +
-      "e.ads.googleads.v10.errorsB\037OperationAcc" +
-      "essDeniedErrorProtoP\001ZEgoogle.golang.org" +
-      "/genproto/googleapis/ads/googleads/v10/e" +
-      "rrors;errors\242\002\003GAA\252\002\037Google.Ads.GoogleAd" +
-      "s.V10.Errors\312\002\037Google\\Ads\\GoogleAds\\V10\\" +
-      "Errors\352\002#Google::Ads::GoogleAds::V10::Er" +
-      "rorsb\006proto3"
+      "s.googleads.v10.errors\"\353\003\n\036OperationAcce" +
+      "ssDeniedErrorEnum\"\310\003\n\032OperationAccessDen" +
+      "iedError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\030" +
+      "\n\024ACTION_NOT_PERMITTED\020\002\022\"\n\036CREATE_OPERA" +
+      "TION_NOT_PERMITTED\020\003\022\"\n\036REMOVE_OPERATION" +
+      "_NOT_PERMITTED\020\004\022\"\n\036UPDATE_OPERATION_NOT" +
+      "_PERMITTED\020\005\022*\n&MUTATE_ACTION_NOT_PERMIT" +
+      "TED_FOR_CLIENT\020\006\022-\n)OPERATION_NOT_PERMIT" +
+      "TED_FOR_CAMPAIGN_TYPE\020\007\022#\n\037CREATE_AS_REM" +
+      "OVED_NOT_PERMITTED\020\010\0220\n,OPERATION_NOT_PE" +
+      "RMITTED_FOR_REMOVED_RESOURCE\020\t\022-\n)OPERAT" +
+      "ION_NOT_PERMITTED_FOR_AD_GROUP_TYPE\020\n\022%\n" +
+      "!MUTATE_NOT_PERMITTED_FOR_CUSTOMER\020\013B\377\001\n" +
+      "#com.google.ads.googleads.v10.errorsB\037Op" +
+      "erationAccessDeniedErrorProtoP\001ZEgoogle." +
+      "golang.org/genproto/googleapis/ads/googl" +
+      "eads/v10/errors;errors\242\002\003GAA\252\002\037Google.Ad" +
+      "s.GoogleAds.V10.Errors\312\002\037Google\\Ads\\Goog" +
+      "leAds\\V10\\Errors\352\002#Google::Ads::GoogleAd" +
+      "s::V10::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_OperationAccessDeniedErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -63,7 +61,6 @@ public final class OperationAccessDeniedErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_OperationAccessDeniedErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

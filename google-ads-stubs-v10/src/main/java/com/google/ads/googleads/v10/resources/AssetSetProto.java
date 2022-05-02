@@ -37,37 +37,36 @@ public final class AssetSetProto {
       "et_set.proto\022\"google.ads.googleads.v10.r" +
       "esources\0325google/ads/googleads/v10/enums" +
       "/asset_set_status.proto\0323google/ads/goog" +
-      "leads/v10/enums/asset_set_type.proto\032\034go" +
-      "ogle/api/annotations.proto\032\037google/api/f" +
-      "ield_behavior.proto\032\031google/api/resource" +
-      ".proto\"\242\004\n\010AssetSet\022@\n\rresource_name\030\001 \001" +
-      "(\tB)\340A\005\372A#\n!googleads.googleapis.com/Ass" +
-      "etSet\022\021\n\004name\030\002 \001(\tB\003\340A\002\022S\n\004type\030\003 \001(\0162=" +
-      ".google.ads.googleads.v10.enums.AssetSet" +
-      "TypeEnum.AssetSetTypeB\006\340A\002\340A\005\022V\n\006status\030" +
-      "\004 \001(\0162A.google.ads.googleads.v10.enums.A" +
-      "ssetSetStatusEnum.AssetSetStatusB\003\340A\003\022]\n" +
-      "\024merchant_center_feed\030\005 \001(\0132?.google.ads" +
-      ".googleads.v10.resources.AssetSet.Mercha" +
-      "ntCenterFeed\032[\n\022MerchantCenterFeed\022\030\n\013me" +
-      "rchant_id\030\001 \001(\003B\003\340A\002\022\034\n\nfeed_label\030\002 \001(\t" +
-      "B\003\340A\001H\000\210\001\001B\r\n\013_feed_label:X\352AU\n!googlead" +
-      "s.googleapis.com/AssetSet\0220customers/{cu" +
-      "stomer_id}/assetSets/{asset_set_id}B\377\001\n&" +
-      "com.google.ads.googleads.v10.resourcesB\r" +
-      "AssetSetProtoP\001ZKgoogle.golang.org/genpr" +
-      "oto/googleapis/ads/googleads/v10/resourc" +
-      "es;resources\242\002\003GAA\252\002\"Google.Ads.GoogleAd" +
-      "s.V10.Resources\312\002\"Google\\Ads\\GoogleAds\\V" +
-      "10\\Resources\352\002&Google::Ads::GoogleAds::V" +
-      "10::Resourcesb\006proto3"
+      "leads/v10/enums/asset_set_type.proto\032\037go" +
+      "ogle/api/field_behavior.proto\032\031google/ap" +
+      "i/resource.proto\"\263\004\n\010AssetSet\022\017\n\002id\030\006 \001(" +
+      "\003B\003\340A\003\022@\n\rresource_name\030\001 \001(\tB)\340A\005\372A#\n!g" +
+      "oogleads.googleapis.com/AssetSet\022\021\n\004name" +
+      "\030\002 \001(\tB\003\340A\002\022S\n\004type\030\003 \001(\0162=.google.ads.g" +
+      "oogleads.v10.enums.AssetSetTypeEnum.Asse" +
+      "tSetTypeB\006\340A\002\340A\005\022V\n\006status\030\004 \001(\0162A.googl" +
+      "e.ads.googleads.v10.enums.AssetSetStatus" +
+      "Enum.AssetSetStatusB\003\340A\003\022]\n\024merchant_cen" +
+      "ter_feed\030\005 \001(\0132?.google.ads.googleads.v1" +
+      "0.resources.AssetSet.MerchantCenterFeed\032" +
+      "[\n\022MerchantCenterFeed\022\030\n\013merchant_id\030\001 \001" +
+      "(\003B\003\340A\002\022\034\n\nfeed_label\030\002 \001(\tB\003\340A\001H\000\210\001\001B\r\n" +
+      "\013_feed_label:X\352AU\n!googleads.googleapis." +
+      "com/AssetSet\0220customers/{customer_id}/as" +
+      "setSets/{asset_set_id}B\377\001\n&com.google.ad" +
+      "s.googleads.v10.resourcesB\rAssetSetProto" +
+      "P\001ZKgoogle.golang.org/genproto/googleapi" +
+      "s/ads/googleads/v10/resources;resources\242" +
+      "\002\003GAA\252\002\"Google.Ads.GoogleAds.V10.Resourc" +
+      "es\312\002\"Google\\Ads\\GoogleAds\\V10\\Resources\352" +
+      "\002&Google::Ads::GoogleAds::V10::Resources" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.enums.AssetSetStatusProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.AssetSetTypeProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -76,7 +75,7 @@ public final class AssetSetProto {
     internal_static_google_ads_googleads_v10_resources_AssetSet_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_resources_AssetSet_descriptor,
-        new java.lang.String[] { "ResourceName", "Name", "Type", "Status", "MerchantCenterFeed", });
+        new java.lang.String[] { "Id", "ResourceName", "Name", "Type", "Status", "MerchantCenterFeed", });
     internal_static_google_ads_googleads_v10_resources_AssetSet_MerchantCenterFeed_descriptor =
       internal_static_google_ads_googleads_v10_resources_AssetSet_descriptor.getNestedTypes().get(0);
     internal_static_google_ads_googleads_v10_resources_AssetSet_MerchantCenterFeed_fieldAccessorTable = new
@@ -92,7 +91,6 @@ public final class AssetSetProto {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.enums.AssetSetStatusProto.getDescriptor();
     com.google.ads.googleads.v10.enums.AssetSetTypeProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

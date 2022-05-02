@@ -128,7 +128,8 @@ public interface RecommendationOrBuilder extends
    * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
    * MAXIMIZE_CLICKS_OPT_IN, MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
    * RESPONSIVE_SEARCH_AD, RESPONSIVE_SEARCH_AD_ASSET, SEARCH_PARTNERS_OPT_IN,
-   * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN, TEXT_AD
+   * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN,
+   * TEXT_AD
    * </pre>
    *
    * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -144,7 +145,8 @@ public interface RecommendationOrBuilder extends
    * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
    * MAXIMIZE_CLICKS_OPT_IN, MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
    * RESPONSIVE_SEARCH_AD, RESPONSIVE_SEARCH_AD_ASSET, SEARCH_PARTNERS_OPT_IN,
-   * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN, TEXT_AD
+   * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN,
+   * TEXT_AD
    * </pre>
    *
    * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -160,7 +162,8 @@ public interface RecommendationOrBuilder extends
    * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
    * MAXIMIZE_CLICKS_OPT_IN, MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
    * RESPONSIVE_SEARCH_AD, RESPONSIVE_SEARCH_AD_ASSET, SEARCH_PARTNERS_OPT_IN,
-   * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN, TEXT_AD
+   * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN,
+   * TEXT_AD
    * </pre>
    *
    * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>

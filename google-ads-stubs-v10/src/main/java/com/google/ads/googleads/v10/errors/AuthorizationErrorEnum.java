@@ -63,6 +63,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -222,6 +224,14 @@ private static final long serialVersionUID = 0L;
      * <code>ACCESS_DENIED_FOR_ACCOUNT_TYPE = 25;</code>
      */
     ACCESS_DENIED_FOR_ACCOUNT_TYPE(25),
+    /**
+     * <pre>
+     * The developer does not have access to the metrics queried.
+     * </pre>
+     *
+     * <code>METRIC_ACCESS_DENIED = 26;</code>
+     */
+    METRIC_ACCESS_DENIED(26),
     UNRECOGNIZED(-1),
     ;
 
@@ -354,6 +364,14 @@ private static final long serialVersionUID = 0L;
      * <code>ACCESS_DENIED_FOR_ACCOUNT_TYPE = 25;</code>
      */
     public static final int ACCESS_DENIED_FOR_ACCOUNT_TYPE_VALUE = 25;
+    /**
+     * <pre>
+     * The developer does not have access to the metrics queried.
+     * </pre>
+     *
+     * <code>METRIC_ACCESS_DENIED = 26;</code>
+     */
+    public static final int METRIC_ACCESS_DENIED_VALUE = 26;
 
 
     public final int getNumber() {
@@ -395,6 +413,7 @@ private static final long serialVersionUID = 0L;
         case 11: return INVALID_LOGIN_CUSTOMER_ID_SERVING_CUSTOMER_ID_COMBINATION;
         case 12: return SERVICE_ACCESS_DENIED;
         case 25: return ACCESS_DENIED_FOR_ACCOUNT_TYPE;
+        case 26: return METRIC_ACCESS_DENIED;
         default: return null;
       }
     }

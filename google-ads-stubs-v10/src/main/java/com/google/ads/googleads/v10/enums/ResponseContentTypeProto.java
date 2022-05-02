@@ -30,22 +30,20 @@ public final class ResponseContentTypeProto {
     java.lang.String[] descriptorData = {
       "\n:google/ads/googleads/v10/enums/respons" +
       "e_content_type.proto\022\036google.ads.googlea" +
-      "ds.v10.enums\032\034google/api/annotations.pro" +
-      "to\"o\n\027ResponseContentTypeEnum\"T\n\023Respons" +
-      "eContentType\022\017\n\013UNSPECIFIED\020\000\022\026\n\022RESOURC" +
-      "E_NAME_ONLY\020\001\022\024\n\020MUTABLE_RESOURCE\020\002B\362\001\n\"" +
-      "com.google.ads.googleads.v10.enumsB\030Resp" +
-      "onseContentTypeProtoP\001ZCgoogle.golang.or" +
-      "g/genproto/googleapis/ads/googleads/v10/" +
-      "enums;enums\242\002\003GAA\252\002\036Google.Ads.GoogleAds" +
-      ".V10.Enums\312\002\036Google\\Ads\\GoogleAds\\V10\\En" +
-      "ums\352\002\"Google::Ads::GoogleAds::V10::Enums" +
-      "b\006proto3"
+      "ds.v10.enums\"o\n\027ResponseContentTypeEnum\"" +
+      "T\n\023ResponseContentType\022\017\n\013UNSPECIFIED\020\000\022" +
+      "\026\n\022RESOURCE_NAME_ONLY\020\001\022\024\n\020MUTABLE_RESOU" +
+      "RCE\020\002B\362\001\n\"com.google.ads.googleads.v10.e" +
+      "numsB\030ResponseContentTypeProtoP\001ZCgoogle" +
+      ".golang.org/genproto/googleapis/ads/goog" +
+      "leads/v10/enums;enums\242\002\003GAA\252\002\036Google.Ads" +
+      ".GoogleAds.V10.Enums\312\002\036Google\\Ads\\Google" +
+      "Ads\\V10\\Enums\352\002\"Google::Ads::GoogleAds::" +
+      "V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_ResponseContentTypeEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -53,7 +51,6 @@ public final class ResponseContentTypeProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_ResponseContentTypeEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

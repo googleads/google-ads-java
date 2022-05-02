@@ -30,24 +30,22 @@ public final class NewResourceCreationErrorProto {
     java.lang.String[] descriptorData = {
       "\nAgoogle/ads/googleads/v10/errors/new_re" +
       "source_creation_error.proto\022\037google.ads." +
-      "googleads.v10.errors\032\034google/api/annotat" +
-      "ions.proto\"\260\001\n\034NewResourceCreationErrorE" +
-      "num\"\217\001\n\030NewResourceCreationError\022\017\n\013UNSP" +
-      "ECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\034\n\030CANNOT_SET_ID_" +
-      "FOR_CREATE\020\002\022\026\n\022DUPLICATE_TEMP_IDS\020\003\022\037\n\033" +
-      "TEMP_ID_RESOURCE_HAD_ERRORS\020\004B\375\001\n#com.go" +
-      "ogle.ads.googleads.v10.errorsB\035NewResour" +
-      "ceCreationErrorProtoP\001ZEgoogle.golang.or" +
-      "g/genproto/googleapis/ads/googleads/v10/" +
-      "errors;errors\242\002\003GAA\252\002\037Google.Ads.GoogleA" +
-      "ds.V10.Errors\312\002\037Google\\Ads\\GoogleAds\\V10" +
-      "\\Errors\352\002#Google::Ads::GoogleAds::V10::E" +
-      "rrorsb\006proto3"
+      "googleads.v10.errors\"\260\001\n\034NewResourceCrea" +
+      "tionErrorEnum\"\217\001\n\030NewResourceCreationErr" +
+      "or\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\034\n\030CANN" +
+      "OT_SET_ID_FOR_CREATE\020\002\022\026\n\022DUPLICATE_TEMP" +
+      "_IDS\020\003\022\037\n\033TEMP_ID_RESOURCE_HAD_ERRORS\020\004B" +
+      "\375\001\n#com.google.ads.googleads.v10.errorsB" +
+      "\035NewResourceCreationErrorProtoP\001ZEgoogle" +
+      ".golang.org/genproto/googleapis/ads/goog" +
+      "leads/v10/errors;errors\242\002\003GAA\252\002\037Google.A" +
+      "ds.GoogleAds.V10.Errors\312\002\037Google\\Ads\\Goo" +
+      "gleAds\\V10\\Errors\352\002#Google::Ads::GoogleA" +
+      "ds::V10::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_NewResourceCreationErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -55,7 +53,6 @@ public final class NewResourceCreationErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_NewResourceCreationErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

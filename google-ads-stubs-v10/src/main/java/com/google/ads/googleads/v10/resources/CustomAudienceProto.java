@@ -40,34 +40,33 @@ public final class CustomAudienceProto {
       "\032;google/ads/googleads/v10/enums/custom_" +
       "audience_status.proto\0329google/ads/google" +
       "ads/v10/enums/custom_audience_type.proto" +
-      "\032\034google/api/annotations.proto\032\037google/a" +
-      "pi/field_behavior.proto\032\031google/api/reso" +
-      "urce.proto\"\200\004\n\016CustomAudience\022F\n\rresourc" +
-      "e_name\030\001 \001(\tB/\340A\005\372A)\n\'googleads.googleap" +
-      "is.com/CustomAudience\022\017\n\002id\030\002 \001(\003B\003\340A\003\022b" +
-      "\n\006status\030\003 \001(\0162M.google.ads.googleads.v1" +
-      "0.enums.CustomAudienceStatusEnum.CustomA" +
-      "udienceStatusB\003\340A\003\022\014\n\004name\030\004 \001(\t\022W\n\004type" +
-      "\030\005 \001(\0162I.google.ads.googleads.v10.enums." +
-      "CustomAudienceTypeEnum.CustomAudienceTyp" +
-      "e\022\023\n\013description\030\006 \001(\t\022I\n\007members\030\007 \003(\0132" +
-      "8.google.ads.googleads.v10.resources.Cus" +
-      "tomAudienceMember:j\352Ag\n\'googleads.google" +
-      "apis.com/CustomAudience\022<customers/{cust" +
-      "omer_id}/customAudiences/{custom_audienc" +
-      "e_id}\"\326\001\n\024CustomAudienceMember\022j\n\013member" +
-      "_type\030\001 \001(\0162U.google.ads.googleads.v10.e" +
-      "nums.CustomAudienceMemberTypeEnum.Custom" +
-      "AudienceMemberType\022\021\n\007keyword\030\002 \001(\tH\000\022\r\n" +
-      "\003url\030\003 \001(\tH\000\022\030\n\016place_category\030\004 \001(\003H\000\022\r" +
-      "\n\003app\030\005 \001(\tH\000B\007\n\005valueB\205\002\n&com.google.ad" +
-      "s.googleads.v10.resourcesB\023CustomAudienc" +
-      "eProtoP\001ZKgoogle.golang.org/genproto/goo" +
-      "gleapis/ads/googleads/v10/resources;reso" +
-      "urces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V10.R" +
-      "esources\312\002\"Google\\Ads\\GoogleAds\\V10\\Reso" +
-      "urces\352\002&Google::Ads::GoogleAds::V10::Res" +
-      "ourcesb\006proto3"
+      "\032\037google/api/field_behavior.proto\032\031googl" +
+      "e/api/resource.proto\"\200\004\n\016CustomAudience\022" +
+      "F\n\rresource_name\030\001 \001(\tB/\340A\005\372A)\n\'googlead" +
+      "s.googleapis.com/CustomAudience\022\017\n\002id\030\002 " +
+      "\001(\003B\003\340A\003\022b\n\006status\030\003 \001(\0162M.google.ads.go" +
+      "ogleads.v10.enums.CustomAudienceStatusEn" +
+      "um.CustomAudienceStatusB\003\340A\003\022\014\n\004name\030\004 \001" +
+      "(\t\022W\n\004type\030\005 \001(\0162I.google.ads.googleads." +
+      "v10.enums.CustomAudienceTypeEnum.CustomA" +
+      "udienceType\022\023\n\013description\030\006 \001(\t\022I\n\007memb" +
+      "ers\030\007 \003(\01328.google.ads.googleads.v10.res" +
+      "ources.CustomAudienceMember:j\352Ag\n\'google" +
+      "ads.googleapis.com/CustomAudience\022<custo" +
+      "mers/{customer_id}/customAudiences/{cust" +
+      "om_audience_id}\"\326\001\n\024CustomAudienceMember" +
+      "\022j\n\013member_type\030\001 \001(\0162U.google.ads.googl" +
+      "eads.v10.enums.CustomAudienceMemberTypeE" +
+      "num.CustomAudienceMemberType\022\021\n\007keyword\030" +
+      "\002 \001(\tH\000\022\r\n\003url\030\003 \001(\tH\000\022\030\n\016place_category" +
+      "\030\004 \001(\003H\000\022\r\n\003app\030\005 \001(\tH\000B\007\n\005valueB\205\002\n&com" +
+      ".google.ads.googleads.v10.resourcesB\023Cus" +
+      "tomAudienceProtoP\001ZKgoogle.golang.org/ge" +
+      "nproto/googleapis/ads/googleads/v10/reso" +
+      "urces;resources\242\002\003GAA\252\002\"Google.Ads.Googl" +
+      "eAds.V10.Resources\312\002\"Google\\Ads\\GoogleAd" +
+      "s\\V10\\Resources\352\002&Google::Ads::GoogleAds" +
+      "::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -75,7 +74,6 @@ public final class CustomAudienceProto {
           com.google.ads.googleads.v10.enums.CustomAudienceMemberTypeProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.CustomAudienceStatusProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.CustomAudienceTypeProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -101,7 +99,6 @@ public final class CustomAudienceProto {
     com.google.ads.googleads.v10.enums.CustomAudienceMemberTypeProto.getDescriptor();
     com.google.ads.googleads.v10.enums.CustomAudienceStatusProto.getDescriptor();
     com.google.ads.googleads.v10.enums.CustomAudienceTypeProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

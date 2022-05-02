@@ -37,39 +37,39 @@ public final class ConversionValueRuleSetProto {
       "\032Cgoogle/ads/googleads/v10/enums/value_r" +
       "ule_set_attachment_type.proto\032=google/ad" +
       "s/googleads/v10/enums/value_rule_set_dim" +
-      "ension.proto\032\034google/api/annotations.pro" +
-      "to\032\037google/api/field_behavior.proto\032\031goo" +
-      "gle/api/resource.proto\"\246\007\n\026ConversionVal" +
-      "ueRuleSet\022N\n\rresource_name\030\001 \001(\tB7\340A\005\372A1" +
+      "ension.proto\032\037google/api/field_behavior." +
+      "proto\032\031google/api/resource.proto\"\246\007\n\026Con" +
+      "versionValueRuleSet\022N\n\rresource_name\030\001 \001" +
+      "(\tB7\340A\005\372A1\n/googleads.googleapis.com/Con" +
+      "versionValueRuleSet\022\017\n\002id\030\002 \001(\003B\003\340A\003\022Q\n\026" +
+      "conversion_value_rules\030\003 \003(\tB1\372A.\n,googl" +
+      "eads.googleapis.com/ConversionValueRule\022" +
+      "c\n\ndimensions\030\004 \003(\0162O.google.ads.googlea" +
+      "ds.v10.enums.ValueRuleSetDimensionEnum.V" +
+      "alueRuleSetDimension\022A\n\016owner_customer\030\005" +
+      " \001(\tB)\340A\003\372A#\n!googleads.googleapis.com/C" +
+      "ustomer\022w\n\017attachment_type\030\006 \001(\0162Y.googl" +
+      "e.ads.googleads.v10.enums.ValueRuleSetAt" +
+      "tachmentTypeEnum.ValueRuleSetAttachmentT" +
+      "ypeB\003\340A\005\0228\n\010campaign\030\007 \001(\tB&\372A#\n!googlea" +
+      "ds.googleapis.com/Campaign\022r\n\006status\030\010 \001" +
+      "(\0162].google.ads.googleads.v10.enums.Conv" +
+      "ersionValueRuleSetStatusEnum.ConversionV" +
+      "alueRuleSetStatusB\003\340A\003\022\200\001\n\034conversion_ac" +
+      "tion_categories\030\t \003(\0162U.google.ads.googl" +
+      "eads.v10.enums.ConversionActionCategoryE" +
+      "num.ConversionActionCategoryB\003\340A\005:\205\001\352A\201\001" +
       "\n/googleads.googleapis.com/ConversionVal" +
-      "ueRuleSet\022\017\n\002id\030\002 \001(\003B\003\340A\003\022Q\n\026conversion" +
-      "_value_rules\030\003 \003(\tB1\372A.\n,googleads.googl" +
-      "eapis.com/ConversionValueRule\022c\n\ndimensi" +
-      "ons\030\004 \003(\0162O.google.ads.googleads.v10.enu" +
-      "ms.ValueRuleSetDimensionEnum.ValueRuleSe" +
-      "tDimension\022A\n\016owner_customer\030\005 \001(\tB)\340A\003\372" +
-      "A#\n!googleads.googleapis.com/Customer\022w\n" +
-      "\017attachment_type\030\006 \001(\0162Y.google.ads.goog" +
-      "leads.v10.enums.ValueRuleSetAttachmentTy" +
-      "peEnum.ValueRuleSetAttachmentTypeB\003\340A\005\0228" +
-      "\n\010campaign\030\007 \001(\tB&\372A#\n!googleads.googlea" +
-      "pis.com/Campaign\022r\n\006status\030\010 \001(\0162].googl" +
-      "e.ads.googleads.v10.enums.ConversionValu" +
-      "eRuleSetStatusEnum.ConversionValueRuleSe" +
-      "tStatusB\003\340A\003\022\200\001\n\034conversion_action_categ" +
-      "ories\030\t \003(\0162U.google.ads.googleads.v10.e" +
-      "nums.ConversionActionCategoryEnum.Conver" +
-      "sionActionCategoryB\003\340A\005:\205\001\352A\201\001\n/googlead" +
-      "s.googleapis.com/ConversionValueRuleSet\022" +
-      "Ncustomers/{customer_id}/conversionValue" +
-      "RuleSets/{conversion_value_rule_set_id}B" +
-      "\215\002\n&com.google.ads.googleads.v10.resourc" +
-      "esB\033ConversionValueRuleSetProtoP\001ZKgoogl" +
-      "e.golang.org/genproto/googleapis/ads/goo" +
-      "gleads/v10/resources;resources\242\002\003GAA\252\002\"G" +
-      "oogle.Ads.GoogleAds.V10.Resources\312\002\"Goog" +
-      "le\\Ads\\GoogleAds\\V10\\Resources\352\002&Google:" +
-      ":Ads::GoogleAds::V10::Resourcesb\006proto3"
+      "ueRuleSet\022Ncustomers/{customer_id}/conve" +
+      "rsionValueRuleSets/{conversion_value_rul" +
+      "e_set_id}B\215\002\n&com.google.ads.googleads.v" +
+      "10.resourcesB\033ConversionValueRuleSetProt" +
+      "oP\001ZKgoogle.golang.org/genproto/googleap" +
+      "is/ads/googleads/v10/resources;resources" +
+      "\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V10.Resour" +
+      "ces\312\002\"Google\\Ads\\GoogleAds\\V10\\Resources" +
+      "\352\002&Google::Ads::GoogleAds::V10::Resource" +
+      "sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -78,7 +78,6 @@ public final class ConversionValueRuleSetProto {
           com.google.ads.googleads.v10.enums.ConversionValueRuleSetStatusProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.ValueRuleSetAttachmentTypeProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.ValueRuleSetDimensionProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -99,7 +98,6 @@ public final class ConversionValueRuleSetProto {
     com.google.ads.googleads.v10.enums.ConversionValueRuleSetStatusProto.getDescriptor();
     com.google.ads.googleads.v10.enums.ValueRuleSetAttachmentTypeProto.getDescriptor();
     com.google.ads.googleads.v10.enums.ValueRuleSetDimensionProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

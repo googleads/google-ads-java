@@ -22,6 +22,7 @@ private static final long serialVersionUID = 0L;
   }
   private ConversionTrackingSetting() {
     conversionTrackingStatus_ = 0;
+    googleAdsConversionCustomer_ = "";
   }
 
   @java.lang.Override
@@ -81,6 +82,12 @@ private static final long serialVersionUID = 0L;
             enhancedConversionsForLeadsEnabled_ = input.readBool();
             break;
           }
+          case 66: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            googleAdsConversionCustomer_ = s;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -92,6 +99,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -248,6 +257,54 @@ private static final long serialVersionUID = 0L;
     return enhancedConversionsForLeadsEnabled_;
   }
 
+  public static final int GOOGLE_ADS_CONVERSION_CUSTOMER_FIELD_NUMBER = 8;
+  private volatile java.lang.Object googleAdsConversionCustomer_;
+  /**
+   * <pre>
+   * Output only. The resource name of the customer where conversions are created and
+   * managed. This field is read-only.
+   * </pre>
+   *
+   * <code>string google_ads_conversion_customer = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The googleAdsConversionCustomer.
+   */
+  @java.lang.Override
+  public java.lang.String getGoogleAdsConversionCustomer() {
+    java.lang.Object ref = googleAdsConversionCustomer_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      googleAdsConversionCustomer_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Output only. The resource name of the customer where conversions are created and
+   * managed. This field is read-only.
+   * </pre>
+   *
+   * <code>string google_ads_conversion_customer = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The bytes for googleAdsConversionCustomer.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getGoogleAdsConversionCustomerBytes() {
+    java.lang.Object ref = googleAdsConversionCustomer_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      googleAdsConversionCustomer_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -277,6 +334,9 @@ private static final long serialVersionUID = 0L;
     if (enhancedConversionsForLeadsEnabled_ != false) {
       output.writeBool(7, enhancedConversionsForLeadsEnabled_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(googleAdsConversionCustomer_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, googleAdsConversionCustomer_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -305,6 +365,9 @@ private static final long serialVersionUID = 0L;
     if (enhancedConversionsForLeadsEnabled_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(7, enhancedConversionsForLeadsEnabled_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(googleAdsConversionCustomer_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, googleAdsConversionCustomer_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -336,6 +399,8 @@ private static final long serialVersionUID = 0L;
     if (conversionTrackingStatus_ != other.conversionTrackingStatus_) return false;
     if (getEnhancedConversionsForLeadsEnabled()
         != other.getEnhancedConversionsForLeadsEnabled()) return false;
+    if (!getGoogleAdsConversionCustomer()
+        .equals(other.getGoogleAdsConversionCustomer())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -365,6 +430,8 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + ENHANCED_CONVERSIONS_FOR_LEADS_ENABLED_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getEnhancedConversionsForLeadsEnabled());
+    hash = (37 * hash) + GOOGLE_ADS_CONVERSION_CUSTOMER_FIELD_NUMBER;
+    hash = (53 * hash) + getGoogleAdsConversionCustomer().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -513,6 +580,8 @@ private static final long serialVersionUID = 0L;
 
       enhancedConversionsForLeadsEnabled_ = false;
 
+      googleAdsConversionCustomer_ = "";
+
       return this;
     }
 
@@ -552,6 +621,7 @@ private static final long serialVersionUID = 0L;
       result.acceptedCustomerDataTerms_ = acceptedCustomerDataTerms_;
       result.conversionTrackingStatus_ = conversionTrackingStatus_;
       result.enhancedConversionsForLeadsEnabled_ = enhancedConversionsForLeadsEnabled_;
+      result.googleAdsConversionCustomer_ = googleAdsConversionCustomer_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -615,6 +685,10 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getEnhancedConversionsForLeadsEnabled() != false) {
         setEnhancedConversionsForLeadsEnabled(other.getEnhancedConversionsForLeadsEnabled());
+      }
+      if (!other.getGoogleAdsConversionCustomer().isEmpty()) {
+        googleAdsConversionCustomer_ = other.googleAdsConversionCustomer_;
+        onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -967,6 +1041,107 @@ private static final long serialVersionUID = 0L;
     public Builder clearEnhancedConversionsForLeadsEnabled() {
       
       enhancedConversionsForLeadsEnabled_ = false;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object googleAdsConversionCustomer_ = "";
+    /**
+     * <pre>
+     * Output only. The resource name of the customer where conversions are created and
+     * managed. This field is read-only.
+     * </pre>
+     *
+     * <code>string google_ads_conversion_customer = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The googleAdsConversionCustomer.
+     */
+    public java.lang.String getGoogleAdsConversionCustomer() {
+      java.lang.Object ref = googleAdsConversionCustomer_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        googleAdsConversionCustomer_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The resource name of the customer where conversions are created and
+     * managed. This field is read-only.
+     * </pre>
+     *
+     * <code>string google_ads_conversion_customer = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The bytes for googleAdsConversionCustomer.
+     */
+    public com.google.protobuf.ByteString
+        getGoogleAdsConversionCustomerBytes() {
+      java.lang.Object ref = googleAdsConversionCustomer_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        googleAdsConversionCustomer_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The resource name of the customer where conversions are created and
+     * managed. This field is read-only.
+     * </pre>
+     *
+     * <code>string google_ads_conversion_customer = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The googleAdsConversionCustomer to set.
+     * @return This builder for chaining.
+     */
+    public Builder setGoogleAdsConversionCustomer(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      googleAdsConversionCustomer_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The resource name of the customer where conversions are created and
+     * managed. This field is read-only.
+     * </pre>
+     *
+     * <code>string google_ads_conversion_customer = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearGoogleAdsConversionCustomer() {
+      
+      googleAdsConversionCustomer_ = getDefaultInstance().getGoogleAdsConversionCustomer();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The resource name of the customer where conversions are created and
+     * managed. This field is read-only.
+     * </pre>
+     *
+     * <code>string google_ads_conversion_customer = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The bytes for googleAdsConversionCustomer to set.
+     * @return This builder for chaining.
+     */
+    public Builder setGoogleAdsConversionCustomerBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      googleAdsConversionCustomer_ = value;
       onChanged();
       return this;
     }

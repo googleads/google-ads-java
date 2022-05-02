@@ -30,27 +30,25 @@ public final class CampaignAudienceViewProto {
     java.lang.String[] descriptorData = {
       "\n?google/ads/googleads/v10/resources/cam" +
       "paign_audience_view.proto\022\"google.ads.go" +
-      "ogleads.v10.resources\032\034google/api/annota" +
-      "tions.proto\032\037google/api/field_behavior.p" +
-      "roto\032\031google/api/resource.proto\"\344\001\n\024Camp" +
-      "aignAudienceView\022L\n\rresource_name\030\001 \001(\tB" +
-      "5\340A\003\372A/\n-googleads.googleapis.com/Campai" +
-      "gnAudienceView:~\352A{\n-googleads.googleapi" +
-      "s.com/CampaignAudienceView\022Jcustomers/{c" +
-      "ustomer_id}/campaignAudienceViews/{campa" +
-      "ign_id}~{criterion_id}B\213\002\n&com.google.ad" +
-      "s.googleads.v10.resourcesB\031CampaignAudie" +
-      "nceViewProtoP\001ZKgoogle.golang.org/genpro" +
-      "to/googleapis/ads/googleads/v10/resource" +
-      "s;resources\242\002\003GAA\252\002\"Google.Ads.GoogleAds" +
-      ".V10.Resources\312\002\"Google\\Ads\\GoogleAds\\V1" +
-      "0\\Resources\352\002&Google::Ads::GoogleAds::V1" +
-      "0::Resourcesb\006proto3"
+      "ogleads.v10.resources\032\037google/api/field_" +
+      "behavior.proto\032\031google/api/resource.prot" +
+      "o\"\344\001\n\024CampaignAudienceView\022L\n\rresource_n" +
+      "ame\030\001 \001(\tB5\340A\003\372A/\n-googleads.googleapis." +
+      "com/CampaignAudienceView:~\352A{\n-googleads" +
+      ".googleapis.com/CampaignAudienceView\022Jcu" +
+      "stomers/{customer_id}/campaignAudienceVi" +
+      "ews/{campaign_id}~{criterion_id}B\213\002\n&com" +
+      ".google.ads.googleads.v10.resourcesB\031Cam" +
+      "paignAudienceViewProtoP\001ZKgoogle.golang." +
+      "org/genproto/googleapis/ads/googleads/v1" +
+      "0/resources;resources\242\002\003GAA\252\002\"Google.Ads" +
+      ".GoogleAds.V10.Resources\312\002\"Google\\Ads\\Go" +
+      "ogleAds\\V10\\Resources\352\002&Google::Ads::Goo" +
+      "gleAds::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -67,7 +65,6 @@ public final class CampaignAudienceViewProto {
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

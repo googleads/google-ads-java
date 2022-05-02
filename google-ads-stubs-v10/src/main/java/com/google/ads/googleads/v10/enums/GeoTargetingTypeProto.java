@@ -30,22 +30,20 @@ public final class GeoTargetingTypeProto {
     java.lang.String[] descriptorData = {
       "\n7google/ads/googleads/v10/enums/geo_tar" +
       "geting_type.proto\022\036google.ads.googleads." +
-      "v10.enums\032\034google/api/annotations.proto\"" +
-      "x\n\024GeoTargetingTypeEnum\"`\n\020GeoTargetingT" +
-      "ype\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\024\n\020ARE" +
-      "A_OF_INTEREST\020\002\022\030\n\024LOCATION_OF_PRESENCE\020" +
-      "\003B\357\001\n\"com.google.ads.googleads.v10.enums" +
-      "B\025GeoTargetingTypeProtoP\001ZCgoogle.golang" +
-      ".org/genproto/googleapis/ads/googleads/v" +
-      "10/enums;enums\242\002\003GAA\252\002\036Google.Ads.Google" +
-      "Ads.V10.Enums\312\002\036Google\\Ads\\GoogleAds\\V10" +
-      "\\Enums\352\002\"Google::Ads::GoogleAds::V10::En" +
-      "umsb\006proto3"
+      "v10.enums\"x\n\024GeoTargetingTypeEnum\"`\n\020Geo" +
+      "TargetingType\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOW" +
+      "N\020\001\022\024\n\020AREA_OF_INTEREST\020\002\022\030\n\024LOCATION_OF" +
+      "_PRESENCE\020\003B\357\001\n\"com.google.ads.googleads" +
+      ".v10.enumsB\025GeoTargetingTypeProtoP\001ZCgoo" +
+      "gle.golang.org/genproto/googleapis/ads/g" +
+      "oogleads/v10/enums;enums\242\002\003GAA\252\002\036Google." +
+      "Ads.GoogleAds.V10.Enums\312\002\036Google\\Ads\\Goo" +
+      "gleAds\\V10\\Enums\352\002\"Google::Ads::GoogleAd" +
+      "s::V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_GeoTargetingTypeEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -53,7 +51,6 @@ public final class GeoTargetingTypeProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_GeoTargetingTypeEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

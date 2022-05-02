@@ -877,6 +877,34 @@ public interface ErrorCodeOrBuilder extends
 
   /**
    * <pre>
+   * The reasons for the campaign conversion goal error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.errors.CampaignConversionGoalErrorEnum.CampaignConversionGoalError campaign_conversion_goal_error = 166;</code>
+   * @return Whether the campaignConversionGoalError field is set.
+   */
+  boolean hasCampaignConversionGoalError();
+  /**
+   * <pre>
+   * The reasons for the campaign conversion goal error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.errors.CampaignConversionGoalErrorEnum.CampaignConversionGoalError campaign_conversion_goal_error = 166;</code>
+   * @return The enum numeric value on the wire for campaignConversionGoalError.
+   */
+  int getCampaignConversionGoalErrorValue();
+  /**
+   * <pre>
+   * The reasons for the campaign conversion goal error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.errors.CampaignConversionGoalErrorEnum.CampaignConversionGoalError campaign_conversion_goal_error = 166;</code>
+   * @return The campaignConversionGoalError.
+   */
+  com.google.ads.googleads.v10.errors.CampaignConversionGoalErrorEnum.CampaignConversionGoalError getCampaignConversionGoalError();
+
+  /**
+   * <pre>
    * The reasons for the campaign customizer error.
    * </pre>
    *
@@ -930,6 +958,34 @@ public interface ErrorCodeOrBuilder extends
    * @return The collectionSizeError.
    */
   com.google.ads.googleads.v10.errors.CollectionSizeErrorEnum.CollectionSizeError getCollectionSizeError();
+
+  /**
+   * <pre>
+   * The reasons for the conversion goal campaign config error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.errors.ConversionGoalCampaignConfigErrorEnum.ConversionGoalCampaignConfigError conversion_goal_campaign_config_error = 165;</code>
+   * @return Whether the conversionGoalCampaignConfigError field is set.
+   */
+  boolean hasConversionGoalCampaignConfigError();
+  /**
+   * <pre>
+   * The reasons for the conversion goal campaign config error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.errors.ConversionGoalCampaignConfigErrorEnum.ConversionGoalCampaignConfigError conversion_goal_campaign_config_error = 165;</code>
+   * @return The enum numeric value on the wire for conversionGoalCampaignConfigError.
+   */
+  int getConversionGoalCampaignConfigErrorValue();
+  /**
+   * <pre>
+   * The reasons for the conversion goal campaign config error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.errors.ConversionGoalCampaignConfigErrorEnum.ConversionGoalCampaignConfigError conversion_goal_campaign_config_error = 165;</code>
+   * @return The conversionGoalCampaignConfigError.
+   */
+  com.google.ads.googleads.v10.errors.ConversionGoalCampaignConfigErrorEnum.ConversionGoalCampaignConfigError getConversionGoalCampaignConfigError();
 
   /**
    * <pre>

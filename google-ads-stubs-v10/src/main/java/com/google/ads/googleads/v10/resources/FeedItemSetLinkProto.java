@@ -30,30 +30,28 @@ public final class FeedItemSetLinkProto {
     java.lang.String[] descriptorData = {
       "\n;google/ads/googleads/v10/resources/fee" +
       "d_item_set_link.proto\022\"google.ads.google" +
-      "ads.v10.resources\032\034google/api/annotation" +
-      "s.proto\032\037google/api/field_behavior.proto" +
-      "\032\031google/api/resource.proto\"\344\002\n\017FeedItem" +
-      "SetLink\022G\n\rresource_name\030\001 \001(\tB0\340A\005\372A*\n(" +
-      "googleads.googleapis.com/FeedItemSetLink" +
-      "\022<\n\tfeed_item\030\002 \001(\tB)\340A\005\372A#\n!googleads.g" +
-      "oogleapis.com/FeedItem\022C\n\rfeed_item_set\030" +
-      "\003 \001(\tB,\340A\005\372A&\n$googleads.googleapis.com/" +
-      "FeedItemSet:\204\001\352A\200\001\n(googleads.googleapis" +
-      ".com/FeedItemSetLink\022Tcustomers/{custome" +
-      "r_id}/feedItemSetLinks/{feed_id}~{feed_i" +
-      "tem_set_id}~{feed_item_id}B\206\002\n&com.googl" +
-      "e.ads.googleads.v10.resourcesB\024FeedItemS" +
-      "etLinkProtoP\001ZKgoogle.golang.org/genprot" +
-      "o/googleapis/ads/googleads/v10/resources" +
-      ";resources\242\002\003GAA\252\002\"Google.Ads.GoogleAds." +
-      "V10.Resources\312\002\"Google\\Ads\\GoogleAds\\V10" +
-      "\\Resources\352\002&Google::Ads::GoogleAds::V10" +
-      "::Resourcesb\006proto3"
+      "ads.v10.resources\032\037google/api/field_beha" +
+      "vior.proto\032\031google/api/resource.proto\"\344\002" +
+      "\n\017FeedItemSetLink\022G\n\rresource_name\030\001 \001(\t" +
+      "B0\340A\005\372A*\n(googleads.googleapis.com/FeedI" +
+      "temSetLink\022<\n\tfeed_item\030\002 \001(\tB)\340A\005\372A#\n!g" +
+      "oogleads.googleapis.com/FeedItem\022C\n\rfeed" +
+      "_item_set\030\003 \001(\tB,\340A\005\372A&\n$googleads.googl" +
+      "eapis.com/FeedItemSet:\204\001\352A\200\001\n(googleads." +
+      "googleapis.com/FeedItemSetLink\022Tcustomer" +
+      "s/{customer_id}/feedItemSetLinks/{feed_i" +
+      "d}~{feed_item_set_id}~{feed_item_id}B\206\002\n" +
+      "&com.google.ads.googleads.v10.resourcesB" +
+      "\024FeedItemSetLinkProtoP\001ZKgoogle.golang.o" +
+      "rg/genproto/googleapis/ads/googleads/v10" +
+      "/resources;resources\242\002\003GAA\252\002\"Google.Ads." +
+      "GoogleAds.V10.Resources\312\002\"Google\\Ads\\Goo" +
+      "gleAds\\V10\\Resources\352\002&Google::Ads::Goog" +
+      "leAds::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -70,7 +68,6 @@ public final class FeedItemSetLinkProto {
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

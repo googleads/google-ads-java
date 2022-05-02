@@ -42,43 +42,42 @@ public final class AdGroupAdAssetViewProto {
       "_performance_label.proto\032;google/ads/goo" +
       "gleads/v10/enums/policy_approval_status." +
       "proto\0329google/ads/googleads/v10/enums/po" +
-      "licy_review_status.proto\032\034google/api/ann" +
-      "otations.proto\032\037google/api/field_behavio" +
-      "r.proto\032\031google/api/resource.proto\"\335\005\n\022A" +
-      "dGroupAdAssetView\022J\n\rresource_name\030\001 \001(\t" +
-      "B3\340A\003\372A-\n+googleads.googleapis.com/AdGro" +
-      "upAdAssetView\022D\n\013ad_group_ad\030\t \001(\tB*\340A\003\372" +
-      "A$\n\"googleads.googleapis.com/AdGroupAdH\000" +
-      "\210\001\001\022:\n\005asset\030\n \001(\tB&\340A\003\372A \n\036googleads.go" +
-      "ogleapis.com/AssetH\001\210\001\001\022Z\n\nfield_type\030\002 " +
-      "\001(\0162A.google.ads.googleads.v10.enums.Ass" +
-      "etFieldTypeEnum.AssetFieldTypeB\003\340A\003\022\031\n\007e" +
-      "nabled\030\010 \001(\010B\003\340A\003H\002\210\001\001\022\\\n\016policy_summary" +
-      "\030\003 \001(\0132?.google.ads.googleads.v10.resour" +
-      "ces.AdGroupAdAssetPolicySummaryB\003\340A\003\022o\n\021" +
-      "performance_label\030\004 \001(\0162O.google.ads.goo" +
-      "gleads.v10.enums.AssetPerformanceLabelEn" +
-      "um.AssetPerformanceLabelB\003\340A\003:\214\001\352A\210\001\n+go" +
-      "ogleads.googleapis.com/AdGroupAdAssetVie" +
-      "w\022Ycustomers/{customer_id}/adGroupAdAsse" +
-      "tViews/{ad_group_id}~{ad_id}~{asset_id}~" +
-      "{field_type}B\016\n\014_ad_group_adB\010\n\006_assetB\n" +
-      "\n\010_enabled\"\307\002\n\033AdGroupAdAssetPolicySumma" +
-      "ry\022T\n\024policy_topic_entries\030\001 \003(\01321.googl" +
-      "e.ads.googleads.v10.common.PolicyTopicEn" +
-      "tryB\003\340A\003\022e\n\rreview_status\030\002 \001(\0162I.google" +
-      ".ads.googleads.v10.enums.PolicyReviewSta" +
-      "tusEnum.PolicyReviewStatusB\003\340A\003\022k\n\017appro" +
-      "val_status\030\003 \001(\0162M.google.ads.googleads." +
-      "v10.enums.PolicyApprovalStatusEnum.Polic" +
-      "yApprovalStatusB\003\340A\003B\211\002\n&com.google.ads." +
-      "googleads.v10.resourcesB\027AdGroupAdAssetV" +
-      "iewProtoP\001ZKgoogle.golang.org/genproto/g" +
-      "oogleapis/ads/googleads/v10/resources;re" +
-      "sources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V10" +
-      ".Resources\312\002\"Google\\Ads\\GoogleAds\\V10\\Re" +
-      "sources\352\002&Google::Ads::GoogleAds::V10::R" +
-      "esourcesb\006proto3"
+      "licy_review_status.proto\032\037google/api/fie" +
+      "ld_behavior.proto\032\031google/api/resource.p" +
+      "roto\"\335\005\n\022AdGroupAdAssetView\022J\n\rresource_" +
+      "name\030\001 \001(\tB3\340A\003\372A-\n+googleads.googleapis" +
+      ".com/AdGroupAdAssetView\022D\n\013ad_group_ad\030\t" +
+      " \001(\tB*\340A\003\372A$\n\"googleads.googleapis.com/A" +
+      "dGroupAdH\000\210\001\001\022:\n\005asset\030\n \001(\tB&\340A\003\372A \n\036go" +
+      "ogleads.googleapis.com/AssetH\001\210\001\001\022Z\n\nfie" +
+      "ld_type\030\002 \001(\0162A.google.ads.googleads.v10" +
+      ".enums.AssetFieldTypeEnum.AssetFieldType" +
+      "B\003\340A\003\022\031\n\007enabled\030\010 \001(\010B\003\340A\003H\002\210\001\001\022\\\n\016poli" +
+      "cy_summary\030\003 \001(\0132?.google.ads.googleads." +
+      "v10.resources.AdGroupAdAssetPolicySummar" +
+      "yB\003\340A\003\022o\n\021performance_label\030\004 \001(\0162O.goog" +
+      "le.ads.googleads.v10.enums.AssetPerforma" +
+      "nceLabelEnum.AssetPerformanceLabelB\003\340A\003:" +
+      "\214\001\352A\210\001\n+googleads.googleapis.com/AdGroup" +
+      "AdAssetView\022Ycustomers/{customer_id}/adG" +
+      "roupAdAssetViews/{ad_group_id}~{ad_id}~{" +
+      "asset_id}~{field_type}B\016\n\014_ad_group_adB\010" +
+      "\n\006_assetB\n\n\010_enabled\"\307\002\n\033AdGroupAdAssetP" +
+      "olicySummary\022T\n\024policy_topic_entries\030\001 \003" +
+      "(\01321.google.ads.googleads.v10.common.Pol" +
+      "icyTopicEntryB\003\340A\003\022e\n\rreview_status\030\002 \001(" +
+      "\0162I.google.ads.googleads.v10.enums.Polic" +
+      "yReviewStatusEnum.PolicyReviewStatusB\003\340A" +
+      "\003\022k\n\017approval_status\030\003 \001(\0162M.google.ads." +
+      "googleads.v10.enums.PolicyApprovalStatus" +
+      "Enum.PolicyApprovalStatusB\003\340A\003B\211\002\n&com.g" +
+      "oogle.ads.googleads.v10.resourcesB\027AdGro" +
+      "upAdAssetViewProtoP\001ZKgoogle.golang.org/" +
+      "genproto/googleapis/ads/googleads/v10/re" +
+      "sources;resources\242\002\003GAA\252\002\"Google.Ads.Goo" +
+      "gleAds.V10.Resources\312\002\"Google\\Ads\\Google" +
+      "Ads\\V10\\Resources\352\002&Google::Ads::GoogleA" +
+      "ds::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -88,7 +87,6 @@ public final class AdGroupAdAssetViewProto {
           com.google.ads.googleads.v10.enums.AssetPerformanceLabelProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.PolicyApprovalStatusProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.PolicyReviewStatusProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -116,7 +114,6 @@ public final class AdGroupAdAssetViewProto {
     com.google.ads.googleads.v10.enums.AssetPerformanceLabelProto.getDescriptor();
     com.google.ads.googleads.v10.enums.PolicyApprovalStatusProto.getDescriptor();
     com.google.ads.googleads.v10.enums.PolicyReviewStatusProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

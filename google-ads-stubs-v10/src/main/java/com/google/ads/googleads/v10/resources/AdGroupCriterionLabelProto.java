@@ -30,32 +30,30 @@ public final class AdGroupCriterionLabelProto {
     java.lang.String[] descriptorData = {
       "\nAgoogle/ads/googleads/v10/resources/ad_" +
       "group_criterion_label.proto\022\"google.ads." +
-      "googleads.v10.resources\032\034google/api/anno" +
-      "tations.proto\032\037google/api/field_behavior" +
-      ".proto\032\031google/api/resource.proto\"\246\003\n\025Ad" +
-      "GroupCriterionLabel\022M\n\rresource_name\030\001 \001" +
-      "(\tB6\340A\005\372A0\n.googleads.googleapis.com/AdG" +
-      "roupCriterionLabel\022R\n\022ad_group_criterion" +
-      "\030\004 \001(\tB1\340A\005\372A+\n)googleads.googleapis.com" +
-      "/AdGroupCriterionH\000\210\001\001\022:\n\005label\030\005 \001(\tB&\340" +
-      "A\005\372A \n\036googleads.googleapis.com/LabelH\001\210" +
-      "\001\001:\214\001\352A\210\001\n.googleads.googleapis.com/AdGr" +
-      "oupCriterionLabel\022Vcustomers/{customer_i" +
-      "d}/adGroupCriterionLabels/{ad_group_id}~" +
-      "{criterion_id}~{label_id}B\025\n\023_ad_group_c" +
-      "riterionB\010\n\006_labelB\214\002\n&com.google.ads.go" +
-      "ogleads.v10.resourcesB\032AdGroupCriterionL" +
-      "abelProtoP\001ZKgoogle.golang.org/genproto/" +
-      "googleapis/ads/googleads/v10/resources;r" +
-      "esources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V1" +
-      "0.Resources\312\002\"Google\\Ads\\GoogleAds\\V10\\R" +
-      "esources\352\002&Google::Ads::GoogleAds::V10::" +
-      "Resourcesb\006proto3"
+      "googleads.v10.resources\032\037google/api/fiel" +
+      "d_behavior.proto\032\031google/api/resource.pr" +
+      "oto\"\246\003\n\025AdGroupCriterionLabel\022M\n\rresourc" +
+      "e_name\030\001 \001(\tB6\340A\005\372A0\n.googleads.googleap" +
+      "is.com/AdGroupCriterionLabel\022R\n\022ad_group" +
+      "_criterion\030\004 \001(\tB1\340A\005\372A+\n)googleads.goog" +
+      "leapis.com/AdGroupCriterionH\000\210\001\001\022:\n\005labe" +
+      "l\030\005 \001(\tB&\340A\005\372A \n\036googleads.googleapis.co" +
+      "m/LabelH\001\210\001\001:\214\001\352A\210\001\n.googleads.googleapi" +
+      "s.com/AdGroupCriterionLabel\022Vcustomers/{" +
+      "customer_id}/adGroupCriterionLabels/{ad_" +
+      "group_id}~{criterion_id}~{label_id}B\025\n\023_" +
+      "ad_group_criterionB\010\n\006_labelB\214\002\n&com.goo" +
+      "gle.ads.googleads.v10.resourcesB\032AdGroup" +
+      "CriterionLabelProtoP\001ZKgoogle.golang.org" +
+      "/genproto/googleapis/ads/googleads/v10/r" +
+      "esources;resources\242\002\003GAA\252\002\"Google.Ads.Go" +
+      "ogleAds.V10.Resources\312\002\"Google\\Ads\\Googl" +
+      "eAds\\V10\\Resources\352\002&Google::Ads::Google" +
+      "Ads::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -72,7 +70,6 @@ public final class AdGroupCriterionLabelProto {
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

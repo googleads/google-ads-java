@@ -155,4 +155,23 @@ public interface KeywordPlanHistoricalMetricsOrBuilder extends
    * @return The highTopOfPageBidMicros.
    */
   long getHighTopOfPageBidMicros();
+
+  /**
+   * <pre>
+   * Average Cost Per Click in micros for the keyword.
+   * </pre>
+   *
+   * <code>optional int64 average_cpc_micros = 11;</code>
+   * @return Whether the averageCpcMicros field is set.
+   */
+  boolean hasAverageCpcMicros();
+  /**
+   * <pre>
+   * Average Cost Per Click in micros for the keyword.
+   * </pre>
+   *
+   * <code>optional int64 average_cpc_micros = 11;</code>
+   * @return The averageCpcMicros.
+   */
+  long getAverageCpcMicros();
 }

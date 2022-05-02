@@ -197,10 +197,10 @@ public class SharedSetServiceStubSettings extends StubSettings<SharedSetServiceS
               .setInitialRetryDelay(Duration.ofMillis(5000L))
               .setRetryDelayMultiplier(1.3)
               .setMaxRetryDelay(Duration.ofMillis(60000L))
-              .setInitialRpcTimeout(Duration.ofMillis(3600000L))
+              .setInitialRpcTimeout(Duration.ofMillis(14400000L))
               .setRpcTimeoutMultiplier(1.0)
-              .setMaxRpcTimeout(Duration.ofMillis(3600000L))
-              .setTotalTimeout(Duration.ofMillis(3600000L))
+              .setMaxRpcTimeout(Duration.ofMillis(14400000L))
+              .setTotalTimeout(Duration.ofMillis(14400000L))
               .build();
       definitions.put("retry_policy_0_params", settings);
       RETRY_PARAM_DEFINITIONS = definitions.build();

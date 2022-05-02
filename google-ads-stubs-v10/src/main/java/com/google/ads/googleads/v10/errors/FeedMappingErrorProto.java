@@ -30,39 +30,37 @@ public final class FeedMappingErrorProto {
     java.lang.String[] descriptorData = {
       "\n8google/ads/googleads/v10/errors/feed_m" +
       "apping_error.proto\022\037google.ads.googleads" +
-      ".v10.errors\032\034google/api/annotations.prot" +
-      "o\"\222\006\n\024FeedMappingErrorEnum\"\371\005\n\020FeedMappi" +
-      "ngError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\035\n" +
-      "\031INVALID_PLACEHOLDER_FIELD\020\002\022\033\n\027INVALID_" +
-      "CRITERION_FIELD\020\003\022\034\n\030INVALID_PLACEHOLDER" +
-      "_TYPE\020\004\022\032\n\026INVALID_CRITERION_TYPE\020\005\022\037\n\033N" +
-      "O_ATTRIBUTE_FIELD_MAPPINGS\020\007\022 \n\034FEED_ATT" +
-      "RIBUTE_TYPE_MISMATCH\020\010\0228\n4CANNOT_OPERATE" +
-      "_ON_MAPPINGS_FOR_SYSTEM_GENERATED_FEED\020\t" +
-      "\022*\n&MULTIPLE_MAPPINGS_FOR_PLACEHOLDER_TY" +
-      "PE\020\n\022(\n$MULTIPLE_MAPPINGS_FOR_CRITERION_" +
-      "TYPE\020\013\022+\n\'MULTIPLE_MAPPINGS_FOR_PLACEHOL" +
-      "DER_FIELD\020\014\022)\n%MULTIPLE_MAPPINGS_FOR_CRI" +
-      "TERION_FIELD\020\r\022\'\n#UNEXPECTED_ATTRIBUTE_F" +
-      "IELD_MAPPINGS\020\016\022.\n*LOCATION_PLACEHOLDER_" +
-      "ONLY_FOR_PLACES_FEEDS\020\017\022)\n%CANNOT_MODIFY" +
-      "_MAPPINGS_FOR_TYPED_FEED\020\020\022:\n6INVALID_PL" +
-      "ACEHOLDER_TYPE_FOR_NON_SYSTEM_GENERATED_" +
-      "FEED\020\021\022;\n7INVALID_PLACEHOLDER_TYPE_FOR_S" +
-      "YSTEM_GENERATED_FEED_TYPE\020\022\022)\n%ATTRIBUTE" +
-      "_FIELD_MAPPING_MISSING_FIELD\020\023B\365\001\n#com.g" +
-      "oogle.ads.googleads.v10.errorsB\025FeedMapp" +
-      "ingErrorProtoP\001ZEgoogle.golang.org/genpr" +
-      "oto/googleapis/ads/googleads/v10/errors;" +
-      "errors\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V10." +
-      "Errors\312\002\037Google\\Ads\\GoogleAds\\V10\\Errors" +
-      "\352\002#Google::Ads::GoogleAds::V10::Errorsb\006" +
-      "proto3"
+      ".v10.errors\"\222\006\n\024FeedMappingErrorEnum\"\371\005\n" +
+      "\020FeedMappingError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UN" +
+      "KNOWN\020\001\022\035\n\031INVALID_PLACEHOLDER_FIELD\020\002\022\033" +
+      "\n\027INVALID_CRITERION_FIELD\020\003\022\034\n\030INVALID_P" +
+      "LACEHOLDER_TYPE\020\004\022\032\n\026INVALID_CRITERION_T" +
+      "YPE\020\005\022\037\n\033NO_ATTRIBUTE_FIELD_MAPPINGS\020\007\022 " +
+      "\n\034FEED_ATTRIBUTE_TYPE_MISMATCH\020\010\0228\n4CANN" +
+      "OT_OPERATE_ON_MAPPINGS_FOR_SYSTEM_GENERA" +
+      "TED_FEED\020\t\022*\n&MULTIPLE_MAPPINGS_FOR_PLAC" +
+      "EHOLDER_TYPE\020\n\022(\n$MULTIPLE_MAPPINGS_FOR_" +
+      "CRITERION_TYPE\020\013\022+\n\'MULTIPLE_MAPPINGS_FO" +
+      "R_PLACEHOLDER_FIELD\020\014\022)\n%MULTIPLE_MAPPIN" +
+      "GS_FOR_CRITERION_FIELD\020\r\022\'\n#UNEXPECTED_A" +
+      "TTRIBUTE_FIELD_MAPPINGS\020\016\022.\n*LOCATION_PL" +
+      "ACEHOLDER_ONLY_FOR_PLACES_FEEDS\020\017\022)\n%CAN" +
+      "NOT_MODIFY_MAPPINGS_FOR_TYPED_FEED\020\020\022:\n6" +
+      "INVALID_PLACEHOLDER_TYPE_FOR_NON_SYSTEM_" +
+      "GENERATED_FEED\020\021\022;\n7INVALID_PLACEHOLDER_" +
+      "TYPE_FOR_SYSTEM_GENERATED_FEED_TYPE\020\022\022)\n" +
+      "%ATTRIBUTE_FIELD_MAPPING_MISSING_FIELD\020\023" +
+      "B\365\001\n#com.google.ads.googleads.v10.errors" +
+      "B\025FeedMappingErrorProtoP\001ZEgoogle.golang" +
+      ".org/genproto/googleapis/ads/googleads/v" +
+      "10/errors;errors\242\002\003GAA\252\002\037Google.Ads.Goog" +
+      "leAds.V10.Errors\312\002\037Google\\Ads\\GoogleAds\\" +
+      "V10\\Errors\352\002#Google::Ads::GoogleAds::V10" +
+      "::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_FeedMappingErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -70,7 +68,6 @@ public final class FeedMappingErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_FeedMappingErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

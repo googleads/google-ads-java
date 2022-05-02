@@ -37,42 +37,40 @@ public final class KeywordPlanCampaignProto {
       "word_plan_campaign.proto\022\"google.ads.goo" +
       "gleads.v10.resources\0329google/ads/googlea" +
       "ds/v10/enums/keyword_plan_network.proto\032" +
-      "\034google/api/annotations.proto\032\037google/ap" +
-      "i/field_behavior.proto\032\031google/api/resou" +
-      "rce.proto\"\242\005\n\023KeywordPlanCampaign\022K\n\rres" +
-      "ource_name\030\001 \001(\tB4\340A\005\372A.\n,googleads.goog" +
-      "leapis.com/KeywordPlanCampaign\022D\n\014keywor" +
-      "d_plan\030\t \001(\tB)\372A&\n$googleads.googleapis." +
-      "com/KeywordPlanH\000\210\001\001\022\024\n\002id\030\n \001(\003B\003\340A\003H\001\210" +
-      "\001\001\022\021\n\004name\030\013 \001(\tH\002\210\001\001\022J\n\022language_consta" +
-      "nts\030\014 \003(\tB.\372A+\n)googleads.googleapis.com" +
-      "/LanguageConstant\022g\n\024keyword_plan_networ" +
-      "k\030\006 \001(\0162I.google.ads.googleads.v10.enums" +
-      ".KeywordPlanNetworkEnum.KeywordPlanNetwo" +
-      "rk\022\033\n\016cpc_bid_micros\030\r \001(\003H\003\210\001\001\022M\n\013geo_t" +
-      "argets\030\010 \003(\01328.google.ads.googleads.v10." +
-      "resources.KeywordPlanGeoTarget:z\352Aw\n,goo" +
-      "gleads.googleapis.com/KeywordPlanCampaig" +
-      "n\022Gcustomers/{customer_id}/keywordPlanCa" +
-      "mpaigns/{keyword_plan_campaign_id}B\017\n\r_k" +
-      "eyword_planB\005\n\003_idB\007\n\005_nameB\021\n\017_cpc_bid_" +
-      "micros\"\201\001\n\024KeywordPlanGeoTarget\022Q\n\023geo_t" +
-      "arget_constant\030\002 \001(\tB/\372A,\n*googleads.goo" +
-      "gleapis.com/GeoTargetConstantH\000\210\001\001B\026\n\024_g" +
-      "eo_target_constantB\212\002\n&com.google.ads.go" +
-      "ogleads.v10.resourcesB\030KeywordPlanCampai" +
-      "gnProtoP\001ZKgoogle.golang.org/genproto/go" +
-      "ogleapis/ads/googleads/v10/resources;res" +
-      "ources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V10." +
-      "Resources\312\002\"Google\\Ads\\GoogleAds\\V10\\Res" +
-      "ources\352\002&Google::Ads::GoogleAds::V10::Re" +
-      "sourcesb\006proto3"
+      "\037google/api/field_behavior.proto\032\031google" +
+      "/api/resource.proto\"\242\005\n\023KeywordPlanCampa" +
+      "ign\022K\n\rresource_name\030\001 \001(\tB4\340A\005\372A.\n,goog" +
+      "leads.googleapis.com/KeywordPlanCampaign" +
+      "\022D\n\014keyword_plan\030\t \001(\tB)\372A&\n$googleads.g" +
+      "oogleapis.com/KeywordPlanH\000\210\001\001\022\024\n\002id\030\n \001" +
+      "(\003B\003\340A\003H\001\210\001\001\022\021\n\004name\030\013 \001(\tH\002\210\001\001\022J\n\022langu" +
+      "age_constants\030\014 \003(\tB.\372A+\n)googleads.goog" +
+      "leapis.com/LanguageConstant\022g\n\024keyword_p" +
+      "lan_network\030\006 \001(\0162I.google.ads.googleads" +
+      ".v10.enums.KeywordPlanNetworkEnum.Keywor" +
+      "dPlanNetwork\022\033\n\016cpc_bid_micros\030\r \001(\003H\003\210\001" +
+      "\001\022M\n\013geo_targets\030\010 \003(\01328.google.ads.goog" +
+      "leads.v10.resources.KeywordPlanGeoTarget" +
+      ":z\352Aw\n,googleads.googleapis.com/KeywordP" +
+      "lanCampaign\022Gcustomers/{customer_id}/key" +
+      "wordPlanCampaigns/{keyword_plan_campaign" +
+      "_id}B\017\n\r_keyword_planB\005\n\003_idB\007\n\005_nameB\021\n" +
+      "\017_cpc_bid_micros\"\201\001\n\024KeywordPlanGeoTarge" +
+      "t\022Q\n\023geo_target_constant\030\002 \001(\tB/\372A,\n*goo" +
+      "gleads.googleapis.com/GeoTargetConstantH" +
+      "\000\210\001\001B\026\n\024_geo_target_constantB\212\002\n&com.goo" +
+      "gle.ads.googleads.v10.resourcesB\030Keyword" +
+      "PlanCampaignProtoP\001ZKgoogle.golang.org/g" +
+      "enproto/googleapis/ads/googleads/v10/res" +
+      "ources;resources\242\002\003GAA\252\002\"Google.Ads.Goog" +
+      "leAds.V10.Resources\312\002\"Google\\Ads\\GoogleA" +
+      "ds\\V10\\Resources\352\002&Google::Ads::GoogleAd" +
+      "s::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.enums.KeywordPlanNetworkProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -96,7 +94,6 @@ public final class KeywordPlanCampaignProto {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.enums.KeywordPlanNetworkProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

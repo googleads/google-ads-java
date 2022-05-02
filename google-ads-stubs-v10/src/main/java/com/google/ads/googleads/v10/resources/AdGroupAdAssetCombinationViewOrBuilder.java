@@ -80,4 +80,29 @@ public interface AdGroupAdAssetCombinationViewOrBuilder extends
    */
   com.google.ads.googleads.v10.common.AssetUsageOrBuilder getServedAssetsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * Output only. The status between the asset combination and the latest version of the ad.
+   * If true, the asset combination is linked to the latest version of the ad.
+   * If false, it means the link once existed but has been removed and is no
+   * longer present in the latest version of the ad.
+   * </pre>
+   *
+   * <code>optional bool enabled = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the enabled field is set.
+   */
+  boolean hasEnabled();
+  /**
+   * <pre>
+   * Output only. The status between the asset combination and the latest version of the ad.
+   * If true, the asset combination is linked to the latest version of the ad.
+   * If false, it means the link once existed but has been removed and is no
+   * longer present in the latest version of the ad.
+   * </pre>
+   *
+   * <code>optional bool enabled = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enabled.
+   */
+  boolean getEnabled();
 }

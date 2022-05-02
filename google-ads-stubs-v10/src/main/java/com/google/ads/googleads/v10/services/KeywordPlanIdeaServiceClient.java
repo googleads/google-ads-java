@@ -43,23 +43,14 @@ import javax.annotation.Generated;
  * <pre>{@code
  * try (KeywordPlanIdeaServiceClient keywordPlanIdeaServiceClient =
  *     KeywordPlanIdeaServiceClient.create()) {
- *   GenerateKeywordIdeasRequest request =
- *       GenerateKeywordIdeasRequest.newBuilder()
+ *   GenerateKeywordHistoricalMetricsRequest request =
+ *       GenerateKeywordHistoricalMetricsRequest.newBuilder()
  *           .setCustomerId("customerId-1581184615")
- *           .setLanguage("language-1613589672")
- *           .addAllGeoTargetConstants(new ArrayList<String>())
- *           .setIncludeAdultKeywords(true)
- *           .setPageToken("pageToken873572522")
- *           .setPageSize(883849137)
- *           .addAllKeywordAnnotation(
- *               new ArrayList<KeywordPlanKeywordAnnotationEnum.KeywordPlanKeywordAnnotation>())
- *           .setAggregateMetrics(KeywordPlanAggregateMetrics.newBuilder().build())
+ *           .addAllKeywords(new ArrayList<String>())
  *           .setHistoricalMetricsOptions(HistoricalMetricsOptions.newBuilder().build())
  *           .build();
- *   for (GenerateKeywordIdeaResult element :
- *       keywordPlanIdeaServiceClient.generateKeywordIdeas(request).iterateAll()) {
- *     // doThingsWith(element);
- *   }
+ *   GenerateKeywordHistoricalMetricsResponse response =
+ *       keywordPlanIdeaServiceClient.generateKeywordHistoricalMetrics(request);
  * }
  * }</pre>
  *
@@ -292,6 +283,70 @@ public class KeywordPlanIdeaServiceClient implements BackgroundResource {
   public final UnaryCallable<GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse>
       generateKeywordIdeasCallable() {
     return stub.generateKeywordIdeasCallable();
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
+  /**
+   * Returns a list of keyword historical metrics.
+   *
+   * <p>List of thrown errors: [AuthenticationError]() [AuthorizationError]()
+   * [CollectionSizeError]() [HeaderError]() [InternalError]() [QuotaError]() [RequestError]()
+   *
+   * <p>Sample code:
+   *
+   * <pre>{@code
+   * try (KeywordPlanIdeaServiceClient keywordPlanIdeaServiceClient =
+   *     KeywordPlanIdeaServiceClient.create()) {
+   *   GenerateKeywordHistoricalMetricsRequest request =
+   *       GenerateKeywordHistoricalMetricsRequest.newBuilder()
+   *           .setCustomerId("customerId-1581184615")
+   *           .addAllKeywords(new ArrayList<String>())
+   *           .setHistoricalMetricsOptions(HistoricalMetricsOptions.newBuilder().build())
+   *           .build();
+   *   GenerateKeywordHistoricalMetricsResponse response =
+   *       keywordPlanIdeaServiceClient.generateKeywordHistoricalMetrics(request);
+   * }
+   * }</pre>
+   *
+   * @param request The request object containing all of the parameters for the API call.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final GenerateKeywordHistoricalMetricsResponse generateKeywordHistoricalMetrics(
+      GenerateKeywordHistoricalMetricsRequest request) {
+    return generateKeywordHistoricalMetricsCallable().call(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
+  /**
+   * Returns a list of keyword historical metrics.
+   *
+   * <p>List of thrown errors: [AuthenticationError]() [AuthorizationError]()
+   * [CollectionSizeError]() [HeaderError]() [InternalError]() [QuotaError]() [RequestError]()
+   *
+   * <p>Sample code:
+   *
+   * <pre>{@code
+   * try (KeywordPlanIdeaServiceClient keywordPlanIdeaServiceClient =
+   *     KeywordPlanIdeaServiceClient.create()) {
+   *   GenerateKeywordHistoricalMetricsRequest request =
+   *       GenerateKeywordHistoricalMetricsRequest.newBuilder()
+   *           .setCustomerId("customerId-1581184615")
+   *           .addAllKeywords(new ArrayList<String>())
+   *           .setHistoricalMetricsOptions(HistoricalMetricsOptions.newBuilder().build())
+   *           .build();
+   *   ApiFuture<GenerateKeywordHistoricalMetricsResponse> future =
+   *       keywordPlanIdeaServiceClient
+   *           .generateKeywordHistoricalMetricsCallable()
+   *           .futureCall(request);
+   *   // Do something.
+   *   GenerateKeywordHistoricalMetricsResponse response = future.get();
+   * }
+   * }</pre>
+   */
+  public final UnaryCallable<
+          GenerateKeywordHistoricalMetricsRequest, GenerateKeywordHistoricalMetricsResponse>
+      generateKeywordHistoricalMetricsCallable() {
+    return stub.generateKeywordHistoricalMetricsCallable();
   }
 
   @Override

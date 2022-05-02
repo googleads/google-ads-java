@@ -30,21 +30,19 @@ public final class CustomParameterProto {
     java.lang.String[] descriptorData = {
       "\n6google/ads/googleads/v10/common/custom" +
       "_parameter.proto\022\037google.ads.googleads.v" +
-      "10.common\032\034google/api/annotations.proto\"" +
-      "I\n\017CustomParameter\022\020\n\003key\030\003 \001(\tH\000\210\001\001\022\022\n\005" +
-      "value\030\004 \001(\tH\001\210\001\001B\006\n\004_keyB\010\n\006_valueB\364\001\n#c" +
-      "om.google.ads.googleads.v10.commonB\024Cust" +
-      "omParameterProtoP\001ZEgoogle.golang.org/ge" +
-      "nproto/googleapis/ads/googleads/v10/comm" +
-      "on;common\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V" +
-      "10.Common\312\002\037Google\\Ads\\GoogleAds\\V10\\Com" +
-      "mon\352\002#Google::Ads::GoogleAds::V10::Commo" +
-      "nb\006proto3"
+      "10.common\"I\n\017CustomParameter\022\020\n\003key\030\003 \001(" +
+      "\tH\000\210\001\001\022\022\n\005value\030\004 \001(\tH\001\210\001\001B\006\n\004_keyB\010\n\006_v" +
+      "alueB\364\001\n#com.google.ads.googleads.v10.co" +
+      "mmonB\024CustomParameterProtoP\001ZEgoogle.gol" +
+      "ang.org/genproto/googleapis/ads/googlead" +
+      "s/v10/common;common\242\002\003GAA\252\002\037Google.Ads.G" +
+      "oogleAds.V10.Common\312\002\037Google\\Ads\\GoogleA" +
+      "ds\\V10\\Common\352\002#Google::Ads::GoogleAds::" +
+      "V10::Commonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_common_CustomParameter_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -52,7 +50,6 @@ public final class CustomParameterProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_common_CustomParameter_descriptor,
         new java.lang.String[] { "Key", "Value", "Key", "Value", });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

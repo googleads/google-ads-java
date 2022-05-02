@@ -33,28 +33,26 @@ public final class TagSnippetProto {
       "mmon\032>google/ads/googleads/v10/enums/tra" +
       "cking_code_page_format.proto\0327google/ads" +
       "/googleads/v10/enums/tracking_code_type." +
-      "proto\032\034google/api/annotations.proto\"\251\002\n\n" +
-      "TagSnippet\022S\n\004type\030\001 \001(\0162E.google.ads.go" +
-      "ogleads.v10.enums.TrackingCodeTypeEnum.T" +
-      "rackingCodeType\022f\n\013page_format\030\002 \001(\0162Q.g" +
-      "oogle.ads.googleads.v10.enums.TrackingCo" +
-      "dePageFormatEnum.TrackingCodePageFormat\022" +
-      "\034\n\017global_site_tag\030\005 \001(\tH\000\210\001\001\022\032\n\revent_s" +
-      "nippet\030\006 \001(\tH\001\210\001\001B\022\n\020_global_site_tagB\020\n" +
-      "\016_event_snippetB\357\001\n#com.google.ads.googl" +
-      "eads.v10.commonB\017TagSnippetProtoP\001ZEgoog" +
-      "le.golang.org/genproto/googleapis/ads/go" +
-      "ogleads/v10/common;common\242\002\003GAA\252\002\037Google" +
-      ".Ads.GoogleAds.V10.Common\312\002\037Google\\Ads\\G" +
-      "oogleAds\\V10\\Common\352\002#Google::Ads::Googl" +
-      "eAds::V10::Commonb\006proto3"
+      "proto\"\251\002\n\nTagSnippet\022S\n\004type\030\001 \001(\0162E.goo" +
+      "gle.ads.googleads.v10.enums.TrackingCode" +
+      "TypeEnum.TrackingCodeType\022f\n\013page_format" +
+      "\030\002 \001(\0162Q.google.ads.googleads.v10.enums." +
+      "TrackingCodePageFormatEnum.TrackingCodeP" +
+      "ageFormat\022\034\n\017global_site_tag\030\005 \001(\tH\000\210\001\001\022" +
+      "\032\n\revent_snippet\030\006 \001(\tH\001\210\001\001B\022\n\020_global_s" +
+      "ite_tagB\020\n\016_event_snippetB\357\001\n#com.google" +
+      ".ads.googleads.v10.commonB\017TagSnippetPro" +
+      "toP\001ZEgoogle.golang.org/genproto/googlea" +
+      "pis/ads/googleads/v10/common;common\242\002\003GA" +
+      "A\252\002\037Google.Ads.GoogleAds.V10.Common\312\002\037Go" +
+      "ogle\\Ads\\GoogleAds\\V10\\Common\352\002#Google::" +
+      "Ads::GoogleAds::V10::Commonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.enums.TrackingCodePageFormatProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.TrackingCodeTypeProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_common_TagSnippet_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -64,7 +62,6 @@ public final class TagSnippetProto {
         new java.lang.String[] { "Type", "PageFormat", "GlobalSiteTag", "EventSnippet", "GlobalSiteTag", "EventSnippet", });
     com.google.ads.googleads.v10.enums.TrackingCodePageFormatProto.getDescriptor();
     com.google.ads.googleads.v10.enums.TrackingCodeTypeProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

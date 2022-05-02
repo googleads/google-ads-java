@@ -33,26 +33,24 @@ public final class MetricGoalProto {
       "mmon\0326google/ads/googleads/v10/enums/exp" +
       "eriment_metric.proto\032@google/ads/googlea" +
       "ds/v10/enums/experiment_metric_direction" +
-      ".proto\032\034google/api/annotations.proto\"\317\001\n" +
-      "\nMetricGoal\022U\n\006metric\030\001 \001(\0162E.google.ads" +
-      ".googleads.v10.enums.ExperimentMetricEnu" +
-      "m.ExperimentMetric\022j\n\tdirection\030\002 \001(\0162W." +
+      ".proto\"\317\001\n\nMetricGoal\022U\n\006metric\030\001 \001(\0162E." +
       "google.ads.googleads.v10.enums.Experimen" +
-      "tMetricDirectionEnum.ExperimentMetricDir" +
-      "ectionB\357\001\n#com.google.ads.googleads.v10." +
-      "commonB\017MetricGoalProtoP\001ZEgoogle.golang" +
-      ".org/genproto/googleapis/ads/googleads/v" +
-      "10/common;common\242\002\003GAA\252\002\037Google.Ads.Goog" +
-      "leAds.V10.Common\312\002\037Google\\Ads\\GoogleAds\\" +
-      "V10\\Common\352\002#Google::Ads::GoogleAds::V10" +
-      "::Commonb\006proto3"
+      "tMetricEnum.ExperimentMetric\022j\n\tdirectio" +
+      "n\030\002 \001(\0162W.google.ads.googleads.v10.enums" +
+      ".ExperimentMetricDirectionEnum.Experimen" +
+      "tMetricDirectionB\357\001\n#com.google.ads.goog" +
+      "leads.v10.commonB\017MetricGoalProtoP\001ZEgoo" +
+      "gle.golang.org/genproto/googleapis/ads/g" +
+      "oogleads/v10/common;common\242\002\003GAA\252\002\037Googl" +
+      "e.Ads.GoogleAds.V10.Common\312\002\037Google\\Ads\\" +
+      "GoogleAds\\V10\\Common\352\002#Google::Ads::Goog" +
+      "leAds::V10::Commonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.enums.ExperimentMetricProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.ExperimentMetricDirectionProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_common_MetricGoal_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -62,7 +60,6 @@ public final class MetricGoalProto {
         new java.lang.String[] { "Metric", "Direction", });
     com.google.ads.googleads.v10.enums.ExperimentMetricProto.getDescriptor();
     com.google.ads.googleads.v10.enums.ExperimentMetricDirectionProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -30,22 +30,21 @@ public final class KeywordPlanKeywordAnnotationProto {
     java.lang.String[] descriptorData = {
       "\nDgoogle/ads/googleads/v10/enums/keyword" +
       "_plan_keyword_annotation.proto\022\036google.a" +
-      "ds.googleads.v10.enums\032\034google/api/annot" +
-      "ations.proto\"u\n KeywordPlanKeywordAnnota" +
-      "tionEnum\"Q\n\034KeywordPlanKeywordAnnotation" +
-      "\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\023\n\017KEYWOR" +
-      "D_CONCEPT\020\002B\373\001\n\"com.google.ads.googleads" +
-      ".v10.enumsB!KeywordPlanKeywordAnnotation" +
-      "ProtoP\001ZCgoogle.golang.org/genproto/goog" +
-      "leapis/ads/googleads/v10/enums;enums\242\002\003G" +
-      "AA\252\002\036Google.Ads.GoogleAds.V10.Enums\312\002\036Go" +
-      "ogle\\Ads\\GoogleAds\\V10\\Enums\352\002\"Google::A" +
-      "ds::GoogleAds::V10::Enumsb\006proto3"
+      "ds.googleads.v10.enums\"u\n KeywordPlanKey" +
+      "wordAnnotationEnum\"Q\n\034KeywordPlanKeyword" +
+      "Annotation\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001" +
+      "\022\023\n\017KEYWORD_CONCEPT\020\002B\373\001\n\"com.google.ads" +
+      ".googleads.v10.enumsB!KeywordPlanKeyword" +
+      "AnnotationProtoP\001ZCgoogle.golang.org/gen" +
+      "proto/googleapis/ads/googleads/v10/enums" +
+      ";enums\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V10." +
+      "Enums\312\002\036Google\\Ads\\GoogleAds\\V10\\Enums\352\002" +
+      "\"Google::Ads::GoogleAds::V10::Enumsb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_KeywordPlanKeywordAnnotationEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -53,7 +52,6 @@ public final class KeywordPlanKeywordAnnotationProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_KeywordPlanKeywordAnnotationEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -30,22 +30,20 @@ public final class PolicyViolationErrorProto {
     java.lang.String[] descriptorData = {
       "\n<google/ads/googleads/v10/errors/policy" +
       "_violation_error.proto\022\037google.ads.googl" +
-      "eads.v10.errors\032\034google/api/annotations." +
-      "proto\"b\n\030PolicyViolationErrorEnum\"F\n\024Pol" +
-      "icyViolationError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UN" +
-      "KNOWN\020\001\022\020\n\014POLICY_ERROR\020\002B\371\001\n#com.google" +
-      ".ads.googleads.v10.errorsB\031PolicyViolati" +
-      "onErrorProtoP\001ZEgoogle.golang.org/genpro" +
-      "to/googleapis/ads/googleads/v10/errors;e" +
-      "rrors\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V10.E" +
-      "rrors\312\002\037Google\\Ads\\GoogleAds\\V10\\Errors\352" +
-      "\002#Google::Ads::GoogleAds::V10::Errorsb\006p" +
-      "roto3"
+      "eads.v10.errors\"b\n\030PolicyViolationErrorE" +
+      "num\"F\n\024PolicyViolationError\022\017\n\013UNSPECIFI" +
+      "ED\020\000\022\013\n\007UNKNOWN\020\001\022\020\n\014POLICY_ERROR\020\002B\371\001\n#" +
+      "com.google.ads.googleads.v10.errorsB\031Pol" +
+      "icyViolationErrorProtoP\001ZEgoogle.golang." +
+      "org/genproto/googleapis/ads/googleads/v1" +
+      "0/errors;errors\242\002\003GAA\252\002\037Google.Ads.Googl" +
+      "eAds.V10.Errors\312\002\037Google\\Ads\\GoogleAds\\V" +
+      "10\\Errors\352\002#Google::Ads::GoogleAds::V10:" +
+      ":Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_PolicyViolationErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -53,7 +51,6 @@ public final class PolicyViolationErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_PolicyViolationErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

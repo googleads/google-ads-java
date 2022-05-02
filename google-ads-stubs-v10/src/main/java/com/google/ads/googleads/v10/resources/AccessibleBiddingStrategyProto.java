@@ -63,69 +63,67 @@ public final class AccessibleBiddingStrategyProto {
       "ds.googleads.v10.resources\032:google/ads/g" +
       "oogleads/v10/enums/bidding_strategy_type" +
       ".proto\032Egoogle/ads/googleads/v10/enums/t" +
-      "arget_impression_share_location.proto\032\034g" +
-      "oogle/api/annotations.proto\032\037google/api/" +
-      "field_behavior.proto\032\031google/api/resourc" +
-      "e.proto\"\211\016\n\031AccessibleBiddingStrategy\022Q\n" +
-      "\rresource_name\030\001 \001(\tB:\340A\003\372A4\n2googleads." +
-      "googleapis.com/AccessibleBiddingStrategy" +
-      "\022\017\n\002id\030\002 \001(\003B\003\340A\003\022\021\n\004name\030\003 \001(\tB\003\340A\003\022^\n\004" +
-      "type\030\004 \001(\0162K.google.ads.googleads.v10.en" +
-      "ums.BiddingStrategyTypeEnum.BiddingStrat" +
-      "egyTypeB\003\340A\003\022\036\n\021owner_customer_id\030\005 \001(\003B" +
-      "\003\340A\003\022#\n\026owner_descriptive_name\030\006 \001(\tB\003\340A" +
-      "\003\022\177\n\031maximize_conversion_value\030\007 \001(\0132U.g" +
-      "oogle.ads.googleads.v10.resources.Access" +
-      "ibleBiddingStrategy.MaximizeConversionVa" +
-      "lueB\003\340A\003H\000\022v\n\024maximize_conversions\030\010 \001(\013" +
-      "2Q.google.ads.googleads.v10.resources.Ac" +
-      "cessibleBiddingStrategy.MaximizeConversi" +
-      "onsB\003\340A\003H\000\022b\n\ntarget_cpa\030\t \001(\0132G.google." +
-      "ads.googleads.v10.resources.AccessibleBi" +
-      "ddingStrategy.TargetCpaB\003\340A\003H\000\022{\n\027target" +
-      "_impression_share\030\n \001(\0132S.google.ads.goo" +
-      "gleads.v10.resources.AccessibleBiddingSt" +
-      "rategy.TargetImpressionShareB\003\340A\003H\000\022d\n\013t" +
-      "arget_roas\030\013 \001(\0132H.google.ads.googleads." +
-      "v10.resources.AccessibleBiddingStrategy." +
-      "TargetRoasB\003\340A\003H\000\022f\n\014target_spend\030\014 \001(\0132" +
-      "I.google.ads.googleads.v10.resources.Acc" +
-      "essibleBiddingStrategy.TargetSpendB\003\340A\003H" +
-      "\000\0323\n\027MaximizeConversionValue\022\030\n\013target_r" +
-      "oas\030\001 \001(\001B\003\340A\003\032.\n\023MaximizeConversions\022\027\n" +
-      "\ntarget_cpa\030\001 \001(\003B\003\340A\003\032F\n\tTargetCpa\022#\n\021t" +
-      "arget_cpa_micros\030\001 \001(\003B\003\340A\003H\000\210\001\001B\024\n\022_tar" +
-      "get_cpa_micros\032\230\002\n\025TargetImpressionShare" +
-      "\022v\n\010location\030\001 \001(\0162_.google.ads.googlead" +
-      "s.v10.enums.TargetImpressionShareLocatio" +
-      "nEnum.TargetImpressionShareLocationB\003\340A\003" +
-      "\022%\n\030location_fraction_micros\030\002 \001(\003H\000\210\001\001\022" +
-      "(\n\026cpc_bid_ceiling_micros\030\003 \001(\003B\003\340A\003H\001\210\001" +
-      "\001B\033\n\031_location_fraction_microsB\031\n\027_cpc_b" +
-      "id_ceiling_micros\032;\n\nTargetRoas\022\035\n\013targe" +
-      "t_roas\030\001 \001(\001B\003\340A\003H\000\210\001\001B\016\n\014_target_roas\032\223" +
-      "\001\n\013TargetSpend\022\'\n\023target_spend_micros\030\001 " +
-      "\001(\003B\005\030\001\340A\003H\000\210\001\001\022(\n\026cpc_bid_ceiling_micro" +
-      "s\030\002 \001(\003B\003\340A\003H\001\210\001\001B\026\n\024_target_spend_micro" +
-      "sB\031\n\027_cpc_bid_ceiling_micros:\202\001\352A\177\n2goog" +
-      "leads.googleapis.com/AccessibleBiddingSt" +
-      "rategy\022Icustomers/{customer_id}/accessib" +
-      "leBiddingStrategies/{bidding_strategy_id" +
-      "}B\010\n\006schemeB\220\002\n&com.google.ads.googleads" +
-      ".v10.resourcesB\036AccessibleBiddingStrateg" +
-      "yProtoP\001ZKgoogle.golang.org/genproto/goo" +
-      "gleapis/ads/googleads/v10/resources;reso" +
-      "urces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V10.R" +
-      "esources\312\002\"Google\\Ads\\GoogleAds\\V10\\Reso" +
-      "urces\352\002&Google::Ads::GoogleAds::V10::Res" +
-      "ourcesb\006proto3"
+      "arget_impression_share_location.proto\032\037g" +
+      "oogle/api/field_behavior.proto\032\031google/a" +
+      "pi/resource.proto\"\211\016\n\031AccessibleBiddingS" +
+      "trategy\022Q\n\rresource_name\030\001 \001(\tB:\340A\003\372A4\n2" +
+      "googleads.googleapis.com/AccessibleBiddi" +
+      "ngStrategy\022\017\n\002id\030\002 \001(\003B\003\340A\003\022\021\n\004name\030\003 \001(" +
+      "\tB\003\340A\003\022^\n\004type\030\004 \001(\0162K.google.ads.google" +
+      "ads.v10.enums.BiddingStrategyTypeEnum.Bi" +
+      "ddingStrategyTypeB\003\340A\003\022\036\n\021owner_customer" +
+      "_id\030\005 \001(\003B\003\340A\003\022#\n\026owner_descriptive_name" +
+      "\030\006 \001(\tB\003\340A\003\022\177\n\031maximize_conversion_value" +
+      "\030\007 \001(\0132U.google.ads.googleads.v10.resour" +
+      "ces.AccessibleBiddingStrategy.MaximizeCo" +
+      "nversionValueB\003\340A\003H\000\022v\n\024maximize_convers" +
+      "ions\030\010 \001(\0132Q.google.ads.googleads.v10.re" +
+      "sources.AccessibleBiddingStrategy.Maximi" +
+      "zeConversionsB\003\340A\003H\000\022b\n\ntarget_cpa\030\t \001(\013" +
+      "2G.google.ads.googleads.v10.resources.Ac" +
+      "cessibleBiddingStrategy.TargetCpaB\003\340A\003H\000" +
+      "\022{\n\027target_impression_share\030\n \001(\0132S.goog" +
+      "le.ads.googleads.v10.resources.Accessibl" +
+      "eBiddingStrategy.TargetImpressionShareB\003" +
+      "\340A\003H\000\022d\n\013target_roas\030\013 \001(\0132H.google.ads." +
+      "googleads.v10.resources.AccessibleBiddin" +
+      "gStrategy.TargetRoasB\003\340A\003H\000\022f\n\014target_sp" +
+      "end\030\014 \001(\0132I.google.ads.googleads.v10.res" +
+      "ources.AccessibleBiddingStrategy.TargetS" +
+      "pendB\003\340A\003H\000\0323\n\027MaximizeConversionValue\022\030" +
+      "\n\013target_roas\030\001 \001(\001B\003\340A\003\032.\n\023MaximizeConv" +
+      "ersions\022\027\n\ntarget_cpa\030\001 \001(\003B\003\340A\003\032F\n\tTarg" +
+      "etCpa\022#\n\021target_cpa_micros\030\001 \001(\003B\003\340A\003H\000\210" +
+      "\001\001B\024\n\022_target_cpa_micros\032\230\002\n\025TargetImpre" +
+      "ssionShare\022v\n\010location\030\001 \001(\0162_.google.ad" +
+      "s.googleads.v10.enums.TargetImpressionSh" +
+      "areLocationEnum.TargetImpressionShareLoc" +
+      "ationB\003\340A\003\022%\n\030location_fraction_micros\030\002" +
+      " \001(\003H\000\210\001\001\022(\n\026cpc_bid_ceiling_micros\030\003 \001(" +
+      "\003B\003\340A\003H\001\210\001\001B\033\n\031_location_fraction_micros" +
+      "B\031\n\027_cpc_bid_ceiling_micros\032;\n\nTargetRoa" +
+      "s\022\035\n\013target_roas\030\001 \001(\001B\003\340A\003H\000\210\001\001B\016\n\014_tar" +
+      "get_roas\032\223\001\n\013TargetSpend\022\'\n\023target_spend" +
+      "_micros\030\001 \001(\003B\005\030\001\340A\003H\000\210\001\001\022(\n\026cpc_bid_cei" +
+      "ling_micros\030\002 \001(\003B\003\340A\003H\001\210\001\001B\026\n\024_target_s" +
+      "pend_microsB\031\n\027_cpc_bid_ceiling_micros:\202" +
+      "\001\352A\177\n2googleads.googleapis.com/Accessibl" +
+      "eBiddingStrategy\022Icustomers/{customer_id" +
+      "}/accessibleBiddingStrategies/{bidding_s" +
+      "trategy_id}B\010\n\006schemeB\220\002\n&com.google.ads" +
+      ".googleads.v10.resourcesB\036AccessibleBidd" +
+      "ingStrategyProtoP\001ZKgoogle.golang.org/ge" +
+      "nproto/googleapis/ads/googleads/v10/reso" +
+      "urces;resources\242\002\003GAA\252\002\"Google.Ads.Googl" +
+      "eAds.V10.Resources\312\002\"Google\\Ads\\GoogleAd" +
+      "s\\V10\\Resources\352\002&Google::Ads::GoogleAds" +
+      "::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.enums.BiddingStrategyTypeProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.TargetImpressionShareLocationProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -180,7 +178,6 @@ public final class AccessibleBiddingStrategyProto {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.enums.BiddingStrategyTypeProto.getDescriptor();
     com.google.ads.googleads.v10.enums.TargetImpressionShareLocationProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

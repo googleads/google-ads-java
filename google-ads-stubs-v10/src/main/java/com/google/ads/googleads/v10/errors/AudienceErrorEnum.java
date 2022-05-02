@@ -63,6 +63,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -125,6 +127,56 @@ private static final long serialVersionUID = 0L;
      * <code>DIMENSION_INVALID = 3;</code>
      */
     DIMENSION_INVALID(3),
+    /**
+     * <pre>
+     * One of the audience segment added is not found.
+     * </pre>
+     *
+     * <code>AUDIENCE_SEGMENT_NOT_FOUND = 4;</code>
+     */
+    AUDIENCE_SEGMENT_NOT_FOUND(4),
+    /**
+     * <pre>
+     * One of the audience segment type is not supported.
+     * </pre>
+     *
+     * <code>AUDIENCE_SEGMENT_TYPE_NOT_SUPPORTED = 5;</code>
+     */
+    AUDIENCE_SEGMENT_TYPE_NOT_SUPPORTED(5),
+    /**
+     * <pre>
+     * The same segment already exists in this audience.
+     * </pre>
+     *
+     * <code>DUPLICATE_AUDIENCE_SEGMENT = 6;</code>
+     */
+    DUPLICATE_AUDIENCE_SEGMENT(6),
+    /**
+     * <pre>
+     * Audience can't have more than allowed number segments.
+     * </pre>
+     *
+     * <code>TOO_MANY_SEGMENTS = 7;</code>
+     */
+    TOO_MANY_SEGMENTS(7),
+    /**
+     * <pre>
+     * Audience can't have multiple dimensions of same type.
+     * </pre>
+     *
+     * <code>TOO_MANY_DIMENSIONS_OF_SAME_TYPE = 8;</code>
+     */
+    TOO_MANY_DIMENSIONS_OF_SAME_TYPE(8),
+    /**
+     * <pre>
+     * The audience cannot be removed, because it is currently used in an
+     * ad group criterion or asset group signal in an (enabled or paused)
+     * ad group or campaign.
+     * </pre>
+     *
+     * <code>IN_USE = 9;</code>
+     */
+    IN_USE(9),
     UNRECOGNIZED(-1),
     ;
 
@@ -160,6 +212,56 @@ private static final long serialVersionUID = 0L;
      * <code>DIMENSION_INVALID = 3;</code>
      */
     public static final int DIMENSION_INVALID_VALUE = 3;
+    /**
+     * <pre>
+     * One of the audience segment added is not found.
+     * </pre>
+     *
+     * <code>AUDIENCE_SEGMENT_NOT_FOUND = 4;</code>
+     */
+    public static final int AUDIENCE_SEGMENT_NOT_FOUND_VALUE = 4;
+    /**
+     * <pre>
+     * One of the audience segment type is not supported.
+     * </pre>
+     *
+     * <code>AUDIENCE_SEGMENT_TYPE_NOT_SUPPORTED = 5;</code>
+     */
+    public static final int AUDIENCE_SEGMENT_TYPE_NOT_SUPPORTED_VALUE = 5;
+    /**
+     * <pre>
+     * The same segment already exists in this audience.
+     * </pre>
+     *
+     * <code>DUPLICATE_AUDIENCE_SEGMENT = 6;</code>
+     */
+    public static final int DUPLICATE_AUDIENCE_SEGMENT_VALUE = 6;
+    /**
+     * <pre>
+     * Audience can't have more than allowed number segments.
+     * </pre>
+     *
+     * <code>TOO_MANY_SEGMENTS = 7;</code>
+     */
+    public static final int TOO_MANY_SEGMENTS_VALUE = 7;
+    /**
+     * <pre>
+     * Audience can't have multiple dimensions of same type.
+     * </pre>
+     *
+     * <code>TOO_MANY_DIMENSIONS_OF_SAME_TYPE = 8;</code>
+     */
+    public static final int TOO_MANY_DIMENSIONS_OF_SAME_TYPE_VALUE = 8;
+    /**
+     * <pre>
+     * The audience cannot be removed, because it is currently used in an
+     * ad group criterion or asset group signal in an (enabled or paused)
+     * ad group or campaign.
+     * </pre>
+     *
+     * <code>IN_USE = 9;</code>
+     */
+    public static final int IN_USE_VALUE = 9;
 
 
     public final int getNumber() {
@@ -190,6 +292,12 @@ private static final long serialVersionUID = 0L;
         case 1: return UNKNOWN;
         case 2: return NAME_ALREADY_IN_USE;
         case 3: return DIMENSION_INVALID;
+        case 4: return AUDIENCE_SEGMENT_NOT_FOUND;
+        case 5: return AUDIENCE_SEGMENT_TYPE_NOT_SUPPORTED;
+        case 6: return DUPLICATE_AUDIENCE_SEGMENT;
+        case 7: return TOO_MANY_SEGMENTS;
+        case 8: return TOO_MANY_DIMENSIONS_OF_SAME_TYPE;
+        case 9: return IN_USE;
         default: return null;
       }
     }

@@ -63,6 +63,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -119,7 +121,7 @@ private static final long serialVersionUID = 0L;
     ENABLED(2),
     /**
      * <pre>
-     * The experiment has beem removed.
+     * The experiment has been removed.
      * </pre>
      *
      * <code>REMOVED = 3;</code>
@@ -128,6 +130,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The experiment has been halted.
+     * This status can be set from ENABLED status through API.
      * </pre>
      *
      * <code>HALTED = 4;</code>
@@ -152,6 +155,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The experiment's campaigns are pending materialization.
+     * This status can be set from SETUP status through API.
      * </pre>
      *
      * <code>INITIATED = 7;</code>
@@ -194,7 +198,7 @@ private static final long serialVersionUID = 0L;
     public static final int ENABLED_VALUE = 2;
     /**
      * <pre>
-     * The experiment has beem removed.
+     * The experiment has been removed.
      * </pre>
      *
      * <code>REMOVED = 3;</code>
@@ -203,6 +207,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The experiment has been halted.
+     * This status can be set from ENABLED status through API.
      * </pre>
      *
      * <code>HALTED = 4;</code>
@@ -227,6 +232,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The experiment's campaigns are pending materialization.
+     * This status can be set from SETUP status through API.
      * </pre>
      *
      * <code>INITIATED = 7;</code>

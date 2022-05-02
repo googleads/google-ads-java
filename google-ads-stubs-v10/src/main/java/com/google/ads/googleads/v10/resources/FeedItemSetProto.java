@@ -33,39 +33,37 @@ public final class FeedItemSetProto {
       "10.resources\032Egoogle/ads/googleads/v10/c" +
       "ommon/feed_item_set_filter_type_infos.pr" +
       "oto\0329google/ads/googleads/v10/enums/feed" +
-      "_item_set_status.proto\032\034google/api/annot" +
-      "ations.proto\032\037google/api/field_behavior." +
-      "proto\032\031google/api/resource.proto\"\365\004\n\013Fee" +
-      "dItemSet\022C\n\rresource_name\030\001 \001(\tB,\340A\005\372A&\n" +
-      "$googleads.googleapis.com/FeedItemSet\0223\n" +
-      "\004feed\030\002 \001(\tB%\340A\005\372A\037\n\035googleads.googleapi" +
-      "s.com/Feed\022\035\n\020feed_item_set_id\030\003 \001(\003B\003\340A" +
-      "\003\022\024\n\014display_name\030\004 \001(\t\022\\\n\006status\030\010 \001(\0162" +
-      "G.google.ads.googleads.v10.enums.FeedIte" +
-      "mSetStatusEnum.FeedItemSetStatusB\003\340A\003\022`\n" +
-      "\033dynamic_location_set_filter\030\005 \001(\01329.goo" +
-      "gle.ads.googleads.v10.common.DynamicLoca" +
-      "tionSetFilterH\000\022s\n%dynamic_affiliate_loc" +
-      "ation_set_filter\030\006 \001(\0132B.google.ads.goog" +
-      "leads.v10.common.DynamicAffiliateLocatio" +
-      "nSetFilterH\000:l\352Ai\n$googleads.googleapis." +
-      "com/FeedItemSet\022Acustomers/{customer_id}" +
-      "/feedItemSets/{feed_id}~{feed_item_set_i" +
-      "d}B\024\n\022dynamic_set_filterB\202\002\n&com.google." +
-      "ads.googleads.v10.resourcesB\020FeedItemSet" +
-      "ProtoP\001ZKgoogle.golang.org/genproto/goog" +
-      "leapis/ads/googleads/v10/resources;resou" +
-      "rces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V10.Re" +
-      "sources\312\002\"Google\\Ads\\GoogleAds\\V10\\Resou" +
-      "rces\352\002&Google::Ads::GoogleAds::V10::Reso" +
-      "urcesb\006proto3"
+      "_item_set_status.proto\032\037google/api/field" +
+      "_behavior.proto\032\031google/api/resource.pro" +
+      "to\"\365\004\n\013FeedItemSet\022C\n\rresource_name\030\001 \001(" +
+      "\tB,\340A\005\372A&\n$googleads.googleapis.com/Feed" +
+      "ItemSet\0223\n\004feed\030\002 \001(\tB%\340A\005\372A\037\n\035googleads" +
+      ".googleapis.com/Feed\022\035\n\020feed_item_set_id" +
+      "\030\003 \001(\003B\003\340A\003\022\024\n\014display_name\030\004 \001(\t\022\\\n\006sta" +
+      "tus\030\010 \001(\0162G.google.ads.googleads.v10.enu" +
+      "ms.FeedItemSetStatusEnum.FeedItemSetStat" +
+      "usB\003\340A\003\022`\n\033dynamic_location_set_filter\030\005" +
+      " \001(\01329.google.ads.googleads.v10.common.D" +
+      "ynamicLocationSetFilterH\000\022s\n%dynamic_aff" +
+      "iliate_location_set_filter\030\006 \001(\0132B.googl" +
+      "e.ads.googleads.v10.common.DynamicAffili" +
+      "ateLocationSetFilterH\000:l\352Ai\n$googleads.g" +
+      "oogleapis.com/FeedItemSet\022Acustomers/{cu" +
+      "stomer_id}/feedItemSets/{feed_id}~{feed_" +
+      "item_set_id}B\024\n\022dynamic_set_filterB\202\002\n&c" +
+      "om.google.ads.googleads.v10.resourcesB\020F" +
+      "eedItemSetProtoP\001ZKgoogle.golang.org/gen" +
+      "proto/googleapis/ads/googleads/v10/resou" +
+      "rces;resources\242\002\003GAA\252\002\"Google.Ads.Google" +
+      "Ads.V10.Resources\312\002\"Google\\Ads\\GoogleAds" +
+      "\\V10\\Resources\352\002&Google::Ads::GoogleAds:" +
+      ":V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.common.FeedItemSetFilterTypeInfosProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.FeedItemSetStatusProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -84,7 +82,6 @@ public final class FeedItemSetProto {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.common.FeedItemSetFilterTypeInfosProto.getDescriptor();
     com.google.ads.googleads.v10.enums.FeedItemSetStatusProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

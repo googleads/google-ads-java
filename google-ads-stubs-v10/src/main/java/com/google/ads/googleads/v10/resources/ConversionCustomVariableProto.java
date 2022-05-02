@@ -32,34 +32,33 @@ public final class ConversionCustomVariableProto {
       "version_custom_variable.proto\022\"google.ad" +
       "s.googleads.v10.resources\032Fgoogle/ads/go" +
       "ogleads/v10/enums/conversion_custom_vari" +
-      "able_status.proto\032\034google/api/annotation" +
-      "s.proto\032\037google/api/field_behavior.proto" +
-      "\032\031google/api/resource.proto\"\350\003\n\030Conversi" +
-      "onCustomVariable\022P\n\rresource_name\030\001 \001(\tB" +
-      "9\340A\005\372A3\n1googleads.googleapis.com/Conver" +
-      "sionCustomVariable\022\017\n\002id\030\002 \001(\003B\003\340A\003\022\021\n\004n" +
-      "ame\030\003 \001(\tB\003\340A\002\022\023\n\003tag\030\004 \001(\tB\006\340A\002\340A\005\022q\n\006s" +
-      "tatus\030\005 \001(\0162a.google.ads.googleads.v10.e" +
-      "nums.ConversionCustomVariableStatusEnum." +
-      "ConversionCustomVariableStatus\022A\n\016owner_" +
-      "customer\030\006 \001(\tB)\340A\003\372A#\n!googleads.google" +
-      "apis.com/Customer:\212\001\352A\206\001\n1googleads.goog" +
-      "leapis.com/ConversionCustomVariable\022Qcus" +
-      "tomers/{customer_id}/conversionCustomVar" +
-      "iables/{conversion_custom_variable_id}B\217" +
-      "\002\n&com.google.ads.googleads.v10.resource" +
-      "sB\035ConversionCustomVariableProtoP\001ZKgoog" +
-      "le.golang.org/genproto/googleapis/ads/go" +
-      "ogleads/v10/resources;resources\242\002\003GAA\252\002\"" +
-      "Google.Ads.GoogleAds.V10.Resources\312\002\"Goo" +
-      "gle\\Ads\\GoogleAds\\V10\\Resources\352\002&Google" +
-      "::Ads::GoogleAds::V10::Resourcesb\006proto3"
+      "able_status.proto\032\037google/api/field_beha" +
+      "vior.proto\032\031google/api/resource.proto\"\350\003" +
+      "\n\030ConversionCustomVariable\022P\n\rresource_n" +
+      "ame\030\001 \001(\tB9\340A\005\372A3\n1googleads.googleapis." +
+      "com/ConversionCustomVariable\022\017\n\002id\030\002 \001(\003" +
+      "B\003\340A\003\022\021\n\004name\030\003 \001(\tB\003\340A\002\022\023\n\003tag\030\004 \001(\tB\006\340" +
+      "A\002\340A\005\022q\n\006status\030\005 \001(\0162a.google.ads.googl" +
+      "eads.v10.enums.ConversionCustomVariableS" +
+      "tatusEnum.ConversionCustomVariableStatus" +
+      "\022A\n\016owner_customer\030\006 \001(\tB)\340A\003\372A#\n!google" +
+      "ads.googleapis.com/Customer:\212\001\352A\206\001\n1goog" +
+      "leads.googleapis.com/ConversionCustomVar" +
+      "iable\022Qcustomers/{customer_id}/conversio" +
+      "nCustomVariables/{conversion_custom_vari" +
+      "able_id}B\217\002\n&com.google.ads.googleads.v1" +
+      "0.resourcesB\035ConversionCustomVariablePro" +
+      "toP\001ZKgoogle.golang.org/genproto/googlea" +
+      "pis/ads/googleads/v10/resources;resource" +
+      "s\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V10.Resou" +
+      "rces\312\002\"Google\\Ads\\GoogleAds\\V10\\Resource" +
+      "s\352\002&Google::Ads::GoogleAds::V10::Resourc" +
+      "esb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.enums.ConversionCustomVariableStatusProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -77,7 +76,6 @@ public final class ConversionCustomVariableProto {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.enums.ConversionCustomVariableStatusProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }
