@@ -1,3 +1,26 @@
+18.0.0 - 2022-05-02
+-------------------
+- Add support for v10_1 of Google Ads API.
+- Remove support for v8 of Google Ads API.
+- Combine two examples in authentication/ into GenerateUserCredentials,
+  since [OAuth OOB](https://developers.googleblog.com/2022/02/making-oauth-flows-safer.html?m=1#disallowed-oob)
+  is being deprecated.
+- Remove artifacts related to v7 of the API
+  which was removed in the release 17.0.0 (#571, #600).
+- Exclude projects defined in google-ads directory
+  from third_party directory (#599).
+- Add code examples:
+  - AddPerformanceMaxProductListingGroupTree
+  - NavigateSearchResultPagesCachingTokens
+- Update code examples:
+  - AddCampaigns
+  - AddCustomerMatchUserList
+  - AddDynamicRemarketingAsset
+  - AddPerformanceMaxCampaign
+  - AddPerformanceMaxRetailCampaign
+  - GetChangeDetails
+  - UploadOfflineConversion
+
 17.0.1 - 2022-02-16
 -------------------
 - Fix #565 to properly set the max inbound message size and metadata size.
