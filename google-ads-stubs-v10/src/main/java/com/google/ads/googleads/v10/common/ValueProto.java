@@ -29,23 +29,21 @@ public final class ValueProto {
   static {
     java.lang.String[] descriptorData = {
       "\n+google/ads/googleads/v10/common/value." +
-      "proto\022\037google.ads.googleads.v10.common\032\034" +
-      "google/api/annotations.proto\"\207\001\n\005Value\022\027" +
-      "\n\rboolean_value\030\001 \001(\010H\000\022\025\n\013int64_value\030\002" +
-      " \001(\003H\000\022\025\n\013float_value\030\003 \001(\002H\000\022\026\n\014double_" +
-      "value\030\004 \001(\001H\000\022\026\n\014string_value\030\005 \001(\tH\000B\007\n" +
-      "\005valueB\352\001\n#com.google.ads.googleads.v10." +
-      "commonB\nValueProtoP\001ZEgoogle.golang.org/" +
-      "genproto/googleapis/ads/googleads/v10/co" +
-      "mmon;common\242\002\003GAA\252\002\037Google.Ads.GoogleAds" +
-      ".V10.Common\312\002\037Google\\Ads\\GoogleAds\\V10\\C" +
-      "ommon\352\002#Google::Ads::GoogleAds::V10::Com" +
-      "monb\006proto3"
+      "proto\022\037google.ads.googleads.v10.common\"\207" +
+      "\001\n\005Value\022\027\n\rboolean_value\030\001 \001(\010H\000\022\025\n\013int" +
+      "64_value\030\002 \001(\003H\000\022\025\n\013float_value\030\003 \001(\002H\000\022" +
+      "\026\n\014double_value\030\004 \001(\001H\000\022\026\n\014string_value\030" +
+      "\005 \001(\tH\000B\007\n\005valueB\352\001\n#com.google.ads.goog" +
+      "leads.v10.commonB\nValueProtoP\001ZEgoogle.g" +
+      "olang.org/genproto/googleapis/ads/google" +
+      "ads/v10/common;common\242\002\003GAA\252\002\037Google.Ads" +
+      ".GoogleAds.V10.Common\312\002\037Google\\Ads\\Googl" +
+      "eAds\\V10\\Common\352\002#Google::Ads::GoogleAds" +
+      "::V10::Commonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_common_Value_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -53,7 +51,6 @@ public final class ValueProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_common_Value_descriptor,
         new java.lang.String[] { "BooleanValue", "Int64Value", "FloatValue", "DoubleValue", "StringValue", "Value", });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

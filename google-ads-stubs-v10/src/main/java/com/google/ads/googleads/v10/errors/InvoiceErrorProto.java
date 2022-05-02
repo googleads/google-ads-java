@@ -30,24 +30,22 @@ public final class InvoiceErrorProto {
     java.lang.String[] descriptorData = {
       "\n3google/ads/googleads/v10/errors/invoic" +
       "e_error.proto\022\037google.ads.googleads.v10." +
-      "errors\032\034google/api/annotations.proto\"\332\001\n" +
-      "\020InvoiceErrorEnum\"\305\001\n\014InvoiceError\022\017\n\013UN" +
-      "SPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\026\n\022YEAR_MONTH_T" +
-      "OO_OLD\020\002\022\031\n\025NOT_INVOICED_CUSTOMER\020\003\022\036\n\032B" +
-      "ILLING_SETUP_NOT_APPROVED\020\004\022*\n&BILLING_S" +
-      "ETUP_NOT_ON_MONTHLY_INVOICING\020\005\022\030\n\024NON_S" +
-      "ERVING_CUSTOMER\020\006B\361\001\n#com.google.ads.goo" +
-      "gleads.v10.errorsB\021InvoiceErrorProtoP\001ZE" +
-      "google.golang.org/genproto/googleapis/ad" +
-      "s/googleads/v10/errors;errors\242\002\003GAA\252\002\037Go" +
-      "ogle.Ads.GoogleAds.V10.Errors\312\002\037Google\\A" +
-      "ds\\GoogleAds\\V10\\Errors\352\002#Google::Ads::G" +
-      "oogleAds::V10::Errorsb\006proto3"
+      "errors\"\332\001\n\020InvoiceErrorEnum\"\305\001\n\014InvoiceE" +
+      "rror\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\026\n\022YE" +
+      "AR_MONTH_TOO_OLD\020\002\022\031\n\025NOT_INVOICED_CUSTO" +
+      "MER\020\003\022\036\n\032BILLING_SETUP_NOT_APPROVED\020\004\022*\n" +
+      "&BILLING_SETUP_NOT_ON_MONTHLY_INVOICING\020" +
+      "\005\022\030\n\024NON_SERVING_CUSTOMER\020\006B\361\001\n#com.goog" +
+      "le.ads.googleads.v10.errorsB\021InvoiceErro" +
+      "rProtoP\001ZEgoogle.golang.org/genproto/goo" +
+      "gleapis/ads/googleads/v10/errors;errors\242" +
+      "\002\003GAA\252\002\037Google.Ads.GoogleAds.V10.Errors\312" +
+      "\002\037Google\\Ads\\GoogleAds\\V10\\Errors\352\002#Goog" +
+      "le::Ads::GoogleAds::V10::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_InvoiceErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -55,7 +53,6 @@ public final class InvoiceErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_InvoiceErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

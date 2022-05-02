@@ -30,30 +30,28 @@ public final class FlightsPlaceholderFieldProto {
     java.lang.String[] descriptorData = {
       "\n=google/ads/googleads/v10/enums/flight_" +
       "placeholder_field.proto\022\036google.ads.goog" +
-      "leads.v10.enums\032\034google/api/annotations." +
-      "proto\"\262\003\n\032FlightPlaceholderFieldEnum\"\223\003\n" +
-      "\026FlightPlaceholderField\022\017\n\013UNSPECIFIED\020\000" +
-      "\022\013\n\007UNKNOWN\020\001\022\022\n\016DESTINATION_ID\020\002\022\r\n\tORI" +
-      "GIN_ID\020\003\022\026\n\022FLIGHT_DESCRIPTION\020\004\022\017\n\013ORIG" +
-      "IN_NAME\020\005\022\024\n\020DESTINATION_NAME\020\006\022\020\n\014FLIGH" +
-      "T_PRICE\020\007\022\023\n\017FORMATTED_PRICE\020\010\022\025\n\021FLIGHT" +
-      "_SALE_PRICE\020\t\022\030\n\024FORMATTED_SALE_PRICE\020\n\022" +
-      "\r\n\tIMAGE_URL\020\013\022\016\n\nFINAL_URLS\020\014\022\025\n\021FINAL_" +
-      "MOBILE_URLS\020\r\022\020\n\014TRACKING_URL\020\016\022\024\n\020ANDRO" +
-      "ID_APP_LINK\020\017\022\033\n\027SIMILAR_DESTINATION_IDS" +
-      "\020\020\022\020\n\014IOS_APP_LINK\020\021\022\024\n\020IOS_APP_STORE_ID" +
-      "\020\022B\366\001\n\"com.google.ads.googleads.v10.enum" +
-      "sB\034FlightsPlaceholderFieldProtoP\001ZCgoogl" +
-      "e.golang.org/genproto/googleapis/ads/goo" +
-      "gleads/v10/enums;enums\242\002\003GAA\252\002\036Google.Ad" +
-      "s.GoogleAds.V10.Enums\312\002\036Google\\Ads\\Googl" +
-      "eAds\\V10\\Enums\352\002\"Google::Ads::GoogleAds:" +
-      ":V10::Enumsb\006proto3"
+      "leads.v10.enums\"\262\003\n\032FlightPlaceholderFie" +
+      "ldEnum\"\223\003\n\026FlightPlaceholderField\022\017\n\013UNS" +
+      "PECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\022\n\016DESTINATION_I" +
+      "D\020\002\022\r\n\tORIGIN_ID\020\003\022\026\n\022FLIGHT_DESCRIPTION" +
+      "\020\004\022\017\n\013ORIGIN_NAME\020\005\022\024\n\020DESTINATION_NAME\020" +
+      "\006\022\020\n\014FLIGHT_PRICE\020\007\022\023\n\017FORMATTED_PRICE\020\010" +
+      "\022\025\n\021FLIGHT_SALE_PRICE\020\t\022\030\n\024FORMATTED_SAL" +
+      "E_PRICE\020\n\022\r\n\tIMAGE_URL\020\013\022\016\n\nFINAL_URLS\020\014" +
+      "\022\025\n\021FINAL_MOBILE_URLS\020\r\022\020\n\014TRACKING_URL\020" +
+      "\016\022\024\n\020ANDROID_APP_LINK\020\017\022\033\n\027SIMILAR_DESTI" +
+      "NATION_IDS\020\020\022\020\n\014IOS_APP_LINK\020\021\022\024\n\020IOS_AP" +
+      "P_STORE_ID\020\022B\366\001\n\"com.google.ads.googlead" +
+      "s.v10.enumsB\034FlightsPlaceholderFieldProt" +
+      "oP\001ZCgoogle.golang.org/genproto/googleap" +
+      "is/ads/googleads/v10/enums;enums\242\002\003GAA\252\002" +
+      "\036Google.Ads.GoogleAds.V10.Enums\312\002\036Google" +
+      "\\Ads\\GoogleAds\\V10\\Enums\352\002\"Google::Ads::" +
+      "GoogleAds::V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_FlightPlaceholderFieldEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -61,7 +59,6 @@ public final class FlightsPlaceholderFieldProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_FlightPlaceholderFieldEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

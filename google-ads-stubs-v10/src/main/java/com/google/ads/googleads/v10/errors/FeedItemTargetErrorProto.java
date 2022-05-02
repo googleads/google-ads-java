@@ -30,29 +30,27 @@ public final class FeedItemTargetErrorProto {
     java.lang.String[] descriptorData = {
       "\n<google/ads/googleads/v10/errors/feed_i" +
       "tem_target_error.proto\022\037google.ads.googl" +
-      "eads.v10.errors\032\034google/api/annotations." +
-      "proto\"\374\002\n\027FeedItemTargetErrorEnum\"\340\002\n\023Fe" +
-      "edItemTargetError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UN" +
-      "KNOWN\020\001\022#\n\037MUST_SET_TARGET_ONEOF_ON_CREA" +
-      "TE\020\002\022#\n\037FEED_ITEM_TARGET_ALREADY_EXISTS\020" +
-      "\003\022&\n\"FEED_ITEM_SCHEDULES_CANNOT_OVERLAP\020" +
-      "\004\022(\n$TARGET_LIMIT_EXCEEDED_FOR_GIVEN_TYP" +
-      "E\020\005\022\036\n\032TOO_MANY_SCHEDULES_PER_DAY\020\006\022=\n9C" +
-      "ANNOT_HAVE_ENABLED_CAMPAIGN_AND_ENABLED_" +
-      "AD_GROUP_TARGETS\020\007\022\031\n\025DUPLICATE_AD_SCHED" +
-      "ULE\020\010\022\025\n\021DUPLICATE_KEYWORD\020\tB\370\001\n#com.goo" +
-      "gle.ads.googleads.v10.errorsB\030FeedItemTa" +
-      "rgetErrorProtoP\001ZEgoogle.golang.org/genp" +
-      "roto/googleapis/ads/googleads/v10/errors" +
-      ";errors\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V10" +
-      ".Errors\312\002\037Google\\Ads\\GoogleAds\\V10\\Error" +
-      "s\352\002#Google::Ads::GoogleAds::V10::Errorsb" +
-      "\006proto3"
+      "eads.v10.errors\"\374\002\n\027FeedItemTargetErrorE" +
+      "num\"\340\002\n\023FeedItemTargetError\022\017\n\013UNSPECIFI" +
+      "ED\020\000\022\013\n\007UNKNOWN\020\001\022#\n\037MUST_SET_TARGET_ONE" +
+      "OF_ON_CREATE\020\002\022#\n\037FEED_ITEM_TARGET_ALREA" +
+      "DY_EXISTS\020\003\022&\n\"FEED_ITEM_SCHEDULES_CANNO" +
+      "T_OVERLAP\020\004\022(\n$TARGET_LIMIT_EXCEEDED_FOR" +
+      "_GIVEN_TYPE\020\005\022\036\n\032TOO_MANY_SCHEDULES_PER_" +
+      "DAY\020\006\022=\n9CANNOT_HAVE_ENABLED_CAMPAIGN_AN" +
+      "D_ENABLED_AD_GROUP_TARGETS\020\007\022\031\n\025DUPLICAT" +
+      "E_AD_SCHEDULE\020\010\022\025\n\021DUPLICATE_KEYWORD\020\tB\370" +
+      "\001\n#com.google.ads.googleads.v10.errorsB\030" +
+      "FeedItemTargetErrorProtoP\001ZEgoogle.golan" +
+      "g.org/genproto/googleapis/ads/googleads/" +
+      "v10/errors;errors\242\002\003GAA\252\002\037Google.Ads.Goo" +
+      "gleAds.V10.Errors\312\002\037Google\\Ads\\GoogleAds" +
+      "\\V10\\Errors\352\002#Google::Ads::GoogleAds::V1" +
+      "0::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_FeedItemTargetErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -60,7 +58,6 @@ public final class FeedItemTargetErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_FeedItemTargetErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

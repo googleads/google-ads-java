@@ -34,21 +34,21 @@ public final class PolicySummaryProto {
       "/policy.proto\032;google/ads/googleads/v10/" +
       "enums/policy_approval_status.proto\0329goog" +
       "le/ads/googleads/v10/enums/policy_review" +
-      "_status.proto\032\034google/api/annotations.pr" +
-      "oto\"\252\002\n\rPolicySummary\022O\n\024policy_topic_en" +
-      "tries\030\001 \003(\01321.google.ads.googleads.v10.c" +
-      "ommon.PolicyTopicEntry\022`\n\rreview_status\030" +
-      "\002 \001(\0162I.google.ads.googleads.v10.enums.P" +
-      "olicyReviewStatusEnum.PolicyReviewStatus" +
-      "\022f\n\017approval_status\030\003 \001(\0162M.google.ads.g" +
-      "oogleads.v10.enums.PolicyApprovalStatusE" +
-      "num.PolicyApprovalStatusB\362\001\n#com.google." +
-      "ads.googleads.v10.commonB\022PolicySummaryP" +
-      "rotoP\001ZEgoogle.golang.org/genproto/googl" +
-      "eapis/ads/googleads/v10/common;common\242\002\003" +
-      "GAA\252\002\037Google.Ads.GoogleAds.V10.Common\312\002\037" +
-      "Google\\Ads\\GoogleAds\\V10\\Common\352\002#Google" +
-      "::Ads::GoogleAds::V10::Commonb\006proto3"
+      "_status.proto\"\252\002\n\rPolicySummary\022O\n\024polic" +
+      "y_topic_entries\030\001 \003(\01321.google.ads.googl" +
+      "eads.v10.common.PolicyTopicEntry\022`\n\rrevi" +
+      "ew_status\030\002 \001(\0162I.google.ads.googleads.v" +
+      "10.enums.PolicyReviewStatusEnum.PolicyRe" +
+      "viewStatus\022f\n\017approval_status\030\003 \001(\0162M.go" +
+      "ogle.ads.googleads.v10.enums.PolicyAppro" +
+      "valStatusEnum.PolicyApprovalStatusB\362\001\n#c" +
+      "om.google.ads.googleads.v10.commonB\022Poli" +
+      "cySummaryProtoP\001ZEgoogle.golang.org/genp" +
+      "roto/googleapis/ads/googleads/v10/common" +
+      ";common\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V10" +
+      ".Common\312\002\037Google\\Ads\\GoogleAds\\V10\\Commo" +
+      "n\352\002#Google::Ads::GoogleAds::V10::Commonb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -56,7 +56,6 @@ public final class PolicySummaryProto {
           com.google.ads.googleads.v10.common.PolicyProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.PolicyApprovalStatusProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.PolicyReviewStatusProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_common_PolicySummary_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -67,7 +66,6 @@ public final class PolicySummaryProto {
     com.google.ads.googleads.v10.common.PolicyProto.getDescriptor();
     com.google.ads.googleads.v10.enums.PolicyApprovalStatusProto.getDescriptor();
     com.google.ads.googleads.v10.enums.PolicyReviewStatusProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -377,6 +377,118 @@ private static final long serialVersionUID = 0L;
             assetDataCase_ = 29;
             break;
           }
+          case 242: {
+            com.google.ads.googleads.v10.common.DynamicRealEstateAsset.Builder subBuilder = null;
+            if (assetDataCase_ == 30) {
+              subBuilder = ((com.google.ads.googleads.v10.common.DynamicRealEstateAsset) assetData_).toBuilder();
+            }
+            assetData_ =
+                input.readMessage(com.google.ads.googleads.v10.common.DynamicRealEstateAsset.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.DynamicRealEstateAsset) assetData_);
+              assetData_ = subBuilder.buildPartial();
+            }
+            assetDataCase_ = 30;
+            break;
+          }
+          case 250: {
+            com.google.ads.googleads.v10.common.DynamicCustomAsset.Builder subBuilder = null;
+            if (assetDataCase_ == 31) {
+              subBuilder = ((com.google.ads.googleads.v10.common.DynamicCustomAsset) assetData_).toBuilder();
+            }
+            assetData_ =
+                input.readMessage(com.google.ads.googleads.v10.common.DynamicCustomAsset.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.DynamicCustomAsset) assetData_);
+              assetData_ = subBuilder.buildPartial();
+            }
+            assetDataCase_ = 31;
+            break;
+          }
+          case 258: {
+            com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset.Builder subBuilder = null;
+            if (assetDataCase_ == 32) {
+              subBuilder = ((com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset) assetData_).toBuilder();
+            }
+            assetData_ =
+                input.readMessage(com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset) assetData_);
+              assetData_ = subBuilder.buildPartial();
+            }
+            assetDataCase_ = 32;
+            break;
+          }
+          case 266: {
+            com.google.ads.googleads.v10.common.DynamicFlightsAsset.Builder subBuilder = null;
+            if (assetDataCase_ == 33) {
+              subBuilder = ((com.google.ads.googleads.v10.common.DynamicFlightsAsset) assetData_).toBuilder();
+            }
+            assetData_ =
+                input.readMessage(com.google.ads.googleads.v10.common.DynamicFlightsAsset.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.DynamicFlightsAsset) assetData_);
+              assetData_ = subBuilder.buildPartial();
+            }
+            assetDataCase_ = 33;
+            break;
+          }
+          case 274: {
+            com.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset.Builder subBuilder = null;
+            if (assetDataCase_ == 34) {
+              subBuilder = ((com.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset) assetData_).toBuilder();
+            }
+            assetData_ =
+                input.readMessage(com.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset) assetData_);
+              assetData_ = subBuilder.buildPartial();
+            }
+            assetDataCase_ = 34;
+            break;
+          }
+          case 282: {
+            com.google.ads.googleads.v10.common.DynamicTravelAsset.Builder subBuilder = null;
+            if (assetDataCase_ == 35) {
+              subBuilder = ((com.google.ads.googleads.v10.common.DynamicTravelAsset) assetData_).toBuilder();
+            }
+            assetData_ =
+                input.readMessage(com.google.ads.googleads.v10.common.DynamicTravelAsset.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.DynamicTravelAsset) assetData_);
+              assetData_ = subBuilder.buildPartial();
+            }
+            assetDataCase_ = 35;
+            break;
+          }
+          case 290: {
+            com.google.ads.googleads.v10.common.DynamicLocalAsset.Builder subBuilder = null;
+            if (assetDataCase_ == 36) {
+              subBuilder = ((com.google.ads.googleads.v10.common.DynamicLocalAsset) assetData_).toBuilder();
+            }
+            assetData_ =
+                input.readMessage(com.google.ads.googleads.v10.common.DynamicLocalAsset.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.DynamicLocalAsset) assetData_);
+              assetData_ = subBuilder.buildPartial();
+            }
+            assetDataCase_ = 36;
+            break;
+          }
+          case 298: {
+            com.google.ads.googleads.v10.common.DynamicJobsAsset.Builder subBuilder = null;
+            if (assetDataCase_ == 37) {
+              subBuilder = ((com.google.ads.googleads.v10.common.DynamicJobsAsset) assetData_).toBuilder();
+            }
+            assetData_ =
+                input.readMessage(com.google.ads.googleads.v10.common.DynamicJobsAsset.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.DynamicJobsAsset) assetData_);
+              assetData_ = subBuilder.buildPartial();
+            }
+            assetDataCase_ = 37;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -388,6 +500,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -441,6 +555,14 @@ private static final long serialVersionUID = 0L;
     CALL_ASSET(27),
     PRICE_ASSET(28),
     CALL_TO_ACTION_ASSET(29),
+    DYNAMIC_REAL_ESTATE_ASSET(30),
+    DYNAMIC_CUSTOM_ASSET(31),
+    DYNAMIC_HOTELS_AND_RENTALS_ASSET(32),
+    DYNAMIC_FLIGHTS_ASSET(33),
+    DISCOVERY_CAROUSEL_CARD_ASSET(34),
+    DYNAMIC_TRAVEL_ASSET(35),
+    DYNAMIC_LOCAL_ASSET(36),
+    DYNAMIC_JOBS_ASSET(37),
     ASSETDATA_NOT_SET(0);
     private final int value;
     private AssetDataCase(int value) {
@@ -475,6 +597,14 @@ private static final long serialVersionUID = 0L;
         case 27: return CALL_ASSET;
         case 28: return PRICE_ASSET;
         case 29: return CALL_TO_ACTION_ASSET;
+        case 30: return DYNAMIC_REAL_ESTATE_ASSET;
+        case 31: return DYNAMIC_CUSTOM_ASSET;
+        case 32: return DYNAMIC_HOTELS_AND_RENTALS_ASSET;
+        case 33: return DYNAMIC_FLIGHTS_ASSET;
+        case 34: return DISCOVERY_CAROUSEL_CARD_ASSET;
+        case 35: return DYNAMIC_TRAVEL_ASSET;
+        case 36: return DYNAMIC_LOCAL_ASSET;
+        case 37: return DYNAMIC_JOBS_ASSET;
         case 0: return ASSETDATA_NOT_SET;
         default: return null;
       }
@@ -1707,6 +1837,350 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v10.common.CallToActionAsset.getDefaultInstance();
   }
 
+  public static final int DYNAMIC_REAL_ESTATE_ASSET_FIELD_NUMBER = 30;
+  /**
+   * <pre>
+   * A dynamic real estate asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicRealEstateAsset dynamic_real_estate_asset = 30;</code>
+   * @return Whether the dynamicRealEstateAsset field is set.
+   */
+  @java.lang.Override
+  public boolean hasDynamicRealEstateAsset() {
+    return assetDataCase_ == 30;
+  }
+  /**
+   * <pre>
+   * A dynamic real estate asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicRealEstateAsset dynamic_real_estate_asset = 30;</code>
+   * @return The dynamicRealEstateAsset.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.common.DynamicRealEstateAsset getDynamicRealEstateAsset() {
+    if (assetDataCase_ == 30) {
+       return (com.google.ads.googleads.v10.common.DynamicRealEstateAsset) assetData_;
+    }
+    return com.google.ads.googleads.v10.common.DynamicRealEstateAsset.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * A dynamic real estate asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicRealEstateAsset dynamic_real_estate_asset = 30;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.common.DynamicRealEstateAssetOrBuilder getDynamicRealEstateAssetOrBuilder() {
+    if (assetDataCase_ == 30) {
+       return (com.google.ads.googleads.v10.common.DynamicRealEstateAsset) assetData_;
+    }
+    return com.google.ads.googleads.v10.common.DynamicRealEstateAsset.getDefaultInstance();
+  }
+
+  public static final int DYNAMIC_CUSTOM_ASSET_FIELD_NUMBER = 31;
+  /**
+   * <pre>
+   * A dynamic custom asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicCustomAsset dynamic_custom_asset = 31;</code>
+   * @return Whether the dynamicCustomAsset field is set.
+   */
+  @java.lang.Override
+  public boolean hasDynamicCustomAsset() {
+    return assetDataCase_ == 31;
+  }
+  /**
+   * <pre>
+   * A dynamic custom asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicCustomAsset dynamic_custom_asset = 31;</code>
+   * @return The dynamicCustomAsset.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.common.DynamicCustomAsset getDynamicCustomAsset() {
+    if (assetDataCase_ == 31) {
+       return (com.google.ads.googleads.v10.common.DynamicCustomAsset) assetData_;
+    }
+    return com.google.ads.googleads.v10.common.DynamicCustomAsset.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * A dynamic custom asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicCustomAsset dynamic_custom_asset = 31;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.common.DynamicCustomAssetOrBuilder getDynamicCustomAssetOrBuilder() {
+    if (assetDataCase_ == 31) {
+       return (com.google.ads.googleads.v10.common.DynamicCustomAsset) assetData_;
+    }
+    return com.google.ads.googleads.v10.common.DynamicCustomAsset.getDefaultInstance();
+  }
+
+  public static final int DYNAMIC_HOTELS_AND_RENTALS_ASSET_FIELD_NUMBER = 32;
+  /**
+   * <pre>
+   * A dynamic hotels and rentals asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset dynamic_hotels_and_rentals_asset = 32;</code>
+   * @return Whether the dynamicHotelsAndRentalsAsset field is set.
+   */
+  @java.lang.Override
+  public boolean hasDynamicHotelsAndRentalsAsset() {
+    return assetDataCase_ == 32;
+  }
+  /**
+   * <pre>
+   * A dynamic hotels and rentals asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset dynamic_hotels_and_rentals_asset = 32;</code>
+   * @return The dynamicHotelsAndRentalsAsset.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset getDynamicHotelsAndRentalsAsset() {
+    if (assetDataCase_ == 32) {
+       return (com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset) assetData_;
+    }
+    return com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * A dynamic hotels and rentals asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset dynamic_hotels_and_rentals_asset = 32;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAssetOrBuilder getDynamicHotelsAndRentalsAssetOrBuilder() {
+    if (assetDataCase_ == 32) {
+       return (com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset) assetData_;
+    }
+    return com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset.getDefaultInstance();
+  }
+
+  public static final int DYNAMIC_FLIGHTS_ASSET_FIELD_NUMBER = 33;
+  /**
+   * <pre>
+   * A dynamic flights asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicFlightsAsset dynamic_flights_asset = 33;</code>
+   * @return Whether the dynamicFlightsAsset field is set.
+   */
+  @java.lang.Override
+  public boolean hasDynamicFlightsAsset() {
+    return assetDataCase_ == 33;
+  }
+  /**
+   * <pre>
+   * A dynamic flights asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicFlightsAsset dynamic_flights_asset = 33;</code>
+   * @return The dynamicFlightsAsset.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.common.DynamicFlightsAsset getDynamicFlightsAsset() {
+    if (assetDataCase_ == 33) {
+       return (com.google.ads.googleads.v10.common.DynamicFlightsAsset) assetData_;
+    }
+    return com.google.ads.googleads.v10.common.DynamicFlightsAsset.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * A dynamic flights asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicFlightsAsset dynamic_flights_asset = 33;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.common.DynamicFlightsAssetOrBuilder getDynamicFlightsAssetOrBuilder() {
+    if (assetDataCase_ == 33) {
+       return (com.google.ads.googleads.v10.common.DynamicFlightsAsset) assetData_;
+    }
+    return com.google.ads.googleads.v10.common.DynamicFlightsAsset.getDefaultInstance();
+  }
+
+  public static final int DISCOVERY_CAROUSEL_CARD_ASSET_FIELD_NUMBER = 34;
+  /**
+   * <pre>
+   * Immutable. A discovery carousel card asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset discovery_carousel_card_asset = 34 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the discoveryCarouselCardAsset field is set.
+   */
+  @java.lang.Override
+  public boolean hasDiscoveryCarouselCardAsset() {
+    return assetDataCase_ == 34;
+  }
+  /**
+   * <pre>
+   * Immutable. A discovery carousel card asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset discovery_carousel_card_asset = 34 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The discoveryCarouselCardAsset.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset getDiscoveryCarouselCardAsset() {
+    if (assetDataCase_ == 34) {
+       return (com.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset) assetData_;
+    }
+    return com.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Immutable. A discovery carousel card asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset discovery_carousel_card_asset = 34 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.common.DiscoveryCarouselCardAssetOrBuilder getDiscoveryCarouselCardAssetOrBuilder() {
+    if (assetDataCase_ == 34) {
+       return (com.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset) assetData_;
+    }
+    return com.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset.getDefaultInstance();
+  }
+
+  public static final int DYNAMIC_TRAVEL_ASSET_FIELD_NUMBER = 35;
+  /**
+   * <pre>
+   * A dynamic travel asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicTravelAsset dynamic_travel_asset = 35;</code>
+   * @return Whether the dynamicTravelAsset field is set.
+   */
+  @java.lang.Override
+  public boolean hasDynamicTravelAsset() {
+    return assetDataCase_ == 35;
+  }
+  /**
+   * <pre>
+   * A dynamic travel asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicTravelAsset dynamic_travel_asset = 35;</code>
+   * @return The dynamicTravelAsset.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.common.DynamicTravelAsset getDynamicTravelAsset() {
+    if (assetDataCase_ == 35) {
+       return (com.google.ads.googleads.v10.common.DynamicTravelAsset) assetData_;
+    }
+    return com.google.ads.googleads.v10.common.DynamicTravelAsset.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * A dynamic travel asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicTravelAsset dynamic_travel_asset = 35;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.common.DynamicTravelAssetOrBuilder getDynamicTravelAssetOrBuilder() {
+    if (assetDataCase_ == 35) {
+       return (com.google.ads.googleads.v10.common.DynamicTravelAsset) assetData_;
+    }
+    return com.google.ads.googleads.v10.common.DynamicTravelAsset.getDefaultInstance();
+  }
+
+  public static final int DYNAMIC_LOCAL_ASSET_FIELD_NUMBER = 36;
+  /**
+   * <pre>
+   * A dynamic local asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicLocalAsset dynamic_local_asset = 36;</code>
+   * @return Whether the dynamicLocalAsset field is set.
+   */
+  @java.lang.Override
+  public boolean hasDynamicLocalAsset() {
+    return assetDataCase_ == 36;
+  }
+  /**
+   * <pre>
+   * A dynamic local asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicLocalAsset dynamic_local_asset = 36;</code>
+   * @return The dynamicLocalAsset.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.common.DynamicLocalAsset getDynamicLocalAsset() {
+    if (assetDataCase_ == 36) {
+       return (com.google.ads.googleads.v10.common.DynamicLocalAsset) assetData_;
+    }
+    return com.google.ads.googleads.v10.common.DynamicLocalAsset.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * A dynamic local asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicLocalAsset dynamic_local_asset = 36;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.common.DynamicLocalAssetOrBuilder getDynamicLocalAssetOrBuilder() {
+    if (assetDataCase_ == 36) {
+       return (com.google.ads.googleads.v10.common.DynamicLocalAsset) assetData_;
+    }
+    return com.google.ads.googleads.v10.common.DynamicLocalAsset.getDefaultInstance();
+  }
+
+  public static final int DYNAMIC_JOBS_ASSET_FIELD_NUMBER = 37;
+  /**
+   * <pre>
+   * A dynamic jobs asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicJobsAsset dynamic_jobs_asset = 37;</code>
+   * @return Whether the dynamicJobsAsset field is set.
+   */
+  @java.lang.Override
+  public boolean hasDynamicJobsAsset() {
+    return assetDataCase_ == 37;
+  }
+  /**
+   * <pre>
+   * A dynamic jobs asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicJobsAsset dynamic_jobs_asset = 37;</code>
+   * @return The dynamicJobsAsset.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.common.DynamicJobsAsset getDynamicJobsAsset() {
+    if (assetDataCase_ == 37) {
+       return (com.google.ads.googleads.v10.common.DynamicJobsAsset) assetData_;
+    }
+    return com.google.ads.googleads.v10.common.DynamicJobsAsset.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * A dynamic jobs asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicJobsAsset dynamic_jobs_asset = 37;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.common.DynamicJobsAssetOrBuilder getDynamicJobsAssetOrBuilder() {
+    if (assetDataCase_ == 37) {
+       return (com.google.ads.googleads.v10.common.DynamicJobsAsset) assetData_;
+    }
+    return com.google.ads.googleads.v10.common.DynamicJobsAsset.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1801,6 +2275,30 @@ private static final long serialVersionUID = 0L;
     }
     if (assetDataCase_ == 29) {
       output.writeMessage(29, (com.google.ads.googleads.v10.common.CallToActionAsset) assetData_);
+    }
+    if (assetDataCase_ == 30) {
+      output.writeMessage(30, (com.google.ads.googleads.v10.common.DynamicRealEstateAsset) assetData_);
+    }
+    if (assetDataCase_ == 31) {
+      output.writeMessage(31, (com.google.ads.googleads.v10.common.DynamicCustomAsset) assetData_);
+    }
+    if (assetDataCase_ == 32) {
+      output.writeMessage(32, (com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset) assetData_);
+    }
+    if (assetDataCase_ == 33) {
+      output.writeMessage(33, (com.google.ads.googleads.v10.common.DynamicFlightsAsset) assetData_);
+    }
+    if (assetDataCase_ == 34) {
+      output.writeMessage(34, (com.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset) assetData_);
+    }
+    if (assetDataCase_ == 35) {
+      output.writeMessage(35, (com.google.ads.googleads.v10.common.DynamicTravelAsset) assetData_);
+    }
+    if (assetDataCase_ == 36) {
+      output.writeMessage(36, (com.google.ads.googleads.v10.common.DynamicLocalAsset) assetData_);
+    }
+    if (assetDataCase_ == 37) {
+      output.writeMessage(37, (com.google.ads.googleads.v10.common.DynamicJobsAsset) assetData_);
     }
     unknownFields.writeTo(output);
   }
@@ -1923,6 +2421,38 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(29, (com.google.ads.googleads.v10.common.CallToActionAsset) assetData_);
     }
+    if (assetDataCase_ == 30) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(30, (com.google.ads.googleads.v10.common.DynamicRealEstateAsset) assetData_);
+    }
+    if (assetDataCase_ == 31) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(31, (com.google.ads.googleads.v10.common.DynamicCustomAsset) assetData_);
+    }
+    if (assetDataCase_ == 32) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(32, (com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset) assetData_);
+    }
+    if (assetDataCase_ == 33) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(33, (com.google.ads.googleads.v10.common.DynamicFlightsAsset) assetData_);
+    }
+    if (assetDataCase_ == 34) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(34, (com.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset) assetData_);
+    }
+    if (assetDataCase_ == 35) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(35, (com.google.ads.googleads.v10.common.DynamicTravelAsset) assetData_);
+    }
+    if (assetDataCase_ == 36) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(36, (com.google.ads.googleads.v10.common.DynamicLocalAsset) assetData_);
+    }
+    if (assetDataCase_ == 37) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(37, (com.google.ads.googleads.v10.common.DynamicJobsAsset) assetData_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -2041,6 +2571,38 @@ private static final long serialVersionUID = 0L;
       case 29:
         if (!getCallToActionAsset()
             .equals(other.getCallToActionAsset())) return false;
+        break;
+      case 30:
+        if (!getDynamicRealEstateAsset()
+            .equals(other.getDynamicRealEstateAsset())) return false;
+        break;
+      case 31:
+        if (!getDynamicCustomAsset()
+            .equals(other.getDynamicCustomAsset())) return false;
+        break;
+      case 32:
+        if (!getDynamicHotelsAndRentalsAsset()
+            .equals(other.getDynamicHotelsAndRentalsAsset())) return false;
+        break;
+      case 33:
+        if (!getDynamicFlightsAsset()
+            .equals(other.getDynamicFlightsAsset())) return false;
+        break;
+      case 34:
+        if (!getDiscoveryCarouselCardAsset()
+            .equals(other.getDiscoveryCarouselCardAsset())) return false;
+        break;
+      case 35:
+        if (!getDynamicTravelAsset()
+            .equals(other.getDynamicTravelAsset())) return false;
+        break;
+      case 36:
+        if (!getDynamicLocalAsset()
+            .equals(other.getDynamicLocalAsset())) return false;
+        break;
+      case 37:
+        if (!getDynamicJobsAsset()
+            .equals(other.getDynamicJobsAsset())) return false;
         break;
       case 0:
       default:
@@ -2161,6 +2723,38 @@ private static final long serialVersionUID = 0L;
       case 29:
         hash = (37 * hash) + CALL_TO_ACTION_ASSET_FIELD_NUMBER;
         hash = (53 * hash) + getCallToActionAsset().hashCode();
+        break;
+      case 30:
+        hash = (37 * hash) + DYNAMIC_REAL_ESTATE_ASSET_FIELD_NUMBER;
+        hash = (53 * hash) + getDynamicRealEstateAsset().hashCode();
+        break;
+      case 31:
+        hash = (37 * hash) + DYNAMIC_CUSTOM_ASSET_FIELD_NUMBER;
+        hash = (53 * hash) + getDynamicCustomAsset().hashCode();
+        break;
+      case 32:
+        hash = (37 * hash) + DYNAMIC_HOTELS_AND_RENTALS_ASSET_FIELD_NUMBER;
+        hash = (53 * hash) + getDynamicHotelsAndRentalsAsset().hashCode();
+        break;
+      case 33:
+        hash = (37 * hash) + DYNAMIC_FLIGHTS_ASSET_FIELD_NUMBER;
+        hash = (53 * hash) + getDynamicFlightsAsset().hashCode();
+        break;
+      case 34:
+        hash = (37 * hash) + DISCOVERY_CAROUSEL_CARD_ASSET_FIELD_NUMBER;
+        hash = (53 * hash) + getDiscoveryCarouselCardAsset().hashCode();
+        break;
+      case 35:
+        hash = (37 * hash) + DYNAMIC_TRAVEL_ASSET_FIELD_NUMBER;
+        hash = (53 * hash) + getDynamicTravelAsset().hashCode();
+        break;
+      case 36:
+        hash = (37 * hash) + DYNAMIC_LOCAL_ASSET_FIELD_NUMBER;
+        hash = (53 * hash) + getDynamicLocalAsset().hashCode();
+        break;
+      case 37:
+        hash = (37 * hash) + DYNAMIC_JOBS_ASSET_FIELD_NUMBER;
+        hash = (53 * hash) + getDynamicJobsAsset().hashCode();
         break;
       case 0:
       default:
@@ -2525,6 +3119,62 @@ private static final long serialVersionUID = 0L;
           result.assetData_ = callToActionAssetBuilder_.build();
         }
       }
+      if (assetDataCase_ == 30) {
+        if (dynamicRealEstateAssetBuilder_ == null) {
+          result.assetData_ = assetData_;
+        } else {
+          result.assetData_ = dynamicRealEstateAssetBuilder_.build();
+        }
+      }
+      if (assetDataCase_ == 31) {
+        if (dynamicCustomAssetBuilder_ == null) {
+          result.assetData_ = assetData_;
+        } else {
+          result.assetData_ = dynamicCustomAssetBuilder_.build();
+        }
+      }
+      if (assetDataCase_ == 32) {
+        if (dynamicHotelsAndRentalsAssetBuilder_ == null) {
+          result.assetData_ = assetData_;
+        } else {
+          result.assetData_ = dynamicHotelsAndRentalsAssetBuilder_.build();
+        }
+      }
+      if (assetDataCase_ == 33) {
+        if (dynamicFlightsAssetBuilder_ == null) {
+          result.assetData_ = assetData_;
+        } else {
+          result.assetData_ = dynamicFlightsAssetBuilder_.build();
+        }
+      }
+      if (assetDataCase_ == 34) {
+        if (discoveryCarouselCardAssetBuilder_ == null) {
+          result.assetData_ = assetData_;
+        } else {
+          result.assetData_ = discoveryCarouselCardAssetBuilder_.build();
+        }
+      }
+      if (assetDataCase_ == 35) {
+        if (dynamicTravelAssetBuilder_ == null) {
+          result.assetData_ = assetData_;
+        } else {
+          result.assetData_ = dynamicTravelAssetBuilder_.build();
+        }
+      }
+      if (assetDataCase_ == 36) {
+        if (dynamicLocalAssetBuilder_ == null) {
+          result.assetData_ = assetData_;
+        } else {
+          result.assetData_ = dynamicLocalAssetBuilder_.build();
+        }
+      }
+      if (assetDataCase_ == 37) {
+        if (dynamicJobsAssetBuilder_ == null) {
+          result.assetData_ = assetData_;
+        } else {
+          result.assetData_ = dynamicJobsAssetBuilder_.build();
+        }
+      }
       result.bitField0_ = to_bitField0_;
       result.assetDataCase_ = assetDataCase_;
       onBuilt();
@@ -2716,6 +3366,38 @@ private static final long serialVersionUID = 0L;
         }
         case CALL_TO_ACTION_ASSET: {
           mergeCallToActionAsset(other.getCallToActionAsset());
+          break;
+        }
+        case DYNAMIC_REAL_ESTATE_ASSET: {
+          mergeDynamicRealEstateAsset(other.getDynamicRealEstateAsset());
+          break;
+        }
+        case DYNAMIC_CUSTOM_ASSET: {
+          mergeDynamicCustomAsset(other.getDynamicCustomAsset());
+          break;
+        }
+        case DYNAMIC_HOTELS_AND_RENTALS_ASSET: {
+          mergeDynamicHotelsAndRentalsAsset(other.getDynamicHotelsAndRentalsAsset());
+          break;
+        }
+        case DYNAMIC_FLIGHTS_ASSET: {
+          mergeDynamicFlightsAsset(other.getDynamicFlightsAsset());
+          break;
+        }
+        case DISCOVERY_CAROUSEL_CARD_ASSET: {
+          mergeDiscoveryCarouselCardAsset(other.getDiscoveryCarouselCardAsset());
+          break;
+        }
+        case DYNAMIC_TRAVEL_ASSET: {
+          mergeDynamicTravelAsset(other.getDynamicTravelAsset());
+          break;
+        }
+        case DYNAMIC_LOCAL_ASSET: {
+          mergeDynamicLocalAsset(other.getDynamicLocalAsset());
+          break;
+        }
+        case DYNAMIC_JOBS_ASSET: {
+          mergeDynamicJobsAsset(other.getDynamicJobsAsset());
           break;
         }
         case ASSETDATA_NOT_SET: {
@@ -4200,8 +4882,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (assetDataCase_ == 5) {
           youtubeVideoAssetBuilder_.mergeFrom(value);
+        } else {
+          youtubeVideoAssetBuilder_.setMessage(value);
         }
-        youtubeVideoAssetBuilder_.setMessage(value);
       }
       assetDataCase_ = 5;
       return this;
@@ -4377,8 +5060,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (assetDataCase_ == 6) {
           mediaBundleAssetBuilder_.mergeFrom(value);
+        } else {
+          mediaBundleAssetBuilder_.setMessage(value);
         }
-        mediaBundleAssetBuilder_.setMessage(value);
       }
       assetDataCase_ = 6;
       return this;
@@ -4554,8 +5238,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (assetDataCase_ == 7) {
           imageAssetBuilder_.mergeFrom(value);
+        } else {
+          imageAssetBuilder_.setMessage(value);
         }
-        imageAssetBuilder_.setMessage(value);
       }
       assetDataCase_ = 7;
       return this;
@@ -4731,8 +5416,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (assetDataCase_ == 8) {
           textAssetBuilder_.mergeFrom(value);
+        } else {
+          textAssetBuilder_.setMessage(value);
         }
-        textAssetBuilder_.setMessage(value);
       }
       assetDataCase_ = 8;
       return this;
@@ -4908,8 +5594,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (assetDataCase_ == 9) {
           leadFormAssetBuilder_.mergeFrom(value);
+        } else {
+          leadFormAssetBuilder_.setMessage(value);
         }
-        leadFormAssetBuilder_.setMessage(value);
       }
       assetDataCase_ = 9;
       return this;
@@ -5085,8 +5772,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (assetDataCase_ == 10) {
           bookOnGoogleAssetBuilder_.mergeFrom(value);
+        } else {
+          bookOnGoogleAssetBuilder_.setMessage(value);
         }
-        bookOnGoogleAssetBuilder_.setMessage(value);
       }
       assetDataCase_ = 10;
       return this;
@@ -5262,8 +5950,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (assetDataCase_ == 15) {
           promotionAssetBuilder_.mergeFrom(value);
+        } else {
+          promotionAssetBuilder_.setMessage(value);
         }
-        promotionAssetBuilder_.setMessage(value);
       }
       assetDataCase_ = 15;
       return this;
@@ -5439,8 +6128,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (assetDataCase_ == 20) {
           calloutAssetBuilder_.mergeFrom(value);
+        } else {
+          calloutAssetBuilder_.setMessage(value);
         }
-        calloutAssetBuilder_.setMessage(value);
       }
       assetDataCase_ = 20;
       return this;
@@ -5616,8 +6306,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (assetDataCase_ == 21) {
           structuredSnippetAssetBuilder_.mergeFrom(value);
+        } else {
+          structuredSnippetAssetBuilder_.setMessage(value);
         }
-        structuredSnippetAssetBuilder_.setMessage(value);
       }
       assetDataCase_ = 21;
       return this;
@@ -5793,8 +6484,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (assetDataCase_ == 22) {
           sitelinkAssetBuilder_.mergeFrom(value);
+        } else {
+          sitelinkAssetBuilder_.setMessage(value);
         }
-        sitelinkAssetBuilder_.setMessage(value);
       }
       assetDataCase_ = 22;
       return this;
@@ -5970,8 +6662,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (assetDataCase_ == 23) {
           pageFeedAssetBuilder_.mergeFrom(value);
+        } else {
+          pageFeedAssetBuilder_.setMessage(value);
         }
-        pageFeedAssetBuilder_.setMessage(value);
       }
       assetDataCase_ = 23;
       return this;
@@ -6147,8 +6840,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (assetDataCase_ == 24) {
           dynamicEducationAssetBuilder_.mergeFrom(value);
+        } else {
+          dynamicEducationAssetBuilder_.setMessage(value);
         }
-        dynamicEducationAssetBuilder_.setMessage(value);
       }
       assetDataCase_ = 24;
       return this;
@@ -6324,8 +7018,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (assetDataCase_ == 25) {
           mobileAppAssetBuilder_.mergeFrom(value);
+        } else {
+          mobileAppAssetBuilder_.setMessage(value);
         }
-        mobileAppAssetBuilder_.setMessage(value);
       }
       assetDataCase_ = 25;
       return this;
@@ -6501,8 +7196,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (assetDataCase_ == 26) {
           hotelCalloutAssetBuilder_.mergeFrom(value);
+        } else {
+          hotelCalloutAssetBuilder_.setMessage(value);
         }
-        hotelCalloutAssetBuilder_.setMessage(value);
       }
       assetDataCase_ = 26;
       return this;
@@ -6678,8 +7374,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (assetDataCase_ == 27) {
           callAssetBuilder_.mergeFrom(value);
+        } else {
+          callAssetBuilder_.setMessage(value);
         }
-        callAssetBuilder_.setMessage(value);
       }
       assetDataCase_ = 27;
       return this;
@@ -6855,8 +7552,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (assetDataCase_ == 28) {
           priceAssetBuilder_.mergeFrom(value);
+        } else {
+          priceAssetBuilder_.setMessage(value);
         }
-        priceAssetBuilder_.setMessage(value);
       }
       assetDataCase_ = 28;
       return this;
@@ -7032,8 +7730,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (assetDataCase_ == 29) {
           callToActionAssetBuilder_.mergeFrom(value);
+        } else {
+          callToActionAssetBuilder_.setMessage(value);
         }
-        callToActionAssetBuilder_.setMessage(value);
       }
       assetDataCase_ = 29;
       return this;
@@ -7113,6 +7812,1430 @@ private static final long serialVersionUID = 0L;
       assetDataCase_ = 29;
       onChanged();;
       return callToActionAssetBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v10.common.DynamicRealEstateAsset, com.google.ads.googleads.v10.common.DynamicRealEstateAsset.Builder, com.google.ads.googleads.v10.common.DynamicRealEstateAssetOrBuilder> dynamicRealEstateAssetBuilder_;
+    /**
+     * <pre>
+     * A dynamic real estate asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicRealEstateAsset dynamic_real_estate_asset = 30;</code>
+     * @return Whether the dynamicRealEstateAsset field is set.
+     */
+    @java.lang.Override
+    public boolean hasDynamicRealEstateAsset() {
+      return assetDataCase_ == 30;
+    }
+    /**
+     * <pre>
+     * A dynamic real estate asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicRealEstateAsset dynamic_real_estate_asset = 30;</code>
+     * @return The dynamicRealEstateAsset.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.common.DynamicRealEstateAsset getDynamicRealEstateAsset() {
+      if (dynamicRealEstateAssetBuilder_ == null) {
+        if (assetDataCase_ == 30) {
+          return (com.google.ads.googleads.v10.common.DynamicRealEstateAsset) assetData_;
+        }
+        return com.google.ads.googleads.v10.common.DynamicRealEstateAsset.getDefaultInstance();
+      } else {
+        if (assetDataCase_ == 30) {
+          return dynamicRealEstateAssetBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v10.common.DynamicRealEstateAsset.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * A dynamic real estate asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicRealEstateAsset dynamic_real_estate_asset = 30;</code>
+     */
+    public Builder setDynamicRealEstateAsset(com.google.ads.googleads.v10.common.DynamicRealEstateAsset value) {
+      if (dynamicRealEstateAssetBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        assetData_ = value;
+        onChanged();
+      } else {
+        dynamicRealEstateAssetBuilder_.setMessage(value);
+      }
+      assetDataCase_ = 30;
+      return this;
+    }
+    /**
+     * <pre>
+     * A dynamic real estate asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicRealEstateAsset dynamic_real_estate_asset = 30;</code>
+     */
+    public Builder setDynamicRealEstateAsset(
+        com.google.ads.googleads.v10.common.DynamicRealEstateAsset.Builder builderForValue) {
+      if (dynamicRealEstateAssetBuilder_ == null) {
+        assetData_ = builderForValue.build();
+        onChanged();
+      } else {
+        dynamicRealEstateAssetBuilder_.setMessage(builderForValue.build());
+      }
+      assetDataCase_ = 30;
+      return this;
+    }
+    /**
+     * <pre>
+     * A dynamic real estate asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicRealEstateAsset dynamic_real_estate_asset = 30;</code>
+     */
+    public Builder mergeDynamicRealEstateAsset(com.google.ads.googleads.v10.common.DynamicRealEstateAsset value) {
+      if (dynamicRealEstateAssetBuilder_ == null) {
+        if (assetDataCase_ == 30 &&
+            assetData_ != com.google.ads.googleads.v10.common.DynamicRealEstateAsset.getDefaultInstance()) {
+          assetData_ = com.google.ads.googleads.v10.common.DynamicRealEstateAsset.newBuilder((com.google.ads.googleads.v10.common.DynamicRealEstateAsset) assetData_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          assetData_ = value;
+        }
+        onChanged();
+      } else {
+        if (assetDataCase_ == 30) {
+          dynamicRealEstateAssetBuilder_.mergeFrom(value);
+        } else {
+          dynamicRealEstateAssetBuilder_.setMessage(value);
+        }
+      }
+      assetDataCase_ = 30;
+      return this;
+    }
+    /**
+     * <pre>
+     * A dynamic real estate asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicRealEstateAsset dynamic_real_estate_asset = 30;</code>
+     */
+    public Builder clearDynamicRealEstateAsset() {
+      if (dynamicRealEstateAssetBuilder_ == null) {
+        if (assetDataCase_ == 30) {
+          assetDataCase_ = 0;
+          assetData_ = null;
+          onChanged();
+        }
+      } else {
+        if (assetDataCase_ == 30) {
+          assetDataCase_ = 0;
+          assetData_ = null;
+        }
+        dynamicRealEstateAssetBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A dynamic real estate asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicRealEstateAsset dynamic_real_estate_asset = 30;</code>
+     */
+    public com.google.ads.googleads.v10.common.DynamicRealEstateAsset.Builder getDynamicRealEstateAssetBuilder() {
+      return getDynamicRealEstateAssetFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * A dynamic real estate asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicRealEstateAsset dynamic_real_estate_asset = 30;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.common.DynamicRealEstateAssetOrBuilder getDynamicRealEstateAssetOrBuilder() {
+      if ((assetDataCase_ == 30) && (dynamicRealEstateAssetBuilder_ != null)) {
+        return dynamicRealEstateAssetBuilder_.getMessageOrBuilder();
+      } else {
+        if (assetDataCase_ == 30) {
+          return (com.google.ads.googleads.v10.common.DynamicRealEstateAsset) assetData_;
+        }
+        return com.google.ads.googleads.v10.common.DynamicRealEstateAsset.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * A dynamic real estate asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicRealEstateAsset dynamic_real_estate_asset = 30;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v10.common.DynamicRealEstateAsset, com.google.ads.googleads.v10.common.DynamicRealEstateAsset.Builder, com.google.ads.googleads.v10.common.DynamicRealEstateAssetOrBuilder> 
+        getDynamicRealEstateAssetFieldBuilder() {
+      if (dynamicRealEstateAssetBuilder_ == null) {
+        if (!(assetDataCase_ == 30)) {
+          assetData_ = com.google.ads.googleads.v10.common.DynamicRealEstateAsset.getDefaultInstance();
+        }
+        dynamicRealEstateAssetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v10.common.DynamicRealEstateAsset, com.google.ads.googleads.v10.common.DynamicRealEstateAsset.Builder, com.google.ads.googleads.v10.common.DynamicRealEstateAssetOrBuilder>(
+                (com.google.ads.googleads.v10.common.DynamicRealEstateAsset) assetData_,
+                getParentForChildren(),
+                isClean());
+        assetData_ = null;
+      }
+      assetDataCase_ = 30;
+      onChanged();;
+      return dynamicRealEstateAssetBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v10.common.DynamicCustomAsset, com.google.ads.googleads.v10.common.DynamicCustomAsset.Builder, com.google.ads.googleads.v10.common.DynamicCustomAssetOrBuilder> dynamicCustomAssetBuilder_;
+    /**
+     * <pre>
+     * A dynamic custom asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicCustomAsset dynamic_custom_asset = 31;</code>
+     * @return Whether the dynamicCustomAsset field is set.
+     */
+    @java.lang.Override
+    public boolean hasDynamicCustomAsset() {
+      return assetDataCase_ == 31;
+    }
+    /**
+     * <pre>
+     * A dynamic custom asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicCustomAsset dynamic_custom_asset = 31;</code>
+     * @return The dynamicCustomAsset.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.common.DynamicCustomAsset getDynamicCustomAsset() {
+      if (dynamicCustomAssetBuilder_ == null) {
+        if (assetDataCase_ == 31) {
+          return (com.google.ads.googleads.v10.common.DynamicCustomAsset) assetData_;
+        }
+        return com.google.ads.googleads.v10.common.DynamicCustomAsset.getDefaultInstance();
+      } else {
+        if (assetDataCase_ == 31) {
+          return dynamicCustomAssetBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v10.common.DynamicCustomAsset.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * A dynamic custom asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicCustomAsset dynamic_custom_asset = 31;</code>
+     */
+    public Builder setDynamicCustomAsset(com.google.ads.googleads.v10.common.DynamicCustomAsset value) {
+      if (dynamicCustomAssetBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        assetData_ = value;
+        onChanged();
+      } else {
+        dynamicCustomAssetBuilder_.setMessage(value);
+      }
+      assetDataCase_ = 31;
+      return this;
+    }
+    /**
+     * <pre>
+     * A dynamic custom asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicCustomAsset dynamic_custom_asset = 31;</code>
+     */
+    public Builder setDynamicCustomAsset(
+        com.google.ads.googleads.v10.common.DynamicCustomAsset.Builder builderForValue) {
+      if (dynamicCustomAssetBuilder_ == null) {
+        assetData_ = builderForValue.build();
+        onChanged();
+      } else {
+        dynamicCustomAssetBuilder_.setMessage(builderForValue.build());
+      }
+      assetDataCase_ = 31;
+      return this;
+    }
+    /**
+     * <pre>
+     * A dynamic custom asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicCustomAsset dynamic_custom_asset = 31;</code>
+     */
+    public Builder mergeDynamicCustomAsset(com.google.ads.googleads.v10.common.DynamicCustomAsset value) {
+      if (dynamicCustomAssetBuilder_ == null) {
+        if (assetDataCase_ == 31 &&
+            assetData_ != com.google.ads.googleads.v10.common.DynamicCustomAsset.getDefaultInstance()) {
+          assetData_ = com.google.ads.googleads.v10.common.DynamicCustomAsset.newBuilder((com.google.ads.googleads.v10.common.DynamicCustomAsset) assetData_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          assetData_ = value;
+        }
+        onChanged();
+      } else {
+        if (assetDataCase_ == 31) {
+          dynamicCustomAssetBuilder_.mergeFrom(value);
+        } else {
+          dynamicCustomAssetBuilder_.setMessage(value);
+        }
+      }
+      assetDataCase_ = 31;
+      return this;
+    }
+    /**
+     * <pre>
+     * A dynamic custom asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicCustomAsset dynamic_custom_asset = 31;</code>
+     */
+    public Builder clearDynamicCustomAsset() {
+      if (dynamicCustomAssetBuilder_ == null) {
+        if (assetDataCase_ == 31) {
+          assetDataCase_ = 0;
+          assetData_ = null;
+          onChanged();
+        }
+      } else {
+        if (assetDataCase_ == 31) {
+          assetDataCase_ = 0;
+          assetData_ = null;
+        }
+        dynamicCustomAssetBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A dynamic custom asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicCustomAsset dynamic_custom_asset = 31;</code>
+     */
+    public com.google.ads.googleads.v10.common.DynamicCustomAsset.Builder getDynamicCustomAssetBuilder() {
+      return getDynamicCustomAssetFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * A dynamic custom asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicCustomAsset dynamic_custom_asset = 31;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.common.DynamicCustomAssetOrBuilder getDynamicCustomAssetOrBuilder() {
+      if ((assetDataCase_ == 31) && (dynamicCustomAssetBuilder_ != null)) {
+        return dynamicCustomAssetBuilder_.getMessageOrBuilder();
+      } else {
+        if (assetDataCase_ == 31) {
+          return (com.google.ads.googleads.v10.common.DynamicCustomAsset) assetData_;
+        }
+        return com.google.ads.googleads.v10.common.DynamicCustomAsset.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * A dynamic custom asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicCustomAsset dynamic_custom_asset = 31;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v10.common.DynamicCustomAsset, com.google.ads.googleads.v10.common.DynamicCustomAsset.Builder, com.google.ads.googleads.v10.common.DynamicCustomAssetOrBuilder> 
+        getDynamicCustomAssetFieldBuilder() {
+      if (dynamicCustomAssetBuilder_ == null) {
+        if (!(assetDataCase_ == 31)) {
+          assetData_ = com.google.ads.googleads.v10.common.DynamicCustomAsset.getDefaultInstance();
+        }
+        dynamicCustomAssetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v10.common.DynamicCustomAsset, com.google.ads.googleads.v10.common.DynamicCustomAsset.Builder, com.google.ads.googleads.v10.common.DynamicCustomAssetOrBuilder>(
+                (com.google.ads.googleads.v10.common.DynamicCustomAsset) assetData_,
+                getParentForChildren(),
+                isClean());
+        assetData_ = null;
+      }
+      assetDataCase_ = 31;
+      onChanged();;
+      return dynamicCustomAssetBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset, com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset.Builder, com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAssetOrBuilder> dynamicHotelsAndRentalsAssetBuilder_;
+    /**
+     * <pre>
+     * A dynamic hotels and rentals asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset dynamic_hotels_and_rentals_asset = 32;</code>
+     * @return Whether the dynamicHotelsAndRentalsAsset field is set.
+     */
+    @java.lang.Override
+    public boolean hasDynamicHotelsAndRentalsAsset() {
+      return assetDataCase_ == 32;
+    }
+    /**
+     * <pre>
+     * A dynamic hotels and rentals asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset dynamic_hotels_and_rentals_asset = 32;</code>
+     * @return The dynamicHotelsAndRentalsAsset.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset getDynamicHotelsAndRentalsAsset() {
+      if (dynamicHotelsAndRentalsAssetBuilder_ == null) {
+        if (assetDataCase_ == 32) {
+          return (com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset) assetData_;
+        }
+        return com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset.getDefaultInstance();
+      } else {
+        if (assetDataCase_ == 32) {
+          return dynamicHotelsAndRentalsAssetBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * A dynamic hotels and rentals asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset dynamic_hotels_and_rentals_asset = 32;</code>
+     */
+    public Builder setDynamicHotelsAndRentalsAsset(com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset value) {
+      if (dynamicHotelsAndRentalsAssetBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        assetData_ = value;
+        onChanged();
+      } else {
+        dynamicHotelsAndRentalsAssetBuilder_.setMessage(value);
+      }
+      assetDataCase_ = 32;
+      return this;
+    }
+    /**
+     * <pre>
+     * A dynamic hotels and rentals asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset dynamic_hotels_and_rentals_asset = 32;</code>
+     */
+    public Builder setDynamicHotelsAndRentalsAsset(
+        com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset.Builder builderForValue) {
+      if (dynamicHotelsAndRentalsAssetBuilder_ == null) {
+        assetData_ = builderForValue.build();
+        onChanged();
+      } else {
+        dynamicHotelsAndRentalsAssetBuilder_.setMessage(builderForValue.build());
+      }
+      assetDataCase_ = 32;
+      return this;
+    }
+    /**
+     * <pre>
+     * A dynamic hotels and rentals asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset dynamic_hotels_and_rentals_asset = 32;</code>
+     */
+    public Builder mergeDynamicHotelsAndRentalsAsset(com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset value) {
+      if (dynamicHotelsAndRentalsAssetBuilder_ == null) {
+        if (assetDataCase_ == 32 &&
+            assetData_ != com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset.getDefaultInstance()) {
+          assetData_ = com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset.newBuilder((com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset) assetData_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          assetData_ = value;
+        }
+        onChanged();
+      } else {
+        if (assetDataCase_ == 32) {
+          dynamicHotelsAndRentalsAssetBuilder_.mergeFrom(value);
+        } else {
+          dynamicHotelsAndRentalsAssetBuilder_.setMessage(value);
+        }
+      }
+      assetDataCase_ = 32;
+      return this;
+    }
+    /**
+     * <pre>
+     * A dynamic hotels and rentals asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset dynamic_hotels_and_rentals_asset = 32;</code>
+     */
+    public Builder clearDynamicHotelsAndRentalsAsset() {
+      if (dynamicHotelsAndRentalsAssetBuilder_ == null) {
+        if (assetDataCase_ == 32) {
+          assetDataCase_ = 0;
+          assetData_ = null;
+          onChanged();
+        }
+      } else {
+        if (assetDataCase_ == 32) {
+          assetDataCase_ = 0;
+          assetData_ = null;
+        }
+        dynamicHotelsAndRentalsAssetBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A dynamic hotels and rentals asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset dynamic_hotels_and_rentals_asset = 32;</code>
+     */
+    public com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset.Builder getDynamicHotelsAndRentalsAssetBuilder() {
+      return getDynamicHotelsAndRentalsAssetFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * A dynamic hotels and rentals asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset dynamic_hotels_and_rentals_asset = 32;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAssetOrBuilder getDynamicHotelsAndRentalsAssetOrBuilder() {
+      if ((assetDataCase_ == 32) && (dynamicHotelsAndRentalsAssetBuilder_ != null)) {
+        return dynamicHotelsAndRentalsAssetBuilder_.getMessageOrBuilder();
+      } else {
+        if (assetDataCase_ == 32) {
+          return (com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset) assetData_;
+        }
+        return com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * A dynamic hotels and rentals asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset dynamic_hotels_and_rentals_asset = 32;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset, com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset.Builder, com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAssetOrBuilder> 
+        getDynamicHotelsAndRentalsAssetFieldBuilder() {
+      if (dynamicHotelsAndRentalsAssetBuilder_ == null) {
+        if (!(assetDataCase_ == 32)) {
+          assetData_ = com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset.getDefaultInstance();
+        }
+        dynamicHotelsAndRentalsAssetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset, com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset.Builder, com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAssetOrBuilder>(
+                (com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset) assetData_,
+                getParentForChildren(),
+                isClean());
+        assetData_ = null;
+      }
+      assetDataCase_ = 32;
+      onChanged();;
+      return dynamicHotelsAndRentalsAssetBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v10.common.DynamicFlightsAsset, com.google.ads.googleads.v10.common.DynamicFlightsAsset.Builder, com.google.ads.googleads.v10.common.DynamicFlightsAssetOrBuilder> dynamicFlightsAssetBuilder_;
+    /**
+     * <pre>
+     * A dynamic flights asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicFlightsAsset dynamic_flights_asset = 33;</code>
+     * @return Whether the dynamicFlightsAsset field is set.
+     */
+    @java.lang.Override
+    public boolean hasDynamicFlightsAsset() {
+      return assetDataCase_ == 33;
+    }
+    /**
+     * <pre>
+     * A dynamic flights asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicFlightsAsset dynamic_flights_asset = 33;</code>
+     * @return The dynamicFlightsAsset.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.common.DynamicFlightsAsset getDynamicFlightsAsset() {
+      if (dynamicFlightsAssetBuilder_ == null) {
+        if (assetDataCase_ == 33) {
+          return (com.google.ads.googleads.v10.common.DynamicFlightsAsset) assetData_;
+        }
+        return com.google.ads.googleads.v10.common.DynamicFlightsAsset.getDefaultInstance();
+      } else {
+        if (assetDataCase_ == 33) {
+          return dynamicFlightsAssetBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v10.common.DynamicFlightsAsset.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * A dynamic flights asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicFlightsAsset dynamic_flights_asset = 33;</code>
+     */
+    public Builder setDynamicFlightsAsset(com.google.ads.googleads.v10.common.DynamicFlightsAsset value) {
+      if (dynamicFlightsAssetBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        assetData_ = value;
+        onChanged();
+      } else {
+        dynamicFlightsAssetBuilder_.setMessage(value);
+      }
+      assetDataCase_ = 33;
+      return this;
+    }
+    /**
+     * <pre>
+     * A dynamic flights asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicFlightsAsset dynamic_flights_asset = 33;</code>
+     */
+    public Builder setDynamicFlightsAsset(
+        com.google.ads.googleads.v10.common.DynamicFlightsAsset.Builder builderForValue) {
+      if (dynamicFlightsAssetBuilder_ == null) {
+        assetData_ = builderForValue.build();
+        onChanged();
+      } else {
+        dynamicFlightsAssetBuilder_.setMessage(builderForValue.build());
+      }
+      assetDataCase_ = 33;
+      return this;
+    }
+    /**
+     * <pre>
+     * A dynamic flights asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicFlightsAsset dynamic_flights_asset = 33;</code>
+     */
+    public Builder mergeDynamicFlightsAsset(com.google.ads.googleads.v10.common.DynamicFlightsAsset value) {
+      if (dynamicFlightsAssetBuilder_ == null) {
+        if (assetDataCase_ == 33 &&
+            assetData_ != com.google.ads.googleads.v10.common.DynamicFlightsAsset.getDefaultInstance()) {
+          assetData_ = com.google.ads.googleads.v10.common.DynamicFlightsAsset.newBuilder((com.google.ads.googleads.v10.common.DynamicFlightsAsset) assetData_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          assetData_ = value;
+        }
+        onChanged();
+      } else {
+        if (assetDataCase_ == 33) {
+          dynamicFlightsAssetBuilder_.mergeFrom(value);
+        } else {
+          dynamicFlightsAssetBuilder_.setMessage(value);
+        }
+      }
+      assetDataCase_ = 33;
+      return this;
+    }
+    /**
+     * <pre>
+     * A dynamic flights asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicFlightsAsset dynamic_flights_asset = 33;</code>
+     */
+    public Builder clearDynamicFlightsAsset() {
+      if (dynamicFlightsAssetBuilder_ == null) {
+        if (assetDataCase_ == 33) {
+          assetDataCase_ = 0;
+          assetData_ = null;
+          onChanged();
+        }
+      } else {
+        if (assetDataCase_ == 33) {
+          assetDataCase_ = 0;
+          assetData_ = null;
+        }
+        dynamicFlightsAssetBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A dynamic flights asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicFlightsAsset dynamic_flights_asset = 33;</code>
+     */
+    public com.google.ads.googleads.v10.common.DynamicFlightsAsset.Builder getDynamicFlightsAssetBuilder() {
+      return getDynamicFlightsAssetFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * A dynamic flights asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicFlightsAsset dynamic_flights_asset = 33;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.common.DynamicFlightsAssetOrBuilder getDynamicFlightsAssetOrBuilder() {
+      if ((assetDataCase_ == 33) && (dynamicFlightsAssetBuilder_ != null)) {
+        return dynamicFlightsAssetBuilder_.getMessageOrBuilder();
+      } else {
+        if (assetDataCase_ == 33) {
+          return (com.google.ads.googleads.v10.common.DynamicFlightsAsset) assetData_;
+        }
+        return com.google.ads.googleads.v10.common.DynamicFlightsAsset.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * A dynamic flights asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicFlightsAsset dynamic_flights_asset = 33;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v10.common.DynamicFlightsAsset, com.google.ads.googleads.v10.common.DynamicFlightsAsset.Builder, com.google.ads.googleads.v10.common.DynamicFlightsAssetOrBuilder> 
+        getDynamicFlightsAssetFieldBuilder() {
+      if (dynamicFlightsAssetBuilder_ == null) {
+        if (!(assetDataCase_ == 33)) {
+          assetData_ = com.google.ads.googleads.v10.common.DynamicFlightsAsset.getDefaultInstance();
+        }
+        dynamicFlightsAssetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v10.common.DynamicFlightsAsset, com.google.ads.googleads.v10.common.DynamicFlightsAsset.Builder, com.google.ads.googleads.v10.common.DynamicFlightsAssetOrBuilder>(
+                (com.google.ads.googleads.v10.common.DynamicFlightsAsset) assetData_,
+                getParentForChildren(),
+                isClean());
+        assetData_ = null;
+      }
+      assetDataCase_ = 33;
+      onChanged();;
+      return dynamicFlightsAssetBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset, com.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset.Builder, com.google.ads.googleads.v10.common.DiscoveryCarouselCardAssetOrBuilder> discoveryCarouselCardAssetBuilder_;
+    /**
+     * <pre>
+     * Immutable. A discovery carousel card asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset discovery_carousel_card_asset = 34 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return Whether the discoveryCarouselCardAsset field is set.
+     */
+    @java.lang.Override
+    public boolean hasDiscoveryCarouselCardAsset() {
+      return assetDataCase_ == 34;
+    }
+    /**
+     * <pre>
+     * Immutable. A discovery carousel card asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset discovery_carousel_card_asset = 34 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The discoveryCarouselCardAsset.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset getDiscoveryCarouselCardAsset() {
+      if (discoveryCarouselCardAssetBuilder_ == null) {
+        if (assetDataCase_ == 34) {
+          return (com.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset) assetData_;
+        }
+        return com.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset.getDefaultInstance();
+      } else {
+        if (assetDataCase_ == 34) {
+          return discoveryCarouselCardAssetBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Immutable. A discovery carousel card asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset discovery_carousel_card_asset = 34 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder setDiscoveryCarouselCardAsset(com.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset value) {
+      if (discoveryCarouselCardAssetBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        assetData_ = value;
+        onChanged();
+      } else {
+        discoveryCarouselCardAssetBuilder_.setMessage(value);
+      }
+      assetDataCase_ = 34;
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. A discovery carousel card asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset discovery_carousel_card_asset = 34 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder setDiscoveryCarouselCardAsset(
+        com.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset.Builder builderForValue) {
+      if (discoveryCarouselCardAssetBuilder_ == null) {
+        assetData_ = builderForValue.build();
+        onChanged();
+      } else {
+        discoveryCarouselCardAssetBuilder_.setMessage(builderForValue.build());
+      }
+      assetDataCase_ = 34;
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. A discovery carousel card asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset discovery_carousel_card_asset = 34 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder mergeDiscoveryCarouselCardAsset(com.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset value) {
+      if (discoveryCarouselCardAssetBuilder_ == null) {
+        if (assetDataCase_ == 34 &&
+            assetData_ != com.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset.getDefaultInstance()) {
+          assetData_ = com.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset.newBuilder((com.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset) assetData_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          assetData_ = value;
+        }
+        onChanged();
+      } else {
+        if (assetDataCase_ == 34) {
+          discoveryCarouselCardAssetBuilder_.mergeFrom(value);
+        } else {
+          discoveryCarouselCardAssetBuilder_.setMessage(value);
+        }
+      }
+      assetDataCase_ = 34;
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. A discovery carousel card asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset discovery_carousel_card_asset = 34 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public Builder clearDiscoveryCarouselCardAsset() {
+      if (discoveryCarouselCardAssetBuilder_ == null) {
+        if (assetDataCase_ == 34) {
+          assetDataCase_ = 0;
+          assetData_ = null;
+          onChanged();
+        }
+      } else {
+        if (assetDataCase_ == 34) {
+          assetDataCase_ = 0;
+          assetData_ = null;
+        }
+        discoveryCarouselCardAssetBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Immutable. A discovery carousel card asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset discovery_carousel_card_asset = 34 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    public com.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset.Builder getDiscoveryCarouselCardAssetBuilder() {
+      return getDiscoveryCarouselCardAssetFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Immutable. A discovery carousel card asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset discovery_carousel_card_asset = 34 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.common.DiscoveryCarouselCardAssetOrBuilder getDiscoveryCarouselCardAssetOrBuilder() {
+      if ((assetDataCase_ == 34) && (discoveryCarouselCardAssetBuilder_ != null)) {
+        return discoveryCarouselCardAssetBuilder_.getMessageOrBuilder();
+      } else {
+        if (assetDataCase_ == 34) {
+          return (com.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset) assetData_;
+        }
+        return com.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Immutable. A discovery carousel card asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset discovery_carousel_card_asset = 34 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset, com.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset.Builder, com.google.ads.googleads.v10.common.DiscoveryCarouselCardAssetOrBuilder> 
+        getDiscoveryCarouselCardAssetFieldBuilder() {
+      if (discoveryCarouselCardAssetBuilder_ == null) {
+        if (!(assetDataCase_ == 34)) {
+          assetData_ = com.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset.getDefaultInstance();
+        }
+        discoveryCarouselCardAssetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset, com.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset.Builder, com.google.ads.googleads.v10.common.DiscoveryCarouselCardAssetOrBuilder>(
+                (com.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset) assetData_,
+                getParentForChildren(),
+                isClean());
+        assetData_ = null;
+      }
+      assetDataCase_ = 34;
+      onChanged();;
+      return discoveryCarouselCardAssetBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v10.common.DynamicTravelAsset, com.google.ads.googleads.v10.common.DynamicTravelAsset.Builder, com.google.ads.googleads.v10.common.DynamicTravelAssetOrBuilder> dynamicTravelAssetBuilder_;
+    /**
+     * <pre>
+     * A dynamic travel asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicTravelAsset dynamic_travel_asset = 35;</code>
+     * @return Whether the dynamicTravelAsset field is set.
+     */
+    @java.lang.Override
+    public boolean hasDynamicTravelAsset() {
+      return assetDataCase_ == 35;
+    }
+    /**
+     * <pre>
+     * A dynamic travel asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicTravelAsset dynamic_travel_asset = 35;</code>
+     * @return The dynamicTravelAsset.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.common.DynamicTravelAsset getDynamicTravelAsset() {
+      if (dynamicTravelAssetBuilder_ == null) {
+        if (assetDataCase_ == 35) {
+          return (com.google.ads.googleads.v10.common.DynamicTravelAsset) assetData_;
+        }
+        return com.google.ads.googleads.v10.common.DynamicTravelAsset.getDefaultInstance();
+      } else {
+        if (assetDataCase_ == 35) {
+          return dynamicTravelAssetBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v10.common.DynamicTravelAsset.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * A dynamic travel asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicTravelAsset dynamic_travel_asset = 35;</code>
+     */
+    public Builder setDynamicTravelAsset(com.google.ads.googleads.v10.common.DynamicTravelAsset value) {
+      if (dynamicTravelAssetBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        assetData_ = value;
+        onChanged();
+      } else {
+        dynamicTravelAssetBuilder_.setMessage(value);
+      }
+      assetDataCase_ = 35;
+      return this;
+    }
+    /**
+     * <pre>
+     * A dynamic travel asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicTravelAsset dynamic_travel_asset = 35;</code>
+     */
+    public Builder setDynamicTravelAsset(
+        com.google.ads.googleads.v10.common.DynamicTravelAsset.Builder builderForValue) {
+      if (dynamicTravelAssetBuilder_ == null) {
+        assetData_ = builderForValue.build();
+        onChanged();
+      } else {
+        dynamicTravelAssetBuilder_.setMessage(builderForValue.build());
+      }
+      assetDataCase_ = 35;
+      return this;
+    }
+    /**
+     * <pre>
+     * A dynamic travel asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicTravelAsset dynamic_travel_asset = 35;</code>
+     */
+    public Builder mergeDynamicTravelAsset(com.google.ads.googleads.v10.common.DynamicTravelAsset value) {
+      if (dynamicTravelAssetBuilder_ == null) {
+        if (assetDataCase_ == 35 &&
+            assetData_ != com.google.ads.googleads.v10.common.DynamicTravelAsset.getDefaultInstance()) {
+          assetData_ = com.google.ads.googleads.v10.common.DynamicTravelAsset.newBuilder((com.google.ads.googleads.v10.common.DynamicTravelAsset) assetData_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          assetData_ = value;
+        }
+        onChanged();
+      } else {
+        if (assetDataCase_ == 35) {
+          dynamicTravelAssetBuilder_.mergeFrom(value);
+        } else {
+          dynamicTravelAssetBuilder_.setMessage(value);
+        }
+      }
+      assetDataCase_ = 35;
+      return this;
+    }
+    /**
+     * <pre>
+     * A dynamic travel asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicTravelAsset dynamic_travel_asset = 35;</code>
+     */
+    public Builder clearDynamicTravelAsset() {
+      if (dynamicTravelAssetBuilder_ == null) {
+        if (assetDataCase_ == 35) {
+          assetDataCase_ = 0;
+          assetData_ = null;
+          onChanged();
+        }
+      } else {
+        if (assetDataCase_ == 35) {
+          assetDataCase_ = 0;
+          assetData_ = null;
+        }
+        dynamicTravelAssetBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A dynamic travel asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicTravelAsset dynamic_travel_asset = 35;</code>
+     */
+    public com.google.ads.googleads.v10.common.DynamicTravelAsset.Builder getDynamicTravelAssetBuilder() {
+      return getDynamicTravelAssetFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * A dynamic travel asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicTravelAsset dynamic_travel_asset = 35;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.common.DynamicTravelAssetOrBuilder getDynamicTravelAssetOrBuilder() {
+      if ((assetDataCase_ == 35) && (dynamicTravelAssetBuilder_ != null)) {
+        return dynamicTravelAssetBuilder_.getMessageOrBuilder();
+      } else {
+        if (assetDataCase_ == 35) {
+          return (com.google.ads.googleads.v10.common.DynamicTravelAsset) assetData_;
+        }
+        return com.google.ads.googleads.v10.common.DynamicTravelAsset.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * A dynamic travel asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicTravelAsset dynamic_travel_asset = 35;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v10.common.DynamicTravelAsset, com.google.ads.googleads.v10.common.DynamicTravelAsset.Builder, com.google.ads.googleads.v10.common.DynamicTravelAssetOrBuilder> 
+        getDynamicTravelAssetFieldBuilder() {
+      if (dynamicTravelAssetBuilder_ == null) {
+        if (!(assetDataCase_ == 35)) {
+          assetData_ = com.google.ads.googleads.v10.common.DynamicTravelAsset.getDefaultInstance();
+        }
+        dynamicTravelAssetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v10.common.DynamicTravelAsset, com.google.ads.googleads.v10.common.DynamicTravelAsset.Builder, com.google.ads.googleads.v10.common.DynamicTravelAssetOrBuilder>(
+                (com.google.ads.googleads.v10.common.DynamicTravelAsset) assetData_,
+                getParentForChildren(),
+                isClean());
+        assetData_ = null;
+      }
+      assetDataCase_ = 35;
+      onChanged();;
+      return dynamicTravelAssetBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v10.common.DynamicLocalAsset, com.google.ads.googleads.v10.common.DynamicLocalAsset.Builder, com.google.ads.googleads.v10.common.DynamicLocalAssetOrBuilder> dynamicLocalAssetBuilder_;
+    /**
+     * <pre>
+     * A dynamic local asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicLocalAsset dynamic_local_asset = 36;</code>
+     * @return Whether the dynamicLocalAsset field is set.
+     */
+    @java.lang.Override
+    public boolean hasDynamicLocalAsset() {
+      return assetDataCase_ == 36;
+    }
+    /**
+     * <pre>
+     * A dynamic local asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicLocalAsset dynamic_local_asset = 36;</code>
+     * @return The dynamicLocalAsset.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.common.DynamicLocalAsset getDynamicLocalAsset() {
+      if (dynamicLocalAssetBuilder_ == null) {
+        if (assetDataCase_ == 36) {
+          return (com.google.ads.googleads.v10.common.DynamicLocalAsset) assetData_;
+        }
+        return com.google.ads.googleads.v10.common.DynamicLocalAsset.getDefaultInstance();
+      } else {
+        if (assetDataCase_ == 36) {
+          return dynamicLocalAssetBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v10.common.DynamicLocalAsset.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * A dynamic local asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicLocalAsset dynamic_local_asset = 36;</code>
+     */
+    public Builder setDynamicLocalAsset(com.google.ads.googleads.v10.common.DynamicLocalAsset value) {
+      if (dynamicLocalAssetBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        assetData_ = value;
+        onChanged();
+      } else {
+        dynamicLocalAssetBuilder_.setMessage(value);
+      }
+      assetDataCase_ = 36;
+      return this;
+    }
+    /**
+     * <pre>
+     * A dynamic local asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicLocalAsset dynamic_local_asset = 36;</code>
+     */
+    public Builder setDynamicLocalAsset(
+        com.google.ads.googleads.v10.common.DynamicLocalAsset.Builder builderForValue) {
+      if (dynamicLocalAssetBuilder_ == null) {
+        assetData_ = builderForValue.build();
+        onChanged();
+      } else {
+        dynamicLocalAssetBuilder_.setMessage(builderForValue.build());
+      }
+      assetDataCase_ = 36;
+      return this;
+    }
+    /**
+     * <pre>
+     * A dynamic local asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicLocalAsset dynamic_local_asset = 36;</code>
+     */
+    public Builder mergeDynamicLocalAsset(com.google.ads.googleads.v10.common.DynamicLocalAsset value) {
+      if (dynamicLocalAssetBuilder_ == null) {
+        if (assetDataCase_ == 36 &&
+            assetData_ != com.google.ads.googleads.v10.common.DynamicLocalAsset.getDefaultInstance()) {
+          assetData_ = com.google.ads.googleads.v10.common.DynamicLocalAsset.newBuilder((com.google.ads.googleads.v10.common.DynamicLocalAsset) assetData_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          assetData_ = value;
+        }
+        onChanged();
+      } else {
+        if (assetDataCase_ == 36) {
+          dynamicLocalAssetBuilder_.mergeFrom(value);
+        } else {
+          dynamicLocalAssetBuilder_.setMessage(value);
+        }
+      }
+      assetDataCase_ = 36;
+      return this;
+    }
+    /**
+     * <pre>
+     * A dynamic local asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicLocalAsset dynamic_local_asset = 36;</code>
+     */
+    public Builder clearDynamicLocalAsset() {
+      if (dynamicLocalAssetBuilder_ == null) {
+        if (assetDataCase_ == 36) {
+          assetDataCase_ = 0;
+          assetData_ = null;
+          onChanged();
+        }
+      } else {
+        if (assetDataCase_ == 36) {
+          assetDataCase_ = 0;
+          assetData_ = null;
+        }
+        dynamicLocalAssetBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A dynamic local asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicLocalAsset dynamic_local_asset = 36;</code>
+     */
+    public com.google.ads.googleads.v10.common.DynamicLocalAsset.Builder getDynamicLocalAssetBuilder() {
+      return getDynamicLocalAssetFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * A dynamic local asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicLocalAsset dynamic_local_asset = 36;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.common.DynamicLocalAssetOrBuilder getDynamicLocalAssetOrBuilder() {
+      if ((assetDataCase_ == 36) && (dynamicLocalAssetBuilder_ != null)) {
+        return dynamicLocalAssetBuilder_.getMessageOrBuilder();
+      } else {
+        if (assetDataCase_ == 36) {
+          return (com.google.ads.googleads.v10.common.DynamicLocalAsset) assetData_;
+        }
+        return com.google.ads.googleads.v10.common.DynamicLocalAsset.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * A dynamic local asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicLocalAsset dynamic_local_asset = 36;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v10.common.DynamicLocalAsset, com.google.ads.googleads.v10.common.DynamicLocalAsset.Builder, com.google.ads.googleads.v10.common.DynamicLocalAssetOrBuilder> 
+        getDynamicLocalAssetFieldBuilder() {
+      if (dynamicLocalAssetBuilder_ == null) {
+        if (!(assetDataCase_ == 36)) {
+          assetData_ = com.google.ads.googleads.v10.common.DynamicLocalAsset.getDefaultInstance();
+        }
+        dynamicLocalAssetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v10.common.DynamicLocalAsset, com.google.ads.googleads.v10.common.DynamicLocalAsset.Builder, com.google.ads.googleads.v10.common.DynamicLocalAssetOrBuilder>(
+                (com.google.ads.googleads.v10.common.DynamicLocalAsset) assetData_,
+                getParentForChildren(),
+                isClean());
+        assetData_ = null;
+      }
+      assetDataCase_ = 36;
+      onChanged();;
+      return dynamicLocalAssetBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v10.common.DynamicJobsAsset, com.google.ads.googleads.v10.common.DynamicJobsAsset.Builder, com.google.ads.googleads.v10.common.DynamicJobsAssetOrBuilder> dynamicJobsAssetBuilder_;
+    /**
+     * <pre>
+     * A dynamic jobs asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicJobsAsset dynamic_jobs_asset = 37;</code>
+     * @return Whether the dynamicJobsAsset field is set.
+     */
+    @java.lang.Override
+    public boolean hasDynamicJobsAsset() {
+      return assetDataCase_ == 37;
+    }
+    /**
+     * <pre>
+     * A dynamic jobs asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicJobsAsset dynamic_jobs_asset = 37;</code>
+     * @return The dynamicJobsAsset.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.common.DynamicJobsAsset getDynamicJobsAsset() {
+      if (dynamicJobsAssetBuilder_ == null) {
+        if (assetDataCase_ == 37) {
+          return (com.google.ads.googleads.v10.common.DynamicJobsAsset) assetData_;
+        }
+        return com.google.ads.googleads.v10.common.DynamicJobsAsset.getDefaultInstance();
+      } else {
+        if (assetDataCase_ == 37) {
+          return dynamicJobsAssetBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v10.common.DynamicJobsAsset.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * A dynamic jobs asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicJobsAsset dynamic_jobs_asset = 37;</code>
+     */
+    public Builder setDynamicJobsAsset(com.google.ads.googleads.v10.common.DynamicJobsAsset value) {
+      if (dynamicJobsAssetBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        assetData_ = value;
+        onChanged();
+      } else {
+        dynamicJobsAssetBuilder_.setMessage(value);
+      }
+      assetDataCase_ = 37;
+      return this;
+    }
+    /**
+     * <pre>
+     * A dynamic jobs asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicJobsAsset dynamic_jobs_asset = 37;</code>
+     */
+    public Builder setDynamicJobsAsset(
+        com.google.ads.googleads.v10.common.DynamicJobsAsset.Builder builderForValue) {
+      if (dynamicJobsAssetBuilder_ == null) {
+        assetData_ = builderForValue.build();
+        onChanged();
+      } else {
+        dynamicJobsAssetBuilder_.setMessage(builderForValue.build());
+      }
+      assetDataCase_ = 37;
+      return this;
+    }
+    /**
+     * <pre>
+     * A dynamic jobs asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicJobsAsset dynamic_jobs_asset = 37;</code>
+     */
+    public Builder mergeDynamicJobsAsset(com.google.ads.googleads.v10.common.DynamicJobsAsset value) {
+      if (dynamicJobsAssetBuilder_ == null) {
+        if (assetDataCase_ == 37 &&
+            assetData_ != com.google.ads.googleads.v10.common.DynamicJobsAsset.getDefaultInstance()) {
+          assetData_ = com.google.ads.googleads.v10.common.DynamicJobsAsset.newBuilder((com.google.ads.googleads.v10.common.DynamicJobsAsset) assetData_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          assetData_ = value;
+        }
+        onChanged();
+      } else {
+        if (assetDataCase_ == 37) {
+          dynamicJobsAssetBuilder_.mergeFrom(value);
+        } else {
+          dynamicJobsAssetBuilder_.setMessage(value);
+        }
+      }
+      assetDataCase_ = 37;
+      return this;
+    }
+    /**
+     * <pre>
+     * A dynamic jobs asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicJobsAsset dynamic_jobs_asset = 37;</code>
+     */
+    public Builder clearDynamicJobsAsset() {
+      if (dynamicJobsAssetBuilder_ == null) {
+        if (assetDataCase_ == 37) {
+          assetDataCase_ = 0;
+          assetData_ = null;
+          onChanged();
+        }
+      } else {
+        if (assetDataCase_ == 37) {
+          assetDataCase_ = 0;
+          assetData_ = null;
+        }
+        dynamicJobsAssetBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * A dynamic jobs asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicJobsAsset dynamic_jobs_asset = 37;</code>
+     */
+    public com.google.ads.googleads.v10.common.DynamicJobsAsset.Builder getDynamicJobsAssetBuilder() {
+      return getDynamicJobsAssetFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * A dynamic jobs asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicJobsAsset dynamic_jobs_asset = 37;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.common.DynamicJobsAssetOrBuilder getDynamicJobsAssetOrBuilder() {
+      if ((assetDataCase_ == 37) && (dynamicJobsAssetBuilder_ != null)) {
+        return dynamicJobsAssetBuilder_.getMessageOrBuilder();
+      } else {
+        if (assetDataCase_ == 37) {
+          return (com.google.ads.googleads.v10.common.DynamicJobsAsset) assetData_;
+        }
+        return com.google.ads.googleads.v10.common.DynamicJobsAsset.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * A dynamic jobs asset.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DynamicJobsAsset dynamic_jobs_asset = 37;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v10.common.DynamicJobsAsset, com.google.ads.googleads.v10.common.DynamicJobsAsset.Builder, com.google.ads.googleads.v10.common.DynamicJobsAssetOrBuilder> 
+        getDynamicJobsAssetFieldBuilder() {
+      if (dynamicJobsAssetBuilder_ == null) {
+        if (!(assetDataCase_ == 37)) {
+          assetData_ = com.google.ads.googleads.v10.common.DynamicJobsAsset.getDefaultInstance();
+        }
+        dynamicJobsAssetBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v10.common.DynamicJobsAsset, com.google.ads.googleads.v10.common.DynamicJobsAsset.Builder, com.google.ads.googleads.v10.common.DynamicJobsAssetOrBuilder>(
+                (com.google.ads.googleads.v10.common.DynamicJobsAsset) assetData_,
+                getParentForChildren(),
+                isClean());
+        assetData_ = null;
+      }
+      assetDataCase_ = 37;
+      onChanged();;
+      return dynamicJobsAssetBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

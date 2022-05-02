@@ -30,22 +30,20 @@ public final class ListOperationErrorProto {
     java.lang.String[] descriptorData = {
       "\n:google/ads/googleads/v10/errors/list_o" +
       "peration_error.proto\022\037google.ads.googlea" +
-      "ds.v10.errors\032\034google/api/annotations.pr" +
-      "oto\"~\n\026ListOperationErrorEnum\"d\n\022ListOpe" +
-      "rationError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020" +
-      "\001\022\032\n\026REQUIRED_FIELD_MISSING\020\007\022\024\n\020DUPLICA" +
-      "TE_VALUES\020\010B\367\001\n#com.google.ads.googleads" +
-      ".v10.errorsB\027ListOperationErrorProtoP\001ZE" +
-      "google.golang.org/genproto/googleapis/ad" +
-      "s/googleads/v10/errors;errors\242\002\003GAA\252\002\037Go" +
-      "ogle.Ads.GoogleAds.V10.Errors\312\002\037Google\\A" +
-      "ds\\GoogleAds\\V10\\Errors\352\002#Google::Ads::G" +
-      "oogleAds::V10::Errorsb\006proto3"
+      "ds.v10.errors\"~\n\026ListOperationErrorEnum\"" +
+      "d\n\022ListOperationError\022\017\n\013UNSPECIFIED\020\000\022\013" +
+      "\n\007UNKNOWN\020\001\022\032\n\026REQUIRED_FIELD_MISSING\020\007\022" +
+      "\024\n\020DUPLICATE_VALUES\020\010B\367\001\n#com.google.ads" +
+      ".googleads.v10.errorsB\027ListOperationErro" +
+      "rProtoP\001ZEgoogle.golang.org/genproto/goo" +
+      "gleapis/ads/googleads/v10/errors;errors\242" +
+      "\002\003GAA\252\002\037Google.Ads.GoogleAds.V10.Errors\312" +
+      "\002\037Google\\Ads\\GoogleAds\\V10\\Errors\352\002#Goog" +
+      "le::Ads::GoogleAds::V10::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_ListOperationErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -53,7 +51,6 @@ public final class ListOperationErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_ListOperationErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

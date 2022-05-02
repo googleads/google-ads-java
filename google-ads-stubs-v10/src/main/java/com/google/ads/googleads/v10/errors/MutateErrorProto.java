@@ -30,28 +30,26 @@ public final class MutateErrorProto {
     java.lang.String[] descriptorData = {
       "\n2google/ads/googleads/v10/errors/mutate" +
       "_error.proto\022\037google.ads.googleads.v10.e" +
-      "rrors\032\034google/api/annotations.proto\"\343\002\n\017" +
-      "MutateErrorEnum\"\317\002\n\013MutateError\022\017\n\013UNSPE" +
-      "CIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\026\n\022RESOURCE_NOT_FO" +
-      "UND\020\003\022!\n\035ID_EXISTS_IN_MULTIPLE_MUTATES\020\007" +
-      "\022\035\n\031INCONSISTENT_FIELD_VALUES\020\010\022\026\n\022MUTAT" +
-      "E_NOT_ALLOWED\020\t\022\036\n\032RESOURCE_NOT_IN_GOOGL" +
-      "E_ADS\020\n\022\033\n\027RESOURCE_ALREADY_EXISTS\020\013\022+\n\'" +
-      "RESOURCE_DOES_NOT_SUPPORT_VALIDATE_ONLY\020" +
-      "\014\022.\n*OPERATION_DOES_NOT_SUPPORT_PARTIAL_" +
-      "FAILURE\020\020\022\026\n\022RESOURCE_READ_ONLY\020\rB\360\001\n#co" +
-      "m.google.ads.googleads.v10.errorsB\020Mutat" +
-      "eErrorProtoP\001ZEgoogle.golang.org/genprot" +
-      "o/googleapis/ads/googleads/v10/errors;er" +
-      "rors\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V10.Er" +
-      "rors\312\002\037Google\\Ads\\GoogleAds\\V10\\Errors\352\002" +
-      "#Google::Ads::GoogleAds::V10::Errorsb\006pr" +
-      "oto3"
+      "rrors\"\343\002\n\017MutateErrorEnum\"\317\002\n\013MutateErro" +
+      "r\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\026\n\022RESOU" +
+      "RCE_NOT_FOUND\020\003\022!\n\035ID_EXISTS_IN_MULTIPLE" +
+      "_MUTATES\020\007\022\035\n\031INCONSISTENT_FIELD_VALUES\020" +
+      "\010\022\026\n\022MUTATE_NOT_ALLOWED\020\t\022\036\n\032RESOURCE_NO" +
+      "T_IN_GOOGLE_ADS\020\n\022\033\n\027RESOURCE_ALREADY_EX" +
+      "ISTS\020\013\022+\n\'RESOURCE_DOES_NOT_SUPPORT_VALI" +
+      "DATE_ONLY\020\014\022.\n*OPERATION_DOES_NOT_SUPPOR" +
+      "T_PARTIAL_FAILURE\020\020\022\026\n\022RESOURCE_READ_ONL" +
+      "Y\020\rB\360\001\n#com.google.ads.googleads.v10.err" +
+      "orsB\020MutateErrorProtoP\001ZEgoogle.golang.o" +
+      "rg/genproto/googleapis/ads/googleads/v10" +
+      "/errors;errors\242\002\003GAA\252\002\037Google.Ads.Google" +
+      "Ads.V10.Errors\312\002\037Google\\Ads\\GoogleAds\\V1" +
+      "0\\Errors\352\002#Google::Ads::GoogleAds::V10::" +
+      "Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_MutateErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -59,7 +57,6 @@ public final class MutateErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_MutateErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -45,4 +45,18 @@ public interface HistoricalMetricsOptionsOrBuilder extends
    * <code>optional .google.ads.googleads.v10.common.YearMonthRange year_month_range = 1;</code>
    */
   com.google.ads.googleads.v10.common.YearMonthRangeOrBuilder getYearMonthRangeOrBuilder();
+
+  /**
+   * <pre>
+   * Indicates whether to include average cost per click value.
+   * Average CPC is a legacy value that will be removed and replaced in the
+   * future, and as such we are including it as an optioanl value so clients
+   * only use it when strictly necessary and to better track clients that use
+   * this value.
+   * </pre>
+   *
+   * <code>bool include_average_cpc = 2;</code>
+   * @return The includeAverageCpc.
+   */
+  boolean getIncludeAverageCpc();
 }

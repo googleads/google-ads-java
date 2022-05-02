@@ -43,40 +43,40 @@ public final class AdGroupAdProto {
       "cy_approval_status.proto\0329google/ads/goo" +
       "gleads/v10/enums/policy_review_status.pr" +
       "oto\032+google/ads/googleads/v10/resources/" +
-      "ad.proto\032\034google/api/annotations.proto\032\037" +
-      "google/api/field_behavior.proto\032\031google/" +
-      "api/resource.proto\"\227\005\n\tAdGroupAd\022A\n\rreso" +
-      "urce_name\030\001 \001(\tB*\340A\005\372A$\n\"googleads.googl" +
-      "eapis.com/AdGroupAd\022S\n\006status\030\003 \001(\0162C.go" +
-      "ogle.ads.googleads.v10.enums.AdGroupAdSt" +
-      "atusEnum.AdGroupAdStatus\022?\n\010ad_group\030\t \001" +
-      "(\tB(\340A\005\372A\"\n googleads.googleapis.com/AdG" +
-      "roupH\000\210\001\001\0227\n\002ad\030\005 \001(\0132&.google.ads.googl" +
-      "eads.v10.resources.AdB\003\340A\005\022W\n\016policy_sum" +
-      "mary\030\006 \001(\0132:.google.ads.googleads.v10.re" +
-      "sources.AdGroupAdPolicySummaryB\003\340A\003\022S\n\013a" +
-      "d_strength\030\007 \001(\01629.google.ads.googleads." +
-      "v10.enums.AdStrengthEnum.AdStrengthB\003\340A\003" +
-      "\022\031\n\014action_items\030\r \003(\tB\003\340A\003\022?\n\006labels\030\n " +
-      "\003(\tB/\340A\003\372A)\n\'googleads.googleapis.com/Ad" +
-      "GroupAdLabel:a\352A^\n\"googleads.googleapis." +
-      "com/AdGroupAd\0228customers/{customer_id}/a" +
-      "dGroupAds/{ad_group_id}~{ad_id}B\013\n\t_ad_g" +
-      "roup\"\302\002\n\026AdGroupAdPolicySummary\022T\n\024polic" +
-      "y_topic_entries\030\001 \003(\01321.google.ads.googl" +
-      "eads.v10.common.PolicyTopicEntryB\003\340A\003\022e\n" +
-      "\rreview_status\030\002 \001(\0162I.google.ads.google" +
-      "ads.v10.enums.PolicyReviewStatusEnum.Pol" +
-      "icyReviewStatusB\003\340A\003\022k\n\017approval_status\030" +
-      "\003 \001(\0162M.google.ads.googleads.v10.enums.P" +
-      "olicyApprovalStatusEnum.PolicyApprovalSt" +
-      "atusB\003\340A\003B\200\002\n&com.google.ads.googleads.v" +
-      "10.resourcesB\016AdGroupAdProtoP\001ZKgoogle.g" +
-      "olang.org/genproto/googleapis/ads/google" +
-      "ads/v10/resources;resources\242\002\003GAA\252\002\"Goog" +
-      "le.Ads.GoogleAds.V10.Resources\312\002\"Google\\" +
-      "Ads\\GoogleAds\\V10\\Resources\352\002&Google::Ad" +
-      "s::GoogleAds::V10::Resourcesb\006proto3"
+      "ad.proto\032\037google/api/field_behavior.prot" +
+      "o\032\031google/api/resource.proto\"\227\005\n\tAdGroup" +
+      "Ad\022A\n\rresource_name\030\001 \001(\tB*\340A\005\372A$\n\"googl" +
+      "eads.googleapis.com/AdGroupAd\022S\n\006status\030" +
+      "\003 \001(\0162C.google.ads.googleads.v10.enums.A" +
+      "dGroupAdStatusEnum.AdGroupAdStatus\022?\n\010ad" +
+      "_group\030\t \001(\tB(\340A\005\372A\"\n googleads.googleap" +
+      "is.com/AdGroupH\000\210\001\001\0227\n\002ad\030\005 \001(\0132&.google" +
+      ".ads.googleads.v10.resources.AdB\003\340A\005\022W\n\016" +
+      "policy_summary\030\006 \001(\0132:.google.ads.google" +
+      "ads.v10.resources.AdGroupAdPolicySummary" +
+      "B\003\340A\003\022S\n\013ad_strength\030\007 \001(\01629.google.ads." +
+      "googleads.v10.enums.AdStrengthEnum.AdStr" +
+      "engthB\003\340A\003\022\031\n\014action_items\030\r \003(\tB\003\340A\003\022?\n" +
+      "\006labels\030\n \003(\tB/\340A\003\372A)\n\'googleads.googlea" +
+      "pis.com/AdGroupAdLabel:a\352A^\n\"googleads.g" +
+      "oogleapis.com/AdGroupAd\0228customers/{cust" +
+      "omer_id}/adGroupAds/{ad_group_id}~{ad_id" +
+      "}B\013\n\t_ad_group\"\302\002\n\026AdGroupAdPolicySummar" +
+      "y\022T\n\024policy_topic_entries\030\001 \003(\01321.google" +
+      ".ads.googleads.v10.common.PolicyTopicEnt" +
+      "ryB\003\340A\003\022e\n\rreview_status\030\002 \001(\0162I.google." +
+      "ads.googleads.v10.enums.PolicyReviewStat" +
+      "usEnum.PolicyReviewStatusB\003\340A\003\022k\n\017approv" +
+      "al_status\030\003 \001(\0162M.google.ads.googleads.v" +
+      "10.enums.PolicyApprovalStatusEnum.Policy" +
+      "ApprovalStatusB\003\340A\003B\200\002\n&com.google.ads.g" +
+      "oogleads.v10.resourcesB\016AdGroupAdProtoP\001" +
+      "ZKgoogle.golang.org/genproto/googleapis/" +
+      "ads/googleads/v10/resources;resources\242\002\003" +
+      "GAA\252\002\"Google.Ads.GoogleAds.V10.Resources" +
+      "\312\002\"Google\\Ads\\GoogleAds\\V10\\Resources\352\002&" +
+      "Google::Ads::GoogleAds::V10::Resourcesb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -87,7 +87,6 @@ public final class AdGroupAdProto {
           com.google.ads.googleads.v10.enums.PolicyApprovalStatusProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.PolicyReviewStatusProto.getDescriptor(),
           com.google.ads.googleads.v10.resources.AdProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -116,7 +115,6 @@ public final class AdGroupAdProto {
     com.google.ads.googleads.v10.enums.PolicyApprovalStatusProto.getDescriptor();
     com.google.ads.googleads.v10.enums.PolicyReviewStatusProto.getDescriptor();
     com.google.ads.googleads.v10.resources.AdProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

@@ -6,8 +6,8 @@ package com.google.ads.googleads.v10.resources;
 /**
  * <pre>
  * An asset group.
- * AssetGroupAsset will be used to link an asset to the asset group.
- * AssetGroupHint will be used to associate a hint to an asset group.
+ * AssetGroupAsset is used to link an asset to the asset group.
+ * AssetGroupSignal is used to associate a signal to an asset group.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v10.resources.AssetGroup}
@@ -133,6 +133,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -326,7 +328,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A list of final URLs after all cross domain redirects. In performance max,
-   * by default, the urls will be eligible for expansion unless opted out.
+   * by default, the urls are eligible for expansion unless opted out.
    * </pre>
    *
    * <code>repeated string final_urls = 4;</code>
@@ -339,7 +341,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A list of final URLs after all cross domain redirects. In performance max,
-   * by default, the urls will be eligible for expansion unless opted out.
+   * by default, the urls are eligible for expansion unless opted out.
    * </pre>
    *
    * <code>repeated string final_urls = 4;</code>
@@ -351,7 +353,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A list of final URLs after all cross domain redirects. In performance max,
-   * by default, the urls will be eligible for expansion unless opted out.
+   * by default, the urls are eligible for expansion unless opted out.
    * </pre>
    *
    * <code>repeated string final_urls = 4;</code>
@@ -364,7 +366,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A list of final URLs after all cross domain redirects. In performance max,
-   * by default, the urls will be eligible for expansion unless opted out.
+   * by default, the urls are eligible for expansion unless opted out.
    * </pre>
    *
    * <code>repeated string final_urls = 4;</code>
@@ -381,7 +383,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A list of final mobile URLs after all cross domain redirects. In
-   * performance max, by default, the urls will be eligible for expansion
+   * performance max, by default, the urls are eligible for expansion
    * unless opted out.
    * </pre>
    *
@@ -395,7 +397,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A list of final mobile URLs after all cross domain redirects. In
-   * performance max, by default, the urls will be eligible for expansion
+   * performance max, by default, the urls are eligible for expansion
    * unless opted out.
    * </pre>
    *
@@ -408,7 +410,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A list of final mobile URLs after all cross domain redirects. In
-   * performance max, by default, the urls will be eligible for expansion
+   * performance max, by default, the urls are eligible for expansion
    * unless opted out.
    * </pre>
    *
@@ -422,7 +424,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A list of final mobile URLs after all cross domain redirects. In
-   * performance max, by default, the urls will be eligible for expansion
+   * performance max, by default, the urls are eligible for expansion
    * unless opted out.
    * </pre>
    *
@@ -811,8 +813,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * An asset group.
-   * AssetGroupAsset will be used to link an asset to the asset group.
-   * AssetGroupHint will be used to associate a hint to an asset group.
+   * AssetGroupAsset is used to link an asset to the asset group.
+   * AssetGroupSignal is used to associate a signal to an asset group.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v10.resources.AssetGroup}
@@ -1399,7 +1401,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A list of final URLs after all cross domain redirects. In performance max,
-     * by default, the urls will be eligible for expansion unless opted out.
+     * by default, the urls are eligible for expansion unless opted out.
      * </pre>
      *
      * <code>repeated string final_urls = 4;</code>
@@ -1412,7 +1414,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A list of final URLs after all cross domain redirects. In performance max,
-     * by default, the urls will be eligible for expansion unless opted out.
+     * by default, the urls are eligible for expansion unless opted out.
      * </pre>
      *
      * <code>repeated string final_urls = 4;</code>
@@ -1424,7 +1426,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A list of final URLs after all cross domain redirects. In performance max,
-     * by default, the urls will be eligible for expansion unless opted out.
+     * by default, the urls are eligible for expansion unless opted out.
      * </pre>
      *
      * <code>repeated string final_urls = 4;</code>
@@ -1437,7 +1439,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A list of final URLs after all cross domain redirects. In performance max,
-     * by default, the urls will be eligible for expansion unless opted out.
+     * by default, the urls are eligible for expansion unless opted out.
      * </pre>
      *
      * <code>repeated string final_urls = 4;</code>
@@ -1451,7 +1453,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A list of final URLs after all cross domain redirects. In performance max,
-     * by default, the urls will be eligible for expansion unless opted out.
+     * by default, the urls are eligible for expansion unless opted out.
      * </pre>
      *
      * <code>repeated string final_urls = 4;</code>
@@ -1472,7 +1474,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A list of final URLs after all cross domain redirects. In performance max,
-     * by default, the urls will be eligible for expansion unless opted out.
+     * by default, the urls are eligible for expansion unless opted out.
      * </pre>
      *
      * <code>repeated string final_urls = 4;</code>
@@ -1492,7 +1494,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A list of final URLs after all cross domain redirects. In performance max,
-     * by default, the urls will be eligible for expansion unless opted out.
+     * by default, the urls are eligible for expansion unless opted out.
      * </pre>
      *
      * <code>repeated string final_urls = 4;</code>
@@ -1510,7 +1512,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A list of final URLs after all cross domain redirects. In performance max,
-     * by default, the urls will be eligible for expansion unless opted out.
+     * by default, the urls are eligible for expansion unless opted out.
      * </pre>
      *
      * <code>repeated string final_urls = 4;</code>
@@ -1525,7 +1527,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A list of final URLs after all cross domain redirects. In performance max,
-     * by default, the urls will be eligible for expansion unless opted out.
+     * by default, the urls are eligible for expansion unless opted out.
      * </pre>
      *
      * <code>repeated string final_urls = 4;</code>
@@ -1554,7 +1556,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A list of final mobile URLs after all cross domain redirects. In
-     * performance max, by default, the urls will be eligible for expansion
+     * performance max, by default, the urls are eligible for expansion
      * unless opted out.
      * </pre>
      *
@@ -1568,7 +1570,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A list of final mobile URLs after all cross domain redirects. In
-     * performance max, by default, the urls will be eligible for expansion
+     * performance max, by default, the urls are eligible for expansion
      * unless opted out.
      * </pre>
      *
@@ -1581,7 +1583,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A list of final mobile URLs after all cross domain redirects. In
-     * performance max, by default, the urls will be eligible for expansion
+     * performance max, by default, the urls are eligible for expansion
      * unless opted out.
      * </pre>
      *
@@ -1595,7 +1597,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A list of final mobile URLs after all cross domain redirects. In
-     * performance max, by default, the urls will be eligible for expansion
+     * performance max, by default, the urls are eligible for expansion
      * unless opted out.
      * </pre>
      *
@@ -1610,7 +1612,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A list of final mobile URLs after all cross domain redirects. In
-     * performance max, by default, the urls will be eligible for expansion
+     * performance max, by default, the urls are eligible for expansion
      * unless opted out.
      * </pre>
      *
@@ -1632,7 +1634,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A list of final mobile URLs after all cross domain redirects. In
-     * performance max, by default, the urls will be eligible for expansion
+     * performance max, by default, the urls are eligible for expansion
      * unless opted out.
      * </pre>
      *
@@ -1653,7 +1655,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A list of final mobile URLs after all cross domain redirects. In
-     * performance max, by default, the urls will be eligible for expansion
+     * performance max, by default, the urls are eligible for expansion
      * unless opted out.
      * </pre>
      *
@@ -1672,7 +1674,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A list of final mobile URLs after all cross domain redirects. In
-     * performance max, by default, the urls will be eligible for expansion
+     * performance max, by default, the urls are eligible for expansion
      * unless opted out.
      * </pre>
      *
@@ -1688,7 +1690,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A list of final mobile URLs after all cross domain redirects. In
-     * performance max, by default, the urls will be eligible for expansion
+     * performance max, by default, the urls are eligible for expansion
      * unless opted out.
      * </pre>
      *

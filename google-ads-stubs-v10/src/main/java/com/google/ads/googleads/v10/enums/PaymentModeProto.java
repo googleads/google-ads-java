@@ -30,22 +30,20 @@ public final class PaymentModeProto {
     java.lang.String[] descriptorData = {
       "\n1google/ads/googleads/v10/enums/payment" +
       "_mode.proto\022\036google.ads.googleads.v10.en" +
-      "ums\032\034google/api/annotations.proto\"\201\001\n\017Pa" +
-      "ymentModeEnum\"n\n\013PaymentMode\022\017\n\013UNSPECIF" +
-      "IED\020\000\022\013\n\007UNKNOWN\020\001\022\n\n\006CLICKS\020\004\022\024\n\020CONVER" +
-      "SION_VALUE\020\005\022\017\n\013CONVERSIONS\020\006\022\016\n\nGUEST_S" +
-      "TAY\020\007B\352\001\n\"com.google.ads.googleads.v10.e" +
-      "numsB\020PaymentModeProtoP\001ZCgoogle.golang." +
-      "org/genproto/googleapis/ads/googleads/v1" +
-      "0/enums;enums\242\002\003GAA\252\002\036Google.Ads.GoogleA" +
-      "ds.V10.Enums\312\002\036Google\\Ads\\GoogleAds\\V10\\" +
-      "Enums\352\002\"Google::Ads::GoogleAds::V10::Enu" +
-      "msb\006proto3"
+      "ums\"\201\001\n\017PaymentModeEnum\"n\n\013PaymentMode\022\017" +
+      "\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\n\n\006CLICKS\020\004" +
+      "\022\024\n\020CONVERSION_VALUE\020\005\022\017\n\013CONVERSIONS\020\006\022" +
+      "\016\n\nGUEST_STAY\020\007B\352\001\n\"com.google.ads.googl" +
+      "eads.v10.enumsB\020PaymentModeProtoP\001ZCgoog" +
+      "le.golang.org/genproto/googleapis/ads/go" +
+      "ogleads/v10/enums;enums\242\002\003GAA\252\002\036Google.A" +
+      "ds.GoogleAds.V10.Enums\312\002\036Google\\Ads\\Goog" +
+      "leAds\\V10\\Enums\352\002\"Google::Ads::GoogleAds" +
+      "::V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_PaymentModeEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -53,7 +51,6 @@ public final class PaymentModeProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_PaymentModeEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

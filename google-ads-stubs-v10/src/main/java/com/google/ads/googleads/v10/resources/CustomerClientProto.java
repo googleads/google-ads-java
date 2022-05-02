@@ -31,42 +31,40 @@ public final class CustomerClientProto {
       "\n8google/ads/googleads/v10/resources/cus" +
       "tomer_client.proto\022\"google.ads.googleads" +
       ".v10.resources\0324google/ads/googleads/v10" +
-      "/enums/customer_status.proto\032\034google/api" +
-      "/annotations.proto\032\037google/api/field_beh" +
-      "avior.proto\032\031google/api/resource.proto\"\215" +
-      "\006\n\016CustomerClient\022F\n\rresource_name\030\001 \001(\t" +
-      "B/\340A\003\372A)\n\'googleads.googleapis.com/Custo" +
-      "merClient\022G\n\017client_customer\030\014 \001(\tB)\340A\003\372" +
-      "A#\n!googleads.googleapis.com/CustomerH\000\210" +
-      "\001\001\022\030\n\006hidden\030\r \001(\010B\003\340A\003H\001\210\001\001\022\027\n\005level\030\016 " +
-      "\001(\003B\003\340A\003H\002\210\001\001\022\033\n\ttime_zone\030\017 \001(\tB\003\340A\003H\003\210" +
-      "\001\001\022\036\n\014test_account\030\020 \001(\010B\003\340A\003H\004\210\001\001\022\031\n\007ma" +
-      "nager\030\021 \001(\010B\003\340A\003H\005\210\001\001\022\"\n\020descriptive_nam" +
-      "e\030\022 \001(\tB\003\340A\003H\006\210\001\001\022\037\n\rcurrency_code\030\023 \001(\t" +
-      "B\003\340A\003H\007\210\001\001\022\024\n\002id\030\024 \001(\003B\003\340A\003H\010\210\001\001\022>\n\016appl" +
-      "ied_labels\030\025 \003(\tB&\340A\003\372A \n\036googleads.goog" +
-      "leapis.com/Label\022V\n\006status\030\026 \001(\0162A.googl" +
-      "e.ads.googleads.v10.enums.CustomerStatus" +
-      "Enum.CustomerStatusB\003\340A\003:j\352Ag\n\'googleads" +
-      ".googleapis.com/CustomerClient\022<customer" +
-      "s/{customer_id}/customerClients/{client_" +
-      "customer_id}B\022\n\020_client_customerB\t\n\007_hid" +
-      "denB\010\n\006_levelB\014\n\n_time_zoneB\017\n\r_test_acc" +
-      "ountB\n\n\010_managerB\023\n\021_descriptive_nameB\020\n" +
-      "\016_currency_codeB\005\n\003_idB\205\002\n&com.google.ad" +
-      "s.googleads.v10.resourcesB\023CustomerClien" +
-      "tProtoP\001ZKgoogle.golang.org/genproto/goo" +
-      "gleapis/ads/googleads/v10/resources;reso" +
-      "urces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V10.R" +
-      "esources\312\002\"Google\\Ads\\GoogleAds\\V10\\Reso" +
-      "urces\352\002&Google::Ads::GoogleAds::V10::Res" +
-      "ourcesb\006proto3"
+      "/enums/customer_status.proto\032\037google/api" +
+      "/field_behavior.proto\032\031google/api/resour" +
+      "ce.proto\"\215\006\n\016CustomerClient\022F\n\rresource_" +
+      "name\030\001 \001(\tB/\340A\003\372A)\n\'googleads.googleapis" +
+      ".com/CustomerClient\022G\n\017client_customer\030\014" +
+      " \001(\tB)\340A\003\372A#\n!googleads.googleapis.com/C" +
+      "ustomerH\000\210\001\001\022\030\n\006hidden\030\r \001(\010B\003\340A\003H\001\210\001\001\022\027" +
+      "\n\005level\030\016 \001(\003B\003\340A\003H\002\210\001\001\022\033\n\ttime_zone\030\017 \001" +
+      "(\tB\003\340A\003H\003\210\001\001\022\036\n\014test_account\030\020 \001(\010B\003\340A\003H" +
+      "\004\210\001\001\022\031\n\007manager\030\021 \001(\010B\003\340A\003H\005\210\001\001\022\"\n\020descr" +
+      "iptive_name\030\022 \001(\tB\003\340A\003H\006\210\001\001\022\037\n\rcurrency_" +
+      "code\030\023 \001(\tB\003\340A\003H\007\210\001\001\022\024\n\002id\030\024 \001(\003B\003\340A\003H\010\210" +
+      "\001\001\022>\n\016applied_labels\030\025 \003(\tB&\340A\003\372A \n\036goog" +
+      "leads.googleapis.com/Label\022V\n\006status\030\026 \001" +
+      "(\0162A.google.ads.googleads.v10.enums.Cust" +
+      "omerStatusEnum.CustomerStatusB\003\340A\003:j\352Ag\n" +
+      "\'googleads.googleapis.com/CustomerClient" +
+      "\022<customers/{customer_id}/customerClient" +
+      "s/{client_customer_id}B\022\n\020_client_custom" +
+      "erB\t\n\007_hiddenB\010\n\006_levelB\014\n\n_time_zoneB\017\n" +
+      "\r_test_accountB\n\n\010_managerB\023\n\021_descripti" +
+      "ve_nameB\020\n\016_currency_codeB\005\n\003_idB\205\002\n&com" +
+      ".google.ads.googleads.v10.resourcesB\023Cus" +
+      "tomerClientProtoP\001ZKgoogle.golang.org/ge" +
+      "nproto/googleapis/ads/googleads/v10/reso" +
+      "urces;resources\242\002\003GAA\252\002\"Google.Ads.Googl" +
+      "eAds.V10.Resources\312\002\"Google\\Ads\\GoogleAd" +
+      "s\\V10\\Resources\352\002&Google::Ads::GoogleAds" +
+      "::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.enums.CustomerStatusProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -84,7 +82,6 @@ public final class CustomerClientProto {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.enums.CustomerStatusProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

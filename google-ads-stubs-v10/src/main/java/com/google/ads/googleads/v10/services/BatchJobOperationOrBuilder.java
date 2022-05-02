@@ -34,5 +34,40 @@ public interface BatchJobOperationOrBuilder extends
    */
   com.google.ads.googleads.v10.resources.BatchJobOrBuilder getCreateOrBuilder();
 
+  /**
+   * <pre>
+   * Remove operation: The batch job must not have been run. A resource name
+   * for the removed batch job is expected, in this format:
+   * `customers/{customer_id}/batchJobs/{batch_job_id}`
+   * </pre>
+   *
+   * <code>string remove = 4 [(.google.api.resource_reference) = { ... }</code>
+   * @return Whether the remove field is set.
+   */
+  boolean hasRemove();
+  /**
+   * <pre>
+   * Remove operation: The batch job must not have been run. A resource name
+   * for the removed batch job is expected, in this format:
+   * `customers/{customer_id}/batchJobs/{batch_job_id}`
+   * </pre>
+   *
+   * <code>string remove = 4 [(.google.api.resource_reference) = { ... }</code>
+   * @return The remove.
+   */
+  java.lang.String getRemove();
+  /**
+   * <pre>
+   * Remove operation: The batch job must not have been run. A resource name
+   * for the removed batch job is expected, in this format:
+   * `customers/{customer_id}/batchJobs/{batch_job_id}`
+   * </pre>
+   *
+   * <code>string remove = 4 [(.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for remove.
+   */
+  com.google.protobuf.ByteString
+      getRemoveBytes();
+
   public com.google.ads.googleads.v10.services.BatchJobOperation.OperationCase getOperationCase();
 }

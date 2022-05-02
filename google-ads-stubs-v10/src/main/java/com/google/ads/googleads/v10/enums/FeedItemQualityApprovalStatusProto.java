@@ -30,23 +30,21 @@ public final class FeedItemQualityApprovalStatusProto {
     java.lang.String[] descriptorData = {
       "\nFgoogle/ads/googleads/v10/enums/feed_it" +
       "em_quality_approval_status.proto\022\036google" +
-      ".ads.googleads.v10.enums\032\034google/api/ann" +
-      "otations.proto\"\201\001\n!FeedItemQualityApprov" +
-      "alStatusEnum\"\\\n\035FeedItemQualityApprovalS" +
-      "tatus\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\014\n\010A" +
-      "PPROVED\020\002\022\017\n\013DISAPPROVED\020\003B\374\001\n\"com.googl" +
-      "e.ads.googleads.v10.enumsB\"FeedItemQuali" +
-      "tyApprovalStatusProtoP\001ZCgoogle.golang.o" +
-      "rg/genproto/googleapis/ads/googleads/v10" +
-      "/enums;enums\242\002\003GAA\252\002\036Google.Ads.GoogleAd" +
-      "s.V10.Enums\312\002\036Google\\Ads\\GoogleAds\\V10\\E" +
-      "nums\352\002\"Google::Ads::GoogleAds::V10::Enum" +
-      "sb\006proto3"
+      ".ads.googleads.v10.enums\"\201\001\n!FeedItemQua" +
+      "lityApprovalStatusEnum\"\\\n\035FeedItemQualit" +
+      "yApprovalStatus\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKN" +
+      "OWN\020\001\022\014\n\010APPROVED\020\002\022\017\n\013DISAPPROVED\020\003B\374\001\n" +
+      "\"com.google.ads.googleads.v10.enumsB\"Fee" +
+      "dItemQualityApprovalStatusProtoP\001ZCgoogl" +
+      "e.golang.org/genproto/googleapis/ads/goo" +
+      "gleads/v10/enums;enums\242\002\003GAA\252\002\036Google.Ad" +
+      "s.GoogleAds.V10.Enums\312\002\036Google\\Ads\\Googl" +
+      "eAds\\V10\\Enums\352\002\"Google::Ads::GoogleAds:" +
+      ":V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_FeedItemQualityApprovalStatusEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -54,7 +52,6 @@ public final class FeedItemQualityApprovalStatusProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_FeedItemQualityApprovalStatusEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

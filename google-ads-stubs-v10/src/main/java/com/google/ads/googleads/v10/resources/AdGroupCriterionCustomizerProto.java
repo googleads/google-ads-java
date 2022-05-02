@@ -33,40 +33,38 @@ public final class AdGroupCriterionCustomizerProto {
       ".ads.googleads.v10.resources\0326google/ads" +
       "/googleads/v10/common/customizer_value.p" +
       "roto\032<google/ads/googleads/v10/enums/cus" +
-      "tomizer_value_status.proto\032\034google/api/a" +
-      "nnotations.proto\032\037google/api/field_behav" +
-      "ior.proto\032\031google/api/resource.proto\"\206\005\n" +
-      "\032AdGroupCriterionCustomizer\022R\n\rresource_" +
-      "name\030\001 \001(\tB;\340A\005\372A5\n3googleads.googleapis" +
-      ".com/AdGroupCriterionCustomizer\022R\n\022ad_gr" +
-      "oup_criterion\030\002 \001(\tB1\340A\005\372A+\n)googleads.g" +
-      "oogleapis.com/AdGroupCriterionH\000\210\001\001\022U\n\024c" +
-      "ustomizer_attribute\030\003 \001(\tB7\340A\002\340A\005\372A.\n,go" +
-      "ogleads.googleapis.com/CustomizerAttribu" +
-      "te\022d\n\006status\030\004 \001(\0162O.google.ads.googlead" +
-      "s.v10.enums.CustomizerValueStatusEnum.Cu" +
-      "stomizerValueStatusB\003\340A\003\022D\n\005value\030\005 \001(\0132" +
-      "0.google.ads.googleads.v10.common.Custom" +
-      "izerValueB\003\340A\002:\245\001\352A\241\001\n3googleads.googlea" +
-      "pis.com/AdGroupCriterionCustomizer\022jcust" +
-      "omers/{customer_id}/adGroupCriterionCust" +
-      "omizers/{ad_group_id}~{criterion_id}~{cu" +
-      "stomizer_attribute_id}B\025\n\023_ad_group_crit" +
-      "erionB\221\002\n&com.google.ads.googleads.v10.r" +
-      "esourcesB\037AdGroupCriterionCustomizerProt" +
-      "oP\001ZKgoogle.golang.org/genproto/googleap" +
-      "is/ads/googleads/v10/resources;resources" +
-      "\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V10.Resour" +
-      "ces\312\002\"Google\\Ads\\GoogleAds\\V10\\Resources" +
-      "\352\002&Google::Ads::GoogleAds::V10::Resource" +
-      "sb\006proto3"
+      "tomizer_value_status.proto\032\037google/api/f" +
+      "ield_behavior.proto\032\031google/api/resource" +
+      ".proto\"\206\005\n\032AdGroupCriterionCustomizer\022R\n" +
+      "\rresource_name\030\001 \001(\tB;\340A\005\372A5\n3googleads." +
+      "googleapis.com/AdGroupCriterionCustomize" +
+      "r\022R\n\022ad_group_criterion\030\002 \001(\tB1\340A\005\372A+\n)g" +
+      "oogleads.googleapis.com/AdGroupCriterion" +
+      "H\000\210\001\001\022U\n\024customizer_attribute\030\003 \001(\tB7\340A\002" +
+      "\340A\005\372A.\n,googleads.googleapis.com/Customi" +
+      "zerAttribute\022d\n\006status\030\004 \001(\0162O.google.ad" +
+      "s.googleads.v10.enums.CustomizerValueSta" +
+      "tusEnum.CustomizerValueStatusB\003\340A\003\022D\n\005va" +
+      "lue\030\005 \001(\01320.google.ads.googleads.v10.com" +
+      "mon.CustomizerValueB\003\340A\002:\245\001\352A\241\001\n3googlea" +
+      "ds.googleapis.com/AdGroupCriterionCustom" +
+      "izer\022jcustomers/{customer_id}/adGroupCri" +
+      "terionCustomizers/{ad_group_id}~{criteri" +
+      "on_id}~{customizer_attribute_id}B\025\n\023_ad_" +
+      "group_criterionB\221\002\n&com.google.ads.googl" +
+      "eads.v10.resourcesB\037AdGroupCriterionCust" +
+      "omizerProtoP\001ZKgoogle.golang.org/genprot" +
+      "o/googleapis/ads/googleads/v10/resources" +
+      ";resources\242\002\003GAA\252\002\"Google.Ads.GoogleAds." +
+      "V10.Resources\312\002\"Google\\Ads\\GoogleAds\\V10" +
+      "\\Resources\352\002&Google::Ads::GoogleAds::V10" +
+      "::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.common.CustomizerValueProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.CustomizerValueStatusProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -85,7 +83,6 @@ public final class AdGroupCriterionCustomizerProto {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.common.CustomizerValueProto.getDescriptor();
     com.google.ads.googleads.v10.enums.CustomizerValueStatusProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

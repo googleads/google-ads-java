@@ -33,37 +33,35 @@ public final class CampaignCustomizerProto {
       "eads.v10.resources\0326google/ads/googleads" +
       "/v10/common/customizer_value.proto\032<goog" +
       "le/ads/googleads/v10/enums/customizer_va" +
-      "lue_status.proto\032\034google/api/annotations" +
-      ".proto\032\037google/api/field_behavior.proto\032" +
-      "\031google/api/resource.proto\"\251\004\n\022CampaignC" +
-      "ustomizer\022J\n\rresource_name\030\001 \001(\tB3\340A\005\372A-" +
-      "\n+googleads.googleapis.com/CampaignCusto" +
-      "mizer\022;\n\010campaign\030\002 \001(\tB)\340A\005\372A#\n!googlea" +
-      "ds.googleapis.com/Campaign\022U\n\024customizer" +
-      "_attribute\030\003 \001(\tB7\340A\002\340A\005\372A.\n,googleads.g" +
-      "oogleapis.com/CustomizerAttribute\022d\n\006sta" +
-      "tus\030\004 \001(\0162O.google.ads.googleads.v10.enu" +
-      "ms.CustomizerValueStatusEnum.CustomizerV" +
-      "alueStatusB\003\340A\003\022D\n\005value\030\005 \001(\01320.google." +
-      "ads.googleads.v10.common.CustomizerValue" +
-      "B\003\340A\002:\206\001\352A\202\001\n+googleads.googleapis.com/C" +
-      "ampaignCustomizer\022Scustomers/{customer_i" +
-      "d}/campaignCustomizers/{campaign_id}~{cu" +
-      "stomizer_attribute_id}B\211\002\n&com.google.ad" +
-      "s.googleads.v10.resourcesB\027CampaignCusto" +
-      "mizerProtoP\001ZKgoogle.golang.org/genproto" +
-      "/googleapis/ads/googleads/v10/resources;" +
-      "resources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V" +
-      "10.Resources\312\002\"Google\\Ads\\GoogleAds\\V10\\" +
-      "Resources\352\002&Google::Ads::GoogleAds::V10:" +
-      ":Resourcesb\006proto3"
+      "lue_status.proto\032\037google/api/field_behav" +
+      "ior.proto\032\031google/api/resource.proto\"\251\004\n" +
+      "\022CampaignCustomizer\022J\n\rresource_name\030\001 \001" +
+      "(\tB3\340A\005\372A-\n+googleads.googleapis.com/Cam" +
+      "paignCustomizer\022;\n\010campaign\030\002 \001(\tB)\340A\005\372A" +
+      "#\n!googleads.googleapis.com/Campaign\022U\n\024" +
+      "customizer_attribute\030\003 \001(\tB7\340A\002\340A\005\372A.\n,g" +
+      "oogleads.googleapis.com/CustomizerAttrib" +
+      "ute\022d\n\006status\030\004 \001(\0162O.google.ads.googlea" +
+      "ds.v10.enums.CustomizerValueStatusEnum.C" +
+      "ustomizerValueStatusB\003\340A\003\022D\n\005value\030\005 \001(\013" +
+      "20.google.ads.googleads.v10.common.Custo" +
+      "mizerValueB\003\340A\002:\206\001\352A\202\001\n+googleads.google" +
+      "apis.com/CampaignCustomizer\022Scustomers/{" +
+      "customer_id}/campaignCustomizers/{campai" +
+      "gn_id}~{customizer_attribute_id}B\211\002\n&com" +
+      ".google.ads.googleads.v10.resourcesB\027Cam" +
+      "paignCustomizerProtoP\001ZKgoogle.golang.or" +
+      "g/genproto/googleapis/ads/googleads/v10/" +
+      "resources;resources\242\002\003GAA\252\002\"Google.Ads.G" +
+      "oogleAds.V10.Resources\312\002\"Google\\Ads\\Goog" +
+      "leAds\\V10\\Resources\352\002&Google::Ads::Googl" +
+      "eAds::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.common.CustomizerValueProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.CustomizerValueStatusProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -82,7 +80,6 @@ public final class CampaignCustomizerProto {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.common.CustomizerValueProto.getDescriptor();
     com.google.ads.googleads.v10.enums.CustomizerValueStatusProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

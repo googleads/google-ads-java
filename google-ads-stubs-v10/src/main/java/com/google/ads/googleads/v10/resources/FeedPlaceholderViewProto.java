@@ -31,30 +31,29 @@ public final class FeedPlaceholderViewProto {
       "\n>google/ads/googleads/v10/resources/fee" +
       "d_placeholder_view.proto\022\"google.ads.goo" +
       "gleads.v10.resources\0325google/ads/googlea" +
-      "ds/v10/enums/placeholder_type.proto\032\034goo" +
-      "gle/api/annotations.proto\032\037google/api/fi" +
-      "eld_behavior.proto\032\031google/api/resource." +
-      "proto\"\272\002\n\023FeedPlaceholderView\022K\n\rresourc" +
-      "e_name\030\001 \001(\tB4\340A\003\372A.\n,googleads.googleap" +
-      "is.com/FeedPlaceholderView\022b\n\020placeholde" +
-      "r_type\030\002 \001(\0162C.google.ads.googleads.v10." +
-      "enums.PlaceholderTypeEnum.PlaceholderTyp" +
-      "eB\003\340A\003:r\352Ao\n,googleads.googleapis.com/Fe" +
-      "edPlaceholderView\022?customers/{customer_i" +
-      "d}/feedPlaceholderViews/{placeholder_typ" +
-      "e}B\212\002\n&com.google.ads.googleads.v10.reso" +
-      "urcesB\030FeedPlaceholderViewProtoP\001ZKgoogl" +
-      "e.golang.org/genproto/googleapis/ads/goo" +
-      "gleads/v10/resources;resources\242\002\003GAA\252\002\"G" +
-      "oogle.Ads.GoogleAds.V10.Resources\312\002\"Goog" +
-      "le\\Ads\\GoogleAds\\V10\\Resources\352\002&Google:" +
-      ":Ads::GoogleAds::V10::Resourcesb\006proto3"
+      "ds/v10/enums/placeholder_type.proto\032\037goo" +
+      "gle/api/field_behavior.proto\032\031google/api" +
+      "/resource.proto\"\272\002\n\023FeedPlaceholderView\022" +
+      "K\n\rresource_name\030\001 \001(\tB4\340A\003\372A.\n,googlead" +
+      "s.googleapis.com/FeedPlaceholderView\022b\n\020" +
+      "placeholder_type\030\002 \001(\0162C.google.ads.goog" +
+      "leads.v10.enums.PlaceholderTypeEnum.Plac" +
+      "eholderTypeB\003\340A\003:r\352Ao\n,googleads.googlea" +
+      "pis.com/FeedPlaceholderView\022?customers/{" +
+      "customer_id}/feedPlaceholderViews/{place" +
+      "holder_type}B\212\002\n&com.google.ads.googlead" +
+      "s.v10.resourcesB\030FeedPlaceholderViewProt" +
+      "oP\001ZKgoogle.golang.org/genproto/googleap" +
+      "is/ads/googleads/v10/resources;resources" +
+      "\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V10.Resour" +
+      "ces\312\002\"Google\\Ads\\GoogleAds\\V10\\Resources" +
+      "\352\002&Google::Ads::GoogleAds::V10::Resource" +
+      "sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.enums.PlaceholderTypeProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -72,7 +71,6 @@ public final class FeedPlaceholderViewProto {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.enums.PlaceholderTypeProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

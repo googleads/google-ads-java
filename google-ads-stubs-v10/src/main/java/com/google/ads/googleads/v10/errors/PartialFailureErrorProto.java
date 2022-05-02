@@ -30,22 +30,20 @@ public final class PartialFailureErrorProto {
     java.lang.String[] descriptorData = {
       "\n;google/ads/googleads/v10/errors/partia" +
       "l_failure_error.proto\022\037google.ads.google" +
-      "ads.v10.errors\032\034google/api/annotations.p" +
-      "roto\"q\n\027PartialFailureErrorEnum\"V\n\023Parti" +
-      "alFailureError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNO" +
-      "WN\020\001\022!\n\035PARTIAL_FAILURE_MODE_REQUIRED\020\002B" +
-      "\370\001\n#com.google.ads.googleads.v10.errorsB" +
-      "\030PartialFailureErrorProtoP\001ZEgoogle.gola" +
-      "ng.org/genproto/googleapis/ads/googleads" +
-      "/v10/errors;errors\242\002\003GAA\252\002\037Google.Ads.Go" +
-      "ogleAds.V10.Errors\312\002\037Google\\Ads\\GoogleAd" +
-      "s\\V10\\Errors\352\002#Google::Ads::GoogleAds::V" +
-      "10::Errorsb\006proto3"
+      "ads.v10.errors\"q\n\027PartialFailureErrorEnu" +
+      "m\"V\n\023PartialFailureError\022\017\n\013UNSPECIFIED\020" +
+      "\000\022\013\n\007UNKNOWN\020\001\022!\n\035PARTIAL_FAILURE_MODE_R" +
+      "EQUIRED\020\002B\370\001\n#com.google.ads.googleads.v" +
+      "10.errorsB\030PartialFailureErrorProtoP\001ZEg" +
+      "oogle.golang.org/genproto/googleapis/ads" +
+      "/googleads/v10/errors;errors\242\002\003GAA\252\002\037Goo" +
+      "gle.Ads.GoogleAds.V10.Errors\312\002\037Google\\Ad" +
+      "s\\GoogleAds\\V10\\Errors\352\002#Google::Ads::Go" +
+      "ogleAds::V10::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_PartialFailureErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -53,7 +51,6 @@ public final class PartialFailureErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_PartialFailureErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -10,7 +10,7 @@ public interface ListPlannableProductsRequestOrBuilder extends
   /**
    * <pre>
    * Required. The ID of the selected location for planning. To list the available
-   * plannable location ids use [ReachPlanService.ListPlannableLocations][google.ads.googleads.v10.services.ReachPlanService.ListPlannableLocations].
+   * plannable location IDs use [ReachPlanService.ListPlannableLocations][google.ads.googleads.v10.services.ReachPlanService.ListPlannableLocations].
    * </pre>
    *
    * <code>string plannable_location_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -20,7 +20,7 @@ public interface ListPlannableProductsRequestOrBuilder extends
   /**
    * <pre>
    * Required. The ID of the selected location for planning. To list the available
-   * plannable location ids use [ReachPlanService.ListPlannableLocations][google.ads.googleads.v10.services.ReachPlanService.ListPlannableLocations].
+   * plannable location IDs use [ReachPlanService.ListPlannableLocations][google.ads.googleads.v10.services.ReachPlanService.ListPlannableLocations].
    * </pre>
    *
    * <code>string plannable_location_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>

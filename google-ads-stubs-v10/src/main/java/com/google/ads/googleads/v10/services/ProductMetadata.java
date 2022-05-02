@@ -91,6 +91,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -117,8 +119,10 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object plannableProductCode_;
   /**
    * <pre>
-   * The code associated with the ad product. E.g. BUMPER, TRUEVIEW_IN_STREAM
-   * To list the available plannable product codes use ListPlannableProducts.
+   * The code associated with the ad product (for example: BUMPER,
+   * TRUEVIEW_IN_STREAM).
+   * To list the available plannable product codes use
+   * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v10.services.ReachPlanService.ListPlannableProducts].
    * </pre>
    *
    * <code>optional string plannable_product_code = 4;</code>
@@ -130,8 +134,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The code associated with the ad product. E.g. BUMPER, TRUEVIEW_IN_STREAM
-   * To list the available plannable product codes use ListPlannableProducts.
+   * The code associated with the ad product (for example: BUMPER,
+   * TRUEVIEW_IN_STREAM).
+   * To list the available plannable product codes use
+   * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v10.services.ReachPlanService.ListPlannableProducts].
    * </pre>
    *
    * <code>optional string plannable_product_code = 4;</code>
@@ -152,8 +158,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The code associated with the ad product. E.g. BUMPER, TRUEVIEW_IN_STREAM
-   * To list the available plannable product codes use ListPlannableProducts.
+   * The code associated with the ad product (for example: BUMPER,
+   * TRUEVIEW_IN_STREAM).
+   * To list the available plannable product codes use
+   * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v10.services.ReachPlanService.ListPlannableProducts].
    * </pre>
    *
    * <code>optional string plannable_product_code = 4;</code>
@@ -627,8 +635,10 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object plannableProductCode_ = "";
     /**
      * <pre>
-     * The code associated with the ad product. E.g. BUMPER, TRUEVIEW_IN_STREAM
-     * To list the available plannable product codes use ListPlannableProducts.
+     * The code associated with the ad product (for example: BUMPER,
+     * TRUEVIEW_IN_STREAM).
+     * To list the available plannable product codes use
+     * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v10.services.ReachPlanService.ListPlannableProducts].
      * </pre>
      *
      * <code>optional string plannable_product_code = 4;</code>
@@ -639,8 +649,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The code associated with the ad product. E.g. BUMPER, TRUEVIEW_IN_STREAM
-     * To list the available plannable product codes use ListPlannableProducts.
+     * The code associated with the ad product (for example: BUMPER,
+     * TRUEVIEW_IN_STREAM).
+     * To list the available plannable product codes use
+     * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v10.services.ReachPlanService.ListPlannableProducts].
      * </pre>
      *
      * <code>optional string plannable_product_code = 4;</code>
@@ -660,8 +672,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The code associated with the ad product. E.g. BUMPER, TRUEVIEW_IN_STREAM
-     * To list the available plannable product codes use ListPlannableProducts.
+     * The code associated with the ad product (for example: BUMPER,
+     * TRUEVIEW_IN_STREAM).
+     * To list the available plannable product codes use
+     * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v10.services.ReachPlanService.ListPlannableProducts].
      * </pre>
      *
      * <code>optional string plannable_product_code = 4;</code>
@@ -682,8 +696,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The code associated with the ad product. E.g. BUMPER, TRUEVIEW_IN_STREAM
-     * To list the available plannable product codes use ListPlannableProducts.
+     * The code associated with the ad product (for example: BUMPER,
+     * TRUEVIEW_IN_STREAM).
+     * To list the available plannable product codes use
+     * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v10.services.ReachPlanService.ListPlannableProducts].
      * </pre>
      *
      * <code>optional string plannable_product_code = 4;</code>
@@ -702,8 +718,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The code associated with the ad product. E.g. BUMPER, TRUEVIEW_IN_STREAM
-     * To list the available plannable product codes use ListPlannableProducts.
+     * The code associated with the ad product (for example: BUMPER,
+     * TRUEVIEW_IN_STREAM).
+     * To list the available plannable product codes use
+     * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v10.services.ReachPlanService.ListPlannableProducts].
      * </pre>
      *
      * <code>optional string plannable_product_code = 4;</code>
@@ -717,8 +735,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The code associated with the ad product. E.g. BUMPER, TRUEVIEW_IN_STREAM
-     * To list the available plannable product codes use ListPlannableProducts.
+     * The code associated with the ad product (for example: BUMPER,
+     * TRUEVIEW_IN_STREAM).
+     * To list the available plannable product codes use
+     * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v10.services.ReachPlanService.ListPlannableProducts].
      * </pre>
      *
      * <code>optional string plannable_product_code = 4;</code>

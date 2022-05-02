@@ -30,24 +30,22 @@ public final class YoutubeVideoRegistrationErrorProto {
     java.lang.String[] descriptorData = {
       "\nFgoogle/ads/googleads/v10/errors/youtub" +
       "e_video_registration_error.proto\022\037google" +
-      ".ads.googleads.v10.errors\032\034google/api/an" +
-      "notations.proto\"\252\001\n!YoutubeVideoRegistra" +
-      "tionErrorEnum\"\204\001\n\035YoutubeVideoRegistrati" +
-      "onError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\023\n" +
-      "\017VIDEO_NOT_FOUND\020\002\022\030\n\024VIDEO_NOT_ACCESSIB" +
-      "LE\020\003\022\026\n\022VIDEO_NOT_ELIGIBLE\020\004B\202\002\n#com.goo" +
-      "gle.ads.googleads.v10.errorsB\"YoutubeVid" +
-      "eoRegistrationErrorProtoP\001ZEgoogle.golan" +
-      "g.org/genproto/googleapis/ads/googleads/" +
-      "v10/errors;errors\242\002\003GAA\252\002\037Google.Ads.Goo" +
-      "gleAds.V10.Errors\312\002\037Google\\Ads\\GoogleAds" +
-      "\\V10\\Errors\352\002#Google::Ads::GoogleAds::V1" +
-      "0::Errorsb\006proto3"
+      ".ads.googleads.v10.errors\"\252\001\n!YoutubeVid" +
+      "eoRegistrationErrorEnum\"\204\001\n\035YoutubeVideo" +
+      "RegistrationError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UN" +
+      "KNOWN\020\001\022\023\n\017VIDEO_NOT_FOUND\020\002\022\030\n\024VIDEO_NO" +
+      "T_ACCESSIBLE\020\003\022\026\n\022VIDEO_NOT_ELIGIBLE\020\004B\202" +
+      "\002\n#com.google.ads.googleads.v10.errorsB\"" +
+      "YoutubeVideoRegistrationErrorProtoP\001ZEgo" +
+      "ogle.golang.org/genproto/googleapis/ads/" +
+      "googleads/v10/errors;errors\242\002\003GAA\252\002\037Goog" +
+      "le.Ads.GoogleAds.V10.Errors\312\002\037Google\\Ads" +
+      "\\GoogleAds\\V10\\Errors\352\002#Google::Ads::Goo" +
+      "gleAds::V10::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_YoutubeVideoRegistrationErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -55,7 +53,6 @@ public final class YoutubeVideoRegistrationErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_YoutubeVideoRegistrationErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

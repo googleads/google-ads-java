@@ -18,6 +18,8 @@ package com.google.ads.googleads.v10.services.stub;
 
 import static com.google.ads.googleads.v10.services.KeywordPlanIdeaServiceClient.GenerateKeywordIdeasPagedResponse;
 
+import com.google.ads.googleads.v10.services.GenerateKeywordHistoricalMetricsRequest;
+import com.google.ads.googleads.v10.services.GenerateKeywordHistoricalMetricsResponse;
 import com.google.ads.googleads.v10.services.GenerateKeywordIdeaResponse;
 import com.google.ads.googleads.v10.services.GenerateKeywordIdeasRequest;
 import com.google.api.gax.core.BackgroundResource;
@@ -41,6 +43,13 @@ public abstract class KeywordPlanIdeaServiceStub implements BackgroundResource {
   public UnaryCallable<GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse>
       generateKeywordIdeasCallable() {
     throw new UnsupportedOperationException("Not implemented: generateKeywordIdeasCallable()");
+  }
+
+  public UnaryCallable<
+          GenerateKeywordHistoricalMetricsRequest, GenerateKeywordHistoricalMetricsResponse>
+      generateKeywordHistoricalMetricsCallable() {
+    throw new UnsupportedOperationException(
+        "Not implemented: generateKeywordHistoricalMetricsCallable()");
   }
 
   @Override

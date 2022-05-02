@@ -203,7 +203,7 @@ public final class ReachPlanServiceGrpc {
 
     /**
      * <pre>
-     * Returns the list of plannable locations (for example, countries &amp; DMAs).
+     * Returns the list of plannable locations (for example, countries).
      * List of thrown errors:
      *   [AuthenticationError]()
      *   [AuthorizationError]()
@@ -333,7 +333,7 @@ public final class ReachPlanServiceGrpc {
 
     /**
      * <pre>
-     * Returns the list of plannable locations (for example, countries &amp; DMAs).
+     * Returns the list of plannable locations (for example, countries).
      * List of thrown errors:
      *   [AuthenticationError]()
      *   [AuthorizationError]()
@@ -434,7 +434,7 @@ public final class ReachPlanServiceGrpc {
 
     /**
      * <pre>
-     * Returns the list of plannable locations (for example, countries &amp; DMAs).
+     * Returns the list of plannable locations (for example, countries).
      * List of thrown errors:
      *   [AuthenticationError]()
      *   [AuthorizationError]()
@@ -531,7 +531,7 @@ public final class ReachPlanServiceGrpc {
 
     /**
      * <pre>
-     * Returns the list of plannable locations (for example, countries &amp; DMAs).
+     * Returns the list of plannable locations (for example, countries).
      * List of thrown errors:
      *   [AuthenticationError]()
      *   [AuthorizationError]()

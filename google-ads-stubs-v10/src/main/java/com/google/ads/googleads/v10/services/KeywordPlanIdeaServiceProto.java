@@ -49,6 +49,21 @@ public final class KeywordPlanIdeaServiceProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_google_ads_googleads_v10_services_GenerateKeywordIdeaResult_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v10_services_GenerateKeywordHistoricalMetricsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v10_services_GenerateKeywordHistoricalMetricsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v10_services_GenerateKeywordHistoricalMetricsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v10_services_GenerateKeywordHistoricalMetricsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_google_ads_googleads_v10_services_GenerateKeywordHistoricalMetricsResult_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_google_ads_googleads_v10_services_GenerateKeywordHistoricalMetricsResult_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -99,28 +114,48 @@ public final class KeywordPlanIdeaServiceProto {
       "deaResult\022d\n\030aggregate_metric_results\030\004 " +
       "\001(\0132B.google.ads.googleads.v10.common.Ke" +
       "ywordPlanAggregateMetricResults\022\027\n\017next_" +
-      "page_token\030\002 \001(\t\022\022\n\ntotal_size\030\003 \001(\003\"\346\001\n" +
+      "page_token\030\002 \001(\t\022\022\n\ntotal_size\030\003 \001(\003\"\376\001\n" +
       "\031GenerateKeywordIdeaResult\022\021\n\004text\030\005 \001(\t" +
       "H\000\210\001\001\022[\n\024keyword_idea_metrics\030\003 \001(\0132=.go" +
       "ogle.ads.googleads.v10.common.KeywordPla" +
       "nHistoricalMetrics\022P\n\023keyword_annotation" +
       "s\030\006 \001(\01323.google.ads.googleads.v10.commo" +
-      "n.KeywordAnnotationsB\007\n\005_text2\270\002\n\026Keywor" +
-      "dPlanIdeaService\022\326\001\n\024GenerateKeywordIdea" +
-      "s\022>.google.ads.googleads.v10.services.Ge" +
-      "nerateKeywordIdeasRequest\032>.google.ads.g" +
-      "oogleads.v10.services.GenerateKeywordIde" +
-      "aResponse\">\202\323\344\223\0028\"3/v10/customers/{custo" +
-      "mer_id=*}:generateKeywordIdeas:\001*\032E\312A\030go" +
-      "ogleads.googleapis.com\322A\'https://www.goo" +
-      "gleapis.com/auth/adwordsB\207\002\n%com.google." +
-      "ads.googleads.v10.servicesB\033KeywordPlanI" +
-      "deaServiceProtoP\001ZIgoogle.golang.org/gen" +
-      "proto/googleapis/ads/googleads/v10/servi" +
-      "ces;services\242\002\003GAA\252\002!Google.Ads.GoogleAd" +
-      "s.V10.Services\312\002!Google\\Ads\\GoogleAds\\V1" +
-      "0\\Services\352\002%Google::Ads::GoogleAds::V10" +
-      "::Servicesb\006proto3"
+      "n.KeywordAnnotations\022\026\n\016close_variants\030\007" +
+      " \003(\tB\007\n\005_text\"\257\001\n\'GenerateKeywordHistori" +
+      "calMetricsRequest\022\023\n\013customer_id\030\001 \001(\t\022\020" +
+      "\n\010keywords\030\002 \003(\t\022]\n\032historical_metrics_o" +
+      "ptions\030\003 \001(\01329.google.ads.googleads.v10." +
+      "common.HistoricalMetricsOptions\"\206\001\n(Gene" +
+      "rateKeywordHistoricalMetricsResponse\022Z\n\007" +
+      "results\030\001 \003(\0132I.google.ads.googleads.v10" +
+      ".services.GenerateKeywordHistoricalMetri" +
+      "csResult\"\264\001\n&GenerateKeywordHistoricalMe" +
+      "tricsResult\022\021\n\004text\030\001 \001(\tH\000\210\001\001\022\026\n\016close_" +
+      "variants\030\003 \003(\t\022V\n\017keyword_metrics\030\002 \001(\0132" +
+      "=.google.ads.googleads.v10.common.Keywor" +
+      "dPlanHistoricalMetricsB\007\n\005_text2\302\004\n\026Keyw" +
+      "ordPlanIdeaService\022\326\001\n\024GenerateKeywordId" +
+      "eas\022>.google.ads.googleads.v10.services." +
+      "GenerateKeywordIdeasRequest\032>.google.ads" +
+      ".googleads.v10.services.GenerateKeywordI" +
+      "deaResponse\">\202\323\344\223\0028\"3/v10/customers/{cus" +
+      "tomer_id=*}:generateKeywordIdeas:\001*\022\207\002\n " +
+      "GenerateKeywordHistoricalMetrics\022J.googl" +
+      "e.ads.googleads.v10.services.GenerateKey" +
+      "wordHistoricalMetricsRequest\032K.google.ad" +
+      "s.googleads.v10.services.GenerateKeyword" +
+      "HistoricalMetricsResponse\"J\202\323\344\223\002D\"?/v10/" +
+      "customers/{customer_id=*}:generateKeywor" +
+      "dHistoricalMetrics:\001*\032E\312A\030googleads.goog" +
+      "leapis.com\322A\'https://www.googleapis.com/" +
+      "auth/adwordsB\207\002\n%com.google.ads.googlead" +
+      "s.v10.servicesB\033KeywordPlanIdeaServicePr" +
+      "otoP\001ZIgoogle.golang.org/genproto/google" +
+      "apis/ads/googleads/v10/services;services" +
+      "\242\002\003GAA\252\002!Google.Ads.GoogleAds.V10.Servic" +
+      "es\312\002!Google\\Ads\\GoogleAds\\V10\\Services\352\002" +
+      "%Google::Ads::GoogleAds::V10::Servicesb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -172,7 +207,25 @@ public final class KeywordPlanIdeaServiceProto {
     internal_static_google_ads_googleads_v10_services_GenerateKeywordIdeaResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_services_GenerateKeywordIdeaResult_descriptor,
-        new java.lang.String[] { "Text", "KeywordIdeaMetrics", "KeywordAnnotations", "Text", });
+        new java.lang.String[] { "Text", "KeywordIdeaMetrics", "KeywordAnnotations", "CloseVariants", "Text", });
+    internal_static_google_ads_googleads_v10_services_GenerateKeywordHistoricalMetricsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_google_ads_googleads_v10_services_GenerateKeywordHistoricalMetricsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v10_services_GenerateKeywordHistoricalMetricsRequest_descriptor,
+        new java.lang.String[] { "CustomerId", "Keywords", "HistoricalMetricsOptions", });
+    internal_static_google_ads_googleads_v10_services_GenerateKeywordHistoricalMetricsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_google_ads_googleads_v10_services_GenerateKeywordHistoricalMetricsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v10_services_GenerateKeywordHistoricalMetricsResponse_descriptor,
+        new java.lang.String[] { "Results", });
+    internal_static_google_ads_googleads_v10_services_GenerateKeywordHistoricalMetricsResult_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_google_ads_googleads_v10_services_GenerateKeywordHistoricalMetricsResult_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_google_ads_googleads_v10_services_GenerateKeywordHistoricalMetricsResult_descriptor,
+        new java.lang.String[] { "Text", "CloseVariants", "KeywordMetrics", "Text", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);

@@ -94,13 +94,13 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 136: {
-            targetCpaSimulationKeyValueCase_ = 17;
             targetCpaSimulationKeyValue_ = input.readInt64();
+            targetCpaSimulationKeyValueCase_ = 17;
             break;
           }
           case 145: {
-            targetCpaSimulationKeyValueCase_ = 18;
             targetCpaSimulationKeyValue_ = input.readDouble();
+            targetCpaSimulationKeyValueCase_ = 18;
             break;
           }
           case 152: {
@@ -119,6 +119,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -486,10 +488,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000020) != 0)) {
       output.writeInt64(14, topSlotImpressions_);
     }
-    if (appInstalls_ != 0D) {
+    if (java.lang.Double.doubleToRawLongBits(appInstalls_) != 0) {
       output.writeDouble(15, appInstalls_);
     }
-    if (inAppActions_ != 0D) {
+    if (java.lang.Double.doubleToRawLongBits(inAppActions_) != 0) {
       output.writeDouble(16, inAppActions_);
     }
     if (targetCpaSimulationKeyValueCase_ == 17) {
@@ -536,11 +538,11 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(14, topSlotImpressions_);
     }
-    if (appInstalls_ != 0D) {
+    if (java.lang.Double.doubleToRawLongBits(appInstalls_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(15, appInstalls_);
     }
-    if (inAppActions_ != 0D) {
+    if (java.lang.Double.doubleToRawLongBits(inAppActions_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(16, inAppActions_);
     }

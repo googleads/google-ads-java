@@ -40,63 +40,62 @@ public final class UserListProto {
       "mbership_status.proto\0329google/ads/google" +
       "ads/v10/enums/user_list_size_range.proto" +
       "\0323google/ads/googleads/v10/enums/user_li" +
-      "st_type.proto\032\034google/api/annotations.pr" +
-      "oto\032\037google/api/field_behavior.proto\032\031go" +
-      "ogle/api/resource.proto\"\333\016\n\010UserList\022@\n\r" +
-      "resource_name\030\001 \001(\tB)\340A\005\372A#\n!googleads.g" +
-      "oogleapis.com/UserList\022\024\n\002id\030\031 \001(\003B\003\340A\003H" +
-      "\001\210\001\001\022\033\n\tread_only\030\032 \001(\010B\003\340A\003H\002\210\001\001\022\021\n\004nam" +
-      "e\030\033 \001(\tH\003\210\001\001\022\030\n\013description\030\034 \001(\tH\004\210\001\001\022p" +
-      "\n\021membership_status\030\006 \001(\0162U.google.ads.g" +
-      "oogleads.v10.enums.UserListMembershipSta" +
-      "tusEnum.UserListMembershipStatus\022\035\n\020inte" +
-      "gration_code\030\035 \001(\tH\005\210\001\001\022!\n\024membership_li" +
-      "fe_span\030\036 \001(\003H\006\210\001\001\022\"\n\020size_for_display\030\037" +
-      " \001(\003B\003\340A\003H\007\210\001\001\022l\n\026size_range_for_display" +
-      "\030\n \001(\0162G.google.ads.googleads.v10.enums." +
-      "UserListSizeRangeEnum.UserListSizeRangeB" +
-      "\003\340A\003\022!\n\017size_for_search\030  \001(\003B\003\340A\003H\010\210\001\001\022" +
-      "k\n\025size_range_for_search\030\014 \001(\0162G.google." +
-      "ads.googleads.v10.enums.UserListSizeRang" +
-      "eEnum.UserListSizeRangeB\003\340A\003\022P\n\004type\030\r \001" +
-      "(\0162=.google.ads.googleads.v10.enums.User" +
-      "ListTypeEnum.UserListTypeB\003\340A\003\022g\n\016closin" +
-      "g_reason\030\016 \001(\0162O.google.ads.googleads.v1" +
-      "0.enums.UserListClosingReasonEnum.UserLi" +
-      "stClosingReason\022Y\n\raccess_reason\030\017 \001(\0162=" +
-      ".google.ads.googleads.v10.enums.AccessRe" +
-      "asonEnum.AccessReasonB\003\340A\003\022o\n\030account_us" +
-      "er_list_status\030\020 \001(\0162M.google.ads.google" +
-      "ads.v10.enums.UserListAccessStatusEnum.U" +
-      "serListAccessStatus\022 \n\023eligible_for_sear" +
-      "ch\030! \001(\010H\t\210\001\001\022&\n\024eligible_for_display\030\" " +
-      "\001(\010B\003\340A\003H\n\210\001\001\022\'\n\025match_rate_percentage\030\030" +
-      " \001(\005B\003\340A\003H\013\210\001\001\022T\n\023crm_based_user_list\030\023 " +
-      "\001(\01325.google.ads.googleads.v10.common.Cr" +
-      "mBasedUserListInfoH\000\022V\n\021similar_user_lis" +
-      "t\030\024 \001(\01324.google.ads.googleads.v10.commo" +
-      "n.SimilarUserListInfoB\003\340A\003H\000\022V\n\024rule_bas" +
-      "ed_user_list\030\025 \001(\01326.google.ads.googlead" +
-      "s.v10.common.RuleBasedUserListInfoH\000\022Q\n\021" +
-      "logical_user_list\030\026 \001(\01324.google.ads.goo" +
-      "gleads.v10.common.LogicalUserListInfoH\000\022" +
-      "M\n\017basic_user_list\030\027 \001(\01322.google.ads.go" +
-      "ogleads.v10.common.BasicUserListInfoH\000:X" +
-      "\352AU\n!googleads.googleapis.com/UserList\0220" +
-      "customers/{customer_id}/userLists/{user_" +
-      "list_id}B\013\n\tuser_listB\005\n\003_idB\014\n\n_read_on" +
-      "lyB\007\n\005_nameB\016\n\014_descriptionB\023\n\021_integrat" +
-      "ion_codeB\027\n\025_membership_life_spanB\023\n\021_si" +
-      "ze_for_displayB\022\n\020_size_for_searchB\026\n\024_e" +
-      "ligible_for_searchB\027\n\025_eligible_for_disp" +
-      "layB\030\n\026_match_rate_percentageB\377\001\n&com.go" +
-      "ogle.ads.googleads.v10.resourcesB\rUserLi" +
-      "stProtoP\001ZKgoogle.golang.org/genproto/go" +
-      "ogleapis/ads/googleads/v10/resources;res" +
-      "ources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V10." +
-      "Resources\312\002\"Google\\Ads\\GoogleAds\\V10\\Res" +
-      "ources\352\002&Google::Ads::GoogleAds::V10::Re" +
-      "sourcesb\006proto3"
+      "st_type.proto\032\037google/api/field_behavior" +
+      ".proto\032\031google/api/resource.proto\"\333\016\n\010Us" +
+      "erList\022@\n\rresource_name\030\001 \001(\tB)\340A\005\372A#\n!g" +
+      "oogleads.googleapis.com/UserList\022\024\n\002id\030\031" +
+      " \001(\003B\003\340A\003H\001\210\001\001\022\033\n\tread_only\030\032 \001(\010B\003\340A\003H\002" +
+      "\210\001\001\022\021\n\004name\030\033 \001(\tH\003\210\001\001\022\030\n\013description\030\034 " +
+      "\001(\tH\004\210\001\001\022p\n\021membership_status\030\006 \001(\0162U.go" +
+      "ogle.ads.googleads.v10.enums.UserListMem" +
+      "bershipStatusEnum.UserListMembershipStat" +
+      "us\022\035\n\020integration_code\030\035 \001(\tH\005\210\001\001\022!\n\024mem" +
+      "bership_life_span\030\036 \001(\003H\006\210\001\001\022\"\n\020size_for" +
+      "_display\030\037 \001(\003B\003\340A\003H\007\210\001\001\022l\n\026size_range_f" +
+      "or_display\030\n \001(\0162G.google.ads.googleads." +
+      "v10.enums.UserListSizeRangeEnum.UserList" +
+      "SizeRangeB\003\340A\003\022!\n\017size_for_search\030  \001(\003B" +
+      "\003\340A\003H\010\210\001\001\022k\n\025size_range_for_search\030\014 \001(\016" +
+      "2G.google.ads.googleads.v10.enums.UserLi" +
+      "stSizeRangeEnum.UserListSizeRangeB\003\340A\003\022P" +
+      "\n\004type\030\r \001(\0162=.google.ads.googleads.v10." +
+      "enums.UserListTypeEnum.UserListTypeB\003\340A\003" +
+      "\022g\n\016closing_reason\030\016 \001(\0162O.google.ads.go" +
+      "ogleads.v10.enums.UserListClosingReasonE" +
+      "num.UserListClosingReason\022Y\n\raccess_reas" +
+      "on\030\017 \001(\0162=.google.ads.googleads.v10.enum" +
+      "s.AccessReasonEnum.AccessReasonB\003\340A\003\022o\n\030" +
+      "account_user_list_status\030\020 \001(\0162M.google." +
+      "ads.googleads.v10.enums.UserListAccessSt" +
+      "atusEnum.UserListAccessStatus\022 \n\023eligibl" +
+      "e_for_search\030! \001(\010H\t\210\001\001\022&\n\024eligible_for_" +
+      "display\030\" \001(\010B\003\340A\003H\n\210\001\001\022\'\n\025match_rate_pe" +
+      "rcentage\030\030 \001(\005B\003\340A\003H\013\210\001\001\022T\n\023crm_based_us" +
+      "er_list\030\023 \001(\01325.google.ads.googleads.v10" +
+      ".common.CrmBasedUserListInfoH\000\022V\n\021simila" +
+      "r_user_list\030\024 \001(\01324.google.ads.googleads" +
+      ".v10.common.SimilarUserListInfoB\003\340A\003H\000\022V" +
+      "\n\024rule_based_user_list\030\025 \001(\01326.google.ad" +
+      "s.googleads.v10.common.RuleBasedUserList" +
+      "InfoH\000\022Q\n\021logical_user_list\030\026 \001(\01324.goog" +
+      "le.ads.googleads.v10.common.LogicalUserL" +
+      "istInfoH\000\022M\n\017basic_user_list\030\027 \001(\01322.goo" +
+      "gle.ads.googleads.v10.common.BasicUserLi" +
+      "stInfoH\000:X\352AU\n!googleads.googleapis.com/" +
+      "UserList\0220customers/{customer_id}/userLi" +
+      "sts/{user_list_id}B\013\n\tuser_listB\005\n\003_idB\014" +
+      "\n\n_read_onlyB\007\n\005_nameB\016\n\014_descriptionB\023\n" +
+      "\021_integration_codeB\027\n\025_membership_life_s" +
+      "panB\023\n\021_size_for_displayB\022\n\020_size_for_se" +
+      "archB\026\n\024_eligible_for_searchB\027\n\025_eligibl" +
+      "e_for_displayB\030\n\026_match_rate_percentageB" +
+      "\377\001\n&com.google.ads.googleads.v10.resourc" +
+      "esB\rUserListProtoP\001ZKgoogle.golang.org/g" +
+      "enproto/googleapis/ads/googleads/v10/res" +
+      "ources;resources\242\002\003GAA\252\002\"Google.Ads.Goog" +
+      "leAds.V10.Resources\312\002\"Google\\Ads\\GoogleA" +
+      "ds\\V10\\Resources\352\002&Google::Ads::GoogleAd" +
+      "s::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -108,7 +107,6 @@ public final class UserListProto {
           com.google.ads.googleads.v10.enums.UserListMembershipStatusProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.UserListSizeRangeProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.UserListTypeProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -132,7 +130,6 @@ public final class UserListProto {
     com.google.ads.googleads.v10.enums.UserListMembershipStatusProto.getDescriptor();
     com.google.ads.googleads.v10.enums.UserListSizeRangeProto.getDescriptor();
     com.google.ads.googleads.v10.enums.UserListTypeProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

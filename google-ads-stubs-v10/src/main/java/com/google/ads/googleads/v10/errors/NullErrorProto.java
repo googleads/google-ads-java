@@ -30,20 +30,19 @@ public final class NullErrorProto {
     java.lang.String[] descriptorData = {
       "\n0google/ads/googleads/v10/errors/null_e" +
       "rror.proto\022\037google.ads.googleads.v10.err" +
-      "ors\032\034google/api/annotations.proto\"L\n\rNul" +
-      "lErrorEnum\";\n\tNullError\022\017\n\013UNSPECIFIED\020\000" +
-      "\022\013\n\007UNKNOWN\020\001\022\020\n\014NULL_CONTENT\020\002B\356\001\n#com." +
-      "google.ads.googleads.v10.errorsB\016NullErr" +
-      "orProtoP\001ZEgoogle.golang.org/genproto/go" +
-      "ogleapis/ads/googleads/v10/errors;errors" +
-      "\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V10.Errors" +
-      "\312\002\037Google\\Ads\\GoogleAds\\V10\\Errors\352\002#Goo" +
-      "gle::Ads::GoogleAds::V10::Errorsb\006proto3"
+      "ors\"L\n\rNullErrorEnum\";\n\tNullError\022\017\n\013UNS" +
+      "PECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\020\n\014NULL_CONTENT\020" +
+      "\002B\356\001\n#com.google.ads.googleads.v10.error" +
+      "sB\016NullErrorProtoP\001ZEgoogle.golang.org/g" +
+      "enproto/googleapis/ads/googleads/v10/err" +
+      "ors;errors\242\002\003GAA\252\002\037Google.Ads.GoogleAds." +
+      "V10.Errors\312\002\037Google\\Ads\\GoogleAds\\V10\\Er" +
+      "rors\352\002#Google::Ads::GoogleAds::V10::Erro" +
+      "rsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_NullErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -51,7 +50,6 @@ public final class NullErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_NullErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

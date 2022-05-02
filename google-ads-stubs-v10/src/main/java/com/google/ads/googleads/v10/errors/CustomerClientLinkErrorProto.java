@@ -30,29 +30,28 @@ public final class CustomerClientLinkErrorProto {
     java.lang.String[] descriptorData = {
       "\n@google/ads/googleads/v10/errors/custom" +
       "er_client_link_error.proto\022\037google.ads.g" +
-      "oogleads.v10.errors\032\034google/api/annotati" +
-      "ons.proto\"\217\003\n\033CustomerClientLinkErrorEnu" +
-      "m\"\357\002\n\027CustomerClientLinkError\022\017\n\013UNSPECI" +
-      "FIED\020\000\022\013\n\007UNKNOWN\020\001\022*\n&CLIENT_ALREADY_IN" +
-      "VITED_BY_THIS_MANAGER\020\002\022\'\n#CLIENT_ALREAD" +
-      "Y_MANAGED_IN_HIERARCHY\020\003\022\033\n\027CYCLIC_LINK_" +
-      "NOT_ALLOWED\020\004\022\"\n\036CUSTOMER_HAS_TOO_MANY_A" +
-      "CCOUNTS\020\005\022#\n\037CLIENT_HAS_TOO_MANY_INVITAT" +
-      "IONS\020\006\022*\n&CANNOT_HIDE_OR_UNHIDE_MANAGER_" +
-      "ACCOUNTS\020\007\022-\n)CUSTOMER_HAS_TOO_MANY_ACCO" +
-      "UNTS_AT_MANAGER\020\010\022 \n\034CLIENT_HAS_TOO_MANY" +
-      "_MANAGERS\020\tB\374\001\n#com.google.ads.googleads" +
-      ".v10.errorsB\034CustomerClientLinkErrorProt" +
-      "oP\001ZEgoogle.golang.org/genproto/googleap" +
-      "is/ads/googleads/v10/errors;errors\242\002\003GAA" +
-      "\252\002\037Google.Ads.GoogleAds.V10.Errors\312\002\037Goo" +
-      "gle\\Ads\\GoogleAds\\V10\\Errors\352\002#Google::A" +
-      "ds::GoogleAds::V10::Errorsb\006proto3"
+      "oogleads.v10.errors\"\217\003\n\033CustomerClientLi" +
+      "nkErrorEnum\"\357\002\n\027CustomerClientLinkError\022" +
+      "\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022*\n&CLIENT_" +
+      "ALREADY_INVITED_BY_THIS_MANAGER\020\002\022\'\n#CLI" +
+      "ENT_ALREADY_MANAGED_IN_HIERARCHY\020\003\022\033\n\027CY" +
+      "CLIC_LINK_NOT_ALLOWED\020\004\022\"\n\036CUSTOMER_HAS_" +
+      "TOO_MANY_ACCOUNTS\020\005\022#\n\037CLIENT_HAS_TOO_MA" +
+      "NY_INVITATIONS\020\006\022*\n&CANNOT_HIDE_OR_UNHID" +
+      "E_MANAGER_ACCOUNTS\020\007\022-\n)CUSTOMER_HAS_TOO" +
+      "_MANY_ACCOUNTS_AT_MANAGER\020\010\022 \n\034CLIENT_HA" +
+      "S_TOO_MANY_MANAGERS\020\tB\374\001\n#com.google.ads" +
+      ".googleads.v10.errorsB\034CustomerClientLin" +
+      "kErrorProtoP\001ZEgoogle.golang.org/genprot" +
+      "o/googleapis/ads/googleads/v10/errors;er" +
+      "rors\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V10.Er" +
+      "rors\312\002\037Google\\Ads\\GoogleAds\\V10\\Errors\352\002" +
+      "#Google::Ads::GoogleAds::V10::Errorsb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_CustomerClientLinkErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -60,7 +59,6 @@ public final class CustomerClientLinkErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_CustomerClientLinkErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

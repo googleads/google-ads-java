@@ -88,7 +88,7 @@ public interface AssetGroupOrBuilder extends
   /**
    * <pre>
    * A list of final URLs after all cross domain redirects. In performance max,
-   * by default, the urls will be eligible for expansion unless opted out.
+   * by default, the urls are eligible for expansion unless opted out.
    * </pre>
    *
    * <code>repeated string final_urls = 4;</code>
@@ -99,7 +99,7 @@ public interface AssetGroupOrBuilder extends
   /**
    * <pre>
    * A list of final URLs after all cross domain redirects. In performance max,
-   * by default, the urls will be eligible for expansion unless opted out.
+   * by default, the urls are eligible for expansion unless opted out.
    * </pre>
    *
    * <code>repeated string final_urls = 4;</code>
@@ -109,7 +109,7 @@ public interface AssetGroupOrBuilder extends
   /**
    * <pre>
    * A list of final URLs after all cross domain redirects. In performance max,
-   * by default, the urls will be eligible for expansion unless opted out.
+   * by default, the urls are eligible for expansion unless opted out.
    * </pre>
    *
    * <code>repeated string final_urls = 4;</code>
@@ -120,7 +120,7 @@ public interface AssetGroupOrBuilder extends
   /**
    * <pre>
    * A list of final URLs after all cross domain redirects. In performance max,
-   * by default, the urls will be eligible for expansion unless opted out.
+   * by default, the urls are eligible for expansion unless opted out.
    * </pre>
    *
    * <code>repeated string final_urls = 4;</code>
@@ -133,7 +133,7 @@ public interface AssetGroupOrBuilder extends
   /**
    * <pre>
    * A list of final mobile URLs after all cross domain redirects. In
-   * performance max, by default, the urls will be eligible for expansion
+   * performance max, by default, the urls are eligible for expansion
    * unless opted out.
    * </pre>
    *
@@ -145,7 +145,7 @@ public interface AssetGroupOrBuilder extends
   /**
    * <pre>
    * A list of final mobile URLs after all cross domain redirects. In
-   * performance max, by default, the urls will be eligible for expansion
+   * performance max, by default, the urls are eligible for expansion
    * unless opted out.
    * </pre>
    *
@@ -156,7 +156,7 @@ public interface AssetGroupOrBuilder extends
   /**
    * <pre>
    * A list of final mobile URLs after all cross domain redirects. In
-   * performance max, by default, the urls will be eligible for expansion
+   * performance max, by default, the urls are eligible for expansion
    * unless opted out.
    * </pre>
    *
@@ -168,7 +168,7 @@ public interface AssetGroupOrBuilder extends
   /**
    * <pre>
    * A list of final mobile URLs after all cross domain redirects. In
-   * performance max, by default, the urls will be eligible for expansion
+   * performance max, by default, the urls are eligible for expansion
    * unless opted out.
    * </pre>
    *

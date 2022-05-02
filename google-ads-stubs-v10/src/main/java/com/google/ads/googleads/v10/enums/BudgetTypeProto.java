@@ -30,22 +30,20 @@ public final class BudgetTypeProto {
     java.lang.String[] descriptorData = {
       "\n0google/ads/googleads/v10/enums/budget_" +
       "type.proto\022\036google.ads.googleads.v10.enu" +
-      "ms\032\034google/api/annotations.proto\"\201\001\n\016Bud" +
-      "getTypeEnum\"o\n\nBudgetType\022\017\n\013UNSPECIFIED" +
-      "\020\000\022\013\n\007UNKNOWN\020\001\022\014\n\010STANDARD\020\002\022\r\n\tFIXED_C" +
-      "PA\020\004\022\022\n\016SMART_CAMPAIGN\020\005\022\022\n\016LOCAL_SERVIC" +
-      "ES\020\006B\351\001\n\"com.google.ads.googleads.v10.en" +
-      "umsB\017BudgetTypeProtoP\001ZCgoogle.golang.or" +
-      "g/genproto/googleapis/ads/googleads/v10/" +
-      "enums;enums\242\002\003GAA\252\002\036Google.Ads.GoogleAds" +
-      ".V10.Enums\312\002\036Google\\Ads\\GoogleAds\\V10\\En" +
-      "ums\352\002\"Google::Ads::GoogleAds::V10::Enums" +
-      "b\006proto3"
+      "ms\"\201\001\n\016BudgetTypeEnum\"o\n\nBudgetType\022\017\n\013U" +
+      "NSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\014\n\010STANDARD\020\002\022" +
+      "\r\n\tFIXED_CPA\020\004\022\022\n\016SMART_CAMPAIGN\020\005\022\022\n\016LO" +
+      "CAL_SERVICES\020\006B\351\001\n\"com.google.ads.google" +
+      "ads.v10.enumsB\017BudgetTypeProtoP\001ZCgoogle" +
+      ".golang.org/genproto/googleapis/ads/goog" +
+      "leads/v10/enums;enums\242\002\003GAA\252\002\036Google.Ads" +
+      ".GoogleAds.V10.Enums\312\002\036Google\\Ads\\Google" +
+      "Ads\\V10\\Enums\352\002\"Google::Ads::GoogleAds::" +
+      "V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_BudgetTypeEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -53,7 +51,6 @@ public final class BudgetTypeProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_BudgetTypeEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

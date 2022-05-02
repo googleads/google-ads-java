@@ -167,6 +167,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -1469,8 +1471,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 4) {
           contentLabelBuilder_.mergeFrom(value);
+        } else {
+          contentLabelBuilder_.setMessage(value);
         }
-        contentLabelBuilder_.setMessage(value);
       }
       criterionCase_ = 4;
       return this;
@@ -1646,8 +1649,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 5) {
           mobileApplicationBuilder_.mergeFrom(value);
+        } else {
+          mobileApplicationBuilder_.setMessage(value);
         }
-        mobileApplicationBuilder_.setMessage(value);
       }
       criterionCase_ = 5;
       return this;
@@ -1823,8 +1827,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 6) {
           mobileAppCategoryBuilder_.mergeFrom(value);
+        } else {
+          mobileAppCategoryBuilder_.setMessage(value);
         }
-        mobileAppCategoryBuilder_.setMessage(value);
       }
       criterionCase_ = 6;
       return this;
@@ -2000,8 +2005,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 7) {
           placementBuilder_.mergeFrom(value);
+        } else {
+          placementBuilder_.setMessage(value);
         }
-        placementBuilder_.setMessage(value);
       }
       criterionCase_ = 7;
       return this;
@@ -2177,8 +2183,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 8) {
           youtubeVideoBuilder_.mergeFrom(value);
+        } else {
+          youtubeVideoBuilder_.setMessage(value);
         }
-        youtubeVideoBuilder_.setMessage(value);
       }
       criterionCase_ = 8;
       return this;
@@ -2354,8 +2361,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (criterionCase_ == 9) {
           youtubeChannelBuilder_.mergeFrom(value);
+        } else {
+          youtubeChannelBuilder_.setMessage(value);
         }
-        youtubeChannelBuilder_.setMessage(value);
       }
       criterionCase_ = 9;
       return this;

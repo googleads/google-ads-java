@@ -35,37 +35,36 @@ public final class CampaignCriterionSimulationProto {
       "google/ads/googleads/v10/enums/simulatio" +
       "n_modification_method.proto\0324google/ads/" +
       "googleads/v10/enums/simulation_type.prot" +
-      "o\032\034google/api/annotations.proto\032\037google/" +
-      "api/field_behavior.proto\032\031google/api/res" +
-      "ource.proto\"\274\006\n\033CampaignCriterionSimulat" +
-      "ion\022S\n\rresource_name\030\001 \001(\tB<\340A\003\372A6\n4goog" +
-      "leads.googleapis.com/CampaignCriterionSi" +
-      "mulation\022\035\n\013campaign_id\030\t \001(\003B\003\340A\003H\001\210\001\001\022" +
-      "\036\n\014criterion_id\030\n \001(\003B\003\340A\003H\002\210\001\001\022T\n\004type\030" +
-      "\004 \001(\0162A.google.ads.googleads.v10.enums.S" +
-      "imulationTypeEnum.SimulationTypeB\003\340A\003\022\177\n" +
-      "\023modification_method\030\005 \001(\0162].google.ads." +
-      "googleads.v10.enums.SimulationModificati" +
-      "onMethodEnum.SimulationModificationMetho" +
-      "dB\003\340A\003\022\034\n\nstart_date\030\013 \001(\tB\003\340A\003H\003\210\001\001\022\032\n\010" +
-      "end_date\030\014 \001(\tB\003\340A\003H\004\210\001\001\022g\n\027bid_modifier" +
-      "_point_list\030\010 \001(\0132?.google.ads.googleads" +
-      ".v10.common.BidModifierSimulationPointLi" +
-      "stB\003\340A\003H\000:\303\001\352A\277\001\n4googleads.googleapis.c" +
-      "om/CampaignCriterionSimulation\022\206\001custome" +
-      "rs/{customer_id}/campaignCriterionSimula" +
-      "tions/{campaign_id}~{criterion_id}~{type" +
-      "}~{modification_method}~{start_date}~{en" +
-      "d_date}B\014\n\npoint_listB\016\n\014_campaign_idB\017\n" +
-      "\r_criterion_idB\r\n\013_start_dateB\013\n\t_end_da" +
-      "teB\222\002\n&com.google.ads.googleads.v10.reso" +
-      "urcesB CampaignCriterionSimulationProtoP" +
-      "\001ZKgoogle.golang.org/genproto/googleapis" +
-      "/ads/googleads/v10/resources;resources\242\002" +
-      "\003GAA\252\002\"Google.Ads.GoogleAds.V10.Resource" +
-      "s\312\002\"Google\\Ads\\GoogleAds\\V10\\Resources\352\002" +
-      "&Google::Ads::GoogleAds::V10::Resourcesb" +
-      "\006proto3"
+      "o\032\037google/api/field_behavior.proto\032\031goog" +
+      "le/api/resource.proto\"\274\006\n\033CampaignCriter" +
+      "ionSimulation\022S\n\rresource_name\030\001 \001(\tB<\340A" +
+      "\003\372A6\n4googleads.googleapis.com/CampaignC" +
+      "riterionSimulation\022\035\n\013campaign_id\030\t \001(\003B" +
+      "\003\340A\003H\001\210\001\001\022\036\n\014criterion_id\030\n \001(\003B\003\340A\003H\002\210\001" +
+      "\001\022T\n\004type\030\004 \001(\0162A.google.ads.googleads.v" +
+      "10.enums.SimulationTypeEnum.SimulationTy" +
+      "peB\003\340A\003\022\177\n\023modification_method\030\005 \001(\0162].g" +
+      "oogle.ads.googleads.v10.enums.Simulation" +
+      "ModificationMethodEnum.SimulationModific" +
+      "ationMethodB\003\340A\003\022\034\n\nstart_date\030\013 \001(\tB\003\340A" +
+      "\003H\003\210\001\001\022\032\n\010end_date\030\014 \001(\tB\003\340A\003H\004\210\001\001\022g\n\027bi" +
+      "d_modifier_point_list\030\010 \001(\0132?.google.ads" +
+      ".googleads.v10.common.BidModifierSimulat" +
+      "ionPointListB\003\340A\003H\000:\303\001\352A\277\001\n4googleads.go" +
+      "ogleapis.com/CampaignCriterionSimulation" +
+      "\022\206\001customers/{customer_id}/campaignCrite" +
+      "rionSimulations/{campaign_id}~{criterion" +
+      "_id}~{type}~{modification_method}~{start" +
+      "_date}~{end_date}B\014\n\npoint_listB\016\n\014_camp" +
+      "aign_idB\017\n\r_criterion_idB\r\n\013_start_dateB" +
+      "\013\n\t_end_dateB\222\002\n&com.google.ads.googlead" +
+      "s.v10.resourcesB CampaignCriterionSimula" +
+      "tionProtoP\001ZKgoogle.golang.org/genproto/" +
+      "googleapis/ads/googleads/v10/resources;r" +
+      "esources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V1" +
+      "0.Resources\312\002\"Google\\Ads\\GoogleAds\\V10\\R" +
+      "esources\352\002&Google::Ads::GoogleAds::V10::" +
+      "Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -73,7 +72,6 @@ public final class CampaignCriterionSimulationProto {
           com.google.ads.googleads.v10.common.SimulationProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.SimulationModificationMethodProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.SimulationTypeProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -93,7 +91,6 @@ public final class CampaignCriterionSimulationProto {
     com.google.ads.googleads.v10.common.SimulationProto.getDescriptor();
     com.google.ads.googleads.v10.enums.SimulationModificationMethodProto.getDescriptor();
     com.google.ads.googleads.v10.enums.SimulationTypeProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

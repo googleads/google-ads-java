@@ -38,36 +38,35 @@ public final class KeywordPlanProto {
       "0.resources\032+google/ads/googleads/v10/co" +
       "mmon/dates.proto\032Cgoogle/ads/googleads/v" +
       "10/enums/keyword_plan_forecast_interval." +
-      "proto\032\034google/api/annotations.proto\032\037goo" +
-      "gle/api/field_behavior.proto\032\031google/api" +
-      "/resource.proto\"\306\002\n\013KeywordPlan\022C\n\rresou" +
-      "rce_name\030\001 \001(\tB,\340A\005\372A&\n$googleads.google" +
-      "apis.com/KeywordPlan\022\024\n\002id\030\005 \001(\003B\003\340A\003H\000\210" +
-      "\001\001\022\021\n\004name\030\006 \001(\tH\001\210\001\001\022V\n\017forecast_period" +
-      "\030\004 \001(\0132=.google.ads.googleads.v10.resour" +
-      "ces.KeywordPlanForecastPeriod:a\352A^\n$goog" +
-      "leads.googleapis.com/KeywordPlan\0226custom" +
-      "ers/{customer_id}/keywordPlans/{keyword_" +
-      "plan_id}B\005\n\003_idB\007\n\005_name\"\337\001\n\031KeywordPlan" +
-      "ForecastPeriod\022t\n\rdate_interval\030\001 \001(\0162[." +
-      "google.ads.googleads.v10.enums.KeywordPl" +
-      "anForecastIntervalEnum.KeywordPlanForeca" +
-      "stIntervalH\000\022@\n\ndate_range\030\002 \001(\0132*.googl" +
-      "e.ads.googleads.v10.common.DateRangeH\000B\n" +
-      "\n\010intervalB\202\002\n&com.google.ads.googleads." +
-      "v10.resourcesB\020KeywordPlanProtoP\001ZKgoogl" +
-      "e.golang.org/genproto/googleapis/ads/goo" +
-      "gleads/v10/resources;resources\242\002\003GAA\252\002\"G" +
-      "oogle.Ads.GoogleAds.V10.Resources\312\002\"Goog" +
-      "le\\Ads\\GoogleAds\\V10\\Resources\352\002&Google:" +
-      ":Ads::GoogleAds::V10::Resourcesb\006proto3"
+      "proto\032\037google/api/field_behavior.proto\032\031" +
+      "google/api/resource.proto\"\306\002\n\013KeywordPla" +
+      "n\022C\n\rresource_name\030\001 \001(\tB,\340A\005\372A&\n$google" +
+      "ads.googleapis.com/KeywordPlan\022\024\n\002id\030\005 \001" +
+      "(\003B\003\340A\003H\000\210\001\001\022\021\n\004name\030\006 \001(\tH\001\210\001\001\022V\n\017forec" +
+      "ast_period\030\004 \001(\0132=.google.ads.googleads." +
+      "v10.resources.KeywordPlanForecastPeriod:" +
+      "a\352A^\n$googleads.googleapis.com/KeywordPl" +
+      "an\0226customers/{customer_id}/keywordPlans" +
+      "/{keyword_plan_id}B\005\n\003_idB\007\n\005_name\"\337\001\n\031K" +
+      "eywordPlanForecastPeriod\022t\n\rdate_interva" +
+      "l\030\001 \001(\0162[.google.ads.googleads.v10.enums" +
+      ".KeywordPlanForecastIntervalEnum.Keyword" +
+      "PlanForecastIntervalH\000\022@\n\ndate_range\030\002 \001" +
+      "(\0132*.google.ads.googleads.v10.common.Dat" +
+      "eRangeH\000B\n\n\010intervalB\202\002\n&com.google.ads." +
+      "googleads.v10.resourcesB\020KeywordPlanProt" +
+      "oP\001ZKgoogle.golang.org/genproto/googleap" +
+      "is/ads/googleads/v10/resources;resources" +
+      "\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V10.Resour" +
+      "ces\312\002\"Google\\Ads\\GoogleAds\\V10\\Resources" +
+      "\352\002&Google::Ads::GoogleAds::V10::Resource" +
+      "sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.common.DatesProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.KeywordPlanForecastIntervalProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -92,7 +91,6 @@ public final class KeywordPlanProto {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.common.DatesProto.getDescriptor();
     com.google.ads.googleads.v10.enums.KeywordPlanForecastIntervalProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

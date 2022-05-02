@@ -30,22 +30,24 @@ public final class AudienceErrorProto {
     java.lang.String[] descriptorData = {
       "\n4google/ads/googleads/v10/errors/audien" +
       "ce_error.proto\022\037google.ads.googleads.v10" +
-      ".errors\032\034google/api/annotations.proto\"r\n" +
-      "\021AudienceErrorEnum\"]\n\rAudienceError\022\017\n\013U" +
-      "NSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\027\n\023NAME_ALREAD" +
-      "Y_IN_USE\020\002\022\025\n\021DIMENSION_INVALID\020\003B\362\001\n#co" +
-      "m.google.ads.googleads.v10.errorsB\022Audie" +
-      "nceErrorProtoP\001ZEgoogle.golang.org/genpr" +
-      "oto/googleapis/ads/googleads/v10/errors;" +
-      "errors\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V10." +
-      "Errors\312\002\037Google\\Ads\\GoogleAds\\V10\\Errors" +
-      "\352\002#Google::Ads::GoogleAds::V10::Errorsb\006" +
-      "proto3"
+      ".errors\"\245\002\n\021AudienceErrorEnum\"\217\002\n\rAudien" +
+      "ceError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\027\n" +
+      "\023NAME_ALREADY_IN_USE\020\002\022\025\n\021DIMENSION_INVA" +
+      "LID\020\003\022\036\n\032AUDIENCE_SEGMENT_NOT_FOUND\020\004\022\'\n" +
+      "#AUDIENCE_SEGMENT_TYPE_NOT_SUPPORTED\020\005\022\036" +
+      "\n\032DUPLICATE_AUDIENCE_SEGMENT\020\006\022\025\n\021TOO_MA" +
+      "NY_SEGMENTS\020\007\022$\n TOO_MANY_DIMENSIONS_OF_" +
+      "SAME_TYPE\020\010\022\n\n\006IN_USE\020\tB\362\001\n#com.google.a" +
+      "ds.googleads.v10.errorsB\022AudienceErrorPr" +
+      "otoP\001ZEgoogle.golang.org/genproto/google" +
+      "apis/ads/googleads/v10/errors;errors\242\002\003G" +
+      "AA\252\002\037Google.Ads.GoogleAds.V10.Errors\312\002\037G" +
+      "oogle\\Ads\\GoogleAds\\V10\\Errors\352\002#Google:" +
+      ":Ads::GoogleAds::V10::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_AudienceErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -53,7 +55,6 @@ public final class AudienceErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_AudienceErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

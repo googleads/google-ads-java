@@ -30,30 +30,28 @@ public final class RealEstatePlaceholderFieldProto {
     java.lang.String[] descriptorData = {
       "\nBgoogle/ads/googleads/v10/enums/real_es" +
       "tate_placeholder_field.proto\022\036google.ads" +
-      ".googleads.v10.enums\032\034google/api/annotat" +
-      "ions.proto\"\251\003\n\036RealEstatePlaceholderFiel" +
-      "dEnum\"\206\003\n\032RealEstatePlaceholderField\022\017\n\013" +
-      "UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\016\n\nLISTING_ID" +
-      "\020\002\022\020\n\014LISTING_NAME\020\003\022\r\n\tCITY_NAME\020\004\022\017\n\013D" +
-      "ESCRIPTION\020\005\022\013\n\007ADDRESS\020\006\022\t\n\005PRICE\020\007\022\023\n\017" +
-      "FORMATTED_PRICE\020\010\022\r\n\tIMAGE_URL\020\t\022\021\n\rPROP" +
-      "ERTY_TYPE\020\n\022\020\n\014LISTING_TYPE\020\013\022\027\n\023CONTEXT" +
-      "UAL_KEYWORDS\020\014\022\016\n\nFINAL_URLS\020\r\022\025\n\021FINAL_" +
-      "MOBILE_URLS\020\016\022\020\n\014TRACKING_URL\020\017\022\024\n\020ANDRO" +
-      "ID_APP_LINK\020\020\022\027\n\023SIMILAR_LISTING_IDS\020\021\022\020" +
-      "\n\014IOS_APP_LINK\020\022\022\024\n\020IOS_APP_STORE_ID\020\023B\371" +
-      "\001\n\"com.google.ads.googleads.v10.enumsB\037R" +
-      "ealEstatePlaceholderFieldProtoP\001ZCgoogle" +
-      ".golang.org/genproto/googleapis/ads/goog" +
-      "leads/v10/enums;enums\242\002\003GAA\252\002\036Google.Ads" +
-      ".GoogleAds.V10.Enums\312\002\036Google\\Ads\\Google" +
-      "Ads\\V10\\Enums\352\002\"Google::Ads::GoogleAds::" +
-      "V10::Enumsb\006proto3"
+      ".googleads.v10.enums\"\251\003\n\036RealEstatePlace" +
+      "holderFieldEnum\"\206\003\n\032RealEstatePlaceholde" +
+      "rField\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\016\n\n" +
+      "LISTING_ID\020\002\022\020\n\014LISTING_NAME\020\003\022\r\n\tCITY_N" +
+      "AME\020\004\022\017\n\013DESCRIPTION\020\005\022\013\n\007ADDRESS\020\006\022\t\n\005P" +
+      "RICE\020\007\022\023\n\017FORMATTED_PRICE\020\010\022\r\n\tIMAGE_URL" +
+      "\020\t\022\021\n\rPROPERTY_TYPE\020\n\022\020\n\014LISTING_TYPE\020\013\022" +
+      "\027\n\023CONTEXTUAL_KEYWORDS\020\014\022\016\n\nFINAL_URLS\020\r" +
+      "\022\025\n\021FINAL_MOBILE_URLS\020\016\022\020\n\014TRACKING_URL\020" +
+      "\017\022\024\n\020ANDROID_APP_LINK\020\020\022\027\n\023SIMILAR_LISTI" +
+      "NG_IDS\020\021\022\020\n\014IOS_APP_LINK\020\022\022\024\n\020IOS_APP_ST" +
+      "ORE_ID\020\023B\371\001\n\"com.google.ads.googleads.v1" +
+      "0.enumsB\037RealEstatePlaceholderFieldProto" +
+      "P\001ZCgoogle.golang.org/genproto/googleapi" +
+      "s/ads/googleads/v10/enums;enums\242\002\003GAA\252\002\036" +
+      "Google.Ads.GoogleAds.V10.Enums\312\002\036Google\\" +
+      "Ads\\GoogleAds\\V10\\Enums\352\002\"Google::Ads::G" +
+      "oogleAds::V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_RealEstatePlaceholderFieldEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -61,7 +59,6 @@ public final class RealEstatePlaceholderFieldProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_RealEstatePlaceholderFieldEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

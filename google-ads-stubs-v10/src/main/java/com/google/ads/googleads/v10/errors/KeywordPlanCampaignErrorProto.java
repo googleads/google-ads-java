@@ -30,25 +30,23 @@ public final class KeywordPlanCampaignErrorProto {
     java.lang.String[] descriptorData = {
       "\nAgoogle/ads/googleads/v10/errors/keywor" +
       "d_plan_campaign_error.proto\022\037google.ads." +
-      "googleads.v10.errors\032\034google/api/annotat" +
-      "ions.proto\"\333\001\n\034KeywordPlanCampaignErrorE" +
-      "num\"\272\001\n\030KeywordPlanCampaignError\022\017\n\013UNSP" +
-      "ECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\020\n\014INVALID_NAME\020\002" +
-      "\022\025\n\021INVALID_LANGUAGES\020\003\022\020\n\014INVALID_GEOS\020" +
-      "\004\022\022\n\016DUPLICATE_NAME\020\005\022\025\n\021MAX_GEOS_EXCEED" +
-      "ED\020\006\022\032\n\026MAX_LANGUAGES_EXCEEDED\020\007B\375\001\n#com" +
-      ".google.ads.googleads.v10.errorsB\035Keywor" +
-      "dPlanCampaignErrorProtoP\001ZEgoogle.golang" +
-      ".org/genproto/googleapis/ads/googleads/v" +
-      "10/errors;errors\242\002\003GAA\252\002\037Google.Ads.Goog" +
-      "leAds.V10.Errors\312\002\037Google\\Ads\\GoogleAds\\" +
-      "V10\\Errors\352\002#Google::Ads::GoogleAds::V10" +
-      "::Errorsb\006proto3"
+      "googleads.v10.errors\"\333\001\n\034KeywordPlanCamp" +
+      "aignErrorEnum\"\272\001\n\030KeywordPlanCampaignErr" +
+      "or\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\020\n\014INVA" +
+      "LID_NAME\020\002\022\025\n\021INVALID_LANGUAGES\020\003\022\020\n\014INV" +
+      "ALID_GEOS\020\004\022\022\n\016DUPLICATE_NAME\020\005\022\025\n\021MAX_G" +
+      "EOS_EXCEEDED\020\006\022\032\n\026MAX_LANGUAGES_EXCEEDED" +
+      "\020\007B\375\001\n#com.google.ads.googleads.v10.erro" +
+      "rsB\035KeywordPlanCampaignErrorProtoP\001ZEgoo" +
+      "gle.golang.org/genproto/googleapis/ads/g" +
+      "oogleads/v10/errors;errors\242\002\003GAA\252\002\037Googl" +
+      "e.Ads.GoogleAds.V10.Errors\312\002\037Google\\Ads\\" +
+      "GoogleAds\\V10\\Errors\352\002#Google::Ads::Goog" +
+      "leAds::V10::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_KeywordPlanCampaignErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -56,7 +54,6 @@ public final class KeywordPlanCampaignErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_KeywordPlanCampaignErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

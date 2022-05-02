@@ -39,26 +39,25 @@ public final class FrequencyCapProto {
       "requency_cap_event_type.proto\0328google/ad" +
       "s/googleads/v10/enums/frequency_cap_leve" +
       "l.proto\032<google/ads/googleads/v10/enums/" +
-      "frequency_cap_time_unit.proto\032\034google/ap" +
-      "i/annotations.proto\"l\n\021FrequencyCapEntry" +
-      "\022=\n\003key\030\001 \001(\01320.google.ads.googleads.v10" +
-      ".common.FrequencyCapKey\022\020\n\003cap\030\003 \001(\005H\000\210\001" +
-      "\001B\006\n\004_cap\"\332\002\n\017FrequencyCapKey\022V\n\005level\030\001" +
-      " \001(\0162G.google.ads.googleads.v10.enums.Fr" +
-      "equencyCapLevelEnum.FrequencyCapLevel\022c\n" +
-      "\nevent_type\030\003 \001(\0162O.google.ads.googleads" +
-      ".v10.enums.FrequencyCapEventTypeEnum.Fre" +
-      "quencyCapEventType\022`\n\ttime_unit\030\002 \001(\0162M." +
-      "google.ads.googleads.v10.enums.Frequency" +
-      "CapTimeUnitEnum.FrequencyCapTimeUnit\022\030\n\013" +
-      "time_length\030\005 \001(\005H\000\210\001\001B\016\n\014_time_lengthB\361" +
-      "\001\n#com.google.ads.googleads.v10.commonB\021" +
-      "FrequencyCapProtoP\001ZEgoogle.golang.org/g" +
-      "enproto/googleapis/ads/googleads/v10/com" +
-      "mon;common\242\002\003GAA\252\002\037Google.Ads.GoogleAds." +
-      "V10.Common\312\002\037Google\\Ads\\GoogleAds\\V10\\Co" +
-      "mmon\352\002#Google::Ads::GoogleAds::V10::Comm" +
-      "onb\006proto3"
+      "frequency_cap_time_unit.proto\"l\n\021Frequen" +
+      "cyCapEntry\022=\n\003key\030\001 \001(\01320.google.ads.goo" +
+      "gleads.v10.common.FrequencyCapKey\022\020\n\003cap" +
+      "\030\003 \001(\005H\000\210\001\001B\006\n\004_cap\"\332\002\n\017FrequencyCapKey\022" +
+      "V\n\005level\030\001 \001(\0162G.google.ads.googleads.v1" +
+      "0.enums.FrequencyCapLevelEnum.FrequencyC" +
+      "apLevel\022c\n\nevent_type\030\003 \001(\0162O.google.ads" +
+      ".googleads.v10.enums.FrequencyCapEventTy" +
+      "peEnum.FrequencyCapEventType\022`\n\ttime_uni" +
+      "t\030\002 \001(\0162M.google.ads.googleads.v10.enums" +
+      ".FrequencyCapTimeUnitEnum.FrequencyCapTi" +
+      "meUnit\022\030\n\013time_length\030\005 \001(\005H\000\210\001\001B\016\n\014_tim" +
+      "e_lengthB\361\001\n#com.google.ads.googleads.v1" +
+      "0.commonB\021FrequencyCapProtoP\001ZEgoogle.go" +
+      "lang.org/genproto/googleapis/ads/googlea" +
+      "ds/v10/common;common\242\002\003GAA\252\002\037Google.Ads." +
+      "GoogleAds.V10.Common\312\002\037Google\\Ads\\Google" +
+      "Ads\\V10\\Common\352\002#Google::Ads::GoogleAds:" +
+      ":V10::Commonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -66,7 +65,6 @@ public final class FrequencyCapProto {
           com.google.ads.googleads.v10.enums.FrequencyCapEventTypeProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.FrequencyCapLevelProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.FrequencyCapTimeUnitProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_common_FrequencyCapEntry_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -83,7 +81,6 @@ public final class FrequencyCapProto {
     com.google.ads.googleads.v10.enums.FrequencyCapEventTypeProto.getDescriptor();
     com.google.ads.googleads.v10.enums.FrequencyCapLevelProto.getDescriptor();
     com.google.ads.googleads.v10.enums.FrequencyCapTimeUnitProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

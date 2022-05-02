@@ -30,22 +30,21 @@ public final class ResourceAccessDeniedErrorProto {
     java.lang.String[] descriptorData = {
       "\nBgoogle/ads/googleads/v10/errors/resour" +
       "ce_access_denied_error.proto\022\037google.ads" +
-      ".googleads.v10.errors\032\034google/api/annota" +
-      "tions.proto\"s\n\035ResourceAccessDeniedError" +
-      "Enum\"R\n\031ResourceAccessDeniedError\022\017\n\013UNS" +
-      "PECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\027\n\023WRITE_ACCESS_" +
-      "DENIED\020\003B\376\001\n#com.google.ads.googleads.v1" +
-      "0.errorsB\036ResourceAccessDeniedErrorProto" +
-      "P\001ZEgoogle.golang.org/genproto/googleapi" +
-      "s/ads/googleads/v10/errors;errors\242\002\003GAA\252" +
-      "\002\037Google.Ads.GoogleAds.V10.Errors\312\002\037Goog" +
-      "le\\Ads\\GoogleAds\\V10\\Errors\352\002#Google::Ad" +
-      "s::GoogleAds::V10::Errorsb\006proto3"
+      ".googleads.v10.errors\"s\n\035ResourceAccessD" +
+      "eniedErrorEnum\"R\n\031ResourceAccessDeniedEr" +
+      "ror\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\027\n\023WRI" +
+      "TE_ACCESS_DENIED\020\003B\376\001\n#com.google.ads.go" +
+      "ogleads.v10.errorsB\036ResourceAccessDenied" +
+      "ErrorProtoP\001ZEgoogle.golang.org/genproto" +
+      "/googleapis/ads/googleads/v10/errors;err" +
+      "ors\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V10.Err" +
+      "ors\312\002\037Google\\Ads\\GoogleAds\\V10\\Errors\352\002#" +
+      "Google::Ads::GoogleAds::V10::Errorsb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_ResourceAccessDeniedErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -53,7 +52,6 @@ public final class ResourceAccessDeniedErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_ResourceAccessDeniedErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

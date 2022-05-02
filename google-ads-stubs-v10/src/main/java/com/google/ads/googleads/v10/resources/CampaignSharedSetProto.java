@@ -32,34 +32,32 @@ public final class CampaignSharedSetProto {
       "paign_shared_set.proto\022\"google.ads.googl" +
       "eads.v10.resources\032?google/ads/googleads" +
       "/v10/enums/campaign_shared_set_status.pr" +
-      "oto\032\034google/api/annotations.proto\032\037googl" +
-      "e/api/field_behavior.proto\032\031google/api/r" +
-      "esource.proto\"\346\003\n\021CampaignSharedSet\022I\n\rr" +
-      "esource_name\030\001 \001(\tB2\340A\005\372A,\n*googleads.go" +
-      "ogleapis.com/CampaignSharedSet\022@\n\010campai" +
-      "gn\030\005 \001(\tB)\340A\005\372A#\n!googleads.googleapis.c" +
-      "om/CampaignH\000\210\001\001\022C\n\nshared_set\030\006 \001(\tB*\340A" +
-      "\005\372A$\n\"googleads.googleapis.com/SharedSet" +
-      "H\001\210\001\001\022h\n\006status\030\002 \001(\0162S.google.ads.googl" +
-      "eads.v10.enums.CampaignSharedSetStatusEn" +
-      "um.CampaignSharedSetStatusB\003\340A\003:y\352Av\n*go" +
+      "oto\032\037google/api/field_behavior.proto\032\031go" +
+      "ogle/api/resource.proto\"\346\003\n\021CampaignShar" +
+      "edSet\022I\n\rresource_name\030\001 \001(\tB2\340A\005\372A,\n*go" +
       "ogleads.googleapis.com/CampaignSharedSet" +
-      "\022Hcustomers/{customer_id}/campaignShared" +
-      "Sets/{campaign_id}~{shared_set_id}B\013\n\t_c" +
-      "ampaignB\r\n\013_shared_setB\210\002\n&com.google.ad" +
-      "s.googleads.v10.resourcesB\026CampaignShare" +
-      "dSetProtoP\001ZKgoogle.golang.org/genproto/" +
-      "googleapis/ads/googleads/v10/resources;r" +
-      "esources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V1" +
-      "0.Resources\312\002\"Google\\Ads\\GoogleAds\\V10\\R" +
-      "esources\352\002&Google::Ads::GoogleAds::V10::" +
-      "Resourcesb\006proto3"
+      "\022@\n\010campaign\030\005 \001(\tB)\340A\005\372A#\n!googleads.go" +
+      "ogleapis.com/CampaignH\000\210\001\001\022C\n\nshared_set" +
+      "\030\006 \001(\tB*\340A\005\372A$\n\"googleads.googleapis.com" +
+      "/SharedSetH\001\210\001\001\022h\n\006status\030\002 \001(\0162S.google" +
+      ".ads.googleads.v10.enums.CampaignSharedS" +
+      "etStatusEnum.CampaignSharedSetStatusB\003\340A" +
+      "\003:y\352Av\n*googleads.googleapis.com/Campaig" +
+      "nSharedSet\022Hcustomers/{customer_id}/camp" +
+      "aignSharedSets/{campaign_id}~{shared_set" +
+      "_id}B\013\n\t_campaignB\r\n\013_shared_setB\210\002\n&com" +
+      ".google.ads.googleads.v10.resourcesB\026Cam" +
+      "paignSharedSetProtoP\001ZKgoogle.golang.org" +
+      "/genproto/googleapis/ads/googleads/v10/r" +
+      "esources;resources\242\002\003GAA\252\002\"Google.Ads.Go" +
+      "ogleAds.V10.Resources\312\002\"Google\\Ads\\Googl" +
+      "eAds\\V10\\Resources\352\002&Google::Ads::Google" +
+      "Ads::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.enums.CampaignSharedSetStatusProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -77,7 +75,6 @@ public final class CampaignSharedSetProto {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.enums.CampaignSharedSetStatusProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

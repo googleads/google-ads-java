@@ -133,7 +133,7 @@ public final class CustomerManagerLinkServiceGrpc {
 
     /**
      * <pre>
-     * Creates or updates customer manager links. Operation statuses are returned.
+     * Updates customer manager links. Operation statuses are returned.
      * List of thrown errors:
      *   [AuthenticationError]()
      *   [AuthorizationError]()
@@ -216,7 +216,7 @@ public final class CustomerManagerLinkServiceGrpc {
 
     /**
      * <pre>
-     * Creates or updates customer manager links. Operation statuses are returned.
+     * Updates customer manager links. Operation statuses are returned.
      * List of thrown errors:
      *   [AuthenticationError]()
      *   [AuthorizationError]()
@@ -282,7 +282,7 @@ public final class CustomerManagerLinkServiceGrpc {
 
     /**
      * <pre>
-     * Creates or updates customer manager links. Operation statuses are returned.
+     * Updates customer manager links. Operation statuses are returned.
      * List of thrown errors:
      *   [AuthenticationError]()
      *   [AuthorizationError]()
@@ -346,7 +346,7 @@ public final class CustomerManagerLinkServiceGrpc {
 
     /**
      * <pre>
-     * Creates or updates customer manager links. Operation statuses are returned.
+     * Updates customer manager links. Operation statuses are returned.
      * List of thrown errors:
      *   [AuthenticationError]()
      *   [AuthorizationError]()

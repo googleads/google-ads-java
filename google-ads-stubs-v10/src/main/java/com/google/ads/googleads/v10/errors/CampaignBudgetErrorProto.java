@@ -30,40 +30,38 @@ public final class CampaignBudgetErrorProto {
     java.lang.String[] descriptorData = {
       "\n;google/ads/googleads/v10/errors/campai" +
       "gn_budget_error.proto\022\037google.ads.google" +
-      "ads.v10.errors\032\034google/api/annotations.p" +
-      "roto\"\263\006\n\027CampaignBudgetErrorEnum\"\227\006\n\023Cam" +
-      "paignBudgetError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNK" +
-      "NOWN\020\001\022$\n CAMPAIGN_BUDGET_CANNOT_BE_SHAR" +
-      "ED\020\021\022\033\n\027CAMPAIGN_BUDGET_REMOVED\020\002\022\032\n\026CAM" +
-      "PAIGN_BUDGET_IN_USE\020\003\022(\n$CAMPAIGN_BUDGET" +
-      "_PERIOD_NOT_AVAILABLE\020\004\022<\n8CANNOT_MODIFY" +
-      "_FIELD_OF_IMPLICITLY_SHARED_CAMPAIGN_BUD" +
-      "GET\020\006\0226\n2CANNOT_UPDATE_CAMPAIGN_BUDGET_T" +
-      "O_IMPLICITLY_SHARED\020\007\022C\n?CANNOT_UPDATE_C" +
-      "AMPAIGN_BUDGET_TO_EXPLICITLY_SHARED_WITH" +
-      "OUT_NAME\020\010\0226\n2CANNOT_UPDATE_CAMPAIGN_BUD" +
-      "GET_TO_EXPLICITLY_SHARED\020\t\022H\nDCANNOT_USE" +
-      "_IMPLICITLY_SHARED_CAMPAIGN_BUDGET_WITH_" +
-      "MULTIPLE_CAMPAIGNS\020\n\022\022\n\016DUPLICATE_NAME\020\013" +
-      "\022\"\n\036MONEY_AMOUNT_IN_WRONG_CURRENCY\020\014\022/\n+" +
-      "MONEY_AMOUNT_LESS_THAN_CURRENCY_MINIMUM_" +
-      "CPC\020\r\022\032\n\026MONEY_AMOUNT_TOO_LARGE\020\016\022\031\n\025NEG" +
-      "ATIVE_MONEY_AMOUNT\020\017\022)\n%NON_MULTIPLE_OF_" +
-      "MINIMUM_CURRENCY_UNIT\020\020\022=\n9TOTAL_BUDGET_" +
-      "AMOUNT_MUST_BE_UNSET_FOR_BUDGET_PERIOD_D" +
-      "AILY\020\022\022\022\n\016INVALID_PERIOD\020\023B\370\001\n#com.googl" +
-      "e.ads.googleads.v10.errorsB\030CampaignBudg" +
-      "etErrorProtoP\001ZEgoogle.golang.org/genpro" +
-      "to/googleapis/ads/googleads/v10/errors;e" +
-      "rrors\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V10.E" +
-      "rrors\312\002\037Google\\Ads\\GoogleAds\\V10\\Errors\352" +
-      "\002#Google::Ads::GoogleAds::V10::Errorsb\006p" +
-      "roto3"
+      "ads.v10.errors\"\263\006\n\027CampaignBudgetErrorEn" +
+      "um\"\227\006\n\023CampaignBudgetError\022\017\n\013UNSPECIFIE" +
+      "D\020\000\022\013\n\007UNKNOWN\020\001\022$\n CAMPAIGN_BUDGET_CANN" +
+      "OT_BE_SHARED\020\021\022\033\n\027CAMPAIGN_BUDGET_REMOVE" +
+      "D\020\002\022\032\n\026CAMPAIGN_BUDGET_IN_USE\020\003\022(\n$CAMPA" +
+      "IGN_BUDGET_PERIOD_NOT_AVAILABLE\020\004\022<\n8CAN" +
+      "NOT_MODIFY_FIELD_OF_IMPLICITLY_SHARED_CA" +
+      "MPAIGN_BUDGET\020\006\0226\n2CANNOT_UPDATE_CAMPAIG" +
+      "N_BUDGET_TO_IMPLICITLY_SHARED\020\007\022C\n?CANNO" +
+      "T_UPDATE_CAMPAIGN_BUDGET_TO_EXPLICITLY_S" +
+      "HARED_WITHOUT_NAME\020\010\0226\n2CANNOT_UPDATE_CA" +
+      "MPAIGN_BUDGET_TO_EXPLICITLY_SHARED\020\t\022H\nD" +
+      "CANNOT_USE_IMPLICITLY_SHARED_CAMPAIGN_BU" +
+      "DGET_WITH_MULTIPLE_CAMPAIGNS\020\n\022\022\n\016DUPLIC" +
+      "ATE_NAME\020\013\022\"\n\036MONEY_AMOUNT_IN_WRONG_CURR" +
+      "ENCY\020\014\022/\n+MONEY_AMOUNT_LESS_THAN_CURRENC" +
+      "Y_MINIMUM_CPC\020\r\022\032\n\026MONEY_AMOUNT_TOO_LARG" +
+      "E\020\016\022\031\n\025NEGATIVE_MONEY_AMOUNT\020\017\022)\n%NON_MU" +
+      "LTIPLE_OF_MINIMUM_CURRENCY_UNIT\020\020\022=\n9TOT" +
+      "AL_BUDGET_AMOUNT_MUST_BE_UNSET_FOR_BUDGE" +
+      "T_PERIOD_DAILY\020\022\022\022\n\016INVALID_PERIOD\020\023B\370\001\n" +
+      "#com.google.ads.googleads.v10.errorsB\030Ca" +
+      "mpaignBudgetErrorProtoP\001ZEgoogle.golang." +
+      "org/genproto/googleapis/ads/googleads/v1" +
+      "0/errors;errors\242\002\003GAA\252\002\037Google.Ads.Googl" +
+      "eAds.V10.Errors\312\002\037Google\\Ads\\GoogleAds\\V" +
+      "10\\Errors\352\002#Google::Ads::GoogleAds::V10:" +
+      ":Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_CampaignBudgetErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -71,7 +69,6 @@ public final class CampaignBudgetErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_CampaignBudgetErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

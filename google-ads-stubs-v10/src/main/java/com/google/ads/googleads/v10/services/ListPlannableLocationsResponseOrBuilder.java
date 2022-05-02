@@ -9,11 +9,10 @@ public interface ListPlannableLocationsResponseOrBuilder extends
 
   /**
    * <pre>
-   * The list of locations available for planning (Countries, DMAs,
-   * sub-countries).
-   * For locations like Countries and DMAs see
-   * https://developers.google.com/google-ads/api/reference/data/geotargets for
-   * more information.
+   * The list of locations available for planning.
+   * See
+   * https://developers.google.com/google-ads/api/reference/data/geotargets
+   * for sample locations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.services.PlannableLocation plannable_locations = 1;</code>
@@ -22,11 +21,10 @@ public interface ListPlannableLocationsResponseOrBuilder extends
       getPlannableLocationsList();
   /**
    * <pre>
-   * The list of locations available for planning (Countries, DMAs,
-   * sub-countries).
-   * For locations like Countries and DMAs see
-   * https://developers.google.com/google-ads/api/reference/data/geotargets for
-   * more information.
+   * The list of locations available for planning.
+   * See
+   * https://developers.google.com/google-ads/api/reference/data/geotargets
+   * for sample locations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.services.PlannableLocation plannable_locations = 1;</code>
@@ -34,11 +32,10 @@ public interface ListPlannableLocationsResponseOrBuilder extends
   com.google.ads.googleads.v10.services.PlannableLocation getPlannableLocations(int index);
   /**
    * <pre>
-   * The list of locations available for planning (Countries, DMAs,
-   * sub-countries).
-   * For locations like Countries and DMAs see
-   * https://developers.google.com/google-ads/api/reference/data/geotargets for
-   * more information.
+   * The list of locations available for planning.
+   * See
+   * https://developers.google.com/google-ads/api/reference/data/geotargets
+   * for sample locations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.services.PlannableLocation plannable_locations = 1;</code>
@@ -46,11 +43,10 @@ public interface ListPlannableLocationsResponseOrBuilder extends
   int getPlannableLocationsCount();
   /**
    * <pre>
-   * The list of locations available for planning (Countries, DMAs,
-   * sub-countries).
-   * For locations like Countries and DMAs see
-   * https://developers.google.com/google-ads/api/reference/data/geotargets for
-   * more information.
+   * The list of locations available for planning.
+   * See
+   * https://developers.google.com/google-ads/api/reference/data/geotargets
+   * for sample locations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.services.PlannableLocation plannable_locations = 1;</code>
@@ -59,11 +55,10 @@ public interface ListPlannableLocationsResponseOrBuilder extends
       getPlannableLocationsOrBuilderList();
   /**
    * <pre>
-   * The list of locations available for planning (Countries, DMAs,
-   * sub-countries).
-   * For locations like Countries and DMAs see
-   * https://developers.google.com/google-ads/api/reference/data/geotargets for
-   * more information.
+   * The list of locations available for planning.
+   * See
+   * https://developers.google.com/google-ads/api/reference/data/geotargets
+   * for sample locations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.services.PlannableLocation plannable_locations = 1;</code>

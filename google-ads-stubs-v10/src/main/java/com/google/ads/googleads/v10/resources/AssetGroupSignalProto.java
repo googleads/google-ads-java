@@ -31,31 +31,29 @@ public final class AssetGroupSignalProto {
       "\n;google/ads/googleads/v10/resources/ass" +
       "et_group_signal.proto\022\"google.ads.google" +
       "ads.v10.resources\032.google/ads/googleads/" +
-      "v10/common/criteria.proto\032\034google/api/an" +
-      "notations.proto\032\037google/api/field_behavi" +
-      "or.proto\032\031google/api/resource.proto\"\337\002\n\020" +
-      "AssetGroupSignal\022H\n\rresource_name\030\001 \001(\tB" +
-      "1\340A\005\372A+\n)googleads.googleapis.com/AssetG" +
-      "roupSignal\022@\n\013asset_group\030\002 \001(\tB+\340A\005\372A%\n" +
-      "#googleads.googleapis.com/AssetGroup\022D\n\010" +
-      "audience\030\003 \001(\0132-.google.ads.googleads.v1" +
-      "0.common.AudienceInfoB\003\340A\005:y\352Av\n)googlea" +
-      "ds.googleapis.com/AssetGroupSignal\022Icust" +
-      "omers/{customer_id}/assetGroupSignals/{a" +
-      "sset_group_id}~{criterion_id}B\207\002\n&com.go" +
-      "ogle.ads.googleads.v10.resourcesB\025AssetG" +
-      "roupSignalProtoP\001ZKgoogle.golang.org/gen" +
-      "proto/googleapis/ads/googleads/v10/resou" +
-      "rces;resources\242\002\003GAA\252\002\"Google.Ads.Google" +
-      "Ads.V10.Resources\312\002\"Google\\Ads\\GoogleAds" +
-      "\\V10\\Resources\352\002&Google::Ads::GoogleAds:" +
-      ":V10::Resourcesb\006proto3"
+      "v10/common/criteria.proto\032\037google/api/fi" +
+      "eld_behavior.proto\032\031google/api/resource." +
+      "proto\"\337\002\n\020AssetGroupSignal\022H\n\rresource_n" +
+      "ame\030\001 \001(\tB1\340A\005\372A+\n)googleads.googleapis." +
+      "com/AssetGroupSignal\022@\n\013asset_group\030\002 \001(" +
+      "\tB+\340A\005\372A%\n#googleads.googleapis.com/Asse" +
+      "tGroup\022D\n\010audience\030\003 \001(\0132-.google.ads.go" +
+      "ogleads.v10.common.AudienceInfoB\003\340A\005:y\352A" +
+      "v\n)googleads.googleapis.com/AssetGroupSi" +
+      "gnal\022Icustomers/{customer_id}/assetGroup" +
+      "Signals/{asset_group_id}~{criterion_id}B" +
+      "\207\002\n&com.google.ads.googleads.v10.resourc" +
+      "esB\025AssetGroupSignalProtoP\001ZKgoogle.gola" +
+      "ng.org/genproto/googleapis/ads/googleads" +
+      "/v10/resources;resources\242\002\003GAA\252\002\"Google." +
+      "Ads.GoogleAds.V10.Resources\312\002\"Google\\Ads" +
+      "\\GoogleAds\\V10\\Resources\352\002&Google::Ads::" +
+      "GoogleAds::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.common.CriteriaProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -73,7 +71,6 @@ public final class AssetGroupSignalProto {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.common.CriteriaProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

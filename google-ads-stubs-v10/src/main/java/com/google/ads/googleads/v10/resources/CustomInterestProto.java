@@ -40,34 +40,33 @@ public final class CustomInterestProto {
       "\032;google/ads/googleads/v10/enums/custom_" +
       "interest_status.proto\0329google/ads/google" +
       "ads/v10/enums/custom_interest_type.proto" +
-      "\032\034google/api/annotations.proto\032\037google/a" +
-      "pi/field_behavior.proto\032\031google/api/reso" +
-      "urce.proto\"\252\004\n\016CustomInterest\022F\n\rresourc" +
-      "e_name\030\001 \001(\tB/\340A\005\372A)\n\'googleads.googleap" +
-      "is.com/CustomInterest\022\024\n\002id\030\010 \001(\003B\003\340A\003H\000" +
-      "\210\001\001\022]\n\006status\030\003 \001(\0162M.google.ads.googlea" +
-      "ds.v10.enums.CustomInterestStatusEnum.Cu" +
-      "stomInterestStatus\022\021\n\004name\030\t \001(\tH\001\210\001\001\022W\n" +
-      "\004type\030\005 \001(\0162I.google.ads.googleads.v10.e" +
-      "nums.CustomInterestTypeEnum.CustomIntere" +
-      "stType\022\030\n\013description\030\n \001(\tH\002\210\001\001\022I\n\007memb" +
-      "ers\030\007 \003(\01328.google.ads.googleads.v10.res" +
-      "ources.CustomInterestMember:j\352Ag\n\'google" +
-      "ads.googleapis.com/CustomInterest\022<custo" +
-      "mers/{customer_id}/customInterests/{cust" +
-      "om_interest_id}B\005\n\003_idB\007\n\005_nameB\016\n\014_desc" +
-      "ription\"\250\001\n\024CustomInterestMember\022j\n\013memb" +
-      "er_type\030\001 \001(\0162U.google.ads.googleads.v10" +
-      ".enums.CustomInterestMemberTypeEnum.Cust" +
-      "omInterestMemberType\022\026\n\tparameter\030\003 \001(\tH" +
-      "\000\210\001\001B\014\n\n_parameterB\205\002\n&com.google.ads.go" +
-      "ogleads.v10.resourcesB\023CustomInterestPro" +
-      "toP\001ZKgoogle.golang.org/genproto/googlea" +
-      "pis/ads/googleads/v10/resources;resource" +
-      "s\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V10.Resou" +
-      "rces\312\002\"Google\\Ads\\GoogleAds\\V10\\Resource" +
-      "s\352\002&Google::Ads::GoogleAds::V10::Resourc" +
-      "esb\006proto3"
+      "\032\037google/api/field_behavior.proto\032\031googl" +
+      "e/api/resource.proto\"\252\004\n\016CustomInterest\022" +
+      "F\n\rresource_name\030\001 \001(\tB/\340A\005\372A)\n\'googlead" +
+      "s.googleapis.com/CustomInterest\022\024\n\002id\030\010 " +
+      "\001(\003B\003\340A\003H\000\210\001\001\022]\n\006status\030\003 \001(\0162M.google.a" +
+      "ds.googleads.v10.enums.CustomInterestSta" +
+      "tusEnum.CustomInterestStatus\022\021\n\004name\030\t \001" +
+      "(\tH\001\210\001\001\022W\n\004type\030\005 \001(\0162I.google.ads.googl" +
+      "eads.v10.enums.CustomInterestTypeEnum.Cu" +
+      "stomInterestType\022\030\n\013description\030\n \001(\tH\002\210" +
+      "\001\001\022I\n\007members\030\007 \003(\01328.google.ads.googlea" +
+      "ds.v10.resources.CustomInterestMember:j\352" +
+      "Ag\n\'googleads.googleapis.com/CustomInter" +
+      "est\022<customers/{customer_id}/customInter" +
+      "ests/{custom_interest_id}B\005\n\003_idB\007\n\005_nam" +
+      "eB\016\n\014_description\"\250\001\n\024CustomInterestMemb" +
+      "er\022j\n\013member_type\030\001 \001(\0162U.google.ads.goo" +
+      "gleads.v10.enums.CustomInterestMemberTyp" +
+      "eEnum.CustomInterestMemberType\022\026\n\tparame" +
+      "ter\030\003 \001(\tH\000\210\001\001B\014\n\n_parameterB\205\002\n&com.goo" +
+      "gle.ads.googleads.v10.resourcesB\023CustomI" +
+      "nterestProtoP\001ZKgoogle.golang.org/genpro" +
+      "to/googleapis/ads/googleads/v10/resource" +
+      "s;resources\242\002\003GAA\252\002\"Google.Ads.GoogleAds" +
+      ".V10.Resources\312\002\"Google\\Ads\\GoogleAds\\V1" +
+      "0\\Resources\352\002&Google::Ads::GoogleAds::V1" +
+      "0::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -75,7 +74,6 @@ public final class CustomInterestProto {
           com.google.ads.googleads.v10.enums.CustomInterestMemberTypeProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.CustomInterestStatusProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.CustomInterestTypeProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -101,7 +99,6 @@ public final class CustomInterestProto {
     com.google.ads.googleads.v10.enums.CustomInterestMemberTypeProto.getDescriptor();
     com.google.ads.googleads.v10.enums.CustomInterestStatusProto.getDescriptor();
     com.google.ads.googleads.v10.enums.CustomInterestTypeProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

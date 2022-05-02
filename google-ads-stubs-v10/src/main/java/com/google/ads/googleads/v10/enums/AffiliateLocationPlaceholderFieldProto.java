@@ -30,27 +30,25 @@ public final class AffiliateLocationPlaceholderFieldProto {
     java.lang.String[] descriptorData = {
       "\nIgoogle/ads/googleads/v10/enums/affilia" +
       "te_location_placeholder_field.proto\022\036goo" +
-      "gle.ads.googleads.v10.enums\032\034google/api/" +
-      "annotations.proto\"\244\002\n%AffiliateLocationP" +
-      "laceholderFieldEnum\"\372\001\n!AffiliateLocatio" +
-      "nPlaceholderField\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UN" +
-      "KNOWN\020\001\022\021\n\rBUSINESS_NAME\020\002\022\022\n\016ADDRESS_LI" +
-      "NE_1\020\003\022\022\n\016ADDRESS_LINE_2\020\004\022\010\n\004CITY\020\005\022\014\n\010" +
-      "PROVINCE\020\006\022\017\n\013POSTAL_CODE\020\007\022\020\n\014COUNTRY_C" +
-      "ODE\020\010\022\020\n\014PHONE_NUMBER\020\t\022\021\n\rLANGUAGE_CODE" +
-      "\020\n\022\014\n\010CHAIN_ID\020\013\022\016\n\nCHAIN_NAME\020\014B\200\002\n\"com" +
-      ".google.ads.googleads.v10.enumsB&Affilia" +
-      "teLocationPlaceholderFieldProtoP\001ZCgoogl" +
-      "e.golang.org/genproto/googleapis/ads/goo" +
-      "gleads/v10/enums;enums\242\002\003GAA\252\002\036Google.Ad" +
-      "s.GoogleAds.V10.Enums\312\002\036Google\\Ads\\Googl" +
-      "eAds\\V10\\Enums\352\002\"Google::Ads::GoogleAds:" +
-      ":V10::Enumsb\006proto3"
+      "gle.ads.googleads.v10.enums\"\244\002\n%Affiliat" +
+      "eLocationPlaceholderFieldEnum\"\372\001\n!Affili" +
+      "ateLocationPlaceholderField\022\017\n\013UNSPECIFI" +
+      "ED\020\000\022\013\n\007UNKNOWN\020\001\022\021\n\rBUSINESS_NAME\020\002\022\022\n\016" +
+      "ADDRESS_LINE_1\020\003\022\022\n\016ADDRESS_LINE_2\020\004\022\010\n\004" +
+      "CITY\020\005\022\014\n\010PROVINCE\020\006\022\017\n\013POSTAL_CODE\020\007\022\020\n" +
+      "\014COUNTRY_CODE\020\010\022\020\n\014PHONE_NUMBER\020\t\022\021\n\rLAN" +
+      "GUAGE_CODE\020\n\022\014\n\010CHAIN_ID\020\013\022\016\n\nCHAIN_NAME" +
+      "\020\014B\200\002\n\"com.google.ads.googleads.v10.enum" +
+      "sB&AffiliateLocationPlaceholderFieldProt" +
+      "oP\001ZCgoogle.golang.org/genproto/googleap" +
+      "is/ads/googleads/v10/enums;enums\242\002\003GAA\252\002" +
+      "\036Google.Ads.GoogleAds.V10.Enums\312\002\036Google" +
+      "\\Ads\\GoogleAds\\V10\\Enums\352\002\"Google::Ads::" +
+      "GoogleAds::V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_AffiliateLocationPlaceholderFieldEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -58,7 +56,6 @@ public final class AffiliateLocationPlaceholderFieldProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_AffiliateLocationPlaceholderFieldEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

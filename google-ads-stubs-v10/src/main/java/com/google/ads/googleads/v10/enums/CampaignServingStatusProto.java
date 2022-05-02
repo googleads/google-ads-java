@@ -30,23 +30,21 @@ public final class CampaignServingStatusProto {
     java.lang.String[] descriptorData = {
       "\n<google/ads/googleads/v10/enums/campaig" +
       "n_serving_status.proto\022\036google.ads.googl" +
-      "eads.v10.enums\032\034google/api/annotations.p" +
-      "roto\"\220\001\n\031CampaignServingStatusEnum\"s\n\025Ca" +
-      "mpaignServingStatus\022\017\n\013UNSPECIFIED\020\000\022\013\n\007" +
-      "UNKNOWN\020\001\022\013\n\007SERVING\020\002\022\010\n\004NONE\020\003\022\t\n\005ENDE" +
-      "D\020\004\022\013\n\007PENDING\020\005\022\r\n\tSUSPENDED\020\006B\364\001\n\"com." +
-      "google.ads.googleads.v10.enumsB\032Campaign" +
-      "ServingStatusProtoP\001ZCgoogle.golang.org/" +
-      "genproto/googleapis/ads/googleads/v10/en" +
-      "ums;enums\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V" +
-      "10.Enums\312\002\036Google\\Ads\\GoogleAds\\V10\\Enum" +
-      "s\352\002\"Google::Ads::GoogleAds::V10::Enumsb\006" +
-      "proto3"
+      "eads.v10.enums\"\220\001\n\031CampaignServingStatus" +
+      "Enum\"s\n\025CampaignServingStatus\022\017\n\013UNSPECI" +
+      "FIED\020\000\022\013\n\007UNKNOWN\020\001\022\013\n\007SERVING\020\002\022\010\n\004NONE" +
+      "\020\003\022\t\n\005ENDED\020\004\022\013\n\007PENDING\020\005\022\r\n\tSUSPENDED\020" +
+      "\006B\364\001\n\"com.google.ads.googleads.v10.enums" +
+      "B\032CampaignServingStatusProtoP\001ZCgoogle.g" +
+      "olang.org/genproto/googleapis/ads/google" +
+      "ads/v10/enums;enums\242\002\003GAA\252\002\036Google.Ads.G" +
+      "oogleAds.V10.Enums\312\002\036Google\\Ads\\GoogleAd" +
+      "s\\V10\\Enums\352\002\"Google::Ads::GoogleAds::V1" +
+      "0::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_CampaignServingStatusEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -54,7 +52,6 @@ public final class CampaignServingStatusProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_CampaignServingStatusEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

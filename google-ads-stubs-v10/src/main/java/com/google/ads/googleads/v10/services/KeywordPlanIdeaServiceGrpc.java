@@ -49,6 +49,37 @@ public final class KeywordPlanIdeaServiceGrpc {
     return getGenerateKeywordIdeasMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v10.services.GenerateKeywordHistoricalMetricsRequest,
+      com.google.ads.googleads.v10.services.GenerateKeywordHistoricalMetricsResponse> getGenerateKeywordHistoricalMetricsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GenerateKeywordHistoricalMetrics",
+      requestType = com.google.ads.googleads.v10.services.GenerateKeywordHistoricalMetricsRequest.class,
+      responseType = com.google.ads.googleads.v10.services.GenerateKeywordHistoricalMetricsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.google.ads.googleads.v10.services.GenerateKeywordHistoricalMetricsRequest,
+      com.google.ads.googleads.v10.services.GenerateKeywordHistoricalMetricsResponse> getGenerateKeywordHistoricalMetricsMethod() {
+    io.grpc.MethodDescriptor<com.google.ads.googleads.v10.services.GenerateKeywordHistoricalMetricsRequest, com.google.ads.googleads.v10.services.GenerateKeywordHistoricalMetricsResponse> getGenerateKeywordHistoricalMetricsMethod;
+    if ((getGenerateKeywordHistoricalMetricsMethod = KeywordPlanIdeaServiceGrpc.getGenerateKeywordHistoricalMetricsMethod) == null) {
+      synchronized (KeywordPlanIdeaServiceGrpc.class) {
+        if ((getGenerateKeywordHistoricalMetricsMethod = KeywordPlanIdeaServiceGrpc.getGenerateKeywordHistoricalMetricsMethod) == null) {
+          KeywordPlanIdeaServiceGrpc.getGenerateKeywordHistoricalMetricsMethod = getGenerateKeywordHistoricalMetricsMethod =
+              io.grpc.MethodDescriptor.<com.google.ads.googleads.v10.services.GenerateKeywordHistoricalMetricsRequest, com.google.ads.googleads.v10.services.GenerateKeywordHistoricalMetricsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GenerateKeywordHistoricalMetrics"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v10.services.GenerateKeywordHistoricalMetricsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v10.services.GenerateKeywordHistoricalMetricsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new KeywordPlanIdeaServiceMethodDescriptorSupplier("GenerateKeywordHistoricalMetrics"))
+              .build();
+        }
+      }
+    }
+    return getGenerateKeywordHistoricalMetricsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -119,6 +150,24 @@ public final class KeywordPlanIdeaServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGenerateKeywordIdeasMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Returns a list of keyword historical metrics.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [CollectionSizeError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public void generateKeywordHistoricalMetrics(com.google.ads.googleads.v10.services.GenerateKeywordHistoricalMetricsRequest request,
+        io.grpc.stub.StreamObserver<com.google.ads.googleads.v10.services.GenerateKeywordHistoricalMetricsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGenerateKeywordHistoricalMetricsMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -128,6 +177,13 @@ public final class KeywordPlanIdeaServiceGrpc {
                 com.google.ads.googleads.v10.services.GenerateKeywordIdeasRequest,
                 com.google.ads.googleads.v10.services.GenerateKeywordIdeaResponse>(
                   this, METHODID_GENERATE_KEYWORD_IDEAS)))
+          .addMethod(
+            getGenerateKeywordHistoricalMetricsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.google.ads.googleads.v10.services.GenerateKeywordHistoricalMetricsRequest,
+                com.google.ads.googleads.v10.services.GenerateKeywordHistoricalMetricsResponse>(
+                  this, METHODID_GENERATE_KEYWORD_HISTORICAL_METRICS)))
           .build();
     }
   }
@@ -168,6 +224,25 @@ public final class KeywordPlanIdeaServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGenerateKeywordIdeasMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Returns a list of keyword historical metrics.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [CollectionSizeError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public void generateKeywordHistoricalMetrics(com.google.ads.googleads.v10.services.GenerateKeywordHistoricalMetricsRequest request,
+        io.grpc.stub.StreamObserver<com.google.ads.googleads.v10.services.GenerateKeywordHistoricalMetricsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGenerateKeywordHistoricalMetricsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -204,6 +279,24 @@ public final class KeywordPlanIdeaServiceGrpc {
     public com.google.ads.googleads.v10.services.GenerateKeywordIdeaResponse generateKeywordIdeas(com.google.ads.googleads.v10.services.GenerateKeywordIdeasRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGenerateKeywordIdeasMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns a list of keyword historical metrics.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [CollectionSizeError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v10.services.GenerateKeywordHistoricalMetricsResponse generateKeywordHistoricalMetrics(com.google.ads.googleads.v10.services.GenerateKeywordHistoricalMetricsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGenerateKeywordHistoricalMetricsMethod(), getCallOptions(), request);
     }
   }
 
@@ -243,9 +336,29 @@ public final class KeywordPlanIdeaServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGenerateKeywordIdeasMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Returns a list of keyword historical metrics.
+     * List of thrown errors:
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [CollectionSizeError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v10.services.GenerateKeywordHistoricalMetricsResponse> generateKeywordHistoricalMetrics(
+        com.google.ads.googleads.v10.services.GenerateKeywordHistoricalMetricsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGenerateKeywordHistoricalMetricsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GENERATE_KEYWORD_IDEAS = 0;
+  private static final int METHODID_GENERATE_KEYWORD_HISTORICAL_METRICS = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -267,6 +380,10 @@ public final class KeywordPlanIdeaServiceGrpc {
         case METHODID_GENERATE_KEYWORD_IDEAS:
           serviceImpl.generateKeywordIdeas((com.google.ads.googleads.v10.services.GenerateKeywordIdeasRequest) request,
               (io.grpc.stub.StreamObserver<com.google.ads.googleads.v10.services.GenerateKeywordIdeaResponse>) responseObserver);
+          break;
+        case METHODID_GENERATE_KEYWORD_HISTORICAL_METRICS:
+          serviceImpl.generateKeywordHistoricalMetrics((com.google.ads.googleads.v10.services.GenerateKeywordHistoricalMetricsRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.ads.googleads.v10.services.GenerateKeywordHistoricalMetricsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -330,6 +447,7 @@ public final class KeywordPlanIdeaServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new KeywordPlanIdeaServiceFileDescriptorSupplier())
               .addMethod(getGenerateKeywordIdeasMethod())
+              .addMethod(getGenerateKeywordHistoricalMetricsMethod())
               .build();
         }
       }

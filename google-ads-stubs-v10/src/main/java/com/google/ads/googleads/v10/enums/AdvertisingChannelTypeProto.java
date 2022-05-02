@@ -30,25 +30,23 @@ public final class AdvertisingChannelTypeProto {
     java.lang.String[] descriptorData = {
       "\n=google/ads/googleads/v10/enums/adverti" +
       "sing_channel_type.proto\022\036google.ads.goog" +
-      "leads.v10.enums\032\034google/api/annotations." +
-      "proto\"\344\001\n\032AdvertisingChannelTypeEnum\"\305\001\n" +
-      "\026AdvertisingChannelType\022\017\n\013UNSPECIFIED\020\000" +
-      "\022\013\n\007UNKNOWN\020\001\022\n\n\006SEARCH\020\002\022\013\n\007DISPLAY\020\003\022\014" +
-      "\n\010SHOPPING\020\004\022\t\n\005HOTEL\020\005\022\t\n\005VIDEO\020\006\022\021\n\rMU" +
-      "LTI_CHANNEL\020\007\022\t\n\005LOCAL\020\010\022\t\n\005SMART\020\t\022\023\n\017P" +
-      "ERFORMANCE_MAX\020\n\022\022\n\016LOCAL_SERVICES\020\013B\365\001\n" +
-      "\"com.google.ads.googleads.v10.enumsB\033Adv" +
-      "ertisingChannelTypeProtoP\001ZCgoogle.golan" +
-      "g.org/genproto/googleapis/ads/googleads/" +
-      "v10/enums;enums\242\002\003GAA\252\002\036Google.Ads.Googl" +
-      "eAds.V10.Enums\312\002\036Google\\Ads\\GoogleAds\\V1" +
-      "0\\Enums\352\002\"Google::Ads::GoogleAds::V10::E" +
-      "numsb\006proto3"
+      "leads.v10.enums\"\363\001\n\032AdvertisingChannelTy" +
+      "peEnum\"\324\001\n\026AdvertisingChannelType\022\017\n\013UNS" +
+      "PECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\n\n\006SEARCH\020\002\022\013\n\007D" +
+      "ISPLAY\020\003\022\014\n\010SHOPPING\020\004\022\t\n\005HOTEL\020\005\022\t\n\005VID" +
+      "EO\020\006\022\021\n\rMULTI_CHANNEL\020\007\022\t\n\005LOCAL\020\010\022\t\n\005SM" +
+      "ART\020\t\022\023\n\017PERFORMANCE_MAX\020\n\022\022\n\016LOCAL_SERV" +
+      "ICES\020\013\022\r\n\tDISCOVERY\020\014B\365\001\n\"com.google.ads" +
+      ".googleads.v10.enumsB\033AdvertisingChannel" +
+      "TypeProtoP\001ZCgoogle.golang.org/genproto/" +
+      "googleapis/ads/googleads/v10/enums;enums" +
+      "\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V10.Enums\312" +
+      "\002\036Google\\Ads\\GoogleAds\\V10\\Enums\352\002\"Googl" +
+      "e::Ads::GoogleAds::V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_AdvertisingChannelTypeEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -56,7 +54,6 @@ public final class AdvertisingChannelTypeProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_AdvertisingChannelTypeEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

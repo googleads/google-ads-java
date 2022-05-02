@@ -64,6 +64,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -239,6 +241,30 @@ private static final long serialVersionUID = 0L;
      * <code>AD_GROUP_ASSET = 17;</code>
      */
     AD_GROUP_ASSET(17),
+    /**
+     * <pre>
+     * An AssetSet resource change.
+     * </pre>
+     *
+     * <code>ASSET_SET = 18;</code>
+     */
+    ASSET_SET(18),
+    /**
+     * <pre>
+     * An AssetSetAsset resource change.
+     * </pre>
+     *
+     * <code>ASSET_SET_ASSET = 19;</code>
+     */
+    ASSET_SET_ASSET(19),
+    /**
+     * <pre>
+     * A CampaignAssetSet resource change.
+     * </pre>
+     *
+     * <code>CAMPAIGN_ASSET_SET = 20;</code>
+     */
+    CAMPAIGN_ASSET_SET(20),
     UNRECOGNIZED(-1),
     ;
 
@@ -387,6 +413,30 @@ private static final long serialVersionUID = 0L;
      * <code>AD_GROUP_ASSET = 17;</code>
      */
     public static final int AD_GROUP_ASSET_VALUE = 17;
+    /**
+     * <pre>
+     * An AssetSet resource change.
+     * </pre>
+     *
+     * <code>ASSET_SET = 18;</code>
+     */
+    public static final int ASSET_SET_VALUE = 18;
+    /**
+     * <pre>
+     * An AssetSetAsset resource change.
+     * </pre>
+     *
+     * <code>ASSET_SET_ASSET = 19;</code>
+     */
+    public static final int ASSET_SET_ASSET_VALUE = 19;
+    /**
+     * <pre>
+     * A CampaignAssetSet resource change.
+     * </pre>
+     *
+     * <code>CAMPAIGN_ASSET_SET = 20;</code>
+     */
+    public static final int CAMPAIGN_ASSET_SET_VALUE = 20;
 
 
     public final int getNumber() {
@@ -431,6 +481,9 @@ private static final long serialVersionUID = 0L;
         case 15: return CUSTOMER_ASSET;
         case 16: return CAMPAIGN_ASSET;
         case 17: return AD_GROUP_ASSET;
+        case 18: return ASSET_SET;
+        case 19: return ASSET_SET_ASSET;
+        case 20: return CAMPAIGN_ASSET_SET;
         default: return null;
       }
     }

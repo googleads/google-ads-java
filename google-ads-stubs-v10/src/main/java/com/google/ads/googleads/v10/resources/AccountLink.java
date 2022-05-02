@@ -122,6 +122,20 @@ private static final long serialVersionUID = 0L;
             accountLinkId_ = input.readInt64();
             break;
           }
+          case 74: {
+            com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier.Builder subBuilder = null;
+            if (linkedAccountCase_ == 9) {
+              subBuilder = ((com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier) linkedAccount_).toBuilder();
+            }
+            linkedAccount_ =
+                input.readMessage(com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier) linkedAccount_);
+              linkedAccount_ = subBuilder.buildPartial();
+            }
+            linkedAccountCase_ = 9;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -133,6 +147,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -163,6 +179,7 @@ private static final long serialVersionUID = 0L;
     THIRD_PARTY_APP_ANALYTICS(5),
     DATA_PARTNER(6),
     GOOGLE_ADS(7),
+    HOTEL_CENTER(9),
     LINKEDACCOUNT_NOT_SET(0);
     private final int value;
     private LinkedAccountCase(int value) {
@@ -183,6 +200,7 @@ private static final long serialVersionUID = 0L;
         case 5: return THIRD_PARTY_APP_ANALYTICS;
         case 6: return DATA_PARTNER;
         case 7: return GOOGLE_ADS;
+        case 9: return HOTEL_CENTER;
         case 0: return LINKEDACCOUNT_NOT_SET;
         default: return null;
       }
@@ -460,6 +478,49 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v10.resources.GoogleAdsLinkIdentifier.getDefaultInstance();
   }
 
+  public static final int HOTEL_CENTER_FIELD_NUMBER = 9;
+  /**
+   * <pre>
+   * Output only. Hotel link
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier hotel_center = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the hotelCenter field is set.
+   */
+  @java.lang.Override
+  public boolean hasHotelCenter() {
+    return linkedAccountCase_ == 9;
+  }
+  /**
+   * <pre>
+   * Output only. Hotel link
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier hotel_center = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The hotelCenter.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier getHotelCenter() {
+    if (linkedAccountCase_ == 9) {
+       return (com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier) linkedAccount_;
+    }
+    return com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Output only. Hotel link
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier hotel_center = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifierOrBuilder getHotelCenterOrBuilder() {
+    if (linkedAccountCase_ == 9) {
+       return (com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier) linkedAccount_;
+    }
+    return com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -494,6 +555,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeInt64(8, accountLinkId_);
+    }
+    if (linkedAccountCase_ == 9) {
+      output.writeMessage(9, (com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier) linkedAccount_);
     }
     unknownFields.writeTo(output);
   }
@@ -530,6 +594,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(8, accountLinkId_);
+    }
+    if (linkedAccountCase_ == 9) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, (com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier) linkedAccount_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -569,6 +637,10 @@ private static final long serialVersionUID = 0L;
         if (!getGoogleAds()
             .equals(other.getGoogleAds())) return false;
         break;
+      case 9:
+        if (!getHotelCenter()
+            .equals(other.getHotelCenter())) return false;
+        break;
       case 0:
       default:
     }
@@ -606,6 +678,10 @@ private static final long serialVersionUID = 0L;
       case 7:
         hash = (37 * hash) + GOOGLE_ADS_FIELD_NUMBER;
         hash = (53 * hash) + getGoogleAds().hashCode();
+        break;
+      case 9:
+        hash = (37 * hash) + HOTEL_CENTER_FIELD_NUMBER;
+        hash = (53 * hash) + getHotelCenter().hashCode();
         break;
       case 0:
       default:
@@ -814,6 +890,13 @@ private static final long serialVersionUID = 0L;
           result.linkedAccount_ = googleAdsBuilder_.build();
         }
       }
+      if (linkedAccountCase_ == 9) {
+        if (hotelCenterBuilder_ == null) {
+          result.linkedAccount_ = linkedAccount_;
+        } else {
+          result.linkedAccount_ = hotelCenterBuilder_.build();
+        }
+      }
       result.bitField0_ = to_bitField0_;
       result.linkedAccountCase_ = linkedAccountCase_;
       onBuilt();
@@ -888,6 +971,10 @@ private static final long serialVersionUID = 0L;
         }
         case GOOGLE_ADS: {
           mergeGoogleAds(other.getGoogleAds());
+          break;
+        }
+        case HOTEL_CENTER: {
+          mergeHotelCenter(other.getHotelCenter());
           break;
         }
         case LINKEDACCOUNT_NOT_SET: {
@@ -1346,8 +1433,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (linkedAccountCase_ == 5) {
           thirdPartyAppAnalyticsBuilder_.mergeFrom(value);
+        } else {
+          thirdPartyAppAnalyticsBuilder_.setMessage(value);
         }
-        thirdPartyAppAnalyticsBuilder_.setMessage(value);
       }
       linkedAccountCase_ = 5;
       return this;
@@ -1523,8 +1611,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (linkedAccountCase_ == 6) {
           dataPartnerBuilder_.mergeFrom(value);
+        } else {
+          dataPartnerBuilder_.setMessage(value);
         }
-        dataPartnerBuilder_.setMessage(value);
       }
       linkedAccountCase_ = 6;
       return this;
@@ -1700,8 +1789,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (linkedAccountCase_ == 7) {
           googleAdsBuilder_.mergeFrom(value);
+        } else {
+          googleAdsBuilder_.setMessage(value);
         }
-        googleAdsBuilder_.setMessage(value);
       }
       linkedAccountCase_ = 7;
       return this;
@@ -1781,6 +1871,184 @@ private static final long serialVersionUID = 0L;
       linkedAccountCase_ = 7;
       onChanged();;
       return googleAdsBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier, com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier.Builder, com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifierOrBuilder> hotelCenterBuilder_;
+    /**
+     * <pre>
+     * Output only. Hotel link
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier hotel_center = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the hotelCenter field is set.
+     */
+    @java.lang.Override
+    public boolean hasHotelCenter() {
+      return linkedAccountCase_ == 9;
+    }
+    /**
+     * <pre>
+     * Output only. Hotel link
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier hotel_center = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The hotelCenter.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier getHotelCenter() {
+      if (hotelCenterBuilder_ == null) {
+        if (linkedAccountCase_ == 9) {
+          return (com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier) linkedAccount_;
+        }
+        return com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier.getDefaultInstance();
+      } else {
+        if (linkedAccountCase_ == 9) {
+          return hotelCenterBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. Hotel link
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier hotel_center = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setHotelCenter(com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier value) {
+      if (hotelCenterBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        linkedAccount_ = value;
+        onChanged();
+      } else {
+        hotelCenterBuilder_.setMessage(value);
+      }
+      linkedAccountCase_ = 9;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Hotel link
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier hotel_center = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setHotelCenter(
+        com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier.Builder builderForValue) {
+      if (hotelCenterBuilder_ == null) {
+        linkedAccount_ = builderForValue.build();
+        onChanged();
+      } else {
+        hotelCenterBuilder_.setMessage(builderForValue.build());
+      }
+      linkedAccountCase_ = 9;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Hotel link
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier hotel_center = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder mergeHotelCenter(com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier value) {
+      if (hotelCenterBuilder_ == null) {
+        if (linkedAccountCase_ == 9 &&
+            linkedAccount_ != com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier.getDefaultInstance()) {
+          linkedAccount_ = com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier.newBuilder((com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier) linkedAccount_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          linkedAccount_ = value;
+        }
+        onChanged();
+      } else {
+        if (linkedAccountCase_ == 9) {
+          hotelCenterBuilder_.mergeFrom(value);
+        } else {
+          hotelCenterBuilder_.setMessage(value);
+        }
+      }
+      linkedAccountCase_ = 9;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Hotel link
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier hotel_center = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder clearHotelCenter() {
+      if (hotelCenterBuilder_ == null) {
+        if (linkedAccountCase_ == 9) {
+          linkedAccountCase_ = 0;
+          linkedAccount_ = null;
+          onChanged();
+        }
+      } else {
+        if (linkedAccountCase_ == 9) {
+          linkedAccountCase_ = 0;
+          linkedAccount_ = null;
+        }
+        hotelCenterBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. Hotel link
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier hotel_center = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier.Builder getHotelCenterBuilder() {
+      return getHotelCenterFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Output only. Hotel link
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier hotel_center = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifierOrBuilder getHotelCenterOrBuilder() {
+      if ((linkedAccountCase_ == 9) && (hotelCenterBuilder_ != null)) {
+        return hotelCenterBuilder_.getMessageOrBuilder();
+      } else {
+        if (linkedAccountCase_ == 9) {
+          return (com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier) linkedAccount_;
+        }
+        return com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. Hotel link
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier hotel_center = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier, com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier.Builder, com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifierOrBuilder> 
+        getHotelCenterFieldBuilder() {
+      if (hotelCenterBuilder_ == null) {
+        if (!(linkedAccountCase_ == 9)) {
+          linkedAccount_ = com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier.getDefaultInstance();
+        }
+        hotelCenterBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier, com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier.Builder, com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifierOrBuilder>(
+                (com.google.ads.googleads.v10.resources.HotelCenterLinkIdentifier) linkedAccount_,
+                getParentForChildren(),
+                isClean());
+        linkedAccount_ = null;
+      }
+      linkedAccountCase_ = 9;
+      onChanged();;
+      return hotelCenterBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

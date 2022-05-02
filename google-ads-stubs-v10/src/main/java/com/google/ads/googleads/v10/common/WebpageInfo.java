@@ -99,6 +99,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -351,7 +353,7 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, criterionName_);
     }
-    if (coveragePercentage_ != 0D) {
+    if (java.lang.Double.doubleToRawLongBits(coveragePercentage_) != 0) {
       output.writeDouble(4, coveragePercentage_);
     }
     if (sample_ != null) {
@@ -373,7 +375,7 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, criterionName_);
     }
-    if (coveragePercentage_ != 0D) {
+    if (java.lang.Double.doubleToRawLongBits(coveragePercentage_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(4, coveragePercentage_);
     }

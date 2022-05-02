@@ -132,6 +132,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -320,7 +322,7 @@ private static final long serialVersionUID = 0L;
    * Targetable devices for the ad product.
    * TABLET device targeting is automatically applied to reported metrics
    * when MOBILE targeting is selected for CPM_MASTHEAD,
-   * GOOGLE_PREFERRED_BUMPER and GOOGLE_PREFERRED_SHORT products.
+   * GOOGLE_PREFERRED_BUMPER, and GOOGLE_PREFERRED_SHORT products.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.DeviceInfo devices = 3;</code>
@@ -334,7 +336,7 @@ private static final long serialVersionUID = 0L;
    * Targetable devices for the ad product.
    * TABLET device targeting is automatically applied to reported metrics
    * when MOBILE targeting is selected for CPM_MASTHEAD,
-   * GOOGLE_PREFERRED_BUMPER and GOOGLE_PREFERRED_SHORT products.
+   * GOOGLE_PREFERRED_BUMPER, and GOOGLE_PREFERRED_SHORT products.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.DeviceInfo devices = 3;</code>
@@ -349,7 +351,7 @@ private static final long serialVersionUID = 0L;
    * Targetable devices for the ad product.
    * TABLET device targeting is automatically applied to reported metrics
    * when MOBILE targeting is selected for CPM_MASTHEAD,
-   * GOOGLE_PREFERRED_BUMPER and GOOGLE_PREFERRED_SHORT products.
+   * GOOGLE_PREFERRED_BUMPER, and GOOGLE_PREFERRED_SHORT products.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.DeviceInfo devices = 3;</code>
@@ -363,7 +365,7 @@ private static final long serialVersionUID = 0L;
    * Targetable devices for the ad product.
    * TABLET device targeting is automatically applied to reported metrics
    * when MOBILE targeting is selected for CPM_MASTHEAD,
-   * GOOGLE_PREFERRED_BUMPER and GOOGLE_PREFERRED_SHORT products.
+   * GOOGLE_PREFERRED_BUMPER, and GOOGLE_PREFERRED_SHORT products.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.DeviceInfo devices = 3;</code>
@@ -377,7 +379,7 @@ private static final long serialVersionUID = 0L;
    * Targetable devices for the ad product.
    * TABLET device targeting is automatically applied to reported metrics
    * when MOBILE targeting is selected for CPM_MASTHEAD,
-   * GOOGLE_PREFERRED_BUMPER and GOOGLE_PREFERRED_SHORT products.
+   * GOOGLE_PREFERRED_BUMPER, and GOOGLE_PREFERRED_SHORT products.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.DeviceInfo devices = 3;</code>
@@ -1491,7 +1493,7 @@ private static final long serialVersionUID = 0L;
      * Targetable devices for the ad product.
      * TABLET device targeting is automatically applied to reported metrics
      * when MOBILE targeting is selected for CPM_MASTHEAD,
-     * GOOGLE_PREFERRED_BUMPER and GOOGLE_PREFERRED_SHORT products.
+     * GOOGLE_PREFERRED_BUMPER, and GOOGLE_PREFERRED_SHORT products.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.common.DeviceInfo devices = 3;</code>
@@ -1508,7 +1510,7 @@ private static final long serialVersionUID = 0L;
      * Targetable devices for the ad product.
      * TABLET device targeting is automatically applied to reported metrics
      * when MOBILE targeting is selected for CPM_MASTHEAD,
-     * GOOGLE_PREFERRED_BUMPER and GOOGLE_PREFERRED_SHORT products.
+     * GOOGLE_PREFERRED_BUMPER, and GOOGLE_PREFERRED_SHORT products.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.common.DeviceInfo devices = 3;</code>
@@ -1525,7 +1527,7 @@ private static final long serialVersionUID = 0L;
      * Targetable devices for the ad product.
      * TABLET device targeting is automatically applied to reported metrics
      * when MOBILE targeting is selected for CPM_MASTHEAD,
-     * GOOGLE_PREFERRED_BUMPER and GOOGLE_PREFERRED_SHORT products.
+     * GOOGLE_PREFERRED_BUMPER, and GOOGLE_PREFERRED_SHORT products.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.common.DeviceInfo devices = 3;</code>
@@ -1542,7 +1544,7 @@ private static final long serialVersionUID = 0L;
      * Targetable devices for the ad product.
      * TABLET device targeting is automatically applied to reported metrics
      * when MOBILE targeting is selected for CPM_MASTHEAD,
-     * GOOGLE_PREFERRED_BUMPER and GOOGLE_PREFERRED_SHORT products.
+     * GOOGLE_PREFERRED_BUMPER, and GOOGLE_PREFERRED_SHORT products.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.common.DeviceInfo devices = 3;</code>
@@ -1566,7 +1568,7 @@ private static final long serialVersionUID = 0L;
      * Targetable devices for the ad product.
      * TABLET device targeting is automatically applied to reported metrics
      * when MOBILE targeting is selected for CPM_MASTHEAD,
-     * GOOGLE_PREFERRED_BUMPER and GOOGLE_PREFERRED_SHORT products.
+     * GOOGLE_PREFERRED_BUMPER, and GOOGLE_PREFERRED_SHORT products.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.common.DeviceInfo devices = 3;</code>
@@ -1587,7 +1589,7 @@ private static final long serialVersionUID = 0L;
      * Targetable devices for the ad product.
      * TABLET device targeting is automatically applied to reported metrics
      * when MOBILE targeting is selected for CPM_MASTHEAD,
-     * GOOGLE_PREFERRED_BUMPER and GOOGLE_PREFERRED_SHORT products.
+     * GOOGLE_PREFERRED_BUMPER, and GOOGLE_PREFERRED_SHORT products.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.common.DeviceInfo devices = 3;</code>
@@ -1610,7 +1612,7 @@ private static final long serialVersionUID = 0L;
      * Targetable devices for the ad product.
      * TABLET device targeting is automatically applied to reported metrics
      * when MOBILE targeting is selected for CPM_MASTHEAD,
-     * GOOGLE_PREFERRED_BUMPER and GOOGLE_PREFERRED_SHORT products.
+     * GOOGLE_PREFERRED_BUMPER, and GOOGLE_PREFERRED_SHORT products.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.common.DeviceInfo devices = 3;</code>
@@ -1634,7 +1636,7 @@ private static final long serialVersionUID = 0L;
      * Targetable devices for the ad product.
      * TABLET device targeting is automatically applied to reported metrics
      * when MOBILE targeting is selected for CPM_MASTHEAD,
-     * GOOGLE_PREFERRED_BUMPER and GOOGLE_PREFERRED_SHORT products.
+     * GOOGLE_PREFERRED_BUMPER, and GOOGLE_PREFERRED_SHORT products.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.common.DeviceInfo devices = 3;</code>
@@ -1655,7 +1657,7 @@ private static final long serialVersionUID = 0L;
      * Targetable devices for the ad product.
      * TABLET device targeting is automatically applied to reported metrics
      * when MOBILE targeting is selected for CPM_MASTHEAD,
-     * GOOGLE_PREFERRED_BUMPER and GOOGLE_PREFERRED_SHORT products.
+     * GOOGLE_PREFERRED_BUMPER, and GOOGLE_PREFERRED_SHORT products.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.common.DeviceInfo devices = 3;</code>
@@ -1676,7 +1678,7 @@ private static final long serialVersionUID = 0L;
      * Targetable devices for the ad product.
      * TABLET device targeting is automatically applied to reported metrics
      * when MOBILE targeting is selected for CPM_MASTHEAD,
-     * GOOGLE_PREFERRED_BUMPER and GOOGLE_PREFERRED_SHORT products.
+     * GOOGLE_PREFERRED_BUMPER, and GOOGLE_PREFERRED_SHORT products.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.common.DeviceInfo devices = 3;</code>
@@ -1698,7 +1700,7 @@ private static final long serialVersionUID = 0L;
      * Targetable devices for the ad product.
      * TABLET device targeting is automatically applied to reported metrics
      * when MOBILE targeting is selected for CPM_MASTHEAD,
-     * GOOGLE_PREFERRED_BUMPER and GOOGLE_PREFERRED_SHORT products.
+     * GOOGLE_PREFERRED_BUMPER, and GOOGLE_PREFERRED_SHORT products.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.common.DeviceInfo devices = 3;</code>
@@ -1718,7 +1720,7 @@ private static final long serialVersionUID = 0L;
      * Targetable devices for the ad product.
      * TABLET device targeting is automatically applied to reported metrics
      * when MOBILE targeting is selected for CPM_MASTHEAD,
-     * GOOGLE_PREFERRED_BUMPER and GOOGLE_PREFERRED_SHORT products.
+     * GOOGLE_PREFERRED_BUMPER, and GOOGLE_PREFERRED_SHORT products.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.common.DeviceInfo devices = 3;</code>
@@ -1738,7 +1740,7 @@ private static final long serialVersionUID = 0L;
      * Targetable devices for the ad product.
      * TABLET device targeting is automatically applied to reported metrics
      * when MOBILE targeting is selected for CPM_MASTHEAD,
-     * GOOGLE_PREFERRED_BUMPER and GOOGLE_PREFERRED_SHORT products.
+     * GOOGLE_PREFERRED_BUMPER, and GOOGLE_PREFERRED_SHORT products.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.common.DeviceInfo devices = 3;</code>
@@ -1752,7 +1754,7 @@ private static final long serialVersionUID = 0L;
      * Targetable devices for the ad product.
      * TABLET device targeting is automatically applied to reported metrics
      * when MOBILE targeting is selected for CPM_MASTHEAD,
-     * GOOGLE_PREFERRED_BUMPER and GOOGLE_PREFERRED_SHORT products.
+     * GOOGLE_PREFERRED_BUMPER, and GOOGLE_PREFERRED_SHORT products.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.common.DeviceInfo devices = 3;</code>
@@ -1769,7 +1771,7 @@ private static final long serialVersionUID = 0L;
      * Targetable devices for the ad product.
      * TABLET device targeting is automatically applied to reported metrics
      * when MOBILE targeting is selected for CPM_MASTHEAD,
-     * GOOGLE_PREFERRED_BUMPER and GOOGLE_PREFERRED_SHORT products.
+     * GOOGLE_PREFERRED_BUMPER, and GOOGLE_PREFERRED_SHORT products.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.common.DeviceInfo devices = 3;</code>
@@ -1787,7 +1789,7 @@ private static final long serialVersionUID = 0L;
      * Targetable devices for the ad product.
      * TABLET device targeting is automatically applied to reported metrics
      * when MOBILE targeting is selected for CPM_MASTHEAD,
-     * GOOGLE_PREFERRED_BUMPER and GOOGLE_PREFERRED_SHORT products.
+     * GOOGLE_PREFERRED_BUMPER, and GOOGLE_PREFERRED_SHORT products.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.common.DeviceInfo devices = 3;</code>
@@ -1801,7 +1803,7 @@ private static final long serialVersionUID = 0L;
      * Targetable devices for the ad product.
      * TABLET device targeting is automatically applied to reported metrics
      * when MOBILE targeting is selected for CPM_MASTHEAD,
-     * GOOGLE_PREFERRED_BUMPER and GOOGLE_PREFERRED_SHORT products.
+     * GOOGLE_PREFERRED_BUMPER, and GOOGLE_PREFERRED_SHORT products.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.common.DeviceInfo devices = 3;</code>
@@ -1816,7 +1818,7 @@ private static final long serialVersionUID = 0L;
      * Targetable devices for the ad product.
      * TABLET device targeting is automatically applied to reported metrics
      * when MOBILE targeting is selected for CPM_MASTHEAD,
-     * GOOGLE_PREFERRED_BUMPER and GOOGLE_PREFERRED_SHORT products.
+     * GOOGLE_PREFERRED_BUMPER, and GOOGLE_PREFERRED_SHORT products.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.common.DeviceInfo devices = 3;</code>

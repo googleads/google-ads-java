@@ -776,5 +776,221 @@ public interface AssetOrBuilder extends
    */
   com.google.ads.googleads.v10.common.CallToActionAssetOrBuilder getCallToActionAssetOrBuilder();
 
+  /**
+   * <pre>
+   * A dynamic real estate asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicRealEstateAsset dynamic_real_estate_asset = 30;</code>
+   * @return Whether the dynamicRealEstateAsset field is set.
+   */
+  boolean hasDynamicRealEstateAsset();
+  /**
+   * <pre>
+   * A dynamic real estate asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicRealEstateAsset dynamic_real_estate_asset = 30;</code>
+   * @return The dynamicRealEstateAsset.
+   */
+  com.google.ads.googleads.v10.common.DynamicRealEstateAsset getDynamicRealEstateAsset();
+  /**
+   * <pre>
+   * A dynamic real estate asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicRealEstateAsset dynamic_real_estate_asset = 30;</code>
+   */
+  com.google.ads.googleads.v10.common.DynamicRealEstateAssetOrBuilder getDynamicRealEstateAssetOrBuilder();
+
+  /**
+   * <pre>
+   * A dynamic custom asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicCustomAsset dynamic_custom_asset = 31;</code>
+   * @return Whether the dynamicCustomAsset field is set.
+   */
+  boolean hasDynamicCustomAsset();
+  /**
+   * <pre>
+   * A dynamic custom asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicCustomAsset dynamic_custom_asset = 31;</code>
+   * @return The dynamicCustomAsset.
+   */
+  com.google.ads.googleads.v10.common.DynamicCustomAsset getDynamicCustomAsset();
+  /**
+   * <pre>
+   * A dynamic custom asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicCustomAsset dynamic_custom_asset = 31;</code>
+   */
+  com.google.ads.googleads.v10.common.DynamicCustomAssetOrBuilder getDynamicCustomAssetOrBuilder();
+
+  /**
+   * <pre>
+   * A dynamic hotels and rentals asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset dynamic_hotels_and_rentals_asset = 32;</code>
+   * @return Whether the dynamicHotelsAndRentalsAsset field is set.
+   */
+  boolean hasDynamicHotelsAndRentalsAsset();
+  /**
+   * <pre>
+   * A dynamic hotels and rentals asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset dynamic_hotels_and_rentals_asset = 32;</code>
+   * @return The dynamicHotelsAndRentalsAsset.
+   */
+  com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset getDynamicHotelsAndRentalsAsset();
+  /**
+   * <pre>
+   * A dynamic hotels and rentals asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAsset dynamic_hotels_and_rentals_asset = 32;</code>
+   */
+  com.google.ads.googleads.v10.common.DynamicHotelsAndRentalsAssetOrBuilder getDynamicHotelsAndRentalsAssetOrBuilder();
+
+  /**
+   * <pre>
+   * A dynamic flights asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicFlightsAsset dynamic_flights_asset = 33;</code>
+   * @return Whether the dynamicFlightsAsset field is set.
+   */
+  boolean hasDynamicFlightsAsset();
+  /**
+   * <pre>
+   * A dynamic flights asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicFlightsAsset dynamic_flights_asset = 33;</code>
+   * @return The dynamicFlightsAsset.
+   */
+  com.google.ads.googleads.v10.common.DynamicFlightsAsset getDynamicFlightsAsset();
+  /**
+   * <pre>
+   * A dynamic flights asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicFlightsAsset dynamic_flights_asset = 33;</code>
+   */
+  com.google.ads.googleads.v10.common.DynamicFlightsAssetOrBuilder getDynamicFlightsAssetOrBuilder();
+
+  /**
+   * <pre>
+   * Immutable. A discovery carousel card asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset discovery_carousel_card_asset = 34 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return Whether the discoveryCarouselCardAsset field is set.
+   */
+  boolean hasDiscoveryCarouselCardAsset();
+  /**
+   * <pre>
+   * Immutable. A discovery carousel card asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset discovery_carousel_card_asset = 34 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The discoveryCarouselCardAsset.
+   */
+  com.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset getDiscoveryCarouselCardAsset();
+  /**
+   * <pre>
+   * Immutable. A discovery carousel card asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DiscoveryCarouselCardAsset discovery_carousel_card_asset = 34 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   */
+  com.google.ads.googleads.v10.common.DiscoveryCarouselCardAssetOrBuilder getDiscoveryCarouselCardAssetOrBuilder();
+
+  /**
+   * <pre>
+   * A dynamic travel asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicTravelAsset dynamic_travel_asset = 35;</code>
+   * @return Whether the dynamicTravelAsset field is set.
+   */
+  boolean hasDynamicTravelAsset();
+  /**
+   * <pre>
+   * A dynamic travel asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicTravelAsset dynamic_travel_asset = 35;</code>
+   * @return The dynamicTravelAsset.
+   */
+  com.google.ads.googleads.v10.common.DynamicTravelAsset getDynamicTravelAsset();
+  /**
+   * <pre>
+   * A dynamic travel asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicTravelAsset dynamic_travel_asset = 35;</code>
+   */
+  com.google.ads.googleads.v10.common.DynamicTravelAssetOrBuilder getDynamicTravelAssetOrBuilder();
+
+  /**
+   * <pre>
+   * A dynamic local asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicLocalAsset dynamic_local_asset = 36;</code>
+   * @return Whether the dynamicLocalAsset field is set.
+   */
+  boolean hasDynamicLocalAsset();
+  /**
+   * <pre>
+   * A dynamic local asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicLocalAsset dynamic_local_asset = 36;</code>
+   * @return The dynamicLocalAsset.
+   */
+  com.google.ads.googleads.v10.common.DynamicLocalAsset getDynamicLocalAsset();
+  /**
+   * <pre>
+   * A dynamic local asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicLocalAsset dynamic_local_asset = 36;</code>
+   */
+  com.google.ads.googleads.v10.common.DynamicLocalAssetOrBuilder getDynamicLocalAssetOrBuilder();
+
+  /**
+   * <pre>
+   * A dynamic jobs asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicJobsAsset dynamic_jobs_asset = 37;</code>
+   * @return Whether the dynamicJobsAsset field is set.
+   */
+  boolean hasDynamicJobsAsset();
+  /**
+   * <pre>
+   * A dynamic jobs asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicJobsAsset dynamic_jobs_asset = 37;</code>
+   * @return The dynamicJobsAsset.
+   */
+  com.google.ads.googleads.v10.common.DynamicJobsAsset getDynamicJobsAsset();
+  /**
+   * <pre>
+   * A dynamic jobs asset.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DynamicJobsAsset dynamic_jobs_asset = 37;</code>
+   */
+  com.google.ads.googleads.v10.common.DynamicJobsAssetOrBuilder getDynamicJobsAssetOrBuilder();
+
   public com.google.ads.googleads.v10.resources.Asset.AssetDataCase getAssetDataCase();
 }

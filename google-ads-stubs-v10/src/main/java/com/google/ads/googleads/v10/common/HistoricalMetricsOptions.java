@@ -66,6 +66,11 @@ private static final long serialVersionUID = 0L;
             bitField0_ |= 0x00000001;
             break;
           }
+          case 16: {
+
+            includeAverageCpc_ = input.readBool();
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -77,6 +82,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -149,6 +156,25 @@ private static final long serialVersionUID = 0L;
     return yearMonthRange_ == null ? com.google.ads.googleads.v10.common.YearMonthRange.getDefaultInstance() : yearMonthRange_;
   }
 
+  public static final int INCLUDE_AVERAGE_CPC_FIELD_NUMBER = 2;
+  private boolean includeAverageCpc_;
+  /**
+   * <pre>
+   * Indicates whether to include average cost per click value.
+   * Average CPC is a legacy value that will be removed and replaced in the
+   * future, and as such we are including it as an optioanl value so clients
+   * only use it when strictly necessary and to better track clients that use
+   * this value.
+   * </pre>
+   *
+   * <code>bool include_average_cpc = 2;</code>
+   * @return The includeAverageCpc.
+   */
+  @java.lang.Override
+  public boolean getIncludeAverageCpc() {
+    return includeAverageCpc_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -166,6 +192,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(1, getYearMonthRange());
     }
+    if (includeAverageCpc_ != false) {
+      output.writeBool(2, includeAverageCpc_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -178,6 +207,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getYearMonthRange());
+    }
+    if (includeAverageCpc_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(2, includeAverageCpc_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -199,6 +232,8 @@ private static final long serialVersionUID = 0L;
       if (!getYearMonthRange()
           .equals(other.getYearMonthRange())) return false;
     }
+    if (getIncludeAverageCpc()
+        != other.getIncludeAverageCpc()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -214,6 +249,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + YEAR_MONTH_RANGE_FIELD_NUMBER;
       hash = (53 * hash) + getYearMonthRange().hashCode();
     }
+    hash = (37 * hash) + INCLUDE_AVERAGE_CPC_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getIncludeAverageCpc());
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -358,6 +396,8 @@ private static final long serialVersionUID = 0L;
         yearMonthRangeBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000001);
+      includeAverageCpc_ = false;
+
       return this;
     }
 
@@ -394,6 +434,7 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField0_ |= 0x00000001;
       }
+      result.includeAverageCpc_ = includeAverageCpc_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -445,6 +486,9 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v10.common.HistoricalMetricsOptions.getDefaultInstance()) return this;
       if (other.hasYearMonthRange()) {
         mergeYearMonthRange(other.getYearMonthRange());
+      }
+      if (other.getIncludeAverageCpc() != false) {
+        setIncludeAverageCpc(other.getIncludeAverageCpc());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -666,6 +710,61 @@ private static final long serialVersionUID = 0L;
         yearMonthRange_ = null;
       }
       return yearMonthRangeBuilder_;
+    }
+
+    private boolean includeAverageCpc_ ;
+    /**
+     * <pre>
+     * Indicates whether to include average cost per click value.
+     * Average CPC is a legacy value that will be removed and replaced in the
+     * future, and as such we are including it as an optioanl value so clients
+     * only use it when strictly necessary and to better track clients that use
+     * this value.
+     * </pre>
+     *
+     * <code>bool include_average_cpc = 2;</code>
+     * @return The includeAverageCpc.
+     */
+    @java.lang.Override
+    public boolean getIncludeAverageCpc() {
+      return includeAverageCpc_;
+    }
+    /**
+     * <pre>
+     * Indicates whether to include average cost per click value.
+     * Average CPC is a legacy value that will be removed and replaced in the
+     * future, and as such we are including it as an optioanl value so clients
+     * only use it when strictly necessary and to better track clients that use
+     * this value.
+     * </pre>
+     *
+     * <code>bool include_average_cpc = 2;</code>
+     * @param value The includeAverageCpc to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIncludeAverageCpc(boolean value) {
+      
+      includeAverageCpc_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Indicates whether to include average cost per click value.
+     * Average CPC is a legacy value that will be removed and replaced in the
+     * future, and as such we are including it as an optioanl value so clients
+     * only use it when strictly necessary and to better track clients that use
+     * this value.
+     * </pre>
+     *
+     * <code>bool include_average_cpc = 2;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearIncludeAverageCpc() {
+      
+      includeAverageCpc_ = false;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

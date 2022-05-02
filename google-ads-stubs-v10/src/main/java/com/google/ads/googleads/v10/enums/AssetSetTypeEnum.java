@@ -63,6 +63,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -111,7 +113,7 @@ private static final long serialVersionUID = 0L;
     UNKNOWN(1),
     /**
      * <pre>
-     * Page feed.
+     * Page asset set.
      * </pre>
      *
      * <code>PAGE_FEED = 2;</code>
@@ -119,7 +121,7 @@ private static final long serialVersionUID = 0L;
     PAGE_FEED(2),
     /**
      * <pre>
-     * Dynamic education feed.
+     * Dynamic education asset set.
      * </pre>
      *
      * <code>DYNAMIC_EDUCATION = 3;</code>
@@ -133,6 +135,62 @@ private static final long serialVersionUID = 0L;
      * <code>MERCHANT_CENTER_FEED = 4;</code>
      */
     MERCHANT_CENTER_FEED(4),
+    /**
+     * <pre>
+     * Dynamic real estate asset set.
+     * </pre>
+     *
+     * <code>DYNAMIC_REAL_ESTATE = 5;</code>
+     */
+    DYNAMIC_REAL_ESTATE(5),
+    /**
+     * <pre>
+     * Dynamic custom asset set.
+     * </pre>
+     *
+     * <code>DYNAMIC_CUSTOM = 6;</code>
+     */
+    DYNAMIC_CUSTOM(6),
+    /**
+     * <pre>
+     * Dynamic hotels and rentals asset set.
+     * </pre>
+     *
+     * <code>DYNAMIC_HOTELS_AND_RENTALS = 7;</code>
+     */
+    DYNAMIC_HOTELS_AND_RENTALS(7),
+    /**
+     * <pre>
+     * Dynamic flights asset set.
+     * </pre>
+     *
+     * <code>DYNAMIC_FLIGHTS = 8;</code>
+     */
+    DYNAMIC_FLIGHTS(8),
+    /**
+     * <pre>
+     * Dynamic travel asset set.
+     * </pre>
+     *
+     * <code>DYNAMIC_TRAVEL = 9;</code>
+     */
+    DYNAMIC_TRAVEL(9),
+    /**
+     * <pre>
+     * Dynamic local asset set.
+     * </pre>
+     *
+     * <code>DYNAMIC_LOCAL = 10;</code>
+     */
+    DYNAMIC_LOCAL(10),
+    /**
+     * <pre>
+     * Dynamic jobs asset set.
+     * </pre>
+     *
+     * <code>DYNAMIC_JOBS = 11;</code>
+     */
+    DYNAMIC_JOBS(11),
     UNRECOGNIZED(-1),
     ;
 
@@ -154,7 +212,7 @@ private static final long serialVersionUID = 0L;
     public static final int UNKNOWN_VALUE = 1;
     /**
      * <pre>
-     * Page feed.
+     * Page asset set.
      * </pre>
      *
      * <code>PAGE_FEED = 2;</code>
@@ -162,7 +220,7 @@ private static final long serialVersionUID = 0L;
     public static final int PAGE_FEED_VALUE = 2;
     /**
      * <pre>
-     * Dynamic education feed.
+     * Dynamic education asset set.
      * </pre>
      *
      * <code>DYNAMIC_EDUCATION = 3;</code>
@@ -176,6 +234,62 @@ private static final long serialVersionUID = 0L;
      * <code>MERCHANT_CENTER_FEED = 4;</code>
      */
     public static final int MERCHANT_CENTER_FEED_VALUE = 4;
+    /**
+     * <pre>
+     * Dynamic real estate asset set.
+     * </pre>
+     *
+     * <code>DYNAMIC_REAL_ESTATE = 5;</code>
+     */
+    public static final int DYNAMIC_REAL_ESTATE_VALUE = 5;
+    /**
+     * <pre>
+     * Dynamic custom asset set.
+     * </pre>
+     *
+     * <code>DYNAMIC_CUSTOM = 6;</code>
+     */
+    public static final int DYNAMIC_CUSTOM_VALUE = 6;
+    /**
+     * <pre>
+     * Dynamic hotels and rentals asset set.
+     * </pre>
+     *
+     * <code>DYNAMIC_HOTELS_AND_RENTALS = 7;</code>
+     */
+    public static final int DYNAMIC_HOTELS_AND_RENTALS_VALUE = 7;
+    /**
+     * <pre>
+     * Dynamic flights asset set.
+     * </pre>
+     *
+     * <code>DYNAMIC_FLIGHTS = 8;</code>
+     */
+    public static final int DYNAMIC_FLIGHTS_VALUE = 8;
+    /**
+     * <pre>
+     * Dynamic travel asset set.
+     * </pre>
+     *
+     * <code>DYNAMIC_TRAVEL = 9;</code>
+     */
+    public static final int DYNAMIC_TRAVEL_VALUE = 9;
+    /**
+     * <pre>
+     * Dynamic local asset set.
+     * </pre>
+     *
+     * <code>DYNAMIC_LOCAL = 10;</code>
+     */
+    public static final int DYNAMIC_LOCAL_VALUE = 10;
+    /**
+     * <pre>
+     * Dynamic jobs asset set.
+     * </pre>
+     *
+     * <code>DYNAMIC_JOBS = 11;</code>
+     */
+    public static final int DYNAMIC_JOBS_VALUE = 11;
 
 
     public final int getNumber() {
@@ -207,6 +321,13 @@ private static final long serialVersionUID = 0L;
         case 2: return PAGE_FEED;
         case 3: return DYNAMIC_EDUCATION;
         case 4: return MERCHANT_CENTER_FEED;
+        case 5: return DYNAMIC_REAL_ESTATE;
+        case 6: return DYNAMIC_CUSTOM;
+        case 7: return DYNAMIC_HOTELS_AND_RENTALS;
+        case 8: return DYNAMIC_FLIGHTS;
+        case 9: return DYNAMIC_TRAVEL;
+        case 10: return DYNAMIC_LOCAL;
+        case 11: return DYNAMIC_JOBS;
         default: return null;
       }
     }

@@ -93,8 +93,8 @@ public interface PreferencesOrBuilder extends
 
   /**
    * <pre>
-   * True if the price guaranteed. The cost of serving the ad is agreed upfront
-   * and not subject to an auction.
+   * True if the price is guaranteed. The cost of serving the ad is agreed
+   * upfront and not subject to an auction.
    * If not set, default is any value.
    * </pre>
    *
@@ -104,8 +104,8 @@ public interface PreferencesOrBuilder extends
   boolean hasHasGuaranteedPrice();
   /**
    * <pre>
-   * True if the price guaranteed. The cost of serving the ad is agreed upfront
-   * and not subject to an auction.
+   * True if the price is guaranteed. The cost of serving the ad is agreed
+   * upfront and not subject to an auction.
    * If not set, default is any value.
    * </pre>
    *

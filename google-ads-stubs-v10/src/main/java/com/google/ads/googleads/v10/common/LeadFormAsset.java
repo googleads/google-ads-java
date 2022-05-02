@@ -29,6 +29,7 @@ private static final long serialVersionUID = 0L;
     postSubmitHeadline_ = "";
     postSubmitDescription_ = "";
     fields_ = java.util.Collections.emptyList();
+    customQuestionFields_ = java.util.Collections.emptyList();
     deliveryMethods_ = java.util.Collections.emptyList();
     postSubmitCallToActionType_ = 0;
     backgroundImageAsset_ = "";
@@ -77,9 +78,9 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 74: {
-            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000010) != 0)) {
               deliveryMethods_ = new java.util.ArrayList<com.google.ads.googleads.v10.common.LeadFormDeliveryMethod>();
-              mutable_bitField0_ |= 0x00000008;
+              mutable_bitField0_ |= 0x00000010;
             }
             deliveryMethods_.add(
                 input.readMessage(com.google.ads.googleads.v10.common.LeadFormDeliveryMethod.parser(), extensionRegistry));
@@ -157,6 +158,15 @@ private static final long serialVersionUID = 0L;
             customDisclosure_ = s;
             break;
           }
+          case 186: {
+            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+              customQuestionFields_ = new java.util.ArrayList<com.google.ads.googleads.v10.common.LeadFormCustomQuestionField>();
+              mutable_bitField0_ |= 0x00000008;
+            }
+            customQuestionFields_.add(
+                input.readMessage(com.google.ads.googleads.v10.common.LeadFormCustomQuestionField.parser(), extensionRegistry));
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -168,6 +178,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -175,8 +187,11 @@ private static final long serialVersionUID = 0L;
       if (((mutable_bitField0_ & 0x00000004) != 0)) {
         fields_ = java.util.Collections.unmodifiableList(fields_);
       }
-      if (((mutable_bitField0_ & 0x00000008) != 0)) {
+      if (((mutable_bitField0_ & 0x00000010) != 0)) {
         deliveryMethods_ = java.util.Collections.unmodifiableList(deliveryMethods_);
+      }
+      if (((mutable_bitField0_ & 0x00000008) != 0)) {
+        customQuestionFields_ = java.util.Collections.unmodifiableList(customQuestionFields_);
       }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
@@ -643,6 +658,66 @@ private static final long serialVersionUID = 0L;
     return fields_.get(index);
   }
 
+  public static final int CUSTOM_QUESTION_FIELDS_FIELD_NUMBER = 23;
+  private java.util.List<com.google.ads.googleads.v10.common.LeadFormCustomQuestionField> customQuestionFields_;
+  /**
+   * <pre>
+   * Ordered list of custom question fields.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v10.common.LeadFormCustomQuestionField custom_question_fields = 23;</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.google.ads.googleads.v10.common.LeadFormCustomQuestionField> getCustomQuestionFieldsList() {
+    return customQuestionFields_;
+  }
+  /**
+   * <pre>
+   * Ordered list of custom question fields.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v10.common.LeadFormCustomQuestionField custom_question_fields = 23;</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.google.ads.googleads.v10.common.LeadFormCustomQuestionFieldOrBuilder> 
+      getCustomQuestionFieldsOrBuilderList() {
+    return customQuestionFields_;
+  }
+  /**
+   * <pre>
+   * Ordered list of custom question fields.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v10.common.LeadFormCustomQuestionField custom_question_fields = 23;</code>
+   */
+  @java.lang.Override
+  public int getCustomQuestionFieldsCount() {
+    return customQuestionFields_.size();
+  }
+  /**
+   * <pre>
+   * Ordered list of custom question fields.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v10.common.LeadFormCustomQuestionField custom_question_fields = 23;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.common.LeadFormCustomQuestionField getCustomQuestionFields(int index) {
+    return customQuestionFields_.get(index);
+  }
+  /**
+   * <pre>
+   * Ordered list of custom question fields.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v10.common.LeadFormCustomQuestionField custom_question_fields = 23;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.common.LeadFormCustomQuestionFieldOrBuilder getCustomQuestionFieldsOrBuilder(
+      int index) {
+    return customQuestionFields_.get(index);
+  }
+
   public static final int DELIVERY_METHODS_FIELD_NUMBER = 9;
   private java.util.List<com.google.ads.googleads.v10.common.LeadFormDeliveryMethod> deliveryMethods_;
   /**
@@ -942,6 +1017,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000008) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 22, customDisclosure_);
     }
+    for (int i = 0; i < customQuestionFields_.size(); i++) {
+      output.writeMessage(23, customQuestionFields_.get(i));
+    }
     unknownFields.writeTo(output);
   }
 
@@ -998,6 +1076,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000008) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(22, customDisclosure_);
     }
+    for (int i = 0; i < customQuestionFields_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(23, customQuestionFields_.get(i));
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1036,6 +1118,8 @@ private static final long serialVersionUID = 0L;
     }
     if (!getFieldsList()
         .equals(other.getFieldsList())) return false;
+    if (!getCustomQuestionFieldsList()
+        .equals(other.getCustomQuestionFieldsList())) return false;
     if (!getDeliveryMethodsList()
         .equals(other.getDeliveryMethodsList())) return false;
     if (postSubmitCallToActionType_ != other.postSubmitCallToActionType_) return false;
@@ -1084,6 +1168,10 @@ private static final long serialVersionUID = 0L;
     if (getFieldsCount() > 0) {
       hash = (37 * hash) + FIELDS_FIELD_NUMBER;
       hash = (53 * hash) + getFieldsList().hashCode();
+    }
+    if (getCustomQuestionFieldsCount() > 0) {
+      hash = (37 * hash) + CUSTOM_QUESTION_FIELDS_FIELD_NUMBER;
+      hash = (53 * hash) + getCustomQuestionFieldsList().hashCode();
     }
     if (getDeliveryMethodsCount() > 0) {
       hash = (37 * hash) + DELIVERY_METHODS_FIELD_NUMBER;
@@ -1234,6 +1322,7 @@ private static final long serialVersionUID = 0L;
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
         getFieldsFieldBuilder();
+        getCustomQuestionFieldsFieldBuilder();
         getDeliveryMethodsFieldBuilder();
       }
     }
@@ -1262,20 +1351,26 @@ private static final long serialVersionUID = 0L;
       } else {
         fieldsBuilder_.clear();
       }
+      if (customQuestionFieldsBuilder_ == null) {
+        customQuestionFields_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+      } else {
+        customQuestionFieldsBuilder_.clear();
+      }
       if (deliveryMethodsBuilder_ == null) {
         deliveryMethods_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
       } else {
         deliveryMethodsBuilder_.clear();
       }
       postSubmitCallToActionType_ = 0;
 
       backgroundImageAsset_ = "";
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000020);
       desiredIntent_ = 0;
 
       customDisclosure_ = "";
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000040);
       return this;
     }
 
@@ -1327,22 +1422,31 @@ private static final long serialVersionUID = 0L;
       } else {
         result.fields_ = fieldsBuilder_.build();
       }
-      if (deliveryMethodsBuilder_ == null) {
+      if (customQuestionFieldsBuilder_ == null) {
         if (((bitField0_ & 0x00000008) != 0)) {
-          deliveryMethods_ = java.util.Collections.unmodifiableList(deliveryMethods_);
+          customQuestionFields_ = java.util.Collections.unmodifiableList(customQuestionFields_);
           bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.customQuestionFields_ = customQuestionFields_;
+      } else {
+        result.customQuestionFields_ = customQuestionFieldsBuilder_.build();
+      }
+      if (deliveryMethodsBuilder_ == null) {
+        if (((bitField0_ & 0x00000010) != 0)) {
+          deliveryMethods_ = java.util.Collections.unmodifiableList(deliveryMethods_);
+          bitField0_ = (bitField0_ & ~0x00000010);
         }
         result.deliveryMethods_ = deliveryMethods_;
       } else {
         result.deliveryMethods_ = deliveryMethodsBuilder_.build();
       }
       result.postSubmitCallToActionType_ = postSubmitCallToActionType_;
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000020) != 0)) {
         to_bitField0_ |= 0x00000004;
       }
       result.backgroundImageAsset_ = backgroundImageAsset_;
       result.desiredIntent_ = desiredIntent_;
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000040) != 0)) {
         to_bitField0_ |= 0x00000008;
       }
       result.customDisclosure_ = customDisclosure_;
@@ -1454,11 +1558,37 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (customQuestionFieldsBuilder_ == null) {
+        if (!other.customQuestionFields_.isEmpty()) {
+          if (customQuestionFields_.isEmpty()) {
+            customQuestionFields_ = other.customQuestionFields_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureCustomQuestionFieldsIsMutable();
+            customQuestionFields_.addAll(other.customQuestionFields_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.customQuestionFields_.isEmpty()) {
+          if (customQuestionFieldsBuilder_.isEmpty()) {
+            customQuestionFieldsBuilder_.dispose();
+            customQuestionFieldsBuilder_ = null;
+            customQuestionFields_ = other.customQuestionFields_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+            customQuestionFieldsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getCustomQuestionFieldsFieldBuilder() : null;
+          } else {
+            customQuestionFieldsBuilder_.addAllMessages(other.customQuestionFields_);
+          }
+        }
+      }
       if (deliveryMethodsBuilder_ == null) {
         if (!other.deliveryMethods_.isEmpty()) {
           if (deliveryMethods_.isEmpty()) {
             deliveryMethods_ = other.deliveryMethods_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensureDeliveryMethodsIsMutable();
             deliveryMethods_.addAll(other.deliveryMethods_);
@@ -1471,7 +1601,7 @@ private static final long serialVersionUID = 0L;
             deliveryMethodsBuilder_.dispose();
             deliveryMethodsBuilder_ = null;
             deliveryMethods_ = other.deliveryMethods_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000010);
             deliveryMethodsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getDeliveryMethodsFieldBuilder() : null;
@@ -1484,7 +1614,7 @@ private static final long serialVersionUID = 0L;
         setPostSubmitCallToActionTypeValue(other.getPostSubmitCallToActionTypeValue());
       }
       if (other.hasBackgroundImageAsset()) {
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000020;
         backgroundImageAsset_ = other.backgroundImageAsset_;
         onChanged();
       }
@@ -1492,7 +1622,7 @@ private static final long serialVersionUID = 0L;
         setDesiredIntentValue(other.getDesiredIntentValue());
       }
       if (other.hasCustomDisclosure()) {
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000040;
         customDisclosure_ = other.customDisclosure_;
         onChanged();
       }
@@ -2638,12 +2768,324 @@ private static final long serialVersionUID = 0L;
       return fieldsBuilder_;
     }
 
+    private java.util.List<com.google.ads.googleads.v10.common.LeadFormCustomQuestionField> customQuestionFields_ =
+      java.util.Collections.emptyList();
+    private void ensureCustomQuestionFieldsIsMutable() {
+      if (!((bitField0_ & 0x00000008) != 0)) {
+        customQuestionFields_ = new java.util.ArrayList<com.google.ads.googleads.v10.common.LeadFormCustomQuestionField>(customQuestionFields_);
+        bitField0_ |= 0x00000008;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.ads.googleads.v10.common.LeadFormCustomQuestionField, com.google.ads.googleads.v10.common.LeadFormCustomQuestionField.Builder, com.google.ads.googleads.v10.common.LeadFormCustomQuestionFieldOrBuilder> customQuestionFieldsBuilder_;
+
+    /**
+     * <pre>
+     * Ordered list of custom question fields.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v10.common.LeadFormCustomQuestionField custom_question_fields = 23;</code>
+     */
+    public java.util.List<com.google.ads.googleads.v10.common.LeadFormCustomQuestionField> getCustomQuestionFieldsList() {
+      if (customQuestionFieldsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(customQuestionFields_);
+      } else {
+        return customQuestionFieldsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Ordered list of custom question fields.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v10.common.LeadFormCustomQuestionField custom_question_fields = 23;</code>
+     */
+    public int getCustomQuestionFieldsCount() {
+      if (customQuestionFieldsBuilder_ == null) {
+        return customQuestionFields_.size();
+      } else {
+        return customQuestionFieldsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Ordered list of custom question fields.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v10.common.LeadFormCustomQuestionField custom_question_fields = 23;</code>
+     */
+    public com.google.ads.googleads.v10.common.LeadFormCustomQuestionField getCustomQuestionFields(int index) {
+      if (customQuestionFieldsBuilder_ == null) {
+        return customQuestionFields_.get(index);
+      } else {
+        return customQuestionFieldsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Ordered list of custom question fields.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v10.common.LeadFormCustomQuestionField custom_question_fields = 23;</code>
+     */
+    public Builder setCustomQuestionFields(
+        int index, com.google.ads.googleads.v10.common.LeadFormCustomQuestionField value) {
+      if (customQuestionFieldsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCustomQuestionFieldsIsMutable();
+        customQuestionFields_.set(index, value);
+        onChanged();
+      } else {
+        customQuestionFieldsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Ordered list of custom question fields.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v10.common.LeadFormCustomQuestionField custom_question_fields = 23;</code>
+     */
+    public Builder setCustomQuestionFields(
+        int index, com.google.ads.googleads.v10.common.LeadFormCustomQuestionField.Builder builderForValue) {
+      if (customQuestionFieldsBuilder_ == null) {
+        ensureCustomQuestionFieldsIsMutable();
+        customQuestionFields_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        customQuestionFieldsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Ordered list of custom question fields.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v10.common.LeadFormCustomQuestionField custom_question_fields = 23;</code>
+     */
+    public Builder addCustomQuestionFields(com.google.ads.googleads.v10.common.LeadFormCustomQuestionField value) {
+      if (customQuestionFieldsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCustomQuestionFieldsIsMutable();
+        customQuestionFields_.add(value);
+        onChanged();
+      } else {
+        customQuestionFieldsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Ordered list of custom question fields.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v10.common.LeadFormCustomQuestionField custom_question_fields = 23;</code>
+     */
+    public Builder addCustomQuestionFields(
+        int index, com.google.ads.googleads.v10.common.LeadFormCustomQuestionField value) {
+      if (customQuestionFieldsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCustomQuestionFieldsIsMutable();
+        customQuestionFields_.add(index, value);
+        onChanged();
+      } else {
+        customQuestionFieldsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Ordered list of custom question fields.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v10.common.LeadFormCustomQuestionField custom_question_fields = 23;</code>
+     */
+    public Builder addCustomQuestionFields(
+        com.google.ads.googleads.v10.common.LeadFormCustomQuestionField.Builder builderForValue) {
+      if (customQuestionFieldsBuilder_ == null) {
+        ensureCustomQuestionFieldsIsMutable();
+        customQuestionFields_.add(builderForValue.build());
+        onChanged();
+      } else {
+        customQuestionFieldsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Ordered list of custom question fields.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v10.common.LeadFormCustomQuestionField custom_question_fields = 23;</code>
+     */
+    public Builder addCustomQuestionFields(
+        int index, com.google.ads.googleads.v10.common.LeadFormCustomQuestionField.Builder builderForValue) {
+      if (customQuestionFieldsBuilder_ == null) {
+        ensureCustomQuestionFieldsIsMutable();
+        customQuestionFields_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        customQuestionFieldsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Ordered list of custom question fields.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v10.common.LeadFormCustomQuestionField custom_question_fields = 23;</code>
+     */
+    public Builder addAllCustomQuestionFields(
+        java.lang.Iterable<? extends com.google.ads.googleads.v10.common.LeadFormCustomQuestionField> values) {
+      if (customQuestionFieldsBuilder_ == null) {
+        ensureCustomQuestionFieldsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, customQuestionFields_);
+        onChanged();
+      } else {
+        customQuestionFieldsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Ordered list of custom question fields.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v10.common.LeadFormCustomQuestionField custom_question_fields = 23;</code>
+     */
+    public Builder clearCustomQuestionFields() {
+      if (customQuestionFieldsBuilder_ == null) {
+        customQuestionFields_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+      } else {
+        customQuestionFieldsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Ordered list of custom question fields.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v10.common.LeadFormCustomQuestionField custom_question_fields = 23;</code>
+     */
+    public Builder removeCustomQuestionFields(int index) {
+      if (customQuestionFieldsBuilder_ == null) {
+        ensureCustomQuestionFieldsIsMutable();
+        customQuestionFields_.remove(index);
+        onChanged();
+      } else {
+        customQuestionFieldsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Ordered list of custom question fields.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v10.common.LeadFormCustomQuestionField custom_question_fields = 23;</code>
+     */
+    public com.google.ads.googleads.v10.common.LeadFormCustomQuestionField.Builder getCustomQuestionFieldsBuilder(
+        int index) {
+      return getCustomQuestionFieldsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Ordered list of custom question fields.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v10.common.LeadFormCustomQuestionField custom_question_fields = 23;</code>
+     */
+    public com.google.ads.googleads.v10.common.LeadFormCustomQuestionFieldOrBuilder getCustomQuestionFieldsOrBuilder(
+        int index) {
+      if (customQuestionFieldsBuilder_ == null) {
+        return customQuestionFields_.get(index);  } else {
+        return customQuestionFieldsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Ordered list of custom question fields.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v10.common.LeadFormCustomQuestionField custom_question_fields = 23;</code>
+     */
+    public java.util.List<? extends com.google.ads.googleads.v10.common.LeadFormCustomQuestionFieldOrBuilder> 
+         getCustomQuestionFieldsOrBuilderList() {
+      if (customQuestionFieldsBuilder_ != null) {
+        return customQuestionFieldsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(customQuestionFields_);
+      }
+    }
+    /**
+     * <pre>
+     * Ordered list of custom question fields.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v10.common.LeadFormCustomQuestionField custom_question_fields = 23;</code>
+     */
+    public com.google.ads.googleads.v10.common.LeadFormCustomQuestionField.Builder addCustomQuestionFieldsBuilder() {
+      return getCustomQuestionFieldsFieldBuilder().addBuilder(
+          com.google.ads.googleads.v10.common.LeadFormCustomQuestionField.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Ordered list of custom question fields.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v10.common.LeadFormCustomQuestionField custom_question_fields = 23;</code>
+     */
+    public com.google.ads.googleads.v10.common.LeadFormCustomQuestionField.Builder addCustomQuestionFieldsBuilder(
+        int index) {
+      return getCustomQuestionFieldsFieldBuilder().addBuilder(
+          index, com.google.ads.googleads.v10.common.LeadFormCustomQuestionField.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Ordered list of custom question fields.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v10.common.LeadFormCustomQuestionField custom_question_fields = 23;</code>
+     */
+    public java.util.List<com.google.ads.googleads.v10.common.LeadFormCustomQuestionField.Builder> 
+         getCustomQuestionFieldsBuilderList() {
+      return getCustomQuestionFieldsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.ads.googleads.v10.common.LeadFormCustomQuestionField, com.google.ads.googleads.v10.common.LeadFormCustomQuestionField.Builder, com.google.ads.googleads.v10.common.LeadFormCustomQuestionFieldOrBuilder> 
+        getCustomQuestionFieldsFieldBuilder() {
+      if (customQuestionFieldsBuilder_ == null) {
+        customQuestionFieldsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.ads.googleads.v10.common.LeadFormCustomQuestionField, com.google.ads.googleads.v10.common.LeadFormCustomQuestionField.Builder, com.google.ads.googleads.v10.common.LeadFormCustomQuestionFieldOrBuilder>(
+                customQuestionFields_,
+                ((bitField0_ & 0x00000008) != 0),
+                getParentForChildren(),
+                isClean());
+        customQuestionFields_ = null;
+      }
+      return customQuestionFieldsBuilder_;
+    }
+
     private java.util.List<com.google.ads.googleads.v10.common.LeadFormDeliveryMethod> deliveryMethods_ =
       java.util.Collections.emptyList();
     private void ensureDeliveryMethodsIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
+      if (!((bitField0_ & 0x00000010) != 0)) {
         deliveryMethods_ = new java.util.ArrayList<com.google.ads.googleads.v10.common.LeadFormDeliveryMethod>(deliveryMethods_);
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
        }
     }
 
@@ -2848,7 +3290,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearDeliveryMethods() {
       if (deliveryMethodsBuilder_ == null) {
         deliveryMethods_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
       } else {
         deliveryMethodsBuilder_.clear();
@@ -2960,7 +3402,7 @@ private static final long serialVersionUID = 0L;
         deliveryMethodsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.google.ads.googleads.v10.common.LeadFormDeliveryMethod, com.google.ads.googleads.v10.common.LeadFormDeliveryMethod.Builder, com.google.ads.googleads.v10.common.LeadFormDeliveryMethodOrBuilder>(
                 deliveryMethods_,
-                ((bitField0_ & 0x00000008) != 0),
+                ((bitField0_ & 0x00000010) != 0),
                 getParentForChildren(),
                 isClean());
         deliveryMethods_ = null;
@@ -3058,7 +3500,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the backgroundImageAsset field is set.
      */
     public boolean hasBackgroundImageAsset() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -3118,7 +3560,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000010;
+  bitField0_ |= 0x00000020;
       backgroundImageAsset_ = value;
       onChanged();
       return this;
@@ -3133,7 +3575,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearBackgroundImageAsset() {
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000020);
       backgroundImageAsset_ = getDefaultInstance().getBackgroundImageAsset();
       onChanged();
       return this;
@@ -3154,7 +3596,7 @@ private static final long serialVersionUID = 0L;
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       backgroundImageAsset_ = value;
       onChanged();
       return this;
@@ -3245,7 +3687,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the customDisclosure field is set.
      */
     public boolean hasCustomDisclosure() {
-      return ((bitField0_ & 0x00000020) != 0);
+      return ((bitField0_ & 0x00000040) != 0);
     }
     /**
      * <pre>
@@ -3305,7 +3747,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00000020;
+  bitField0_ |= 0x00000040;
       customDisclosure_ = value;
       onChanged();
       return this;
@@ -3320,7 +3762,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearCustomDisclosure() {
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000040);
       customDisclosure_ = getDefaultInstance().getCustomDisclosure();
       onChanged();
       return this;
@@ -3341,7 +3783,7 @@ private static final long serialVersionUID = 0L;
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       customDisclosure_ = value;
       onChanged();
       return this;

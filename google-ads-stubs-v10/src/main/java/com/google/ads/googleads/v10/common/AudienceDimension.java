@@ -133,6 +133,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -964,8 +966,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (dimensionCase_ == 1) {
           ageBuilder_.mergeFrom(value);
+        } else {
+          ageBuilder_.setMessage(value);
         }
-        ageBuilder_.setMessage(value);
       }
       dimensionCase_ = 1;
       return this;
@@ -1141,8 +1144,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (dimensionCase_ == 2) {
           genderBuilder_.mergeFrom(value);
+        } else {
+          genderBuilder_.setMessage(value);
         }
-        genderBuilder_.setMessage(value);
       }
       dimensionCase_ = 2;
       return this;
@@ -1318,8 +1322,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (dimensionCase_ == 3) {
           householdIncomeBuilder_.mergeFrom(value);
+        } else {
+          householdIncomeBuilder_.setMessage(value);
         }
-        householdIncomeBuilder_.setMessage(value);
       }
       dimensionCase_ = 3;
       return this;
@@ -1495,8 +1500,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (dimensionCase_ == 4) {
           parentalStatusBuilder_.mergeFrom(value);
+        } else {
+          parentalStatusBuilder_.setMessage(value);
         }
-        parentalStatusBuilder_.setMessage(value);
       }
       dimensionCase_ = 4;
       return this;
@@ -1677,8 +1683,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (dimensionCase_ == 5) {
           audienceSegmentsBuilder_.mergeFrom(value);
+        } else {
+          audienceSegmentsBuilder_.setMessage(value);
         }
-        audienceSegmentsBuilder_.setMessage(value);
       }
       dimensionCase_ = 5;
       return this;

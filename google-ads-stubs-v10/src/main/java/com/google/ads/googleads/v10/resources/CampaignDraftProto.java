@@ -31,40 +31,38 @@ public final class CampaignDraftProto {
       "\n7google/ads/googleads/v10/resources/cam" +
       "paign_draft.proto\022\"google.ads.googleads." +
       "v10.resources\032:google/ads/googleads/v10/" +
-      "enums/campaign_draft_status.proto\032\034googl" +
-      "e/api/annotations.proto\032\037google/api/fiel" +
-      "d_behavior.proto\032\031google/api/resource.pr" +
-      "oto\"\256\005\n\rCampaignDraft\022E\n\rresource_name\030\001" +
-      " \001(\tB.\340A\005\372A(\n&googleads.googleapis.com/C" +
-      "ampaignDraft\022\032\n\010draft_id\030\t \001(\003B\003\340A\003H\000\210\001\001" +
-      "\022E\n\rbase_campaign\030\n \001(\tB)\340A\005\372A#\n!googlea" +
-      "ds.googleapis.com/CampaignH\001\210\001\001\022\021\n\004name\030" +
-      "\013 \001(\tH\002\210\001\001\022F\n\016draft_campaign\030\014 \001(\tB)\340A\003\372" +
-      "A#\n!googleads.googleapis.com/CampaignH\003\210" +
-      "\001\001\022`\n\006status\030\006 \001(\0162K.google.ads.googlead" +
-      "s.v10.enums.CampaignDraftStatusEnum.Camp" +
-      "aignDraftStatusB\003\340A\003\022(\n\026has_experiment_r" +
-      "unning\030\r \001(\010B\003\340A\003H\004\210\001\001\022(\n\026long_running_o" +
-      "peration\030\016 \001(\tB\003\340A\003H\005\210\001\001:q\352An\n&googleads" +
-      ".googleapis.com/CampaignDraft\022Dcustomers" +
-      "/{customer_id}/campaignDrafts/{base_camp" +
-      "aign_id}~{draft_id}B\013\n\t_draft_idB\020\n\016_bas" +
-      "e_campaignB\007\n\005_nameB\021\n\017_draft_campaignB\031" +
-      "\n\027_has_experiment_runningB\031\n\027_long_runni" +
-      "ng_operationB\204\002\n&com.google.ads.googlead" +
-      "s.v10.resourcesB\022CampaignDraftProtoP\001ZKg" +
-      "oogle.golang.org/genproto/googleapis/ads" +
-      "/googleads/v10/resources;resources\242\002\003GAA" +
-      "\252\002\"Google.Ads.GoogleAds.V10.Resources\312\002\"" +
-      "Google\\Ads\\GoogleAds\\V10\\Resources\352\002&Goo" +
-      "gle::Ads::GoogleAds::V10::Resourcesb\006pro" +
-      "to3"
+      "enums/campaign_draft_status.proto\032\037googl" +
+      "e/api/field_behavior.proto\032\031google/api/r" +
+      "esource.proto\"\256\005\n\rCampaignDraft\022E\n\rresou" +
+      "rce_name\030\001 \001(\tB.\340A\005\372A(\n&googleads.google" +
+      "apis.com/CampaignDraft\022\032\n\010draft_id\030\t \001(\003" +
+      "B\003\340A\003H\000\210\001\001\022E\n\rbase_campaign\030\n \001(\tB)\340A\005\372A" +
+      "#\n!googleads.googleapis.com/CampaignH\001\210\001" +
+      "\001\022\021\n\004name\030\013 \001(\tH\002\210\001\001\022F\n\016draft_campaign\030\014" +
+      " \001(\tB)\340A\003\372A#\n!googleads.googleapis.com/C" +
+      "ampaignH\003\210\001\001\022`\n\006status\030\006 \001(\0162K.google.ad" +
+      "s.googleads.v10.enums.CampaignDraftStatu" +
+      "sEnum.CampaignDraftStatusB\003\340A\003\022(\n\026has_ex" +
+      "periment_running\030\r \001(\010B\003\340A\003H\004\210\001\001\022(\n\026long" +
+      "_running_operation\030\016 \001(\tB\003\340A\003H\005\210\001\001:q\352An\n" +
+      "&googleads.googleapis.com/CampaignDraft\022" +
+      "Dcustomers/{customer_id}/campaignDrafts/" +
+      "{base_campaign_id}~{draft_id}B\013\n\t_draft_" +
+      "idB\020\n\016_base_campaignB\007\n\005_nameB\021\n\017_draft_" +
+      "campaignB\031\n\027_has_experiment_runningB\031\n\027_" +
+      "long_running_operationB\204\002\n&com.google.ad" +
+      "s.googleads.v10.resourcesB\022CampaignDraft" +
+      "ProtoP\001ZKgoogle.golang.org/genproto/goog" +
+      "leapis/ads/googleads/v10/resources;resou" +
+      "rces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V10.Re" +
+      "sources\312\002\"Google\\Ads\\GoogleAds\\V10\\Resou" +
+      "rces\352\002&Google::Ads::GoogleAds::V10::Reso" +
+      "urcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.enums.CampaignDraftStatusProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -82,7 +80,6 @@ public final class CampaignDraftProto {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.enums.CampaignDraftStatusProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

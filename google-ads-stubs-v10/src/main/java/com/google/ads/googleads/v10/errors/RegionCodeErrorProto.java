@@ -30,21 +30,20 @@ public final class RegionCodeErrorProto {
     java.lang.String[] descriptorData = {
       "\n7google/ads/googleads/v10/errors/region" +
       "_code_error.proto\022\037google.ads.googleads." +
-      "v10.errors\032\034google/api/annotations.proto" +
-      "\"_\n\023RegionCodeErrorEnum\"H\n\017RegionCodeErr" +
-      "or\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\027\n\023INVA" +
-      "LID_REGION_CODE\020\002B\364\001\n#com.google.ads.goo" +
-      "gleads.v10.errorsB\024RegionCodeErrorProtoP" +
-      "\001ZEgoogle.golang.org/genproto/googleapis" +
-      "/ads/googleads/v10/errors;errors\242\002\003GAA\252\002" +
-      "\037Google.Ads.GoogleAds.V10.Errors\312\002\037Googl" +
-      "e\\Ads\\GoogleAds\\V10\\Errors\352\002#Google::Ads" +
-      "::GoogleAds::V10::Errorsb\006proto3"
+      "v10.errors\"_\n\023RegionCodeErrorEnum\"H\n\017Reg" +
+      "ionCodeError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN" +
+      "\020\001\022\027\n\023INVALID_REGION_CODE\020\002B\364\001\n#com.goog" +
+      "le.ads.googleads.v10.errorsB\024RegionCodeE" +
+      "rrorProtoP\001ZEgoogle.golang.org/genproto/" +
+      "googleapis/ads/googleads/v10/errors;erro" +
+      "rs\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V10.Erro" +
+      "rs\312\002\037Google\\Ads\\GoogleAds\\V10\\Errors\352\002#G" +
+      "oogle::Ads::GoogleAds::V10::Errorsb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_RegionCodeErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -52,7 +51,6 @@ public final class RegionCodeErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_RegionCodeErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

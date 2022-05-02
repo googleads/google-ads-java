@@ -30,22 +30,21 @@ public final class KeywordPlanAdGroupErrorProto {
     java.lang.String[] descriptorData = {
       "\nAgoogle/ads/googleads/v10/errors/keywor" +
       "d_plan_ad_group_error.proto\022\037google.ads." +
-      "googleads.v10.errors\032\034google/api/annotat" +
-      "ions.proto\"|\n\033KeywordPlanAdGroupErrorEnu" +
-      "m\"]\n\027KeywordPlanAdGroupError\022\017\n\013UNSPECIF" +
-      "IED\020\000\022\013\n\007UNKNOWN\020\001\022\020\n\014INVALID_NAME\020\002\022\022\n\016" +
-      "DUPLICATE_NAME\020\003B\374\001\n#com.google.ads.goog" +
-      "leads.v10.errorsB\034KeywordPlanAdGroupErro" +
-      "rProtoP\001ZEgoogle.golang.org/genproto/goo" +
-      "gleapis/ads/googleads/v10/errors;errors\242" +
-      "\002\003GAA\252\002\037Google.Ads.GoogleAds.V10.Errors\312" +
-      "\002\037Google\\Ads\\GoogleAds\\V10\\Errors\352\002#Goog" +
-      "le::Ads::GoogleAds::V10::Errorsb\006proto3"
+      "googleads.v10.errors\"|\n\033KeywordPlanAdGro" +
+      "upErrorEnum\"]\n\027KeywordPlanAdGroupError\022\017" +
+      "\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\020\n\014INVALID_" +
+      "NAME\020\002\022\022\n\016DUPLICATE_NAME\020\003B\374\001\n#com.googl" +
+      "e.ads.googleads.v10.errorsB\034KeywordPlanA" +
+      "dGroupErrorProtoP\001ZEgoogle.golang.org/ge" +
+      "nproto/googleapis/ads/googleads/v10/erro" +
+      "rs;errors\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V" +
+      "10.Errors\312\002\037Google\\Ads\\GoogleAds\\V10\\Err" +
+      "ors\352\002#Google::Ads::GoogleAds::V10::Error" +
+      "sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_KeywordPlanAdGroupErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -53,7 +52,6 @@ public final class KeywordPlanAdGroupErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_KeywordPlanAdGroupErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

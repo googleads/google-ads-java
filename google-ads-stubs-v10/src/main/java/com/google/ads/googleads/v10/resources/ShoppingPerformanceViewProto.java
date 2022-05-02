@@ -30,27 +30,25 @@ public final class ShoppingPerformanceViewProto {
     java.lang.String[] descriptorData = {
       "\nBgoogle/ads/googleads/v10/resources/sho" +
       "pping_performance_view.proto\022\"google.ads" +
-      ".googleads.v10.resources\032\034google/api/ann" +
-      "otations.proto\032\037google/api/field_behavio" +
-      "r.proto\032\031google/api/resource.proto\"\322\001\n\027S" +
-      "hoppingPerformanceView\022O\n\rresource_name\030" +
-      "\001 \001(\tB8\340A\003\372A2\n0googleads.googleapis.com/" +
-      "ShoppingPerformanceView:f\352Ac\n0googleads." +
-      "googleapis.com/ShoppingPerformanceView\022/" +
-      "customers/{customer_id}/shoppingPerforma" +
-      "nceViewB\216\002\n&com.google.ads.googleads.v10" +
-      ".resourcesB\034ShoppingPerformanceViewProto" +
-      "P\001ZKgoogle.golang.org/genproto/googleapi" +
-      "s/ads/googleads/v10/resources;resources\242" +
-      "\002\003GAA\252\002\"Google.Ads.GoogleAds.V10.Resourc" +
-      "es\312\002\"Google\\Ads\\GoogleAds\\V10\\Resources\352" +
-      "\002&Google::Ads::GoogleAds::V10::Resources" +
-      "b\006proto3"
+      ".googleads.v10.resources\032\037google/api/fie" +
+      "ld_behavior.proto\032\031google/api/resource.p" +
+      "roto\"\322\001\n\027ShoppingPerformanceView\022O\n\rreso" +
+      "urce_name\030\001 \001(\tB8\340A\003\372A2\n0googleads.googl" +
+      "eapis.com/ShoppingPerformanceView:f\352Ac\n0" +
+      "googleads.googleapis.com/ShoppingPerform" +
+      "anceView\022/customers/{customer_id}/shoppi" +
+      "ngPerformanceViewB\216\002\n&com.google.ads.goo" +
+      "gleads.v10.resourcesB\034ShoppingPerformanc" +
+      "eViewProtoP\001ZKgoogle.golang.org/genproto" +
+      "/googleapis/ads/googleads/v10/resources;" +
+      "resources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V" +
+      "10.Resources\312\002\"Google\\Ads\\GoogleAds\\V10\\" +
+      "Resources\352\002&Google::Ads::GoogleAds::V10:" +
+      ":Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -67,7 +65,6 @@ public final class ShoppingPerformanceViewProto {
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

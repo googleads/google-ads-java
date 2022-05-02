@@ -127,6 +127,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -1685,8 +1687,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (pointListCase_ == 8) {
           bidModifierPointListBuilder_.mergeFrom(value);
+        } else {
+          bidModifierPointListBuilder_.setMessage(value);
         }
-        bidModifierPointListBuilder_.setMessage(value);
       }
       pointListCase_ = 8;
       return this;

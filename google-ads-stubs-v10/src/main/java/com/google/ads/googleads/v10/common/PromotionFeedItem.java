@@ -120,8 +120,8 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 136: {
-            discountTypeCase_ = 17;
             discountType_ = input.readInt64();
+            discountTypeCase_ = 17;
             break;
           }
           case 146: {
@@ -189,6 +189,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -3458,8 +3460,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (discountTypeCase_ == 4) {
           moneyAmountOffBuilder_.mergeFrom(value);
+        } else {
+          moneyAmountOffBuilder_.setMessage(value);
         }
-        moneyAmountOffBuilder_.setMessage(value);
       }
       discountTypeCase_ = 4;
       return this;
@@ -3765,8 +3768,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (promotionTriggerCase_ == 6) {
           ordersOverAmountBuilder_.mergeFrom(value);
+        } else {
+          ordersOverAmountBuilder_.setMessage(value);
         }
-        ordersOverAmountBuilder_.setMessage(value);
       }
       promotionTriggerCase_ = 6;
       return this;

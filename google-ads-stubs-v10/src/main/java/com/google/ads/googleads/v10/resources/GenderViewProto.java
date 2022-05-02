@@ -30,25 +30,24 @@ public final class GenderViewProto {
     java.lang.String[] descriptorData = {
       "\n4google/ads/googleads/v10/resources/gen" +
       "der_view.proto\022\"google.ads.googleads.v10" +
-      ".resources\032\034google/api/annotations.proto" +
-      "\032\037google/api/field_behavior.proto\032\031googl" +
-      "e/api/resource.proto\"\274\001\n\nGenderView\022B\n\rr" +
-      "esource_name\030\001 \001(\tB+\340A\003\372A%\n#googleads.go" +
-      "ogleapis.com/GenderView:j\352Ag\n#googleads." +
-      "googleapis.com/GenderView\022@customers/{cu" +
-      "stomer_id}/genderViews/{ad_group_id}~{cr" +
-      "iterion_id}B\201\002\n&com.google.ads.googleads" +
-      ".v10.resourcesB\017GenderViewProtoP\001ZKgoogl" +
-      "e.golang.org/genproto/googleapis/ads/goo" +
-      "gleads/v10/resources;resources\242\002\003GAA\252\002\"G" +
-      "oogle.Ads.GoogleAds.V10.Resources\312\002\"Goog" +
-      "le\\Ads\\GoogleAds\\V10\\Resources\352\002&Google:" +
-      ":Ads::GoogleAds::V10::Resourcesb\006proto3"
+      ".resources\032\037google/api/field_behavior.pr" +
+      "oto\032\031google/api/resource.proto\"\274\001\n\nGende" +
+      "rView\022B\n\rresource_name\030\001 \001(\tB+\340A\003\372A%\n#go" +
+      "ogleads.googleapis.com/GenderView:j\352Ag\n#" +
+      "googleads.googleapis.com/GenderView\022@cus" +
+      "tomers/{customer_id}/genderViews/{ad_gro" +
+      "up_id}~{criterion_id}B\201\002\n&com.google.ads" +
+      ".googleads.v10.resourcesB\017GenderViewProt" +
+      "oP\001ZKgoogle.golang.org/genproto/googleap" +
+      "is/ads/googleads/v10/resources;resources" +
+      "\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V10.Resour" +
+      "ces\312\002\"Google\\Ads\\GoogleAds\\V10\\Resources" +
+      "\352\002&Google::Ads::GoogleAds::V10::Resource" +
+      "sb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -65,7 +64,6 @@ public final class GenderViewProto {
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

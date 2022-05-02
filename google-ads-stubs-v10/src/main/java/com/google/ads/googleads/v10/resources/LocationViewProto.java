@@ -30,26 +30,24 @@ public final class LocationViewProto {
     java.lang.String[] descriptorData = {
       "\n6google/ads/googleads/v10/resources/loc" +
       "ation_view.proto\022\"google.ads.googleads.v" +
-      "10.resources\032\034google/api/annotations.pro" +
-      "to\032\037google/api/field_behavior.proto\032\031goo" +
-      "gle/api/resource.proto\"\304\001\n\014LocationView\022" +
-      "D\n\rresource_name\030\001 \001(\tB-\340A\003\372A\'\n%googlead" +
-      "s.googleapis.com/LocationView:n\352Ak\n%goog" +
-      "leads.googleapis.com/LocationView\022Bcusto" +
-      "mers/{customer_id}/locationViews/{campai" +
-      "gn_id}~{criterion_id}B\203\002\n&com.google.ads" +
-      ".googleads.v10.resourcesB\021LocationViewPr" +
-      "otoP\001ZKgoogle.golang.org/genproto/google" +
-      "apis/ads/googleads/v10/resources;resourc" +
-      "es\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V10.Reso" +
-      "urces\312\002\"Google\\Ads\\GoogleAds\\V10\\Resourc" +
-      "es\352\002&Google::Ads::GoogleAds::V10::Resour" +
-      "cesb\006proto3"
+      "10.resources\032\037google/api/field_behavior." +
+      "proto\032\031google/api/resource.proto\"\304\001\n\014Loc" +
+      "ationView\022D\n\rresource_name\030\001 \001(\tB-\340A\003\372A\'" +
+      "\n%googleads.googleapis.com/LocationView:" +
+      "n\352Ak\n%googleads.googleapis.com/LocationV" +
+      "iew\022Bcustomers/{customer_id}/locationVie" +
+      "ws/{campaign_id}~{criterion_id}B\203\002\n&com." +
+      "google.ads.googleads.v10.resourcesB\021Loca" +
+      "tionViewProtoP\001ZKgoogle.golang.org/genpr" +
+      "oto/googleapis/ads/googleads/v10/resourc" +
+      "es;resources\242\002\003GAA\252\002\"Google.Ads.GoogleAd" +
+      "s.V10.Resources\312\002\"Google\\Ads\\GoogleAds\\V" +
+      "10\\Resources\352\002&Google::Ads::GoogleAds::V" +
+      "10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -66,7 +64,6 @@ public final class LocationViewProto {
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

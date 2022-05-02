@@ -104,70 +104,70 @@ public final class AudiencesProto {
       "r_type.proto\0326google/ads/googleads/v10/e" +
       "nums/income_range_type.proto\0329google/ads" +
       "/googleads/v10/enums/parental_status_typ" +
-      "e.proto\032\034google/api/annotations.proto\"\246\003" +
-      "\n\021AudienceDimension\022<\n\003age\030\001 \001(\0132-.googl" +
-      "e.ads.googleads.v10.common.AgeDimensionH" +
-      "\000\022B\n\006gender\030\002 \001(\01320.google.ads.googleads" +
-      ".v10.common.GenderDimensionH\000\022U\n\020househo" +
-      "ld_income\030\003 \001(\01329.google.ads.googleads.v" +
-      "10.common.HouseholdIncomeDimensionH\000\022S\n\017" +
-      "parental_status\030\004 \001(\01328.google.ads.googl" +
-      "eads.v10.common.ParentalStatusDimensionH" +
-      "\000\022V\n\021audience_segments\030\005 \001(\01329.google.ad" +
-      "s.googleads.v10.common.AudienceSegmentDi" +
-      "mensionH\000B\013\n\tdimension\"c\n\032AudienceExclus" +
-      "ionDimension\022E\n\nexclusions\030\001 \003(\01321.googl" +
-      "e.ads.googleads.v10.common.ExclusionSegm" +
-      "ent\"d\n\020ExclusionSegment\022E\n\tuser_list\030\001 \001" +
-      "(\01320.google.ads.googleads.v10.common.Use" +
-      "rListSegmentH\000B\t\n\007segment\"\213\001\n\014AgeDimensi" +
-      "on\022?\n\nage_ranges\030\001 \003(\0132+.google.ads.goog" +
-      "leads.v10.common.AgeSegment\022!\n\024include_u" +
-      "ndetermined\030\002 \001(\010H\000\210\001\001B\027\n\025_include_undet" +
-      "ermined\"P\n\nAgeSegment\022\024\n\007min_age\030\001 \001(\005H\000" +
-      "\210\001\001\022\024\n\007max_age\030\002 \001(\005H\001\210\001\001B\n\n\010_min_ageB\n\n" +
-      "\010_max_age\"\231\001\n\017GenderDimension\022J\n\007genders" +
-      "\030\001 \003(\01629.google.ads.googleads.v10.enums." +
-      "GenderTypeEnum.GenderType\022!\n\024include_und" +
-      "etermined\030\002 \001(\010H\000\210\001\001B\027\n\025_include_undeter" +
-      "mined\"\262\001\n\030HouseholdIncomeDimension\022Z\n\rin" +
-      "come_ranges\030\001 \003(\0162C.google.ads.googleads" +
-      ".v10.enums.IncomeRangeTypeEnum.IncomeRan" +
-      "geType\022!\n\024include_undetermined\030\002 \001(\010H\000\210\001" +
-      "\001B\027\n\025_include_undetermined\"\273\001\n\027ParentalS" +
-      "tatusDimension\022d\n\021parental_statuses\030\001 \003(" +
-      "\0162I.google.ads.googleads.v10.enums.Paren" +
-      "talStatusTypeEnum.ParentalStatusType\022!\n\024" +
-      "include_undetermined\030\002 \001(\010H\000\210\001\001B\027\n\025_incl" +
-      "ude_undetermined\"^\n\030AudienceSegmentDimen" +
-      "sion\022B\n\010segments\030\001 \003(\01320.google.ads.goog" +
-      "leads.v10.common.AudienceSegment\"\253\003\n\017Aud" +
-      "ienceSegment\022E\n\tuser_list\030\001 \001(\01320.google" +
-      ".ads.googleads.v10.common.UserListSegmen" +
-      "tH\000\022M\n\ruser_interest\030\002 \001(\01324.google.ads." +
-      "googleads.v10.common.UserInterestSegment" +
-      "H\000\022G\n\nlife_event\030\003 \001(\01321.google.ads.goog" +
-      "leads.v10.common.LifeEventSegmentH\000\022[\n\024d" +
-      "etailed_demographic\030\004 \001(\0132;.google.ads.g" +
-      "oogleads.v10.common.DetailedDemographicS" +
-      "egmentH\000\022Q\n\017custom_audience\030\005 \001(\01326.goog" +
-      "le.ads.googleads.v10.common.CustomAudien" +
-      "ceSegmentH\000B\t\n\007segment\"7\n\017UserListSegmen" +
-      "t\022\026\n\tuser_list\030\001 \001(\tH\000\210\001\001B\014\n\n_user_list\"" +
-      "U\n\023UserInterestSegment\022#\n\026user_interest_" +
-      "category\030\001 \001(\tH\000\210\001\001B\031\n\027_user_interest_ca" +
-      "tegory\":\n\020LifeEventSegment\022\027\n\nlife_event" +
-      "\030\001 \001(\tH\000\210\001\001B\r\n\013_life_event\"X\n\032DetailedDe" +
-      "mographicSegment\022!\n\024detailed_demographic" +
-      "\030\001 \001(\tH\000\210\001\001B\027\n\025_detailed_demographic\"I\n\025" +
-      "CustomAudienceSegment\022\034\n\017custom_audience" +
-      "\030\001 \001(\tH\000\210\001\001B\022\n\020_custom_audienceB\356\001\n#com." +
-      "google.ads.googleads.v10.commonB\016Audienc" +
-      "esProtoP\001ZEgoogle.golang.org/genproto/go" +
-      "ogleapis/ads/googleads/v10/common;common" +
-      "\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V10.Common" +
-      "\312\002\037Google\\Ads\\GoogleAds\\V10\\Common\352\002#Goo" +
-      "gle::Ads::GoogleAds::V10::Commonb\006proto3"
+      "e.proto\"\246\003\n\021AudienceDimension\022<\n\003age\030\001 \001" +
+      "(\0132-.google.ads.googleads.v10.common.Age" +
+      "DimensionH\000\022B\n\006gender\030\002 \001(\01320.google.ads" +
+      ".googleads.v10.common.GenderDimensionH\000\022" +
+      "U\n\020household_income\030\003 \001(\01329.google.ads.g" +
+      "oogleads.v10.common.HouseholdIncomeDimen" +
+      "sionH\000\022S\n\017parental_status\030\004 \001(\01328.google" +
+      ".ads.googleads.v10.common.ParentalStatus" +
+      "DimensionH\000\022V\n\021audience_segments\030\005 \001(\01329" +
+      ".google.ads.googleads.v10.common.Audienc" +
+      "eSegmentDimensionH\000B\013\n\tdimension\"c\n\032Audi" +
+      "enceExclusionDimension\022E\n\nexclusions\030\001 \003" +
+      "(\01321.google.ads.googleads.v10.common.Exc" +
+      "lusionSegment\"d\n\020ExclusionSegment\022E\n\tuse" +
+      "r_list\030\001 \001(\01320.google.ads.googleads.v10." +
+      "common.UserListSegmentH\000B\t\n\007segment\"\213\001\n\014" +
+      "AgeDimension\022?\n\nage_ranges\030\001 \003(\0132+.googl" +
+      "e.ads.googleads.v10.common.AgeSegment\022!\n" +
+      "\024include_undetermined\030\002 \001(\010H\000\210\001\001B\027\n\025_inc" +
+      "lude_undetermined\"P\n\nAgeSegment\022\024\n\007min_a" +
+      "ge\030\001 \001(\005H\000\210\001\001\022\024\n\007max_age\030\002 \001(\005H\001\210\001\001B\n\n\010_" +
+      "min_ageB\n\n\010_max_age\"\231\001\n\017GenderDimension\022" +
+      "J\n\007genders\030\001 \003(\01629.google.ads.googleads." +
+      "v10.enums.GenderTypeEnum.GenderType\022!\n\024i" +
+      "nclude_undetermined\030\002 \001(\010H\000\210\001\001B\027\n\025_inclu" +
+      "de_undetermined\"\262\001\n\030HouseholdIncomeDimen" +
+      "sion\022Z\n\rincome_ranges\030\001 \003(\0162C.google.ads" +
+      ".googleads.v10.enums.IncomeRangeTypeEnum" +
+      ".IncomeRangeType\022!\n\024include_undetermined" +
+      "\030\002 \001(\010H\000\210\001\001B\027\n\025_include_undetermined\"\273\001\n" +
+      "\027ParentalStatusDimension\022d\n\021parental_sta" +
+      "tuses\030\001 \003(\0162I.google.ads.googleads.v10.e" +
+      "nums.ParentalStatusTypeEnum.ParentalStat" +
+      "usType\022!\n\024include_undetermined\030\002 \001(\010H\000\210\001" +
+      "\001B\027\n\025_include_undetermined\"^\n\030AudienceSe" +
+      "gmentDimension\022B\n\010segments\030\001 \003(\01320.googl" +
+      "e.ads.googleads.v10.common.AudienceSegme" +
+      "nt\"\253\003\n\017AudienceSegment\022E\n\tuser_list\030\001 \001(" +
+      "\01320.google.ads.googleads.v10.common.User" +
+      "ListSegmentH\000\022M\n\ruser_interest\030\002 \001(\01324.g" +
+      "oogle.ads.googleads.v10.common.UserInter" +
+      "estSegmentH\000\022G\n\nlife_event\030\003 \001(\01321.googl" +
+      "e.ads.googleads.v10.common.LifeEventSegm" +
+      "entH\000\022[\n\024detailed_demographic\030\004 \001(\0132;.go" +
+      "ogle.ads.googleads.v10.common.DetailedDe" +
+      "mographicSegmentH\000\022Q\n\017custom_audience\030\005 " +
+      "\001(\01326.google.ads.googleads.v10.common.Cu" +
+      "stomAudienceSegmentH\000B\t\n\007segment\"7\n\017User" +
+      "ListSegment\022\026\n\tuser_list\030\001 \001(\tH\000\210\001\001B\014\n\n_" +
+      "user_list\"U\n\023UserInterestSegment\022#\n\026user" +
+      "_interest_category\030\001 \001(\tH\000\210\001\001B\031\n\027_user_i" +
+      "nterest_category\":\n\020LifeEventSegment\022\027\n\n" +
+      "life_event\030\001 \001(\tH\000\210\001\001B\r\n\013_life_event\"X\n\032" +
+      "DetailedDemographicSegment\022!\n\024detailed_d" +
+      "emographic\030\001 \001(\tH\000\210\001\001B\027\n\025_detailed_demog" +
+      "raphic\"I\n\025CustomAudienceSegment\022\034\n\017custo" +
+      "m_audience\030\001 \001(\tH\000\210\001\001B\022\n\020_custom_audienc" +
+      "eB\356\001\n#com.google.ads.googleads.v10.commo" +
+      "nB\016AudiencesProtoP\001ZEgoogle.golang.org/g" +
+      "enproto/googleapis/ads/googleads/v10/com" +
+      "mon;common\242\002\003GAA\252\002\037Google.Ads.GoogleAds." +
+      "V10.Common\312\002\037Google\\Ads\\GoogleAds\\V10\\Co" +
+      "mmon\352\002#Google::Ads::GoogleAds::V10::Comm" +
+      "onb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -175,7 +175,6 @@ public final class AudiencesProto {
           com.google.ads.googleads.v10.enums.GenderTypeProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.IncomeRangeTypeProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.ParentalStatusTypeProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_common_AudienceDimension_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -270,7 +269,6 @@ public final class AudiencesProto {
     com.google.ads.googleads.v10.enums.GenderTypeProto.getDescriptor();
     com.google.ads.googleads.v10.enums.IncomeRangeTypeProto.getDescriptor();
     com.google.ads.googleads.v10.enums.ParentalStatusTypeProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

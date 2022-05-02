@@ -30,22 +30,20 @@ public final class CustomerErrorProto {
     java.lang.String[] descriptorData = {
       "\n4google/ads/googleads/v10/errors/custom" +
       "er_error.proto\022\037google.ads.googleads.v10" +
-      ".errors\032\034google/api/annotations.proto\"x\n" +
-      "\021CustomerErrorEnum\"c\n\rCustomerError\022\017\n\013U" +
-      "NSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\034\n\030STATUS_CHAN" +
-      "GE_DISALLOWED\020\002\022\026\n\022ACCOUNT_NOT_SET_UP\020\003B" +
-      "\362\001\n#com.google.ads.googleads.v10.errorsB" +
-      "\022CustomerErrorProtoP\001ZEgoogle.golang.org" +
-      "/genproto/googleapis/ads/googleads/v10/e" +
-      "rrors;errors\242\002\003GAA\252\002\037Google.Ads.GoogleAd" +
-      "s.V10.Errors\312\002\037Google\\Ads\\GoogleAds\\V10\\" +
-      "Errors\352\002#Google::Ads::GoogleAds::V10::Er" +
-      "rorsb\006proto3"
+      ".errors\"x\n\021CustomerErrorEnum\"c\n\rCustomer" +
+      "Error\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\034\n\030S" +
+      "TATUS_CHANGE_DISALLOWED\020\002\022\026\n\022ACCOUNT_NOT" +
+      "_SET_UP\020\003B\362\001\n#com.google.ads.googleads.v" +
+      "10.errorsB\022CustomerErrorProtoP\001ZEgoogle." +
+      "golang.org/genproto/googleapis/ads/googl" +
+      "eads/v10/errors;errors\242\002\003GAA\252\002\037Google.Ad" +
+      "s.GoogleAds.V10.Errors\312\002\037Google\\Ads\\Goog" +
+      "leAds\\V10\\Errors\352\002#Google::Ads::GoogleAd" +
+      "s::V10::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_CustomerErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -53,7 +51,6 @@ public final class CustomerErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_CustomerErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

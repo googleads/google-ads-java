@@ -30,35 +30,33 @@ public final class ReachPlanAgeRangeProto {
     java.lang.String[] descriptorData = {
       "\n9google/ads/googleads/v10/enums/reach_p" +
       "lan_age_range.proto\022\036google.ads.googlead" +
-      "s.v10.enums\032\034google/api/annotations.prot" +
-      "o\"\213\005\n\025ReachPlanAgeRangeEnum\"\361\004\n\021ReachPla" +
-      "nAgeRange\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022" +
-      "\025\n\017AGE_RANGE_18_24\020\331\331\036\022\023\n\017AGE_RANGE_18_3" +
-      "4\020\002\022\023\n\017AGE_RANGE_18_44\020\003\022\023\n\017AGE_RANGE_18" +
-      "_49\020\004\022\023\n\017AGE_RANGE_18_54\020\005\022\023\n\017AGE_RANGE_" +
-      "18_64\020\006\022\026\n\022AGE_RANGE_18_65_UP\020\007\022\023\n\017AGE_R" +
-      "ANGE_21_34\020\010\022\025\n\017AGE_RANGE_25_34\020\332\331\036\022\023\n\017A" +
-      "GE_RANGE_25_44\020\t\022\023\n\017AGE_RANGE_25_49\020\n\022\023\n" +
-      "\017AGE_RANGE_25_54\020\013\022\023\n\017AGE_RANGE_25_64\020\014\022" +
-      "\026\n\022AGE_RANGE_25_65_UP\020\r\022\025\n\017AGE_RANGE_35_" +
-      "44\020\333\331\036\022\023\n\017AGE_RANGE_35_49\020\016\022\023\n\017AGE_RANGE" +
-      "_35_54\020\017\022\023\n\017AGE_RANGE_35_64\020\020\022\026\n\022AGE_RAN" +
-      "GE_35_65_UP\020\021\022\025\n\017AGE_RANGE_45_54\020\334\331\036\022\023\n\017" +
-      "AGE_RANGE_45_64\020\022\022\026\n\022AGE_RANGE_45_65_UP\020" +
-      "\023\022\026\n\022AGE_RANGE_50_65_UP\020\024\022\025\n\017AGE_RANGE_5" +
-      "5_64\020\335\331\036\022\026\n\022AGE_RANGE_55_65_UP\020\025\022\025\n\017AGE_" +
-      "RANGE_65_UP\020\336\331\036B\360\001\n\"com.google.ads.googl" +
-      "eads.v10.enumsB\026ReachPlanAgeRangeProtoP\001" +
-      "ZCgoogle.golang.org/genproto/googleapis/" +
-      "ads/googleads/v10/enums;enums\242\002\003GAA\252\002\036Go" +
-      "ogle.Ads.GoogleAds.V10.Enums\312\002\036Google\\Ad" +
-      "s\\GoogleAds\\V10\\Enums\352\002\"Google::Ads::Goo" +
-      "gleAds::V10::Enumsb\006proto3"
+      "s.v10.enums\"\213\005\n\025ReachPlanAgeRangeEnum\"\361\004" +
+      "\n\021ReachPlanAgeRange\022\017\n\013UNSPECIFIED\020\000\022\013\n\007" +
+      "UNKNOWN\020\001\022\025\n\017AGE_RANGE_18_24\020\331\331\036\022\023\n\017AGE_" +
+      "RANGE_18_34\020\002\022\023\n\017AGE_RANGE_18_44\020\003\022\023\n\017AG" +
+      "E_RANGE_18_49\020\004\022\023\n\017AGE_RANGE_18_54\020\005\022\023\n\017" +
+      "AGE_RANGE_18_64\020\006\022\026\n\022AGE_RANGE_18_65_UP\020" +
+      "\007\022\023\n\017AGE_RANGE_21_34\020\010\022\025\n\017AGE_RANGE_25_3" +
+      "4\020\332\331\036\022\023\n\017AGE_RANGE_25_44\020\t\022\023\n\017AGE_RANGE_" +
+      "25_49\020\n\022\023\n\017AGE_RANGE_25_54\020\013\022\023\n\017AGE_RANG" +
+      "E_25_64\020\014\022\026\n\022AGE_RANGE_25_65_UP\020\r\022\025\n\017AGE" +
+      "_RANGE_35_44\020\333\331\036\022\023\n\017AGE_RANGE_35_49\020\016\022\023\n" +
+      "\017AGE_RANGE_35_54\020\017\022\023\n\017AGE_RANGE_35_64\020\020\022" +
+      "\026\n\022AGE_RANGE_35_65_UP\020\021\022\025\n\017AGE_RANGE_45_" +
+      "54\020\334\331\036\022\023\n\017AGE_RANGE_45_64\020\022\022\026\n\022AGE_RANGE" +
+      "_45_65_UP\020\023\022\026\n\022AGE_RANGE_50_65_UP\020\024\022\025\n\017A" +
+      "GE_RANGE_55_64\020\335\331\036\022\026\n\022AGE_RANGE_55_65_UP" +
+      "\020\025\022\025\n\017AGE_RANGE_65_UP\020\336\331\036B\360\001\n\"com.google" +
+      ".ads.googleads.v10.enumsB\026ReachPlanAgeRa" +
+      "ngeProtoP\001ZCgoogle.golang.org/genproto/g" +
+      "oogleapis/ads/googleads/v10/enums;enums\242" +
+      "\002\003GAA\252\002\036Google.Ads.GoogleAds.V10.Enums\312\002" +
+      "\036Google\\Ads\\GoogleAds\\V10\\Enums\352\002\"Google" +
+      "::Ads::GoogleAds::V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_ReachPlanAgeRangeEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -66,7 +64,6 @@ public final class ReachPlanAgeRangeProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_ReachPlanAgeRangeEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

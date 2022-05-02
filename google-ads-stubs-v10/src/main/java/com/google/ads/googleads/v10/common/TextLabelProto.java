@@ -30,21 +30,19 @@ public final class TextLabelProto {
     java.lang.String[] descriptorData = {
       "\n0google/ads/googleads/v10/common/text_l" +
       "abel.proto\022\037google.ads.googleads.v10.com" +
-      "mon\032\034google/api/annotations.proto\"i\n\tTex" +
-      "tLabel\022\035\n\020background_color\030\003 \001(\tH\000\210\001\001\022\030\n" +
-      "\013description\030\004 \001(\tH\001\210\001\001B\023\n\021_background_c" +
-      "olorB\016\n\014_descriptionB\356\001\n#com.google.ads." +
-      "googleads.v10.commonB\016TextLabelProtoP\001ZE" +
-      "google.golang.org/genproto/googleapis/ad" +
-      "s/googleads/v10/common;common\242\002\003GAA\252\002\037Go" +
-      "ogle.Ads.GoogleAds.V10.Common\312\002\037Google\\A" +
-      "ds\\GoogleAds\\V10\\Common\352\002#Google::Ads::G" +
-      "oogleAds::V10::Commonb\006proto3"
+      "mon\"i\n\tTextLabel\022\035\n\020background_color\030\003 \001" +
+      "(\tH\000\210\001\001\022\030\n\013description\030\004 \001(\tH\001\210\001\001B\023\n\021_ba" +
+      "ckground_colorB\016\n\014_descriptionB\356\001\n#com.g" +
+      "oogle.ads.googleads.v10.commonB\016TextLabe" +
+      "lProtoP\001ZEgoogle.golang.org/genproto/goo" +
+      "gleapis/ads/googleads/v10/common;common\242" +
+      "\002\003GAA\252\002\037Google.Ads.GoogleAds.V10.Common\312" +
+      "\002\037Google\\Ads\\GoogleAds\\V10\\Common\352\002#Goog" +
+      "le::Ads::GoogleAds::V10::Commonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_common_TextLabel_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -52,7 +50,6 @@ public final class TextLabelProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_common_TextLabel_descriptor,
         new java.lang.String[] { "BackgroundColor", "Description", "BackgroundColor", "Description", });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

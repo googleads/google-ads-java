@@ -30,28 +30,31 @@ public final class AssetGroupProductGroupViewProto {
     java.lang.String[] descriptorData = {
       "\nGgoogle/ads/googleads/v10/resources/ass" +
       "et_group_product_group_view.proto\022\"googl" +
-      "e.ads.googleads.v10.resources\032\034google/ap" +
-      "i/annotations.proto\032\037google/api/field_be" +
-      "havior.proto\032\031google/api/resource.proto\"" +
-      "\214\002\n\032AssetGroupProductGroupView\022R\n\rresour" +
-      "ce_name\030\001 \001(\tB;\340A\003\372A5\n3googleads.googlea" +
-      "pis.com/AssetGroupProductGroupView:\231\001\352A\225" +
-      "\001\n3googleads.googleapis.com/AssetGroupPr" +
-      "oductGroupView\022^customers/{customer_id}/" +
-      "assetGroupProductGroupViews/{asset_group" +
-      "_id}~{listing_group_filter_id}B\221\002\n&com.g" +
-      "oogle.ads.googleads.v10.resourcesB\037Asset" +
-      "GroupProductGroupViewProtoP\001ZKgoogle.gol" +
-      "ang.org/genproto/googleapis/ads/googlead" +
-      "s/v10/resources;resources\242\002\003GAA\252\002\"Google" +
-      ".Ads.GoogleAds.V10.Resources\312\002\"Google\\Ad" +
-      "s\\GoogleAds\\V10\\Resources\352\002&Google::Ads:" +
-      ":GoogleAds::V10::Resourcesb\006proto3"
+      "e.ads.googleads.v10.resources\032\037google/ap" +
+      "i/field_behavior.proto\032\031google/api/resou" +
+      "rce.proto\"\267\003\n\032AssetGroupProductGroupView" +
+      "\022R\n\rresource_name\030\001 \001(\tB;\340A\003\372A5\n3googlea" +
+      "ds.googleapis.com/AssetGroupProductGroup" +
+      "View\022@\n\013asset_group\030\002 \001(\tB+\340A\003\372A%\n#googl" +
+      "eads.googleapis.com/AssetGroup\022g\n asset_" +
+      "group_listing_group_filter\030\004 \001(\tB=\340A\003\372A7" +
+      "\n5googleads.googleapis.com/AssetGroupLis" +
+      "tingGroupFilter:\231\001\352A\225\001\n3googleads.google" +
+      "apis.com/AssetGroupProductGroupView\022^cus" +
+      "tomers/{customer_id}/assetGroupProductGr" +
+      "oupViews/{asset_group_id}~{listing_group" +
+      "_filter_id}B\221\002\n&com.google.ads.googleads" +
+      ".v10.resourcesB\037AssetGroupProductGroupVi" +
+      "ewProtoP\001ZKgoogle.golang.org/genproto/go" +
+      "ogleapis/ads/googleads/v10/resources;res" +
+      "ources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V10." +
+      "Resources\312\002\"Google\\Ads\\GoogleAds\\V10\\Res" +
+      "ources\352\002&Google::Ads::GoogleAds::V10::Re" +
+      "sourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -60,7 +63,7 @@ public final class AssetGroupProductGroupViewProto {
     internal_static_google_ads_googleads_v10_resources_AssetGroupProductGroupView_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_resources_AssetGroupProductGroupView_descriptor,
-        new java.lang.String[] { "ResourceName", });
+        new java.lang.String[] { "ResourceName", "AssetGroup", "AssetGroupListingGroupFilter", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
@@ -68,7 +71,6 @@ public final class AssetGroupProductGroupViewProto {
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

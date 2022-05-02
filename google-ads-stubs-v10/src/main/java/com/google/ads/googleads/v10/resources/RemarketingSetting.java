@@ -71,6 +71,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -97,7 +99,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object googleGlobalSiteTag_;
   /**
    * <pre>
-   * Output only. The Google global site tag.
+   * Output only. The Google tag.
    * </pre>
    *
    * <code>optional string google_global_site_tag = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -109,7 +111,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The Google global site tag.
+   * Output only. The Google tag.
    * </pre>
    *
    * <code>optional string google_global_site_tag = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -130,7 +132,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The Google global site tag.
+   * Output only. The Google tag.
    * </pre>
    *
    * <code>optional string google_global_site_tag = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -473,7 +475,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object googleGlobalSiteTag_ = "";
     /**
      * <pre>
-     * Output only. The Google global site tag.
+     * Output only. The Google tag.
      * </pre>
      *
      * <code>optional string google_global_site_tag = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -484,7 +486,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The Google global site tag.
+     * Output only. The Google tag.
      * </pre>
      *
      * <code>optional string google_global_site_tag = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -504,7 +506,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The Google global site tag.
+     * Output only. The Google tag.
      * </pre>
      *
      * <code>optional string google_global_site_tag = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -525,7 +527,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The Google global site tag.
+     * Output only. The Google tag.
      * </pre>
      *
      * <code>optional string google_global_site_tag = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -544,7 +546,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The Google global site tag.
+     * Output only. The Google tag.
      * </pre>
      *
      * <code>optional string google_global_site_tag = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -558,7 +560,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The Google global site tag.
+     * Output only. The Google tag.
      * </pre>
      *
      * <code>optional string google_global_site_tag = 2 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

@@ -30,32 +30,30 @@ public final class KeywordPlanAdGroupProto {
     java.lang.String[] descriptorData = {
       "\n>google/ads/googleads/v10/resources/key" +
       "word_plan_ad_group.proto\022\"google.ads.goo" +
-      "gleads.v10.resources\032\034google/api/annotat" +
-      "ions.proto\032\037google/api/field_behavior.pr" +
-      "oto\032\031google/api/resource.proto\"\264\003\n\022Keywo" +
-      "rdPlanAdGroup\022J\n\rresource_name\030\001 \001(\tB3\340A" +
-      "\005\372A-\n+googleads.googleapis.com/KeywordPl" +
-      "anAdGroup\022U\n\025keyword_plan_campaign\030\006 \001(\t" +
-      "B1\372A.\n,googleads.googleapis.com/KeywordP" +
-      "lanCampaignH\000\210\001\001\022\024\n\002id\030\007 \001(\003B\003\340A\003H\001\210\001\001\022\021" +
-      "\n\004name\030\010 \001(\tH\002\210\001\001\022\033\n\016cpc_bid_micros\030\t \001(" +
-      "\003H\003\210\001\001:x\352Au\n+googleads.googleapis.com/Ke" +
-      "ywordPlanAdGroup\022Fcustomers/{customer_id" +
-      "}/keywordPlanAdGroups/{keyword_plan_ad_g" +
-      "roup_id}B\030\n\026_keyword_plan_campaignB\005\n\003_i" +
-      "dB\007\n\005_nameB\021\n\017_cpc_bid_microsB\211\002\n&com.go" +
-      "ogle.ads.googleads.v10.resourcesB\027Keywor" +
-      "dPlanAdGroupProtoP\001ZKgoogle.golang.org/g" +
-      "enproto/googleapis/ads/googleads/v10/res" +
-      "ources;resources\242\002\003GAA\252\002\"Google.Ads.Goog" +
-      "leAds.V10.Resources\312\002\"Google\\Ads\\GoogleA" +
-      "ds\\V10\\Resources\352\002&Google::Ads::GoogleAd" +
-      "s::V10::Resourcesb\006proto3"
+      "gleads.v10.resources\032\037google/api/field_b" +
+      "ehavior.proto\032\031google/api/resource.proto" +
+      "\"\264\003\n\022KeywordPlanAdGroup\022J\n\rresource_name" +
+      "\030\001 \001(\tB3\340A\005\372A-\n+googleads.googleapis.com" +
+      "/KeywordPlanAdGroup\022U\n\025keyword_plan_camp" +
+      "aign\030\006 \001(\tB1\372A.\n,googleads.googleapis.co" +
+      "m/KeywordPlanCampaignH\000\210\001\001\022\024\n\002id\030\007 \001(\003B\003" +
+      "\340A\003H\001\210\001\001\022\021\n\004name\030\010 \001(\tH\002\210\001\001\022\033\n\016cpc_bid_m" +
+      "icros\030\t \001(\003H\003\210\001\001:x\352Au\n+googleads.googlea" +
+      "pis.com/KeywordPlanAdGroup\022Fcustomers/{c" +
+      "ustomer_id}/keywordPlanAdGroups/{keyword" +
+      "_plan_ad_group_id}B\030\n\026_keyword_plan_camp" +
+      "aignB\005\n\003_idB\007\n\005_nameB\021\n\017_cpc_bid_microsB" +
+      "\211\002\n&com.google.ads.googleads.v10.resourc" +
+      "esB\027KeywordPlanAdGroupProtoP\001ZKgoogle.go" +
+      "lang.org/genproto/googleapis/ads/googlea" +
+      "ds/v10/resources;resources\242\002\003GAA\252\002\"Googl" +
+      "e.Ads.GoogleAds.V10.Resources\312\002\"Google\\A" +
+      "ds\\GoogleAds\\V10\\Resources\352\002&Google::Ads" +
+      "::GoogleAds::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -72,7 +70,6 @@ public final class KeywordPlanAdGroupProto {
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

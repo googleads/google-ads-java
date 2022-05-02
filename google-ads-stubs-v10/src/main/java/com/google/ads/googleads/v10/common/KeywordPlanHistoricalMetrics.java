@@ -93,6 +93,11 @@ private static final long serialVersionUID = 0L;
             highTopOfPageBidMicros_ = input.readInt64();
             break;
           }
+          case 88: {
+            bitField0_ |= 0x00000010;
+            averageCpcMicros_ = input.readInt64();
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -104,6 +109,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -334,6 +341,33 @@ private static final long serialVersionUID = 0L;
     return highTopOfPageBidMicros_;
   }
 
+  public static final int AVERAGE_CPC_MICROS_FIELD_NUMBER = 11;
+  private long averageCpcMicros_;
+  /**
+   * <pre>
+   * Average Cost Per Click in micros for the keyword.
+   * </pre>
+   *
+   * <code>optional int64 average_cpc_micros = 11;</code>
+   * @return Whether the averageCpcMicros field is set.
+   */
+  @java.lang.Override
+  public boolean hasAverageCpcMicros() {
+    return ((bitField0_ & 0x00000010) != 0);
+  }
+  /**
+   * <pre>
+   * Average Cost Per Click in micros for the keyword.
+   * </pre>
+   *
+   * <code>optional int64 average_cpc_micros = 11;</code>
+   * @return The averageCpcMicros.
+   */
+  @java.lang.Override
+  public long getAverageCpcMicros() {
+    return averageCpcMicros_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -365,6 +399,9 @@ private static final long serialVersionUID = 0L;
     }
     if (((bitField0_ & 0x00000008) != 0)) {
       output.writeInt64(10, highTopOfPageBidMicros_);
+    }
+    if (((bitField0_ & 0x00000010) != 0)) {
+      output.writeInt64(11, averageCpcMicros_);
     }
     unknownFields.writeTo(output);
   }
@@ -398,6 +435,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000008) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(10, highTopOfPageBidMicros_);
+    }
+    if (((bitField0_ & 0x00000010) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(11, averageCpcMicros_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -437,6 +478,11 @@ private static final long serialVersionUID = 0L;
       if (getHighTopOfPageBidMicros()
           != other.getHighTopOfPageBidMicros()) return false;
     }
+    if (hasAverageCpcMicros() != other.hasAverageCpcMicros()) return false;
+    if (hasAverageCpcMicros()) {
+      if (getAverageCpcMicros()
+          != other.getAverageCpcMicros()) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -473,6 +519,11 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + HIGH_TOP_OF_PAGE_BID_MICROS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getHighTopOfPageBidMicros());
+    }
+    if (hasAverageCpcMicros()) {
+      hash = (37 * hash) + AVERAGE_CPC_MICROS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getAverageCpcMicros());
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -631,6 +682,8 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000008);
       highTopOfPageBidMicros_ = 0L;
       bitField0_ = (bitField0_ & ~0x00000010);
+      averageCpcMicros_ = 0L;
+      bitField0_ = (bitField0_ & ~0x00000020);
       return this;
     }
 
@@ -684,6 +737,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.highTopOfPageBidMicros_ = highTopOfPageBidMicros_;
         to_bitField0_ |= 0x00000008;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.averageCpcMicros_ = averageCpcMicros_;
+        to_bitField0_ |= 0x00000010;
       }
       result.bitField0_ = to_bitField0_;
       onBuilt();
@@ -774,6 +831,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasHighTopOfPageBidMicros()) {
         setHighTopOfPageBidMicros(other.getHighTopOfPageBidMicros());
+      }
+      if (other.hasAverageCpcMicros()) {
+        setAverageCpcMicros(other.getAverageCpcMicros());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1427,6 +1487,61 @@ private static final long serialVersionUID = 0L;
     public Builder clearHighTopOfPageBidMicros() {
       bitField0_ = (bitField0_ & ~0x00000010);
       highTopOfPageBidMicros_ = 0L;
+      onChanged();
+      return this;
+    }
+
+    private long averageCpcMicros_ ;
+    /**
+     * <pre>
+     * Average Cost Per Click in micros for the keyword.
+     * </pre>
+     *
+     * <code>optional int64 average_cpc_micros = 11;</code>
+     * @return Whether the averageCpcMicros field is set.
+     */
+    @java.lang.Override
+    public boolean hasAverageCpcMicros() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * Average Cost Per Click in micros for the keyword.
+     * </pre>
+     *
+     * <code>optional int64 average_cpc_micros = 11;</code>
+     * @return The averageCpcMicros.
+     */
+    @java.lang.Override
+    public long getAverageCpcMicros() {
+      return averageCpcMicros_;
+    }
+    /**
+     * <pre>
+     * Average Cost Per Click in micros for the keyword.
+     * </pre>
+     *
+     * <code>optional int64 average_cpc_micros = 11;</code>
+     * @param value The averageCpcMicros to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAverageCpcMicros(long value) {
+      bitField0_ |= 0x00000020;
+      averageCpcMicros_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Average Cost Per Click in micros for the keyword.
+     * </pre>
+     *
+     * <code>optional int64 average_cpc_micros = 11;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAverageCpcMicros() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      averageCpcMicros_ = 0L;
       onChanged();
       return this;
     }

@@ -30,38 +30,36 @@ public final class DomainCategoryProto {
     java.lang.String[] descriptorData = {
       "\n8google/ads/googleads/v10/resources/dom" +
       "ain_category.proto\022\"google.ads.googleads" +
-      ".v10.resources\032\034google/api/annotations.p" +
-      "roto\032\037google/api/field_behavior.proto\032\031g" +
-      "oogle/api/resource.proto\"\236\005\n\016DomainCateg" +
-      "ory\022F\n\rresource_name\030\001 \001(\tB/\340A\003\372A)\n\'goog" +
-      "leads.googleapis.com/DomainCategory\022@\n\010c" +
-      "ampaign\030\n \001(\tB)\340A\003\372A#\n!googleads.googlea" +
-      "pis.com/CampaignH\000\210\001\001\022\032\n\010category\030\013 \001(\tB" +
-      "\003\340A\003H\001\210\001\001\022\037\n\rlanguage_code\030\014 \001(\tB\003\340A\003H\002\210" +
-      "\001\001\022\030\n\006domain\030\r \001(\tB\003\340A\003H\003\210\001\001\022#\n\021coverage" +
-      "_fraction\030\016 \001(\001B\003\340A\003H\004\210\001\001\022\037\n\rcategory_ra" +
-      "nk\030\017 \001(\003B\003\340A\003H\005\210\001\001\022\036\n\014has_children\030\020 \001(\010" +
-      "B\003\340A\003H\006\210\001\001\022,\n\032recommended_cpc_bid_micros" +
-      "\030\021 \001(\003B\003\340A\003H\007\210\001\001:\207\001\352A\203\001\n\'googleads.googl" +
-      "eapis.com/DomainCategory\022Xcustomers/{cus" +
-      "tomer_id}/domainCategories/{campaign_id}" +
-      "~{base64_category}~{language_code}B\013\n\t_c" +
-      "ampaignB\013\n\t_categoryB\020\n\016_language_codeB\t" +
-      "\n\007_domainB\024\n\022_coverage_fractionB\020\n\016_cate" +
-      "gory_rankB\017\n\r_has_childrenB\035\n\033_recommend" +
-      "ed_cpc_bid_microsB\205\002\n&com.google.ads.goo" +
-      "gleads.v10.resourcesB\023DomainCategoryProt" +
-      "oP\001ZKgoogle.golang.org/genproto/googleap" +
-      "is/ads/googleads/v10/resources;resources" +
-      "\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V10.Resour" +
-      "ces\312\002\"Google\\Ads\\GoogleAds\\V10\\Resources" +
-      "\352\002&Google::Ads::GoogleAds::V10::Resource" +
-      "sb\006proto3"
+      ".v10.resources\032\037google/api/field_behavio" +
+      "r.proto\032\031google/api/resource.proto\"\236\005\n\016D" +
+      "omainCategory\022F\n\rresource_name\030\001 \001(\tB/\340A" +
+      "\003\372A)\n\'googleads.googleapis.com/DomainCat" +
+      "egory\022@\n\010campaign\030\n \001(\tB)\340A\003\372A#\n!googlea" +
+      "ds.googleapis.com/CampaignH\000\210\001\001\022\032\n\010categ" +
+      "ory\030\013 \001(\tB\003\340A\003H\001\210\001\001\022\037\n\rlanguage_code\030\014 \001" +
+      "(\tB\003\340A\003H\002\210\001\001\022\030\n\006domain\030\r \001(\tB\003\340A\003H\003\210\001\001\022#" +
+      "\n\021coverage_fraction\030\016 \001(\001B\003\340A\003H\004\210\001\001\022\037\n\rc" +
+      "ategory_rank\030\017 \001(\003B\003\340A\003H\005\210\001\001\022\036\n\014has_chil" +
+      "dren\030\020 \001(\010B\003\340A\003H\006\210\001\001\022,\n\032recommended_cpc_" +
+      "bid_micros\030\021 \001(\003B\003\340A\003H\007\210\001\001:\207\001\352A\203\001\n\'googl" +
+      "eads.googleapis.com/DomainCategory\022Xcust" +
+      "omers/{customer_id}/domainCategories/{ca" +
+      "mpaign_id}~{base64_category}~{language_c" +
+      "ode}B\013\n\t_campaignB\013\n\t_categoryB\020\n\016_langu" +
+      "age_codeB\t\n\007_domainB\024\n\022_coverage_fractio" +
+      "nB\020\n\016_category_rankB\017\n\r_has_childrenB\035\n\033" +
+      "_recommended_cpc_bid_microsB\205\002\n&com.goog" +
+      "le.ads.googleads.v10.resourcesB\023DomainCa" +
+      "tegoryProtoP\001ZKgoogle.golang.org/genprot" +
+      "o/googleapis/ads/googleads/v10/resources" +
+      ";resources\242\002\003GAA\252\002\"Google.Ads.GoogleAds." +
+      "V10.Resources\312\002\"Google\\Ads\\GoogleAds\\V10" +
+      "\\Resources\352\002&Google::Ads::GoogleAds::V10" +
+      "::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -78,7 +76,6 @@ public final class DomainCategoryProto {
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

@@ -30,28 +30,26 @@ public final class ContentLabelTypeProto {
     java.lang.String[] descriptorData = {
       "\n7google/ads/googleads/v10/enums/content" +
       "_label_type.proto\022\036google.ads.googleads." +
-      "v10.enums\032\034google/api/annotations.proto\"" +
-      "\366\002\n\024ContentLabelTypeEnum\"\335\002\n\020ContentLabe" +
-      "lType\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\027\n\023S" +
-      "EXUALLY_SUGGESTIVE\020\002\022\022\n\016BELOW_THE_FOLD\020\003" +
-      "\022\021\n\rPARKED_DOMAIN\020\004\022\014\n\010JUVENILE\020\006\022\r\n\tPRO" +
-      "FANITY\020\007\022\013\n\007TRAGEDY\020\010\022\t\n\005VIDEO\020\t\022\025\n\021VIDE" +
-      "O_RATING_DV_G\020\n\022\026\n\022VIDEO_RATING_DV_PG\020\013\022" +
-      "\025\n\021VIDEO_RATING_DV_T\020\014\022\026\n\022VIDEO_RATING_D" +
-      "V_MA\020\r\022\027\n\023VIDEO_NOT_YET_RATED\020\016\022\022\n\016EMBED" +
-      "DED_VIDEO\020\017\022\030\n\024LIVE_STREAMING_VIDEO\020\020\022\021\n" +
-      "\rSOCIAL_ISSUES\020\021B\357\001\n\"com.google.ads.goog" +
-      "leads.v10.enumsB\025ContentLabelTypeProtoP\001" +
-      "ZCgoogle.golang.org/genproto/googleapis/" +
-      "ads/googleads/v10/enums;enums\242\002\003GAA\252\002\036Go" +
-      "ogle.Ads.GoogleAds.V10.Enums\312\002\036Google\\Ad" +
-      "s\\GoogleAds\\V10\\Enums\352\002\"Google::Ads::Goo" +
-      "gleAds::V10::Enumsb\006proto3"
+      "v10.enums\"\366\002\n\024ContentLabelTypeEnum\"\335\002\n\020C" +
+      "ontentLabelType\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKN" +
+      "OWN\020\001\022\027\n\023SEXUALLY_SUGGESTIVE\020\002\022\022\n\016BELOW_" +
+      "THE_FOLD\020\003\022\021\n\rPARKED_DOMAIN\020\004\022\014\n\010JUVENIL" +
+      "E\020\006\022\r\n\tPROFANITY\020\007\022\013\n\007TRAGEDY\020\010\022\t\n\005VIDEO" +
+      "\020\t\022\025\n\021VIDEO_RATING_DV_G\020\n\022\026\n\022VIDEO_RATIN" +
+      "G_DV_PG\020\013\022\025\n\021VIDEO_RATING_DV_T\020\014\022\026\n\022VIDE" +
+      "O_RATING_DV_MA\020\r\022\027\n\023VIDEO_NOT_YET_RATED\020" +
+      "\016\022\022\n\016EMBEDDED_VIDEO\020\017\022\030\n\024LIVE_STREAMING_" +
+      "VIDEO\020\020\022\021\n\rSOCIAL_ISSUES\020\021B\357\001\n\"com.googl" +
+      "e.ads.googleads.v10.enumsB\025ContentLabelT" +
+      "ypeProtoP\001ZCgoogle.golang.org/genproto/g" +
+      "oogleapis/ads/googleads/v10/enums;enums\242" +
+      "\002\003GAA\252\002\036Google.Ads.GoogleAds.V10.Enums\312\002" +
+      "\036Google\\Ads\\GoogleAds\\V10\\Enums\352\002\"Google" +
+      "::Ads::GoogleAds::V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_ContentLabelTypeEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -59,7 +57,6 @@ public final class ContentLabelTypeProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_ContentLabelTypeEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -667,6 +667,22 @@
  * }
  * }</pre>
  *
+ * <p>======================= CampaignGroupServiceClient =======================
+ *
+ * <p>Service Description: Service to manage campaign groups.
+ *
+ * <p>Sample for CampaignGroupServiceClient:
+ *
+ * <pre>{@code
+ * try (CampaignGroupServiceClient campaignGroupServiceClient =
+ *     CampaignGroupServiceClient.create()) {
+ *   String customerId = "customerId-1581184615";
+ *   List<CampaignGroupOperation> operations = new ArrayList<>();
+ *   MutateCampaignGroupsResponse response =
+ *       campaignGroupServiceClient.mutateCampaignGroups(customerId, operations);
+ * }
+ * }</pre>
+ *
  * <p>======================= CampaignLabelServiceClient =======================
  *
  * <p>Service Description: Service to manage labels on campaigns.
@@ -1376,23 +1392,14 @@
  * <pre>{@code
  * try (KeywordPlanIdeaServiceClient keywordPlanIdeaServiceClient =
  *     KeywordPlanIdeaServiceClient.create()) {
- *   GenerateKeywordIdeasRequest request =
- *       GenerateKeywordIdeasRequest.newBuilder()
+ *   GenerateKeywordHistoricalMetricsRequest request =
+ *       GenerateKeywordHistoricalMetricsRequest.newBuilder()
  *           .setCustomerId("customerId-1581184615")
- *           .setLanguage("language-1613589672")
- *           .addAllGeoTargetConstants(new ArrayList<String>())
- *           .setIncludeAdultKeywords(true)
- *           .setPageToken("pageToken873572522")
- *           .setPageSize(883849137)
- *           .addAllKeywordAnnotation(
- *               new ArrayList<KeywordPlanKeywordAnnotationEnum.KeywordPlanKeywordAnnotation>())
- *           .setAggregateMetrics(KeywordPlanAggregateMetrics.newBuilder().build())
+ *           .addAllKeywords(new ArrayList<String>())
  *           .setHistoricalMetricsOptions(HistoricalMetricsOptions.newBuilder().build())
  *           .build();
- *   for (GenerateKeywordIdeaResult element :
- *       keywordPlanIdeaServiceClient.generateKeywordIdeas(request).iterateAll()) {
- *     // doThingsWith(element);
- *   }
+ *   GenerateKeywordHistoricalMetricsResponse response =
+ *       keywordPlanIdeaServiceClient.generateKeywordHistoricalMetrics(request);
  * }
  * }</pre>
  *

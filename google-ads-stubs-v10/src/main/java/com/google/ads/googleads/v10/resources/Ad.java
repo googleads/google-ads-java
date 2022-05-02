@@ -477,6 +477,34 @@ private static final long serialVersionUID = 0L;
             adDataCase_ = 50;
             break;
           }
+          case 410: {
+            com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo.Builder subBuilder = null;
+            if (adDataCase_ == 51) {
+              subBuilder = ((com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo) adData_).toBuilder();
+            }
+            adData_ =
+                input.readMessage(com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo) adData_);
+              adData_ = subBuilder.buildPartial();
+            }
+            adDataCase_ = 51;
+            break;
+          }
+          case 418: {
+            com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo.Builder subBuilder = null;
+            if (adDataCase_ == 52) {
+              subBuilder = ((com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo) adData_).toBuilder();
+            }
+            adData_ =
+                input.readMessage(com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo) adData_);
+              adData_ = subBuilder.buildPartial();
+            }
+            adDataCase_ = 52;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -488,6 +516,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -552,6 +582,8 @@ private static final long serialVersionUID = 0L;
     SHOPPING_COMPARISON_LISTING_AD(36),
     SMART_CAMPAIGN_AD(48),
     APP_PRE_REGISTRATION_AD(50),
+    DISCOVERY_MULTI_ASSET_AD(51),
+    DISCOVERY_CAROUSEL_AD(52),
     ADDATA_NOT_SET(0);
     private final int value;
     private AdDataCase(int value) {
@@ -591,6 +623,8 @@ private static final long serialVersionUID = 0L;
         case 36: return SHOPPING_COMPARISON_LISTING_AD;
         case 48: return SMART_CAMPAIGN_AD;
         case 50: return APP_PRE_REGISTRATION_AD;
+        case 51: return DISCOVERY_MULTI_ASSET_AD;
+        case 52: return DISCOVERY_CAROUSEL_AD;
         case 0: return ADDATA_NOT_SET;
         default: return null;
       }
@@ -2318,6 +2352,92 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v10.common.AppPreRegistrationAdInfo.getDefaultInstance();
   }
 
+  public static final int DISCOVERY_MULTI_ASSET_AD_FIELD_NUMBER = 51;
+  /**
+   * <pre>
+   * Details pertaining to a discovery multi asset ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo discovery_multi_asset_ad = 51;</code>
+   * @return Whether the discoveryMultiAssetAd field is set.
+   */
+  @java.lang.Override
+  public boolean hasDiscoveryMultiAssetAd() {
+    return adDataCase_ == 51;
+  }
+  /**
+   * <pre>
+   * Details pertaining to a discovery multi asset ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo discovery_multi_asset_ad = 51;</code>
+   * @return The discoveryMultiAssetAd.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo getDiscoveryMultiAssetAd() {
+    if (adDataCase_ == 51) {
+       return (com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo) adData_;
+    }
+    return com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Details pertaining to a discovery multi asset ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo discovery_multi_asset_ad = 51;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfoOrBuilder getDiscoveryMultiAssetAdOrBuilder() {
+    if (adDataCase_ == 51) {
+       return (com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo) adData_;
+    }
+    return com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo.getDefaultInstance();
+  }
+
+  public static final int DISCOVERY_CAROUSEL_AD_FIELD_NUMBER = 52;
+  /**
+   * <pre>
+   * Details pertaining to a discovery carousel ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo discovery_carousel_ad = 52;</code>
+   * @return Whether the discoveryCarouselAd field is set.
+   */
+  @java.lang.Override
+  public boolean hasDiscoveryCarouselAd() {
+    return adDataCase_ == 52;
+  }
+  /**
+   * <pre>
+   * Details pertaining to a discovery carousel ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo discovery_carousel_ad = 52;</code>
+   * @return The discoveryCarouselAd.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo getDiscoveryCarouselAd() {
+    if (adDataCase_ == 52) {
+       return (com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo) adData_;
+    }
+    return com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Details pertaining to a discovery carousel ad.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo discovery_carousel_ad = 52;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfoOrBuilder getDiscoveryCarouselAdOrBuilder() {
+    if (adDataCase_ == 52) {
+       return (com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo) adData_;
+    }
+    return com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -2442,6 +2562,12 @@ private static final long serialVersionUID = 0L;
     }
     if (adDataCase_ == 50) {
       output.writeMessage(50, (com.google.ads.googleads.v10.common.AppPreRegistrationAdInfo) adData_);
+    }
+    if (adDataCase_ == 51) {
+      output.writeMessage(51, (com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo) adData_);
+    }
+    if (adDataCase_ == 52) {
+      output.writeMessage(52, (com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo) adData_);
     }
     unknownFields.writeTo(output);
   }
@@ -2603,6 +2729,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(50, (com.google.ads.googleads.v10.common.AppPreRegistrationAdInfo) adData_);
     }
+    if (adDataCase_ == 51) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(51, (com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo) adData_);
+    }
+    if (adDataCase_ == 52) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(52, (com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo) adData_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -2752,6 +2886,14 @@ private static final long serialVersionUID = 0L;
       case 50:
         if (!getAppPreRegistrationAd()
             .equals(other.getAppPreRegistrationAd())) return false;
+        break;
+      case 51:
+        if (!getDiscoveryMultiAssetAd()
+            .equals(other.getDiscoveryMultiAssetAd())) return false;
+        break;
+      case 52:
+        if (!getDiscoveryCarouselAd()
+            .equals(other.getDiscoveryCarouselAd())) return false;
         break;
       case 0:
       default:
@@ -2909,6 +3051,14 @@ private static final long serialVersionUID = 0L;
       case 50:
         hash = (37 * hash) + APP_PRE_REGISTRATION_AD_FIELD_NUMBER;
         hash = (53 * hash) + getAppPreRegistrationAd().hashCode();
+        break;
+      case 51:
+        hash = (37 * hash) + DISCOVERY_MULTI_ASSET_AD_FIELD_NUMBER;
+        hash = (53 * hash) + getDiscoveryMultiAssetAd().hashCode();
+        break;
+      case 52:
+        hash = (37 * hash) + DISCOVERY_CAROUSEL_AD_FIELD_NUMBER;
+        hash = (53 * hash) + getDiscoveryCarouselAd().hashCode();
         break;
       case 0:
       default:
@@ -3344,6 +3494,20 @@ private static final long serialVersionUID = 0L;
           result.adData_ = appPreRegistrationAdBuilder_.build();
         }
       }
+      if (adDataCase_ == 51) {
+        if (discoveryMultiAssetAdBuilder_ == null) {
+          result.adData_ = adData_;
+        } else {
+          result.adData_ = discoveryMultiAssetAdBuilder_.build();
+        }
+      }
+      if (adDataCase_ == 52) {
+        if (discoveryCarouselAdBuilder_ == null) {
+          result.adData_ = adData_;
+        } else {
+          result.adData_ = discoveryCarouselAdBuilder_.build();
+        }
+      }
       result.bitField0_ = to_bitField0_;
       result.adDataCase_ = adDataCase_;
       onBuilt();
@@ -3618,6 +3782,14 @@ private static final long serialVersionUID = 0L;
         }
         case APP_PRE_REGISTRATION_AD: {
           mergeAppPreRegistrationAd(other.getAppPreRegistrationAd());
+          break;
+        }
+        case DISCOVERY_MULTI_ASSET_AD: {
+          mergeDiscoveryMultiAssetAd(other.getDiscoveryMultiAssetAd());
+          break;
+        }
+        case DISCOVERY_CAROUSEL_AD: {
+          mergeDiscoveryCarouselAd(other.getDiscoveryCarouselAd());
           break;
         }
         case ADDATA_NOT_SET: {
@@ -6007,8 +6179,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (adDataCase_ == 6) {
           textAdBuilder_.mergeFrom(value);
+        } else {
+          textAdBuilder_.setMessage(value);
         }
-        textAdBuilder_.setMessage(value);
       }
       adDataCase_ = 6;
       return this;
@@ -6184,8 +6357,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (adDataCase_ == 7) {
           expandedTextAdBuilder_.mergeFrom(value);
+        } else {
+          expandedTextAdBuilder_.setMessage(value);
         }
-        expandedTextAdBuilder_.setMessage(value);
       }
       adDataCase_ = 7;
       return this;
@@ -6361,8 +6535,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (adDataCase_ == 49) {
           callAdBuilder_.mergeFrom(value);
+        } else {
+          callAdBuilder_.setMessage(value);
         }
-        callAdBuilder_.setMessage(value);
       }
       adDataCase_ = 49;
       return this;
@@ -6558,8 +6733,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (adDataCase_ == 14) {
           expandedDynamicSearchAdBuilder_.mergeFrom(value);
+        } else {
+          expandedDynamicSearchAdBuilder_.setMessage(value);
         }
-        expandedDynamicSearchAdBuilder_.setMessage(value);
       }
       adDataCase_ = 14;
       return this;
@@ -6751,8 +6927,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (adDataCase_ == 15) {
           hotelAdBuilder_.mergeFrom(value);
+        } else {
+          hotelAdBuilder_.setMessage(value);
         }
-        hotelAdBuilder_.setMessage(value);
       }
       adDataCase_ = 15;
       return this;
@@ -6928,8 +7105,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (adDataCase_ == 17) {
           shoppingSmartAdBuilder_.mergeFrom(value);
+        } else {
+          shoppingSmartAdBuilder_.setMessage(value);
         }
-        shoppingSmartAdBuilder_.setMessage(value);
       }
       adDataCase_ = 17;
       return this;
@@ -7105,8 +7283,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (adDataCase_ == 18) {
           shoppingProductAdBuilder_.mergeFrom(value);
+        } else {
+          shoppingProductAdBuilder_.setMessage(value);
         }
-        shoppingProductAdBuilder_.setMessage(value);
       }
       adDataCase_ = 18;
       return this;
@@ -7282,8 +7461,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (adDataCase_ == 21) {
           gmailAdBuilder_.mergeFrom(value);
+        } else {
+          gmailAdBuilder_.setMessage(value);
         }
-        gmailAdBuilder_.setMessage(value);
       }
       adDataCase_ = 21;
       return this;
@@ -7459,8 +7639,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (adDataCase_ == 22) {
           imageAdBuilder_.mergeFrom(value);
+        } else {
+          imageAdBuilder_.setMessage(value);
         }
-        imageAdBuilder_.setMessage(value);
       }
       adDataCase_ = 22;
       return this;
@@ -7636,8 +7817,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (adDataCase_ == 24) {
           videoAdBuilder_.mergeFrom(value);
+        } else {
+          videoAdBuilder_.setMessage(value);
         }
-        videoAdBuilder_.setMessage(value);
       }
       adDataCase_ = 24;
       return this;
@@ -7813,8 +7995,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (adDataCase_ == 39) {
           videoResponsiveAdBuilder_.mergeFrom(value);
+        } else {
+          videoResponsiveAdBuilder_.setMessage(value);
         }
-        videoResponsiveAdBuilder_.setMessage(value);
       }
       adDataCase_ = 39;
       return this;
@@ -7990,8 +8173,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (adDataCase_ == 25) {
           responsiveSearchAdBuilder_.mergeFrom(value);
+        } else {
+          responsiveSearchAdBuilder_.setMessage(value);
         }
-        responsiveSearchAdBuilder_.setMessage(value);
       }
       adDataCase_ = 25;
       return this;
@@ -8167,8 +8351,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (adDataCase_ == 28) {
           legacyResponsiveDisplayAdBuilder_.mergeFrom(value);
+        } else {
+          legacyResponsiveDisplayAdBuilder_.setMessage(value);
         }
-        legacyResponsiveDisplayAdBuilder_.setMessage(value);
       }
       adDataCase_ = 28;
       return this;
@@ -8344,8 +8529,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (adDataCase_ == 29) {
           appAdBuilder_.mergeFrom(value);
+        } else {
+          appAdBuilder_.setMessage(value);
         }
-        appAdBuilder_.setMessage(value);
       }
       adDataCase_ = 29;
       return this;
@@ -8521,8 +8707,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (adDataCase_ == 30) {
           legacyAppInstallAdBuilder_.mergeFrom(value);
+        } else {
+          legacyAppInstallAdBuilder_.setMessage(value);
         }
-        legacyAppInstallAdBuilder_.setMessage(value);
       }
       adDataCase_ = 30;
       return this;
@@ -8698,8 +8885,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (adDataCase_ == 31) {
           responsiveDisplayAdBuilder_.mergeFrom(value);
+        } else {
+          responsiveDisplayAdBuilder_.setMessage(value);
         }
-        responsiveDisplayAdBuilder_.setMessage(value);
       }
       adDataCase_ = 31;
       return this;
@@ -8875,8 +9063,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (adDataCase_ == 32) {
           localAdBuilder_.mergeFrom(value);
+        } else {
+          localAdBuilder_.setMessage(value);
         }
-        localAdBuilder_.setMessage(value);
       }
       adDataCase_ = 32;
       return this;
@@ -9052,8 +9241,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (adDataCase_ == 33) {
           displayUploadAdBuilder_.mergeFrom(value);
+        } else {
+          displayUploadAdBuilder_.setMessage(value);
         }
-        displayUploadAdBuilder_.setMessage(value);
       }
       adDataCase_ = 33;
       return this;
@@ -9229,8 +9419,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (adDataCase_ == 34) {
           appEngagementAdBuilder_.mergeFrom(value);
+        } else {
+          appEngagementAdBuilder_.setMessage(value);
         }
-        appEngagementAdBuilder_.setMessage(value);
       }
       adDataCase_ = 34;
       return this;
@@ -9406,8 +9597,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (adDataCase_ == 36) {
           shoppingComparisonListingAdBuilder_.mergeFrom(value);
+        } else {
+          shoppingComparisonListingAdBuilder_.setMessage(value);
         }
-        shoppingComparisonListingAdBuilder_.setMessage(value);
       }
       adDataCase_ = 36;
       return this;
@@ -9583,8 +9775,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (adDataCase_ == 48) {
           smartCampaignAdBuilder_.mergeFrom(value);
+        } else {
+          smartCampaignAdBuilder_.setMessage(value);
         }
-        smartCampaignAdBuilder_.setMessage(value);
       }
       adDataCase_ = 48;
       return this;
@@ -9760,8 +9953,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (adDataCase_ == 50) {
           appPreRegistrationAdBuilder_.mergeFrom(value);
+        } else {
+          appPreRegistrationAdBuilder_.setMessage(value);
         }
-        appPreRegistrationAdBuilder_.setMessage(value);
       }
       adDataCase_ = 50;
       return this;
@@ -9841,6 +10035,362 @@ private static final long serialVersionUID = 0L;
       adDataCase_ = 50;
       onChanged();;
       return appPreRegistrationAdBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo, com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo.Builder, com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfoOrBuilder> discoveryMultiAssetAdBuilder_;
+    /**
+     * <pre>
+     * Details pertaining to a discovery multi asset ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo discovery_multi_asset_ad = 51;</code>
+     * @return Whether the discoveryMultiAssetAd field is set.
+     */
+    @java.lang.Override
+    public boolean hasDiscoveryMultiAssetAd() {
+      return adDataCase_ == 51;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a discovery multi asset ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo discovery_multi_asset_ad = 51;</code>
+     * @return The discoveryMultiAssetAd.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo getDiscoveryMultiAssetAd() {
+      if (discoveryMultiAssetAdBuilder_ == null) {
+        if (adDataCase_ == 51) {
+          return (com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo) adData_;
+        }
+        return com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo.getDefaultInstance();
+      } else {
+        if (adDataCase_ == 51) {
+          return discoveryMultiAssetAdBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Details pertaining to a discovery multi asset ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo discovery_multi_asset_ad = 51;</code>
+     */
+    public Builder setDiscoveryMultiAssetAd(com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo value) {
+      if (discoveryMultiAssetAdBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        adData_ = value;
+        onChanged();
+      } else {
+        discoveryMultiAssetAdBuilder_.setMessage(value);
+      }
+      adDataCase_ = 51;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a discovery multi asset ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo discovery_multi_asset_ad = 51;</code>
+     */
+    public Builder setDiscoveryMultiAssetAd(
+        com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo.Builder builderForValue) {
+      if (discoveryMultiAssetAdBuilder_ == null) {
+        adData_ = builderForValue.build();
+        onChanged();
+      } else {
+        discoveryMultiAssetAdBuilder_.setMessage(builderForValue.build());
+      }
+      adDataCase_ = 51;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a discovery multi asset ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo discovery_multi_asset_ad = 51;</code>
+     */
+    public Builder mergeDiscoveryMultiAssetAd(com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo value) {
+      if (discoveryMultiAssetAdBuilder_ == null) {
+        if (adDataCase_ == 51 &&
+            adData_ != com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo.getDefaultInstance()) {
+          adData_ = com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo.newBuilder((com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo) adData_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          adData_ = value;
+        }
+        onChanged();
+      } else {
+        if (adDataCase_ == 51) {
+          discoveryMultiAssetAdBuilder_.mergeFrom(value);
+        } else {
+          discoveryMultiAssetAdBuilder_.setMessage(value);
+        }
+      }
+      adDataCase_ = 51;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a discovery multi asset ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo discovery_multi_asset_ad = 51;</code>
+     */
+    public Builder clearDiscoveryMultiAssetAd() {
+      if (discoveryMultiAssetAdBuilder_ == null) {
+        if (adDataCase_ == 51) {
+          adDataCase_ = 0;
+          adData_ = null;
+          onChanged();
+        }
+      } else {
+        if (adDataCase_ == 51) {
+          adDataCase_ = 0;
+          adData_ = null;
+        }
+        discoveryMultiAssetAdBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a discovery multi asset ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo discovery_multi_asset_ad = 51;</code>
+     */
+    public com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo.Builder getDiscoveryMultiAssetAdBuilder() {
+      return getDiscoveryMultiAssetAdFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Details pertaining to a discovery multi asset ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo discovery_multi_asset_ad = 51;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfoOrBuilder getDiscoveryMultiAssetAdOrBuilder() {
+      if ((adDataCase_ == 51) && (discoveryMultiAssetAdBuilder_ != null)) {
+        return discoveryMultiAssetAdBuilder_.getMessageOrBuilder();
+      } else {
+        if (adDataCase_ == 51) {
+          return (com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo) adData_;
+        }
+        return com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Details pertaining to a discovery multi asset ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo discovery_multi_asset_ad = 51;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo, com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo.Builder, com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfoOrBuilder> 
+        getDiscoveryMultiAssetAdFieldBuilder() {
+      if (discoveryMultiAssetAdBuilder_ == null) {
+        if (!(adDataCase_ == 51)) {
+          adData_ = com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo.getDefaultInstance();
+        }
+        discoveryMultiAssetAdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo, com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo.Builder, com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfoOrBuilder>(
+                (com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo) adData_,
+                getParentForChildren(),
+                isClean());
+        adData_ = null;
+      }
+      adDataCase_ = 51;
+      onChanged();;
+      return discoveryMultiAssetAdBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo, com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo.Builder, com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfoOrBuilder> discoveryCarouselAdBuilder_;
+    /**
+     * <pre>
+     * Details pertaining to a discovery carousel ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo discovery_carousel_ad = 52;</code>
+     * @return Whether the discoveryCarouselAd field is set.
+     */
+    @java.lang.Override
+    public boolean hasDiscoveryCarouselAd() {
+      return adDataCase_ == 52;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a discovery carousel ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo discovery_carousel_ad = 52;</code>
+     * @return The discoveryCarouselAd.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo getDiscoveryCarouselAd() {
+      if (discoveryCarouselAdBuilder_ == null) {
+        if (adDataCase_ == 52) {
+          return (com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo) adData_;
+        }
+        return com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo.getDefaultInstance();
+      } else {
+        if (adDataCase_ == 52) {
+          return discoveryCarouselAdBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Details pertaining to a discovery carousel ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo discovery_carousel_ad = 52;</code>
+     */
+    public Builder setDiscoveryCarouselAd(com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo value) {
+      if (discoveryCarouselAdBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        adData_ = value;
+        onChanged();
+      } else {
+        discoveryCarouselAdBuilder_.setMessage(value);
+      }
+      adDataCase_ = 52;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a discovery carousel ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo discovery_carousel_ad = 52;</code>
+     */
+    public Builder setDiscoveryCarouselAd(
+        com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo.Builder builderForValue) {
+      if (discoveryCarouselAdBuilder_ == null) {
+        adData_ = builderForValue.build();
+        onChanged();
+      } else {
+        discoveryCarouselAdBuilder_.setMessage(builderForValue.build());
+      }
+      adDataCase_ = 52;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a discovery carousel ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo discovery_carousel_ad = 52;</code>
+     */
+    public Builder mergeDiscoveryCarouselAd(com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo value) {
+      if (discoveryCarouselAdBuilder_ == null) {
+        if (adDataCase_ == 52 &&
+            adData_ != com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo.getDefaultInstance()) {
+          adData_ = com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo.newBuilder((com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo) adData_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          adData_ = value;
+        }
+        onChanged();
+      } else {
+        if (adDataCase_ == 52) {
+          discoveryCarouselAdBuilder_.mergeFrom(value);
+        } else {
+          discoveryCarouselAdBuilder_.setMessage(value);
+        }
+      }
+      adDataCase_ = 52;
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a discovery carousel ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo discovery_carousel_ad = 52;</code>
+     */
+    public Builder clearDiscoveryCarouselAd() {
+      if (discoveryCarouselAdBuilder_ == null) {
+        if (adDataCase_ == 52) {
+          adDataCase_ = 0;
+          adData_ = null;
+          onChanged();
+        }
+      } else {
+        if (adDataCase_ == 52) {
+          adDataCase_ = 0;
+          adData_ = null;
+        }
+        discoveryCarouselAdBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Details pertaining to a discovery carousel ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo discovery_carousel_ad = 52;</code>
+     */
+    public com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo.Builder getDiscoveryCarouselAdBuilder() {
+      return getDiscoveryCarouselAdFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Details pertaining to a discovery carousel ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo discovery_carousel_ad = 52;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfoOrBuilder getDiscoveryCarouselAdOrBuilder() {
+      if ((adDataCase_ == 52) && (discoveryCarouselAdBuilder_ != null)) {
+        return discoveryCarouselAdBuilder_.getMessageOrBuilder();
+      } else {
+        if (adDataCase_ == 52) {
+          return (com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo) adData_;
+        }
+        return com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Details pertaining to a discovery carousel ad.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo discovery_carousel_ad = 52;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo, com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo.Builder, com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfoOrBuilder> 
+        getDiscoveryCarouselAdFieldBuilder() {
+      if (discoveryCarouselAdBuilder_ == null) {
+        if (!(adDataCase_ == 52)) {
+          adData_ = com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo.getDefaultInstance();
+        }
+        discoveryCarouselAdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo, com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo.Builder, com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfoOrBuilder>(
+                (com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo) adData_,
+                getParentForChildren(),
+                isClean());
+        adData_ = null;
+      }
+      adDataCase_ = 52;
+      onChanged();;
+      return discoveryCarouselAdBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

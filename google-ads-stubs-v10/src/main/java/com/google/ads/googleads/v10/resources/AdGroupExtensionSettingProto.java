@@ -33,38 +33,36 @@ public final class AdGroupExtensionSettingProto {
       "s.googleads.v10.resources\032=google/ads/go" +
       "ogleads/v10/enums/extension_setting_devi" +
       "ce.proto\0323google/ads/googleads/v10/enums" +
-      "/extension_type.proto\032\034google/api/annota" +
-      "tions.proto\032\037google/api/field_behavior.p" +
-      "roto\032\031google/api/resource.proto\"\322\004\n\027AdGr" +
-      "oupExtensionSetting\022O\n\rresource_name\030\001 \001" +
-      "(\tB8\340A\005\372A2\n0googleads.googleapis.com/AdG" +
-      "roupExtensionSetting\022\\\n\016extension_type\030\002" +
-      " \001(\0162?.google.ads.googleads.v10.enums.Ex" +
-      "tensionTypeEnum.ExtensionTypeB\003\340A\005\022?\n\010ad" +
-      "_group\030\006 \001(\tB(\340A\005\372A\"\n googleads.googleap" +
-      "is.com/AdGroupH\000\210\001\001\022M\n\024extension_feed_it" +
-      "ems\030\007 \003(\tB/\372A,\n*googleads.googleapis.com" +
-      "/ExtensionFeedItem\022a\n\006device\030\005 \001(\0162Q.goo" +
-      "gle.ads.googleads.v10.enums.ExtensionSet" +
-      "tingDeviceEnum.ExtensionSettingDevice:\207\001" +
-      "\352A\203\001\n0googleads.googleapis.com/AdGroupEx" +
-      "tensionSetting\022Ocustomers/{customer_id}/" +
-      "adGroupExtensionSettings/{ad_group_id}~{" +
-      "extension_type}B\013\n\t_ad_groupB\216\002\n&com.goo" +
-      "gle.ads.googleads.v10.resourcesB\034AdGroup" +
-      "ExtensionSettingProtoP\001ZKgoogle.golang.o" +
-      "rg/genproto/googleapis/ads/googleads/v10" +
-      "/resources;resources\242\002\003GAA\252\002\"Google.Ads." +
-      "GoogleAds.V10.Resources\312\002\"Google\\Ads\\Goo" +
-      "gleAds\\V10\\Resources\352\002&Google::Ads::Goog" +
-      "leAds::V10::Resourcesb\006proto3"
+      "/extension_type.proto\032\037google/api/field_" +
+      "behavior.proto\032\031google/api/resource.prot" +
+      "o\"\322\004\n\027AdGroupExtensionSetting\022O\n\rresourc" +
+      "e_name\030\001 \001(\tB8\340A\005\372A2\n0googleads.googleap" +
+      "is.com/AdGroupExtensionSetting\022\\\n\016extens" +
+      "ion_type\030\002 \001(\0162?.google.ads.googleads.v1" +
+      "0.enums.ExtensionTypeEnum.ExtensionTypeB" +
+      "\003\340A\005\022?\n\010ad_group\030\006 \001(\tB(\340A\005\372A\"\n googlead" +
+      "s.googleapis.com/AdGroupH\000\210\001\001\022M\n\024extensi" +
+      "on_feed_items\030\007 \003(\tB/\372A,\n*googleads.goog" +
+      "leapis.com/ExtensionFeedItem\022a\n\006device\030\005" +
+      " \001(\0162Q.google.ads.googleads.v10.enums.Ex" +
+      "tensionSettingDeviceEnum.ExtensionSettin" +
+      "gDevice:\207\001\352A\203\001\n0googleads.googleapis.com" +
+      "/AdGroupExtensionSetting\022Ocustomers/{cus" +
+      "tomer_id}/adGroupExtensionSettings/{ad_g" +
+      "roup_id}~{extension_type}B\013\n\t_ad_groupB\216" +
+      "\002\n&com.google.ads.googleads.v10.resource" +
+      "sB\034AdGroupExtensionSettingProtoP\001ZKgoogl" +
+      "e.golang.org/genproto/googleapis/ads/goo" +
+      "gleads/v10/resources;resources\242\002\003GAA\252\002\"G" +
+      "oogle.Ads.GoogleAds.V10.Resources\312\002\"Goog" +
+      "le\\Ads\\GoogleAds\\V10\\Resources\352\002&Google:" +
+      ":Ads::GoogleAds::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.enums.ExtensionSettingDeviceProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.ExtensionTypeProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -83,7 +81,6 @@ public final class AdGroupExtensionSettingProto {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.enums.ExtensionSettingDeviceProto.getDescriptor();
     com.google.ads.googleads.v10.enums.ExtensionTypeProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

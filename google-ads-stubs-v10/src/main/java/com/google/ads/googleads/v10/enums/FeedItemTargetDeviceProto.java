@@ -30,21 +30,20 @@ public final class FeedItemTargetDeviceProto {
     java.lang.String[] descriptorData = {
       "\n<google/ads/googleads/v10/enums/feed_it" +
       "em_target_device.proto\022\036google.ads.googl" +
-      "eads.v10.enums\032\034google/api/annotations.p" +
-      "roto\"\\\n\030FeedItemTargetDeviceEnum\"@\n\024Feed" +
-      "ItemTargetDevice\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNK" +
-      "NOWN\020\001\022\n\n\006MOBILE\020\002B\363\001\n\"com.google.ads.go" +
-      "ogleads.v10.enumsB\031FeedItemTargetDeviceP" +
-      "rotoP\001ZCgoogle.golang.org/genproto/googl" +
-      "eapis/ads/googleads/v10/enums;enums\242\002\003GA" +
-      "A\252\002\036Google.Ads.GoogleAds.V10.Enums\312\002\036Goo" +
-      "gle\\Ads\\GoogleAds\\V10\\Enums\352\002\"Google::Ad" +
-      "s::GoogleAds::V10::Enumsb\006proto3"
+      "eads.v10.enums\"\\\n\030FeedItemTargetDeviceEn" +
+      "um\"@\n\024FeedItemTargetDevice\022\017\n\013UNSPECIFIE" +
+      "D\020\000\022\013\n\007UNKNOWN\020\001\022\n\n\006MOBILE\020\002B\363\001\n\"com.goo" +
+      "gle.ads.googleads.v10.enumsB\031FeedItemTar" +
+      "getDeviceProtoP\001ZCgoogle.golang.org/genp" +
+      "roto/googleapis/ads/googleads/v10/enums;" +
+      "enums\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V10.E" +
+      "nums\312\002\036Google\\Ads\\GoogleAds\\V10\\Enums\352\002\"" +
+      "Google::Ads::GoogleAds::V10::Enumsb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_FeedItemTargetDeviceEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -52,7 +51,6 @@ public final class FeedItemTargetDeviceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_FeedItemTargetDeviceEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

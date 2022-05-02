@@ -31,25 +31,23 @@ public final class PolicyTopicEvidenceDestinationMismatchUrlTypeProto {
       "\nXgoogle/ads/googleads/v10/enums/policy_" +
       "topic_evidence_destination_mismatch_url_" +
       "type.proto\022\036google.ads.googleads.v10.enu" +
-      "ms\032\034google/api/annotations.proto\"\344\001\n1Pol" +
-      "icyTopicEvidenceDestinationMismatchUrlTy" +
-      "peEnum\"\256\001\n-PolicyTopicEvidenceDestinatio" +
-      "nMismatchUrlType\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNK" +
-      "NOWN\020\001\022\017\n\013DISPLAY_URL\020\002\022\r\n\tFINAL_URL\020\003\022\024" +
-      "\n\020FINAL_MOBILE_URL\020\004\022\020\n\014TRACKING_URL\020\005\022\027" +
-      "\n\023MOBILE_TRACKING_URL\020\006B\214\002\n\"com.google.a" +
-      "ds.googleads.v10.enumsB2PolicyTopicEvide" +
-      "nceDestinationMismatchUrlTypeProtoP\001ZCgo" +
-      "ogle.golang.org/genproto/googleapis/ads/" +
-      "googleads/v10/enums;enums\242\002\003GAA\252\002\036Google" +
-      ".Ads.GoogleAds.V10.Enums\312\002\036Google\\Ads\\Go" +
-      "ogleAds\\V10\\Enums\352\002\"Google::Ads::GoogleA" +
-      "ds::V10::Enumsb\006proto3"
+      "ms\"\344\001\n1PolicyTopicEvidenceDestinationMis" +
+      "matchUrlTypeEnum\"\256\001\n-PolicyTopicEvidence" +
+      "DestinationMismatchUrlType\022\017\n\013UNSPECIFIE" +
+      "D\020\000\022\013\n\007UNKNOWN\020\001\022\017\n\013DISPLAY_URL\020\002\022\r\n\tFIN" +
+      "AL_URL\020\003\022\024\n\020FINAL_MOBILE_URL\020\004\022\020\n\014TRACKI" +
+      "NG_URL\020\005\022\027\n\023MOBILE_TRACKING_URL\020\006B\214\002\n\"co" +
+      "m.google.ads.googleads.v10.enumsB2Policy" +
+      "TopicEvidenceDestinationMismatchUrlTypeP" +
+      "rotoP\001ZCgoogle.golang.org/genproto/googl" +
+      "eapis/ads/googleads/v10/enums;enums\242\002\003GA" +
+      "A\252\002\036Google.Ads.GoogleAds.V10.Enums\312\002\036Goo" +
+      "gle\\Ads\\GoogleAds\\V10\\Enums\352\002\"Google::Ad" +
+      "s::GoogleAds::V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_PolicyTopicEvidenceDestinationMismatchUrlTypeEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -57,7 +55,6 @@ public final class PolicyTopicEvidenceDestinationMismatchUrlTypeProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_PolicyTopicEvidenceDestinationMismatchUrlTypeEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

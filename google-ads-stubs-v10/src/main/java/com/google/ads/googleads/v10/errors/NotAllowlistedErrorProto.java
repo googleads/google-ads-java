@@ -30,22 +30,20 @@ public final class NotAllowlistedErrorProto {
     java.lang.String[] descriptorData = {
       "\n;google/ads/googleads/v10/errors/not_al" +
       "lowlisted_error.proto\022\037google.ads.google" +
-      "ads.v10.errors\032\034google/api/annotations.p" +
-      "roto\"}\n\027NotAllowlistedErrorEnum\"b\n\023NotAl" +
-      "lowlistedError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNO" +
-      "WN\020\001\022-\n)CUSTOMER_NOT_ALLOWLISTED_FOR_THI" +
-      "S_FEATURE\020\002B\370\001\n#com.google.ads.googleads" +
-      ".v10.errorsB\030NotAllowlistedErrorProtoP\001Z" +
-      "Egoogle.golang.org/genproto/googleapis/a" +
-      "ds/googleads/v10/errors;errors\242\002\003GAA\252\002\037G" +
-      "oogle.Ads.GoogleAds.V10.Errors\312\002\037Google\\" +
-      "Ads\\GoogleAds\\V10\\Errors\352\002#Google::Ads::" +
-      "GoogleAds::V10::Errorsb\006proto3"
+      "ads.v10.errors\"}\n\027NotAllowlistedErrorEnu" +
+      "m\"b\n\023NotAllowlistedError\022\017\n\013UNSPECIFIED\020" +
+      "\000\022\013\n\007UNKNOWN\020\001\022-\n)CUSTOMER_NOT_ALLOWLIST" +
+      "ED_FOR_THIS_FEATURE\020\002B\370\001\n#com.google.ads" +
+      ".googleads.v10.errorsB\030NotAllowlistedErr" +
+      "orProtoP\001ZEgoogle.golang.org/genproto/go" +
+      "ogleapis/ads/googleads/v10/errors;errors" +
+      "\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V10.Errors" +
+      "\312\002\037Google\\Ads\\GoogleAds\\V10\\Errors\352\002#Goo" +
+      "gle::Ads::GoogleAds::V10::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_NotAllowlistedErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -53,7 +51,6 @@ public final class NotAllowlistedErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_NotAllowlistedErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

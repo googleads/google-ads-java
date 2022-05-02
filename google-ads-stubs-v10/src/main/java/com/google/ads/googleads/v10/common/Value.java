@@ -53,23 +53,23 @@ private static final long serialVersionUID = 0L;
             done = true;
             break;
           case 8: {
-            valueCase_ = 1;
             value_ = input.readBool();
+            valueCase_ = 1;
             break;
           }
           case 16: {
-            valueCase_ = 2;
             value_ = input.readInt64();
+            valueCase_ = 2;
             break;
           }
           case 29: {
-            valueCase_ = 3;
             value_ = input.readFloat();
+            valueCase_ = 3;
             break;
           }
           case 33: {
-            valueCase_ = 4;
             value_ = input.readDouble();
+            valueCase_ = 4;
             break;
           }
           case 42: {
@@ -89,6 +89,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);

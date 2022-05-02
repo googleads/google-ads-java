@@ -79,6 +79,7 @@ import com.google.ads.googleads.v10.resources.CampaignDraftName;
 import com.google.ads.googleads.v10.resources.CampaignExperimentName;
 import com.google.ads.googleads.v10.resources.CampaignExtensionSettingName;
 import com.google.ads.googleads.v10.resources.CampaignFeedName;
+import com.google.ads.googleads.v10.resources.CampaignGroupName;
 import com.google.ads.googleads.v10.resources.CampaignLabelName;
 import com.google.ads.googleads.v10.resources.CampaignName;
 import com.google.ads.googleads.v10.resources.CampaignSharedSetName;
@@ -148,6 +149,7 @@ import com.google.ads.googleads.v10.resources.KeywordViewName;
 import com.google.ads.googleads.v10.resources.LabelName;
 import com.google.ads.googleads.v10.resources.LandingPageViewName;
 import com.google.ads.googleads.v10.resources.LanguageConstantName;
+import com.google.ads.googleads.v10.resources.LeadFormSubmissionDataName;
 import com.google.ads.googleads.v10.resources.LifeEventName;
 import com.google.ads.googleads.v10.resources.LocationViewName;
 import com.google.ads.googleads.v10.resources.ManagedPlacementViewName;
@@ -594,12 +596,6 @@ public class ResourceNames {
         endDate);
   }
 
-  /** Returns the Customer User Access Invitation resource name for the specified components. */
-  public static String customerUserAccessInvitation(long customerId, long invitationId) {
-    return CustomerUserAccessInvitationName.format(
-        String.valueOf(customerId), String.valueOf(invitationId));
-  }
-
   /** Returns the Campaign Draft resource name for the specified components. */
   public static String campaignDraft(long customerId, long baseCampaignId, long draftId) {
     return CampaignDraftName.format(
@@ -623,6 +619,11 @@ public class ResourceNames {
   public static String campaignFeed(long customerId, long campaignId, long feedId) {
     return CampaignFeedName.format(
         String.valueOf(customerId), String.valueOf(campaignId), String.valueOf(feedId));
+  }
+
+  /** Returns the campaign group resource name for the specified components. */
+  public static String campaignGroup(long customerId, long campaignGroupId) {
+    return CampaignGroupName.format(String.valueOf(customerId), String.valueOf(campaignGroupId));
   }
 
   /** Returns the campaign label for the specified components. */
@@ -731,6 +732,12 @@ public class ResourceNames {
   public static String customerCustomizer(long customerId, long customizerAttributeId) {
     return CustomerCustomizerName.format(
         String.valueOf(customerId), String.valueOf(customizerAttributeId));
+  }
+
+  /** Returns the Customer User Access Invitation resource name for the specified components. */
+  public static String customerUserAccessInvitation(long customerId, long invitationId) {
+    return CustomerUserAccessInvitationName.format(
+        String.valueOf(customerId), String.valueOf(invitationId));
   }
 
   /** Returns the Customizer Attribute resource name for the specified components. */
@@ -1058,6 +1065,11 @@ public class ResourceNames {
   /** Returns the language constant resource name for the specified components. */
   public static String languageConstant(long criterionId) {
     return LanguageConstantName.format(String.valueOf(criterionId));
+  }
+
+  /** Returns the lead form submission data resource name for the specified components. */
+  public static String leadFormSubmissionData(long customerId, String leadFormUserSubmissionId) {
+    return LeadFormSubmissionDataName.format(String.valueOf(customerId), leadFormUserSubmissionId);
   }
 
   /** Returns the Life Event resource name for the specified components. */

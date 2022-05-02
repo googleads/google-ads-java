@@ -91,54 +91,52 @@ public final class BiddingProto {
       "\n-google/ads/googleads/v10/common/biddin" +
       "g.proto\022\037google.ads.googleads.v10.common" +
       "\032Egoogle/ads/googleads/v10/enums/target_" +
-      "impression_share_location.proto\032\034google/" +
-      "api/annotations.proto\"L\n\nCommission\022#\n\026c" +
-      "ommission_rate_micros\030\002 \001(\003H\000\210\001\001B\031\n\027_com" +
-      "mission_rate_micros\"\r\n\013EnhancedCpc\"G\n\tMa" +
-      "nualCpc\022!\n\024enhanced_cpc_enabled\030\002 \001(\010H\000\210" +
-      "\001\001B\027\n\025_enhanced_cpc_enabled\"\013\n\tManualCpm" +
-      "\"\013\n\tManualCpv\"g\n\023MaximizeConversions\022\022\n\n" +
-      "target_cpa\030\001 \001(\003\022\036\n\026cpc_bid_ceiling_micr" +
-      "os\030\002 \001(\003\022\034\n\024cpc_bid_floor_micros\030\003 \001(\003\"l" +
-      "\n\027MaximizeConversionValue\022\023\n\013target_roas" +
-      "\030\002 \001(\001\022\036\n\026cpc_bid_ceiling_micros\030\003 \001(\003\022\034" +
-      "\n\024cpc_bid_floor_micros\030\004 \001(\003\"\275\001\n\tTargetC" +
-      "pa\022\036\n\021target_cpa_micros\030\004 \001(\003H\000\210\001\001\022#\n\026cp" +
-      "c_bid_ceiling_micros\030\005 \001(\003H\001\210\001\001\022!\n\024cpc_b" +
-      "id_floor_micros\030\006 \001(\003H\002\210\001\001B\024\n\022_target_cp" +
-      "a_microsB\031\n\027_cpc_bid_ceiling_microsB\027\n\025_" +
-      "cpc_bid_floor_micros\"\013\n\tTargetCpm\"\216\002\n\025Ta" +
-      "rgetImpressionShare\022q\n\010location\030\001 \001(\0162_." +
-      "google.ads.googleads.v10.enums.TargetImp" +
-      "ressionShareLocationEnum.TargetImpressio" +
-      "nShareLocation\022%\n\030location_fraction_micr" +
-      "os\030\004 \001(\003H\000\210\001\001\022#\n\026cpc_bid_ceiling_micros\030" +
-      "\005 \001(\003H\001\210\001\001B\033\n\031_location_fraction_microsB" +
-      "\031\n\027_cpc_bid_ceiling_micros\"\262\001\n\nTargetRoa" +
-      "s\022\030\n\013target_roas\030\004 \001(\001H\000\210\001\001\022#\n\026cpc_bid_c" +
-      "eiling_micros\030\005 \001(\003H\001\210\001\001\022!\n\024cpc_bid_floo" +
-      "r_micros\030\006 \001(\003H\002\210\001\001B\016\n\014_target_roasB\031\n\027_" +
-      "cpc_bid_ceiling_microsB\027\n\025_cpc_bid_floor" +
-      "_micros\"\213\001\n\013TargetSpend\022$\n\023target_spend_" +
-      "micros\030\003 \001(\003B\002\030\001H\000\210\001\001\022#\n\026cpc_bid_ceiling" +
-      "_micros\030\004 \001(\003H\001\210\001\001B\026\n\024_target_spend_micr" +
-      "osB\031\n\027_cpc_bid_ceiling_micros\"\210\001\n\nPercen" +
-      "tCpc\022#\n\026cpc_bid_ceiling_micros\030\003 \001(\003H\000\210\001" +
-      "\001\022!\n\024enhanced_cpc_enabled\030\004 \001(\010H\001\210\001\001B\031\n\027" +
-      "_cpc_bid_ceiling_microsB\027\n\025_enhanced_cpc" +
-      "_enabledB\354\001\n#com.google.ads.googleads.v1" +
-      "0.commonB\014BiddingProtoP\001ZEgoogle.golang." +
-      "org/genproto/googleapis/ads/googleads/v1" +
-      "0/common;common\242\002\003GAA\252\002\037Google.Ads.Googl" +
-      "eAds.V10.Common\312\002\037Google\\Ads\\GoogleAds\\V" +
-      "10\\Common\352\002#Google::Ads::GoogleAds::V10:" +
-      ":Commonb\006proto3"
+      "impression_share_location.proto\"L\n\nCommi" +
+      "ssion\022#\n\026commission_rate_micros\030\002 \001(\003H\000\210" +
+      "\001\001B\031\n\027_commission_rate_micros\"\r\n\013Enhance" +
+      "dCpc\"G\n\tManualCpc\022!\n\024enhanced_cpc_enable" +
+      "d\030\002 \001(\010H\000\210\001\001B\027\n\025_enhanced_cpc_enabled\"\013\n" +
+      "\tManualCpm\"\013\n\tManualCpv\"g\n\023MaximizeConve" +
+      "rsions\022\022\n\ntarget_cpa\030\001 \001(\003\022\036\n\026cpc_bid_ce" +
+      "iling_micros\030\002 \001(\003\022\034\n\024cpc_bid_floor_micr" +
+      "os\030\003 \001(\003\"l\n\027MaximizeConversionValue\022\023\n\013t" +
+      "arget_roas\030\002 \001(\001\022\036\n\026cpc_bid_ceiling_micr" +
+      "os\030\003 \001(\003\022\034\n\024cpc_bid_floor_micros\030\004 \001(\003\"\275" +
+      "\001\n\tTargetCpa\022\036\n\021target_cpa_micros\030\004 \001(\003H" +
+      "\000\210\001\001\022#\n\026cpc_bid_ceiling_micros\030\005 \001(\003H\001\210\001" +
+      "\001\022!\n\024cpc_bid_floor_micros\030\006 \001(\003H\002\210\001\001B\024\n\022" +
+      "_target_cpa_microsB\031\n\027_cpc_bid_ceiling_m" +
+      "icrosB\027\n\025_cpc_bid_floor_micros\"\013\n\tTarget" +
+      "Cpm\"\216\002\n\025TargetImpressionShare\022q\n\010locatio" +
+      "n\030\001 \001(\0162_.google.ads.googleads.v10.enums" +
+      ".TargetImpressionShareLocationEnum.Targe" +
+      "tImpressionShareLocation\022%\n\030location_fra" +
+      "ction_micros\030\004 \001(\003H\000\210\001\001\022#\n\026cpc_bid_ceili" +
+      "ng_micros\030\005 \001(\003H\001\210\001\001B\033\n\031_location_fracti" +
+      "on_microsB\031\n\027_cpc_bid_ceiling_micros\"\262\001\n" +
+      "\nTargetRoas\022\030\n\013target_roas\030\004 \001(\001H\000\210\001\001\022#\n" +
+      "\026cpc_bid_ceiling_micros\030\005 \001(\003H\001\210\001\001\022!\n\024cp" +
+      "c_bid_floor_micros\030\006 \001(\003H\002\210\001\001B\016\n\014_target" +
+      "_roasB\031\n\027_cpc_bid_ceiling_microsB\027\n\025_cpc" +
+      "_bid_floor_micros\"\213\001\n\013TargetSpend\022$\n\023tar" +
+      "get_spend_micros\030\003 \001(\003B\002\030\001H\000\210\001\001\022#\n\026cpc_b" +
+      "id_ceiling_micros\030\004 \001(\003H\001\210\001\001B\026\n\024_target_" +
+      "spend_microsB\031\n\027_cpc_bid_ceiling_micros\"" +
+      "\210\001\n\nPercentCpc\022#\n\026cpc_bid_ceiling_micros" +
+      "\030\003 \001(\003H\000\210\001\001\022!\n\024enhanced_cpc_enabled\030\004 \001(" +
+      "\010H\001\210\001\001B\031\n\027_cpc_bid_ceiling_microsB\027\n\025_en" +
+      "hanced_cpc_enabledB\354\001\n#com.google.ads.go" +
+      "ogleads.v10.commonB\014BiddingProtoP\001ZEgoog" +
+      "le.golang.org/genproto/googleapis/ads/go" +
+      "ogleads/v10/common;common\242\002\003GAA\252\002\037Google" +
+      ".Ads.GoogleAds.V10.Common\312\002\037Google\\Ads\\G" +
+      "oogleAds\\V10\\Common\352\002#Google::Ads::Googl" +
+      "eAds::V10::Commonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.enums.TargetImpressionShareLocationProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_common_Commission_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -219,7 +217,6 @@ public final class BiddingProto {
         internal_static_google_ads_googleads_v10_common_PercentCpc_descriptor,
         new java.lang.String[] { "CpcBidCeilingMicros", "EnhancedCpcEnabled", "CpcBidCeilingMicros", "EnhancedCpcEnabled", });
     com.google.ads.googleads.v10.enums.TargetImpressionShareLocationProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

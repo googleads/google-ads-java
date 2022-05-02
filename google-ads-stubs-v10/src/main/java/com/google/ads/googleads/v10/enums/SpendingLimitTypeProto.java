@@ -30,21 +30,19 @@ public final class SpendingLimitTypeProto {
     java.lang.String[] descriptorData = {
       "\n8google/ads/googleads/v10/enums/spendin" +
       "g_limit_type.proto\022\036google.ads.googleads" +
-      ".v10.enums\032\034google/api/annotations.proto" +
-      "\"X\n\025SpendingLimitTypeEnum\"?\n\021SpendingLim" +
-      "itType\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\014\n\010" +
-      "INFINITE\020\002B\360\001\n\"com.google.ads.googleads." +
-      "v10.enumsB\026SpendingLimitTypeProtoP\001ZCgoo" +
-      "gle.golang.org/genproto/googleapis/ads/g" +
-      "oogleads/v10/enums;enums\242\002\003GAA\252\002\036Google." +
-      "Ads.GoogleAds.V10.Enums\312\002\036Google\\Ads\\Goo" +
-      "gleAds\\V10\\Enums\352\002\"Google::Ads::GoogleAd" +
-      "s::V10::Enumsb\006proto3"
+      ".v10.enums\"X\n\025SpendingLimitTypeEnum\"?\n\021S" +
+      "pendingLimitType\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNK" +
+      "NOWN\020\001\022\014\n\010INFINITE\020\002B\360\001\n\"com.google.ads." +
+      "googleads.v10.enumsB\026SpendingLimitTypePr" +
+      "otoP\001ZCgoogle.golang.org/genproto/google" +
+      "apis/ads/googleads/v10/enums;enums\242\002\003GAA" +
+      "\252\002\036Google.Ads.GoogleAds.V10.Enums\312\002\036Goog" +
+      "le\\Ads\\GoogleAds\\V10\\Enums\352\002\"Google::Ads" +
+      "::GoogleAds::V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_SpendingLimitTypeEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -52,7 +50,6 @@ public final class SpendingLimitTypeProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_SpendingLimitTypeEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

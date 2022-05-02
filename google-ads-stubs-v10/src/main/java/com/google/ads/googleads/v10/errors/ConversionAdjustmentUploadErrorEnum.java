@@ -63,6 +63,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -297,6 +299,16 @@ private static final long serialVersionUID = 0L;
      * <code>CUSTOMER_DATA_POLICY_PROHIBITS_ENHANCEMENT = 23;</code>
      */
     CUSTOMER_DATA_POLICY_PROHIBITS_ENHANCEMENT(23),
+    /**
+     * <pre>
+     * The conversion adjustment is for a conversion action of type WEBPAGE, but
+     * does not have an order_id. The order_id is required for an adjustment for
+     * a WEBPAGE conversion action.
+     * </pre>
+     *
+     * <code>MISSING_ORDER_ID_FOR_WEBPAGE = 24;</code>
+     */
+    MISSING_ORDER_ID_FOR_WEBPAGE(24),
     UNRECOGNIZED(-1),
     ;
 
@@ -504,6 +516,16 @@ private static final long serialVersionUID = 0L;
      * <code>CUSTOMER_DATA_POLICY_PROHIBITS_ENHANCEMENT = 23;</code>
      */
     public static final int CUSTOMER_DATA_POLICY_PROHIBITS_ENHANCEMENT_VALUE = 23;
+    /**
+     * <pre>
+     * The conversion adjustment is for a conversion action of type WEBPAGE, but
+     * does not have an order_id. The order_id is required for an adjustment for
+     * a WEBPAGE conversion action.
+     * </pre>
+     *
+     * <code>MISSING_ORDER_ID_FOR_WEBPAGE = 24;</code>
+     */
+    public static final int MISSING_ORDER_ID_FOR_WEBPAGE_VALUE = 24;
 
 
     public final int getNumber() {
@@ -553,6 +575,7 @@ private static final long serialVersionUID = 0L;
         case 21: return CONVERSION_ALREADY_ENHANCED;
         case 22: return DUPLICATE_ENHANCEMENT_IN_REQUEST;
         case 23: return CUSTOMER_DATA_POLICY_PROHIBITS_ENHANCEMENT;
+        case 24: return MISSING_ORDER_ID_FOR_WEBPAGE;
         default: return null;
       }
     }

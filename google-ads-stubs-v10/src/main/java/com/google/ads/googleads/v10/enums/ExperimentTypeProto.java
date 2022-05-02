@@ -30,27 +30,26 @@ public final class ExperimentTypeProto {
     java.lang.String[] descriptorData = {
       "\n4google/ads/googleads/v10/enums/experim" +
       "ent_type.proto\022\036google.ads.googleads.v10" +
-      ".enums\032\034google/api/annotations.proto\"\336\002\n" +
-      "\022ExperimentTypeEnum\"\307\002\n\016ExperimentType\022\017" +
-      "\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\031\n\025DISPLAY_" +
-      "AND_VIDEO_360\020\002\022\020\n\014AD_VARIATION\020\003\022\021\n\rSMA" +
-      "RT_DISPLAY\020\004\022\022\n\016YOUTUBE_CUSTOM\020\005\022\022\n\016DISP" +
-      "LAY_CUSTOM\020\006\022\021\n\rSEARCH_CUSTOM\020\007\022&\n\"DISPL" +
-      "AY_AUTOMATED_BIDDING_STRATEGY\020\010\022%\n!SEARC" +
-      "H_AUTOMATED_BIDDING_STRATEGY\020\t\022\'\n#SHOPPI" +
-      "NG_AUTOMATED_BIDDING_STRATEGY\020\n\022\022\n\016SMART" +
-      "_MATCHING\020\013\022\020\n\014HOTEL_CUSTOM\020\014B\355\001\n\"com.go" +
-      "ogle.ads.googleads.v10.enumsB\023Experiment" +
-      "TypeProtoP\001ZCgoogle.golang.org/genproto/" +
-      "googleapis/ads/googleads/v10/enums;enums" +
-      "\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V10.Enums\312" +
-      "\002\036Google\\Ads\\GoogleAds\\V10\\Enums\352\002\"Googl" +
-      "e::Ads::GoogleAds::V10::Enumsb\006proto3"
+      ".enums\"\336\002\n\022ExperimentTypeEnum\"\307\002\n\016Experi" +
+      "mentType\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\031" +
+      "\n\025DISPLAY_AND_VIDEO_360\020\002\022\020\n\014AD_VARIATIO" +
+      "N\020\003\022\021\n\rSMART_DISPLAY\020\004\022\022\n\016YOUTUBE_CUSTOM" +
+      "\020\005\022\022\n\016DISPLAY_CUSTOM\020\006\022\021\n\rSEARCH_CUSTOM\020" +
+      "\007\022&\n\"DISPLAY_AUTOMATED_BIDDING_STRATEGY\020" +
+      "\010\022%\n!SEARCH_AUTOMATED_BIDDING_STRATEGY\020\t" +
+      "\022\'\n#SHOPPING_AUTOMATED_BIDDING_STRATEGY\020" +
+      "\n\022\022\n\016SMART_MATCHING\020\013\022\020\n\014HOTEL_CUSTOM\020\014B" +
+      "\355\001\n\"com.google.ads.googleads.v10.enumsB\023" +
+      "ExperimentTypeProtoP\001ZCgoogle.golang.org" +
+      "/genproto/googleapis/ads/googleads/v10/e" +
+      "nums;enums\242\002\003GAA\252\002\036Google.Ads.GoogleAds." +
+      "V10.Enums\312\002\036Google\\Ads\\GoogleAds\\V10\\Enu" +
+      "ms\352\002\"Google::Ads::GoogleAds::V10::Enumsb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_ExperimentTypeEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -58,7 +57,6 @@ public final class ExperimentTypeProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_ExperimentTypeEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

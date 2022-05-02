@@ -30,22 +30,20 @@ public final class ExtensionSettingDeviceProto {
     java.lang.String[] descriptorData = {
       "\n=google/ads/googleads/v10/enums/extensi" +
       "on_setting_device.proto\022\036google.ads.goog" +
-      "leads.v10.enums\032\034google/api/annotations." +
-      "proto\"m\n\032ExtensionSettingDeviceEnum\"O\n\026E" +
-      "xtensionSettingDevice\022\017\n\013UNSPECIFIED\020\000\022\013" +
-      "\n\007UNKNOWN\020\001\022\n\n\006MOBILE\020\002\022\013\n\007DESKTOP\020\003B\365\001\n" +
-      "\"com.google.ads.googleads.v10.enumsB\033Ext" +
-      "ensionSettingDeviceProtoP\001ZCgoogle.golan" +
-      "g.org/genproto/googleapis/ads/googleads/" +
-      "v10/enums;enums\242\002\003GAA\252\002\036Google.Ads.Googl" +
-      "eAds.V10.Enums\312\002\036Google\\Ads\\GoogleAds\\V1" +
-      "0\\Enums\352\002\"Google::Ads::GoogleAds::V10::E" +
-      "numsb\006proto3"
+      "leads.v10.enums\"m\n\032ExtensionSettingDevic" +
+      "eEnum\"O\n\026ExtensionSettingDevice\022\017\n\013UNSPE" +
+      "CIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\n\n\006MOBILE\020\002\022\013\n\007DES" +
+      "KTOP\020\003B\365\001\n\"com.google.ads.googleads.v10." +
+      "enumsB\033ExtensionSettingDeviceProtoP\001ZCgo" +
+      "ogle.golang.org/genproto/googleapis/ads/" +
+      "googleads/v10/enums;enums\242\002\003GAA\252\002\036Google" +
+      ".Ads.GoogleAds.V10.Enums\312\002\036Google\\Ads\\Go" +
+      "ogleAds\\V10\\Enums\352\002\"Google::Ads::GoogleA" +
+      "ds::V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_ExtensionSettingDeviceEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -53,7 +51,6 @@ public final class ExtensionSettingDeviceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_ExtensionSettingDeviceEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

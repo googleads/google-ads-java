@@ -31,30 +31,28 @@ public final class AssetFieldTypeViewProto {
       "\n>google/ads/googleads/v10/resources/ass" +
       "et_field_type_view.proto\022\"google.ads.goo" +
       "gleads.v10.resources\0325google/ads/googlea" +
-      "ds/v10/enums/asset_field_type.proto\032\034goo" +
-      "gle/api/annotations.proto\032\037google/api/fi" +
-      "eld_behavior.proto\032\031google/api/resource." +
-      "proto\"\250\002\n\022AssetFieldTypeView\022J\n\rresource" +
-      "_name\030\001 \001(\tB3\340A\003\372A-\n+googleads.googleapi" +
-      "s.com/AssetFieldTypeView\022Z\n\nfield_type\030\003" +
-      " \001(\0162A.google.ads.googleads.v10.enums.As" +
-      "setFieldTypeEnum.AssetFieldTypeB\003\340A\003:j\352A" +
-      "g\n+googleads.googleapis.com/AssetFieldTy" +
-      "peView\0228customers/{customer_id}/assetFie" +
-      "ldTypeViews/{field_type}B\211\002\n&com.google." +
-      "ads.googleads.v10.resourcesB\027AssetFieldT" +
-      "ypeViewProtoP\001ZKgoogle.golang.org/genpro" +
-      "to/googleapis/ads/googleads/v10/resource" +
-      "s;resources\242\002\003GAA\252\002\"Google.Ads.GoogleAds" +
-      ".V10.Resources\312\002\"Google\\Ads\\GoogleAds\\V1" +
-      "0\\Resources\352\002&Google::Ads::GoogleAds::V1" +
-      "0::Resourcesb\006proto3"
+      "ds/v10/enums/asset_field_type.proto\032\037goo" +
+      "gle/api/field_behavior.proto\032\031google/api" +
+      "/resource.proto\"\250\002\n\022AssetFieldTypeView\022J" +
+      "\n\rresource_name\030\001 \001(\tB3\340A\003\372A-\n+googleads" +
+      ".googleapis.com/AssetFieldTypeView\022Z\n\nfi" +
+      "eld_type\030\003 \001(\0162A.google.ads.googleads.v1" +
+      "0.enums.AssetFieldTypeEnum.AssetFieldTyp" +
+      "eB\003\340A\003:j\352Ag\n+googleads.googleapis.com/As" +
+      "setFieldTypeView\0228customers/{customer_id" +
+      "}/assetFieldTypeViews/{field_type}B\211\002\n&c" +
+      "om.google.ads.googleads.v10.resourcesB\027A" +
+      "ssetFieldTypeViewProtoP\001ZKgoogle.golang." +
+      "org/genproto/googleapis/ads/googleads/v1" +
+      "0/resources;resources\242\002\003GAA\252\002\"Google.Ads" +
+      ".GoogleAds.V10.Resources\312\002\"Google\\Ads\\Go" +
+      "ogleAds\\V10\\Resources\352\002&Google::Ads::Goo" +
+      "gleAds::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.enums.AssetFieldTypeProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -72,7 +70,6 @@ public final class AssetFieldTypeViewProto {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.enums.AssetFieldTypeProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

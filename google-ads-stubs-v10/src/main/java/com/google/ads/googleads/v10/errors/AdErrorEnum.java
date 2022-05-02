@@ -63,6 +63,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -1339,6 +1341,22 @@ private static final long serialVersionUID = 0L;
      * <code>MISSING_REQUIRED_IMAGE_ASPECT_RATIO = 153;</code>
      */
     MISSING_REQUIRED_IMAGE_ASPECT_RATIO(153),
+    /**
+     * <pre>
+     * Aspect ratios mismatch between different assets.
+     * </pre>
+     *
+     * <code>MISMATCHED_ASPECT_RATIOS = 155;</code>
+     */
+    MISMATCHED_ASPECT_RATIOS(155),
+    /**
+     * <pre>
+     * Images must be unique between different carousel card assets.
+     * </pre>
+     *
+     * <code>DUPLICATE_IMAGE_ACROSS_CAROUSEL_CARDS = 156;</code>
+     */
+    DUPLICATE_IMAGE_ACROSS_CAROUSEL_CARDS(156),
     UNRECOGNIZED(-1),
     ;
 
@@ -2588,6 +2606,22 @@ private static final long serialVersionUID = 0L;
      * <code>MISSING_REQUIRED_IMAGE_ASPECT_RATIO = 153;</code>
      */
     public static final int MISSING_REQUIRED_IMAGE_ASPECT_RATIO_VALUE = 153;
+    /**
+     * <pre>
+     * Aspect ratios mismatch between different assets.
+     * </pre>
+     *
+     * <code>MISMATCHED_ASPECT_RATIOS = 155;</code>
+     */
+    public static final int MISMATCHED_ASPECT_RATIOS_VALUE = 155;
+    /**
+     * <pre>
+     * Images must be unique between different carousel card assets.
+     * </pre>
+     *
+     * <code>DUPLICATE_IMAGE_ACROSS_CAROUSEL_CARDS = 156;</code>
+     */
+    public static final int DUPLICATE_IMAGE_ACROSS_CAROUSEL_CARDS_VALUE = 156;
 
 
     public final int getNumber() {
@@ -2766,6 +2800,8 @@ private static final long serialVersionUID = 0L;
         case 151: return INVALID_CUSTOMIZER_ATTRIBUTE_NAME;
         case 152: return STORE_MISMATCH;
         case 153: return MISSING_REQUIRED_IMAGE_ASPECT_RATIO;
+        case 155: return MISMATCHED_ASPECT_RATIOS;
+        case 156: return DUPLICATE_IMAGE_ACROSS_CAROUSEL_CARDS;
         default: return null;
       }
     }

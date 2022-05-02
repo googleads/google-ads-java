@@ -30,31 +30,29 @@ public final class KeywordThemeConstantProto {
     java.lang.String[] descriptorData = {
       "\n?google/ads/googleads/v10/resources/key" +
       "word_theme_constant.proto\022\"google.ads.go" +
-      "ogleads.v10.resources\032\034google/api/annota" +
-      "tions.proto\032\037google/api/field_behavior.p" +
-      "roto\032\031google/api/resource.proto\"\364\002\n\024Keyw" +
-      "ordThemeConstant\022L\n\rresource_name\030\001 \001(\tB" +
-      "5\340A\003\372A/\n-googleads.googleapis.com/Keywor" +
-      "dThemeConstant\022\036\n\014country_code\030\002 \001(\tB\003\340A" +
-      "\003H\000\210\001\001\022\037\n\rlanguage_code\030\003 \001(\tB\003\340A\003H\001\210\001\001\022" +
-      "\036\n\014display_name\030\004 \001(\tB\003\340A\003H\002\210\001\001:y\352Av\n-go" +
-      "ogleads.googleapis.com/KeywordThemeConst" +
-      "ant\022EkeywordThemeConstants/{express_cate" +
-      "gory_id}~{express_sub_category_id}B\017\n\r_c" +
-      "ountry_codeB\020\n\016_language_codeB\017\n\r_displa" +
-      "y_nameB\213\002\n&com.google.ads.googleads.v10." +
-      "resourcesB\031KeywordThemeConstantProtoP\001ZK" +
-      "google.golang.org/genproto/googleapis/ad" +
-      "s/googleads/v10/resources;resources\242\002\003GA" +
-      "A\252\002\"Google.Ads.GoogleAds.V10.Resources\312\002" +
-      "\"Google\\Ads\\GoogleAds\\V10\\Resources\352\002&Go" +
-      "ogle::Ads::GoogleAds::V10::Resourcesb\006pr" +
-      "oto3"
+      "ogleads.v10.resources\032\037google/api/field_" +
+      "behavior.proto\032\031google/api/resource.prot" +
+      "o\"\364\002\n\024KeywordThemeConstant\022L\n\rresource_n" +
+      "ame\030\001 \001(\tB5\340A\003\372A/\n-googleads.googleapis." +
+      "com/KeywordThemeConstant\022\036\n\014country_code" +
+      "\030\002 \001(\tB\003\340A\003H\000\210\001\001\022\037\n\rlanguage_code\030\003 \001(\tB" +
+      "\003\340A\003H\001\210\001\001\022\036\n\014display_name\030\004 \001(\tB\003\340A\003H\002\210\001" +
+      "\001:y\352Av\n-googleads.googleapis.com/Keyword" +
+      "ThemeConstant\022EkeywordThemeConstants/{ex" +
+      "press_category_id}~{express_sub_category" +
+      "_id}B\017\n\r_country_codeB\020\n\016_language_codeB" +
+      "\017\n\r_display_nameB\213\002\n&com.google.ads.goog" +
+      "leads.v10.resourcesB\031KeywordThemeConstan" +
+      "tProtoP\001ZKgoogle.golang.org/genproto/goo" +
+      "gleapis/ads/googleads/v10/resources;reso" +
+      "urces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V10.R" +
+      "esources\312\002\"Google\\Ads\\GoogleAds\\V10\\Reso" +
+      "urces\352\002&Google::Ads::GoogleAds::V10::Res" +
+      "ourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -71,7 +69,6 @@ public final class KeywordThemeConstantProto {
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

@@ -30,25 +30,24 @@ public final class CriterionCategoryChannelAvailabilityModeProto {
     java.lang.String[] descriptorData = {
       "\nQgoogle/ads/googleads/v10/enums/criteri" +
       "on_category_channel_availability_mode.pr" +
-      "oto\022\036google.ads.googleads.v10.enums\032\034goo" +
-      "gle/api/annotations.proto\"\324\001\n,CriterionC" +
-      "ategoryChannelAvailabilityModeEnum\"\243\001\n(C" +
-      "riterionCategoryChannelAvailabilityMode\022" +
-      "\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\020\n\014ALL_CHA" +
-      "NNELS\020\002\022!\n\035CHANNEL_TYPE_AND_ALL_SUBTYPES" +
-      "\020\003\022$\n CHANNEL_TYPE_AND_SUBSET_SUBTYPES\020\004" +
-      "B\207\002\n\"com.google.ads.googleads.v10.enumsB" +
-      "-CriterionCategoryChannelAvailabilityMod" +
-      "eProtoP\001ZCgoogle.golang.org/genproto/goo" +
-      "gleapis/ads/googleads/v10/enums;enums\242\002\003" +
-      "GAA\252\002\036Google.Ads.GoogleAds.V10.Enums\312\002\036G" +
-      "oogle\\Ads\\GoogleAds\\V10\\Enums\352\002\"Google::" +
-      "Ads::GoogleAds::V10::Enumsb\006proto3"
+      "oto\022\036google.ads.googleads.v10.enums\"\324\001\n," +
+      "CriterionCategoryChannelAvailabilityMode" +
+      "Enum\"\243\001\n(CriterionCategoryChannelAvailab" +
+      "ilityMode\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022" +
+      "\020\n\014ALL_CHANNELS\020\002\022!\n\035CHANNEL_TYPE_AND_AL" +
+      "L_SUBTYPES\020\003\022$\n CHANNEL_TYPE_AND_SUBSET_" +
+      "SUBTYPES\020\004B\207\002\n\"com.google.ads.googleads." +
+      "v10.enumsB-CriterionCategoryChannelAvail" +
+      "abilityModeProtoP\001ZCgoogle.golang.org/ge" +
+      "nproto/googleapis/ads/googleads/v10/enum" +
+      "s;enums\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V10" +
+      ".Enums\312\002\036Google\\Ads\\GoogleAds\\V10\\Enums\352" +
+      "\002\"Google::Ads::GoogleAds::V10::Enumsb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_CriterionCategoryChannelAvailabilityModeEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -56,7 +55,6 @@ public final class CriterionCategoryChannelAvailabilityModeProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_CriterionCategoryChannelAvailabilityModeEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

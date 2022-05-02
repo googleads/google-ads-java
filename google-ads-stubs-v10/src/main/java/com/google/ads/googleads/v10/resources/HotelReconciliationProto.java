@@ -32,37 +32,35 @@ public final class HotelReconciliationProto {
       "el_reconciliation.proto\022\"google.ads.goog" +
       "leads.v10.resources\032@google/ads/googlead" +
       "s/v10/enums/hotel_reconciliation_status." +
-      "proto\032\034google/api/annotations.proto\032\037goo" +
-      "gle/api/field_behavior.proto\032\031google/api" +
-      "/resource.proto\"\343\004\n\023HotelReconciliation\022" +
-      "K\n\rresource_name\030\001 \001(\tB4\340A\005\372A.\n,googlead" +
-      "s.googleapis.com/HotelReconciliation\022\035\n\r" +
-      "commission_id\030\002 \001(\tB\006\340A\002\340A\003\022\025\n\010order_id\030" +
-      "\003 \001(\tB\003\340A\003\022;\n\010campaign\030\013 \001(\tB)\340A\003\372A#\n!go" +
-      "ogleads.googleapis.com/Campaign\022\034\n\017hotel" +
-      "_center_id\030\004 \001(\003B\003\340A\003\022\025\n\010hotel_id\030\005 \001(\tB" +
-      "\003\340A\003\022\032\n\rcheck_in_date\030\006 \001(\tB\003\340A\003\022\033\n\016chec" +
-      "k_out_date\030\007 \001(\tB\003\340A\003\022\'\n\027reconciled_valu" +
-      "e_micros\030\010 \001(\003B\006\340A\002\340A\003\022\023\n\006billed\030\t \001(\010B\003" +
-      "\340A\003\022o\n\006status\030\n \001(\0162W.google.ads.googlea" +
-      "ds.v10.enums.HotelReconciliationStatusEn" +
-      "um.HotelReconciliationStatusB\006\340A\002\340A\003:o\352A" +
-      "l\n,googleads.googleapis.com/HotelReconci" +
-      "liation\022<customers/{customer_id}/hotelRe" +
-      "conciliations/{commission_id}B\212\002\n&com.go" +
-      "ogle.ads.googleads.v10.resourcesB\030HotelR" +
-      "econciliationProtoP\001ZKgoogle.golang.org/" +
-      "genproto/googleapis/ads/googleads/v10/re" +
-      "sources;resources\242\002\003GAA\252\002\"Google.Ads.Goo" +
-      "gleAds.V10.Resources\312\002\"Google\\Ads\\Google" +
-      "Ads\\V10\\Resources\352\002&Google::Ads::GoogleA" +
-      "ds::V10::Resourcesb\006proto3"
+      "proto\032\037google/api/field_behavior.proto\032\031" +
+      "google/api/resource.proto\"\343\004\n\023HotelRecon" +
+      "ciliation\022K\n\rresource_name\030\001 \001(\tB4\340A\005\372A." +
+      "\n,googleads.googleapis.com/HotelReconcil" +
+      "iation\022\035\n\rcommission_id\030\002 \001(\tB\006\340A\002\340A\003\022\025\n" +
+      "\010order_id\030\003 \001(\tB\003\340A\003\022;\n\010campaign\030\013 \001(\tB)" +
+      "\340A\003\372A#\n!googleads.googleapis.com/Campaig" +
+      "n\022\034\n\017hotel_center_id\030\004 \001(\003B\003\340A\003\022\025\n\010hotel" +
+      "_id\030\005 \001(\tB\003\340A\003\022\032\n\rcheck_in_date\030\006 \001(\tB\003\340" +
+      "A\003\022\033\n\016check_out_date\030\007 \001(\tB\003\340A\003\022\'\n\027recon" +
+      "ciled_value_micros\030\010 \001(\003B\006\340A\002\340A\003\022\023\n\006bill" +
+      "ed\030\t \001(\010B\003\340A\003\022o\n\006status\030\n \001(\0162W.google.a" +
+      "ds.googleads.v10.enums.HotelReconciliati" +
+      "onStatusEnum.HotelReconciliationStatusB\006" +
+      "\340A\002\340A\003:o\352Al\n,googleads.googleapis.com/Ho" +
+      "telReconciliation\022<customers/{customer_i" +
+      "d}/hotelReconciliations/{commission_id}B" +
+      "\212\002\n&com.google.ads.googleads.v10.resourc" +
+      "esB\030HotelReconciliationProtoP\001ZKgoogle.g" +
+      "olang.org/genproto/googleapis/ads/google" +
+      "ads/v10/resources;resources\242\002\003GAA\252\002\"Goog" +
+      "le.Ads.GoogleAds.V10.Resources\312\002\"Google\\" +
+      "Ads\\GoogleAds\\V10\\Resources\352\002&Google::Ad" +
+      "s::GoogleAds::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.enums.HotelReconciliationStatusProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -80,7 +78,6 @@ public final class HotelReconciliationProto {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.enums.HotelReconciliationStatusProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

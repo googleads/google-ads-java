@@ -30,23 +30,21 @@ public final class ReachPlanNetworkProto {
     java.lang.String[] descriptorData = {
       "\n7google/ads/googleads/v10/enums/reach_p" +
       "lan_network.proto\022\036google.ads.googleads." +
-      "v10.enums\032\034google/api/annotations.proto\"" +
-      "\227\001\n\024ReachPlanNetworkEnum\"\177\n\020ReachPlanNet" +
-      "work\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\013\n\007YO" +
-      "UTUBE\020\002\022\031\n\025GOOGLE_VIDEO_PARTNERS\020\003\022%\n!YO" +
-      "UTUBE_AND_GOOGLE_VIDEO_PARTNERS\020\004B\357\001\n\"co" +
-      "m.google.ads.googleads.v10.enumsB\025ReachP" +
-      "lanNetworkProtoP\001ZCgoogle.golang.org/gen" +
-      "proto/googleapis/ads/googleads/v10/enums" +
-      ";enums\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V10." +
-      "Enums\312\002\036Google\\Ads\\GoogleAds\\V10\\Enums\352\002" +
-      "\"Google::Ads::GoogleAds::V10::Enumsb\006pro" +
-      "to3"
+      "v10.enums\"\227\001\n\024ReachPlanNetworkEnum\"\177\n\020Re" +
+      "achPlanNetwork\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNO" +
+      "WN\020\001\022\013\n\007YOUTUBE\020\002\022\031\n\025GOOGLE_VIDEO_PARTNE" +
+      "RS\020\003\022%\n!YOUTUBE_AND_GOOGLE_VIDEO_PARTNER" +
+      "S\020\004B\357\001\n\"com.google.ads.googleads.v10.enu" +
+      "msB\025ReachPlanNetworkProtoP\001ZCgoogle.gola" +
+      "ng.org/genproto/googleapis/ads/googleads" +
+      "/v10/enums;enums\242\002\003GAA\252\002\036Google.Ads.Goog" +
+      "leAds.V10.Enums\312\002\036Google\\Ads\\GoogleAds\\V" +
+      "10\\Enums\352\002\"Google::Ads::GoogleAds::V10::" +
+      "Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_ReachPlanNetworkEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -54,7 +52,6 @@ public final class ReachPlanNetworkProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_ReachPlanNetworkEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

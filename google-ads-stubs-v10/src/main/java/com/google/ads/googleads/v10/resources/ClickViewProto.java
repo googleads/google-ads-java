@@ -32,44 +32,43 @@ public final class ClickViewProto {
       "ck_view.proto\022\"google.ads.googleads.v10." +
       "resources\0324google/ads/googleads/v10/comm" +
       "on/click_location.proto\032.google/ads/goog" +
-      "leads/v10/common/criteria.proto\032\034google/" +
-      "api/annotations.proto\032\037google/api/field_" +
-      "behavior.proto\032\031google/api/resource.prot" +
-      "o\"\312\006\n\tClickView\022A\n\rresource_name\030\001 \001(\tB*" +
-      "\340A\003\372A$\n\"googleads.googleapis.com/ClickVi" +
-      "ew\022\027\n\005gclid\030\010 \001(\tB\003\340A\003H\000\210\001\001\022M\n\020area_of_i" +
-      "nterest\030\003 \001(\0132..google.ads.googleads.v10" +
-      ".common.ClickLocationB\003\340A\003\022Q\n\024location_o" +
-      "f_presence\030\004 \001(\0132..google.ads.googleads." +
-      "v10.common.ClickLocationB\003\340A\003\022\035\n\013page_nu" +
-      "mber\030\t \001(\003B\003\340A\003H\001\210\001\001\022D\n\013ad_group_ad\030\n \001(" +
-      "\tB*\340A\003\372A$\n\"googleads.googleapis.com/AdGr" +
-      "oupAdH\002\210\001\001\022Y\n\030campaign_location_target\030\013" +
-      " \001(\tB2\340A\003\372A,\n*googleads.googleapis.com/G" +
-      "eoTargetConstantH\003\210\001\001\022A\n\tuser_list\030\014 \001(\t" +
-      "B)\340A\003\372A#\n!googleads.googleapis.com/UserL" +
-      "istH\004\210\001\001\022B\n\007keyword\030\r \001(\tB1\340A\003\372A+\n)googl" +
-      "eads.googleapis.com/AdGroupCriterion\022G\n\014" +
-      "keyword_info\030\016 \001(\0132,.google.ads.googlead" +
-      "s.v10.common.KeywordInfoB\003\340A\003:Z\352AW\n\"goog" +
-      "leads.googleapis.com/ClickView\0221customer" +
-      "s/{customer_id}/clickViews/{date}~{gclid" +
-      "}B\010\n\006_gclidB\016\n\014_page_numberB\016\n\014_ad_group" +
-      "_adB\033\n\031_campaign_location_targetB\014\n\n_use" +
-      "r_listB\200\002\n&com.google.ads.googleads.v10." +
-      "resourcesB\016ClickViewProtoP\001ZKgoogle.gola" +
-      "ng.org/genproto/googleapis/ads/googleads" +
-      "/v10/resources;resources\242\002\003GAA\252\002\"Google." +
-      "Ads.GoogleAds.V10.Resources\312\002\"Google\\Ads" +
-      "\\GoogleAds\\V10\\Resources\352\002&Google::Ads::" +
-      "GoogleAds::V10::Resourcesb\006proto3"
+      "leads/v10/common/criteria.proto\032\037google/" +
+      "api/field_behavior.proto\032\031google/api/res" +
+      "ource.proto\"\312\006\n\tClickView\022A\n\rresource_na" +
+      "me\030\001 \001(\tB*\340A\003\372A$\n\"googleads.googleapis.c" +
+      "om/ClickView\022\027\n\005gclid\030\010 \001(\tB\003\340A\003H\000\210\001\001\022M\n" +
+      "\020area_of_interest\030\003 \001(\0132..google.ads.goo" +
+      "gleads.v10.common.ClickLocationB\003\340A\003\022Q\n\024" +
+      "location_of_presence\030\004 \001(\0132..google.ads." +
+      "googleads.v10.common.ClickLocationB\003\340A\003\022" +
+      "\035\n\013page_number\030\t \001(\003B\003\340A\003H\001\210\001\001\022D\n\013ad_gro" +
+      "up_ad\030\n \001(\tB*\340A\003\372A$\n\"googleads.googleapi" +
+      "s.com/AdGroupAdH\002\210\001\001\022Y\n\030campaign_locatio" +
+      "n_target\030\013 \001(\tB2\340A\003\372A,\n*googleads.google" +
+      "apis.com/GeoTargetConstantH\003\210\001\001\022A\n\tuser_" +
+      "list\030\014 \001(\tB)\340A\003\372A#\n!googleads.googleapis" +
+      ".com/UserListH\004\210\001\001\022B\n\007keyword\030\r \001(\tB1\340A\003" +
+      "\372A+\n)googleads.googleapis.com/AdGroupCri" +
+      "terion\022G\n\014keyword_info\030\016 \001(\0132,.google.ad" +
+      "s.googleads.v10.common.KeywordInfoB\003\340A\003:" +
+      "Z\352AW\n\"googleads.googleapis.com/ClickView" +
+      "\0221customers/{customer_id}/clickViews/{da" +
+      "te}~{gclid}B\010\n\006_gclidB\016\n\014_page_numberB\016\n" +
+      "\014_ad_group_adB\033\n\031_campaign_location_targ" +
+      "etB\014\n\n_user_listB\200\002\n&com.google.ads.goog" +
+      "leads.v10.resourcesB\016ClickViewProtoP\001ZKg" +
+      "oogle.golang.org/genproto/googleapis/ads" +
+      "/googleads/v10/resources;resources\242\002\003GAA" +
+      "\252\002\"Google.Ads.GoogleAds.V10.Resources\312\002\"" +
+      "Google\\Ads\\GoogleAds\\V10\\Resources\352\002&Goo" +
+      "gle::Ads::GoogleAds::V10::Resourcesb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.common.ClickLocationProto.getDescriptor(),
           com.google.ads.googleads.v10.common.CriteriaProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -88,7 +87,6 @@ public final class ClickViewProto {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.common.ClickLocationProto.getDescriptor();
     com.google.ads.googleads.v10.common.CriteriaProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

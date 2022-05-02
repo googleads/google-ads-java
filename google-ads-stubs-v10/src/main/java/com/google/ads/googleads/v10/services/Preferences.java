@@ -91,6 +91,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -233,8 +235,8 @@ private static final long serialVersionUID = 0L;
   private boolean hasGuaranteedPrice_;
   /**
    * <pre>
-   * True if the price guaranteed. The cost of serving the ad is agreed upfront
-   * and not subject to an auction.
+   * True if the price is guaranteed. The cost of serving the ad is agreed
+   * upfront and not subject to an auction.
    * If not set, default is any value.
    * </pre>
    *
@@ -247,8 +249,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * True if the price guaranteed. The cost of serving the ad is agreed upfront
-   * and not subject to an auction.
+   * True if the price is guaranteed. The cost of serving the ad is agreed
+   * upfront and not subject to an auction.
    * If not set, default is any value.
    * </pre>
    *
@@ -932,8 +934,8 @@ private static final long serialVersionUID = 0L;
     private boolean hasGuaranteedPrice_ ;
     /**
      * <pre>
-     * True if the price guaranteed. The cost of serving the ad is agreed upfront
-     * and not subject to an auction.
+     * True if the price is guaranteed. The cost of serving the ad is agreed
+     * upfront and not subject to an auction.
      * If not set, default is any value.
      * </pre>
      *
@@ -946,8 +948,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * True if the price guaranteed. The cost of serving the ad is agreed upfront
-     * and not subject to an auction.
+     * True if the price is guaranteed. The cost of serving the ad is agreed
+     * upfront and not subject to an auction.
      * If not set, default is any value.
      * </pre>
      *
@@ -960,8 +962,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * True if the price guaranteed. The cost of serving the ad is agreed upfront
-     * and not subject to an auction.
+     * True if the price is guaranteed. The cost of serving the ad is agreed
+     * upfront and not subject to an auction.
      * If not set, default is any value.
      * </pre>
      *
@@ -977,8 +979,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * True if the price guaranteed. The cost of serving the ad is agreed upfront
-     * and not subject to an auction.
+     * True if the price is guaranteed. The cost of serving the ad is agreed
+     * upfront and not subject to an auction.
      * If not set, default is any value.
      * </pre>
      *

@@ -29,6 +29,7 @@ private static final long serialVersionUID = 0L;
     orderId_ = "";
     customVariables_ = java.util.Collections.emptyList();
     userIdentifiers_ = java.util.Collections.emptyList();
+    conversionEnvironment_ = 0;
   }
 
   @java.lang.Override
@@ -153,6 +154,12 @@ private static final long serialVersionUID = 0L;
             wbraid_ = s;
             break;
           }
+          case 160: {
+            int rawValue = input.readEnum();
+
+            conversionEnvironment_ = rawValue;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -164,6 +171,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -838,6 +847,33 @@ private static final long serialVersionUID = 0L;
     return userIdentifiers_.get(index);
   }
 
+  public static final int CONVERSION_ENVIRONMENT_FIELD_NUMBER = 20;
+  private int conversionEnvironment_;
+  /**
+   * <pre>
+   * The environment this conversion was recorded on. e.g. App or Web.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.enums.ConversionEnvironmentEnum.ConversionEnvironment conversion_environment = 20;</code>
+   * @return The enum numeric value on the wire for conversionEnvironment.
+   */
+  @java.lang.Override public int getConversionEnvironmentValue() {
+    return conversionEnvironment_;
+  }
+  /**
+   * <pre>
+   * The environment this conversion was recorded on. e.g. App or Web.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.enums.ConversionEnvironmentEnum.ConversionEnvironment conversion_environment = 20;</code>
+   * @return The conversionEnvironment.
+   */
+  @java.lang.Override public com.google.ads.googleads.v10.enums.ConversionEnvironmentEnum.ConversionEnvironment getConversionEnvironment() {
+    @SuppressWarnings("deprecation")
+    com.google.ads.googleads.v10.enums.ConversionEnvironmentEnum.ConversionEnvironment result = com.google.ads.googleads.v10.enums.ConversionEnvironmentEnum.ConversionEnvironment.valueOf(conversionEnvironment_);
+    return result == null ? com.google.ads.googleads.v10.enums.ConversionEnvironmentEnum.ConversionEnvironment.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -888,6 +924,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(wbraid_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 19, wbraid_);
     }
+    if (conversionEnvironment_ != com.google.ads.googleads.v10.enums.ConversionEnvironmentEnum.ConversionEnvironment.UNSPECIFIED.getNumber()) {
+      output.writeEnum(20, conversionEnvironment_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -937,6 +976,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(wbraid_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(19, wbraid_);
+    }
+    if (conversionEnvironment_ != com.google.ads.googleads.v10.enums.ConversionEnvironmentEnum.ConversionEnvironment.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(20, conversionEnvironment_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -1002,6 +1045,7 @@ private static final long serialVersionUID = 0L;
     }
     if (!getUserIdentifiersList()
         .equals(other.getUserIdentifiersList())) return false;
+    if (conversionEnvironment_ != other.conversionEnvironment_) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -1058,6 +1102,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + USER_IDENTIFIERS_FIELD_NUMBER;
       hash = (53 * hash) + getUserIdentifiersList().hashCode();
     }
+    hash = (37 * hash) + CONVERSION_ENVIRONMENT_FIELD_NUMBER;
+    hash = (53 * hash) + conversionEnvironment_;
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1237,6 +1283,8 @@ private static final long serialVersionUID = 0L;
       } else {
         userIdentifiersBuilder_.clear();
       }
+      conversionEnvironment_ = 0;
+
       return this;
     }
 
@@ -1319,6 +1367,7 @@ private static final long serialVersionUID = 0L;
       } else {
         result.userIdentifiers_ = userIdentifiersBuilder_.build();
       }
+      result.conversionEnvironment_ = conversionEnvironment_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -1461,6 +1510,9 @@ private static final long serialVersionUID = 0L;
             userIdentifiersBuilder_.addAllMessages(other.userIdentifiers_);
           }
         }
+      }
+      if (other.conversionEnvironment_ != 0) {
+        setConversionEnvironmentValue(other.getConversionEnvironmentValue());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -3312,6 +3364,80 @@ private static final long serialVersionUID = 0L;
         userIdentifiers_ = null;
       }
       return userIdentifiersBuilder_;
+    }
+
+    private int conversionEnvironment_ = 0;
+    /**
+     * <pre>
+     * The environment this conversion was recorded on. e.g. App or Web.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.enums.ConversionEnvironmentEnum.ConversionEnvironment conversion_environment = 20;</code>
+     * @return The enum numeric value on the wire for conversionEnvironment.
+     */
+    @java.lang.Override public int getConversionEnvironmentValue() {
+      return conversionEnvironment_;
+    }
+    /**
+     * <pre>
+     * The environment this conversion was recorded on. e.g. App or Web.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.enums.ConversionEnvironmentEnum.ConversionEnvironment conversion_environment = 20;</code>
+     * @param value The enum numeric value on the wire for conversionEnvironment to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConversionEnvironmentValue(int value) {
+      
+      conversionEnvironment_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The environment this conversion was recorded on. e.g. App or Web.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.enums.ConversionEnvironmentEnum.ConversionEnvironment conversion_environment = 20;</code>
+     * @return The conversionEnvironment.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.enums.ConversionEnvironmentEnum.ConversionEnvironment getConversionEnvironment() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v10.enums.ConversionEnvironmentEnum.ConversionEnvironment result = com.google.ads.googleads.v10.enums.ConversionEnvironmentEnum.ConversionEnvironment.valueOf(conversionEnvironment_);
+      return result == null ? com.google.ads.googleads.v10.enums.ConversionEnvironmentEnum.ConversionEnvironment.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * The environment this conversion was recorded on. e.g. App or Web.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.enums.ConversionEnvironmentEnum.ConversionEnvironment conversion_environment = 20;</code>
+     * @param value The conversionEnvironment to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConversionEnvironment(com.google.ads.googleads.v10.enums.ConversionEnvironmentEnum.ConversionEnvironment value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      conversionEnvironment_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The environment this conversion was recorded on. e.g. App or Web.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.enums.ConversionEnvironmentEnum.ConversionEnvironment conversion_environment = 20;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearConversionEnvironment() {
+      
+      conversionEnvironment_ = 0;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

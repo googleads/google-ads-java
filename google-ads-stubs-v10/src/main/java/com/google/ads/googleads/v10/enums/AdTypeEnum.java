@@ -63,6 +63,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -335,6 +337,22 @@ private static final long serialVersionUID = 0L;
      * <code>IN_FEED_VIDEO_AD = 34;</code>
      */
     IN_FEED_VIDEO_AD(34),
+    /**
+     * <pre>
+     * Discovery multi asset ad.
+     * </pre>
+     *
+     * <code>DISCOVERY_MULTI_ASSET_AD = 35;</code>
+     */
+    DISCOVERY_MULTI_ASSET_AD(35),
+    /**
+     * <pre>
+     * Discovery carousel ad.
+     * </pre>
+     *
+     * <code>DISCOVERY_CAROUSEL_AD = 36;</code>
+     */
+    DISCOVERY_CAROUSEL_AD(36),
     UNRECOGNIZED(-1),
     ;
 
@@ -580,6 +598,22 @@ private static final long serialVersionUID = 0L;
      * <code>IN_FEED_VIDEO_AD = 34;</code>
      */
     public static final int IN_FEED_VIDEO_AD_VALUE = 34;
+    /**
+     * <pre>
+     * Discovery multi asset ad.
+     * </pre>
+     *
+     * <code>DISCOVERY_MULTI_ASSET_AD = 35;</code>
+     */
+    public static final int DISCOVERY_MULTI_ASSET_AD_VALUE = 35;
+    /**
+     * <pre>
+     * Discovery carousel ad.
+     * </pre>
+     *
+     * <code>DISCOVERY_CAROUSEL_AD = 36;</code>
+     */
+    public static final int DISCOVERY_CAROUSEL_AD_VALUE = 36;
 
 
     public final int getNumber() {
@@ -636,6 +670,8 @@ private static final long serialVersionUID = 0L;
         case 32: return CALL_AD;
         case 33: return APP_PRE_REGISTRATION_AD;
         case 34: return IN_FEED_VIDEO_AD;
+        case 35: return DISCOVERY_MULTI_ASSET_AD;
+        case 36: return DISCOVERY_CAROUSEL_AD;
         default: return null;
       }
     }

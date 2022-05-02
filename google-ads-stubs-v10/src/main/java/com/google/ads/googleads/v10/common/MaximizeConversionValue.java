@@ -79,6 +79,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -167,7 +169,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (targetRoas_ != 0D) {
+    if (java.lang.Double.doubleToRawLongBits(targetRoas_) != 0) {
       output.writeDouble(2, targetRoas_);
     }
     if (cpcBidCeilingMicros_ != 0L) {
@@ -185,7 +187,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (targetRoas_ != 0D) {
+    if (java.lang.Double.doubleToRawLongBits(targetRoas_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(2, targetRoas_);
     }

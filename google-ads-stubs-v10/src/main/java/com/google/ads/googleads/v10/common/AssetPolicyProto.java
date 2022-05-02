@@ -34,21 +34,21 @@ public final class AssetPolicyProto {
       "olicy.proto\032;google/ads/googleads/v10/en" +
       "ums/policy_approval_status.proto\0329google" +
       "/ads/googleads/v10/enums/policy_review_s" +
-      "tatus.proto\032\034google/api/annotations.prot" +
-      "o\"\261\002\n\024AdAssetPolicySummary\022O\n\024policy_top" +
-      "ic_entries\030\001 \003(\01321.google.ads.googleads." +
-      "v10.common.PolicyTopicEntry\022`\n\rreview_st" +
-      "atus\030\002 \001(\0162I.google.ads.googleads.v10.en" +
-      "ums.PolicyReviewStatusEnum.PolicyReviewS" +
-      "tatus\022f\n\017approval_status\030\003 \001(\0162M.google." +
-      "ads.googleads.v10.enums.PolicyApprovalSt" +
-      "atusEnum.PolicyApprovalStatusB\360\001\n#com.go" +
-      "ogle.ads.googleads.v10.commonB\020AssetPoli" +
-      "cyProtoP\001ZEgoogle.golang.org/genproto/go" +
-      "ogleapis/ads/googleads/v10/common;common" +
-      "\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V10.Common" +
-      "\312\002\037Google\\Ads\\GoogleAds\\V10\\Common\352\002#Goo" +
-      "gle::Ads::GoogleAds::V10::Commonb\006proto3"
+      "tatus.proto\"\261\002\n\024AdAssetPolicySummary\022O\n\024" +
+      "policy_topic_entries\030\001 \003(\01321.google.ads." +
+      "googleads.v10.common.PolicyTopicEntry\022`\n" +
+      "\rreview_status\030\002 \001(\0162I.google.ads.google" +
+      "ads.v10.enums.PolicyReviewStatusEnum.Pol" +
+      "icyReviewStatus\022f\n\017approval_status\030\003 \001(\016" +
+      "2M.google.ads.googleads.v10.enums.Policy" +
+      "ApprovalStatusEnum.PolicyApprovalStatusB" +
+      "\360\001\n#com.google.ads.googleads.v10.commonB" +
+      "\020AssetPolicyProtoP\001ZEgoogle.golang.org/g" +
+      "enproto/googleapis/ads/googleads/v10/com" +
+      "mon;common\242\002\003GAA\252\002\037Google.Ads.GoogleAds." +
+      "V10.Common\312\002\037Google\\Ads\\GoogleAds\\V10\\Co" +
+      "mmon\352\002#Google::Ads::GoogleAds::V10::Comm" +
+      "onb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -56,7 +56,6 @@ public final class AssetPolicyProto {
           com.google.ads.googleads.v10.common.PolicyProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.PolicyApprovalStatusProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.PolicyReviewStatusProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_common_AdAssetPolicySummary_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -67,7 +66,6 @@ public final class AssetPolicyProto {
     com.google.ads.googleads.v10.common.PolicyProto.getDescriptor();
     com.google.ads.googleads.v10.enums.PolicyApprovalStatusProto.getDescriptor();
     com.google.ads.googleads.v10.enums.PolicyReviewStatusProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

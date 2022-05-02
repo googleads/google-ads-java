@@ -36,36 +36,35 @@ public final class BiddingDataExclusionProto {
       "ice.proto\032<google/ads/googleads/v10/enum" +
       "s/seasonality_event_scope.proto\032=google/" +
       "ads/googleads/v10/enums/seasonality_even" +
-      "t_status.proto\032\034google/api/annotations.p" +
-      "roto\032\037google/api/field_behavior.proto\032\031g" +
-      "oogle/api/resource.proto\"\230\006\n\024BiddingData" +
-      "Exclusion\022L\n\rresource_name\030\001 \001(\tB5\340A\005\372A/" +
-      "\n-googleads.googleapis.com/BiddingDataEx" +
-      "clusion\022\036\n\021data_exclusion_id\030\002 \001(\003B\003\340A\003\022" +
-      "^\n\005scope\030\003 \001(\0162O.google.ads.googleads.v1" +
-      "0.enums.SeasonalityEventScopeEnum.Season" +
-      "alityEventScope\022f\n\006status\030\004 \001(\0162Q.google" +
-      ".ads.googleads.v10.enums.SeasonalityEven" +
-      "tStatusEnum.SeasonalityEventStatusB\003\340A\003\022" +
-      "\034\n\017start_date_time\030\005 \001(\tB\003\340A\002\022\032\n\rend_dat" +
-      "e_time\030\006 \001(\tB\003\340A\002\022\014\n\004name\030\007 \001(\t\022\023\n\013descr" +
-      "iption\030\010 \001(\t\022B\n\007devices\030\t \003(\01621.google.a" +
-      "ds.googleads.v10.enums.DeviceEnum.Device" +
-      "\0229\n\tcampaigns\030\n \003(\tB&\372A#\n!googleads.goog" +
-      "leapis.com/Campaign\022t\n\031advertising_chann" +
-      "el_types\030\013 \003(\0162Q.google.ads.googleads.v1" +
-      "0.enums.AdvertisingChannelTypeEnum.Adver" +
-      "tisingChannelType:x\352Au\n-googleads.google" +
-      "apis.com/BiddingDataExclusion\022Dcustomers" +
-      "/{customer_id}/biddingDataExclusions/{se" +
-      "asonality_event_id}B\213\002\n&com.google.ads.g" +
-      "oogleads.v10.resourcesB\031BiddingDataExclu" +
-      "sionProtoP\001ZKgoogle.golang.org/genproto/" +
-      "googleapis/ads/googleads/v10/resources;r" +
-      "esources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V1" +
-      "0.Resources\312\002\"Google\\Ads\\GoogleAds\\V10\\R" +
-      "esources\352\002&Google::Ads::GoogleAds::V10::" +
-      "Resourcesb\006proto3"
+      "t_status.proto\032\037google/api/field_behavio" +
+      "r.proto\032\031google/api/resource.proto\"\230\006\n\024B" +
+      "iddingDataExclusion\022L\n\rresource_name\030\001 \001" +
+      "(\tB5\340A\005\372A/\n-googleads.googleapis.com/Bid" +
+      "dingDataExclusion\022\036\n\021data_exclusion_id\030\002" +
+      " \001(\003B\003\340A\003\022^\n\005scope\030\003 \001(\0162O.google.ads.go" +
+      "ogleads.v10.enums.SeasonalityEventScopeE" +
+      "num.SeasonalityEventScope\022f\n\006status\030\004 \001(" +
+      "\0162Q.google.ads.googleads.v10.enums.Seaso" +
+      "nalityEventStatusEnum.SeasonalityEventSt" +
+      "atusB\003\340A\003\022\034\n\017start_date_time\030\005 \001(\tB\003\340A\002\022" +
+      "\032\n\rend_date_time\030\006 \001(\tB\003\340A\002\022\014\n\004name\030\007 \001(" +
+      "\t\022\023\n\013description\030\010 \001(\t\022B\n\007devices\030\t \003(\0162" +
+      "1.google.ads.googleads.v10.enums.DeviceE" +
+      "num.Device\0229\n\tcampaigns\030\n \003(\tB&\372A#\n!goog" +
+      "leads.googleapis.com/Campaign\022t\n\031adverti" +
+      "sing_channel_types\030\013 \003(\0162Q.google.ads.go" +
+      "ogleads.v10.enums.AdvertisingChannelType" +
+      "Enum.AdvertisingChannelType:x\352Au\n-google" +
+      "ads.googleapis.com/BiddingDataExclusion\022" +
+      "Dcustomers/{customer_id}/biddingDataExcl" +
+      "usions/{seasonality_event_id}B\213\002\n&com.go" +
+      "ogle.ads.googleads.v10.resourcesB\031Biddin" +
+      "gDataExclusionProtoP\001ZKgoogle.golang.org" +
+      "/genproto/googleapis/ads/googleads/v10/r" +
+      "esources;resources\242\002\003GAA\252\002\"Google.Ads.Go" +
+      "ogleAds.V10.Resources\312\002\"Google\\Ads\\Googl" +
+      "eAds\\V10\\Resources\352\002&Google::Ads::Google" +
+      "Ads::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -74,7 +73,6 @@ public final class BiddingDataExclusionProto {
           com.google.ads.googleads.v10.enums.DeviceProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.SeasonalityEventScopeProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.SeasonalityEventStatusProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -95,7 +93,6 @@ public final class BiddingDataExclusionProto {
     com.google.ads.googleads.v10.enums.DeviceProto.getDescriptor();
     com.google.ads.googleads.v10.enums.SeasonalityEventScopeProto.getDescriptor();
     com.google.ads.googleads.v10.enums.SeasonalityEventStatusProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

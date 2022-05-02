@@ -244,6 +244,50 @@ public interface LeadFormAssetOrBuilder extends
 
   /**
    * <pre>
+   * Ordered list of custom question fields.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v10.common.LeadFormCustomQuestionField custom_question_fields = 23;</code>
+   */
+  java.util.List<com.google.ads.googleads.v10.common.LeadFormCustomQuestionField> 
+      getCustomQuestionFieldsList();
+  /**
+   * <pre>
+   * Ordered list of custom question fields.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v10.common.LeadFormCustomQuestionField custom_question_fields = 23;</code>
+   */
+  com.google.ads.googleads.v10.common.LeadFormCustomQuestionField getCustomQuestionFields(int index);
+  /**
+   * <pre>
+   * Ordered list of custom question fields.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v10.common.LeadFormCustomQuestionField custom_question_fields = 23;</code>
+   */
+  int getCustomQuestionFieldsCount();
+  /**
+   * <pre>
+   * Ordered list of custom question fields.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v10.common.LeadFormCustomQuestionField custom_question_fields = 23;</code>
+   */
+  java.util.List<? extends com.google.ads.googleads.v10.common.LeadFormCustomQuestionFieldOrBuilder> 
+      getCustomQuestionFieldsOrBuilderList();
+  /**
+   * <pre>
+   * Ordered list of custom question fields.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v10.common.LeadFormCustomQuestionField custom_question_fields = 23;</code>
+   */
+  com.google.ads.googleads.v10.common.LeadFormCustomQuestionFieldOrBuilder getCustomQuestionFieldsOrBuilder(
+      int index);
+
+  /**
+   * <pre>
    * Configured methods for collected lead data to be delivered to advertiser.
    * Only one method typed as WebhookDelivery can be configured.
    * </pre>

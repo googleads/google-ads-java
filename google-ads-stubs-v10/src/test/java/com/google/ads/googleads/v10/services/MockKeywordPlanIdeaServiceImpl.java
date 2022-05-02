@@ -79,4 +79,26 @@ public class MockKeywordPlanIdeaServiceImpl extends KeywordPlanIdeaServiceImplBa
                   Exception.class.getName())));
     }
   }
+
+  @Override
+  public void generateKeywordHistoricalMetrics(
+      GenerateKeywordHistoricalMetricsRequest request,
+      StreamObserver<GenerateKeywordHistoricalMetricsResponse> responseObserver) {
+    Object response = responses.poll();
+    if (response instanceof GenerateKeywordHistoricalMetricsResponse) {
+      requests.add(request);
+      responseObserver.onNext(((GenerateKeywordHistoricalMetricsResponse) response));
+      responseObserver.onCompleted();
+    } else if (response instanceof Exception) {
+      responseObserver.onError(((Exception) response));
+    } else {
+      responseObserver.onError(
+          new IllegalArgumentException(
+              String.format(
+                  "Unrecognized response type %s for method GenerateKeywordHistoricalMetrics, expected %s or %s",
+                  response == null ? "null" : response.getClass().getName(),
+                  GenerateKeywordHistoricalMetricsResponse.class.getName(),
+                  Exception.class.getName())));
+    }
+  }
 }

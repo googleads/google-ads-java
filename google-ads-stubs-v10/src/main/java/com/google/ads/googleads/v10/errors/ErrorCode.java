@@ -874,6 +874,18 @@ private static final long serialVersionUID = 0L;
             errorCode_ = rawValue;
             break;
           }
+          case 1320: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 165;
+            errorCode_ = rawValue;
+            break;
+          }
+          case 1328: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 166;
+            errorCode_ = rawValue;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -885,6 +897,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -942,8 +956,10 @@ private static final long serialVersionUID = 0L;
     ASSET_SET_ERROR(152),
     BIDDING_ERROR(26),
     CAMPAIGN_CRITERION_ERROR(29),
+    CAMPAIGN_CONVERSION_GOAL_ERROR(166),
     CAMPAIGN_CUSTOMIZER_ERROR(160),
     COLLECTION_SIZE_ERROR(31),
+    CONVERSION_GOAL_CAMPAIGN_CONFIG_ERROR(165),
     COUNTRY_CODE_ERROR(109),
     CRITERION_ERROR(32),
     CUSTOM_CONVERSION_GOAL_ERROR(150),
@@ -1096,8 +1112,10 @@ private static final long serialVersionUID = 0L;
         case 152: return ASSET_SET_ERROR;
         case 26: return BIDDING_ERROR;
         case 29: return CAMPAIGN_CRITERION_ERROR;
+        case 166: return CAMPAIGN_CONVERSION_GOAL_ERROR;
         case 160: return CAMPAIGN_CUSTOMIZER_ERROR;
         case 31: return COLLECTION_SIZE_ERROR;
+        case 165: return CONVERSION_GOAL_CAMPAIGN_CONFIG_ERROR;
         case 109: return COUNTRY_CODE_ERROR;
         case 32: return CRITERION_ERROR;
         case 150: return CUSTOM_CONVERSION_GOAL_ERROR;
@@ -2581,6 +2599,50 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v10.errors.CampaignCriterionErrorEnum.CampaignCriterionError.UNSPECIFIED;
   }
 
+  public static final int CAMPAIGN_CONVERSION_GOAL_ERROR_FIELD_NUMBER = 166;
+  /**
+   * <pre>
+   * The reasons for the campaign conversion goal error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.errors.CampaignConversionGoalErrorEnum.CampaignConversionGoalError campaign_conversion_goal_error = 166;</code>
+   * @return Whether the campaignConversionGoalError field is set.
+   */
+  public boolean hasCampaignConversionGoalError() {
+    return errorCodeCase_ == 166;
+  }
+  /**
+   * <pre>
+   * The reasons for the campaign conversion goal error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.errors.CampaignConversionGoalErrorEnum.CampaignConversionGoalError campaign_conversion_goal_error = 166;</code>
+   * @return The enum numeric value on the wire for campaignConversionGoalError.
+   */
+  public int getCampaignConversionGoalErrorValue() {
+    if (errorCodeCase_ == 166) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the campaign conversion goal error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.errors.CampaignConversionGoalErrorEnum.CampaignConversionGoalError campaign_conversion_goal_error = 166;</code>
+   * @return The campaignConversionGoalError.
+   */
+  public com.google.ads.googleads.v10.errors.CampaignConversionGoalErrorEnum.CampaignConversionGoalError getCampaignConversionGoalError() {
+    if (errorCodeCase_ == 166) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v10.errors.CampaignConversionGoalErrorEnum.CampaignConversionGoalError result = com.google.ads.googleads.v10.errors.CampaignConversionGoalErrorEnum.CampaignConversionGoalError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v10.errors.CampaignConversionGoalErrorEnum.CampaignConversionGoalError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v10.errors.CampaignConversionGoalErrorEnum.CampaignConversionGoalError.UNSPECIFIED;
+  }
+
   public static final int CAMPAIGN_CUSTOMIZER_ERROR_FIELD_NUMBER = 160;
   /**
    * <pre>
@@ -2667,6 +2729,50 @@ private static final long serialVersionUID = 0L;
       return result == null ? com.google.ads.googleads.v10.errors.CollectionSizeErrorEnum.CollectionSizeError.UNRECOGNIZED : result;
     }
     return com.google.ads.googleads.v10.errors.CollectionSizeErrorEnum.CollectionSizeError.UNSPECIFIED;
+  }
+
+  public static final int CONVERSION_GOAL_CAMPAIGN_CONFIG_ERROR_FIELD_NUMBER = 165;
+  /**
+   * <pre>
+   * The reasons for the conversion goal campaign config error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.errors.ConversionGoalCampaignConfigErrorEnum.ConversionGoalCampaignConfigError conversion_goal_campaign_config_error = 165;</code>
+   * @return Whether the conversionGoalCampaignConfigError field is set.
+   */
+  public boolean hasConversionGoalCampaignConfigError() {
+    return errorCodeCase_ == 165;
+  }
+  /**
+   * <pre>
+   * The reasons for the conversion goal campaign config error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.errors.ConversionGoalCampaignConfigErrorEnum.ConversionGoalCampaignConfigError conversion_goal_campaign_config_error = 165;</code>
+   * @return The enum numeric value on the wire for conversionGoalCampaignConfigError.
+   */
+  public int getConversionGoalCampaignConfigErrorValue() {
+    if (errorCodeCase_ == 165) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the conversion goal campaign config error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.errors.ConversionGoalCampaignConfigErrorEnum.ConversionGoalCampaignConfigError conversion_goal_campaign_config_error = 165;</code>
+   * @return The conversionGoalCampaignConfigError.
+   */
+  public com.google.ads.googleads.v10.errors.ConversionGoalCampaignConfigErrorEnum.ConversionGoalCampaignConfigError getConversionGoalCampaignConfigError() {
+    if (errorCodeCase_ == 165) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v10.errors.ConversionGoalCampaignConfigErrorEnum.ConversionGoalCampaignConfigError result = com.google.ads.googleads.v10.errors.ConversionGoalCampaignConfigErrorEnum.ConversionGoalCampaignConfigError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v10.errors.ConversionGoalCampaignConfigErrorEnum.ConversionGoalCampaignConfigError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v10.errors.ConversionGoalCampaignConfigErrorEnum.ConversionGoalCampaignConfigError.UNSPECIFIED;
   }
 
   public static final int COUNTRY_CODE_ERROR_FIELD_NUMBER = 109;
@@ -7670,6 +7776,12 @@ private static final long serialVersionUID = 0L;
     if (errorCodeCase_ == 164) {
       output.writeEnum(164, ((java.lang.Integer) errorCode_));
     }
+    if (errorCodeCase_ == 165) {
+      output.writeEnum(165, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 166) {
+      output.writeEnum(166, ((java.lang.Integer) errorCode_));
+    }
     unknownFields.writeTo(output);
   }
 
@@ -8227,6 +8339,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(164, ((java.lang.Integer) errorCode_));
     }
+    if (errorCodeCase_ == 165) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(165, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 166) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(166, ((java.lang.Integer) errorCode_));
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -8368,6 +8488,10 @@ private static final long serialVersionUID = 0L;
         if (getCampaignCriterionErrorValue()
             != other.getCampaignCriterionErrorValue()) return false;
         break;
+      case 166:
+        if (getCampaignConversionGoalErrorValue()
+            != other.getCampaignConversionGoalErrorValue()) return false;
+        break;
       case 160:
         if (getCampaignCustomizerErrorValue()
             != other.getCampaignCustomizerErrorValue()) return false;
@@ -8375,6 +8499,10 @@ private static final long serialVersionUID = 0L;
       case 31:
         if (getCollectionSizeErrorValue()
             != other.getCollectionSizeErrorValue()) return false;
+        break;
+      case 165:
+        if (getConversionGoalCampaignConfigErrorValue()
+            != other.getConversionGoalCampaignConfigErrorValue()) return false;
         break;
       case 109:
         if (getCountryCodeErrorValue()
@@ -8931,6 +9059,10 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + CAMPAIGN_CRITERION_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getCampaignCriterionErrorValue();
         break;
+      case 166:
+        hash = (37 * hash) + CAMPAIGN_CONVERSION_GOAL_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getCampaignConversionGoalErrorValue();
+        break;
       case 160:
         hash = (37 * hash) + CAMPAIGN_CUSTOMIZER_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getCampaignCustomizerErrorValue();
@@ -8938,6 +9070,10 @@ private static final long serialVersionUID = 0L;
       case 31:
         hash = (37 * hash) + COLLECTION_SIZE_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getCollectionSizeErrorValue();
+        break;
+      case 165:
+        hash = (37 * hash) + CONVERSION_GOAL_CAMPAIGN_CONFIG_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getConversionGoalCampaignConfigErrorValue();
         break;
       case 109:
         hash = (37 * hash) + COUNTRY_CODE_ERROR_FIELD_NUMBER;
@@ -9616,10 +9752,16 @@ private static final long serialVersionUID = 0L;
       if (errorCodeCase_ == 29) {
         result.errorCode_ = errorCode_;
       }
+      if (errorCodeCase_ == 166) {
+        result.errorCode_ = errorCode_;
+      }
       if (errorCodeCase_ == 160) {
         result.errorCode_ = errorCode_;
       }
       if (errorCodeCase_ == 31) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 165) {
         result.errorCode_ = errorCode_;
       }
       if (errorCodeCase_ == 109) {
@@ -10108,12 +10250,20 @@ private static final long serialVersionUID = 0L;
           setCampaignCriterionErrorValue(other.getCampaignCriterionErrorValue());
           break;
         }
+        case CAMPAIGN_CONVERSION_GOAL_ERROR: {
+          setCampaignConversionGoalErrorValue(other.getCampaignConversionGoalErrorValue());
+          break;
+        }
         case CAMPAIGN_CUSTOMIZER_ERROR: {
           setCampaignCustomizerErrorValue(other.getCampaignCustomizerErrorValue());
           break;
         }
         case COLLECTION_SIZE_ERROR: {
           setCollectionSizeErrorValue(other.getCollectionSizeErrorValue());
+          break;
+        }
+        case CONVERSION_GOAL_CAMPAIGN_CONFIG_ERROR: {
+          setConversionGoalCampaignConfigErrorValue(other.getConversionGoalCampaignConfigErrorValue());
           break;
         }
         case COUNTRY_CODE_ERROR: {
@@ -13527,6 +13677,101 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
+     * The reasons for the campaign conversion goal error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.errors.CampaignConversionGoalErrorEnum.CampaignConversionGoalError campaign_conversion_goal_error = 166;</code>
+     * @return Whether the campaignConversionGoalError field is set.
+     */
+    @java.lang.Override
+    public boolean hasCampaignConversionGoalError() {
+      return errorCodeCase_ == 166;
+    }
+    /**
+     * <pre>
+     * The reasons for the campaign conversion goal error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.errors.CampaignConversionGoalErrorEnum.CampaignConversionGoalError campaign_conversion_goal_error = 166;</code>
+     * @return The enum numeric value on the wire for campaignConversionGoalError.
+     */
+    @java.lang.Override
+    public int getCampaignConversionGoalErrorValue() {
+      if (errorCodeCase_ == 166) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the campaign conversion goal error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.errors.CampaignConversionGoalErrorEnum.CampaignConversionGoalError campaign_conversion_goal_error = 166;</code>
+     * @param value The enum numeric value on the wire for campaignConversionGoalError to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCampaignConversionGoalErrorValue(int value) {
+      errorCodeCase_ = 166;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the campaign conversion goal error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.errors.CampaignConversionGoalErrorEnum.CampaignConversionGoalError campaign_conversion_goal_error = 166;</code>
+     * @return The campaignConversionGoalError.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.errors.CampaignConversionGoalErrorEnum.CampaignConversionGoalError getCampaignConversionGoalError() {
+      if (errorCodeCase_ == 166) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v10.errors.CampaignConversionGoalErrorEnum.CampaignConversionGoalError result = com.google.ads.googleads.v10.errors.CampaignConversionGoalErrorEnum.CampaignConversionGoalError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v10.errors.CampaignConversionGoalErrorEnum.CampaignConversionGoalError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v10.errors.CampaignConversionGoalErrorEnum.CampaignConversionGoalError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the campaign conversion goal error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.errors.CampaignConversionGoalErrorEnum.CampaignConversionGoalError campaign_conversion_goal_error = 166;</code>
+     * @param value The campaignConversionGoalError to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCampaignConversionGoalError(com.google.ads.googleads.v10.errors.CampaignConversionGoalErrorEnum.CampaignConversionGoalError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 166;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the campaign conversion goal error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.errors.CampaignConversionGoalErrorEnum.CampaignConversionGoalError campaign_conversion_goal_error = 166;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCampaignConversionGoalError() {
+      if (errorCodeCase_ == 166) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
      * The reasons for the campaign customizer error.
      * </pre>
      *
@@ -13708,6 +13953,101 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearCollectionSizeError() {
       if (errorCodeCase_ == 31) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the conversion goal campaign config error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.errors.ConversionGoalCampaignConfigErrorEnum.ConversionGoalCampaignConfigError conversion_goal_campaign_config_error = 165;</code>
+     * @return Whether the conversionGoalCampaignConfigError field is set.
+     */
+    @java.lang.Override
+    public boolean hasConversionGoalCampaignConfigError() {
+      return errorCodeCase_ == 165;
+    }
+    /**
+     * <pre>
+     * The reasons for the conversion goal campaign config error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.errors.ConversionGoalCampaignConfigErrorEnum.ConversionGoalCampaignConfigError conversion_goal_campaign_config_error = 165;</code>
+     * @return The enum numeric value on the wire for conversionGoalCampaignConfigError.
+     */
+    @java.lang.Override
+    public int getConversionGoalCampaignConfigErrorValue() {
+      if (errorCodeCase_ == 165) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the conversion goal campaign config error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.errors.ConversionGoalCampaignConfigErrorEnum.ConversionGoalCampaignConfigError conversion_goal_campaign_config_error = 165;</code>
+     * @param value The enum numeric value on the wire for conversionGoalCampaignConfigError to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConversionGoalCampaignConfigErrorValue(int value) {
+      errorCodeCase_ = 165;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the conversion goal campaign config error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.errors.ConversionGoalCampaignConfigErrorEnum.ConversionGoalCampaignConfigError conversion_goal_campaign_config_error = 165;</code>
+     * @return The conversionGoalCampaignConfigError.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.errors.ConversionGoalCampaignConfigErrorEnum.ConversionGoalCampaignConfigError getConversionGoalCampaignConfigError() {
+      if (errorCodeCase_ == 165) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v10.errors.ConversionGoalCampaignConfigErrorEnum.ConversionGoalCampaignConfigError result = com.google.ads.googleads.v10.errors.ConversionGoalCampaignConfigErrorEnum.ConversionGoalCampaignConfigError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v10.errors.ConversionGoalCampaignConfigErrorEnum.ConversionGoalCampaignConfigError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v10.errors.ConversionGoalCampaignConfigErrorEnum.ConversionGoalCampaignConfigError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the conversion goal campaign config error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.errors.ConversionGoalCampaignConfigErrorEnum.ConversionGoalCampaignConfigError conversion_goal_campaign_config_error = 165;</code>
+     * @param value The conversionGoalCampaignConfigError to set.
+     * @return This builder for chaining.
+     */
+    public Builder setConversionGoalCampaignConfigError(com.google.ads.googleads.v10.errors.ConversionGoalCampaignConfigErrorEnum.ConversionGoalCampaignConfigError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 165;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the conversion goal campaign config error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.errors.ConversionGoalCampaignConfigErrorEnum.ConversionGoalCampaignConfigError conversion_goal_campaign_config_error = 165;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearConversionGoalCampaignConfigError() {
+      if (errorCodeCase_ == 165) {
         errorCodeCase_ = 0;
         errorCode_ = null;
         onChanged();

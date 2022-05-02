@@ -300,4 +300,44 @@ public interface VideoResponsiveAdInfoOrBuilder extends
    */
   com.google.ads.googleads.v10.common.AdImageAssetOrBuilder getCompanionBannersOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * First part of text that appears in the ad with the displayed URL.
+   * </pre>
+   *
+   * <code>string breadcrumb1 = 7;</code>
+   * @return The breadcrumb1.
+   */
+  java.lang.String getBreadcrumb1();
+  /**
+   * <pre>
+   * First part of text that appears in the ad with the displayed URL.
+   * </pre>
+   *
+   * <code>string breadcrumb1 = 7;</code>
+   * @return The bytes for breadcrumb1.
+   */
+  com.google.protobuf.ByteString
+      getBreadcrumb1Bytes();
+
+  /**
+   * <pre>
+   * Second part of text that appears in the ad with the displayed URL.
+   * </pre>
+   *
+   * <code>string breadcrumb2 = 8;</code>
+   * @return The breadcrumb2.
+   */
+  java.lang.String getBreadcrumb2();
+  /**
+   * <pre>
+   * Second part of text that appears in the ad with the displayed URL.
+   * </pre>
+   *
+   * <code>string breadcrumb2 = 8;</code>
+   * @return The bytes for breadcrumb2.
+   */
+  com.google.protobuf.ByteString
+      getBreadcrumb2Bytes();
 }

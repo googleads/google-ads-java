@@ -31,36 +31,34 @@ public final class DetailPlacementViewProto {
       "\n>google/ads/googleads/v10/resources/det" +
       "ail_placement_view.proto\022\"google.ads.goo" +
       "gleads.v10.resources\0323google/ads/googlea" +
-      "ds/v10/enums/placement_type.proto\032\034googl" +
-      "e/api/annotations.proto\032\037google/api/fiel" +
-      "d_behavior.proto\032\031google/api/resource.pr" +
-      "oto\"\231\004\n\023DetailPlacementView\022K\n\rresource_" +
-      "name\030\001 \001(\tB4\340A\003\372A.\n,googleads.googleapis" +
-      ".com/DetailPlacementView\022\033\n\tplacement\030\007 " +
-      "\001(\tB\003\340A\003H\000\210\001\001\022\036\n\014display_name\030\010 \001(\tB\003\340A\003" +
-      "H\001\210\001\001\022,\n\032group_placement_target_url\030\t \001(" +
-      "\tB\003\340A\003H\002\210\001\001\022\034\n\ntarget_url\030\n \001(\tB\003\340A\003H\003\210\001" +
-      "\001\022\\\n\016placement_type\030\006 \001(\0162?.google.ads.g" +
-      "oogleads.v10.enums.PlacementTypeEnum.Pla" +
-      "cementTypeB\003\340A\003:\200\001\352A}\n,googleads.googlea" +
-      "pis.com/DetailPlacementView\022Mcustomers/{" +
-      "customer_id}/detailPlacementViews/{ad_gr" +
-      "oup_id}~{base64_placement}B\014\n\n_placement" +
-      "B\017\n\r_display_nameB\035\n\033_group_placement_ta" +
-      "rget_urlB\r\n\013_target_urlB\212\002\n&com.google.a" +
-      "ds.googleads.v10.resourcesB\030DetailPlacem" +
-      "entViewProtoP\001ZKgoogle.golang.org/genpro" +
-      "to/googleapis/ads/googleads/v10/resource" +
-      "s;resources\242\002\003GAA\252\002\"Google.Ads.GoogleAds" +
-      ".V10.Resources\312\002\"Google\\Ads\\GoogleAds\\V1" +
-      "0\\Resources\352\002&Google::Ads::GoogleAds::V1" +
-      "0::Resourcesb\006proto3"
+      "ds/v10/enums/placement_type.proto\032\037googl" +
+      "e/api/field_behavior.proto\032\031google/api/r" +
+      "esource.proto\"\231\004\n\023DetailPlacementView\022K\n" +
+      "\rresource_name\030\001 \001(\tB4\340A\003\372A.\n,googleads." +
+      "googleapis.com/DetailPlacementView\022\033\n\tpl" +
+      "acement\030\007 \001(\tB\003\340A\003H\000\210\001\001\022\036\n\014display_name\030" +
+      "\010 \001(\tB\003\340A\003H\001\210\001\001\022,\n\032group_placement_targe" +
+      "t_url\030\t \001(\tB\003\340A\003H\002\210\001\001\022\034\n\ntarget_url\030\n \001(" +
+      "\tB\003\340A\003H\003\210\001\001\022\\\n\016placement_type\030\006 \001(\0162?.go" +
+      "ogle.ads.googleads.v10.enums.PlacementTy" +
+      "peEnum.PlacementTypeB\003\340A\003:\200\001\352A}\n,googlea" +
+      "ds.googleapis.com/DetailPlacementView\022Mc" +
+      "ustomers/{customer_id}/detailPlacementVi" +
+      "ews/{ad_group_id}~{base64_placement}B\014\n\n" +
+      "_placementB\017\n\r_display_nameB\035\n\033_group_pl" +
+      "acement_target_urlB\r\n\013_target_urlB\212\002\n&co" +
+      "m.google.ads.googleads.v10.resourcesB\030De" +
+      "tailPlacementViewProtoP\001ZKgoogle.golang." +
+      "org/genproto/googleapis/ads/googleads/v1" +
+      "0/resources;resources\242\002\003GAA\252\002\"Google.Ads" +
+      ".GoogleAds.V10.Resources\312\002\"Google\\Ads\\Go" +
+      "ogleAds\\V10\\Resources\352\002&Google::Ads::Goo" +
+      "gleAds::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.enums.PlacementTypeProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -78,7 +76,6 @@ public final class DetailPlacementViewProto {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.enums.PlacementTypeProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

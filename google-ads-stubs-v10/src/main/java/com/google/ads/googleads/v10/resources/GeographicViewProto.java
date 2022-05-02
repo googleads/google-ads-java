@@ -31,32 +31,30 @@ public final class GeographicViewProto {
       "\n8google/ads/googleads/v10/resources/geo" +
       "graphic_view.proto\022\"google.ads.googleads" +
       ".v10.resources\0327google/ads/googleads/v10" +
-      "/enums/geo_targeting_type.proto\032\034google/" +
-      "api/annotations.proto\032\037google/api/field_" +
-      "behavior.proto\032\031google/api/resource.prot" +
-      "o\"\372\002\n\016GeographicView\022F\n\rresource_name\030\001 " +
-      "\001(\tB/\340A\003\372A)\n\'googleads.googleapis.com/Ge" +
-      "ographicView\022a\n\rlocation_type\030\003 \001(\0162E.go" +
-      "ogle.ads.googleads.v10.enums.GeoTargetin" +
-      "gTypeEnum.GeoTargetingTypeB\003\340A\003\022&\n\024count" +
-      "ry_criterion_id\030\005 \001(\003B\003\340A\003H\000\210\001\001:|\352Ay\n\'go" +
-      "ogleads.googleapis.com/GeographicView\022Nc" +
-      "ustomers/{customer_id}/geographicViews/{" +
-      "country_criterion_id}~{location_type}B\027\n" +
-      "\025_country_criterion_idB\205\002\n&com.google.ad" +
-      "s.googleads.v10.resourcesB\023GeographicVie" +
-      "wProtoP\001ZKgoogle.golang.org/genproto/goo" +
-      "gleapis/ads/googleads/v10/resources;reso" +
-      "urces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V10.R" +
-      "esources\312\002\"Google\\Ads\\GoogleAds\\V10\\Reso" +
-      "urces\352\002&Google::Ads::GoogleAds::V10::Res" +
-      "ourcesb\006proto3"
+      "/enums/geo_targeting_type.proto\032\037google/" +
+      "api/field_behavior.proto\032\031google/api/res" +
+      "ource.proto\"\372\002\n\016GeographicView\022F\n\rresour" +
+      "ce_name\030\001 \001(\tB/\340A\003\372A)\n\'googleads.googlea" +
+      "pis.com/GeographicView\022a\n\rlocation_type\030" +
+      "\003 \001(\0162E.google.ads.googleads.v10.enums.G" +
+      "eoTargetingTypeEnum.GeoTargetingTypeB\003\340A" +
+      "\003\022&\n\024country_criterion_id\030\005 \001(\003B\003\340A\003H\000\210\001" +
+      "\001:|\352Ay\n\'googleads.googleapis.com/Geograp" +
+      "hicView\022Ncustomers/{customer_id}/geograp" +
+      "hicViews/{country_criterion_id}~{locatio" +
+      "n_type}B\027\n\025_country_criterion_idB\205\002\n&com" +
+      ".google.ads.googleads.v10.resourcesB\023Geo" +
+      "graphicViewProtoP\001ZKgoogle.golang.org/ge" +
+      "nproto/googleapis/ads/googleads/v10/reso" +
+      "urces;resources\242\002\003GAA\252\002\"Google.Ads.Googl" +
+      "eAds.V10.Resources\312\002\"Google\\Ads\\GoogleAd" +
+      "s\\V10\\Resources\352\002&Google::Ads::GoogleAds" +
+      "::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.enums.GeoTargetingTypeProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -74,7 +72,6 @@ public final class GeographicViewProto {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.enums.GeoTargetingTypeProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

@@ -30,23 +30,21 @@ public final class CampaignExperimentTrafficSplitTypeProto {
     java.lang.String[] descriptorData = {
       "\nKgoogle/ads/googleads/v10/enums/campaig" +
       "n_experiment_traffic_split_type.proto\022\036g" +
-      "oogle.ads.googleads.v10.enums\032\034google/ap" +
-      "i/annotations.proto\"\212\001\n&CampaignExperime" +
-      "ntTrafficSplitTypeEnum\"`\n\"CampaignExperi" +
-      "mentTrafficSplitType\022\017\n\013UNSPECIFIED\020\000\022\013\n" +
-      "\007UNKNOWN\020\001\022\020\n\014RANDOM_QUERY\020\002\022\n\n\006COOKIE\020\003" +
-      "B\201\002\n\"com.google.ads.googleads.v10.enumsB" +
-      "\'CampaignExperimentTrafficSplitTypeProto" +
-      "P\001ZCgoogle.golang.org/genproto/googleapi" +
-      "s/ads/googleads/v10/enums;enums\242\002\003GAA\252\002\036" +
-      "Google.Ads.GoogleAds.V10.Enums\312\002\036Google\\" +
-      "Ads\\GoogleAds\\V10\\Enums\352\002\"Google::Ads::G" +
-      "oogleAds::V10::Enumsb\006proto3"
+      "oogle.ads.googleads.v10.enums\"\212\001\n&Campai" +
+      "gnExperimentTrafficSplitTypeEnum\"`\n\"Camp" +
+      "aignExperimentTrafficSplitType\022\017\n\013UNSPEC" +
+      "IFIED\020\000\022\013\n\007UNKNOWN\020\001\022\020\n\014RANDOM_QUERY\020\002\022\n" +
+      "\n\006COOKIE\020\003B\201\002\n\"com.google.ads.googleads." +
+      "v10.enumsB\'CampaignExperimentTrafficSpli" +
+      "tTypeProtoP\001ZCgoogle.golang.org/genproto" +
+      "/googleapis/ads/googleads/v10/enums;enum" +
+      "s\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V10.Enums" +
+      "\312\002\036Google\\Ads\\GoogleAds\\V10\\Enums\352\002\"Goog" +
+      "le::Ads::GoogleAds::V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_CampaignExperimentTrafficSplitTypeEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -54,7 +52,6 @@ public final class CampaignExperimentTrafficSplitTypeProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_CampaignExperimentTrafficSplitTypeEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -30,26 +30,24 @@ public final class CriterionCategoryLocaleAvailabilityModeProto {
     java.lang.String[] descriptorData = {
       "\nPgoogle/ads/googleads/v10/enums/criteri" +
       "on_category_locale_availability_mode.pro" +
-      "to\022\036google.ads.googleads.v10.enums\032\034goog" +
-      "le/api/annotations.proto\"\341\001\n+CriterionCa" +
-      "tegoryLocaleAvailabilityModeEnum\"\261\001\n\'Cri" +
-      "terionCategoryLocaleAvailabilityMode\022\017\n\013" +
-      "UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\017\n\013ALL_LOCALE" +
-      "S\020\002\022\035\n\031COUNTRY_AND_ALL_LANGUAGES\020\003\022\036\n\032LA" +
-      "NGUAGE_AND_ALL_COUNTRIES\020\004\022\030\n\024COUNTRY_AN" +
-      "D_LANGUAGE\020\005B\206\002\n\"com.google.ads.googlead" +
-      "s.v10.enumsB,CriterionCategoryLocaleAvai" +
-      "labilityModeProtoP\001ZCgoogle.golang.org/g" +
-      "enproto/googleapis/ads/googleads/v10/enu" +
-      "ms;enums\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V1" +
-      "0.Enums\312\002\036Google\\Ads\\GoogleAds\\V10\\Enums" +
-      "\352\002\"Google::Ads::GoogleAds::V10::Enumsb\006p" +
-      "roto3"
+      "to\022\036google.ads.googleads.v10.enums\"\341\001\n+C" +
+      "riterionCategoryLocaleAvailabilityModeEn" +
+      "um\"\261\001\n\'CriterionCategoryLocaleAvailabili" +
+      "tyMode\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\017\n\013" +
+      "ALL_LOCALES\020\002\022\035\n\031COUNTRY_AND_ALL_LANGUAG" +
+      "ES\020\003\022\036\n\032LANGUAGE_AND_ALL_COUNTRIES\020\004\022\030\n\024" +
+      "COUNTRY_AND_LANGUAGE\020\005B\206\002\n\"com.google.ad" +
+      "s.googleads.v10.enumsB,CriterionCategory" +
+      "LocaleAvailabilityModeProtoP\001ZCgoogle.go" +
+      "lang.org/genproto/googleapis/ads/googlea" +
+      "ds/v10/enums;enums\242\002\003GAA\252\002\036Google.Ads.Go" +
+      "ogleAds.V10.Enums\312\002\036Google\\Ads\\GoogleAds" +
+      "\\V10\\Enums\352\002\"Google::Ads::GoogleAds::V10" +
+      "::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_CriterionCategoryLocaleAvailabilityModeEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -57,7 +55,6 @@ public final class CriterionCategoryLocaleAvailabilityModeProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_CriterionCategoryLocaleAvailabilityModeEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

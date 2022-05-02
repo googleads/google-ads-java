@@ -63,6 +63,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -199,6 +201,62 @@ private static final long serialVersionUID = 0L;
      * <code>JOB_TITLE = 15;</code>
      */
     JOB_TITLE(15),
+    /**
+     * <pre>
+     * The user will be asked to fill in their CPF for Brazil users.
+     * </pre>
+     *
+     * <code>GOVERNMENT_ISSUED_ID_CPF_BR = 16;</code>
+     */
+    GOVERNMENT_ISSUED_ID_CPF_BR(16),
+    /**
+     * <pre>
+     * The user will be asked to fill in their DNI for Argentina users.
+     * </pre>
+     *
+     * <code>GOVERNMENT_ISSUED_ID_DNI_AR = 17;</code>
+     */
+    GOVERNMENT_ISSUED_ID_DNI_AR(17),
+    /**
+     * <pre>
+     * The user will be asked to fill in their DNI for Peru users.
+     * </pre>
+     *
+     * <code>GOVERNMENT_ISSUED_ID_DNI_PE = 18;</code>
+     */
+    GOVERNMENT_ISSUED_ID_DNI_PE(18),
+    /**
+     * <pre>
+     * The user will be asked to fill in their RUT for Chile users.
+     * </pre>
+     *
+     * <code>GOVERNMENT_ISSUED_ID_RUT_CL = 19;</code>
+     */
+    GOVERNMENT_ISSUED_ID_RUT_CL(19),
+    /**
+     * <pre>
+     * The user will be asked to fill in their CC for Colombia users.
+     * </pre>
+     *
+     * <code>GOVERNMENT_ISSUED_ID_CC_CO = 20;</code>
+     */
+    GOVERNMENT_ISSUED_ID_CC_CO(20),
+    /**
+     * <pre>
+     * The user will be asked to fill in their CI for Ecuador users.
+     * </pre>
+     *
+     * <code>GOVERNMENT_ISSUED_ID_CI_EC = 21;</code>
+     */
+    GOVERNMENT_ISSUED_ID_CI_EC(21),
+    /**
+     * <pre>
+     * The user will be asked to fill in their RFC for Mexico users.
+     * </pre>
+     *
+     * <code>GOVERNMENT_ISSUED_ID_RFC_MX = 22;</code>
+     */
+    GOVERNMENT_ISSUED_ID_RFC_MX(22),
     /**
      * <pre>
      * The user will be asked to fill in their first name. This
@@ -751,6 +809,62 @@ private static final long serialVersionUID = 0L;
     public static final int JOB_TITLE_VALUE = 15;
     /**
      * <pre>
+     * The user will be asked to fill in their CPF for Brazil users.
+     * </pre>
+     *
+     * <code>GOVERNMENT_ISSUED_ID_CPF_BR = 16;</code>
+     */
+    public static final int GOVERNMENT_ISSUED_ID_CPF_BR_VALUE = 16;
+    /**
+     * <pre>
+     * The user will be asked to fill in their DNI for Argentina users.
+     * </pre>
+     *
+     * <code>GOVERNMENT_ISSUED_ID_DNI_AR = 17;</code>
+     */
+    public static final int GOVERNMENT_ISSUED_ID_DNI_AR_VALUE = 17;
+    /**
+     * <pre>
+     * The user will be asked to fill in their DNI for Peru users.
+     * </pre>
+     *
+     * <code>GOVERNMENT_ISSUED_ID_DNI_PE = 18;</code>
+     */
+    public static final int GOVERNMENT_ISSUED_ID_DNI_PE_VALUE = 18;
+    /**
+     * <pre>
+     * The user will be asked to fill in their RUT for Chile users.
+     * </pre>
+     *
+     * <code>GOVERNMENT_ISSUED_ID_RUT_CL = 19;</code>
+     */
+    public static final int GOVERNMENT_ISSUED_ID_RUT_CL_VALUE = 19;
+    /**
+     * <pre>
+     * The user will be asked to fill in their CC for Colombia users.
+     * </pre>
+     *
+     * <code>GOVERNMENT_ISSUED_ID_CC_CO = 20;</code>
+     */
+    public static final int GOVERNMENT_ISSUED_ID_CC_CO_VALUE = 20;
+    /**
+     * <pre>
+     * The user will be asked to fill in their CI for Ecuador users.
+     * </pre>
+     *
+     * <code>GOVERNMENT_ISSUED_ID_CI_EC = 21;</code>
+     */
+    public static final int GOVERNMENT_ISSUED_ID_CI_EC_VALUE = 21;
+    /**
+     * <pre>
+     * The user will be asked to fill in their RFC for Mexico users.
+     * </pre>
+     *
+     * <code>GOVERNMENT_ISSUED_ID_RFC_MX = 22;</code>
+     */
+    public static final int GOVERNMENT_ISSUED_ID_RFC_MX_VALUE = 22;
+    /**
+     * <pre>
      * The user will be asked to fill in their first name. This
      * field can not be set at the same time as FULL_NAME.
      * </pre>
@@ -1229,6 +1343,13 @@ private static final long serialVersionUID = 0L;
         case 13: return COMPANY_NAME;
         case 14: return WORK_PHONE;
         case 15: return JOB_TITLE;
+        case 16: return GOVERNMENT_ISSUED_ID_CPF_BR;
+        case 17: return GOVERNMENT_ISSUED_ID_DNI_AR;
+        case 18: return GOVERNMENT_ISSUED_ID_DNI_PE;
+        case 19: return GOVERNMENT_ISSUED_ID_RUT_CL;
+        case 20: return GOVERNMENT_ISSUED_ID_CC_CO;
+        case 21: return GOVERNMENT_ISSUED_ID_CI_EC;
+        case 22: return GOVERNMENT_ISSUED_ID_RFC_MX;
         case 23: return FIRST_NAME;
         case 24: return LAST_NAME;
         case 1001: return VEHICLE_MODEL;

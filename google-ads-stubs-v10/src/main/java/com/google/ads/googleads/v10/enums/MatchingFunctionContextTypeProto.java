@@ -30,23 +30,21 @@ public final class MatchingFunctionContextTypeProto {
     java.lang.String[] descriptorData = {
       "\nCgoogle/ads/googleads/v10/enums/matchin" +
       "g_function_context_type.proto\022\036google.ad" +
-      "s.googleads.v10.enums\032\034google/api/annota" +
-      "tions.proto\"\227\001\n\037MatchingFunctionContextT" +
-      "ypeEnum\"t\n\033MatchingFunctionContextType\022\017" +
-      "\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\020\n\014FEED_ITE" +
-      "M_ID\020\002\022\017\n\013DEVICE_NAME\020\003\022\024\n\020FEED_ITEM_SET" +
-      "_ID\020\004B\372\001\n\"com.google.ads.googleads.v10.e" +
-      "numsB MatchingFunctionContextTypeProtoP\001" +
-      "ZCgoogle.golang.org/genproto/googleapis/" +
-      "ads/googleads/v10/enums;enums\242\002\003GAA\252\002\036Go" +
-      "ogle.Ads.GoogleAds.V10.Enums\312\002\036Google\\Ad" +
-      "s\\GoogleAds\\V10\\Enums\352\002\"Google::Ads::Goo" +
-      "gleAds::V10::Enumsb\006proto3"
+      "s.googleads.v10.enums\"\227\001\n\037MatchingFuncti" +
+      "onContextTypeEnum\"t\n\033MatchingFunctionCon" +
+      "textType\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\020" +
+      "\n\014FEED_ITEM_ID\020\002\022\017\n\013DEVICE_NAME\020\003\022\024\n\020FEE" +
+      "D_ITEM_SET_ID\020\004B\372\001\n\"com.google.ads.googl" +
+      "eads.v10.enumsB MatchingFunctionContextT" +
+      "ypeProtoP\001ZCgoogle.golang.org/genproto/g" +
+      "oogleapis/ads/googleads/v10/enums;enums\242" +
+      "\002\003GAA\252\002\036Google.Ads.GoogleAds.V10.Enums\312\002" +
+      "\036Google\\Ads\\GoogleAds\\V10\\Enums\352\002\"Google" +
+      "::Ads::GoogleAds::V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_MatchingFunctionContextTypeEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -54,7 +52,6 @@ public final class MatchingFunctionContextTypeProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_MatchingFunctionContextTypeEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

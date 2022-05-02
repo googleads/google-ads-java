@@ -32,33 +32,31 @@ public final class SearchTermViewProto {
       "rch_term_view.proto\022\"google.ads.googlead" +
       "s.v10.resources\032Agoogle/ads/googleads/v1" +
       "0/enums/search_term_targeting_status.pro" +
-      "to\032\034google/api/annotations.proto\032\037google" +
-      "/api/field_behavior.proto\032\031google/api/re" +
-      "source.proto\"\276\003\n\016SearchTermView\022F\n\rresou" +
-      "rce_name\030\001 \001(\tB/\340A\003\372A)\n\'googleads.google" +
-      "apis.com/SearchTermView\022\035\n\013search_term\030\005" +
-      " \001(\tB\003\340A\003H\000\210\001\001\022?\n\010ad_group\030\006 \001(\tB(\340A\003\372A\"" +
-      "\n googleads.googleapis.com/AdGroupH\001\210\001\001\022" +
-      "l\n\006status\030\004 \001(\0162W.google.ads.googleads.v" +
-      "10.enums.SearchTermTargetingStatusEnum.S" +
-      "earchTermTargetingStatusB\003\340A\003:y\352Av\n\'goog" +
-      "leads.googleapis.com/SearchTermView\022Kcus" +
-      "tomers/{customer_id}/searchTermViews/{ca" +
-      "mpaign_id}~{ad_group_id}~{query}B\016\n\014_sea" +
-      "rch_termB\013\n\t_ad_groupB\205\002\n&com.google.ads" +
-      ".googleads.v10.resourcesB\023SearchTermView" +
-      "ProtoP\001ZKgoogle.golang.org/genproto/goog" +
-      "leapis/ads/googleads/v10/resources;resou" +
-      "rces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V10.Re" +
-      "sources\312\002\"Google\\Ads\\GoogleAds\\V10\\Resou" +
-      "rces\352\002&Google::Ads::GoogleAds::V10::Reso" +
-      "urcesb\006proto3"
+      "to\032\037google/api/field_behavior.proto\032\031goo" +
+      "gle/api/resource.proto\"\276\003\n\016SearchTermVie" +
+      "w\022F\n\rresource_name\030\001 \001(\tB/\340A\003\372A)\n\'google" +
+      "ads.googleapis.com/SearchTermView\022\035\n\013sea" +
+      "rch_term\030\005 \001(\tB\003\340A\003H\000\210\001\001\022?\n\010ad_group\030\006 \001" +
+      "(\tB(\340A\003\372A\"\n googleads.googleapis.com/AdG" +
+      "roupH\001\210\001\001\022l\n\006status\030\004 \001(\0162W.google.ads.g" +
+      "oogleads.v10.enums.SearchTermTargetingSt" +
+      "atusEnum.SearchTermTargetingStatusB\003\340A\003:" +
+      "y\352Av\n\'googleads.googleapis.com/SearchTer" +
+      "mView\022Kcustomers/{customer_id}/searchTer" +
+      "mViews/{campaign_id}~{ad_group_id}~{quer" +
+      "y}B\016\n\014_search_termB\013\n\t_ad_groupB\205\002\n&com." +
+      "google.ads.googleads.v10.resourcesB\023Sear" +
+      "chTermViewProtoP\001ZKgoogle.golang.org/gen" +
+      "proto/googleapis/ads/googleads/v10/resou" +
+      "rces;resources\242\002\003GAA\252\002\"Google.Ads.Google" +
+      "Ads.V10.Resources\312\002\"Google\\Ads\\GoogleAds" +
+      "\\V10\\Resources\352\002&Google::Ads::GoogleAds:" +
+      ":V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.enums.SearchTermTargetingStatusProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -76,7 +74,6 @@ public final class SearchTermViewProto {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.enums.SearchTermTargetingStatusProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

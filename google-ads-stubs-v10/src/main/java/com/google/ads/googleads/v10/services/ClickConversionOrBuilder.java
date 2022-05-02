@@ -393,4 +393,23 @@ public interface ClickConversionOrBuilder extends
    */
   com.google.ads.googleads.v10.common.UserIdentifierOrBuilder getUserIdentifiersOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * The environment this conversion was recorded on. e.g. App or Web.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.enums.ConversionEnvironmentEnum.ConversionEnvironment conversion_environment = 20;</code>
+   * @return The enum numeric value on the wire for conversionEnvironment.
+   */
+  int getConversionEnvironmentValue();
+  /**
+   * <pre>
+   * The environment this conversion was recorded on. e.g. App or Web.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.enums.ConversionEnvironmentEnum.ConversionEnvironment conversion_environment = 20;</code>
+   * @return The conversionEnvironment.
+   */
+  com.google.ads.googleads.v10.enums.ConversionEnvironmentEnum.ConversionEnvironment getConversionEnvironment();
 }

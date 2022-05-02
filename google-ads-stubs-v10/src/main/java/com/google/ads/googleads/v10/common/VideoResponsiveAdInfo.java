@@ -26,6 +26,8 @@ private static final long serialVersionUID = 0L;
     callToActions_ = java.util.Collections.emptyList();
     videos_ = java.util.Collections.emptyList();
     companionBanners_ = java.util.Collections.emptyList();
+    breadcrumb1_ = "";
+    breadcrumb2_ = "";
   }
 
   @java.lang.Override
@@ -113,6 +115,18 @@ private static final long serialVersionUID = 0L;
                 input.readMessage(com.google.ads.googleads.v10.common.AdImageAsset.parser(), extensionRegistry));
             break;
           }
+          case 58: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            breadcrumb1_ = s;
+            break;
+          }
+          case 66: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            breadcrumb2_ = s;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -124,6 +138,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -553,6 +569,98 @@ private static final long serialVersionUID = 0L;
     return companionBanners_.get(index);
   }
 
+  public static final int BREADCRUMB1_FIELD_NUMBER = 7;
+  private volatile java.lang.Object breadcrumb1_;
+  /**
+   * <pre>
+   * First part of text that appears in the ad with the displayed URL.
+   * </pre>
+   *
+   * <code>string breadcrumb1 = 7;</code>
+   * @return The breadcrumb1.
+   */
+  @java.lang.Override
+  public java.lang.String getBreadcrumb1() {
+    java.lang.Object ref = breadcrumb1_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      breadcrumb1_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * First part of text that appears in the ad with the displayed URL.
+   * </pre>
+   *
+   * <code>string breadcrumb1 = 7;</code>
+   * @return The bytes for breadcrumb1.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getBreadcrumb1Bytes() {
+    java.lang.Object ref = breadcrumb1_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      breadcrumb1_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int BREADCRUMB2_FIELD_NUMBER = 8;
+  private volatile java.lang.Object breadcrumb2_;
+  /**
+   * <pre>
+   * Second part of text that appears in the ad with the displayed URL.
+   * </pre>
+   *
+   * <code>string breadcrumb2 = 8;</code>
+   * @return The breadcrumb2.
+   */
+  @java.lang.Override
+  public java.lang.String getBreadcrumb2() {
+    java.lang.Object ref = breadcrumb2_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      breadcrumb2_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Second part of text that appears in the ad with the displayed URL.
+   * </pre>
+   *
+   * <code>string breadcrumb2 = 8;</code>
+   * @return The bytes for breadcrumb2.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getBreadcrumb2Bytes() {
+    java.lang.Object ref = breadcrumb2_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      breadcrumb2_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -584,6 +692,12 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < companionBanners_.size(); i++) {
       output.writeMessage(6, companionBanners_.get(i));
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(breadcrumb1_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, breadcrumb1_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(breadcrumb2_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, breadcrumb2_);
     }
     unknownFields.writeTo(output);
   }
@@ -618,6 +732,12 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(6, companionBanners_.get(i));
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(breadcrumb1_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, breadcrumb1_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(breadcrumb2_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, breadcrumb2_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -645,6 +765,10 @@ private static final long serialVersionUID = 0L;
         .equals(other.getVideosList())) return false;
     if (!getCompanionBannersList()
         .equals(other.getCompanionBannersList())) return false;
+    if (!getBreadcrumb1()
+        .equals(other.getBreadcrumb1())) return false;
+    if (!getBreadcrumb2()
+        .equals(other.getBreadcrumb2())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -680,6 +804,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + COMPANION_BANNERS_FIELD_NUMBER;
       hash = (53 * hash) + getCompanionBannersList().hashCode();
     }
+    hash = (37 * hash) + BREADCRUMB1_FIELD_NUMBER;
+    hash = (53 * hash) + getBreadcrumb1().hashCode();
+    hash = (37 * hash) + BREADCRUMB2_FIELD_NUMBER;
+    hash = (53 * hash) + getBreadcrumb2().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -859,6 +987,10 @@ private static final long serialVersionUID = 0L;
       } else {
         companionBannersBuilder_.clear();
       }
+      breadcrumb1_ = "";
+
+      breadcrumb2_ = "";
+
       return this;
     }
 
@@ -940,6 +1072,8 @@ private static final long serialVersionUID = 0L;
       } else {
         result.companionBanners_ = companionBannersBuilder_.build();
       }
+      result.breadcrumb1_ = breadcrumb1_;
+      result.breadcrumb2_ = breadcrumb2_;
       onBuilt();
       return result;
     }
@@ -1143,6 +1277,14 @@ private static final long serialVersionUID = 0L;
             companionBannersBuilder_.addAllMessages(other.companionBanners_);
           }
         }
+      }
+      if (!other.getBreadcrumb1().isEmpty()) {
+        breadcrumb1_ = other.breadcrumb1_;
+        onChanged();
+      }
+      if (!other.getBreadcrumb2().isEmpty()) {
+        breadcrumb2_ = other.breadcrumb2_;
+        onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -3152,6 +3294,198 @@ private static final long serialVersionUID = 0L;
         companionBanners_ = null;
       }
       return companionBannersBuilder_;
+    }
+
+    private java.lang.Object breadcrumb1_ = "";
+    /**
+     * <pre>
+     * First part of text that appears in the ad with the displayed URL.
+     * </pre>
+     *
+     * <code>string breadcrumb1 = 7;</code>
+     * @return The breadcrumb1.
+     */
+    public java.lang.String getBreadcrumb1() {
+      java.lang.Object ref = breadcrumb1_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        breadcrumb1_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * First part of text that appears in the ad with the displayed URL.
+     * </pre>
+     *
+     * <code>string breadcrumb1 = 7;</code>
+     * @return The bytes for breadcrumb1.
+     */
+    public com.google.protobuf.ByteString
+        getBreadcrumb1Bytes() {
+      java.lang.Object ref = breadcrumb1_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        breadcrumb1_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * First part of text that appears in the ad with the displayed URL.
+     * </pre>
+     *
+     * <code>string breadcrumb1 = 7;</code>
+     * @param value The breadcrumb1 to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBreadcrumb1(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      breadcrumb1_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * First part of text that appears in the ad with the displayed URL.
+     * </pre>
+     *
+     * <code>string breadcrumb1 = 7;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearBreadcrumb1() {
+      
+      breadcrumb1_ = getDefaultInstance().getBreadcrumb1();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * First part of text that appears in the ad with the displayed URL.
+     * </pre>
+     *
+     * <code>string breadcrumb1 = 7;</code>
+     * @param value The bytes for breadcrumb1 to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBreadcrumb1Bytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      breadcrumb1_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object breadcrumb2_ = "";
+    /**
+     * <pre>
+     * Second part of text that appears in the ad with the displayed URL.
+     * </pre>
+     *
+     * <code>string breadcrumb2 = 8;</code>
+     * @return The breadcrumb2.
+     */
+    public java.lang.String getBreadcrumb2() {
+      java.lang.Object ref = breadcrumb2_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        breadcrumb2_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Second part of text that appears in the ad with the displayed URL.
+     * </pre>
+     *
+     * <code>string breadcrumb2 = 8;</code>
+     * @return The bytes for breadcrumb2.
+     */
+    public com.google.protobuf.ByteString
+        getBreadcrumb2Bytes() {
+      java.lang.Object ref = breadcrumb2_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        breadcrumb2_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Second part of text that appears in the ad with the displayed URL.
+     * </pre>
+     *
+     * <code>string breadcrumb2 = 8;</code>
+     * @param value The breadcrumb2 to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBreadcrumb2(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      breadcrumb2_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Second part of text that appears in the ad with the displayed URL.
+     * </pre>
+     *
+     * <code>string breadcrumb2 = 8;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearBreadcrumb2() {
+      
+      breadcrumb2_ = getDefaultInstance().getBreadcrumb2();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Second part of text that appears in the ad with the displayed URL.
+     * </pre>
+     *
+     * <code>string breadcrumb2 = 8;</code>
+     * @param value The bytes for breadcrumb2 to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBreadcrumb2Bytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      breadcrumb2_ = value;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

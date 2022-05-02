@@ -30,33 +30,31 @@ public final class ConversionLagBucketProto {
     java.lang.String[] descriptorData = {
       "\n:google/ads/googleads/v10/enums/convers" +
       "ion_lag_bucket.proto\022\036google.ads.googlea" +
-      "ds.v10.enums\032\034google/api/annotations.pro" +
-      "to\"\273\004\n\027ConversionLagBucketEnum\"\237\004\n\023Conve" +
-      "rsionLagBucket\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNO" +
-      "WN\020\001\022\025\n\021LESS_THAN_ONE_DAY\020\002\022\023\n\017ONE_TO_TW" +
-      "O_DAYS\020\003\022\025\n\021TWO_TO_THREE_DAYS\020\004\022\026\n\022THREE" +
-      "_TO_FOUR_DAYS\020\005\022\025\n\021FOUR_TO_FIVE_DAYS\020\006\022\024" +
-      "\n\020FIVE_TO_SIX_DAYS\020\007\022\025\n\021SIX_TO_SEVEN_DAY" +
-      "S\020\010\022\027\n\023SEVEN_TO_EIGHT_DAYS\020\t\022\026\n\022EIGHT_TO" +
-      "_NINE_DAYS\020\n\022\024\n\020NINE_TO_TEN_DAYS\020\013\022\026\n\022TE" +
-      "N_TO_ELEVEN_DAYS\020\014\022\031\n\025ELEVEN_TO_TWELVE_D" +
-      "AYS\020\r\022\033\n\027TWELVE_TO_THIRTEEN_DAYS\020\016\022\035\n\031TH" +
-      "IRTEEN_TO_FOURTEEN_DAYS\020\017\022\037\n\033FOURTEEN_TO" +
-      "_TWENTY_ONE_DAYS\020\020\022\035\n\031TWENTY_ONE_TO_THIR" +
-      "TY_DAYS\020\021\022\035\n\031THIRTY_TO_FORTY_FIVE_DAYS\020\022" +
-      "\022\034\n\030FORTY_FIVE_TO_SIXTY_DAYS\020\023\022\030\n\024SIXTY_" +
-      "TO_NINETY_DAYS\020\024B\362\001\n\"com.google.ads.goog" +
-      "leads.v10.enumsB\030ConversionLagBucketProt" +
-      "oP\001ZCgoogle.golang.org/genproto/googleap" +
-      "is/ads/googleads/v10/enums;enums\242\002\003GAA\252\002" +
-      "\036Google.Ads.GoogleAds.V10.Enums\312\002\036Google" +
-      "\\Ads\\GoogleAds\\V10\\Enums\352\002\"Google::Ads::" +
-      "GoogleAds::V10::Enumsb\006proto3"
+      "ds.v10.enums\"\273\004\n\027ConversionLagBucketEnum" +
+      "\"\237\004\n\023ConversionLagBucket\022\017\n\013UNSPECIFIED\020" +
+      "\000\022\013\n\007UNKNOWN\020\001\022\025\n\021LESS_THAN_ONE_DAY\020\002\022\023\n" +
+      "\017ONE_TO_TWO_DAYS\020\003\022\025\n\021TWO_TO_THREE_DAYS\020" +
+      "\004\022\026\n\022THREE_TO_FOUR_DAYS\020\005\022\025\n\021FOUR_TO_FIV" +
+      "E_DAYS\020\006\022\024\n\020FIVE_TO_SIX_DAYS\020\007\022\025\n\021SIX_TO" +
+      "_SEVEN_DAYS\020\010\022\027\n\023SEVEN_TO_EIGHT_DAYS\020\t\022\026" +
+      "\n\022EIGHT_TO_NINE_DAYS\020\n\022\024\n\020NINE_TO_TEN_DA" +
+      "YS\020\013\022\026\n\022TEN_TO_ELEVEN_DAYS\020\014\022\031\n\025ELEVEN_T" +
+      "O_TWELVE_DAYS\020\r\022\033\n\027TWELVE_TO_THIRTEEN_DA" +
+      "YS\020\016\022\035\n\031THIRTEEN_TO_FOURTEEN_DAYS\020\017\022\037\n\033F" +
+      "OURTEEN_TO_TWENTY_ONE_DAYS\020\020\022\035\n\031TWENTY_O" +
+      "NE_TO_THIRTY_DAYS\020\021\022\035\n\031THIRTY_TO_FORTY_F" +
+      "IVE_DAYS\020\022\022\034\n\030FORTY_FIVE_TO_SIXTY_DAYS\020\023" +
+      "\022\030\n\024SIXTY_TO_NINETY_DAYS\020\024B\362\001\n\"com.googl" +
+      "e.ads.googleads.v10.enumsB\030ConversionLag" +
+      "BucketProtoP\001ZCgoogle.golang.org/genprot" +
+      "o/googleapis/ads/googleads/v10/enums;enu" +
+      "ms\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V10.Enum" +
+      "s\312\002\036Google\\Ads\\GoogleAds\\V10\\Enums\352\002\"Goo" +
+      "gle::Ads::GoogleAds::V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_ConversionLagBucketEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -64,7 +62,6 @@ public final class ConversionLagBucketProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_ConversionLagBucketEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

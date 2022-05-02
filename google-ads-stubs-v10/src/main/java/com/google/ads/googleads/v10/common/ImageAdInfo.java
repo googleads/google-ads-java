@@ -70,13 +70,13 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 106: {
-            imageCase_ = 13;
             image_ = input.readBytes();
+            imageCase_ = 13;
             break;
           }
           case 112: {
-            imageCase_ = 14;
             image_ = input.readInt64();
+            imageCase_ = 14;
             break;
           }
           case 120: {
@@ -128,6 +128,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);

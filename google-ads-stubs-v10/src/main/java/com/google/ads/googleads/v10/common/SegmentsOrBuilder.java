@@ -2184,6 +2184,25 @@ public interface SegmentsOrBuilder extends
 
   /**
    * <pre>
+   * iOS Store Kit Ad Network attribution credit
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.enums.SkAdNetworkAttributionCreditEnum.SkAdNetworkAttributionCredit sk_ad_network_attribution_credit = 144;</code>
+   * @return The enum numeric value on the wire for skAdNetworkAttributionCredit.
+   */
+  int getSkAdNetworkAttributionCreditValue();
+  /**
+   * <pre>
+   * iOS Store Kit Ad Network attribution credit
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.enums.SkAdNetworkAttributionCreditEnum.SkAdNetworkAttributionCredit sk_ad_network_attribution_credit = 144;</code>
+   * @return The skAdNetworkAttributionCredit.
+   */
+  com.google.ads.googleads.v10.enums.SkAdNetworkAttributionCreditEnum.SkAdNetworkAttributionCredit getSkAdNetworkAttributionCredit();
+
+  /**
+   * <pre>
    * Only used with CustomerAsset, CampaignAsset and AdGroupAsset metrics.
    * Indicates whether the interaction metrics occurred on the asset itself
    * or a different asset or ad unit.

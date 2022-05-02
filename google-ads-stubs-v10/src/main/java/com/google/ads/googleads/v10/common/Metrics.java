@@ -723,6 +723,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -5002,16 +5004,16 @@ private static final long serialVersionUID = 0L;
     if (((bitField2_ & 0x02000000) != 0)) {
       output.writeDouble(239, relativeCtr_);
     }
-    if (allConversionsValueByConversionDate_ != 0D) {
+    if (java.lang.Double.doubleToRawLongBits(allConversionsValueByConversionDate_) != 0) {
       output.writeDouble(240, allConversionsValueByConversionDate_);
     }
-    if (allConversionsByConversionDate_ != 0D) {
+    if (java.lang.Double.doubleToRawLongBits(allConversionsByConversionDate_) != 0) {
       output.writeDouble(241, allConversionsByConversionDate_);
     }
-    if (conversionsValueByConversionDate_ != 0D) {
+    if (java.lang.Double.doubleToRawLongBits(conversionsValueByConversionDate_) != 0) {
       output.writeDouble(242, conversionsValueByConversionDate_);
     }
-    if (conversionsByConversionDate_ != 0D) {
+    if (java.lang.Double.doubleToRawLongBits(conversionsByConversionDate_) != 0) {
       output.writeDouble(243, conversionsByConversionDate_);
     }
     if (((bitField3_ & 0x00000200) != 0)) {
@@ -5504,19 +5506,19 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(239, relativeCtr_);
     }
-    if (allConversionsValueByConversionDate_ != 0D) {
+    if (java.lang.Double.doubleToRawLongBits(allConversionsValueByConversionDate_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(240, allConversionsValueByConversionDate_);
     }
-    if (allConversionsByConversionDate_ != 0D) {
+    if (java.lang.Double.doubleToRawLongBits(allConversionsByConversionDate_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(241, allConversionsByConversionDate_);
     }
-    if (conversionsValueByConversionDate_ != 0D) {
+    if (java.lang.Double.doubleToRawLongBits(conversionsValueByConversionDate_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(242, conversionsValueByConversionDate_);
     }
-    if (conversionsByConversionDate_ != 0D) {
+    if (java.lang.Double.doubleToRawLongBits(conversionsByConversionDate_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(243, conversionsByConversionDate_);
     }

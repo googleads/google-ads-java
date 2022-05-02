@@ -397,6 +397,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -563,6 +565,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -1558,6 +1562,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -2642,6 +2648,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -2798,6 +2806,8 @@ private static final long serialVersionUID = 0L;
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
@@ -4649,6 +4659,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -5533,6 +5545,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -6677,6 +6691,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -6886,6 +6902,8 @@ private static final long serialVersionUID = 0L;
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e).setUnfinishedMessage(this);
@@ -8803,6 +8821,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -9342,6 +9362,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -9768,6 +9790,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -10221,6 +10245,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -10766,6 +10792,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -11247,6 +11275,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -12160,6 +12190,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -13073,6 +13105,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -13997,6 +14031,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -14840,6 +14876,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -15742,6 +15780,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -16497,6 +16537,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -17421,6 +17463,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -18186,6 +18230,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -19563,7 +19609,8 @@ private static final long serialVersionUID = 0L;
    * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
    * MAXIMIZE_CLICKS_OPT_IN, MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
    * RESPONSIVE_SEARCH_AD, RESPONSIVE_SEARCH_AD_ASSET, SEARCH_PARTNERS_OPT_IN,
-   * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN, TEXT_AD
+   * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN,
+   * TEXT_AD
    * </pre>
    *
    * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -19582,7 +19629,8 @@ private static final long serialVersionUID = 0L;
    * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
    * MAXIMIZE_CLICKS_OPT_IN, MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
    * RESPONSIVE_SEARCH_AD, RESPONSIVE_SEARCH_AD_ASSET, SEARCH_PARTNERS_OPT_IN,
-   * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN, TEXT_AD
+   * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN,
+   * TEXT_AD
    * </pre>
    *
    * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -19610,7 +19658,8 @@ private static final long serialVersionUID = 0L;
    * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
    * MAXIMIZE_CLICKS_OPT_IN, MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
    * RESPONSIVE_SEARCH_AD, RESPONSIVE_SEARCH_AD_ASSET, SEARCH_PARTNERS_OPT_IN,
-   * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN, TEXT_AD
+   * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN,
+   * TEXT_AD
    * </pre>
    *
    * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -22080,7 +22129,8 @@ private static final long serialVersionUID = 0L;
      * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
      * MAXIMIZE_CLICKS_OPT_IN, MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
      * RESPONSIVE_SEARCH_AD, RESPONSIVE_SEARCH_AD_ASSET, SEARCH_PARTNERS_OPT_IN,
-     * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN, TEXT_AD
+     * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN,
+     * TEXT_AD
      * </pre>
      *
      * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -22098,7 +22148,8 @@ private static final long serialVersionUID = 0L;
      * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
      * MAXIMIZE_CLICKS_OPT_IN, MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
      * RESPONSIVE_SEARCH_AD, RESPONSIVE_SEARCH_AD_ASSET, SEARCH_PARTNERS_OPT_IN,
-     * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN, TEXT_AD
+     * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN,
+     * TEXT_AD
      * </pre>
      *
      * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -22125,7 +22176,8 @@ private static final long serialVersionUID = 0L;
      * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
      * MAXIMIZE_CLICKS_OPT_IN, MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
      * RESPONSIVE_SEARCH_AD, RESPONSIVE_SEARCH_AD_ASSET, SEARCH_PARTNERS_OPT_IN,
-     * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN, TEXT_AD
+     * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN,
+     * TEXT_AD
      * </pre>
      *
      * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -22153,7 +22205,8 @@ private static final long serialVersionUID = 0L;
      * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
      * MAXIMIZE_CLICKS_OPT_IN, MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
      * RESPONSIVE_SEARCH_AD, RESPONSIVE_SEARCH_AD_ASSET, SEARCH_PARTNERS_OPT_IN,
-     * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN, TEXT_AD
+     * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN,
+     * TEXT_AD
      * </pre>
      *
      * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -22179,7 +22232,8 @@ private static final long serialVersionUID = 0L;
      * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
      * MAXIMIZE_CLICKS_OPT_IN, MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
      * RESPONSIVE_SEARCH_AD, RESPONSIVE_SEARCH_AD_ASSET, SEARCH_PARTNERS_OPT_IN,
-     * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN, TEXT_AD
+     * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN,
+     * TEXT_AD
      * </pre>
      *
      * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -22200,7 +22254,8 @@ private static final long serialVersionUID = 0L;
      * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
      * MAXIMIZE_CLICKS_OPT_IN, MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
      * RESPONSIVE_SEARCH_AD, RESPONSIVE_SEARCH_AD_ASSET, SEARCH_PARTNERS_OPT_IN,
-     * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN, TEXT_AD
+     * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN,
+     * TEXT_AD
      * </pre>
      *
      * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -22499,8 +22554,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (recommendationCase_ == 4) {
           campaignBudgetRecommendationBuilder_.mergeFrom(value);
+        } else {
+          campaignBudgetRecommendationBuilder_.setMessage(value);
         }
-        campaignBudgetRecommendationBuilder_.setMessage(value);
       }
       recommendationCase_ = 4;
       return this;
@@ -22676,8 +22732,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (recommendationCase_ == 22) {
           forecastingCampaignBudgetRecommendationBuilder_.mergeFrom(value);
+        } else {
+          forecastingCampaignBudgetRecommendationBuilder_.setMessage(value);
         }
-        forecastingCampaignBudgetRecommendationBuilder_.setMessage(value);
       }
       recommendationCase_ = 22;
       return this;
@@ -22853,8 +22910,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (recommendationCase_ == 8) {
           keywordRecommendationBuilder_.mergeFrom(value);
+        } else {
+          keywordRecommendationBuilder_.setMessage(value);
         }
-        keywordRecommendationBuilder_.setMessage(value);
       }
       recommendationCase_ = 8;
       return this;
@@ -23030,8 +23088,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (recommendationCase_ == 9) {
           textAdRecommendationBuilder_.mergeFrom(value);
+        } else {
+          textAdRecommendationBuilder_.setMessage(value);
         }
-        textAdRecommendationBuilder_.setMessage(value);
       }
       recommendationCase_ = 9;
       return this;
@@ -23207,8 +23266,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (recommendationCase_ == 10) {
           targetCpaOptInRecommendationBuilder_.mergeFrom(value);
+        } else {
+          targetCpaOptInRecommendationBuilder_.setMessage(value);
         }
-        targetCpaOptInRecommendationBuilder_.setMessage(value);
       }
       recommendationCase_ = 10;
       return this;
@@ -23384,8 +23444,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (recommendationCase_ == 11) {
           maximizeConversionsOptInRecommendationBuilder_.mergeFrom(value);
+        } else {
+          maximizeConversionsOptInRecommendationBuilder_.setMessage(value);
         }
-        maximizeConversionsOptInRecommendationBuilder_.setMessage(value);
       }
       recommendationCase_ = 11;
       return this;
@@ -23561,8 +23622,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (recommendationCase_ == 12) {
           enhancedCpcOptInRecommendationBuilder_.mergeFrom(value);
+        } else {
+          enhancedCpcOptInRecommendationBuilder_.setMessage(value);
         }
-        enhancedCpcOptInRecommendationBuilder_.setMessage(value);
       }
       recommendationCase_ = 12;
       return this;
@@ -23738,8 +23800,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (recommendationCase_ == 14) {
           searchPartnersOptInRecommendationBuilder_.mergeFrom(value);
+        } else {
+          searchPartnersOptInRecommendationBuilder_.setMessage(value);
         }
-        searchPartnersOptInRecommendationBuilder_.setMessage(value);
       }
       recommendationCase_ = 14;
       return this;
@@ -23915,8 +23978,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (recommendationCase_ == 15) {
           maximizeClicksOptInRecommendationBuilder_.mergeFrom(value);
+        } else {
+          maximizeClicksOptInRecommendationBuilder_.setMessage(value);
         }
-        maximizeClicksOptInRecommendationBuilder_.setMessage(value);
       }
       recommendationCase_ = 15;
       return this;
@@ -24092,8 +24156,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (recommendationCase_ == 16) {
           optimizeAdRotationRecommendationBuilder_.mergeFrom(value);
+        } else {
+          optimizeAdRotationRecommendationBuilder_.setMessage(value);
         }
-        optimizeAdRotationRecommendationBuilder_.setMessage(value);
       }
       recommendationCase_ = 16;
       return this;
@@ -24269,8 +24334,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (recommendationCase_ == 17) {
           calloutExtensionRecommendationBuilder_.mergeFrom(value);
+        } else {
+          calloutExtensionRecommendationBuilder_.setMessage(value);
         }
-        calloutExtensionRecommendationBuilder_.setMessage(value);
       }
       recommendationCase_ = 17;
       return this;
@@ -24446,8 +24512,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (recommendationCase_ == 18) {
           sitelinkExtensionRecommendationBuilder_.mergeFrom(value);
+        } else {
+          sitelinkExtensionRecommendationBuilder_.setMessage(value);
         }
-        sitelinkExtensionRecommendationBuilder_.setMessage(value);
       }
       recommendationCase_ = 18;
       return this;
@@ -24623,8 +24690,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (recommendationCase_ == 19) {
           callExtensionRecommendationBuilder_.mergeFrom(value);
+        } else {
+          callExtensionRecommendationBuilder_.setMessage(value);
         }
-        callExtensionRecommendationBuilder_.setMessage(value);
       }
       recommendationCase_ = 19;
       return this;
@@ -24800,8 +24868,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (recommendationCase_ == 20) {
           keywordMatchTypeRecommendationBuilder_.mergeFrom(value);
+        } else {
+          keywordMatchTypeRecommendationBuilder_.setMessage(value);
         }
-        keywordMatchTypeRecommendationBuilder_.setMessage(value);
       }
       recommendationCase_ = 20;
       return this;
@@ -24977,8 +25046,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (recommendationCase_ == 21) {
           moveUnusedBudgetRecommendationBuilder_.mergeFrom(value);
+        } else {
+          moveUnusedBudgetRecommendationBuilder_.setMessage(value);
         }
-        moveUnusedBudgetRecommendationBuilder_.setMessage(value);
       }
       recommendationCase_ = 21;
       return this;
@@ -25154,8 +25224,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (recommendationCase_ == 23) {
           targetRoasOptInRecommendationBuilder_.mergeFrom(value);
+        } else {
+          targetRoasOptInRecommendationBuilder_.setMessage(value);
         }
-        targetRoasOptInRecommendationBuilder_.setMessage(value);
       }
       recommendationCase_ = 23;
       return this;
@@ -25331,8 +25402,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (recommendationCase_ == 28) {
           responsiveSearchAdRecommendationBuilder_.mergeFrom(value);
+        } else {
+          responsiveSearchAdRecommendationBuilder_.setMessage(value);
         }
-        responsiveSearchAdRecommendationBuilder_.setMessage(value);
       }
       recommendationCase_ = 28;
       return this;
@@ -25508,8 +25580,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (recommendationCase_ == 29) {
           marginalRoiCampaignBudgetRecommendationBuilder_.mergeFrom(value);
+        } else {
+          marginalRoiCampaignBudgetRecommendationBuilder_.setMessage(value);
         }
-        marginalRoiCampaignBudgetRecommendationBuilder_.setMessage(value);
       }
       recommendationCase_ = 29;
       return this;
@@ -25685,8 +25758,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (recommendationCase_ == 30) {
           useBroadMatchKeywordRecommendationBuilder_.mergeFrom(value);
+        } else {
+          useBroadMatchKeywordRecommendationBuilder_.setMessage(value);
         }
-        useBroadMatchKeywordRecommendationBuilder_.setMessage(value);
       }
       recommendationCase_ = 30;
       return this;
@@ -25862,8 +25936,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (recommendationCase_ == 31) {
           responsiveSearchAdAssetRecommendationBuilder_.mergeFrom(value);
+        } else {
+          responsiveSearchAdAssetRecommendationBuilder_.setMessage(value);
         }
-        responsiveSearchAdAssetRecommendationBuilder_.setMessage(value);
       }
       recommendationCase_ = 31;
       return this;

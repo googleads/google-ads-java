@@ -30,20 +30,18 @@ public final class IdErrorProto {
     java.lang.String[] descriptorData = {
       "\n.google/ads/googleads/v10/errors/id_err" +
       "or.proto\022\037google.ads.googleads.v10.error" +
-      "s\032\034google/api/annotations.proto\"E\n\013IdErr" +
-      "orEnum\"6\n\007IdError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UN" +
-      "KNOWN\020\001\022\r\n\tNOT_FOUND\020\002B\354\001\n#com.google.ad" +
-      "s.googleads.v10.errorsB\014IdErrorProtoP\001ZE" +
-      "google.golang.org/genproto/googleapis/ad" +
-      "s/googleads/v10/errors;errors\242\002\003GAA\252\002\037Go" +
-      "ogle.Ads.GoogleAds.V10.Errors\312\002\037Google\\A" +
-      "ds\\GoogleAds\\V10\\Errors\352\002#Google::Ads::G" +
-      "oogleAds::V10::Errorsb\006proto3"
+      "s\"E\n\013IdErrorEnum\"6\n\007IdError\022\017\n\013UNSPECIFI" +
+      "ED\020\000\022\013\n\007UNKNOWN\020\001\022\r\n\tNOT_FOUND\020\002B\354\001\n#com" +
+      ".google.ads.googleads.v10.errorsB\014IdErro" +
+      "rProtoP\001ZEgoogle.golang.org/genproto/goo" +
+      "gleapis/ads/googleads/v10/errors;errors\242" +
+      "\002\003GAA\252\002\037Google.Ads.GoogleAds.V10.Errors\312" +
+      "\002\037Google\\Ads\\GoogleAds\\V10\\Errors\352\002#Goog" +
+      "le::Ads::GoogleAds::V10::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_IdErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -51,7 +49,6 @@ public final class IdErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_IdErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -30,23 +30,22 @@ public final class ClickLocationProto {
     java.lang.String[] descriptorData = {
       "\n4google/ads/googleads/v10/common/click_" +
       "location.proto\022\037google.ads.googleads.v10" +
-      ".common\032\034google/api/annotations.proto\"\271\001" +
-      "\n\rClickLocation\022\021\n\004city\030\006 \001(\tH\000\210\001\001\022\024\n\007co" +
-      "untry\030\007 \001(\tH\001\210\001\001\022\022\n\005metro\030\010 \001(\tH\002\210\001\001\022\032\n\r" +
-      "most_specific\030\t \001(\tH\003\210\001\001\022\023\n\006region\030\n \001(\t" +
-      "H\004\210\001\001B\007\n\005_cityB\n\n\010_countryB\010\n\006_metroB\020\n\016" +
-      "_most_specificB\t\n\007_regionB\362\001\n#com.google" +
-      ".ads.googleads.v10.commonB\022ClickLocation" +
-      "ProtoP\001ZEgoogle.golang.org/genproto/goog" +
-      "leapis/ads/googleads/v10/common;common\242\002" +
-      "\003GAA\252\002\037Google.Ads.GoogleAds.V10.Common\312\002" +
-      "\037Google\\Ads\\GoogleAds\\V10\\Common\352\002#Googl" +
-      "e::Ads::GoogleAds::V10::Commonb\006proto3"
+      ".common\"\271\001\n\rClickLocation\022\021\n\004city\030\006 \001(\tH" +
+      "\000\210\001\001\022\024\n\007country\030\007 \001(\tH\001\210\001\001\022\022\n\005metro\030\010 \001(" +
+      "\tH\002\210\001\001\022\032\n\rmost_specific\030\t \001(\tH\003\210\001\001\022\023\n\006re" +
+      "gion\030\n \001(\tH\004\210\001\001B\007\n\005_cityB\n\n\010_countryB\010\n\006" +
+      "_metroB\020\n\016_most_specificB\t\n\007_regionB\362\001\n#" +
+      "com.google.ads.googleads.v10.commonB\022Cli" +
+      "ckLocationProtoP\001ZEgoogle.golang.org/gen" +
+      "proto/googleapis/ads/googleads/v10/commo" +
+      "n;common\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V1" +
+      "0.Common\312\002\037Google\\Ads\\GoogleAds\\V10\\Comm" +
+      "on\352\002#Google::Ads::GoogleAds::V10::Common" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_common_ClickLocation_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -54,7 +53,6 @@ public final class ClickLocationProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_common_ClickLocation_descriptor,
         new java.lang.String[] { "City", "Country", "Metro", "MostSpecific", "Region", "City", "Country", "Metro", "MostSpecific", "Region", });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

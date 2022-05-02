@@ -776,6 +776,35 @@ public interface CampaignOrBuilder extends
 
   /**
    * <pre>
+   * The campaign group this campaign belongs to.
+   * </pre>
+   *
+   * <code>optional string campaign_group = 76 [(.google.api.resource_reference) = { ... }</code>
+   * @return Whether the campaignGroup field is set.
+   */
+  boolean hasCampaignGroup();
+  /**
+   * <pre>
+   * The campaign group this campaign belongs to.
+   * </pre>
+   *
+   * <code>optional string campaign_group = 76 [(.google.api.resource_reference) = { ... }</code>
+   * @return The campaignGroup.
+   */
+  java.lang.String getCampaignGroup();
+  /**
+   * <pre>
+   * The campaign group this campaign belongs to.
+   * </pre>
+   *
+   * <code>optional string campaign_group = 76 [(.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for campaignGroup.
+   */
+  com.google.protobuf.ByteString
+      getCampaignGroupBytes();
+
+  /**
+   * <pre>
    * The last day of the campaign in serving customer's timezone in YYYY-MM-DD
    * format.
    * </pre>

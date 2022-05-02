@@ -30,24 +30,22 @@ public final class TargetCpaOptInRecommendationGoalProto {
     java.lang.String[] descriptorData = {
       "\nJgoogle/ads/googleads/v10/enums/target_" +
       "cpa_opt_in_recommendation_goal.proto\022\036go" +
-      "ogle.ads.googleads.v10.enums\032\034google/api" +
-      "/annotations.proto\"\255\001\n$TargetCpaOptInRec" +
-      "ommendationGoalEnum\"\204\001\n TargetCpaOptInRe" +
-      "commendationGoal\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNK" +
-      "NOWN\020\001\022\r\n\tSAME_COST\020\002\022\024\n\020SAME_CONVERSION" +
-      "S\020\003\022\014\n\010SAME_CPA\020\004\022\017\n\013CLOSEST_CPA\020\005B\377\001\n\"c" +
-      "om.google.ads.googleads.v10.enumsB%Targe" +
-      "tCpaOptInRecommendationGoalProtoP\001ZCgoog" +
-      "le.golang.org/genproto/googleapis/ads/go" +
-      "ogleads/v10/enums;enums\242\002\003GAA\252\002\036Google.A" +
-      "ds.GoogleAds.V10.Enums\312\002\036Google\\Ads\\Goog" +
-      "leAds\\V10\\Enums\352\002\"Google::Ads::GoogleAds" +
-      "::V10::Enumsb\006proto3"
+      "ogle.ads.googleads.v10.enums\"\255\001\n$TargetC" +
+      "paOptInRecommendationGoalEnum\"\204\001\n Target" +
+      "CpaOptInRecommendationGoal\022\017\n\013UNSPECIFIE" +
+      "D\020\000\022\013\n\007UNKNOWN\020\001\022\r\n\tSAME_COST\020\002\022\024\n\020SAME_" +
+      "CONVERSIONS\020\003\022\014\n\010SAME_CPA\020\004\022\017\n\013CLOSEST_C" +
+      "PA\020\005B\377\001\n\"com.google.ads.googleads.v10.en" +
+      "umsB%TargetCpaOptInRecommendationGoalPro" +
+      "toP\001ZCgoogle.golang.org/genproto/googlea" +
+      "pis/ads/googleads/v10/enums;enums\242\002\003GAA\252" +
+      "\002\036Google.Ads.GoogleAds.V10.Enums\312\002\036Googl" +
+      "e\\Ads\\GoogleAds\\V10\\Enums\352\002\"Google::Ads:" +
+      ":GoogleAds::V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_TargetCpaOptInRecommendationGoalEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -55,7 +53,6 @@ public final class TargetCpaOptInRecommendationGoalProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_TargetCpaOptInRecommendationGoalEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

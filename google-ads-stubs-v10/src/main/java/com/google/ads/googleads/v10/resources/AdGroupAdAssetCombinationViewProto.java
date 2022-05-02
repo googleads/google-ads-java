@@ -32,32 +32,31 @@ public final class AdGroupAdAssetCombinationViewProto {
       "group_ad_asset_combination_view.proto\022\"g" +
       "oogle.ads.googleads.v10.resources\0321googl" +
       "e/ads/googleads/v10/common/asset_usage.p" +
-      "roto\032\034google/api/annotations.proto\032\037goog" +
-      "le/api/field_behavior.proto\032\031google/api/" +
-      "resource.proto\"\204\003\n\035AdGroupAdAssetCombina" +
-      "tionView\022U\n\rresource_name\030\001 \001(\tB>\340A\003\372A8\n" +
-      "6googleads.googleapis.com/AdGroupAdAsset" +
-      "CombinationView\022G\n\rserved_assets\030\002 \003(\0132+" +
-      ".google.ads.googleads.v10.common.AssetUs" +
-      "ageB\003\340A\003:\302\001\352A\276\001\n6googleads.googleapis.co" +
-      "m/AdGroupAdAssetCombinationView\022\203\001custom" +
-      "ers/{customer_id}/adGroupAdAssetCombinat" +
-      "ionViews/{ad_group_id}~{ad_id}~{asset_co" +
-      "mbination_id_low}~{asset_combination_id_" +
-      "high}B\224\002\n&com.google.ads.googleads.v10.r" +
-      "esourcesB\"AdGroupAdAssetCombinationViewP" +
-      "rotoP\001ZKgoogle.golang.org/genproto/googl" +
-      "eapis/ads/googleads/v10/resources;resour" +
-      "ces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V10.Res" +
-      "ources\312\002\"Google\\Ads\\GoogleAds\\V10\\Resour" +
-      "ces\352\002&Google::Ads::GoogleAds::V10::Resou" +
-      "rcesb\006proto3"
+      "roto\032\037google/api/field_behavior.proto\032\031g" +
+      "oogle/api/resource.proto\"\253\003\n\035AdGroupAdAs" +
+      "setCombinationView\022U\n\rresource_name\030\001 \001(" +
+      "\tB>\340A\003\372A8\n6googleads.googleapis.com/AdGr" +
+      "oupAdAssetCombinationView\022G\n\rserved_asse" +
+      "ts\030\002 \003(\0132+.google.ads.googleads.v10.comm" +
+      "on.AssetUsageB\003\340A\003\022\031\n\007enabled\030\003 \001(\010B\003\340A\003" +
+      "H\000\210\001\001:\302\001\352A\276\001\n6googleads.googleapis.com/A" +
+      "dGroupAdAssetCombinationView\022\203\001customers" +
+      "/{customer_id}/adGroupAdAssetCombination" +
+      "Views/{ad_group_id}~{ad_id}~{asset_combi" +
+      "nation_id_low}~{asset_combination_id_hig" +
+      "h}B\n\n\010_enabledB\224\002\n&com.google.ads.google" +
+      "ads.v10.resourcesB\"AdGroupAdAssetCombina" +
+      "tionViewProtoP\001ZKgoogle.golang.org/genpr" +
+      "oto/googleapis/ads/googleads/v10/resourc" +
+      "es;resources\242\002\003GAA\252\002\"Google.Ads.GoogleAd" +
+      "s.V10.Resources\312\002\"Google\\Ads\\GoogleAds\\V" +
+      "10\\Resources\352\002&Google::Ads::GoogleAds::V" +
+      "10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.common.AssetUsageProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -66,7 +65,7 @@ public final class AdGroupAdAssetCombinationViewProto {
     internal_static_google_ads_googleads_v10_resources_AdGroupAdAssetCombinationView_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_resources_AdGroupAdAssetCombinationView_descriptor,
-        new java.lang.String[] { "ResourceName", "ServedAssets", });
+        new java.lang.String[] { "ResourceName", "ServedAssets", "Enabled", "Enabled", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
@@ -75,7 +74,6 @@ public final class AdGroupAdAssetCombinationViewProto {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.common.AssetUsageProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

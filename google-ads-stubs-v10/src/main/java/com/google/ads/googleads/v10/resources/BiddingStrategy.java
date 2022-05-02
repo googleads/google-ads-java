@@ -219,6 +219,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -2640,8 +2642,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (schemeCase_ == 7) {
           enhancedCpcBuilder_.mergeFrom(value);
+        } else {
+          enhancedCpcBuilder_.setMessage(value);
         }
-        enhancedCpcBuilder_.setMessage(value);
       }
       schemeCase_ = 7;
       return this;
@@ -2830,8 +2833,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (schemeCase_ == 21) {
           maximizeConversionValueBuilder_.mergeFrom(value);
+        } else {
+          maximizeConversionValueBuilder_.setMessage(value);
         }
-        maximizeConversionValueBuilder_.setMessage(value);
       }
       schemeCase_ = 21;
       return this;
@@ -3016,8 +3020,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (schemeCase_ == 22) {
           maximizeConversionsBuilder_.mergeFrom(value);
+        } else {
+          maximizeConversionsBuilder_.setMessage(value);
         }
-        maximizeConversionsBuilder_.setMessage(value);
       }
       schemeCase_ = 22;
       return this;
@@ -3202,8 +3207,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (schemeCase_ == 9) {
           targetCpaBuilder_.mergeFrom(value);
+        } else {
+          targetCpaBuilder_.setMessage(value);
         }
-        targetCpaBuilder_.setMessage(value);
       }
       schemeCase_ = 9;
       return this;
@@ -3388,8 +3394,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (schemeCase_ == 48) {
           targetImpressionShareBuilder_.mergeFrom(value);
+        } else {
+          targetImpressionShareBuilder_.setMessage(value);
         }
-        targetImpressionShareBuilder_.setMessage(value);
       }
       schemeCase_ = 48;
       return this;
@@ -3574,8 +3581,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (schemeCase_ == 11) {
           targetRoasBuilder_.mergeFrom(value);
+        } else {
+          targetRoasBuilder_.setMessage(value);
         }
-        targetRoasBuilder_.setMessage(value);
       }
       schemeCase_ = 11;
       return this;
@@ -3760,8 +3768,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (schemeCase_ == 12) {
           targetSpendBuilder_.mergeFrom(value);
+        } else {
+          targetSpendBuilder_.setMessage(value);
         }
-        targetSpendBuilder_.setMessage(value);
       }
       schemeCase_ = 12;
       return this;

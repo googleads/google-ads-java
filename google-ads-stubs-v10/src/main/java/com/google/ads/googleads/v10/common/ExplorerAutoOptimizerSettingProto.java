@@ -30,21 +30,19 @@ public final class ExplorerAutoOptimizerSettingProto {
     java.lang.String[] descriptorData = {
       "\nEgoogle/ads/googleads/v10/common/explor" +
       "er_auto_optimizer_setting.proto\022\037google." +
-      "ads.googleads.v10.common\032\034google/api/ann" +
-      "otations.proto\">\n\034ExplorerAutoOptimizerS" +
-      "etting\022\023\n\006opt_in\030\002 \001(\010H\000\210\001\001B\t\n\007_opt_inB\201" +
-      "\002\n#com.google.ads.googleads.v10.commonB!" +
-      "ExplorerAutoOptimizerSettingProtoP\001ZEgoo" +
-      "gle.golang.org/genproto/googleapis/ads/g" +
-      "oogleads/v10/common;common\242\002\003GAA\252\002\037Googl" +
-      "e.Ads.GoogleAds.V10.Common\312\002\037Google\\Ads\\" +
-      "GoogleAds\\V10\\Common\352\002#Google::Ads::Goog" +
-      "leAds::V10::Commonb\006proto3"
+      "ads.googleads.v10.common\">\n\034ExplorerAuto" +
+      "OptimizerSetting\022\023\n\006opt_in\030\002 \001(\010H\000\210\001\001B\t\n" +
+      "\007_opt_inB\201\002\n#com.google.ads.googleads.v1" +
+      "0.commonB!ExplorerAutoOptimizerSettingPr" +
+      "otoP\001ZEgoogle.golang.org/genproto/google" +
+      "apis/ads/googleads/v10/common;common\242\002\003G" +
+      "AA\252\002\037Google.Ads.GoogleAds.V10.Common\312\002\037G" +
+      "oogle\\Ads\\GoogleAds\\V10\\Common\352\002#Google:" +
+      ":Ads::GoogleAds::V10::Commonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_common_ExplorerAutoOptimizerSetting_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -52,7 +50,6 @@ public final class ExplorerAutoOptimizerSettingProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_common_ExplorerAutoOptimizerSetting_descriptor,
         new java.lang.String[] { "OptIn", "OptIn", });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

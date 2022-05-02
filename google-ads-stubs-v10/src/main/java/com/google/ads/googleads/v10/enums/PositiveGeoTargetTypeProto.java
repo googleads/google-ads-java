@@ -30,23 +30,21 @@ public final class PositiveGeoTargetTypeProto {
     java.lang.String[] descriptorData = {
       "\n=google/ads/googleads/v10/enums/positiv" +
       "e_geo_target_type.proto\022\036google.ads.goog" +
-      "leads.v10.enums\032\034google/api/annotations." +
-      "proto\"\217\001\n\031PositiveGeoTargetTypeEnum\"r\n\025P" +
-      "ositiveGeoTargetType\022\017\n\013UNSPECIFIED\020\000\022\013\n" +
-      "\007UNKNOWN\020\001\022\030\n\024PRESENCE_OR_INTEREST\020\005\022\023\n\017" +
-      "SEARCH_INTEREST\020\006\022\014\n\010PRESENCE\020\007B\364\001\n\"com." +
-      "google.ads.googleads.v10.enumsB\032Positive" +
-      "GeoTargetTypeProtoP\001ZCgoogle.golang.org/" +
-      "genproto/googleapis/ads/googleads/v10/en" +
-      "ums;enums\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V" +
-      "10.Enums\312\002\036Google\\Ads\\GoogleAds\\V10\\Enum" +
-      "s\352\002\"Google::Ads::GoogleAds::V10::Enumsb\006" +
-      "proto3"
+      "leads.v10.enums\"\217\001\n\031PositiveGeoTargetTyp" +
+      "eEnum\"r\n\025PositiveGeoTargetType\022\017\n\013UNSPEC" +
+      "IFIED\020\000\022\013\n\007UNKNOWN\020\001\022\030\n\024PRESENCE_OR_INTE" +
+      "REST\020\005\022\023\n\017SEARCH_INTEREST\020\006\022\014\n\010PRESENCE\020" +
+      "\007B\364\001\n\"com.google.ads.googleads.v10.enums" +
+      "B\032PositiveGeoTargetTypeProtoP\001ZCgoogle.g" +
+      "olang.org/genproto/googleapis/ads/google" +
+      "ads/v10/enums;enums\242\002\003GAA\252\002\036Google.Ads.G" +
+      "oogleAds.V10.Enums\312\002\036Google\\Ads\\GoogleAd" +
+      "s\\V10\\Enums\352\002\"Google::Ads::GoogleAds::V1" +
+      "0::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_PositiveGeoTargetTypeEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -54,7 +52,6 @@ public final class PositiveGeoTargetTypeProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_PositiveGeoTargetTypeEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

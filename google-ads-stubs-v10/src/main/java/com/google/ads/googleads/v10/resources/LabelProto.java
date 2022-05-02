@@ -32,32 +32,30 @@ public final class LabelProto {
       "el.proto\022\"google.ads.googleads.v10.resou" +
       "rces\0320google/ads/googleads/v10/common/te" +
       "xt_label.proto\0321google/ads/googleads/v10" +
-      "/enums/label_status.proto\032\034google/api/an" +
-      "notations.proto\032\037google/api/field_behavi" +
-      "or.proto\032\031google/api/resource.proto\"\341\002\n\005" +
-      "Label\022=\n\rresource_name\030\001 \001(\tB&\340A\005\372A \n\036go" +
-      "ogleads.googleapis.com/Label\022\024\n\002id\030\006 \001(\003" +
-      "B\003\340A\003H\000\210\001\001\022\021\n\004name\030\007 \001(\tH\001\210\001\001\022P\n\006status\030" +
-      "\004 \001(\0162;.google.ads.googleads.v10.enums.L" +
-      "abelStatusEnum.LabelStatusB\003\340A\003\022>\n\ntext_" +
-      "label\030\005 \001(\0132*.google.ads.googleads.v10.c" +
-      "ommon.TextLabel:N\352AK\n\036googleads.googleap" +
-      "is.com/Label\022)customers/{customer_id}/la" +
-      "bels/{label_id}B\005\n\003_idB\007\n\005_nameB\374\001\n&com." +
-      "google.ads.googleads.v10.resourcesB\nLabe" +
-      "lProtoP\001ZKgoogle.golang.org/genproto/goo" +
-      "gleapis/ads/googleads/v10/resources;reso" +
-      "urces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V10.R" +
-      "esources\312\002\"Google\\Ads\\GoogleAds\\V10\\Reso" +
-      "urces\352\002&Google::Ads::GoogleAds::V10::Res" +
-      "ourcesb\006proto3"
+      "/enums/label_status.proto\032\037google/api/fi" +
+      "eld_behavior.proto\032\031google/api/resource." +
+      "proto\"\341\002\n\005Label\022=\n\rresource_name\030\001 \001(\tB&" +
+      "\340A\005\372A \n\036googleads.googleapis.com/Label\022\024" +
+      "\n\002id\030\006 \001(\003B\003\340A\003H\000\210\001\001\022\021\n\004name\030\007 \001(\tH\001\210\001\001\022" +
+      "P\n\006status\030\004 \001(\0162;.google.ads.googleads.v" +
+      "10.enums.LabelStatusEnum.LabelStatusB\003\340A" +
+      "\003\022>\n\ntext_label\030\005 \001(\0132*.google.ads.googl" +
+      "eads.v10.common.TextLabel:N\352AK\n\036googlead" +
+      "s.googleapis.com/Label\022)customers/{custo" +
+      "mer_id}/labels/{label_id}B\005\n\003_idB\007\n\005_nam" +
+      "eB\374\001\n&com.google.ads.googleads.v10.resou" +
+      "rcesB\nLabelProtoP\001ZKgoogle.golang.org/ge" +
+      "nproto/googleapis/ads/googleads/v10/reso" +
+      "urces;resources\242\002\003GAA\252\002\"Google.Ads.Googl" +
+      "eAds.V10.Resources\312\002\"Google\\Ads\\GoogleAd" +
+      "s\\V10\\Resources\352\002&Google::Ads::GoogleAds" +
+      "::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.common.TextLabelProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.LabelStatusProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -76,7 +74,6 @@ public final class LabelProto {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.common.TextLabelProto.getDescriptor();
     com.google.ads.googleads.v10.enums.LabelStatusProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

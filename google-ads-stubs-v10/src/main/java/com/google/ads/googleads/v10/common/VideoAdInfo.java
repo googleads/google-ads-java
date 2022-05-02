@@ -146,6 +146,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -1197,8 +1199,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (formatCase_ == 2) {
           inStreamBuilder_.mergeFrom(value);
+        } else {
+          inStreamBuilder_.setMessage(value);
         }
-        inStreamBuilder_.setMessage(value);
       }
       formatCase_ = 2;
       return this;
@@ -1374,8 +1377,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (formatCase_ == 3) {
           bumperBuilder_.mergeFrom(value);
+        } else {
+          bumperBuilder_.setMessage(value);
         }
-        bumperBuilder_.setMessage(value);
       }
       formatCase_ = 3;
       return this;
@@ -1551,8 +1555,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (formatCase_ == 4) {
           outStreamBuilder_.mergeFrom(value);
+        } else {
+          outStreamBuilder_.setMessage(value);
         }
-        outStreamBuilder_.setMessage(value);
       }
       formatCase_ = 4;
       return this;
@@ -1728,8 +1733,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (formatCase_ == 5) {
           nonSkippableBuilder_.mergeFrom(value);
+        } else {
+          nonSkippableBuilder_.setMessage(value);
         }
-        nonSkippableBuilder_.setMessage(value);
       }
       formatCase_ = 5;
       return this;
@@ -1905,8 +1911,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (formatCase_ == 9) {
           inFeedBuilder_.mergeFrom(value);
+        } else {
+          inFeedBuilder_.setMessage(value);
         }
-        inFeedBuilder_.setMessage(value);
       }
       formatCase_ = 9;
       return this;

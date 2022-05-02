@@ -30,43 +30,41 @@ public final class AccountBudgetProposalErrorProto {
     java.lang.String[] descriptorData = {
       "\nCgoogle/ads/googleads/v10/errors/accoun" +
       "t_budget_proposal_error.proto\022\037google.ad" +
-      "s.googleads.v10.errors\032\034google/api/annot" +
-      "ations.proto\"\230\007\n\036AccountBudgetProposalEr" +
-      "rorEnum\"\365\006\n\032AccountBudgetProposalError\022\017" +
-      "\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\032\n\026FIELD_MA" +
-      "SK_NOT_ALLOWED\020\002\022\023\n\017IMMUTABLE_FIELD\020\003\022\032\n" +
-      "\026REQUIRED_FIELD_MISSING\020\004\022#\n\037CANNOT_CANC" +
-      "EL_APPROVED_PROPOSAL\020\005\022#\n\037CANNOT_REMOVE_" +
-      "UNAPPROVED_BUDGET\020\006\022 \n\034CANNOT_REMOVE_RUN" +
-      "NING_BUDGET\020\007\022 \n\034CANNOT_END_UNAPPROVED_B" +
-      "UDGET\020\010\022\036\n\032CANNOT_END_INACTIVE_BUDGET\020\t\022" +
-      "\030\n\024BUDGET_NAME_REQUIRED\020\n\022\034\n\030CANNOT_UPDA" +
-      "TE_OLD_BUDGET\020\013\022\026\n\022CANNOT_END_IN_PAST\020\014\022" +
-      "\032\n\026CANNOT_EXTEND_END_TIME\020\r\022\"\n\036PURCHASE_" +
-      "ORDER_NUMBER_REQUIRED\020\016\022\"\n\036PENDING_UPDAT" +
-      "E_PROPOSAL_EXISTS\020\017\022=\n9MULTIPLE_BUDGETS_" +
-      "NOT_ALLOWED_FOR_UNAPPROVED_BILLING_SETUP" +
-      "\020\020\022/\n+CANNOT_UPDATE_START_TIME_FOR_START" +
-      "ED_BUDGET\020\021\0226\n2SPENDING_LIMIT_LOWER_THAN" +
-      "_ACCRUED_COST_NOT_ALLOWED\020\022\022\023\n\017UPDATE_IS" +
-      "_NO_OP\020\023\022#\n\037END_TIME_MUST_FOLLOW_START_T" +
-      "IME\020\024\0225\n1BUDGET_DATE_RANGE_INCOMPATIBLE_" +
-      "WITH_BILLING_SETUP\020\025\022\022\n\016NOT_AUTHORIZED\020\026" +
-      "\022\031\n\025INVALID_BILLING_SETUP\020\027\022\034\n\030OVERLAPS_" +
-      "EXISTING_BUDGET\020\030\022$\n CANNOT_CREATE_BUDGE" +
-      "T_THROUGH_API\020\031B\377\001\n#com.google.ads.googl" +
-      "eads.v10.errorsB\037AccountBudgetProposalEr" +
-      "rorProtoP\001ZEgoogle.golang.org/genproto/g" +
-      "oogleapis/ads/googleads/v10/errors;error" +
-      "s\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V10.Error" +
-      "s\312\002\037Google\\Ads\\GoogleAds\\V10\\Errors\352\002#Go" +
-      "ogle::Ads::GoogleAds::V10::Errorsb\006proto" +
-      "3"
+      "s.googleads.v10.errors\"\230\007\n\036AccountBudget" +
+      "ProposalErrorEnum\"\365\006\n\032AccountBudgetPropo" +
+      "salError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\032" +
+      "\n\026FIELD_MASK_NOT_ALLOWED\020\002\022\023\n\017IMMUTABLE_" +
+      "FIELD\020\003\022\032\n\026REQUIRED_FIELD_MISSING\020\004\022#\n\037C" +
+      "ANNOT_CANCEL_APPROVED_PROPOSAL\020\005\022#\n\037CANN" +
+      "OT_REMOVE_UNAPPROVED_BUDGET\020\006\022 \n\034CANNOT_" +
+      "REMOVE_RUNNING_BUDGET\020\007\022 \n\034CANNOT_END_UN" +
+      "APPROVED_BUDGET\020\010\022\036\n\032CANNOT_END_INACTIVE" +
+      "_BUDGET\020\t\022\030\n\024BUDGET_NAME_REQUIRED\020\n\022\034\n\030C" +
+      "ANNOT_UPDATE_OLD_BUDGET\020\013\022\026\n\022CANNOT_END_" +
+      "IN_PAST\020\014\022\032\n\026CANNOT_EXTEND_END_TIME\020\r\022\"\n" +
+      "\036PURCHASE_ORDER_NUMBER_REQUIRED\020\016\022\"\n\036PEN" +
+      "DING_UPDATE_PROPOSAL_EXISTS\020\017\022=\n9MULTIPL" +
+      "E_BUDGETS_NOT_ALLOWED_FOR_UNAPPROVED_BIL" +
+      "LING_SETUP\020\020\022/\n+CANNOT_UPDATE_START_TIME" +
+      "_FOR_STARTED_BUDGET\020\021\0226\n2SPENDING_LIMIT_" +
+      "LOWER_THAN_ACCRUED_COST_NOT_ALLOWED\020\022\022\023\n" +
+      "\017UPDATE_IS_NO_OP\020\023\022#\n\037END_TIME_MUST_FOLL" +
+      "OW_START_TIME\020\024\0225\n1BUDGET_DATE_RANGE_INC" +
+      "OMPATIBLE_WITH_BILLING_SETUP\020\025\022\022\n\016NOT_AU" +
+      "THORIZED\020\026\022\031\n\025INVALID_BILLING_SETUP\020\027\022\034\n" +
+      "\030OVERLAPS_EXISTING_BUDGET\020\030\022$\n CANNOT_CR" +
+      "EATE_BUDGET_THROUGH_API\020\031B\377\001\n#com.google" +
+      ".ads.googleads.v10.errorsB\037AccountBudget" +
+      "ProposalErrorProtoP\001ZEgoogle.golang.org/" +
+      "genproto/googleapis/ads/googleads/v10/er" +
+      "rors;errors\242\002\003GAA\252\002\037Google.Ads.GoogleAds" +
+      ".V10.Errors\312\002\037Google\\Ads\\GoogleAds\\V10\\E" +
+      "rrors\352\002#Google::Ads::GoogleAds::V10::Err" +
+      "orsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_AccountBudgetProposalErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -74,7 +72,6 @@ public final class AccountBudgetProposalErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_AccountBudgetProposalErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

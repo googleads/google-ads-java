@@ -30,22 +30,21 @@ public final class KeywordPlanAggregateMetricTypeProto {
     java.lang.String[] descriptorData = {
       "\nGgoogle/ads/googleads/v10/enums/keyword" +
       "_plan_aggregate_metric_type.proto\022\036googl" +
-      "e.ads.googleads.v10.enums\032\034google/api/an" +
-      "notations.proto\"p\n\"KeywordPlanAggregateM" +
-      "etricTypeEnum\"J\n\036KeywordPlanAggregateMet" +
-      "ricType\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\n\n" +
-      "\006DEVICE\020\002B\375\001\n\"com.google.ads.googleads.v" +
-      "10.enumsB#KeywordPlanAggregateMetricType" +
-      "ProtoP\001ZCgoogle.golang.org/genproto/goog" +
-      "leapis/ads/googleads/v10/enums;enums\242\002\003G" +
-      "AA\252\002\036Google.Ads.GoogleAds.V10.Enums\312\002\036Go" +
-      "ogle\\Ads\\GoogleAds\\V10\\Enums\352\002\"Google::A" +
-      "ds::GoogleAds::V10::Enumsb\006proto3"
+      "e.ads.googleads.v10.enums\"p\n\"KeywordPlan" +
+      "AggregateMetricTypeEnum\"J\n\036KeywordPlanAg" +
+      "gregateMetricType\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UN" +
+      "KNOWN\020\001\022\n\n\006DEVICE\020\002B\375\001\n\"com.google.ads.g" +
+      "oogleads.v10.enumsB#KeywordPlanAggregate" +
+      "MetricTypeProtoP\001ZCgoogle.golang.org/gen" +
+      "proto/googleapis/ads/googleads/v10/enums" +
+      ";enums\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V10." +
+      "Enums\312\002\036Google\\Ads\\GoogleAds\\V10\\Enums\352\002" +
+      "\"Google::Ads::GoogleAds::V10::Enumsb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_KeywordPlanAggregateMetricTypeEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -53,7 +52,6 @@ public final class KeywordPlanAggregateMetricTypeProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_KeywordPlanAggregateMetricTypeEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

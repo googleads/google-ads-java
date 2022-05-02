@@ -30,24 +30,22 @@ public final class ConversionCustomVariableErrorProto {
     java.lang.String[] descriptorData = {
       "\nFgoogle/ads/googleads/v10/errors/conver" +
       "sion_custom_variable_error.proto\022\037google" +
-      ".ads.googleads.v10.errors\032\034google/api/an" +
-      "notations.proto\"\233\001\n!ConversionCustomVari" +
-      "ableErrorEnum\"v\n\035ConversionCustomVariabl" +
-      "eError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\022\n\016" +
-      "DUPLICATE_NAME\020\002\022\021\n\rDUPLICATE_TAG\020\003\022\020\n\014R" +
-      "ESERVED_TAG\020\004B\202\002\n#com.google.ads.googlea" +
-      "ds.v10.errorsB\"ConversionCustomVariableE" +
-      "rrorProtoP\001ZEgoogle.golang.org/genproto/" +
-      "googleapis/ads/googleads/v10/errors;erro" +
-      "rs\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V10.Erro" +
-      "rs\312\002\037Google\\Ads\\GoogleAds\\V10\\Errors\352\002#G" +
-      "oogle::Ads::GoogleAds::V10::Errorsb\006prot" +
-      "o3"
+      ".ads.googleads.v10.errors\"\233\001\n!Conversion" +
+      "CustomVariableErrorEnum\"v\n\035ConversionCus" +
+      "tomVariableError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNK" +
+      "NOWN\020\001\022\022\n\016DUPLICATE_NAME\020\002\022\021\n\rDUPLICATE_" +
+      "TAG\020\003\022\020\n\014RESERVED_TAG\020\004B\202\002\n#com.google.a" +
+      "ds.googleads.v10.errorsB\"ConversionCusto" +
+      "mVariableErrorProtoP\001ZEgoogle.golang.org" +
+      "/genproto/googleapis/ads/googleads/v10/e" +
+      "rrors;errors\242\002\003GAA\252\002\037Google.Ads.GoogleAd" +
+      "s.V10.Errors\312\002\037Google\\Ads\\GoogleAds\\V10\\" +
+      "Errors\352\002#Google::Ads::GoogleAds::V10::Er" +
+      "rorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_ConversionCustomVariableErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -55,7 +53,6 @@ public final class ConversionCustomVariableErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_ConversionCustomVariableErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

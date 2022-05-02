@@ -63,6 +63,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -1167,6 +1169,25 @@ private static final long serialVersionUID = 0L;
      * <code>AUDIENCE_NOT_ELIGIBLE_FOR_CAMPAIGN_TYPE = 137;</code>
      */
     AUDIENCE_NOT_ELIGIBLE_FOR_CAMPAIGN_TYPE(137),
+    /**
+     * <pre>
+     * Audience is not allowed to attach when use_audience_grouped bit is set to
+     * false.
+     * </pre>
+     *
+     * <code>AUDIENCE_NOT_ALLOWED_TO_ATTACH_WHEN_AUDIENCE_GROUPED_SET_TO_FALSE = 138;</code>
+     */
+    AUDIENCE_NOT_ALLOWED_TO_ATTACH_WHEN_AUDIENCE_GROUPED_SET_TO_FALSE(138),
+    /**
+     * <pre>
+     * Targeting is not allowed for Customer Match lists as per Customer Match
+     * policy. Please see
+     * https://support.google.com/google-ads/answer/6299717.
+     * </pre>
+     *
+     * <code>CANNOT_TARGET_CUSTOMER_MATCH_USER_LIST = 139;</code>
+     */
+    CANNOT_TARGET_CUSTOMER_MATCH_USER_LIST(139),
     UNRECOGNIZED(-1),
     ;
 
@@ -2244,6 +2265,25 @@ private static final long serialVersionUID = 0L;
      * <code>AUDIENCE_NOT_ELIGIBLE_FOR_CAMPAIGN_TYPE = 137;</code>
      */
     public static final int AUDIENCE_NOT_ELIGIBLE_FOR_CAMPAIGN_TYPE_VALUE = 137;
+    /**
+     * <pre>
+     * Audience is not allowed to attach when use_audience_grouped bit is set to
+     * false.
+     * </pre>
+     *
+     * <code>AUDIENCE_NOT_ALLOWED_TO_ATTACH_WHEN_AUDIENCE_GROUPED_SET_TO_FALSE = 138;</code>
+     */
+    public static final int AUDIENCE_NOT_ALLOWED_TO_ATTACH_WHEN_AUDIENCE_GROUPED_SET_TO_FALSE_VALUE = 138;
+    /**
+     * <pre>
+     * Targeting is not allowed for Customer Match lists as per Customer Match
+     * policy. Please see
+     * https://support.google.com/google-ads/answer/6299717.
+     * </pre>
+     *
+     * <code>CANNOT_TARGET_CUSTOMER_MATCH_USER_LIST = 139;</code>
+     */
+    public static final int CANNOT_TARGET_CUSTOMER_MATCH_USER_LIST_VALUE = 139;
 
 
     public final int getNumber() {
@@ -2400,6 +2440,8 @@ private static final long serialVersionUID = 0L;
         case 135: return BROAD_MATCH_MODIFIER_KEYWORD_NOT_ALLOWED;
         case 136: return ONE_AUDIENCE_ALLOWED_PER_ASSET_GROUP;
         case 137: return AUDIENCE_NOT_ELIGIBLE_FOR_CAMPAIGN_TYPE;
+        case 138: return AUDIENCE_NOT_ALLOWED_TO_ATTACH_WHEN_AUDIENCE_GROUPED_SET_TO_FALSE;
+        case 139: return CANNOT_TARGET_CUSTOMER_MATCH_USER_LIST;
         default: return null;
       }
     }

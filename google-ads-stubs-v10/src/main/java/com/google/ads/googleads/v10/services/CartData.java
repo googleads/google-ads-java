@@ -98,6 +98,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -247,6 +249,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -368,7 +372,7 @@ private static final long serialVersionUID = 0L;
       if (quantity_ != 0) {
         output.writeInt32(2, quantity_);
       }
-      if (unitPrice_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(unitPrice_) != 0) {
         output.writeDouble(3, unitPrice_);
       }
       unknownFields.writeTo(output);
@@ -387,7 +391,7 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(2, quantity_);
       }
-      if (unitPrice_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(unitPrice_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(3, unitPrice_);
       }
@@ -1139,7 +1143,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feedLanguageCode_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, feedLanguageCode_);
     }
-    if (localTransactionCost_ != 0D) {
+    if (java.lang.Double.doubleToRawLongBits(localTransactionCost_) != 0) {
       output.writeDouble(4, localTransactionCost_);
     }
     for (int i = 0; i < items_.size(); i++) {
@@ -1163,7 +1167,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feedLanguageCode_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, feedLanguageCode_);
     }
-    if (localTransactionCost_ != 0D) {
+    if (java.lang.Double.doubleToRawLongBits(localTransactionCost_) != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(4, localTransactionCost_);
     }

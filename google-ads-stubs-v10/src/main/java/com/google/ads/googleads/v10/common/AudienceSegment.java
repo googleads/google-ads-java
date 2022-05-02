@@ -133,6 +133,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -961,8 +963,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (segmentCase_ == 1) {
           userListBuilder_.mergeFrom(value);
+        } else {
+          userListBuilder_.setMessage(value);
         }
-        userListBuilder_.setMessage(value);
       }
       segmentCase_ = 1;
       return this;
@@ -1138,8 +1141,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (segmentCase_ == 2) {
           userInterestBuilder_.mergeFrom(value);
+        } else {
+          userInterestBuilder_.setMessage(value);
         }
-        userInterestBuilder_.setMessage(value);
       }
       segmentCase_ = 2;
       return this;
@@ -1315,8 +1319,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (segmentCase_ == 3) {
           lifeEventBuilder_.mergeFrom(value);
+        } else {
+          lifeEventBuilder_.setMessage(value);
         }
-        lifeEventBuilder_.setMessage(value);
       }
       segmentCase_ = 3;
       return this;
@@ -1492,8 +1497,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (segmentCase_ == 4) {
           detailedDemographicBuilder_.mergeFrom(value);
+        } else {
+          detailedDemographicBuilder_.setMessage(value);
         }
-        detailedDemographicBuilder_.setMessage(value);
       }
       segmentCase_ = 4;
       return this;
@@ -1669,8 +1675,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (segmentCase_ == 5) {
           customAudienceBuilder_.mergeFrom(value);
+        } else {
+          customAudienceBuilder_.setMessage(value);
         }
-        customAudienceBuilder_.setMessage(value);
       }
       segmentCase_ = 5;
       return this;

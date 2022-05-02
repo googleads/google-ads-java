@@ -30,23 +30,21 @@ public final class PolicyApprovalStatusProto {
     java.lang.String[] descriptorData = {
       "\n;google/ads/googleads/v10/enums/policy_" +
       "approval_status.proto\022\036google.ads.google" +
-      "ads.v10.enums\032\034google/api/annotations.pr" +
-      "oto\"\241\001\n\030PolicyApprovalStatusEnum\"\204\001\n\024Pol" +
-      "icyApprovalStatus\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UN" +
-      "KNOWN\020\001\022\017\n\013DISAPPROVED\020\002\022\024\n\020APPROVED_LIM" +
-      "ITED\020\003\022\014\n\010APPROVED\020\004\022\031\n\025AREA_OF_INTEREST" +
-      "_ONLY\020\005B\363\001\n\"com.google.ads.googleads.v10" +
-      ".enumsB\031PolicyApprovalStatusProtoP\001ZCgoo" +
-      "gle.golang.org/genproto/googleapis/ads/g" +
-      "oogleads/v10/enums;enums\242\002\003GAA\252\002\036Google." +
-      "Ads.GoogleAds.V10.Enums\312\002\036Google\\Ads\\Goo" +
-      "gleAds\\V10\\Enums\352\002\"Google::Ads::GoogleAd" +
-      "s::V10::Enumsb\006proto3"
+      "ads.v10.enums\"\241\001\n\030PolicyApprovalStatusEn" +
+      "um\"\204\001\n\024PolicyApprovalStatus\022\017\n\013UNSPECIFI" +
+      "ED\020\000\022\013\n\007UNKNOWN\020\001\022\017\n\013DISAPPROVED\020\002\022\024\n\020AP" +
+      "PROVED_LIMITED\020\003\022\014\n\010APPROVED\020\004\022\031\n\025AREA_O" +
+      "F_INTEREST_ONLY\020\005B\363\001\n\"com.google.ads.goo" +
+      "gleads.v10.enumsB\031PolicyApprovalStatusPr" +
+      "otoP\001ZCgoogle.golang.org/genproto/google" +
+      "apis/ads/googleads/v10/enums;enums\242\002\003GAA" +
+      "\252\002\036Google.Ads.GoogleAds.V10.Enums\312\002\036Goog" +
+      "le\\Ads\\GoogleAds\\V10\\Enums\352\002\"Google::Ads" +
+      "::GoogleAds::V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_PolicyApprovalStatusEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -54,7 +52,6 @@ public final class PolicyApprovalStatusProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_PolicyApprovalStatusEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

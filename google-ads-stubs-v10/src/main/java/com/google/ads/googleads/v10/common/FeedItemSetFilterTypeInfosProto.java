@@ -42,29 +42,27 @@ public final class FeedItemSetFilterTypeInfosProto {
       "tem_set_filter_type_infos.proto\022\037google." +
       "ads.googleads.v10.common\032Egoogle/ads/goo" +
       "gleads/v10/enums/feed_item_set_string_fi" +
-      "lter_type.proto\032\034google/api/annotations." +
-      "proto\"}\n\030DynamicLocationSetFilter\022\016\n\006lab" +
-      "els\030\001 \003(\t\022Q\n\024business_name_filter\030\002 \001(\0132" +
-      "3.google.ads.googleads.v10.common.Busine" +
-      "ssNameFilter\"\235\001\n\022BusinessNameFilter\022\025\n\rb" +
-      "usiness_name\030\001 \001(\t\022p\n\013filter_type\030\002 \001(\0162" +
-      "[.google.ads.googleads.v10.enums.FeedIte" +
-      "mSetStringFilterTypeEnum.FeedItemSetStri" +
-      "ngFilterType\"6\n!DynamicAffiliateLocation" +
-      "SetFilter\022\021\n\tchain_ids\030\001 \003(\003B\377\001\n#com.goo" +
-      "gle.ads.googleads.v10.commonB\037FeedItemSe" +
-      "tFilterTypeInfosProtoP\001ZEgoogle.golang.o" +
-      "rg/genproto/googleapis/ads/googleads/v10" +
-      "/common;common\242\002\003GAA\252\002\037Google.Ads.Google" +
-      "Ads.V10.Common\312\002\037Google\\Ads\\GoogleAds\\V1" +
-      "0\\Common\352\002#Google::Ads::GoogleAds::V10::" +
-      "Commonb\006proto3"
+      "lter_type.proto\"}\n\030DynamicLocationSetFil" +
+      "ter\022\016\n\006labels\030\001 \003(\t\022Q\n\024business_name_fil" +
+      "ter\030\002 \001(\01323.google.ads.googleads.v10.com" +
+      "mon.BusinessNameFilter\"\235\001\n\022BusinessNameF" +
+      "ilter\022\025\n\rbusiness_name\030\001 \001(\t\022p\n\013filter_t" +
+      "ype\030\002 \001(\0162[.google.ads.googleads.v10.enu" +
+      "ms.FeedItemSetStringFilterTypeEnum.FeedI" +
+      "temSetStringFilterType\"6\n!DynamicAffilia" +
+      "teLocationSetFilter\022\021\n\tchain_ids\030\001 \003(\003B\377" +
+      "\001\n#com.google.ads.googleads.v10.commonB\037" +
+      "FeedItemSetFilterTypeInfosProtoP\001ZEgoogl" +
+      "e.golang.org/genproto/googleapis/ads/goo" +
+      "gleads/v10/common;common\242\002\003GAA\252\002\037Google." +
+      "Ads.GoogleAds.V10.Common\312\002\037Google\\Ads\\Go" +
+      "ogleAds\\V10\\Common\352\002#Google::Ads::Google" +
+      "Ads::V10::Commonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.enums.FeedItemSetStringFilterTypeProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_common_DynamicLocationSetFilter_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -85,7 +83,6 @@ public final class FeedItemSetFilterTypeInfosProto {
         internal_static_google_ads_googleads_v10_common_DynamicAffiliateLocationSetFilter_descriptor,
         new java.lang.String[] { "ChainIds", });
     com.google.ads.googleads.v10.enums.FeedItemSetStringFilterTypeProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

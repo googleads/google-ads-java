@@ -32,37 +32,35 @@ public final class KeywordPlanAdGroupKeywordProto {
       "word_plan_ad_group_keyword.proto\022\"google" +
       ".ads.googleads.v10.resources\0327google/ads" +
       "/googleads/v10/enums/keyword_match_type." +
-      "proto\032\034google/api/annotations.proto\032\037goo" +
-      "gle/api/field_behavior.proto\032\031google/api" +
-      "/resource.proto\"\335\004\n\031KeywordPlanAdGroupKe" +
-      "yword\022Q\n\rresource_name\030\001 \001(\tB:\340A\005\372A4\n2go" +
-      "ogleads.googleapis.com/KeywordPlanAdGrou" +
-      "pKeyword\022T\n\025keyword_plan_ad_group\030\010 \001(\tB" +
-      "0\372A-\n+googleads.googleapis.com/KeywordPl" +
-      "anAdGroupH\000\210\001\001\022\024\n\002id\030\t \001(\003B\003\340A\003H\001\210\001\001\022\021\n\004" +
-      "text\030\n \001(\tH\002\210\001\001\022Y\n\nmatch_type\030\005 \001(\0162E.go" +
-      "ogle.ads.googleads.v10.enums.KeywordMatc" +
-      "hTypeEnum.KeywordMatchType\022\033\n\016cpc_bid_mi" +
-      "cros\030\013 \001(\003H\003\210\001\001\022\032\n\010negative\030\014 \001(\010B\003\340A\005H\004" +
-      "\210\001\001:\217\001\352A\213\001\n2googleads.googleapis.com/Key" +
-      "wordPlanAdGroupKeyword\022Ucustomers/{custo" +
-      "mer_id}/keywordPlanAdGroupKeywords/{keyw" +
-      "ord_plan_ad_group_keyword_id}B\030\n\026_keywor" +
-      "d_plan_ad_groupB\005\n\003_idB\007\n\005_textB\021\n\017_cpc_" +
-      "bid_microsB\013\n\t_negativeB\220\002\n&com.google.a" +
-      "ds.googleads.v10.resourcesB\036KeywordPlanA" +
-      "dGroupKeywordProtoP\001ZKgoogle.golang.org/" +
-      "genproto/googleapis/ads/googleads/v10/re" +
-      "sources;resources\242\002\003GAA\252\002\"Google.Ads.Goo" +
-      "gleAds.V10.Resources\312\002\"Google\\Ads\\Google" +
-      "Ads\\V10\\Resources\352\002&Google::Ads::GoogleA" +
-      "ds::V10::Resourcesb\006proto3"
+      "proto\032\037google/api/field_behavior.proto\032\031" +
+      "google/api/resource.proto\"\335\004\n\031KeywordPla" +
+      "nAdGroupKeyword\022Q\n\rresource_name\030\001 \001(\tB:" +
+      "\340A\005\372A4\n2googleads.googleapis.com/Keyword" +
+      "PlanAdGroupKeyword\022T\n\025keyword_plan_ad_gr" +
+      "oup\030\010 \001(\tB0\372A-\n+googleads.googleapis.com" +
+      "/KeywordPlanAdGroupH\000\210\001\001\022\024\n\002id\030\t \001(\003B\003\340A" +
+      "\003H\001\210\001\001\022\021\n\004text\030\n \001(\tH\002\210\001\001\022Y\n\nmatch_type\030" +
+      "\005 \001(\0162E.google.ads.googleads.v10.enums.K" +
+      "eywordMatchTypeEnum.KeywordMatchType\022\033\n\016" +
+      "cpc_bid_micros\030\013 \001(\003H\003\210\001\001\022\032\n\010negative\030\014 " +
+      "\001(\010B\003\340A\005H\004\210\001\001:\217\001\352A\213\001\n2googleads.googleap" +
+      "is.com/KeywordPlanAdGroupKeyword\022Ucustom" +
+      "ers/{customer_id}/keywordPlanAdGroupKeyw" +
+      "ords/{keyword_plan_ad_group_keyword_id}B" +
+      "\030\n\026_keyword_plan_ad_groupB\005\n\003_idB\007\n\005_tex" +
+      "tB\021\n\017_cpc_bid_microsB\013\n\t_negativeB\220\002\n&co" +
+      "m.google.ads.googleads.v10.resourcesB\036Ke" +
+      "ywordPlanAdGroupKeywordProtoP\001ZKgoogle.g" +
+      "olang.org/genproto/googleapis/ads/google" +
+      "ads/v10/resources;resources\242\002\003GAA\252\002\"Goog" +
+      "le.Ads.GoogleAds.V10.Resources\312\002\"Google\\" +
+      "Ads\\GoogleAds\\V10\\Resources\352\002&Google::Ad" +
+      "s::GoogleAds::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.enums.KeywordMatchTypeProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -80,7 +78,6 @@ public final class KeywordPlanAdGroupKeywordProto {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.enums.KeywordMatchTypeProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

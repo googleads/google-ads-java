@@ -65,8 +65,8 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 16: {
-            businessSettingCase_ = 2;
             businessSetting_ = input.readInt64();
+            businessSettingCase_ = 2;
             break;
           }
           case 26: {
@@ -146,6 +146,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -292,6 +294,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -1177,6 +1181,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -3703,8 +3709,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (businessSettingCase_ == 8) {
           businessContextBuilder_.mergeFrom(value);
+        } else {
+          businessContextBuilder_.setMessage(value);
         }
-        businessContextBuilder_.setMessage(value);
       }
       businessSettingCase_ = 8;
       return this;
@@ -3957,8 +3964,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (geoTargetCase_ == 4) {
           locationListBuilder_.mergeFrom(value);
+        } else {
+          locationListBuilder_.setMessage(value);
         }
-        locationListBuilder_.setMessage(value);
       }
       geoTargetCase_ = 4;
       return this;
@@ -4134,8 +4142,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (geoTargetCase_ == 5) {
           proximityBuilder_.mergeFrom(value);
+        } else {
+          proximityBuilder_.setMessage(value);
         }
-        proximityBuilder_.setMessage(value);
       }
       geoTargetCase_ = 5;
       return this;

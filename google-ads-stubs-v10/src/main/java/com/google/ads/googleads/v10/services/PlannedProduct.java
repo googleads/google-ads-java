@@ -76,6 +76,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -103,7 +105,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Required. Selected product for planning.
-   * The code associated with the ad product. E.g. Trueview, Bumper
+   * The code associated with the ad product (for example: Trueview, Bumper).
    * To list the available plannable product codes use
    * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v10.services.ReachPlanService.ListPlannableProducts].
    * </pre>
@@ -118,7 +120,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Required. Selected product for planning.
-   * The code associated with the ad product. E.g. Trueview, Bumper
+   * The code associated with the ad product (for example: Trueview, Bumper).
    * To list the available plannable product codes use
    * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v10.services.ReachPlanService.ListPlannableProducts].
    * </pre>
@@ -142,7 +144,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Required. Selected product for planning.
-   * The code associated with the ad product. E.g. Trueview, Bumper
+   * The code associated with the ad product (for example: Trueview, Bumper).
    * To list the available plannable product codes use
    * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v10.services.ReachPlanService.ListPlannableProducts].
    * </pre>
@@ -171,7 +173,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Required. Maximum budget allocation in micros for the selected product.
    * The value is specified in the selected planning currency_code.
-   * E.g. 1 000 000$ = 1 000 000 000 000 micros.
+   * For example: 1 000 000$ = 1 000 000 000 000 micros.
    * </pre>
    *
    * <code>optional int64 budget_micros = 4;</code>
@@ -185,7 +187,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Required. Maximum budget allocation in micros for the selected product.
    * The value is specified in the selected planning currency_code.
-   * E.g. 1 000 000$ = 1 000 000 000 000 micros.
+   * For example: 1 000 000$ = 1 000 000 000 000 micros.
    * </pre>
    *
    * <code>optional int64 budget_micros = 4;</code>
@@ -545,7 +547,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. Selected product for planning.
-     * The code associated with the ad product. E.g. Trueview, Bumper
+     * The code associated with the ad product (for example: Trueview, Bumper).
      * To list the available plannable product codes use
      * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v10.services.ReachPlanService.ListPlannableProducts].
      * </pre>
@@ -559,7 +561,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. Selected product for planning.
-     * The code associated with the ad product. E.g. Trueview, Bumper
+     * The code associated with the ad product (for example: Trueview, Bumper).
      * To list the available plannable product codes use
      * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v10.services.ReachPlanService.ListPlannableProducts].
      * </pre>
@@ -582,7 +584,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. Selected product for planning.
-     * The code associated with the ad product. E.g. Trueview, Bumper
+     * The code associated with the ad product (for example: Trueview, Bumper).
      * To list the available plannable product codes use
      * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v10.services.ReachPlanService.ListPlannableProducts].
      * </pre>
@@ -606,7 +608,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. Selected product for planning.
-     * The code associated with the ad product. E.g. Trueview, Bumper
+     * The code associated with the ad product (for example: Trueview, Bumper).
      * To list the available plannable product codes use
      * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v10.services.ReachPlanService.ListPlannableProducts].
      * </pre>
@@ -628,7 +630,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. Selected product for planning.
-     * The code associated with the ad product. E.g. Trueview, Bumper
+     * The code associated with the ad product (for example: Trueview, Bumper).
      * To list the available plannable product codes use
      * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v10.services.ReachPlanService.ListPlannableProducts].
      * </pre>
@@ -645,7 +647,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Required. Selected product for planning.
-     * The code associated with the ad product. E.g. Trueview, Bumper
+     * The code associated with the ad product (for example: Trueview, Bumper).
      * To list the available plannable product codes use
      * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v10.services.ReachPlanService.ListPlannableProducts].
      * </pre>
@@ -671,7 +673,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Required. Maximum budget allocation in micros for the selected product.
      * The value is specified in the selected planning currency_code.
-     * E.g. 1 000 000$ = 1 000 000 000 000 micros.
+     * For example: 1 000 000$ = 1 000 000 000 000 micros.
      * </pre>
      *
      * <code>optional int64 budget_micros = 4;</code>
@@ -685,7 +687,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Required. Maximum budget allocation in micros for the selected product.
      * The value is specified in the selected planning currency_code.
-     * E.g. 1 000 000$ = 1 000 000 000 000 micros.
+     * For example: 1 000 000$ = 1 000 000 000 000 micros.
      * </pre>
      *
      * <code>optional int64 budget_micros = 4;</code>
@@ -699,7 +701,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Required. Maximum budget allocation in micros for the selected product.
      * The value is specified in the selected planning currency_code.
-     * E.g. 1 000 000$ = 1 000 000 000 000 micros.
+     * For example: 1 000 000$ = 1 000 000 000 000 micros.
      * </pre>
      *
      * <code>optional int64 budget_micros = 4;</code>
@@ -716,7 +718,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Required. Maximum budget allocation in micros for the selected product.
      * The value is specified in the selected planning currency_code.
-     * E.g. 1 000 000$ = 1 000 000 000 000 micros.
+     * For example: 1 000 000$ = 1 000 000 000 000 micros.
      * </pre>
      *
      * <code>optional int64 budget_micros = 4;</code>

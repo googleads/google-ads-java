@@ -74,6 +74,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -100,8 +102,8 @@ private static final long serialVersionUID = 0L;
   private int minAge_;
   /**
    * <pre>
-   * Minimum age to include. A minimum age must be specified and must be
-   * at least 18.
+   * Minimum age to include. A minimum age must be specified and must be at
+   * least 18. Allowed values are 18, 25, 35, 45, 55, and 65.
    * </pre>
    *
    * <code>optional int32 min_age = 1;</code>
@@ -113,8 +115,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Minimum age to include. A minimum age must be specified and must be
-   * at least 18.
+   * Minimum age to include. A minimum age must be specified and must be at
+   * least 18. Allowed values are 18, 25, 35, 45, 55, and 65.
    * </pre>
    *
    * <code>optional int32 min_age = 1;</code>
@@ -129,7 +131,9 @@ private static final long serialVersionUID = 0L;
   private int maxAge_;
   /**
    * <pre>
-   * Maximum age to include.
+   * Maximum age to include. A maximum age need not be specified. If specified,
+   * max_age must be greater than min_age, and allowed values are 24, 34, 44,
+   * 54, and 64.
    * </pre>
    *
    * <code>optional int32 max_age = 2;</code>
@@ -141,7 +145,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Maximum age to include.
+   * Maximum age to include. A maximum age need not be specified. If specified,
+   * max_age must be greater than min_age, and allowed values are 24, 34, 44,
+   * 54, and 64.
    * </pre>
    *
    * <code>optional int32 max_age = 2;</code>
@@ -498,8 +504,8 @@ private static final long serialVersionUID = 0L;
     private int minAge_ ;
     /**
      * <pre>
-     * Minimum age to include. A minimum age must be specified and must be
-     * at least 18.
+     * Minimum age to include. A minimum age must be specified and must be at
+     * least 18. Allowed values are 18, 25, 35, 45, 55, and 65.
      * </pre>
      *
      * <code>optional int32 min_age = 1;</code>
@@ -511,8 +517,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Minimum age to include. A minimum age must be specified and must be
-     * at least 18.
+     * Minimum age to include. A minimum age must be specified and must be at
+     * least 18. Allowed values are 18, 25, 35, 45, 55, and 65.
      * </pre>
      *
      * <code>optional int32 min_age = 1;</code>
@@ -524,8 +530,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Minimum age to include. A minimum age must be specified and must be
-     * at least 18.
+     * Minimum age to include. A minimum age must be specified and must be at
+     * least 18. Allowed values are 18, 25, 35, 45, 55, and 65.
      * </pre>
      *
      * <code>optional int32 min_age = 1;</code>
@@ -540,8 +546,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Minimum age to include. A minimum age must be specified and must be
-     * at least 18.
+     * Minimum age to include. A minimum age must be specified and must be at
+     * least 18. Allowed values are 18, 25, 35, 45, 55, and 65.
      * </pre>
      *
      * <code>optional int32 min_age = 1;</code>
@@ -557,7 +563,9 @@ private static final long serialVersionUID = 0L;
     private int maxAge_ ;
     /**
      * <pre>
-     * Maximum age to include.
+     * Maximum age to include. A maximum age need not be specified. If specified,
+     * max_age must be greater than min_age, and allowed values are 24, 34, 44,
+     * 54, and 64.
      * </pre>
      *
      * <code>optional int32 max_age = 2;</code>
@@ -569,7 +577,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Maximum age to include.
+     * Maximum age to include. A maximum age need not be specified. If specified,
+     * max_age must be greater than min_age, and allowed values are 24, 34, 44,
+     * 54, and 64.
      * </pre>
      *
      * <code>optional int32 max_age = 2;</code>
@@ -581,7 +591,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Maximum age to include.
+     * Maximum age to include. A maximum age need not be specified. If specified,
+     * max_age must be greater than min_age, and allowed values are 24, 34, 44,
+     * 54, and 64.
      * </pre>
      *
      * <code>optional int32 max_age = 2;</code>
@@ -596,7 +608,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Maximum age to include.
+     * Maximum age to include. A maximum age need not be specified. If specified,
+     * max_age must be greater than min_age, and allowed values are 24, 34, 44,
+     * 54, and 64.
      * </pre>
      *
      * <code>optional int32 max_age = 2;</code>

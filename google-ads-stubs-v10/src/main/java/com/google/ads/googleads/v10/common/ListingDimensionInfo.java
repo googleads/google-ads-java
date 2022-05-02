@@ -248,6 +248,62 @@ private static final long serialVersionUID = 0L;
             dimensionCase_ = 16;
             break;
           }
+          case 138: {
+            com.google.ads.googleads.v10.common.ProductGroupingInfo.Builder subBuilder = null;
+            if (dimensionCase_ == 17) {
+              subBuilder = ((com.google.ads.googleads.v10.common.ProductGroupingInfo) dimension_).toBuilder();
+            }
+            dimension_ =
+                input.readMessage(com.google.ads.googleads.v10.common.ProductGroupingInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.ProductGroupingInfo) dimension_);
+              dimension_ = subBuilder.buildPartial();
+            }
+            dimensionCase_ = 17;
+            break;
+          }
+          case 146: {
+            com.google.ads.googleads.v10.common.ProductLabelsInfo.Builder subBuilder = null;
+            if (dimensionCase_ == 18) {
+              subBuilder = ((com.google.ads.googleads.v10.common.ProductLabelsInfo) dimension_).toBuilder();
+            }
+            dimension_ =
+                input.readMessage(com.google.ads.googleads.v10.common.ProductLabelsInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.ProductLabelsInfo) dimension_);
+              dimension_ = subBuilder.buildPartial();
+            }
+            dimensionCase_ = 18;
+            break;
+          }
+          case 154: {
+            com.google.ads.googleads.v10.common.ProductLegacyConditionInfo.Builder subBuilder = null;
+            if (dimensionCase_ == 19) {
+              subBuilder = ((com.google.ads.googleads.v10.common.ProductLegacyConditionInfo) dimension_).toBuilder();
+            }
+            dimension_ =
+                input.readMessage(com.google.ads.googleads.v10.common.ProductLegacyConditionInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.ProductLegacyConditionInfo) dimension_);
+              dimension_ = subBuilder.buildPartial();
+            }
+            dimensionCase_ = 19;
+            break;
+          }
+          case 162: {
+            com.google.ads.googleads.v10.common.ProductTypeFullInfo.Builder subBuilder = null;
+            if (dimensionCase_ == 20) {
+              subBuilder = ((com.google.ads.googleads.v10.common.ProductTypeFullInfo) dimension_).toBuilder();
+            }
+            dimension_ =
+                input.readMessage(com.google.ads.googleads.v10.common.ProductTypeFullInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.ProductTypeFullInfo) dimension_);
+              dimension_ = subBuilder.buildPartial();
+            }
+            dimensionCase_ = 20;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -259,6 +315,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -298,6 +356,10 @@ private static final long serialVersionUID = 0L;
     PRODUCT_CUSTOM_ATTRIBUTE(16),
     PRODUCT_ITEM_ID(11),
     PRODUCT_TYPE(12),
+    PRODUCT_GROUPING(17),
+    PRODUCT_LABELS(18),
+    PRODUCT_LEGACY_CONDITION(19),
+    PRODUCT_TYPE_FULL(20),
     UNKNOWN_LISTING_DIMENSION(14),
     DIMENSION_NOT_SET(0);
     private final int value;
@@ -329,6 +391,10 @@ private static final long serialVersionUID = 0L;
         case 16: return PRODUCT_CUSTOM_ATTRIBUTE;
         case 11: return PRODUCT_ITEM_ID;
         case 12: return PRODUCT_TYPE;
+        case 17: return PRODUCT_GROUPING;
+        case 18: return PRODUCT_LABELS;
+        case 19: return PRODUCT_LEGACY_CONDITION;
+        case 20: return PRODUCT_TYPE_FULL;
         case 14: return UNKNOWN_LISTING_DIMENSION;
         case 0: return DIMENSION_NOT_SET;
         default: return null;
@@ -904,6 +970,178 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v10.common.ProductTypeInfo.getDefaultInstance();
   }
 
+  public static final int PRODUCT_GROUPING_FIELD_NUMBER = 17;
+  /**
+   * <pre>
+   * Grouping of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.ProductGroupingInfo product_grouping = 17;</code>
+   * @return Whether the productGrouping field is set.
+   */
+  @java.lang.Override
+  public boolean hasProductGrouping() {
+    return dimensionCase_ == 17;
+  }
+  /**
+   * <pre>
+   * Grouping of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.ProductGroupingInfo product_grouping = 17;</code>
+   * @return The productGrouping.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.common.ProductGroupingInfo getProductGrouping() {
+    if (dimensionCase_ == 17) {
+       return (com.google.ads.googleads.v10.common.ProductGroupingInfo) dimension_;
+    }
+    return com.google.ads.googleads.v10.common.ProductGroupingInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Grouping of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.ProductGroupingInfo product_grouping = 17;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.common.ProductGroupingInfoOrBuilder getProductGroupingOrBuilder() {
+    if (dimensionCase_ == 17) {
+       return (com.google.ads.googleads.v10.common.ProductGroupingInfo) dimension_;
+    }
+    return com.google.ads.googleads.v10.common.ProductGroupingInfo.getDefaultInstance();
+  }
+
+  public static final int PRODUCT_LABELS_FIELD_NUMBER = 18;
+  /**
+   * <pre>
+   * Labels of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.ProductLabelsInfo product_labels = 18;</code>
+   * @return Whether the productLabels field is set.
+   */
+  @java.lang.Override
+  public boolean hasProductLabels() {
+    return dimensionCase_ == 18;
+  }
+  /**
+   * <pre>
+   * Labels of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.ProductLabelsInfo product_labels = 18;</code>
+   * @return The productLabels.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.common.ProductLabelsInfo getProductLabels() {
+    if (dimensionCase_ == 18) {
+       return (com.google.ads.googleads.v10.common.ProductLabelsInfo) dimension_;
+    }
+    return com.google.ads.googleads.v10.common.ProductLabelsInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Labels of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.ProductLabelsInfo product_labels = 18;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.common.ProductLabelsInfoOrBuilder getProductLabelsOrBuilder() {
+    if (dimensionCase_ == 18) {
+       return (com.google.ads.googleads.v10.common.ProductLabelsInfo) dimension_;
+    }
+    return com.google.ads.googleads.v10.common.ProductLabelsInfo.getDefaultInstance();
+  }
+
+  public static final int PRODUCT_LEGACY_CONDITION_FIELD_NUMBER = 19;
+  /**
+   * <pre>
+   * Legacy condition of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.ProductLegacyConditionInfo product_legacy_condition = 19;</code>
+   * @return Whether the productLegacyCondition field is set.
+   */
+  @java.lang.Override
+  public boolean hasProductLegacyCondition() {
+    return dimensionCase_ == 19;
+  }
+  /**
+   * <pre>
+   * Legacy condition of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.ProductLegacyConditionInfo product_legacy_condition = 19;</code>
+   * @return The productLegacyCondition.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.common.ProductLegacyConditionInfo getProductLegacyCondition() {
+    if (dimensionCase_ == 19) {
+       return (com.google.ads.googleads.v10.common.ProductLegacyConditionInfo) dimension_;
+    }
+    return com.google.ads.googleads.v10.common.ProductLegacyConditionInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Legacy condition of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.ProductLegacyConditionInfo product_legacy_condition = 19;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.common.ProductLegacyConditionInfoOrBuilder getProductLegacyConditionOrBuilder() {
+    if (dimensionCase_ == 19) {
+       return (com.google.ads.googleads.v10.common.ProductLegacyConditionInfo) dimension_;
+    }
+    return com.google.ads.googleads.v10.common.ProductLegacyConditionInfo.getDefaultInstance();
+  }
+
+  public static final int PRODUCT_TYPE_FULL_FIELD_NUMBER = 20;
+  /**
+   * <pre>
+   * Full type of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.ProductTypeFullInfo product_type_full = 20;</code>
+   * @return Whether the productTypeFull field is set.
+   */
+  @java.lang.Override
+  public boolean hasProductTypeFull() {
+    return dimensionCase_ == 20;
+  }
+  /**
+   * <pre>
+   * Full type of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.ProductTypeFullInfo product_type_full = 20;</code>
+   * @return The productTypeFull.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.common.ProductTypeFullInfo getProductTypeFull() {
+    if (dimensionCase_ == 20) {
+       return (com.google.ads.googleads.v10.common.ProductTypeFullInfo) dimension_;
+    }
+    return com.google.ads.googleads.v10.common.ProductTypeFullInfo.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Full type of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.ProductTypeFullInfo product_type_full = 20;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v10.common.ProductTypeFullInfoOrBuilder getProductTypeFullOrBuilder() {
+    if (dimensionCase_ == 20) {
+       return (com.google.ads.googleads.v10.common.ProductTypeFullInfo) dimension_;
+    }
+    return com.google.ads.googleads.v10.common.ProductTypeFullInfo.getDefaultInstance();
+  }
+
   public static final int UNKNOWN_LISTING_DIMENSION_FIELD_NUMBER = 14;
   /**
    * <pre>
@@ -1003,6 +1241,18 @@ private static final long serialVersionUID = 0L;
     if (dimensionCase_ == 16) {
       output.writeMessage(16, (com.google.ads.googleads.v10.common.ProductCustomAttributeInfo) dimension_);
     }
+    if (dimensionCase_ == 17) {
+      output.writeMessage(17, (com.google.ads.googleads.v10.common.ProductGroupingInfo) dimension_);
+    }
+    if (dimensionCase_ == 18) {
+      output.writeMessage(18, (com.google.ads.googleads.v10.common.ProductLabelsInfo) dimension_);
+    }
+    if (dimensionCase_ == 19) {
+      output.writeMessage(19, (com.google.ads.googleads.v10.common.ProductLegacyConditionInfo) dimension_);
+    }
+    if (dimensionCase_ == 20) {
+      output.writeMessage(20, (com.google.ads.googleads.v10.common.ProductTypeFullInfo) dimension_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -1067,6 +1317,22 @@ private static final long serialVersionUID = 0L;
     if (dimensionCase_ == 16) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(16, (com.google.ads.googleads.v10.common.ProductCustomAttributeInfo) dimension_);
+    }
+    if (dimensionCase_ == 17) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(17, (com.google.ads.googleads.v10.common.ProductGroupingInfo) dimension_);
+    }
+    if (dimensionCase_ == 18) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(18, (com.google.ads.googleads.v10.common.ProductLabelsInfo) dimension_);
+    }
+    if (dimensionCase_ == 19) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(19, (com.google.ads.googleads.v10.common.ProductLegacyConditionInfo) dimension_);
+    }
+    if (dimensionCase_ == 20) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(20, (com.google.ads.googleads.v10.common.ProductTypeFullInfo) dimension_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -1136,6 +1402,22 @@ private static final long serialVersionUID = 0L;
       case 12:
         if (!getProductType()
             .equals(other.getProductType())) return false;
+        break;
+      case 17:
+        if (!getProductGrouping()
+            .equals(other.getProductGrouping())) return false;
+        break;
+      case 18:
+        if (!getProductLabels()
+            .equals(other.getProductLabels())) return false;
+        break;
+      case 19:
+        if (!getProductLegacyCondition()
+            .equals(other.getProductLegacyCondition())) return false;
+        break;
+      case 20:
+        if (!getProductTypeFull()
+            .equals(other.getProductTypeFull())) return false;
         break;
       case 14:
         if (!getUnknownListingDimension()
@@ -1207,6 +1489,22 @@ private static final long serialVersionUID = 0L;
       case 12:
         hash = (37 * hash) + PRODUCT_TYPE_FIELD_NUMBER;
         hash = (53 * hash) + getProductType().hashCode();
+        break;
+      case 17:
+        hash = (37 * hash) + PRODUCT_GROUPING_FIELD_NUMBER;
+        hash = (53 * hash) + getProductGrouping().hashCode();
+        break;
+      case 18:
+        hash = (37 * hash) + PRODUCT_LABELS_FIELD_NUMBER;
+        hash = (53 * hash) + getProductLabels().hashCode();
+        break;
+      case 19:
+        hash = (37 * hash) + PRODUCT_LEGACY_CONDITION_FIELD_NUMBER;
+        hash = (53 * hash) + getProductLegacyCondition().hashCode();
+        break;
+      case 20:
+        hash = (37 * hash) + PRODUCT_TYPE_FULL_FIELD_NUMBER;
+        hash = (53 * hash) + getProductTypeFull().hashCode();
         break;
       case 14:
         hash = (37 * hash) + UNKNOWN_LISTING_DIMENSION_FIELD_NUMBER;
@@ -1471,6 +1769,34 @@ private static final long serialVersionUID = 0L;
           result.dimension_ = productTypeBuilder_.build();
         }
       }
+      if (dimensionCase_ == 17) {
+        if (productGroupingBuilder_ == null) {
+          result.dimension_ = dimension_;
+        } else {
+          result.dimension_ = productGroupingBuilder_.build();
+        }
+      }
+      if (dimensionCase_ == 18) {
+        if (productLabelsBuilder_ == null) {
+          result.dimension_ = dimension_;
+        } else {
+          result.dimension_ = productLabelsBuilder_.build();
+        }
+      }
+      if (dimensionCase_ == 19) {
+        if (productLegacyConditionBuilder_ == null) {
+          result.dimension_ = dimension_;
+        } else {
+          result.dimension_ = productLegacyConditionBuilder_.build();
+        }
+      }
+      if (dimensionCase_ == 20) {
+        if (productTypeFullBuilder_ == null) {
+          result.dimension_ = dimension_;
+        } else {
+          result.dimension_ = productTypeFullBuilder_.build();
+        }
+      }
       if (dimensionCase_ == 14) {
         if (unknownListingDimensionBuilder_ == null) {
           result.dimension_ = dimension_;
@@ -1578,6 +1904,22 @@ private static final long serialVersionUID = 0L;
         }
         case PRODUCT_TYPE: {
           mergeProductType(other.getProductType());
+          break;
+        }
+        case PRODUCT_GROUPING: {
+          mergeProductGrouping(other.getProductGrouping());
+          break;
+        }
+        case PRODUCT_LABELS: {
+          mergeProductLabels(other.getProductLabels());
+          break;
+        }
+        case PRODUCT_LEGACY_CONDITION: {
+          mergeProductLegacyCondition(other.getProductLegacyCondition());
+          break;
+        }
+        case PRODUCT_TYPE_FULL: {
+          mergeProductTypeFull(other.getProductTypeFull());
           break;
         }
         case UNKNOWN_LISTING_DIMENSION: {
@@ -1726,8 +2068,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (dimensionCase_ == 2) {
           hotelIdBuilder_.mergeFrom(value);
+        } else {
+          hotelIdBuilder_.setMessage(value);
         }
-        hotelIdBuilder_.setMessage(value);
       }
       dimensionCase_ = 2;
       return this;
@@ -1903,8 +2246,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (dimensionCase_ == 3) {
           hotelClassBuilder_.mergeFrom(value);
+        } else {
+          hotelClassBuilder_.setMessage(value);
         }
-        hotelClassBuilder_.setMessage(value);
       }
       dimensionCase_ = 3;
       return this;
@@ -2080,8 +2424,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (dimensionCase_ == 4) {
           hotelCountryRegionBuilder_.mergeFrom(value);
+        } else {
+          hotelCountryRegionBuilder_.setMessage(value);
         }
-        hotelCountryRegionBuilder_.setMessage(value);
       }
       dimensionCase_ = 4;
       return this;
@@ -2257,8 +2602,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (dimensionCase_ == 5) {
           hotelStateBuilder_.mergeFrom(value);
+        } else {
+          hotelStateBuilder_.setMessage(value);
         }
-        hotelStateBuilder_.setMessage(value);
       }
       dimensionCase_ = 5;
       return this;
@@ -2434,8 +2780,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (dimensionCase_ == 6) {
           hotelCityBuilder_.mergeFrom(value);
+        } else {
+          hotelCityBuilder_.setMessage(value);
         }
-        hotelCityBuilder_.setMessage(value);
       }
       dimensionCase_ = 6;
       return this;
@@ -2611,8 +2958,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (dimensionCase_ == 13) {
           productBiddingCategoryBuilder_.mergeFrom(value);
+        } else {
+          productBiddingCategoryBuilder_.setMessage(value);
         }
-        productBiddingCategoryBuilder_.setMessage(value);
       }
       dimensionCase_ = 13;
       return this;
@@ -2788,8 +3136,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (dimensionCase_ == 15) {
           productBrandBuilder_.mergeFrom(value);
+        } else {
+          productBrandBuilder_.setMessage(value);
         }
-        productBrandBuilder_.setMessage(value);
       }
       dimensionCase_ = 15;
       return this;
@@ -2965,8 +3314,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (dimensionCase_ == 8) {
           productChannelBuilder_.mergeFrom(value);
+        } else {
+          productChannelBuilder_.setMessage(value);
         }
-        productChannelBuilder_.setMessage(value);
       }
       dimensionCase_ = 8;
       return this;
@@ -3142,8 +3492,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (dimensionCase_ == 9) {
           productChannelExclusivityBuilder_.mergeFrom(value);
+        } else {
+          productChannelExclusivityBuilder_.setMessage(value);
         }
-        productChannelExclusivityBuilder_.setMessage(value);
       }
       dimensionCase_ = 9;
       return this;
@@ -3319,8 +3670,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (dimensionCase_ == 10) {
           productConditionBuilder_.mergeFrom(value);
+        } else {
+          productConditionBuilder_.setMessage(value);
         }
-        productConditionBuilder_.setMessage(value);
       }
       dimensionCase_ = 10;
       return this;
@@ -3496,8 +3848,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (dimensionCase_ == 16) {
           productCustomAttributeBuilder_.mergeFrom(value);
+        } else {
+          productCustomAttributeBuilder_.setMessage(value);
         }
-        productCustomAttributeBuilder_.setMessage(value);
       }
       dimensionCase_ = 16;
       return this;
@@ -3673,8 +4026,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (dimensionCase_ == 11) {
           productItemIdBuilder_.mergeFrom(value);
+        } else {
+          productItemIdBuilder_.setMessage(value);
         }
-        productItemIdBuilder_.setMessage(value);
       }
       dimensionCase_ = 11;
       return this;
@@ -3850,8 +4204,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (dimensionCase_ == 12) {
           productTypeBuilder_.mergeFrom(value);
+        } else {
+          productTypeBuilder_.setMessage(value);
         }
-        productTypeBuilder_.setMessage(value);
       }
       dimensionCase_ = 12;
       return this;
@@ -3931,6 +4286,718 @@ private static final long serialVersionUID = 0L;
       dimensionCase_ = 12;
       onChanged();;
       return productTypeBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v10.common.ProductGroupingInfo, com.google.ads.googleads.v10.common.ProductGroupingInfo.Builder, com.google.ads.googleads.v10.common.ProductGroupingInfoOrBuilder> productGroupingBuilder_;
+    /**
+     * <pre>
+     * Grouping of a product offer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.ProductGroupingInfo product_grouping = 17;</code>
+     * @return Whether the productGrouping field is set.
+     */
+    @java.lang.Override
+    public boolean hasProductGrouping() {
+      return dimensionCase_ == 17;
+    }
+    /**
+     * <pre>
+     * Grouping of a product offer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.ProductGroupingInfo product_grouping = 17;</code>
+     * @return The productGrouping.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.common.ProductGroupingInfo getProductGrouping() {
+      if (productGroupingBuilder_ == null) {
+        if (dimensionCase_ == 17) {
+          return (com.google.ads.googleads.v10.common.ProductGroupingInfo) dimension_;
+        }
+        return com.google.ads.googleads.v10.common.ProductGroupingInfo.getDefaultInstance();
+      } else {
+        if (dimensionCase_ == 17) {
+          return productGroupingBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v10.common.ProductGroupingInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Grouping of a product offer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.ProductGroupingInfo product_grouping = 17;</code>
+     */
+    public Builder setProductGrouping(com.google.ads.googleads.v10.common.ProductGroupingInfo value) {
+      if (productGroupingBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        dimension_ = value;
+        onChanged();
+      } else {
+        productGroupingBuilder_.setMessage(value);
+      }
+      dimensionCase_ = 17;
+      return this;
+    }
+    /**
+     * <pre>
+     * Grouping of a product offer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.ProductGroupingInfo product_grouping = 17;</code>
+     */
+    public Builder setProductGrouping(
+        com.google.ads.googleads.v10.common.ProductGroupingInfo.Builder builderForValue) {
+      if (productGroupingBuilder_ == null) {
+        dimension_ = builderForValue.build();
+        onChanged();
+      } else {
+        productGroupingBuilder_.setMessage(builderForValue.build());
+      }
+      dimensionCase_ = 17;
+      return this;
+    }
+    /**
+     * <pre>
+     * Grouping of a product offer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.ProductGroupingInfo product_grouping = 17;</code>
+     */
+    public Builder mergeProductGrouping(com.google.ads.googleads.v10.common.ProductGroupingInfo value) {
+      if (productGroupingBuilder_ == null) {
+        if (dimensionCase_ == 17 &&
+            dimension_ != com.google.ads.googleads.v10.common.ProductGroupingInfo.getDefaultInstance()) {
+          dimension_ = com.google.ads.googleads.v10.common.ProductGroupingInfo.newBuilder((com.google.ads.googleads.v10.common.ProductGroupingInfo) dimension_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          dimension_ = value;
+        }
+        onChanged();
+      } else {
+        if (dimensionCase_ == 17) {
+          productGroupingBuilder_.mergeFrom(value);
+        } else {
+          productGroupingBuilder_.setMessage(value);
+        }
+      }
+      dimensionCase_ = 17;
+      return this;
+    }
+    /**
+     * <pre>
+     * Grouping of a product offer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.ProductGroupingInfo product_grouping = 17;</code>
+     */
+    public Builder clearProductGrouping() {
+      if (productGroupingBuilder_ == null) {
+        if (dimensionCase_ == 17) {
+          dimensionCase_ = 0;
+          dimension_ = null;
+          onChanged();
+        }
+      } else {
+        if (dimensionCase_ == 17) {
+          dimensionCase_ = 0;
+          dimension_ = null;
+        }
+        productGroupingBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Grouping of a product offer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.ProductGroupingInfo product_grouping = 17;</code>
+     */
+    public com.google.ads.googleads.v10.common.ProductGroupingInfo.Builder getProductGroupingBuilder() {
+      return getProductGroupingFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Grouping of a product offer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.ProductGroupingInfo product_grouping = 17;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.common.ProductGroupingInfoOrBuilder getProductGroupingOrBuilder() {
+      if ((dimensionCase_ == 17) && (productGroupingBuilder_ != null)) {
+        return productGroupingBuilder_.getMessageOrBuilder();
+      } else {
+        if (dimensionCase_ == 17) {
+          return (com.google.ads.googleads.v10.common.ProductGroupingInfo) dimension_;
+        }
+        return com.google.ads.googleads.v10.common.ProductGroupingInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Grouping of a product offer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.ProductGroupingInfo product_grouping = 17;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v10.common.ProductGroupingInfo, com.google.ads.googleads.v10.common.ProductGroupingInfo.Builder, com.google.ads.googleads.v10.common.ProductGroupingInfoOrBuilder> 
+        getProductGroupingFieldBuilder() {
+      if (productGroupingBuilder_ == null) {
+        if (!(dimensionCase_ == 17)) {
+          dimension_ = com.google.ads.googleads.v10.common.ProductGroupingInfo.getDefaultInstance();
+        }
+        productGroupingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v10.common.ProductGroupingInfo, com.google.ads.googleads.v10.common.ProductGroupingInfo.Builder, com.google.ads.googleads.v10.common.ProductGroupingInfoOrBuilder>(
+                (com.google.ads.googleads.v10.common.ProductGroupingInfo) dimension_,
+                getParentForChildren(),
+                isClean());
+        dimension_ = null;
+      }
+      dimensionCase_ = 17;
+      onChanged();;
+      return productGroupingBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v10.common.ProductLabelsInfo, com.google.ads.googleads.v10.common.ProductLabelsInfo.Builder, com.google.ads.googleads.v10.common.ProductLabelsInfoOrBuilder> productLabelsBuilder_;
+    /**
+     * <pre>
+     * Labels of a product offer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.ProductLabelsInfo product_labels = 18;</code>
+     * @return Whether the productLabels field is set.
+     */
+    @java.lang.Override
+    public boolean hasProductLabels() {
+      return dimensionCase_ == 18;
+    }
+    /**
+     * <pre>
+     * Labels of a product offer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.ProductLabelsInfo product_labels = 18;</code>
+     * @return The productLabels.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.common.ProductLabelsInfo getProductLabels() {
+      if (productLabelsBuilder_ == null) {
+        if (dimensionCase_ == 18) {
+          return (com.google.ads.googleads.v10.common.ProductLabelsInfo) dimension_;
+        }
+        return com.google.ads.googleads.v10.common.ProductLabelsInfo.getDefaultInstance();
+      } else {
+        if (dimensionCase_ == 18) {
+          return productLabelsBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v10.common.ProductLabelsInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Labels of a product offer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.ProductLabelsInfo product_labels = 18;</code>
+     */
+    public Builder setProductLabels(com.google.ads.googleads.v10.common.ProductLabelsInfo value) {
+      if (productLabelsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        dimension_ = value;
+        onChanged();
+      } else {
+        productLabelsBuilder_.setMessage(value);
+      }
+      dimensionCase_ = 18;
+      return this;
+    }
+    /**
+     * <pre>
+     * Labels of a product offer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.ProductLabelsInfo product_labels = 18;</code>
+     */
+    public Builder setProductLabels(
+        com.google.ads.googleads.v10.common.ProductLabelsInfo.Builder builderForValue) {
+      if (productLabelsBuilder_ == null) {
+        dimension_ = builderForValue.build();
+        onChanged();
+      } else {
+        productLabelsBuilder_.setMessage(builderForValue.build());
+      }
+      dimensionCase_ = 18;
+      return this;
+    }
+    /**
+     * <pre>
+     * Labels of a product offer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.ProductLabelsInfo product_labels = 18;</code>
+     */
+    public Builder mergeProductLabels(com.google.ads.googleads.v10.common.ProductLabelsInfo value) {
+      if (productLabelsBuilder_ == null) {
+        if (dimensionCase_ == 18 &&
+            dimension_ != com.google.ads.googleads.v10.common.ProductLabelsInfo.getDefaultInstance()) {
+          dimension_ = com.google.ads.googleads.v10.common.ProductLabelsInfo.newBuilder((com.google.ads.googleads.v10.common.ProductLabelsInfo) dimension_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          dimension_ = value;
+        }
+        onChanged();
+      } else {
+        if (dimensionCase_ == 18) {
+          productLabelsBuilder_.mergeFrom(value);
+        } else {
+          productLabelsBuilder_.setMessage(value);
+        }
+      }
+      dimensionCase_ = 18;
+      return this;
+    }
+    /**
+     * <pre>
+     * Labels of a product offer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.ProductLabelsInfo product_labels = 18;</code>
+     */
+    public Builder clearProductLabels() {
+      if (productLabelsBuilder_ == null) {
+        if (dimensionCase_ == 18) {
+          dimensionCase_ = 0;
+          dimension_ = null;
+          onChanged();
+        }
+      } else {
+        if (dimensionCase_ == 18) {
+          dimensionCase_ = 0;
+          dimension_ = null;
+        }
+        productLabelsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Labels of a product offer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.ProductLabelsInfo product_labels = 18;</code>
+     */
+    public com.google.ads.googleads.v10.common.ProductLabelsInfo.Builder getProductLabelsBuilder() {
+      return getProductLabelsFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Labels of a product offer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.ProductLabelsInfo product_labels = 18;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.common.ProductLabelsInfoOrBuilder getProductLabelsOrBuilder() {
+      if ((dimensionCase_ == 18) && (productLabelsBuilder_ != null)) {
+        return productLabelsBuilder_.getMessageOrBuilder();
+      } else {
+        if (dimensionCase_ == 18) {
+          return (com.google.ads.googleads.v10.common.ProductLabelsInfo) dimension_;
+        }
+        return com.google.ads.googleads.v10.common.ProductLabelsInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Labels of a product offer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.ProductLabelsInfo product_labels = 18;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v10.common.ProductLabelsInfo, com.google.ads.googleads.v10.common.ProductLabelsInfo.Builder, com.google.ads.googleads.v10.common.ProductLabelsInfoOrBuilder> 
+        getProductLabelsFieldBuilder() {
+      if (productLabelsBuilder_ == null) {
+        if (!(dimensionCase_ == 18)) {
+          dimension_ = com.google.ads.googleads.v10.common.ProductLabelsInfo.getDefaultInstance();
+        }
+        productLabelsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v10.common.ProductLabelsInfo, com.google.ads.googleads.v10.common.ProductLabelsInfo.Builder, com.google.ads.googleads.v10.common.ProductLabelsInfoOrBuilder>(
+                (com.google.ads.googleads.v10.common.ProductLabelsInfo) dimension_,
+                getParentForChildren(),
+                isClean());
+        dimension_ = null;
+      }
+      dimensionCase_ = 18;
+      onChanged();;
+      return productLabelsBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v10.common.ProductLegacyConditionInfo, com.google.ads.googleads.v10.common.ProductLegacyConditionInfo.Builder, com.google.ads.googleads.v10.common.ProductLegacyConditionInfoOrBuilder> productLegacyConditionBuilder_;
+    /**
+     * <pre>
+     * Legacy condition of a product offer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.ProductLegacyConditionInfo product_legacy_condition = 19;</code>
+     * @return Whether the productLegacyCondition field is set.
+     */
+    @java.lang.Override
+    public boolean hasProductLegacyCondition() {
+      return dimensionCase_ == 19;
+    }
+    /**
+     * <pre>
+     * Legacy condition of a product offer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.ProductLegacyConditionInfo product_legacy_condition = 19;</code>
+     * @return The productLegacyCondition.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.common.ProductLegacyConditionInfo getProductLegacyCondition() {
+      if (productLegacyConditionBuilder_ == null) {
+        if (dimensionCase_ == 19) {
+          return (com.google.ads.googleads.v10.common.ProductLegacyConditionInfo) dimension_;
+        }
+        return com.google.ads.googleads.v10.common.ProductLegacyConditionInfo.getDefaultInstance();
+      } else {
+        if (dimensionCase_ == 19) {
+          return productLegacyConditionBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v10.common.ProductLegacyConditionInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Legacy condition of a product offer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.ProductLegacyConditionInfo product_legacy_condition = 19;</code>
+     */
+    public Builder setProductLegacyCondition(com.google.ads.googleads.v10.common.ProductLegacyConditionInfo value) {
+      if (productLegacyConditionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        dimension_ = value;
+        onChanged();
+      } else {
+        productLegacyConditionBuilder_.setMessage(value);
+      }
+      dimensionCase_ = 19;
+      return this;
+    }
+    /**
+     * <pre>
+     * Legacy condition of a product offer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.ProductLegacyConditionInfo product_legacy_condition = 19;</code>
+     */
+    public Builder setProductLegacyCondition(
+        com.google.ads.googleads.v10.common.ProductLegacyConditionInfo.Builder builderForValue) {
+      if (productLegacyConditionBuilder_ == null) {
+        dimension_ = builderForValue.build();
+        onChanged();
+      } else {
+        productLegacyConditionBuilder_.setMessage(builderForValue.build());
+      }
+      dimensionCase_ = 19;
+      return this;
+    }
+    /**
+     * <pre>
+     * Legacy condition of a product offer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.ProductLegacyConditionInfo product_legacy_condition = 19;</code>
+     */
+    public Builder mergeProductLegacyCondition(com.google.ads.googleads.v10.common.ProductLegacyConditionInfo value) {
+      if (productLegacyConditionBuilder_ == null) {
+        if (dimensionCase_ == 19 &&
+            dimension_ != com.google.ads.googleads.v10.common.ProductLegacyConditionInfo.getDefaultInstance()) {
+          dimension_ = com.google.ads.googleads.v10.common.ProductLegacyConditionInfo.newBuilder((com.google.ads.googleads.v10.common.ProductLegacyConditionInfo) dimension_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          dimension_ = value;
+        }
+        onChanged();
+      } else {
+        if (dimensionCase_ == 19) {
+          productLegacyConditionBuilder_.mergeFrom(value);
+        } else {
+          productLegacyConditionBuilder_.setMessage(value);
+        }
+      }
+      dimensionCase_ = 19;
+      return this;
+    }
+    /**
+     * <pre>
+     * Legacy condition of a product offer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.ProductLegacyConditionInfo product_legacy_condition = 19;</code>
+     */
+    public Builder clearProductLegacyCondition() {
+      if (productLegacyConditionBuilder_ == null) {
+        if (dimensionCase_ == 19) {
+          dimensionCase_ = 0;
+          dimension_ = null;
+          onChanged();
+        }
+      } else {
+        if (dimensionCase_ == 19) {
+          dimensionCase_ = 0;
+          dimension_ = null;
+        }
+        productLegacyConditionBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Legacy condition of a product offer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.ProductLegacyConditionInfo product_legacy_condition = 19;</code>
+     */
+    public com.google.ads.googleads.v10.common.ProductLegacyConditionInfo.Builder getProductLegacyConditionBuilder() {
+      return getProductLegacyConditionFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Legacy condition of a product offer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.ProductLegacyConditionInfo product_legacy_condition = 19;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.common.ProductLegacyConditionInfoOrBuilder getProductLegacyConditionOrBuilder() {
+      if ((dimensionCase_ == 19) && (productLegacyConditionBuilder_ != null)) {
+        return productLegacyConditionBuilder_.getMessageOrBuilder();
+      } else {
+        if (dimensionCase_ == 19) {
+          return (com.google.ads.googleads.v10.common.ProductLegacyConditionInfo) dimension_;
+        }
+        return com.google.ads.googleads.v10.common.ProductLegacyConditionInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Legacy condition of a product offer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.ProductLegacyConditionInfo product_legacy_condition = 19;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v10.common.ProductLegacyConditionInfo, com.google.ads.googleads.v10.common.ProductLegacyConditionInfo.Builder, com.google.ads.googleads.v10.common.ProductLegacyConditionInfoOrBuilder> 
+        getProductLegacyConditionFieldBuilder() {
+      if (productLegacyConditionBuilder_ == null) {
+        if (!(dimensionCase_ == 19)) {
+          dimension_ = com.google.ads.googleads.v10.common.ProductLegacyConditionInfo.getDefaultInstance();
+        }
+        productLegacyConditionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v10.common.ProductLegacyConditionInfo, com.google.ads.googleads.v10.common.ProductLegacyConditionInfo.Builder, com.google.ads.googleads.v10.common.ProductLegacyConditionInfoOrBuilder>(
+                (com.google.ads.googleads.v10.common.ProductLegacyConditionInfo) dimension_,
+                getParentForChildren(),
+                isClean());
+        dimension_ = null;
+      }
+      dimensionCase_ = 19;
+      onChanged();;
+      return productLegacyConditionBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v10.common.ProductTypeFullInfo, com.google.ads.googleads.v10.common.ProductTypeFullInfo.Builder, com.google.ads.googleads.v10.common.ProductTypeFullInfoOrBuilder> productTypeFullBuilder_;
+    /**
+     * <pre>
+     * Full type of a product offer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.ProductTypeFullInfo product_type_full = 20;</code>
+     * @return Whether the productTypeFull field is set.
+     */
+    @java.lang.Override
+    public boolean hasProductTypeFull() {
+      return dimensionCase_ == 20;
+    }
+    /**
+     * <pre>
+     * Full type of a product offer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.ProductTypeFullInfo product_type_full = 20;</code>
+     * @return The productTypeFull.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.common.ProductTypeFullInfo getProductTypeFull() {
+      if (productTypeFullBuilder_ == null) {
+        if (dimensionCase_ == 20) {
+          return (com.google.ads.googleads.v10.common.ProductTypeFullInfo) dimension_;
+        }
+        return com.google.ads.googleads.v10.common.ProductTypeFullInfo.getDefaultInstance();
+      } else {
+        if (dimensionCase_ == 20) {
+          return productTypeFullBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v10.common.ProductTypeFullInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Full type of a product offer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.ProductTypeFullInfo product_type_full = 20;</code>
+     */
+    public Builder setProductTypeFull(com.google.ads.googleads.v10.common.ProductTypeFullInfo value) {
+      if (productTypeFullBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        dimension_ = value;
+        onChanged();
+      } else {
+        productTypeFullBuilder_.setMessage(value);
+      }
+      dimensionCase_ = 20;
+      return this;
+    }
+    /**
+     * <pre>
+     * Full type of a product offer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.ProductTypeFullInfo product_type_full = 20;</code>
+     */
+    public Builder setProductTypeFull(
+        com.google.ads.googleads.v10.common.ProductTypeFullInfo.Builder builderForValue) {
+      if (productTypeFullBuilder_ == null) {
+        dimension_ = builderForValue.build();
+        onChanged();
+      } else {
+        productTypeFullBuilder_.setMessage(builderForValue.build());
+      }
+      dimensionCase_ = 20;
+      return this;
+    }
+    /**
+     * <pre>
+     * Full type of a product offer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.ProductTypeFullInfo product_type_full = 20;</code>
+     */
+    public Builder mergeProductTypeFull(com.google.ads.googleads.v10.common.ProductTypeFullInfo value) {
+      if (productTypeFullBuilder_ == null) {
+        if (dimensionCase_ == 20 &&
+            dimension_ != com.google.ads.googleads.v10.common.ProductTypeFullInfo.getDefaultInstance()) {
+          dimension_ = com.google.ads.googleads.v10.common.ProductTypeFullInfo.newBuilder((com.google.ads.googleads.v10.common.ProductTypeFullInfo) dimension_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          dimension_ = value;
+        }
+        onChanged();
+      } else {
+        if (dimensionCase_ == 20) {
+          productTypeFullBuilder_.mergeFrom(value);
+        } else {
+          productTypeFullBuilder_.setMessage(value);
+        }
+      }
+      dimensionCase_ = 20;
+      return this;
+    }
+    /**
+     * <pre>
+     * Full type of a product offer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.ProductTypeFullInfo product_type_full = 20;</code>
+     */
+    public Builder clearProductTypeFull() {
+      if (productTypeFullBuilder_ == null) {
+        if (dimensionCase_ == 20) {
+          dimensionCase_ = 0;
+          dimension_ = null;
+          onChanged();
+        }
+      } else {
+        if (dimensionCase_ == 20) {
+          dimensionCase_ = 0;
+          dimension_ = null;
+        }
+        productTypeFullBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Full type of a product offer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.ProductTypeFullInfo product_type_full = 20;</code>
+     */
+    public com.google.ads.googleads.v10.common.ProductTypeFullInfo.Builder getProductTypeFullBuilder() {
+      return getProductTypeFullFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Full type of a product offer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.ProductTypeFullInfo product_type_full = 20;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.common.ProductTypeFullInfoOrBuilder getProductTypeFullOrBuilder() {
+      if ((dimensionCase_ == 20) && (productTypeFullBuilder_ != null)) {
+        return productTypeFullBuilder_.getMessageOrBuilder();
+      } else {
+        if (dimensionCase_ == 20) {
+          return (com.google.ads.googleads.v10.common.ProductTypeFullInfo) dimension_;
+        }
+        return com.google.ads.googleads.v10.common.ProductTypeFullInfo.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Full type of a product offer.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.common.ProductTypeFullInfo product_type_full = 20;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v10.common.ProductTypeFullInfo, com.google.ads.googleads.v10.common.ProductTypeFullInfo.Builder, com.google.ads.googleads.v10.common.ProductTypeFullInfoOrBuilder> 
+        getProductTypeFullFieldBuilder() {
+      if (productTypeFullBuilder_ == null) {
+        if (!(dimensionCase_ == 20)) {
+          dimension_ = com.google.ads.googleads.v10.common.ProductTypeFullInfo.getDefaultInstance();
+        }
+        productTypeFullBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v10.common.ProductTypeFullInfo, com.google.ads.googleads.v10.common.ProductTypeFullInfo.Builder, com.google.ads.googleads.v10.common.ProductTypeFullInfoOrBuilder>(
+                (com.google.ads.googleads.v10.common.ProductTypeFullInfo) dimension_,
+                getParentForChildren(),
+                isClean());
+        dimension_ = null;
+      }
+      dimensionCase_ = 20;
+      onChanged();;
+      return productTypeFullBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -4027,8 +5094,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (dimensionCase_ == 14) {
           unknownListingDimensionBuilder_.mergeFrom(value);
+        } else {
+          unknownListingDimensionBuilder_.setMessage(value);
         }
-        unknownListingDimensionBuilder_.setMessage(value);
       }
       dimensionCase_ = 14;
       return this;

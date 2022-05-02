@@ -30,30 +30,28 @@ public final class PaidOrganicSearchTermViewProto {
     java.lang.String[] descriptorData = {
       "\nFgoogle/ads/googleads/v10/resources/pai" +
       "d_organic_search_term_view.proto\022\"google" +
-      ".ads.googleads.v10.resources\032\034google/api" +
-      "/annotations.proto\032\037google/api/field_beh" +
-      "avior.proto\032\031google/api/resource.proto\"\275" +
-      "\002\n\031PaidOrganicSearchTermView\022Q\n\rresource" +
-      "_name\030\001 \001(\tB:\340A\003\372A4\n2googleads.googleapi" +
-      "s.com/PaidOrganicSearchTermView\022\035\n\013searc" +
-      "h_term\030\003 \001(\tB\003\340A\003H\000\210\001\001:\235\001\352A\231\001\n2googleads" +
+      ".ads.googleads.v10.resources\032\037google/api" +
+      "/field_behavior.proto\032\031google/api/resour" +
+      "ce.proto\"\275\002\n\031PaidOrganicSearchTermView\022Q" +
+      "\n\rresource_name\030\001 \001(\tB:\340A\003\372A4\n2googleads" +
       ".googleapis.com/PaidOrganicSearchTermVie" +
-      "w\022ccustomers/{customer_id}/paidOrganicSe" +
-      "archTermViews/{campaign_id}~{ad_group_id" +
-      "}~{base64_search_term}B\016\n\014_search_termB\220" +
-      "\002\n&com.google.ads.googleads.v10.resource" +
-      "sB\036PaidOrganicSearchTermViewProtoP\001ZKgoo" +
-      "gle.golang.org/genproto/googleapis/ads/g" +
-      "oogleads/v10/resources;resources\242\002\003GAA\252\002" +
-      "\"Google.Ads.GoogleAds.V10.Resources\312\002\"Go" +
-      "ogle\\Ads\\GoogleAds\\V10\\Resources\352\002&Googl" +
-      "e::Ads::GoogleAds::V10::Resourcesb\006proto" +
-      "3"
+      "w\022\035\n\013search_term\030\003 \001(\tB\003\340A\003H\000\210\001\001:\235\001\352A\231\001\n" +
+      "2googleads.googleapis.com/PaidOrganicSea" +
+      "rchTermView\022ccustomers/{customer_id}/pai" +
+      "dOrganicSearchTermViews/{campaign_id}~{a" +
+      "d_group_id}~{base64_search_term}B\016\n\014_sea" +
+      "rch_termB\220\002\n&com.google.ads.googleads.v1" +
+      "0.resourcesB\036PaidOrganicSearchTermViewPr" +
+      "otoP\001ZKgoogle.golang.org/genproto/google" +
+      "apis/ads/googleads/v10/resources;resourc" +
+      "es\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V10.Reso" +
+      "urces\312\002\"Google\\Ads\\GoogleAds\\V10\\Resourc" +
+      "es\352\002&Google::Ads::GoogleAds::V10::Resour" +
+      "cesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -70,7 +68,6 @@ public final class PaidOrganicSearchTermViewProto {
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

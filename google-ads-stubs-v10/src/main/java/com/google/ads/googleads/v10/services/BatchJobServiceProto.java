@@ -87,72 +87,73 @@ public final class BatchJobServiceProto {
       "oto\"\177\n\025MutateBatchJobRequest\022\030\n\013customer" +
       "_id\030\001 \001(\tB\003\340A\002\022L\n\toperation\030\002 \001(\01324.goog" +
       "le.ads.googleads.v10.services.BatchJobOp" +
-      "erationB\003\340A\002\"`\n\021BatchJobOperation\022>\n\006cre" +
-      "ate\030\001 \001(\0132,.google.ads.googleads.v10.res" +
-      "ources.BatchJobH\000B\013\n\toperation\"a\n\026Mutate" +
-      "BatchJobResponse\022G\n\006result\030\001 \001(\01327.googl" +
-      "e.ads.googleads.v10.services.MutateBatch" +
-      "JobResult\"U\n\024MutateBatchJobResult\022=\n\rres" +
-      "ource_name\030\001 \001(\tB&\372A#\n!googleads.googlea" +
-      "pis.com/BatchJob\"V\n\022RunBatchJobRequest\022@" +
-      "\n\rresource_name\030\001 \001(\tB)\340A\002\372A#\n!googleads" +
-      ".googleapis.com/BatchJob\"\314\001\n\034AddBatchJob" +
-      "OperationsRequest\022@\n\rresource_name\030\001 \001(\t" +
+      "erationB\003\340A\002\"\232\001\n\021BatchJobOperation\022>\n\006cr" +
+      "eate\030\001 \001(\0132,.google.ads.googleads.v10.re" +
+      "sources.BatchJobH\000\0228\n\006remove\030\004 \001(\tB&\372A#\n" +
+      "!googleads.googleapis.com/BatchJobH\000B\013\n\t" +
+      "operation\"a\n\026MutateBatchJobResponse\022G\n\006r" +
+      "esult\030\001 \001(\01327.google.ads.googleads.v10.s" +
+      "ervices.MutateBatchJobResult\"U\n\024MutateBa" +
+      "tchJobResult\022=\n\rresource_name\030\001 \001(\tB&\372A#" +
+      "\n!googleads.googleapis.com/BatchJob\"V\n\022R" +
+      "unBatchJobRequest\022@\n\rresource_name\030\001 \001(\t" +
       "B)\340A\002\372A#\n!googleads.googleapis.com/Batch" +
-      "Job\022\026\n\016sequence_token\030\002 \001(\t\022R\n\021mutate_op" +
-      "erations\030\003 \003(\01322.google.ads.googleads.v1" +
-      "0.services.MutateOperationB\003\340A\002\"V\n\035AddBa" +
-      "tchJobOperationsResponse\022\030\n\020total_operat" +
-      "ions\030\001 \001(\003\022\033\n\023next_sequence_token\030\002 \001(\t\"" +
-      "\361\001\n\032ListBatchJobResultsRequest\022@\n\rresour" +
-      "ce_name\030\001 \001(\tB)\340A\002\372A#\n!googleads.googlea" +
-      "pis.com/BatchJob\022\022\n\npage_token\030\002 \001(\t\022\021\n\t" +
-      "page_size\030\003 \001(\005\022j\n\025response_content_type" +
-      "\030\004 \001(\0162K.google.ads.googleads.v10.enums." +
-      "ResponseContentTypeEnum.ResponseContentT" +
-      "ype\"z\n\033ListBatchJobResultsResponse\022B\n\007re" +
-      "sults\030\001 \003(\01321.google.ads.googleads.v10.s" +
-      "ervices.BatchJobResult\022\027\n\017next_page_toke" +
-      "n\030\002 \001(\t\"\254\001\n\016BatchJobResult\022\027\n\017operation_" +
-      "index\030\001 \001(\003\022]\n\031mutate_operation_response" +
-      "\030\002 \001(\0132:.google.ads.googleads.v10.servic" +
-      "es.MutateOperationResponse\022\"\n\006status\030\003 \001" +
-      "(\0132\022.google.rpc.Status2\341\010\n\017BatchJobServi" +
-      "ce\022\331\001\n\016MutateBatchJob\0228.google.ads.googl" +
-      "eads.v10.services.MutateBatchJobRequest\032" +
-      "9.google.ads.googleads.v10.services.Muta" +
-      "teBatchJobResponse\"R\202\323\344\223\0024\"//v10/custome" +
-      "rs/{customer_id=*}/batchJobs:mutate:\001*\332A" +
-      "\025customer_id,operation\022\346\001\n\023ListBatchJobR" +
-      "esults\022=.google.ads.googleads.v10.servic" +
-      "es.ListBatchJobResultsRequest\032>.google.a" +
-      "ds.googleads.v10.services.ListBatchJobRe" +
-      "sultsResponse\"P\202\323\344\223\002:\0228/v10/{resource_na" +
-      "me=customers/*/batchJobs/*}:listResults\332" +
-      "A\rresource_name\022\211\002\n\013RunBatchJob\0225.google" +
-      ".ads.googleads.v10.services.RunBatchJobR" +
-      "equest\032\035.google.longrunning.Operation\"\243\001" +
-      "\202\323\344\223\0025\"0/v10/{resource_name=customers/*/" +
-      "batchJobs/*}:run:\001*\332A\rresource_name\312AU\n\025" +
-      "google.protobuf.Empty\022<google.ads.google" +
-      "ads.v10.resources.BatchJob.BatchJobMetad" +
-      "ata\022\265\002\n\025AddBatchJobOperations\022?.google.a" +
-      "ds.googleads.v10.services.AddBatchJobOpe" +
-      "rationsRequest\032@.google.ads.googleads.v1" +
-      "0.services.AddBatchJobOperationsResponse" +
-      "\"\230\001\202\323\344\223\002?\":/v10/{resource_name=customers" +
-      "/*/batchJobs/*}:addOperations:\001*\332A.resou" +
-      "rce_name,sequence_token,mutate_operation" +
-      "s\332A\037resource_name,mutate_operations\032E\312A\030" +
-      "googleads.googleapis.com\322A\'https://www.g" +
-      "oogleapis.com/auth/adwordsB\200\002\n%com.googl" +
-      "e.ads.googleads.v10.servicesB\024BatchJobSe" +
-      "rviceProtoP\001ZIgoogle.golang.org/genproto" +
-      "/googleapis/ads/googleads/v10/services;s" +
-      "ervices\242\002\003GAA\252\002!Google.Ads.GoogleAds.V10" +
-      ".Services\312\002!Google\\Ads\\GoogleAds\\V10\\Ser" +
-      "vices\352\002%Google::Ads::GoogleAds::V10::Ser" +
-      "vicesb\006proto3"
+      "Job\"\314\001\n\034AddBatchJobOperationsRequest\022@\n\r" +
+      "resource_name\030\001 \001(\tB)\340A\002\372A#\n!googleads.g" +
+      "oogleapis.com/BatchJob\022\026\n\016sequence_token" +
+      "\030\002 \001(\t\022R\n\021mutate_operations\030\003 \003(\01322.goog" +
+      "le.ads.googleads.v10.services.MutateOper" +
+      "ationB\003\340A\002\"V\n\035AddBatchJobOperationsRespo" +
+      "nse\022\030\n\020total_operations\030\001 \001(\003\022\033\n\023next_se" +
+      "quence_token\030\002 \001(\t\"\361\001\n\032ListBatchJobResul" +
+      "tsRequest\022@\n\rresource_name\030\001 \001(\tB)\340A\002\372A#" +
+      "\n!googleads.googleapis.com/BatchJob\022\022\n\np" +
+      "age_token\030\002 \001(\t\022\021\n\tpage_size\030\003 \001(\005\022j\n\025re" +
+      "sponse_content_type\030\004 \001(\0162K.google.ads.g" +
+      "oogleads.v10.enums.ResponseContentTypeEn" +
+      "um.ResponseContentType\"z\n\033ListBatchJobRe" +
+      "sultsResponse\022B\n\007results\030\001 \003(\01321.google." +
+      "ads.googleads.v10.services.BatchJobResul" +
+      "t\022\027\n\017next_page_token\030\002 \001(\t\"\254\001\n\016BatchJobR" +
+      "esult\022\027\n\017operation_index\030\001 \001(\003\022]\n\031mutate" +
+      "_operation_response\030\002 \001(\0132:.google.ads.g" +
+      "oogleads.v10.services.MutateOperationRes" +
+      "ponse\022\"\n\006status\030\003 \001(\0132\022.google.rpc.Statu" +
+      "s2\341\010\n\017BatchJobService\022\331\001\n\016MutateBatchJob" +
+      "\0228.google.ads.googleads.v10.services.Mut" +
+      "ateBatchJobRequest\0329.google.ads.googlead" +
+      "s.v10.services.MutateBatchJobResponse\"R\202" +
+      "\323\344\223\0024\"//v10/customers/{customer_id=*}/ba" +
+      "tchJobs:mutate:\001*\332A\025customer_id,operatio" +
+      "n\022\346\001\n\023ListBatchJobResults\022=.google.ads.g" +
+      "oogleads.v10.services.ListBatchJobResult" +
+      "sRequest\032>.google.ads.googleads.v10.serv" +
+      "ices.ListBatchJobResultsResponse\"P\202\323\344\223\002:" +
+      "\0228/v10/{resource_name=customers/*/batchJ" +
+      "obs/*}:listResults\332A\rresource_name\022\211\002\n\013R" +
+      "unBatchJob\0225.google.ads.googleads.v10.se" +
+      "rvices.RunBatchJobRequest\032\035.google.longr" +
+      "unning.Operation\"\243\001\202\323\344\223\0025\"0/v10/{resourc" +
+      "e_name=customers/*/batchJobs/*}:run:\001*\332A" +
+      "\rresource_name\312AU\n\025google.protobuf.Empty" +
+      "\022<google.ads.googleads.v10.resources.Bat" +
+      "chJob.BatchJobMetadata\022\265\002\n\025AddBatchJobOp" +
+      "erations\022?.google.ads.googleads.v10.serv" +
+      "ices.AddBatchJobOperationsRequest\032@.goog" +
+      "le.ads.googleads.v10.services.AddBatchJo" +
+      "bOperationsResponse\"\230\001\202\323\344\223\002?\":/v10/{reso" +
+      "urce_name=customers/*/batchJobs/*}:addOp" +
+      "erations:\001*\332A.resource_name,sequence_tok" +
+      "en,mutate_operations\332A\037resource_name,mut" +
+      "ate_operations\032E\312A\030googleads.googleapis." +
+      "com\322A\'https://www.googleapis.com/auth/ad" +
+      "wordsB\200\002\n%com.google.ads.googleads.v10.s" +
+      "ervicesB\024BatchJobServiceProtoP\001ZIgoogle." +
+      "golang.org/genproto/googleapis/ads/googl" +
+      "eads/v10/services;services\242\002\003GAA\252\002!Googl" +
+      "e.Ads.GoogleAds.V10.Services\312\002!Google\\Ad" +
+      "s\\GoogleAds\\V10\\Services\352\002%Google::Ads::" +
+      "GoogleAds::V10::Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -178,7 +179,7 @@ public final class BatchJobServiceProto {
     internal_static_google_ads_googleads_v10_services_BatchJobOperation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_services_BatchJobOperation_descriptor,
-        new java.lang.String[] { "Create", "Operation", });
+        new java.lang.String[] { "Create", "Remove", "Operation", });
     internal_static_google_ads_googleads_v10_services_MutateBatchJobResponse_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_google_ads_googleads_v10_services_MutateBatchJobResponse_fieldAccessorTable = new

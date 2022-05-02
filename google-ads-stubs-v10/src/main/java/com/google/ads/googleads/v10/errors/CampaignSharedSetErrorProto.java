@@ -30,22 +30,20 @@ public final class CampaignSharedSetErrorProto {
     java.lang.String[] descriptorData = {
       "\n?google/ads/googleads/v10/errors/campai" +
       "gn_shared_set_error.proto\022\037google.ads.go" +
-      "ogleads.v10.errors\032\034google/api/annotatio" +
-      "ns.proto\"r\n\032CampaignSharedSetErrorEnum\"T" +
-      "\n\026CampaignSharedSetError\022\017\n\013UNSPECIFIED\020" +
-      "\000\022\013\n\007UNKNOWN\020\001\022\034\n\030SHARED_SET_ACCESS_DENI" +
-      "ED\020\002B\373\001\n#com.google.ads.googleads.v10.er" +
-      "rorsB\033CampaignSharedSetErrorProtoP\001ZEgoo" +
-      "gle.golang.org/genproto/googleapis/ads/g" +
-      "oogleads/v10/errors;errors\242\002\003GAA\252\002\037Googl" +
-      "e.Ads.GoogleAds.V10.Errors\312\002\037Google\\Ads\\" +
-      "GoogleAds\\V10\\Errors\352\002#Google::Ads::Goog" +
-      "leAds::V10::Errorsb\006proto3"
+      "ogleads.v10.errors\"r\n\032CampaignSharedSetE" +
+      "rrorEnum\"T\n\026CampaignSharedSetError\022\017\n\013UN" +
+      "SPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\034\n\030SHARED_SET_A" +
+      "CCESS_DENIED\020\002B\373\001\n#com.google.ads.google" +
+      "ads.v10.errorsB\033CampaignSharedSetErrorPr" +
+      "otoP\001ZEgoogle.golang.org/genproto/google" +
+      "apis/ads/googleads/v10/errors;errors\242\002\003G" +
+      "AA\252\002\037Google.Ads.GoogleAds.V10.Errors\312\002\037G" +
+      "oogle\\Ads\\GoogleAds\\V10\\Errors\352\002#Google:" +
+      ":Ads::GoogleAds::V10::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_CampaignSharedSetErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -53,7 +51,6 @@ public final class CampaignSharedSetErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_CampaignSharedSetErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

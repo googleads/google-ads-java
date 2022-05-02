@@ -33,35 +33,33 @@ public final class CustomerCustomizerProto {
       "eads.v10.resources\0326google/ads/googleads" +
       "/v10/common/customizer_value.proto\032<goog" +
       "le/ads/googleads/v10/enums/customizer_va" +
-      "lue_status.proto\032\034google/api/annotations" +
-      ".proto\032\037google/api/field_behavior.proto\032" +
-      "\031google/api/resource.proto\"\334\003\n\022CustomerC" +
-      "ustomizer\022J\n\rresource_name\030\001 \001(\tB3\340A\005\372A-" +
-      "\n+googleads.googleapis.com/CustomerCusto" +
-      "mizer\022U\n\024customizer_attribute\030\002 \001(\tB7\340A\002" +
-      "\340A\005\372A.\n,googleads.googleapis.com/Customi" +
-      "zerAttribute\022d\n\006status\030\003 \001(\0162O.google.ad" +
-      "s.googleads.v10.enums.CustomizerValueSta" +
-      "tusEnum.CustomizerValueStatusB\003\340A\003\022D\n\005va" +
-      "lue\030\004 \001(\01320.google.ads.googleads.v10.com" +
-      "mon.CustomizerValueB\003\340A\002:w\352At\n+googleads" +
-      ".googleapis.com/CustomerCustomizer\022Ecust" +
-      "omers/{customer_id}/customerCustomizers/" +
-      "{customizer_attribute_id}B\211\002\n&com.google" +
-      ".ads.googleads.v10.resourcesB\027CustomerCu" +
-      "stomizerProtoP\001ZKgoogle.golang.org/genpr" +
-      "oto/googleapis/ads/googleads/v10/resourc" +
-      "es;resources\242\002\003GAA\252\002\"Google.Ads.GoogleAd" +
-      "s.V10.Resources\312\002\"Google\\Ads\\GoogleAds\\V" +
-      "10\\Resources\352\002&Google::Ads::GoogleAds::V" +
-      "10::Resourcesb\006proto3"
+      "lue_status.proto\032\037google/api/field_behav" +
+      "ior.proto\032\031google/api/resource.proto\"\334\003\n" +
+      "\022CustomerCustomizer\022J\n\rresource_name\030\001 \001" +
+      "(\tB3\340A\005\372A-\n+googleads.googleapis.com/Cus" +
+      "tomerCustomizer\022U\n\024customizer_attribute\030" +
+      "\002 \001(\tB7\340A\002\340A\005\372A.\n,googleads.googleapis.c" +
+      "om/CustomizerAttribute\022d\n\006status\030\003 \001(\0162O" +
+      ".google.ads.googleads.v10.enums.Customiz" +
+      "erValueStatusEnum.CustomizerValueStatusB" +
+      "\003\340A\003\022D\n\005value\030\004 \001(\01320.google.ads.googlea" +
+      "ds.v10.common.CustomizerValueB\003\340A\002:w\352At\n" +
+      "+googleads.googleapis.com/CustomerCustom" +
+      "izer\022Ecustomers/{customer_id}/customerCu" +
+      "stomizers/{customizer_attribute_id}B\211\002\n&" +
+      "com.google.ads.googleads.v10.resourcesB\027" +
+      "CustomerCustomizerProtoP\001ZKgoogle.golang" +
+      ".org/genproto/googleapis/ads/googleads/v" +
+      "10/resources;resources\242\002\003GAA\252\002\"Google.Ad" +
+      "s.GoogleAds.V10.Resources\312\002\"Google\\Ads\\G" +
+      "oogleAds\\V10\\Resources\352\002&Google::Ads::Go" +
+      "ogleAds::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.common.CustomizerValueProto.getDescriptor(),
           com.google.ads.googleads.v10.enums.CustomizerValueStatusProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -80,7 +78,6 @@ public final class CustomerCustomizerProto {
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.common.CustomizerValueProto.getDescriptor();
     com.google.ads.googleads.v10.enums.CustomizerValueStatusProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

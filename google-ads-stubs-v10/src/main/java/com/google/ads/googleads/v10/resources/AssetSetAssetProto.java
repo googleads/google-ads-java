@@ -31,33 +31,31 @@ public final class AssetSetAssetProto {
       "\n8google/ads/googleads/v10/resources/ass" +
       "et_set_asset.proto\022\"google.ads.googleads" +
       ".v10.resources\032;google/ads/googleads/v10" +
-      "/enums/asset_set_asset_status.proto\032\034goo" +
-      "gle/api/annotations.proto\032\037google/api/fi" +
-      "eld_behavior.proto\032\031google/api/resource." +
-      "proto\"\234\003\n\rAssetSetAsset\022E\n\rresource_name" +
-      "\030\001 \001(\tB.\340A\005\372A(\n&googleads.googleapis.com" +
-      "/AssetSetAsset\022<\n\tasset_set\030\002 \001(\tB)\340A\005\372A" +
-      "#\n!googleads.googleapis.com/AssetSet\0225\n\005" +
-      "asset\030\003 \001(\tB&\340A\005\372A \n\036googleads.googleapi" +
-      "s.com/Asset\022`\n\006status\030\004 \001(\0162K.google.ads" +
-      ".googleads.v10.enums.AssetSetAssetStatus" +
-      "Enum.AssetSetAssetStatusB\003\340A\003:m\352Aj\n&goog" +
-      "leads.googleapis.com/AssetSetAsset\022@cust" +
-      "omers/{customer_id}/assetSetAssets/{asse" +
-      "t_set_id}~{asset_id}B\204\002\n&com.google.ads." +
-      "googleads.v10.resourcesB\022AssetSetAssetPr" +
-      "otoP\001ZKgoogle.golang.org/genproto/google" +
-      "apis/ads/googleads/v10/resources;resourc" +
-      "es\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V10.Reso" +
-      "urces\312\002\"Google\\Ads\\GoogleAds\\V10\\Resourc" +
-      "es\352\002&Google::Ads::GoogleAds::V10::Resour" +
-      "cesb\006proto3"
+      "/enums/asset_set_asset_status.proto\032\037goo" +
+      "gle/api/field_behavior.proto\032\031google/api" +
+      "/resource.proto\"\234\003\n\rAssetSetAsset\022E\n\rres" +
+      "ource_name\030\001 \001(\tB.\340A\005\372A(\n&googleads.goog" +
+      "leapis.com/AssetSetAsset\022<\n\tasset_set\030\002 " +
+      "\001(\tB)\340A\005\372A#\n!googleads.googleapis.com/As" +
+      "setSet\0225\n\005asset\030\003 \001(\tB&\340A\005\372A \n\036googleads" +
+      ".googleapis.com/Asset\022`\n\006status\030\004 \001(\0162K." +
+      "google.ads.googleads.v10.enums.AssetSetA" +
+      "ssetStatusEnum.AssetSetAssetStatusB\003\340A\003:" +
+      "m\352Aj\n&googleads.googleapis.com/AssetSetA" +
+      "sset\022@customers/{customer_id}/assetSetAs" +
+      "sets/{asset_set_id}~{asset_id}B\204\002\n&com.g" +
+      "oogle.ads.googleads.v10.resourcesB\022Asset" +
+      "SetAssetProtoP\001ZKgoogle.golang.org/genpr" +
+      "oto/googleapis/ads/googleads/v10/resourc" +
+      "es;resources\242\002\003GAA\252\002\"Google.Ads.GoogleAd" +
+      "s.V10.Resources\312\002\"Google\\Ads\\GoogleAds\\V" +
+      "10\\Resources\352\002&Google::Ads::GoogleAds::V" +
+      "10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.enums.AssetSetAssetStatusProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -75,7 +73,6 @@ public final class AssetSetAssetProto {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.enums.AssetSetAssetStatusProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

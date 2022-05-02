@@ -30,22 +30,20 @@ public final class SystemManagedEntitySourceProto {
     java.lang.String[] descriptorData = {
       "\nAgoogle/ads/googleads/v10/enums/system_" +
       "managed_entity_source.proto\022\036google.ads." +
-      "googleads.v10.enums\032\034google/api/annotati" +
-      "ons.proto\"q\n\037SystemManagedResourceSource" +
-      "Enum\"N\n\033SystemManagedResourceSource\022\017\n\013U" +
-      "NSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\021\n\rAD_VARIATIO" +
-      "NS\020\002B\370\001\n\"com.google.ads.googleads.v10.en" +
-      "umsB\036SystemManagedEntitySourceProtoP\001ZCg" +
-      "oogle.golang.org/genproto/googleapis/ads" +
-      "/googleads/v10/enums;enums\242\002\003GAA\252\002\036Googl" +
-      "e.Ads.GoogleAds.V10.Enums\312\002\036Google\\Ads\\G" +
-      "oogleAds\\V10\\Enums\352\002\"Google::Ads::Google" +
-      "Ads::V10::Enumsb\006proto3"
+      "googleads.v10.enums\"q\n\037SystemManagedReso" +
+      "urceSourceEnum\"N\n\033SystemManagedResourceS" +
+      "ource\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\021\n\rA" +
+      "D_VARIATIONS\020\002B\370\001\n\"com.google.ads.google" +
+      "ads.v10.enumsB\036SystemManagedEntitySource" +
+      "ProtoP\001ZCgoogle.golang.org/genproto/goog" +
+      "leapis/ads/googleads/v10/enums;enums\242\002\003G" +
+      "AA\252\002\036Google.Ads.GoogleAds.V10.Enums\312\002\036Go" +
+      "ogle\\Ads\\GoogleAds\\V10\\Enums\352\002\"Google::A" +
+      "ds::GoogleAds::V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_SystemManagedResourceSourceEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -53,7 +51,6 @@ public final class SystemManagedEntitySourceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_SystemManagedResourceSourceEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

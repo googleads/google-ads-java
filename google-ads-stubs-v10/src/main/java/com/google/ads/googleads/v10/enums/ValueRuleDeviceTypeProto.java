@@ -30,22 +30,20 @@ public final class ValueRuleDeviceTypeProto {
     java.lang.String[] descriptorData = {
       "\n;google/ads/googleads/v10/enums/value_r" +
       "ule_device_type.proto\022\036google.ads.google" +
-      "ads.v10.enums\032\034google/api/annotations.pr" +
-      "oto\"s\n\027ValueRuleDeviceTypeEnum\"X\n\023ValueR" +
-      "uleDeviceType\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOW" +
-      "N\020\001\022\n\n\006MOBILE\020\002\022\013\n\007DESKTOP\020\003\022\n\n\006TABLET\020\004" +
-      "B\362\001\n\"com.google.ads.googleads.v10.enumsB" +
-      "\030ValueRuleDeviceTypeProtoP\001ZCgoogle.gola" +
-      "ng.org/genproto/googleapis/ads/googleads" +
-      "/v10/enums;enums\242\002\003GAA\252\002\036Google.Ads.Goog" +
-      "leAds.V10.Enums\312\002\036Google\\Ads\\GoogleAds\\V" +
-      "10\\Enums\352\002\"Google::Ads::GoogleAds::V10::" +
-      "Enumsb\006proto3"
+      "ads.v10.enums\"s\n\027ValueRuleDeviceTypeEnum" +
+      "\"X\n\023ValueRuleDeviceType\022\017\n\013UNSPECIFIED\020\000" +
+      "\022\013\n\007UNKNOWN\020\001\022\n\n\006MOBILE\020\002\022\013\n\007DESKTOP\020\003\022\n" +
+      "\n\006TABLET\020\004B\362\001\n\"com.google.ads.googleads." +
+      "v10.enumsB\030ValueRuleDeviceTypeProtoP\001ZCg" +
+      "oogle.golang.org/genproto/googleapis/ads" +
+      "/googleads/v10/enums;enums\242\002\003GAA\252\002\036Googl" +
+      "e.Ads.GoogleAds.V10.Enums\312\002\036Google\\Ads\\G" +
+      "oogleAds\\V10\\Enums\352\002\"Google::Ads::Google" +
+      "Ads::V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_ValueRuleDeviceTypeEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -53,7 +51,6 @@ public final class ValueRuleDeviceTypeProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_ValueRuleDeviceTypeEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

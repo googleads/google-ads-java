@@ -30,26 +30,24 @@ public final class ThirdPartyAppAnalyticsLinkErrorProto {
     java.lang.String[] descriptorData = {
       "\nJgoogle/ads/googleads/v10/errors/third_" +
       "party_app_analytics_link_error.proto\022\037go" +
-      "ogle.ads.googleads.v10.errors\032\034google/ap" +
-      "i/annotations.proto\"\376\001\n#ThirdPartyAppAna" +
-      "lyticsLinkErrorEnum\"\326\001\n\037ThirdPartyAppAna" +
-      "lyticsLinkError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKN" +
-      "OWN\020\001\022!\n\035INVALID_ANALYTICS_PROVIDER_ID\020\002" +
-      "\022\031\n\025INVALID_MOBILE_APP_ID\020\003\022\035\n\031MOBILE_AP" +
-      "P_IS_NOT_ENABLED\020\004\0228\n4CANNOT_REGENERATE_" +
-      "SHAREABLE_LINK_ID_FOR_REMOVED_LINK\020\005B\204\002\n" +
-      "#com.google.ads.googleads.v10.errorsB$Th" +
-      "irdPartyAppAnalyticsLinkErrorProtoP\001ZEgo" +
-      "ogle.golang.org/genproto/googleapis/ads/" +
-      "googleads/v10/errors;errors\242\002\003GAA\252\002\037Goog" +
-      "le.Ads.GoogleAds.V10.Errors\312\002\037Google\\Ads" +
-      "\\GoogleAds\\V10\\Errors\352\002#Google::Ads::Goo" +
-      "gleAds::V10::Errorsb\006proto3"
+      "ogle.ads.googleads.v10.errors\"\376\001\n#ThirdP" +
+      "artyAppAnalyticsLinkErrorEnum\"\326\001\n\037ThirdP" +
+      "artyAppAnalyticsLinkError\022\017\n\013UNSPECIFIED" +
+      "\020\000\022\013\n\007UNKNOWN\020\001\022!\n\035INVALID_ANALYTICS_PRO" +
+      "VIDER_ID\020\002\022\031\n\025INVALID_MOBILE_APP_ID\020\003\022\035\n" +
+      "\031MOBILE_APP_IS_NOT_ENABLED\020\004\0228\n4CANNOT_R" +
+      "EGENERATE_SHAREABLE_LINK_ID_FOR_REMOVED_" +
+      "LINK\020\005B\204\002\n#com.google.ads.googleads.v10." +
+      "errorsB$ThirdPartyAppAnalyticsLinkErrorP" +
+      "rotoP\001ZEgoogle.golang.org/genproto/googl" +
+      "eapis/ads/googleads/v10/errors;errors\242\002\003" +
+      "GAA\252\002\037Google.Ads.GoogleAds.V10.Errors\312\002\037" +
+      "Google\\Ads\\GoogleAds\\V10\\Errors\352\002#Google" +
+      "::Ads::GoogleAds::V10::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_ThirdPartyAppAnalyticsLinkErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -57,7 +55,6 @@ public final class ThirdPartyAppAnalyticsLinkErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_ThirdPartyAppAnalyticsLinkErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

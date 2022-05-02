@@ -92,6 +92,7 @@ private static final long serialVersionUID = 0L;
     week_ = "";
     skAdNetworkUserType_ = 0;
     skAdNetworkAdEventType_ = 0;
+    skAdNetworkAttributionCredit_ = 0;
   }
 
   @java.lang.Override
@@ -665,6 +666,12 @@ private static final long serialVersionUID = 0L;
             bitField1_ |= 0x02000000;
             break;
           }
+          case 1152: {
+            int rawValue = input.readEnum();
+
+            skAdNetworkAttributionCredit_ = rawValue;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -676,6 +683,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -4537,6 +4546,33 @@ private static final long serialVersionUID = 0L;
     return skAdNetworkSourceApp_ == null ? com.google.ads.googleads.v10.common.SkAdNetworkSourceApp.getDefaultInstance() : skAdNetworkSourceApp_;
   }
 
+  public static final int SK_AD_NETWORK_ATTRIBUTION_CREDIT_FIELD_NUMBER = 144;
+  private int skAdNetworkAttributionCredit_;
+  /**
+   * <pre>
+   * iOS Store Kit Ad Network attribution credit
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.enums.SkAdNetworkAttributionCreditEnum.SkAdNetworkAttributionCredit sk_ad_network_attribution_credit = 144;</code>
+   * @return The enum numeric value on the wire for skAdNetworkAttributionCredit.
+   */
+  @java.lang.Override public int getSkAdNetworkAttributionCreditValue() {
+    return skAdNetworkAttributionCredit_;
+  }
+  /**
+   * <pre>
+   * iOS Store Kit Ad Network attribution credit
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.enums.SkAdNetworkAttributionCreditEnum.SkAdNetworkAttributionCredit sk_ad_network_attribution_credit = 144;</code>
+   * @return The skAdNetworkAttributionCredit.
+   */
+  @java.lang.Override public com.google.ads.googleads.v10.enums.SkAdNetworkAttributionCreditEnum.SkAdNetworkAttributionCredit getSkAdNetworkAttributionCredit() {
+    @SuppressWarnings("deprecation")
+    com.google.ads.googleads.v10.enums.SkAdNetworkAttributionCreditEnum.SkAdNetworkAttributionCredit result = com.google.ads.googleads.v10.enums.SkAdNetworkAttributionCreditEnum.SkAdNetworkAttributionCredit.valueOf(skAdNetworkAttributionCredit_);
+    return result == null ? com.google.ads.googleads.v10.enums.SkAdNetworkAttributionCreditEnum.SkAdNetworkAttributionCredit.UNRECOGNIZED : result;
+  }
+
   public static final int ASSET_INTERACTION_TARGET_FIELD_NUMBER = 139;
   private com.google.ads.googleads.v10.common.AssetInteractionTarget assetInteractionTarget_;
   /**
@@ -4874,6 +4910,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField1_ & 0x02000000) != 0)) {
       output.writeMessage(143, getSkAdNetworkSourceApp());
     }
+    if (skAdNetworkAttributionCredit_ != com.google.ads.googleads.v10.enums.SkAdNetworkAttributionCreditEnum.SkAdNetworkAttributionCredit.UNSPECIFIED.getNumber()) {
+      output.writeEnum(144, skAdNetworkAttributionCredit_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -5184,6 +5223,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField1_ & 0x02000000) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(143, getSkAdNetworkSourceApp());
+    }
+    if (skAdNetworkAttributionCredit_ != com.google.ads.googleads.v10.enums.SkAdNetworkAttributionCreditEnum.SkAdNetworkAttributionCredit.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(144, skAdNetworkAttributionCredit_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -5526,6 +5569,7 @@ private static final long serialVersionUID = 0L;
       if (!getSkAdNetworkSourceApp()
           .equals(other.getSkAdNetworkSourceApp())) return false;
     }
+    if (skAdNetworkAttributionCredit_ != other.skAdNetworkAttributionCredit_) return false;
     if (hasAssetInteractionTarget() != other.hasAssetInteractionTarget()) return false;
     if (hasAssetInteractionTarget()) {
       if (!getAssetInteractionTarget()
@@ -5841,6 +5885,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SK_AD_NETWORK_SOURCE_APP_FIELD_NUMBER;
       hash = (53 * hash) + getSkAdNetworkSourceApp().hashCode();
     }
+    hash = (37 * hash) + SK_AD_NETWORK_ATTRIBUTION_CREDIT_FIELD_NUMBER;
+    hash = (53 * hash) + skAdNetworkAttributionCredit_;
     if (hasAssetInteractionTarget()) {
       hash = (37 * hash) + ASSET_INTERACTION_TARGET_FIELD_NUMBER;
       hash = (53 * hash) + getAssetInteractionTarget().hashCode();
@@ -6168,6 +6214,8 @@ private static final long serialVersionUID = 0L;
         skAdNetworkSourceAppBuilder_.clear();
       }
       bitField1_ = (bitField1_ & ~0x02000000);
+      skAdNetworkAttributionCredit_ = 0;
+
       if (assetInteractionTargetBuilder_ == null) {
         assetInteractionTarget_ = null;
       } else {
@@ -6476,6 +6524,7 @@ private static final long serialVersionUID = 0L;
         }
         to_bitField1_ |= 0x02000000;
       }
+      result.skAdNetworkAttributionCredit_ = skAdNetworkAttributionCredit_;
       if (((from_bitField1_ & 0x04000000) != 0)) {
         if (assetInteractionTargetBuilder_ == null) {
           result.assetInteractionTarget_ = assetInteractionTarget_;
@@ -6883,6 +6932,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasSkAdNetworkSourceApp()) {
         mergeSkAdNetworkSourceApp(other.getSkAdNetworkSourceApp());
+      }
+      if (other.skAdNetworkAttributionCredit_ != 0) {
+        setSkAdNetworkAttributionCreditValue(other.getSkAdNetworkAttributionCreditValue());
       }
       if (other.hasAssetInteractionTarget()) {
         mergeAssetInteractionTarget(other.getAssetInteractionTarget());
@@ -14961,6 +15013,80 @@ private static final long serialVersionUID = 0L;
         skAdNetworkSourceApp_ = null;
       }
       return skAdNetworkSourceAppBuilder_;
+    }
+
+    private int skAdNetworkAttributionCredit_ = 0;
+    /**
+     * <pre>
+     * iOS Store Kit Ad Network attribution credit
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.enums.SkAdNetworkAttributionCreditEnum.SkAdNetworkAttributionCredit sk_ad_network_attribution_credit = 144;</code>
+     * @return The enum numeric value on the wire for skAdNetworkAttributionCredit.
+     */
+    @java.lang.Override public int getSkAdNetworkAttributionCreditValue() {
+      return skAdNetworkAttributionCredit_;
+    }
+    /**
+     * <pre>
+     * iOS Store Kit Ad Network attribution credit
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.enums.SkAdNetworkAttributionCreditEnum.SkAdNetworkAttributionCredit sk_ad_network_attribution_credit = 144;</code>
+     * @param value The enum numeric value on the wire for skAdNetworkAttributionCredit to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSkAdNetworkAttributionCreditValue(int value) {
+      
+      skAdNetworkAttributionCredit_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * iOS Store Kit Ad Network attribution credit
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.enums.SkAdNetworkAttributionCreditEnum.SkAdNetworkAttributionCredit sk_ad_network_attribution_credit = 144;</code>
+     * @return The skAdNetworkAttributionCredit.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v10.enums.SkAdNetworkAttributionCreditEnum.SkAdNetworkAttributionCredit getSkAdNetworkAttributionCredit() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v10.enums.SkAdNetworkAttributionCreditEnum.SkAdNetworkAttributionCredit result = com.google.ads.googleads.v10.enums.SkAdNetworkAttributionCreditEnum.SkAdNetworkAttributionCredit.valueOf(skAdNetworkAttributionCredit_);
+      return result == null ? com.google.ads.googleads.v10.enums.SkAdNetworkAttributionCreditEnum.SkAdNetworkAttributionCredit.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * iOS Store Kit Ad Network attribution credit
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.enums.SkAdNetworkAttributionCreditEnum.SkAdNetworkAttributionCredit sk_ad_network_attribution_credit = 144;</code>
+     * @param value The skAdNetworkAttributionCredit to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSkAdNetworkAttributionCredit(com.google.ads.googleads.v10.enums.SkAdNetworkAttributionCreditEnum.SkAdNetworkAttributionCredit value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      skAdNetworkAttributionCredit_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * iOS Store Kit Ad Network attribution credit
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v10.enums.SkAdNetworkAttributionCreditEnum.SkAdNetworkAttributionCredit sk_ad_network_attribution_credit = 144;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSkAdNetworkAttributionCredit() {
+      
+      skAdNetworkAttributionCredit_ = 0;
+      onChanged();
+      return this;
     }
 
     private com.google.ads.googleads.v10.common.AssetInteractionTarget assetInteractionTarget_;

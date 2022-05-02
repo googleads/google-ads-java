@@ -30,13 +30,14 @@ public final class CustomConversionGoalErrorProto {
     java.lang.String[] descriptorData = {
       "\nBgoogle/ads/googleads/v10/errors/custom" +
       "_conversion_goal_error.proto\022\037google.ads" +
-      ".googleads.v10.errors\032\034google/api/annota" +
-      "tions.proto\"\316\001\n\035CustomConversionGoalErro" +
-      "rEnum\"\254\001\n\031CustomConversionGoalError\022\017\n\013U" +
-      "NSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\035\n\031INVALID_CON" +
-      "VERSION_ACTION\020\002\022!\n\035CONVERSION_ACTION_NO" +
-      "T_ENABLED\020\003\022/\n+CANNOT_REMOVE_LINKED_CUST" +
-      "OM_CONVERSION_GOAL\020\004B\376\001\n#com.google.ads." +
+      ".googleads.v10.errors\"\224\002\n\035CustomConversi" +
+      "onGoalErrorEnum\"\362\001\n\031CustomConversionGoal" +
+      "Error\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\035\n\031I" +
+      "NVALID_CONVERSION_ACTION\020\002\022!\n\035CONVERSION" +
+      "_ACTION_NOT_ENABLED\020\003\022/\n+CANNOT_REMOVE_L" +
+      "INKED_CUSTOM_CONVERSION_GOAL\020\004\022\036\n\032CUSTOM" +
+      "_GOAL_DUPLICATE_NAME\020\005\022$\n DUPLICATE_CONV" +
+      "ERSION_ACTION_LIST\020\006B\376\001\n#com.google.ads." +
       "googleads.v10.errorsB\036CustomConversionGo" +
       "alErrorProtoP\001ZEgoogle.golang.org/genpro" +
       "to/googleapis/ads/googleads/v10/errors;e" +
@@ -48,7 +49,6 @@ public final class CustomConversionGoalErrorProto {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_CustomConversionGoalErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -56,7 +56,6 @@ public final class CustomConversionGoalErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_CustomConversionGoalErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -18,6 +18,8 @@ package com.google.ads.googleads.v10.services.stub;
 
 import static com.google.ads.googleads.v10.services.KeywordPlanIdeaServiceClient.GenerateKeywordIdeasPagedResponse;
 
+import com.google.ads.googleads.v10.services.GenerateKeywordHistoricalMetricsRequest;
+import com.google.ads.googleads.v10.services.GenerateKeywordHistoricalMetricsResponse;
 import com.google.ads.googleads.v10.services.GenerateKeywordIdeaResponse;
 import com.google.ads.googleads.v10.services.GenerateKeywordIdeaResult;
 import com.google.ads.googleads.v10.services.GenerateKeywordIdeasRequest;
@@ -67,16 +69,16 @@ import org.threeten.bp.Duration;
  * <p>The builder of this class is recursive, so contained classes are themselves builders. When
  * build() is called, the tree of builders is called to create the complete settings object.
  *
- * <p>For example, to set the total timeout of generateKeywordIdeas to 30 seconds:
+ * <p>For example, to set the total timeout of generateKeywordHistoricalMetrics to 30 seconds:
  *
  * <pre>{@code
  * KeywordPlanIdeaServiceStubSettings.Builder keywordPlanIdeaServiceSettingsBuilder =
  *     KeywordPlanIdeaServiceStubSettings.newBuilder();
  * keywordPlanIdeaServiceSettingsBuilder
- *     .generateKeywordIdeasSettings()
+ *     .generateKeywordHistoricalMetricsSettings()
  *     .setRetrySettings(
  *         keywordPlanIdeaServiceSettingsBuilder
- *             .generateKeywordIdeasSettings()
+ *             .generateKeywordHistoricalMetricsSettings()
  *             .getRetrySettings()
  *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
@@ -96,6 +98,9 @@ public class KeywordPlanIdeaServiceStubSettings
           GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse,
           GenerateKeywordIdeasPagedResponse>
       generateKeywordIdeasSettings;
+  private final UnaryCallSettings<
+          GenerateKeywordHistoricalMetricsRequest, GenerateKeywordHistoricalMetricsResponse>
+      generateKeywordHistoricalMetricsSettings;
 
   private static final PagedListDescriptor<
           GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse, GenerateKeywordIdeaResult>
@@ -168,6 +173,13 @@ public class KeywordPlanIdeaServiceStubSettings
           GenerateKeywordIdeasPagedResponse>
       generateKeywordIdeasSettings() {
     return generateKeywordIdeasSettings;
+  }
+
+  /** Returns the object with the settings used for calls to generateKeywordHistoricalMetrics. */
+  public UnaryCallSettings<
+          GenerateKeywordHistoricalMetricsRequest, GenerateKeywordHistoricalMetricsResponse>
+      generateKeywordHistoricalMetricsSettings() {
+    return generateKeywordHistoricalMetricsSettings;
   }
 
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
@@ -247,6 +259,8 @@ public class KeywordPlanIdeaServiceStubSettings
     super(settingsBuilder);
 
     generateKeywordIdeasSettings = settingsBuilder.generateKeywordIdeasSettings().build();
+    generateKeywordHistoricalMetricsSettings =
+        settingsBuilder.generateKeywordHistoricalMetricsSettings().build();
   }
 
   /** Builder for KeywordPlanIdeaServiceStubSettings. */
@@ -257,6 +271,9 @@ public class KeywordPlanIdeaServiceStubSettings
             GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse,
             GenerateKeywordIdeasPagedResponse>
         generateKeywordIdeasSettings;
+    private final UnaryCallSettings.Builder<
+            GenerateKeywordHistoricalMetricsRequest, GenerateKeywordHistoricalMetricsResponse>
+        generateKeywordHistoricalMetricsSettings;
     private static final ImmutableMap<String, ImmutableSet<StatusCode.Code>>
         RETRYABLE_CODE_DEFINITIONS;
 
@@ -281,10 +298,10 @@ public class KeywordPlanIdeaServiceStubSettings
               .setInitialRetryDelay(Duration.ofMillis(5000L))
               .setRetryDelayMultiplier(1.3)
               .setMaxRetryDelay(Duration.ofMillis(60000L))
-              .setInitialRpcTimeout(Duration.ofMillis(3600000L))
+              .setInitialRpcTimeout(Duration.ofMillis(14400000L))
               .setRpcTimeoutMultiplier(1.0)
-              .setMaxRpcTimeout(Duration.ofMillis(3600000L))
-              .setTotalTimeout(Duration.ofMillis(3600000L))
+              .setMaxRpcTimeout(Duration.ofMillis(14400000L))
+              .setTotalTimeout(Duration.ofMillis(14400000L))
               .build();
       definitions.put("retry_policy_0_params", settings);
       RETRY_PARAM_DEFINITIONS = definitions.build();
@@ -299,9 +316,11 @@ public class KeywordPlanIdeaServiceStubSettings
 
       generateKeywordIdeasSettings =
           PagedCallSettings.newBuilder(GENERATE_KEYWORD_IDEAS_PAGE_STR_FACT);
+      generateKeywordHistoricalMetricsSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
 
       unaryMethodSettingsBuilders =
-          ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(generateKeywordIdeasSettings);
+          ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(
+              generateKeywordIdeasSettings, generateKeywordHistoricalMetricsSettings);
       initDefaults(this);
     }
 
@@ -309,9 +328,12 @@ public class KeywordPlanIdeaServiceStubSettings
       super(settings);
 
       generateKeywordIdeasSettings = settings.generateKeywordIdeasSettings.toBuilder();
+      generateKeywordHistoricalMetricsSettings =
+          settings.generateKeywordHistoricalMetricsSettings.toBuilder();
 
       unaryMethodSettingsBuilders =
-          ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(generateKeywordIdeasSettings);
+          ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(
+              generateKeywordIdeasSettings, generateKeywordHistoricalMetricsSettings);
     }
 
     private static Builder createDefault() {
@@ -330,6 +352,11 @@ public class KeywordPlanIdeaServiceStubSettings
     private static Builder initDefaults(Builder builder) {
       builder
           .generateKeywordIdeasSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
+
+      builder
+          .generateKeywordHistoricalMetricsSettings()
           .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
           .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
 
@@ -357,6 +384,13 @@ public class KeywordPlanIdeaServiceStubSettings
             GenerateKeywordIdeasPagedResponse>
         generateKeywordIdeasSettings() {
       return generateKeywordIdeasSettings;
+    }
+
+    /** Returns the builder for the settings used for calls to generateKeywordHistoricalMetrics. */
+    public UnaryCallSettings.Builder<
+            GenerateKeywordHistoricalMetricsRequest, GenerateKeywordHistoricalMetricsResponse>
+        generateKeywordHistoricalMetricsSettings() {
+      return generateKeywordHistoricalMetricsSettings;
     }
 
     @Override

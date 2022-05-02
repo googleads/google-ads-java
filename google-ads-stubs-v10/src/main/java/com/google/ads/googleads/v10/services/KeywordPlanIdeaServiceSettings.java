@@ -50,16 +50,16 @@ import javax.annotation.Generated;
  * <p>The builder of this class is recursive, so contained classes are themselves builders. When
  * build() is called, the tree of builders is called to create the complete settings object.
  *
- * <p>For example, to set the total timeout of generateKeywordIdeas to 30 seconds:
+ * <p>For example, to set the total timeout of generateKeywordHistoricalMetrics to 30 seconds:
  *
  * <pre>{@code
  * KeywordPlanIdeaServiceSettings.Builder keywordPlanIdeaServiceSettingsBuilder =
  *     KeywordPlanIdeaServiceSettings.newBuilder();
  * keywordPlanIdeaServiceSettingsBuilder
- *     .generateKeywordIdeasSettings()
+ *     .generateKeywordHistoricalMetricsSettings()
  *     .setRetrySettings(
  *         keywordPlanIdeaServiceSettingsBuilder
- *             .generateKeywordIdeasSettings()
+ *             .generateKeywordHistoricalMetricsSettings()
  *             .getRetrySettings()
  *             .toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
@@ -77,6 +77,14 @@ public class KeywordPlanIdeaServiceSettings extends ClientSettings<KeywordPlanId
           GenerateKeywordIdeasPagedResponse>
       generateKeywordIdeasSettings() {
     return ((KeywordPlanIdeaServiceStubSettings) getStubSettings()).generateKeywordIdeasSettings();
+  }
+
+  /** Returns the object with the settings used for calls to generateKeywordHistoricalMetrics. */
+  public UnaryCallSettings<
+          GenerateKeywordHistoricalMetricsRequest, GenerateKeywordHistoricalMetricsResponse>
+      generateKeywordHistoricalMetricsSettings() {
+    return ((KeywordPlanIdeaServiceStubSettings) getStubSettings())
+        .generateKeywordHistoricalMetricsSettings();
   }
 
   public static final KeywordPlanIdeaServiceSettings create(KeywordPlanIdeaServiceStubSettings stub)
@@ -183,6 +191,13 @@ public class KeywordPlanIdeaServiceSettings extends ClientSettings<KeywordPlanId
             GenerateKeywordIdeasPagedResponse>
         generateKeywordIdeasSettings() {
       return getStubSettingsBuilder().generateKeywordIdeasSettings();
+    }
+
+    /** Returns the builder for the settings used for calls to generateKeywordHistoricalMetrics. */
+    public UnaryCallSettings.Builder<
+            GenerateKeywordHistoricalMetricsRequest, GenerateKeywordHistoricalMetricsResponse>
+        generateKeywordHistoricalMetricsSettings() {
+      return getStubSettingsBuilder().generateKeywordHistoricalMetricsSettings();
     }
 
     @Override

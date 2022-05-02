@@ -360,6 +360,114 @@ public interface ListingDimensionInfoOrBuilder extends
 
   /**
    * <pre>
+   * Grouping of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.ProductGroupingInfo product_grouping = 17;</code>
+   * @return Whether the productGrouping field is set.
+   */
+  boolean hasProductGrouping();
+  /**
+   * <pre>
+   * Grouping of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.ProductGroupingInfo product_grouping = 17;</code>
+   * @return The productGrouping.
+   */
+  com.google.ads.googleads.v10.common.ProductGroupingInfo getProductGrouping();
+  /**
+   * <pre>
+   * Grouping of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.ProductGroupingInfo product_grouping = 17;</code>
+   */
+  com.google.ads.googleads.v10.common.ProductGroupingInfoOrBuilder getProductGroupingOrBuilder();
+
+  /**
+   * <pre>
+   * Labels of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.ProductLabelsInfo product_labels = 18;</code>
+   * @return Whether the productLabels field is set.
+   */
+  boolean hasProductLabels();
+  /**
+   * <pre>
+   * Labels of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.ProductLabelsInfo product_labels = 18;</code>
+   * @return The productLabels.
+   */
+  com.google.ads.googleads.v10.common.ProductLabelsInfo getProductLabels();
+  /**
+   * <pre>
+   * Labels of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.ProductLabelsInfo product_labels = 18;</code>
+   */
+  com.google.ads.googleads.v10.common.ProductLabelsInfoOrBuilder getProductLabelsOrBuilder();
+
+  /**
+   * <pre>
+   * Legacy condition of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.ProductLegacyConditionInfo product_legacy_condition = 19;</code>
+   * @return Whether the productLegacyCondition field is set.
+   */
+  boolean hasProductLegacyCondition();
+  /**
+   * <pre>
+   * Legacy condition of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.ProductLegacyConditionInfo product_legacy_condition = 19;</code>
+   * @return The productLegacyCondition.
+   */
+  com.google.ads.googleads.v10.common.ProductLegacyConditionInfo getProductLegacyCondition();
+  /**
+   * <pre>
+   * Legacy condition of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.ProductLegacyConditionInfo product_legacy_condition = 19;</code>
+   */
+  com.google.ads.googleads.v10.common.ProductLegacyConditionInfoOrBuilder getProductLegacyConditionOrBuilder();
+
+  /**
+   * <pre>
+   * Full type of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.ProductTypeFullInfo product_type_full = 20;</code>
+   * @return Whether the productTypeFull field is set.
+   */
+  boolean hasProductTypeFull();
+  /**
+   * <pre>
+   * Full type of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.ProductTypeFullInfo product_type_full = 20;</code>
+   * @return The productTypeFull.
+   */
+  com.google.ads.googleads.v10.common.ProductTypeFullInfo getProductTypeFull();
+  /**
+   * <pre>
+   * Full type of a product offer.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.common.ProductTypeFullInfo product_type_full = 20;</code>
+   */
+  com.google.ads.googleads.v10.common.ProductTypeFullInfoOrBuilder getProductTypeFullOrBuilder();
+
+  /**
+   * <pre>
    * Unknown dimension. Set when no other listing dimension is set.
    * </pre>
    *

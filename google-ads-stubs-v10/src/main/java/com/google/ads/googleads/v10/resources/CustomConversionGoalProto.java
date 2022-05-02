@@ -32,33 +32,31 @@ public final class CustomConversionGoalProto {
       "tom_conversion_goal.proto\022\"google.ads.go" +
       "ogleads.v10.resources\032Bgoogle/ads/google" +
       "ads/v10/enums/custom_conversion_goal_sta" +
-      "tus.proto\032\034google/api/annotations.proto\032" +
-      "\037google/api/field_behavior.proto\032\031google" +
-      "/api/resource.proto\"\247\003\n\024CustomConversion" +
-      "Goal\022L\n\rresource_name\030\001 \001(\tB5\340A\005\372A/\n-goo" +
-      "gleads.googleapis.com/CustomConversionGo" +
-      "al\022\017\n\002id\030\002 \001(\003B\003\340A\005\022\014\n\004name\030\003 \001(\t\022J\n\022con" +
-      "version_actions\030\004 \003(\tB.\372A+\n)googleads.go" +
-      "ogleapis.com/ConversionAction\022i\n\006status\030" +
-      "\005 \001(\0162Y.google.ads.googleads.v10.enums.C" +
-      "ustomConversionGoalStatusEnum.CustomConv" +
-      "ersionGoalStatus:k\352Ah\n-googleads.googlea" +
-      "pis.com/CustomConversionGoal\0227customers/" +
-      "{customer_id}/customConversionGoals/{goa" +
-      "l_id}B\213\002\n&com.google.ads.googleads.v10.r" +
-      "esourcesB\031CustomConversionGoalProtoP\001ZKg" +
-      "oogle.golang.org/genproto/googleapis/ads" +
-      "/googleads/v10/resources;resources\242\002\003GAA" +
-      "\252\002\"Google.Ads.GoogleAds.V10.Resources\312\002\"" +
-      "Google\\Ads\\GoogleAds\\V10\\Resources\352\002&Goo" +
-      "gle::Ads::GoogleAds::V10::Resourcesb\006pro" +
-      "to3"
+      "tus.proto\032\037google/api/field_behavior.pro" +
+      "to\032\031google/api/resource.proto\"\247\003\n\024Custom" +
+      "ConversionGoal\022L\n\rresource_name\030\001 \001(\tB5\340" +
+      "A\005\372A/\n-googleads.googleapis.com/CustomCo" +
+      "nversionGoal\022\017\n\002id\030\002 \001(\003B\003\340A\005\022\014\n\004name\030\003 " +
+      "\001(\t\022J\n\022conversion_actions\030\004 \003(\tB.\372A+\n)go" +
+      "ogleads.googleapis.com/ConversionAction\022" +
+      "i\n\006status\030\005 \001(\0162Y.google.ads.googleads.v" +
+      "10.enums.CustomConversionGoalStatusEnum." +
+      "CustomConversionGoalStatus:k\352Ah\n-googlea" +
+      "ds.googleapis.com/CustomConversionGoal\0227" +
+      "customers/{customer_id}/customConversion" +
+      "Goals/{goal_id}B\213\002\n&com.google.ads.googl" +
+      "eads.v10.resourcesB\031CustomConversionGoal" +
+      "ProtoP\001ZKgoogle.golang.org/genproto/goog" +
+      "leapis/ads/googleads/v10/resources;resou" +
+      "rces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V10.Re" +
+      "sources\312\002\"Google\\Ads\\GoogleAds\\V10\\Resou" +
+      "rces\352\002&Google::Ads::GoogleAds::V10::Reso" +
+      "urcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.ads.googleads.v10.enums.CustomConversionGoalStatusProto.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -76,7 +74,6 @@ public final class CustomConversionGoalProto {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.ads.googleads.v10.enums.CustomConversionGoalStatusProto.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

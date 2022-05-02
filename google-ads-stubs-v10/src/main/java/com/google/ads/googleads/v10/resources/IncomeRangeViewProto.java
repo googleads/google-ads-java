@@ -30,26 +30,24 @@ public final class IncomeRangeViewProto {
     java.lang.String[] descriptorData = {
       "\n:google/ads/googleads/v10/resources/inc" +
       "ome_range_view.proto\022\"google.ads.googlea" +
-      "ds.v10.resources\032\034google/api/annotations" +
-      ".proto\032\037google/api/field_behavior.proto\032" +
-      "\031google/api/resource.proto\"\320\001\n\017IncomeRan" +
-      "geView\022G\n\rresource_name\030\001 \001(\tB0\340A\003\372A*\n(g" +
-      "oogleads.googleapis.com/IncomeRangeView:" +
-      "t\352Aq\n(googleads.googleapis.com/IncomeRan" +
-      "geView\022Ecustomers/{customer_id}/incomeRa" +
-      "ngeViews/{ad_group_id}~{criterion_id}B\206\002" +
-      "\n&com.google.ads.googleads.v10.resources" +
-      "B\024IncomeRangeViewProtoP\001ZKgoogle.golang." +
-      "org/genproto/googleapis/ads/googleads/v1" +
-      "0/resources;resources\242\002\003GAA\252\002\"Google.Ads" +
-      ".GoogleAds.V10.Resources\312\002\"Google\\Ads\\Go" +
-      "ogleAds\\V10\\Resources\352\002&Google::Ads::Goo" +
-      "gleAds::V10::Resourcesb\006proto3"
+      "ds.v10.resources\032\037google/api/field_behav" +
+      "ior.proto\032\031google/api/resource.proto\"\320\001\n" +
+      "\017IncomeRangeView\022G\n\rresource_name\030\001 \001(\tB" +
+      "0\340A\003\372A*\n(googleads.googleapis.com/Income" +
+      "RangeView:t\352Aq\n(googleads.googleapis.com" +
+      "/IncomeRangeView\022Ecustomers/{customer_id" +
+      "}/incomeRangeViews/{ad_group_id}~{criter" +
+      "ion_id}B\206\002\n&com.google.ads.googleads.v10" +
+      ".resourcesB\024IncomeRangeViewProtoP\001ZKgoog" +
+      "le.golang.org/genproto/googleapis/ads/go" +
+      "ogleads/v10/resources;resources\242\002\003GAA\252\002\"" +
+      "Google.Ads.GoogleAds.V10.Resources\312\002\"Goo" +
+      "gle\\Ads\\GoogleAds\\V10\\Resources\352\002&Google" +
+      "::Ads::GoogleAds::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -66,7 +64,6 @@ public final class IncomeRangeViewProto {
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

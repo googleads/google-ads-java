@@ -30,37 +30,36 @@ public final class SettingErrorProto {
     java.lang.String[] descriptorData = {
       "\n3google/ads/googleads/v10/errors/settin" +
       "g_error.proto\022\037google.ads.googleads.v10." +
-      "errors\032\034google/api/annotations.proto\"\355\005\n" +
-      "\020SettingErrorEnum\"\330\005\n\014SettingError\022\017\n\013UN" +
-      "SPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022!\n\035SETTING_TYPE" +
-      "_IS_NOT_AVAILABLE\020\003\0220\n,SETTING_TYPE_IS_N" +
-      "OT_COMPATIBLE_WITH_CAMPAIGN\020\004\022;\n7TARGETI" +
-      "NG_SETTING_CONTAINS_INVALID_CRITERION_TY" +
-      "PE_GROUP\020\005\022Q\nMTARGETING_SETTING_DEMOGRAP" +
-      "HIC_CRITERION_TYPE_GROUPS_MUST_BE_SET_TO" +
-      "_TARGET_ALL\020\006\022\\\nXTARGETING_SETTING_CANNO" +
-      "T_CHANGE_TARGET_ALL_TO_FALSE_FOR_DEMOGRA" +
-      "PHIC_CRITERION_TYPE_GROUP\020\007\022C\n?DYNAMIC_S" +
-      "EARCH_ADS_SETTING_AT_LEAST_ONE_FEED_ID_M" +
-      "UST_BE_PRESENT\020\010\022;\n7DYNAMIC_SEARCH_ADS_S" +
-      "ETTING_CONTAINS_INVALID_DOMAIN_NAME\020\t\0226\n" +
-      "2DYNAMIC_SEARCH_ADS_SETTING_CONTAINS_SUB" +
-      "DOMAIN_NAME\020\n\022=\n9DYNAMIC_SEARCH_ADS_SETT" +
-      "ING_CONTAINS_INVALID_LANGUAGE_CODE\020\013\022>\n:" +
-      "TARGET_ALL_IS_NOT_ALLOWED_FOR_PLACEMENT_" +
-      "IN_SEARCH_CAMPAIGN\020\014\022.\n*SETTING_VALUE_NO" +
-      "T_COMPATIBLE_WITH_CAMPAIGN\020\024B\361\001\n#com.goo" +
-      "gle.ads.googleads.v10.errorsB\021SettingErr" +
-      "orProtoP\001ZEgoogle.golang.org/genproto/go" +
-      "ogleapis/ads/googleads/v10/errors;errors" +
-      "\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V10.Errors" +
-      "\312\002\037Google\\Ads\\GoogleAds\\V10\\Errors\352\002#Goo" +
-      "gle::Ads::GoogleAds::V10::Errorsb\006proto3"
+      "errors\"\355\005\n\020SettingErrorEnum\"\330\005\n\014SettingE" +
+      "rror\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022!\n\035SE" +
+      "TTING_TYPE_IS_NOT_AVAILABLE\020\003\0220\n,SETTING" +
+      "_TYPE_IS_NOT_COMPATIBLE_WITH_CAMPAIGN\020\004\022" +
+      ";\n7TARGETING_SETTING_CONTAINS_INVALID_CR" +
+      "ITERION_TYPE_GROUP\020\005\022Q\nMTARGETING_SETTIN" +
+      "G_DEMOGRAPHIC_CRITERION_TYPE_GROUPS_MUST" +
+      "_BE_SET_TO_TARGET_ALL\020\006\022\\\nXTARGETING_SET" +
+      "TING_CANNOT_CHANGE_TARGET_ALL_TO_FALSE_F" +
+      "OR_DEMOGRAPHIC_CRITERION_TYPE_GROUP\020\007\022C\n" +
+      "?DYNAMIC_SEARCH_ADS_SETTING_AT_LEAST_ONE" +
+      "_FEED_ID_MUST_BE_PRESENT\020\010\022;\n7DYNAMIC_SE" +
+      "ARCH_ADS_SETTING_CONTAINS_INVALID_DOMAIN" +
+      "_NAME\020\t\0226\n2DYNAMIC_SEARCH_ADS_SETTING_CO" +
+      "NTAINS_SUBDOMAIN_NAME\020\n\022=\n9DYNAMIC_SEARC" +
+      "H_ADS_SETTING_CONTAINS_INVALID_LANGUAGE_" +
+      "CODE\020\013\022>\n:TARGET_ALL_IS_NOT_ALLOWED_FOR_" +
+      "PLACEMENT_IN_SEARCH_CAMPAIGN\020\014\022.\n*SETTIN" +
+      "G_VALUE_NOT_COMPATIBLE_WITH_CAMPAIGN\020\024B\361" +
+      "\001\n#com.google.ads.googleads.v10.errorsB\021" +
+      "SettingErrorProtoP\001ZEgoogle.golang.org/g" +
+      "enproto/googleapis/ads/googleads/v10/err" +
+      "ors;errors\242\002\003GAA\252\002\037Google.Ads.GoogleAds." +
+      "V10.Errors\312\002\037Google\\Ads\\GoogleAds\\V10\\Er" +
+      "rors\352\002#Google::Ads::GoogleAds::V10::Erro" +
+      "rsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_SettingErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -68,7 +67,6 @@ public final class SettingErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_SettingErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

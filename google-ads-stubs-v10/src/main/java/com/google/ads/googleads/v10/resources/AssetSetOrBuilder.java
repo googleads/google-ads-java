@@ -9,6 +9,16 @@ public interface AssetSetOrBuilder extends
 
   /**
    * <pre>
+   * Output only. The ID of the asset set.
+   * </pre>
+   *
+   * <code>int64 id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The id.
+   */
+  long getId();
+
+  /**
+   * <pre>
    * Immutable. The resource name of the asset set.
    * Asset set resource names have the form:
    * `customers/{customer_id}/assetSets/{asset_set_id}`

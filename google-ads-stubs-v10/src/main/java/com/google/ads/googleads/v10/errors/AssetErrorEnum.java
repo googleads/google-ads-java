@@ -63,6 +63,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -358,6 +360,23 @@ private static final long serialVersionUID = 0L;
      * <code>NAME_REQUIRED_FOR_ASSET_TYPE = 32;</code>
      */
     NAME_REQUIRED_FOR_ASSET_TYPE(32),
+    /**
+     * <pre>
+     * Legacy qualifying questions cannot be in the same Lead Form as
+     * custom questions.
+     * </pre>
+     *
+     * <code>LEAD_FORM_LEGACY_QUALIFYING_QUESTIONS_DISALLOWED = 33;</code>
+     */
+    LEAD_FORM_LEGACY_QUALIFYING_QUESTIONS_DISALLOWED(33),
+    /**
+     * <pre>
+     * Unique name is required for this asset type.
+     * </pre>
+     *
+     * <code>NAME_CONFLICT_FOR_ASSET_TYPE = 34;</code>
+     */
+    NAME_CONFLICT_FOR_ASSET_TYPE(34),
     UNRECOGNIZED(-1),
     ;
 
@@ -626,6 +645,23 @@ private static final long serialVersionUID = 0L;
      * <code>NAME_REQUIRED_FOR_ASSET_TYPE = 32;</code>
      */
     public static final int NAME_REQUIRED_FOR_ASSET_TYPE_VALUE = 32;
+    /**
+     * <pre>
+     * Legacy qualifying questions cannot be in the same Lead Form as
+     * custom questions.
+     * </pre>
+     *
+     * <code>LEAD_FORM_LEGACY_QUALIFYING_QUESTIONS_DISALLOWED = 33;</code>
+     */
+    public static final int LEAD_FORM_LEGACY_QUALIFYING_QUESTIONS_DISALLOWED_VALUE = 33;
+    /**
+     * <pre>
+     * Unique name is required for this asset type.
+     * </pre>
+     *
+     * <code>NAME_CONFLICT_FOR_ASSET_TYPE = 34;</code>
+     */
+    public static final int NAME_CONFLICT_FOR_ASSET_TYPE_VALUE = 34;
 
 
     public final int getNumber() {
@@ -684,6 +720,8 @@ private static final long serialVersionUID = 0L;
         case 30: return MOBILE_APP_INVALID_APP_ID;
         case 31: return MOBILE_APP_INVALID_FINAL_URL_FOR_APP_DOWNLOAD_URL;
         case 32: return NAME_REQUIRED_FOR_ASSET_TYPE;
+        case 33: return LEAD_FORM_LEGACY_QUALIFYING_QUESTIONS_DISALLOWED;
+        case 34: return NAME_CONFLICT_FOR_ASSET_TYPE;
         default: return null;
       }
     }

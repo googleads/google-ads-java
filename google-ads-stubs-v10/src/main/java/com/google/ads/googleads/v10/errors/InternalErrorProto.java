@@ -30,23 +30,21 @@ public final class InternalErrorProto {
     java.lang.String[] descriptorData = {
       "\n4google/ads/googleads/v10/errors/intern" +
       "al_error.proto\022\037google.ads.googleads.v10" +
-      ".errors\032\034google/api/annotations.proto\"\241\001" +
-      "\n\021InternalErrorEnum\"\213\001\n\rInternalError\022\017\n" +
-      "\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\022\n\016INTERNAL_" +
-      "ERROR\020\002\022\034\n\030ERROR_CODE_NOT_PUBLISHED\020\003\022\023\n" +
-      "\017TRANSIENT_ERROR\020\004\022\025\n\021DEADLINE_EXCEEDED\020" +
-      "\005B\362\001\n#com.google.ads.googleads.v10.error" +
-      "sB\022InternalErrorProtoP\001ZEgoogle.golang.o" +
-      "rg/genproto/googleapis/ads/googleads/v10" +
-      "/errors;errors\242\002\003GAA\252\002\037Google.Ads.Google" +
-      "Ads.V10.Errors\312\002\037Google\\Ads\\GoogleAds\\V1" +
-      "0\\Errors\352\002#Google::Ads::GoogleAds::V10::" +
-      "Errorsb\006proto3"
+      ".errors\"\241\001\n\021InternalErrorEnum\"\213\001\n\rIntern" +
+      "alError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\022\n" +
+      "\016INTERNAL_ERROR\020\002\022\034\n\030ERROR_CODE_NOT_PUBL" +
+      "ISHED\020\003\022\023\n\017TRANSIENT_ERROR\020\004\022\025\n\021DEADLINE" +
+      "_EXCEEDED\020\005B\362\001\n#com.google.ads.googleads" +
+      ".v10.errorsB\022InternalErrorProtoP\001ZEgoogl" +
+      "e.golang.org/genproto/googleapis/ads/goo" +
+      "gleads/v10/errors;errors\242\002\003GAA\252\002\037Google." +
+      "Ads.GoogleAds.V10.Errors\312\002\037Google\\Ads\\Go" +
+      "ogleAds\\V10\\Errors\352\002#Google::Ads::Google" +
+      "Ads::V10::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_InternalErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -54,7 +52,6 @@ public final class InternalErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_InternalErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

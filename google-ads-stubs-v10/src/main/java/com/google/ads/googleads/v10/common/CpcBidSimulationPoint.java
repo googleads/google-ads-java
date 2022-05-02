@@ -84,13 +84,13 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 120: {
-            cpcSimulationKeyValueCase_ = 15;
             cpcSimulationKeyValue_ = input.readInt64();
+            cpcSimulationKeyValueCase_ = 15;
             break;
           }
           case 129: {
-            cpcSimulationKeyValueCase_ = 16;
             cpcSimulationKeyValue_ = input.readDouble();
+            cpcSimulationKeyValueCase_ = 16;
             break;
           }
           case 136: {
@@ -109,6 +109,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);

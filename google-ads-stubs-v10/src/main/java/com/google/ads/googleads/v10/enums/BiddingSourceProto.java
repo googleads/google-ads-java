@@ -30,22 +30,20 @@ public final class BiddingSourceProto {
     java.lang.String[] descriptorData = {
       "\n3google/ads/googleads/v10/enums/bidding" +
       "_source.proto\022\036google.ads.googleads.v10." +
-      "enums\032\034google/api/annotations.proto\"\207\001\n\021" +
-      "BiddingSourceEnum\"r\n\rBiddingSource\022\017\n\013UN" +
-      "SPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\035\n\031CAMPAIGN_BID" +
-      "DING_STRATEGY\020\005\022\014\n\010AD_GROUP\020\006\022\026\n\022AD_GROU" +
-      "P_CRITERION\020\007B\354\001\n\"com.google.ads.googlea" +
-      "ds.v10.enumsB\022BiddingSourceProtoP\001ZCgoog" +
-      "le.golang.org/genproto/googleapis/ads/go" +
-      "ogleads/v10/enums;enums\242\002\003GAA\252\002\036Google.A" +
-      "ds.GoogleAds.V10.Enums\312\002\036Google\\Ads\\Goog" +
-      "leAds\\V10\\Enums\352\002\"Google::Ads::GoogleAds" +
-      "::V10::Enumsb\006proto3"
+      "enums\"\207\001\n\021BiddingSourceEnum\"r\n\rBiddingSo" +
+      "urce\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\035\n\031CA" +
+      "MPAIGN_BIDDING_STRATEGY\020\005\022\014\n\010AD_GROUP\020\006\022" +
+      "\026\n\022AD_GROUP_CRITERION\020\007B\354\001\n\"com.google.a" +
+      "ds.googleads.v10.enumsB\022BiddingSourcePro" +
+      "toP\001ZCgoogle.golang.org/genproto/googlea" +
+      "pis/ads/googleads/v10/enums;enums\242\002\003GAA\252" +
+      "\002\036Google.Ads.GoogleAds.V10.Enums\312\002\036Googl" +
+      "e\\Ads\\GoogleAds\\V10\\Enums\352\002\"Google::Ads:" +
+      ":GoogleAds::V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_BiddingSourceEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -53,7 +51,6 @@ public final class BiddingSourceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_BiddingSourceEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

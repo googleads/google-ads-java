@@ -30,31 +30,30 @@ public final class AuthorizationErrorProto {
     java.lang.String[] descriptorData = {
       "\n9google/ads/googleads/v10/errors/author" +
       "ization_error.proto\022\037google.ads.googlead" +
-      "s.v10.errors\032\034google/api/annotations.pro" +
-      "to\"\332\003\n\026AuthorizationErrorEnum\"\277\003\n\022Author" +
-      "izationError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN" +
-      "\020\001\022\032\n\026USER_PERMISSION_DENIED\020\002\022$\n DEVELO" +
-      "PER_TOKEN_NOT_ON_ALLOWLIST\020\r\022\036\n\032DEVELOPE" +
-      "R_TOKEN_PROHIBITED\020\004\022\024\n\020PROJECT_DISABLED" +
-      "\020\005\022\027\n\023AUTHORIZATION_ERROR\020\006\022\030\n\024ACTION_NO" +
-      "T_PERMITTED\020\007\022\025\n\021INCOMPLETE_SIGNUP\020\010\022\030\n\024" +
-      "CUSTOMER_NOT_ENABLED\020\030\022\017\n\013MISSING_TOS\020\t\022" +
-      " \n\034DEVELOPER_TOKEN_NOT_APPROVED\020\n\022=\n9INV" +
-      "ALID_LOGIN_CUSTOMER_ID_SERVING_CUSTOMER_" +
-      "ID_COMBINATION\020\013\022\031\n\025SERVICE_ACCESS_DENIE" +
-      "D\020\014\022\"\n\036ACCESS_DENIED_FOR_ACCOUNT_TYPE\020\031B" +
-      "\367\001\n#com.google.ads.googleads.v10.errorsB" +
-      "\027AuthorizationErrorProtoP\001ZEgoogle.golan" +
-      "g.org/genproto/googleapis/ads/googleads/" +
-      "v10/errors;errors\242\002\003GAA\252\002\037Google.Ads.Goo" +
-      "gleAds.V10.Errors\312\002\037Google\\Ads\\GoogleAds" +
-      "\\V10\\Errors\352\002#Google::Ads::GoogleAds::V1" +
-      "0::Errorsb\006proto3"
+      "s.v10.errors\"\364\003\n\026AuthorizationErrorEnum\"" +
+      "\331\003\n\022AuthorizationError\022\017\n\013UNSPECIFIED\020\000\022" +
+      "\013\n\007UNKNOWN\020\001\022\032\n\026USER_PERMISSION_DENIED\020\002" +
+      "\022$\n DEVELOPER_TOKEN_NOT_ON_ALLOWLIST\020\r\022\036" +
+      "\n\032DEVELOPER_TOKEN_PROHIBITED\020\004\022\024\n\020PROJEC" +
+      "T_DISABLED\020\005\022\027\n\023AUTHORIZATION_ERROR\020\006\022\030\n" +
+      "\024ACTION_NOT_PERMITTED\020\007\022\025\n\021INCOMPLETE_SI" +
+      "GNUP\020\010\022\030\n\024CUSTOMER_NOT_ENABLED\020\030\022\017\n\013MISS" +
+      "ING_TOS\020\t\022 \n\034DEVELOPER_TOKEN_NOT_APPROVE" +
+      "D\020\n\022=\n9INVALID_LOGIN_CUSTOMER_ID_SERVING" +
+      "_CUSTOMER_ID_COMBINATION\020\013\022\031\n\025SERVICE_AC" +
+      "CESS_DENIED\020\014\022\"\n\036ACCESS_DENIED_FOR_ACCOU" +
+      "NT_TYPE\020\031\022\030\n\024METRIC_ACCESS_DENIED\020\032B\367\001\n#" +
+      "com.google.ads.googleads.v10.errorsB\027Aut" +
+      "horizationErrorProtoP\001ZEgoogle.golang.or" +
+      "g/genproto/googleapis/ads/googleads/v10/" +
+      "errors;errors\242\002\003GAA\252\002\037Google.Ads.GoogleA" +
+      "ds.V10.Errors\312\002\037Google\\Ads\\GoogleAds\\V10" +
+      "\\Errors\352\002#Google::Ads::GoogleAds::V10::E" +
+      "rrorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_AuthorizationErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -62,7 +61,6 @@ public final class AuthorizationErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_AuthorizationErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

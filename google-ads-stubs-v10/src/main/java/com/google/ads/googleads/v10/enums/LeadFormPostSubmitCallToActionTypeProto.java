@@ -30,24 +30,22 @@ public final class LeadFormPostSubmitCallToActionTypeProto {
     java.lang.String[] descriptorData = {
       "\nNgoogle/ads/googleads/v10/enums/lead_fo" +
       "rm_post_submit_call_to_action_type.proto" +
-      "\022\036google.ads.googleads.v10.enums\032\034google" +
-      "/api/annotations.proto\"\250\001\n&LeadFormPostS" +
-      "ubmitCallToActionTypeEnum\"~\n\"LeadFormPos" +
-      "tSubmitCallToActionType\022\017\n\013UNSPECIFIED\020\000" +
-      "\022\013\n\007UNKNOWN\020\001\022\016\n\nVISIT_SITE\020\002\022\014\n\010DOWNLOA" +
-      "D\020\003\022\016\n\nLEARN_MORE\020\004\022\014\n\010SHOP_NOW\020\005B\201\002\n\"co" +
-      "m.google.ads.googleads.v10.enumsB\'LeadFo" +
-      "rmPostSubmitCallToActionTypeProtoP\001ZCgoo" +
-      "gle.golang.org/genproto/googleapis/ads/g" +
-      "oogleads/v10/enums;enums\242\002\003GAA\252\002\036Google." +
-      "Ads.GoogleAds.V10.Enums\312\002\036Google\\Ads\\Goo" +
-      "gleAds\\V10\\Enums\352\002\"Google::Ads::GoogleAd" +
-      "s::V10::Enumsb\006proto3"
+      "\022\036google.ads.googleads.v10.enums\"\250\001\n&Lea" +
+      "dFormPostSubmitCallToActionTypeEnum\"~\n\"L" +
+      "eadFormPostSubmitCallToActionType\022\017\n\013UNS" +
+      "PECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\016\n\nVISIT_SITE\020\002\022" +
+      "\014\n\010DOWNLOAD\020\003\022\016\n\nLEARN_MORE\020\004\022\014\n\010SHOP_NO" +
+      "W\020\005B\201\002\n\"com.google.ads.googleads.v10.enu" +
+      "msB\'LeadFormPostSubmitCallToActionTypePr" +
+      "otoP\001ZCgoogle.golang.org/genproto/google" +
+      "apis/ads/googleads/v10/enums;enums\242\002\003GAA" +
+      "\252\002\036Google.Ads.GoogleAds.V10.Enums\312\002\036Goog" +
+      "le\\Ads\\GoogleAds\\V10\\Enums\352\002\"Google::Ads" +
+      "::GoogleAds::V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_LeadFormPostSubmitCallToActionTypeEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -55,7 +53,6 @@ public final class LeadFormPostSubmitCallToActionTypeProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_LeadFormPostSubmitCallToActionTypeEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

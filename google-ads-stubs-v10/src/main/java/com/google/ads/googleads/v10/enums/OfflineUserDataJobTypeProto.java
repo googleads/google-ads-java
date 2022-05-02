@@ -30,25 +30,23 @@ public final class OfflineUserDataJobTypeProto {
     java.lang.String[] descriptorData = {
       "\n?google/ads/googleads/v10/enums/offline" +
       "_user_data_job_type.proto\022\036google.ads.go" +
-      "ogleads.v10.enums\032\034google/api/annotation" +
-      "s.proto\"\337\001\n\032OfflineUserDataJobTypeEnum\"\300" +
-      "\001\n\026OfflineUserDataJobType\022\017\n\013UNSPECIFIED" +
-      "\020\000\022\013\n\007UNKNOWN\020\001\022\"\n\036STORE_SALES_UPLOAD_FI" +
-      "RST_PARTY\020\002\022\"\n\036STORE_SALES_UPLOAD_THIRD_" +
-      "PARTY\020\003\022\034\n\030CUSTOMER_MATCH_USER_LIST\020\004\022\"\n" +
-      "\036CUSTOMER_MATCH_WITH_ATTRIBUTES\020\005B\365\001\n\"co" +
-      "m.google.ads.googleads.v10.enumsB\033Offlin" +
-      "eUserDataJobTypeProtoP\001ZCgoogle.golang.o" +
-      "rg/genproto/googleapis/ads/googleads/v10" +
-      "/enums;enums\242\002\003GAA\252\002\036Google.Ads.GoogleAd" +
-      "s.V10.Enums\312\002\036Google\\Ads\\GoogleAds\\V10\\E" +
-      "nums\352\002\"Google::Ads::GoogleAds::V10::Enum" +
-      "sb\006proto3"
+      "ogleads.v10.enums\"\337\001\n\032OfflineUserDataJob" +
+      "TypeEnum\"\300\001\n\026OfflineUserDataJobType\022\017\n\013U" +
+      "NSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\"\n\036STORE_SALES" +
+      "_UPLOAD_FIRST_PARTY\020\002\022\"\n\036STORE_SALES_UPL" +
+      "OAD_THIRD_PARTY\020\003\022\034\n\030CUSTOMER_MATCH_USER" +
+      "_LIST\020\004\022\"\n\036CUSTOMER_MATCH_WITH_ATTRIBUTE" +
+      "S\020\005B\365\001\n\"com.google.ads.googleads.v10.enu" +
+      "msB\033OfflineUserDataJobTypeProtoP\001ZCgoogl" +
+      "e.golang.org/genproto/googleapis/ads/goo" +
+      "gleads/v10/enums;enums\242\002\003GAA\252\002\036Google.Ad" +
+      "s.GoogleAds.V10.Enums\312\002\036Google\\Ads\\Googl" +
+      "eAds\\V10\\Enums\352\002\"Google::Ads::GoogleAds:" +
+      ":V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_OfflineUserDataJobTypeEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -56,7 +54,6 @@ public final class OfflineUserDataJobTypeProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_OfflineUserDataJobTypeEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

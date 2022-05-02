@@ -63,6 +63,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -222,6 +224,16 @@ private static final long serialVersionUID = 0L;
      * <code>DIMENSION_NO_CONDITION_NOT_ALLOWED = 13;</code>
      */
     DIMENSION_NO_CONDITION_NOT_ALLOWED(13),
+    /**
+     * <pre>
+     * Value rule sets defined on the specified conversion action categories are
+     * not supported. The list of conversion action categories must be an empty
+     * list, only STORE_VISIT, or only STORE_SALE.
+     * </pre>
+     *
+     * <code>UNSUPPORTED_CONVERSION_ACTION_CATEGORIES = 14;</code>
+     */
+    UNSUPPORTED_CONVERSION_ACTION_CATEGORIES(14),
     UNRECOGNIZED(-1),
     ;
 
@@ -354,6 +366,16 @@ private static final long serialVersionUID = 0L;
      * <code>DIMENSION_NO_CONDITION_NOT_ALLOWED = 13;</code>
      */
     public static final int DIMENSION_NO_CONDITION_NOT_ALLOWED_VALUE = 13;
+    /**
+     * <pre>
+     * Value rule sets defined on the specified conversion action categories are
+     * not supported. The list of conversion action categories must be an empty
+     * list, only STORE_VISIT, or only STORE_SALE.
+     * </pre>
+     *
+     * <code>UNSUPPORTED_CONVERSION_ACTION_CATEGORIES = 14;</code>
+     */
+    public static final int UNSUPPORTED_CONVERSION_ACTION_CATEGORIES_VALUE = 14;
 
 
     public final int getNumber() {
@@ -394,6 +416,7 @@ private static final long serialVersionUID = 0L;
         case 11: return INELIGIBLE_CONVERSION_ACTION_CATEGORIES;
         case 12: return DIMENSION_NO_CONDITION_USED_WITH_OTHER_DIMENSIONS;
         case 13: return DIMENSION_NO_CONDITION_NOT_ALLOWED;
+        case 14: return UNSUPPORTED_CONVERSION_ACTION_CATEGORIES;
         default: return null;
       }
     }

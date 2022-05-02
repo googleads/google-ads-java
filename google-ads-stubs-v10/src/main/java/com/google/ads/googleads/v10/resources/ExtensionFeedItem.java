@@ -321,6 +321,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -3879,8 +3881,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (extensionCase_ == 2) {
           sitelinkFeedItemBuilder_.mergeFrom(value);
+        } else {
+          sitelinkFeedItemBuilder_.setMessage(value);
         }
-        sitelinkFeedItemBuilder_.setMessage(value);
       }
       extensionCase_ = 2;
       return this;
@@ -4056,8 +4059,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (extensionCase_ == 3) {
           structuredSnippetFeedItemBuilder_.mergeFrom(value);
+        } else {
+          structuredSnippetFeedItemBuilder_.setMessage(value);
         }
-        structuredSnippetFeedItemBuilder_.setMessage(value);
       }
       extensionCase_ = 3;
       return this;
@@ -4233,8 +4237,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (extensionCase_ == 7) {
           appFeedItemBuilder_.mergeFrom(value);
+        } else {
+          appFeedItemBuilder_.setMessage(value);
         }
-        appFeedItemBuilder_.setMessage(value);
       }
       extensionCase_ = 7;
       return this;
@@ -4410,8 +4415,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (extensionCase_ == 8) {
           callFeedItemBuilder_.mergeFrom(value);
+        } else {
+          callFeedItemBuilder_.setMessage(value);
         }
-        callFeedItemBuilder_.setMessage(value);
       }
       extensionCase_ = 8;
       return this;
@@ -4587,8 +4593,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (extensionCase_ == 9) {
           calloutFeedItemBuilder_.mergeFrom(value);
+        } else {
+          calloutFeedItemBuilder_.setMessage(value);
         }
-        calloutFeedItemBuilder_.setMessage(value);
       }
       extensionCase_ = 9;
       return this;
@@ -4764,8 +4771,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (extensionCase_ == 10) {
           textMessageFeedItemBuilder_.mergeFrom(value);
+        } else {
+          textMessageFeedItemBuilder_.setMessage(value);
         }
-        textMessageFeedItemBuilder_.setMessage(value);
       }
       extensionCase_ = 10;
       return this;
@@ -4941,8 +4949,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (extensionCase_ == 11) {
           priceFeedItemBuilder_.mergeFrom(value);
+        } else {
+          priceFeedItemBuilder_.setMessage(value);
         }
-        priceFeedItemBuilder_.setMessage(value);
       }
       extensionCase_ = 11;
       return this;
@@ -5118,8 +5127,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (extensionCase_ == 12) {
           promotionFeedItemBuilder_.mergeFrom(value);
+        } else {
+          promotionFeedItemBuilder_.setMessage(value);
         }
-        promotionFeedItemBuilder_.setMessage(value);
       }
       extensionCase_ = 12;
       return this;
@@ -5300,8 +5310,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (extensionCase_ == 14) {
           locationFeedItemBuilder_.mergeFrom(value);
+        } else {
+          locationFeedItemBuilder_.setMessage(value);
         }
-        locationFeedItemBuilder_.setMessage(value);
       }
       extensionCase_ = 14;
       return this;
@@ -5491,8 +5502,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (extensionCase_ == 15) {
           affiliateLocationFeedItemBuilder_.mergeFrom(value);
+        } else {
+          affiliateLocationFeedItemBuilder_.setMessage(value);
         }
-        affiliateLocationFeedItemBuilder_.setMessage(value);
       }
       extensionCase_ = 15;
       return this;
@@ -5676,8 +5688,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (extensionCase_ == 23) {
           hotelCalloutFeedItemBuilder_.mergeFrom(value);
+        } else {
+          hotelCalloutFeedItemBuilder_.setMessage(value);
         }
-        hotelCalloutFeedItemBuilder_.setMessage(value);
       }
       extensionCase_ = 23;
       return this;
@@ -5853,8 +5866,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (extensionCase_ == 31) {
           imageFeedItemBuilder_.mergeFrom(value);
+        } else {
+          imageFeedItemBuilder_.setMessage(value);
         }
-        imageFeedItemBuilder_.setMessage(value);
       }
       extensionCase_ = 31;
       return this;

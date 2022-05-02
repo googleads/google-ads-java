@@ -30,23 +30,21 @@ public final class AccountBudgetProposalTypeProto {
     java.lang.String[] descriptorData = {
       "\nAgoogle/ads/googleads/v10/enums/account" +
       "_budget_proposal_type.proto\022\036google.ads." +
-      "googleads.v10.enums\032\034google/api/annotati" +
-      "ons.proto\"\207\001\n\035AccountBudgetProposalTypeE" +
-      "num\"f\n\031AccountBudgetProposalType\022\017\n\013UNSP" +
-      "ECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\n\n\006CREATE\020\002\022\n\n\006UP" +
-      "DATE\020\003\022\007\n\003END\020\004\022\n\n\006REMOVE\020\005B\370\001\n\"com.goog" +
-      "le.ads.googleads.v10.enumsB\036AccountBudge" +
-      "tProposalTypeProtoP\001ZCgoogle.golang.org/" +
-      "genproto/googleapis/ads/googleads/v10/en" +
-      "ums;enums\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V" +
-      "10.Enums\312\002\036Google\\Ads\\GoogleAds\\V10\\Enum" +
-      "s\352\002\"Google::Ads::GoogleAds::V10::Enumsb\006" +
-      "proto3"
+      "googleads.v10.enums\"\207\001\n\035AccountBudgetPro" +
+      "posalTypeEnum\"f\n\031AccountBudgetProposalTy" +
+      "pe\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\n\n\006CREA" +
+      "TE\020\002\022\n\n\006UPDATE\020\003\022\007\n\003END\020\004\022\n\n\006REMOVE\020\005B\370\001" +
+      "\n\"com.google.ads.googleads.v10.enumsB\036Ac" +
+      "countBudgetProposalTypeProtoP\001ZCgoogle.g" +
+      "olang.org/genproto/googleapis/ads/google" +
+      "ads/v10/enums;enums\242\002\003GAA\252\002\036Google.Ads.G" +
+      "oogleAds.V10.Enums\312\002\036Google\\Ads\\GoogleAd" +
+      "s\\V10\\Enums\352\002\"Google::Ads::GoogleAds::V1" +
+      "0::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_AccountBudgetProposalTypeEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -54,7 +52,6 @@ public final class AccountBudgetProposalTypeProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_AccountBudgetProposalTypeEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -189,6 +189,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -294,6 +296,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -348,7 +352,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (targetRoas_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(targetRoas_) != 0) {
         output.writeDouble(1, targetRoas_);
       }
       unknownFields.writeTo(output);
@@ -360,7 +364,7 @@ private static final long serialVersionUID = 0L;
       if (size != -1) return size;
 
       size = 0;
-      if (targetRoas_ != 0D) {
+      if (java.lang.Double.doubleToRawLongBits(targetRoas_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(1, targetRoas_);
       }
@@ -831,6 +835,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -1368,6 +1374,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -2003,6 +2011,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -2813,6 +2823,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -3306,6 +3318,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional int64 target_spend_micros = 1 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @deprecated google.ads.googleads.v10.resources.AccessibleBiddingStrategy.TargetSpend.target_spend_micros is deprecated.
+     *     See google/ads/googleads/v10/resources/accessible_bidding_strategy.proto;l=106
      * @return Whether the targetSpendMicros field is set.
      */
     @java.lang.Deprecated boolean hasTargetSpendMicros();
@@ -3321,6 +3335,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional int64 target_spend_micros = 1 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @deprecated google.ads.googleads.v10.resources.AccessibleBiddingStrategy.TargetSpend.target_spend_micros is deprecated.
+     *     See google/ads/googleads/v10/resources/accessible_bidding_strategy.proto;l=106
      * @return The targetSpendMicros.
      */
     @java.lang.Deprecated long getTargetSpendMicros();
@@ -3418,6 +3434,8 @@ private static final long serialVersionUID = 0L;
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
@@ -3454,6 +3472,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional int64 target_spend_micros = 1 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @deprecated google.ads.googleads.v10.resources.AccessibleBiddingStrategy.TargetSpend.target_spend_micros is deprecated.
+     *     See google/ads/googleads/v10/resources/accessible_bidding_strategy.proto;l=106
      * @return Whether the targetSpendMicros field is set.
      */
     @java.lang.Override
@@ -3472,6 +3492,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>optional int64 target_spend_micros = 1 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @deprecated google.ads.googleads.v10.resources.AccessibleBiddingStrategy.TargetSpend.target_spend_micros is deprecated.
+     *     See google/ads/googleads/v10/resources/accessible_bidding_strategy.proto;l=106
      * @return The targetSpendMicros.
      */
     @java.lang.Override
@@ -3867,6 +3889,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>optional int64 target_spend_micros = 1 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @deprecated google.ads.googleads.v10.resources.AccessibleBiddingStrategy.TargetSpend.target_spend_micros is deprecated.
+       *     See google/ads/googleads/v10/resources/accessible_bidding_strategy.proto;l=106
        * @return Whether the targetSpendMicros field is set.
        */
       @java.lang.Override
@@ -3885,6 +3909,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>optional int64 target_spend_micros = 1 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @deprecated google.ads.googleads.v10.resources.AccessibleBiddingStrategy.TargetSpend.target_spend_micros is deprecated.
+       *     See google/ads/googleads/v10/resources/accessible_bidding_strategy.proto;l=106
        * @return The targetSpendMicros.
        */
       @java.lang.Override
@@ -3903,6 +3929,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>optional int64 target_spend_micros = 1 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @deprecated google.ads.googleads.v10.resources.AccessibleBiddingStrategy.TargetSpend.target_spend_micros is deprecated.
+       *     See google/ads/googleads/v10/resources/accessible_bidding_strategy.proto;l=106
        * @param value The targetSpendMicros to set.
        * @return This builder for chaining.
        */
@@ -3924,6 +3952,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>optional int64 target_spend_micros = 1 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @deprecated google.ads.googleads.v10.resources.AccessibleBiddingStrategy.TargetSpend.target_spend_micros is deprecated.
+       *     See google/ads/googleads/v10/resources/accessible_bidding_strategy.proto;l=106
        * @return This builder for chaining.
        */
       @java.lang.Deprecated public Builder clearTargetSpendMicros() {
@@ -5709,8 +5739,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (schemeCase_ == 7) {
           maximizeConversionValueBuilder_.mergeFrom(value);
+        } else {
+          maximizeConversionValueBuilder_.setMessage(value);
         }
-        maximizeConversionValueBuilder_.setMessage(value);
       }
       schemeCase_ = 7;
       return this;
@@ -5895,8 +5926,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (schemeCase_ == 8) {
           maximizeConversionsBuilder_.mergeFrom(value);
+        } else {
+          maximizeConversionsBuilder_.setMessage(value);
         }
-        maximizeConversionsBuilder_.setMessage(value);
       }
       schemeCase_ = 8;
       return this;
@@ -6081,8 +6113,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (schemeCase_ == 9) {
           targetCpaBuilder_.mergeFrom(value);
+        } else {
+          targetCpaBuilder_.setMessage(value);
         }
-        targetCpaBuilder_.setMessage(value);
       }
       schemeCase_ = 9;
       return this;
@@ -6267,8 +6300,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (schemeCase_ == 10) {
           targetImpressionShareBuilder_.mergeFrom(value);
+        } else {
+          targetImpressionShareBuilder_.setMessage(value);
         }
-        targetImpressionShareBuilder_.setMessage(value);
       }
       schemeCase_ = 10;
       return this;
@@ -6453,8 +6487,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (schemeCase_ == 11) {
           targetRoasBuilder_.mergeFrom(value);
+        } else {
+          targetRoasBuilder_.setMessage(value);
         }
-        targetRoasBuilder_.setMessage(value);
       }
       schemeCase_ = 11;
       return this;
@@ -6639,8 +6674,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (schemeCase_ == 12) {
           targetSpendBuilder_.mergeFrom(value);
+        } else {
+          targetSpendBuilder_.setMessage(value);
         }
-        targetSpendBuilder_.setMessage(value);
       }
       schemeCase_ = 12;
       return this;

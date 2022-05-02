@@ -18,6 +18,8 @@ package com.google.ads.googleads.v10.services.stub;
 
 import static com.google.ads.googleads.v10.services.KeywordPlanIdeaServiceClient.GenerateKeywordIdeasPagedResponse;
 
+import com.google.ads.googleads.v10.services.GenerateKeywordHistoricalMetricsRequest;
+import com.google.ads.googleads.v10.services.GenerateKeywordHistoricalMetricsResponse;
 import com.google.ads.googleads.v10.services.GenerateKeywordIdeaResponse;
 import com.google.ads.googleads.v10.services.GenerateKeywordIdeasRequest;
 import com.google.api.gax.core.BackgroundResource;
@@ -55,10 +57,30 @@ public class GrpcKeywordPlanIdeaServiceStub extends KeywordPlanIdeaServiceStub {
                   ProtoUtils.marshaller(GenerateKeywordIdeaResponse.getDefaultInstance()))
               .build();
 
+  private static final MethodDescriptor<
+          GenerateKeywordHistoricalMetricsRequest, GenerateKeywordHistoricalMetricsResponse>
+      generateKeywordHistoricalMetricsMethodDescriptor =
+          MethodDescriptor
+              .<GenerateKeywordHistoricalMetricsRequest, GenerateKeywordHistoricalMetricsResponse>
+                  newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(
+                  "google.ads.googleads.v10.services.KeywordPlanIdeaService/GenerateKeywordHistoricalMetrics")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(
+                      GenerateKeywordHistoricalMetricsRequest.getDefaultInstance()))
+              .setResponseMarshaller(
+                  ProtoUtils.marshaller(
+                      GenerateKeywordHistoricalMetricsResponse.getDefaultInstance()))
+              .build();
+
   private final UnaryCallable<GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse>
       generateKeywordIdeasCallable;
   private final UnaryCallable<GenerateKeywordIdeasRequest, GenerateKeywordIdeasPagedResponse>
       generateKeywordIdeasPagedCallable;
+  private final UnaryCallable<
+          GenerateKeywordHistoricalMetricsRequest, GenerateKeywordHistoricalMetricsResponse>
+      generateKeywordHistoricalMetricsCallable;
 
   private final BackgroundResource backgroundResources;
   private final GrpcOperationsStub operationsStub;
@@ -115,6 +137,20 @@ public class GrpcKeywordPlanIdeaServiceStub extends KeywordPlanIdeaServiceStub {
                       return params.build();
                     })
                 .build();
+    GrpcCallSettings<
+            GenerateKeywordHistoricalMetricsRequest, GenerateKeywordHistoricalMetricsResponse>
+        generateKeywordHistoricalMetricsTransportSettings =
+            GrpcCallSettings
+                .<GenerateKeywordHistoricalMetricsRequest, GenerateKeywordHistoricalMetricsResponse>
+                    newBuilder()
+                .setMethodDescriptor(generateKeywordHistoricalMetricsMethodDescriptor)
+                .setParamsExtractor(
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("customer_id", String.valueOf(request.getCustomerId()));
+                      return params.build();
+                    })
+                .build();
 
     this.generateKeywordIdeasCallable =
         callableFactory.createUnaryCallable(
@@ -125,6 +161,11 @@ public class GrpcKeywordPlanIdeaServiceStub extends KeywordPlanIdeaServiceStub {
         callableFactory.createPagedCallable(
             generateKeywordIdeasTransportSettings,
             settings.generateKeywordIdeasSettings(),
+            clientContext);
+    this.generateKeywordHistoricalMetricsCallable =
+        callableFactory.createUnaryCallable(
+            generateKeywordHistoricalMetricsTransportSettings,
+            settings.generateKeywordHistoricalMetricsSettings(),
             clientContext);
 
     this.backgroundResources =
@@ -145,6 +186,13 @@ public class GrpcKeywordPlanIdeaServiceStub extends KeywordPlanIdeaServiceStub {
   public UnaryCallable<GenerateKeywordIdeasRequest, GenerateKeywordIdeasPagedResponse>
       generateKeywordIdeasPagedCallable() {
     return generateKeywordIdeasPagedCallable;
+  }
+
+  @Override
+  public UnaryCallable<
+          GenerateKeywordHistoricalMetricsRequest, GenerateKeywordHistoricalMetricsResponse>
+      generateKeywordHistoricalMetricsCallable() {
+    return generateKeywordHistoricalMetricsCallable;
   }
 
   @Override

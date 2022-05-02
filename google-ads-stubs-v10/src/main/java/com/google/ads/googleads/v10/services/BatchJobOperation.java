@@ -66,6 +66,12 @@ private static final long serialVersionUID = 0L;
             operationCase_ = 1;
             break;
           }
+          case 34: {
+            java.lang.String s = input.readStringRequireUtf8();
+            operationCase_ = 4;
+            operation_ = s;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -77,6 +83,8 @@ private static final long serialVersionUID = 0L;
       }
     } catch (com.google.protobuf.InvalidProtocolBufferException e) {
       throw e.setUnfinishedMessage(this);
+    } catch (com.google.protobuf.UninitializedMessageException e) {
+      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
@@ -104,6 +112,7 @@ private static final long serialVersionUID = 0L;
       implements com.google.protobuf.Internal.EnumLite,
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     CREATE(1),
+    REMOVE(4),
     OPERATION_NOT_SET(0);
     private final int value;
     private OperationCase(int value) {
@@ -122,6 +131,7 @@ private static final long serialVersionUID = 0L;
     public static OperationCase forNumber(int value) {
       switch (value) {
         case 1: return CREATE;
+        case 4: return REMOVE;
         case 0: return OPERATION_NOT_SET;
         default: return null;
       }
@@ -180,6 +190,76 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v10.resources.BatchJob.getDefaultInstance();
   }
 
+  public static final int REMOVE_FIELD_NUMBER = 4;
+  /**
+   * <pre>
+   * Remove operation: The batch job must not have been run. A resource name
+   * for the removed batch job is expected, in this format:
+   * `customers/{customer_id}/batchJobs/{batch_job_id}`
+   * </pre>
+   *
+   * <code>string remove = 4 [(.google.api.resource_reference) = { ... }</code>
+   * @return Whether the remove field is set.
+   */
+  public boolean hasRemove() {
+    return operationCase_ == 4;
+  }
+  /**
+   * <pre>
+   * Remove operation: The batch job must not have been run. A resource name
+   * for the removed batch job is expected, in this format:
+   * `customers/{customer_id}/batchJobs/{batch_job_id}`
+   * </pre>
+   *
+   * <code>string remove = 4 [(.google.api.resource_reference) = { ... }</code>
+   * @return The remove.
+   */
+  public java.lang.String getRemove() {
+    java.lang.Object ref = "";
+    if (operationCase_ == 4) {
+      ref = operation_;
+    }
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      if (operationCase_ == 4) {
+        operation_ = s;
+      }
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Remove operation: The batch job must not have been run. A resource name
+   * for the removed batch job is expected, in this format:
+   * `customers/{customer_id}/batchJobs/{batch_job_id}`
+   * </pre>
+   *
+   * <code>string remove = 4 [(.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for remove.
+   */
+  public com.google.protobuf.ByteString
+      getRemoveBytes() {
+    java.lang.Object ref = "";
+    if (operationCase_ == 4) {
+      ref = operation_;
+    }
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      if (operationCase_ == 4) {
+        operation_ = b;
+      }
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -197,6 +277,9 @@ private static final long serialVersionUID = 0L;
     if (operationCase_ == 1) {
       output.writeMessage(1, (com.google.ads.googleads.v10.resources.BatchJob) operation_);
     }
+    if (operationCase_ == 4) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, operation_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -209,6 +292,9 @@ private static final long serialVersionUID = 0L;
     if (operationCase_ == 1) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, (com.google.ads.googleads.v10.resources.BatchJob) operation_);
+    }
+    if (operationCase_ == 4) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, operation_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -231,6 +317,10 @@ private static final long serialVersionUID = 0L;
         if (!getCreate()
             .equals(other.getCreate())) return false;
         break;
+      case 4:
+        if (!getRemove()
+            .equals(other.getRemove())) return false;
+        break;
       case 0:
       default:
     }
@@ -249,6 +339,10 @@ private static final long serialVersionUID = 0L;
       case 1:
         hash = (37 * hash) + CREATE_FIELD_NUMBER;
         hash = (53 * hash) + getCreate().hashCode();
+        break;
+      case 4:
+        hash = (37 * hash) + REMOVE_FIELD_NUMBER;
+        hash = (53 * hash) + getRemove().hashCode();
         break;
       case 0:
       default:
@@ -425,6 +519,9 @@ private static final long serialVersionUID = 0L;
           result.operation_ = createBuilder_.build();
         }
       }
+      if (operationCase_ == 4) {
+        result.operation_ = operation_;
+      }
       result.operationCase_ = operationCase_;
       onBuilt();
       return result;
@@ -477,6 +574,12 @@ private static final long serialVersionUID = 0L;
       switch (other.getOperationCase()) {
         case CREATE: {
           mergeCreate(other.getCreate());
+          break;
+        }
+        case REMOVE: {
+          operationCase_ = 4;
+          operation_ = other.operation_;
+          onChanged();
           break;
         }
         case OPERATION_NOT_SET: {
@@ -621,8 +724,9 @@ private static final long serialVersionUID = 0L;
       } else {
         if (operationCase_ == 1) {
           createBuilder_.mergeFrom(value);
+        } else {
+          createBuilder_.setMessage(value);
         }
-        createBuilder_.setMessage(value);
       }
       operationCase_ = 1;
       return this;
@@ -702,6 +806,139 @@ private static final long serialVersionUID = 0L;
       operationCase_ = 1;
       onChanged();;
       return createBuilder_;
+    }
+
+    /**
+     * <pre>
+     * Remove operation: The batch job must not have been run. A resource name
+     * for the removed batch job is expected, in this format:
+     * `customers/{customer_id}/batchJobs/{batch_job_id}`
+     * </pre>
+     *
+     * <code>string remove = 4 [(.google.api.resource_reference) = { ... }</code>
+     * @return Whether the remove field is set.
+     */
+    @java.lang.Override
+    public boolean hasRemove() {
+      return operationCase_ == 4;
+    }
+    /**
+     * <pre>
+     * Remove operation: The batch job must not have been run. A resource name
+     * for the removed batch job is expected, in this format:
+     * `customers/{customer_id}/batchJobs/{batch_job_id}`
+     * </pre>
+     *
+     * <code>string remove = 4 [(.google.api.resource_reference) = { ... }</code>
+     * @return The remove.
+     */
+    @java.lang.Override
+    public java.lang.String getRemove() {
+      java.lang.Object ref = "";
+      if (operationCase_ == 4) {
+        ref = operation_;
+      }
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (operationCase_ == 4) {
+          operation_ = s;
+        }
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Remove operation: The batch job must not have been run. A resource name
+     * for the removed batch job is expected, in this format:
+     * `customers/{customer_id}/batchJobs/{batch_job_id}`
+     * </pre>
+     *
+     * <code>string remove = 4 [(.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for remove.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getRemoveBytes() {
+      java.lang.Object ref = "";
+      if (operationCase_ == 4) {
+        ref = operation_;
+      }
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (operationCase_ == 4) {
+          operation_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Remove operation: The batch job must not have been run. A resource name
+     * for the removed batch job is expected, in this format:
+     * `customers/{customer_id}/batchJobs/{batch_job_id}`
+     * </pre>
+     *
+     * <code>string remove = 4 [(.google.api.resource_reference) = { ... }</code>
+     * @param value The remove to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRemove(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  operationCase_ = 4;
+      operation_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Remove operation: The batch job must not have been run. A resource name
+     * for the removed batch job is expected, in this format:
+     * `customers/{customer_id}/batchJobs/{batch_job_id}`
+     * </pre>
+     *
+     * <code>string remove = 4 [(.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearRemove() {
+      if (operationCase_ == 4) {
+        operationCase_ = 0;
+        operation_ = null;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Remove operation: The batch job must not have been run. A resource name
+     * for the removed batch job is expected, in this format:
+     * `customers/{customer_id}/batchJobs/{batch_job_id}`
+     * </pre>
+     *
+     * <code>string remove = 4 [(.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for remove to set.
+     * @return This builder for chaining.
+     */
+    public Builder setRemoveBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      operationCase_ = 4;
+      operation_ = value;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

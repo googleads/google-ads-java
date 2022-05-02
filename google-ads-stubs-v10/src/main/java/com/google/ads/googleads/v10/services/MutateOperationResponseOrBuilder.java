@@ -981,6 +981,33 @@ public interface MutateOperationResponseOrBuilder extends
 
   /**
    * <pre>
+   * The result for the campaign group mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.services.MutateCampaignGroupResult campaign_group_result = 9;</code>
+   * @return Whether the campaignGroupResult field is set.
+   */
+  boolean hasCampaignGroupResult();
+  /**
+   * <pre>
+   * The result for the campaign group mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.services.MutateCampaignGroupResult campaign_group_result = 9;</code>
+   * @return The campaignGroupResult.
+   */
+  com.google.ads.googleads.v10.services.MutateCampaignGroupResult getCampaignGroupResult();
+  /**
+   * <pre>
+   * The result for the campaign group mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v10.services.MutateCampaignGroupResult campaign_group_result = 9;</code>
+   */
+  com.google.ads.googleads.v10.services.MutateCampaignGroupResultOrBuilder getCampaignGroupResultOrBuilder();
+
+  /**
+   * <pre>
    * The result for the campaign label mutate.
    * </pre>
    *

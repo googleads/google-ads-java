@@ -30,23 +30,21 @@ public final class ValueRuleSetDimensionProto {
     java.lang.String[] descriptorData = {
       "\n=google/ads/googleads/v10/enums/value_r" +
       "ule_set_dimension.proto\022\036google.ads.goog" +
-      "leads.v10.enums\032\034google/api/annotations." +
-      "proto\"\220\001\n\031ValueRuleSetDimensionEnum\"s\n\025V" +
-      "alueRuleSetDimension\022\017\n\013UNSPECIFIED\020\000\022\013\n" +
-      "\007UNKNOWN\020\001\022\020\n\014GEO_LOCATION\020\002\022\n\n\006DEVICE\020\003" +
-      "\022\014\n\010AUDIENCE\020\004\022\020\n\014NO_CONDITION\020\005B\364\001\n\"com" +
-      ".google.ads.googleads.v10.enumsB\032ValueRu" +
-      "leSetDimensionProtoP\001ZCgoogle.golang.org" +
-      "/genproto/googleapis/ads/googleads/v10/e" +
-      "nums;enums\242\002\003GAA\252\002\036Google.Ads.GoogleAds." +
-      "V10.Enums\312\002\036Google\\Ads\\GoogleAds\\V10\\Enu" +
-      "ms\352\002\"Google::Ads::GoogleAds::V10::Enumsb" +
-      "\006proto3"
+      "leads.v10.enums\"\220\001\n\031ValueRuleSetDimensio" +
+      "nEnum\"s\n\025ValueRuleSetDimension\022\017\n\013UNSPEC" +
+      "IFIED\020\000\022\013\n\007UNKNOWN\020\001\022\020\n\014GEO_LOCATION\020\002\022\n" +
+      "\n\006DEVICE\020\003\022\014\n\010AUDIENCE\020\004\022\020\n\014NO_CONDITION" +
+      "\020\005B\364\001\n\"com.google.ads.googleads.v10.enum" +
+      "sB\032ValueRuleSetDimensionProtoP\001ZCgoogle." +
+      "golang.org/genproto/googleapis/ads/googl" +
+      "eads/v10/enums;enums\242\002\003GAA\252\002\036Google.Ads." +
+      "GoogleAds.V10.Enums\312\002\036Google\\Ads\\GoogleA" +
+      "ds\\V10\\Enums\352\002\"Google::Ads::GoogleAds::V" +
+      "10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_ValueRuleSetDimensionEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -54,7 +52,6 @@ public final class ValueRuleSetDimensionProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_ValueRuleSetDimensionEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

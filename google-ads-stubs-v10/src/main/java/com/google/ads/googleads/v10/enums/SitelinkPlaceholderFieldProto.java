@@ -30,24 +30,22 @@ public final class SitelinkPlaceholderFieldProto {
     java.lang.String[] descriptorData = {
       "\n?google/ads/googleads/v10/enums/sitelin" +
       "k_placeholder_field.proto\022\036google.ads.go" +
-      "ogleads.v10.enums\032\034google/api/annotation" +
-      "s.proto\"\312\001\n\034SitelinkPlaceholderFieldEnum" +
-      "\"\251\001\n\030SitelinkPlaceholderField\022\017\n\013UNSPECI" +
-      "FIED\020\000\022\013\n\007UNKNOWN\020\001\022\010\n\004TEXT\020\002\022\n\n\006LINE_1\020" +
-      "\003\022\n\n\006LINE_2\020\004\022\016\n\nFINAL_URLS\020\005\022\025\n\021FINAL_M" +
-      "OBILE_URLS\020\006\022\020\n\014TRACKING_URL\020\007\022\024\n\020FINAL_" +
-      "URL_SUFFIX\020\010B\367\001\n\"com.google.ads.googlead" +
-      "s.v10.enumsB\035SitelinkPlaceholderFieldPro" +
-      "toP\001ZCgoogle.golang.org/genproto/googlea" +
-      "pis/ads/googleads/v10/enums;enums\242\002\003GAA\252" +
-      "\002\036Google.Ads.GoogleAds.V10.Enums\312\002\036Googl" +
-      "e\\Ads\\GoogleAds\\V10\\Enums\352\002\"Google::Ads:" +
-      ":GoogleAds::V10::Enumsb\006proto3"
+      "ogleads.v10.enums\"\312\001\n\034SitelinkPlaceholde" +
+      "rFieldEnum\"\251\001\n\030SitelinkPlaceholderField\022" +
+      "\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\010\n\004TEXT\020\002\022" +
+      "\n\n\006LINE_1\020\003\022\n\n\006LINE_2\020\004\022\016\n\nFINAL_URLS\020\005\022" +
+      "\025\n\021FINAL_MOBILE_URLS\020\006\022\020\n\014TRACKING_URL\020\007" +
+      "\022\024\n\020FINAL_URL_SUFFIX\020\010B\367\001\n\"com.google.ad" +
+      "s.googleads.v10.enumsB\035SitelinkPlacehold" +
+      "erFieldProtoP\001ZCgoogle.golang.org/genpro" +
+      "to/googleapis/ads/googleads/v10/enums;en" +
+      "ums\242\002\003GAA\252\002\036Google.Ads.GoogleAds.V10.Enu" +
+      "ms\312\002\036Google\\Ads\\GoogleAds\\V10\\Enums\352\002\"Go" +
+      "ogle::Ads::GoogleAds::V10::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_enums_SitelinkPlaceholderFieldEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -55,7 +53,6 @@ public final class SitelinkPlaceholderFieldProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_enums_SitelinkPlaceholderFieldEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

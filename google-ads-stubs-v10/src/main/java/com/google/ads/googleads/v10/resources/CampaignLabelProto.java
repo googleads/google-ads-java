@@ -30,30 +30,28 @@ public final class CampaignLabelProto {
     java.lang.String[] descriptorData = {
       "\n7google/ads/googleads/v10/resources/cam" +
       "paign_label.proto\022\"google.ads.googleads." +
-      "v10.resources\032\034google/api/annotations.pr" +
-      "oto\032\037google/api/field_behavior.proto\032\031go" +
-      "ogle/api/resource.proto\"\331\002\n\rCampaignLabe" +
-      "l\022E\n\rresource_name\030\001 \001(\tB.\340A\005\372A(\n&google" +
-      "ads.googleapis.com/CampaignLabel\022@\n\010camp" +
-      "aign\030\004 \001(\tB)\340A\005\372A#\n!googleads.googleapis" +
-      ".com/CampaignH\000\210\001\001\022:\n\005label\030\005 \001(\tB&\340A\005\372A" +
-      " \n\036googleads.googleapis.com/LabelH\001\210\001\001:l" +
-      "\352Ai\n&googleads.googleapis.com/CampaignLa" +
-      "bel\022?customers/{customer_id}/campaignLab" +
-      "els/{campaign_id}~{label_id}B\013\n\t_campaig" +
-      "nB\010\n\006_labelB\204\002\n&com.google.ads.googleads" +
-      ".v10.resourcesB\022CampaignLabelProtoP\001ZKgo" +
-      "ogle.golang.org/genproto/googleapis/ads/" +
-      "googleads/v10/resources;resources\242\002\003GAA\252" +
-      "\002\"Google.Ads.GoogleAds.V10.Resources\312\002\"G" +
-      "oogle\\Ads\\GoogleAds\\V10\\Resources\352\002&Goog" +
-      "le::Ads::GoogleAds::V10::Resourcesb\006prot" +
-      "o3"
+      "v10.resources\032\037google/api/field_behavior" +
+      ".proto\032\031google/api/resource.proto\"\331\002\n\rCa" +
+      "mpaignLabel\022E\n\rresource_name\030\001 \001(\tB.\340A\005\372" +
+      "A(\n&googleads.googleapis.com/CampaignLab" +
+      "el\022@\n\010campaign\030\004 \001(\tB)\340A\005\372A#\n!googleads." +
+      "googleapis.com/CampaignH\000\210\001\001\022:\n\005label\030\005 " +
+      "\001(\tB&\340A\005\372A \n\036googleads.googleapis.com/La" +
+      "belH\001\210\001\001:l\352Ai\n&googleads.googleapis.com/" +
+      "CampaignLabel\022?customers/{customer_id}/c" +
+      "ampaignLabels/{campaign_id}~{label_id}B\013" +
+      "\n\t_campaignB\010\n\006_labelB\204\002\n&com.google.ads" +
+      ".googleads.v10.resourcesB\022CampaignLabelP" +
+      "rotoP\001ZKgoogle.golang.org/genproto/googl" +
+      "eapis/ads/googleads/v10/resources;resour" +
+      "ces\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V10.Res" +
+      "ources\312\002\"Google\\Ads\\GoogleAds\\V10\\Resour" +
+      "ces\352\002&Google::Ads::GoogleAds::V10::Resou" +
+      "rcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -70,7 +68,6 @@ public final class CampaignLabelProto {
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

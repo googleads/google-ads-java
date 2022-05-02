@@ -30,29 +30,27 @@ public final class MobileAppCategoryConstantProto {
     java.lang.String[] descriptorData = {
       "\nEgoogle/ads/googleads/v10/resources/mob" +
       "ile_app_category_constant.proto\022\"google." +
-      "ads.googleads.v10.resources\032\034google/api/" +
-      "annotations.proto\032\037google/api/field_beha" +
-      "vior.proto\032\031google/api/resource.proto\"\232\002" +
-      "\n\031MobileAppCategoryConstant\022Q\n\rresource_" +
-      "name\030\001 \001(\tB:\340A\003\372A4\n2googleads.googleapis" +
-      ".com/MobileAppCategoryConstant\022\024\n\002id\030\004 \001" +
-      "(\005B\003\340A\003H\000\210\001\001\022\026\n\004name\030\005 \001(\tB\003\340A\003H\001\210\001\001:l\352A" +
-      "i\n2googleads.googleapis.com/MobileAppCat" +
-      "egoryConstant\0223mobileAppCategoryConstant" +
-      "s/{mobile_app_category_id}B\005\n\003_idB\007\n\005_na" +
-      "meB\220\002\n&com.google.ads.googleads.v10.reso" +
-      "urcesB\036MobileAppCategoryConstantProtoP\001Z" +
-      "Kgoogle.golang.org/genproto/googleapis/a" +
-      "ds/googleads/v10/resources;resources\242\002\003G" +
-      "AA\252\002\"Google.Ads.GoogleAds.V10.Resources\312" +
-      "\002\"Google\\Ads\\GoogleAds\\V10\\Resources\352\002&G" +
-      "oogle::Ads::GoogleAds::V10::Resourcesb\006p" +
-      "roto3"
+      "ads.googleads.v10.resources\032\037google/api/" +
+      "field_behavior.proto\032\031google/api/resourc" +
+      "e.proto\"\232\002\n\031MobileAppCategoryConstant\022Q\n" +
+      "\rresource_name\030\001 \001(\tB:\340A\003\372A4\n2googleads." +
+      "googleapis.com/MobileAppCategoryConstant" +
+      "\022\024\n\002id\030\004 \001(\005B\003\340A\003H\000\210\001\001\022\026\n\004name\030\005 \001(\tB\003\340A" +
+      "\003H\001\210\001\001:l\352Ai\n2googleads.googleapis.com/Mo" +
+      "bileAppCategoryConstant\0223mobileAppCatego" +
+      "ryConstants/{mobile_app_category_id}B\005\n\003" +
+      "_idB\007\n\005_nameB\220\002\n&com.google.ads.googlead" +
+      "s.v10.resourcesB\036MobileAppCategoryConsta" +
+      "ntProtoP\001ZKgoogle.golang.org/genproto/go" +
+      "ogleapis/ads/googleads/v10/resources;res" +
+      "ources\242\002\003GAA\252\002\"Google.Ads.GoogleAds.V10." +
+      "Resources\312\002\"Google\\Ads\\GoogleAds\\V10\\Res" +
+      "ources\352\002&Google::Ads::GoogleAds::V10::Re" +
+      "sourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -69,7 +67,6 @@ public final class MobileAppCategoryConstantProto {
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }

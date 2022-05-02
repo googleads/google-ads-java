@@ -9,8 +9,10 @@ public interface ProductMetadataOrBuilder extends
 
   /**
    * <pre>
-   * The code associated with the ad product. E.g. BUMPER, TRUEVIEW_IN_STREAM
-   * To list the available plannable product codes use ListPlannableProducts.
+   * The code associated with the ad product (for example: BUMPER,
+   * TRUEVIEW_IN_STREAM).
+   * To list the available plannable product codes use
+   * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v10.services.ReachPlanService.ListPlannableProducts].
    * </pre>
    *
    * <code>optional string plannable_product_code = 4;</code>
@@ -19,8 +21,10 @@ public interface ProductMetadataOrBuilder extends
   boolean hasPlannableProductCode();
   /**
    * <pre>
-   * The code associated with the ad product. E.g. BUMPER, TRUEVIEW_IN_STREAM
-   * To list the available plannable product codes use ListPlannableProducts.
+   * The code associated with the ad product (for example: BUMPER,
+   * TRUEVIEW_IN_STREAM).
+   * To list the available plannable product codes use
+   * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v10.services.ReachPlanService.ListPlannableProducts].
    * </pre>
    *
    * <code>optional string plannable_product_code = 4;</code>
@@ -29,8 +33,10 @@ public interface ProductMetadataOrBuilder extends
   java.lang.String getPlannableProductCode();
   /**
    * <pre>
-   * The code associated with the ad product. E.g. BUMPER, TRUEVIEW_IN_STREAM
-   * To list the available plannable product codes use ListPlannableProducts.
+   * The code associated with the ad product (for example: BUMPER,
+   * TRUEVIEW_IN_STREAM).
+   * To list the available plannable product codes use
+   * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v10.services.ReachPlanService.ListPlannableProducts].
    * </pre>
    *
    * <code>optional string plannable_product_code = 4;</code>

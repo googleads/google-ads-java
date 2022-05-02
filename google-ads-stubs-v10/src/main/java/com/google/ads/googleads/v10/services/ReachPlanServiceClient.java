@@ -148,7 +148,7 @@ public class ReachPlanServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
-   * Returns the list of plannable locations (for example, countries &amp; DMAs).
+   * Returns the list of plannable locations (for example, countries).
    *
    * <p>List of thrown errors: [AuthenticationError]() [AuthorizationError]() [HeaderError]()
    * [InternalError]() [QuotaError]() [RequestError]()
@@ -173,7 +173,7 @@ public class ReachPlanServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
-   * Returns the list of plannable locations (for example, countries &amp; DMAs).
+   * Returns the list of plannable locations (for example, countries).
    *
    * <p>List of thrown errors: [AuthenticationError]() [AuthorizationError]() [HeaderError]()
    * [InternalError]() [QuotaError]() [RequestError]()
@@ -213,7 +213,7 @@ public class ReachPlanServiceClient implements BackgroundResource {
    * }</pre>
    *
    * @param plannableLocationId Required. The ID of the selected location for planning. To list the
-   *     available plannable location ids use
+   *     available plannable location IDs use
    *     [ReachPlanService.ListPlannableLocations][google.ads.googleads.v10.services.ReachPlanService.ListPlannableLocations].
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -303,7 +303,7 @@ public class ReachPlanServiceClient implements BackgroundResource {
    * }</pre>
    *
    * @param customerId Required. The ID of the customer.
-   * @param plannableLocationId Required. The ID of the location, this is one of the ids returned by
+   * @param plannableLocationId Required. The ID of the location, this is one of the IDs returned by
    *     [ReachPlanService.ListPlannableLocations][google.ads.googleads.v10.services.ReachPlanService.ListPlannableLocations].
    * @param currencyCode Required. Currency code. Three-character ISO 4217 currency code.
    * @param budgetMicros Required. Total budget. Amount in micros. One million is equivalent to one

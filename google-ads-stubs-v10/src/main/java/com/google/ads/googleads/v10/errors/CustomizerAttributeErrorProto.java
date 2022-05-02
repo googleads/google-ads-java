@@ -30,23 +30,21 @@ public final class CustomizerAttributeErrorProto {
     java.lang.String[] descriptorData = {
       "\n@google/ads/googleads/v10/errors/custom" +
       "izer_attribute_error.proto\022\037google.ads.g" +
-      "oogleads.v10.errors\032\034google/api/annotati" +
-      "ons.proto\"\201\001\n\034CustomizerAttributeErrorEn" +
-      "um\"a\n\030CustomizerAttributeError\022\017\n\013UNSPEC" +
-      "IFIED\020\000\022\013\n\007UNKNOWN\020\001\022\'\n#DUPLICATE_CUSTOM" +
-      "IZER_ATTRIBUTE_NAME\020\002B\375\001\n#com.google.ads" +
-      ".googleads.v10.errorsB\035CustomizerAttribu" +
-      "teErrorProtoP\001ZEgoogle.golang.org/genpro" +
-      "to/googleapis/ads/googleads/v10/errors;e" +
-      "rrors\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V10.E" +
-      "rrors\312\002\037Google\\Ads\\GoogleAds\\V10\\Errors\352" +
-      "\002#Google::Ads::GoogleAds::V10::Errorsb\006p" +
-      "roto3"
+      "oogleads.v10.errors\"\201\001\n\034CustomizerAttrib" +
+      "uteErrorEnum\"a\n\030CustomizerAttributeError" +
+      "\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\'\n#DUPLIC" +
+      "ATE_CUSTOMIZER_ATTRIBUTE_NAME\020\002B\375\001\n#com." +
+      "google.ads.googleads.v10.errorsB\035Customi" +
+      "zerAttributeErrorProtoP\001ZEgoogle.golang." +
+      "org/genproto/googleapis/ads/googleads/v1" +
+      "0/errors;errors\242\002\003GAA\252\002\037Google.Ads.Googl" +
+      "eAds.V10.Errors\312\002\037Google\\Ads\\GoogleAds\\V" +
+      "10\\Errors\352\002#Google::Ads::GoogleAds::V10:" +
+      ":Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_google_ads_googleads_v10_errors_CustomizerAttributeErrorEnum_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -54,7 +52,6 @@ public final class CustomizerAttributeErrorProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v10_errors_CustomizerAttributeErrorEnum_descriptor,
         new java.lang.String[] { });
-    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

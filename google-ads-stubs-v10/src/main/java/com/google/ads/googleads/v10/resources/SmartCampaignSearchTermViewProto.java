@@ -30,30 +30,28 @@ public final class SmartCampaignSearchTermViewProto {
     java.lang.String[] descriptorData = {
       "\nHgoogle/ads/googleads/v10/resources/sma" +
       "rt_campaign_search_term_view.proto\022\"goog" +
-      "le.ads.googleads.v10.resources\032\034google/a" +
-      "pi/annotations.proto\032\037google/api/field_b" +
-      "ehavior.proto\032\031google/api/resource.proto" +
-      "\"\322\002\n\033SmartCampaignSearchTermView\022S\n\rreso" +
-      "urce_name\030\001 \001(\tB<\340A\003\372A6\n4googleads.googl" +
-      "eapis.com/SmartCampaignSearchTermView\022\030\n" +
-      "\013search_term\030\002 \001(\tB\003\340A\003\022;\n\010campaign\030\003 \001(" +
-      "\tB)\340A\003\372A#\n!googleads.googleapis.com/Camp" +
-      "aign:\206\001\352A\202\001\n4googleads.googleapis.com/Sm" +
-      "artCampaignSearchTermView\022Jcustomers/{cu" +
-      "stomer_id}/smartCampaignSearchTermViews/" +
-      "{campaign_id}~{query}B\222\002\n&com.google.ads" +
-      ".googleads.v10.resourcesB SmartCampaignS" +
-      "earchTermViewProtoP\001ZKgoogle.golang.org/" +
-      "genproto/googleapis/ads/googleads/v10/re" +
-      "sources;resources\242\002\003GAA\252\002\"Google.Ads.Goo" +
-      "gleAds.V10.Resources\312\002\"Google\\Ads\\Google" +
-      "Ads\\V10\\Resources\352\002&Google::Ads::GoogleA" +
-      "ds::V10::Resourcesb\006proto3"
+      "le.ads.googleads.v10.resources\032\037google/a" +
+      "pi/field_behavior.proto\032\031google/api/reso" +
+      "urce.proto\"\322\002\n\033SmartCampaignSearchTermVi" +
+      "ew\022S\n\rresource_name\030\001 \001(\tB<\340A\003\372A6\n4googl" +
+      "eads.googleapis.com/SmartCampaignSearchT" +
+      "ermView\022\030\n\013search_term\030\002 \001(\tB\003\340A\003\022;\n\010cam" +
+      "paign\030\003 \001(\tB)\340A\003\372A#\n!googleads.googleapi" +
+      "s.com/Campaign:\206\001\352A\202\001\n4googleads.googlea" +
+      "pis.com/SmartCampaignSearchTermView\022Jcus" +
+      "tomers/{customer_id}/smartCampaignSearch" +
+      "TermViews/{campaign_id}~{query}B\222\002\n&com." +
+      "google.ads.googleads.v10.resourcesB Smar" +
+      "tCampaignSearchTermViewProtoP\001ZKgoogle.g" +
+      "olang.org/genproto/googleapis/ads/google" +
+      "ads/v10/resources;resources\242\002\003GAA\252\002\"Goog" +
+      "le.Ads.GoogleAds.V10.Resources\312\002\"Google\\" +
+      "Ads\\GoogleAds\\V10\\Resources\352\002&Google::Ad" +
+      "s::GoogleAds::V10::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
@@ -70,7 +68,6 @@ public final class SmartCampaignSearchTermViewProto {
     registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
   }
