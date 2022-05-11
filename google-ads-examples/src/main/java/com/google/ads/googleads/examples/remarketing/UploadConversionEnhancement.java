@@ -115,8 +115,8 @@ public class UploadConversionEnhancement {
               params.customerId,
               params.conversionActionId,
               params.orderId,
-              params.conversionDateTime,
               params.userAgent,
+              params.conversionDateTime,
               params.restatementValue,
               params.currencyCode);
     } catch (GoogleAdsException gae) {
@@ -142,8 +142,9 @@ public class UploadConversionEnhancement {
    * @param customerId the client customer ID.
    * @param conversionActionId conversion action ID associated with this conversion.
    * @param orderId unique order ID (transaction ID) of the conversion.
-   * @param conversionDateTime
    * @param userAgent the HTTP user agent of the conversion.
+   * @param conversionDateTime the date and time of the conversion with the specified {@code
+   *     orderId}. Must include the time zone offset.
    * @param restatementValue the enhancement value.
    * @param restatementCurrencyCode the currency of the enhancement value.
    */
@@ -153,8 +154,8 @@ public class UploadConversionEnhancement {
       long customerId,
       long conversionActionId,
       String orderId,
-      String conversionDateTime,
       String userAgent,
+      String conversionDateTime,
       Double restatementValue,
       String restatementCurrencyCode)
       throws NoSuchAlgorithmException, UnsupportedEncodingException {
