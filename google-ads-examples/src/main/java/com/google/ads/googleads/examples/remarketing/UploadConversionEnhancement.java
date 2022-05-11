@@ -64,7 +64,7 @@ public class UploadConversionEnhancement {
                 + "Setting this field is optional, but recommended.")
     private String conversionDateTime;
 
-    @Parameter(names = ArgumentNames.USER_AGENT, required = false)
+    @Parameter(names = ArgumentNames.USER_AGENT, required = true)
     private String userAgent;
 
     @Parameter(names = ArgumentNames.RESTATEMENT_VALUE, required = false)
@@ -87,11 +87,11 @@ public class UploadConversionEnhancement {
       params.customerId = Long.parseLong("INSERT_CUSTOMER_ID_HERE");
       params.conversionActionId = Long.parseLong("INSERT_CONVERSION_ACTION_ID_HERE");
       params.orderId = "INSERT_ORDER_ID_HERE";
+      params.userAgent = "INSERT_USER_AGENT_HERE";
 
-      // Optional: Specify the conversion date/time, user agent, restatement value, and restatement
-      // currency code.
+      // Optional: Specify the conversion date/time, restatement value, and restatement currency
+      // code.
       params.conversionDateTime = null;
-      params.userAgent = null;
       params.restatementValue = null;
       params.currencyCode = null;
     }
@@ -208,14 +208,12 @@ public class UploadConversionEnhancement {
     // Adds the user identifiers to the enhancement adjustment.
     enhancementBuilder.addUserIdentifiers(addressIdentifier).addUserIdentifiers(emailIdentifier);
 
-    // Sets optional fields where a value was provided.
+    // Sets the user agent. This should match the user agent of the request that sent the original
+    // conversion so the conversion and its enhancement are either both attributed as same-device
+    // or both attributed as cross-device.
+    enhancementBuilder.setUserAgent(userAgent);
 
-    if (userAgent != null) {
-      // Sets the user agent. This should match the user agent of the request that sent the original
-      // conversion so the conversion and its enhancement are either both attributed as same-device
-      // or both attributed as cross-device.
-      enhancementBuilder.setUserAgent(userAgent);
-    }
+    // Sets optional fields where a value was provided.
 
     if (restatementValue != null) {
       // Creates a builder to construct the restated conversion value.
