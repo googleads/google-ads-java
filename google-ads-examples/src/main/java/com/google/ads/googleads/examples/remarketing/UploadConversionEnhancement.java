@@ -54,6 +54,9 @@ public class UploadConversionEnhancement {
     @Parameter(names = ArgumentNames.ORDER_ID, required = true)
     private String orderId;
 
+    @Parameter(names = ArgumentNames.USER_AGENT, required = true)
+    private String userAgent;
+
     @Parameter(
         names = ArgumentNames.CONVERSION_DATE_TIME,
         required = false,
@@ -63,9 +66,6 @@ public class UploadConversionEnhancement {
                 + "The format is  'yyyy-mm-dd hh:mm:ss+|-hh:mm', e.g. '2019-01-01 12:32:45-08:00'. "
                 + "Setting this field is optional, but recommended.")
     private String conversionDateTime;
-
-    @Parameter(names = ArgumentNames.USER_AGENT, required = true)
-    private String userAgent;
 
     @Parameter(names = ArgumentNames.RESTATEMENT_VALUE, required = false)
     private Double restatementValue;
