@@ -36,7 +36,7 @@ public class ErrorUtils
     return new ErrorPath(
         error,
         pathElement.getFieldName(),
-        Optional.ofNullable(pathElement.hasIndex() ? (long) pathElement.getIndex() : null));
+        pathElement.hasIndex() ? Optional.of(pathElement.getIndex()) : Optional.empty());
   }
 
   @Override
