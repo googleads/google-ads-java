@@ -31,6 +31,68 @@ public abstract class AbstractErrorUtils<
     FieldPathElementT extends Message> {
 
   /**
+   * Gets a list of all partial failure error messages for a given response.
+   *
+   * <p>For example, given the following Failure:
+   *
+   * <pre>
+   *   <code>
+   *     errors {
+   *       message: "Too low."
+   *       location {
+   *         field_path_elements {
+   *           field_name: "operations"
+   *           index {
+   *             value: 1
+   *           }
+   *         }
+   *         field_path_elements {
+   *           field_name: "create"
+   *         }
+   *         field_path_elements {
+   *           field_name: "campaign"
+   *         }
+   *       }
+   *     }
+   *     errors {
+   *       message: "Too low."
+   *       location {
+   *         field_path_elements {
+   *           field_name: "operations"
+   *           index {
+   *             value: 2
+   *           }
+   *         }
+   *         field_path_elements {
+   *           field_name: "create"
+   *         }
+   *         field_path_elements {
+   *           field_name: "campaign"
+   *         }
+   *       }
+   *     }
+   *   </code>
+   * </pre>
+   *
+   * Two {@link GoogleAdsErrorT} instances would be returned for operation index 1 and 2.
+   *
+   * @param partialFailureStatus a partialFailure status, with the detail list containing {@link
+   *     GoogleAdsFailureT} instances.
+   * @return a list containing all the {@link GoogleAdsErrorT} instances.
+   * @throws InvalidProtocolBufferException if not able to unpack the protocol buffer. This is most
+   *     likely due to using the wrong version of ErrorUtils being used with the API response.
+   */
+  public List<GoogleAdsErrorT> getGoogleAdsErrors(Status partialFailureStatus)
+      throws InvalidProtocolBufferException {
+    List<GoogleAdsErrorT> result = new ArrayList();
+    for (Any detail : partialFailureStatus.getDetailsList()) {
+      GoogleAdsFailureT failure = getGoogleAdsFailure(detail);
+      result.addAll(getGoogleAdsErrors(failure));
+    }
+    return result;
+  }
+
+  /**
    * Gets a list of all partial failure error messages for a given response. Operations are indexed
    * from 0.
    *

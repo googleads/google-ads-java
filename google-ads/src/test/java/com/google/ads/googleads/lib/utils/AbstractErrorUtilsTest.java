@@ -15,6 +15,7 @@
 package com.google.ads.googleads.lib.utils;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 import com.google.ads.googleads.lib.test.errors.Int64Value;
 import com.google.ads.googleads.lib.test.errors.MockError;
@@ -42,6 +43,36 @@ public class AbstractErrorUtilsTest {
   @Parameterized.Parameters
   public static String[] parameters() {
     return new String[] {"operations", "mutate_operations"};
+  }
+
+  @Test
+  public void getGoogleAdsErrors_includesAll() throws InvalidProtocolBufferException {
+    MockPath pathIndex =
+            MockPath.newBuilder()
+                    .setIndex(Int64Value.newBuilder().setValue(0))
+                    .setFieldName(operationsFieldName)
+                    .build();
+    MockError errorIndex = MockError.newBuilder().addLocation(pathIndex).build();
+    MockFailure failureIndex = MockFailure.newBuilder().addErrors(errorIndex).build();
+
+    MockPath pathNoIndex = MockPath.newBuilder().setFieldName(operationsFieldName).build();
+    MockError errorNoIndex = MockError.newBuilder().addLocation(pathNoIndex).build();
+    MockFailure failureNoIndex = MockFailure.newBuilder().addErrors(errorNoIndex).build();
+
+    MockPath pathNoOperation = MockPath.newBuilder().setFieldName("someotherfield").build();
+    MockError errorNoOperation = MockError.newBuilder().addLocation(pathNoOperation).build();
+    MockFailure failureNoOperation = MockFailure.newBuilder().addErrors(errorNoOperation).build();
+
+    Status status = Status.newBuilder()
+            .addDetails(Any.pack(failureIndex))
+            .addDetails(Any.pack(failureNoIndex))
+            .addDetails(Any.pack(failureNoOperation))
+            .build();
+    List<MockError> result = impl.getGoogleAdsErrors(status);
+    assertEquals(3, result.size());
+    assertEquals(errorIndex, result.get(0));
+    assertEquals(errorNoIndex, result.get(1));
+    assertEquals(errorNoOperation, result.get(2));
   }
 
   @Test
