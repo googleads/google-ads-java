@@ -139,15 +139,20 @@ public class FieldMasks {
 
   /**
    * Returns true if the original message contains an empty message field that is not present on the
-   * modified message, in which case the user is clearing the top level message field.
+   * modified message, or vice-versa, in which case the user is attempting to clear the top level
+   * message field.
    */
   private static boolean isClearingMessage(
       Message original, Message modified, FieldDescriptor field) {
     Message originalValueMessage = (Message) original.getField(field);
-    // Use getAllFields to check if there are any fields set, not whether or not the field exists.
-    return !modified.hasField(field)
-        && original.hasField(field)
-        && originalValueMessage.getAllFields().isEmpty();
+    Message modifiedValueMessage = (Message) modified.getField(field);
+    // Use getAllFields to check if there are any fields set, not whether the field exists.
+    return (!modified.hasField(field)
+            && original.hasField(field)
+            && originalValueMessage.getAllFields().isEmpty()
+        || !original.hasField(field)
+            && modified.hasField(field)
+            && modifiedValueMessage.getAllFields().isEmpty());
   }
 
   /**

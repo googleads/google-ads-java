@@ -35,7 +35,7 @@ public final class ArgumentNames {
   public static final String BRIDGE_MAP_VERSION_ID = "--bridgeMapVersionId";
   public static final String BUSINESS_ACCOUNT_IDENTIFIER = "--businessAccountIdentifier";
   public static final String BUSINESS_NAME = "--businessName";
-  public static final String BUSINESS_LOCATION_ID = "--businessLocationId";
+  public static final String BUSINESS_PROFILE_LOCATION = "--businessProfileLocation";
   public static final String CALLER_ID = "--callerId";
   public static final String CALLOUT_TEXT = "--calloutText";
   public static final String CALL_START_DATE_TIME = "--callStartDateTime";
