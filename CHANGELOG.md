@@ -2,7 +2,7 @@
 -------------------
 - Add support and examples for Google Ads API v11.0.
 - Update FieldMasks utility to better handle empty message fields.
-- Update AddSmartCampaign example for the new features in v11.
+- Update AddSmartCampaign example for the new features in v11.0.
 - Add DetectAndApplyRecommendations example.
 - Add CreateExperiment example, replacing CreateExperimentCampaign and
   GraduateCampaignExperiment.
