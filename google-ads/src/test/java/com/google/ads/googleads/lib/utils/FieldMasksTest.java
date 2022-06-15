@@ -5,6 +5,7 @@ import static org.junit.Assert.assertThrows;
 
 import com.google.ads.googleads.v10.common.ManualCpc;
 import com.google.ads.googleads.v10.common.ManualCpm;
+import com.google.ads.googleads.v10.common.MaximizeConversions;
 import com.google.ads.googleads.v10.enums.CampaignStatusEnum.CampaignStatus;
 import com.google.ads.googleads.v10.resources.Campaign;
 import com.google.ads.googleads.v10.resources.Campaign.DynamicSearchAdsSetting;
@@ -159,5 +160,28 @@ public class FieldMasksTest {
             "dynamic_search_ads_setting.domain_name",
             "selective_optimization.conversion_actions",
             "tracking_setting.tracking_url"));
+  }
+
+  @Test
+  public void modified_empty_message_includes_message() {
+    Campaign campaign =
+        Campaign.newBuilder()
+            .setMaximizeConversions(MaximizeConversions.newBuilder().build())
+            .build();
+    assertEquals(
+        FieldMasks.allSetFieldsOf(campaign).getPathsList(),
+        Arrays.asList("maximize_conversions"));
+  }
+
+  @Test
+  public void compare_captures_empty_original_message() {
+    Campaign original = Campaign.newBuilder().build();
+    Campaign modified =
+        Campaign.newBuilder()
+            .setMaximizeConversions(MaximizeConversions.newBuilder().build())
+            .build();
+    assertEquals(
+        FieldMasks.compare(original, modified).getPathsList(),
+        Arrays.asList("maximize_conversions"));
   }
 }

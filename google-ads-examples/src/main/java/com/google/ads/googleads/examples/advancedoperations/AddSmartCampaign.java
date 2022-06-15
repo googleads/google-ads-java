@@ -20,44 +20,44 @@ import com.google.ads.googleads.examples.utils.CodeSampleHelper;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.utils.FieldMasks;
-import com.google.ads.googleads.v10.common.AdScheduleInfo;
-import com.google.ads.googleads.v10.common.AdTextAsset;
-import com.google.ads.googleads.v10.common.KeywordThemeInfo;
-import com.google.ads.googleads.v10.common.LocationInfo;
-import com.google.ads.googleads.v10.common.SmartCampaignAdInfo;
-import com.google.ads.googleads.v10.enums.AdGroupTypeEnum.AdGroupType;
-import com.google.ads.googleads.v10.enums.AdTypeEnum.AdType;
-import com.google.ads.googleads.v10.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType;
-import com.google.ads.googleads.v10.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
-import com.google.ads.googleads.v10.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
-import com.google.ads.googleads.v10.enums.BudgetTypeEnum.BudgetType;
-import com.google.ads.googleads.v10.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v10.enums.DayOfWeekEnum.DayOfWeek;
-import com.google.ads.googleads.v10.enums.MinuteOfHourEnum.MinuteOfHour;
-import com.google.ads.googleads.v10.errors.GoogleAdsError;
-import com.google.ads.googleads.v10.errors.GoogleAdsException;
-import com.google.ads.googleads.v10.resources.Ad;
-import com.google.ads.googleads.v10.resources.KeywordThemeConstant;
-import com.google.ads.googleads.v10.resources.SmartCampaignSetting;
-import com.google.ads.googleads.v10.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v10.services.KeywordThemeConstantServiceClient;
-import com.google.ads.googleads.v10.services.MutateGoogleAdsResponse;
-import com.google.ads.googleads.v10.services.MutateOperation;
-import com.google.ads.googleads.v10.services.MutateOperationResponse;
-import com.google.ads.googleads.v10.services.SmartCampaignSuggestServiceClient;
-import com.google.ads.googleads.v10.services.SmartCampaignSuggestionInfo;
-import com.google.ads.googleads.v10.services.SmartCampaignSuggestionInfo.BusinessContext;
-import com.google.ads.googleads.v10.services.SmartCampaignSuggestionInfo.LocationList;
-import com.google.ads.googleads.v10.services.SuggestKeywordThemeConstantsRequest;
-import com.google.ads.googleads.v10.services.SuggestKeywordThemeConstantsResponse;
-import com.google.ads.googleads.v10.services.SuggestKeywordThemesRequest;
-import com.google.ads.googleads.v10.services.SuggestKeywordThemesResponse;
-import com.google.ads.googleads.v10.services.SuggestSmartCampaignAdRequest;
-import com.google.ads.googleads.v10.services.SuggestSmartCampaignAdResponse;
-import com.google.ads.googleads.v10.services.SuggestSmartCampaignBudgetOptionsRequest;
-import com.google.ads.googleads.v10.services.SuggestSmartCampaignBudgetOptionsResponse;
-import com.google.ads.googleads.v10.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption;
-import com.google.ads.googleads.v10.utils.ResourceNames;
+import com.google.ads.googleads.v11.common.AdScheduleInfo;
+import com.google.ads.googleads.v11.common.AdTextAsset;
+import com.google.ads.googleads.v11.common.KeywordThemeInfo;
+import com.google.ads.googleads.v11.common.LocationInfo;
+import com.google.ads.googleads.v11.common.SmartCampaignAdInfo;
+import com.google.ads.googleads.v11.enums.AdGroupTypeEnum.AdGroupType;
+import com.google.ads.googleads.v11.enums.AdTypeEnum.AdType;
+import com.google.ads.googleads.v11.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType;
+import com.google.ads.googleads.v11.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
+import com.google.ads.googleads.v11.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
+import com.google.ads.googleads.v11.enums.BudgetTypeEnum.BudgetType;
+import com.google.ads.googleads.v11.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v11.enums.DayOfWeekEnum.DayOfWeek;
+import com.google.ads.googleads.v11.enums.MinuteOfHourEnum.MinuteOfHour;
+import com.google.ads.googleads.v11.errors.GoogleAdsError;
+import com.google.ads.googleads.v11.errors.GoogleAdsException;
+import com.google.ads.googleads.v11.resources.Ad;
+import com.google.ads.googleads.v11.resources.KeywordThemeConstant;
+import com.google.ads.googleads.v11.resources.SmartCampaignSetting;
+import com.google.ads.googleads.v11.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v11.services.KeywordThemeConstantServiceClient;
+import com.google.ads.googleads.v11.services.MutateGoogleAdsResponse;
+import com.google.ads.googleads.v11.services.MutateOperation;
+import com.google.ads.googleads.v11.services.MutateOperationResponse;
+import com.google.ads.googleads.v11.services.SmartCampaignSuggestServiceClient;
+import com.google.ads.googleads.v11.services.SmartCampaignSuggestionInfo;
+import com.google.ads.googleads.v11.services.SmartCampaignSuggestionInfo.BusinessContext;
+import com.google.ads.googleads.v11.services.SmartCampaignSuggestionInfo.LocationList;
+import com.google.ads.googleads.v11.services.SuggestKeywordThemeConstantsRequest;
+import com.google.ads.googleads.v11.services.SuggestKeywordThemeConstantsResponse;
+import com.google.ads.googleads.v11.services.SuggestKeywordThemesRequest;
+import com.google.ads.googleads.v11.services.SuggestKeywordThemesResponse;
+import com.google.ads.googleads.v11.services.SuggestSmartCampaignAdRequest;
+import com.google.ads.googleads.v11.services.SuggestSmartCampaignAdResponse;
+import com.google.ads.googleads.v11.services.SuggestSmartCampaignBudgetOptionsRequest;
+import com.google.ads.googleads.v11.services.SuggestSmartCampaignBudgetOptionsResponse;
+import com.google.ads.googleads.v11.services.SuggestSmartCampaignBudgetOptionsResponse.BudgetOption;
+import com.google.ads.googleads.v11.utils.ResourceNames;
 import com.google.protobuf.Descriptors.OneofDescriptor;
 import com.google.protobuf.Message;
 import java.io.FileNotFoundException;
@@ -110,12 +110,14 @@ public class AddSmartCampaign {
     private String freeFormKeywordText;
 
     @Parameter(
-        names = ArgumentNames.BUSINESS_LOCATION_ID,
+        names = ArgumentNames.BUSINESS_PROFILE_LOCATION,
         description =
-            "The ID of a Business Profile location. This is required if a business name is not"
-                + " provided. It can be retrieved using the Business Profile API, for details see:"
-                + " https://developers.google.com/my-business/reference/rest/v4/accounts.locations")
-    private String locationId;
+            "The resource name of a Business Profile location. This is required if a business name"
+                + " is not provided. It can be retrieved using the Business Profile API"
+                + " (https://developers.google.com/my-business/reference/businessinformation/rest/v1/accounts.locations)"
+                + " or from the Business Profile UI"
+                + " (https://support.google.com/business/answer/10737668")
+    private String businessProfileLocation;
 
     @Parameter(
         names = ArgumentNames.BUSINESS_NAME,
@@ -138,8 +140,8 @@ public class AddSmartCampaign {
       // Optionally specifies a keyword that should be included as-is.
       params.freeFormKeywordText = null;
 
-      // Must specify one of location ID or business name.
-      params.locationId = "INSERT_BUSINESS_LOCATION_ID_HERE";
+      // Must specify one of business profile location or business name.
+      params.businessProfileLocation = "INSERT_BUSINESS_PROFILE_LOCATION_HERE";
       params.businessName = "INSERT_BUSINESS_NAME";
     }
 
@@ -162,7 +164,7 @@ public class AddSmartCampaign {
               params.customerId,
               params.keyword,
               params.freeFormKeywordText,
-              params.locationId,
+              params.businessProfileLocation,
               params.businessName);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
@@ -185,24 +187,26 @@ public class AddSmartCampaign {
       long customerId,
       String keyword,
       String freeFormKeywordText,
-      String locationId,
+      String businessProfileLocation,
       String businessName) {
-    if (locationId == null && businessName == null) {
-      throw new RuntimeException("Must provider either --locationId or --businessName");
+    // Checks that exactly one of businessProfileLocation and businessName is set.
+    if (businessProfileLocation != null && businessName != null) {
+      throw new IllegalArgumentException(
+          "Both the business location resource name and business name are provided but they are"
+              + " mutually exclusive. Please only set a value for one of them.");
     }
-
-    // [START add_smart_campaign_14]
-    // Converts the location ID to unsigned long (potentially contains IDs with the most significant
-    // bit set).
-    Long locationIdParsed = (locationId == null ? null : Long.parseUnsignedLong(locationId));
-    // [END add_smart_campaign_14]
+    if (businessProfileLocation == null && businessName == null) {
+      throw new IllegalArgumentException(
+          "Neither the business location resource name nor the business name are provided. Please"
+              + " set a value for one of them.");
+    }
 
     // [START add_smart_campaign_12]
     // Gets the SmartCampaignSuggestionInfo object which acts as the basis for many of the
     // entities necessary to create a Smart campaign. It will be reused a number of times to
     // retrieve suggestions for keyword themes, budget amount, ad creatives, and campaign criteria.
     SmartCampaignSuggestionInfo suggestionInfo =
-        getSmartCampaignSuggestionInfo(googleAdsClient, locationIdParsed, businessName);
+        getSmartCampaignSuggestionInfo(googleAdsClient, businessProfileLocation, businessName);
 
     // Generates a list of keyword themes using the SuggestKeywordThemes method on the
     // SmartCampaignSuggestService. It is strongly recommended that you use this strategy for
@@ -245,7 +249,8 @@ public class AddSmartCampaign {
             Arrays.asList(
                 createCampaignBudgetOperation(customerId, suggestedDailyBudgetMicros),
                 createSmartCampaignOperation(customerId),
-                createSmartCampaignSettingOperation(customerId, locationIdParsed, businessName),
+                createSmartCampaignSettingOperation(
+                    customerId, businessProfileLocation, businessName),
                 createAdGroupOperation(customerId),
                 createAdGroupAdOperation(customerId, adSuggestions)));
     operations.addAll(
@@ -315,7 +320,7 @@ public class AddSmartCampaign {
    */
   // [START add_smart_campaign_9]
   private SmartCampaignSuggestionInfo getSmartCampaignSuggestionInfo(
-      GoogleAdsClient googleAdsClient, Long locationId, String businessName) {
+      GoogleAdsClient googleAdsClient, String businessProfileLocation, String businessName) {
     SmartCampaignSuggestionInfo.Builder suggestionInfoBuilder =
         SmartCampaignSuggestionInfo.newBuilder()
             // Adds the URL of the campaign's landing page.
@@ -370,10 +375,10 @@ public class AddSmartCampaign {
                     .setEndMinute(MinuteOfHour.ZERO)
                     .build());
 
-    // Sets either of the business_location_id or business_name, depending on whichever is
+    // Sets either of the business_profile_location or business_name, depending on whichever is
     // provided.
-    if (locationId != null) {
-      suggestionInfoBuilder.setBusinessLocationId(locationId);
+    if (businessProfileLocation != null) {
+      suggestionInfoBuilder.setBusinessProfileLocation(businessProfileLocation);
     } else {
       suggestionInfoBuilder.setBusinessContext(
           BusinessContext.newBuilder().setBusinessName(businessName).build());
@@ -524,22 +529,29 @@ public class AddSmartCampaign {
    */
   // [START add_smart_campaign_4]
   private MutateOperation createSmartCampaignSettingOperation(
-      long customerId, Long locationId, String businessName) {
+      long customerId, String businessProfileLocation, String businessName) {
     MutateOperation.Builder builder = MutateOperation.newBuilder();
     SmartCampaignSetting.Builder settingBuilder =
         builder
             .getSmartCampaignSettingOperationBuilder()
             .getUpdateBuilder()
+            // Sets a temporary ID in the campaign setting's resource name to associate it with
+            // the campaign created in the previous step.
             .setResourceName(
-                ResourceNames.smartCampaignSetting(customerId, SMART_CAMPAIGN_TEMPORARY_ID))
-            .setFinalUrl(LANDING_PAGE_URL)
-            .setAdvertisingLanguageCode(LANGUAGE_CODE);
+                ResourceNames.smartCampaignSetting(customerId, SMART_CAMPAIGN_TEMPORARY_ID));
+    // Configures the SmartCampaignSetting using many of the same details used to
+    // generate a budget suggestion.
     settingBuilder
+        .setFinalUrl(LANDING_PAGE_URL)
+        .setAdvertisingLanguageCode(LANGUAGE_CODE)
         .getPhoneNumberBuilder()
         .setCountryCode(COUNTRY_CODE)
         .setPhoneNumber(PHONE_NUMBER);
-    if (locationId != null) {
-      settingBuilder.setBusinessLocationId(locationId);
+
+    // It's required that either a business profile location resource name or a business name is
+    // added to the SmartCampaignSetting.
+    if (businessProfileLocation != null) {
+      settingBuilder.setBusinessProfileLocation(businessProfileLocation);
     } else {
       settingBuilder.setBusinessName(businessName);
     }
@@ -636,8 +648,8 @@ public class AddSmartCampaign {
 
   // [START add_smart_campaign_8]
   /**
-   * Creates {@link com.google.ads.googleads.v10.resources.CampaignCriterion} operations for add each
-   * {@link KeywordThemeInfo}.
+   * Creates {@link com.google.ads.googleads.v11.resources.CampaignCriterion} operations for add
+   * each {@link KeywordThemeInfo}.
    */
   private Collection<? extends MutateOperation> createCampaignCriterionOperations(
       long customerId,

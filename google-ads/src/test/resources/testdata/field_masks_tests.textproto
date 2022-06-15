@@ -284,10 +284,10 @@ test_cases {
     }
   }
   expected_mask {
-    paths: ["dynamic_setting.domain_name", "selective_optimization.conversion_action"]
+    paths: ["dynamic_setting.domain_name", "dynamic_setting.tracking_setting", "selective_optimization.conversion_action"]
   }
   all_set_fields_mask {
-    paths: ["dynamic_setting.domain_name", "selective_optimization.conversion_action"]
+    paths: ["dynamic_setting.domain_name", "dynamic_setting.tracking_setting", "selective_optimization.conversion_action"]
   }
 }
 
@@ -309,10 +309,10 @@ test_cases {
     }
   }
   expected_mask {
-    paths: ["dynamic_setting.use_supplied_urls_only", "dynamic_setting.tracking_setting.tracking_url"]
+    paths: ["dynamic_setting.use_supplied_urls_only", "dynamic_setting.tracking_setting.tracking_url", "selective_optimization"]
   }
   all_set_fields_mask {
-    paths: ["dynamic_setting.use_supplied_urls_only", "dynamic_setting.tracking_setting.tracking_url"]
+    paths: ["dynamic_setting.use_supplied_urls_only", "dynamic_setting.tracking_setting.tracking_url", "selective_optimization"]
   }
 }
 
@@ -457,7 +457,7 @@ test_cases {
     paths: ["dynamic_setting.domain_name", "dynamic_setting.tracking_setting.tracking_url", "selective_optimization.conversion_action"]
   }
   all_set_fields_mask {
-    paths: []
+    paths: ["dynamic_setting", "selective_optimization"]
   }
   expected_field_values {
     key: "selective_optimization"
@@ -799,7 +799,7 @@ test_cases {
     paths: ["optimization_setting.optimization_types"]
   }
   all_set_fields_mask {
-    paths: []
+    paths: ["optimization_setting"]
   }
 }
 
