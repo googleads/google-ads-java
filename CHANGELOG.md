@@ -1,3 +1,12 @@
+19.0.0 - 2022-06-15
+-------------------
+- Add support and examples for Google Ads API v11.0.
+- Update FieldMasks utility to better handle empty message fields.
+- Update AddSmartCampaign example for the new features in v11.0.
+- Add DetectAndApplyRecommendations example.
+- Add CreateExperiment example, replacing CreateExperimentCampaign and
+  GraduateCampaignExperiment.
+
 18.0.0 - 2022-05-02
 -------------------
 - Add support for v10_1 of Google Ads API.
