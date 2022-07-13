@@ -162,6 +162,7 @@ disableUnlessPublishing(tasks.sourcesJar)
 class ExampleRunnerTask extends JavaExec {
 
   // The base package for all examples.
+  @Internal
   private String basePackage = 'com.google.ads.googleads.examples.'
 
   // Hints for failed executions.
