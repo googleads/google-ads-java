@@ -1,39 +1,6 @@
 
 # Serialized TestSuite proto
 
-# Modify scalar in a wrapper proto
-test_cases {
-  description: "Modify scalar in a wrapper proto"
-  original_resource {
-    wrapper {
-      value: "a"
-    }
-  }
-  modified_resource {
-    wrapper {
-      value: "b"
-    }
-  }
-  expected_mask {
-    paths: "wrapper"
-  }
-}
-
-# Create wrapper proto
-test_cases {
-  description: "Create wrapper proto"
-  original_resource {
-  }
-  modified_resource {
-    wrapper {
-      value: "a"
-    }
-  }
-  expected_mask {
-    paths: "wrapper"
-  }
-}
-
 # Modify element in a repeated field
 test_cases {
   description: "Modify element in a repeated field"
@@ -130,41 +97,18 @@ test_cases {
 test_cases {
   description: "No change"
   original_resource {
-    wrapper {
-      value: "a"
-    }
+    name: "a"
     foos {
       num: 1
     }
   }
   modified_resource {
-    wrapper {
-      value: "a"
-    }
+    name: "a"
     foos {
       num: 1
     }
   }
   expected_mask {
-  }
-}
-
-# Create message with nested wrapper
-test_cases {
-  description: "Create message with nested wrapper"
-  original_resource {
-  }
-  modified_resource {
-    foo {
-      bar {
-        nested_wrapper {
-          value: true
-        }
-      }
-    }
-  }
-  expected_mask {
-    paths: "foo.bar.nested_wrapper"
   }
 }
 
