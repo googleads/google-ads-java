@@ -16,7 +16,6 @@ package com.google.ads.googleads.lib.utils;
 
 import static org.junit.Assert.assertEquals;
 
-import com.google.ads.googleads.lib.test.errors.Int64Value;
 import com.google.ads.googleads.lib.test.errors.MockError;
 import com.google.ads.googleads.lib.test.errors.MockFailure;
 import com.google.ads.googleads.lib.test.errors.MockPath;
@@ -46,11 +45,7 @@ public class AbstractErrorUtilsTest {
 
   @Test
   public void getGoogleAdsErrors_includesWhen_operationSet() throws InvalidProtocolBufferException {
-    MockPath path =
-        MockPath.newBuilder()
-            .setIndex(Int64Value.newBuilder().setValue(0))
-            .setFieldName(operationsFieldName)
-            .build();
+    MockPath path = MockPath.newBuilder().setIndex(0).setFieldName(operationsFieldName).build();
     MockError error = MockError.newBuilder().addLocation(path).build();
     MockFailure failure = MockFailure.newBuilder().addErrors(error).build();
     Status status = Status.newBuilder().addDetails(Any.pack(failure)).build();
@@ -82,8 +77,7 @@ public class AbstractErrorUtilsTest {
   @Test
   public void getGoogleAdsErrors_omitsWhen_missingFieldName()
       throws InvalidProtocolBufferException {
-    MockPath path =
-        MockPath.newBuilder().setIndex(Int64Value.newBuilder().setValue(0).build()).build();
+    MockPath path = MockPath.newBuilder().setIndex(0).build();
     MockError error = MockError.newBuilder().addLocation(path).build();
     MockFailure failure = MockFailure.newBuilder().addErrors(error).build();
     Status status = Status.newBuilder().addDetails(Any.pack(failure)).build();
@@ -95,11 +89,7 @@ public class AbstractErrorUtilsTest {
   public void getGoogleAdsErrors_omitsWhen_operationIndexOutOfSequenceInPaths()
       throws InvalidProtocolBufferException {
     MockPath path0 = MockPath.newBuilder().setFieldName("someotherfield").build();
-    MockPath path1 =
-        MockPath.newBuilder()
-            .setIndex(Int64Value.newBuilder().setValue(0))
-            .setFieldName(operationsFieldName)
-            .build();
+    MockPath path1 = MockPath.newBuilder().setIndex(0).setFieldName(operationsFieldName).build();
     MockError error = MockError.newBuilder().addLocation(path0).addLocation(path1).build();
     MockFailure failure = MockFailure.newBuilder().addErrors(error).build();
     Status status = Status.newBuilder().addDetails(Any.pack(failure)).build();
@@ -110,16 +100,8 @@ public class AbstractErrorUtilsTest {
   @Test
   public void getGoogleAdsErrors_includesWhen_operationIndexOutOfSequenceInErrors()
       throws InvalidProtocolBufferException {
-    MockPath path0 =
-        MockPath.newBuilder()
-            .setIndex(Int64Value.newBuilder().setValue(0))
-            .setFieldName(operationsFieldName)
-            .build();
-    MockPath path1 =
-        MockPath.newBuilder()
-            .setIndex(Int64Value.newBuilder().setValue(1))
-            .setFieldName(operationsFieldName)
-            .build();
+    MockPath path0 = MockPath.newBuilder().setIndex(0).setFieldName(operationsFieldName).build();
+    MockPath path1 = MockPath.newBuilder().setIndex(1).setFieldName(operationsFieldName).build();
     MockError error0 = MockError.newBuilder().addLocation(path0).build();
     MockError error1 = MockError.newBuilder().addLocation(path1).build();
     // Swap the order of the errors.
@@ -132,16 +114,8 @@ public class AbstractErrorUtilsTest {
 
   @Test
   public void getGoogleAdsErrors_noDuplicates_ofSameError() throws InvalidProtocolBufferException {
-    MockPath path0 =
-        MockPath.newBuilder()
-            .setIndex(Int64Value.newBuilder().setValue(0))
-            .setFieldName(operationsFieldName)
-            .build();
-    MockPath path1 =
-        MockPath.newBuilder()
-            .setIndex(Int64Value.newBuilder().setValue(0))
-            .setFieldName(operationsFieldName)
-            .build();
+    MockPath path0 = MockPath.newBuilder().setIndex(0).setFieldName(operationsFieldName).build();
+    MockPath path1 = MockPath.newBuilder().setIndex(0).setFieldName(operationsFieldName).build();
     MockError error0 = MockError.newBuilder().addLocation(path0).build();
     MockError error1 = MockError.newBuilder().addLocation(path1).build();
     MockFailure failure = MockFailure.newBuilder().addErrors(error0).addErrors(error1).build();
@@ -154,16 +128,8 @@ public class AbstractErrorUtilsTest {
   @Test
   public void getGoogleAdsErrors_duplicates_whenErrorsDiffer()
       throws InvalidProtocolBufferException {
-    MockPath path0 =
-        MockPath.newBuilder()
-            .setIndex(Int64Value.newBuilder().setValue(0))
-            .setFieldName(operationsFieldName)
-            .build();
-    MockPath path1 =
-        MockPath.newBuilder()
-            .setIndex(Int64Value.newBuilder().setValue(0))
-            .setFieldName(operationsFieldName)
-            .build();
+    MockPath path0 = MockPath.newBuilder().setIndex(0).setFieldName(operationsFieldName).build();
+    MockPath path1 = MockPath.newBuilder().setIndex(0).setFieldName(operationsFieldName).build();
     MockPath path2 = MockPath.newBuilder().setFieldName("somethingelse").build();
     MockError error0 = MockError.newBuilder().addLocation(path0).build();
     MockError error1 = MockError.newBuilder().addLocation(path1).addLocation(path2).build();
@@ -178,11 +144,7 @@ public class AbstractErrorUtilsTest {
 
   @Test
   public void getFailedOperationIndices_returnsOperation() {
-    MockPath path0 =
-        MockPath.newBuilder()
-            .setIndex(Int64Value.newBuilder().setValue(123))
-            .setFieldName(operationsFieldName)
-            .build();
+    MockPath path0 = MockPath.newBuilder().setIndex(123).setFieldName(operationsFieldName).build();
     MockError error0 = MockError.newBuilder().addLocation(path0).build();
     MockFailure failure = MockFailure.newBuilder().addErrors(error0).build();
     List<Long> result = impl.getFailedOperationIndices(failure);
@@ -192,16 +154,8 @@ public class AbstractErrorUtilsTest {
 
   @Test
   public void getFailedOperationIndices_removesDuplicates() {
-    MockPath path0 =
-        MockPath.newBuilder()
-            .setIndex(Int64Value.newBuilder().setValue(123))
-            .setFieldName(operationsFieldName)
-            .build();
-    MockPath path1 =
-        MockPath.newBuilder()
-            .setIndex(Int64Value.newBuilder().setValue(123))
-            .setFieldName(operationsFieldName)
-            .build();
+    MockPath path0 = MockPath.newBuilder().setIndex(123).setFieldName(operationsFieldName).build();
+    MockPath path1 = MockPath.newBuilder().setIndex(123).setFieldName(operationsFieldName).build();
     MockError error0 = MockError.newBuilder().addLocation(path0).build();
     MockError error1 = MockError.newBuilder().addLocation(path1).build();
     MockFailure failure = MockFailure.newBuilder().addErrors(error0).addErrors(error1).build();
@@ -212,11 +166,7 @@ public class AbstractErrorUtilsTest {
 
   @Test
   public void getFailedOperationIndices_ignoresNonOperationErrors() {
-    MockPath path0 =
-        MockPath.newBuilder()
-            .setIndex(Int64Value.newBuilder().setValue(123))
-            .setFieldName("someotherfield")
-            .build();
+    MockPath path0 = MockPath.newBuilder().setIndex(123).setFieldName("someotherfield").build();
     MockError error0 = MockError.newBuilder().addLocation(path0).build();
     MockFailure failure = MockFailure.newBuilder().addErrors(error0).build();
     List<Long> result = impl.getFailedOperationIndices(failure);
@@ -247,8 +197,7 @@ public class AbstractErrorUtilsTest {
       return new ErrorPath(
           error,
           errorLocation.getFieldName(),
-          Optional.ofNullable(
-              errorLocation.hasIndex() ? errorLocation.getIndex().getValue() : null));
+          Optional.ofNullable(errorLocation.hasIndex() ? errorLocation.getIndex() : null));
     }
   }
 }

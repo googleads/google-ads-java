@@ -25,7 +25,6 @@ public final class ArgumentNames {
   public static final String ADJUSTMENT_DATE_TIME = "--adjustmentDateTime";
   public static final String ADJUSTMENT_TYPE = "--adjustmentType";
   public static final String ADVERTISER_UPLOAD_DATE_TIME = "--advertiserUploadDateTime";
-  public static final String ARTIFACT_NAME = "--artifactName";
   public static final String ASSET_GROUP_ID = "--assetGroupId";
   public static final String ATTRIBUTE_VALUE = "--attributeValue";
   public static final String AUDIENCE_ID = "--audienceId";
@@ -96,6 +95,7 @@ public final class ArgumentNames {
   public static final String MANAGER_ID = "--managerId";
   public static final String MARKETING_IMAGE_ASSET_ID = "--marketingImageAssetId";
   public static final String MERCHANT_CENTER_ACCOUNT_ID = "--merchantCenterAccountId";
+  public static final String NAME_PREFIX = "--namePrefix";
   public static final String OAUTH_CLIENT_FILE = "--oAuthClientFile";
   public static final String OAUTH_SCOPES = "--oAuthScopes";
   public static final String OFFLINE_USER_DATA_JOB_TYPE = "--offlineUserDataJobType";

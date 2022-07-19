@@ -21,7 +21,14 @@ import com.google.api.gax.rpc.ApiClientHeaderProvider;
 import com.google.api.gax.rpc.HeaderProvider;
 import com.google.auto.value.AutoValue;
 import com.google.auto.value.extension.memoized.Memoized;
+import com.google.common.base.Joiner;
 import com.google.common.collect.ImmutableMap;
+import com.google.protobuf.Message;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Properties;
 import javax.annotation.Nullable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -55,13 +62,13 @@ public abstract class GoogleAdsHeaderProvider implements HeaderProvider {
   @Override
   @Memoized
   public ImmutableMap<String, String> getHeaders() {
-    ImmutableMap.Builder<String, String> builder = ImmutableMap.builder();
-    builder.put("developer-token", getDeveloperToken());
+    Map<String, String> headers = new HashMap<>();
+    headers.put("developer-token", getDeveloperToken());
     if (getLoginCustomerId() != null) {
-      builder.put("login-customer-id", String.valueOf(getLoginCustomerId()));
+      headers.put("login-customer-id", String.valueOf(getLoginCustomerId()));
     }
     if (getLinkedCustomerId() != null) {
-      builder.put("linked-customer-id", String.valueOf(getLinkedCustomerId()));
+      headers.put("linked-customer-id", String.valueOf(getLinkedCustomerId()));
     }
     // Add the x-goog-api-client header which is usually added by the stub settings. However,
     // this doesn't happen. Once we add headers, needsHeaders() is false, so GAX's
@@ -74,14 +81,50 @@ public abstract class GoogleAdsHeaderProvider implements HeaderProvider {
                 GaxGrpcProperties.getGrpcTokenName(), GaxGrpcProperties.getGrpcVersion())
             .setClientLibToken("gccl", getLibraryVersion())
             .build();
-    builder.putAll(apiClient.getHeaders());
-    return builder.build();
+    // Adds all the headers from the provider.
+    headers.putAll(apiClient.getHeaders());
+
+    // Adds the "pb/x.y.z" string to the API client header key with the runtime version of the
+    // protobuf-java dependency.
+    String protobufVersion = getProtobufVersion();
+    if (protobufVersion != null) {
+      // Gets the original value for the header.
+      String apiClientHeader = headers.get(ApiClientHeaderProvider.getDefaultApiClientHeaderKey());
+      // Appends the protobuf version with the "pb/" prefix.
+      apiClientHeader =
+          Joiner.on(' ').skipNulls().join(apiClientHeader, String.format("pb/%s", protobufVersion));
+      // Updates the entry for the header.
+      headers.put(ApiClientHeaderProvider.getDefaultApiClientHeaderKey(), apiClientHeader);
+    }
+    return ImmutableMap.copyOf(headers);
   }
 
   private static String getLibraryVersion() {
     String implementationVersion =
         GoogleAdsHeaderProvider.class.getPackage().getImplementationVersion();
     return implementationVersion == null ? "0.0.0" : implementationVersion;
+  }
+
+  private static String getProtobufVersion() {
+    // Tries to get the implementation version from the protobuf Message interface.
+    String protobufImplVersion = Message.class.getPackage().getImplementationVersion();
+    if (protobufImplVersion != null) {
+      return protobufImplVersion;
+    }
+    // If the implementation version isn't available, attempts to retrieve the protobuf version from
+    // the pom.properties file packaged in the protobuf-java JAR file.
+    try (InputStream in =
+        Message.class.getResourceAsStream(
+            "/META-INF/maven/com.google.protobuf/protobuf-java/pom.properties")) {
+      if (in != null) {
+        Properties props = new Properties();
+        props.load(in);
+        return props.getProperty("version");
+      }
+    } catch (IOException e) {
+      // Ignores exception reading from the file, as this is expected if the file does not exist.
+    }
+    return null;
   }
 
   @AutoValue.Builder

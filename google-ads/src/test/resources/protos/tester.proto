@@ -2,7 +2,6 @@ syntax = "proto3";
 
 package google.ads.googleads.test;
 
-import "google/protobuf/wrappers.proto";
 import "google/protobuf/field_mask.proto";
 
 option java_multiple_files = true;
@@ -22,7 +21,7 @@ message TestCase {
 }
 
 message Resource {
-  google.protobuf.StringValue wrapper = 1;
+  string name = 1;
   Foo foo = 2;
   repeated Foo foos = 3;
   optional int32 presence = 4;
@@ -36,7 +35,6 @@ message Foo {
 
 message Bar {
   int64 num = 1;
-  google.protobuf.BoolValue nested_wrapper = 2;
   optional int32 nested_presence = 3;
   repeated string repeated_primitive_string = 4;
   string primitive_string = 5;

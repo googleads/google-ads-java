@@ -1,16 +1,30 @@
+// Copyright 2018 Google LLC
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     https://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
 package com.google.ads.googleads.lib.utils;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 
-import com.google.ads.googleads.v10.common.ManualCpc;
-import com.google.ads.googleads.v10.common.ManualCpm;
-import com.google.ads.googleads.v10.common.MaximizeConversions;
-import com.google.ads.googleads.v10.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v10.resources.Campaign;
-import com.google.ads.googleads.v10.resources.Campaign.DynamicSearchAdsSetting;
-import com.google.ads.googleads.v10.resources.Campaign.SelectiveOptimization;
-import com.google.ads.googleads.v10.resources.Campaign.TrackingSetting;
+import com.google.ads.googleads.v11.common.ManualCpc;
+import com.google.ads.googleads.v11.common.ManualCpm;
+import com.google.ads.googleads.v11.common.MaximizeConversions;
+import com.google.ads.googleads.v11.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v11.resources.Campaign;
+import com.google.ads.googleads.v11.resources.Campaign.DynamicSearchAdsSetting;
+import com.google.ads.googleads.v11.resources.Campaign.SelectiveOptimization;
+import com.google.ads.googleads.v11.resources.Campaign.TrackingSetting;
 import com.google.common.collect.ImmutableList;
 import com.google.protobuf.Descriptors.EnumValueDescriptor;
 import java.util.Arrays;
@@ -133,7 +147,7 @@ public class FieldMasksTest {
               FieldMasks.getFieldValue("status.paused", campaign);
             });
     assertEquals(
-        "Unable to access subfield of google.ads.googleads.v10.resources.Campaign.status which is"
+        "Unable to access subfield of google.ads.googleads.v11.resources.Campaign.status which is"
             + " not a Message",
         exception.getMessage());
   }
@@ -169,8 +183,7 @@ public class FieldMasksTest {
             .setMaximizeConversions(MaximizeConversions.newBuilder().build())
             .build();
     assertEquals(
-        FieldMasks.allSetFieldsOf(campaign).getPathsList(),
-        Arrays.asList("maximize_conversions"));
+        FieldMasks.allSetFieldsOf(campaign).getPathsList(), Arrays.asList("maximize_conversions"));
   }
 
   @Test

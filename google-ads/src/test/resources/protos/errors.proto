@@ -36,10 +36,5 @@ message MockError {
 
 message MockPath {
   string fieldName = 1;
-  Int64Value index = 2;
-}
-
-message Int64Value {
-  // The int64 value.
-  int64 value = 1;
+  optional int64 index = 2;
 }

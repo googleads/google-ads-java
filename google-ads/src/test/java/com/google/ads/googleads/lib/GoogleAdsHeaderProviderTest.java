@@ -108,10 +108,30 @@ public class GoogleAdsHeaderProviderTest {
   public void includes_clientLibraryVersion() {
     GoogleAdsHeaderProvider provider =
         GoogleAdsHeaderProvider.newBuilder().setDeveloperToken("test").build();
-    Pattern pattern = Pattern.compile("gccl/([0-9]+\\.[0-9]+\\.[0-9]+)");
     String headerValue = provider.getHeaders().get("x-goog-api-client");
+    assertValueMatchesVersionPattern("gccl/", headerValue);
+  }
+
+  @Test
+  public void includes_protobufLibraryVersion() {
+    GoogleAdsHeaderProvider provider =
+        GoogleAdsHeaderProvider.newBuilder().setDeveloperToken("test").build();
+    String headerValue = provider.getHeaders().get("x-goog-api-client");
+    assertValueMatchesVersionPattern("pb/", headerValue);
+  }
+
+  /**
+   * Verifies that the string after a {@code prefixToken} matches the standard pattern for semantic
+   * version.
+   *
+   * @param prefixToken the prefix to search for in {@code headerValue}
+   * @param headerValue the header value
+   */
+  private void assertValueMatchesVersionPattern(String prefixToken, String headerValue) {
+    Pattern pattern = Pattern.compile(prefixToken + "([0-9]+\\.[0-9]+\\.[0-9]+)");
     Matcher matcher = pattern.matcher(headerValue);
-    assertTrue("Unable to regex match gccl in header " + headerValue, matcher.find());
+    assertTrue(
+        "Unable to regex match " + prefixToken + " in header " + headerValue, matcher.find());
     for (char c : matcher.group(1).toCharArray()) {
       assertTrue(
           "Version must only consist of numbers and .s: " + c + " : " + matcher.group(1),

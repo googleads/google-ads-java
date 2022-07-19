@@ -132,8 +132,7 @@ public class FieldMasks {
   /** Returns true if the field parameter should be added to the UpdateMask. */
   private static boolean shouldAddTopLevelMessageToPath(
       Message original, Message modified, FieldDescriptor field) {
-    return isWrapperType(field.getMessageType())
-        || isClearingMessage(original, modified, field)
+    return isClearingMessage(original, modified, field)
         || isSettingEmptyOneOf(original, modified, field);
   }
 
@@ -191,10 +190,5 @@ public class FieldMasks {
     } else {
       return currentField + "." + field.getName();
     }
-  }
-
-  private static boolean isWrapperType(Descriptor descriptor) {
-    return descriptor.getFile().getPackage().equals("google.protobuf")
-        && descriptor.getFile().getFullName().equals("google/protobuf/wrappers.proto");
   }
 }
