@@ -1,3 +1,12 @@
+20.0.0 - 2022-07-19
+-------------------
+- Remove support for v9 of Google Ads API.
+- Add @Internal annotation for basePackage in Gradle (#647).
+- Add protobuf version to the API client header.
+- Rename GetArtifactMetadata to SearchForGoogleAdsFields and make the example
+  more flexible and useful.
+- Remove references to wrapper types.
+
 19.0.0 - 2022-06-15
 -------------------
 - Add support and examples for Google Ads API v11.0.
