@@ -1,6 +1,3 @@
-import groovy.json.JsonSlurper
-import com.google.common.collect.Sets
-
 /*
  * Copyright 2020 Google LLC
  *
@@ -20,10 +17,18 @@ import com.google.common.collect.Sets
  * depends on the google-ads-annotation-processing subproject.
  */
 
+
+import com.google.common.collect.Sets
+import groovy.json.JsonSlurper
+
+import java.util.stream.Collectors
+
+import static nl.javadude.gradle.plugins.license.DownloadLicensesExtension.license
+
 plugins {
-  id 'com.google.api-ads.java-conventions'
-  id 'com.google.protobuf' version '0.8.15'
-  id "com.github.hierynomus.license-report" version "0.15.0"
+    id 'com.google.api-ads.java-conventions'
+    id 'com.google.protobuf' version '0.8.15'
+    id "com.github.hierynomus.license-report" version "0.15.0"
 }
 
 description = 'Google Ads API client library for Java'
@@ -115,6 +120,28 @@ task generateLicenses(type: nl.javadude.gradle.plugins.license.DownloadLicenses)
     // the exclusion is precise.
     excludeDependencies = rootProject.allprojects
             .collect { it.group + ':' + it.name + ':' + it.version }
+
+    // Sets an extension property that contains all allowed licenses and their
+    // canonical names. Update this map if you need to add a new license.
+    ext.allowedLicenses = [
+            'apacheTwo'      : license('Apache License, Version 2.0', 'http://opensource.org/licenses/Apache-2.0'),
+            'bsdThreeClause' : license('3-Clause BSD License', 'https://opensource.org/licenses/BSD-3-Clause'),
+            'mit'            : license('MIT License', 'https://opensource.org/licenses/mit-license.php'),
+            'cddlAndGplv2Cpe': license('CDDL + GPLv2 with classpath exception', 'https://github.com/javaee/javax.annotation/blob/master/LICENSE')
+    ]
+
+    // Specifies aliases for the known licenses so the report will use the
+    // canonical name of each license.
+    aliases = [
+            (ext.allowedLicenses['apacheTwo'])     : ['Apache License 2.0',
+                                                      'The Apache License, Version 2.0',
+                                                      'The Apache Software License, Version 2.0',
+                                                      'Apache 2.0',
+                                                      'Apache-2.0',
+                                                      'Apache 2'],
+            (ext.allowedLicenses['bsdThreeClause']): ['BSD 3-clause', 'BSD', 'BSD New license'],
+            (ext.allowedLicenses['mit'])           : ['The MIT License', 'MIT license'],
+    ]
 }
 
 task verifyLicenses() {
@@ -127,43 +154,30 @@ task verifyLicenses() {
         // contains the JSON file (among other files).
         def inputFile = tasks.generateLicenses.outputs.files.singleFile.listFiles().find { it.path.endsWith(".json") }
         def json = new JsonSlurper().parseText(inputFile.text)
-        // Gets all the licenses except those for ourselves (which aren't set yet).
-        def licenses = json
+        // Gets the names of all the licenses except those for ourselves
+        // (which aren't set yet).
+        def licenseNames = json
                 .dependencies
                 .findAll { !it.name.startsWith("com.google.api-ads") }
                 .licenses
                 .name
                 .flatten() as Set
-        // Defines licenses which are allowed. Update this list if you need to add
-        // a new license.
-        def allowedLicenses = [
-                "Apache License 2.0",
-                "Apache License, Version 2.0",
-                "The Apache License, Version 2.0",
-                "The Apache Software License, Version 2.0",
-                "Apache 2.0",
-                "Apache-2.0",
-                "Apache 2",
-                "BSD",
-                "BSD 3-clause",
-                "3-Clause BSD License",
-                "The MIT License",
-                "MIT License",
-                "MIT license",
-                "BSD New license",
-                "The New BSD License",
-                "GNU General Public License, version 2 (GPL2), with the classpath exception",
-                "CDDL + GPLv2 with classpath exception"
-        ] as Set
+        // Gets the canonical names of allowed licenses from the
+        // generateLicenses task.
+        def allowedLicenseNames = tasks.generateLicenses.ext.allowedLicenses
+                .values()
+                .stream()
+                .map { it.licenseName }
+                .collect(Collectors.toSet())
         // Computes which licenses are in use but not permitted.
-        def notAllowed = Sets.difference(licenses, allowedLicenses)
+        def notAllowed = Sets.difference(licenseNames, allowedLicenseNames)
         if (!notAllowed.empty) {
             throw new GradleException(
                     """Licenses found which were not allowed: ${notAllowed}
 - Note that this script is not very smart. It doesn't attempt to do partial
 string comparison on the license name. It is possible that the new license is
 already allowed with a different spelling. If the new license is already allowed
-just add the new spelling to google-ads/build.gradle.
+just add the new spelling to the aliases in google-ads/build.gradle.
 - Otherwise you need to consider if we should accept this new license. For 
 Googlers, there is a company policy for this available internally.""")
         }
@@ -274,11 +288,11 @@ task copyThirdPartyBinaries(type: Copy) {
 }
 
 publishing {
-  publications {
-    maven(MavenPublication) { publication ->
-      configurePom(publication,
-          "Google Ads API client library for Java - main library",
-          "Main library for the Google Ads API client library for Java")
+    publications {
+        maven(MavenPublication) { publication ->
+            configurePom(publication,
+                    "Google Ads API client library for Java - main library",
+                    "Main library for the Google Ads API client library for Java")
+        }
     }
-  }
 }
