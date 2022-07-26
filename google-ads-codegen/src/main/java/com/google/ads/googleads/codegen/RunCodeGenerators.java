@@ -15,18 +15,17 @@
 package com.google.ads.googleads.codegen;
 
 import com.google.ads.googleads.lib.stubs.annotations.VersionDescriptor;
+import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
+import com.google.common.reflect.ClassPath;
+import com.google.common.reflect.ClassPath.ClassInfo;
 import java.io.File;
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
-import org.reflections.Reflections;
-import org.reflections.scanners.SubTypesScanner;
-import org.reflections.scanners.TypeAnnotationsScanner;
-import org.reflections.util.ClasspathHelper;
-import org.reflections.util.ConfigurationBuilder;
 
 /**
  * Generates various classes which require knowing the available Google Ads API major versions.
@@ -56,12 +55,24 @@ public class RunCodeGenerators {
    * major version by the GAPIC generator pipeline.
    */
   private static Set<Class<?>> loadAnnotatedClasses() {
-    Reflections reflections =
-        new Reflections(
-            new ConfigurationBuilder()
-                .addUrls(ClasspathHelper.forPackage("com.google.ads.googleads"))
-                .addScanners(new TypeAnnotationsScanner(), new SubTypesScanner()));
-    return reflections.getTypesAnnotatedWith(VersionDescriptor.class);
+    try {
+      Set<Class<?>> annotatedClasses =
+          ClassPath.from(ClassLoader.getSystemClassLoader())
+              .getTopLevelClassesRecursive("com.google.ads.googleads")
+              .stream()
+              .map(ClassInfo::load)
+              .filter(c -> c.getAnnotation(VersionDescriptor.class) != null)
+              .collect(Collectors.toSet());
+      // Verifies annotated classes were found.
+      Preconditions.checkState(
+          !annotatedClasses.isEmpty(),
+          "No types found with annotation: %s",
+          VersionDescriptor.class);
+      return annotatedClasses;
+    } catch (IOException e) {
+      throw new RuntimeException(
+          "Failed to find classes annotated with " + VersionDescriptor.class.getSimpleName(), e);
+    }
   }
 
   /** Pulls the @VersionDescriptor instance from annotated classes. */

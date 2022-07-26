@@ -20,25 +20,45 @@ import static org.hamcrest.number.OrderingComparison.greaterThan;
 import static org.junit.Assert.assertEquals;
 
 import com.beust.jcommander.Parameter;
+import com.google.common.collect.ImmutableList;
+import com.google.common.reflect.ClassPath;
+import com.google.common.reflect.ClassPath.ClassInfo;
+import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
+import java.util.Arrays;
 import java.util.Set;
+import java.util.stream.Collectors;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
-import org.reflections.Reflections;
-import org.reflections.scanners.FieldAnnotationsScanner;
 
 @RunWith(JUnit4.class)
 public class ValidateParametersTest {
 
   @Test
-  public void ensure_no_final_parmeters() {
+  public void ensure_no_final_parameters() throws IOException {
     // Avoids silent failures from JCommander when parsing flags if the field is final.
-    Reflections reflections =
-        new Reflections("com.google.ads.googleads.examples", new FieldAnnotationsScanner());
-    Set<Field> annotatedFields = reflections.getFieldsAnnotatedWith(Parameter.class);
-    assertThat("parameters", annotatedFields.size(), is(greaterThan(0)));
+    Set<Field> annotatedFields =
+        ClassPath.from(getClass().getClassLoader())
+            .getTopLevelClassesRecursive("com.google.ads.googleads.examples")
+            .stream()
+            .map(ClassInfo::load)
+            .flatMap(
+                c ->
+                    ImmutableList.<Class<?>>builder()
+                        .add(c)
+                        .addAll(Arrays.asList(c.getDeclaredClasses()))
+                        .build()
+                        .stream())
+            .flatMap(c -> Arrays.stream(c.getDeclaredFields()))
+            .filter(f -> f.getAnnotation(Parameter.class) != null)
+            .collect(Collectors.toSet());
+
+    // Asserts that the above discovered at least 300 annotated fields. Examples contain closer to
+    // 400 such fields as of the writing of this test, but this leaves some room in case we decide
+    // to remove some examples.
+    assertThat("parameters", annotatedFields.size(), is(greaterThan(300)));
     for (Field field : annotatedFields) {
       assertEquals("field is final: " + field, 0, field.getModifiers() & Modifier.FINAL);
     }

@@ -35,12 +35,6 @@
     <file>auto-service-1.0-rc2.jar</file>
     <license name='Apache 2.0' url='http://www.apache.org/licenses/LICENSE-2.0.txt' />
   </dependency>
-  <dependency name='org.javassist:javassist:3.21.0-GA'>
-    <file>javassist-3.21.0-GA.jar</file>
-    <license name='MPL 1.1' url='http://www.mozilla.org/MPL/MPL-1.1.html' />
-    <license name='LGPL 2.1' url='http://www.gnu.org/licenses/lgpl-2.1.html' />
-    <license name='Apache License 2.0' url='http://www.apache.org/licenses/' />
-  </dependency>
   <dependency name='com.google.protobuf:protobuf-java-util:3.18.1'>
     <file>protobuf-java-util-3.18.1.jar</file>
     <license name='3-Clause BSD License' url='https://opensource.org/licenses/BSD-3-Clause' />
@@ -68,11 +62,6 @@
   <dependency name='org.threeten:threetenbp:1.5.1'>
     <file>threetenbp-1.5.1.jar</file>
     <license name='BSD 3-clause' url='https://raw.githubusercontent.com/ThreeTen/threetenbp/master/LICENSE.txt' />
-  </dependency>
-  <dependency name='org.reflections:reflections:0.9.11'>
-    <file>reflections-0.9.11.jar</file>
-    <license name='WTFPL' url='http://www.wtfpl.net/' />
-    <license name='The New BSD License' url='http://www.opensource.org/licenses/bsd-license.html' />
   </dependency>
   <dependency name='com.google.guava:failureaccess:1.0.1'>
     <file>failureaccess-1.0.1.jar</file>
