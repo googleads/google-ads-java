@@ -186,7 +186,7 @@ Googlers, there is a company policy for this available internally.""")
 
 task copyLicenses(type: Copy) {
     description = "Copies licenses from build directory to third_party"
-    dependsOn 'generateLicenses'
+    dependsOn 'verifyLicenses'
     mustRunAfter 'createThirdPartyDirectory'
 
     from new File(tasks.generateLicenses.xmlDestination.getAbsolutePath(), "dependency-license.json"),
