@@ -51,6 +51,14 @@ jar {
         'Implementation-Title': 'Google Ads API - client library for Java',
         'Implementation-Version': archiveVersion)
   }
+
+  // Adds license information to the META-INF directory in the jar.
+  into('META-INF') {
+    from("${project.rootProject.rootDir}") {
+      include "LICENSE"
+      include "THIRD-PARTY-LICENSE.txt"
+    }
+  }
 }
 
 javadoc {
