@@ -18,9 +18,11 @@ import com.beust.jcommander.Parameter;
 import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
-import com.google.ads.googleads.v11.common.ExpandedTextAdInfo;
+import com.google.ads.googleads.v11.common.AdTextAsset;
 import com.google.ads.googleads.v11.common.PolicyTopicEntry;
+import com.google.ads.googleads.v11.common.ResponsiveSearchAdInfo;
 import com.google.ads.googleads.v11.enums.AdGroupAdStatusEnum.AdGroupAdStatus;
+import com.google.ads.googleads.v11.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType;
 import com.google.ads.googleads.v11.errors.GoogleAdsError;
 import com.google.ads.googleads.v11.errors.GoogleAdsException;
 import com.google.ads.googleads.v11.errors.PolicyFindingErrorEnum.PolicyFindingError;
@@ -31,18 +33,19 @@ import com.google.ads.googleads.v11.services.AdGroupAdServiceClient;
 import com.google.ads.googleads.v11.services.MutateAdGroupAdsRequest;
 import com.google.ads.googleads.v11.services.MutateAdGroupAdsResponse;
 import com.google.ads.googleads.v11.utils.ResourceNames;
+import com.google.common.collect.ImmutableList;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Shows how to use the validateOnly header to validate an expanded text ad. No ads will be created,
- * but exceptions will still be thrown.
+ * Shows how to use the validateOnly header to validate a responsive search ad. No ads will be
+ * created, but exceptions will still be thrown.
  */
-public class ValidateTextAd {
+public class ValidateAd {
 
-  private static class ValidateTextAdParams extends CodeSampleParams {
+  private static class ValidateAdParams extends CodeSampleParams {
 
     @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
     private Long customerId;
@@ -52,7 +55,7 @@ public class ValidateTextAd {
   }
 
   public static void main(String[] args) {
-    ValidateTextAdParams params = new ValidateTextAdParams();
+    ValidateAdParams params = new ValidateAdParams();
     if (!params.parseArguments(args)) {
 
       // Either pass the required parameters for this example on the command line, or insert them
@@ -74,7 +77,7 @@ public class ValidateTextAd {
     }
 
     try {
-      new ValidateTextAd().runExample(googleAdsClient, params.customerId, params.adGroupId);
+      new ValidateAd().runExample(googleAdsClient, params.customerId, params.adGroupId);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -102,20 +105,28 @@ public class ValidateTextAd {
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long adGroupId) {
     String adGroupResourceName = ResourceNames.adGroup(customerId, adGroupId);
 
-    // Creates the expanded text ad info.
-    ExpandedTextAdInfo expandedTextAdInfo =
-        ExpandedTextAdInfo.newBuilder()
-            .setDescription("Luxury Cruise to Mars")
-            .setHeadlinePart1("Visit the Red Planet in style")
-            // Adds a headline that will trigger a policy violation to demonstrate error handling.
-            .setHeadlinePart2("Low-gravity fun for everyone!!")
+    // Creates the responsive search ad info.
+    ResponsiveSearchAdInfo responsiveSearchAdInfo =
+        ResponsiveSearchAdInfo.newBuilder()
+            .addAllHeadlines(
+                ImmutableList.of(
+                    AdTextAsset.newBuilder()
+                        .setText("Visit the Red Planet in style.")
+                        .setPinnedField(ServedAssetFieldType.HEADLINE_1)
+                        .build(),
+                    AdTextAsset.newBuilder().setText("Low-gravity fun for everyone!").build(),
+                    AdTextAsset.newBuilder().setText("Book your Cruise to Mars now!").build()))
+            .addAllDescriptions(
+                ImmutableList.of(
+                    AdTextAsset.newBuilder().setText("Luxury Cruise to Mars").build(),
+                    AdTextAsset.newBuilder().setText("Book your ticket now").build()))
             .build();
 
     // Wraps the info in an Ad object.
     Ad ad =
         Ad.newBuilder()
-            .setExpandedTextAd(expandedTextAdInfo)
-            .addFinalUrls("http://www.example.com")
+            .setResponsiveSearchAd(responsiveSearchAdInfo)
+            .addFinalUrls("https://www.example.com")
             .build();
 
     // Builds the final ad group ad representation.
@@ -139,25 +150,26 @@ public class ValidateTextAd {
                   .addOperations(operation)
                   .setValidateOnly(true)
                   .build());
-      // Since validation is ON, result will be null.
-      System.out.println("Expanded text ad validated successfully.");
+      // This line will not be executed since the ad will fail validation.
+      System.out.println("Responsive search ad validated successfully.");
     } catch (GoogleAdsException e) {
       // This block will be hit if there is a validation error from the server.
-      System.out.println("There were validation error(s) while adding expanded text ad.");
+      System.out.println("There were validation error(s) while adding responsive search ad.");
 
-      if (e.getGoogleAdsFailure() != null) {
-        // Note: Policy violation errors are returned as PolicyFindingErrors. See
-        // https://developers.google.com/google-ads/api/docs/policy-exemption/overview
-        // for additional details.
-        List<GoogleAdsError> policyFindingErrors =
-            e.getGoogleAdsFailure().getErrorsList().stream()
-                .filter(
-                    err ->
-                        err.getErrorCode().getPolicyFindingError()
-                            == PolicyFindingError.POLICY_FINDING)
-                .collect(Collectors.toList());
-        int count = 1;
+      // Note: Policy violation errors are returned as PolicyFindingErrors. See
+      // https://developers.google.com/google-ads/api/docs/policy-exemption/overview
+      // for additional details.
+      List<GoogleAdsError> policyFindingErrors =
+          e.getGoogleAdsFailure().getErrorsList().stream()
+              .filter(
+                  err ->
+                      err.getErrorCode().getPolicyFindingError()
+                          == PolicyFindingError.POLICY_FINDING)
+              .collect(Collectors.toList());
+
+      if (!policyFindingErrors.isEmpty()) {
         for (GoogleAdsError policyFindingError : policyFindingErrors) {
+          int count = 1;
           if (policyFindingError.getDetails().hasPolicyFindingDetails()) {
             List<PolicyTopicEntry> policyTopicEntries =
                 policyFindingError
@@ -166,7 +178,7 @@ public class ValidateTextAd {
                     .getPolicyTopicEntriesList();
             for (PolicyTopicEntry policyTopicEntry : policyTopicEntries) {
               System.out.printf(
-                  "%d Policy topic entry with topic '%s' and type '%s' was found.%n",
+                  "%d Policy topic entries with topic '%s' and type '%s' found.%n",
                   count, policyTopicEntry.getTopic(), policyTopicEntry.getType());
             }
             count++;
