@@ -20,6 +20,8 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.utils.FieldMasks;
+import com.google.ads.googleads.v11.common.AdTextAsset;
+import com.google.ads.googleads.v11.enums.ServedAssetFieldTypeEnum.ServedAssetFieldType;
 import com.google.ads.googleads.v11.errors.GoogleAdsError;
 import com.google.ads.googleads.v11.errors.GoogleAdsException;
 import com.google.ads.googleads.v11.resources.Ad;
@@ -32,10 +34,10 @@ import com.google.common.collect.ImmutableList;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-/** Updates an expanded text ad. To get expanded text ads, run GetExpandedTextAds. */
-public class UpdateExpandedTextAd {
+/** Updates a responsive search ad. To get responsive search ads, run GetResponsiveSearchAds. */
+public class UpdateResponsiveSearchAd {
 
-  private static class UpdateExpandedTextAdParams extends CodeSampleParams {
+  private static class UpdateResponsiveSearchAdParams extends CodeSampleParams {
 
     @Parameter(names = ArgumentNames.CUSTOMER_ID, required = true)
     private Long customerId;
@@ -45,7 +47,7 @@ public class UpdateExpandedTextAd {
   }
 
   public static void main(String[] args) {
-    UpdateExpandedTextAdParams params = new UpdateExpandedTextAdParams();
+    UpdateResponsiveSearchAdParams params = new UpdateResponsiveSearchAdParams();
     if (!params.parseArguments(args)) {
 
       // Either pass the required parameters for this example on the command line, or insert them
@@ -67,7 +69,7 @@ public class UpdateExpandedTextAd {
     }
 
     try {
-      new UpdateExpandedTextAd().runExample(googleAdsClient, params.customerId, params.adId);
+      new UpdateResponsiveSearchAd().runExample(googleAdsClient, params.customerId, params.adId);
     } catch (GoogleAdsException gae) {
       // GoogleAdsException is the base class for most exceptions thrown by an API request.
       // Instances of this exception have a message and a GoogleAdsFailure that contains a
@@ -91,7 +93,7 @@ public class UpdateExpandedTextAd {
    * @param customerId the customer ID to update.
    * @param adId the ad ID to update.
    */
-  // [START update_expanded_text_ad]
+  // [START update_responsive_search_ad]
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long adId) {
     // Creates an AdOperation to update an ad.
     AdOperation.Builder adOperation = AdOperation.newBuilder();
@@ -104,12 +106,23 @@ public class UpdateExpandedTextAd {
             .addFinalUrls("http://www.example.com/")
             .addFinalMobileUrls("http://www.example.com/mobile");
 
-    // Sets the expanded text ad properties to update on the ad.
+    // Sets the responsive search ad properties to update on the ad.
     adBuilder
-        .getExpandedTextAdBuilder()
-        .setHeadlinePart1("Cruise to Pluto #" + getShortPrintableDateTime())
-        .setHeadlinePart2("Tickets on sale now")
-        .setDescription("Best space cruise ever.");
+        .getResponsiveSearchAdBuilder()
+        .addAllHeadlines(
+            ImmutableList.of(
+                AdTextAsset.newBuilder()
+                    .setText("Cruise to Pluto #" + getShortPrintableDateTime())
+                    .setPinnedField(ServedAssetFieldType.HEADLINE_1)
+                    .build(),
+                AdTextAsset.newBuilder().setText("Tickets on sale now").build(),
+                AdTextAsset.newBuilder().setText("Buy your ticket now").build()))
+        .addAllDescriptions(
+            ImmutableList.of(
+                AdTextAsset.newBuilder().setText("Best space cruise ever.").build(),
+                AdTextAsset.newBuilder()
+                    .setText("The most wonderful space experience you will ever have.")
+                    .build()));
 
     // Sets the update mask (the fields which will be modified) to be all the fields we set above.
     adOperation.setUpdateMask(FieldMasks.allSetFieldsOf(adBuilder.build()));
@@ -128,5 +141,5 @@ public class UpdateExpandedTextAd {
       }
     }
   }
-  // [END update_expanded_text_ad]
+  // [END update_responsive_search_ad]
 }
