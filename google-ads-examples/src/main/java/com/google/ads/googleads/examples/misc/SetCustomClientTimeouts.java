@@ -109,6 +109,9 @@ public class SetCustomClientTimeouts {
                       .setQuery("SELECT campaign.id FROM campaign")
                       .build(),
                   // Sets the timeout to use.
+                  // Note: This overrides the default value and can lead to
+                  // RequestError.RPC_DEADLINE_TOO_SHORT errors when too small. We recommend
+                  // to do it only if necessary.
                   GrpcCallContext.createDefault()
                       .withTimeout(Duration.ofMillis(CLIENT_TIMEOUT_MILLIS)));
       // Iterates over all rows in all messages and collects the campaign IDs.
