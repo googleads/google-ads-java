@@ -1,4 +1,4 @@
-// Copyright 2019 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -28,6 +28,7 @@ import com.google.ads.googleads.v11.utils.ResourceNames;
 import com.google.protobuf.ProtocolStringList;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.List;
 
 /**
  * Generates historical metrics for a keyword plan. To create a keyword plan, run the {@link
@@ -108,7 +109,7 @@ public class GenerateHistoricalMetrics {
         // These metrics include those for both the search query and any close variants included in
         // the response.
 
-        ProtocolStringList variants = metric.getCloseVariantsList();
+        List<String> variants = metric.getCloseVariantsList();
         String variantsList =
             (variants.isEmpty())
                 ? ""
@@ -131,18 +132,24 @@ public class GenerateHistoricalMetrics {
         // placement is for a keyword. The level of competition from 0-100 is determined by the
         // number of ad slots filled divided by the total number of ad slots available. If not
         // enough data is available, None will be returned.
-        System.out.printf(
-            "\tCompetition index: %d.%n", metric.getKeywordMetrics().getCompetitionIndex());
+        if (metric.getKeywordMetrics().hasCompetitionIndex()) {
+          System.out.printf(
+              "\tCompetition index: %d.%n", metric.getKeywordMetrics().getCompetitionIndex());
+        }
 
         // Top of page bid low range (20th percentile) in micros for the keyword.
-        System.out.printf(
-            "\tTop of page bid low range %d.%n",
-            metric.getKeywordMetrics().getLowTopOfPageBidMicros());
+        if (metric.getKeywordMetrics().hasLowTopOfPageBidMicros()) {
+          System.out.printf(
+              "\tTop of page bid low range %d.%n",
+              metric.getKeywordMetrics().getLowTopOfPageBidMicros());
+        }
 
         // Top of page bid high range (80th percentile) in micros for the keyword.
-        System.out.printf(
-            "\tTop of page bid high range %d.%n",
-            metric.getKeywordMetrics().getHighTopOfPageBidMicros());
+        if (metric.getKeywordMetrics().hasHighTopOfPageBidMicros()) {
+          System.out.printf(
+              "\tTop of page bid high range %d.%n",
+              metric.getKeywordMetrics().getHighTopOfPageBidMicros());
+        }
 
         // Approximate number of searches on this query for the past twelve months.
         for (MonthlySearchVolume month : metric.getKeywordMetrics().getMonthlySearchVolumesList()) {
