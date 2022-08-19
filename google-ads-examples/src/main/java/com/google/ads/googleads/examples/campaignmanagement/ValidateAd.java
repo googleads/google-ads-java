@@ -40,8 +40,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Shows how to use the validateOnly header to validate a responsive search ad. No ads will be
- * created, but exceptions will still be thrown.
+ * Shows how to use the validateOnly request parameter to validate a responsive search ad. No ads
+ * will be created, but exceptions will still be thrown.
  */
 public class ValidateAd {
 
