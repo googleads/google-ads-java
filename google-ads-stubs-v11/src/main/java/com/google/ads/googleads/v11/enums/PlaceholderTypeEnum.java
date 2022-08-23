@@ -201,7 +201,7 @@ private static final long serialVersionUID = 0L;
     PRICE(10),
     /**
      * <pre>
-     * Allows you to highlight sales and other promotions that let users see how
+     * Lets you highlight sales and other promotions that let users see how
      * they can save by buying now.
      * </pre>
      *
@@ -400,7 +400,7 @@ private static final long serialVersionUID = 0L;
     public static final int PRICE_VALUE = 10;
     /**
      * <pre>
-     * Allows you to highlight sales and other promotions that let users see how
+     * Lets you highlight sales and other promotions that let users see how
      * they can save by buying now.
      * </pre>
      *

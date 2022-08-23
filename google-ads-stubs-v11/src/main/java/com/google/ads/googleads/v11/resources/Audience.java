@@ -5,7 +5,7 @@ package com.google.ads.googleads.v11.resources;
 
 /**
  * <pre>
- * Audience is an effective targeting option that allows you to
+ * Audience is an effective targeting option that lets you
  * intersect different segment attributes, such as detailed demographics and
  * affinities, to create audiences that represent sections of your target
  * segments.
@@ -664,7 +664,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Audience is an effective targeting option that allows you to
+   * Audience is an effective targeting option that lets you
    * intersect different segment attributes, such as detailed demographics and
    * affinities, to create audiences that represent sections of your target
    * segments.

@@ -67,4 +67,37 @@ public interface PlannedProductOrBuilder extends
    * @return The budgetMicros.
    */
   long getBudgetMicros();
+
+  /**
+   * <pre>
+   * Targeting settings for the selected product.
+   * To list the available targeting for each product use
+   * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v11.services.ReachPlanService.ListPlannableProducts].
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.services.AdvancedProductTargeting advanced_product_targeting = 5;</code>
+   * @return Whether the advancedProductTargeting field is set.
+   */
+  boolean hasAdvancedProductTargeting();
+  /**
+   * <pre>
+   * Targeting settings for the selected product.
+   * To list the available targeting for each product use
+   * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v11.services.ReachPlanService.ListPlannableProducts].
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.services.AdvancedProductTargeting advanced_product_targeting = 5;</code>
+   * @return The advancedProductTargeting.
+   */
+  com.google.ads.googleads.v11.services.AdvancedProductTargeting getAdvancedProductTargeting();
+  /**
+   * <pre>
+   * Targeting settings for the selected product.
+   * To list the available targeting for each product use
+   * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v11.services.ReachPlanService.ListPlannableProducts].
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.services.AdvancedProductTargeting advanced_product_targeting = 5;</code>
+   */
+  com.google.ads.googleads.v11.services.AdvancedProductTargetingOrBuilder getAdvancedProductTargetingOrBuilder();
 }

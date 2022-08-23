@@ -899,7 +899,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the conversion action.
    * </pre>
    *
-   * <code>optional string conversion_action = 113;</code>
+   * <code>optional string conversion_action = 113 [(.google.api.resource_reference) = { ... }</code>
    * @return Whether the conversionAction field is set.
    */
   @java.lang.Override
@@ -911,7 +911,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the conversion action.
    * </pre>
    *
-   * <code>optional string conversion_action = 113;</code>
+   * <code>optional string conversion_action = 113 [(.google.api.resource_reference) = { ... }</code>
    * @return The conversionAction.
    */
   @java.lang.Override
@@ -932,7 +932,7 @@ private static final long serialVersionUID = 0L;
    * Resource name of the conversion action.
    * </pre>
    *
-   * <code>optional string conversion_action = 113;</code>
+   * <code>optional string conversion_action = 113 [(.google.api.resource_reference) = { ... }</code>
    * @return The bytes for conversionAction.
    */
   @java.lang.Override
@@ -1040,10 +1040,10 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * This segments your conversion columns by the original conversion and
-   * conversion value vs. the delta if conversions were adjusted. False row has
-   * the data as originally stated; While true row has the delta between data
-   * now and the data as originally stated. Summing the two together results
-   * post-adjustment data.
+   * conversion value versus the delta if conversions were adjusted. False row
+   * has the data as originally stated; While true row has the delta between
+   * data now and the data as originally stated. Summing the two together
+   * results post-adjustment data.
    * </pre>
    *
    * <code>optional bool conversion_adjustment = 115;</code>
@@ -1056,10 +1056,10 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * This segments your conversion columns by the original conversion and
-   * conversion value vs. the delta if conversions were adjusted. False row has
-   * the data as originally stated; While true row has the delta between data
-   * now and the data as originally stated. Summing the two together results
-   * post-adjustment data.
+   * conversion value versus the delta if conversions were adjusted. False row
+   * has the data as originally stated; While true row has the delta between
+   * data now and the data as originally stated. Summing the two together
+   * results post-adjustment data.
    * </pre>
    *
    * <code>optional bool conversion_adjustment = 115;</code>
@@ -1160,7 +1160,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Date to which metrics apply.
-   * yyyy-MM-dd format, e.g., 2018-04-17.
+   * yyyy-MM-dd format, for example, 2018-04-17.
    * </pre>
    *
    * <code>optional string date = 79;</code>
@@ -1173,7 +1173,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Date to which metrics apply.
-   * yyyy-MM-dd format, e.g., 2018-04-17.
+   * yyyy-MM-dd format, for example, 2018-04-17.
    * </pre>
    *
    * <code>optional string date = 79;</code>
@@ -1195,7 +1195,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Date to which metrics apply.
-   * yyyy-MM-dd format, e.g., 2018-04-17.
+   * yyyy-MM-dd format, for example, 2018-04-17.
    * </pre>
    *
    * <code>optional string date = 79;</code>
@@ -1220,7 +1220,7 @@ private static final long serialVersionUID = 0L;
   private int dayOfWeek_;
   /**
    * <pre>
-   * Day of the week, e.g., MONDAY.
+   * Day of the week, for example, MONDAY.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.DayOfWeekEnum.DayOfWeek day_of_week = 5;</code>
@@ -1231,7 +1231,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Day of the week, e.g., MONDAY.
+   * Day of the week, for example, MONDAY.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.DayOfWeekEnum.DayOfWeek day_of_week = 5;</code>
@@ -2663,7 +2663,7 @@ private static final long serialVersionUID = 0L;
   private int monthOfYear_;
   /**
    * <pre>
-   * Month of the year, e.g., January.
+   * Month of the year, for example, January.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.MonthOfYearEnum.MonthOfYear month_of_year = 18;</code>
@@ -2674,7 +2674,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Month of the year, e.g., January.
+   * Month of the year, for example, January.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.MonthOfYearEnum.MonthOfYear month_of_year = 18;</code>
@@ -4132,8 +4132,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Quarter as represented by the date of the first day of a quarter.
-   * Uses the calendar year for quarters, e.g., the second quarter of 2018
-   * starts on 2018-04-01. Formatted as yyyy-MM-dd.
+   * Uses the calendar year for quarters, for example, the second quarter of
+   * 2018 starts on 2018-04-01. Formatted as yyyy-MM-dd.
    * </pre>
    *
    * <code>optional string quarter = 128;</code>
@@ -4146,8 +4146,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Quarter as represented by the date of the first day of a quarter.
-   * Uses the calendar year for quarters, e.g., the second quarter of 2018
-   * starts on 2018-04-01. Formatted as yyyy-MM-dd.
+   * Uses the calendar year for quarters, for example, the second quarter of
+   * 2018 starts on 2018-04-01. Formatted as yyyy-MM-dd.
    * </pre>
    *
    * <code>optional string quarter = 128;</code>
@@ -4169,8 +4169,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Quarter as represented by the date of the first day of a quarter.
-   * Uses the calendar year for quarters, e.g., the second quarter of 2018
-   * starts on 2018-04-01. Formatted as yyyy-MM-dd.
+   * Uses the calendar year for quarters, for example, the second quarter of
+   * 2018 starts on 2018-04-01. Formatted as yyyy-MM-dd.
    * </pre>
    *
    * <code>optional string quarter = 128;</code>
@@ -4489,7 +4489,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * iOS Store Kit Ad Network conversion value.
-   * Null value means this segment is not applicable, e.g. non-iOS campaign.
+   * Null value means this segment is not applicable, for example, non-iOS
+   * campaign.
    * </pre>
    *
    * <code>optional int64 sk_ad_network_conversion_value = 137;</code>
@@ -4502,7 +4503,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * iOS Store Kit Ad Network conversion value.
-   * Null value means this segment is not applicable, e.g. non-iOS campaign.
+   * Null value means this segment is not applicable, for example, non-iOS
+   * campaign.
    * </pre>
    *
    * <code>optional int64 sk_ad_network_conversion_value = 137;</code>
@@ -4572,8 +4574,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * App where the ad that drove the iOS Store Kit Ad Network install was
-   * shown. Null value means this segment is not applicable, e.g. non-iOS
-   * campaign, or was not present in any postbacks sent by Apple.
+   * shown. Null value means this segment is not applicable, for example,
+   * non-iOS campaign, or was not present in any postbacks sent by Apple.
    * </pre>
    *
    * <code>optional .google.ads.googleads.v11.common.SkAdNetworkSourceApp sk_ad_network_source_app = 143;</code>
@@ -4586,8 +4588,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * App where the ad that drove the iOS Store Kit Ad Network install was
-   * shown. Null value means this segment is not applicable, e.g. non-iOS
-   * campaign, or was not present in any postbacks sent by Apple.
+   * shown. Null value means this segment is not applicable, for example,
+   * non-iOS campaign, or was not present in any postbacks sent by Apple.
    * </pre>
    *
    * <code>optional .google.ads.googleads.v11.common.SkAdNetworkSourceApp sk_ad_network_source_app = 143;</code>
@@ -4600,8 +4602,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * App where the ad that drove the iOS Store Kit Ad Network install was
-   * shown. Null value means this segment is not applicable, e.g. non-iOS
-   * campaign, or was not present in any postbacks sent by Apple.
+   * shown. Null value means this segment is not applicable, for example,
+   * non-iOS campaign, or was not present in any postbacks sent by Apple.
    * </pre>
    *
    * <code>optional .google.ads.googleads.v11.common.SkAdNetworkSourceApp sk_ad_network_source_app = 143;</code>
@@ -4645,12 +4647,13 @@ private static final long serialVersionUID = 0L;
    * Only used with CustomerAsset, CampaignAsset and AdGroupAsset metrics.
    * Indicates whether the interaction metrics occurred on the asset itself
    * or a different asset or ad unit.
-   * Interactions (e.g. clicks) are counted across all the parts of the served
-   * ad (e.g. Ad itself and other components like Sitelinks) when they are
-   * served together. When interaction_on_this_asset is true, it means the
-   * interactions are on this specific asset and when interaction_on_this_asset
-   * is false, it means the interactions is not on this specific asset but on
-   * other parts of the served ad this asset is served with.
+   * Interactions (for example, clicks) are counted across all the parts of the
+   * served ad (for example, Ad itself and other components like Sitelinks) when
+   * they are served together. When interaction_on_this_asset is true, it means
+   * the interactions are on this specific asset and when
+   * interaction_on_this_asset is false, it means the interactions is not on
+   * this specific asset but on other parts of the served ad this asset is
+   * served with.
    * </pre>
    *
    * <code>optional .google.ads.googleads.v11.common.AssetInteractionTarget asset_interaction_target = 139;</code>
@@ -4665,12 +4668,13 @@ private static final long serialVersionUID = 0L;
    * Only used with CustomerAsset, CampaignAsset and AdGroupAsset metrics.
    * Indicates whether the interaction metrics occurred on the asset itself
    * or a different asset or ad unit.
-   * Interactions (e.g. clicks) are counted across all the parts of the served
-   * ad (e.g. Ad itself and other components like Sitelinks) when they are
-   * served together. When interaction_on_this_asset is true, it means the
-   * interactions are on this specific asset and when interaction_on_this_asset
-   * is false, it means the interactions is not on this specific asset but on
-   * other parts of the served ad this asset is served with.
+   * Interactions (for example, clicks) are counted across all the parts of the
+   * served ad (for example, Ad itself and other components like Sitelinks) when
+   * they are served together. When interaction_on_this_asset is true, it means
+   * the interactions are on this specific asset and when
+   * interaction_on_this_asset is false, it means the interactions is not on
+   * this specific asset but on other parts of the served ad this asset is
+   * served with.
    * </pre>
    *
    * <code>optional .google.ads.googleads.v11.common.AssetInteractionTarget asset_interaction_target = 139;</code>
@@ -4685,12 +4689,13 @@ private static final long serialVersionUID = 0L;
    * Only used with CustomerAsset, CampaignAsset and AdGroupAsset metrics.
    * Indicates whether the interaction metrics occurred on the asset itself
    * or a different asset or ad unit.
-   * Interactions (e.g. clicks) are counted across all the parts of the served
-   * ad (e.g. Ad itself and other components like Sitelinks) when they are
-   * served together. When interaction_on_this_asset is true, it means the
-   * interactions are on this specific asset and when interaction_on_this_asset
-   * is false, it means the interactions is not on this specific asset but on
-   * other parts of the served ad this asset is served with.
+   * Interactions (for example, clicks) are counted across all the parts of the
+   * served ad (for example, Ad itself and other components like Sitelinks) when
+   * they are served together. When interaction_on_this_asset is true, it means
+   * the interactions are on this specific asset and when
+   * interaction_on_this_asset is false, it means the interactions is not on
+   * this specific asset but on other parts of the served ad this asset is
+   * served with.
    * </pre>
    *
    * <code>optional .google.ads.googleads.v11.common.AssetInteractionTarget asset_interaction_target = 139;</code>
@@ -7551,7 +7556,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the conversion action.
      * </pre>
      *
-     * <code>optional string conversion_action = 113;</code>
+     * <code>optional string conversion_action = 113 [(.google.api.resource_reference) = { ... }</code>
      * @return Whether the conversionAction field is set.
      */
     public boolean hasConversionAction() {
@@ -7562,7 +7567,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the conversion action.
      * </pre>
      *
-     * <code>optional string conversion_action = 113;</code>
+     * <code>optional string conversion_action = 113 [(.google.api.resource_reference) = { ... }</code>
      * @return The conversionAction.
      */
     public java.lang.String getConversionAction() {
@@ -7582,7 +7587,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the conversion action.
      * </pre>
      *
-     * <code>optional string conversion_action = 113;</code>
+     * <code>optional string conversion_action = 113 [(.google.api.resource_reference) = { ... }</code>
      * @return The bytes for conversionAction.
      */
     public com.google.protobuf.ByteString
@@ -7603,7 +7608,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the conversion action.
      * </pre>
      *
-     * <code>optional string conversion_action = 113;</code>
+     * <code>optional string conversion_action = 113 [(.google.api.resource_reference) = { ... }</code>
      * @param value The conversionAction to set.
      * @return This builder for chaining.
      */
@@ -7622,7 +7627,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the conversion action.
      * </pre>
      *
-     * <code>optional string conversion_action = 113;</code>
+     * <code>optional string conversion_action = 113 [(.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public Builder clearConversionAction() {
@@ -7636,7 +7641,7 @@ private static final long serialVersionUID = 0L;
      * Resource name of the conversion action.
      * </pre>
      *
-     * <code>optional string conversion_action = 113;</code>
+     * <code>optional string conversion_action = 113 [(.google.api.resource_reference) = { ... }</code>
      * @param value The bytes for conversionAction to set.
      * @return This builder for chaining.
      */
@@ -7837,10 +7842,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * This segments your conversion columns by the original conversion and
-     * conversion value vs. the delta if conversions were adjusted. False row has
-     * the data as originally stated; While true row has the delta between data
-     * now and the data as originally stated. Summing the two together results
-     * post-adjustment data.
+     * conversion value versus the delta if conversions were adjusted. False row
+     * has the data as originally stated; While true row has the delta between
+     * data now and the data as originally stated. Summing the two together
+     * results post-adjustment data.
      * </pre>
      *
      * <code>optional bool conversion_adjustment = 115;</code>
@@ -7853,10 +7858,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * This segments your conversion columns by the original conversion and
-     * conversion value vs. the delta if conversions were adjusted. False row has
-     * the data as originally stated; While true row has the delta between data
-     * now and the data as originally stated. Summing the two together results
-     * post-adjustment data.
+     * conversion value versus the delta if conversions were adjusted. False row
+     * has the data as originally stated; While true row has the delta between
+     * data now and the data as originally stated. Summing the two together
+     * results post-adjustment data.
      * </pre>
      *
      * <code>optional bool conversion_adjustment = 115;</code>
@@ -7869,10 +7874,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * This segments your conversion columns by the original conversion and
-     * conversion value vs. the delta if conversions were adjusted. False row has
-     * the data as originally stated; While true row has the delta between data
-     * now and the data as originally stated. Summing the two together results
-     * post-adjustment data.
+     * conversion value versus the delta if conversions were adjusted. False row
+     * has the data as originally stated; While true row has the delta between
+     * data now and the data as originally stated. Summing the two together
+     * results post-adjustment data.
      * </pre>
      *
      * <code>optional bool conversion_adjustment = 115;</code>
@@ -7888,10 +7893,10 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * This segments your conversion columns by the original conversion and
-     * conversion value vs. the delta if conversions were adjusted. False row has
-     * the data as originally stated; While true row has the delta between data
-     * now and the data as originally stated. Summing the two together results
-     * post-adjustment data.
+     * conversion value versus the delta if conversions were adjusted. False row
+     * has the data as originally stated; While true row has the delta between
+     * data now and the data as originally stated. Summing the two together
+     * results post-adjustment data.
      * </pre>
      *
      * <code>optional bool conversion_adjustment = 115;</code>
@@ -8140,7 +8145,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Date to which metrics apply.
-     * yyyy-MM-dd format, e.g., 2018-04-17.
+     * yyyy-MM-dd format, for example, 2018-04-17.
      * </pre>
      *
      * <code>optional string date = 79;</code>
@@ -8152,7 +8157,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Date to which metrics apply.
-     * yyyy-MM-dd format, e.g., 2018-04-17.
+     * yyyy-MM-dd format, for example, 2018-04-17.
      * </pre>
      *
      * <code>optional string date = 79;</code>
@@ -8173,7 +8178,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Date to which metrics apply.
-     * yyyy-MM-dd format, e.g., 2018-04-17.
+     * yyyy-MM-dd format, for example, 2018-04-17.
      * </pre>
      *
      * <code>optional string date = 79;</code>
@@ -8195,7 +8200,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Date to which metrics apply.
-     * yyyy-MM-dd format, e.g., 2018-04-17.
+     * yyyy-MM-dd format, for example, 2018-04-17.
      * </pre>
      *
      * <code>optional string date = 79;</code>
@@ -8215,7 +8220,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Date to which metrics apply.
-     * yyyy-MM-dd format, e.g., 2018-04-17.
+     * yyyy-MM-dd format, for example, 2018-04-17.
      * </pre>
      *
      * <code>optional string date = 79;</code>
@@ -8230,7 +8235,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Date to which metrics apply.
-     * yyyy-MM-dd format, e.g., 2018-04-17.
+     * yyyy-MM-dd format, for example, 2018-04-17.
      * </pre>
      *
      * <code>optional string date = 79;</code>
@@ -8252,7 +8257,7 @@ private static final long serialVersionUID = 0L;
     private int dayOfWeek_ = 0;
     /**
      * <pre>
-     * Day of the week, e.g., MONDAY.
+     * Day of the week, for example, MONDAY.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.DayOfWeekEnum.DayOfWeek day_of_week = 5;</code>
@@ -8263,7 +8268,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Day of the week, e.g., MONDAY.
+     * Day of the week, for example, MONDAY.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.DayOfWeekEnum.DayOfWeek day_of_week = 5;</code>
@@ -8278,7 +8283,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Day of the week, e.g., MONDAY.
+     * Day of the week, for example, MONDAY.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.DayOfWeekEnum.DayOfWeek day_of_week = 5;</code>
@@ -8292,7 +8297,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Day of the week, e.g., MONDAY.
+     * Day of the week, for example, MONDAY.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.DayOfWeekEnum.DayOfWeek day_of_week = 5;</code>
@@ -8310,7 +8315,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Day of the week, e.g., MONDAY.
+     * Day of the week, for example, MONDAY.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.DayOfWeekEnum.DayOfWeek day_of_week = 5;</code>
@@ -11201,7 +11206,7 @@ private static final long serialVersionUID = 0L;
     private int monthOfYear_ = 0;
     /**
      * <pre>
-     * Month of the year, e.g., January.
+     * Month of the year, for example, January.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.MonthOfYearEnum.MonthOfYear month_of_year = 18;</code>
@@ -11212,7 +11217,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Month of the year, e.g., January.
+     * Month of the year, for example, January.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.MonthOfYearEnum.MonthOfYear month_of_year = 18;</code>
@@ -11227,7 +11232,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Month of the year, e.g., January.
+     * Month of the year, for example, January.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.MonthOfYearEnum.MonthOfYear month_of_year = 18;</code>
@@ -11241,7 +11246,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Month of the year, e.g., January.
+     * Month of the year, for example, January.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.MonthOfYearEnum.MonthOfYear month_of_year = 18;</code>
@@ -11259,7 +11264,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Month of the year, e.g., January.
+     * Month of the year, for example, January.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.MonthOfYearEnum.MonthOfYear month_of_year = 18;</code>
@@ -14042,8 +14047,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Quarter as represented by the date of the first day of a quarter.
-     * Uses the calendar year for quarters, e.g., the second quarter of 2018
-     * starts on 2018-04-01. Formatted as yyyy-MM-dd.
+     * Uses the calendar year for quarters, for example, the second quarter of
+     * 2018 starts on 2018-04-01. Formatted as yyyy-MM-dd.
      * </pre>
      *
      * <code>optional string quarter = 128;</code>
@@ -14055,8 +14060,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Quarter as represented by the date of the first day of a quarter.
-     * Uses the calendar year for quarters, e.g., the second quarter of 2018
-     * starts on 2018-04-01. Formatted as yyyy-MM-dd.
+     * Uses the calendar year for quarters, for example, the second quarter of
+     * 2018 starts on 2018-04-01. Formatted as yyyy-MM-dd.
      * </pre>
      *
      * <code>optional string quarter = 128;</code>
@@ -14077,8 +14082,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Quarter as represented by the date of the first day of a quarter.
-     * Uses the calendar year for quarters, e.g., the second quarter of 2018
-     * starts on 2018-04-01. Formatted as yyyy-MM-dd.
+     * Uses the calendar year for quarters, for example, the second quarter of
+     * 2018 starts on 2018-04-01. Formatted as yyyy-MM-dd.
      * </pre>
      *
      * <code>optional string quarter = 128;</code>
@@ -14100,8 +14105,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Quarter as represented by the date of the first day of a quarter.
-     * Uses the calendar year for quarters, e.g., the second quarter of 2018
-     * starts on 2018-04-01. Formatted as yyyy-MM-dd.
+     * Uses the calendar year for quarters, for example, the second quarter of
+     * 2018 starts on 2018-04-01. Formatted as yyyy-MM-dd.
      * </pre>
      *
      * <code>optional string quarter = 128;</code>
@@ -14121,8 +14126,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Quarter as represented by the date of the first day of a quarter.
-     * Uses the calendar year for quarters, e.g., the second quarter of 2018
-     * starts on 2018-04-01. Formatted as yyyy-MM-dd.
+     * Uses the calendar year for quarters, for example, the second quarter of
+     * 2018 starts on 2018-04-01. Formatted as yyyy-MM-dd.
      * </pre>
      *
      * <code>optional string quarter = 128;</code>
@@ -14137,8 +14142,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Quarter as represented by the date of the first day of a quarter.
-     * Uses the calendar year for quarters, e.g., the second quarter of 2018
-     * starts on 2018-04-01. Formatted as yyyy-MM-dd.
+     * Uses the calendar year for quarters, for example, the second quarter of
+     * 2018 starts on 2018-04-01. Formatted as yyyy-MM-dd.
      * </pre>
      *
      * <code>optional string quarter = 128;</code>
@@ -14836,7 +14841,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * iOS Store Kit Ad Network conversion value.
-     * Null value means this segment is not applicable, e.g. non-iOS campaign.
+     * Null value means this segment is not applicable, for example, non-iOS
+     * campaign.
      * </pre>
      *
      * <code>optional int64 sk_ad_network_conversion_value = 137;</code>
@@ -14849,7 +14855,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * iOS Store Kit Ad Network conversion value.
-     * Null value means this segment is not applicable, e.g. non-iOS campaign.
+     * Null value means this segment is not applicable, for example, non-iOS
+     * campaign.
      * </pre>
      *
      * <code>optional int64 sk_ad_network_conversion_value = 137;</code>
@@ -14862,7 +14869,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * iOS Store Kit Ad Network conversion value.
-     * Null value means this segment is not applicable, e.g. non-iOS campaign.
+     * Null value means this segment is not applicable, for example, non-iOS
+     * campaign.
      * </pre>
      *
      * <code>optional int64 sk_ad_network_conversion_value = 137;</code>
@@ -14878,7 +14886,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * iOS Store Kit Ad Network conversion value.
-     * Null value means this segment is not applicable, e.g. non-iOS campaign.
+     * Null value means this segment is not applicable, for example, non-iOS
+     * campaign.
      * </pre>
      *
      * <code>optional int64 sk_ad_network_conversion_value = 137;</code>
@@ -15045,8 +15054,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * App where the ad that drove the iOS Store Kit Ad Network install was
-     * shown. Null value means this segment is not applicable, e.g. non-iOS
-     * campaign, or was not present in any postbacks sent by Apple.
+     * shown. Null value means this segment is not applicable, for example,
+     * non-iOS campaign, or was not present in any postbacks sent by Apple.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v11.common.SkAdNetworkSourceApp sk_ad_network_source_app = 143;</code>
@@ -15058,8 +15067,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * App where the ad that drove the iOS Store Kit Ad Network install was
-     * shown. Null value means this segment is not applicable, e.g. non-iOS
-     * campaign, or was not present in any postbacks sent by Apple.
+     * shown. Null value means this segment is not applicable, for example,
+     * non-iOS campaign, or was not present in any postbacks sent by Apple.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v11.common.SkAdNetworkSourceApp sk_ad_network_source_app = 143;</code>
@@ -15075,8 +15084,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * App where the ad that drove the iOS Store Kit Ad Network install was
-     * shown. Null value means this segment is not applicable, e.g. non-iOS
-     * campaign, or was not present in any postbacks sent by Apple.
+     * shown. Null value means this segment is not applicable, for example,
+     * non-iOS campaign, or was not present in any postbacks sent by Apple.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v11.common.SkAdNetworkSourceApp sk_ad_network_source_app = 143;</code>
@@ -15097,8 +15106,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * App where the ad that drove the iOS Store Kit Ad Network install was
-     * shown. Null value means this segment is not applicable, e.g. non-iOS
-     * campaign, or was not present in any postbacks sent by Apple.
+     * shown. Null value means this segment is not applicable, for example,
+     * non-iOS campaign, or was not present in any postbacks sent by Apple.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v11.common.SkAdNetworkSourceApp sk_ad_network_source_app = 143;</code>
@@ -15117,8 +15126,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * App where the ad that drove the iOS Store Kit Ad Network install was
-     * shown. Null value means this segment is not applicable, e.g. non-iOS
-     * campaign, or was not present in any postbacks sent by Apple.
+     * shown. Null value means this segment is not applicable, for example,
+     * non-iOS campaign, or was not present in any postbacks sent by Apple.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v11.common.SkAdNetworkSourceApp sk_ad_network_source_app = 143;</code>
@@ -15143,8 +15152,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * App where the ad that drove the iOS Store Kit Ad Network install was
-     * shown. Null value means this segment is not applicable, e.g. non-iOS
-     * campaign, or was not present in any postbacks sent by Apple.
+     * shown. Null value means this segment is not applicable, for example,
+     * non-iOS campaign, or was not present in any postbacks sent by Apple.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v11.common.SkAdNetworkSourceApp sk_ad_network_source_app = 143;</code>
@@ -15162,8 +15171,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * App where the ad that drove the iOS Store Kit Ad Network install was
-     * shown. Null value means this segment is not applicable, e.g. non-iOS
-     * campaign, or was not present in any postbacks sent by Apple.
+     * shown. Null value means this segment is not applicable, for example,
+     * non-iOS campaign, or was not present in any postbacks sent by Apple.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v11.common.SkAdNetworkSourceApp sk_ad_network_source_app = 143;</code>
@@ -15176,8 +15185,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * App where the ad that drove the iOS Store Kit Ad Network install was
-     * shown. Null value means this segment is not applicable, e.g. non-iOS
-     * campaign, or was not present in any postbacks sent by Apple.
+     * shown. Null value means this segment is not applicable, for example,
+     * non-iOS campaign, or was not present in any postbacks sent by Apple.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v11.common.SkAdNetworkSourceApp sk_ad_network_source_app = 143;</code>
@@ -15193,8 +15202,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * App where the ad that drove the iOS Store Kit Ad Network install was
-     * shown. Null value means this segment is not applicable, e.g. non-iOS
-     * campaign, or was not present in any postbacks sent by Apple.
+     * shown. Null value means this segment is not applicable, for example,
+     * non-iOS campaign, or was not present in any postbacks sent by Apple.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v11.common.SkAdNetworkSourceApp sk_ad_network_source_app = 143;</code>
@@ -15295,12 +15304,13 @@ private static final long serialVersionUID = 0L;
      * Only used with CustomerAsset, CampaignAsset and AdGroupAsset metrics.
      * Indicates whether the interaction metrics occurred on the asset itself
      * or a different asset or ad unit.
-     * Interactions (e.g. clicks) are counted across all the parts of the served
-     * ad (e.g. Ad itself and other components like Sitelinks) when they are
-     * served together. When interaction_on_this_asset is true, it means the
-     * interactions are on this specific asset and when interaction_on_this_asset
-     * is false, it means the interactions is not on this specific asset but on
-     * other parts of the served ad this asset is served with.
+     * Interactions (for example, clicks) are counted across all the parts of the
+     * served ad (for example, Ad itself and other components like Sitelinks) when
+     * they are served together. When interaction_on_this_asset is true, it means
+     * the interactions are on this specific asset and when
+     * interaction_on_this_asset is false, it means the interactions is not on
+     * this specific asset but on other parts of the served ad this asset is
+     * served with.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v11.common.AssetInteractionTarget asset_interaction_target = 139;</code>
@@ -15314,12 +15324,13 @@ private static final long serialVersionUID = 0L;
      * Only used with CustomerAsset, CampaignAsset and AdGroupAsset metrics.
      * Indicates whether the interaction metrics occurred on the asset itself
      * or a different asset or ad unit.
-     * Interactions (e.g. clicks) are counted across all the parts of the served
-     * ad (e.g. Ad itself and other components like Sitelinks) when they are
-     * served together. When interaction_on_this_asset is true, it means the
-     * interactions are on this specific asset and when interaction_on_this_asset
-     * is false, it means the interactions is not on this specific asset but on
-     * other parts of the served ad this asset is served with.
+     * Interactions (for example, clicks) are counted across all the parts of the
+     * served ad (for example, Ad itself and other components like Sitelinks) when
+     * they are served together. When interaction_on_this_asset is true, it means
+     * the interactions are on this specific asset and when
+     * interaction_on_this_asset is false, it means the interactions is not on
+     * this specific asset but on other parts of the served ad this asset is
+     * served with.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v11.common.AssetInteractionTarget asset_interaction_target = 139;</code>
@@ -15337,12 +15348,13 @@ private static final long serialVersionUID = 0L;
      * Only used with CustomerAsset, CampaignAsset and AdGroupAsset metrics.
      * Indicates whether the interaction metrics occurred on the asset itself
      * or a different asset or ad unit.
-     * Interactions (e.g. clicks) are counted across all the parts of the served
-     * ad (e.g. Ad itself and other components like Sitelinks) when they are
-     * served together. When interaction_on_this_asset is true, it means the
-     * interactions are on this specific asset and when interaction_on_this_asset
-     * is false, it means the interactions is not on this specific asset but on
-     * other parts of the served ad this asset is served with.
+     * Interactions (for example, clicks) are counted across all the parts of the
+     * served ad (for example, Ad itself and other components like Sitelinks) when
+     * they are served together. When interaction_on_this_asset is true, it means
+     * the interactions are on this specific asset and when
+     * interaction_on_this_asset is false, it means the interactions is not on
+     * this specific asset but on other parts of the served ad this asset is
+     * served with.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v11.common.AssetInteractionTarget asset_interaction_target = 139;</code>
@@ -15365,12 +15377,13 @@ private static final long serialVersionUID = 0L;
      * Only used with CustomerAsset, CampaignAsset and AdGroupAsset metrics.
      * Indicates whether the interaction metrics occurred on the asset itself
      * or a different asset or ad unit.
-     * Interactions (e.g. clicks) are counted across all the parts of the served
-     * ad (e.g. Ad itself and other components like Sitelinks) when they are
-     * served together. When interaction_on_this_asset is true, it means the
-     * interactions are on this specific asset and when interaction_on_this_asset
-     * is false, it means the interactions is not on this specific asset but on
-     * other parts of the served ad this asset is served with.
+     * Interactions (for example, clicks) are counted across all the parts of the
+     * served ad (for example, Ad itself and other components like Sitelinks) when
+     * they are served together. When interaction_on_this_asset is true, it means
+     * the interactions are on this specific asset and when
+     * interaction_on_this_asset is false, it means the interactions is not on
+     * this specific asset but on other parts of the served ad this asset is
+     * served with.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v11.common.AssetInteractionTarget asset_interaction_target = 139;</code>
@@ -15391,12 +15404,13 @@ private static final long serialVersionUID = 0L;
      * Only used with CustomerAsset, CampaignAsset and AdGroupAsset metrics.
      * Indicates whether the interaction metrics occurred on the asset itself
      * or a different asset or ad unit.
-     * Interactions (e.g. clicks) are counted across all the parts of the served
-     * ad (e.g. Ad itself and other components like Sitelinks) when they are
-     * served together. When interaction_on_this_asset is true, it means the
-     * interactions are on this specific asset and when interaction_on_this_asset
-     * is false, it means the interactions is not on this specific asset but on
-     * other parts of the served ad this asset is served with.
+     * Interactions (for example, clicks) are counted across all the parts of the
+     * served ad (for example, Ad itself and other components like Sitelinks) when
+     * they are served together. When interaction_on_this_asset is true, it means
+     * the interactions are on this specific asset and when
+     * interaction_on_this_asset is false, it means the interactions is not on
+     * this specific asset but on other parts of the served ad this asset is
+     * served with.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v11.common.AssetInteractionTarget asset_interaction_target = 139;</code>
@@ -15423,12 +15437,13 @@ private static final long serialVersionUID = 0L;
      * Only used with CustomerAsset, CampaignAsset and AdGroupAsset metrics.
      * Indicates whether the interaction metrics occurred on the asset itself
      * or a different asset or ad unit.
-     * Interactions (e.g. clicks) are counted across all the parts of the served
-     * ad (e.g. Ad itself and other components like Sitelinks) when they are
-     * served together. When interaction_on_this_asset is true, it means the
-     * interactions are on this specific asset and when interaction_on_this_asset
-     * is false, it means the interactions is not on this specific asset but on
-     * other parts of the served ad this asset is served with.
+     * Interactions (for example, clicks) are counted across all the parts of the
+     * served ad (for example, Ad itself and other components like Sitelinks) when
+     * they are served together. When interaction_on_this_asset is true, it means
+     * the interactions are on this specific asset and when
+     * interaction_on_this_asset is false, it means the interactions is not on
+     * this specific asset but on other parts of the served ad this asset is
+     * served with.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v11.common.AssetInteractionTarget asset_interaction_target = 139;</code>
@@ -15448,12 +15463,13 @@ private static final long serialVersionUID = 0L;
      * Only used with CustomerAsset, CampaignAsset and AdGroupAsset metrics.
      * Indicates whether the interaction metrics occurred on the asset itself
      * or a different asset or ad unit.
-     * Interactions (e.g. clicks) are counted across all the parts of the served
-     * ad (e.g. Ad itself and other components like Sitelinks) when they are
-     * served together. When interaction_on_this_asset is true, it means the
-     * interactions are on this specific asset and when interaction_on_this_asset
-     * is false, it means the interactions is not on this specific asset but on
-     * other parts of the served ad this asset is served with.
+     * Interactions (for example, clicks) are counted across all the parts of the
+     * served ad (for example, Ad itself and other components like Sitelinks) when
+     * they are served together. When interaction_on_this_asset is true, it means
+     * the interactions are on this specific asset and when
+     * interaction_on_this_asset is false, it means the interactions is not on
+     * this specific asset but on other parts of the served ad this asset is
+     * served with.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v11.common.AssetInteractionTarget asset_interaction_target = 139;</code>
@@ -15468,12 +15484,13 @@ private static final long serialVersionUID = 0L;
      * Only used with CustomerAsset, CampaignAsset and AdGroupAsset metrics.
      * Indicates whether the interaction metrics occurred on the asset itself
      * or a different asset or ad unit.
-     * Interactions (e.g. clicks) are counted across all the parts of the served
-     * ad (e.g. Ad itself and other components like Sitelinks) when they are
-     * served together. When interaction_on_this_asset is true, it means the
-     * interactions are on this specific asset and when interaction_on_this_asset
-     * is false, it means the interactions is not on this specific asset but on
-     * other parts of the served ad this asset is served with.
+     * Interactions (for example, clicks) are counted across all the parts of the
+     * served ad (for example, Ad itself and other components like Sitelinks) when
+     * they are served together. When interaction_on_this_asset is true, it means
+     * the interactions are on this specific asset and when
+     * interaction_on_this_asset is false, it means the interactions is not on
+     * this specific asset but on other parts of the served ad this asset is
+     * served with.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v11.common.AssetInteractionTarget asset_interaction_target = 139;</code>
@@ -15491,12 +15508,13 @@ private static final long serialVersionUID = 0L;
      * Only used with CustomerAsset, CampaignAsset and AdGroupAsset metrics.
      * Indicates whether the interaction metrics occurred on the asset itself
      * or a different asset or ad unit.
-     * Interactions (e.g. clicks) are counted across all the parts of the served
-     * ad (e.g. Ad itself and other components like Sitelinks) when they are
-     * served together. When interaction_on_this_asset is true, it means the
-     * interactions are on this specific asset and when interaction_on_this_asset
-     * is false, it means the interactions is not on this specific asset but on
-     * other parts of the served ad this asset is served with.
+     * Interactions (for example, clicks) are counted across all the parts of the
+     * served ad (for example, Ad itself and other components like Sitelinks) when
+     * they are served together. When interaction_on_this_asset is true, it means
+     * the interactions are on this specific asset and when
+     * interaction_on_this_asset is false, it means the interactions is not on
+     * this specific asset but on other parts of the served ad this asset is
+     * served with.
      * </pre>
      *
      * <code>optional .google.ads.googleads.v11.common.AssetInteractionTarget asset_interaction_target = 139;</code>

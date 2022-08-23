@@ -288,8 +288,8 @@ private static final long serialVersionUID = 0L;
   private int fieldType_;
   /**
    * <pre>
-   * The description of the placement of the asset within the asset group. E.g.:
-   * HEADLINE, YOUTUBE_VIDEO etc
+   * The description of the placement of the asset within the asset group. For
+   * example: HEADLINE, YOUTUBE_VIDEO etc
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.AssetFieldTypeEnum.AssetFieldType field_type = 4;</code>
@@ -300,8 +300,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The description of the placement of the asset within the asset group. E.g.:
-   * HEADLINE, YOUTUBE_VIDEO etc
+   * The description of the placement of the asset within the asset group. For
+   * example: HEADLINE, YOUTUBE_VIDEO etc
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.AssetFieldTypeEnum.AssetFieldType field_type = 4;</code>
@@ -1125,8 +1125,8 @@ private static final long serialVersionUID = 0L;
     private int fieldType_ = 0;
     /**
      * <pre>
-     * The description of the placement of the asset within the asset group. E.g.:
-     * HEADLINE, YOUTUBE_VIDEO etc
+     * The description of the placement of the asset within the asset group. For
+     * example: HEADLINE, YOUTUBE_VIDEO etc
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.AssetFieldTypeEnum.AssetFieldType field_type = 4;</code>
@@ -1137,8 +1137,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The description of the placement of the asset within the asset group. E.g.:
-     * HEADLINE, YOUTUBE_VIDEO etc
+     * The description of the placement of the asset within the asset group. For
+     * example: HEADLINE, YOUTUBE_VIDEO etc
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.AssetFieldTypeEnum.AssetFieldType field_type = 4;</code>
@@ -1153,8 +1153,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The description of the placement of the asset within the asset group. E.g.:
-     * HEADLINE, YOUTUBE_VIDEO etc
+     * The description of the placement of the asset within the asset group. For
+     * example: HEADLINE, YOUTUBE_VIDEO etc
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.AssetFieldTypeEnum.AssetFieldType field_type = 4;</code>
@@ -1168,8 +1168,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The description of the placement of the asset within the asset group. E.g.:
-     * HEADLINE, YOUTUBE_VIDEO etc
+     * The description of the placement of the asset within the asset group. For
+     * example: HEADLINE, YOUTUBE_VIDEO etc
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.AssetFieldTypeEnum.AssetFieldType field_type = 4;</code>
@@ -1187,8 +1187,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The description of the placement of the asset within the asset group. E.g.:
-     * HEADLINE, YOUTUBE_VIDEO etc
+     * The description of the placement of the asset within the asset group. For
+     * example: HEADLINE, YOUTUBE_VIDEO etc
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.AssetFieldTypeEnum.AssetFieldType field_type = 4;</code>

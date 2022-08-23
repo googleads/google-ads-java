@@ -2209,8 +2209,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.enums.DeviceEnum.Device devices = 9;</code>
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of devices at the given index.
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for devices to set.
      * @return This builder for chaining.
      */
     public Builder setDevicesValue(
@@ -2633,8 +2633,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType advertising_channel_types = 11;</code>
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of advertisingChannelTypes at the given index.
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for advertisingChannelTypes to set.
      * @return This builder for chaining.
      */
     public Builder setAdvertisingChannelTypesValue(

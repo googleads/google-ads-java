@@ -26,7 +26,7 @@ import javax.annotation.Generated;
 
 // AUTO-GENERATED DOCUMENTATION AND CLASS.
 /**
- * Service Description: A service for managing account-level budgets via proposals.
+ * Service Description: A service for managing account-level budgets through proposals.
  *
  * <p>A proposal is a request to create a new budget or make changes to an existing one.
  *

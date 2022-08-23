@@ -150,7 +150,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object customQuestionText_;
   /**
    * <pre>
-   * The exact custom question field text (e.g. "Do you own a car?").
+   * The exact custom question field text (for example, "Do you own a car?").
    * </pre>
    *
    * <code>string custom_question_text = 1;</code>
@@ -171,7 +171,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The exact custom question field text (e.g. "Do you own a car?").
+   * The exact custom question field text (for example, "Do you own a car?").
    * </pre>
    *
    * <code>string custom_question_text = 1;</code>
@@ -605,7 +605,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object customQuestionText_ = "";
     /**
      * <pre>
-     * The exact custom question field text (e.g. "Do you own a car?").
+     * The exact custom question field text (for example, "Do you own a car?").
      * </pre>
      *
      * <code>string custom_question_text = 1;</code>
@@ -625,7 +625,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The exact custom question field text (e.g. "Do you own a car?").
+     * The exact custom question field text (for example, "Do you own a car?").
      * </pre>
      *
      * <code>string custom_question_text = 1;</code>
@@ -646,7 +646,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The exact custom question field text (e.g. "Do you own a car?").
+     * The exact custom question field text (for example, "Do you own a car?").
      * </pre>
      *
      * <code>string custom_question_text = 1;</code>
@@ -665,7 +665,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The exact custom question field text (e.g. "Do you own a car?").
+     * The exact custom question field text (for example, "Do you own a car?").
      * </pre>
      *
      * <code>string custom_question_text = 1;</code>
@@ -679,7 +679,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The exact custom question field text (e.g. "Do you own a car?").
+     * The exact custom question field text (for example, "Do you own a car?").
      * </pre>
      *
      * <code>string custom_question_text = 1;</code>

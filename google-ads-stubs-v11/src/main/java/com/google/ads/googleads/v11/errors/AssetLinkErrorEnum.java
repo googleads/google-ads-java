@@ -121,7 +121,7 @@ private static final long serialVersionUID = 0L;
     PINNING_UNSUPPORTED(2),
     /**
      * <pre>
-     * The given field type is not supported to be added directly via asset
+     * The given field type is not supported to be added directly through asset
      * links.
      * </pre>
      *
@@ -191,9 +191,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Not enough assets with fallback are available. When validating the
-     * minimum number of assets, assets without fallback (e.g. assets that
-     * contain location tag without default value "{LOCATION(City)}") will not
-     * be counted.
+     * minimum number of assets, assets without fallback (for example, assets
+     * that contain location tag without default value "{LOCATION(City)}") will
+     * not be counted.
      * </pre>
      *
      * <code>NOT_ENOUGH_AVAILABLE_ASSET_LINKS_WITH_FALLBACK = 11;</code>
@@ -238,6 +238,14 @@ private static final long serialVersionUID = 0L;
     YOUTUBE_VIDEO_TOO_SHORT(15),
     /**
      * <pre>
+     * The specified field type is excluded for given campaign or ad group.
+     * </pre>
+     *
+     * <code>EXCLUDED_PARENT_FIELD_TYPE = 16;</code>
+     */
+    EXCLUDED_PARENT_FIELD_TYPE(16),
+    /**
+     * <pre>
      * The status is invalid for the operation specified.
      * </pre>
      *
@@ -274,7 +282,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Automatically created links cannot be changed into adveritser links or
-     * vice versa.
+     * the reverse.
      * </pre>
      *
      * <code>CANNOT_MODIFY_ASSET_LINK_SOURCE = 21;</code>
@@ -309,7 +317,7 @@ private static final long serialVersionUID = 0L;
     public static final int PINNING_UNSUPPORTED_VALUE = 2;
     /**
      * <pre>
-     * The given field type is not supported to be added directly via asset
+     * The given field type is not supported to be added directly through asset
      * links.
      * </pre>
      *
@@ -379,9 +387,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Not enough assets with fallback are available. When validating the
-     * minimum number of assets, assets without fallback (e.g. assets that
-     * contain location tag without default value "{LOCATION(City)}") will not
-     * be counted.
+     * minimum number of assets, assets without fallback (for example, assets
+     * that contain location tag without default value "{LOCATION(City)}") will
+     * not be counted.
      * </pre>
      *
      * <code>NOT_ENOUGH_AVAILABLE_ASSET_LINKS_WITH_FALLBACK = 11;</code>
@@ -426,6 +434,14 @@ private static final long serialVersionUID = 0L;
     public static final int YOUTUBE_VIDEO_TOO_SHORT_VALUE = 15;
     /**
      * <pre>
+     * The specified field type is excluded for given campaign or ad group.
+     * </pre>
+     *
+     * <code>EXCLUDED_PARENT_FIELD_TYPE = 16;</code>
+     */
+    public static final int EXCLUDED_PARENT_FIELD_TYPE_VALUE = 16;
+    /**
+     * <pre>
      * The status is invalid for the operation specified.
      * </pre>
      *
@@ -462,7 +478,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Automatically created links cannot be changed into adveritser links or
-     * vice versa.
+     * the reverse.
      * </pre>
      *
      * <code>CANNOT_MODIFY_ASSET_LINK_SOURCE = 21;</code>
@@ -510,6 +526,7 @@ private static final long serialVersionUID = 0L;
         case 13: return YOUTUBE_VIDEO_REMOVED;
         case 14: return YOUTUBE_VIDEO_TOO_LONG;
         case 15: return YOUTUBE_VIDEO_TOO_SHORT;
+        case 16: return EXCLUDED_PARENT_FIELD_TYPE;
         case 17: return INVALID_STATUS;
         case 18: return YOUTUBE_VIDEO_DURATION_NOT_DEFINED;
         case 19: return CANNOT_CREATE_AUTOMATICALLY_CREATED_LINKS;

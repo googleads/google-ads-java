@@ -7,7 +7,7 @@ package com.google.ads.googleads.v11.resources;
  * <pre>
  * A hotel reconciliation. It contains conversion information from Hotel
  * bookings to reconcile with advertiser records. These rows may be updated
- * or canceled before billing via Bulk Uploads.
+ * or canceled before billing through Bulk Uploads.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v11.resources.HotelReconciliation}
@@ -851,7 +851,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * A hotel reconciliation. It contains conversion information from Hotel
    * bookings to reconcile with advertiser records. These rows may be updated
-   * or canceled before billing via Bulk Uploads.
+   * or canceled before billing through Bulk Uploads.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v11.resources.HotelReconciliation}

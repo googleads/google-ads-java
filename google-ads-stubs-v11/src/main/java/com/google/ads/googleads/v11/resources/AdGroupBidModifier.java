@@ -543,7 +543,7 @@ private static final long serialVersionUID = 0L;
   public static final int HOTEL_DATE_SELECTION_TYPE_FIELD_NUMBER = 5;
   /**
    * <pre>
-   * Immutable. Criterion for hotel date selection (default dates vs. user selected).
+   * Immutable. Criterion for hotel date selection (default dates versus user selected).
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -555,7 +555,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. Criterion for hotel date selection (default dates vs. user selected).
+   * Immutable. Criterion for hotel date selection (default dates versus user selected).
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -570,7 +570,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. Criterion for hotel date selection (default dates vs. user selected).
+   * Immutable. Criterion for hotel date selection (default dates versus user selected).
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2030,7 +2030,7 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.common.HotelDateSelectionTypeInfo, com.google.ads.googleads.v11.common.HotelDateSelectionTypeInfo.Builder, com.google.ads.googleads.v11.common.HotelDateSelectionTypeInfoOrBuilder> hotelDateSelectionTypeBuilder_;
     /**
      * <pre>
-     * Immutable. Criterion for hotel date selection (default dates vs. user selected).
+     * Immutable. Criterion for hotel date selection (default dates versus user selected).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2042,7 +2042,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. Criterion for hotel date selection (default dates vs. user selected).
+     * Immutable. Criterion for hotel date selection (default dates versus user selected).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2064,7 +2064,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. Criterion for hotel date selection (default dates vs. user selected).
+     * Immutable. Criterion for hotel date selection (default dates versus user selected).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2084,7 +2084,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. Criterion for hotel date selection (default dates vs. user selected).
+     * Immutable. Criterion for hotel date selection (default dates versus user selected).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2102,7 +2102,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. Criterion for hotel date selection (default dates vs. user selected).
+     * Immutable. Criterion for hotel date selection (default dates versus user selected).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2129,7 +2129,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. Criterion for hotel date selection (default dates vs. user selected).
+     * Immutable. Criterion for hotel date selection (default dates versus user selected).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2152,7 +2152,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. Criterion for hotel date selection (default dates vs. user selected).
+     * Immutable. Criterion for hotel date selection (default dates versus user selected).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2162,7 +2162,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. Criterion for hotel date selection (default dates vs. user selected).
+     * Immutable. Criterion for hotel date selection (default dates versus user selected).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2180,7 +2180,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. Criterion for hotel date selection (default dates vs. user selected).
+     * Immutable. Criterion for hotel date selection (default dates versus user selected).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>

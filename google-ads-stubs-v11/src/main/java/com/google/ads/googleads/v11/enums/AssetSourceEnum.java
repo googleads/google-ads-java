@@ -6,7 +6,7 @@ package com.google.ads.googleads.v11.enums;
 /**
  * <pre>
  * Source of the asset or asset link for who generated the entity.
- * e.g. advertiser or automatically created.
+ * For example, advertiser or automatically created.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v11.enums.AssetSourceEnum}
@@ -396,7 +396,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Source of the asset or asset link for who generated the entity.
-   * e.g. advertiser or automatically created.
+   * For example, advertiser or automatically created.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v11.enums.AssetSourceEnum}

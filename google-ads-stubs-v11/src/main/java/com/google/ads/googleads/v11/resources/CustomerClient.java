@@ -346,7 +346,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. Common Locale Data Repository (CLDR) string representation of the
-   * time zone of the client, e.g. America/Los_Angeles. Read only.
+   * time zone of the client, for example, America/Los_Angeles. Read only.
    * </pre>
    *
    * <code>optional string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -359,7 +359,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. Common Locale Data Repository (CLDR) string representation of the
-   * time zone of the client, e.g. America/Los_Angeles. Read only.
+   * time zone of the client, for example, America/Los_Angeles. Read only.
    * </pre>
    *
    * <code>optional string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -381,7 +381,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. Common Locale Data Repository (CLDR) string representation of the
-   * time zone of the client, e.g. America/Los_Angeles. Read only.
+   * time zone of the client, for example, America/Los_Angeles. Read only.
    * </pre>
    *
    * <code>optional string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -518,7 +518,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object currencyCode_;
   /**
    * <pre>
-   * Output only. Currency code (e.g. 'USD', 'EUR') for the client. Read only.
+   * Output only. Currency code (for example, 'USD', 'EUR') for the client. Read only.
    * </pre>
    *
    * <code>optional string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -530,7 +530,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Currency code (e.g. 'USD', 'EUR') for the client. Read only.
+   * Output only. Currency code (for example, 'USD', 'EUR') for the client. Read only.
    * </pre>
    *
    * <code>optional string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -551,7 +551,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Currency code (e.g. 'USD', 'EUR') for the client. Read only.
+   * Output only. Currency code (for example, 'USD', 'EUR') for the client. Read only.
    * </pre>
    *
    * <code>optional string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1630,7 +1630,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Common Locale Data Repository (CLDR) string representation of the
-     * time zone of the client, e.g. America/Los_Angeles. Read only.
+     * time zone of the client, for example, America/Los_Angeles. Read only.
      * </pre>
      *
      * <code>optional string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1642,7 +1642,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Common Locale Data Repository (CLDR) string representation of the
-     * time zone of the client, e.g. America/Los_Angeles. Read only.
+     * time zone of the client, for example, America/Los_Angeles. Read only.
      * </pre>
      *
      * <code>optional string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1663,7 +1663,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Common Locale Data Repository (CLDR) string representation of the
-     * time zone of the client, e.g. America/Los_Angeles. Read only.
+     * time zone of the client, for example, America/Los_Angeles. Read only.
      * </pre>
      *
      * <code>optional string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1685,7 +1685,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Common Locale Data Repository (CLDR) string representation of the
-     * time zone of the client, e.g. America/Los_Angeles. Read only.
+     * time zone of the client, for example, America/Los_Angeles. Read only.
      * </pre>
      *
      * <code>optional string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1705,7 +1705,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Common Locale Data Repository (CLDR) string representation of the
-     * time zone of the client, e.g. America/Los_Angeles. Read only.
+     * time zone of the client, for example, America/Los_Angeles. Read only.
      * </pre>
      *
      * <code>optional string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1720,7 +1720,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Common Locale Data Repository (CLDR) string representation of the
-     * time zone of the client, e.g. America/Los_Angeles. Read only.
+     * time zone of the client, for example, America/Los_Angeles. Read only.
      * </pre>
      *
      * <code>optional string time_zone = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1959,7 +1959,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object currencyCode_ = "";
     /**
      * <pre>
-     * Output only. Currency code (e.g. 'USD', 'EUR') for the client. Read only.
+     * Output only. Currency code (for example, 'USD', 'EUR') for the client. Read only.
      * </pre>
      *
      * <code>optional string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1970,7 +1970,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Currency code (e.g. 'USD', 'EUR') for the client. Read only.
+     * Output only. Currency code (for example, 'USD', 'EUR') for the client. Read only.
      * </pre>
      *
      * <code>optional string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1990,7 +1990,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Currency code (e.g. 'USD', 'EUR') for the client. Read only.
+     * Output only. Currency code (for example, 'USD', 'EUR') for the client. Read only.
      * </pre>
      *
      * <code>optional string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2011,7 +2011,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Currency code (e.g. 'USD', 'EUR') for the client. Read only.
+     * Output only. Currency code (for example, 'USD', 'EUR') for the client. Read only.
      * </pre>
      *
      * <code>optional string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2030,7 +2030,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Currency code (e.g. 'USD', 'EUR') for the client. Read only.
+     * Output only. Currency code (for example, 'USD', 'EUR') for the client. Read only.
      * </pre>
      *
      * <code>optional string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2044,7 +2044,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Currency code (e.g. 'USD', 'EUR') for the client. Read only.
+     * Output only. Currency code (for example, 'USD', 'EUR') for the client. Read only.
      * </pre>
      *
      * <code>optional string currency_code = 19 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

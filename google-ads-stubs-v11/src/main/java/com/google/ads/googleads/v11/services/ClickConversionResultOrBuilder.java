@@ -112,7 +112,7 @@ public interface ClickConversionResultOrBuilder extends
   /**
    * <pre>
    * The date time at which the conversion occurred. The format is
-   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
    * </pre>
    *
    * <code>optional string conversion_date_time = 6;</code>
@@ -122,7 +122,7 @@ public interface ClickConversionResultOrBuilder extends
   /**
    * <pre>
    * The date time at which the conversion occurred. The format is
-   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
    * </pre>
    *
    * <code>optional string conversion_date_time = 6;</code>
@@ -132,7 +132,7 @@ public interface ClickConversionResultOrBuilder extends
   /**
    * <pre>
    * The date time at which the conversion occurred. The format is
-   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
    * </pre>
    *
    * <code>optional string conversion_date_time = 6;</code>

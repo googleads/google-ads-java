@@ -303,6 +303,23 @@ private static final long serialVersionUID = 0L;
      * <code>RESPONSIVE_SEARCH_AD_IMPROVE_AD_STRENGTH = 23;</code>
      */
     RESPONSIVE_SEARCH_AD_IMPROVE_AD_STRENGTH(23),
+    /**
+     * <pre>
+     * Recommendation to update a campaign to use Display Expansion.
+     * </pre>
+     *
+     * <code>DISPLAY_EXPANSION_OPT_IN = 24;</code>
+     */
+    DISPLAY_EXPANSION_OPT_IN(24),
+    /**
+     * <pre>
+     * Recommendation to upgrade a Local campaign to a Performance Max
+     * campaign.
+     * </pre>
+     *
+     * <code>UPGRADE_LOCAL_CAMPAIGN_TO_PERFORMANCE_MAX = 25;</code>
+     */
+    UPGRADE_LOCAL_CAMPAIGN_TO_PERFORMANCE_MAX(25),
     UNRECOGNIZED(-1),
     ;
 
@@ -514,6 +531,23 @@ private static final long serialVersionUID = 0L;
      * <code>RESPONSIVE_SEARCH_AD_IMPROVE_AD_STRENGTH = 23;</code>
      */
     public static final int RESPONSIVE_SEARCH_AD_IMPROVE_AD_STRENGTH_VALUE = 23;
+    /**
+     * <pre>
+     * Recommendation to update a campaign to use Display Expansion.
+     * </pre>
+     *
+     * <code>DISPLAY_EXPANSION_OPT_IN = 24;</code>
+     */
+    public static final int DISPLAY_EXPANSION_OPT_IN_VALUE = 24;
+    /**
+     * <pre>
+     * Recommendation to upgrade a Local campaign to a Performance Max
+     * campaign.
+     * </pre>
+     *
+     * <code>UPGRADE_LOCAL_CAMPAIGN_TO_PERFORMANCE_MAX = 25;</code>
+     */
+    public static final int UPGRADE_LOCAL_CAMPAIGN_TO_PERFORMANCE_MAX_VALUE = 25;
 
 
     public final int getNumber() {
@@ -564,6 +598,8 @@ private static final long serialVersionUID = 0L;
         case 21: return RESPONSIVE_SEARCH_AD_ASSET;
         case 22: return UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX;
         case 23: return RESPONSIVE_SEARCH_AD_IMPROVE_AD_STRENGTH;
+        case 24: return DISPLAY_EXPANSION_OPT_IN;
+        case 25: return UPGRADE_LOCAL_CAMPAIGN_TO_PERFORMANCE_MAX;
         default: return null;
       }
     }

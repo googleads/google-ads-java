@@ -119,8 +119,8 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Errors that pertain to operation failures in the partial failure mode.
    * Returned only when partial_failure = true and all errors occur inside the
-   * operations. If any errors occur outside the operations (e.g. auth errors),
-   * we return an RPC level error.
+   * operations. If any errors occur outside the operations (for example, auth
+   * errors), we return an RPC level error.
    * </pre>
    *
    * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -134,8 +134,8 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Errors that pertain to operation failures in the partial failure mode.
    * Returned only when partial_failure = true and all errors occur inside the
-   * operations. If any errors occur outside the operations (e.g. auth errors),
-   * we return an RPC level error.
+   * operations. If any errors occur outside the operations (for example, auth
+   * errors), we return an RPC level error.
    * </pre>
    *
    * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -149,8 +149,8 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Errors that pertain to operation failures in the partial failure mode.
    * Returned only when partial_failure = true and all errors occur inside the
-   * operations. If any errors occur outside the operations (e.g. auth errors),
-   * we return an RPC level error.
+   * operations. If any errors occur outside the operations (for example, auth
+   * errors), we return an RPC level error.
    * </pre>
    *
    * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -603,8 +603,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Errors that pertain to operation failures in the partial failure mode.
      * Returned only when partial_failure = true and all errors occur inside the
-     * operations. If any errors occur outside the operations (e.g. auth errors),
-     * we return an RPC level error.
+     * operations. If any errors occur outside the operations (for example, auth
+     * errors), we return an RPC level error.
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -617,8 +617,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Errors that pertain to operation failures in the partial failure mode.
      * Returned only when partial_failure = true and all errors occur inside the
-     * operations. If any errors occur outside the operations (e.g. auth errors),
-     * we return an RPC level error.
+     * operations. If any errors occur outside the operations (for example, auth
+     * errors), we return an RPC level error.
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -635,8 +635,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Errors that pertain to operation failures in the partial failure mode.
      * Returned only when partial_failure = true and all errors occur inside the
-     * operations. If any errors occur outside the operations (e.g. auth errors),
-     * we return an RPC level error.
+     * operations. If any errors occur outside the operations (for example, auth
+     * errors), we return an RPC level error.
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -658,8 +658,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Errors that pertain to operation failures in the partial failure mode.
      * Returned only when partial_failure = true and all errors occur inside the
-     * operations. If any errors occur outside the operations (e.g. auth errors),
-     * we return an RPC level error.
+     * operations. If any errors occur outside the operations (for example, auth
+     * errors), we return an RPC level error.
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -679,8 +679,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Errors that pertain to operation failures in the partial failure mode.
      * Returned only when partial_failure = true and all errors occur inside the
-     * operations. If any errors occur outside the operations (e.g. auth errors),
-     * we return an RPC level error.
+     * operations. If any errors occur outside the operations (for example, auth
+     * errors), we return an RPC level error.
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -704,8 +704,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Errors that pertain to operation failures in the partial failure mode.
      * Returned only when partial_failure = true and all errors occur inside the
-     * operations. If any errors occur outside the operations (e.g. auth errors),
-     * we return an RPC level error.
+     * operations. If any errors occur outside the operations (for example, auth
+     * errors), we return an RPC level error.
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -725,8 +725,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Errors that pertain to operation failures in the partial failure mode.
      * Returned only when partial_failure = true and all errors occur inside the
-     * operations. If any errors occur outside the operations (e.g. auth errors),
-     * we return an RPC level error.
+     * operations. If any errors occur outside the operations (for example, auth
+     * errors), we return an RPC level error.
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -740,8 +740,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Errors that pertain to operation failures in the partial failure mode.
      * Returned only when partial_failure = true and all errors occur inside the
-     * operations. If any errors occur outside the operations (e.g. auth errors),
-     * we return an RPC level error.
+     * operations. If any errors occur outside the operations (for example, auth
+     * errors), we return an RPC level error.
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 1;</code>
@@ -758,8 +758,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Errors that pertain to operation failures in the partial failure mode.
      * Returned only when partial_failure = true and all errors occur inside the
-     * operations. If any errors occur outside the operations (e.g. auth errors),
-     * we return an RPC level error.
+     * operations. If any errors occur outside the operations (for example, auth
+     * errors), we return an RPC level error.
      * </pre>
      *
      * <code>.google.rpc.Status partial_failure_error = 1;</code>

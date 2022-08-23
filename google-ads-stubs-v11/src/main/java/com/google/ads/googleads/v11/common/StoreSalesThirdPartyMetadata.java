@@ -6,7 +6,7 @@ package com.google.ads.googleads.v11.common;
 /**
  * <pre>
  * Metadata for a third party Store Sales.
- * This product is only for customers on the allow-list. Please contact your
+ * This product is only for customers on the allow-list. Contact your
  * Google business development representative for details on the upload
  * configuration.
  * </pre>
@@ -621,7 +621,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Metadata for a third party Store Sales.
-   * This product is only for customers on the allow-list. Please contact your
+   * This product is only for customers on the allow-list. Contact your
    * Google business development representative for details on the upload
    * configuration.
    * </pre>

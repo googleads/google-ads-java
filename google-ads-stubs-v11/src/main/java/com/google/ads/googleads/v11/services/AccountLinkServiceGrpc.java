@@ -158,7 +158,7 @@ public final class AccountLinkServiceGrpc {
      * <pre>
      * Creates or removes an account link.
      * From V5, create is not supported through
-     * AccountLinkService.MutateAccountLink. Please use
+     * AccountLinkService.MutateAccountLink. Use
      * AccountLinkService.CreateAccountLink instead.
      * List of thrown errors:
      *   [AccountLinkError]()
@@ -241,7 +241,7 @@ public final class AccountLinkServiceGrpc {
      * <pre>
      * Creates or removes an account link.
      * From V5, create is not supported through
-     * AccountLinkService.MutateAccountLink. Please use
+     * AccountLinkService.MutateAccountLink. Use
      * AccountLinkService.CreateAccountLink instead.
      * List of thrown errors:
      *   [AccountLinkError]()
@@ -305,7 +305,7 @@ public final class AccountLinkServiceGrpc {
      * <pre>
      * Creates or removes an account link.
      * From V5, create is not supported through
-     * AccountLinkService.MutateAccountLink. Please use
+     * AccountLinkService.MutateAccountLink. Use
      * AccountLinkService.CreateAccountLink instead.
      * List of thrown errors:
      *   [AccountLinkError]()
@@ -369,7 +369,7 @@ public final class AccountLinkServiceGrpc {
      * <pre>
      * Creates or removes an account link.
      * From V5, create is not supported through
-     * AccountLinkService.MutateAccountLink. Please use
+     * AccountLinkService.MutateAccountLink. Use
      * AccountLinkService.CreateAccountLink instead.
      * List of thrown errors:
      *   [AccountLinkError]()

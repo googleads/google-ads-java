@@ -3899,5 +3899,33 @@ public interface ErrorCodeOrBuilder extends
    */
   com.google.ads.googleads.v11.errors.ExperimentArmErrorEnum.ExperimentArmError getExperimentArmError();
 
+  /**
+   * <pre>
+   * The reasons for the Audience Insights error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.errors.AudienceInsightsErrorEnum.AudienceInsightsError audience_insights_error = 167;</code>
+   * @return Whether the audienceInsightsError field is set.
+   */
+  boolean hasAudienceInsightsError();
+  /**
+   * <pre>
+   * The reasons for the Audience Insights error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.errors.AudienceInsightsErrorEnum.AudienceInsightsError audience_insights_error = 167;</code>
+   * @return The enum numeric value on the wire for audienceInsightsError.
+   */
+  int getAudienceInsightsErrorValue();
+  /**
+   * <pre>
+   * The reasons for the Audience Insights error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.errors.AudienceInsightsErrorEnum.AudienceInsightsError audience_insights_error = 167;</code>
+   * @return The audienceInsightsError.
+   */
+  com.google.ads.googleads.v11.errors.AudienceInsightsErrorEnum.AudienceInsightsError getAudienceInsightsError();
+
   public com.google.ads.googleads.v11.errors.ErrorCode.ErrorCodeCase getErrorCodeCase();
 }

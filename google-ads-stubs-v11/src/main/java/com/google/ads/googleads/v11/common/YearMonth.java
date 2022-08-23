@@ -102,7 +102,7 @@ private static final long serialVersionUID = 0L;
   private long year_;
   /**
    * <pre>
-   * The year (e.g. 2020).
+   * The year (for example, 2020).
    * </pre>
    *
    * <code>int64 year = 1;</code>
@@ -117,7 +117,7 @@ private static final long serialVersionUID = 0L;
   private int month_;
   /**
    * <pre>
-   * The month of the year. (e.g. FEBRUARY).
+   * The month of the year. (for example, FEBRUARY).
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.MonthOfYearEnum.MonthOfYear month = 2;</code>
@@ -128,7 +128,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The month of the year. (e.g. FEBRUARY).
+   * The month of the year. (for example, FEBRUARY).
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.MonthOfYearEnum.MonthOfYear month = 2;</code>
@@ -466,7 +466,7 @@ private static final long serialVersionUID = 0L;
     private long year_ ;
     /**
      * <pre>
-     * The year (e.g. 2020).
+     * The year (for example, 2020).
      * </pre>
      *
      * <code>int64 year = 1;</code>
@@ -478,7 +478,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The year (e.g. 2020).
+     * The year (for example, 2020).
      * </pre>
      *
      * <code>int64 year = 1;</code>
@@ -493,7 +493,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The year (e.g. 2020).
+     * The year (for example, 2020).
      * </pre>
      *
      * <code>int64 year = 1;</code>
@@ -509,7 +509,7 @@ private static final long serialVersionUID = 0L;
     private int month_ = 0;
     /**
      * <pre>
-     * The month of the year. (e.g. FEBRUARY).
+     * The month of the year. (for example, FEBRUARY).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.MonthOfYearEnum.MonthOfYear month = 2;</code>
@@ -520,7 +520,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The month of the year. (e.g. FEBRUARY).
+     * The month of the year. (for example, FEBRUARY).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.MonthOfYearEnum.MonthOfYear month = 2;</code>
@@ -535,7 +535,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The month of the year. (e.g. FEBRUARY).
+     * The month of the year. (for example, FEBRUARY).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.MonthOfYearEnum.MonthOfYear month = 2;</code>
@@ -549,7 +549,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The month of the year. (e.g. FEBRUARY).
+     * The month of the year. (for example, FEBRUARY).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.MonthOfYearEnum.MonthOfYear month = 2;</code>
@@ -567,7 +567,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The month of the year. (e.g. FEBRUARY).
+     * The month of the year. (for example, FEBRUARY).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.MonthOfYearEnum.MonthOfYear month = 2;</code>

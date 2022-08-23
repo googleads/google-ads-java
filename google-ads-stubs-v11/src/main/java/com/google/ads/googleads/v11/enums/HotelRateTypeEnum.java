@@ -141,9 +141,9 @@ private static final long serialVersionUID = 0L;
     QUALIFIED_RATE(4),
     /**
      * <pre>
-     * Rates available to users that satisfy some eligibility criteria. e.g.
-     * all signed-in users, 20% of mobile users, all mobile users in Canada,
-     * etc.
+     * Rates available to users that satisfy some eligibility criteria, for
+     * example, all signed-in users, 20% of mobile users, all mobile users in
+     * Canada, etc.
      * </pre>
      *
      * <code>PRIVATE_RATE = 5;</code>
@@ -198,9 +198,9 @@ private static final long serialVersionUID = 0L;
     public static final int QUALIFIED_RATE_VALUE = 4;
     /**
      * <pre>
-     * Rates available to users that satisfy some eligibility criteria. e.g.
-     * all signed-in users, 20% of mobile users, all mobile users in Canada,
-     * etc.
+     * Rates available to users that satisfy some eligibility criteria, for
+     * example, all signed-in users, 20% of mobile users, all mobile users in
+     * Canada, etc.
      * </pre>
      *
      * <code>PRIVATE_RATE = 5;</code>

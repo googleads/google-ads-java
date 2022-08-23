@@ -126,10 +126,14 @@ public interface RecommendationOrBuilder extends
    * This field will be set for the following recommendation types:
    * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
    * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
-   * MAXIMIZE_CLICKS_OPT_IN, MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
-   * RESPONSIVE_SEARCH_AD, RESPONSIVE_SEARCH_AD_ASSET, SEARCH_PARTNERS_OPT_IN,
-   * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN,
-   * TEXT_AD, UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX
+   * UPGRADE_LOCAL_CAMPAIGN_TO_PERFORMANCE_MAX, MAXIMIZE_CLICKS_OPT_IN,
+   * MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
+   * RESPONSIVE_SEARCH_AD,
+   * RESPONSIVE_SEARCH_AD_ASSET,
+   * SEARCH_PARTNERS_OPT_IN,
+   * DISPLAY_EXPANSION_OPT_IN, SITELINK_EXTENSION, TARGET_CPA_OPT_IN,
+   * TARGET_ROAS_OPT_IN, TEXT_AD,
+   * UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX
    * </pre>
    *
    * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -143,10 +147,14 @@ public interface RecommendationOrBuilder extends
    * This field will be set for the following recommendation types:
    * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
    * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
-   * MAXIMIZE_CLICKS_OPT_IN, MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
-   * RESPONSIVE_SEARCH_AD, RESPONSIVE_SEARCH_AD_ASSET, SEARCH_PARTNERS_OPT_IN,
-   * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN,
-   * TEXT_AD, UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX
+   * UPGRADE_LOCAL_CAMPAIGN_TO_PERFORMANCE_MAX, MAXIMIZE_CLICKS_OPT_IN,
+   * MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
+   * RESPONSIVE_SEARCH_AD,
+   * RESPONSIVE_SEARCH_AD_ASSET,
+   * SEARCH_PARTNERS_OPT_IN,
+   * DISPLAY_EXPANSION_OPT_IN, SITELINK_EXTENSION, TARGET_CPA_OPT_IN,
+   * TARGET_ROAS_OPT_IN, TEXT_AD,
+   * UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX
    * </pre>
    *
    * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -160,10 +168,14 @@ public interface RecommendationOrBuilder extends
    * This field will be set for the following recommendation types:
    * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
    * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
-   * MAXIMIZE_CLICKS_OPT_IN, MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
-   * RESPONSIVE_SEARCH_AD, RESPONSIVE_SEARCH_AD_ASSET, SEARCH_PARTNERS_OPT_IN,
-   * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN,
-   * TEXT_AD, UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX
+   * UPGRADE_LOCAL_CAMPAIGN_TO_PERFORMANCE_MAX, MAXIMIZE_CLICKS_OPT_IN,
+   * MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
+   * RESPONSIVE_SEARCH_AD,
+   * RESPONSIVE_SEARCH_AD_ASSET,
+   * SEARCH_PARTNERS_OPT_IN,
+   * DISPLAY_EXPANSION_OPT_IN, SITELINK_EXTENSION, TARGET_CPA_OPT_IN,
+   * TARGET_ROAS_OPT_IN, TEXT_AD,
+   * UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX
    * </pre>
    *
    * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -828,6 +840,63 @@ public interface RecommendationOrBuilder extends
    * <code>.google.ads.googleads.v11.resources.Recommendation.ResponsiveSearchAdImproveAdStrengthRecommendation responsive_search_ad_improve_ad_strength_recommendation = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   com.google.ads.googleads.v11.resources.Recommendation.ResponsiveSearchAdImproveAdStrengthRecommendationOrBuilder getResponsiveSearchAdImproveAdStrengthRecommendationOrBuilder();
+
+  /**
+   * <pre>
+   * Output only. The Display Expansion opt-in recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation display_expansion_opt_in_recommendation = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the displayExpansionOptInRecommendation field is set.
+   */
+  boolean hasDisplayExpansionOptInRecommendation();
+  /**
+   * <pre>
+   * Output only. The Display Expansion opt-in recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation display_expansion_opt_in_recommendation = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The displayExpansionOptInRecommendation.
+   */
+  com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation getDisplayExpansionOptInRecommendation();
+  /**
+   * <pre>
+   * Output only. The Display Expansion opt-in recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation display_expansion_opt_in_recommendation = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendationOrBuilder getDisplayExpansionOptInRecommendationOrBuilder();
+
+  /**
+   * <pre>
+   * Output only. The upgrade a Local campaign to a Performance Max campaign
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation upgrade_local_campaign_to_performance_max_recommendation = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the upgradeLocalCampaignToPerformanceMaxRecommendation field is set.
+   */
+  boolean hasUpgradeLocalCampaignToPerformanceMaxRecommendation();
+  /**
+   * <pre>
+   * Output only. The upgrade a Local campaign to a Performance Max campaign
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation upgrade_local_campaign_to_performance_max_recommendation = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The upgradeLocalCampaignToPerformanceMaxRecommendation.
+   */
+  com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation getUpgradeLocalCampaignToPerformanceMaxRecommendation();
+  /**
+   * <pre>
+   * Output only. The upgrade a Local campaign to a Performance Max campaign
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation upgrade_local_campaign_to_performance_max_recommendation = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendationOrBuilder getUpgradeLocalCampaignToPerformanceMaxRecommendationOrBuilder();
 
   public com.google.ads.googleads.v11.resources.Recommendation.RecommendationCase getRecommendationCase();
 }

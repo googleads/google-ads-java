@@ -10,7 +10,7 @@ public interface UploadUserDataResponseOrBuilder extends
   /**
    * <pre>
    * The date time at which the request was received by API, formatted as
-   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
    * </pre>
    *
    * <code>optional string upload_date_time = 3;</code>
@@ -20,7 +20,7 @@ public interface UploadUserDataResponseOrBuilder extends
   /**
    * <pre>
    * The date time at which the request was received by API, formatted as
-   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
    * </pre>
    *
    * <code>optional string upload_date_time = 3;</code>
@@ -30,7 +30,7 @@ public interface UploadUserDataResponseOrBuilder extends
   /**
    * <pre>
    * The date time at which the request was received by API, formatted as
-   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
    * </pre>
    *
    * <code>optional string upload_date_time = 3;</code>

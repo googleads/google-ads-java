@@ -5,7 +5,7 @@ package com.google.ads.googleads.v11.enums;
 
 /**
  * <pre>
- * Container for enumeration of days of the week, e.g., "Monday".
+ * Container for enumeration of days of the week, for example, "Monday".
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v11.enums.DayOfWeekEnum}
@@ -88,7 +88,7 @@ private static final long serialVersionUID = 0L;
 
   /**
    * <pre>
-   * Enumerates days of the week, e.g., "Monday".
+   * Enumerates days of the week, for example, "Monday".
    * </pre>
    *
    * Protobuf enum {@code google.ads.googleads.v11.enums.DayOfWeekEnum.DayOfWeek}
@@ -479,7 +479,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Container for enumeration of days of the week, e.g., "Monday".
+   * Container for enumeration of days of the week, for example, "Monday".
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v11.enums.DayOfWeekEnum}

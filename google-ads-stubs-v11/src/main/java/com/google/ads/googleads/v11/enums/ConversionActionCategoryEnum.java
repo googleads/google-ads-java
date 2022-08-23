@@ -283,7 +283,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A lead conversion imported from an external source into Google Ads, that
-     * has further completed a desired stage as defined by the lead gen
+     * has further completed a chosen stage as defined by the lead gen
      * advertiser.
      * </pre>
      *
@@ -480,7 +480,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A lead conversion imported from an external source into Google Ads, that
-     * has further completed a desired stage as defined by the lead gen
+     * has further completed a chosen stage as defined by the lead gen
      * advertiser.
      * </pre>
      *

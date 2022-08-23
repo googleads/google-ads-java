@@ -257,9 +257,9 @@ public class CustomerManagerLinkServiceClient implements BackgroundResource {
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Moves a client customer to a new manager customer. This simplifies the complex request that
-   * requires two operations to move a client customer to a new manager. i.e.: 1. Update operation
-   * with Status INACTIVE (previous manager) and, 2. Update operation with Status ACTIVE (new
-   * manager).
+   * requires two operations to move a client customer to a new manager, for example: 1. Update
+   * operation with Status INACTIVE (previous manager) and, 2. Update operation with Status ACTIVE
+   * (new manager).
    *
    * <p>List of thrown errors: [AuthenticationError]() [AuthorizationError]() [DatabaseError]()
    * [FieldError]() [HeaderError]() [InternalError]() [MutateError]() [QuotaError]()
@@ -303,9 +303,9 @@ public class CustomerManagerLinkServiceClient implements BackgroundResource {
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Moves a client customer to a new manager customer. This simplifies the complex request that
-   * requires two operations to move a client customer to a new manager. i.e.: 1. Update operation
-   * with Status INACTIVE (previous manager) and, 2. Update operation with Status ACTIVE (new
-   * manager).
+   * requires two operations to move a client customer to a new manager, for example: 1. Update
+   * operation with Status INACTIVE (previous manager) and, 2. Update operation with Status ACTIVE
+   * (new manager).
    *
    * <p>List of thrown errors: [AuthenticationError]() [AuthorizationError]() [DatabaseError]()
    * [FieldError]() [HeaderError]() [InternalError]() [MutateError]() [QuotaError]()
@@ -339,9 +339,9 @@ public class CustomerManagerLinkServiceClient implements BackgroundResource {
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Moves a client customer to a new manager customer. This simplifies the complex request that
-   * requires two operations to move a client customer to a new manager. i.e.: 1. Update operation
-   * with Status INACTIVE (previous manager) and, 2. Update operation with Status ACTIVE (new
-   * manager).
+   * requires two operations to move a client customer to a new manager, for example: 1. Update
+   * operation with Status INACTIVE (previous manager) and, 2. Update operation with Status ACTIVE
+   * (new manager).
    *
    * <p>List of thrown errors: [AuthenticationError]() [AuthorizationError]() [DatabaseError]()
    * [FieldError]() [HeaderError]() [InternalError]() [MutateError]() [QuotaError]()

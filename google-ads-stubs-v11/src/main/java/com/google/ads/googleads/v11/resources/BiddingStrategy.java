@@ -875,7 +875,7 @@ private static final long serialVersionUID = 0L;
   public static final int TARGET_IMPRESSION_SHARE_FIELD_NUMBER = 48;
   /**
    * <pre>
-   * A bidding strategy that automatically optimizes towards a desired
+   * A bidding strategy that automatically optimizes towards a chosen
    * percentage of impressions.
    * </pre>
    *
@@ -888,7 +888,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A bidding strategy that automatically optimizes towards a desired
+   * A bidding strategy that automatically optimizes towards a chosen
    * percentage of impressions.
    * </pre>
    *
@@ -904,7 +904,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A bidding strategy that automatically optimizes towards a desired
+   * A bidding strategy that automatically optimizes towards a chosen
    * percentage of impressions.
    * </pre>
    *
@@ -3299,7 +3299,7 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.common.TargetImpressionShare, com.google.ads.googleads.v11.common.TargetImpressionShare.Builder, com.google.ads.googleads.v11.common.TargetImpressionShareOrBuilder> targetImpressionShareBuilder_;
     /**
      * <pre>
-     * A bidding strategy that automatically optimizes towards a desired
+     * A bidding strategy that automatically optimizes towards a chosen
      * percentage of impressions.
      * </pre>
      *
@@ -3312,7 +3312,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A bidding strategy that automatically optimizes towards a desired
+     * A bidding strategy that automatically optimizes towards a chosen
      * percentage of impressions.
      * </pre>
      *
@@ -3335,7 +3335,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A bidding strategy that automatically optimizes towards a desired
+     * A bidding strategy that automatically optimizes towards a chosen
      * percentage of impressions.
      * </pre>
      *
@@ -3356,7 +3356,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A bidding strategy that automatically optimizes towards a desired
+     * A bidding strategy that automatically optimizes towards a chosen
      * percentage of impressions.
      * </pre>
      *
@@ -3375,7 +3375,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A bidding strategy that automatically optimizes towards a desired
+     * A bidding strategy that automatically optimizes towards a chosen
      * percentage of impressions.
      * </pre>
      *
@@ -3403,7 +3403,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A bidding strategy that automatically optimizes towards a desired
+     * A bidding strategy that automatically optimizes towards a chosen
      * percentage of impressions.
      * </pre>
      *
@@ -3427,7 +3427,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A bidding strategy that automatically optimizes towards a desired
+     * A bidding strategy that automatically optimizes towards a chosen
      * percentage of impressions.
      * </pre>
      *
@@ -3438,7 +3438,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A bidding strategy that automatically optimizes towards a desired
+     * A bidding strategy that automatically optimizes towards a chosen
      * percentage of impressions.
      * </pre>
      *
@@ -3457,7 +3457,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A bidding strategy that automatically optimizes towards a desired
+     * A bidding strategy that automatically optimizes towards a chosen
      * percentage of impressions.
      * </pre>
      *

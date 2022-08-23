@@ -113,9 +113,9 @@ private static final long serialVersionUID = 0L;
     UNKNOWN(1),
     /**
      * <pre>
-     * Keyword criteria, e.g. 'mars cruise'. KEYWORD may be used as a custom bid
-     * dimension. Keywords are always a targeting dimension, so may not be set
-     * as a target "ALL" dimension with TargetRestriction.
+     * Keyword criteria, for example, 'mars cruise'. KEYWORD may be used as a
+     * custom bid dimension. Keywords are always a targeting dimension, so may
+     * not be set as a target "ALL" dimension with TargetRestriction.
      * </pre>
      *
      * <code>KEYWORD = 2;</code>
@@ -132,7 +132,7 @@ private static final long serialVersionUID = 0L;
     AUDIENCE(3),
     /**
      * <pre>
-     * Topic criteria for targeting categories of content, e.g.
+     * Topic criteria for targeting categories of content, for example,
      * 'category::Animals&gt;Pets' Used for Display and Video targeting.
      * </pre>
      *
@@ -202,9 +202,9 @@ private static final long serialVersionUID = 0L;
     public static final int UNKNOWN_VALUE = 1;
     /**
      * <pre>
-     * Keyword criteria, e.g. 'mars cruise'. KEYWORD may be used as a custom bid
-     * dimension. Keywords are always a targeting dimension, so may not be set
-     * as a target "ALL" dimension with TargetRestriction.
+     * Keyword criteria, for example, 'mars cruise'. KEYWORD may be used as a
+     * custom bid dimension. Keywords are always a targeting dimension, so may
+     * not be set as a target "ALL" dimension with TargetRestriction.
      * </pre>
      *
      * <code>KEYWORD = 2;</code>
@@ -221,7 +221,7 @@ private static final long serialVersionUID = 0L;
     public static final int AUDIENCE_VALUE = 3;
     /**
      * <pre>
-     * Topic criteria for targeting categories of content, e.g.
+     * Topic criteria for targeting categories of content, for example,
      * 'category::Animals&gt;Pets' Used for Display and Video targeting.
      * </pre>
      *

@@ -119,8 +119,8 @@ private static final long serialVersionUID = 0L;
   private int level_;
   /**
    * <pre>
-   * The level on which the cap is to be applied (e.g. ad group ad, ad group).
-   * The cap is applied to all the entities of this level.
+   * The level on which the cap is to be applied (for example, ad group ad, ad
+   * group). The cap is applied to all the entities of this level.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.FrequencyCapLevelEnum.FrequencyCapLevel level = 1;</code>
@@ -131,8 +131,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The level on which the cap is to be applied (e.g. ad group ad, ad group).
-   * The cap is applied to all the entities of this level.
+   * The level on which the cap is to be applied (for example, ad group ad, ad
+   * group). The cap is applied to all the entities of this level.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.FrequencyCapLevelEnum.FrequencyCapLevel level = 1;</code>
@@ -148,7 +148,7 @@ private static final long serialVersionUID = 0L;
   private int eventType_;
   /**
    * <pre>
-   * The type of event that the cap applies to (e.g. impression).
+   * The type of event that the cap applies to (for example, impression).
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.FrequencyCapEventTypeEnum.FrequencyCapEventType event_type = 3;</code>
@@ -159,7 +159,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The type of event that the cap applies to (e.g. impression).
+   * The type of event that the cap applies to (for example, impression).
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.FrequencyCapEventTypeEnum.FrequencyCapEventType event_type = 3;</code>
@@ -175,7 +175,7 @@ private static final long serialVersionUID = 0L;
   private int timeUnit_;
   /**
    * <pre>
-   * Unit of time the cap is defined at (e.g. day, week).
+   * Unit of time the cap is defined at (for example, day, week).
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit time_unit = 2;</code>
@@ -186,7 +186,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Unit of time the cap is defined at (e.g. day, week).
+   * Unit of time the cap is defined at (for example, day, week).
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit time_unit = 2;</code>
@@ -595,8 +595,8 @@ private static final long serialVersionUID = 0L;
     private int level_ = 0;
     /**
      * <pre>
-     * The level on which the cap is to be applied (e.g. ad group ad, ad group).
-     * The cap is applied to all the entities of this level.
+     * The level on which the cap is to be applied (for example, ad group ad, ad
+     * group). The cap is applied to all the entities of this level.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.FrequencyCapLevelEnum.FrequencyCapLevel level = 1;</code>
@@ -607,8 +607,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The level on which the cap is to be applied (e.g. ad group ad, ad group).
-     * The cap is applied to all the entities of this level.
+     * The level on which the cap is to be applied (for example, ad group ad, ad
+     * group). The cap is applied to all the entities of this level.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.FrequencyCapLevelEnum.FrequencyCapLevel level = 1;</code>
@@ -623,8 +623,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The level on which the cap is to be applied (e.g. ad group ad, ad group).
-     * The cap is applied to all the entities of this level.
+     * The level on which the cap is to be applied (for example, ad group ad, ad
+     * group). The cap is applied to all the entities of this level.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.FrequencyCapLevelEnum.FrequencyCapLevel level = 1;</code>
@@ -638,8 +638,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The level on which the cap is to be applied (e.g. ad group ad, ad group).
-     * The cap is applied to all the entities of this level.
+     * The level on which the cap is to be applied (for example, ad group ad, ad
+     * group). The cap is applied to all the entities of this level.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.FrequencyCapLevelEnum.FrequencyCapLevel level = 1;</code>
@@ -657,8 +657,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The level on which the cap is to be applied (e.g. ad group ad, ad group).
-     * The cap is applied to all the entities of this level.
+     * The level on which the cap is to be applied (for example, ad group ad, ad
+     * group). The cap is applied to all the entities of this level.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.FrequencyCapLevelEnum.FrequencyCapLevel level = 1;</code>
@@ -674,7 +674,7 @@ private static final long serialVersionUID = 0L;
     private int eventType_ = 0;
     /**
      * <pre>
-     * The type of event that the cap applies to (e.g. impression).
+     * The type of event that the cap applies to (for example, impression).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.FrequencyCapEventTypeEnum.FrequencyCapEventType event_type = 3;</code>
@@ -685,7 +685,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of event that the cap applies to (e.g. impression).
+     * The type of event that the cap applies to (for example, impression).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.FrequencyCapEventTypeEnum.FrequencyCapEventType event_type = 3;</code>
@@ -700,7 +700,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of event that the cap applies to (e.g. impression).
+     * The type of event that the cap applies to (for example, impression).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.FrequencyCapEventTypeEnum.FrequencyCapEventType event_type = 3;</code>
@@ -714,7 +714,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of event that the cap applies to (e.g. impression).
+     * The type of event that the cap applies to (for example, impression).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.FrequencyCapEventTypeEnum.FrequencyCapEventType event_type = 3;</code>
@@ -732,7 +732,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of event that the cap applies to (e.g. impression).
+     * The type of event that the cap applies to (for example, impression).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.FrequencyCapEventTypeEnum.FrequencyCapEventType event_type = 3;</code>
@@ -748,7 +748,7 @@ private static final long serialVersionUID = 0L;
     private int timeUnit_ = 0;
     /**
      * <pre>
-     * Unit of time the cap is defined at (e.g. day, week).
+     * Unit of time the cap is defined at (for example, day, week).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit time_unit = 2;</code>
@@ -759,7 +759,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Unit of time the cap is defined at (e.g. day, week).
+     * Unit of time the cap is defined at (for example, day, week).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit time_unit = 2;</code>
@@ -774,7 +774,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Unit of time the cap is defined at (e.g. day, week).
+     * Unit of time the cap is defined at (for example, day, week).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit time_unit = 2;</code>
@@ -788,7 +788,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Unit of time the cap is defined at (e.g. day, week).
+     * Unit of time the cap is defined at (for example, day, week).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit time_unit = 2;</code>
@@ -806,7 +806,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Unit of time the cap is defined at (e.g. day, week).
+     * Unit of time the cap is defined at (for example, day, week).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit time_unit = 2;</code>

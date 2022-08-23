@@ -42,6 +42,33 @@ public interface RuleBasedUserListInfoOrBuilder extends
 
   /**
    * <pre>
+   * Flexible rule representation of visitors with one or multiple actions.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.common.FlexibleRuleUserListInfo flexible_rule_user_list = 5;</code>
+   * @return Whether the flexibleRuleUserList field is set.
+   */
+  boolean hasFlexibleRuleUserList();
+  /**
+   * <pre>
+   * Flexible rule representation of visitors with one or multiple actions.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.common.FlexibleRuleUserListInfo flexible_rule_user_list = 5;</code>
+   * @return The flexibleRuleUserList.
+   */
+  com.google.ads.googleads.v11.common.FlexibleRuleUserListInfo getFlexibleRuleUserList();
+  /**
+   * <pre>
+   * Flexible rule representation of visitors with one or multiple actions.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.common.FlexibleRuleUserListInfo flexible_rule_user_list = 5;</code>
+   */
+  com.google.ads.googleads.v11.common.FlexibleRuleUserListInfoOrBuilder getFlexibleRuleUserListOrBuilder();
+
+  /**
+   * <pre>
    * User lists defined by combining two rules.
    * There are two operators: AND, where the left and right operands have to
    * be true; AND_NOT where left operand is true but right operand is false.

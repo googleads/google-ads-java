@@ -170,7 +170,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The date time at which the original conversion for this adjustment
    * occurred. The timezone must be specified. The format is "yyyy-mm-dd
-   * hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+   * hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
    * </pre>
    *
    * <code>optional string conversion_date_time = 4;</code>
@@ -184,7 +184,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The date time at which the original conversion for this adjustment
    * occurred. The timezone must be specified. The format is "yyyy-mm-dd
-   * hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+   * hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
    * </pre>
    *
    * <code>optional string conversion_date_time = 4;</code>
@@ -207,7 +207,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The date time at which the original conversion for this adjustment
    * occurred. The timezone must be specified. The format is "yyyy-mm-dd
-   * hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+   * hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
    * </pre>
    *
    * <code>optional string conversion_date_time = 4;</code>
@@ -692,7 +692,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The date time at which the original conversion for this adjustment
      * occurred. The timezone must be specified. The format is "yyyy-mm-dd
-     * hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+     * hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
      * </pre>
      *
      * <code>optional string conversion_date_time = 4;</code>
@@ -705,7 +705,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The date time at which the original conversion for this adjustment
      * occurred. The timezone must be specified. The format is "yyyy-mm-dd
-     * hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+     * hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
      * </pre>
      *
      * <code>optional string conversion_date_time = 4;</code>
@@ -727,7 +727,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The date time at which the original conversion for this adjustment
      * occurred. The timezone must be specified. The format is "yyyy-mm-dd
-     * hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+     * hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
      * </pre>
      *
      * <code>optional string conversion_date_time = 4;</code>
@@ -750,7 +750,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The date time at which the original conversion for this adjustment
      * occurred. The timezone must be specified. The format is "yyyy-mm-dd
-     * hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+     * hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
      * </pre>
      *
      * <code>optional string conversion_date_time = 4;</code>
@@ -771,7 +771,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The date time at which the original conversion for this adjustment
      * occurred. The timezone must be specified. The format is "yyyy-mm-dd
-     * hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+     * hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
      * </pre>
      *
      * <code>optional string conversion_date_time = 4;</code>
@@ -787,7 +787,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The date time at which the original conversion for this adjustment
      * occurred. The timezone must be specified. The format is "yyyy-mm-dd
-     * hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+     * hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
      * </pre>
      *
      * <code>optional string conversion_date_time = 4;</code>

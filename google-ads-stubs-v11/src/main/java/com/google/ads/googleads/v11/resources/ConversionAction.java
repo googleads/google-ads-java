@@ -4206,8 +4206,8 @@ private static final long serialVersionUID = 0L;
    * primary_for_goal = false conversion action, that conversion action is
    * still biddable.
    * By default, primary_for_goal will be true if not set. In V9,
-   * primary_for_goal can only be set to false after creation via an 'update'
-   * operation because it's not declared as optional.
+   * primary_for_goal can only be set to false after creation through an
+   * 'update' operation because it's not declared as optional.
    * </pre>
    *
    * <code>optional bool primary_for_goal = 31;</code>
@@ -4227,8 +4227,8 @@ private static final long serialVersionUID = 0L;
    * primary_for_goal = false conversion action, that conversion action is
    * still biddable.
    * By default, primary_for_goal will be true if not set. In V9,
-   * primary_for_goal can only be set to false after creation via an 'update'
-   * operation because it's not declared as optional.
+   * primary_for_goal can only be set to false after creation through an
+   * 'update' operation because it's not declared as optional.
    * </pre>
    *
    * <code>optional bool primary_for_goal = 31;</code>
@@ -4361,7 +4361,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The maximum number of days that may elapse between an interaction
-   * (e.g., a click) and a conversion event.
+   * (for example, a click) and a conversion event.
    * </pre>
    *
    * <code>optional int64 click_through_lookback_window_days = 25;</code>
@@ -4374,7 +4374,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The maximum number of days that may elapse between an interaction
-   * (e.g., a click) and a conversion event.
+   * (for example, a click) and a conversion event.
    * </pre>
    *
    * <code>optional int64 click_through_lookback_window_days = 25;</code>
@@ -6100,8 +6100,8 @@ private static final long serialVersionUID = 0L;
      * primary_for_goal = false conversion action, that conversion action is
      * still biddable.
      * By default, primary_for_goal will be true if not set. In V9,
-     * primary_for_goal can only be set to false after creation via an 'update'
-     * operation because it's not declared as optional.
+     * primary_for_goal can only be set to false after creation through an
+     * 'update' operation because it's not declared as optional.
      * </pre>
      *
      * <code>optional bool primary_for_goal = 31;</code>
@@ -6121,8 +6121,8 @@ private static final long serialVersionUID = 0L;
      * primary_for_goal = false conversion action, that conversion action is
      * still biddable.
      * By default, primary_for_goal will be true if not set. In V9,
-     * primary_for_goal can only be set to false after creation via an 'update'
-     * operation because it's not declared as optional.
+     * primary_for_goal can only be set to false after creation through an
+     * 'update' operation because it's not declared as optional.
      * </pre>
      *
      * <code>optional bool primary_for_goal = 31;</code>
@@ -6142,8 +6142,8 @@ private static final long serialVersionUID = 0L;
      * primary_for_goal = false conversion action, that conversion action is
      * still biddable.
      * By default, primary_for_goal will be true if not set. In V9,
-     * primary_for_goal can only be set to false after creation via an 'update'
-     * operation because it's not declared as optional.
+     * primary_for_goal can only be set to false after creation through an
+     * 'update' operation because it's not declared as optional.
      * </pre>
      *
      * <code>optional bool primary_for_goal = 31;</code>
@@ -6166,8 +6166,8 @@ private static final long serialVersionUID = 0L;
      * primary_for_goal = false conversion action, that conversion action is
      * still biddable.
      * By default, primary_for_goal will be true if not set. In V9,
-     * primary_for_goal can only be set to false after creation via an 'update'
-     * operation because it's not declared as optional.
+     * primary_for_goal can only be set to false after creation through an
+     * 'update' operation because it's not declared as optional.
      * </pre>
      *
      * <code>optional bool primary_for_goal = 31;</code>
@@ -6430,7 +6430,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The maximum number of days that may elapse between an interaction
-     * (e.g., a click) and a conversion event.
+     * (for example, a click) and a conversion event.
      * </pre>
      *
      * <code>optional int64 click_through_lookback_window_days = 25;</code>
@@ -6443,7 +6443,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The maximum number of days that may elapse between an interaction
-     * (e.g., a click) and a conversion event.
+     * (for example, a click) and a conversion event.
      * </pre>
      *
      * <code>optional int64 click_through_lookback_window_days = 25;</code>
@@ -6456,7 +6456,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The maximum number of days that may elapse between an interaction
-     * (e.g., a click) and a conversion event.
+     * (for example, a click) and a conversion event.
      * </pre>
      *
      * <code>optional int64 click_through_lookback_window_days = 25;</code>
@@ -6472,7 +6472,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The maximum number of days that may elapse between an interaction
-     * (e.g., a click) and a conversion event.
+     * (for example, a click) and a conversion event.
      * </pre>
      *
      * <code>optional int64 click_through_lookback_window_days = 25;</code>

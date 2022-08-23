@@ -52,7 +52,7 @@ public interface UserListOrBuilder extends
 
   /**
    * <pre>
-   * Output only. A flag that indicates if a user may edit a list. Depends on the list
+   * Output only. An option that indicates if a user may edit a list. Depends on the list
    * ownership and list type. For example, external remarketing user lists are
    * not editable.
    * This field is read-only.
@@ -64,7 +64,7 @@ public interface UserListOrBuilder extends
   boolean hasReadOnly();
   /**
    * <pre>
-   * Output only. A flag that indicates if a user may edit a list. Depends on the list
+   * Output only. An option that indicates if a user may edit a list. Depends on the list
    * ownership and list type. For example, external remarketing user lists are
    * not editable.
    * This field is read-only.
@@ -78,7 +78,7 @@ public interface UserListOrBuilder extends
   /**
    * <pre>
    * Name of this user list. Depending on its access_reason, the user list name
-   * may not be unique (e.g. if access_reason=SHARED)
+   * may not be unique (for example, if access_reason=SHARED)
    * </pre>
    *
    * <code>optional string name = 27;</code>
@@ -88,7 +88,7 @@ public interface UserListOrBuilder extends
   /**
    * <pre>
    * Name of this user list. Depending on its access_reason, the user list name
-   * may not be unique (e.g. if access_reason=SHARED)
+   * may not be unique (for example, if access_reason=SHARED)
    * </pre>
    *
    * <code>optional string name = 27;</code>
@@ -98,7 +98,7 @@ public interface UserListOrBuilder extends
   /**
    * <pre>
    * Name of this user list. Depending on its access_reason, the user list name
-   * may not be unique (e.g. if access_reason=SHARED)
+   * may not be unique (for example, if access_reason=SHARED)
    * </pre>
    *
    * <code>optional string name = 27;</code>

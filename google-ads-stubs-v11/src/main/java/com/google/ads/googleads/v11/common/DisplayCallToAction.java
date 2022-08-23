@@ -173,8 +173,8 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object textColor_;
   /**
    * <pre>
-   * Text color for the display-call-to-action in hexadecimal, e.g. #ffffff for
-   * white.
+   * Text color for the display-call-to-action in hexadecimal, for example,
+   * # ffffff for white.
    * </pre>
    *
    * <code>optional string text_color = 6;</code>
@@ -186,8 +186,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Text color for the display-call-to-action in hexadecimal, e.g. #ffffff for
-   * white.
+   * Text color for the display-call-to-action in hexadecimal, for example,
+   * # ffffff for white.
    * </pre>
    *
    * <code>optional string text_color = 6;</code>
@@ -208,8 +208,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Text color for the display-call-to-action in hexadecimal, e.g. #ffffff for
-   * white.
+   * Text color for the display-call-to-action in hexadecimal, for example,
+   * # ffffff for white.
    * </pre>
    *
    * <code>optional string text_color = 6;</code>
@@ -774,8 +774,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object textColor_ = "";
     /**
      * <pre>
-     * Text color for the display-call-to-action in hexadecimal, e.g. #ffffff for
-     * white.
+     * Text color for the display-call-to-action in hexadecimal, for example,
+     * # ffffff for white.
      * </pre>
      *
      * <code>optional string text_color = 6;</code>
@@ -786,8 +786,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Text color for the display-call-to-action in hexadecimal, e.g. #ffffff for
-     * white.
+     * Text color for the display-call-to-action in hexadecimal, for example,
+     * # ffffff for white.
      * </pre>
      *
      * <code>optional string text_color = 6;</code>
@@ -807,8 +807,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Text color for the display-call-to-action in hexadecimal, e.g. #ffffff for
-     * white.
+     * Text color for the display-call-to-action in hexadecimal, for example,
+     * # ffffff for white.
      * </pre>
      *
      * <code>optional string text_color = 6;</code>
@@ -829,8 +829,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Text color for the display-call-to-action in hexadecimal, e.g. #ffffff for
-     * white.
+     * Text color for the display-call-to-action in hexadecimal, for example,
+     * # ffffff for white.
      * </pre>
      *
      * <code>optional string text_color = 6;</code>
@@ -849,8 +849,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Text color for the display-call-to-action in hexadecimal, e.g. #ffffff for
-     * white.
+     * Text color for the display-call-to-action in hexadecimal, for example,
+     * # ffffff for white.
      * </pre>
      *
      * <code>optional string text_color = 6;</code>
@@ -864,8 +864,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Text color for the display-call-to-action in hexadecimal, e.g. #ffffff for
-     * white.
+     * Text color for the display-call-to-action in hexadecimal, for example,
+     * # ffffff for white.
      * </pre>
      *
      * <code>optional string text_color = 6;</code>

@@ -5,7 +5,7 @@ package com.google.ads.googleads.v11.enums;
 
 /**
  * <pre>
- * Describes the desired level of intent of generated leads.
+ * Describes the chosen level of intent of generated leads.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v11.enums.LeadFormDesiredIntentEnum}
@@ -88,7 +88,7 @@ private static final long serialVersionUID = 0L;
 
   /**
    * <pre>
-   * Enum describing the desired level of intent of generated leads.
+   * Enum describing the chosen level of intent of generated leads.
    * </pre>
    *
    * Protobuf enum {@code google.ads.googleads.v11.enums.LeadFormDesiredIntentEnum.LeadFormDesiredIntent}
@@ -394,7 +394,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Describes the desired level of intent of generated leads.
+   * Describes the chosen level of intent of generated leads.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v11.enums.LeadFormDesiredIntentEnum}

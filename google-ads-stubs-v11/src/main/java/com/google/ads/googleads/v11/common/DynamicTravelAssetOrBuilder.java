@@ -53,7 +53,7 @@ public interface DynamicTravelAssetOrBuilder extends
 
   /**
    * <pre>
-   * Required. Title, e.g. Book your train ticket. Required.
+   * Required. Title, for example, Book your train ticket. Required.
    * </pre>
    *
    * <code>string title = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -62,7 +62,7 @@ public interface DynamicTravelAssetOrBuilder extends
   java.lang.String getTitle();
   /**
    * <pre>
-   * Required. Title, e.g. Book your train ticket. Required.
+   * Required. Title, for example, Book your train ticket. Required.
    * </pre>
    *
    * <code>string title = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -73,7 +73,7 @@ public interface DynamicTravelAssetOrBuilder extends
 
   /**
    * <pre>
-   * Destination name, e.g. Paris.
+   * Destination name, for example, Paris.
    * </pre>
    *
    * <code>string destination_name = 4;</code>
@@ -82,7 +82,7 @@ public interface DynamicTravelAssetOrBuilder extends
   java.lang.String getDestinationName();
   /**
    * <pre>
-   * Destination name, e.g. Paris.
+   * Destination name, for example, Paris.
    * </pre>
    *
    * <code>string destination_name = 4;</code>
@@ -94,9 +94,9 @@ public interface DynamicTravelAssetOrBuilder extends
   /**
    * <pre>
    * Destination address which can be specified in one of the following formats.
-   * (1) City, state, code, country, e.g. Mountain View, CA, USA.
-   * (2) Full address, e.g. 123 Boulevard St, Mountain View, CA 94043.
-   * (3) Latitude-longitude in the DDD format, e.g. 41.40338, 2.17403.
+   * (1) City, state, code, country, for example, Mountain View, CA, USA.
+   * (2) Full address, for example, 123 Boulevard St, Mountain View, CA 94043.
+   * (3) Latitude-longitude in the DDD format, for example, 41.40338, 2.17403.
    * </pre>
    *
    * <code>string destination_address = 5;</code>
@@ -106,9 +106,9 @@ public interface DynamicTravelAssetOrBuilder extends
   /**
    * <pre>
    * Destination address which can be specified in one of the following formats.
-   * (1) City, state, code, country, e.g. Mountain View, CA, USA.
-   * (2) Full address, e.g. 123 Boulevard St, Mountain View, CA 94043.
-   * (3) Latitude-longitude in the DDD format, e.g. 41.40338, 2.17403.
+   * (1) City, state, code, country, for example, Mountain View, CA, USA.
+   * (2) Full address, for example, 123 Boulevard St, Mountain View, CA 94043.
+   * (3) Latitude-longitude in the DDD format, for example, 41.40338, 2.17403.
    * </pre>
    *
    * <code>string destination_address = 5;</code>
@@ -119,7 +119,7 @@ public interface DynamicTravelAssetOrBuilder extends
 
   /**
    * <pre>
-   * Origin name, e.g. London.
+   * Origin name, for example, London.
    * </pre>
    *
    * <code>string origin_name = 6;</code>
@@ -128,7 +128,7 @@ public interface DynamicTravelAssetOrBuilder extends
   java.lang.String getOriginName();
   /**
    * <pre>
-   * Origin name, e.g. London.
+   * Origin name, for example, London.
    * </pre>
    *
    * <code>string origin_name = 6;</code>
@@ -140,7 +140,7 @@ public interface DynamicTravelAssetOrBuilder extends
   /**
    * <pre>
    * Price which can be a number followed by the alphabetic currency code,
-   * ISO 4217 standard. Use '.' as the decimal mark. e.g. 100.00 USD.
+   * ISO 4217 standard. Use '.' as the decimal mark, for example, 100.00 USD.
    * </pre>
    *
    * <code>string price = 7;</code>
@@ -150,7 +150,7 @@ public interface DynamicTravelAssetOrBuilder extends
   /**
    * <pre>
    * Price which can be a number followed by the alphabetic currency code,
-   * ISO 4217 standard. Use '.' as the decimal mark. e.g. 100.00 USD.
+   * ISO 4217 standard. Use '.' as the decimal mark, for example, 100.00 USD.
    * </pre>
    *
    * <code>string price = 7;</code>
@@ -162,8 +162,8 @@ public interface DynamicTravelAssetOrBuilder extends
   /**
    * <pre>
    * Sale price which can be a number followed by the alphabetic currency
-   * code, ISO 4217 standard. Use '.' as the decimal mark, e.g. 80.00 USD.
-   * Must be less than the 'price' field.
+   * code, ISO 4217 standard. Use '.' as the decimal mark, for example, 80.00
+   * USD. Must be less than the 'price' field.
    * </pre>
    *
    * <code>string sale_price = 8;</code>
@@ -173,8 +173,8 @@ public interface DynamicTravelAssetOrBuilder extends
   /**
    * <pre>
    * Sale price which can be a number followed by the alphabetic currency
-   * code, ISO 4217 standard. Use '.' as the decimal mark, e.g. 80.00 USD.
-   * Must be less than the 'price' field.
+   * code, ISO 4217 standard. Use '.' as the decimal mark, for example, 80.00
+   * USD. Must be less than the 'price' field.
    * </pre>
    *
    * <code>string sale_price = 8;</code>
@@ -186,7 +186,7 @@ public interface DynamicTravelAssetOrBuilder extends
   /**
    * <pre>
    * Formatted price which can be any characters. If set, this attribute will be
-   * used instead of 'price', e.g. Starting at $100.00.
+   * used instead of 'price', for example, Starting at $100.00.
    * </pre>
    *
    * <code>string formatted_price = 9;</code>
@@ -196,7 +196,7 @@ public interface DynamicTravelAssetOrBuilder extends
   /**
    * <pre>
    * Formatted price which can be any characters. If set, this attribute will be
-   * used instead of 'price', e.g. Starting at $100.00.
+   * used instead of 'price', for example, Starting at $100.00.
    * </pre>
    *
    * <code>string formatted_price = 9;</code>
@@ -208,7 +208,7 @@ public interface DynamicTravelAssetOrBuilder extends
   /**
    * <pre>
    * Formatted sale price which can be any characters. If set, this attribute
-   * will be used instead of 'sale price', e.g. On sale for $80.00.
+   * will be used instead of 'sale price', for example, On sale for $80.00.
    * </pre>
    *
    * <code>string formatted_sale_price = 10;</code>
@@ -218,7 +218,7 @@ public interface DynamicTravelAssetOrBuilder extends
   /**
    * <pre>
    * Formatted sale price which can be any characters. If set, this attribute
-   * will be used instead of 'sale price', e.g. On sale for $80.00.
+   * will be used instead of 'sale price', for example, On sale for $80.00.
    * </pre>
    *
    * <code>string formatted_sale_price = 10;</code>
@@ -229,7 +229,7 @@ public interface DynamicTravelAssetOrBuilder extends
 
   /**
    * <pre>
-   * Category, e.g. Express.
+   * Category, for example, Express.
    * </pre>
    *
    * <code>string category = 11;</code>
@@ -238,7 +238,7 @@ public interface DynamicTravelAssetOrBuilder extends
   java.lang.String getCategory();
   /**
    * <pre>
-   * Category, e.g. Express.
+   * Category, for example, Express.
    * </pre>
    *
    * <code>string category = 11;</code>
@@ -249,7 +249,7 @@ public interface DynamicTravelAssetOrBuilder extends
 
   /**
    * <pre>
-   * Contextual keywords, e.g. Paris trains.
+   * Contextual keywords, for example, Paris trains.
    * </pre>
    *
    * <code>repeated string contextual_keywords = 12;</code>
@@ -259,7 +259,7 @@ public interface DynamicTravelAssetOrBuilder extends
       getContextualKeywordsList();
   /**
    * <pre>
-   * Contextual keywords, e.g. Paris trains.
+   * Contextual keywords, for example, Paris trains.
    * </pre>
    *
    * <code>repeated string contextual_keywords = 12;</code>
@@ -268,7 +268,7 @@ public interface DynamicTravelAssetOrBuilder extends
   int getContextualKeywordsCount();
   /**
    * <pre>
-   * Contextual keywords, e.g. Paris trains.
+   * Contextual keywords, for example, Paris trains.
    * </pre>
    *
    * <code>repeated string contextual_keywords = 12;</code>
@@ -278,7 +278,7 @@ public interface DynamicTravelAssetOrBuilder extends
   java.lang.String getContextualKeywords(int index);
   /**
    * <pre>
-   * Contextual keywords, e.g. Paris trains.
+   * Contextual keywords, for example, Paris trains.
    * </pre>
    *
    * <code>repeated string contextual_keywords = 12;</code>
@@ -290,7 +290,7 @@ public interface DynamicTravelAssetOrBuilder extends
 
   /**
    * <pre>
-   * Similar destination IDs, e.g. NYC.
+   * Similar destination IDs, for example, NYC.
    * </pre>
    *
    * <code>repeated string similar_destination_ids = 13;</code>
@@ -300,7 +300,7 @@ public interface DynamicTravelAssetOrBuilder extends
       getSimilarDestinationIdsList();
   /**
    * <pre>
-   * Similar destination IDs, e.g. NYC.
+   * Similar destination IDs, for example, NYC.
    * </pre>
    *
    * <code>repeated string similar_destination_ids = 13;</code>
@@ -309,7 +309,7 @@ public interface DynamicTravelAssetOrBuilder extends
   int getSimilarDestinationIdsCount();
   /**
    * <pre>
-   * Similar destination IDs, e.g. NYC.
+   * Similar destination IDs, for example, NYC.
    * </pre>
    *
    * <code>repeated string similar_destination_ids = 13;</code>
@@ -319,7 +319,7 @@ public interface DynamicTravelAssetOrBuilder extends
   java.lang.String getSimilarDestinationIds(int index);
   /**
    * <pre>
-   * Similar destination IDs, e.g. NYC.
+   * Similar destination IDs, for example, NYC.
    * </pre>
    *
    * <code>repeated string similar_destination_ids = 13;</code>
@@ -331,8 +331,8 @@ public interface DynamicTravelAssetOrBuilder extends
 
   /**
    * <pre>
-   * Image URL, e.g. http://www.example.com/image.png. The image will not be
-   * uploaded as image asset.
+   * Image URL, for example, http://www.example.com/image.png. The image will
+   * not be uploaded as image asset.
    * </pre>
    *
    * <code>string image_url = 14;</code>
@@ -341,8 +341,8 @@ public interface DynamicTravelAssetOrBuilder extends
   java.lang.String getImageUrl();
   /**
    * <pre>
-   * Image URL, e.g. http://www.example.com/image.png. The image will not be
-   * uploaded as image asset.
+   * Image URL, for example, http://www.example.com/image.png. The image will
+   * not be uploaded as image asset.
    * </pre>
    *
    * <code>string image_url = 14;</code>
@@ -353,7 +353,7 @@ public interface DynamicTravelAssetOrBuilder extends
 
   /**
    * <pre>
-   * Android deep link, e.g.
+   * Android deep link, for example,
    * android-app://com.example.android/http/example.com/gizmos?1234.
    * </pre>
    *
@@ -363,7 +363,7 @@ public interface DynamicTravelAssetOrBuilder extends
   java.lang.String getAndroidAppLink();
   /**
    * <pre>
-   * Android deep link, e.g.
+   * Android deep link, for example,
    * android-app://com.example.android/http/example.com/gizmos?1234.
    * </pre>
    *
@@ -375,7 +375,7 @@ public interface DynamicTravelAssetOrBuilder extends
 
   /**
    * <pre>
-   * iOS deep link, e.g. exampleApp://content/page.
+   * iOS deep link, for example, exampleApp://content/page.
    * </pre>
    *
    * <code>string ios_app_link = 16;</code>
@@ -384,7 +384,7 @@ public interface DynamicTravelAssetOrBuilder extends
   java.lang.String getIosAppLink();
   /**
    * <pre>
-   * iOS deep link, e.g. exampleApp://content/page.
+   * iOS deep link, for example, exampleApp://content/page.
    * </pre>
    *
    * <code>string ios_app_link = 16;</code>

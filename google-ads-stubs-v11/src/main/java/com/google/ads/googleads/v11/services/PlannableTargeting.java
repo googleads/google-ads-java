@@ -24,6 +24,7 @@ private static final long serialVersionUID = 0L;
     genders_ = java.util.Collections.emptyList();
     devices_ = java.util.Collections.emptyList();
     networks_ = java.util.Collections.emptyList();
+    youtubeSelectLineups_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -121,6 +122,15 @@ private static final long serialVersionUID = 0L;
             input.popLimit(oldLimit);
             break;
           }
+          case 42: {
+            if (!((mutable_bitField0_ & 0x00000010) != 0)) {
+              youtubeSelectLineups_ = new java.util.ArrayList<com.google.ads.googleads.v11.services.YouTubeSelectLineUp>();
+              mutable_bitField0_ |= 0x00000010;
+            }
+            youtubeSelectLineups_.add(
+                input.readMessage(com.google.ads.googleads.v11.services.YouTubeSelectLineUp.parser(), extensionRegistry));
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -149,6 +159,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((mutable_bitField0_ & 0x00000008) != 0)) {
         networks_ = java.util.Collections.unmodifiableList(networks_);
+      }
+      if (((mutable_bitField0_ & 0x00000010) != 0)) {
+        youtubeSelectLineups_ = java.util.Collections.unmodifiableList(youtubeSelectLineups_);
       }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
@@ -468,6 +481,66 @@ private static final long serialVersionUID = 0L;
   }
   private int networksMemoizedSerializedSize;
 
+  public static final int YOUTUBE_SELECT_LINEUPS_FIELD_NUMBER = 5;
+  private java.util.List<com.google.ads.googleads.v11.services.YouTubeSelectLineUp> youtubeSelectLineups_;
+  /**
+   * <pre>
+   * Targetable YouTube Select Lineups for the ad product.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v11.services.YouTubeSelectLineUp youtube_select_lineups = 5;</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.google.ads.googleads.v11.services.YouTubeSelectLineUp> getYoutubeSelectLineupsList() {
+    return youtubeSelectLineups_;
+  }
+  /**
+   * <pre>
+   * Targetable YouTube Select Lineups for the ad product.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v11.services.YouTubeSelectLineUp youtube_select_lineups = 5;</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.google.ads.googleads.v11.services.YouTubeSelectLineUpOrBuilder> 
+      getYoutubeSelectLineupsOrBuilderList() {
+    return youtubeSelectLineups_;
+  }
+  /**
+   * <pre>
+   * Targetable YouTube Select Lineups for the ad product.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v11.services.YouTubeSelectLineUp youtube_select_lineups = 5;</code>
+   */
+  @java.lang.Override
+  public int getYoutubeSelectLineupsCount() {
+    return youtubeSelectLineups_.size();
+  }
+  /**
+   * <pre>
+   * Targetable YouTube Select Lineups for the ad product.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v11.services.YouTubeSelectLineUp youtube_select_lineups = 5;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v11.services.YouTubeSelectLineUp getYoutubeSelectLineups(int index) {
+    return youtubeSelectLineups_.get(index);
+  }
+  /**
+   * <pre>
+   * Targetable YouTube Select Lineups for the ad product.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v11.services.YouTubeSelectLineUp youtube_select_lineups = 5;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v11.services.YouTubeSelectLineUpOrBuilder getYoutubeSelectLineupsOrBuilder(
+      int index) {
+    return youtubeSelectLineups_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -502,6 +575,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < networks_.size(); i++) {
       output.writeEnumNoTag(networks_.get(i));
+    }
+    for (int i = 0; i < youtubeSelectLineups_.size(); i++) {
+      output.writeMessage(5, youtubeSelectLineups_.get(i));
     }
     unknownFields.writeTo(output);
   }
@@ -544,6 +620,10 @@ private static final long serialVersionUID = 0L;
           .computeUInt32SizeNoTag(dataSize);
       }networksMemoizedSerializedSize = dataSize;
     }
+    for (int i = 0; i < youtubeSelectLineups_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, youtubeSelectLineups_.get(i));
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -565,6 +645,8 @@ private static final long serialVersionUID = 0L;
     if (!getDevicesList()
         .equals(other.getDevicesList())) return false;
     if (!networks_.equals(other.networks_)) return false;
+    if (!getYoutubeSelectLineupsList()
+        .equals(other.getYoutubeSelectLineupsList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -591,6 +673,10 @@ private static final long serialVersionUID = 0L;
     if (getNetworksCount() > 0) {
       hash = (37 * hash) + NETWORKS_FIELD_NUMBER;
       hash = (53 * hash) + networks_.hashCode();
+    }
+    if (getYoutubeSelectLineupsCount() > 0) {
+      hash = (37 * hash) + YOUTUBE_SELECT_LINEUPS_FIELD_NUMBER;
+      hash = (53 * hash) + getYoutubeSelectLineupsList().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -726,6 +812,7 @@ private static final long serialVersionUID = 0L;
               .alwaysUseFieldBuilders) {
         getGendersFieldBuilder();
         getDevicesFieldBuilder();
+        getYoutubeSelectLineupsFieldBuilder();
       }
     }
     @java.lang.Override
@@ -747,6 +834,12 @@ private static final long serialVersionUID = 0L;
       }
       networks_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000008);
+      if (youtubeSelectLineupsBuilder_ == null) {
+        youtubeSelectLineups_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);
+      } else {
+        youtubeSelectLineupsBuilder_.clear();
+      }
       return this;
     }
 
@@ -802,6 +895,15 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000008);
       }
       result.networks_ = networks_;
+      if (youtubeSelectLineupsBuilder_ == null) {
+        if (((bitField0_ & 0x00000010) != 0)) {
+          youtubeSelectLineups_ = java.util.Collections.unmodifiableList(youtubeSelectLineups_);
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.youtubeSelectLineups_ = youtubeSelectLineups_;
+      } else {
+        result.youtubeSelectLineups_ = youtubeSelectLineupsBuilder_.build();
+      }
       onBuilt();
       return result;
     }
@@ -921,6 +1023,32 @@ private static final long serialVersionUID = 0L;
           networks_.addAll(other.networks_);
         }
         onChanged();
+      }
+      if (youtubeSelectLineupsBuilder_ == null) {
+        if (!other.youtubeSelectLineups_.isEmpty()) {
+          if (youtubeSelectLineups_.isEmpty()) {
+            youtubeSelectLineups_ = other.youtubeSelectLineups_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            ensureYoutubeSelectLineupsIsMutable();
+            youtubeSelectLineups_.addAll(other.youtubeSelectLineups_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.youtubeSelectLineups_.isEmpty()) {
+          if (youtubeSelectLineupsBuilder_.isEmpty()) {
+            youtubeSelectLineupsBuilder_.dispose();
+            youtubeSelectLineupsBuilder_ = null;
+            youtubeSelectLineups_ = other.youtubeSelectLineups_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+            youtubeSelectLineupsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getYoutubeSelectLineupsFieldBuilder() : null;
+          } else {
+            youtubeSelectLineupsBuilder_.addAllMessages(other.youtubeSelectLineups_);
+          }
+        }
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1115,8 +1243,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.enums.ReachPlanAgeRangeEnum.ReachPlanAgeRange age_ranges = 1;</code>
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of ageRanges at the given index.
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for ageRanges to set.
      * @return This builder for chaining.
      */
     public Builder setAgeRangesValue(
@@ -1985,8 +2113,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.enums.ReachPlanNetworkEnum.ReachPlanNetwork networks = 4;</code>
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of networks at the given index.
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for networks to set.
      * @return This builder for chaining.
      */
     public Builder setNetworksValue(
@@ -2028,6 +2156,318 @@ private static final long serialVersionUID = 0L;
       }
       onChanged();
       return this;
+    }
+
+    private java.util.List<com.google.ads.googleads.v11.services.YouTubeSelectLineUp> youtubeSelectLineups_ =
+      java.util.Collections.emptyList();
+    private void ensureYoutubeSelectLineupsIsMutable() {
+      if (!((bitField0_ & 0x00000010) != 0)) {
+        youtubeSelectLineups_ = new java.util.ArrayList<com.google.ads.googleads.v11.services.YouTubeSelectLineUp>(youtubeSelectLineups_);
+        bitField0_ |= 0x00000010;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.ads.googleads.v11.services.YouTubeSelectLineUp, com.google.ads.googleads.v11.services.YouTubeSelectLineUp.Builder, com.google.ads.googleads.v11.services.YouTubeSelectLineUpOrBuilder> youtubeSelectLineupsBuilder_;
+
+    /**
+     * <pre>
+     * Targetable YouTube Select Lineups for the ad product.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v11.services.YouTubeSelectLineUp youtube_select_lineups = 5;</code>
+     */
+    public java.util.List<com.google.ads.googleads.v11.services.YouTubeSelectLineUp> getYoutubeSelectLineupsList() {
+      if (youtubeSelectLineupsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(youtubeSelectLineups_);
+      } else {
+        return youtubeSelectLineupsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Targetable YouTube Select Lineups for the ad product.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v11.services.YouTubeSelectLineUp youtube_select_lineups = 5;</code>
+     */
+    public int getYoutubeSelectLineupsCount() {
+      if (youtubeSelectLineupsBuilder_ == null) {
+        return youtubeSelectLineups_.size();
+      } else {
+        return youtubeSelectLineupsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Targetable YouTube Select Lineups for the ad product.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v11.services.YouTubeSelectLineUp youtube_select_lineups = 5;</code>
+     */
+    public com.google.ads.googleads.v11.services.YouTubeSelectLineUp getYoutubeSelectLineups(int index) {
+      if (youtubeSelectLineupsBuilder_ == null) {
+        return youtubeSelectLineups_.get(index);
+      } else {
+        return youtubeSelectLineupsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Targetable YouTube Select Lineups for the ad product.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v11.services.YouTubeSelectLineUp youtube_select_lineups = 5;</code>
+     */
+    public Builder setYoutubeSelectLineups(
+        int index, com.google.ads.googleads.v11.services.YouTubeSelectLineUp value) {
+      if (youtubeSelectLineupsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureYoutubeSelectLineupsIsMutable();
+        youtubeSelectLineups_.set(index, value);
+        onChanged();
+      } else {
+        youtubeSelectLineupsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Targetable YouTube Select Lineups for the ad product.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v11.services.YouTubeSelectLineUp youtube_select_lineups = 5;</code>
+     */
+    public Builder setYoutubeSelectLineups(
+        int index, com.google.ads.googleads.v11.services.YouTubeSelectLineUp.Builder builderForValue) {
+      if (youtubeSelectLineupsBuilder_ == null) {
+        ensureYoutubeSelectLineupsIsMutable();
+        youtubeSelectLineups_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        youtubeSelectLineupsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Targetable YouTube Select Lineups for the ad product.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v11.services.YouTubeSelectLineUp youtube_select_lineups = 5;</code>
+     */
+    public Builder addYoutubeSelectLineups(com.google.ads.googleads.v11.services.YouTubeSelectLineUp value) {
+      if (youtubeSelectLineupsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureYoutubeSelectLineupsIsMutable();
+        youtubeSelectLineups_.add(value);
+        onChanged();
+      } else {
+        youtubeSelectLineupsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Targetable YouTube Select Lineups for the ad product.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v11.services.YouTubeSelectLineUp youtube_select_lineups = 5;</code>
+     */
+    public Builder addYoutubeSelectLineups(
+        int index, com.google.ads.googleads.v11.services.YouTubeSelectLineUp value) {
+      if (youtubeSelectLineupsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureYoutubeSelectLineupsIsMutable();
+        youtubeSelectLineups_.add(index, value);
+        onChanged();
+      } else {
+        youtubeSelectLineupsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Targetable YouTube Select Lineups for the ad product.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v11.services.YouTubeSelectLineUp youtube_select_lineups = 5;</code>
+     */
+    public Builder addYoutubeSelectLineups(
+        com.google.ads.googleads.v11.services.YouTubeSelectLineUp.Builder builderForValue) {
+      if (youtubeSelectLineupsBuilder_ == null) {
+        ensureYoutubeSelectLineupsIsMutable();
+        youtubeSelectLineups_.add(builderForValue.build());
+        onChanged();
+      } else {
+        youtubeSelectLineupsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Targetable YouTube Select Lineups for the ad product.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v11.services.YouTubeSelectLineUp youtube_select_lineups = 5;</code>
+     */
+    public Builder addYoutubeSelectLineups(
+        int index, com.google.ads.googleads.v11.services.YouTubeSelectLineUp.Builder builderForValue) {
+      if (youtubeSelectLineupsBuilder_ == null) {
+        ensureYoutubeSelectLineupsIsMutable();
+        youtubeSelectLineups_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        youtubeSelectLineupsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Targetable YouTube Select Lineups for the ad product.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v11.services.YouTubeSelectLineUp youtube_select_lineups = 5;</code>
+     */
+    public Builder addAllYoutubeSelectLineups(
+        java.lang.Iterable<? extends com.google.ads.googleads.v11.services.YouTubeSelectLineUp> values) {
+      if (youtubeSelectLineupsBuilder_ == null) {
+        ensureYoutubeSelectLineupsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, youtubeSelectLineups_);
+        onChanged();
+      } else {
+        youtubeSelectLineupsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Targetable YouTube Select Lineups for the ad product.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v11.services.YouTubeSelectLineUp youtube_select_lineups = 5;</code>
+     */
+    public Builder clearYoutubeSelectLineups() {
+      if (youtubeSelectLineupsBuilder_ == null) {
+        youtubeSelectLineups_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+      } else {
+        youtubeSelectLineupsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Targetable YouTube Select Lineups for the ad product.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v11.services.YouTubeSelectLineUp youtube_select_lineups = 5;</code>
+     */
+    public Builder removeYoutubeSelectLineups(int index) {
+      if (youtubeSelectLineupsBuilder_ == null) {
+        ensureYoutubeSelectLineupsIsMutable();
+        youtubeSelectLineups_.remove(index);
+        onChanged();
+      } else {
+        youtubeSelectLineupsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Targetable YouTube Select Lineups for the ad product.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v11.services.YouTubeSelectLineUp youtube_select_lineups = 5;</code>
+     */
+    public com.google.ads.googleads.v11.services.YouTubeSelectLineUp.Builder getYoutubeSelectLineupsBuilder(
+        int index) {
+      return getYoutubeSelectLineupsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Targetable YouTube Select Lineups for the ad product.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v11.services.YouTubeSelectLineUp youtube_select_lineups = 5;</code>
+     */
+    public com.google.ads.googleads.v11.services.YouTubeSelectLineUpOrBuilder getYoutubeSelectLineupsOrBuilder(
+        int index) {
+      if (youtubeSelectLineupsBuilder_ == null) {
+        return youtubeSelectLineups_.get(index);  } else {
+        return youtubeSelectLineupsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Targetable YouTube Select Lineups for the ad product.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v11.services.YouTubeSelectLineUp youtube_select_lineups = 5;</code>
+     */
+    public java.util.List<? extends com.google.ads.googleads.v11.services.YouTubeSelectLineUpOrBuilder> 
+         getYoutubeSelectLineupsOrBuilderList() {
+      if (youtubeSelectLineupsBuilder_ != null) {
+        return youtubeSelectLineupsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(youtubeSelectLineups_);
+      }
+    }
+    /**
+     * <pre>
+     * Targetable YouTube Select Lineups for the ad product.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v11.services.YouTubeSelectLineUp youtube_select_lineups = 5;</code>
+     */
+    public com.google.ads.googleads.v11.services.YouTubeSelectLineUp.Builder addYoutubeSelectLineupsBuilder() {
+      return getYoutubeSelectLineupsFieldBuilder().addBuilder(
+          com.google.ads.googleads.v11.services.YouTubeSelectLineUp.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Targetable YouTube Select Lineups for the ad product.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v11.services.YouTubeSelectLineUp youtube_select_lineups = 5;</code>
+     */
+    public com.google.ads.googleads.v11.services.YouTubeSelectLineUp.Builder addYoutubeSelectLineupsBuilder(
+        int index) {
+      return getYoutubeSelectLineupsFieldBuilder().addBuilder(
+          index, com.google.ads.googleads.v11.services.YouTubeSelectLineUp.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Targetable YouTube Select Lineups for the ad product.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v11.services.YouTubeSelectLineUp youtube_select_lineups = 5;</code>
+     */
+    public java.util.List<com.google.ads.googleads.v11.services.YouTubeSelectLineUp.Builder> 
+         getYoutubeSelectLineupsBuilderList() {
+      return getYoutubeSelectLineupsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.ads.googleads.v11.services.YouTubeSelectLineUp, com.google.ads.googleads.v11.services.YouTubeSelectLineUp.Builder, com.google.ads.googleads.v11.services.YouTubeSelectLineUpOrBuilder> 
+        getYoutubeSelectLineupsFieldBuilder() {
+      if (youtubeSelectLineupsBuilder_ == null) {
+        youtubeSelectLineupsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.ads.googleads.v11.services.YouTubeSelectLineUp, com.google.ads.googleads.v11.services.YouTubeSelectLineUp.Builder, com.google.ads.googleads.v11.services.YouTubeSelectLineUpOrBuilder>(
+                youtubeSelectLineups_,
+                ((bitField0_ & 0x00000010) != 0),
+                getParentForChildren(),
+                isClean());
+        youtubeSelectLineups_ = null;
+      }
+      return youtubeSelectLineupsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

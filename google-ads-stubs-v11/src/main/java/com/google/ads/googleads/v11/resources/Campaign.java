@@ -24,6 +24,7 @@ private static final long serialVersionUID = 0L;
     name_ = "";
     status_ = 0;
     servingStatus_ = 0;
+    biddingStrategySystemStatus_ = 0;
     adServingOptimizationStatus_ = 0;
     advertisingChannelType_ = 0;
     advertisingChannelSubType_ = 0;
@@ -649,6 +650,12 @@ private static final long serialVersionUID = 0L;
               performanceMaxUpgrade_ = subBuilder.buildPartial();
             }
 
+            break;
+          }
+          case 624: {
+            int rawValue = input.readEnum();
+
+            biddingStrategySystemStatus_ = rawValue;
             break;
           }
           default: {
@@ -3207,8 +3214,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Required. The Internet domain name that this setting represents, e.g., "google.com"
-     * or "www.google.com".
+     * Required. The Internet domain name that this setting represents, for example,
+     * "google.com" or "www.google.com".
      * </pre>
      *
      * <code>string domain_name = 6 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -3217,8 +3224,8 @@ private static final long serialVersionUID = 0L;
     java.lang.String getDomainName();
     /**
      * <pre>
-     * Required. The Internet domain name that this setting represents, e.g., "google.com"
-     * or "www.google.com".
+     * Required. The Internet domain name that this setting represents, for example,
+     * "google.com" or "www.google.com".
      * </pre>
      *
      * <code>string domain_name = 6 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -3229,7 +3236,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Required. The language code specifying the language of the domain, e.g., "en".
+     * Required. The language code specifying the language of the domain, for example,
+     * "en".
      * </pre>
      *
      * <code>string language_code = 7 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -3238,7 +3246,8 @@ private static final long serialVersionUID = 0L;
     java.lang.String getLanguageCode();
     /**
      * <pre>
-     * Required. The language code specifying the language of the domain, e.g., "en".
+     * Required. The language code specifying the language of the domain, for example,
+     * "en".
      * </pre>
      *
      * <code>string language_code = 7 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -3428,8 +3437,8 @@ private static final long serialVersionUID = 0L;
     private volatile java.lang.Object domainName_;
     /**
      * <pre>
-     * Required. The Internet domain name that this setting represents, e.g., "google.com"
-     * or "www.google.com".
+     * Required. The Internet domain name that this setting represents, for example,
+     * "google.com" or "www.google.com".
      * </pre>
      *
      * <code>string domain_name = 6 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -3450,8 +3459,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The Internet domain name that this setting represents, e.g., "google.com"
-     * or "www.google.com".
+     * Required. The Internet domain name that this setting represents, for example,
+     * "google.com" or "www.google.com".
      * </pre>
      *
      * <code>string domain_name = 6 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -3476,7 +3485,8 @@ private static final long serialVersionUID = 0L;
     private volatile java.lang.Object languageCode_;
     /**
      * <pre>
-     * Required. The language code specifying the language of the domain, e.g., "en".
+     * Required. The language code specifying the language of the domain, for example,
+     * "en".
      * </pre>
      *
      * <code>string language_code = 7 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -3497,7 +3507,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The language code specifying the language of the domain, e.g., "en".
+     * Required. The language code specifying the language of the domain, for example,
+     * "en".
      * </pre>
      *
      * <code>string language_code = 7 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -3986,8 +3997,8 @@ private static final long serialVersionUID = 0L;
       private java.lang.Object domainName_ = "";
       /**
        * <pre>
-       * Required. The Internet domain name that this setting represents, e.g., "google.com"
-       * or "www.google.com".
+       * Required. The Internet domain name that this setting represents, for example,
+       * "google.com" or "www.google.com".
        * </pre>
        *
        * <code>string domain_name = 6 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -4007,8 +4018,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Required. The Internet domain name that this setting represents, e.g., "google.com"
-       * or "www.google.com".
+       * Required. The Internet domain name that this setting represents, for example,
+       * "google.com" or "www.google.com".
        * </pre>
        *
        * <code>string domain_name = 6 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -4029,8 +4040,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Required. The Internet domain name that this setting represents, e.g., "google.com"
-       * or "www.google.com".
+       * Required. The Internet domain name that this setting represents, for example,
+       * "google.com" or "www.google.com".
        * </pre>
        *
        * <code>string domain_name = 6 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -4049,8 +4060,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Required. The Internet domain name that this setting represents, e.g., "google.com"
-       * or "www.google.com".
+       * Required. The Internet domain name that this setting represents, for example,
+       * "google.com" or "www.google.com".
        * </pre>
        *
        * <code>string domain_name = 6 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -4064,8 +4075,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Required. The Internet domain name that this setting represents, e.g., "google.com"
-       * or "www.google.com".
+       * Required. The Internet domain name that this setting represents, for example,
+       * "google.com" or "www.google.com".
        * </pre>
        *
        * <code>string domain_name = 6 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -4087,7 +4098,8 @@ private static final long serialVersionUID = 0L;
       private java.lang.Object languageCode_ = "";
       /**
        * <pre>
-       * Required. The language code specifying the language of the domain, e.g., "en".
+       * Required. The language code specifying the language of the domain, for example,
+       * "en".
        * </pre>
        *
        * <code>string language_code = 7 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -4107,7 +4119,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Required. The language code specifying the language of the domain, e.g., "en".
+       * Required. The language code specifying the language of the domain, for example,
+       * "en".
        * </pre>
        *
        * <code>string language_code = 7 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -4128,7 +4141,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Required. The language code specifying the language of the domain, e.g., "en".
+       * Required. The language code specifying the language of the domain, for example,
+       * "en".
        * </pre>
        *
        * <code>string language_code = 7 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -4147,7 +4161,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Required. The language code specifying the language of the domain, e.g., "en".
+       * Required. The language code specifying the language of the domain, for example,
+       * "en".
        * </pre>
        *
        * <code>string language_code = 7 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -4161,7 +4176,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Required. The language code specifying the language of the domain, e.g., "en".
+       * Required. The language code specifying the language of the domain, for example,
+       * "en".
        * </pre>
        *
        * <code>string language_code = 7 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -4466,7 +4482,7 @@ private static final long serialVersionUID = 0L;
      * Only one of feed_label or sales_country can be set.
      * Field is immutable except for clearing.
      * Once this field is cleared, you must use feed_label if you
-     * wish to set the sales country.
+     * want to set the sales country.
      * </pre>
      *
      * <code>optional string sales_country = 6;</code>
@@ -4479,7 +4495,7 @@ private static final long serialVersionUID = 0L;
      * Only one of feed_label or sales_country can be set.
      * Field is immutable except for clearing.
      * Once this field is cleared, you must use feed_label if you
-     * wish to set the sales country.
+     * want to set the sales country.
      * </pre>
      *
      * <code>optional string sales_country = 6;</code>
@@ -4492,7 +4508,7 @@ private static final long serialVersionUID = 0L;
      * Only one of feed_label or sales_country can be set.
      * Field is immutable except for clearing.
      * Once this field is cleared, you must use feed_label if you
-     * wish to set the sales country.
+     * want to set the sales country.
      * </pre>
      *
      * <code>optional string sales_country = 6;</code>
@@ -4506,7 +4522,7 @@ private static final long serialVersionUID = 0L;
      * Feed label of products to include in the campaign.
      * Only one of feed_label or sales_country can be set.
      * If used instead of sales_country, the feed_label field accepts country
-     * codes in the same format i.e. 'XX'.
+     * codes in the same format for example: 'XX'.
      * Otherwise can be any string used for feed label in Google Merchant
      * Center.
      * </pre>
@@ -4520,7 +4536,7 @@ private static final long serialVersionUID = 0L;
      * Feed label of products to include in the campaign.
      * Only one of feed_label or sales_country can be set.
      * If used instead of sales_country, the feed_label field accepts country
-     * codes in the same format i.e. 'XX'.
+     * codes in the same format for example: 'XX'.
      * Otherwise can be any string used for feed label in Google Merchant
      * Center.
      * </pre>
@@ -4749,7 +4765,7 @@ private static final long serialVersionUID = 0L;
      * Only one of feed_label or sales_country can be set.
      * Field is immutable except for clearing.
      * Once this field is cleared, you must use feed_label if you
-     * wish to set the sales country.
+     * want to set the sales country.
      * </pre>
      *
      * <code>optional string sales_country = 6;</code>
@@ -4765,7 +4781,7 @@ private static final long serialVersionUID = 0L;
      * Only one of feed_label or sales_country can be set.
      * Field is immutable except for clearing.
      * Once this field is cleared, you must use feed_label if you
-     * wish to set the sales country.
+     * want to set the sales country.
      * </pre>
      *
      * <code>optional string sales_country = 6;</code>
@@ -4790,7 +4806,7 @@ private static final long serialVersionUID = 0L;
      * Only one of feed_label or sales_country can be set.
      * Field is immutable except for clearing.
      * Once this field is cleared, you must use feed_label if you
-     * wish to set the sales country.
+     * want to set the sales country.
      * </pre>
      *
      * <code>optional string sales_country = 6;</code>
@@ -4818,7 +4834,7 @@ private static final long serialVersionUID = 0L;
      * Feed label of products to include in the campaign.
      * Only one of feed_label or sales_country can be set.
      * If used instead of sales_country, the feed_label field accepts country
-     * codes in the same format i.e. 'XX'.
+     * codes in the same format for example: 'XX'.
      * Otherwise can be any string used for feed label in Google Merchant
      * Center.
      * </pre>
@@ -4844,7 +4860,7 @@ private static final long serialVersionUID = 0L;
      * Feed label of products to include in the campaign.
      * Only one of feed_label or sales_country can be set.
      * If used instead of sales_country, the feed_label field accepts country
-     * codes in the same format i.e. 'XX'.
+     * codes in the same format for example: 'XX'.
      * Otherwise can be any string used for feed label in Google Merchant
      * Center.
      * </pre>
@@ -5449,7 +5465,7 @@ private static final long serialVersionUID = 0L;
        * Only one of feed_label or sales_country can be set.
        * Field is immutable except for clearing.
        * Once this field is cleared, you must use feed_label if you
-       * wish to set the sales country.
+       * want to set the sales country.
        * </pre>
        *
        * <code>optional string sales_country = 6;</code>
@@ -5464,7 +5480,7 @@ private static final long serialVersionUID = 0L;
        * Only one of feed_label or sales_country can be set.
        * Field is immutable except for clearing.
        * Once this field is cleared, you must use feed_label if you
-       * wish to set the sales country.
+       * want to set the sales country.
        * </pre>
        *
        * <code>optional string sales_country = 6;</code>
@@ -5488,7 +5504,7 @@ private static final long serialVersionUID = 0L;
        * Only one of feed_label or sales_country can be set.
        * Field is immutable except for clearing.
        * Once this field is cleared, you must use feed_label if you
-       * wish to set the sales country.
+       * want to set the sales country.
        * </pre>
        *
        * <code>optional string sales_country = 6;</code>
@@ -5513,7 +5529,7 @@ private static final long serialVersionUID = 0L;
        * Only one of feed_label or sales_country can be set.
        * Field is immutable except for clearing.
        * Once this field is cleared, you must use feed_label if you
-       * wish to set the sales country.
+       * want to set the sales country.
        * </pre>
        *
        * <code>optional string sales_country = 6;</code>
@@ -5536,7 +5552,7 @@ private static final long serialVersionUID = 0L;
        * Only one of feed_label or sales_country can be set.
        * Field is immutable except for clearing.
        * Once this field is cleared, you must use feed_label if you
-       * wish to set the sales country.
+       * want to set the sales country.
        * </pre>
        *
        * <code>optional string sales_country = 6;</code>
@@ -5554,7 +5570,7 @@ private static final long serialVersionUID = 0L;
        * Only one of feed_label or sales_country can be set.
        * Field is immutable except for clearing.
        * Once this field is cleared, you must use feed_label if you
-       * wish to set the sales country.
+       * want to set the sales country.
        * </pre>
        *
        * <code>optional string sales_country = 6;</code>
@@ -5579,7 +5595,7 @@ private static final long serialVersionUID = 0L;
        * Feed label of products to include in the campaign.
        * Only one of feed_label or sales_country can be set.
        * If used instead of sales_country, the feed_label field accepts country
-       * codes in the same format i.e. 'XX'.
+       * codes in the same format for example: 'XX'.
        * Otherwise can be any string used for feed label in Google Merchant
        * Center.
        * </pre>
@@ -5604,7 +5620,7 @@ private static final long serialVersionUID = 0L;
        * Feed label of products to include in the campaign.
        * Only one of feed_label or sales_country can be set.
        * If used instead of sales_country, the feed_label field accepts country
-       * codes in the same format i.e. 'XX'.
+       * codes in the same format for example: 'XX'.
        * Otherwise can be any string used for feed label in Google Merchant
        * Center.
        * </pre>
@@ -5630,7 +5646,7 @@ private static final long serialVersionUID = 0L;
        * Feed label of products to include in the campaign.
        * Only one of feed_label or sales_country can be set.
        * If used instead of sales_country, the feed_label field accepts country
-       * codes in the same format i.e. 'XX'.
+       * codes in the same format for example: 'XX'.
        * Otherwise can be any string used for feed label in Google Merchant
        * Center.
        * </pre>
@@ -5654,7 +5670,7 @@ private static final long serialVersionUID = 0L;
        * Feed label of products to include in the campaign.
        * Only one of feed_label or sales_country can be set.
        * If used instead of sales_country, the feed_label field accepts country
-       * codes in the same format i.e. 'XX'.
+       * codes in the same format for example: 'XX'.
        * Otherwise can be any string used for feed label in Google Merchant
        * Center.
        * </pre>
@@ -5673,7 +5689,7 @@ private static final long serialVersionUID = 0L;
        * Feed label of products to include in the campaign.
        * Only one of feed_label or sales_country can be set.
        * If used instead of sales_country, the feed_label field accepts country
-       * codes in the same format i.e. 'XX'.
+       * codes in the same format for example: 'XX'.
        * Otherwise can be any string used for feed label in Google Merchant
        * Center.
        * </pre>
@@ -10982,8 +10998,8 @@ private static final long serialVersionUID = 0L;
        * </pre>
        *
        * <code>repeated .google.ads.googleads.v11.enums.OptimizationGoalTypeEnum.OptimizationGoalType optimization_goal_types = 1;</code>
-       * @param index The index of the value to return.
-       * @return The enum numeric value on the wire of optimizationGoalTypes at the given index.
+       * @param index The index to set the value at.
+       * @param value The enum numeric value on the wire for optimizationGoalTypes to set.
        * @return This builder for chaining.
        */
       public Builder setOptimizationGoalTypesValue(
@@ -13658,6 +13674,33 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.google.ads.googleads.v11.enums.CampaignServingStatusEnum.CampaignServingStatus.UNRECOGNIZED : result;
   }
 
+  public static final int BIDDING_STRATEGY_SYSTEM_STATUS_FIELD_NUMBER = 78;
+  private int biddingStrategySystemStatus_;
+  /**
+   * <pre>
+   * Output only. The system status of the campaign's bidding strategy.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.enums.BiddingStrategySystemStatusEnum.BiddingStrategySystemStatus bidding_strategy_system_status = 78 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for biddingStrategySystemStatus.
+   */
+  @java.lang.Override public int getBiddingStrategySystemStatusValue() {
+    return biddingStrategySystemStatus_;
+  }
+  /**
+   * <pre>
+   * Output only. The system status of the campaign's bidding strategy.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.enums.BiddingStrategySystemStatusEnum.BiddingStrategySystemStatus bidding_strategy_system_status = 78 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The biddingStrategySystemStatus.
+   */
+  @java.lang.Override public com.google.ads.googleads.v11.enums.BiddingStrategySystemStatusEnum.BiddingStrategySystemStatus getBiddingStrategySystemStatus() {
+    @SuppressWarnings("deprecation")
+    com.google.ads.googleads.v11.enums.BiddingStrategySystemStatusEnum.BiddingStrategySystemStatus result = com.google.ads.googleads.v11.enums.BiddingStrategySystemStatusEnum.BiddingStrategySystemStatus.valueOf(biddingStrategySystemStatus_);
+    return result == null ? com.google.ads.googleads.v11.enums.BiddingStrategySystemStatusEnum.BiddingStrategySystemStatus.UNRECOGNIZED : result;
+  }
+
   public static final int AD_SERVING_OPTIMIZATION_STATUS_FIELD_NUMBER = 8;
   private int adServingOptimizationStatus_;
   /**
@@ -14720,7 +14763,9 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The last day of the campaign in serving customer's timezone in YYYY-MM-DD
-   * format.
+   * format. On create, defaults to 2037-12-30, which means the campaign will
+   * run indefinitely. To set an existing campaign to run indefinitely, set this
+   * field to 2037-12-30.
    * </pre>
    *
    * <code>optional string end_date = 64;</code>
@@ -14733,7 +14778,9 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The last day of the campaign in serving customer's timezone in YYYY-MM-DD
-   * format.
+   * format. On create, defaults to 2037-12-30, which means the campaign will
+   * run indefinitely. To set an existing campaign to run indefinitely, set this
+   * field to 2037-12-30.
    * </pre>
    *
    * <code>optional string end_date = 64;</code>
@@ -14755,7 +14802,9 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The last day of the campaign in serving customer's timezone in YYYY-MM-DD
-   * format.
+   * format. On create, defaults to 2037-12-30, which means the campaign will
+   * run indefinitely. To set an existing campaign to run indefinitely, set this
+   * field to 2037-12-30.
    * </pre>
    *
    * <code>optional string end_date = 64;</code>
@@ -15755,7 +15804,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Target Impression Share bidding strategy. An automated bidding strategy
-   * that sets bids to achieve a desired percentage of impressions.
+   * that sets bids to achieve a chosen percentage of impressions.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.TargetImpressionShare target_impression_share = 48;</code>
@@ -15768,7 +15817,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Target Impression Share bidding strategy. An automated bidding strategy
-   * that sets bids to achieve a desired percentage of impressions.
+   * that sets bids to achieve a chosen percentage of impressions.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.TargetImpressionShare target_impression_share = 48;</code>
@@ -15784,7 +15833,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Target Impression Share bidding strategy. An automated bidding strategy
-   * that sets bids to achieve a desired percentage of impressions.
+   * that sets bids to achieve a chosen percentage of impressions.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.TargetImpressionShare target_impression_share = 48;</code>
@@ -16168,6 +16217,9 @@ private static final long serialVersionUID = 0L;
     if (performanceMaxUpgrade_ != null) {
       output.writeMessage(77, getPerformanceMaxUpgrade());
     }
+    if (biddingStrategySystemStatus_ != com.google.ads.googleads.v11.enums.BiddingStrategySystemStatusEnum.BiddingStrategySystemStatus.UNSPECIFIED.getNumber()) {
+      output.writeEnum(78, biddingStrategySystemStatus_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -16402,6 +16454,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(77, getPerformanceMaxUpgrade());
     }
+    if (biddingStrategySystemStatus_ != com.google.ads.googleads.v11.enums.BiddingStrategySystemStatusEnum.BiddingStrategySystemStatus.UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(78, biddingStrategySystemStatus_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -16431,6 +16487,7 @@ private static final long serialVersionUID = 0L;
     }
     if (status_ != other.status_) return false;
     if (servingStatus_ != other.servingStatus_) return false;
+    if (biddingStrategySystemStatus_ != other.biddingStrategySystemStatus_) return false;
     if (adServingOptimizationStatus_ != other.adServingOptimizationStatus_) return false;
     if (advertisingChannelType_ != other.advertisingChannelType_) return false;
     if (advertisingChannelSubType_ != other.advertisingChannelSubType_) return false;
@@ -16660,6 +16717,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + status_;
     hash = (37 * hash) + SERVING_STATUS_FIELD_NUMBER;
     hash = (53 * hash) + servingStatus_;
+    hash = (37 * hash) + BIDDING_STRATEGY_SYSTEM_STATUS_FIELD_NUMBER;
+    hash = (53 * hash) + biddingStrategySystemStatus_;
     hash = (37 * hash) + AD_SERVING_OPTIMIZATION_STATUS_FIELD_NUMBER;
     hash = (53 * hash) + adServingOptimizationStatus_;
     hash = (37 * hash) + ADVERTISING_CHANNEL_TYPE_FIELD_NUMBER;
@@ -17004,6 +17063,8 @@ private static final long serialVersionUID = 0L;
 
       servingStatus_ = 0;
 
+      biddingStrategySystemStatus_ = 0;
+
       adServingOptimizationStatus_ = 0;
 
       advertisingChannelType_ = 0;
@@ -17191,6 +17252,7 @@ private static final long serialVersionUID = 0L;
       result.name_ = name_;
       result.status_ = status_;
       result.servingStatus_ = servingStatus_;
+      result.biddingStrategySystemStatus_ = biddingStrategySystemStatus_;
       result.adServingOptimizationStatus_ = adServingOptimizationStatus_;
       result.advertisingChannelType_ = advertisingChannelType_;
       result.advertisingChannelSubType_ = advertisingChannelSubType_;
@@ -17507,6 +17569,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.servingStatus_ != 0) {
         setServingStatusValue(other.getServingStatusValue());
+      }
+      if (other.biddingStrategySystemStatus_ != 0) {
+        setBiddingStrategySystemStatusValue(other.getBiddingStrategySystemStatusValue());
       }
       if (other.adServingOptimizationStatus_ != 0) {
         setAdServingOptimizationStatusValue(other.getAdServingOptimizationStatusValue());
@@ -18243,6 +18308,80 @@ private static final long serialVersionUID = 0L;
     public Builder clearServingStatus() {
       
       servingStatus_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int biddingStrategySystemStatus_ = 0;
+    /**
+     * <pre>
+     * Output only. The system status of the campaign's bidding strategy.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.enums.BiddingStrategySystemStatusEnum.BiddingStrategySystemStatus bidding_strategy_system_status = 78 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for biddingStrategySystemStatus.
+     */
+    @java.lang.Override public int getBiddingStrategySystemStatusValue() {
+      return biddingStrategySystemStatus_;
+    }
+    /**
+     * <pre>
+     * Output only. The system status of the campaign's bidding strategy.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.enums.BiddingStrategySystemStatusEnum.BiddingStrategySystemStatus bidding_strategy_system_status = 78 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for biddingStrategySystemStatus to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBiddingStrategySystemStatusValue(int value) {
+      
+      biddingStrategySystemStatus_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The system status of the campaign's bidding strategy.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.enums.BiddingStrategySystemStatusEnum.BiddingStrategySystemStatus bidding_strategy_system_status = 78 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The biddingStrategySystemStatus.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v11.enums.BiddingStrategySystemStatusEnum.BiddingStrategySystemStatus getBiddingStrategySystemStatus() {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v11.enums.BiddingStrategySystemStatusEnum.BiddingStrategySystemStatus result = com.google.ads.googleads.v11.enums.BiddingStrategySystemStatusEnum.BiddingStrategySystemStatus.valueOf(biddingStrategySystemStatus_);
+      return result == null ? com.google.ads.googleads.v11.enums.BiddingStrategySystemStatusEnum.BiddingStrategySystemStatus.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Output only. The system status of the campaign's bidding strategy.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.enums.BiddingStrategySystemStatusEnum.BiddingStrategySystemStatus bidding_strategy_system_status = 78 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The biddingStrategySystemStatus to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBiddingStrategySystemStatus(com.google.ads.googleads.v11.enums.BiddingStrategySystemStatusEnum.BiddingStrategySystemStatus value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      biddingStrategySystemStatus_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The system status of the campaign's bidding strategy.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.enums.BiddingStrategySystemStatusEnum.BiddingStrategySystemStatus bidding_strategy_system_status = 78 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearBiddingStrategySystemStatus() {
+      
+      biddingStrategySystemStatus_ = 0;
       onChanged();
       return this;
     }
@@ -21561,7 +21700,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The last day of the campaign in serving customer's timezone in YYYY-MM-DD
-     * format.
+     * format. On create, defaults to 2037-12-30, which means the campaign will
+     * run indefinitely. To set an existing campaign to run indefinitely, set this
+     * field to 2037-12-30.
      * </pre>
      *
      * <code>optional string end_date = 64;</code>
@@ -21573,7 +21714,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The last day of the campaign in serving customer's timezone in YYYY-MM-DD
-     * format.
+     * format. On create, defaults to 2037-12-30, which means the campaign will
+     * run indefinitely. To set an existing campaign to run indefinitely, set this
+     * field to 2037-12-30.
      * </pre>
      *
      * <code>optional string end_date = 64;</code>
@@ -21594,7 +21737,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The last day of the campaign in serving customer's timezone in YYYY-MM-DD
-     * format.
+     * format. On create, defaults to 2037-12-30, which means the campaign will
+     * run indefinitely. To set an existing campaign to run indefinitely, set this
+     * field to 2037-12-30.
      * </pre>
      *
      * <code>optional string end_date = 64;</code>
@@ -21616,7 +21761,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The last day of the campaign in serving customer's timezone in YYYY-MM-DD
-     * format.
+     * format. On create, defaults to 2037-12-30, which means the campaign will
+     * run indefinitely. To set an existing campaign to run indefinitely, set this
+     * field to 2037-12-30.
      * </pre>
      *
      * <code>optional string end_date = 64;</code>
@@ -21636,7 +21783,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The last day of the campaign in serving customer's timezone in YYYY-MM-DD
-     * format.
+     * format. On create, defaults to 2037-12-30, which means the campaign will
+     * run indefinitely. To set an existing campaign to run indefinitely, set this
+     * field to 2037-12-30.
      * </pre>
      *
      * <code>optional string end_date = 64;</code>
@@ -21651,7 +21800,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The last day of the campaign in serving customer's timezone in YYYY-MM-DD
-     * format.
+     * format. On create, defaults to 2037-12-30, which means the campaign will
+     * run indefinitely. To set an existing campaign to run indefinitely, set this
+     * field to 2037-12-30.
      * </pre>
      *
      * <code>optional string end_date = 64;</code>
@@ -23127,8 +23278,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.enums.AssetFieldTypeEnum.AssetFieldType excluded_parent_asset_field_types = 69;</code>
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of excludedParentAssetFieldTypes at the given index.
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for excludedParentAssetFieldTypes to set.
      * @return This builder for chaining.
      */
     public Builder setExcludedParentAssetFieldTypesValue(
@@ -25046,7 +25197,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Target Impression Share bidding strategy. An automated bidding strategy
-     * that sets bids to achieve a desired percentage of impressions.
+     * that sets bids to achieve a chosen percentage of impressions.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.TargetImpressionShare target_impression_share = 48;</code>
@@ -25059,7 +25210,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Target Impression Share bidding strategy. An automated bidding strategy
-     * that sets bids to achieve a desired percentage of impressions.
+     * that sets bids to achieve a chosen percentage of impressions.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.TargetImpressionShare target_impression_share = 48;</code>
@@ -25082,7 +25233,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Target Impression Share bidding strategy. An automated bidding strategy
-     * that sets bids to achieve a desired percentage of impressions.
+     * that sets bids to achieve a chosen percentage of impressions.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.TargetImpressionShare target_impression_share = 48;</code>
@@ -25103,7 +25254,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Target Impression Share bidding strategy. An automated bidding strategy
-     * that sets bids to achieve a desired percentage of impressions.
+     * that sets bids to achieve a chosen percentage of impressions.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.TargetImpressionShare target_impression_share = 48;</code>
@@ -25122,7 +25273,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Target Impression Share bidding strategy. An automated bidding strategy
-     * that sets bids to achieve a desired percentage of impressions.
+     * that sets bids to achieve a chosen percentage of impressions.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.TargetImpressionShare target_impression_share = 48;</code>
@@ -25150,7 +25301,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Target Impression Share bidding strategy. An automated bidding strategy
-     * that sets bids to achieve a desired percentage of impressions.
+     * that sets bids to achieve a chosen percentage of impressions.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.TargetImpressionShare target_impression_share = 48;</code>
@@ -25174,7 +25325,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Target Impression Share bidding strategy. An automated bidding strategy
-     * that sets bids to achieve a desired percentage of impressions.
+     * that sets bids to achieve a chosen percentage of impressions.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.TargetImpressionShare target_impression_share = 48;</code>
@@ -25185,7 +25336,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Target Impression Share bidding strategy. An automated bidding strategy
-     * that sets bids to achieve a desired percentage of impressions.
+     * that sets bids to achieve a chosen percentage of impressions.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.TargetImpressionShare target_impression_share = 48;</code>
@@ -25204,7 +25355,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Target Impression Share bidding strategy. An automated bidding strategy
-     * that sets bids to achieve a desired percentage of impressions.
+     * that sets bids to achieve a chosen percentage of impressions.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.common.TargetImpressionShare target_impression_share = 48;</code>

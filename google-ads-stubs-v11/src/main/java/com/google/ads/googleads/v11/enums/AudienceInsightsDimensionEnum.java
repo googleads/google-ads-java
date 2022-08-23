@@ -127,6 +127,86 @@ private static final long serialVersionUID = 0L;
      * <code>KNOWLEDGE_GRAPH = 3;</code>
      */
     KNOWLEDGE_GRAPH(3),
+    /**
+     * <pre>
+     * A country, represented by a geo target.
+     * </pre>
+     *
+     * <code>GEO_TARGET_COUNTRY = 4;</code>
+     */
+    GEO_TARGET_COUNTRY(4),
+    /**
+     * <pre>
+     * A geographic location within a country.
+     * </pre>
+     *
+     * <code>SUB_COUNTRY_LOCATION = 5;</code>
+     */
+    SUB_COUNTRY_LOCATION(5),
+    /**
+     * <pre>
+     * A YouTube channel.
+     * </pre>
+     *
+     * <code>YOUTUBE_CHANNEL = 6;</code>
+     */
+    YOUTUBE_CHANNEL(6),
+    /**
+     * <pre>
+     * A YouTube Dynamic Lineup.
+     * </pre>
+     *
+     * <code>YOUTUBE_DYNAMIC_LINEUP = 7;</code>
+     */
+    YOUTUBE_DYNAMIC_LINEUP(7),
+    /**
+     * <pre>
+     * An Affinity UserInterest.
+     * </pre>
+     *
+     * <code>AFFINITY_USER_INTEREST = 8;</code>
+     */
+    AFFINITY_USER_INTEREST(8),
+    /**
+     * <pre>
+     * An In-Market UserInterest.
+     * </pre>
+     *
+     * <code>IN_MARKET_USER_INTEREST = 9;</code>
+     */
+    IN_MARKET_USER_INTEREST(9),
+    /**
+     * <pre>
+     * A Parental Status value (parent, or not a parent).
+     * </pre>
+     *
+     * <code>PARENTAL_STATUS = 10;</code>
+     */
+    PARENTAL_STATUS(10),
+    /**
+     * <pre>
+     * A household income percentile range.
+     * </pre>
+     *
+     * <code>INCOME_RANGE = 11;</code>
+     */
+    INCOME_RANGE(11),
+    /**
+     * <pre>
+     * An age range.
+     * </pre>
+     *
+     * <code>AGE_RANGE = 12;</code>
+     */
+    AGE_RANGE(12),
+    /**
+     * <pre>
+     * A gender.
+     * </pre>
+     *
+     * <code>GENDER = 13;</code>
+     */
+    GENDER(13),
     UNRECOGNIZED(-1),
     ;
 
@@ -162,6 +242,86 @@ private static final long serialVersionUID = 0L;
      * <code>KNOWLEDGE_GRAPH = 3;</code>
      */
     public static final int KNOWLEDGE_GRAPH_VALUE = 3;
+    /**
+     * <pre>
+     * A country, represented by a geo target.
+     * </pre>
+     *
+     * <code>GEO_TARGET_COUNTRY = 4;</code>
+     */
+    public static final int GEO_TARGET_COUNTRY_VALUE = 4;
+    /**
+     * <pre>
+     * A geographic location within a country.
+     * </pre>
+     *
+     * <code>SUB_COUNTRY_LOCATION = 5;</code>
+     */
+    public static final int SUB_COUNTRY_LOCATION_VALUE = 5;
+    /**
+     * <pre>
+     * A YouTube channel.
+     * </pre>
+     *
+     * <code>YOUTUBE_CHANNEL = 6;</code>
+     */
+    public static final int YOUTUBE_CHANNEL_VALUE = 6;
+    /**
+     * <pre>
+     * A YouTube Dynamic Lineup.
+     * </pre>
+     *
+     * <code>YOUTUBE_DYNAMIC_LINEUP = 7;</code>
+     */
+    public static final int YOUTUBE_DYNAMIC_LINEUP_VALUE = 7;
+    /**
+     * <pre>
+     * An Affinity UserInterest.
+     * </pre>
+     *
+     * <code>AFFINITY_USER_INTEREST = 8;</code>
+     */
+    public static final int AFFINITY_USER_INTEREST_VALUE = 8;
+    /**
+     * <pre>
+     * An In-Market UserInterest.
+     * </pre>
+     *
+     * <code>IN_MARKET_USER_INTEREST = 9;</code>
+     */
+    public static final int IN_MARKET_USER_INTEREST_VALUE = 9;
+    /**
+     * <pre>
+     * A Parental Status value (parent, or not a parent).
+     * </pre>
+     *
+     * <code>PARENTAL_STATUS = 10;</code>
+     */
+    public static final int PARENTAL_STATUS_VALUE = 10;
+    /**
+     * <pre>
+     * A household income percentile range.
+     * </pre>
+     *
+     * <code>INCOME_RANGE = 11;</code>
+     */
+    public static final int INCOME_RANGE_VALUE = 11;
+    /**
+     * <pre>
+     * An age range.
+     * </pre>
+     *
+     * <code>AGE_RANGE = 12;</code>
+     */
+    public static final int AGE_RANGE_VALUE = 12;
+    /**
+     * <pre>
+     * A gender.
+     * </pre>
+     *
+     * <code>GENDER = 13;</code>
+     */
+    public static final int GENDER_VALUE = 13;
 
 
     public final int getNumber() {
@@ -192,6 +352,16 @@ private static final long serialVersionUID = 0L;
         case 1: return UNKNOWN;
         case 2: return CATEGORY;
         case 3: return KNOWLEDGE_GRAPH;
+        case 4: return GEO_TARGET_COUNTRY;
+        case 5: return SUB_COUNTRY_LOCATION;
+        case 6: return YOUTUBE_CHANNEL;
+        case 7: return YOUTUBE_DYNAMIC_LINEUP;
+        case 8: return AFFINITY_USER_INTEREST;
+        case 9: return IN_MARKET_USER_INTEREST;
+        case 10: return PARENTAL_STATUS;
+        case 11: return INCOME_RANGE;
+        case 12: return AGE_RANGE;
+        case 13: return GENDER;
         default: return null;
       }
     }

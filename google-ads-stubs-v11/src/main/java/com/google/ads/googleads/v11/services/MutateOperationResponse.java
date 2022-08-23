@@ -1088,6 +1088,34 @@ private static final long serialVersionUID = 0L;
             responseCase_ = 80;
             break;
           }
+          case 650: {
+            com.google.ads.googleads.v11.services.MutateExperimentResult.Builder subBuilder = null;
+            if (responseCase_ == 81) {
+              subBuilder = ((com.google.ads.googleads.v11.services.MutateExperimentResult) response_).toBuilder();
+            }
+            response_ =
+                input.readMessage(com.google.ads.googleads.v11.services.MutateExperimentResult.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v11.services.MutateExperimentResult) response_);
+              response_ = subBuilder.buildPartial();
+            }
+            responseCase_ = 81;
+            break;
+          }
+          case 658: {
+            com.google.ads.googleads.v11.services.MutateExperimentArmResult.Builder subBuilder = null;
+            if (responseCase_ == 82) {
+              subBuilder = ((com.google.ads.googleads.v11.services.MutateExperimentArmResult) response_).toBuilder();
+            }
+            response_ =
+                input.readMessage(com.google.ads.googleads.v11.services.MutateExperimentArmResult.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v11.services.MutateExperimentArmResult) response_);
+              response_ = subBuilder.buildPartial();
+            }
+            responseCase_ = 82;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -1182,6 +1210,8 @@ private static final long serialVersionUID = 0L;
     CUSTOMER_NEGATIVE_CRITERION_RESULT(34),
     CUSTOMER_RESULT(35),
     CUSTOMIZER_ATTRIBUTE_RESULT(70),
+    EXPERIMENT_RESULT(81),
+    EXPERIMENT_ARM_RESULT(82),
     EXTENSION_FEED_ITEM_RESULT(36),
     FEED_ITEM_RESULT(37),
     FEED_ITEM_SET_RESULT(53),
@@ -1273,6 +1303,8 @@ private static final long serialVersionUID = 0L;
         case 34: return CUSTOMER_NEGATIVE_CRITERION_RESULT;
         case 35: return CUSTOMER_RESULT;
         case 70: return CUSTOMIZER_ATTRIBUTE_RESULT;
+        case 81: return EXPERIMENT_RESULT;
+        case 82: return EXPERIMENT_ARM_RESULT;
         case 36: return EXTENSION_FEED_ITEM_RESULT;
         case 37: return FEED_ITEM_RESULT;
         case 53: return FEED_ITEM_SET_RESULT;
@@ -3672,6 +3704,92 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v11.services.MutateCustomizerAttributeResult.getDefaultInstance();
   }
 
+  public static final int EXPERIMENT_RESULT_FIELD_NUMBER = 81;
+  /**
+   * <pre>
+   * The result for the experiment mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.services.MutateExperimentResult experiment_result = 81;</code>
+   * @return Whether the experimentResult field is set.
+   */
+  @java.lang.Override
+  public boolean hasExperimentResult() {
+    return responseCase_ == 81;
+  }
+  /**
+   * <pre>
+   * The result for the experiment mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.services.MutateExperimentResult experiment_result = 81;</code>
+   * @return The experimentResult.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v11.services.MutateExperimentResult getExperimentResult() {
+    if (responseCase_ == 81) {
+       return (com.google.ads.googleads.v11.services.MutateExperimentResult) response_;
+    }
+    return com.google.ads.googleads.v11.services.MutateExperimentResult.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * The result for the experiment mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.services.MutateExperimentResult experiment_result = 81;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v11.services.MutateExperimentResultOrBuilder getExperimentResultOrBuilder() {
+    if (responseCase_ == 81) {
+       return (com.google.ads.googleads.v11.services.MutateExperimentResult) response_;
+    }
+    return com.google.ads.googleads.v11.services.MutateExperimentResult.getDefaultInstance();
+  }
+
+  public static final int EXPERIMENT_ARM_RESULT_FIELD_NUMBER = 82;
+  /**
+   * <pre>
+   * The result for the experiment arm mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.services.MutateExperimentArmResult experiment_arm_result = 82;</code>
+   * @return Whether the experimentArmResult field is set.
+   */
+  @java.lang.Override
+  public boolean hasExperimentArmResult() {
+    return responseCase_ == 82;
+  }
+  /**
+   * <pre>
+   * The result for the experiment arm mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.services.MutateExperimentArmResult experiment_arm_result = 82;</code>
+   * @return The experimentArmResult.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v11.services.MutateExperimentArmResult getExperimentArmResult() {
+    if (responseCase_ == 82) {
+       return (com.google.ads.googleads.v11.services.MutateExperimentArmResult) response_;
+    }
+    return com.google.ads.googleads.v11.services.MutateExperimentArmResult.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * The result for the experiment arm mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.services.MutateExperimentArmResult experiment_arm_result = 82;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v11.services.MutateExperimentArmResultOrBuilder getExperimentArmResultOrBuilder() {
+    if (responseCase_ == 82) {
+       return (com.google.ads.googleads.v11.services.MutateExperimentArmResult) response_;
+    }
+    return com.google.ads.googleads.v11.services.MutateExperimentArmResult.getDefaultInstance();
+  }
+
   public static final int EXTENSION_FEED_ITEM_RESULT_FIELD_NUMBER = 36;
   /**
    * <pre>
@@ -4725,6 +4843,12 @@ private static final long serialVersionUID = 0L;
     if (responseCase_ == 80) {
       output.writeMessage(80, (com.google.ads.googleads.v11.services.MutateAudienceResult) response_);
     }
+    if (responseCase_ == 81) {
+      output.writeMessage(81, (com.google.ads.googleads.v11.services.MutateExperimentResult) response_);
+    }
+    if (responseCase_ == 82) {
+      output.writeMessage(82, (com.google.ads.googleads.v11.services.MutateExperimentArmResult) response_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -5030,6 +5154,14 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(80, (com.google.ads.googleads.v11.services.MutateAudienceResult) response_);
     }
+    if (responseCase_ == 81) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(81, (com.google.ads.googleads.v11.services.MutateExperimentResult) response_);
+    }
+    if (responseCase_ == 82) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(82, (com.google.ads.googleads.v11.services.MutateExperimentArmResult) response_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -5266,6 +5398,14 @@ private static final long serialVersionUID = 0L;
       case 70:
         if (!getCustomizerAttributeResult()
             .equals(other.getCustomizerAttributeResult())) return false;
+        break;
+      case 81:
+        if (!getExperimentResult()
+            .equals(other.getExperimentResult())) return false;
+        break;
+      case 82:
+        if (!getExperimentArmResult()
+            .equals(other.getExperimentArmResult())) return false;
         break;
       case 36:
         if (!getExtensionFeedItemResult()
@@ -5577,6 +5717,14 @@ private static final long serialVersionUID = 0L;
       case 70:
         hash = (37 * hash) + CUSTOMIZER_ATTRIBUTE_RESULT_FIELD_NUMBER;
         hash = (53 * hash) + getCustomizerAttributeResult().hashCode();
+        break;
+      case 81:
+        hash = (37 * hash) + EXPERIMENT_RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + getExperimentResult().hashCode();
+        break;
+      case 82:
+        hash = (37 * hash) + EXPERIMENT_ARM_RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + getExperimentArmResult().hashCode();
         break;
       case 36:
         hash = (37 * hash) + EXTENSION_FEED_ITEM_RESULT_FIELD_NUMBER;
@@ -6207,6 +6355,20 @@ private static final long serialVersionUID = 0L;
           result.response_ = customizerAttributeResultBuilder_.build();
         }
       }
+      if (responseCase_ == 81) {
+        if (experimentResultBuilder_ == null) {
+          result.response_ = response_;
+        } else {
+          result.response_ = experimentResultBuilder_.build();
+        }
+      }
+      if (responseCase_ == 82) {
+        if (experimentArmResultBuilder_ == null) {
+          result.response_ = response_;
+        } else {
+          result.response_ = experimentArmResultBuilder_.build();
+        }
+      }
       if (responseCase_ == 36) {
         if (extensionFeedItemResultBuilder_ == null) {
           result.response_ = response_;
@@ -6608,6 +6770,14 @@ private static final long serialVersionUID = 0L;
         }
         case CUSTOMIZER_ATTRIBUTE_RESULT: {
           mergeCustomizerAttributeResult(other.getCustomizerAttributeResult());
+          break;
+        }
+        case EXPERIMENT_RESULT: {
+          mergeExperimentResult(other.getExperimentResult());
+          break;
+        }
+        case EXPERIMENT_ARM_RESULT: {
+          mergeExperimentArmResult(other.getExperimentArmResult());
           break;
         }
         case EXTENSION_FEED_ITEM_RESULT: {
@@ -16522,6 +16692,362 @@ private static final long serialVersionUID = 0L;
       responseCase_ = 70;
       onChanged();;
       return customizerAttributeResultBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v11.services.MutateExperimentResult, com.google.ads.googleads.v11.services.MutateExperimentResult.Builder, com.google.ads.googleads.v11.services.MutateExperimentResultOrBuilder> experimentResultBuilder_;
+    /**
+     * <pre>
+     * The result for the experiment mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.services.MutateExperimentResult experiment_result = 81;</code>
+     * @return Whether the experimentResult field is set.
+     */
+    @java.lang.Override
+    public boolean hasExperimentResult() {
+      return responseCase_ == 81;
+    }
+    /**
+     * <pre>
+     * The result for the experiment mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.services.MutateExperimentResult experiment_result = 81;</code>
+     * @return The experimentResult.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v11.services.MutateExperimentResult getExperimentResult() {
+      if (experimentResultBuilder_ == null) {
+        if (responseCase_ == 81) {
+          return (com.google.ads.googleads.v11.services.MutateExperimentResult) response_;
+        }
+        return com.google.ads.googleads.v11.services.MutateExperimentResult.getDefaultInstance();
+      } else {
+        if (responseCase_ == 81) {
+          return experimentResultBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v11.services.MutateExperimentResult.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * The result for the experiment mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.services.MutateExperimentResult experiment_result = 81;</code>
+     */
+    public Builder setExperimentResult(com.google.ads.googleads.v11.services.MutateExperimentResult value) {
+      if (experimentResultBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        response_ = value;
+        onChanged();
+      } else {
+        experimentResultBuilder_.setMessage(value);
+      }
+      responseCase_ = 81;
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the experiment mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.services.MutateExperimentResult experiment_result = 81;</code>
+     */
+    public Builder setExperimentResult(
+        com.google.ads.googleads.v11.services.MutateExperimentResult.Builder builderForValue) {
+      if (experimentResultBuilder_ == null) {
+        response_ = builderForValue.build();
+        onChanged();
+      } else {
+        experimentResultBuilder_.setMessage(builderForValue.build());
+      }
+      responseCase_ = 81;
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the experiment mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.services.MutateExperimentResult experiment_result = 81;</code>
+     */
+    public Builder mergeExperimentResult(com.google.ads.googleads.v11.services.MutateExperimentResult value) {
+      if (experimentResultBuilder_ == null) {
+        if (responseCase_ == 81 &&
+            response_ != com.google.ads.googleads.v11.services.MutateExperimentResult.getDefaultInstance()) {
+          response_ = com.google.ads.googleads.v11.services.MutateExperimentResult.newBuilder((com.google.ads.googleads.v11.services.MutateExperimentResult) response_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          response_ = value;
+        }
+        onChanged();
+      } else {
+        if (responseCase_ == 81) {
+          experimentResultBuilder_.mergeFrom(value);
+        } else {
+          experimentResultBuilder_.setMessage(value);
+        }
+      }
+      responseCase_ = 81;
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the experiment mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.services.MutateExperimentResult experiment_result = 81;</code>
+     */
+    public Builder clearExperimentResult() {
+      if (experimentResultBuilder_ == null) {
+        if (responseCase_ == 81) {
+          responseCase_ = 0;
+          response_ = null;
+          onChanged();
+        }
+      } else {
+        if (responseCase_ == 81) {
+          responseCase_ = 0;
+          response_ = null;
+        }
+        experimentResultBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the experiment mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.services.MutateExperimentResult experiment_result = 81;</code>
+     */
+    public com.google.ads.googleads.v11.services.MutateExperimentResult.Builder getExperimentResultBuilder() {
+      return getExperimentResultFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The result for the experiment mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.services.MutateExperimentResult experiment_result = 81;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v11.services.MutateExperimentResultOrBuilder getExperimentResultOrBuilder() {
+      if ((responseCase_ == 81) && (experimentResultBuilder_ != null)) {
+        return experimentResultBuilder_.getMessageOrBuilder();
+      } else {
+        if (responseCase_ == 81) {
+          return (com.google.ads.googleads.v11.services.MutateExperimentResult) response_;
+        }
+        return com.google.ads.googleads.v11.services.MutateExperimentResult.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * The result for the experiment mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.services.MutateExperimentResult experiment_result = 81;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v11.services.MutateExperimentResult, com.google.ads.googleads.v11.services.MutateExperimentResult.Builder, com.google.ads.googleads.v11.services.MutateExperimentResultOrBuilder> 
+        getExperimentResultFieldBuilder() {
+      if (experimentResultBuilder_ == null) {
+        if (!(responseCase_ == 81)) {
+          response_ = com.google.ads.googleads.v11.services.MutateExperimentResult.getDefaultInstance();
+        }
+        experimentResultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v11.services.MutateExperimentResult, com.google.ads.googleads.v11.services.MutateExperimentResult.Builder, com.google.ads.googleads.v11.services.MutateExperimentResultOrBuilder>(
+                (com.google.ads.googleads.v11.services.MutateExperimentResult) response_,
+                getParentForChildren(),
+                isClean());
+        response_ = null;
+      }
+      responseCase_ = 81;
+      onChanged();;
+      return experimentResultBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v11.services.MutateExperimentArmResult, com.google.ads.googleads.v11.services.MutateExperimentArmResult.Builder, com.google.ads.googleads.v11.services.MutateExperimentArmResultOrBuilder> experimentArmResultBuilder_;
+    /**
+     * <pre>
+     * The result for the experiment arm mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.services.MutateExperimentArmResult experiment_arm_result = 82;</code>
+     * @return Whether the experimentArmResult field is set.
+     */
+    @java.lang.Override
+    public boolean hasExperimentArmResult() {
+      return responseCase_ == 82;
+    }
+    /**
+     * <pre>
+     * The result for the experiment arm mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.services.MutateExperimentArmResult experiment_arm_result = 82;</code>
+     * @return The experimentArmResult.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v11.services.MutateExperimentArmResult getExperimentArmResult() {
+      if (experimentArmResultBuilder_ == null) {
+        if (responseCase_ == 82) {
+          return (com.google.ads.googleads.v11.services.MutateExperimentArmResult) response_;
+        }
+        return com.google.ads.googleads.v11.services.MutateExperimentArmResult.getDefaultInstance();
+      } else {
+        if (responseCase_ == 82) {
+          return experimentArmResultBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v11.services.MutateExperimentArmResult.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * The result for the experiment arm mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.services.MutateExperimentArmResult experiment_arm_result = 82;</code>
+     */
+    public Builder setExperimentArmResult(com.google.ads.googleads.v11.services.MutateExperimentArmResult value) {
+      if (experimentArmResultBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        response_ = value;
+        onChanged();
+      } else {
+        experimentArmResultBuilder_.setMessage(value);
+      }
+      responseCase_ = 82;
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the experiment arm mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.services.MutateExperimentArmResult experiment_arm_result = 82;</code>
+     */
+    public Builder setExperimentArmResult(
+        com.google.ads.googleads.v11.services.MutateExperimentArmResult.Builder builderForValue) {
+      if (experimentArmResultBuilder_ == null) {
+        response_ = builderForValue.build();
+        onChanged();
+      } else {
+        experimentArmResultBuilder_.setMessage(builderForValue.build());
+      }
+      responseCase_ = 82;
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the experiment arm mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.services.MutateExperimentArmResult experiment_arm_result = 82;</code>
+     */
+    public Builder mergeExperimentArmResult(com.google.ads.googleads.v11.services.MutateExperimentArmResult value) {
+      if (experimentArmResultBuilder_ == null) {
+        if (responseCase_ == 82 &&
+            response_ != com.google.ads.googleads.v11.services.MutateExperimentArmResult.getDefaultInstance()) {
+          response_ = com.google.ads.googleads.v11.services.MutateExperimentArmResult.newBuilder((com.google.ads.googleads.v11.services.MutateExperimentArmResult) response_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          response_ = value;
+        }
+        onChanged();
+      } else {
+        if (responseCase_ == 82) {
+          experimentArmResultBuilder_.mergeFrom(value);
+        } else {
+          experimentArmResultBuilder_.setMessage(value);
+        }
+      }
+      responseCase_ = 82;
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the experiment arm mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.services.MutateExperimentArmResult experiment_arm_result = 82;</code>
+     */
+    public Builder clearExperimentArmResult() {
+      if (experimentArmResultBuilder_ == null) {
+        if (responseCase_ == 82) {
+          responseCase_ = 0;
+          response_ = null;
+          onChanged();
+        }
+      } else {
+        if (responseCase_ == 82) {
+          responseCase_ = 0;
+          response_ = null;
+        }
+        experimentArmResultBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The result for the experiment arm mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.services.MutateExperimentArmResult experiment_arm_result = 82;</code>
+     */
+    public com.google.ads.googleads.v11.services.MutateExperimentArmResult.Builder getExperimentArmResultBuilder() {
+      return getExperimentArmResultFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The result for the experiment arm mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.services.MutateExperimentArmResult experiment_arm_result = 82;</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v11.services.MutateExperimentArmResultOrBuilder getExperimentArmResultOrBuilder() {
+      if ((responseCase_ == 82) && (experimentArmResultBuilder_ != null)) {
+        return experimentArmResultBuilder_.getMessageOrBuilder();
+      } else {
+        if (responseCase_ == 82) {
+          return (com.google.ads.googleads.v11.services.MutateExperimentArmResult) response_;
+        }
+        return com.google.ads.googleads.v11.services.MutateExperimentArmResult.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * The result for the experiment arm mutate.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.services.MutateExperimentArmResult experiment_arm_result = 82;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v11.services.MutateExperimentArmResult, com.google.ads.googleads.v11.services.MutateExperimentArmResult.Builder, com.google.ads.googleads.v11.services.MutateExperimentArmResultOrBuilder> 
+        getExperimentArmResultFieldBuilder() {
+      if (experimentArmResultBuilder_ == null) {
+        if (!(responseCase_ == 82)) {
+          response_ = com.google.ads.googleads.v11.services.MutateExperimentArmResult.getDefaultInstance();
+        }
+        experimentArmResultBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v11.services.MutateExperimentArmResult, com.google.ads.googleads.v11.services.MutateExperimentArmResult.Builder, com.google.ads.googleads.v11.services.MutateExperimentArmResultOrBuilder>(
+                (com.google.ads.googleads.v11.services.MutateExperimentArmResult) response_,
+                getParentForChildren(),
+                isClean());
+        response_ = null;
+      }
+      responseCase_ = 82;
+      onChanged();;
+      return experimentArmResultBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<

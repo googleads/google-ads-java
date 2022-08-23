@@ -122,10 +122,9 @@ private static final long serialVersionUID = 0L;
   private double loyaltyFraction_;
   /**
    * <pre>
-   * This is the fraction of all transactions that are identifiable (i.e.,
-   * associated with any form of customer information).
-   * Required.
-   * The fraction needs to be between 0 and 1 (excluding 0).
+   * This is the fraction of all transactions that are identifiable (for
+   * example, associated with any form of customer information). Required. The
+   * fraction needs to be between 0 and 1 (excluding 0).
    * </pre>
    *
    * <code>optional double loyalty_fraction = 5;</code>
@@ -137,10 +136,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * This is the fraction of all transactions that are identifiable (i.e.,
-   * associated with any form of customer information).
-   * Required.
-   * The fraction needs to be between 0 and 1 (excluding 0).
+   * This is the fraction of all transactions that are identifiable (for
+   * example, associated with any form of customer information). Required. The
+   * fraction needs to be between 0 and 1 (excluding 0).
    * </pre>
    *
    * <code>optional double loyalty_fraction = 5;</code>
@@ -697,10 +695,9 @@ private static final long serialVersionUID = 0L;
     private double loyaltyFraction_ ;
     /**
      * <pre>
-     * This is the fraction of all transactions that are identifiable (i.e.,
-     * associated with any form of customer information).
-     * Required.
-     * The fraction needs to be between 0 and 1 (excluding 0).
+     * This is the fraction of all transactions that are identifiable (for
+     * example, associated with any form of customer information). Required. The
+     * fraction needs to be between 0 and 1 (excluding 0).
      * </pre>
      *
      * <code>optional double loyalty_fraction = 5;</code>
@@ -712,10 +709,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * This is the fraction of all transactions that are identifiable (i.e.,
-     * associated with any form of customer information).
-     * Required.
-     * The fraction needs to be between 0 and 1 (excluding 0).
+     * This is the fraction of all transactions that are identifiable (for
+     * example, associated with any form of customer information). Required. The
+     * fraction needs to be between 0 and 1 (excluding 0).
      * </pre>
      *
      * <code>optional double loyalty_fraction = 5;</code>
@@ -727,10 +723,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * This is the fraction of all transactions that are identifiable (i.e.,
-     * associated with any form of customer information).
-     * Required.
-     * The fraction needs to be between 0 and 1 (excluding 0).
+     * This is the fraction of all transactions that are identifiable (for
+     * example, associated with any form of customer information). Required. The
+     * fraction needs to be between 0 and 1 (excluding 0).
      * </pre>
      *
      * <code>optional double loyalty_fraction = 5;</code>
@@ -745,10 +740,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * This is the fraction of all transactions that are identifiable (i.e.,
-     * associated with any form of customer information).
-     * Required.
-     * The fraction needs to be between 0 and 1 (excluding 0).
+     * This is the fraction of all transactions that are identifiable (for
+     * example, associated with any form of customer information). Required. The
+     * fraction needs to be between 0 and 1 (excluding 0).
      * </pre>
      *
      * <code>optional double loyalty_fraction = 5;</code>

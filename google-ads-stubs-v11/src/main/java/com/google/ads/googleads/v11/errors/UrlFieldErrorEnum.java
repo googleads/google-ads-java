@@ -129,9 +129,9 @@ private static final long serialVersionUID = 0L;
     INVALID_TAG_IN_TRACKING_URL_TEMPLATE(3),
     /**
      * <pre>
-     * The tracking url template must contain at least one tag (e.g. {lpurl}),
-     * This applies only to tracking url template associated with website ads or
-     * product ads.
+     * The tracking url template must contain at least one tag (for example,
+     * {lpurl}), This applies only to tracking url template associated with
+     * website ads or product ads.
      * </pre>
      *
      * <code>MISSING_TRACKING_URL_TEMPLATE_TAG = 4;</code>
@@ -182,7 +182,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The tracking url template contains nested occurrences of the same
-     * conditional tag (i.e. {ifmobile:{ifmobile:x}}).
+     * conditional tag (for example, {ifmobile:{ifmobile:x}}).
      * </pre>
      *
      * <code>REDUNDANT_NESTED_TRACKING_URL_TEMPLATE_TAG = 10;</code>
@@ -207,7 +207,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The final url contains nested occurrences of the same conditional tag
-     * (i.e. {ifmobile:{ifmobile:x}}).
+     * (for example, {ifmobile:{ifmobile:x}}).
      * </pre>
      *
      * <code>REDUNDANT_NESTED_FINAL_URL_TAG = 13;</code>
@@ -273,7 +273,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The final mobile url contains nested occurrences of the same conditional
-     * tag (i.e. {ifmobile:{ifmobile:x}}).
+     * tag (for example, {ifmobile:{ifmobile:x}}).
      * </pre>
      *
      * <code>REDUNDANT_NESTED_FINAL_MOBILE_URL_TAG = 21;</code>
@@ -339,7 +339,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The final app url contains nested occurrences of the same conditional tag
-     * (i.e. {ifmobile:{ifmobile:x}}).
+     * (for example, {ifmobile:{ifmobile:x}}).
      * </pre>
      *
      * <code>REDUNDANT_NESTED_FINAL_APP_URL_TAG = 29;</code>
@@ -363,7 +363,8 @@ private static final long serialVersionUID = 0L;
     INVALID_OSTYPE(31),
     /**
      * <pre>
-     * The protocol given for an app url is not valid. (E.g. "android-app://")
+     * The protocol given for an app url is not valid. (For example,
+     * "android-app://")
      * </pre>
      *
      * <code>INVALID_PROTOCOL_FOR_APP_URL = 32;</code>
@@ -413,7 +414,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The custom parameter contains nested occurrences of the same conditional
-     * tag (i.e. {ifmobile:{ifmobile:x}}).
+     * tag (for example, {ifmobile:{ifmobile:x}}).
      * </pre>
      *
      * <code>REDUNDANT_NESTED_URL_CUSTOM_PARAMETER_TAG = 42;</code>
@@ -461,7 +462,7 @@ private static final long serialVersionUID = 0L;
     INVALID_TAG_IN_URL(46),
     /**
      * <pre>
-     * The url must contain at least one tag (e.g. {lpurl}).
+     * The url must contain at least one tag (for example, {lpurl}).
      * </pre>
      *
      * <code>MISSING_URL_TAG = 47;</code>
@@ -502,8 +503,8 @@ private static final long serialVersionUID = 0L;
     INVALID_TAG_IN_FINAL_URL_SUFFIX(51),
     /**
      * <pre>
-     * The top level domain is invalid, e.g. not a public top level domain
-     * listed in publicsuffix.org.
+     * The top level domain is invalid, for example, not a public top level
+     * domain listed in publicsuffix.org.
      * </pre>
      *
      * <code>INVALID_TOP_LEVEL_DOMAIN = 53;</code>
@@ -586,9 +587,9 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_TAG_IN_TRACKING_URL_TEMPLATE_VALUE = 3;
     /**
      * <pre>
-     * The tracking url template must contain at least one tag (e.g. {lpurl}),
-     * This applies only to tracking url template associated with website ads or
-     * product ads.
+     * The tracking url template must contain at least one tag (for example,
+     * {lpurl}), This applies only to tracking url template associated with
+     * website ads or product ads.
      * </pre>
      *
      * <code>MISSING_TRACKING_URL_TEMPLATE_TAG = 4;</code>
@@ -639,7 +640,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The tracking url template contains nested occurrences of the same
-     * conditional tag (i.e. {ifmobile:{ifmobile:x}}).
+     * conditional tag (for example, {ifmobile:{ifmobile:x}}).
      * </pre>
      *
      * <code>REDUNDANT_NESTED_TRACKING_URL_TEMPLATE_TAG = 10;</code>
@@ -664,7 +665,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The final url contains nested occurrences of the same conditional tag
-     * (i.e. {ifmobile:{ifmobile:x}}).
+     * (for example, {ifmobile:{ifmobile:x}}).
      * </pre>
      *
      * <code>REDUNDANT_NESTED_FINAL_URL_TAG = 13;</code>
@@ -730,7 +731,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The final mobile url contains nested occurrences of the same conditional
-     * tag (i.e. {ifmobile:{ifmobile:x}}).
+     * tag (for example, {ifmobile:{ifmobile:x}}).
      * </pre>
      *
      * <code>REDUNDANT_NESTED_FINAL_MOBILE_URL_TAG = 21;</code>
@@ -796,7 +797,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The final app url contains nested occurrences of the same conditional tag
-     * (i.e. {ifmobile:{ifmobile:x}}).
+     * (for example, {ifmobile:{ifmobile:x}}).
      * </pre>
      *
      * <code>REDUNDANT_NESTED_FINAL_APP_URL_TAG = 29;</code>
@@ -820,7 +821,8 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_OSTYPE_VALUE = 31;
     /**
      * <pre>
-     * The protocol given for an app url is not valid. (E.g. "android-app://")
+     * The protocol given for an app url is not valid. (For example,
+     * "android-app://")
      * </pre>
      *
      * <code>INVALID_PROTOCOL_FOR_APP_URL = 32;</code>
@@ -870,7 +872,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The custom parameter contains nested occurrences of the same conditional
-     * tag (i.e. {ifmobile:{ifmobile:x}}).
+     * tag (for example, {ifmobile:{ifmobile:x}}).
      * </pre>
      *
      * <code>REDUNDANT_NESTED_URL_CUSTOM_PARAMETER_TAG = 42;</code>
@@ -918,7 +920,7 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_TAG_IN_URL_VALUE = 46;
     /**
      * <pre>
-     * The url must contain at least one tag (e.g. {lpurl}).
+     * The url must contain at least one tag (for example, {lpurl}).
      * </pre>
      *
      * <code>MISSING_URL_TAG = 47;</code>
@@ -959,8 +961,8 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_TAG_IN_FINAL_URL_SUFFIX_VALUE = 51;
     /**
      * <pre>
-     * The top level domain is invalid, e.g. not a public top level domain
-     * listed in publicsuffix.org.
+     * The top level domain is invalid, for example, not a public top level
+     * domain listed in publicsuffix.org.
      * </pre>
      *
      * <code>INVALID_TOP_LEVEL_DOMAIN = 53;</code>

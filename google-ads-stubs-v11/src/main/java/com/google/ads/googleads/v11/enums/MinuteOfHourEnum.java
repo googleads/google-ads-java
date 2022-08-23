@@ -88,7 +88,7 @@ private static final long serialVersionUID = 0L;
 
   /**
    * <pre>
-   * Enumerates of quarter-hours. E.g. "FIFTEEN"
+   * Enumerates of quarter-hours. For example, "FIFTEEN"
    * </pre>
    *
    * Protobuf enum {@code google.ads.googleads.v11.enums.MinuteOfHourEnum.MinuteOfHour}

@@ -368,7 +368,7 @@ private static final long serialVersionUID = 0L;
     NEGATIVE_KEYWORDS_PER_CAMPAIGN(28),
     /**
      * <pre>
-     * Number of excluded campaign criteria in placement dimension, e.g.
+     * Number of excluded campaign criteria in placement dimension, for example,
      * placement, mobile application, YouTube channel, etc. The API criterion
      * type is NOT limited to placement only, and this does not include
      * exclusions at the ad group or other levels.
@@ -1110,8 +1110,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Number of ENABLED keyword plans per user per customer.
      * The limit is applied per &lt;user, customer&gt; pair because by default a plan
-     * is private to a user of a customer. Each user of a customer has his or
-     * her own independent limit.
+     * is private to a user of a customer. Each user of a customer has their own
+     * independent limit.
      * </pre>
      *
      * <code>KEYWORD_PLANS_PER_USER_PER_CUSTOMER = 122;</code>
@@ -1458,7 +1458,7 @@ private static final long serialVersionUID = 0L;
     public static final int NEGATIVE_KEYWORDS_PER_CAMPAIGN_VALUE = 28;
     /**
      * <pre>
-     * Number of excluded campaign criteria in placement dimension, e.g.
+     * Number of excluded campaign criteria in placement dimension, for example,
      * placement, mobile application, YouTube channel, etc. The API criterion
      * type is NOT limited to placement only, and this does not include
      * exclusions at the ad group or other levels.
@@ -2200,8 +2200,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Number of ENABLED keyword plans per user per customer.
      * The limit is applied per &lt;user, customer&gt; pair because by default a plan
-     * is private to a user of a customer. Each user of a customer has his or
-     * her own independent limit.
+     * is private to a user of a customer. Each user of a customer has their own
+     * independent limit.
      * </pre>
      *
      * <code>KEYWORD_PLANS_PER_USER_PER_CUSTOMER = 122;</code>

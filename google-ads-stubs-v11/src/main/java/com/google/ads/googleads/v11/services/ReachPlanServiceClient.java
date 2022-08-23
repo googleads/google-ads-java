@@ -471,6 +471,7 @@ public class ReachPlanServiceClient implements BackgroundResource {
    *           .setTargeting(Targeting.newBuilder().build())
    *           .addAllPlannedProducts(new ArrayList<PlannedProduct>())
    *           .setForecastMetricOptions(ForecastMetricOptions.newBuilder().build())
+   *           .setCustomerReachGroup("customerReachGroup123255626")
    *           .build();
    *   GenerateReachForecastResponse response =
    *       reachPlanServiceClient.generateReachForecast(request);
@@ -511,6 +512,7 @@ public class ReachPlanServiceClient implements BackgroundResource {
    *           .setTargeting(Targeting.newBuilder().build())
    *           .addAllPlannedProducts(new ArrayList<PlannedProduct>())
    *           .setForecastMetricOptions(ForecastMetricOptions.newBuilder().build())
+   *           .setCustomerReachGroup("customerReachGroup123255626")
    *           .build();
    *   ApiFuture<GenerateReachForecastResponse> future =
    *       reachPlanServiceClient.generateReachForecastCallable().futureCall(request);

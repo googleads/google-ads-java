@@ -120,9 +120,8 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Errors that pertain to conversion adjustment failures in the partial
    * failure mode. Returned when all errors occur inside the adjustments. If any
-   * errors occur outside the adjustments (e.g. auth errors), we return an RPC
-   * level error.
-   * See
+   * errors occur outside the adjustments (for example, auth errors), we return
+   * an RPC level error. See
    * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
    * for more information about partial failure.
    * </pre>
@@ -138,9 +137,8 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Errors that pertain to conversion adjustment failures in the partial
    * failure mode. Returned when all errors occur inside the adjustments. If any
-   * errors occur outside the adjustments (e.g. auth errors), we return an RPC
-   * level error.
-   * See
+   * errors occur outside the adjustments (for example, auth errors), we return
+   * an RPC level error. See
    * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
    * for more information about partial failure.
    * </pre>
@@ -156,9 +154,8 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Errors that pertain to conversion adjustment failures in the partial
    * failure mode. Returned when all errors occur inside the adjustments. If any
-   * errors occur outside the adjustments (e.g. auth errors), we return an RPC
-   * level error.
-   * See
+   * errors occur outside the adjustments (for example, auth errors), we return
+   * an RPC level error. See
    * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
    * for more information about partial failure.
    * </pre>
@@ -624,9 +621,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Errors that pertain to conversion adjustment failures in the partial
      * failure mode. Returned when all errors occur inside the adjustments. If any
-     * errors occur outside the adjustments (e.g. auth errors), we return an RPC
-     * level error.
-     * See
+     * errors occur outside the adjustments (for example, auth errors), we return
+     * an RPC level error. See
      * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
      * for more information about partial failure.
      * </pre>
@@ -641,9 +637,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Errors that pertain to conversion adjustment failures in the partial
      * failure mode. Returned when all errors occur inside the adjustments. If any
-     * errors occur outside the adjustments (e.g. auth errors), we return an RPC
-     * level error.
-     * See
+     * errors occur outside the adjustments (for example, auth errors), we return
+     * an RPC level error. See
      * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
      * for more information about partial failure.
      * </pre>
@@ -662,9 +657,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Errors that pertain to conversion adjustment failures in the partial
      * failure mode. Returned when all errors occur inside the adjustments. If any
-     * errors occur outside the adjustments (e.g. auth errors), we return an RPC
-     * level error.
-     * See
+     * errors occur outside the adjustments (for example, auth errors), we return
+     * an RPC level error. See
      * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
      * for more information about partial failure.
      * </pre>
@@ -688,9 +682,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Errors that pertain to conversion adjustment failures in the partial
      * failure mode. Returned when all errors occur inside the adjustments. If any
-     * errors occur outside the adjustments (e.g. auth errors), we return an RPC
-     * level error.
-     * See
+     * errors occur outside the adjustments (for example, auth errors), we return
+     * an RPC level error. See
      * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
      * for more information about partial failure.
      * </pre>
@@ -712,9 +705,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Errors that pertain to conversion adjustment failures in the partial
      * failure mode. Returned when all errors occur inside the adjustments. If any
-     * errors occur outside the adjustments (e.g. auth errors), we return an RPC
-     * level error.
-     * See
+     * errors occur outside the adjustments (for example, auth errors), we return
+     * an RPC level error. See
      * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
      * for more information about partial failure.
      * </pre>
@@ -740,9 +732,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Errors that pertain to conversion adjustment failures in the partial
      * failure mode. Returned when all errors occur inside the adjustments. If any
-     * errors occur outside the adjustments (e.g. auth errors), we return an RPC
-     * level error.
-     * See
+     * errors occur outside the adjustments (for example, auth errors), we return
+     * an RPC level error. See
      * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
      * for more information about partial failure.
      * </pre>
@@ -764,9 +755,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Errors that pertain to conversion adjustment failures in the partial
      * failure mode. Returned when all errors occur inside the adjustments. If any
-     * errors occur outside the adjustments (e.g. auth errors), we return an RPC
-     * level error.
-     * See
+     * errors occur outside the adjustments (for example, auth errors), we return
+     * an RPC level error. See
      * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
      * for more information about partial failure.
      * </pre>
@@ -782,9 +772,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Errors that pertain to conversion adjustment failures in the partial
      * failure mode. Returned when all errors occur inside the adjustments. If any
-     * errors occur outside the adjustments (e.g. auth errors), we return an RPC
-     * level error.
-     * See
+     * errors occur outside the adjustments (for example, auth errors), we return
+     * an RPC level error. See
      * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
      * for more information about partial failure.
      * </pre>
@@ -803,9 +792,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Errors that pertain to conversion adjustment failures in the partial
      * failure mode. Returned when all errors occur inside the adjustments. If any
-     * errors occur outside the adjustments (e.g. auth errors), we return an RPC
-     * level error.
-     * See
+     * errors occur outside the adjustments (for example, auth errors), we return
+     * an RPC level error. See
      * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
      * for more information about partial failure.
      * </pre>

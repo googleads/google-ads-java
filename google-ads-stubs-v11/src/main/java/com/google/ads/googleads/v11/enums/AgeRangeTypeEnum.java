@@ -88,7 +88,8 @@ private static final long serialVersionUID = 0L;
 
   /**
    * <pre>
-   * The type of demographic age ranges (e.g. between 18 and 24 years old).
+   * The type of demographic age ranges (for example, between 18 and 24 years
+   * old).
    * </pre>
    *
    * Protobuf enum {@code google.ads.googleads.v11.enums.AgeRangeTypeEnum.AgeRangeType}

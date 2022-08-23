@@ -16,6 +16,8 @@
 
 package com.google.ads.googleads.v11.services.stub;
 
+import com.google.ads.googleads.v11.services.GenerateAudienceCompositionInsightsRequest;
+import com.google.ads.googleads.v11.services.GenerateAudienceCompositionInsightsResponse;
 import com.google.ads.googleads.v11.services.GenerateInsightsFinderReportRequest;
 import com.google.ads.googleads.v11.services.GenerateInsightsFinderReportResponse;
 import com.google.ads.googleads.v11.services.ListAudienceInsightsAttributesRequest;
@@ -92,6 +94,9 @@ public class AudienceInsightsServiceStubSettings
   private final UnaryCallSettings<
           ListAudienceInsightsAttributesRequest, ListAudienceInsightsAttributesResponse>
       listAudienceInsightsAttributesSettings;
+  private final UnaryCallSettings<
+          GenerateAudienceCompositionInsightsRequest, GenerateAudienceCompositionInsightsResponse>
+      generateAudienceCompositionInsightsSettings;
 
   /** Returns the object with the settings used for calls to generateInsightsFinderReport. */
   public UnaryCallSettings<
@@ -105,6 +110,13 @@ public class AudienceInsightsServiceStubSettings
           ListAudienceInsightsAttributesRequest, ListAudienceInsightsAttributesResponse>
       listAudienceInsightsAttributesSettings() {
     return listAudienceInsightsAttributesSettings;
+  }
+
+  /** Returns the object with the settings used for calls to generateAudienceCompositionInsights. */
+  public UnaryCallSettings<
+          GenerateAudienceCompositionInsightsRequest, GenerateAudienceCompositionInsightsResponse>
+      generateAudienceCompositionInsightsSettings() {
+    return generateAudienceCompositionInsightsSettings;
   }
 
   public AudienceInsightsServiceStub createStub() throws IOException {
@@ -186,6 +198,8 @@ public class AudienceInsightsServiceStubSettings
         settingsBuilder.generateInsightsFinderReportSettings().build();
     listAudienceInsightsAttributesSettings =
         settingsBuilder.listAudienceInsightsAttributesSettings().build();
+    generateAudienceCompositionInsightsSettings =
+        settingsBuilder.generateAudienceCompositionInsightsSettings().build();
   }
 
   /** Builder for AudienceInsightsServiceStubSettings. */
@@ -198,6 +212,9 @@ public class AudienceInsightsServiceStubSettings
     private final UnaryCallSettings.Builder<
             ListAudienceInsightsAttributesRequest, ListAudienceInsightsAttributesResponse>
         listAudienceInsightsAttributesSettings;
+    private final UnaryCallSettings.Builder<
+            GenerateAudienceCompositionInsightsRequest, GenerateAudienceCompositionInsightsResponse>
+        generateAudienceCompositionInsightsSettings;
     private static final ImmutableMap<String, ImmutableSet<StatusCode.Code>>
         RETRYABLE_CODE_DEFINITIONS;
 
@@ -240,10 +257,13 @@ public class AudienceInsightsServiceStubSettings
 
       generateInsightsFinderReportSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
       listAudienceInsightsAttributesSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
+      generateAudienceCompositionInsightsSettings = UnaryCallSettings.newUnaryCallSettingsBuilder();
 
       unaryMethodSettingsBuilders =
           ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(
-              generateInsightsFinderReportSettings, listAudienceInsightsAttributesSettings);
+              generateInsightsFinderReportSettings,
+              listAudienceInsightsAttributesSettings,
+              generateAudienceCompositionInsightsSettings);
       initDefaults(this);
     }
 
@@ -254,10 +274,14 @@ public class AudienceInsightsServiceStubSettings
           settings.generateInsightsFinderReportSettings.toBuilder();
       listAudienceInsightsAttributesSettings =
           settings.listAudienceInsightsAttributesSettings.toBuilder();
+      generateAudienceCompositionInsightsSettings =
+          settings.generateAudienceCompositionInsightsSettings.toBuilder();
 
       unaryMethodSettingsBuilders =
           ImmutableList.<UnaryCallSettings.Builder<?, ?>>of(
-              generateInsightsFinderReportSettings, listAudienceInsightsAttributesSettings);
+              generateInsightsFinderReportSettings,
+              listAudienceInsightsAttributesSettings,
+              generateAudienceCompositionInsightsSettings);
     }
 
     private static Builder createDefault() {
@@ -281,6 +305,11 @@ public class AudienceInsightsServiceStubSettings
 
       builder
           .listAudienceInsightsAttributesSettings()
+          .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
+          .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
+
+      builder
+          .generateAudienceCompositionInsightsSettings()
           .setRetryableCodes(RETRYABLE_CODE_DEFINITIONS.get("retry_policy_0_codes"))
           .setRetrySettings(RETRY_PARAM_DEFINITIONS.get("retry_policy_0_params"));
 
@@ -314,6 +343,15 @@ public class AudienceInsightsServiceStubSettings
             ListAudienceInsightsAttributesRequest, ListAudienceInsightsAttributesResponse>
         listAudienceInsightsAttributesSettings() {
       return listAudienceInsightsAttributesSettings;
+    }
+
+    /**
+     * Returns the builder for the settings used for calls to generateAudienceCompositionInsights.
+     */
+    public UnaryCallSettings.Builder<
+            GenerateAudienceCompositionInsightsRequest, GenerateAudienceCompositionInsightsResponse>
+        generateAudienceCompositionInsightsSettings() {
+      return generateAudienceCompositionInsightsSettings;
     }
 
     @Override

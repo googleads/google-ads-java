@@ -122,7 +122,7 @@ private static final long serialVersionUID = 0L;
     PROMOTION_TARGET(2),
     /**
      * <pre>
-     * Data Type: STRING. Allows you to add "up to" phrase to the promotion,
+     * Data Type: STRING. Lets you add "up to" phrase to the promotion,
      * in case you have variable promotion rates.
      * </pre>
      *
@@ -262,7 +262,7 @@ private static final long serialVersionUID = 0L;
     public static final int PROMOTION_TARGET_VALUE = 2;
     /**
      * <pre>
-     * Data Type: STRING. Allows you to add "up to" phrase to the promotion,
+     * Data Type: STRING. Lets you add "up to" phrase to the promotion,
      * in case you have variable promotion rates.
      * </pre>
      *

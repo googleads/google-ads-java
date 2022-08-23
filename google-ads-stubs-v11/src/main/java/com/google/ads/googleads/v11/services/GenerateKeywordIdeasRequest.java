@@ -737,7 +737,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A Keyword and a specific Url to generate ideas from
-   * e.g. cars, www.example.com/cars.
+   * for example, cars, www.example.com/cars.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.KeywordAndUrlSeed keyword_and_url_seed = 2;</code>
@@ -750,7 +750,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A Keyword and a specific Url to generate ideas from
-   * e.g. cars, www.example.com/cars.
+   * for example, cars, www.example.com/cars.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.KeywordAndUrlSeed keyword_and_url_seed = 2;</code>
@@ -766,7 +766,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A Keyword and a specific Url to generate ideas from
-   * e.g. cars, www.example.com/cars.
+   * for example, cars, www.example.com/cars.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.KeywordAndUrlSeed keyword_and_url_seed = 2;</code>
@@ -782,7 +782,7 @@ private static final long serialVersionUID = 0L;
   public static final int KEYWORD_SEED_FIELD_NUMBER = 3;
   /**
    * <pre>
-   * A Keyword or phrase to generate ideas from, e.g. cars.
+   * A Keyword or phrase to generate ideas from, for example, cars.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.KeywordSeed keyword_seed = 3;</code>
@@ -794,7 +794,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A Keyword or phrase to generate ideas from, e.g. cars.
+   * A Keyword or phrase to generate ideas from, for example, cars.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.KeywordSeed keyword_seed = 3;</code>
@@ -809,7 +809,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A Keyword or phrase to generate ideas from, e.g. cars.
+   * A Keyword or phrase to generate ideas from, for example, cars.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.KeywordSeed keyword_seed = 3;</code>
@@ -825,7 +825,7 @@ private static final long serialVersionUID = 0L;
   public static final int URL_SEED_FIELD_NUMBER = 5;
   /**
    * <pre>
-   * A specific url to generate ideas from, e.g. www.example.com/cars.
+   * A specific url to generate ideas from, for example, www.example.com/cars.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.UrlSeed url_seed = 5;</code>
@@ -837,7 +837,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A specific url to generate ideas from, e.g. www.example.com/cars.
+   * A specific url to generate ideas from, for example, www.example.com/cars.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.UrlSeed url_seed = 5;</code>
@@ -852,7 +852,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A specific url to generate ideas from, e.g. www.example.com/cars.
+   * A specific url to generate ideas from, for example, www.example.com/cars.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.UrlSeed url_seed = 5;</code>
@@ -868,7 +868,7 @@ private static final long serialVersionUID = 0L;
   public static final int SITE_SEED_FIELD_NUMBER = 11;
   /**
    * <pre>
-   * The site to generate ideas from, e.g. www.example.com.
+   * The site to generate ideas from, for example, www.example.com.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.SiteSeed site_seed = 11;</code>
@@ -880,7 +880,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The site to generate ideas from, e.g. www.example.com.
+   * The site to generate ideas from, for example, www.example.com.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.SiteSeed site_seed = 11;</code>
@@ -895,7 +895,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The site to generate ideas from, e.g. www.example.com.
+   * The site to generate ideas from, for example, www.example.com.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.SiteSeed site_seed = 11;</code>
@@ -2400,8 +2400,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.enums.KeywordPlanKeywordAnnotationEnum.KeywordPlanKeywordAnnotation keyword_annotation = 17;</code>
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of keywordAnnotation at the given index.
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for keywordAnnotation to set.
      * @return This builder for chaining.
      */
     public Builder setKeywordAnnotationValue(
@@ -2760,7 +2760,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A Keyword and a specific Url to generate ideas from
-     * e.g. cars, www.example.com/cars.
+     * for example, cars, www.example.com/cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.KeywordAndUrlSeed keyword_and_url_seed = 2;</code>
@@ -2773,7 +2773,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A Keyword and a specific Url to generate ideas from
-     * e.g. cars, www.example.com/cars.
+     * for example, cars, www.example.com/cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.KeywordAndUrlSeed keyword_and_url_seed = 2;</code>
@@ -2796,7 +2796,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A Keyword and a specific Url to generate ideas from
-     * e.g. cars, www.example.com/cars.
+     * for example, cars, www.example.com/cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.KeywordAndUrlSeed keyword_and_url_seed = 2;</code>
@@ -2817,7 +2817,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A Keyword and a specific Url to generate ideas from
-     * e.g. cars, www.example.com/cars.
+     * for example, cars, www.example.com/cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.KeywordAndUrlSeed keyword_and_url_seed = 2;</code>
@@ -2836,7 +2836,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A Keyword and a specific Url to generate ideas from
-     * e.g. cars, www.example.com/cars.
+     * for example, cars, www.example.com/cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.KeywordAndUrlSeed keyword_and_url_seed = 2;</code>
@@ -2864,7 +2864,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A Keyword and a specific Url to generate ideas from
-     * e.g. cars, www.example.com/cars.
+     * for example, cars, www.example.com/cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.KeywordAndUrlSeed keyword_and_url_seed = 2;</code>
@@ -2888,7 +2888,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A Keyword and a specific Url to generate ideas from
-     * e.g. cars, www.example.com/cars.
+     * for example, cars, www.example.com/cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.KeywordAndUrlSeed keyword_and_url_seed = 2;</code>
@@ -2899,7 +2899,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A Keyword and a specific Url to generate ideas from
-     * e.g. cars, www.example.com/cars.
+     * for example, cars, www.example.com/cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.KeywordAndUrlSeed keyword_and_url_seed = 2;</code>
@@ -2918,7 +2918,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A Keyword and a specific Url to generate ideas from
-     * e.g. cars, www.example.com/cars.
+     * for example, cars, www.example.com/cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.KeywordAndUrlSeed keyword_and_url_seed = 2;</code>
@@ -2946,7 +2946,7 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.services.KeywordSeed, com.google.ads.googleads.v11.services.KeywordSeed.Builder, com.google.ads.googleads.v11.services.KeywordSeedOrBuilder> keywordSeedBuilder_;
     /**
      * <pre>
-     * A Keyword or phrase to generate ideas from, e.g. cars.
+     * A Keyword or phrase to generate ideas from, for example, cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.KeywordSeed keyword_seed = 3;</code>
@@ -2958,7 +2958,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A Keyword or phrase to generate ideas from, e.g. cars.
+     * A Keyword or phrase to generate ideas from, for example, cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.KeywordSeed keyword_seed = 3;</code>
@@ -2980,7 +2980,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A Keyword or phrase to generate ideas from, e.g. cars.
+     * A Keyword or phrase to generate ideas from, for example, cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.KeywordSeed keyword_seed = 3;</code>
@@ -3000,7 +3000,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A Keyword or phrase to generate ideas from, e.g. cars.
+     * A Keyword or phrase to generate ideas from, for example, cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.KeywordSeed keyword_seed = 3;</code>
@@ -3018,7 +3018,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A Keyword or phrase to generate ideas from, e.g. cars.
+     * A Keyword or phrase to generate ideas from, for example, cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.KeywordSeed keyword_seed = 3;</code>
@@ -3045,7 +3045,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A Keyword or phrase to generate ideas from, e.g. cars.
+     * A Keyword or phrase to generate ideas from, for example, cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.KeywordSeed keyword_seed = 3;</code>
@@ -3068,7 +3068,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A Keyword or phrase to generate ideas from, e.g. cars.
+     * A Keyword or phrase to generate ideas from, for example, cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.KeywordSeed keyword_seed = 3;</code>
@@ -3078,7 +3078,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A Keyword or phrase to generate ideas from, e.g. cars.
+     * A Keyword or phrase to generate ideas from, for example, cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.KeywordSeed keyword_seed = 3;</code>
@@ -3096,7 +3096,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A Keyword or phrase to generate ideas from, e.g. cars.
+     * A Keyword or phrase to generate ideas from, for example, cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.KeywordSeed keyword_seed = 3;</code>
@@ -3124,7 +3124,7 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.services.UrlSeed, com.google.ads.googleads.v11.services.UrlSeed.Builder, com.google.ads.googleads.v11.services.UrlSeedOrBuilder> urlSeedBuilder_;
     /**
      * <pre>
-     * A specific url to generate ideas from, e.g. www.example.com/cars.
+     * A specific url to generate ideas from, for example, www.example.com/cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.UrlSeed url_seed = 5;</code>
@@ -3136,7 +3136,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A specific url to generate ideas from, e.g. www.example.com/cars.
+     * A specific url to generate ideas from, for example, www.example.com/cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.UrlSeed url_seed = 5;</code>
@@ -3158,7 +3158,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A specific url to generate ideas from, e.g. www.example.com/cars.
+     * A specific url to generate ideas from, for example, www.example.com/cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.UrlSeed url_seed = 5;</code>
@@ -3178,7 +3178,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A specific url to generate ideas from, e.g. www.example.com/cars.
+     * A specific url to generate ideas from, for example, www.example.com/cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.UrlSeed url_seed = 5;</code>
@@ -3196,7 +3196,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A specific url to generate ideas from, e.g. www.example.com/cars.
+     * A specific url to generate ideas from, for example, www.example.com/cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.UrlSeed url_seed = 5;</code>
@@ -3223,7 +3223,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A specific url to generate ideas from, e.g. www.example.com/cars.
+     * A specific url to generate ideas from, for example, www.example.com/cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.UrlSeed url_seed = 5;</code>
@@ -3246,7 +3246,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A specific url to generate ideas from, e.g. www.example.com/cars.
+     * A specific url to generate ideas from, for example, www.example.com/cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.UrlSeed url_seed = 5;</code>
@@ -3256,7 +3256,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A specific url to generate ideas from, e.g. www.example.com/cars.
+     * A specific url to generate ideas from, for example, www.example.com/cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.UrlSeed url_seed = 5;</code>
@@ -3274,7 +3274,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A specific url to generate ideas from, e.g. www.example.com/cars.
+     * A specific url to generate ideas from, for example, www.example.com/cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.UrlSeed url_seed = 5;</code>
@@ -3302,7 +3302,7 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.services.SiteSeed, com.google.ads.googleads.v11.services.SiteSeed.Builder, com.google.ads.googleads.v11.services.SiteSeedOrBuilder> siteSeedBuilder_;
     /**
      * <pre>
-     * The site to generate ideas from, e.g. www.example.com.
+     * The site to generate ideas from, for example, www.example.com.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.SiteSeed site_seed = 11;</code>
@@ -3314,7 +3314,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The site to generate ideas from, e.g. www.example.com.
+     * The site to generate ideas from, for example, www.example.com.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.SiteSeed site_seed = 11;</code>
@@ -3336,7 +3336,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The site to generate ideas from, e.g. www.example.com.
+     * The site to generate ideas from, for example, www.example.com.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.SiteSeed site_seed = 11;</code>
@@ -3356,7 +3356,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The site to generate ideas from, e.g. www.example.com.
+     * The site to generate ideas from, for example, www.example.com.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.SiteSeed site_seed = 11;</code>
@@ -3374,7 +3374,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The site to generate ideas from, e.g. www.example.com.
+     * The site to generate ideas from, for example, www.example.com.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.SiteSeed site_seed = 11;</code>
@@ -3401,7 +3401,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The site to generate ideas from, e.g. www.example.com.
+     * The site to generate ideas from, for example, www.example.com.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.SiteSeed site_seed = 11;</code>
@@ -3424,7 +3424,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The site to generate ideas from, e.g. www.example.com.
+     * The site to generate ideas from, for example, www.example.com.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.SiteSeed site_seed = 11;</code>
@@ -3434,7 +3434,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The site to generate ideas from, e.g. www.example.com.
+     * The site to generate ideas from, for example, www.example.com.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.SiteSeed site_seed = 11;</code>
@@ -3452,7 +3452,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The site to generate ideas from, e.g. www.example.com.
+     * The site to generate ideas from, for example, www.example.com.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.services.SiteSeed site_seed = 11;</code>

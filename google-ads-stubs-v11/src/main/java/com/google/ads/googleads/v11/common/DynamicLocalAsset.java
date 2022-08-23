@@ -261,7 +261,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object dealName_;
   /**
    * <pre>
-   * Required. Deal name, e.g. 50% off at Mountain View Grocers. Required.
+   * Required. Deal name, for example, 50% off at Mountain View Grocers. Required.
    * </pre>
    *
    * <code>string deal_name = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -282,7 +282,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. Deal name, e.g. 50% off at Mountain View Grocers. Required.
+   * Required. Deal name, for example, 50% off at Mountain View Grocers. Required.
    * </pre>
    *
    * <code>string deal_name = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -307,7 +307,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object subtitle_;
   /**
    * <pre>
-   * Subtitle, e.g. Groceries.
+   * Subtitle, for example, Groceries.
    * </pre>
    *
    * <code>string subtitle = 3;</code>
@@ -328,7 +328,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Subtitle, e.g. Groceries.
+   * Subtitle, for example, Groceries.
    * </pre>
    *
    * <code>string subtitle = 3;</code>
@@ -353,7 +353,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object description_;
   /**
    * <pre>
-   * Description, e.g. Save on your weekly bill.
+   * Description, for example, Save on your weekly bill.
    * </pre>
    *
    * <code>string description = 4;</code>
@@ -374,7 +374,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Description, e.g. Save on your weekly bill.
+   * Description, for example, Save on your weekly bill.
    * </pre>
    *
    * <code>string description = 4;</code>
@@ -400,7 +400,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Price which can be a number followed by the alphabetic currency code,
-   * ISO 4217 standard. Use '.' as the decimal mark, e.g. 100.00 USD.
+   * ISO 4217 standard. Use '.' as the decimal mark, for example, 100.00 USD.
    * </pre>
    *
    * <code>string price = 5;</code>
@@ -422,7 +422,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Price which can be a number followed by the alphabetic currency code,
-   * ISO 4217 standard. Use '.' as the decimal mark, e.g. 100.00 USD.
+   * ISO 4217 standard. Use '.' as the decimal mark, for example, 100.00 USD.
    * </pre>
    *
    * <code>string price = 5;</code>
@@ -448,7 +448,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Sale price which can be number followed by the alphabetic currency code,
-   * ISO 4217 standard. Use '.' as the decimal mark, e.g. 80.00 USD.
+   * ISO 4217 standard. Use '.' as the decimal mark, for example, 80.00 USD.
    * Must be less than the 'price' field.
    * </pre>
    *
@@ -471,7 +471,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Sale price which can be number followed by the alphabetic currency code,
-   * ISO 4217 standard. Use '.' as the decimal mark, e.g. 80.00 USD.
+   * ISO 4217 standard. Use '.' as the decimal mark, for example, 80.00 USD.
    * Must be less than the 'price' field.
    * </pre>
    *
@@ -497,8 +497,8 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object imageUrl_;
   /**
    * <pre>
-   * Image URL, e.g. http://www.example.com/image.png. The image will not be
-   * uploaded as image asset.
+   * Image URL, for example, http://www.example.com/image.png. The image will
+   * not be uploaded as image asset.
    * </pre>
    *
    * <code>string image_url = 7;</code>
@@ -519,8 +519,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Image URL, e.g. http://www.example.com/image.png. The image will not be
-   * uploaded as image asset.
+   * Image URL, for example, http://www.example.com/image.png. The image will
+   * not be uploaded as image asset.
    * </pre>
    *
    * <code>string image_url = 7;</code>
@@ -546,9 +546,9 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Address which can be specified in one of the following formats.
-   * (1) City, state, code, country, e.g. Mountain View, CA, USA.
-   * (2) Full address, e.g. 123 Boulevard St, Mountain View, CA 94043.
-   * (3) Latitude-longitude in the DDD format, e.g. 41.40338, 2.17403.
+   * (1) City, state, code, country, for example, Mountain View, CA, USA.
+   * (2) Full address, for example, 123 Boulevard St, Mountain View, CA 94043.
+   * (3) Latitude-longitude in the DDD format, for example, 41.40338, 2.17403.
    * </pre>
    *
    * <code>string address = 8;</code>
@@ -570,9 +570,9 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Address which can be specified in one of the following formats.
-   * (1) City, state, code, country, e.g. Mountain View, CA, USA.
-   * (2) Full address, e.g. 123 Boulevard St, Mountain View, CA 94043.
-   * (3) Latitude-longitude in the DDD format, e.g. 41.40338, 2.17403.
+   * (1) City, state, code, country, for example, Mountain View, CA, USA.
+   * (2) Full address, for example, 123 Boulevard St, Mountain View, CA 94043.
+   * (3) Latitude-longitude in the DDD format, for example, 41.40338, 2.17403.
    * </pre>
    *
    * <code>string address = 8;</code>
@@ -597,7 +597,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object category_;
   /**
    * <pre>
-   * Category, e.g. Food.
+   * Category, for example, Food.
    * </pre>
    *
    * <code>string category = 9;</code>
@@ -618,7 +618,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Category, e.g. Food.
+   * Category, for example, Food.
    * </pre>
    *
    * <code>string category = 9;</code>
@@ -643,7 +643,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.LazyStringList contextualKeywords_;
   /**
    * <pre>
-   * Contextual keywords, e.g. Save groceries coupons.
+   * Contextual keywords, for example, Save groceries coupons.
    * </pre>
    *
    * <code>repeated string contextual_keywords = 10;</code>
@@ -655,7 +655,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Contextual keywords, e.g. Save groceries coupons.
+   * Contextual keywords, for example, Save groceries coupons.
    * </pre>
    *
    * <code>repeated string contextual_keywords = 10;</code>
@@ -666,7 +666,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Contextual keywords, e.g. Save groceries coupons.
+   * Contextual keywords, for example, Save groceries coupons.
    * </pre>
    *
    * <code>repeated string contextual_keywords = 10;</code>
@@ -678,7 +678,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Contextual keywords, e.g. Save groceries coupons.
+   * Contextual keywords, for example, Save groceries coupons.
    * </pre>
    *
    * <code>repeated string contextual_keywords = 10;</code>
@@ -695,7 +695,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Formatted price which can be any characters. If set, this attribute will be
-   * used instead of 'price', e.g. Starting at $100.00.
+   * used instead of 'price', for example, Starting at $100.00.
    * </pre>
    *
    * <code>string formatted_price = 11;</code>
@@ -717,7 +717,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Formatted price which can be any characters. If set, this attribute will be
-   * used instead of 'price', e.g. Starting at $100.00.
+   * used instead of 'price', for example, Starting at $100.00.
    * </pre>
    *
    * <code>string formatted_price = 11;</code>
@@ -743,7 +743,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Formatted sale price which can be any characters. If set, this attribute
-   * will be used instead of 'sale price', e.g. On sale for $80.00.
+   * will be used instead of 'sale price', for example, On sale for $80.00.
    * </pre>
    *
    * <code>string formatted_sale_price = 12;</code>
@@ -765,7 +765,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Formatted sale price which can be any characters. If set, this attribute
-   * will be used instead of 'sale price', e.g. On sale for $80.00.
+   * will be used instead of 'sale price', for example, On sale for $80.00.
    * </pre>
    *
    * <code>string formatted_sale_price = 12;</code>
@@ -790,7 +790,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object androidAppLink_;
   /**
    * <pre>
-   * Android deep link, e.g.
+   * Android deep link, for example,
    * android-app://com.example.android/http/example.com/gizmos?1234.
    * </pre>
    *
@@ -812,7 +812,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Android deep link, e.g.
+   * Android deep link, for example,
    * android-app://com.example.android/http/example.com/gizmos?1234.
    * </pre>
    *
@@ -838,7 +838,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.LazyStringList similarDealIds_;
   /**
    * <pre>
-   * Similar deal IDs, e.g. 1275.
+   * Similar deal IDs, for example, 1275.
    * </pre>
    *
    * <code>repeated string similar_deal_ids = 14;</code>
@@ -850,7 +850,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Similar deal IDs, e.g. 1275.
+   * Similar deal IDs, for example, 1275.
    * </pre>
    *
    * <code>repeated string similar_deal_ids = 14;</code>
@@ -861,7 +861,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Similar deal IDs, e.g. 1275.
+   * Similar deal IDs, for example, 1275.
    * </pre>
    *
    * <code>repeated string similar_deal_ids = 14;</code>
@@ -873,7 +873,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Similar deal IDs, e.g. 1275.
+   * Similar deal IDs, for example, 1275.
    * </pre>
    *
    * <code>repeated string similar_deal_ids = 14;</code>
@@ -889,7 +889,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object iosAppLink_;
   /**
    * <pre>
-   * iOS deep link, e.g. exampleApp://content/page.
+   * iOS deep link, for example, exampleApp://content/page.
    * </pre>
    *
    * <code>string ios_app_link = 15;</code>
@@ -910,7 +910,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * iOS deep link, e.g. exampleApp://content/page.
+   * iOS deep link, for example, exampleApp://content/page.
    * </pre>
    *
    * <code>string ios_app_link = 15;</code>
@@ -1650,7 +1650,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object dealName_ = "";
     /**
      * <pre>
-     * Required. Deal name, e.g. 50% off at Mountain View Grocers. Required.
+     * Required. Deal name, for example, 50% off at Mountain View Grocers. Required.
      * </pre>
      *
      * <code>string deal_name = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1670,7 +1670,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Deal name, e.g. 50% off at Mountain View Grocers. Required.
+     * Required. Deal name, for example, 50% off at Mountain View Grocers. Required.
      * </pre>
      *
      * <code>string deal_name = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1691,7 +1691,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Deal name, e.g. 50% off at Mountain View Grocers. Required.
+     * Required. Deal name, for example, 50% off at Mountain View Grocers. Required.
      * </pre>
      *
      * <code>string deal_name = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1710,7 +1710,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Deal name, e.g. 50% off at Mountain View Grocers. Required.
+     * Required. Deal name, for example, 50% off at Mountain View Grocers. Required.
      * </pre>
      *
      * <code>string deal_name = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1724,7 +1724,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Deal name, e.g. 50% off at Mountain View Grocers. Required.
+     * Required. Deal name, for example, 50% off at Mountain View Grocers. Required.
      * </pre>
      *
      * <code>string deal_name = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1746,7 +1746,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object subtitle_ = "";
     /**
      * <pre>
-     * Subtitle, e.g. Groceries.
+     * Subtitle, for example, Groceries.
      * </pre>
      *
      * <code>string subtitle = 3;</code>
@@ -1766,7 +1766,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Subtitle, e.g. Groceries.
+     * Subtitle, for example, Groceries.
      * </pre>
      *
      * <code>string subtitle = 3;</code>
@@ -1787,7 +1787,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Subtitle, e.g. Groceries.
+     * Subtitle, for example, Groceries.
      * </pre>
      *
      * <code>string subtitle = 3;</code>
@@ -1806,7 +1806,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Subtitle, e.g. Groceries.
+     * Subtitle, for example, Groceries.
      * </pre>
      *
      * <code>string subtitle = 3;</code>
@@ -1820,7 +1820,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Subtitle, e.g. Groceries.
+     * Subtitle, for example, Groceries.
      * </pre>
      *
      * <code>string subtitle = 3;</code>
@@ -1842,7 +1842,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object description_ = "";
     /**
      * <pre>
-     * Description, e.g. Save on your weekly bill.
+     * Description, for example, Save on your weekly bill.
      * </pre>
      *
      * <code>string description = 4;</code>
@@ -1862,7 +1862,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Description, e.g. Save on your weekly bill.
+     * Description, for example, Save on your weekly bill.
      * </pre>
      *
      * <code>string description = 4;</code>
@@ -1883,7 +1883,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Description, e.g. Save on your weekly bill.
+     * Description, for example, Save on your weekly bill.
      * </pre>
      *
      * <code>string description = 4;</code>
@@ -1902,7 +1902,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Description, e.g. Save on your weekly bill.
+     * Description, for example, Save on your weekly bill.
      * </pre>
      *
      * <code>string description = 4;</code>
@@ -1916,7 +1916,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Description, e.g. Save on your weekly bill.
+     * Description, for example, Save on your weekly bill.
      * </pre>
      *
      * <code>string description = 4;</code>
@@ -1939,7 +1939,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Price which can be a number followed by the alphabetic currency code,
-     * ISO 4217 standard. Use '.' as the decimal mark, e.g. 100.00 USD.
+     * ISO 4217 standard. Use '.' as the decimal mark, for example, 100.00 USD.
      * </pre>
      *
      * <code>string price = 5;</code>
@@ -1960,7 +1960,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Price which can be a number followed by the alphabetic currency code,
-     * ISO 4217 standard. Use '.' as the decimal mark, e.g. 100.00 USD.
+     * ISO 4217 standard. Use '.' as the decimal mark, for example, 100.00 USD.
      * </pre>
      *
      * <code>string price = 5;</code>
@@ -1982,7 +1982,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Price which can be a number followed by the alphabetic currency code,
-     * ISO 4217 standard. Use '.' as the decimal mark, e.g. 100.00 USD.
+     * ISO 4217 standard. Use '.' as the decimal mark, for example, 100.00 USD.
      * </pre>
      *
      * <code>string price = 5;</code>
@@ -2002,7 +2002,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Price which can be a number followed by the alphabetic currency code,
-     * ISO 4217 standard. Use '.' as the decimal mark, e.g. 100.00 USD.
+     * ISO 4217 standard. Use '.' as the decimal mark, for example, 100.00 USD.
      * </pre>
      *
      * <code>string price = 5;</code>
@@ -2017,7 +2017,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Price which can be a number followed by the alphabetic currency code,
-     * ISO 4217 standard. Use '.' as the decimal mark, e.g. 100.00 USD.
+     * ISO 4217 standard. Use '.' as the decimal mark, for example, 100.00 USD.
      * </pre>
      *
      * <code>string price = 5;</code>
@@ -2040,7 +2040,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Sale price which can be number followed by the alphabetic currency code,
-     * ISO 4217 standard. Use '.' as the decimal mark, e.g. 80.00 USD.
+     * ISO 4217 standard. Use '.' as the decimal mark, for example, 80.00 USD.
      * Must be less than the 'price' field.
      * </pre>
      *
@@ -2062,7 +2062,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Sale price which can be number followed by the alphabetic currency code,
-     * ISO 4217 standard. Use '.' as the decimal mark, e.g. 80.00 USD.
+     * ISO 4217 standard. Use '.' as the decimal mark, for example, 80.00 USD.
      * Must be less than the 'price' field.
      * </pre>
      *
@@ -2085,7 +2085,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Sale price which can be number followed by the alphabetic currency code,
-     * ISO 4217 standard. Use '.' as the decimal mark, e.g. 80.00 USD.
+     * ISO 4217 standard. Use '.' as the decimal mark, for example, 80.00 USD.
      * Must be less than the 'price' field.
      * </pre>
      *
@@ -2106,7 +2106,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Sale price which can be number followed by the alphabetic currency code,
-     * ISO 4217 standard. Use '.' as the decimal mark, e.g. 80.00 USD.
+     * ISO 4217 standard. Use '.' as the decimal mark, for example, 80.00 USD.
      * Must be less than the 'price' field.
      * </pre>
      *
@@ -2122,7 +2122,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Sale price which can be number followed by the alphabetic currency code,
-     * ISO 4217 standard. Use '.' as the decimal mark, e.g. 80.00 USD.
+     * ISO 4217 standard. Use '.' as the decimal mark, for example, 80.00 USD.
      * Must be less than the 'price' field.
      * </pre>
      *
@@ -2145,8 +2145,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object imageUrl_ = "";
     /**
      * <pre>
-     * Image URL, e.g. http://www.example.com/image.png. The image will not be
-     * uploaded as image asset.
+     * Image URL, for example, http://www.example.com/image.png. The image will
+     * not be uploaded as image asset.
      * </pre>
      *
      * <code>string image_url = 7;</code>
@@ -2166,8 +2166,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Image URL, e.g. http://www.example.com/image.png. The image will not be
-     * uploaded as image asset.
+     * Image URL, for example, http://www.example.com/image.png. The image will
+     * not be uploaded as image asset.
      * </pre>
      *
      * <code>string image_url = 7;</code>
@@ -2188,8 +2188,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Image URL, e.g. http://www.example.com/image.png. The image will not be
-     * uploaded as image asset.
+     * Image URL, for example, http://www.example.com/image.png. The image will
+     * not be uploaded as image asset.
      * </pre>
      *
      * <code>string image_url = 7;</code>
@@ -2208,8 +2208,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Image URL, e.g. http://www.example.com/image.png. The image will not be
-     * uploaded as image asset.
+     * Image URL, for example, http://www.example.com/image.png. The image will
+     * not be uploaded as image asset.
      * </pre>
      *
      * <code>string image_url = 7;</code>
@@ -2223,8 +2223,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Image URL, e.g. http://www.example.com/image.png. The image will not be
-     * uploaded as image asset.
+     * Image URL, for example, http://www.example.com/image.png. The image will
+     * not be uploaded as image asset.
      * </pre>
      *
      * <code>string image_url = 7;</code>
@@ -2247,9 +2247,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Address which can be specified in one of the following formats.
-     * (1) City, state, code, country, e.g. Mountain View, CA, USA.
-     * (2) Full address, e.g. 123 Boulevard St, Mountain View, CA 94043.
-     * (3) Latitude-longitude in the DDD format, e.g. 41.40338, 2.17403.
+     * (1) City, state, code, country, for example, Mountain View, CA, USA.
+     * (2) Full address, for example, 123 Boulevard St, Mountain View, CA 94043.
+     * (3) Latitude-longitude in the DDD format, for example, 41.40338, 2.17403.
      * </pre>
      *
      * <code>string address = 8;</code>
@@ -2270,9 +2270,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Address which can be specified in one of the following formats.
-     * (1) City, state, code, country, e.g. Mountain View, CA, USA.
-     * (2) Full address, e.g. 123 Boulevard St, Mountain View, CA 94043.
-     * (3) Latitude-longitude in the DDD format, e.g. 41.40338, 2.17403.
+     * (1) City, state, code, country, for example, Mountain View, CA, USA.
+     * (2) Full address, for example, 123 Boulevard St, Mountain View, CA 94043.
+     * (3) Latitude-longitude in the DDD format, for example, 41.40338, 2.17403.
      * </pre>
      *
      * <code>string address = 8;</code>
@@ -2294,9 +2294,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Address which can be specified in one of the following formats.
-     * (1) City, state, code, country, e.g. Mountain View, CA, USA.
-     * (2) Full address, e.g. 123 Boulevard St, Mountain View, CA 94043.
-     * (3) Latitude-longitude in the DDD format, e.g. 41.40338, 2.17403.
+     * (1) City, state, code, country, for example, Mountain View, CA, USA.
+     * (2) Full address, for example, 123 Boulevard St, Mountain View, CA 94043.
+     * (3) Latitude-longitude in the DDD format, for example, 41.40338, 2.17403.
      * </pre>
      *
      * <code>string address = 8;</code>
@@ -2316,9 +2316,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Address which can be specified in one of the following formats.
-     * (1) City, state, code, country, e.g. Mountain View, CA, USA.
-     * (2) Full address, e.g. 123 Boulevard St, Mountain View, CA 94043.
-     * (3) Latitude-longitude in the DDD format, e.g. 41.40338, 2.17403.
+     * (1) City, state, code, country, for example, Mountain View, CA, USA.
+     * (2) Full address, for example, 123 Boulevard St, Mountain View, CA 94043.
+     * (3) Latitude-longitude in the DDD format, for example, 41.40338, 2.17403.
      * </pre>
      *
      * <code>string address = 8;</code>
@@ -2333,9 +2333,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Address which can be specified in one of the following formats.
-     * (1) City, state, code, country, e.g. Mountain View, CA, USA.
-     * (2) Full address, e.g. 123 Boulevard St, Mountain View, CA 94043.
-     * (3) Latitude-longitude in the DDD format, e.g. 41.40338, 2.17403.
+     * (1) City, state, code, country, for example, Mountain View, CA, USA.
+     * (2) Full address, for example, 123 Boulevard St, Mountain View, CA 94043.
+     * (3) Latitude-longitude in the DDD format, for example, 41.40338, 2.17403.
      * </pre>
      *
      * <code>string address = 8;</code>
@@ -2357,7 +2357,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object category_ = "";
     /**
      * <pre>
-     * Category, e.g. Food.
+     * Category, for example, Food.
      * </pre>
      *
      * <code>string category = 9;</code>
@@ -2377,7 +2377,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Category, e.g. Food.
+     * Category, for example, Food.
      * </pre>
      *
      * <code>string category = 9;</code>
@@ -2398,7 +2398,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Category, e.g. Food.
+     * Category, for example, Food.
      * </pre>
      *
      * <code>string category = 9;</code>
@@ -2417,7 +2417,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Category, e.g. Food.
+     * Category, for example, Food.
      * </pre>
      *
      * <code>string category = 9;</code>
@@ -2431,7 +2431,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Category, e.g. Food.
+     * Category, for example, Food.
      * </pre>
      *
      * <code>string category = 9;</code>
@@ -2459,7 +2459,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contextual keywords, e.g. Save groceries coupons.
+     * Contextual keywords, for example, Save groceries coupons.
      * </pre>
      *
      * <code>repeated string contextual_keywords = 10;</code>
@@ -2471,7 +2471,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contextual keywords, e.g. Save groceries coupons.
+     * Contextual keywords, for example, Save groceries coupons.
      * </pre>
      *
      * <code>repeated string contextual_keywords = 10;</code>
@@ -2482,7 +2482,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contextual keywords, e.g. Save groceries coupons.
+     * Contextual keywords, for example, Save groceries coupons.
      * </pre>
      *
      * <code>repeated string contextual_keywords = 10;</code>
@@ -2494,7 +2494,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contextual keywords, e.g. Save groceries coupons.
+     * Contextual keywords, for example, Save groceries coupons.
      * </pre>
      *
      * <code>repeated string contextual_keywords = 10;</code>
@@ -2507,7 +2507,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contextual keywords, e.g. Save groceries coupons.
+     * Contextual keywords, for example, Save groceries coupons.
      * </pre>
      *
      * <code>repeated string contextual_keywords = 10;</code>
@@ -2527,7 +2527,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contextual keywords, e.g. Save groceries coupons.
+     * Contextual keywords, for example, Save groceries coupons.
      * </pre>
      *
      * <code>repeated string contextual_keywords = 10;</code>
@@ -2546,7 +2546,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contextual keywords, e.g. Save groceries coupons.
+     * Contextual keywords, for example, Save groceries coupons.
      * </pre>
      *
      * <code>repeated string contextual_keywords = 10;</code>
@@ -2563,7 +2563,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contextual keywords, e.g. Save groceries coupons.
+     * Contextual keywords, for example, Save groceries coupons.
      * </pre>
      *
      * <code>repeated string contextual_keywords = 10;</code>
@@ -2577,7 +2577,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contextual keywords, e.g. Save groceries coupons.
+     * Contextual keywords, for example, Save groceries coupons.
      * </pre>
      *
      * <code>repeated string contextual_keywords = 10;</code>
@@ -2600,7 +2600,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Formatted price which can be any characters. If set, this attribute will be
-     * used instead of 'price', e.g. Starting at $100.00.
+     * used instead of 'price', for example, Starting at $100.00.
      * </pre>
      *
      * <code>string formatted_price = 11;</code>
@@ -2621,7 +2621,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Formatted price which can be any characters. If set, this attribute will be
-     * used instead of 'price', e.g. Starting at $100.00.
+     * used instead of 'price', for example, Starting at $100.00.
      * </pre>
      *
      * <code>string formatted_price = 11;</code>
@@ -2643,7 +2643,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Formatted price which can be any characters. If set, this attribute will be
-     * used instead of 'price', e.g. Starting at $100.00.
+     * used instead of 'price', for example, Starting at $100.00.
      * </pre>
      *
      * <code>string formatted_price = 11;</code>
@@ -2663,7 +2663,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Formatted price which can be any characters. If set, this attribute will be
-     * used instead of 'price', e.g. Starting at $100.00.
+     * used instead of 'price', for example, Starting at $100.00.
      * </pre>
      *
      * <code>string formatted_price = 11;</code>
@@ -2678,7 +2678,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Formatted price which can be any characters. If set, this attribute will be
-     * used instead of 'price', e.g. Starting at $100.00.
+     * used instead of 'price', for example, Starting at $100.00.
      * </pre>
      *
      * <code>string formatted_price = 11;</code>
@@ -2701,7 +2701,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Formatted sale price which can be any characters. If set, this attribute
-     * will be used instead of 'sale price', e.g. On sale for $80.00.
+     * will be used instead of 'sale price', for example, On sale for $80.00.
      * </pre>
      *
      * <code>string formatted_sale_price = 12;</code>
@@ -2722,7 +2722,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Formatted sale price which can be any characters. If set, this attribute
-     * will be used instead of 'sale price', e.g. On sale for $80.00.
+     * will be used instead of 'sale price', for example, On sale for $80.00.
      * </pre>
      *
      * <code>string formatted_sale_price = 12;</code>
@@ -2744,7 +2744,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Formatted sale price which can be any characters. If set, this attribute
-     * will be used instead of 'sale price', e.g. On sale for $80.00.
+     * will be used instead of 'sale price', for example, On sale for $80.00.
      * </pre>
      *
      * <code>string formatted_sale_price = 12;</code>
@@ -2764,7 +2764,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Formatted sale price which can be any characters. If set, this attribute
-     * will be used instead of 'sale price', e.g. On sale for $80.00.
+     * will be used instead of 'sale price', for example, On sale for $80.00.
      * </pre>
      *
      * <code>string formatted_sale_price = 12;</code>
@@ -2779,7 +2779,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Formatted sale price which can be any characters. If set, this attribute
-     * will be used instead of 'sale price', e.g. On sale for $80.00.
+     * will be used instead of 'sale price', for example, On sale for $80.00.
      * </pre>
      *
      * <code>string formatted_sale_price = 12;</code>
@@ -2801,7 +2801,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object androidAppLink_ = "";
     /**
      * <pre>
-     * Android deep link, e.g.
+     * Android deep link, for example,
      * android-app://com.example.android/http/example.com/gizmos?1234.
      * </pre>
      *
@@ -2822,7 +2822,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Android deep link, e.g.
+     * Android deep link, for example,
      * android-app://com.example.android/http/example.com/gizmos?1234.
      * </pre>
      *
@@ -2844,7 +2844,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Android deep link, e.g.
+     * Android deep link, for example,
      * android-app://com.example.android/http/example.com/gizmos?1234.
      * </pre>
      *
@@ -2864,7 +2864,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Android deep link, e.g.
+     * Android deep link, for example,
      * android-app://com.example.android/http/example.com/gizmos?1234.
      * </pre>
      *
@@ -2879,7 +2879,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Android deep link, e.g.
+     * Android deep link, for example,
      * android-app://com.example.android/http/example.com/gizmos?1234.
      * </pre>
      *
@@ -2908,7 +2908,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Similar deal IDs, e.g. 1275.
+     * Similar deal IDs, for example, 1275.
      * </pre>
      *
      * <code>repeated string similar_deal_ids = 14;</code>
@@ -2920,7 +2920,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Similar deal IDs, e.g. 1275.
+     * Similar deal IDs, for example, 1275.
      * </pre>
      *
      * <code>repeated string similar_deal_ids = 14;</code>
@@ -2931,7 +2931,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Similar deal IDs, e.g. 1275.
+     * Similar deal IDs, for example, 1275.
      * </pre>
      *
      * <code>repeated string similar_deal_ids = 14;</code>
@@ -2943,7 +2943,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Similar deal IDs, e.g. 1275.
+     * Similar deal IDs, for example, 1275.
      * </pre>
      *
      * <code>repeated string similar_deal_ids = 14;</code>
@@ -2956,7 +2956,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Similar deal IDs, e.g. 1275.
+     * Similar deal IDs, for example, 1275.
      * </pre>
      *
      * <code>repeated string similar_deal_ids = 14;</code>
@@ -2976,7 +2976,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Similar deal IDs, e.g. 1275.
+     * Similar deal IDs, for example, 1275.
      * </pre>
      *
      * <code>repeated string similar_deal_ids = 14;</code>
@@ -2995,7 +2995,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Similar deal IDs, e.g. 1275.
+     * Similar deal IDs, for example, 1275.
      * </pre>
      *
      * <code>repeated string similar_deal_ids = 14;</code>
@@ -3012,7 +3012,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Similar deal IDs, e.g. 1275.
+     * Similar deal IDs, for example, 1275.
      * </pre>
      *
      * <code>repeated string similar_deal_ids = 14;</code>
@@ -3026,7 +3026,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Similar deal IDs, e.g. 1275.
+     * Similar deal IDs, for example, 1275.
      * </pre>
      *
      * <code>repeated string similar_deal_ids = 14;</code>
@@ -3048,7 +3048,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object iosAppLink_ = "";
     /**
      * <pre>
-     * iOS deep link, e.g. exampleApp://content/page.
+     * iOS deep link, for example, exampleApp://content/page.
      * </pre>
      *
      * <code>string ios_app_link = 15;</code>
@@ -3068,7 +3068,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * iOS deep link, e.g. exampleApp://content/page.
+     * iOS deep link, for example, exampleApp://content/page.
      * </pre>
      *
      * <code>string ios_app_link = 15;</code>
@@ -3089,7 +3089,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * iOS deep link, e.g. exampleApp://content/page.
+     * iOS deep link, for example, exampleApp://content/page.
      * </pre>
      *
      * <code>string ios_app_link = 15;</code>
@@ -3108,7 +3108,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * iOS deep link, e.g. exampleApp://content/page.
+     * iOS deep link, for example, exampleApp://content/page.
      * </pre>
      *
      * <code>string ios_app_link = 15;</code>
@@ -3122,7 +3122,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * iOS deep link, e.g. exampleApp://content/page.
+     * iOS deep link, for example, exampleApp://content/page.
      * </pre>
      *
      * <code>string ios_app_link = 15;</code>

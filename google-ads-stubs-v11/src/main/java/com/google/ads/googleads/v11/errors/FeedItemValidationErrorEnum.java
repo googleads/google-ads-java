@@ -465,8 +465,8 @@ private static final long serialVersionUID = 0L;
      * Advertisers can link a conversion action with a phone number to indicate
      * that sufficiently long calls forwarded to that phone number should be
      * counted as conversions of the specified type.  This is an error message
-     * indicating that the conversion action specified is invalid (e.g., the
-     * conversion action does not exist within the appropriate Google Ads
+     * indicating that the conversion action specified is invalid (for example,
+     * the conversion action does not exist within the appropriate Google Ads
      * account, or it is a type of conversion not appropriate to phone call
      * conversions).
      * </pre>
@@ -784,7 +784,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Consent for call recording, which is required for the use of call
-     * extensions, was not provided by the advertiser. Please see
+     * extensions, was not provided by the advertiser. See
      * https://support.google.com/google-ads/answer/7412639.
      * </pre>
      *
@@ -1342,8 +1342,8 @@ private static final long serialVersionUID = 0L;
      * Advertisers can link a conversion action with a phone number to indicate
      * that sufficiently long calls forwarded to that phone number should be
      * counted as conversions of the specified type.  This is an error message
-     * indicating that the conversion action specified is invalid (e.g., the
-     * conversion action does not exist within the appropriate Google Ads
+     * indicating that the conversion action specified is invalid (for example,
+     * the conversion action does not exist within the appropriate Google Ads
      * account, or it is a type of conversion not appropriate to phone call
      * conversions).
      * </pre>
@@ -1661,7 +1661,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Consent for call recording, which is required for the use of call
-     * extensions, was not provided by the advertiser. Please see
+     * extensions, was not provided by the advertiser. See
      * https://support.google.com/google-ads/answer/7412639.
      * </pre>
      *

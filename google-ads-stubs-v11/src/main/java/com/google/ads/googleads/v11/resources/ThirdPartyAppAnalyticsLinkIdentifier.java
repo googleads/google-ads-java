@@ -146,10 +146,10 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. A string that uniquely identifies a mobile application from which the data
    * was collected to the Google Ads API. For iOS, the ID string is the 9 digit
-   * string that appears at the end of an App Store URL (e.g., "422689480" for
-   * "Gmail" whose App Store link is
+   * string that appears at the end of an App Store URL (for example,
+   * "422689480" for "Gmail" whose App Store link is
    * https://apps.apple.com/us/app/gmail-email-by-google/id422689480). For
-   * Android, the ID string is the application's package name (e.g.,
+   * Android, the ID string is the application's package name (for example,
    * "com.google.android.gm" for "Gmail" given Google Play link
    * https://play.google.com/store/apps/details?id=com.google.android.gm)
    * This field should not be empty when creating a new third
@@ -168,10 +168,10 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. A string that uniquely identifies a mobile application from which the data
    * was collected to the Google Ads API. For iOS, the ID string is the 9 digit
-   * string that appears at the end of an App Store URL (e.g., "422689480" for
-   * "Gmail" whose App Store link is
+   * string that appears at the end of an App Store URL (for example,
+   * "422689480" for "Gmail" whose App Store link is
    * https://apps.apple.com/us/app/gmail-email-by-google/id422689480). For
-   * Android, the ID string is the application's package name (e.g.,
+   * Android, the ID string is the application's package name (for example,
    * "com.google.android.gm" for "Gmail" given Google Play link
    * https://play.google.com/store/apps/details?id=com.google.android.gm)
    * This field should not be empty when creating a new third
@@ -199,10 +199,10 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Immutable. A string that uniquely identifies a mobile application from which the data
    * was collected to the Google Ads API. For iOS, the ID string is the 9 digit
-   * string that appears at the end of an App Store URL (e.g., "422689480" for
-   * "Gmail" whose App Store link is
+   * string that appears at the end of an App Store URL (for example,
+   * "422689480" for "Gmail" whose App Store link is
    * https://apps.apple.com/us/app/gmail-email-by-google/id422689480). For
-   * Android, the ID string is the application's package name (e.g.,
+   * Android, the ID string is the application's package name (for example,
    * "com.google.android.gm" for "Gmail" given Google Play link
    * https://play.google.com/store/apps/details?id=com.google.android.gm)
    * This field should not be empty when creating a new third
@@ -694,10 +694,10 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. A string that uniquely identifies a mobile application from which the data
      * was collected to the Google Ads API. For iOS, the ID string is the 9 digit
-     * string that appears at the end of an App Store URL (e.g., "422689480" for
-     * "Gmail" whose App Store link is
+     * string that appears at the end of an App Store URL (for example,
+     * "422689480" for "Gmail" whose App Store link is
      * https://apps.apple.com/us/app/gmail-email-by-google/id422689480). For
-     * Android, the ID string is the application's package name (e.g.,
+     * Android, the ID string is the application's package name (for example,
      * "com.google.android.gm" for "Gmail" given Google Play link
      * https://play.google.com/store/apps/details?id=com.google.android.gm)
      * This field should not be empty when creating a new third
@@ -715,10 +715,10 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. A string that uniquely identifies a mobile application from which the data
      * was collected to the Google Ads API. For iOS, the ID string is the 9 digit
-     * string that appears at the end of an App Store URL (e.g., "422689480" for
-     * "Gmail" whose App Store link is
+     * string that appears at the end of an App Store URL (for example,
+     * "422689480" for "Gmail" whose App Store link is
      * https://apps.apple.com/us/app/gmail-email-by-google/id422689480). For
-     * Android, the ID string is the application's package name (e.g.,
+     * Android, the ID string is the application's package name (for example,
      * "com.google.android.gm" for "Gmail" given Google Play link
      * https://play.google.com/store/apps/details?id=com.google.android.gm)
      * This field should not be empty when creating a new third
@@ -745,10 +745,10 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. A string that uniquely identifies a mobile application from which the data
      * was collected to the Google Ads API. For iOS, the ID string is the 9 digit
-     * string that appears at the end of an App Store URL (e.g., "422689480" for
-     * "Gmail" whose App Store link is
+     * string that appears at the end of an App Store URL (for example,
+     * "422689480" for "Gmail" whose App Store link is
      * https://apps.apple.com/us/app/gmail-email-by-google/id422689480). For
-     * Android, the ID string is the application's package name (e.g.,
+     * Android, the ID string is the application's package name (for example,
      * "com.google.android.gm" for "Gmail" given Google Play link
      * https://play.google.com/store/apps/details?id=com.google.android.gm)
      * This field should not be empty when creating a new third
@@ -776,10 +776,10 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. A string that uniquely identifies a mobile application from which the data
      * was collected to the Google Ads API. For iOS, the ID string is the 9 digit
-     * string that appears at the end of an App Store URL (e.g., "422689480" for
-     * "Gmail" whose App Store link is
+     * string that appears at the end of an App Store URL (for example,
+     * "422689480" for "Gmail" whose App Store link is
      * https://apps.apple.com/us/app/gmail-email-by-google/id422689480). For
-     * Android, the ID string is the application's package name (e.g.,
+     * Android, the ID string is the application's package name (for example,
      * "com.google.android.gm" for "Gmail" given Google Play link
      * https://play.google.com/store/apps/details?id=com.google.android.gm)
      * This field should not be empty when creating a new third
@@ -805,10 +805,10 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. A string that uniquely identifies a mobile application from which the data
      * was collected to the Google Ads API. For iOS, the ID string is the 9 digit
-     * string that appears at the end of an App Store URL (e.g., "422689480" for
-     * "Gmail" whose App Store link is
+     * string that appears at the end of an App Store URL (for example,
+     * "422689480" for "Gmail" whose App Store link is
      * https://apps.apple.com/us/app/gmail-email-by-google/id422689480). For
-     * Android, the ID string is the application's package name (e.g.,
+     * Android, the ID string is the application's package name (for example,
      * "com.google.android.gm" for "Gmail" given Google Play link
      * https://play.google.com/store/apps/details?id=com.google.android.gm)
      * This field should not be empty when creating a new third
@@ -829,10 +829,10 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. A string that uniquely identifies a mobile application from which the data
      * was collected to the Google Ads API. For iOS, the ID string is the 9 digit
-     * string that appears at the end of an App Store URL (e.g., "422689480" for
-     * "Gmail" whose App Store link is
+     * string that appears at the end of an App Store URL (for example,
+     * "422689480" for "Gmail" whose App Store link is
      * https://apps.apple.com/us/app/gmail-email-by-google/id422689480). For
-     * Android, the ID string is the application's package name (e.g.,
+     * Android, the ID string is the application's package name (for example,
      * "com.google.android.gm" for "Gmail" given Google Play link
      * https://play.google.com/store/apps/details?id=com.google.android.gm)
      * This field should not be empty when creating a new third

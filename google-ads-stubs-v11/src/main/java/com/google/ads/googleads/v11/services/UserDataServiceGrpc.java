@@ -5,11 +5,11 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  * <pre>
  * Service to manage user data uploads.
- * Any uploads made to a Customer Match list via this service will be eligible
- * for matching as per the customer matching process. Please see
+ * Any uploads made to a Customer Match list through this service will be
+ * eligible for matching as per the customer matching process. See
  * https://support.google.com/google-ads/answer/7474263. However, the uploads
- * made via this service will not be visible under the 'Segment members' section
- * for the Customer Match List in the Google Ads UI.
+ * made through this service will not be visible under the 'Segment members'
+ * section for the Customer Match List in the Google Ads UI.
  * </pre>
  */
 @javax.annotation.Generated(
@@ -101,11 +101,11 @@ public final class UserDataServiceGrpc {
   /**
    * <pre>
    * Service to manage user data uploads.
-   * Any uploads made to a Customer Match list via this service will be eligible
-   * for matching as per the customer matching process. Please see
+   * Any uploads made to a Customer Match list through this service will be
+   * eligible for matching as per the customer matching process. See
    * https://support.google.com/google-ads/answer/7474263. However, the uploads
-   * made via this service will not be visible under the 'Segment members' section
-   * for the Customer Match List in the Google Ads UI.
+   * made through this service will not be visible under the 'Segment members'
+   * section for the Customer Match List in the Google Ads UI.
    * </pre>
    */
   public static abstract class UserDataServiceImplBase implements io.grpc.BindableService {
@@ -148,11 +148,11 @@ public final class UserDataServiceGrpc {
   /**
    * <pre>
    * Service to manage user data uploads.
-   * Any uploads made to a Customer Match list via this service will be eligible
-   * for matching as per the customer matching process. Please see
+   * Any uploads made to a Customer Match list through this service will be
+   * eligible for matching as per the customer matching process. See
    * https://support.google.com/google-ads/answer/7474263. However, the uploads
-   * made via this service will not be visible under the 'Segment members' section
-   * for the Customer Match List in the Google Ads UI.
+   * made through this service will not be visible under the 'Segment members'
+   * section for the Customer Match List in the Google Ads UI.
    * </pre>
    */
   public static final class UserDataServiceStub extends io.grpc.stub.AbstractAsyncStub<UserDataServiceStub> {
@@ -194,11 +194,11 @@ public final class UserDataServiceGrpc {
   /**
    * <pre>
    * Service to manage user data uploads.
-   * Any uploads made to a Customer Match list via this service will be eligible
-   * for matching as per the customer matching process. Please see
+   * Any uploads made to a Customer Match list through this service will be
+   * eligible for matching as per the customer matching process. See
    * https://support.google.com/google-ads/answer/7474263. However, the uploads
-   * made via this service will not be visible under the 'Segment members' section
-   * for the Customer Match List in the Google Ads UI.
+   * made through this service will not be visible under the 'Segment members'
+   * section for the Customer Match List in the Google Ads UI.
    * </pre>
    */
   public static final class UserDataServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<UserDataServiceBlockingStub> {
@@ -239,11 +239,11 @@ public final class UserDataServiceGrpc {
   /**
    * <pre>
    * Service to manage user data uploads.
-   * Any uploads made to a Customer Match list via this service will be eligible
-   * for matching as per the customer matching process. Please see
+   * Any uploads made to a Customer Match list through this service will be
+   * eligible for matching as per the customer matching process. See
    * https://support.google.com/google-ads/answer/7474263. However, the uploads
-   * made via this service will not be visible under the 'Segment members' section
-   * for the Customer Match List in the Google Ads UI.
+   * made through this service will not be visible under the 'Segment members'
+   * section for the Customer Match List in the Google Ads UI.
    * </pre>
    */
   public static final class UserDataServiceFutureStub extends io.grpc.stub.AbstractFutureStub<UserDataServiceFutureStub> {

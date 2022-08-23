@@ -117,8 +117,8 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.google.ads.googleads.v11.common.AdTextAsset> headlines_;
   /**
    * <pre>
-   * List of text assets for headlines. When the ad serves the headlines will
-   * be selected from this list. 3 headlines must be specified.
+   * List of text assets, each of which corresponds to a headline when the ad
+   * serves. This list consists of a minimum of 3 and up to 15 text assets.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.AdTextAsset headlines = 1;</code>
@@ -129,8 +129,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * List of text assets for headlines. When the ad serves the headlines will
-   * be selected from this list. 3 headlines must be specified.
+   * List of text assets, each of which corresponds to a headline when the ad
+   * serves. This list consists of a minimum of 3 and up to 15 text assets.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.AdTextAsset headlines = 1;</code>
@@ -142,8 +142,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * List of text assets for headlines. When the ad serves the headlines will
-   * be selected from this list. 3 headlines must be specified.
+   * List of text assets, each of which corresponds to a headline when the ad
+   * serves. This list consists of a minimum of 3 and up to 15 text assets.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.AdTextAsset headlines = 1;</code>
@@ -154,8 +154,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * List of text assets for headlines. When the ad serves the headlines will
-   * be selected from this list. 3 headlines must be specified.
+   * List of text assets, each of which corresponds to a headline when the ad
+   * serves. This list consists of a minimum of 3 and up to 15 text assets.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.AdTextAsset headlines = 1;</code>
@@ -166,8 +166,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * List of text assets for headlines. When the ad serves the headlines will
-   * be selected from this list. 3 headlines must be specified.
+   * List of text assets, each of which corresponds to a headline when the ad
+   * serves. This list consists of a minimum of 3 and up to 15 text assets.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.AdTextAsset headlines = 1;</code>
@@ -182,8 +182,8 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.google.ads.googleads.v11.common.AdTextAsset> descriptions_;
   /**
    * <pre>
-   * List of text assets for descriptions. When the ad serves the descriptions
-   * will be selected from this list. 2 descriptions must be specified.
+   * List of text assets, each of which corresponds to a description when the ad
+   * serves. This list consists of a minimum of 2 and up to 4 text assets.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.AdTextAsset descriptions = 2;</code>
@@ -194,8 +194,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * List of text assets for descriptions. When the ad serves the descriptions
-   * will be selected from this list. 2 descriptions must be specified.
+   * List of text assets, each of which corresponds to a description when the ad
+   * serves. This list consists of a minimum of 2 and up to 4 text assets.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.AdTextAsset descriptions = 2;</code>
@@ -207,8 +207,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * List of text assets for descriptions. When the ad serves the descriptions
-   * will be selected from this list. 2 descriptions must be specified.
+   * List of text assets, each of which corresponds to a description when the ad
+   * serves. This list consists of a minimum of 2 and up to 4 text assets.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.AdTextAsset descriptions = 2;</code>
@@ -219,8 +219,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * List of text assets for descriptions. When the ad serves the descriptions
-   * will be selected from this list. 2 descriptions must be specified.
+   * List of text assets, each of which corresponds to a description when the ad
+   * serves. This list consists of a minimum of 2 and up to 4 text assets.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.AdTextAsset descriptions = 2;</code>
@@ -231,8 +231,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * List of text assets for descriptions. When the ad serves the descriptions
-   * will be selected from this list. 2 descriptions must be specified.
+   * List of text assets, each of which corresponds to a description when the ad
+   * serves. This list consists of a minimum of 2 and up to 4 text assets.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.AdTextAsset descriptions = 2;</code>
@@ -658,8 +658,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * List of text assets for headlines. When the ad serves the headlines will
-     * be selected from this list. 3 headlines must be specified.
+     * List of text assets, each of which corresponds to a headline when the ad
+     * serves. This list consists of a minimum of 3 and up to 15 text assets.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset headlines = 1;</code>
@@ -673,8 +673,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of text assets for headlines. When the ad serves the headlines will
-     * be selected from this list. 3 headlines must be specified.
+     * List of text assets, each of which corresponds to a headline when the ad
+     * serves. This list consists of a minimum of 3 and up to 15 text assets.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset headlines = 1;</code>
@@ -688,8 +688,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of text assets for headlines. When the ad serves the headlines will
-     * be selected from this list. 3 headlines must be specified.
+     * List of text assets, each of which corresponds to a headline when the ad
+     * serves. This list consists of a minimum of 3 and up to 15 text assets.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset headlines = 1;</code>
@@ -703,8 +703,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of text assets for headlines. When the ad serves the headlines will
-     * be selected from this list. 3 headlines must be specified.
+     * List of text assets, each of which corresponds to a headline when the ad
+     * serves. This list consists of a minimum of 3 and up to 15 text assets.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset headlines = 1;</code>
@@ -725,8 +725,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of text assets for headlines. When the ad serves the headlines will
-     * be selected from this list. 3 headlines must be specified.
+     * List of text assets, each of which corresponds to a headline when the ad
+     * serves. This list consists of a minimum of 3 and up to 15 text assets.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset headlines = 1;</code>
@@ -744,8 +744,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of text assets for headlines. When the ad serves the headlines will
-     * be selected from this list. 3 headlines must be specified.
+     * List of text assets, each of which corresponds to a headline when the ad
+     * serves. This list consists of a minimum of 3 and up to 15 text assets.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset headlines = 1;</code>
@@ -765,8 +765,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of text assets for headlines. When the ad serves the headlines will
-     * be selected from this list. 3 headlines must be specified.
+     * List of text assets, each of which corresponds to a headline when the ad
+     * serves. This list consists of a minimum of 3 and up to 15 text assets.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset headlines = 1;</code>
@@ -787,8 +787,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of text assets for headlines. When the ad serves the headlines will
-     * be selected from this list. 3 headlines must be specified.
+     * List of text assets, each of which corresponds to a headline when the ad
+     * serves. This list consists of a minimum of 3 and up to 15 text assets.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset headlines = 1;</code>
@@ -806,8 +806,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of text assets for headlines. When the ad serves the headlines will
-     * be selected from this list. 3 headlines must be specified.
+     * List of text assets, each of which corresponds to a headline when the ad
+     * serves. This list consists of a minimum of 3 and up to 15 text assets.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset headlines = 1;</code>
@@ -825,8 +825,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of text assets for headlines. When the ad serves the headlines will
-     * be selected from this list. 3 headlines must be specified.
+     * List of text assets, each of which corresponds to a headline when the ad
+     * serves. This list consists of a minimum of 3 and up to 15 text assets.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset headlines = 1;</code>
@@ -845,8 +845,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of text assets for headlines. When the ad serves the headlines will
-     * be selected from this list. 3 headlines must be specified.
+     * List of text assets, each of which corresponds to a headline when the ad
+     * serves. This list consists of a minimum of 3 and up to 15 text assets.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset headlines = 1;</code>
@@ -863,8 +863,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of text assets for headlines. When the ad serves the headlines will
-     * be selected from this list. 3 headlines must be specified.
+     * List of text assets, each of which corresponds to a headline when the ad
+     * serves. This list consists of a minimum of 3 and up to 15 text assets.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset headlines = 1;</code>
@@ -881,8 +881,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of text assets for headlines. When the ad serves the headlines will
-     * be selected from this list. 3 headlines must be specified.
+     * List of text assets, each of which corresponds to a headline when the ad
+     * serves. This list consists of a minimum of 3 and up to 15 text assets.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset headlines = 1;</code>
@@ -893,8 +893,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of text assets for headlines. When the ad serves the headlines will
-     * be selected from this list. 3 headlines must be specified.
+     * List of text assets, each of which corresponds to a headline when the ad
+     * serves. This list consists of a minimum of 3 and up to 15 text assets.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset headlines = 1;</code>
@@ -908,8 +908,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of text assets for headlines. When the ad serves the headlines will
-     * be selected from this list. 3 headlines must be specified.
+     * List of text assets, each of which corresponds to a headline when the ad
+     * serves. This list consists of a minimum of 3 and up to 15 text assets.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset headlines = 1;</code>
@@ -924,8 +924,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of text assets for headlines. When the ad serves the headlines will
-     * be selected from this list. 3 headlines must be specified.
+     * List of text assets, each of which corresponds to a headline when the ad
+     * serves. This list consists of a minimum of 3 and up to 15 text assets.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset headlines = 1;</code>
@@ -936,8 +936,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of text assets for headlines. When the ad serves the headlines will
-     * be selected from this list. 3 headlines must be specified.
+     * List of text assets, each of which corresponds to a headline when the ad
+     * serves. This list consists of a minimum of 3 and up to 15 text assets.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset headlines = 1;</code>
@@ -949,8 +949,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of text assets for headlines. When the ad serves the headlines will
-     * be selected from this list. 3 headlines must be specified.
+     * List of text assets, each of which corresponds to a headline when the ad
+     * serves. This list consists of a minimum of 3 and up to 15 text assets.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset headlines = 1;</code>
@@ -988,8 +988,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * List of text assets for descriptions. When the ad serves the descriptions
-     * will be selected from this list. 2 descriptions must be specified.
+     * List of text assets, each of which corresponds to a description when the ad
+     * serves. This list consists of a minimum of 2 and up to 4 text assets.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset descriptions = 2;</code>
@@ -1003,8 +1003,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of text assets for descriptions. When the ad serves the descriptions
-     * will be selected from this list. 2 descriptions must be specified.
+     * List of text assets, each of which corresponds to a description when the ad
+     * serves. This list consists of a minimum of 2 and up to 4 text assets.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset descriptions = 2;</code>
@@ -1018,8 +1018,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of text assets for descriptions. When the ad serves the descriptions
-     * will be selected from this list. 2 descriptions must be specified.
+     * List of text assets, each of which corresponds to a description when the ad
+     * serves. This list consists of a minimum of 2 and up to 4 text assets.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset descriptions = 2;</code>
@@ -1033,8 +1033,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of text assets for descriptions. When the ad serves the descriptions
-     * will be selected from this list. 2 descriptions must be specified.
+     * List of text assets, each of which corresponds to a description when the ad
+     * serves. This list consists of a minimum of 2 and up to 4 text assets.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset descriptions = 2;</code>
@@ -1055,8 +1055,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of text assets for descriptions. When the ad serves the descriptions
-     * will be selected from this list. 2 descriptions must be specified.
+     * List of text assets, each of which corresponds to a description when the ad
+     * serves. This list consists of a minimum of 2 and up to 4 text assets.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset descriptions = 2;</code>
@@ -1074,8 +1074,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of text assets for descriptions. When the ad serves the descriptions
-     * will be selected from this list. 2 descriptions must be specified.
+     * List of text assets, each of which corresponds to a description when the ad
+     * serves. This list consists of a minimum of 2 and up to 4 text assets.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset descriptions = 2;</code>
@@ -1095,8 +1095,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of text assets for descriptions. When the ad serves the descriptions
-     * will be selected from this list. 2 descriptions must be specified.
+     * List of text assets, each of which corresponds to a description when the ad
+     * serves. This list consists of a minimum of 2 and up to 4 text assets.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset descriptions = 2;</code>
@@ -1117,8 +1117,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of text assets for descriptions. When the ad serves the descriptions
-     * will be selected from this list. 2 descriptions must be specified.
+     * List of text assets, each of which corresponds to a description when the ad
+     * serves. This list consists of a minimum of 2 and up to 4 text assets.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset descriptions = 2;</code>
@@ -1136,8 +1136,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of text assets for descriptions. When the ad serves the descriptions
-     * will be selected from this list. 2 descriptions must be specified.
+     * List of text assets, each of which corresponds to a description when the ad
+     * serves. This list consists of a minimum of 2 and up to 4 text assets.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset descriptions = 2;</code>
@@ -1155,8 +1155,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of text assets for descriptions. When the ad serves the descriptions
-     * will be selected from this list. 2 descriptions must be specified.
+     * List of text assets, each of which corresponds to a description when the ad
+     * serves. This list consists of a minimum of 2 and up to 4 text assets.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset descriptions = 2;</code>
@@ -1175,8 +1175,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of text assets for descriptions. When the ad serves the descriptions
-     * will be selected from this list. 2 descriptions must be specified.
+     * List of text assets, each of which corresponds to a description when the ad
+     * serves. This list consists of a minimum of 2 and up to 4 text assets.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset descriptions = 2;</code>
@@ -1193,8 +1193,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of text assets for descriptions. When the ad serves the descriptions
-     * will be selected from this list. 2 descriptions must be specified.
+     * List of text assets, each of which corresponds to a description when the ad
+     * serves. This list consists of a minimum of 2 and up to 4 text assets.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset descriptions = 2;</code>
@@ -1211,8 +1211,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of text assets for descriptions. When the ad serves the descriptions
-     * will be selected from this list. 2 descriptions must be specified.
+     * List of text assets, each of which corresponds to a description when the ad
+     * serves. This list consists of a minimum of 2 and up to 4 text assets.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset descriptions = 2;</code>
@@ -1223,8 +1223,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of text assets for descriptions. When the ad serves the descriptions
-     * will be selected from this list. 2 descriptions must be specified.
+     * List of text assets, each of which corresponds to a description when the ad
+     * serves. This list consists of a minimum of 2 and up to 4 text assets.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset descriptions = 2;</code>
@@ -1238,8 +1238,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of text assets for descriptions. When the ad serves the descriptions
-     * will be selected from this list. 2 descriptions must be specified.
+     * List of text assets, each of which corresponds to a description when the ad
+     * serves. This list consists of a minimum of 2 and up to 4 text assets.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset descriptions = 2;</code>
@@ -1254,8 +1254,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of text assets for descriptions. When the ad serves the descriptions
-     * will be selected from this list. 2 descriptions must be specified.
+     * List of text assets, each of which corresponds to a description when the ad
+     * serves. This list consists of a minimum of 2 and up to 4 text assets.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset descriptions = 2;</code>
@@ -1266,8 +1266,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of text assets for descriptions. When the ad serves the descriptions
-     * will be selected from this list. 2 descriptions must be specified.
+     * List of text assets, each of which corresponds to a description when the ad
+     * serves. This list consists of a minimum of 2 and up to 4 text assets.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset descriptions = 2;</code>
@@ -1279,8 +1279,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of text assets for descriptions. When the ad serves the descriptions
-     * will be selected from this list. 2 descriptions must be specified.
+     * List of text assets, each of which corresponds to a description when the ad
+     * serves. This list consists of a minimum of 2 and up to 4 text assets.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset descriptions = 2;</code>

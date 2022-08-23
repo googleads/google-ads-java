@@ -141,7 +141,7 @@ public interface ExperimentOrBuilder extends
 
   /**
    * <pre>
-   * The Advertiser-desired status of this experiment.
+   * The Advertiser-chosen status of this experiment.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.ExperimentStatusEnum.ExperimentStatus status = 14;</code>
@@ -150,7 +150,7 @@ public interface ExperimentOrBuilder extends
   int getStatusValue();
   /**
    * <pre>
-   * The Advertiser-desired status of this experiment.
+   * The Advertiser-chosen status of this experiment.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.ExperimentStatusEnum.ExperimentStatus status = 14;</code>

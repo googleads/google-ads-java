@@ -1014,9 +1014,9 @@ public interface MetricsOrBuilder extends
    * <pre>
    * The last date/time a conversion tag for this conversion action successfully
    * fired and was seen by Google Ads. This firing event may not have been the
-   * result of an attributable conversion (e.g. because the tag was fired from a
-   * browser that did not previously click an ad from an appropriate
-   * advertiser). The date/time is in the customer's time zone.
+   * result of an attributable conversion (for example, because the tag was
+   * fired from a browser that did not previously click an ad from an
+   * appropriate advertiser). The date/time is in the customer's time zone.
    * </pre>
    *
    * <code>optional string conversion_last_received_request_date_time = 161;</code>
@@ -1027,9 +1027,9 @@ public interface MetricsOrBuilder extends
    * <pre>
    * The last date/time a conversion tag for this conversion action successfully
    * fired and was seen by Google Ads. This firing event may not have been the
-   * result of an attributable conversion (e.g. because the tag was fired from a
-   * browser that did not previously click an ad from an appropriate
-   * advertiser). The date/time is in the customer's time zone.
+   * result of an attributable conversion (for example, because the tag was
+   * fired from a browser that did not previously click an ad from an
+   * appropriate advertiser). The date/time is in the customer's time zone.
    * </pre>
    *
    * <code>optional string conversion_last_received_request_date_time = 161;</code>
@@ -1040,9 +1040,9 @@ public interface MetricsOrBuilder extends
    * <pre>
    * The last date/time a conversion tag for this conversion action successfully
    * fired and was seen by Google Ads. This firing event may not have been the
-   * result of an attributable conversion (e.g. because the tag was fired from a
-   * browser that did not previously click an ad from an appropriate
-   * advertiser). The date/time is in the customer's time zone.
+   * result of an attributable conversion (for example, because the tag was
+   * fired from a browser that did not previously click an ad from an
+   * appropriate advertiser). The date/time is in the customer's time zone.
    * </pre>
    *
    * <code>optional string conversion_last_received_request_date_time = 161;</code>
@@ -2965,7 +2965,7 @@ public interface MetricsOrBuilder extends
    * <pre>
    * The total number of view-through conversions.
    * These happen when a customer sees an image or rich media ad, then later
-   * completes a conversion on your site without interacting with (e.g.,
+   * completes a conversion on your site without interacting with (for example,
    * clicking on) another ad.
    * </pre>
    *
@@ -2977,7 +2977,7 @@ public interface MetricsOrBuilder extends
    * <pre>
    * The total number of view-through conversions.
    * These happen when a customer sees an image or rich media ad, then later
-   * completes a conversion on your site without interacting with (e.g.,
+   * completes a conversion on your site without interacting with (for example,
    * clicking on) another ad.
    * </pre>
    *

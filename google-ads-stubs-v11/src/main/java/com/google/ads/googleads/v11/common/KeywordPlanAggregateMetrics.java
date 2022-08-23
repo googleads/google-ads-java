@@ -668,8 +668,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.enums.KeywordPlanAggregateMetricTypeEnum.KeywordPlanAggregateMetricType aggregate_metric_types = 1;</code>
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of aggregateMetricTypes at the given index.
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for aggregateMetricTypes to set.
      * @return This builder for chaining.
      */
     public Builder setAggregateMetricTypesValue(

@@ -6,8 +6,8 @@ package com.google.ads.googleads.v11.services;
 /**
  * <pre>
  * Response message for [UserDataService.UploadUserData][google.ads.googleads.v11.services.UserDataService.UploadUserData]
- * Uploads made via this service will not be visible under the 'Segment members'
- * section for the Customer Match List in the Google Ads UI.
+ * Uploads made through this service will not be visible under the 'Segment
+ * members' section for the Customer Match List in the Google Ads UI.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v11.services.UploadUserDataResponse}
@@ -107,7 +107,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The date time at which the request was received by API, formatted as
-   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
    * </pre>
    *
    * <code>optional string upload_date_time = 3;</code>
@@ -120,7 +120,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The date time at which the request was received by API, formatted as
-   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
    * </pre>
    *
    * <code>optional string upload_date_time = 3;</code>
@@ -142,7 +142,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The date time at which the request was received by API, formatted as
-   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
    * </pre>
    *
    * <code>optional string upload_date_time = 3;</code>
@@ -368,8 +368,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Response message for [UserDataService.UploadUserData][google.ads.googleads.v11.services.UserDataService.UploadUserData]
-   * Uploads made via this service will not be visible under the 'Segment members'
-   * section for the Customer Match List in the Google Ads UI.
+   * Uploads made through this service will not be visible under the 'Segment
+   * members' section for the Customer Match List in the Google Ads UI.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v11.services.UploadUserDataResponse}
@@ -540,7 +540,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The date time at which the request was received by API, formatted as
-     * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+     * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
      * </pre>
      *
      * <code>optional string upload_date_time = 3;</code>
@@ -552,7 +552,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The date time at which the request was received by API, formatted as
-     * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+     * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
      * </pre>
      *
      * <code>optional string upload_date_time = 3;</code>
@@ -573,7 +573,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The date time at which the request was received by API, formatted as
-     * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+     * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
      * </pre>
      *
      * <code>optional string upload_date_time = 3;</code>
@@ -595,7 +595,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The date time at which the request was received by API, formatted as
-     * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+     * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
      * </pre>
      *
      * <code>optional string upload_date_time = 3;</code>
@@ -615,7 +615,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The date time at which the request was received by API, formatted as
-     * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+     * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
      * </pre>
      *
      * <code>optional string upload_date_time = 3;</code>
@@ -630,7 +630,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The date time at which the request was received by API, formatted as
-     * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+     * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
      * </pre>
      *
      * <code>optional string upload_date_time = 3;</code>

@@ -145,7 +145,7 @@ private static final long serialVersionUID = 0L;
     BAD_FIELD_NAME(12),
     /**
      * <pre>
-     * Limit value is invalid (i.e. not a number)
+     * Limit value is invalid (for example, not a number)
      * </pre>
      *
      * <code>BAD_LIMIT_VALUE = 15;</code>
@@ -327,8 +327,8 @@ private static final long serialVersionUID = 0L;
     MISALIGNED_DATE_FOR_FILTER(64),
     /**
      * <pre>
-     * Value passed was not a string when it should have been. I.e., it was a
-     * number or unquoted literal.
+     * Value passed was not a string when it should have been. For example, it
+     * was a number or unquoted literal.
      * </pre>
      *
      * <code>INVALID_STRING_VALUE = 57;</code>
@@ -622,7 +622,7 @@ private static final long serialVersionUID = 0L;
     public static final int BAD_FIELD_NAME_VALUE = 12;
     /**
      * <pre>
-     * Limit value is invalid (i.e. not a number)
+     * Limit value is invalid (for example, not a number)
      * </pre>
      *
      * <code>BAD_LIMIT_VALUE = 15;</code>
@@ -804,8 +804,8 @@ private static final long serialVersionUID = 0L;
     public static final int MISALIGNED_DATE_FOR_FILTER_VALUE = 64;
     /**
      * <pre>
-     * Value passed was not a string when it should have been. I.e., it was a
-     * number or unquoted literal.
+     * Value passed was not a string when it should have been. For example, it
+     * was a number or unquoted literal.
      * </pre>
      *
      * <code>INVALID_STRING_VALUE = 57;</code>

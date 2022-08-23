@@ -121,7 +121,7 @@ private static final long serialVersionUID = 0L;
     VIDEO_NOT_FOUND(2),
     /**
      * <pre>
-     * Video to be registered is not accessible (e.g. private).
+     * Video to be registered is not accessible (for example, private).
      * </pre>
      *
      * <code>VIDEO_NOT_ACCESSIBLE = 3;</code>
@@ -129,7 +129,7 @@ private static final long serialVersionUID = 0L;
     VIDEO_NOT_ACCESSIBLE(3),
     /**
      * <pre>
-     * Video to be registered is not eligible (e.g. mature content).
+     * Video to be registered is not eligible (for example, mature content).
      * </pre>
      *
      * <code>VIDEO_NOT_ELIGIBLE = 4;</code>
@@ -164,7 +164,7 @@ private static final long serialVersionUID = 0L;
     public static final int VIDEO_NOT_FOUND_VALUE = 2;
     /**
      * <pre>
-     * Video to be registered is not accessible (e.g. private).
+     * Video to be registered is not accessible (for example, private).
      * </pre>
      *
      * <code>VIDEO_NOT_ACCESSIBLE = 3;</code>
@@ -172,7 +172,7 @@ private static final long serialVersionUID = 0L;
     public static final int VIDEO_NOT_ACCESSIBLE_VALUE = 3;
     /**
      * <pre>
-     * Video to be registered is not eligible (e.g. mature content).
+     * Video to be registered is not eligible (for example, mature content).
      * </pre>
      *
      * <code>VIDEO_NOT_ELIGIBLE = 4;</code>

@@ -241,4 +241,23 @@ public interface AssetGroupOrBuilder extends
    */
   com.google.protobuf.ByteString
       getPath2Bytes();
+
+  /**
+   * <pre>
+   * Output only. Overall ad strength of this asset group.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.enums.AdStrengthEnum.AdStrength ad_strength = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for adStrength.
+   */
+  int getAdStrengthValue();
+  /**
+   * <pre>
+   * Output only. Overall ad strength of this asset group.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.enums.AdStrengthEnum.AdStrength ad_strength = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The adStrength.
+   */
+  com.google.ads.googleads.v11.enums.AdStrengthEnum.AdStrength getAdStrength();
 }

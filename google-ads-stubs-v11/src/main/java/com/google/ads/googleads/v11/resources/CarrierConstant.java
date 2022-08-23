@@ -253,8 +253,8 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object countryCode_;
   /**
    * <pre>
-   * Output only. The country code of the country where the carrier is located, e.g., "AR",
-   * "FR", etc.
+   * Output only. The country code of the country where the carrier is located, for example,
+   * "AR", "FR", etc.
    * </pre>
    *
    * <code>optional string country_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -266,8 +266,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The country code of the country where the carrier is located, e.g., "AR",
-   * "FR", etc.
+   * Output only. The country code of the country where the carrier is located, for example,
+   * "AR", "FR", etc.
    * </pre>
    *
    * <code>optional string country_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -288,8 +288,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The country code of the country where the carrier is located, e.g., "AR",
-   * "FR", etc.
+   * Output only. The country code of the country where the carrier is located, for example,
+   * "AR", "FR", etc.
    * </pre>
    *
    * <code>optional string country_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -969,8 +969,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object countryCode_ = "";
     /**
      * <pre>
-     * Output only. The country code of the country where the carrier is located, e.g., "AR",
-     * "FR", etc.
+     * Output only. The country code of the country where the carrier is located, for example,
+     * "AR", "FR", etc.
      * </pre>
      *
      * <code>optional string country_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -981,8 +981,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The country code of the country where the carrier is located, e.g., "AR",
-     * "FR", etc.
+     * Output only. The country code of the country where the carrier is located, for example,
+     * "AR", "FR", etc.
      * </pre>
      *
      * <code>optional string country_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1002,8 +1002,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The country code of the country where the carrier is located, e.g., "AR",
-     * "FR", etc.
+     * Output only. The country code of the country where the carrier is located, for example,
+     * "AR", "FR", etc.
      * </pre>
      *
      * <code>optional string country_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1024,8 +1024,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The country code of the country where the carrier is located, e.g., "AR",
-     * "FR", etc.
+     * Output only. The country code of the country where the carrier is located, for example,
+     * "AR", "FR", etc.
      * </pre>
      *
      * <code>optional string country_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1044,8 +1044,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The country code of the country where the carrier is located, e.g., "AR",
-     * "FR", etc.
+     * Output only. The country code of the country where the carrier is located, for example,
+     * "AR", "FR", etc.
      * </pre>
      *
      * <code>optional string country_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1059,8 +1059,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The country code of the country where the carrier is located, e.g., "AR",
-     * "FR", etc.
+     * Output only. The country code of the country where the carrier is located, for example,
+     * "AR", "FR", etc.
      * </pre>
      *
      * <code>optional string country_code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

@@ -210,7 +210,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Switching from observation setting to targeting setting is not allowed
-     * for Customer Match lists. Please see
+     * for Customer Match lists. See
      * https://support.google.com/google-ads/answer/6299717.
      * </pre>
      *
@@ -335,7 +335,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Switching from observation setting to targeting setting is not allowed
-     * for Customer Match lists. Please see
+     * for Customer Match lists. See
      * https://support.google.com/google-ads/answer/6299717.
      * </pre>
      *

@@ -73,8 +73,8 @@ public interface AssetGroupAssetOrBuilder extends
 
   /**
    * <pre>
-   * The description of the placement of the asset within the asset group. E.g.:
-   * HEADLINE, YOUTUBE_VIDEO etc
+   * The description of the placement of the asset within the asset group. For
+   * example: HEADLINE, YOUTUBE_VIDEO etc
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.AssetFieldTypeEnum.AssetFieldType field_type = 4;</code>
@@ -83,8 +83,8 @@ public interface AssetGroupAssetOrBuilder extends
   int getFieldTypeValue();
   /**
    * <pre>
-   * The description of the placement of the asset within the asset group. E.g.:
-   * HEADLINE, YOUTUBE_VIDEO etc
+   * The description of the placement of the asset within the asset group. For
+   * example: HEADLINE, YOUTUBE_VIDEO etc
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.AssetFieldTypeEnum.AssetFieldType field_type = 4;</code>

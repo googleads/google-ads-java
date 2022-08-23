@@ -209,8 +209,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Data Type: URL_LIST. Final URLs to be used in ad when using Upgraded
-     * URLs; the more specific the better (e.g. the individual URL of a specific
-     * listing and its location).
+     * URLs; the more specific the better (for example, the individual URL of a
+     * specific listing and its location).
      * </pre>
      *
      * <code>FINAL_URLS = 13;</code>
@@ -387,8 +387,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Data Type: URL_LIST. Final URLs to be used in ad when using Upgraded
-     * URLs; the more specific the better (e.g. the individual URL of a specific
-     * listing and its location).
+     * URLs; the more specific the better (for example, the individual URL of a
+     * specific listing and its location).
      * </pre>
      *
      * <code>FINAL_URLS = 13;</code>

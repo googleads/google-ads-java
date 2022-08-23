@@ -175,7 +175,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Data Type: MONEY. The price (money with currency) of item 1 of the table,
-     * e.g., 30 USD. The currency must match one of the available currencies.
+     * for example, 30 USD. The currency must match one of the available
+     * currencies.
      * </pre>
      *
      * <code>ITEM_1_PRICE = 102;</code>
@@ -227,7 +228,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Data Type: MONEY. The price (money with currency) of item 2 of the table,
-     * e.g., 30 USD. The currency must match one of the available currencies.
+     * for example, 30 USD. The currency must match one of the available
+     * currencies.
      * </pre>
      *
      * <code>ITEM_2_PRICE = 202;</code>
@@ -279,7 +281,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Data Type: MONEY. The price (money with currency) of item 3 of the table,
-     * e.g., 30 USD. The currency must match one of the available currencies.
+     * for example, 30 USD. The currency must match one of the available
+     * currencies.
      * </pre>
      *
      * <code>ITEM_3_PRICE = 302;</code>
@@ -331,7 +334,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Data Type: MONEY. The price (money with currency) of item 4 of the table,
-     * e.g., 30 USD. The currency must match one of the available currencies.
+     * for example, 30 USD. The currency must match one of the available
+     * currencies.
      * </pre>
      *
      * <code>ITEM_4_PRICE = 402;</code>
@@ -383,7 +387,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Data Type: MONEY. The price (money with currency) of item 5 of the table,
-     * e.g., 30 USD. The currency must match one of the available currencies.
+     * for example, 30 USD. The currency must match one of the available
+     * currencies.
      * </pre>
      *
      * <code>ITEM_5_PRICE = 502;</code>
@@ -435,7 +440,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Data Type: MONEY. The price (money with currency) of item 6 of the table,
-     * e.g., 30 USD. The currency must match one of the available currencies.
+     * for example, 30 USD. The currency must match one of the available
+     * currencies.
      * </pre>
      *
      * <code>ITEM_6_PRICE = 602;</code>
@@ -487,7 +493,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Data Type: MONEY. The price (money with currency) of item 7 of the table,
-     * e.g., 30 USD. The currency must match one of the available currencies.
+     * for example, 30 USD. The currency must match one of the available
+     * currencies.
      * </pre>
      *
      * <code>ITEM_7_PRICE = 702;</code>
@@ -539,7 +546,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Data Type: MONEY. The price (money with currency) of item 8 of the table,
-     * e.g., 30 USD. The currency must match one of the available currencies.
+     * for example, 30 USD. The currency must match one of the available
+     * currencies.
      * </pre>
      *
      * <code>ITEM_8_PRICE = 802;</code>
@@ -655,7 +663,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Data Type: MONEY. The price (money with currency) of item 1 of the table,
-     * e.g., 30 USD. The currency must match one of the available currencies.
+     * for example, 30 USD. The currency must match one of the available
+     * currencies.
      * </pre>
      *
      * <code>ITEM_1_PRICE = 102;</code>
@@ -707,7 +716,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Data Type: MONEY. The price (money with currency) of item 2 of the table,
-     * e.g., 30 USD. The currency must match one of the available currencies.
+     * for example, 30 USD. The currency must match one of the available
+     * currencies.
      * </pre>
      *
      * <code>ITEM_2_PRICE = 202;</code>
@@ -759,7 +769,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Data Type: MONEY. The price (money with currency) of item 3 of the table,
-     * e.g., 30 USD. The currency must match one of the available currencies.
+     * for example, 30 USD. The currency must match one of the available
+     * currencies.
      * </pre>
      *
      * <code>ITEM_3_PRICE = 302;</code>
@@ -811,7 +822,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Data Type: MONEY. The price (money with currency) of item 4 of the table,
-     * e.g., 30 USD. The currency must match one of the available currencies.
+     * for example, 30 USD. The currency must match one of the available
+     * currencies.
      * </pre>
      *
      * <code>ITEM_4_PRICE = 402;</code>
@@ -863,7 +875,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Data Type: MONEY. The price (money with currency) of item 5 of the table,
-     * e.g., 30 USD. The currency must match one of the available currencies.
+     * for example, 30 USD. The currency must match one of the available
+     * currencies.
      * </pre>
      *
      * <code>ITEM_5_PRICE = 502;</code>
@@ -915,7 +928,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Data Type: MONEY. The price (money with currency) of item 6 of the table,
-     * e.g., 30 USD. The currency must match one of the available currencies.
+     * for example, 30 USD. The currency must match one of the available
+     * currencies.
      * </pre>
      *
      * <code>ITEM_6_PRICE = 602;</code>
@@ -967,7 +981,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Data Type: MONEY. The price (money with currency) of item 7 of the table,
-     * e.g., 30 USD. The currency must match one of the available currencies.
+     * for example, 30 USD. The currency must match one of the available
+     * currencies.
      * </pre>
      *
      * <code>ITEM_7_PRICE = 702;</code>
@@ -1019,7 +1034,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Data Type: MONEY. The price (money with currency) of item 8 of the table,
-     * e.g., 30 USD. The currency must match one of the available currencies.
+     * for example, 30 USD. The currency must match one of the available
+     * currencies.
      * </pre>
      *
      * <code>ITEM_8_PRICE = 802;</code>

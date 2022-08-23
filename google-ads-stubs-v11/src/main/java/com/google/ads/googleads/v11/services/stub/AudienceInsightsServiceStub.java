@@ -16,6 +16,8 @@
 
 package com.google.ads.googleads.v11.services.stub;
 
+import com.google.ads.googleads.v11.services.GenerateAudienceCompositionInsightsRequest;
+import com.google.ads.googleads.v11.services.GenerateAudienceCompositionInsightsResponse;
 import com.google.ads.googleads.v11.services.GenerateInsightsFinderReportRequest;
 import com.google.ads.googleads.v11.services.GenerateInsightsFinderReportResponse;
 import com.google.ads.googleads.v11.services.ListAudienceInsightsAttributesRequest;
@@ -44,6 +46,13 @@ public abstract class AudienceInsightsServiceStub implements BackgroundResource 
       listAudienceInsightsAttributesCallable() {
     throw new UnsupportedOperationException(
         "Not implemented: listAudienceInsightsAttributesCallable()");
+  }
+
+  public UnaryCallable<
+          GenerateAudienceCompositionInsightsRequest, GenerateAudienceCompositionInsightsResponse>
+      generateAudienceCompositionInsightsCallable() {
+    throw new UnsupportedOperationException(
+        "Not implemented: generateAudienceCompositionInsightsCallable()");
   }
 
   @Override

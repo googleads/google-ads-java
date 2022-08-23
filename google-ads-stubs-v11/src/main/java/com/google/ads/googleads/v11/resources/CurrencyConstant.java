@@ -175,7 +175,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object code_;
   /**
    * <pre>
-   * Output only. ISO 4217 three-letter currency code, e.g. "USD"
+   * Output only. ISO 4217 three-letter currency code, for example, "USD"
    * </pre>
    *
    * <code>optional string code = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -187,7 +187,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. ISO 4217 three-letter currency code, e.g. "USD"
+   * Output only. ISO 4217 three-letter currency code, for example, "USD"
    * </pre>
    *
    * <code>optional string code = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -208,7 +208,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. ISO 4217 three-letter currency code, e.g. "USD"
+   * Output only. ISO 4217 three-letter currency code, for example, "USD"
    * </pre>
    *
    * <code>optional string code = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -291,7 +291,8 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object symbol_;
   /**
    * <pre>
-   * Output only. Standard symbol for describing this currency, e.g. '$' for US Dollars.
+   * Output only. Standard symbol for describing this currency, for example, '$' for US
+   * Dollars.
    * </pre>
    *
    * <code>optional string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -303,7 +304,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Standard symbol for describing this currency, e.g. '$' for US Dollars.
+   * Output only. Standard symbol for describing this currency, for example, '$' for US
+   * Dollars.
    * </pre>
    *
    * <code>optional string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -324,7 +326,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Standard symbol for describing this currency, e.g. '$' for US Dollars.
+   * Output only. Standard symbol for describing this currency, for example, '$' for US
+   * Dollars.
    * </pre>
    *
    * <code>optional string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -897,7 +900,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object code_ = "";
     /**
      * <pre>
-     * Output only. ISO 4217 three-letter currency code, e.g. "USD"
+     * Output only. ISO 4217 three-letter currency code, for example, "USD"
      * </pre>
      *
      * <code>optional string code = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -908,7 +911,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. ISO 4217 three-letter currency code, e.g. "USD"
+     * Output only. ISO 4217 three-letter currency code, for example, "USD"
      * </pre>
      *
      * <code>optional string code = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -928,7 +931,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. ISO 4217 three-letter currency code, e.g. "USD"
+     * Output only. ISO 4217 three-letter currency code, for example, "USD"
      * </pre>
      *
      * <code>optional string code = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -949,7 +952,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. ISO 4217 three-letter currency code, e.g. "USD"
+     * Output only. ISO 4217 three-letter currency code, for example, "USD"
      * </pre>
      *
      * <code>optional string code = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -968,7 +971,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. ISO 4217 three-letter currency code, e.g. "USD"
+     * Output only. ISO 4217 three-letter currency code, for example, "USD"
      * </pre>
      *
      * <code>optional string code = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -982,7 +985,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. ISO 4217 three-letter currency code, e.g. "USD"
+     * Output only. ISO 4217 three-letter currency code, for example, "USD"
      * </pre>
      *
      * <code>optional string code = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1111,7 +1114,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object symbol_ = "";
     /**
      * <pre>
-     * Output only. Standard symbol for describing this currency, e.g. '$' for US Dollars.
+     * Output only. Standard symbol for describing this currency, for example, '$' for US
+     * Dollars.
      * </pre>
      *
      * <code>optional string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1122,7 +1126,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Standard symbol for describing this currency, e.g. '$' for US Dollars.
+     * Output only. Standard symbol for describing this currency, for example, '$' for US
+     * Dollars.
      * </pre>
      *
      * <code>optional string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1142,7 +1147,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Standard symbol for describing this currency, e.g. '$' for US Dollars.
+     * Output only. Standard symbol for describing this currency, for example, '$' for US
+     * Dollars.
      * </pre>
      *
      * <code>optional string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1163,7 +1169,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Standard symbol for describing this currency, e.g. '$' for US Dollars.
+     * Output only. Standard symbol for describing this currency, for example, '$' for US
+     * Dollars.
      * </pre>
      *
      * <code>optional string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1182,7 +1189,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Standard symbol for describing this currency, e.g. '$' for US Dollars.
+     * Output only. Standard symbol for describing this currency, for example, '$' for US
+     * Dollars.
      * </pre>
      *
      * <code>optional string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1196,7 +1204,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Standard symbol for describing this currency, e.g. '$' for US Dollars.
+     * Output only. Standard symbol for describing this currency, for example, '$' for US
+     * Dollars.
      * </pre>
      *
      * <code>optional string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

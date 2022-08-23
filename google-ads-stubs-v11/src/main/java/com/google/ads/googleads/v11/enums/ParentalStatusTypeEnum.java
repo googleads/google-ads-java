@@ -88,7 +88,7 @@ private static final long serialVersionUID = 0L;
 
   /**
    * <pre>
-   * The type of parental statuses (e.g. not a parent).
+   * The type of parental statuses (for example, not a parent).
    * </pre>
    *
    * Protobuf enum {@code google.ads.googleads.v11.enums.ParentalStatusTypeEnum.ParentalStatusType}

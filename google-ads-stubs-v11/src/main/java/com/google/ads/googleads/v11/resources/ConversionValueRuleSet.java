@@ -1648,8 +1648,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.enums.ValueRuleSetDimensionEnum.ValueRuleSetDimension dimensions = 4;</code>
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of dimensions at the given index.
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for dimensions to set.
      * @return This builder for chaining.
      */
     public Builder setDimensionsValue(
@@ -2221,8 +2221,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.enums.ConversionActionCategoryEnum.ConversionActionCategory conversion_action_categories = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of conversionActionCategories at the given index.
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for conversionActionCategories to set.
      * @return This builder for chaining.
      */
     public Builder setConversionActionCategoriesValue(

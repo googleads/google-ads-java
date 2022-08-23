@@ -295,7 +295,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Advertiser needs to be on the allow-list to use remarketing lists created
-     * from advertiser uploaded data (e.g., Customer Match lists).
+     * from advertiser uploaded data (for example, Customer Match lists).
      * </pre>
      *
      * <code>ADVERTISER_NOT_ON_ALLOWLIST_FOR_USING_UPLOADED_DATA = 37;</code>
@@ -529,7 +529,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Advertiser needs to be on the allow-list to use remarketing lists created
-     * from advertiser uploaded data (e.g., Customer Match lists).
+     * from advertiser uploaded data (for example, Customer Match lists).
      * </pre>
      *
      * <code>ADVERTISER_NOT_ON_ALLOWLIST_FOR_USING_UPLOADED_DATA = 37;</code>

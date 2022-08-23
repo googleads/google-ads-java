@@ -81,6 +81,37 @@ public final class AudienceInsightsServiceGrpc {
     return getListAudienceInsightsAttributesMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.google.ads.googleads.v11.services.GenerateAudienceCompositionInsightsRequest,
+      com.google.ads.googleads.v11.services.GenerateAudienceCompositionInsightsResponse> getGenerateAudienceCompositionInsightsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GenerateAudienceCompositionInsights",
+      requestType = com.google.ads.googleads.v11.services.GenerateAudienceCompositionInsightsRequest.class,
+      responseType = com.google.ads.googleads.v11.services.GenerateAudienceCompositionInsightsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.google.ads.googleads.v11.services.GenerateAudienceCompositionInsightsRequest,
+      com.google.ads.googleads.v11.services.GenerateAudienceCompositionInsightsResponse> getGenerateAudienceCompositionInsightsMethod() {
+    io.grpc.MethodDescriptor<com.google.ads.googleads.v11.services.GenerateAudienceCompositionInsightsRequest, com.google.ads.googleads.v11.services.GenerateAudienceCompositionInsightsResponse> getGenerateAudienceCompositionInsightsMethod;
+    if ((getGenerateAudienceCompositionInsightsMethod = AudienceInsightsServiceGrpc.getGenerateAudienceCompositionInsightsMethod) == null) {
+      synchronized (AudienceInsightsServiceGrpc.class) {
+        if ((getGenerateAudienceCompositionInsightsMethod = AudienceInsightsServiceGrpc.getGenerateAudienceCompositionInsightsMethod) == null) {
+          AudienceInsightsServiceGrpc.getGenerateAudienceCompositionInsightsMethod = getGenerateAudienceCompositionInsightsMethod =
+              io.grpc.MethodDescriptor.<com.google.ads.googleads.v11.services.GenerateAudienceCompositionInsightsRequest, com.google.ads.googleads.v11.services.GenerateAudienceCompositionInsightsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GenerateAudienceCompositionInsights"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v11.services.GenerateAudienceCompositionInsightsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.ads.googleads.v11.services.GenerateAudienceCompositionInsightsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new AudienceInsightsServiceMethodDescriptorSupplier("GenerateAudienceCompositionInsights"))
+              .build();
+        }
+      }
+    }
+    return getGenerateAudienceCompositionInsightsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -171,6 +202,28 @@ public final class AudienceInsightsServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListAudienceInsightsAttributesMethod(), responseObserver);
     }
 
+    /**
+     * <pre>
+     * Returns a collection of attributes that are represented in an audience of
+     * interest, with metrics that compare each attribute's share of the audience
+     * with its share of a baseline audience.
+     * List of thrown errors:
+     *   [AudienceInsightsError]()
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [FieldError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RangeError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public void generateAudienceCompositionInsights(com.google.ads.googleads.v11.services.GenerateAudienceCompositionInsightsRequest request,
+        io.grpc.stub.StreamObserver<com.google.ads.googleads.v11.services.GenerateAudienceCompositionInsightsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGenerateAudienceCompositionInsightsMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -187,6 +240,13 @@ public final class AudienceInsightsServiceGrpc {
                 com.google.ads.googleads.v11.services.ListAudienceInsightsAttributesRequest,
                 com.google.ads.googleads.v11.services.ListAudienceInsightsAttributesResponse>(
                   this, METHODID_LIST_AUDIENCE_INSIGHTS_ATTRIBUTES)))
+          .addMethod(
+            getGenerateAudienceCompositionInsightsMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.google.ads.googleads.v11.services.GenerateAudienceCompositionInsightsRequest,
+                com.google.ads.googleads.v11.services.GenerateAudienceCompositionInsightsResponse>(
+                  this, METHODID_GENERATE_AUDIENCE_COMPOSITION_INSIGHTS)))
           .build();
     }
   }
@@ -248,6 +308,29 @@ public final class AudienceInsightsServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListAudienceInsightsAttributesMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Returns a collection of attributes that are represented in an audience of
+     * interest, with metrics that compare each attribute's share of the audience
+     * with its share of a baseline audience.
+     * List of thrown errors:
+     *   [AudienceInsightsError]()
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [FieldError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RangeError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public void generateAudienceCompositionInsights(com.google.ads.googleads.v11.services.GenerateAudienceCompositionInsightsRequest request,
+        io.grpc.stub.StreamObserver<com.google.ads.googleads.v11.services.GenerateAudienceCompositionInsightsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGenerateAudienceCompositionInsightsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -304,6 +387,28 @@ public final class AudienceInsightsServiceGrpc {
     public com.google.ads.googleads.v11.services.ListAudienceInsightsAttributesResponse listAudienceInsightsAttributes(com.google.ads.googleads.v11.services.ListAudienceInsightsAttributesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListAudienceInsightsAttributesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns a collection of attributes that are represented in an audience of
+     * interest, with metrics that compare each attribute's share of the audience
+     * with its share of a baseline audience.
+     * List of thrown errors:
+     *   [AudienceInsightsError]()
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [FieldError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RangeError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.ads.googleads.v11.services.GenerateAudienceCompositionInsightsResponse generateAudienceCompositionInsights(com.google.ads.googleads.v11.services.GenerateAudienceCompositionInsightsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGenerateAudienceCompositionInsightsMethod(), getCallOptions(), request);
     }
   }
 
@@ -364,10 +469,34 @@ public final class AudienceInsightsServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListAudienceInsightsAttributesMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Returns a collection of attributes that are represented in an audience of
+     * interest, with metrics that compare each attribute's share of the audience
+     * with its share of a baseline audience.
+     * List of thrown errors:
+     *   [AudienceInsightsError]()
+     *   [AuthenticationError]()
+     *   [AuthorizationError]()
+     *   [FieldError]()
+     *   [HeaderError]()
+     *   [InternalError]()
+     *   [QuotaError]()
+     *   [RangeError]()
+     *   [RequestError]()
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.ads.googleads.v11.services.GenerateAudienceCompositionInsightsResponse> generateAudienceCompositionInsights(
+        com.google.ads.googleads.v11.services.GenerateAudienceCompositionInsightsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGenerateAudienceCompositionInsightsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GENERATE_INSIGHTS_FINDER_REPORT = 0;
   private static final int METHODID_LIST_AUDIENCE_INSIGHTS_ATTRIBUTES = 1;
+  private static final int METHODID_GENERATE_AUDIENCE_COMPOSITION_INSIGHTS = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -393,6 +522,10 @@ public final class AudienceInsightsServiceGrpc {
         case METHODID_LIST_AUDIENCE_INSIGHTS_ATTRIBUTES:
           serviceImpl.listAudienceInsightsAttributes((com.google.ads.googleads.v11.services.ListAudienceInsightsAttributesRequest) request,
               (io.grpc.stub.StreamObserver<com.google.ads.googleads.v11.services.ListAudienceInsightsAttributesResponse>) responseObserver);
+          break;
+        case METHODID_GENERATE_AUDIENCE_COMPOSITION_INSIGHTS:
+          serviceImpl.generateAudienceCompositionInsights((com.google.ads.googleads.v11.services.GenerateAudienceCompositionInsightsRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.ads.googleads.v11.services.GenerateAudienceCompositionInsightsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -457,6 +590,7 @@ public final class AudienceInsightsServiceGrpc {
               .setSchemaDescriptor(new AudienceInsightsServiceFileDescriptorSupplier())
               .addMethod(getGenerateInsightsFinderReportMethod())
               .addMethod(getListAudienceInsightsAttributesMethod())
+              .addMethod(getGenerateAudienceCompositionInsightsMethod())
               .build();
         }
       }

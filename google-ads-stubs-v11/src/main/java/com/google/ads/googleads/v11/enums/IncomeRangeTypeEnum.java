@@ -88,7 +88,7 @@ private static final long serialVersionUID = 0L;
 
   /**
    * <pre>
-   * The type of demographic income ranges (e.g. between 0% to 50%).
+   * The type of demographic income ranges (for example, between 0% to 50%).
    * </pre>
    *
    * Protobuf enum {@code google.ads.googleads.v11.enums.IncomeRangeTypeEnum.IncomeRangeType}

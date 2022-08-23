@@ -292,6 +292,9 @@
         "grpc": {
           "libraryClient": "AudienceInsightsServiceClient",
           "rpcs": {
+            "GenerateAudienceCompositionInsights": {
+              "methods": ["generateAudienceCompositionInsights", "generateAudienceCompositionInsights", "generateAudienceCompositionInsightsCallable"]
+            },
             "GenerateInsightsFinderReport": {
               "methods": ["generateInsightsFinderReport", "generateInsightsFinderReport", "generateInsightsFinderReportCallable"]
             },

@@ -9,7 +9,7 @@ public interface CallReportingSettingOrBuilder extends
 
   /**
    * <pre>
-   * Enable reporting of phone call events by redirecting them via Google
+   * Enable reporting of phone call events by redirecting them through Google
    * System.
    * </pre>
    *
@@ -19,7 +19,7 @@ public interface CallReportingSettingOrBuilder extends
   boolean hasCallReportingEnabled();
   /**
    * <pre>
-   * Enable reporting of phone call events by redirecting them via Google
+   * Enable reporting of phone call events by redirecting them through Google
    * System.
    * </pre>
    *

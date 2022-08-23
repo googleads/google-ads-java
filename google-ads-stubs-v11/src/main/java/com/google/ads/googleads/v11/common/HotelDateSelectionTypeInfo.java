@@ -5,7 +5,7 @@ package com.google.ads.googleads.v11.common;
 
 /**
  * <pre>
- * Criterion for hotel date selection (default dates vs. user selected).
+ * Criterion for hotel date selection (default dates versus user selected).
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v11.common.HotelDateSelectionTypeInfo}
@@ -276,7 +276,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Criterion for hotel date selection (default dates vs. user selected).
+   * Criterion for hotel date selection (default dates versus user selected).
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v11.common.HotelDateSelectionTypeInfo}

@@ -1020,8 +1020,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.enums.AdvertisingChannelSubTypeEnum.AdvertisingChannelSubType advertising_channel_sub_type = 3;</code>
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of advertisingChannelSubType at the given index.
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for advertisingChannelSubType to set.
      * @return This builder for chaining.
      */
     public Builder setAdvertisingChannelSubTypeValue(

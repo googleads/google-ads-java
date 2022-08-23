@@ -378,6 +378,131 @@ public class AudienceInsightsServiceClient implements BackgroundResource {
     return stub.listAudienceInsightsAttributesCallable();
   }
 
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
+  /**
+   * Returns a collection of attributes that are represented in an audience of interest, with
+   * metrics that compare each attribute's share of the audience with its share of a baseline
+   * audience.
+   *
+   * <p>List of thrown errors: [AudienceInsightsError]() [AuthenticationError]()
+   * [AuthorizationError]() [FieldError]() [HeaderError]() [InternalError]() [QuotaError]()
+   * [RangeError]() [RequestError]()
+   *
+   * <p>Sample code:
+   *
+   * <pre>{@code
+   * // This snippet has been automatically generated for illustrative purposes only.
+   * // It may require modifications to work in your environment.
+   * try (AudienceInsightsServiceClient audienceInsightsServiceClient =
+   *     AudienceInsightsServiceClient.create()) {
+   *   String customerId = "customerId-1581184615";
+   *   InsightsAudience audience = InsightsAudience.newBuilder().build();
+   *   List<AudienceInsightsDimensionEnum.AudienceInsightsDimension> dimensions = new ArrayList<>();
+   *   GenerateAudienceCompositionInsightsResponse response =
+   *       audienceInsightsServiceClient.generateAudienceCompositionInsights(
+   *           customerId, audience, dimensions);
+   * }
+   * }</pre>
+   *
+   * @param customerId Required. The ID of the customer.
+   * @param audience Required. The audience of interest for which insights are being requested.
+   * @param dimensions Required. The audience dimensions for which composition insights should be
+   *     returned.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final GenerateAudienceCompositionInsightsResponse generateAudienceCompositionInsights(
+      String customerId,
+      InsightsAudience audience,
+      List<AudienceInsightsDimensionEnum.AudienceInsightsDimension> dimensions) {
+    GenerateAudienceCompositionInsightsRequest request =
+        GenerateAudienceCompositionInsightsRequest.newBuilder()
+            .setCustomerId(customerId)
+            .setAudience(audience)
+            .addAllDimensions(dimensions)
+            .build();
+    return generateAudienceCompositionInsights(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
+  /**
+   * Returns a collection of attributes that are represented in an audience of interest, with
+   * metrics that compare each attribute's share of the audience with its share of a baseline
+   * audience.
+   *
+   * <p>List of thrown errors: [AudienceInsightsError]() [AuthenticationError]()
+   * [AuthorizationError]() [FieldError]() [HeaderError]() [InternalError]() [QuotaError]()
+   * [RangeError]() [RequestError]()
+   *
+   * <p>Sample code:
+   *
+   * <pre>{@code
+   * // This snippet has been automatically generated for illustrative purposes only.
+   * // It may require modifications to work in your environment.
+   * try (AudienceInsightsServiceClient audienceInsightsServiceClient =
+   *     AudienceInsightsServiceClient.create()) {
+   *   GenerateAudienceCompositionInsightsRequest request =
+   *       GenerateAudienceCompositionInsightsRequest.newBuilder()
+   *           .setCustomerId("customerId-1581184615")
+   *           .setAudience(InsightsAudience.newBuilder().build())
+   *           .setDataMonth("dataMonth-380142346")
+   *           .addAllDimensions(
+   *               new ArrayList<AudienceInsightsDimensionEnum.AudienceInsightsDimension>())
+   *           .setCustomerInsightsGroup("customerInsightsGroup1092118566")
+   *           .build();
+   *   GenerateAudienceCompositionInsightsResponse response =
+   *       audienceInsightsServiceClient.generateAudienceCompositionInsights(request);
+   * }
+   * }</pre>
+   *
+   * @param request The request object containing all of the parameters for the API call.
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   */
+  public final GenerateAudienceCompositionInsightsResponse generateAudienceCompositionInsights(
+      GenerateAudienceCompositionInsightsRequest request) {
+    return generateAudienceCompositionInsightsCallable().call(request);
+  }
+
+  // AUTO-GENERATED DOCUMENTATION AND METHOD.
+  /**
+   * Returns a collection of attributes that are represented in an audience of interest, with
+   * metrics that compare each attribute's share of the audience with its share of a baseline
+   * audience.
+   *
+   * <p>List of thrown errors: [AudienceInsightsError]() [AuthenticationError]()
+   * [AuthorizationError]() [FieldError]() [HeaderError]() [InternalError]() [QuotaError]()
+   * [RangeError]() [RequestError]()
+   *
+   * <p>Sample code:
+   *
+   * <pre>{@code
+   * // This snippet has been automatically generated for illustrative purposes only.
+   * // It may require modifications to work in your environment.
+   * try (AudienceInsightsServiceClient audienceInsightsServiceClient =
+   *     AudienceInsightsServiceClient.create()) {
+   *   GenerateAudienceCompositionInsightsRequest request =
+   *       GenerateAudienceCompositionInsightsRequest.newBuilder()
+   *           .setCustomerId("customerId-1581184615")
+   *           .setAudience(InsightsAudience.newBuilder().build())
+   *           .setDataMonth("dataMonth-380142346")
+   *           .addAllDimensions(
+   *               new ArrayList<AudienceInsightsDimensionEnum.AudienceInsightsDimension>())
+   *           .setCustomerInsightsGroup("customerInsightsGroup1092118566")
+   *           .build();
+   *   ApiFuture<GenerateAudienceCompositionInsightsResponse> future =
+   *       audienceInsightsServiceClient
+   *           .generateAudienceCompositionInsightsCallable()
+   *           .futureCall(request);
+   *   // Do something.
+   *   GenerateAudienceCompositionInsightsResponse response = future.get();
+   * }
+   * }</pre>
+   */
+  public final UnaryCallable<
+          GenerateAudienceCompositionInsightsRequest, GenerateAudienceCompositionInsightsResponse>
+      generateAudienceCompositionInsightsCallable() {
+    return stub.generateAudienceCompositionInsightsCallable();
+  }
+
   @Override
   public final void close() {
     stub.close();

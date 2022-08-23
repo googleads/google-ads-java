@@ -2864,8 +2864,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. A 16 digit ID used to identify the payments account associated with the
-   * billing setup, e.g. "1234-5678-9012-3456". It appears on the invoice PDF as
-   * "Billing Account Number".
+   * billing setup, for example, "1234-5678-9012-3456". It appears on the
+   * invoice PDF as "Billing Account Number".
    * </pre>
    *
    * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2878,8 +2878,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. A 16 digit ID used to identify the payments account associated with the
-   * billing setup, e.g. "1234-5678-9012-3456". It appears on the invoice PDF as
-   * "Billing Account Number".
+   * billing setup, for example, "1234-5678-9012-3456". It appears on the
+   * invoice PDF as "Billing Account Number".
    * </pre>
    *
    * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2901,8 +2901,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. A 16 digit ID used to identify the payments account associated with the
-   * billing setup, e.g. "1234-5678-9012-3456". It appears on the invoice PDF as
-   * "Billing Account Number".
+   * billing setup, for example, "1234-5678-9012-3456". It appears on the
+   * invoice PDF as "Billing Account Number".
    * </pre>
    *
    * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2928,8 +2928,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. A 12 digit ID used to identify the payments profile associated with the
-   * billing setup, e.g. "1234-5678-9012". It appears on the invoice PDF as
-   * "Billing ID".
+   * billing setup, for example, "1234-5678-9012". It appears on the invoice PDF
+   * as "Billing ID".
    * </pre>
    *
    * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2942,8 +2942,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. A 12 digit ID used to identify the payments profile associated with the
-   * billing setup, e.g. "1234-5678-9012". It appears on the invoice PDF as
-   * "Billing ID".
+   * billing setup, for example, "1234-5678-9012". It appears on the invoice PDF
+   * as "Billing ID".
    * </pre>
    *
    * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2965,8 +2965,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. A 12 digit ID used to identify the payments profile associated with the
-   * billing setup, e.g. "1234-5678-9012". It appears on the invoice PDF as
-   * "Billing ID".
+   * billing setup, for example, "1234-5678-9012". It appears on the invoice PDF
+   * as "Billing ID".
    * </pre>
    *
    * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4945,8 +4945,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. A 16 digit ID used to identify the payments account associated with the
-     * billing setup, e.g. "1234-5678-9012-3456". It appears on the invoice PDF as
-     * "Billing Account Number".
+     * billing setup, for example, "1234-5678-9012-3456". It appears on the
+     * invoice PDF as "Billing Account Number".
      * </pre>
      *
      * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4958,8 +4958,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. A 16 digit ID used to identify the payments account associated with the
-     * billing setup, e.g. "1234-5678-9012-3456". It appears on the invoice PDF as
-     * "Billing Account Number".
+     * billing setup, for example, "1234-5678-9012-3456". It appears on the
+     * invoice PDF as "Billing Account Number".
      * </pre>
      *
      * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4980,8 +4980,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. A 16 digit ID used to identify the payments account associated with the
-     * billing setup, e.g. "1234-5678-9012-3456". It appears on the invoice PDF as
-     * "Billing Account Number".
+     * billing setup, for example, "1234-5678-9012-3456". It appears on the
+     * invoice PDF as "Billing Account Number".
      * </pre>
      *
      * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5003,8 +5003,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. A 16 digit ID used to identify the payments account associated with the
-     * billing setup, e.g. "1234-5678-9012-3456". It appears on the invoice PDF as
-     * "Billing Account Number".
+     * billing setup, for example, "1234-5678-9012-3456". It appears on the
+     * invoice PDF as "Billing Account Number".
      * </pre>
      *
      * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5024,8 +5024,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. A 16 digit ID used to identify the payments account associated with the
-     * billing setup, e.g. "1234-5678-9012-3456". It appears on the invoice PDF as
-     * "Billing Account Number".
+     * billing setup, for example, "1234-5678-9012-3456". It appears on the
+     * invoice PDF as "Billing Account Number".
      * </pre>
      *
      * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5040,8 +5040,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. A 16 digit ID used to identify the payments account associated with the
-     * billing setup, e.g. "1234-5678-9012-3456". It appears on the invoice PDF as
-     * "Billing Account Number".
+     * billing setup, for example, "1234-5678-9012-3456". It appears on the
+     * invoice PDF as "Billing Account Number".
      * </pre>
      *
      * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5064,8 +5064,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. A 12 digit ID used to identify the payments profile associated with the
-     * billing setup, e.g. "1234-5678-9012". It appears on the invoice PDF as
-     * "Billing ID".
+     * billing setup, for example, "1234-5678-9012". It appears on the invoice PDF
+     * as "Billing ID".
      * </pre>
      *
      * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5077,8 +5077,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. A 12 digit ID used to identify the payments profile associated with the
-     * billing setup, e.g. "1234-5678-9012". It appears on the invoice PDF as
-     * "Billing ID".
+     * billing setup, for example, "1234-5678-9012". It appears on the invoice PDF
+     * as "Billing ID".
      * </pre>
      *
      * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5099,8 +5099,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. A 12 digit ID used to identify the payments profile associated with the
-     * billing setup, e.g. "1234-5678-9012". It appears on the invoice PDF as
-     * "Billing ID".
+     * billing setup, for example, "1234-5678-9012". It appears on the invoice PDF
+     * as "Billing ID".
      * </pre>
      *
      * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5122,8 +5122,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. A 12 digit ID used to identify the payments profile associated with the
-     * billing setup, e.g. "1234-5678-9012". It appears on the invoice PDF as
-     * "Billing ID".
+     * billing setup, for example, "1234-5678-9012". It appears on the invoice PDF
+     * as "Billing ID".
      * </pre>
      *
      * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5143,8 +5143,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. A 12 digit ID used to identify the payments profile associated with the
-     * billing setup, e.g. "1234-5678-9012". It appears on the invoice PDF as
-     * "Billing ID".
+     * billing setup, for example, "1234-5678-9012". It appears on the invoice PDF
+     * as "Billing ID".
      * </pre>
      *
      * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5159,8 +5159,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. A 12 digit ID used to identify the payments profile associated with the
-     * billing setup, e.g. "1234-5678-9012". It appears on the invoice PDF as
-     * "Billing ID".
+     * billing setup, for example, "1234-5678-9012". It appears on the invoice PDF
+     * as "Billing ID".
      * </pre>
      *
      * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

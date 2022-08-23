@@ -116,10 +116,10 @@ private static final long serialVersionUID = 0L;
    * A string that uniquely identifies a mobile application from which the data
    * was collected.
    * For iOS, the ID string is the 9 digit string that appears at the end of an
-   * App Store URL (e.g., "476943146" for "Flood-It! 2" whose App Store link is
-   * http://itunes.apple.com/us/app/flood-it!-2/id476943146).
-   * For Android, the ID string is the application's package name
-   * (e.g., "com.labpixies.colordrips" for "Color Drips" given Google Play link
+   * App Store URL (for example, "476943146" for "Flood-It! 2" whose App Store
+   * link is http://itunes.apple.com/us/app/flood-it!-2/id476943146). For
+   * Android, the ID string is the application's package name (for example,
+   * "com.labpixies.colordrips" for "Color Drips" given Google Play link
    * https://play.google.com/store/apps/details?id=com.labpixies.colordrips).
    * Required when creating CrmBasedUserList for uploading mobile advertising
    * IDs.
@@ -137,10 +137,10 @@ private static final long serialVersionUID = 0L;
    * A string that uniquely identifies a mobile application from which the data
    * was collected.
    * For iOS, the ID string is the 9 digit string that appears at the end of an
-   * App Store URL (e.g., "476943146" for "Flood-It! 2" whose App Store link is
-   * http://itunes.apple.com/us/app/flood-it!-2/id476943146).
-   * For Android, the ID string is the application's package name
-   * (e.g., "com.labpixies.colordrips" for "Color Drips" given Google Play link
+   * App Store URL (for example, "476943146" for "Flood-It! 2" whose App Store
+   * link is http://itunes.apple.com/us/app/flood-it!-2/id476943146). For
+   * Android, the ID string is the application's package name (for example,
+   * "com.labpixies.colordrips" for "Color Drips" given Google Play link
    * https://play.google.com/store/apps/details?id=com.labpixies.colordrips).
    * Required when creating CrmBasedUserList for uploading mobile advertising
    * IDs.
@@ -167,10 +167,10 @@ private static final long serialVersionUID = 0L;
    * A string that uniquely identifies a mobile application from which the data
    * was collected.
    * For iOS, the ID string is the 9 digit string that appears at the end of an
-   * App Store URL (e.g., "476943146" for "Flood-It! 2" whose App Store link is
-   * http://itunes.apple.com/us/app/flood-it!-2/id476943146).
-   * For Android, the ID string is the application's package name
-   * (e.g., "com.labpixies.colordrips" for "Color Drips" given Google Play link
+   * App Store URL (for example, "476943146" for "Flood-It! 2" whose App Store
+   * link is http://itunes.apple.com/us/app/flood-it!-2/id476943146). For
+   * Android, the ID string is the application's package name (for example,
+   * "com.labpixies.colordrips" for "Color Drips" given Google Play link
    * https://play.google.com/store/apps/details?id=com.labpixies.colordrips).
    * Required when creating CrmBasedUserList for uploading mobile advertising
    * IDs.
@@ -611,10 +611,10 @@ private static final long serialVersionUID = 0L;
      * A string that uniquely identifies a mobile application from which the data
      * was collected.
      * For iOS, the ID string is the 9 digit string that appears at the end of an
-     * App Store URL (e.g., "476943146" for "Flood-It! 2" whose App Store link is
-     * http://itunes.apple.com/us/app/flood-it!-2/id476943146).
-     * For Android, the ID string is the application's package name
-     * (e.g., "com.labpixies.colordrips" for "Color Drips" given Google Play link
+     * App Store URL (for example, "476943146" for "Flood-It! 2" whose App Store
+     * link is http://itunes.apple.com/us/app/flood-it!-2/id476943146). For
+     * Android, the ID string is the application's package name (for example,
+     * "com.labpixies.colordrips" for "Color Drips" given Google Play link
      * https://play.google.com/store/apps/details?id=com.labpixies.colordrips).
      * Required when creating CrmBasedUserList for uploading mobile advertising
      * IDs.
@@ -631,10 +631,10 @@ private static final long serialVersionUID = 0L;
      * A string that uniquely identifies a mobile application from which the data
      * was collected.
      * For iOS, the ID string is the 9 digit string that appears at the end of an
-     * App Store URL (e.g., "476943146" for "Flood-It! 2" whose App Store link is
-     * http://itunes.apple.com/us/app/flood-it!-2/id476943146).
-     * For Android, the ID string is the application's package name
-     * (e.g., "com.labpixies.colordrips" for "Color Drips" given Google Play link
+     * App Store URL (for example, "476943146" for "Flood-It! 2" whose App Store
+     * link is http://itunes.apple.com/us/app/flood-it!-2/id476943146). For
+     * Android, the ID string is the application's package name (for example,
+     * "com.labpixies.colordrips" for "Color Drips" given Google Play link
      * https://play.google.com/store/apps/details?id=com.labpixies.colordrips).
      * Required when creating CrmBasedUserList for uploading mobile advertising
      * IDs.
@@ -660,10 +660,10 @@ private static final long serialVersionUID = 0L;
      * A string that uniquely identifies a mobile application from which the data
      * was collected.
      * For iOS, the ID string is the 9 digit string that appears at the end of an
-     * App Store URL (e.g., "476943146" for "Flood-It! 2" whose App Store link is
-     * http://itunes.apple.com/us/app/flood-it!-2/id476943146).
-     * For Android, the ID string is the application's package name
-     * (e.g., "com.labpixies.colordrips" for "Color Drips" given Google Play link
+     * App Store URL (for example, "476943146" for "Flood-It! 2" whose App Store
+     * link is http://itunes.apple.com/us/app/flood-it!-2/id476943146). For
+     * Android, the ID string is the application's package name (for example,
+     * "com.labpixies.colordrips" for "Color Drips" given Google Play link
      * https://play.google.com/store/apps/details?id=com.labpixies.colordrips).
      * Required when creating CrmBasedUserList for uploading mobile advertising
      * IDs.
@@ -690,10 +690,10 @@ private static final long serialVersionUID = 0L;
      * A string that uniquely identifies a mobile application from which the data
      * was collected.
      * For iOS, the ID string is the 9 digit string that appears at the end of an
-     * App Store URL (e.g., "476943146" for "Flood-It! 2" whose App Store link is
-     * http://itunes.apple.com/us/app/flood-it!-2/id476943146).
-     * For Android, the ID string is the application's package name
-     * (e.g., "com.labpixies.colordrips" for "Color Drips" given Google Play link
+     * App Store URL (for example, "476943146" for "Flood-It! 2" whose App Store
+     * link is http://itunes.apple.com/us/app/flood-it!-2/id476943146). For
+     * Android, the ID string is the application's package name (for example,
+     * "com.labpixies.colordrips" for "Color Drips" given Google Play link
      * https://play.google.com/store/apps/details?id=com.labpixies.colordrips).
      * Required when creating CrmBasedUserList for uploading mobile advertising
      * IDs.
@@ -718,10 +718,10 @@ private static final long serialVersionUID = 0L;
      * A string that uniquely identifies a mobile application from which the data
      * was collected.
      * For iOS, the ID string is the 9 digit string that appears at the end of an
-     * App Store URL (e.g., "476943146" for "Flood-It! 2" whose App Store link is
-     * http://itunes.apple.com/us/app/flood-it!-2/id476943146).
-     * For Android, the ID string is the application's package name
-     * (e.g., "com.labpixies.colordrips" for "Color Drips" given Google Play link
+     * App Store URL (for example, "476943146" for "Flood-It! 2" whose App Store
+     * link is http://itunes.apple.com/us/app/flood-it!-2/id476943146). For
+     * Android, the ID string is the application's package name (for example,
+     * "com.labpixies.colordrips" for "Color Drips" given Google Play link
      * https://play.google.com/store/apps/details?id=com.labpixies.colordrips).
      * Required when creating CrmBasedUserList for uploading mobile advertising
      * IDs.
@@ -741,10 +741,10 @@ private static final long serialVersionUID = 0L;
      * A string that uniquely identifies a mobile application from which the data
      * was collected.
      * For iOS, the ID string is the 9 digit string that appears at the end of an
-     * App Store URL (e.g., "476943146" for "Flood-It! 2" whose App Store link is
-     * http://itunes.apple.com/us/app/flood-it!-2/id476943146).
-     * For Android, the ID string is the application's package name
-     * (e.g., "com.labpixies.colordrips" for "Color Drips" given Google Play link
+     * App Store URL (for example, "476943146" for "Flood-It! 2" whose App Store
+     * link is http://itunes.apple.com/us/app/flood-it!-2/id476943146). For
+     * Android, the ID string is the application's package name (for example,
+     * "com.labpixies.colordrips" for "Color Drips" given Google Play link
      * https://play.google.com/store/apps/details?id=com.labpixies.colordrips).
      * Required when creating CrmBasedUserList for uploading mobile advertising
      * IDs.

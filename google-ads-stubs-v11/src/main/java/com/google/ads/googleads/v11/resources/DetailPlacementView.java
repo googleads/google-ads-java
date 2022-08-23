@@ -306,8 +306,8 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object groupPlacementTargetUrl_;
   /**
    * <pre>
-   * Output only. URL of the group placement, e.g. domain, link to the mobile application in
-   * app store, or a YouTube channel URL.
+   * Output only. URL of the group placement, for example, domain, link to the mobile
+   * application in app store, or a YouTube channel URL.
    * </pre>
    *
    * <code>optional string group_placement_target_url = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -319,8 +319,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. URL of the group placement, e.g. domain, link to the mobile application in
-   * app store, or a YouTube channel URL.
+   * Output only. URL of the group placement, for example, domain, link to the mobile
+   * application in app store, or a YouTube channel URL.
    * </pre>
    *
    * <code>optional string group_placement_target_url = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -341,8 +341,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. URL of the group placement, e.g. domain, link to the mobile application in
-   * app store, or a YouTube channel URL.
+   * Output only. URL of the group placement, for example, domain, link to the mobile
+   * application in app store, or a YouTube channel URL.
    * </pre>
    *
    * <code>optional string group_placement_target_url = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -367,8 +367,8 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object targetUrl_;
   /**
    * <pre>
-   * Output only. URL of the placement, e.g. website, link to the mobile application in app
-   * store, or a YouTube video URL.
+   * Output only. URL of the placement, for example, website, link to the mobile application
+   * in app store, or a YouTube video URL.
    * </pre>
    *
    * <code>optional string target_url = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -380,8 +380,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. URL of the placement, e.g. website, link to the mobile application in app
-   * store, or a YouTube video URL.
+   * Output only. URL of the placement, for example, website, link to the mobile application
+   * in app store, or a YouTube video URL.
    * </pre>
    *
    * <code>optional string target_url = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -402,8 +402,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. URL of the placement, e.g. website, link to the mobile application in app
-   * store, or a YouTube video URL.
+   * Output only. URL of the placement, for example, website, link to the mobile application
+   * in app store, or a YouTube video URL.
    * </pre>
    *
    * <code>optional string target_url = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -428,7 +428,8 @@ private static final long serialVersionUID = 0L;
   private int placementType_;
   /**
    * <pre>
-   * Output only. Type of the placement, e.g. Website, YouTube Video, and Mobile Application.
+   * Output only. Type of the placement, for example, Website, YouTube Video, and Mobile
+   * Application.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.PlacementTypeEnum.PlacementType placement_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -439,7 +440,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. Type of the placement, e.g. Website, YouTube Video, and Mobile Application.
+   * Output only. Type of the placement, for example, Website, YouTube Video, and Mobile
+   * Application.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.PlacementTypeEnum.PlacementType placement_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1216,8 +1218,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object groupPlacementTargetUrl_ = "";
     /**
      * <pre>
-     * Output only. URL of the group placement, e.g. domain, link to the mobile application in
-     * app store, or a YouTube channel URL.
+     * Output only. URL of the group placement, for example, domain, link to the mobile
+     * application in app store, or a YouTube channel URL.
      * </pre>
      *
      * <code>optional string group_placement_target_url = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1228,8 +1230,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. URL of the group placement, e.g. domain, link to the mobile application in
-     * app store, or a YouTube channel URL.
+     * Output only. URL of the group placement, for example, domain, link to the mobile
+     * application in app store, or a YouTube channel URL.
      * </pre>
      *
      * <code>optional string group_placement_target_url = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1249,8 +1251,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. URL of the group placement, e.g. domain, link to the mobile application in
-     * app store, or a YouTube channel URL.
+     * Output only. URL of the group placement, for example, domain, link to the mobile
+     * application in app store, or a YouTube channel URL.
      * </pre>
      *
      * <code>optional string group_placement_target_url = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1271,8 +1273,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. URL of the group placement, e.g. domain, link to the mobile application in
-     * app store, or a YouTube channel URL.
+     * Output only. URL of the group placement, for example, domain, link to the mobile
+     * application in app store, or a YouTube channel URL.
      * </pre>
      *
      * <code>optional string group_placement_target_url = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1291,8 +1293,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. URL of the group placement, e.g. domain, link to the mobile application in
-     * app store, or a YouTube channel URL.
+     * Output only. URL of the group placement, for example, domain, link to the mobile
+     * application in app store, or a YouTube channel URL.
      * </pre>
      *
      * <code>optional string group_placement_target_url = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1306,8 +1308,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. URL of the group placement, e.g. domain, link to the mobile application in
-     * app store, or a YouTube channel URL.
+     * Output only. URL of the group placement, for example, domain, link to the mobile
+     * application in app store, or a YouTube channel URL.
      * </pre>
      *
      * <code>optional string group_placement_target_url = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1329,8 +1331,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object targetUrl_ = "";
     /**
      * <pre>
-     * Output only. URL of the placement, e.g. website, link to the mobile application in app
-     * store, or a YouTube video URL.
+     * Output only. URL of the placement, for example, website, link to the mobile application
+     * in app store, or a YouTube video URL.
      * </pre>
      *
      * <code>optional string target_url = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1341,8 +1343,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. URL of the placement, e.g. website, link to the mobile application in app
-     * store, or a YouTube video URL.
+     * Output only. URL of the placement, for example, website, link to the mobile application
+     * in app store, or a YouTube video URL.
      * </pre>
      *
      * <code>optional string target_url = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1362,8 +1364,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. URL of the placement, e.g. website, link to the mobile application in app
-     * store, or a YouTube video URL.
+     * Output only. URL of the placement, for example, website, link to the mobile application
+     * in app store, or a YouTube video URL.
      * </pre>
      *
      * <code>optional string target_url = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1384,8 +1386,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. URL of the placement, e.g. website, link to the mobile application in app
-     * store, or a YouTube video URL.
+     * Output only. URL of the placement, for example, website, link to the mobile application
+     * in app store, or a YouTube video URL.
      * </pre>
      *
      * <code>optional string target_url = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1404,8 +1406,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. URL of the placement, e.g. website, link to the mobile application in app
-     * store, or a YouTube video URL.
+     * Output only. URL of the placement, for example, website, link to the mobile application
+     * in app store, or a YouTube video URL.
      * </pre>
      *
      * <code>optional string target_url = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1419,8 +1421,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. URL of the placement, e.g. website, link to the mobile application in app
-     * store, or a YouTube video URL.
+     * Output only. URL of the placement, for example, website, link to the mobile application
+     * in app store, or a YouTube video URL.
      * </pre>
      *
      * <code>optional string target_url = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1442,7 +1444,8 @@ private static final long serialVersionUID = 0L;
     private int placementType_ = 0;
     /**
      * <pre>
-     * Output only. Type of the placement, e.g. Website, YouTube Video, and Mobile Application.
+     * Output only. Type of the placement, for example, Website, YouTube Video, and Mobile
+     * Application.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.PlacementTypeEnum.PlacementType placement_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1453,7 +1456,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Type of the placement, e.g. Website, YouTube Video, and Mobile Application.
+     * Output only. Type of the placement, for example, Website, YouTube Video, and Mobile
+     * Application.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.PlacementTypeEnum.PlacementType placement_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1468,7 +1472,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Type of the placement, e.g. Website, YouTube Video, and Mobile Application.
+     * Output only. Type of the placement, for example, Website, YouTube Video, and Mobile
+     * Application.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.PlacementTypeEnum.PlacementType placement_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1482,7 +1487,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Type of the placement, e.g. Website, YouTube Video, and Mobile Application.
+     * Output only. Type of the placement, for example, Website, YouTube Video, and Mobile
+     * Application.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.PlacementTypeEnum.PlacementType placement_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1500,7 +1506,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. Type of the placement, e.g. Website, YouTube Video, and Mobile Application.
+     * Output only. Type of the placement, for example, Website, YouTube Video, and Mobile
+     * Application.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.PlacementTypeEnum.PlacementType placement_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
