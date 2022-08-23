@@ -1,3 +1,11 @@
+21.0.0 - 2022-08-23
+-------------------
+- Add support and examples for Google Ads API v11.1.
+- Update to version 2.8.0 of
+  `com.google.cloud:google-cloud-shared-dependencies`.
+- Update to version 1.5.3 of `com.google.auth:google-auth-library-credentials`.
+- Replace ETA examples with RSA examples.
+
 20.0.0 - 2022-07-19
 -------------------
 - Remove support for v9 of Google Ads API.
