@@ -65,6 +65,19 @@ private static final long serialVersionUID = 0L;
             budgetMicros_ = input.readInt64();
             break;
           }
+          case 42: {
+            com.google.ads.googleads.v11.services.AdvancedProductTargeting.Builder subBuilder = null;
+            if (advancedProductTargeting_ != null) {
+              subBuilder = advancedProductTargeting_.toBuilder();
+            }
+            advancedProductTargeting_ = input.readMessage(com.google.ads.googleads.v11.services.AdvancedProductTargeting.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(advancedProductTargeting_);
+              advancedProductTargeting_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -198,6 +211,50 @@ private static final long serialVersionUID = 0L;
     return budgetMicros_;
   }
 
+  public static final int ADVANCED_PRODUCT_TARGETING_FIELD_NUMBER = 5;
+  private com.google.ads.googleads.v11.services.AdvancedProductTargeting advancedProductTargeting_;
+  /**
+   * <pre>
+   * Targeting settings for the selected product.
+   * To list the available targeting for each product use
+   * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v11.services.ReachPlanService.ListPlannableProducts].
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.services.AdvancedProductTargeting advanced_product_targeting = 5;</code>
+   * @return Whether the advancedProductTargeting field is set.
+   */
+  @java.lang.Override
+  public boolean hasAdvancedProductTargeting() {
+    return advancedProductTargeting_ != null;
+  }
+  /**
+   * <pre>
+   * Targeting settings for the selected product.
+   * To list the available targeting for each product use
+   * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v11.services.ReachPlanService.ListPlannableProducts].
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.services.AdvancedProductTargeting advanced_product_targeting = 5;</code>
+   * @return The advancedProductTargeting.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v11.services.AdvancedProductTargeting getAdvancedProductTargeting() {
+    return advancedProductTargeting_ == null ? com.google.ads.googleads.v11.services.AdvancedProductTargeting.getDefaultInstance() : advancedProductTargeting_;
+  }
+  /**
+   * <pre>
+   * Targeting settings for the selected product.
+   * To list the available targeting for each product use
+   * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v11.services.ReachPlanService.ListPlannableProducts].
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.services.AdvancedProductTargeting advanced_product_targeting = 5;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v11.services.AdvancedProductTargetingOrBuilder getAdvancedProductTargetingOrBuilder() {
+    return getAdvancedProductTargeting();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -218,6 +275,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       output.writeInt64(4, budgetMicros_);
     }
+    if (advancedProductTargeting_ != null) {
+      output.writeMessage(5, getAdvancedProductTargeting());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -233,6 +293,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(4, budgetMicros_);
+    }
+    if (advancedProductTargeting_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, getAdvancedProductTargeting());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -259,6 +323,11 @@ private static final long serialVersionUID = 0L;
       if (getBudgetMicros()
           != other.getBudgetMicros()) return false;
     }
+    if (hasAdvancedProductTargeting() != other.hasAdvancedProductTargeting()) return false;
+    if (hasAdvancedProductTargeting()) {
+      if (!getAdvancedProductTargeting()
+          .equals(other.getAdvancedProductTargeting())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -278,6 +347,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + BUDGET_MICROS_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           getBudgetMicros());
+    }
+    if (hasAdvancedProductTargeting()) {
+      hash = (37 * hash) + ADVANCED_PRODUCT_TARGETING_FIELD_NUMBER;
+      hash = (53 * hash) + getAdvancedProductTargeting().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -420,6 +493,12 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000001);
       budgetMicros_ = 0L;
       bitField0_ = (bitField0_ & ~0x00000002);
+      if (advancedProductTargetingBuilder_ == null) {
+        advancedProductTargeting_ = null;
+      } else {
+        advancedProductTargeting_ = null;
+        advancedProductTargetingBuilder_ = null;
+      }
       return this;
     }
 
@@ -455,6 +534,11 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.budgetMicros_ = budgetMicros_;
         to_bitField0_ |= 0x00000002;
+      }
+      if (advancedProductTargetingBuilder_ == null) {
+        result.advancedProductTargeting_ = advancedProductTargeting_;
+      } else {
+        result.advancedProductTargeting_ = advancedProductTargetingBuilder_.build();
       }
       result.bitField0_ = to_bitField0_;
       onBuilt();
@@ -512,6 +596,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasBudgetMicros()) {
         setBudgetMicros(other.getBudgetMicros());
+      }
+      if (other.hasAdvancedProductTargeting()) {
+        mergeAdvancedProductTargeting(other.getAdvancedProductTargeting());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -729,6 +816,179 @@ private static final long serialVersionUID = 0L;
       budgetMicros_ = 0L;
       onChanged();
       return this;
+    }
+
+    private com.google.ads.googleads.v11.services.AdvancedProductTargeting advancedProductTargeting_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v11.services.AdvancedProductTargeting, com.google.ads.googleads.v11.services.AdvancedProductTargeting.Builder, com.google.ads.googleads.v11.services.AdvancedProductTargetingOrBuilder> advancedProductTargetingBuilder_;
+    /**
+     * <pre>
+     * Targeting settings for the selected product.
+     * To list the available targeting for each product use
+     * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v11.services.ReachPlanService.ListPlannableProducts].
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.services.AdvancedProductTargeting advanced_product_targeting = 5;</code>
+     * @return Whether the advancedProductTargeting field is set.
+     */
+    public boolean hasAdvancedProductTargeting() {
+      return advancedProductTargetingBuilder_ != null || advancedProductTargeting_ != null;
+    }
+    /**
+     * <pre>
+     * Targeting settings for the selected product.
+     * To list the available targeting for each product use
+     * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v11.services.ReachPlanService.ListPlannableProducts].
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.services.AdvancedProductTargeting advanced_product_targeting = 5;</code>
+     * @return The advancedProductTargeting.
+     */
+    public com.google.ads.googleads.v11.services.AdvancedProductTargeting getAdvancedProductTargeting() {
+      if (advancedProductTargetingBuilder_ == null) {
+        return advancedProductTargeting_ == null ? com.google.ads.googleads.v11.services.AdvancedProductTargeting.getDefaultInstance() : advancedProductTargeting_;
+      } else {
+        return advancedProductTargetingBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Targeting settings for the selected product.
+     * To list the available targeting for each product use
+     * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v11.services.ReachPlanService.ListPlannableProducts].
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.services.AdvancedProductTargeting advanced_product_targeting = 5;</code>
+     */
+    public Builder setAdvancedProductTargeting(com.google.ads.googleads.v11.services.AdvancedProductTargeting value) {
+      if (advancedProductTargetingBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        advancedProductTargeting_ = value;
+        onChanged();
+      } else {
+        advancedProductTargetingBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Targeting settings for the selected product.
+     * To list the available targeting for each product use
+     * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v11.services.ReachPlanService.ListPlannableProducts].
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.services.AdvancedProductTargeting advanced_product_targeting = 5;</code>
+     */
+    public Builder setAdvancedProductTargeting(
+        com.google.ads.googleads.v11.services.AdvancedProductTargeting.Builder builderForValue) {
+      if (advancedProductTargetingBuilder_ == null) {
+        advancedProductTargeting_ = builderForValue.build();
+        onChanged();
+      } else {
+        advancedProductTargetingBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Targeting settings for the selected product.
+     * To list the available targeting for each product use
+     * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v11.services.ReachPlanService.ListPlannableProducts].
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.services.AdvancedProductTargeting advanced_product_targeting = 5;</code>
+     */
+    public Builder mergeAdvancedProductTargeting(com.google.ads.googleads.v11.services.AdvancedProductTargeting value) {
+      if (advancedProductTargetingBuilder_ == null) {
+        if (advancedProductTargeting_ != null) {
+          advancedProductTargeting_ =
+            com.google.ads.googleads.v11.services.AdvancedProductTargeting.newBuilder(advancedProductTargeting_).mergeFrom(value).buildPartial();
+        } else {
+          advancedProductTargeting_ = value;
+        }
+        onChanged();
+      } else {
+        advancedProductTargetingBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Targeting settings for the selected product.
+     * To list the available targeting for each product use
+     * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v11.services.ReachPlanService.ListPlannableProducts].
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.services.AdvancedProductTargeting advanced_product_targeting = 5;</code>
+     */
+    public Builder clearAdvancedProductTargeting() {
+      if (advancedProductTargetingBuilder_ == null) {
+        advancedProductTargeting_ = null;
+        onChanged();
+      } else {
+        advancedProductTargeting_ = null;
+        advancedProductTargetingBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Targeting settings for the selected product.
+     * To list the available targeting for each product use
+     * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v11.services.ReachPlanService.ListPlannableProducts].
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.services.AdvancedProductTargeting advanced_product_targeting = 5;</code>
+     */
+    public com.google.ads.googleads.v11.services.AdvancedProductTargeting.Builder getAdvancedProductTargetingBuilder() {
+      
+      onChanged();
+      return getAdvancedProductTargetingFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Targeting settings for the selected product.
+     * To list the available targeting for each product use
+     * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v11.services.ReachPlanService.ListPlannableProducts].
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.services.AdvancedProductTargeting advanced_product_targeting = 5;</code>
+     */
+    public com.google.ads.googleads.v11.services.AdvancedProductTargetingOrBuilder getAdvancedProductTargetingOrBuilder() {
+      if (advancedProductTargetingBuilder_ != null) {
+        return advancedProductTargetingBuilder_.getMessageOrBuilder();
+      } else {
+        return advancedProductTargeting_ == null ?
+            com.google.ads.googleads.v11.services.AdvancedProductTargeting.getDefaultInstance() : advancedProductTargeting_;
+      }
+    }
+    /**
+     * <pre>
+     * Targeting settings for the selected product.
+     * To list the available targeting for each product use
+     * [ReachPlanService.ListPlannableProducts][google.ads.googleads.v11.services.ReachPlanService.ListPlannableProducts].
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.services.AdvancedProductTargeting advanced_product_targeting = 5;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v11.services.AdvancedProductTargeting, com.google.ads.googleads.v11.services.AdvancedProductTargeting.Builder, com.google.ads.googleads.v11.services.AdvancedProductTargetingOrBuilder> 
+        getAdvancedProductTargetingFieldBuilder() {
+      if (advancedProductTargetingBuilder_ == null) {
+        advancedProductTargetingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v11.services.AdvancedProductTargeting, com.google.ads.googleads.v11.services.AdvancedProductTargeting.Builder, com.google.ads.googleads.v11.services.AdvancedProductTargetingOrBuilder>(
+                getAdvancedProductTargeting(),
+                getParentForChildren(),
+                isClean());
+        advancedProductTargeting_ = null;
+      }
+      return advancedProductTargetingBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

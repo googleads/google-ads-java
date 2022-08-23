@@ -204,7 +204,7 @@ private static final long serialVersionUID = 0L;
     STORE_SALES(11),
     /**
      * <pre>
-     * Android app first open conversions tracked via Firebase.
+     * Android app first open conversions tracked through Firebase.
      * </pre>
      *
      * <code>FIREBASE_ANDROID_FIRST_OPEN = 12;</code>
@@ -212,7 +212,7 @@ private static final long serialVersionUID = 0L;
     FIREBASE_ANDROID_FIRST_OPEN(12),
     /**
      * <pre>
-     * Android app in app purchase conversions tracked via Firebase.
+     * Android app in app purchase conversions tracked through Firebase.
      * </pre>
      *
      * <code>FIREBASE_ANDROID_IN_APP_PURCHASE = 13;</code>
@@ -220,7 +220,7 @@ private static final long serialVersionUID = 0L;
     FIREBASE_ANDROID_IN_APP_PURCHASE(13),
     /**
      * <pre>
-     * Android app custom conversions tracked via Firebase.
+     * Android app custom conversions tracked through Firebase.
      * </pre>
      *
      * <code>FIREBASE_ANDROID_CUSTOM = 14;</code>
@@ -228,7 +228,7 @@ private static final long serialVersionUID = 0L;
     FIREBASE_ANDROID_CUSTOM(14),
     /**
      * <pre>
-     * iOS app first open conversions tracked via Firebase.
+     * iOS app first open conversions tracked through Firebase.
      * </pre>
      *
      * <code>FIREBASE_IOS_FIRST_OPEN = 15;</code>
@@ -236,7 +236,7 @@ private static final long serialVersionUID = 0L;
     FIREBASE_IOS_FIRST_OPEN(15),
     /**
      * <pre>
-     * iOS app in app purchase conversions tracked via Firebase.
+     * iOS app in app purchase conversions tracked through Firebase.
      * </pre>
      *
      * <code>FIREBASE_IOS_IN_APP_PURCHASE = 16;</code>
@@ -244,7 +244,7 @@ private static final long serialVersionUID = 0L;
     FIREBASE_IOS_IN_APP_PURCHASE(16),
     /**
      * <pre>
-     * iOS app custom conversions tracked via Firebase.
+     * iOS app custom conversions tracked through Firebase.
      * </pre>
      *
      * <code>FIREBASE_IOS_CUSTOM = 17;</code>
@@ -252,7 +252,8 @@ private static final long serialVersionUID = 0L;
     FIREBASE_IOS_CUSTOM(17),
     /**
      * <pre>
-     * Android app first open conversions tracked via Third Party App Analytics.
+     * Android app first open conversions tracked through Third Party App
+     * Analytics.
      * </pre>
      *
      * <code>THIRD_PARTY_APP_ANALYTICS_ANDROID_FIRST_OPEN = 18;</code>
@@ -260,7 +261,7 @@ private static final long serialVersionUID = 0L;
     THIRD_PARTY_APP_ANALYTICS_ANDROID_FIRST_OPEN(18),
     /**
      * <pre>
-     * Android app in app purchase conversions tracked via Third Party App
+     * Android app in app purchase conversions tracked through Third Party App
      * Analytics.
      * </pre>
      *
@@ -269,7 +270,7 @@ private static final long serialVersionUID = 0L;
     THIRD_PARTY_APP_ANALYTICS_ANDROID_IN_APP_PURCHASE(19),
     /**
      * <pre>
-     * Android app custom conversions tracked via Third Party App Analytics.
+     * Android app custom conversions tracked through Third Party App Analytics.
      * </pre>
      *
      * <code>THIRD_PARTY_APP_ANALYTICS_ANDROID_CUSTOM = 20;</code>
@@ -277,7 +278,7 @@ private static final long serialVersionUID = 0L;
     THIRD_PARTY_APP_ANALYTICS_ANDROID_CUSTOM(20),
     /**
      * <pre>
-     * iOS app first open conversions tracked via Third Party App Analytics.
+     * iOS app first open conversions tracked through Third Party App Analytics.
      * </pre>
      *
      * <code>THIRD_PARTY_APP_ANALYTICS_IOS_FIRST_OPEN = 21;</code>
@@ -285,7 +286,7 @@ private static final long serialVersionUID = 0L;
     THIRD_PARTY_APP_ANALYTICS_IOS_FIRST_OPEN(21),
     /**
      * <pre>
-     * iOS app in app purchase conversions tracked via Third Party App
+     * iOS app in app purchase conversions tracked through Third Party App
      * Analytics.
      * </pre>
      *
@@ -294,7 +295,7 @@ private static final long serialVersionUID = 0L;
     THIRD_PARTY_APP_ANALYTICS_IOS_IN_APP_PURCHASE(22),
     /**
      * <pre>
-     * iOS app custom conversions tracked via Third Party App Analytics.
+     * iOS app custom conversions tracked through Third Party App Analytics.
      * </pre>
      *
      * <code>THIRD_PARTY_APP_ANALYTICS_IOS_CUSTOM = 23;</code>
@@ -528,7 +529,7 @@ private static final long serialVersionUID = 0L;
     public static final int STORE_SALES_VALUE = 11;
     /**
      * <pre>
-     * Android app first open conversions tracked via Firebase.
+     * Android app first open conversions tracked through Firebase.
      * </pre>
      *
      * <code>FIREBASE_ANDROID_FIRST_OPEN = 12;</code>
@@ -536,7 +537,7 @@ private static final long serialVersionUID = 0L;
     public static final int FIREBASE_ANDROID_FIRST_OPEN_VALUE = 12;
     /**
      * <pre>
-     * Android app in app purchase conversions tracked via Firebase.
+     * Android app in app purchase conversions tracked through Firebase.
      * </pre>
      *
      * <code>FIREBASE_ANDROID_IN_APP_PURCHASE = 13;</code>
@@ -544,7 +545,7 @@ private static final long serialVersionUID = 0L;
     public static final int FIREBASE_ANDROID_IN_APP_PURCHASE_VALUE = 13;
     /**
      * <pre>
-     * Android app custom conversions tracked via Firebase.
+     * Android app custom conversions tracked through Firebase.
      * </pre>
      *
      * <code>FIREBASE_ANDROID_CUSTOM = 14;</code>
@@ -552,7 +553,7 @@ private static final long serialVersionUID = 0L;
     public static final int FIREBASE_ANDROID_CUSTOM_VALUE = 14;
     /**
      * <pre>
-     * iOS app first open conversions tracked via Firebase.
+     * iOS app first open conversions tracked through Firebase.
      * </pre>
      *
      * <code>FIREBASE_IOS_FIRST_OPEN = 15;</code>
@@ -560,7 +561,7 @@ private static final long serialVersionUID = 0L;
     public static final int FIREBASE_IOS_FIRST_OPEN_VALUE = 15;
     /**
      * <pre>
-     * iOS app in app purchase conversions tracked via Firebase.
+     * iOS app in app purchase conversions tracked through Firebase.
      * </pre>
      *
      * <code>FIREBASE_IOS_IN_APP_PURCHASE = 16;</code>
@@ -568,7 +569,7 @@ private static final long serialVersionUID = 0L;
     public static final int FIREBASE_IOS_IN_APP_PURCHASE_VALUE = 16;
     /**
      * <pre>
-     * iOS app custom conversions tracked via Firebase.
+     * iOS app custom conversions tracked through Firebase.
      * </pre>
      *
      * <code>FIREBASE_IOS_CUSTOM = 17;</code>
@@ -576,7 +577,8 @@ private static final long serialVersionUID = 0L;
     public static final int FIREBASE_IOS_CUSTOM_VALUE = 17;
     /**
      * <pre>
-     * Android app first open conversions tracked via Third Party App Analytics.
+     * Android app first open conversions tracked through Third Party App
+     * Analytics.
      * </pre>
      *
      * <code>THIRD_PARTY_APP_ANALYTICS_ANDROID_FIRST_OPEN = 18;</code>
@@ -584,7 +586,7 @@ private static final long serialVersionUID = 0L;
     public static final int THIRD_PARTY_APP_ANALYTICS_ANDROID_FIRST_OPEN_VALUE = 18;
     /**
      * <pre>
-     * Android app in app purchase conversions tracked via Third Party App
+     * Android app in app purchase conversions tracked through Third Party App
      * Analytics.
      * </pre>
      *
@@ -593,7 +595,7 @@ private static final long serialVersionUID = 0L;
     public static final int THIRD_PARTY_APP_ANALYTICS_ANDROID_IN_APP_PURCHASE_VALUE = 19;
     /**
      * <pre>
-     * Android app custom conversions tracked via Third Party App Analytics.
+     * Android app custom conversions tracked through Third Party App Analytics.
      * </pre>
      *
      * <code>THIRD_PARTY_APP_ANALYTICS_ANDROID_CUSTOM = 20;</code>
@@ -601,7 +603,7 @@ private static final long serialVersionUID = 0L;
     public static final int THIRD_PARTY_APP_ANALYTICS_ANDROID_CUSTOM_VALUE = 20;
     /**
      * <pre>
-     * iOS app first open conversions tracked via Third Party App Analytics.
+     * iOS app first open conversions tracked through Third Party App Analytics.
      * </pre>
      *
      * <code>THIRD_PARTY_APP_ANALYTICS_IOS_FIRST_OPEN = 21;</code>
@@ -609,7 +611,7 @@ private static final long serialVersionUID = 0L;
     public static final int THIRD_PARTY_APP_ANALYTICS_IOS_FIRST_OPEN_VALUE = 21;
     /**
      * <pre>
-     * iOS app in app purchase conversions tracked via Third Party App
+     * iOS app in app purchase conversions tracked through Third Party App
      * Analytics.
      * </pre>
      *
@@ -618,7 +620,7 @@ private static final long serialVersionUID = 0L;
     public static final int THIRD_PARTY_APP_ANALYTICS_IOS_IN_APP_PURCHASE_VALUE = 22;
     /**
      * <pre>
-     * iOS app custom conversions tracked via Third Party App Analytics.
+     * iOS app custom conversions tracked through Third Party App Analytics.
      * </pre>
      *
      * <code>THIRD_PARTY_APP_ANALYTICS_IOS_CUSTOM = 23;</code>

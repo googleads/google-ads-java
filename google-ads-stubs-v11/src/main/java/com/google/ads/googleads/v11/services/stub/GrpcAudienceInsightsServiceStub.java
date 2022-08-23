@@ -16,6 +16,8 @@
 
 package com.google.ads.googleads.v11.services.stub;
 
+import com.google.ads.googleads.v11.services.GenerateAudienceCompositionInsightsRequest;
+import com.google.ads.googleads.v11.services.GenerateAudienceCompositionInsightsResponse;
 import com.google.ads.googleads.v11.services.GenerateInsightsFinderReportRequest;
 import com.google.ads.googleads.v11.services.GenerateInsightsFinderReportResponse;
 import com.google.ads.googleads.v11.services.ListAudienceInsightsAttributesRequest;
@@ -74,12 +76,33 @@ public class GrpcAudienceInsightsServiceStub extends AudienceInsightsServiceStub
                       ListAudienceInsightsAttributesResponse.getDefaultInstance()))
               .build();
 
+  private static final MethodDescriptor<
+          GenerateAudienceCompositionInsightsRequest, GenerateAudienceCompositionInsightsResponse>
+      generateAudienceCompositionInsightsMethodDescriptor =
+          MethodDescriptor
+              .<GenerateAudienceCompositionInsightsRequest,
+                  GenerateAudienceCompositionInsightsResponse>
+                  newBuilder()
+              .setType(MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(
+                  "google.ads.googleads.v11.services.AudienceInsightsService/GenerateAudienceCompositionInsights")
+              .setRequestMarshaller(
+                  ProtoUtils.marshaller(
+                      GenerateAudienceCompositionInsightsRequest.getDefaultInstance()))
+              .setResponseMarshaller(
+                  ProtoUtils.marshaller(
+                      GenerateAudienceCompositionInsightsResponse.getDefaultInstance()))
+              .build();
+
   private final UnaryCallable<
           GenerateInsightsFinderReportRequest, GenerateInsightsFinderReportResponse>
       generateInsightsFinderReportCallable;
   private final UnaryCallable<
           ListAudienceInsightsAttributesRequest, ListAudienceInsightsAttributesResponse>
       listAudienceInsightsAttributesCallable;
+  private final UnaryCallable<
+          GenerateAudienceCompositionInsightsRequest, GenerateAudienceCompositionInsightsResponse>
+      generateAudienceCompositionInsightsCallable;
 
   private final BackgroundResource backgroundResources;
   private final GrpcOperationsStub operationsStub;
@@ -152,6 +175,21 @@ public class GrpcAudienceInsightsServiceStub extends AudienceInsightsServiceStub
                       return params.build();
                     })
                 .build();
+    GrpcCallSettings<
+            GenerateAudienceCompositionInsightsRequest, GenerateAudienceCompositionInsightsResponse>
+        generateAudienceCompositionInsightsTransportSettings =
+            GrpcCallSettings
+                .<GenerateAudienceCompositionInsightsRequest,
+                    GenerateAudienceCompositionInsightsResponse>
+                    newBuilder()
+                .setMethodDescriptor(generateAudienceCompositionInsightsMethodDescriptor)
+                .setParamsExtractor(
+                    request -> {
+                      ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                      params.put("customer_id", String.valueOf(request.getCustomerId()));
+                      return params.build();
+                    })
+                .build();
 
     this.generateInsightsFinderReportCallable =
         callableFactory.createUnaryCallable(
@@ -162,6 +200,11 @@ public class GrpcAudienceInsightsServiceStub extends AudienceInsightsServiceStub
         callableFactory.createUnaryCallable(
             listAudienceInsightsAttributesTransportSettings,
             settings.listAudienceInsightsAttributesSettings(),
+            clientContext);
+    this.generateAudienceCompositionInsightsCallable =
+        callableFactory.createUnaryCallable(
+            generateAudienceCompositionInsightsTransportSettings,
+            settings.generateAudienceCompositionInsightsSettings(),
             clientContext);
 
     this.backgroundResources =
@@ -183,6 +226,13 @@ public class GrpcAudienceInsightsServiceStub extends AudienceInsightsServiceStub
           ListAudienceInsightsAttributesRequest, ListAudienceInsightsAttributesResponse>
       listAudienceInsightsAttributesCallable() {
     return listAudienceInsightsAttributesCallable;
+  }
+
+  @Override
+  public UnaryCallable<
+          GenerateAudienceCompositionInsightsRequest, GenerateAudienceCompositionInsightsResponse>
+      generateAudienceCompositionInsightsCallable() {
+    return generateAudienceCompositionInsightsCallable;
   }
 
   @Override

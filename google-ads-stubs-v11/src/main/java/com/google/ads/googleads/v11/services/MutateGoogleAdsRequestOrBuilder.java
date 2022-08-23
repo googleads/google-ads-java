@@ -100,7 +100,7 @@ public interface MutateGoogleAdsRequestOrBuilder extends
    * The response content type setting. Determines whether the mutable resource
    * or just the resource name should be returned post mutation. The mutable
    * resource will only be returned if the resource has the appropriate response
-   * field. E.g. MutateCampaignResult.campaign.
+   * field. For example, MutateCampaignResult.campaign.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.ResponseContentTypeEnum.ResponseContentType response_content_type = 5;</code>
@@ -112,7 +112,7 @@ public interface MutateGoogleAdsRequestOrBuilder extends
    * The response content type setting. Determines whether the mutable resource
    * or just the resource name should be returned post mutation. The mutable
    * resource will only be returned if the resource has the appropriate response
-   * field. E.g. MutateCampaignResult.campaign.
+   * field. For example, MutateCampaignResult.campaign.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.ResponseContentTypeEnum.ResponseContentType response_content_type = 5;</code>

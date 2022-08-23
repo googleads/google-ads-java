@@ -142,8 +142,8 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The simulated target impression share value (in micros) upon which
    * projected metrics are based.
-   * E.g. 10% impression share, which is equal to 0.1, is stored as 100_000.
-   * This value is validated and will not exceed 1M (100%).
+   * For example, 10% impression share, which is equal to 0.1, is stored as
+   * 100_000. This value is validated and will not exceed 1M (100%).
    * </pre>
    *
    * <code>int64 target_impression_share_micros = 1;</code>
@@ -769,8 +769,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The simulated target impression share value (in micros) upon which
      * projected metrics are based.
-     * E.g. 10% impression share, which is equal to 0.1, is stored as 100_000.
-     * This value is validated and will not exceed 1M (100%).
+     * For example, 10% impression share, which is equal to 0.1, is stored as
+     * 100_000. This value is validated and will not exceed 1M (100%).
      * </pre>
      *
      * <code>int64 target_impression_share_micros = 1;</code>
@@ -784,8 +784,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The simulated target impression share value (in micros) upon which
      * projected metrics are based.
-     * E.g. 10% impression share, which is equal to 0.1, is stored as 100_000.
-     * This value is validated and will not exceed 1M (100%).
+     * For example, 10% impression share, which is equal to 0.1, is stored as
+     * 100_000. This value is validated and will not exceed 1M (100%).
      * </pre>
      *
      * <code>int64 target_impression_share_micros = 1;</code>
@@ -802,8 +802,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The simulated target impression share value (in micros) upon which
      * projected metrics are based.
-     * E.g. 10% impression share, which is equal to 0.1, is stored as 100_000.
-     * This value is validated and will not exceed 1M (100%).
+     * For example, 10% impression share, which is equal to 0.1, is stored as
+     * 100_000. This value is validated and will not exceed 1M (100%).
      * </pre>
      *
      * <code>int64 target_impression_share_micros = 1;</code>

@@ -113,8 +113,8 @@ private static final long serialVersionUID = 0L;
     UNKNOWN(1),
     /**
      * <pre>
-     * The specified budget amount is too low e.g. lower than minimum currency
-     * unit or lower than ad group minimum cost-per-click.
+     * The specified budget amount is too low for example, lower than minimum
+     * currency unit or lower than ad group minimum cost-per-click.
      * </pre>
      *
      * <code>BUDGET_AMOUNT_TOO_SMALL = 2;</code>
@@ -130,8 +130,8 @@ private static final long serialVersionUID = 0L;
     BUDGET_AMOUNT_TOO_LARGE(3),
     /**
      * <pre>
-     * The specified budget amount is not a valid amount. e.g. not a multiple
-     * of minimum currency unit.
+     * The specified budget amount is not a valid amount, for example, not a
+     * multiple of minimum currency unit.
      * </pre>
      *
      * <code>INVALID_BUDGET_AMOUNT = 4;</code>
@@ -147,8 +147,8 @@ private static final long serialVersionUID = 0L;
     POLICY_ERROR(5),
     /**
      * <pre>
-     * The specified bid amount is not valid. e.g. too many fractional digits,
-     * or negative amount.
+     * The specified bid amount is not valid, for example, too many fractional
+     * digits, or negative amount.
      * </pre>
      *
      * <code>INVALID_BID_AMOUNT = 6;</code>
@@ -248,8 +248,8 @@ private static final long serialVersionUID = 0L;
     public static final int UNKNOWN_VALUE = 1;
     /**
      * <pre>
-     * The specified budget amount is too low e.g. lower than minimum currency
-     * unit or lower than ad group minimum cost-per-click.
+     * The specified budget amount is too low for example, lower than minimum
+     * currency unit or lower than ad group minimum cost-per-click.
      * </pre>
      *
      * <code>BUDGET_AMOUNT_TOO_SMALL = 2;</code>
@@ -265,8 +265,8 @@ private static final long serialVersionUID = 0L;
     public static final int BUDGET_AMOUNT_TOO_LARGE_VALUE = 3;
     /**
      * <pre>
-     * The specified budget amount is not a valid amount. e.g. not a multiple
-     * of minimum currency unit.
+     * The specified budget amount is not a valid amount, for example, not a
+     * multiple of minimum currency unit.
      * </pre>
      *
      * <code>INVALID_BUDGET_AMOUNT = 4;</code>
@@ -282,8 +282,8 @@ private static final long serialVersionUID = 0L;
     public static final int POLICY_ERROR_VALUE = 5;
     /**
      * <pre>
-     * The specified bid amount is not valid. e.g. too many fractional digits,
-     * or negative amount.
+     * The specified bid amount is not valid, for example, too many fractional
+     * digits, or negative amount.
      * </pre>
      *
      * <code>INVALID_BID_AMOUNT = 6;</code>

@@ -9,8 +9,8 @@ package com.google.ads.googleads.v11.resources;
  * All fields prefixed with 'proposed' may not necessarily be applied directly.
  * For example, proposed spending limits may be adjusted before their
  * application.  This is true if the 'proposed' field has an 'approved'
- * counterpart, e.g. spending limits.
- * Please note that the proposal type (proposal_type) changes which fields are
+ * counterpart, for example, spending limits.
+ * Note that the proposal type (proposal_type) changes which fields are
  * required and which must remain empty.
  * </pre>
  *
@@ -639,8 +639,8 @@ private static final long serialVersionUID = 0L;
   private int proposalType_;
   /**
    * <pre>
-   * Immutable. The type of this proposal, e.g. END to end the budget associated with this
-   * proposal.
+   * Immutable. The type of this proposal, for example, END to end the budget associated
+   * with this proposal.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -651,8 +651,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. The type of this proposal, e.g. END to end the budget associated with this
-   * proposal.
+   * Immutable. The type of this proposal, for example, END to end the budget associated
+   * with this proposal.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1114,7 +1114,7 @@ private static final long serialVersionUID = 0L;
   public static final int PROPOSED_START_TIME_TYPE_FIELD_NUMBER = 7;
   /**
    * <pre>
-   * Immutable. The proposed start date time as a well-defined type, e.g. NOW.
+   * Immutable. The proposed start date time as a well-defined type, for example, NOW.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType proposed_start_time_type = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1125,7 +1125,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. The proposed start date time as a well-defined type, e.g. NOW.
+   * Immutable. The proposed start date time as a well-defined type, for example, NOW.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType proposed_start_time_type = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1139,7 +1139,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. The proposed start date time as a well-defined type, e.g. NOW.
+   * Immutable. The proposed start date time as a well-defined type, for example, NOW.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType proposed_start_time_type = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1222,7 +1222,7 @@ private static final long serialVersionUID = 0L;
   public static final int PROPOSED_END_TIME_TYPE_FIELD_NUMBER = 9;
   /**
    * <pre>
-   * Immutable. The proposed end date time as a well-defined type, e.g. FOREVER.
+   * Immutable. The proposed end date time as a well-defined type, for example, FOREVER.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1233,7 +1233,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. The proposed end date time as a well-defined type, e.g. FOREVER.
+   * Immutable. The proposed end date time as a well-defined type, for example, FOREVER.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1247,7 +1247,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. The proposed end date time as a well-defined type, e.g. FOREVER.
+   * Immutable. The proposed end date time as a well-defined type, for example, FOREVER.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1330,7 +1330,7 @@ private static final long serialVersionUID = 0L;
   public static final int APPROVED_END_TIME_TYPE_FIELD_NUMBER = 22;
   /**
    * <pre>
-   * Output only. The approved end date time as a well-defined type, e.g. FOREVER.
+   * Output only. The approved end date time as a well-defined type, for example, FOREVER.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType approved_end_time_type = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1341,7 +1341,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The approved end date time as a well-defined type, e.g. FOREVER.
+   * Output only. The approved end date time as a well-defined type, for example, FOREVER.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType approved_end_time_type = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1355,7 +1355,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The approved end date time as a well-defined type, e.g. FOREVER.
+   * Output only. The approved end date time as a well-defined type, for example, FOREVER.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType approved_end_time_type = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1405,7 +1405,8 @@ private static final long serialVersionUID = 0L;
   public static final int PROPOSED_SPENDING_LIMIT_TYPE_FIELD_NUMBER = 11;
   /**
    * <pre>
-   * Immutable. The proposed spending limit as a well-defined type, e.g. INFINITE.
+   * Immutable. The proposed spending limit as a well-defined type, for example,
+   * INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1416,7 +1417,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. The proposed spending limit as a well-defined type, e.g. INFINITE.
+   * Immutable. The proposed spending limit as a well-defined type, for example,
+   * INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1430,7 +1432,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. The proposed spending limit as a well-defined type, e.g. INFINITE.
+   * Immutable. The proposed spending limit as a well-defined type, for example,
+   * INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1480,7 +1483,8 @@ private static final long serialVersionUID = 0L;
   public static final int APPROVED_SPENDING_LIMIT_TYPE_FIELD_NUMBER = 24;
   /**
    * <pre>
-   * Output only. The approved spending limit as a well-defined type, e.g. INFINITE.
+   * Output only. The approved spending limit as a well-defined type, for example,
+   * INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1491,7 +1495,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The approved spending limit as a well-defined type, e.g. INFINITE.
+   * Output only. The approved spending limit as a well-defined type, for example,
+   * INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1505,7 +1510,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The approved spending limit as a well-defined type, e.g. INFINITE.
+   * Output only. The approved spending limit as a well-defined type, for example,
+   * INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2036,8 +2042,8 @@ private static final long serialVersionUID = 0L;
    * All fields prefixed with 'proposed' may not necessarily be applied directly.
    * For example, proposed spending limits may be adjusted before their
    * application.  This is true if the 'proposed' field has an 'approved'
-   * counterpart, e.g. spending limits.
-   * Please note that the proposal type (proposal_type) changes which fields are
+   * counterpart, for example, spending limits.
+   * Note that the proposal type (proposal_type) changes which fields are
    * required and which must remain empty.
    * </pre>
    *
@@ -2876,8 +2882,8 @@ private static final long serialVersionUID = 0L;
     private int proposalType_ = 0;
     /**
      * <pre>
-     * Immutable. The type of this proposal, e.g. END to end the budget associated with this
-     * proposal.
+     * Immutable. The type of this proposal, for example, END to end the budget associated
+     * with this proposal.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2888,8 +2894,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The type of this proposal, e.g. END to end the budget associated with this
-     * proposal.
+     * Immutable. The type of this proposal, for example, END to end the budget associated
+     * with this proposal.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2904,8 +2910,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The type of this proposal, e.g. END to end the budget associated with this
-     * proposal.
+     * Immutable. The type of this proposal, for example, END to end the budget associated
+     * with this proposal.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2919,8 +2925,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The type of this proposal, e.g. END to end the budget associated with this
-     * proposal.
+     * Immutable. The type of this proposal, for example, END to end the budget associated
+     * with this proposal.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2938,8 +2944,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The type of this proposal, e.g. END to end the budget associated with this
-     * proposal.
+     * Immutable. The type of this proposal, for example, END to end the budget associated
+     * with this proposal.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.AccountBudgetProposalTypeEnum.AccountBudgetProposalType proposal_type = 4 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -3808,7 +3814,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Immutable. The proposed start date time as a well-defined type, e.g. NOW.
+     * Immutable. The proposed start date time as a well-defined type, for example, NOW.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType proposed_start_time_type = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -3820,7 +3826,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The proposed start date time as a well-defined type, e.g. NOW.
+     * Immutable. The proposed start date time as a well-defined type, for example, NOW.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType proposed_start_time_type = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -3835,7 +3841,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The proposed start date time as a well-defined type, e.g. NOW.
+     * Immutable. The proposed start date time as a well-defined type, for example, NOW.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType proposed_start_time_type = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -3850,7 +3856,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The proposed start date time as a well-defined type, e.g. NOW.
+     * Immutable. The proposed start date time as a well-defined type, for example, NOW.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType proposed_start_time_type = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -3868,7 +3874,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The proposed start date time as a well-defined type, e.g. NOW.
+     * Immutable. The proposed start date time as a well-defined type, for example, NOW.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType proposed_start_time_type = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -3886,7 +3892,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The proposed start date time as a well-defined type, e.g. NOW.
+     * Immutable. The proposed start date time as a well-defined type, for example, NOW.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType proposed_start_time_type = 7 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -4024,7 +4030,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Immutable. The proposed end date time as a well-defined type, e.g. FOREVER.
+     * Immutable. The proposed end date time as a well-defined type, for example, FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -4036,7 +4042,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The proposed end date time as a well-defined type, e.g. FOREVER.
+     * Immutable. The proposed end date time as a well-defined type, for example, FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -4051,7 +4057,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The proposed end date time as a well-defined type, e.g. FOREVER.
+     * Immutable. The proposed end date time as a well-defined type, for example, FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -4066,7 +4072,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The proposed end date time as a well-defined type, e.g. FOREVER.
+     * Immutable. The proposed end date time as a well-defined type, for example, FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -4084,7 +4090,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The proposed end date time as a well-defined type, e.g. FOREVER.
+     * Immutable. The proposed end date time as a well-defined type, for example, FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -4102,7 +4108,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The proposed end date time as a well-defined type, e.g. FOREVER.
+     * Immutable. The proposed end date time as a well-defined type, for example, FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -4240,7 +4246,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The approved end date time as a well-defined type, e.g. FOREVER.
+     * Output only. The approved end date time as a well-defined type, for example, FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType approved_end_time_type = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4252,7 +4258,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The approved end date time as a well-defined type, e.g. FOREVER.
+     * Output only. The approved end date time as a well-defined type, for example, FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType approved_end_time_type = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4267,7 +4273,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The approved end date time as a well-defined type, e.g. FOREVER.
+     * Output only. The approved end date time as a well-defined type, for example, FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType approved_end_time_type = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4282,7 +4288,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The approved end date time as a well-defined type, e.g. FOREVER.
+     * Output only. The approved end date time as a well-defined type, for example, FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType approved_end_time_type = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4300,7 +4306,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The approved end date time as a well-defined type, e.g. FOREVER.
+     * Output only. The approved end date time as a well-defined type, for example, FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType approved_end_time_type = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4318,7 +4324,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The approved end date time as a well-defined type, e.g. FOREVER.
+     * Output only. The approved end date time as a well-defined type, for example, FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.TimeTypeEnum.TimeType approved_end_time_type = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4396,7 +4402,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Immutable. The proposed spending limit as a well-defined type, e.g. INFINITE.
+     * Immutable. The proposed spending limit as a well-defined type, for example,
+     * INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -4408,7 +4415,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The proposed spending limit as a well-defined type, e.g. INFINITE.
+     * Immutable. The proposed spending limit as a well-defined type, for example,
+     * INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -4423,7 +4431,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The proposed spending limit as a well-defined type, e.g. INFINITE.
+     * Immutable. The proposed spending limit as a well-defined type, for example,
+     * INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -4438,7 +4447,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The proposed spending limit as a well-defined type, e.g. INFINITE.
+     * Immutable. The proposed spending limit as a well-defined type, for example,
+     * INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -4456,7 +4466,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The proposed spending limit as a well-defined type, e.g. INFINITE.
+     * Immutable. The proposed spending limit as a well-defined type, for example,
+     * INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -4474,7 +4485,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The proposed spending limit as a well-defined type, e.g. INFINITE.
+     * Immutable. The proposed spending limit as a well-defined type, for example,
+     * INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -4552,7 +4564,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The approved spending limit as a well-defined type, e.g. INFINITE.
+     * Output only. The approved spending limit as a well-defined type, for example,
+     * INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4564,7 +4577,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The approved spending limit as a well-defined type, e.g. INFINITE.
+     * Output only. The approved spending limit as a well-defined type, for example,
+     * INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4579,7 +4593,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The approved spending limit as a well-defined type, e.g. INFINITE.
+     * Output only. The approved spending limit as a well-defined type, for example,
+     * INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4594,7 +4609,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The approved spending limit as a well-defined type, e.g. INFINITE.
+     * Output only. The approved spending limit as a well-defined type, for example,
+     * INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4612,7 +4628,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The approved spending limit as a well-defined type, e.g. INFINITE.
+     * Output only. The approved spending limit as a well-defined type, for example,
+     * INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4630,7 +4647,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The approved spending limit as a well-defined type, e.g. INFINITE.
+     * Output only. The approved spending limit as a well-defined type, for example,
+     * INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 24 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

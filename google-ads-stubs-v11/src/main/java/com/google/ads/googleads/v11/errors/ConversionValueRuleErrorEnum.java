@@ -114,7 +114,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The value rule's geo location condition contains invalid geo target
-     * constant(s), i.e. there's no matching geo target.
+     * constant(s), for example, there's no matching geo target.
      * </pre>
      *
      * <code>INVALID_GEO_TARGET_CONSTANT = 2;</code>
@@ -241,7 +241,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The value rule's geo location condition contains invalid geo target
-     * constant(s), i.e. there's no matching geo target.
+     * constant(s), for example, there's no matching geo target.
      * </pre>
      *
      * <code>INVALID_GEO_TARGET_CONSTANT = 2;</code>

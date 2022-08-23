@@ -5998,8 +5998,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.enums.AssetFieldTypeEnum.AssetFieldType excluded_parent_asset_field_types = 54;</code>
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of excludedParentAssetFieldTypes at the given index.
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for excludedParentAssetFieldTypes to set.
      * @return This builder for chaining.
      */
     public Builder setExcludedParentAssetFieldTypesValue(

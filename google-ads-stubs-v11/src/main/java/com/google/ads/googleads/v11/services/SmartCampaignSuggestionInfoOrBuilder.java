@@ -172,8 +172,8 @@ public interface SmartCampaignSuggestionInfoOrBuilder extends
   /**
    * <pre>
    * Optional. The resource name of a Business Profile location.
-   * Business Profile location resource names can be fetched via the Business
-   * Profile API and adhere to the following format:
+   * Business Profile location resource names can be fetched through the
+   * Business Profile API and adhere to the following format:
    * `locations/{locationId}`.
    * See the [Business Profile API]
    * (https://developers.google.com/my-business/reference/businessinformation/rest/v1/accounts.locations)
@@ -187,8 +187,8 @@ public interface SmartCampaignSuggestionInfoOrBuilder extends
   /**
    * <pre>
    * Optional. The resource name of a Business Profile location.
-   * Business Profile location resource names can be fetched via the Business
-   * Profile API and adhere to the following format:
+   * Business Profile location resource names can be fetched through the
+   * Business Profile API and adhere to the following format:
    * `locations/{locationId}`.
    * See the [Business Profile API]
    * (https://developers.google.com/my-business/reference/businessinformation/rest/v1/accounts.locations)
@@ -202,8 +202,8 @@ public interface SmartCampaignSuggestionInfoOrBuilder extends
   /**
    * <pre>
    * Optional. The resource name of a Business Profile location.
-   * Business Profile location resource names can be fetched via the Business
-   * Profile API and adhere to the following format:
+   * Business Profile location resource names can be fetched through the
+   * Business Profile API and adhere to the following format:
    * `locations/{locationId}`.
    * See the [Business Profile API]
    * (https://developers.google.com/my-business/reference/businessinformation/rest/v1/accounts.locations)

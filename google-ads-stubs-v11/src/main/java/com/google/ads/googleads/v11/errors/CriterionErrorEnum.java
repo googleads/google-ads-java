@@ -787,7 +787,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The field is not allowed to be set when the negative field is set to
-     * true, e.g. we don't allow bids in negative ad group or campaign criteria.
+     * true, for example, we don't allow bids in negative ad group or campaign
+     * criteria.
      * </pre>
      *
      * <code>FIELD_INCOMPATIBLE_WITH_NEGATIVE_TARGETING = 84;</code>
@@ -1056,9 +1057,9 @@ private static final long serialVersionUID = 0L;
     LISTING_GROUP_TREE_TOO_DEEP(118),
     /**
      * <pre>
-     * Listing dimension is invalid (e.g. dimension contains illegal value,
-     * dimension type is represented with wrong class, etc). Listing dimension
-     * value can not contain "==" or "&amp;+".
+     * Listing dimension is invalid (for example, dimension contains illegal
+     * value, dimension type is represented with wrong class, etc). Listing
+     * dimension value can not contain "==" or "&amp;+".
      * </pre>
      *
      * <code>INVALID_LISTING_DIMENSION = 119;</code>
@@ -1146,7 +1147,7 @@ private static final long serialVersionUID = 0L;
     HOTEL_CHECK_IN_DATE_RANGE_REVERSED(134),
     /**
      * <pre>
-     * Broad match modifier (BMM) keywords can no longer be created. Please see
+     * Broad match modifier (BMM) keywords can no longer be created. See
      * https://ads-developers.googleblog.com/2021/06/broad-match-modifier-upcoming-changes.html.
      * </pre>
      *
@@ -1181,7 +1182,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Targeting is not allowed for Customer Match lists as per Customer Match
-     * policy. Please see
+     * policy. See
      * https://support.google.com/google-ads/answer/6299717.
      * </pre>
      *
@@ -1883,7 +1884,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The field is not allowed to be set when the negative field is set to
-     * true, e.g. we don't allow bids in negative ad group or campaign criteria.
+     * true, for example, we don't allow bids in negative ad group or campaign
+     * criteria.
      * </pre>
      *
      * <code>FIELD_INCOMPATIBLE_WITH_NEGATIVE_TARGETING = 84;</code>
@@ -2152,9 +2154,9 @@ private static final long serialVersionUID = 0L;
     public static final int LISTING_GROUP_TREE_TOO_DEEP_VALUE = 118;
     /**
      * <pre>
-     * Listing dimension is invalid (e.g. dimension contains illegal value,
-     * dimension type is represented with wrong class, etc). Listing dimension
-     * value can not contain "==" or "&amp;+".
+     * Listing dimension is invalid (for example, dimension contains illegal
+     * value, dimension type is represented with wrong class, etc). Listing
+     * dimension value can not contain "==" or "&amp;+".
      * </pre>
      *
      * <code>INVALID_LISTING_DIMENSION = 119;</code>
@@ -2242,7 +2244,7 @@ private static final long serialVersionUID = 0L;
     public static final int HOTEL_CHECK_IN_DATE_RANGE_REVERSED_VALUE = 134;
     /**
      * <pre>
-     * Broad match modifier (BMM) keywords can no longer be created. Please see
+     * Broad match modifier (BMM) keywords can no longer be created. See
      * https://ads-developers.googleblog.com/2021/06/broad-match-modifier-upcoming-changes.html.
      * </pre>
      *
@@ -2277,7 +2279,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Targeting is not allowed for Customer Match lists as per Customer Match
-     * policy. Please see
+     * policy. See
      * https://support.google.com/google-ads/answer/6299717.
      * </pre>
      *

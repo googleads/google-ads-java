@@ -202,7 +202,7 @@ private static final long serialVersionUID = 0L;
     INVALID_DESTINATION_URL(12),
     /**
      * <pre>
-     * The destination url must contain at least one tag (e.g. {lpurl})
+     * The destination url must contain at least one tag (for example, {lpurl})
      * </pre>
      *
      * <code>MISSING_DESTINATION_URL_TAG = 13;</code>
@@ -256,7 +256,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Operations in the mutate request changes too many shopping ad groups.
-     * Please split requests for multiple shopping ad groups across multiple
+     * Split requests for multiple shopping ad groups across multiple
      * requests.
      * </pre>
      *
@@ -454,7 +454,7 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_DESTINATION_URL_VALUE = 12;
     /**
      * <pre>
-     * The destination url must contain at least one tag (e.g. {lpurl})
+     * The destination url must contain at least one tag (for example, {lpurl})
      * </pre>
      *
      * <code>MISSING_DESTINATION_URL_TAG = 13;</code>
@@ -508,7 +508,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Operations in the mutate request changes too many shopping ad groups.
-     * Please split requests for multiple shopping ad groups across multiple
+     * Split requests for multiple shopping ad groups across multiple
      * requests.
      * </pre>
      *

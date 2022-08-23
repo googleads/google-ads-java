@@ -414,6 +414,34 @@ private static final long serialVersionUID = 0L;
             recommendationCase_ = 33;
             break;
           }
+          case 274: {
+            com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation.Builder subBuilder = null;
+            if (recommendationCase_ == 34) {
+              subBuilder = ((com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation) recommendation_).toBuilder();
+            }
+            recommendation_ =
+                input.readMessage(com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation) recommendation_);
+              recommendation_ = subBuilder.buildPartial();
+            }
+            recommendationCase_ = 34;
+            break;
+          }
+          case 282: {
+            com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation.Builder subBuilder = null;
+            if (recommendationCase_ == 35) {
+              subBuilder = ((com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation) recommendation_).toBuilder();
+            }
+            recommendation_ =
+                input.readMessage(com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom((com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation) recommendation_);
+              recommendation_ = subBuilder.buildPartial();
+            }
+            recommendationCase_ = 35;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -5421,7 +5449,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Creation date of the recommended ad.
-     * YYYY-MM-DD format, e.g., 2018-04-17.
+     * YYYY-MM-DD format, for example, 2018-04-17.
      * </pre>
      *
      * <code>optional string creation_date = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5431,7 +5459,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Creation date of the recommended ad.
-     * YYYY-MM-DD format, e.g., 2018-04-17.
+     * YYYY-MM-DD format, for example, 2018-04-17.
      * </pre>
      *
      * <code>optional string creation_date = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5441,7 +5469,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Creation date of the recommended ad.
-     * YYYY-MM-DD format, e.g., 2018-04-17.
+     * YYYY-MM-DD format, for example, 2018-04-17.
      * </pre>
      *
      * <code>optional string creation_date = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5454,7 +5482,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. Date, if present, is the earliest when the recommendation will be auto
      * applied.
-     * YYYY-MM-DD format, e.g., 2018-04-17.
+     * YYYY-MM-DD format, for example, 2018-04-17.
      * </pre>
      *
      * <code>optional string auto_apply_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5465,7 +5493,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. Date, if present, is the earliest when the recommendation will be auto
      * applied.
-     * YYYY-MM-DD format, e.g., 2018-04-17.
+     * YYYY-MM-DD format, for example, 2018-04-17.
      * </pre>
      *
      * <code>optional string auto_apply_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5476,7 +5504,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. Date, if present, is the earliest when the recommendation will be auto
      * applied.
-     * YYYY-MM-DD format, e.g., 2018-04-17.
+     * YYYY-MM-DD format, for example, 2018-04-17.
      * </pre>
      *
      * <code>optional string auto_apply_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5640,7 +5668,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Creation date of the recommended ad.
-     * YYYY-MM-DD format, e.g., 2018-04-17.
+     * YYYY-MM-DD format, for example, 2018-04-17.
      * </pre>
      *
      * <code>optional string creation_date = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5653,7 +5681,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Creation date of the recommended ad.
-     * YYYY-MM-DD format, e.g., 2018-04-17.
+     * YYYY-MM-DD format, for example, 2018-04-17.
      * </pre>
      *
      * <code>optional string creation_date = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5675,7 +5703,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. Creation date of the recommended ad.
-     * YYYY-MM-DD format, e.g., 2018-04-17.
+     * YYYY-MM-DD format, for example, 2018-04-17.
      * </pre>
      *
      * <code>optional string creation_date = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5702,7 +5730,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. Date, if present, is the earliest when the recommendation will be auto
      * applied.
-     * YYYY-MM-DD format, e.g., 2018-04-17.
+     * YYYY-MM-DD format, for example, 2018-04-17.
      * </pre>
      *
      * <code>optional string auto_apply_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5716,7 +5744,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. Date, if present, is the earliest when the recommendation will be auto
      * applied.
-     * YYYY-MM-DD format, e.g., 2018-04-17.
+     * YYYY-MM-DD format, for example, 2018-04-17.
      * </pre>
      *
      * <code>optional string auto_apply_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5739,7 +5767,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. Date, if present, is the earliest when the recommendation will be auto
      * applied.
-     * YYYY-MM-DD format, e.g., 2018-04-17.
+     * YYYY-MM-DD format, for example, 2018-04-17.
      * </pre>
      *
      * <code>optional string auto_apply_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6294,7 +6322,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Output only. Creation date of the recommended ad.
-       * YYYY-MM-DD format, e.g., 2018-04-17.
+       * YYYY-MM-DD format, for example, 2018-04-17.
        * </pre>
        *
        * <code>optional string creation_date = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6306,7 +6334,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Output only. Creation date of the recommended ad.
-       * YYYY-MM-DD format, e.g., 2018-04-17.
+       * YYYY-MM-DD format, for example, 2018-04-17.
        * </pre>
        *
        * <code>optional string creation_date = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6327,7 +6355,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Output only. Creation date of the recommended ad.
-       * YYYY-MM-DD format, e.g., 2018-04-17.
+       * YYYY-MM-DD format, for example, 2018-04-17.
        * </pre>
        *
        * <code>optional string creation_date = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6349,7 +6377,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Output only. Creation date of the recommended ad.
-       * YYYY-MM-DD format, e.g., 2018-04-17.
+       * YYYY-MM-DD format, for example, 2018-04-17.
        * </pre>
        *
        * <code>optional string creation_date = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6369,7 +6397,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Output only. Creation date of the recommended ad.
-       * YYYY-MM-DD format, e.g., 2018-04-17.
+       * YYYY-MM-DD format, for example, 2018-04-17.
        * </pre>
        *
        * <code>optional string creation_date = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6384,7 +6412,7 @@ private static final long serialVersionUID = 0L;
       /**
        * <pre>
        * Output only. Creation date of the recommended ad.
-       * YYYY-MM-DD format, e.g., 2018-04-17.
+       * YYYY-MM-DD format, for example, 2018-04-17.
        * </pre>
        *
        * <code>optional string creation_date = 4 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6408,7 +6436,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Output only. Date, if present, is the earliest when the recommendation will be auto
        * applied.
-       * YYYY-MM-DD format, e.g., 2018-04-17.
+       * YYYY-MM-DD format, for example, 2018-04-17.
        * </pre>
        *
        * <code>optional string auto_apply_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6421,7 +6449,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Output only. Date, if present, is the earliest when the recommendation will be auto
        * applied.
-       * YYYY-MM-DD format, e.g., 2018-04-17.
+       * YYYY-MM-DD format, for example, 2018-04-17.
        * </pre>
        *
        * <code>optional string auto_apply_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6443,7 +6471,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Output only. Date, if present, is the earliest when the recommendation will be auto
        * applied.
-       * YYYY-MM-DD format, e.g., 2018-04-17.
+       * YYYY-MM-DD format, for example, 2018-04-17.
        * </pre>
        *
        * <code>optional string auto_apply_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6466,7 +6494,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Output only. Date, if present, is the earliest when the recommendation will be auto
        * applied.
-       * YYYY-MM-DD format, e.g., 2018-04-17.
+       * YYYY-MM-DD format, for example, 2018-04-17.
        * </pre>
        *
        * <code>optional string auto_apply_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6487,7 +6515,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Output only. Date, if present, is the earliest when the recommendation will be auto
        * applied.
-       * YYYY-MM-DD format, e.g., 2018-04-17.
+       * YYYY-MM-DD format, for example, 2018-04-17.
        * </pre>
        *
        * <code>optional string auto_apply_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6503,7 +6531,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Output only. Date, if present, is the earliest when the recommendation will be auto
        * applied.
-       * YYYY-MM-DD format, e.g., 2018-04-17.
+       * YYYY-MM-DD format, for example, 2018-04-17.
        * </pre>
        *
        * <code>optional string auto_apply_date = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -21023,6 +21051,862 @@ private static final long serialVersionUID = 0L;
 
   }
 
+  public interface DisplayExpansionOptInRecommendationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * The Display Expansion opt-in recommendation.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation}
+   */
+  public static final class DisplayExpansionOptInRecommendation extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation)
+      DisplayExpansionOptInRecommendationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use DisplayExpansionOptInRecommendation.newBuilder() to construct.
+    private DisplayExpansionOptInRecommendation(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private DisplayExpansionOptInRecommendation() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new DisplayExpansionOptInRecommendation();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private DisplayExpansionOptInRecommendation(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v11.resources.RecommendationProto.internal_static_google_ads_googleads_v11_resources_Recommendation_DisplayExpansionOptInRecommendation_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v11.resources.RecommendationProto.internal_static_google_ads_googleads_v11_resources_Recommendation_DisplayExpansionOptInRecommendation_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation.class, com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation other = (com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * The Display Expansion opt-in recommendation.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation)
+        com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v11.resources.RecommendationProto.internal_static_google_ads_googleads_v11_resources_Recommendation_DisplayExpansionOptInRecommendation_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v11.resources.RecommendationProto.internal_static_google_ads_googleads_v11_resources_Recommendation_DisplayExpansionOptInRecommendation_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation.class, com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v11.resources.RecommendationProto.internal_static_google_ads_googleads_v11_resources_Recommendation_DisplayExpansionOptInRecommendation_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation getDefaultInstanceForType() {
+        return com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation build() {
+        com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation buildPartial() {
+        com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation result = new com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation) {
+          return mergeFrom((com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation other) {
+        if (other == com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation)
+    private static final com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation();
+    }
+
+    public static com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<DisplayExpansionOptInRecommendation>
+        PARSER = new com.google.protobuf.AbstractParser<DisplayExpansionOptInRecommendation>() {
+      @java.lang.Override
+      public DisplayExpansionOptInRecommendation parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new DisplayExpansionOptInRecommendation(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<DisplayExpansionOptInRecommendation> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<DisplayExpansionOptInRecommendation> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface UpgradeLocalCampaignToPerformanceMaxRecommendationOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   * The Upgrade Local campaign to Performance Max campaign recommendation.
+   * </pre>
+   *
+   * Protobuf type {@code google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation}
+   */
+  public static final class UpgradeLocalCampaignToPerformanceMaxRecommendation extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation)
+      UpgradeLocalCampaignToPerformanceMaxRecommendationOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use UpgradeLocalCampaignToPerformanceMaxRecommendation.newBuilder() to construct.
+    private UpgradeLocalCampaignToPerformanceMaxRecommendation(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private UpgradeLocalCampaignToPerformanceMaxRecommendation() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new UpgradeLocalCampaignToPerformanceMaxRecommendation();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private UpgradeLocalCampaignToPerformanceMaxRecommendation(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.google.ads.googleads.v11.resources.RecommendationProto.internal_static_google_ads_googleads_v11_resources_Recommendation_UpgradeLocalCampaignToPerformanceMaxRecommendation_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.google.ads.googleads.v11.resources.RecommendationProto.internal_static_google_ads_googleads_v11_resources_Recommendation_UpgradeLocalCampaignToPerformanceMaxRecommendation_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation.class, com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation)) {
+        return super.equals(obj);
+      }
+      com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation other = (com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * The Upgrade Local campaign to Performance Max campaign recommendation.
+     * </pre>
+     *
+     * Protobuf type {@code google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation)
+        com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendationOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.google.ads.googleads.v11.resources.RecommendationProto.internal_static_google_ads_googleads_v11_resources_Recommendation_UpgradeLocalCampaignToPerformanceMaxRecommendation_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.google.ads.googleads.v11.resources.RecommendationProto.internal_static_google_ads_googleads_v11_resources_Recommendation_UpgradeLocalCampaignToPerformanceMaxRecommendation_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation.class, com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation.Builder.class);
+      }
+
+      // Construct using com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.google.ads.googleads.v11.resources.RecommendationProto.internal_static_google_ads_googleads_v11_resources_Recommendation_UpgradeLocalCampaignToPerformanceMaxRecommendation_descriptor;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation getDefaultInstanceForType() {
+        return com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation build() {
+        com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation buildPartial() {
+        com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation result = new com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation) {
+          return mergeFrom((com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation other) {
+        if (other == com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation)
+    }
+
+    // @@protoc_insertion_point(class_scope:google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation)
+    private static final com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation();
+    }
+
+    public static com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<UpgradeLocalCampaignToPerformanceMaxRecommendation>
+        PARSER = new com.google.protobuf.AbstractParser<UpgradeLocalCampaignToPerformanceMaxRecommendation>() {
+      @java.lang.Override
+      public UpgradeLocalCampaignToPerformanceMaxRecommendation parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new UpgradeLocalCampaignToPerformanceMaxRecommendation(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<UpgradeLocalCampaignToPerformanceMaxRecommendation> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<UpgradeLocalCampaignToPerformanceMaxRecommendation> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private int bitField0_;
   private int recommendationCase_ = 0;
   private java.lang.Object recommendation_;
@@ -21051,6 +21935,8 @@ private static final long serialVersionUID = 0L;
     RESPONSIVE_SEARCH_AD_ASSET_RECOMMENDATION(31),
     UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX_RECOMMENDATION(32),
     RESPONSIVE_SEARCH_AD_IMPROVE_AD_STRENGTH_RECOMMENDATION(33),
+    DISPLAY_EXPANSION_OPT_IN_RECOMMENDATION(34),
+    UPGRADE_LOCAL_CAMPAIGN_TO_PERFORMANCE_MAX_RECOMMENDATION(35),
     RECOMMENDATION_NOT_SET(0);
     private final int value;
     private RecommendationCase(int value) {
@@ -21090,6 +21976,8 @@ private static final long serialVersionUID = 0L;
         case 31: return RESPONSIVE_SEARCH_AD_ASSET_RECOMMENDATION;
         case 32: return UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX_RECOMMENDATION;
         case 33: return RESPONSIVE_SEARCH_AD_IMPROVE_AD_STRENGTH_RECOMMENDATION;
+        case 34: return DISPLAY_EXPANSION_OPT_IN_RECOMMENDATION;
+        case 35: return UPGRADE_LOCAL_CAMPAIGN_TO_PERFORMANCE_MAX_RECOMMENDATION;
         case 0: return RECOMMENDATION_NOT_SET;
         default: return null;
       }
@@ -21300,10 +22188,14 @@ private static final long serialVersionUID = 0L;
    * This field will be set for the following recommendation types:
    * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
    * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
-   * MAXIMIZE_CLICKS_OPT_IN, MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
-   * RESPONSIVE_SEARCH_AD, RESPONSIVE_SEARCH_AD_ASSET, SEARCH_PARTNERS_OPT_IN,
-   * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN,
-   * TEXT_AD, UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX
+   * UPGRADE_LOCAL_CAMPAIGN_TO_PERFORMANCE_MAX, MAXIMIZE_CLICKS_OPT_IN,
+   * MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
+   * RESPONSIVE_SEARCH_AD,
+   * RESPONSIVE_SEARCH_AD_ASSET,
+   * SEARCH_PARTNERS_OPT_IN,
+   * DISPLAY_EXPANSION_OPT_IN, SITELINK_EXTENSION, TARGET_CPA_OPT_IN,
+   * TARGET_ROAS_OPT_IN, TEXT_AD,
+   * UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX
    * </pre>
    *
    * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -21320,10 +22212,14 @@ private static final long serialVersionUID = 0L;
    * This field will be set for the following recommendation types:
    * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
    * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
-   * MAXIMIZE_CLICKS_OPT_IN, MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
-   * RESPONSIVE_SEARCH_AD, RESPONSIVE_SEARCH_AD_ASSET, SEARCH_PARTNERS_OPT_IN,
-   * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN,
-   * TEXT_AD, UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX
+   * UPGRADE_LOCAL_CAMPAIGN_TO_PERFORMANCE_MAX, MAXIMIZE_CLICKS_OPT_IN,
+   * MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
+   * RESPONSIVE_SEARCH_AD,
+   * RESPONSIVE_SEARCH_AD_ASSET,
+   * SEARCH_PARTNERS_OPT_IN,
+   * DISPLAY_EXPANSION_OPT_IN, SITELINK_EXTENSION, TARGET_CPA_OPT_IN,
+   * TARGET_ROAS_OPT_IN, TEXT_AD,
+   * UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX
    * </pre>
    *
    * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -21349,10 +22245,14 @@ private static final long serialVersionUID = 0L;
    * This field will be set for the following recommendation types:
    * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
    * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
-   * MAXIMIZE_CLICKS_OPT_IN, MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
-   * RESPONSIVE_SEARCH_AD, RESPONSIVE_SEARCH_AD_ASSET, SEARCH_PARTNERS_OPT_IN,
-   * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN,
-   * TEXT_AD, UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX
+   * UPGRADE_LOCAL_CAMPAIGN_TO_PERFORMANCE_MAX, MAXIMIZE_CLICKS_OPT_IN,
+   * MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
+   * RESPONSIVE_SEARCH_AD,
+   * RESPONSIVE_SEARCH_AD_ASSET,
+   * SEARCH_PARTNERS_OPT_IN,
+   * DISPLAY_EXPANSION_OPT_IN, SITELINK_EXTENSION, TARGET_CPA_OPT_IN,
+   * TARGET_ROAS_OPT_IN, TEXT_AD,
+   * UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX
    * </pre>
    *
    * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -22419,6 +23319,95 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v11.resources.Recommendation.ResponsiveSearchAdImproveAdStrengthRecommendation.getDefaultInstance();
   }
 
+  public static final int DISPLAY_EXPANSION_OPT_IN_RECOMMENDATION_FIELD_NUMBER = 34;
+  /**
+   * <pre>
+   * Output only. The Display Expansion opt-in recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation display_expansion_opt_in_recommendation = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the displayExpansionOptInRecommendation field is set.
+   */
+  @java.lang.Override
+  public boolean hasDisplayExpansionOptInRecommendation() {
+    return recommendationCase_ == 34;
+  }
+  /**
+   * <pre>
+   * Output only. The Display Expansion opt-in recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation display_expansion_opt_in_recommendation = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The displayExpansionOptInRecommendation.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation getDisplayExpansionOptInRecommendation() {
+    if (recommendationCase_ == 34) {
+       return (com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation) recommendation_;
+    }
+    return com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Output only. The Display Expansion opt-in recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation display_expansion_opt_in_recommendation = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendationOrBuilder getDisplayExpansionOptInRecommendationOrBuilder() {
+    if (recommendationCase_ == 34) {
+       return (com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation) recommendation_;
+    }
+    return com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation.getDefaultInstance();
+  }
+
+  public static final int UPGRADE_LOCAL_CAMPAIGN_TO_PERFORMANCE_MAX_RECOMMENDATION_FIELD_NUMBER = 35;
+  /**
+   * <pre>
+   * Output only. The upgrade a Local campaign to a Performance Max campaign
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation upgrade_local_campaign_to_performance_max_recommendation = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the upgradeLocalCampaignToPerformanceMaxRecommendation field is set.
+   */
+  @java.lang.Override
+  public boolean hasUpgradeLocalCampaignToPerformanceMaxRecommendation() {
+    return recommendationCase_ == 35;
+  }
+  /**
+   * <pre>
+   * Output only. The upgrade a Local campaign to a Performance Max campaign
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation upgrade_local_campaign_to_performance_max_recommendation = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The upgradeLocalCampaignToPerformanceMaxRecommendation.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation getUpgradeLocalCampaignToPerformanceMaxRecommendation() {
+    if (recommendationCase_ == 35) {
+       return (com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation) recommendation_;
+    }
+    return com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation.getDefaultInstance();
+  }
+  /**
+   * <pre>
+   * Output only. The upgrade a Local campaign to a Performance Max campaign
+   * recommendation.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation upgrade_local_campaign_to_performance_max_recommendation = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendationOrBuilder getUpgradeLocalCampaignToPerformanceMaxRecommendationOrBuilder() {
+    if (recommendationCase_ == 35) {
+       return (com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation) recommendation_;
+    }
+    return com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -22519,6 +23508,12 @@ private static final long serialVersionUID = 0L;
     }
     if (recommendationCase_ == 33) {
       output.writeMessage(33, (com.google.ads.googleads.v11.resources.Recommendation.ResponsiveSearchAdImproveAdStrengthRecommendation) recommendation_);
+    }
+    if (recommendationCase_ == 34) {
+      output.writeMessage(34, (com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation) recommendation_);
+    }
+    if (recommendationCase_ == 35) {
+      output.writeMessage(35, (com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation) recommendation_);
     }
     unknownFields.writeTo(output);
   }
@@ -22640,6 +23635,14 @@ private static final long serialVersionUID = 0L;
     if (recommendationCase_ == 33) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(33, (com.google.ads.googleads.v11.resources.Recommendation.ResponsiveSearchAdImproveAdStrengthRecommendation) recommendation_);
+    }
+    if (recommendationCase_ == 34) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(34, (com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation) recommendation_);
+    }
+    if (recommendationCase_ == 35) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(35, (com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation) recommendation_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -22774,6 +23777,14 @@ private static final long serialVersionUID = 0L;
         if (!getResponsiveSearchAdImproveAdStrengthRecommendation()
             .equals(other.getResponsiveSearchAdImproveAdStrengthRecommendation())) return false;
         break;
+      case 34:
+        if (!getDisplayExpansionOptInRecommendation()
+            .equals(other.getDisplayExpansionOptInRecommendation())) return false;
+        break;
+      case 35:
+        if (!getUpgradeLocalCampaignToPerformanceMaxRecommendation()
+            .equals(other.getUpgradeLocalCampaignToPerformanceMaxRecommendation())) return false;
+        break;
       case 0:
       default:
     }
@@ -22901,6 +23912,14 @@ private static final long serialVersionUID = 0L;
       case 33:
         hash = (37 * hash) + RESPONSIVE_SEARCH_AD_IMPROVE_AD_STRENGTH_RECOMMENDATION_FIELD_NUMBER;
         hash = (53 * hash) + getResponsiveSearchAdImproveAdStrengthRecommendation().hashCode();
+        break;
+      case 34:
+        hash = (37 * hash) + DISPLAY_EXPANSION_OPT_IN_RECOMMENDATION_FIELD_NUMBER;
+        hash = (53 * hash) + getDisplayExpansionOptInRecommendation().hashCode();
+        break;
+      case 35:
+        hash = (37 * hash) + UPGRADE_LOCAL_CAMPAIGN_TO_PERFORMANCE_MAX_RECOMMENDATION_FIELD_NUMBER;
+        hash = (53 * hash) + getUpgradeLocalCampaignToPerformanceMaxRecommendation().hashCode();
         break;
       case 0:
       default:
@@ -23267,6 +24286,20 @@ private static final long serialVersionUID = 0L;
           result.recommendation_ = responsiveSearchAdImproveAdStrengthRecommendationBuilder_.build();
         }
       }
+      if (recommendationCase_ == 34) {
+        if (displayExpansionOptInRecommendationBuilder_ == null) {
+          result.recommendation_ = recommendation_;
+        } else {
+          result.recommendation_ = displayExpansionOptInRecommendationBuilder_.build();
+        }
+      }
+      if (recommendationCase_ == 35) {
+        if (upgradeLocalCampaignToPerformanceMaxRecommendationBuilder_ == null) {
+          result.recommendation_ = recommendation_;
+        } else {
+          result.recommendation_ = upgradeLocalCampaignToPerformanceMaxRecommendationBuilder_.build();
+        }
+      }
       result.bitField0_ = to_bitField0_;
       result.recommendationCase_ = recommendationCase_;
       onBuilt();
@@ -23432,6 +24465,14 @@ private static final long serialVersionUID = 0L;
         }
         case RESPONSIVE_SEARCH_AD_IMPROVE_AD_STRENGTH_RECOMMENDATION: {
           mergeResponsiveSearchAdImproveAdStrengthRecommendation(other.getResponsiveSearchAdImproveAdStrengthRecommendation());
+          break;
+        }
+        case DISPLAY_EXPANSION_OPT_IN_RECOMMENDATION: {
+          mergeDisplayExpansionOptInRecommendation(other.getDisplayExpansionOptInRecommendation());
+          break;
+        }
+        case UPGRADE_LOCAL_CAMPAIGN_TO_PERFORMANCE_MAX_RECOMMENDATION: {
+          mergeUpgradeLocalCampaignToPerformanceMaxRecommendation(other.getUpgradeLocalCampaignToPerformanceMaxRecommendation());
           break;
         }
         case RECOMMENDATION_NOT_SET: {
@@ -23961,10 +25002,14 @@ private static final long serialVersionUID = 0L;
      * This field will be set for the following recommendation types:
      * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
      * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
-     * MAXIMIZE_CLICKS_OPT_IN, MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
-     * RESPONSIVE_SEARCH_AD, RESPONSIVE_SEARCH_AD_ASSET, SEARCH_PARTNERS_OPT_IN,
-     * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN,
-     * TEXT_AD, UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX
+     * UPGRADE_LOCAL_CAMPAIGN_TO_PERFORMANCE_MAX, MAXIMIZE_CLICKS_OPT_IN,
+     * MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
+     * RESPONSIVE_SEARCH_AD,
+     * RESPONSIVE_SEARCH_AD_ASSET,
+     * SEARCH_PARTNERS_OPT_IN,
+     * DISPLAY_EXPANSION_OPT_IN, SITELINK_EXTENSION, TARGET_CPA_OPT_IN,
+     * TARGET_ROAS_OPT_IN, TEXT_AD,
+     * UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX
      * </pre>
      *
      * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -23980,10 +25025,14 @@ private static final long serialVersionUID = 0L;
      * This field will be set for the following recommendation types:
      * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
      * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
-     * MAXIMIZE_CLICKS_OPT_IN, MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
-     * RESPONSIVE_SEARCH_AD, RESPONSIVE_SEARCH_AD_ASSET, SEARCH_PARTNERS_OPT_IN,
-     * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN,
-     * TEXT_AD, UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX
+     * UPGRADE_LOCAL_CAMPAIGN_TO_PERFORMANCE_MAX, MAXIMIZE_CLICKS_OPT_IN,
+     * MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
+     * RESPONSIVE_SEARCH_AD,
+     * RESPONSIVE_SEARCH_AD_ASSET,
+     * SEARCH_PARTNERS_OPT_IN,
+     * DISPLAY_EXPANSION_OPT_IN, SITELINK_EXTENSION, TARGET_CPA_OPT_IN,
+     * TARGET_ROAS_OPT_IN, TEXT_AD,
+     * UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX
      * </pre>
      *
      * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -24008,10 +25057,14 @@ private static final long serialVersionUID = 0L;
      * This field will be set for the following recommendation types:
      * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
      * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
-     * MAXIMIZE_CLICKS_OPT_IN, MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
-     * RESPONSIVE_SEARCH_AD, RESPONSIVE_SEARCH_AD_ASSET, SEARCH_PARTNERS_OPT_IN,
-     * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN,
-     * TEXT_AD, UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX
+     * UPGRADE_LOCAL_CAMPAIGN_TO_PERFORMANCE_MAX, MAXIMIZE_CLICKS_OPT_IN,
+     * MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
+     * RESPONSIVE_SEARCH_AD,
+     * RESPONSIVE_SEARCH_AD_ASSET,
+     * SEARCH_PARTNERS_OPT_IN,
+     * DISPLAY_EXPANSION_OPT_IN, SITELINK_EXTENSION, TARGET_CPA_OPT_IN,
+     * TARGET_ROAS_OPT_IN, TEXT_AD,
+     * UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX
      * </pre>
      *
      * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -24037,10 +25090,14 @@ private static final long serialVersionUID = 0L;
      * This field will be set for the following recommendation types:
      * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
      * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
-     * MAXIMIZE_CLICKS_OPT_IN, MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
-     * RESPONSIVE_SEARCH_AD, RESPONSIVE_SEARCH_AD_ASSET, SEARCH_PARTNERS_OPT_IN,
-     * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN,
-     * TEXT_AD, UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX
+     * UPGRADE_LOCAL_CAMPAIGN_TO_PERFORMANCE_MAX, MAXIMIZE_CLICKS_OPT_IN,
+     * MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
+     * RESPONSIVE_SEARCH_AD,
+     * RESPONSIVE_SEARCH_AD_ASSET,
+     * SEARCH_PARTNERS_OPT_IN,
+     * DISPLAY_EXPANSION_OPT_IN, SITELINK_EXTENSION, TARGET_CPA_OPT_IN,
+     * TARGET_ROAS_OPT_IN, TEXT_AD,
+     * UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX
      * </pre>
      *
      * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -24064,10 +25121,14 @@ private static final long serialVersionUID = 0L;
      * This field will be set for the following recommendation types:
      * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
      * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
-     * MAXIMIZE_CLICKS_OPT_IN, MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
-     * RESPONSIVE_SEARCH_AD, RESPONSIVE_SEARCH_AD_ASSET, SEARCH_PARTNERS_OPT_IN,
-     * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN,
-     * TEXT_AD, UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX
+     * UPGRADE_LOCAL_CAMPAIGN_TO_PERFORMANCE_MAX, MAXIMIZE_CLICKS_OPT_IN,
+     * MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
+     * RESPONSIVE_SEARCH_AD,
+     * RESPONSIVE_SEARCH_AD_ASSET,
+     * SEARCH_PARTNERS_OPT_IN,
+     * DISPLAY_EXPANSION_OPT_IN, SITELINK_EXTENSION, TARGET_CPA_OPT_IN,
+     * TARGET_ROAS_OPT_IN, TEXT_AD,
+     * UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX
      * </pre>
      *
      * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -24086,10 +25147,14 @@ private static final long serialVersionUID = 0L;
      * This field will be set for the following recommendation types:
      * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
      * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
-     * MAXIMIZE_CLICKS_OPT_IN, MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
-     * RESPONSIVE_SEARCH_AD, RESPONSIVE_SEARCH_AD_ASSET, SEARCH_PARTNERS_OPT_IN,
-     * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN,
-     * TEXT_AD, UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX
+     * UPGRADE_LOCAL_CAMPAIGN_TO_PERFORMANCE_MAX, MAXIMIZE_CLICKS_OPT_IN,
+     * MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
+     * RESPONSIVE_SEARCH_AD,
+     * RESPONSIVE_SEARCH_AD_ASSET,
+     * SEARCH_PARTNERS_OPT_IN,
+     * DISPLAY_EXPANSION_OPT_IN, SITELINK_EXTENSION, TARGET_CPA_OPT_IN,
+     * TARGET_ROAS_OPT_IN, TEXT_AD,
+     * UPGRADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMANCE_MAX
      * </pre>
      *
      * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -28217,6 +29282,371 @@ private static final long serialVersionUID = 0L;
       recommendationCase_ = 33;
       onChanged();;
       return responsiveSearchAdImproveAdStrengthRecommendationBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation, com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation.Builder, com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendationOrBuilder> displayExpansionOptInRecommendationBuilder_;
+    /**
+     * <pre>
+     * Output only. The Display Expansion opt-in recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation display_expansion_opt_in_recommendation = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the displayExpansionOptInRecommendation field is set.
+     */
+    @java.lang.Override
+    public boolean hasDisplayExpansionOptInRecommendation() {
+      return recommendationCase_ == 34;
+    }
+    /**
+     * <pre>
+     * Output only. The Display Expansion opt-in recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation display_expansion_opt_in_recommendation = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The displayExpansionOptInRecommendation.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation getDisplayExpansionOptInRecommendation() {
+      if (displayExpansionOptInRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 34) {
+          return (com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation) recommendation_;
+        }
+        return com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation.getDefaultInstance();
+      } else {
+        if (recommendationCase_ == 34) {
+          return displayExpansionOptInRecommendationBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The Display Expansion opt-in recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation display_expansion_opt_in_recommendation = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setDisplayExpansionOptInRecommendation(com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation value) {
+      if (displayExpansionOptInRecommendationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        recommendation_ = value;
+        onChanged();
+      } else {
+        displayExpansionOptInRecommendationBuilder_.setMessage(value);
+      }
+      recommendationCase_ = 34;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The Display Expansion opt-in recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation display_expansion_opt_in_recommendation = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setDisplayExpansionOptInRecommendation(
+        com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation.Builder builderForValue) {
+      if (displayExpansionOptInRecommendationBuilder_ == null) {
+        recommendation_ = builderForValue.build();
+        onChanged();
+      } else {
+        displayExpansionOptInRecommendationBuilder_.setMessage(builderForValue.build());
+      }
+      recommendationCase_ = 34;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The Display Expansion opt-in recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation display_expansion_opt_in_recommendation = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder mergeDisplayExpansionOptInRecommendation(com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation value) {
+      if (displayExpansionOptInRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 34 &&
+            recommendation_ != com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation.getDefaultInstance()) {
+          recommendation_ = com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation.newBuilder((com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation) recommendation_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          recommendation_ = value;
+        }
+        onChanged();
+      } else {
+        if (recommendationCase_ == 34) {
+          displayExpansionOptInRecommendationBuilder_.mergeFrom(value);
+        } else {
+          displayExpansionOptInRecommendationBuilder_.setMessage(value);
+        }
+      }
+      recommendationCase_ = 34;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The Display Expansion opt-in recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation display_expansion_opt_in_recommendation = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder clearDisplayExpansionOptInRecommendation() {
+      if (displayExpansionOptInRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 34) {
+          recommendationCase_ = 0;
+          recommendation_ = null;
+          onChanged();
+        }
+      } else {
+        if (recommendationCase_ == 34) {
+          recommendationCase_ = 0;
+          recommendation_ = null;
+        }
+        displayExpansionOptInRecommendationBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The Display Expansion opt-in recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation display_expansion_opt_in_recommendation = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation.Builder getDisplayExpansionOptInRecommendationBuilder() {
+      return getDisplayExpansionOptInRecommendationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Output only. The Display Expansion opt-in recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation display_expansion_opt_in_recommendation = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendationOrBuilder getDisplayExpansionOptInRecommendationOrBuilder() {
+      if ((recommendationCase_ == 34) && (displayExpansionOptInRecommendationBuilder_ != null)) {
+        return displayExpansionOptInRecommendationBuilder_.getMessageOrBuilder();
+      } else {
+        if (recommendationCase_ == 34) {
+          return (com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation) recommendation_;
+        }
+        return com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The Display Expansion opt-in recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation display_expansion_opt_in_recommendation = 34 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation, com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation.Builder, com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendationOrBuilder> 
+        getDisplayExpansionOptInRecommendationFieldBuilder() {
+      if (displayExpansionOptInRecommendationBuilder_ == null) {
+        if (!(recommendationCase_ == 34)) {
+          recommendation_ = com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation.getDefaultInstance();
+        }
+        displayExpansionOptInRecommendationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation, com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation.Builder, com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendationOrBuilder>(
+                (com.google.ads.googleads.v11.resources.Recommendation.DisplayExpansionOptInRecommendation) recommendation_,
+                getParentForChildren(),
+                isClean());
+        recommendation_ = null;
+      }
+      recommendationCase_ = 34;
+      onChanged();;
+      return displayExpansionOptInRecommendationBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation, com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation.Builder, com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendationOrBuilder> upgradeLocalCampaignToPerformanceMaxRecommendationBuilder_;
+    /**
+     * <pre>
+     * Output only. The upgrade a Local campaign to a Performance Max campaign
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation upgrade_local_campaign_to_performance_max_recommendation = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the upgradeLocalCampaignToPerformanceMaxRecommendation field is set.
+     */
+    @java.lang.Override
+    public boolean hasUpgradeLocalCampaignToPerformanceMaxRecommendation() {
+      return recommendationCase_ == 35;
+    }
+    /**
+     * <pre>
+     * Output only. The upgrade a Local campaign to a Performance Max campaign
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation upgrade_local_campaign_to_performance_max_recommendation = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The upgradeLocalCampaignToPerformanceMaxRecommendation.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation getUpgradeLocalCampaignToPerformanceMaxRecommendation() {
+      if (upgradeLocalCampaignToPerformanceMaxRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 35) {
+          return (com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation) recommendation_;
+        }
+        return com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation.getDefaultInstance();
+      } else {
+        if (recommendationCase_ == 35) {
+          return upgradeLocalCampaignToPerformanceMaxRecommendationBuilder_.getMessage();
+        }
+        return com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The upgrade a Local campaign to a Performance Max campaign
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation upgrade_local_campaign_to_performance_max_recommendation = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setUpgradeLocalCampaignToPerformanceMaxRecommendation(com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation value) {
+      if (upgradeLocalCampaignToPerformanceMaxRecommendationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        recommendation_ = value;
+        onChanged();
+      } else {
+        upgradeLocalCampaignToPerformanceMaxRecommendationBuilder_.setMessage(value);
+      }
+      recommendationCase_ = 35;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The upgrade a Local campaign to a Performance Max campaign
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation upgrade_local_campaign_to_performance_max_recommendation = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setUpgradeLocalCampaignToPerformanceMaxRecommendation(
+        com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation.Builder builderForValue) {
+      if (upgradeLocalCampaignToPerformanceMaxRecommendationBuilder_ == null) {
+        recommendation_ = builderForValue.build();
+        onChanged();
+      } else {
+        upgradeLocalCampaignToPerformanceMaxRecommendationBuilder_.setMessage(builderForValue.build());
+      }
+      recommendationCase_ = 35;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The upgrade a Local campaign to a Performance Max campaign
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation upgrade_local_campaign_to_performance_max_recommendation = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder mergeUpgradeLocalCampaignToPerformanceMaxRecommendation(com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation value) {
+      if (upgradeLocalCampaignToPerformanceMaxRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 35 &&
+            recommendation_ != com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation.getDefaultInstance()) {
+          recommendation_ = com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation.newBuilder((com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation) recommendation_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          recommendation_ = value;
+        }
+        onChanged();
+      } else {
+        if (recommendationCase_ == 35) {
+          upgradeLocalCampaignToPerformanceMaxRecommendationBuilder_.mergeFrom(value);
+        } else {
+          upgradeLocalCampaignToPerformanceMaxRecommendationBuilder_.setMessage(value);
+        }
+      }
+      recommendationCase_ = 35;
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The upgrade a Local campaign to a Performance Max campaign
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation upgrade_local_campaign_to_performance_max_recommendation = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder clearUpgradeLocalCampaignToPerformanceMaxRecommendation() {
+      if (upgradeLocalCampaignToPerformanceMaxRecommendationBuilder_ == null) {
+        if (recommendationCase_ == 35) {
+          recommendationCase_ = 0;
+          recommendation_ = null;
+          onChanged();
+        }
+      } else {
+        if (recommendationCase_ == 35) {
+          recommendationCase_ = 0;
+          recommendation_ = null;
+        }
+        upgradeLocalCampaignToPerformanceMaxRecommendationBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Output only. The upgrade a Local campaign to a Performance Max campaign
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation upgrade_local_campaign_to_performance_max_recommendation = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation.Builder getUpgradeLocalCampaignToPerformanceMaxRecommendationBuilder() {
+      return getUpgradeLocalCampaignToPerformanceMaxRecommendationFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Output only. The upgrade a Local campaign to a Performance Max campaign
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation upgrade_local_campaign_to_performance_max_recommendation = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendationOrBuilder getUpgradeLocalCampaignToPerformanceMaxRecommendationOrBuilder() {
+      if ((recommendationCase_ == 35) && (upgradeLocalCampaignToPerformanceMaxRecommendationBuilder_ != null)) {
+        return upgradeLocalCampaignToPerformanceMaxRecommendationBuilder_.getMessageOrBuilder();
+      } else {
+        if (recommendationCase_ == 35) {
+          return (com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation) recommendation_;
+        }
+        return com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation.getDefaultInstance();
+      }
+    }
+    /**
+     * <pre>
+     * Output only. The upgrade a Local campaign to a Performance Max campaign
+     * recommendation.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation upgrade_local_campaign_to_performance_max_recommendation = 35 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation, com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation.Builder, com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendationOrBuilder> 
+        getUpgradeLocalCampaignToPerformanceMaxRecommendationFieldBuilder() {
+      if (upgradeLocalCampaignToPerformanceMaxRecommendationBuilder_ == null) {
+        if (!(recommendationCase_ == 35)) {
+          recommendation_ = com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation.getDefaultInstance();
+        }
+        upgradeLocalCampaignToPerformanceMaxRecommendationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation, com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation.Builder, com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendationOrBuilder>(
+                (com.google.ads.googleads.v11.resources.Recommendation.UpgradeLocalCampaignToPerformanceMaxRecommendation) recommendation_,
+                getParentForChildren(),
+                isClean());
+        recommendation_ = null;
+      }
+      recommendationCase_ = 35;
+      onChanged();;
+      return upgradeLocalCampaignToPerformanceMaxRecommendationBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

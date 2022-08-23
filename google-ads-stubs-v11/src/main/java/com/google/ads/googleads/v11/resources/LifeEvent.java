@@ -201,7 +201,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object name_;
   /**
    * <pre>
-   * Output only. The name of the life event. E.g.,"Recently Moved"
+   * Output only. The name of the life event, for example,"Recently Moved"
    * </pre>
    *
    * <code>string name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -222,7 +222,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The name of the life event. E.g.,"Recently Moved"
+   * Output only. The name of the life event, for example,"Recently Moved"
    * </pre>
    *
    * <code>string name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -950,7 +950,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object name_ = "";
     /**
      * <pre>
-     * Output only. The name of the life event. E.g.,"Recently Moved"
+     * Output only. The name of the life event, for example,"Recently Moved"
      * </pre>
      *
      * <code>string name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -970,7 +970,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The name of the life event. E.g.,"Recently Moved"
+     * Output only. The name of the life event, for example,"Recently Moved"
      * </pre>
      *
      * <code>string name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -991,7 +991,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The name of the life event. E.g.,"Recently Moved"
+     * Output only. The name of the life event, for example,"Recently Moved"
      * </pre>
      *
      * <code>string name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1010,7 +1010,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The name of the life event. E.g.,"Recently Moved"
+     * Output only. The name of the life event, for example,"Recently Moved"
      * </pre>
      *
      * <code>string name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1024,7 +1024,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The name of the life event. E.g.,"Recently Moved"
+     * Output only. The name of the life event, for example,"Recently Moved"
      * </pre>
      *
      * <code>string name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

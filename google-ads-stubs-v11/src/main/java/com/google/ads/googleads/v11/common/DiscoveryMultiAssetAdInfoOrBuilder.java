@@ -401,7 +401,7 @@ public interface DiscoveryMultiAssetAdInfoOrBuilder extends
 
   /**
    * <pre>
-   * Boolean flag that indicates if this ad must be served with lead form.
+   * Boolean option that indicates if this ad must be served with lead form.
    * </pre>
    *
    * <code>optional bool lead_form_only = 9;</code>
@@ -410,7 +410,7 @@ public interface DiscoveryMultiAssetAdInfoOrBuilder extends
   boolean hasLeadFormOnly();
   /**
    * <pre>
-   * Boolean flag that indicates if this ad must be served with lead form.
+   * Boolean option that indicates if this ad must be served with lead form.
    * </pre>
    *
    * <code>optional bool lead_form_only = 9;</code>

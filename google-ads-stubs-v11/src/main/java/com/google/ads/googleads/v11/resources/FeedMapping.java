@@ -395,8 +395,8 @@ private static final long serialVersionUID = 0L;
   public static final int PLACEHOLDER_TYPE_FIELD_NUMBER = 3;
   /**
    * <pre>
-   * Immutable. The placeholder type of this mapping (i.e., if the mapping maps feed
-   * attributes to placeholder fields).
+   * Immutable. The placeholder type of this mapping (for example, if the mapping maps
+   * feed attributes to placeholder fields).
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -407,8 +407,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. The placeholder type of this mapping (i.e., if the mapping maps feed
-   * attributes to placeholder fields).
+   * Immutable. The placeholder type of this mapping (for example, if the mapping maps
+   * feed attributes to placeholder fields).
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -422,8 +422,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. The placeholder type of this mapping (i.e., if the mapping maps feed
-   * attributes to placeholder fields).
+   * Immutable. The placeholder type of this mapping (for example, if the mapping maps
+   * feed attributes to placeholder fields).
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -442,7 +442,7 @@ private static final long serialVersionUID = 0L;
   public static final int CRITERION_TYPE_FIELD_NUMBER = 4;
   /**
    * <pre>
-   * Immutable. The criterion type of this mapping (i.e., if the mapping maps feed
+   * Immutable. The criterion type of this mapping (for example, if the mapping maps feed
    * attributes to criterion fields).
    * </pre>
    *
@@ -454,7 +454,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. The criterion type of this mapping (i.e., if the mapping maps feed
+   * Immutable. The criterion type of this mapping (for example, if the mapping maps feed
    * attributes to criterion fields).
    * </pre>
    *
@@ -469,7 +469,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. The criterion type of this mapping (i.e., if the mapping maps feed
+   * Immutable. The criterion type of this mapping (for example, if the mapping maps feed
    * attributes to criterion fields).
    * </pre>
    *
@@ -1647,8 +1647,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Immutable. The placeholder type of this mapping (i.e., if the mapping maps feed
-     * attributes to placeholder fields).
+     * Immutable. The placeholder type of this mapping (for example, if the mapping maps
+     * feed attributes to placeholder fields).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1660,8 +1660,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The placeholder type of this mapping (i.e., if the mapping maps feed
-     * attributes to placeholder fields).
+     * Immutable. The placeholder type of this mapping (for example, if the mapping maps
+     * feed attributes to placeholder fields).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1676,8 +1676,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The placeholder type of this mapping (i.e., if the mapping maps feed
-     * attributes to placeholder fields).
+     * Immutable. The placeholder type of this mapping (for example, if the mapping maps
+     * feed attributes to placeholder fields).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1692,8 +1692,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The placeholder type of this mapping (i.e., if the mapping maps feed
-     * attributes to placeholder fields).
+     * Immutable. The placeholder type of this mapping (for example, if the mapping maps
+     * feed attributes to placeholder fields).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1711,8 +1711,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The placeholder type of this mapping (i.e., if the mapping maps feed
-     * attributes to placeholder fields).
+     * Immutable. The placeholder type of this mapping (for example, if the mapping maps
+     * feed attributes to placeholder fields).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1730,8 +1730,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The placeholder type of this mapping (i.e., if the mapping maps feed
-     * attributes to placeholder fields).
+     * Immutable. The placeholder type of this mapping (for example, if the mapping maps
+     * feed attributes to placeholder fields).
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1748,7 +1748,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Immutable. The criterion type of this mapping (i.e., if the mapping maps feed
+     * Immutable. The criterion type of this mapping (for example, if the mapping maps feed
      * attributes to criterion fields).
      * </pre>
      *
@@ -1761,7 +1761,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The criterion type of this mapping (i.e., if the mapping maps feed
+     * Immutable. The criterion type of this mapping (for example, if the mapping maps feed
      * attributes to criterion fields).
      * </pre>
      *
@@ -1777,7 +1777,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The criterion type of this mapping (i.e., if the mapping maps feed
+     * Immutable. The criterion type of this mapping (for example, if the mapping maps feed
      * attributes to criterion fields).
      * </pre>
      *
@@ -1793,7 +1793,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The criterion type of this mapping (i.e., if the mapping maps feed
+     * Immutable. The criterion type of this mapping (for example, if the mapping maps feed
      * attributes to criterion fields).
      * </pre>
      *
@@ -1812,7 +1812,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The criterion type of this mapping (i.e., if the mapping maps feed
+     * Immutable. The criterion type of this mapping (for example, if the mapping maps feed
      * attributes to criterion fields).
      * </pre>
      *
@@ -1831,7 +1831,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. The criterion type of this mapping (i.e., if the mapping maps feed
+     * Immutable. The criterion type of this mapping (for example, if the mapping maps feed
      * attributes to criterion fields).
      * </pre>
      *

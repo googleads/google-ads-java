@@ -88,7 +88,7 @@ private static final long serialVersionUID = 0L;
 
   /**
    * <pre>
-   * The unit of radius distance in location group (e.g. MILES)
+   * The unit of radius distance in location group (for example, MILES)
    * </pre>
    *
    * Protobuf enum {@code google.ads.googleads.v11.enums.LocationGroupRadiusUnitsEnum.LocationGroupRadiusUnits}

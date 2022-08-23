@@ -246,7 +246,7 @@ public class AccountLinkServiceClient implements BackgroundResource {
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates or removes an account link. From V5, create is not supported through
-   * AccountLinkService.MutateAccountLink. Please use AccountLinkService.CreateAccountLink instead.
+   * AccountLinkService.MutateAccountLink. Use AccountLinkService.CreateAccountLink instead.
    *
    * <p>List of thrown errors: [AccountLinkError]() [AuthenticationError]() [AuthorizationError]()
    * [FieldMaskError]() [HeaderError]() [InternalError]() [MutateError]() [QuotaError]()
@@ -282,7 +282,7 @@ public class AccountLinkServiceClient implements BackgroundResource {
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates or removes an account link. From V5, create is not supported through
-   * AccountLinkService.MutateAccountLink. Please use AccountLinkService.CreateAccountLink instead.
+   * AccountLinkService.MutateAccountLink. Use AccountLinkService.CreateAccountLink instead.
    *
    * <p>List of thrown errors: [AccountLinkError]() [AuthenticationError]() [AuthorizationError]()
    * [FieldMaskError]() [HeaderError]() [InternalError]() [MutateError]() [QuotaError]()
@@ -315,7 +315,7 @@ public class AccountLinkServiceClient implements BackgroundResource {
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Creates or removes an account link. From V5, create is not supported through
-   * AccountLinkService.MutateAccountLink. Please use AccountLinkService.CreateAccountLink instead.
+   * AccountLinkService.MutateAccountLink. Use AccountLinkService.CreateAccountLink instead.
    *
    * <p>List of thrown errors: [AccountLinkError]() [AuthenticationError]() [AuthorizationError]()
    * [FieldMaskError]() [HeaderError]() [InternalError]() [MutateError]() [QuotaError]()

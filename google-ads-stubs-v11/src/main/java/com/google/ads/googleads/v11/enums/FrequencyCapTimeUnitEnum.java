@@ -88,7 +88,7 @@ private static final long serialVersionUID = 0L;
 
   /**
    * <pre>
-   * Unit of time the cap is defined at (e.g. day, week).
+   * Unit of time the cap is defined at (for example, day, week).
    * </pre>
    *
    * Protobuf enum {@code google.ads.googleads.v11.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit}

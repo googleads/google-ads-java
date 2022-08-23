@@ -87,6 +87,14 @@ public class AudienceInsightsServiceSettings
         .listAudienceInsightsAttributesSettings();
   }
 
+  /** Returns the object with the settings used for calls to generateAudienceCompositionInsights. */
+  public UnaryCallSettings<
+          GenerateAudienceCompositionInsightsRequest, GenerateAudienceCompositionInsightsResponse>
+      generateAudienceCompositionInsightsSettings() {
+    return ((AudienceInsightsServiceStubSettings) getStubSettings())
+        .generateAudienceCompositionInsightsSettings();
+  }
+
   public static final AudienceInsightsServiceSettings create(
       AudienceInsightsServiceStubSettings stub) throws IOException {
     return new AudienceInsightsServiceSettings.Builder(stub.toBuilder()).build();
@@ -197,6 +205,15 @@ public class AudienceInsightsServiceSettings
             ListAudienceInsightsAttributesRequest, ListAudienceInsightsAttributesResponse>
         listAudienceInsightsAttributesSettings() {
       return getStubSettingsBuilder().listAudienceInsightsAttributesSettings();
+    }
+
+    /**
+     * Returns the builder for the settings used for calls to generateAudienceCompositionInsights.
+     */
+    public UnaryCallSettings.Builder<
+            GenerateAudienceCompositionInsightsRequest, GenerateAudienceCompositionInsightsResponse>
+        generateAudienceCompositionInsightsSettings() {
+      return getStubSettingsBuilder().generateAudienceCompositionInsightsSettings();
     }
 
     @Override

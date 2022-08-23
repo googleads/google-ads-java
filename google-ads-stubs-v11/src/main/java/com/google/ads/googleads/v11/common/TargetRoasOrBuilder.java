@@ -9,7 +9,7 @@ public interface TargetRoasOrBuilder extends
 
   /**
    * <pre>
-   * Required. The desired revenue (based on conversion data) per unit of spend.
+   * Required. The chosen revenue (based on conversion data) per unit of spend.
    * Value must be between 0.01 and 1000.0, inclusive.
    * </pre>
    *
@@ -19,7 +19,7 @@ public interface TargetRoasOrBuilder extends
   boolean hasTargetRoas();
   /**
    * <pre>
-   * Required. The desired revenue (based on conversion data) per unit of spend.
+   * Required. The chosen revenue (based on conversion data) per unit of spend.
    * Value must be between 0.01 and 1000.0, inclusive.
    * </pre>
    *

@@ -10,7 +10,8 @@ public interface DynamicCustomAssetOrBuilder extends
   /**
    * <pre>
    * Required. ID which can be any sequence of letters and digits, and must be
-   * unique and match the values of remarketing tag, e.g. sedan. Required.
+   * unique and match the values of remarketing tag, for example, sedan.
+   * Required.
    * </pre>
    *
    * <code>string id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -20,7 +21,8 @@ public interface DynamicCustomAssetOrBuilder extends
   /**
    * <pre>
    * Required. ID which can be any sequence of letters and digits, and must be
-   * unique and match the values of remarketing tag, e.g. sedan. Required.
+   * unique and match the values of remarketing tag, for example, sedan.
+   * Required.
    * </pre>
    *
    * <code>string id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -31,8 +33,8 @@ public interface DynamicCustomAssetOrBuilder extends
 
   /**
    * <pre>
-   * ID2 which can be any sequence of letters and digits, e.g. red. ID sequence
-   * (ID + ID2) must be unique.
+   * ID2 which can be any sequence of letters and digits, for example, red. ID
+   * sequence (ID + ID2) must be unique.
    * </pre>
    *
    * <code>string id2 = 2;</code>
@@ -41,8 +43,8 @@ public interface DynamicCustomAssetOrBuilder extends
   java.lang.String getId2();
   /**
    * <pre>
-   * ID2 which can be any sequence of letters and digits, e.g. red. ID sequence
-   * (ID + ID2) must be unique.
+   * ID2 which can be any sequence of letters and digits, for example, red. ID
+   * sequence (ID + ID2) must be unique.
    * </pre>
    *
    * <code>string id2 = 2;</code>
@@ -53,7 +55,7 @@ public interface DynamicCustomAssetOrBuilder extends
 
   /**
    * <pre>
-   * Required. Item title, e.g. Mid-size sedan. Required.
+   * Required. Item title, for example, Mid-size sedan. Required.
    * </pre>
    *
    * <code>string item_title = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -62,7 +64,7 @@ public interface DynamicCustomAssetOrBuilder extends
   java.lang.String getItemTitle();
   /**
    * <pre>
-   * Required. Item title, e.g. Mid-size sedan. Required.
+   * Required. Item title, for example, Mid-size sedan. Required.
    * </pre>
    *
    * <code>string item_title = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -73,7 +75,7 @@ public interface DynamicCustomAssetOrBuilder extends
 
   /**
    * <pre>
-   * Item subtitle, e.g. At your Mountain View dealership.
+   * Item subtitle, for example, At your Mountain View dealership.
    * </pre>
    *
    * <code>string item_subtitle = 4;</code>
@@ -82,7 +84,7 @@ public interface DynamicCustomAssetOrBuilder extends
   java.lang.String getItemSubtitle();
   /**
    * <pre>
-   * Item subtitle, e.g. At your Mountain View dealership.
+   * Item subtitle, for example, At your Mountain View dealership.
    * </pre>
    *
    * <code>string item_subtitle = 4;</code>
@@ -93,7 +95,7 @@ public interface DynamicCustomAssetOrBuilder extends
 
   /**
    * <pre>
-   * Item description, e.g. Best selling mid-size car.
+   * Item description, for example, Best selling mid-size car.
    * </pre>
    *
    * <code>string item_description = 5;</code>
@@ -102,7 +104,7 @@ public interface DynamicCustomAssetOrBuilder extends
   java.lang.String getItemDescription();
   /**
    * <pre>
-   * Item description, e.g. Best selling mid-size car.
+   * Item description, for example, Best selling mid-size car.
    * </pre>
    *
    * <code>string item_description = 5;</code>
@@ -114,9 +116,9 @@ public interface DynamicCustomAssetOrBuilder extends
   /**
    * <pre>
    * Item address which can be specified in one of the following formats.
-   * (1) City, state, code, country, e.g. Mountain View, CA, USA.
-   * (2) Full address, e.g. 123 Boulevard St, Mountain View, CA 94043.
-   * (3) Latitude-longitude in the DDD format, e.g. 41.40338, 2.17403
+   * (1) City, state, code, country, for example, Mountain View, CA, USA.
+   * (2) Full address, for example, 123 Boulevard St, Mountain View, CA 94043.
+   * (3) Latitude-longitude in the DDD format, for example, 41.40338, 2.17403
    * </pre>
    *
    * <code>string item_address = 6;</code>
@@ -126,9 +128,9 @@ public interface DynamicCustomAssetOrBuilder extends
   /**
    * <pre>
    * Item address which can be specified in one of the following formats.
-   * (1) City, state, code, country, e.g. Mountain View, CA, USA.
-   * (2) Full address, e.g. 123 Boulevard St, Mountain View, CA 94043.
-   * (3) Latitude-longitude in the DDD format, e.g. 41.40338, 2.17403
+   * (1) City, state, code, country, for example, Mountain View, CA, USA.
+   * (2) Full address, for example, 123 Boulevard St, Mountain View, CA 94043.
+   * (3) Latitude-longitude in the DDD format, for example, 41.40338, 2.17403
    * </pre>
    *
    * <code>string item_address = 6;</code>
@@ -139,7 +141,7 @@ public interface DynamicCustomAssetOrBuilder extends
 
   /**
    * <pre>
-   * Item category, e.g. Sedans.
+   * Item category, for example, Sedans.
    * </pre>
    *
    * <code>string item_category = 7;</code>
@@ -148,7 +150,7 @@ public interface DynamicCustomAssetOrBuilder extends
   java.lang.String getItemCategory();
   /**
    * <pre>
-   * Item category, e.g. Sedans.
+   * Item category, for example, Sedans.
    * </pre>
    *
    * <code>string item_category = 7;</code>
@@ -160,7 +162,7 @@ public interface DynamicCustomAssetOrBuilder extends
   /**
    * <pre>
    * Price which can be number followed by the alphabetic currency code,
-   * ISO 4217 standard. Use '.' as the decimal mark, e.g. 20,000.00 USD.
+   * ISO 4217 standard. Use '.' as the decimal mark, for example, 20,000.00 USD.
    * </pre>
    *
    * <code>string price = 8;</code>
@@ -170,7 +172,7 @@ public interface DynamicCustomAssetOrBuilder extends
   /**
    * <pre>
    * Price which can be number followed by the alphabetic currency code,
-   * ISO 4217 standard. Use '.' as the decimal mark, e.g. 20,000.00 USD.
+   * ISO 4217 standard. Use '.' as the decimal mark, for example, 20,000.00 USD.
    * </pre>
    *
    * <code>string price = 8;</code>
@@ -182,7 +184,7 @@ public interface DynamicCustomAssetOrBuilder extends
   /**
    * <pre>
    * Sale price which can be number followed by the alphabetic currency code,
-   * ISO 4217 standard. Use '.' as the decimal mark, e.g. 15,000.00 USD.
+   * ISO 4217 standard. Use '.' as the decimal mark, for example, 15,000.00 USD.
    * Must be less than the 'price' field.
    * </pre>
    *
@@ -193,7 +195,7 @@ public interface DynamicCustomAssetOrBuilder extends
   /**
    * <pre>
    * Sale price which can be number followed by the alphabetic currency code,
-   * ISO 4217 standard. Use '.' as the decimal mark, e.g. 15,000.00 USD.
+   * ISO 4217 standard. Use '.' as the decimal mark, for example, 15,000.00 USD.
    * Must be less than the 'price' field.
    * </pre>
    *
@@ -206,7 +208,7 @@ public interface DynamicCustomAssetOrBuilder extends
   /**
    * <pre>
    * Formatted price which can be any characters. If set, this attribute will be
-   * used instead of 'price', e.g. Starting at $20,000.00.
+   * used instead of 'price', for example, Starting at $20,000.00.
    * </pre>
    *
    * <code>string formatted_price = 10;</code>
@@ -216,7 +218,7 @@ public interface DynamicCustomAssetOrBuilder extends
   /**
    * <pre>
    * Formatted price which can be any characters. If set, this attribute will be
-   * used instead of 'price', e.g. Starting at $20,000.00.
+   * used instead of 'price', for example, Starting at $20,000.00.
    * </pre>
    *
    * <code>string formatted_price = 10;</code>
@@ -228,7 +230,7 @@ public interface DynamicCustomAssetOrBuilder extends
   /**
    * <pre>
    * Formatted sale price which can be any characters. If set, this attribute
-   * will be used instead of 'sale price', e.g. On sale for $15,000.00.
+   * will be used instead of 'sale price', for example, On sale for $15,000.00.
    * </pre>
    *
    * <code>string formatted_sale_price = 11;</code>
@@ -238,7 +240,7 @@ public interface DynamicCustomAssetOrBuilder extends
   /**
    * <pre>
    * Formatted sale price which can be any characters. If set, this attribute
-   * will be used instead of 'sale price', e.g. On sale for $15,000.00.
+   * will be used instead of 'sale price', for example, On sale for $15,000.00.
    * </pre>
    *
    * <code>string formatted_sale_price = 11;</code>
@@ -249,8 +251,8 @@ public interface DynamicCustomAssetOrBuilder extends
 
   /**
    * <pre>
-   * Image URL, e.g. http://www.example.com/image.png. The image will not be
-   * uploaded as image asset.
+   * Image URL, for example, http://www.example.com/image.png. The image will
+   * not be uploaded as image asset.
    * </pre>
    *
    * <code>string image_url = 12;</code>
@@ -259,8 +261,8 @@ public interface DynamicCustomAssetOrBuilder extends
   java.lang.String getImageUrl();
   /**
    * <pre>
-   * Image URL, e.g. http://www.example.com/image.png. The image will not be
-   * uploaded as image asset.
+   * Image URL, for example, http://www.example.com/image.png. The image will
+   * not be uploaded as image asset.
    * </pre>
    *
    * <code>string image_url = 12;</code>
@@ -271,7 +273,7 @@ public interface DynamicCustomAssetOrBuilder extends
 
   /**
    * <pre>
-   * Contextual keywords, e.g. Sedans, 4 door sedans.
+   * Contextual keywords, for example, Sedans, 4 door sedans.
    * </pre>
    *
    * <code>repeated string contextual_keywords = 13;</code>
@@ -281,7 +283,7 @@ public interface DynamicCustomAssetOrBuilder extends
       getContextualKeywordsList();
   /**
    * <pre>
-   * Contextual keywords, e.g. Sedans, 4 door sedans.
+   * Contextual keywords, for example, Sedans, 4 door sedans.
    * </pre>
    *
    * <code>repeated string contextual_keywords = 13;</code>
@@ -290,7 +292,7 @@ public interface DynamicCustomAssetOrBuilder extends
   int getContextualKeywordsCount();
   /**
    * <pre>
-   * Contextual keywords, e.g. Sedans, 4 door sedans.
+   * Contextual keywords, for example, Sedans, 4 door sedans.
    * </pre>
    *
    * <code>repeated string contextual_keywords = 13;</code>
@@ -300,7 +302,7 @@ public interface DynamicCustomAssetOrBuilder extends
   java.lang.String getContextualKeywords(int index);
   /**
    * <pre>
-   * Contextual keywords, e.g. Sedans, 4 door sedans.
+   * Contextual keywords, for example, Sedans, 4 door sedans.
    * </pre>
    *
    * <code>repeated string contextual_keywords = 13;</code>
@@ -312,7 +314,7 @@ public interface DynamicCustomAssetOrBuilder extends
 
   /**
    * <pre>
-   * Android deep link, e.g.
+   * Android deep link, for example,
    * android-app://com.example.android/http/example.com/gizmos?1234.
    * </pre>
    *
@@ -322,7 +324,7 @@ public interface DynamicCustomAssetOrBuilder extends
   java.lang.String getAndroidAppLink();
   /**
    * <pre>
-   * Android deep link, e.g.
+   * Android deep link, for example,
    * android-app://com.example.android/http/example.com/gizmos?1234.
    * </pre>
    *
@@ -334,7 +336,7 @@ public interface DynamicCustomAssetOrBuilder extends
 
   /**
    * <pre>
-   * iOS deep link, e.g. exampleApp://content/page.
+   * iOS deep link, for example, exampleApp://content/page.
    * </pre>
    *
    * <code>string ios_app_link = 16;</code>
@@ -343,7 +345,7 @@ public interface DynamicCustomAssetOrBuilder extends
   java.lang.String getIosAppLink();
   /**
    * <pre>
-   * iOS deep link, e.g. exampleApp://content/page.
+   * iOS deep link, for example, exampleApp://content/page.
    * </pre>
    *
    * <code>string ios_app_link = 16;</code>

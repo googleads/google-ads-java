@@ -33,7 +33,7 @@ public interface CurrencyConstantOrBuilder extends
 
   /**
    * <pre>
-   * Output only. ISO 4217 three-letter currency code, e.g. "USD"
+   * Output only. ISO 4217 three-letter currency code, for example, "USD"
    * </pre>
    *
    * <code>optional string code = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -42,7 +42,7 @@ public interface CurrencyConstantOrBuilder extends
   boolean hasCode();
   /**
    * <pre>
-   * Output only. ISO 4217 three-letter currency code, e.g. "USD"
+   * Output only. ISO 4217 three-letter currency code, for example, "USD"
    * </pre>
    *
    * <code>optional string code = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -51,7 +51,7 @@ public interface CurrencyConstantOrBuilder extends
   java.lang.String getCode();
   /**
    * <pre>
-   * Output only. ISO 4217 three-letter currency code, e.g. "USD"
+   * Output only. ISO 4217 three-letter currency code, for example, "USD"
    * </pre>
    *
    * <code>optional string code = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -91,7 +91,8 @@ public interface CurrencyConstantOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Standard symbol for describing this currency, e.g. '$' for US Dollars.
+   * Output only. Standard symbol for describing this currency, for example, '$' for US
+   * Dollars.
    * </pre>
    *
    * <code>optional string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -100,7 +101,8 @@ public interface CurrencyConstantOrBuilder extends
   boolean hasSymbol();
   /**
    * <pre>
-   * Output only. Standard symbol for describing this currency, e.g. '$' for US Dollars.
+   * Output only. Standard symbol for describing this currency, for example, '$' for US
+   * Dollars.
    * </pre>
    *
    * <code>optional string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -109,7 +111,8 @@ public interface CurrencyConstantOrBuilder extends
   java.lang.String getSymbol();
   /**
    * <pre>
-   * Output only. Standard symbol for describing this currency, e.g. '$' for US Dollars.
+   * Output only. Standard symbol for describing this currency, for example, '$' for US
+   * Dollars.
    * </pre>
    *
    * <code>optional string symbol = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

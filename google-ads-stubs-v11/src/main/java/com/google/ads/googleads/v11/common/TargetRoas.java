@@ -108,7 +108,7 @@ private static final long serialVersionUID = 0L;
   private double targetRoas_;
   /**
    * <pre>
-   * Required. The desired revenue (based on conversion data) per unit of spend.
+   * Required. The chosen revenue (based on conversion data) per unit of spend.
    * Value must be between 0.01 and 1000.0, inclusive.
    * </pre>
    *
@@ -121,7 +121,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. The desired revenue (based on conversion data) per unit of spend.
+   * Required. The chosen revenue (based on conversion data) per unit of spend.
    * Value must be between 0.01 and 1000.0, inclusive.
    * </pre>
    *
@@ -571,7 +571,7 @@ private static final long serialVersionUID = 0L;
     private double targetRoas_ ;
     /**
      * <pre>
-     * Required. The desired revenue (based on conversion data) per unit of spend.
+     * Required. The chosen revenue (based on conversion data) per unit of spend.
      * Value must be between 0.01 and 1000.0, inclusive.
      * </pre>
      *
@@ -584,7 +584,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The desired revenue (based on conversion data) per unit of spend.
+     * Required. The chosen revenue (based on conversion data) per unit of spend.
      * Value must be between 0.01 and 1000.0, inclusive.
      * </pre>
      *
@@ -597,7 +597,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The desired revenue (based on conversion data) per unit of spend.
+     * Required. The chosen revenue (based on conversion data) per unit of spend.
      * Value must be between 0.01 and 1000.0, inclusive.
      * </pre>
      *
@@ -613,7 +613,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The desired revenue (based on conversion data) per unit of spend.
+     * Required. The chosen revenue (based on conversion data) per unit of spend.
      * Value must be between 0.01 and 1000.0, inclusive.
      * </pre>
      *

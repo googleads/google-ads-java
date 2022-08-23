@@ -129,8 +129,8 @@ private static final long serialVersionUID = 0L;
     NON_NATIVE(3),
     /**
      * <pre>
-     * Native format, i.e. the format rendering is controlled by the publisher
-     * and not by Google.
+     * Native format, for example, the format rendering is controlled by the
+     * publisher and not by Google.
      * </pre>
      *
      * <code>NATIVE = 4;</code>
@@ -173,8 +173,8 @@ private static final long serialVersionUID = 0L;
     public static final int NON_NATIVE_VALUE = 3;
     /**
      * <pre>
-     * Native format, i.e. the format rendering is controlled by the publisher
-     * and not by Google.
+     * Native format, for example, the format rendering is controlled by the
+     * publisher and not by Google.
      * </pre>
      *
      * <code>NATIVE = 4;</code>

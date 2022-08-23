@@ -63,7 +63,7 @@ public interface AudienceInsightsAttributeOrBuilder extends
 
   /**
    * <pre>
-   * An audience attribute defiend by a geographic location.
+   * An audience attribute defined by a geographic location.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.LocationInfo location = 3;</code>
@@ -72,7 +72,7 @@ public interface AudienceInsightsAttributeOrBuilder extends
   boolean hasLocation();
   /**
    * <pre>
-   * An audience attribute defiend by a geographic location.
+   * An audience attribute defined by a geographic location.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.LocationInfo location = 3;</code>
@@ -81,7 +81,7 @@ public interface AudienceInsightsAttributeOrBuilder extends
   com.google.ads.googleads.v11.common.LocationInfo getLocation();
   /**
    * <pre>
-   * An audience attribute defiend by a geographic location.
+   * An audience attribute defined by a geographic location.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.LocationInfo location = 3;</code>
@@ -174,6 +174,114 @@ public interface AudienceInsightsAttributeOrBuilder extends
    * <code>.google.ads.googleads.v11.services.AudienceInsightsCategory category = 6;</code>
    */
   com.google.ads.googleads.v11.services.AudienceInsightsCategoryOrBuilder getCategoryOrBuilder();
+
+  /**
+   * <pre>
+   * A YouTube Dynamic Lineup
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.services.AudienceInsightsDynamicLineup dynamic_lineup = 7;</code>
+   * @return Whether the dynamicLineup field is set.
+   */
+  boolean hasDynamicLineup();
+  /**
+   * <pre>
+   * A YouTube Dynamic Lineup
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.services.AudienceInsightsDynamicLineup dynamic_lineup = 7;</code>
+   * @return The dynamicLineup.
+   */
+  com.google.ads.googleads.v11.services.AudienceInsightsDynamicLineup getDynamicLineup();
+  /**
+   * <pre>
+   * A YouTube Dynamic Lineup
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.services.AudienceInsightsDynamicLineup dynamic_lineup = 7;</code>
+   */
+  com.google.ads.googleads.v11.services.AudienceInsightsDynamicLineupOrBuilder getDynamicLineupOrBuilder();
+
+  /**
+   * <pre>
+   * A Parental Status value (parent, or not a parent).
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.common.ParentalStatusInfo parental_status = 8;</code>
+   * @return Whether the parentalStatus field is set.
+   */
+  boolean hasParentalStatus();
+  /**
+   * <pre>
+   * A Parental Status value (parent, or not a parent).
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.common.ParentalStatusInfo parental_status = 8;</code>
+   * @return The parentalStatus.
+   */
+  com.google.ads.googleads.v11.common.ParentalStatusInfo getParentalStatus();
+  /**
+   * <pre>
+   * A Parental Status value (parent, or not a parent).
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.common.ParentalStatusInfo parental_status = 8;</code>
+   */
+  com.google.ads.googleads.v11.common.ParentalStatusInfoOrBuilder getParentalStatusOrBuilder();
+
+  /**
+   * <pre>
+   * A household income percentile range.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.common.IncomeRangeInfo income_range = 9;</code>
+   * @return Whether the incomeRange field is set.
+   */
+  boolean hasIncomeRange();
+  /**
+   * <pre>
+   * A household income percentile range.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.common.IncomeRangeInfo income_range = 9;</code>
+   * @return The incomeRange.
+   */
+  com.google.ads.googleads.v11.common.IncomeRangeInfo getIncomeRange();
+  /**
+   * <pre>
+   * A household income percentile range.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.common.IncomeRangeInfo income_range = 9;</code>
+   */
+  com.google.ads.googleads.v11.common.IncomeRangeInfoOrBuilder getIncomeRangeOrBuilder();
+
+  /**
+   * <pre>
+   * A YouTube channel.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.common.YouTubeChannelInfo youtube_channel = 10;</code>
+   * @return Whether the youtubeChannel field is set.
+   */
+  boolean hasYoutubeChannel();
+  /**
+   * <pre>
+   * A YouTube channel.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.common.YouTubeChannelInfo youtube_channel = 10;</code>
+   * @return The youtubeChannel.
+   */
+  com.google.ads.googleads.v11.common.YouTubeChannelInfo getYoutubeChannel();
+  /**
+   * <pre>
+   * A YouTube channel.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.common.YouTubeChannelInfo youtube_channel = 10;</code>
+   */
+  com.google.ads.googleads.v11.common.YouTubeChannelInfoOrBuilder getYoutubeChannelOrBuilder();
 
   public com.google.ads.googleads.v11.services.AudienceInsightsAttribute.AttributeCase getAttributeCase();
 }

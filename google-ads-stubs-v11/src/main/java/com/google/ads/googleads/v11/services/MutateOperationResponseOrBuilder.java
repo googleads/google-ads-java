@@ -1494,6 +1494,60 @@ public interface MutateOperationResponseOrBuilder extends
 
   /**
    * <pre>
+   * The result for the experiment mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.services.MutateExperimentResult experiment_result = 81;</code>
+   * @return Whether the experimentResult field is set.
+   */
+  boolean hasExperimentResult();
+  /**
+   * <pre>
+   * The result for the experiment mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.services.MutateExperimentResult experiment_result = 81;</code>
+   * @return The experimentResult.
+   */
+  com.google.ads.googleads.v11.services.MutateExperimentResult getExperimentResult();
+  /**
+   * <pre>
+   * The result for the experiment mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.services.MutateExperimentResult experiment_result = 81;</code>
+   */
+  com.google.ads.googleads.v11.services.MutateExperimentResultOrBuilder getExperimentResultOrBuilder();
+
+  /**
+   * <pre>
+   * The result for the experiment arm mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.services.MutateExperimentArmResult experiment_arm_result = 82;</code>
+   * @return Whether the experimentArmResult field is set.
+   */
+  boolean hasExperimentArmResult();
+  /**
+   * <pre>
+   * The result for the experiment arm mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.services.MutateExperimentArmResult experiment_arm_result = 82;</code>
+   * @return The experimentArmResult.
+   */
+  com.google.ads.googleads.v11.services.MutateExperimentArmResult getExperimentArmResult();
+  /**
+   * <pre>
+   * The result for the experiment arm mutate.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.services.MutateExperimentArmResult experiment_arm_result = 82;</code>
+   */
+  com.google.ads.googleads.v11.services.MutateExperimentArmResultOrBuilder getExperimentArmResultOrBuilder();
+
+  /**
+   * <pre>
    * The result for the extension feed item mutate.
    * </pre>
    *

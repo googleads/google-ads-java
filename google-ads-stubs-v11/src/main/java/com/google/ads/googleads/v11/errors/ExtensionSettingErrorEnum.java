@@ -312,8 +312,8 @@ private static final long serialVersionUID = 0L;
     INVALID_DOMESTIC_PHONE_NUMBER_FORMAT(25),
     /**
      * <pre>
-     * Vanity phone numbers (i.e. those including letters) are not allowed for
-     * call extensions.
+     * Vanity phone numbers (for example, those including letters) are not
+     * allowed for call extensions.
      * </pre>
      *
      * <code>VANITY_PHONE_NUMBER_NOT_ALLOWED = 26;</code>
@@ -460,7 +460,7 @@ private static final long serialVersionUID = 0L;
     INVALID_DEVICE_PREFERENCE(43),
     /**
      * <pre>
-     * Invalid feed item schedule end time (i.e., endHour = 24 and
+     * Invalid feed item schedule end time (for example, endHour = 24 and
      * endMinute != 0).
      * </pre>
      *
@@ -477,8 +477,8 @@ private static final long serialVersionUID = 0L;
     DATE_TIME_MUST_BE_IN_ACCOUNT_TIME_ZONE(47),
     /**
      * <pre>
-     * Overlapping feed item schedule times (e.g., 7-10AM and 8-11AM) are not
-     * allowed.
+     * Overlapping feed item schedule times (for example, 7-10AM and 8-11AM) are
+     * not allowed.
      * </pre>
      *
      * <code>OVERLAPPING_SCHEDULES_NOT_ALLOWED = 48;</code>
@@ -629,7 +629,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Customer hasn't consented for call recording, which is required for
-     * adding/updating call extensions. Please see
+     * adding/updating call extensions. See
      * https://support.google.com/google-ads/answer/7412639.
      * </pre>
      *
@@ -873,8 +873,8 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_DOMESTIC_PHONE_NUMBER_FORMAT_VALUE = 25;
     /**
      * <pre>
-     * Vanity phone numbers (i.e. those including letters) are not allowed for
-     * call extensions.
+     * Vanity phone numbers (for example, those including letters) are not
+     * allowed for call extensions.
      * </pre>
      *
      * <code>VANITY_PHONE_NUMBER_NOT_ALLOWED = 26;</code>
@@ -1021,7 +1021,7 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_DEVICE_PREFERENCE_VALUE = 43;
     /**
      * <pre>
-     * Invalid feed item schedule end time (i.e., endHour = 24 and
+     * Invalid feed item schedule end time (for example, endHour = 24 and
      * endMinute != 0).
      * </pre>
      *
@@ -1038,8 +1038,8 @@ private static final long serialVersionUID = 0L;
     public static final int DATE_TIME_MUST_BE_IN_ACCOUNT_TIME_ZONE_VALUE = 47;
     /**
      * <pre>
-     * Overlapping feed item schedule times (e.g., 7-10AM and 8-11AM) are not
-     * allowed.
+     * Overlapping feed item schedule times (for example, 7-10AM and 8-11AM) are
+     * not allowed.
      * </pre>
      *
      * <code>OVERLAPPING_SCHEDULES_NOT_ALLOWED = 48;</code>
@@ -1190,7 +1190,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Customer hasn't consented for call recording, which is required for
-     * adding/updating call extensions. Please see
+     * adding/updating call extensions. See
      * https://support.google.com/google-ads/answer/7412639.
      * </pre>
      *

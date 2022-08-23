@@ -30,7 +30,7 @@ public final class AssetLinkErrorProto {
     java.lang.String[] descriptorData = {
       "\n6google/ads/googleads/v11/errors/asset_" +
       "link_error.proto\022\037google.ads.googleads.v" +
-      "11.errors\"\306\006\n\022AssetLinkErrorEnum\"\257\006\n\016Ass" +
+      "11.errors\"\346\006\n\022AssetLinkErrorEnum\"\317\006\n\016Ass" +
       "etLinkError\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020" +
       "\001\022\027\n\023PINNING_UNSUPPORTED\020\002\022\032\n\026UNSUPPORTE" +
       "D_FIELD_TYPE\020\003\022+\n\'FIELD_TYPE_INCOMPATIBL" +
@@ -46,18 +46,19 @@ public final class AssetLinkErrorProto {
       "ABLE_ASSET_LINKS_WITH_FALLBACK_FOR_VALID" +
       "_COMBINATION\020\014\022\031\n\025YOUTUBE_VIDEO_REMOVED\020" +
       "\r\022\032\n\026YOUTUBE_VIDEO_TOO_LONG\020\016\022\033\n\027YOUTUBE" +
-      "_VIDEO_TOO_SHORT\020\017\022\022\n\016INVALID_STATUS\020\021\022&" +
-      "\n\"YOUTUBE_VIDEO_DURATION_NOT_DEFINED\020\022\022-" +
-      "\n)CANNOT_CREATE_AUTOMATICALLY_CREATED_LI" +
-      "NKS\020\023\022.\n*CANNOT_LINK_TO_AUTOMATICALLY_CR" +
-      "EATED_ASSET\020\024\022#\n\037CANNOT_MODIFY_ASSET_LIN" +
-      "K_SOURCE\020\025B\363\001\n#com.google.ads.googleads." +
-      "v11.errorsB\023AssetLinkErrorProtoP\001ZEgoogl" +
-      "e.golang.org/genproto/googleapis/ads/goo" +
-      "gleads/v11/errors;errors\242\002\003GAA\252\002\037Google." +
-      "Ads.GoogleAds.V11.Errors\312\002\037Google\\Ads\\Go" +
-      "ogleAds\\V11\\Errors\352\002#Google::Ads::Google" +
-      "Ads::V11::Errorsb\006proto3"
+      "_VIDEO_TOO_SHORT\020\017\022\036\n\032EXCLUDED_PARENT_FI" +
+      "ELD_TYPE\020\020\022\022\n\016INVALID_STATUS\020\021\022&\n\"YOUTUB" +
+      "E_VIDEO_DURATION_NOT_DEFINED\020\022\022-\n)CANNOT" +
+      "_CREATE_AUTOMATICALLY_CREATED_LINKS\020\023\022.\n" +
+      "*CANNOT_LINK_TO_AUTOMATICALLY_CREATED_AS" +
+      "SET\020\024\022#\n\037CANNOT_MODIFY_ASSET_LINK_SOURCE" +
+      "\020\025B\363\001\n#com.google.ads.googleads.v11.erro" +
+      "rsB\023AssetLinkErrorProtoP\001ZEgoogle.golang" +
+      ".org/genproto/googleapis/ads/googleads/v" +
+      "11/errors;errors\242\002\003GAA\252\002\037Google.Ads.Goog" +
+      "leAds.V11.Errors\312\002\037Google\\Ads\\GoogleAds\\" +
+      "V11\\Errors\352\002#Google::Ads::GoogleAds::V11" +
+      "::Errorsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

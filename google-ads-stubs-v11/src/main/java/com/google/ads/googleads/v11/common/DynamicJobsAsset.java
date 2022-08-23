@@ -295,7 +295,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object jobTitle_;
   /**
    * <pre>
-   * Required. Job title, e.g. Software engineer. Required.
+   * Required. Job title, for example, Software engineer. Required.
    * </pre>
    *
    * <code>string job_title = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -316,7 +316,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. Job title, e.g. Software engineer. Required.
+   * Required. Job title, for example, Software engineer. Required.
    * </pre>
    *
    * <code>string job_title = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -341,7 +341,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object jobSubtitle_;
   /**
    * <pre>
-   * Job subtitle, e.g. Level II.
+   * Job subtitle, for example, Level II.
    * </pre>
    *
    * <code>string job_subtitle = 4;</code>
@@ -362,7 +362,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Job subtitle, e.g. Level II.
+   * Job subtitle, for example, Level II.
    * </pre>
    *
    * <code>string job_subtitle = 4;</code>
@@ -387,7 +387,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object description_;
   /**
    * <pre>
-   * Description, e.g. Apply your technical skills.
+   * Description, for example, Apply your technical skills.
    * </pre>
    *
    * <code>string description = 5;</code>
@@ -408,7 +408,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Description, e.g. Apply your technical skills.
+   * Description, for example, Apply your technical skills.
    * </pre>
    *
    * <code>string description = 5;</code>
@@ -433,8 +433,8 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object imageUrl_;
   /**
    * <pre>
-   * Image URL, e.g. http://www.example.com/image.png. The image will not be
-   * uploaded as image asset.
+   * Image URL, for example, http://www.example.com/image.png. The image will
+   * not be uploaded as image asset.
    * </pre>
    *
    * <code>string image_url = 6;</code>
@@ -455,8 +455,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Image URL, e.g. http://www.example.com/image.png. The image will not be
-   * uploaded as image asset.
+   * Image URL, for example, http://www.example.com/image.png. The image will
+   * not be uploaded as image asset.
    * </pre>
    *
    * <code>string image_url = 6;</code>
@@ -481,7 +481,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object jobCategory_;
   /**
    * <pre>
-   * Job category, e.g. Technical.
+   * Job category, for example, Technical.
    * </pre>
    *
    * <code>string job_category = 7;</code>
@@ -502,7 +502,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Job category, e.g. Technical.
+   * Job category, for example, Technical.
    * </pre>
    *
    * <code>string job_category = 7;</code>
@@ -527,7 +527,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.LazyStringList contextualKeywords_;
   /**
    * <pre>
-   * Contextual keywords, e.g. Software engineering job.
+   * Contextual keywords, for example, Software engineering job.
    * </pre>
    *
    * <code>repeated string contextual_keywords = 8;</code>
@@ -539,7 +539,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Contextual keywords, e.g. Software engineering job.
+   * Contextual keywords, for example, Software engineering job.
    * </pre>
    *
    * <code>repeated string contextual_keywords = 8;</code>
@@ -550,7 +550,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Contextual keywords, e.g. Software engineering job.
+   * Contextual keywords, for example, Software engineering job.
    * </pre>
    *
    * <code>repeated string contextual_keywords = 8;</code>
@@ -562,7 +562,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Contextual keywords, e.g. Software engineering job.
+   * Contextual keywords, for example, Software engineering job.
    * </pre>
    *
    * <code>repeated string contextual_keywords = 8;</code>
@@ -579,9 +579,9 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Address which can be specified in one of the following formats.
-   * (1) City, state, code, country, e.g. Mountain View, CA, USA.
-   * (2) Full address, e.g. 123 Boulevard St, Mountain View, CA 94043.
-   * (3) Latitude-longitude in the DDD format, e.g. 41.40338, 2.17403.
+   * (1) City, state, code, country, for example, Mountain View, CA, USA.
+   * (2) Full address, for example, 123 Boulevard St, Mountain View, CA 94043.
+   * (3) Latitude-longitude in the DDD format, for example, 41.40338, 2.17403.
    * </pre>
    *
    * <code>string address = 9;</code>
@@ -603,9 +603,9 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Address which can be specified in one of the following formats.
-   * (1) City, state, code, country, e.g. Mountain View, CA, USA.
-   * (2) Full address, e.g. 123 Boulevard St, Mountain View, CA 94043.
-   * (3) Latitude-longitude in the DDD format, e.g. 41.40338, 2.17403.
+   * (1) City, state, code, country, for example, Mountain View, CA, USA.
+   * (2) Full address, for example, 123 Boulevard St, Mountain View, CA 94043.
+   * (3) Latitude-longitude in the DDD format, for example, 41.40338, 2.17403.
    * </pre>
    *
    * <code>string address = 9;</code>
@@ -630,7 +630,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object salary_;
   /**
    * <pre>
-   * Salary, e.g. $100,000.
+   * Salary, for example, $100,000.
    * </pre>
    *
    * <code>string salary = 10;</code>
@@ -651,7 +651,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Salary, e.g. $100,000.
+   * Salary, for example, $100,000.
    * </pre>
    *
    * <code>string salary = 10;</code>
@@ -676,7 +676,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object androidAppLink_;
   /**
    * <pre>
-   * Android deep link, e.g.
+   * Android deep link, for example,
    * android-app://com.example.android/http/example.com/gizmos?1234.
    * </pre>
    *
@@ -698,7 +698,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Android deep link, e.g.
+   * Android deep link, for example,
    * android-app://com.example.android/http/example.com/gizmos?1234.
    * </pre>
    *
@@ -724,7 +724,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.LazyStringList similarJobIds_;
   /**
    * <pre>
-   * Similar job IDs, e.g. 1275.
+   * Similar job IDs, for example, 1275.
    * </pre>
    *
    * <code>repeated string similar_job_ids = 12;</code>
@@ -736,7 +736,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Similar job IDs, e.g. 1275.
+   * Similar job IDs, for example, 1275.
    * </pre>
    *
    * <code>repeated string similar_job_ids = 12;</code>
@@ -747,7 +747,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Similar job IDs, e.g. 1275.
+   * Similar job IDs, for example, 1275.
    * </pre>
    *
    * <code>repeated string similar_job_ids = 12;</code>
@@ -759,7 +759,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Similar job IDs, e.g. 1275.
+   * Similar job IDs, for example, 1275.
    * </pre>
    *
    * <code>repeated string similar_job_ids = 12;</code>
@@ -775,7 +775,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object iosAppLink_;
   /**
    * <pre>
-   * iOS deep link, e.g. exampleApp://content/page.
+   * iOS deep link, for example, exampleApp://content/page.
    * </pre>
    *
    * <code>string ios_app_link = 13;</code>
@@ -796,7 +796,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * iOS deep link, e.g. exampleApp://content/page.
+   * iOS deep link, for example, exampleApp://content/page.
    * </pre>
    *
    * <code>string ios_app_link = 13;</code>
@@ -1603,7 +1603,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object jobTitle_ = "";
     /**
      * <pre>
-     * Required. Job title, e.g. Software engineer. Required.
+     * Required. Job title, for example, Software engineer. Required.
      * </pre>
      *
      * <code>string job_title = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1623,7 +1623,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Job title, e.g. Software engineer. Required.
+     * Required. Job title, for example, Software engineer. Required.
      * </pre>
      *
      * <code>string job_title = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1644,7 +1644,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Job title, e.g. Software engineer. Required.
+     * Required. Job title, for example, Software engineer. Required.
      * </pre>
      *
      * <code>string job_title = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1663,7 +1663,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Job title, e.g. Software engineer. Required.
+     * Required. Job title, for example, Software engineer. Required.
      * </pre>
      *
      * <code>string job_title = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1677,7 +1677,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Job title, e.g. Software engineer. Required.
+     * Required. Job title, for example, Software engineer. Required.
      * </pre>
      *
      * <code>string job_title = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1699,7 +1699,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object jobSubtitle_ = "";
     /**
      * <pre>
-     * Job subtitle, e.g. Level II.
+     * Job subtitle, for example, Level II.
      * </pre>
      *
      * <code>string job_subtitle = 4;</code>
@@ -1719,7 +1719,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Job subtitle, e.g. Level II.
+     * Job subtitle, for example, Level II.
      * </pre>
      *
      * <code>string job_subtitle = 4;</code>
@@ -1740,7 +1740,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Job subtitle, e.g. Level II.
+     * Job subtitle, for example, Level II.
      * </pre>
      *
      * <code>string job_subtitle = 4;</code>
@@ -1759,7 +1759,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Job subtitle, e.g. Level II.
+     * Job subtitle, for example, Level II.
      * </pre>
      *
      * <code>string job_subtitle = 4;</code>
@@ -1773,7 +1773,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Job subtitle, e.g. Level II.
+     * Job subtitle, for example, Level II.
      * </pre>
      *
      * <code>string job_subtitle = 4;</code>
@@ -1795,7 +1795,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object description_ = "";
     /**
      * <pre>
-     * Description, e.g. Apply your technical skills.
+     * Description, for example, Apply your technical skills.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -1815,7 +1815,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Description, e.g. Apply your technical skills.
+     * Description, for example, Apply your technical skills.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -1836,7 +1836,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Description, e.g. Apply your technical skills.
+     * Description, for example, Apply your technical skills.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -1855,7 +1855,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Description, e.g. Apply your technical skills.
+     * Description, for example, Apply your technical skills.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -1869,7 +1869,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Description, e.g. Apply your technical skills.
+     * Description, for example, Apply your technical skills.
      * </pre>
      *
      * <code>string description = 5;</code>
@@ -1891,8 +1891,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object imageUrl_ = "";
     /**
      * <pre>
-     * Image URL, e.g. http://www.example.com/image.png. The image will not be
-     * uploaded as image asset.
+     * Image URL, for example, http://www.example.com/image.png. The image will
+     * not be uploaded as image asset.
      * </pre>
      *
      * <code>string image_url = 6;</code>
@@ -1912,8 +1912,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Image URL, e.g. http://www.example.com/image.png. The image will not be
-     * uploaded as image asset.
+     * Image URL, for example, http://www.example.com/image.png. The image will
+     * not be uploaded as image asset.
      * </pre>
      *
      * <code>string image_url = 6;</code>
@@ -1934,8 +1934,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Image URL, e.g. http://www.example.com/image.png. The image will not be
-     * uploaded as image asset.
+     * Image URL, for example, http://www.example.com/image.png. The image will
+     * not be uploaded as image asset.
      * </pre>
      *
      * <code>string image_url = 6;</code>
@@ -1954,8 +1954,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Image URL, e.g. http://www.example.com/image.png. The image will not be
-     * uploaded as image asset.
+     * Image URL, for example, http://www.example.com/image.png. The image will
+     * not be uploaded as image asset.
      * </pre>
      *
      * <code>string image_url = 6;</code>
@@ -1969,8 +1969,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Image URL, e.g. http://www.example.com/image.png. The image will not be
-     * uploaded as image asset.
+     * Image URL, for example, http://www.example.com/image.png. The image will
+     * not be uploaded as image asset.
      * </pre>
      *
      * <code>string image_url = 6;</code>
@@ -1992,7 +1992,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object jobCategory_ = "";
     /**
      * <pre>
-     * Job category, e.g. Technical.
+     * Job category, for example, Technical.
      * </pre>
      *
      * <code>string job_category = 7;</code>
@@ -2012,7 +2012,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Job category, e.g. Technical.
+     * Job category, for example, Technical.
      * </pre>
      *
      * <code>string job_category = 7;</code>
@@ -2033,7 +2033,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Job category, e.g. Technical.
+     * Job category, for example, Technical.
      * </pre>
      *
      * <code>string job_category = 7;</code>
@@ -2052,7 +2052,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Job category, e.g. Technical.
+     * Job category, for example, Technical.
      * </pre>
      *
      * <code>string job_category = 7;</code>
@@ -2066,7 +2066,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Job category, e.g. Technical.
+     * Job category, for example, Technical.
      * </pre>
      *
      * <code>string job_category = 7;</code>
@@ -2094,7 +2094,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contextual keywords, e.g. Software engineering job.
+     * Contextual keywords, for example, Software engineering job.
      * </pre>
      *
      * <code>repeated string contextual_keywords = 8;</code>
@@ -2106,7 +2106,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contextual keywords, e.g. Software engineering job.
+     * Contextual keywords, for example, Software engineering job.
      * </pre>
      *
      * <code>repeated string contextual_keywords = 8;</code>
@@ -2117,7 +2117,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contextual keywords, e.g. Software engineering job.
+     * Contextual keywords, for example, Software engineering job.
      * </pre>
      *
      * <code>repeated string contextual_keywords = 8;</code>
@@ -2129,7 +2129,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contextual keywords, e.g. Software engineering job.
+     * Contextual keywords, for example, Software engineering job.
      * </pre>
      *
      * <code>repeated string contextual_keywords = 8;</code>
@@ -2142,7 +2142,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contextual keywords, e.g. Software engineering job.
+     * Contextual keywords, for example, Software engineering job.
      * </pre>
      *
      * <code>repeated string contextual_keywords = 8;</code>
@@ -2162,7 +2162,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contextual keywords, e.g. Software engineering job.
+     * Contextual keywords, for example, Software engineering job.
      * </pre>
      *
      * <code>repeated string contextual_keywords = 8;</code>
@@ -2181,7 +2181,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contextual keywords, e.g. Software engineering job.
+     * Contextual keywords, for example, Software engineering job.
      * </pre>
      *
      * <code>repeated string contextual_keywords = 8;</code>
@@ -2198,7 +2198,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contextual keywords, e.g. Software engineering job.
+     * Contextual keywords, for example, Software engineering job.
      * </pre>
      *
      * <code>repeated string contextual_keywords = 8;</code>
@@ -2212,7 +2212,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contextual keywords, e.g. Software engineering job.
+     * Contextual keywords, for example, Software engineering job.
      * </pre>
      *
      * <code>repeated string contextual_keywords = 8;</code>
@@ -2235,9 +2235,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Address which can be specified in one of the following formats.
-     * (1) City, state, code, country, e.g. Mountain View, CA, USA.
-     * (2) Full address, e.g. 123 Boulevard St, Mountain View, CA 94043.
-     * (3) Latitude-longitude in the DDD format, e.g. 41.40338, 2.17403.
+     * (1) City, state, code, country, for example, Mountain View, CA, USA.
+     * (2) Full address, for example, 123 Boulevard St, Mountain View, CA 94043.
+     * (3) Latitude-longitude in the DDD format, for example, 41.40338, 2.17403.
      * </pre>
      *
      * <code>string address = 9;</code>
@@ -2258,9 +2258,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Address which can be specified in one of the following formats.
-     * (1) City, state, code, country, e.g. Mountain View, CA, USA.
-     * (2) Full address, e.g. 123 Boulevard St, Mountain View, CA 94043.
-     * (3) Latitude-longitude in the DDD format, e.g. 41.40338, 2.17403.
+     * (1) City, state, code, country, for example, Mountain View, CA, USA.
+     * (2) Full address, for example, 123 Boulevard St, Mountain View, CA 94043.
+     * (3) Latitude-longitude in the DDD format, for example, 41.40338, 2.17403.
      * </pre>
      *
      * <code>string address = 9;</code>
@@ -2282,9 +2282,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Address which can be specified in one of the following formats.
-     * (1) City, state, code, country, e.g. Mountain View, CA, USA.
-     * (2) Full address, e.g. 123 Boulevard St, Mountain View, CA 94043.
-     * (3) Latitude-longitude in the DDD format, e.g. 41.40338, 2.17403.
+     * (1) City, state, code, country, for example, Mountain View, CA, USA.
+     * (2) Full address, for example, 123 Boulevard St, Mountain View, CA 94043.
+     * (3) Latitude-longitude in the DDD format, for example, 41.40338, 2.17403.
      * </pre>
      *
      * <code>string address = 9;</code>
@@ -2304,9 +2304,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Address which can be specified in one of the following formats.
-     * (1) City, state, code, country, e.g. Mountain View, CA, USA.
-     * (2) Full address, e.g. 123 Boulevard St, Mountain View, CA 94043.
-     * (3) Latitude-longitude in the DDD format, e.g. 41.40338, 2.17403.
+     * (1) City, state, code, country, for example, Mountain View, CA, USA.
+     * (2) Full address, for example, 123 Boulevard St, Mountain View, CA 94043.
+     * (3) Latitude-longitude in the DDD format, for example, 41.40338, 2.17403.
      * </pre>
      *
      * <code>string address = 9;</code>
@@ -2321,9 +2321,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Address which can be specified in one of the following formats.
-     * (1) City, state, code, country, e.g. Mountain View, CA, USA.
-     * (2) Full address, e.g. 123 Boulevard St, Mountain View, CA 94043.
-     * (3) Latitude-longitude in the DDD format, e.g. 41.40338, 2.17403.
+     * (1) City, state, code, country, for example, Mountain View, CA, USA.
+     * (2) Full address, for example, 123 Boulevard St, Mountain View, CA 94043.
+     * (3) Latitude-longitude in the DDD format, for example, 41.40338, 2.17403.
      * </pre>
      *
      * <code>string address = 9;</code>
@@ -2345,7 +2345,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object salary_ = "";
     /**
      * <pre>
-     * Salary, e.g. $100,000.
+     * Salary, for example, $100,000.
      * </pre>
      *
      * <code>string salary = 10;</code>
@@ -2365,7 +2365,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Salary, e.g. $100,000.
+     * Salary, for example, $100,000.
      * </pre>
      *
      * <code>string salary = 10;</code>
@@ -2386,7 +2386,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Salary, e.g. $100,000.
+     * Salary, for example, $100,000.
      * </pre>
      *
      * <code>string salary = 10;</code>
@@ -2405,7 +2405,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Salary, e.g. $100,000.
+     * Salary, for example, $100,000.
      * </pre>
      *
      * <code>string salary = 10;</code>
@@ -2419,7 +2419,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Salary, e.g. $100,000.
+     * Salary, for example, $100,000.
      * </pre>
      *
      * <code>string salary = 10;</code>
@@ -2441,7 +2441,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object androidAppLink_ = "";
     /**
      * <pre>
-     * Android deep link, e.g.
+     * Android deep link, for example,
      * android-app://com.example.android/http/example.com/gizmos?1234.
      * </pre>
      *
@@ -2462,7 +2462,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Android deep link, e.g.
+     * Android deep link, for example,
      * android-app://com.example.android/http/example.com/gizmos?1234.
      * </pre>
      *
@@ -2484,7 +2484,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Android deep link, e.g.
+     * Android deep link, for example,
      * android-app://com.example.android/http/example.com/gizmos?1234.
      * </pre>
      *
@@ -2504,7 +2504,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Android deep link, e.g.
+     * Android deep link, for example,
      * android-app://com.example.android/http/example.com/gizmos?1234.
      * </pre>
      *
@@ -2519,7 +2519,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Android deep link, e.g.
+     * Android deep link, for example,
      * android-app://com.example.android/http/example.com/gizmos?1234.
      * </pre>
      *
@@ -2548,7 +2548,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Similar job IDs, e.g. 1275.
+     * Similar job IDs, for example, 1275.
      * </pre>
      *
      * <code>repeated string similar_job_ids = 12;</code>
@@ -2560,7 +2560,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Similar job IDs, e.g. 1275.
+     * Similar job IDs, for example, 1275.
      * </pre>
      *
      * <code>repeated string similar_job_ids = 12;</code>
@@ -2571,7 +2571,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Similar job IDs, e.g. 1275.
+     * Similar job IDs, for example, 1275.
      * </pre>
      *
      * <code>repeated string similar_job_ids = 12;</code>
@@ -2583,7 +2583,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Similar job IDs, e.g. 1275.
+     * Similar job IDs, for example, 1275.
      * </pre>
      *
      * <code>repeated string similar_job_ids = 12;</code>
@@ -2596,7 +2596,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Similar job IDs, e.g. 1275.
+     * Similar job IDs, for example, 1275.
      * </pre>
      *
      * <code>repeated string similar_job_ids = 12;</code>
@@ -2616,7 +2616,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Similar job IDs, e.g. 1275.
+     * Similar job IDs, for example, 1275.
      * </pre>
      *
      * <code>repeated string similar_job_ids = 12;</code>
@@ -2635,7 +2635,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Similar job IDs, e.g. 1275.
+     * Similar job IDs, for example, 1275.
      * </pre>
      *
      * <code>repeated string similar_job_ids = 12;</code>
@@ -2652,7 +2652,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Similar job IDs, e.g. 1275.
+     * Similar job IDs, for example, 1275.
      * </pre>
      *
      * <code>repeated string similar_job_ids = 12;</code>
@@ -2666,7 +2666,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Similar job IDs, e.g. 1275.
+     * Similar job IDs, for example, 1275.
      * </pre>
      *
      * <code>repeated string similar_job_ids = 12;</code>
@@ -2688,7 +2688,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object iosAppLink_ = "";
     /**
      * <pre>
-     * iOS deep link, e.g. exampleApp://content/page.
+     * iOS deep link, for example, exampleApp://content/page.
      * </pre>
      *
      * <code>string ios_app_link = 13;</code>
@@ -2708,7 +2708,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * iOS deep link, e.g. exampleApp://content/page.
+     * iOS deep link, for example, exampleApp://content/page.
      * </pre>
      *
      * <code>string ios_app_link = 13;</code>
@@ -2729,7 +2729,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * iOS deep link, e.g. exampleApp://content/page.
+     * iOS deep link, for example, exampleApp://content/page.
      * </pre>
      *
      * <code>string ios_app_link = 13;</code>
@@ -2748,7 +2748,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * iOS deep link, e.g. exampleApp://content/page.
+     * iOS deep link, for example, exampleApp://content/page.
      * </pre>
      *
      * <code>string ios_app_link = 13;</code>
@@ -2762,7 +2762,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * iOS deep link, e.g. exampleApp://content/page.
+     * iOS deep link, for example, exampleApp://content/page.
      * </pre>
      *
      * <code>string ios_app_link = 13;</code>

@@ -114,7 +114,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Multiple requests were attempting to modify the same resource at once.
-     * Please retry the request.
+     * Retry the request.
      * </pre>
      *
      * <code>CONCURRENT_MODIFICATION = 2;</code>
@@ -131,7 +131,7 @@ private static final long serialVersionUID = 0L;
     DATA_CONSTRAINT_VIOLATION(3),
     /**
      * <pre>
-     * The data written is too large. Please split the request into smaller
+     * The data written is too large. Split the request into smaller
      * requests.
      * </pre>
      *
@@ -160,7 +160,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Multiple requests were attempting to modify the same resource at once.
-     * Please retry the request.
+     * Retry the request.
      * </pre>
      *
      * <code>CONCURRENT_MODIFICATION = 2;</code>
@@ -177,7 +177,7 @@ private static final long serialVersionUID = 0L;
     public static final int DATA_CONSTRAINT_VIOLATION_VALUE = 3;
     /**
      * <pre>
-     * The data written is too large. Please split the request into smaller
+     * The data written is too large. Split the request into smaller
      * requests.
      * </pre>
      *

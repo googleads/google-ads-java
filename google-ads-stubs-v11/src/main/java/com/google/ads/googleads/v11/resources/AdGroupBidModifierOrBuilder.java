@@ -166,7 +166,7 @@ public interface AdGroupBidModifierOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. Criterion for hotel date selection (default dates vs. user selected).
+   * Immutable. Criterion for hotel date selection (default dates versus user selected).
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -175,7 +175,7 @@ public interface AdGroupBidModifierOrBuilder extends
   boolean hasHotelDateSelectionType();
   /**
    * <pre>
-   * Immutable. Criterion for hotel date selection (default dates vs. user selected).
+   * Immutable. Criterion for hotel date selection (default dates versus user selected).
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -184,7 +184,7 @@ public interface AdGroupBidModifierOrBuilder extends
   com.google.ads.googleads.v11.common.HotelDateSelectionTypeInfo getHotelDateSelectionType();
   /**
    * <pre>
-   * Immutable. Criterion for hotel date selection (default dates vs. user selected).
+   * Immutable. Criterion for hotel date selection (default dates versus user selected).
    * </pre>
    *
    * <code>.google.ads.googleads.v11.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>

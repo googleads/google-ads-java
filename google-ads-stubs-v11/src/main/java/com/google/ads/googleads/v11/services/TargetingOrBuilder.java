@@ -192,4 +192,34 @@ public interface TargetingOrBuilder extends
    * @return The network.
    */
   com.google.ads.googleads.v11.enums.ReachPlanNetworkEnum.ReachPlanNetwork getNetwork();
+
+  /**
+   * <pre>
+   * Targeted audiences.
+   * If not specified, does not target any specific audience.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.services.AudienceTargeting audience_targeting = 7;</code>
+   * @return Whether the audienceTargeting field is set.
+   */
+  boolean hasAudienceTargeting();
+  /**
+   * <pre>
+   * Targeted audiences.
+   * If not specified, does not target any specific audience.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.services.AudienceTargeting audience_targeting = 7;</code>
+   * @return The audienceTargeting.
+   */
+  com.google.ads.googleads.v11.services.AudienceTargeting getAudienceTargeting();
+  /**
+   * <pre>
+   * Targeted audiences.
+   * If not specified, does not target any specific audience.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.services.AudienceTargeting audience_targeting = 7;</code>
+   */
+  com.google.ads.googleads.v11.services.AudienceTargetingOrBuilder getAudienceTargetingOrBuilder();
 }

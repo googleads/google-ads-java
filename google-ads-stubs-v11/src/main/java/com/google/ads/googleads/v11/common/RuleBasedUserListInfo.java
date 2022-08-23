@@ -87,6 +87,19 @@ private static final long serialVersionUID = 0L;
             ruleBasedUserListCase_ = 4;
             break;
           }
+          case 42: {
+            com.google.ads.googleads.v11.common.FlexibleRuleUserListInfo.Builder subBuilder = null;
+            if (flexibleRuleUserList_ != null) {
+              subBuilder = flexibleRuleUserList_.toBuilder();
+            }
+            flexibleRuleUserList_ = input.readMessage(com.google.ads.googleads.v11.common.FlexibleRuleUserListInfo.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(flexibleRuleUserList_);
+              flexibleRuleUserList_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -201,6 +214,44 @@ private static final long serialVersionUID = 0L;
     @SuppressWarnings("deprecation")
     com.google.ads.googleads.v11.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus result = com.google.ads.googleads.v11.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus.valueOf(prepopulationStatus_);
     return result == null ? com.google.ads.googleads.v11.enums.UserListPrepopulationStatusEnum.UserListPrepopulationStatus.UNRECOGNIZED : result;
+  }
+
+  public static final int FLEXIBLE_RULE_USER_LIST_FIELD_NUMBER = 5;
+  private com.google.ads.googleads.v11.common.FlexibleRuleUserListInfo flexibleRuleUserList_;
+  /**
+   * <pre>
+   * Flexible rule representation of visitors with one or multiple actions.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.common.FlexibleRuleUserListInfo flexible_rule_user_list = 5;</code>
+   * @return Whether the flexibleRuleUserList field is set.
+   */
+  @java.lang.Override
+  public boolean hasFlexibleRuleUserList() {
+    return flexibleRuleUserList_ != null;
+  }
+  /**
+   * <pre>
+   * Flexible rule representation of visitors with one or multiple actions.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.common.FlexibleRuleUserListInfo flexible_rule_user_list = 5;</code>
+   * @return The flexibleRuleUserList.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v11.common.FlexibleRuleUserListInfo getFlexibleRuleUserList() {
+    return flexibleRuleUserList_ == null ? com.google.ads.googleads.v11.common.FlexibleRuleUserListInfo.getDefaultInstance() : flexibleRuleUserList_;
+  }
+  /**
+   * <pre>
+   * Flexible rule representation of visitors with one or multiple actions.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.common.FlexibleRuleUserListInfo flexible_rule_user_list = 5;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v11.common.FlexibleRuleUserListInfoOrBuilder getFlexibleRuleUserListOrBuilder() {
+    return getFlexibleRuleUserList();
   }
 
   public static final int COMBINED_RULE_USER_LIST_FIELD_NUMBER = 2;
@@ -321,6 +372,9 @@ private static final long serialVersionUID = 0L;
     if (ruleBasedUserListCase_ == 4) {
       output.writeMessage(4, (com.google.ads.googleads.v11.common.ExpressionRuleUserListInfo) ruleBasedUserList_);
     }
+    if (flexibleRuleUserList_ != null) {
+      output.writeMessage(5, getFlexibleRuleUserList());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -342,6 +396,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, (com.google.ads.googleads.v11.common.ExpressionRuleUserListInfo) ruleBasedUserList_);
     }
+    if (flexibleRuleUserList_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, getFlexibleRuleUserList());
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -358,6 +416,11 @@ private static final long serialVersionUID = 0L;
     com.google.ads.googleads.v11.common.RuleBasedUserListInfo other = (com.google.ads.googleads.v11.common.RuleBasedUserListInfo) obj;
 
     if (prepopulationStatus_ != other.prepopulationStatus_) return false;
+    if (hasFlexibleRuleUserList() != other.hasFlexibleRuleUserList()) return false;
+    if (hasFlexibleRuleUserList()) {
+      if (!getFlexibleRuleUserList()
+          .equals(other.getFlexibleRuleUserList())) return false;
+    }
     if (!getRuleBasedUserListCase().equals(other.getRuleBasedUserListCase())) return false;
     switch (ruleBasedUserListCase_) {
       case 2:
@@ -384,6 +447,10 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + PREPOPULATION_STATUS_FIELD_NUMBER;
     hash = (53 * hash) + prepopulationStatus_;
+    if (hasFlexibleRuleUserList()) {
+      hash = (37 * hash) + FLEXIBLE_RULE_USER_LIST_FIELD_NUMBER;
+      hash = (53 * hash) + getFlexibleRuleUserList().hashCode();
+    }
     switch (ruleBasedUserListCase_) {
       case 2:
         hash = (37 * hash) + COMBINED_RULE_USER_LIST_FIELD_NUMBER;
@@ -535,6 +602,12 @@ private static final long serialVersionUID = 0L;
       super.clear();
       prepopulationStatus_ = 0;
 
+      if (flexibleRuleUserListBuilder_ == null) {
+        flexibleRuleUserList_ = null;
+      } else {
+        flexibleRuleUserList_ = null;
+        flexibleRuleUserListBuilder_ = null;
+      }
       ruleBasedUserListCase_ = 0;
       ruleBasedUserList_ = null;
       return this;
@@ -564,6 +637,11 @@ private static final long serialVersionUID = 0L;
     public com.google.ads.googleads.v11.common.RuleBasedUserListInfo buildPartial() {
       com.google.ads.googleads.v11.common.RuleBasedUserListInfo result = new com.google.ads.googleads.v11.common.RuleBasedUserListInfo(this);
       result.prepopulationStatus_ = prepopulationStatus_;
+      if (flexibleRuleUserListBuilder_ == null) {
+        result.flexibleRuleUserList_ = flexibleRuleUserList_;
+      } else {
+        result.flexibleRuleUserList_ = flexibleRuleUserListBuilder_.build();
+      }
       if (ruleBasedUserListCase_ == 2) {
         if (combinedRuleUserListBuilder_ == null) {
           result.ruleBasedUserList_ = ruleBasedUserList_;
@@ -629,6 +707,9 @@ private static final long serialVersionUID = 0L;
       if (other == com.google.ads.googleads.v11.common.RuleBasedUserListInfo.getDefaultInstance()) return this;
       if (other.prepopulationStatus_ != 0) {
         setPrepopulationStatusValue(other.getPrepopulationStatusValue());
+      }
+      if (other.hasFlexibleRuleUserList()) {
+        mergeFlexibleRuleUserList(other.getFlexibleRuleUserList());
       }
       switch (other.getRuleBasedUserListCase()) {
         case COMBINED_RULE_USER_LIST: {
@@ -794,6 +875,161 @@ private static final long serialVersionUID = 0L;
       prepopulationStatus_ = 0;
       onChanged();
       return this;
+    }
+
+    private com.google.ads.googleads.v11.common.FlexibleRuleUserListInfo flexibleRuleUserList_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v11.common.FlexibleRuleUserListInfo, com.google.ads.googleads.v11.common.FlexibleRuleUserListInfo.Builder, com.google.ads.googleads.v11.common.FlexibleRuleUserListInfoOrBuilder> flexibleRuleUserListBuilder_;
+    /**
+     * <pre>
+     * Flexible rule representation of visitors with one or multiple actions.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.common.FlexibleRuleUserListInfo flexible_rule_user_list = 5;</code>
+     * @return Whether the flexibleRuleUserList field is set.
+     */
+    public boolean hasFlexibleRuleUserList() {
+      return flexibleRuleUserListBuilder_ != null || flexibleRuleUserList_ != null;
+    }
+    /**
+     * <pre>
+     * Flexible rule representation of visitors with one or multiple actions.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.common.FlexibleRuleUserListInfo flexible_rule_user_list = 5;</code>
+     * @return The flexibleRuleUserList.
+     */
+    public com.google.ads.googleads.v11.common.FlexibleRuleUserListInfo getFlexibleRuleUserList() {
+      if (flexibleRuleUserListBuilder_ == null) {
+        return flexibleRuleUserList_ == null ? com.google.ads.googleads.v11.common.FlexibleRuleUserListInfo.getDefaultInstance() : flexibleRuleUserList_;
+      } else {
+        return flexibleRuleUserListBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Flexible rule representation of visitors with one or multiple actions.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.common.FlexibleRuleUserListInfo flexible_rule_user_list = 5;</code>
+     */
+    public Builder setFlexibleRuleUserList(com.google.ads.googleads.v11.common.FlexibleRuleUserListInfo value) {
+      if (flexibleRuleUserListBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        flexibleRuleUserList_ = value;
+        onChanged();
+      } else {
+        flexibleRuleUserListBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Flexible rule representation of visitors with one or multiple actions.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.common.FlexibleRuleUserListInfo flexible_rule_user_list = 5;</code>
+     */
+    public Builder setFlexibleRuleUserList(
+        com.google.ads.googleads.v11.common.FlexibleRuleUserListInfo.Builder builderForValue) {
+      if (flexibleRuleUserListBuilder_ == null) {
+        flexibleRuleUserList_ = builderForValue.build();
+        onChanged();
+      } else {
+        flexibleRuleUserListBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Flexible rule representation of visitors with one or multiple actions.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.common.FlexibleRuleUserListInfo flexible_rule_user_list = 5;</code>
+     */
+    public Builder mergeFlexibleRuleUserList(com.google.ads.googleads.v11.common.FlexibleRuleUserListInfo value) {
+      if (flexibleRuleUserListBuilder_ == null) {
+        if (flexibleRuleUserList_ != null) {
+          flexibleRuleUserList_ =
+            com.google.ads.googleads.v11.common.FlexibleRuleUserListInfo.newBuilder(flexibleRuleUserList_).mergeFrom(value).buildPartial();
+        } else {
+          flexibleRuleUserList_ = value;
+        }
+        onChanged();
+      } else {
+        flexibleRuleUserListBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Flexible rule representation of visitors with one or multiple actions.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.common.FlexibleRuleUserListInfo flexible_rule_user_list = 5;</code>
+     */
+    public Builder clearFlexibleRuleUserList() {
+      if (flexibleRuleUserListBuilder_ == null) {
+        flexibleRuleUserList_ = null;
+        onChanged();
+      } else {
+        flexibleRuleUserList_ = null;
+        flexibleRuleUserListBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Flexible rule representation of visitors with one or multiple actions.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.common.FlexibleRuleUserListInfo flexible_rule_user_list = 5;</code>
+     */
+    public com.google.ads.googleads.v11.common.FlexibleRuleUserListInfo.Builder getFlexibleRuleUserListBuilder() {
+      
+      onChanged();
+      return getFlexibleRuleUserListFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Flexible rule representation of visitors with one or multiple actions.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.common.FlexibleRuleUserListInfo flexible_rule_user_list = 5;</code>
+     */
+    public com.google.ads.googleads.v11.common.FlexibleRuleUserListInfoOrBuilder getFlexibleRuleUserListOrBuilder() {
+      if (flexibleRuleUserListBuilder_ != null) {
+        return flexibleRuleUserListBuilder_.getMessageOrBuilder();
+      } else {
+        return flexibleRuleUserList_ == null ?
+            com.google.ads.googleads.v11.common.FlexibleRuleUserListInfo.getDefaultInstance() : flexibleRuleUserList_;
+      }
+    }
+    /**
+     * <pre>
+     * Flexible rule representation of visitors with one or multiple actions.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.common.FlexibleRuleUserListInfo flexible_rule_user_list = 5;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v11.common.FlexibleRuleUserListInfo, com.google.ads.googleads.v11.common.FlexibleRuleUserListInfo.Builder, com.google.ads.googleads.v11.common.FlexibleRuleUserListInfoOrBuilder> 
+        getFlexibleRuleUserListFieldBuilder() {
+      if (flexibleRuleUserListBuilder_ == null) {
+        flexibleRuleUserListBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v11.common.FlexibleRuleUserListInfo, com.google.ads.googleads.v11.common.FlexibleRuleUserListInfo.Builder, com.google.ads.googleads.v11.common.FlexibleRuleUserListInfoOrBuilder>(
+                getFlexibleRuleUserList(),
+                getParentForChildren(),
+                isClean());
+        flexibleRuleUserList_ = null;
+      }
+      return flexibleRuleUserListBuilder_;
     }
 
     private com.google.protobuf.SingleFieldBuilderV3<

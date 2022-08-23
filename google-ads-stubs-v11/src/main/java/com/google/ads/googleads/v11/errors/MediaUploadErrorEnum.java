@@ -302,7 +302,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The media bundle is not compatible with the asset spec product type.
-     * (E.g. Gmail, dynamic remarketing, etc.)
+     * (For example, Gmail, dynamic remarketing, etc.)
      * </pre>
      *
      * <code>MEDIA_BUNDLE_NOT_COMPATIBLE_TO_PRODUCT_TYPE = 25;</code>
@@ -599,7 +599,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The media bundle is not compatible with the asset spec product type.
-     * (E.g. Gmail, dynamic remarketing, etc.)
+     * (For example, Gmail, dynamic remarketing, etc.)
      * </pre>
      *
      * <code>MEDIA_BUNDLE_NOT_COMPATIBLE_TO_PRODUCT_TYPE = 25;</code>

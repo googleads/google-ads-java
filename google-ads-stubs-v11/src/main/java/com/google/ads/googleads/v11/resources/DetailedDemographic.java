@@ -201,8 +201,8 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object name_;
   /**
    * <pre>
-   * Output only. The name of the detailed demographic. E.g."Highest Level of Educational
-   * Attainment"
+   * Output only. The name of the detailed demographic. For example,"Highest Level of
+   * Educational Attainment"
    * </pre>
    *
    * <code>string name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -223,8 +223,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The name of the detailed demographic. E.g."Highest Level of Educational
-   * Attainment"
+   * Output only. The name of the detailed demographic. For example,"Highest Level of
+   * Educational Attainment"
    * </pre>
    *
    * <code>string name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -952,8 +952,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object name_ = "";
     /**
      * <pre>
-     * Output only. The name of the detailed demographic. E.g."Highest Level of Educational
-     * Attainment"
+     * Output only. The name of the detailed demographic. For example,"Highest Level of
+     * Educational Attainment"
      * </pre>
      *
      * <code>string name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -973,8 +973,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The name of the detailed demographic. E.g."Highest Level of Educational
-     * Attainment"
+     * Output only. The name of the detailed demographic. For example,"Highest Level of
+     * Educational Attainment"
      * </pre>
      *
      * <code>string name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -995,8 +995,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The name of the detailed demographic. E.g."Highest Level of Educational
-     * Attainment"
+     * Output only. The name of the detailed demographic. For example,"Highest Level of
+     * Educational Attainment"
      * </pre>
      *
      * <code>string name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1015,8 +1015,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The name of the detailed demographic. E.g."Highest Level of Educational
-     * Attainment"
+     * Output only. The name of the detailed demographic. For example,"Highest Level of
+     * Educational Attainment"
      * </pre>
      *
      * <code>string name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1030,8 +1030,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The name of the detailed demographic. E.g."Highest Level of Educational
-     * Attainment"
+     * Output only. The name of the detailed demographic. For example,"Highest Level of
+     * Educational Attainment"
      * </pre>
      *
      * <code>string name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

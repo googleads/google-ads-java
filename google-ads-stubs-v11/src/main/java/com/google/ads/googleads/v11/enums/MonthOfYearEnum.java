@@ -5,7 +5,7 @@ package com.google.ads.googleads.v11.enums;
 
 /**
  * <pre>
- * Container for enumeration of months of the year, e.g., "January".
+ * Container for enumeration of months of the year, for example, "January".
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v11.enums.MonthOfYearEnum}
@@ -88,7 +88,7 @@ private static final long serialVersionUID = 0L;
 
   /**
    * <pre>
-   * Enumerates months of the year, e.g., "January".
+   * Enumerates months of the year, for example, "January".
    * </pre>
    *
    * Protobuf enum {@code google.ads.googleads.v11.enums.MonthOfYearEnum.MonthOfYear}
@@ -564,7 +564,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Container for enumeration of months of the year, e.g., "January".
+   * Container for enumeration of months of the year, for example, "January".
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v11.enums.MonthOfYearEnum}

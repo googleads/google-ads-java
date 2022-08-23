@@ -88,7 +88,7 @@ private static final long serialVersionUID = 0L;
 
   /**
    * <pre>
-   * The type of demographic genders (e.g. female).
+   * The type of demographic genders (for example, female).
    * </pre>
    *
    * Protobuf enum {@code google.ads.googleads.v11.enums.GenderTypeEnum.GenderType}

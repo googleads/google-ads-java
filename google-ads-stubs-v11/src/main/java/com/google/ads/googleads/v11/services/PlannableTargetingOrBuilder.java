@@ -217,4 +217,48 @@ public interface PlannableTargetingOrBuilder extends
    * @return The enum numeric value on the wire of networks at the given index.
    */
   int getNetworksValue(int index);
+
+  /**
+   * <pre>
+   * Targetable YouTube Select Lineups for the ad product.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v11.services.YouTubeSelectLineUp youtube_select_lineups = 5;</code>
+   */
+  java.util.List<com.google.ads.googleads.v11.services.YouTubeSelectLineUp> 
+      getYoutubeSelectLineupsList();
+  /**
+   * <pre>
+   * Targetable YouTube Select Lineups for the ad product.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v11.services.YouTubeSelectLineUp youtube_select_lineups = 5;</code>
+   */
+  com.google.ads.googleads.v11.services.YouTubeSelectLineUp getYoutubeSelectLineups(int index);
+  /**
+   * <pre>
+   * Targetable YouTube Select Lineups for the ad product.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v11.services.YouTubeSelectLineUp youtube_select_lineups = 5;</code>
+   */
+  int getYoutubeSelectLineupsCount();
+  /**
+   * <pre>
+   * Targetable YouTube Select Lineups for the ad product.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v11.services.YouTubeSelectLineUp youtube_select_lineups = 5;</code>
+   */
+  java.util.List<? extends com.google.ads.googleads.v11.services.YouTubeSelectLineUpOrBuilder> 
+      getYoutubeSelectLineupsOrBuilderList();
+  /**
+   * <pre>
+   * Targetable YouTube Select Lineups for the ad product.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v11.services.YouTubeSelectLineUp youtube_select_lineups = 5;</code>
+   */
+  com.google.ads.googleads.v11.services.YouTubeSelectLineUpOrBuilder getYoutubeSelectLineupsOrBuilder(
+      int index);
 }

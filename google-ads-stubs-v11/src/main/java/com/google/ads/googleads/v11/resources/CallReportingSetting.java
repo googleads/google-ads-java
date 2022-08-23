@@ -109,7 +109,7 @@ private static final long serialVersionUID = 0L;
   private boolean callReportingEnabled_;
   /**
    * <pre>
-   * Enable reporting of phone call events by redirecting them via Google
+   * Enable reporting of phone call events by redirecting them through Google
    * System.
    * </pre>
    *
@@ -122,7 +122,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Enable reporting of phone call events by redirecting them via Google
+   * Enable reporting of phone call events by redirecting them through Google
    * System.
    * </pre>
    *
@@ -599,7 +599,7 @@ private static final long serialVersionUID = 0L;
     private boolean callReportingEnabled_ ;
     /**
      * <pre>
-     * Enable reporting of phone call events by redirecting them via Google
+     * Enable reporting of phone call events by redirecting them through Google
      * System.
      * </pre>
      *
@@ -612,7 +612,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Enable reporting of phone call events by redirecting them via Google
+     * Enable reporting of phone call events by redirecting them through Google
      * System.
      * </pre>
      *
@@ -625,7 +625,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Enable reporting of phone call events by redirecting them via Google
+     * Enable reporting of phone call events by redirecting them through Google
      * System.
      * </pre>
      *
@@ -641,7 +641,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Enable reporting of phone call events by redirecting them via Google
+     * Enable reporting of phone call events by redirecting them through Google
      * System.
      * </pre>
      *

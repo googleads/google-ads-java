@@ -159,7 +159,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. A 16 digit id used to identify the payments account associated with the
      * billing setup.
-     * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+     * This must be passed as a string with dashes, for example,
+     * "1234-5678-9012-3456".
      * </pre>
      *
      * <code>optional string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -170,7 +171,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. A 16 digit id used to identify the payments account associated with the
      * billing setup.
-     * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+     * This must be passed as a string with dashes, for example,
+     * "1234-5678-9012-3456".
      * </pre>
      *
      * <code>optional string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -181,7 +183,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. A 16 digit id used to identify the payments account associated with the
      * billing setup.
-     * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+     * This must be passed as a string with dashes, for example,
+     * "1234-5678-9012-3456".
      * </pre>
      *
      * <code>optional string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -232,7 +235,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. A 12 digit id used to identify the payments profile associated with the
      * billing setup.
-     * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+     * This must be passed in as a string with dashes, for example,
+     * "1234-5678-9012".
      * </pre>
      *
      * <code>optional string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -243,7 +247,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. A 12 digit id used to identify the payments profile associated with the
      * billing setup.
-     * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+     * This must be passed in as a string with dashes, for example,
+     * "1234-5678-9012".
      * </pre>
      *
      * <code>optional string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -254,7 +259,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. A 12 digit id used to identify the payments profile associated with the
      * billing setup.
-     * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+     * This must be passed in as a string with dashes, for example,
+     * "1234-5678-9012".
      * </pre>
      *
      * <code>optional string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -294,8 +300,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. A secondary payments profile id present in uncommon situations, e.g.
-     * when a sequential liability agreement has been arranged.
+     * Output only. A secondary payments profile id present in uncommon situations, for
+     * example, when a sequential liability agreement has been arranged.
      * </pre>
      *
      * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -304,8 +310,8 @@ private static final long serialVersionUID = 0L;
     boolean hasSecondaryPaymentsProfileId();
     /**
      * <pre>
-     * Output only. A secondary payments profile id present in uncommon situations, e.g.
-     * when a sequential liability agreement has been arranged.
+     * Output only. A secondary payments profile id present in uncommon situations, for
+     * example, when a sequential liability agreement has been arranged.
      * </pre>
      *
      * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -314,8 +320,8 @@ private static final long serialVersionUID = 0L;
     java.lang.String getSecondaryPaymentsProfileId();
     /**
      * <pre>
-     * Output only. A secondary payments profile id present in uncommon situations, e.g.
-     * when a sequential liability agreement has been arranged.
+     * Output only. A secondary payments profile id present in uncommon situations, for
+     * example, when a sequential liability agreement has been arranged.
      * </pre>
      *
      * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -450,7 +456,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. A 16 digit id used to identify the payments account associated with the
      * billing setup.
-     * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+     * This must be passed as a string with dashes, for example,
+     * "1234-5678-9012-3456".
      * </pre>
      *
      * <code>optional string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -464,7 +471,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. A 16 digit id used to identify the payments account associated with the
      * billing setup.
-     * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+     * This must be passed as a string with dashes, for example,
+     * "1234-5678-9012-3456".
      * </pre>
      *
      * <code>optional string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -487,7 +495,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. A 16 digit id used to identify the payments account associated with the
      * billing setup.
-     * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+     * This must be passed as a string with dashes, for example,
+     * "1234-5678-9012-3456".
      * </pre>
      *
      * <code>optional string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -581,7 +590,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. A 12 digit id used to identify the payments profile associated with the
      * billing setup.
-     * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+     * This must be passed in as a string with dashes, for example,
+     * "1234-5678-9012".
      * </pre>
      *
      * <code>optional string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -595,7 +605,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. A 12 digit id used to identify the payments profile associated with the
      * billing setup.
-     * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+     * This must be passed in as a string with dashes, for example,
+     * "1234-5678-9012".
      * </pre>
      *
      * <code>optional string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -618,7 +629,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. A 12 digit id used to identify the payments profile associated with the
      * billing setup.
-     * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+     * This must be passed in as a string with dashes, for example,
+     * "1234-5678-9012".
      * </pre>
      *
      * <code>optional string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -701,8 +713,8 @@ private static final long serialVersionUID = 0L;
     private volatile java.lang.Object secondaryPaymentsProfileId_;
     /**
      * <pre>
-     * Output only. A secondary payments profile id present in uncommon situations, e.g.
-     * when a sequential liability agreement has been arranged.
+     * Output only. A secondary payments profile id present in uncommon situations, for
+     * example, when a sequential liability agreement has been arranged.
      * </pre>
      *
      * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -714,8 +726,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A secondary payments profile id present in uncommon situations, e.g.
-     * when a sequential liability agreement has been arranged.
+     * Output only. A secondary payments profile id present in uncommon situations, for
+     * example, when a sequential liability agreement has been arranged.
      * </pre>
      *
      * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -736,8 +748,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A secondary payments profile id present in uncommon situations, e.g.
-     * when a sequential liability agreement has been arranged.
+     * Output only. A secondary payments profile id present in uncommon situations, for
+     * example, when a sequential liability agreement has been arranged.
      * </pre>
      *
      * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1186,7 +1198,8 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Output only. A 16 digit id used to identify the payments account associated with the
        * billing setup.
-       * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+       * This must be passed as a string with dashes, for example,
+       * "1234-5678-9012-3456".
        * </pre>
        *
        * <code>optional string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1199,7 +1212,8 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Output only. A 16 digit id used to identify the payments account associated with the
        * billing setup.
-       * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+       * This must be passed as a string with dashes, for example,
+       * "1234-5678-9012-3456".
        * </pre>
        *
        * <code>optional string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1221,7 +1235,8 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Output only. A 16 digit id used to identify the payments account associated with the
        * billing setup.
-       * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+       * This must be passed as a string with dashes, for example,
+       * "1234-5678-9012-3456".
        * </pre>
        *
        * <code>optional string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1244,7 +1259,8 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Output only. A 16 digit id used to identify the payments account associated with the
        * billing setup.
-       * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+       * This must be passed as a string with dashes, for example,
+       * "1234-5678-9012-3456".
        * </pre>
        *
        * <code>optional string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1265,7 +1281,8 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Output only. A 16 digit id used to identify the payments account associated with the
        * billing setup.
-       * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+       * This must be passed as a string with dashes, for example,
+       * "1234-5678-9012-3456".
        * </pre>
        *
        * <code>optional string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1281,7 +1298,8 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Output only. A 16 digit id used to identify the payments account associated with the
        * billing setup.
-       * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+       * This must be passed as a string with dashes, for example,
+       * "1234-5678-9012-3456".
        * </pre>
        *
        * <code>optional string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1430,7 +1448,8 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Immutable. A 12 digit id used to identify the payments profile associated with the
        * billing setup.
-       * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+       * This must be passed in as a string with dashes, for example,
+       * "1234-5678-9012".
        * </pre>
        *
        * <code>optional string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1443,7 +1462,8 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Immutable. A 12 digit id used to identify the payments profile associated with the
        * billing setup.
-       * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+       * This must be passed in as a string with dashes, for example,
+       * "1234-5678-9012".
        * </pre>
        *
        * <code>optional string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1465,7 +1485,8 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Immutable. A 12 digit id used to identify the payments profile associated with the
        * billing setup.
-       * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+       * This must be passed in as a string with dashes, for example,
+       * "1234-5678-9012".
        * </pre>
        *
        * <code>optional string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1488,7 +1509,8 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Immutable. A 12 digit id used to identify the payments profile associated with the
        * billing setup.
-       * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+       * This must be passed in as a string with dashes, for example,
+       * "1234-5678-9012".
        * </pre>
        *
        * <code>optional string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1509,7 +1531,8 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Immutable. A 12 digit id used to identify the payments profile associated with the
        * billing setup.
-       * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+       * This must be passed in as a string with dashes, for example,
+       * "1234-5678-9012".
        * </pre>
        *
        * <code>optional string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1525,7 +1548,8 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Immutable. A 12 digit id used to identify the payments profile associated with the
        * billing setup.
-       * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+       * This must be passed in as a string with dashes, for example,
+       * "1234-5678-9012".
        * </pre>
        *
        * <code>optional string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1654,8 +1678,8 @@ private static final long serialVersionUID = 0L;
       private java.lang.Object secondaryPaymentsProfileId_ = "";
       /**
        * <pre>
-       * Output only. A secondary payments profile id present in uncommon situations, e.g.
-       * when a sequential liability agreement has been arranged.
+       * Output only. A secondary payments profile id present in uncommon situations, for
+       * example, when a sequential liability agreement has been arranged.
        * </pre>
        *
        * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1666,8 +1690,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. A secondary payments profile id present in uncommon situations, e.g.
-       * when a sequential liability agreement has been arranged.
+       * Output only. A secondary payments profile id present in uncommon situations, for
+       * example, when a sequential liability agreement has been arranged.
        * </pre>
        *
        * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1687,8 +1711,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. A secondary payments profile id present in uncommon situations, e.g.
-       * when a sequential liability agreement has been arranged.
+       * Output only. A secondary payments profile id present in uncommon situations, for
+       * example, when a sequential liability agreement has been arranged.
        * </pre>
        *
        * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1709,8 +1733,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. A secondary payments profile id present in uncommon situations, e.g.
-       * when a sequential liability agreement has been arranged.
+       * Output only. A secondary payments profile id present in uncommon situations, for
+       * example, when a sequential liability agreement has been arranged.
        * </pre>
        *
        * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1729,8 +1753,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. A secondary payments profile id present in uncommon situations, e.g.
-       * when a sequential liability agreement has been arranged.
+       * Output only. A secondary payments profile id present in uncommon situations, for
+       * example, when a sequential liability agreement has been arranged.
        * </pre>
        *
        * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1744,8 +1768,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. A secondary payments profile id present in uncommon situations, e.g.
-       * when a sequential liability agreement has been arranged.
+       * Output only. A secondary payments profile id present in uncommon situations, for
+       * example, when a sequential liability agreement has been arranged.
        * </pre>
        *
        * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

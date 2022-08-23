@@ -145,8 +145,8 @@ private static final long serialVersionUID = 0L;
     MULTIPLIER_NOT_ALLOWED_FOR_BIDDING_STRATEGY(5),
     /**
      * <pre>
-     * A multiplier cannot be set when there is no base bid (e.g., content max
-     * cpc)
+     * A multiplier cannot be set when there is no base bid (for example,
+     * content max cpc)
      * </pre>
      *
      * <code>MULTIPLIER_NOT_ALLOWED_WHEN_BASE_BID_IS_MISSING = 6;</code>
@@ -202,7 +202,8 @@ private static final long serialVersionUID = 0L;
     BID_LESS_THAN_MIN_ALLOWED_BID_WITH_MULTIPLIER(12),
     /**
      * <pre>
-     * Multiplier type (cpc vs. cpm) needs to match campaign's bidding strategy
+     * Multiplier type (cpc versus cpm) needs to match campaign's bidding
+     * strategy
      * </pre>
      *
      * <code>MULTIPLIER_AND_BIDDING_STRATEGY_TYPE_MISMATCH = 13;</code>
@@ -261,8 +262,8 @@ private static final long serialVersionUID = 0L;
     public static final int MULTIPLIER_NOT_ALLOWED_FOR_BIDDING_STRATEGY_VALUE = 5;
     /**
      * <pre>
-     * A multiplier cannot be set when there is no base bid (e.g., content max
-     * cpc)
+     * A multiplier cannot be set when there is no base bid (for example,
+     * content max cpc)
      * </pre>
      *
      * <code>MULTIPLIER_NOT_ALLOWED_WHEN_BASE_BID_IS_MISSING = 6;</code>
@@ -318,7 +319,8 @@ private static final long serialVersionUID = 0L;
     public static final int BID_LESS_THAN_MIN_ALLOWED_BID_WITH_MULTIPLIER_VALUE = 12;
     /**
      * <pre>
-     * Multiplier type (cpc vs. cpm) needs to match campaign's bidding strategy
+     * Multiplier type (cpc versus cpm) needs to match campaign's bidding
+     * strategy
      * </pre>
      *
      * <code>MULTIPLIER_AND_BIDDING_STRATEGY_TYPE_MISMATCH = 13;</code>

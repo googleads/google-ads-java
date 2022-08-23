@@ -113,7 +113,7 @@ private static final long serialVersionUID = 0L;
     UNKNOWN(1),
     /**
      * <pre>
-     * Pay per click.
+     * Pay per interaction.
      * </pre>
      *
      * <code>CLICKS = 4;</code>
@@ -172,7 +172,7 @@ private static final long serialVersionUID = 0L;
     public static final int UNKNOWN_VALUE = 1;
     /**
      * <pre>
-     * Pay per click.
+     * Pay per interaction.
      * </pre>
      *
      * <code>CLICKS = 4;</code>

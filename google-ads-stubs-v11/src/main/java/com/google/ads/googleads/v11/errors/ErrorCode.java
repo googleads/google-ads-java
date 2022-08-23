@@ -886,6 +886,12 @@ private static final long serialVersionUID = 0L;
             errorCode_ = rawValue;
             break;
           }
+          case 1336: {
+            int rawValue = input.readEnum();
+            errorCodeCase_ = 167;
+            errorCode_ = rawValue;
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -1064,6 +1070,7 @@ private static final long serialVersionUID = 0L;
     CUSTOM_AUDIENCE_ERROR(139),
     AUDIENCE_ERROR(164),
     EXPERIMENT_ARM_ERROR(156),
+    AUDIENCE_INSIGHTS_ERROR(167),
     ERRORCODE_NOT_SET(0);
     private final int value;
     private ErrorCodeCase(int value) {
@@ -1220,6 +1227,7 @@ private static final long serialVersionUID = 0L;
         case 139: return CUSTOM_AUDIENCE_ERROR;
         case 164: return AUDIENCE_ERROR;
         case 156: return EXPERIMENT_ARM_ERROR;
+        case 167: return AUDIENCE_INSIGHTS_ERROR;
         case 0: return ERRORCODE_NOT_SET;
         default: return null;
       }
@@ -7351,6 +7359,50 @@ private static final long serialVersionUID = 0L;
     return com.google.ads.googleads.v11.errors.ExperimentArmErrorEnum.ExperimentArmError.UNSPECIFIED;
   }
 
+  public static final int AUDIENCE_INSIGHTS_ERROR_FIELD_NUMBER = 167;
+  /**
+   * <pre>
+   * The reasons for the Audience Insights error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.errors.AudienceInsightsErrorEnum.AudienceInsightsError audience_insights_error = 167;</code>
+   * @return Whether the audienceInsightsError field is set.
+   */
+  public boolean hasAudienceInsightsError() {
+    return errorCodeCase_ == 167;
+  }
+  /**
+   * <pre>
+   * The reasons for the Audience Insights error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.errors.AudienceInsightsErrorEnum.AudienceInsightsError audience_insights_error = 167;</code>
+   * @return The enum numeric value on the wire for audienceInsightsError.
+   */
+  public int getAudienceInsightsErrorValue() {
+    if (errorCodeCase_ == 167) {
+      return (java.lang.Integer) errorCode_;
+    }
+    return 0;
+  }
+  /**
+   * <pre>
+   * The reasons for the Audience Insights error
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.errors.AudienceInsightsErrorEnum.AudienceInsightsError audience_insights_error = 167;</code>
+   * @return The audienceInsightsError.
+   */
+  public com.google.ads.googleads.v11.errors.AudienceInsightsErrorEnum.AudienceInsightsError getAudienceInsightsError() {
+    if (errorCodeCase_ == 167) {
+      @SuppressWarnings("deprecation")
+      com.google.ads.googleads.v11.errors.AudienceInsightsErrorEnum.AudienceInsightsError result = com.google.ads.googleads.v11.errors.AudienceInsightsErrorEnum.AudienceInsightsError.valueOf(
+          (java.lang.Integer) errorCode_);
+      return result == null ? com.google.ads.googleads.v11.errors.AudienceInsightsErrorEnum.AudienceInsightsError.UNRECOGNIZED : result;
+    }
+    return com.google.ads.googleads.v11.errors.AudienceInsightsErrorEnum.AudienceInsightsError.UNSPECIFIED;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -7781,6 +7833,9 @@ private static final long serialVersionUID = 0L;
     }
     if (errorCodeCase_ == 166) {
       output.writeEnum(166, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 167) {
+      output.writeEnum(167, ((java.lang.Integer) errorCode_));
     }
     unknownFields.writeTo(output);
   }
@@ -8346,6 +8401,10 @@ private static final long serialVersionUID = 0L;
     if (errorCodeCase_ == 166) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(166, ((java.lang.Integer) errorCode_));
+    }
+    if (errorCodeCase_ == 167) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(167, ((java.lang.Integer) errorCode_));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -8920,6 +8979,10 @@ private static final long serialVersionUID = 0L;
         if (getExperimentArmErrorValue()
             != other.getExperimentArmErrorValue()) return false;
         break;
+      case 167:
+        if (getAudienceInsightsErrorValue()
+            != other.getAudienceInsightsErrorValue()) return false;
+        break;
       case 0:
       default:
     }
@@ -9490,6 +9553,10 @@ private static final long serialVersionUID = 0L;
       case 156:
         hash = (37 * hash) + EXPERIMENT_ARM_ERROR_FIELD_NUMBER;
         hash = (53 * hash) + getExperimentArmErrorValue();
+        break;
+      case 167:
+        hash = (37 * hash) + AUDIENCE_INSIGHTS_ERROR_FIELD_NUMBER;
+        hash = (53 * hash) + getAudienceInsightsErrorValue();
         break;
       case 0:
       default:
@@ -10074,6 +10141,9 @@ private static final long serialVersionUID = 0L;
         result.errorCode_ = errorCode_;
       }
       if (errorCodeCase_ == 156) {
+        result.errorCode_ = errorCode_;
+      }
+      if (errorCodeCase_ == 167) {
         result.errorCode_ = errorCode_;
       }
       result.errorCodeCase_ = errorCodeCase_;
@@ -10680,6 +10750,10 @@ private static final long serialVersionUID = 0L;
         }
         case EXPERIMENT_ARM_ERROR: {
           setExperimentArmErrorValue(other.getExperimentArmErrorValue());
+          break;
+        }
+        case AUDIENCE_INSIGHTS_ERROR: {
+          setAudienceInsightsErrorValue(other.getAudienceInsightsErrorValue());
           break;
         }
         case ERRORCODE_NOT_SET: {
@@ -23928,6 +24002,101 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearExperimentArmError() {
       if (errorCodeCase_ == 156) {
+        errorCodeCase_ = 0;
+        errorCode_ = null;
+        onChanged();
+      }
+      return this;
+    }
+
+    /**
+     * <pre>
+     * The reasons for the Audience Insights error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.errors.AudienceInsightsErrorEnum.AudienceInsightsError audience_insights_error = 167;</code>
+     * @return Whether the audienceInsightsError field is set.
+     */
+    @java.lang.Override
+    public boolean hasAudienceInsightsError() {
+      return errorCodeCase_ == 167;
+    }
+    /**
+     * <pre>
+     * The reasons for the Audience Insights error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.errors.AudienceInsightsErrorEnum.AudienceInsightsError audience_insights_error = 167;</code>
+     * @return The enum numeric value on the wire for audienceInsightsError.
+     */
+    @java.lang.Override
+    public int getAudienceInsightsErrorValue() {
+      if (errorCodeCase_ == 167) {
+        return ((java.lang.Integer) errorCode_).intValue();
+      }
+      return 0;
+    }
+    /**
+     * <pre>
+     * The reasons for the Audience Insights error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.errors.AudienceInsightsErrorEnum.AudienceInsightsError audience_insights_error = 167;</code>
+     * @param value The enum numeric value on the wire for audienceInsightsError to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAudienceInsightsErrorValue(int value) {
+      errorCodeCase_ = 167;
+      errorCode_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the Audience Insights error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.errors.AudienceInsightsErrorEnum.AudienceInsightsError audience_insights_error = 167;</code>
+     * @return The audienceInsightsError.
+     */
+    @java.lang.Override
+    public com.google.ads.googleads.v11.errors.AudienceInsightsErrorEnum.AudienceInsightsError getAudienceInsightsError() {
+      if (errorCodeCase_ == 167) {
+        @SuppressWarnings("deprecation")
+        com.google.ads.googleads.v11.errors.AudienceInsightsErrorEnum.AudienceInsightsError result = com.google.ads.googleads.v11.errors.AudienceInsightsErrorEnum.AudienceInsightsError.valueOf(
+            (java.lang.Integer) errorCode_);
+        return result == null ? com.google.ads.googleads.v11.errors.AudienceInsightsErrorEnum.AudienceInsightsError.UNRECOGNIZED : result;
+      }
+      return com.google.ads.googleads.v11.errors.AudienceInsightsErrorEnum.AudienceInsightsError.UNSPECIFIED;
+    }
+    /**
+     * <pre>
+     * The reasons for the Audience Insights error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.errors.AudienceInsightsErrorEnum.AudienceInsightsError audience_insights_error = 167;</code>
+     * @param value The audienceInsightsError to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAudienceInsightsError(com.google.ads.googleads.v11.errors.AudienceInsightsErrorEnum.AudienceInsightsError value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      errorCodeCase_ = 167;
+      errorCode_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The reasons for the Audience Insights error
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.errors.AudienceInsightsErrorEnum.AudienceInsightsError audience_insights_error = 167;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAudienceInsightsError() {
+      if (errorCodeCase_ == 167) {
         errorCodeCase_ = 0;
         errorCode_ = null;
         onChanged();

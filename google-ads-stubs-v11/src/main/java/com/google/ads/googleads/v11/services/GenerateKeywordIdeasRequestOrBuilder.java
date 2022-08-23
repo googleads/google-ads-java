@@ -290,7 +290,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
   /**
    * <pre>
    * A Keyword and a specific Url to generate ideas from
-   * e.g. cars, www.example.com/cars.
+   * for example, cars, www.example.com/cars.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.KeywordAndUrlSeed keyword_and_url_seed = 2;</code>
@@ -300,7 +300,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
   /**
    * <pre>
    * A Keyword and a specific Url to generate ideas from
-   * e.g. cars, www.example.com/cars.
+   * for example, cars, www.example.com/cars.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.KeywordAndUrlSeed keyword_and_url_seed = 2;</code>
@@ -310,7 +310,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
   /**
    * <pre>
    * A Keyword and a specific Url to generate ideas from
-   * e.g. cars, www.example.com/cars.
+   * for example, cars, www.example.com/cars.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.KeywordAndUrlSeed keyword_and_url_seed = 2;</code>
@@ -319,7 +319,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
 
   /**
    * <pre>
-   * A Keyword or phrase to generate ideas from, e.g. cars.
+   * A Keyword or phrase to generate ideas from, for example, cars.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.KeywordSeed keyword_seed = 3;</code>
@@ -328,7 +328,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
   boolean hasKeywordSeed();
   /**
    * <pre>
-   * A Keyword or phrase to generate ideas from, e.g. cars.
+   * A Keyword or phrase to generate ideas from, for example, cars.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.KeywordSeed keyword_seed = 3;</code>
@@ -337,7 +337,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
   com.google.ads.googleads.v11.services.KeywordSeed getKeywordSeed();
   /**
    * <pre>
-   * A Keyword or phrase to generate ideas from, e.g. cars.
+   * A Keyword or phrase to generate ideas from, for example, cars.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.KeywordSeed keyword_seed = 3;</code>
@@ -346,7 +346,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
 
   /**
    * <pre>
-   * A specific url to generate ideas from, e.g. www.example.com/cars.
+   * A specific url to generate ideas from, for example, www.example.com/cars.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.UrlSeed url_seed = 5;</code>
@@ -355,7 +355,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
   boolean hasUrlSeed();
   /**
    * <pre>
-   * A specific url to generate ideas from, e.g. www.example.com/cars.
+   * A specific url to generate ideas from, for example, www.example.com/cars.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.UrlSeed url_seed = 5;</code>
@@ -364,7 +364,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
   com.google.ads.googleads.v11.services.UrlSeed getUrlSeed();
   /**
    * <pre>
-   * A specific url to generate ideas from, e.g. www.example.com/cars.
+   * A specific url to generate ideas from, for example, www.example.com/cars.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.UrlSeed url_seed = 5;</code>
@@ -373,7 +373,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
 
   /**
    * <pre>
-   * The site to generate ideas from, e.g. www.example.com.
+   * The site to generate ideas from, for example, www.example.com.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.SiteSeed site_seed = 11;</code>
@@ -382,7 +382,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
   boolean hasSiteSeed();
   /**
    * <pre>
-   * The site to generate ideas from, e.g. www.example.com.
+   * The site to generate ideas from, for example, www.example.com.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.SiteSeed site_seed = 11;</code>
@@ -391,7 +391,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
   com.google.ads.googleads.v11.services.SiteSeed getSiteSeed();
   /**
    * <pre>
-   * The site to generate ideas from, e.g. www.example.com.
+   * The site to generate ideas from, for example, www.example.com.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.services.SiteSeed site_seed = 11;</code>

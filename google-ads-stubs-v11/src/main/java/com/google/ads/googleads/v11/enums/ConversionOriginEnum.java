@@ -123,8 +123,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Conversions reported by an offline pipeline which collects local actions
-     * from Google-hosted pages (e.g. Google Maps, Google Place Page, etc) and
-     * attributes them to relevant ad events.
+     * from Google-hosted pages (for example, Google Maps, Google Place Page,
+     * etc) and attributes them to relevant ad events.
      * </pre>
      *
      * <code>GOOGLE_HOSTED = 3;</code>
@@ -132,7 +132,7 @@ private static final long serialVersionUID = 0L;
     GOOGLE_HOSTED(3),
     /**
      * <pre>
-     * Conversion that occurs when a user performs an action via any app
+     * Conversion that occurs when a user performs an action through any app
      * platforms.
      * </pre>
      *
@@ -195,8 +195,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Conversions reported by an offline pipeline which collects local actions
-     * from Google-hosted pages (e.g. Google Maps, Google Place Page, etc) and
-     * attributes them to relevant ad events.
+     * from Google-hosted pages (for example, Google Maps, Google Place Page,
+     * etc) and attributes them to relevant ad events.
      * </pre>
      *
      * <code>GOOGLE_HOSTED = 3;</code>
@@ -204,7 +204,7 @@ private static final long serialVersionUID = 0L;
     public static final int GOOGLE_HOSTED_VALUE = 3;
     /**
      * <pre>
-     * Conversion that occurs when a user performs an action via any app
+     * Conversion that occurs when a user performs an action through any app
      * platforms.
      * </pre>
      *

@@ -113,7 +113,7 @@ private static final long serialVersionUID = 0L;
     UNKNOWN(1),
     /**
      * <pre>
-     * Websites(e.g. 'www.flowers4sale.com').
+     * Websites(for example, 'www.flowers4sale.com').
      * </pre>
      *
      * <code>WEBSITE = 2;</code>
@@ -121,7 +121,7 @@ private static final long serialVersionUID = 0L;
     WEBSITE(2),
     /**
      * <pre>
-     * Mobile application categories(e.g. 'Games').
+     * Mobile application categories(for example, 'Games').
      * </pre>
      *
      * <code>MOBILE_APP_CATEGORY = 3;</code>
@@ -129,7 +129,7 @@ private static final long serialVersionUID = 0L;
     MOBILE_APP_CATEGORY(3),
     /**
      * <pre>
-     * mobile applications(e.g. 'mobileapp::2-com.whatsthewordanswers').
+     * mobile applications(for example, 'mobileapp::2-com.whatsthewordanswers').
      * </pre>
      *
      * <code>MOBILE_APPLICATION = 4;</code>
@@ -137,7 +137,7 @@ private static final long serialVersionUID = 0L;
     MOBILE_APPLICATION(4),
     /**
      * <pre>
-     * YouTube videos(e.g. 'youtube.com/video/wtLJPvx7-ys').
+     * YouTube videos(for example, 'youtube.com/video/wtLJPvx7-ys').
      * </pre>
      *
      * <code>YOUTUBE_VIDEO = 5;</code>
@@ -145,7 +145,7 @@ private static final long serialVersionUID = 0L;
     YOUTUBE_VIDEO(5),
     /**
      * <pre>
-     * YouTube channels(e.g. 'youtube.com::L8ZULXASCc1I_oaOT0NaOQ').
+     * YouTube channels(for example, 'youtube.com::L8ZULXASCc1I_oaOT0NaOQ').
      * </pre>
      *
      * <code>YOUTUBE_CHANNEL = 6;</code>
@@ -172,7 +172,7 @@ private static final long serialVersionUID = 0L;
     public static final int UNKNOWN_VALUE = 1;
     /**
      * <pre>
-     * Websites(e.g. 'www.flowers4sale.com').
+     * Websites(for example, 'www.flowers4sale.com').
      * </pre>
      *
      * <code>WEBSITE = 2;</code>
@@ -180,7 +180,7 @@ private static final long serialVersionUID = 0L;
     public static final int WEBSITE_VALUE = 2;
     /**
      * <pre>
-     * Mobile application categories(e.g. 'Games').
+     * Mobile application categories(for example, 'Games').
      * </pre>
      *
      * <code>MOBILE_APP_CATEGORY = 3;</code>
@@ -188,7 +188,7 @@ private static final long serialVersionUID = 0L;
     public static final int MOBILE_APP_CATEGORY_VALUE = 3;
     /**
      * <pre>
-     * mobile applications(e.g. 'mobileapp::2-com.whatsthewordanswers').
+     * mobile applications(for example, 'mobileapp::2-com.whatsthewordanswers').
      * </pre>
      *
      * <code>MOBILE_APPLICATION = 4;</code>
@@ -196,7 +196,7 @@ private static final long serialVersionUID = 0L;
     public static final int MOBILE_APPLICATION_VALUE = 4;
     /**
      * <pre>
-     * YouTube videos(e.g. 'youtube.com/video/wtLJPvx7-ys').
+     * YouTube videos(for example, 'youtube.com/video/wtLJPvx7-ys').
      * </pre>
      *
      * <code>YOUTUBE_VIDEO = 5;</code>
@@ -204,7 +204,7 @@ private static final long serialVersionUID = 0L;
     public static final int YOUTUBE_VIDEO_VALUE = 5;
     /**
      * <pre>
-     * YouTube channels(e.g. 'youtube.com::L8ZULXASCc1I_oaOT0NaOQ').
+     * YouTube channels(for example, 'youtube.com::L8ZULXASCc1I_oaOT0NaOQ').
      * </pre>
      *
      * <code>YOUTUBE_CHANNEL = 6;</code>

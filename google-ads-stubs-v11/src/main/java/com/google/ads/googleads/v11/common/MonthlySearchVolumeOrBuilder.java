@@ -9,7 +9,7 @@ public interface MonthlySearchVolumeOrBuilder extends
 
   /**
    * <pre>
-   * The year of the search volume (e.g. 2020).
+   * The year of the search volume (for example, 2020).
    * </pre>
    *
    * <code>optional int64 year = 4;</code>
@@ -18,7 +18,7 @@ public interface MonthlySearchVolumeOrBuilder extends
   boolean hasYear();
   /**
    * <pre>
-   * The year of the search volume (e.g. 2020).
+   * The year of the search volume (for example, 2020).
    * </pre>
    *
    * <code>optional int64 year = 4;</code>

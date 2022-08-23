@@ -133,7 +133,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The url to access the uploaded zipped data.
-   * E.g. https://tpc.googlesyndication.com/simgad/123
+   * For example, https://tpc.googlesyndication.com/simgad/123
    * This field is read-only.
    * </pre>
    *
@@ -147,7 +147,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The url to access the uploaded zipped data.
-   * E.g. https://tpc.googlesyndication.com/simgad/123
+   * For example, https://tpc.googlesyndication.com/simgad/123
    * This field is read-only.
    * </pre>
    *
@@ -170,7 +170,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. The url to access the uploaded zipped data.
-   * E.g. https://tpc.googlesyndication.com/simgad/123
+   * For example, https://tpc.googlesyndication.com/simgad/123
    * This field is read-only.
    * </pre>
    *
@@ -598,7 +598,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The url to access the uploaded zipped data.
-     * E.g. https://tpc.googlesyndication.com/simgad/123
+     * For example, https://tpc.googlesyndication.com/simgad/123
      * This field is read-only.
      * </pre>
      *
@@ -611,7 +611,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The url to access the uploaded zipped data.
-     * E.g. https://tpc.googlesyndication.com/simgad/123
+     * For example, https://tpc.googlesyndication.com/simgad/123
      * This field is read-only.
      * </pre>
      *
@@ -633,7 +633,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The url to access the uploaded zipped data.
-     * E.g. https://tpc.googlesyndication.com/simgad/123
+     * For example, https://tpc.googlesyndication.com/simgad/123
      * This field is read-only.
      * </pre>
      *
@@ -656,7 +656,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The url to access the uploaded zipped data.
-     * E.g. https://tpc.googlesyndication.com/simgad/123
+     * For example, https://tpc.googlesyndication.com/simgad/123
      * This field is read-only.
      * </pre>
      *
@@ -677,7 +677,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The url to access the uploaded zipped data.
-     * E.g. https://tpc.googlesyndication.com/simgad/123
+     * For example, https://tpc.googlesyndication.com/simgad/123
      * This field is read-only.
      * </pre>
      *
@@ -693,7 +693,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. The url to access the uploaded zipped data.
-     * E.g. https://tpc.googlesyndication.com/simgad/123
+     * For example, https://tpc.googlesyndication.com/simgad/123
      * This field is read-only.
      * </pre>
      *

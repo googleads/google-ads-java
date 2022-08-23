@@ -347,8 +347,8 @@ private static final long serialVersionUID = 0L;
     ATTRIBUTES_NOT_APPLICABLE_FOR_CUSTOMER_MATCH_USER_LIST(34),
     /**
      * <pre>
-     * Lifetime value bucket must be a number from 1-10, except for remove
-     * operation where 0 will be accepted.
+     * Lifetime bucket value must be a number from 0 to 10; 0 is only accepted
+     * for remove operations
      * </pre>
      *
      * <code>LIFETIME_VALUE_BUCKET_NOT_IN_RANGE = 35;</code>
@@ -398,6 +398,40 @@ private static final long serialVersionUID = 0L;
      * <code>INVALID_ITEM_ID = 40;</code>
      */
     INVALID_ITEM_ID(40),
+    /**
+     * <pre>
+     * First purchase date time cannot be greater than the last purchase date
+     * time.
+     * </pre>
+     *
+     * <code>FIRST_PURCHASE_TIME_GREATER_THAN_LAST_PURCHASE_TIME = 42;</code>
+     */
+    FIRST_PURCHASE_TIME_GREATER_THAN_LAST_PURCHASE_TIME(42),
+    /**
+     * <pre>
+     * Provided lifecycle stage is invalid.
+     * </pre>
+     *
+     * <code>INVALID_LIFECYCLE_STAGE = 43;</code>
+     */
+    INVALID_LIFECYCLE_STAGE(43),
+    /**
+     * <pre>
+     * The event value of the Customer Match user attribute is invalid.
+     * </pre>
+     *
+     * <code>INVALID_EVENT_VALUE = 44;</code>
+     */
+    INVALID_EVENT_VALUE(44),
+    /**
+     * <pre>
+     * All the fields are not present in the EventAttribute of the Customer
+     * Match.
+     * </pre>
+     *
+     * <code>EVENT_ATTRIBUTE_ALL_FIELDS_ARE_REQUIRED = 45;</code>
+     */
+    EVENT_ATTRIBUTE_ALL_FIELDS_ARE_REQUIRED(45),
     UNRECOGNIZED(-1),
     ;
 
@@ -653,8 +687,8 @@ private static final long serialVersionUID = 0L;
     public static final int ATTRIBUTES_NOT_APPLICABLE_FOR_CUSTOMER_MATCH_USER_LIST_VALUE = 34;
     /**
      * <pre>
-     * Lifetime value bucket must be a number from 1-10, except for remove
-     * operation where 0 will be accepted.
+     * Lifetime bucket value must be a number from 0 to 10; 0 is only accepted
+     * for remove operations
      * </pre>
      *
      * <code>LIFETIME_VALUE_BUCKET_NOT_IN_RANGE = 35;</code>
@@ -704,6 +738,40 @@ private static final long serialVersionUID = 0L;
      * <code>INVALID_ITEM_ID = 40;</code>
      */
     public static final int INVALID_ITEM_ID_VALUE = 40;
+    /**
+     * <pre>
+     * First purchase date time cannot be greater than the last purchase date
+     * time.
+     * </pre>
+     *
+     * <code>FIRST_PURCHASE_TIME_GREATER_THAN_LAST_PURCHASE_TIME = 42;</code>
+     */
+    public static final int FIRST_PURCHASE_TIME_GREATER_THAN_LAST_PURCHASE_TIME_VALUE = 42;
+    /**
+     * <pre>
+     * Provided lifecycle stage is invalid.
+     * </pre>
+     *
+     * <code>INVALID_LIFECYCLE_STAGE = 43;</code>
+     */
+    public static final int INVALID_LIFECYCLE_STAGE_VALUE = 43;
+    /**
+     * <pre>
+     * The event value of the Customer Match user attribute is invalid.
+     * </pre>
+     *
+     * <code>INVALID_EVENT_VALUE = 44;</code>
+     */
+    public static final int INVALID_EVENT_VALUE_VALUE = 44;
+    /**
+     * <pre>
+     * All the fields are not present in the EventAttribute of the Customer
+     * Match.
+     * </pre>
+     *
+     * <code>EVENT_ATTRIBUTE_ALL_FIELDS_ARE_REQUIRED = 45;</code>
+     */
+    public static final int EVENT_ATTRIBUTE_ALL_FIELDS_ARE_REQUIRED_VALUE = 45;
 
 
     public final int getNumber() {
@@ -766,6 +834,10 @@ private static final long serialVersionUID = 0L;
         case 38: return LAST_PURCHASE_TIME_LESS_THAN_ACQUISITION_TIME;
         case 39: return CUSTOMER_IDENTIFIER_NOT_ALLOWED;
         case 40: return INVALID_ITEM_ID;
+        case 42: return FIRST_PURCHASE_TIME_GREATER_THAN_LAST_PURCHASE_TIME;
+        case 43: return INVALID_LIFECYCLE_STAGE;
+        case 44: return INVALID_EVENT_VALUE;
+        case 45: return EVENT_ATTRIBUTE_ALL_FIELDS_ARE_REQUIRED;
         default: return null;
       }
     }

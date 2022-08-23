@@ -94,6 +94,19 @@ private static final long serialVersionUID = 0L;
             plannableLocationId_ = s;
             break;
           }
+          case 58: {
+            com.google.ads.googleads.v11.services.AudienceTargeting.Builder subBuilder = null;
+            if (audienceTargeting_ != null) {
+              subBuilder = audienceTargeting_.toBuilder();
+            }
+            audienceTargeting_ = input.readMessage(com.google.ads.googleads.v11.services.AudienceTargeting.parser(), extensionRegistry);
+            if (subBuilder != null) {
+              subBuilder.mergeFrom(audienceTargeting_);
+              audienceTargeting_ = subBuilder.buildPartial();
+            }
+
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -398,6 +411,47 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.google.ads.googleads.v11.enums.ReachPlanNetworkEnum.ReachPlanNetwork.UNRECOGNIZED : result;
   }
 
+  public static final int AUDIENCE_TARGETING_FIELD_NUMBER = 7;
+  private com.google.ads.googleads.v11.services.AudienceTargeting audienceTargeting_;
+  /**
+   * <pre>
+   * Targeted audiences.
+   * If not specified, does not target any specific audience.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.services.AudienceTargeting audience_targeting = 7;</code>
+   * @return Whether the audienceTargeting field is set.
+   */
+  @java.lang.Override
+  public boolean hasAudienceTargeting() {
+    return audienceTargeting_ != null;
+  }
+  /**
+   * <pre>
+   * Targeted audiences.
+   * If not specified, does not target any specific audience.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.services.AudienceTargeting audience_targeting = 7;</code>
+   * @return The audienceTargeting.
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v11.services.AudienceTargeting getAudienceTargeting() {
+    return audienceTargeting_ == null ? com.google.ads.googleads.v11.services.AudienceTargeting.getDefaultInstance() : audienceTargeting_;
+  }
+  /**
+   * <pre>
+   * Targeted audiences.
+   * If not specified, does not target any specific audience.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.services.AudienceTargeting audience_targeting = 7;</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v11.services.AudienceTargetingOrBuilder getAudienceTargetingOrBuilder() {
+    return getAudienceTargeting();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -427,6 +481,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, plannableLocationId_);
     }
+    if (audienceTargeting_ != null) {
+      output.writeMessage(7, getAudienceTargeting());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -455,6 +512,10 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, plannableLocationId_);
     }
+    if (audienceTargeting_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, getAudienceTargeting());
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -481,6 +542,11 @@ private static final long serialVersionUID = 0L;
     if (!getDevicesList()
         .equals(other.getDevicesList())) return false;
     if (network_ != other.network_) return false;
+    if (hasAudienceTargeting() != other.hasAudienceTargeting()) return false;
+    if (hasAudienceTargeting()) {
+      if (!getAudienceTargeting()
+          .equals(other.getAudienceTargeting())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -508,6 +574,10 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + NETWORK_FIELD_NUMBER;
     hash = (53 * hash) + network_;
+    if (hasAudienceTargeting()) {
+      hash = (37 * hash) + AUDIENCE_TARGETING_FIELD_NUMBER;
+      hash = (53 * hash) + getAudienceTargeting().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -665,6 +735,12 @@ private static final long serialVersionUID = 0L;
       }
       network_ = 0;
 
+      if (audienceTargetingBuilder_ == null) {
+        audienceTargeting_ = null;
+      } else {
+        audienceTargeting_ = null;
+        audienceTargetingBuilder_ = null;
+      }
       return this;
     }
 
@@ -717,6 +793,11 @@ private static final long serialVersionUID = 0L;
         result.devices_ = devicesBuilder_.build();
       }
       result.network_ = network_;
+      if (audienceTargetingBuilder_ == null) {
+        result.audienceTargeting_ = audienceTargeting_;
+      } else {
+        result.audienceTargeting_ = audienceTargetingBuilder_.build();
+      }
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -828,6 +909,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.network_ != 0) {
         setNetworkValue(other.getNetworkValue());
+      }
+      if (other.hasAudienceTargeting()) {
+        mergeAudienceTargeting(other.getAudienceTargeting());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1834,6 +1918,170 @@ private static final long serialVersionUID = 0L;
       network_ = 0;
       onChanged();
       return this;
+    }
+
+    private com.google.ads.googleads.v11.services.AudienceTargeting audienceTargeting_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v11.services.AudienceTargeting, com.google.ads.googleads.v11.services.AudienceTargeting.Builder, com.google.ads.googleads.v11.services.AudienceTargetingOrBuilder> audienceTargetingBuilder_;
+    /**
+     * <pre>
+     * Targeted audiences.
+     * If not specified, does not target any specific audience.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.services.AudienceTargeting audience_targeting = 7;</code>
+     * @return Whether the audienceTargeting field is set.
+     */
+    public boolean hasAudienceTargeting() {
+      return audienceTargetingBuilder_ != null || audienceTargeting_ != null;
+    }
+    /**
+     * <pre>
+     * Targeted audiences.
+     * If not specified, does not target any specific audience.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.services.AudienceTargeting audience_targeting = 7;</code>
+     * @return The audienceTargeting.
+     */
+    public com.google.ads.googleads.v11.services.AudienceTargeting getAudienceTargeting() {
+      if (audienceTargetingBuilder_ == null) {
+        return audienceTargeting_ == null ? com.google.ads.googleads.v11.services.AudienceTargeting.getDefaultInstance() : audienceTargeting_;
+      } else {
+        return audienceTargetingBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Targeted audiences.
+     * If not specified, does not target any specific audience.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.services.AudienceTargeting audience_targeting = 7;</code>
+     */
+    public Builder setAudienceTargeting(com.google.ads.googleads.v11.services.AudienceTargeting value) {
+      if (audienceTargetingBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        audienceTargeting_ = value;
+        onChanged();
+      } else {
+        audienceTargetingBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Targeted audiences.
+     * If not specified, does not target any specific audience.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.services.AudienceTargeting audience_targeting = 7;</code>
+     */
+    public Builder setAudienceTargeting(
+        com.google.ads.googleads.v11.services.AudienceTargeting.Builder builderForValue) {
+      if (audienceTargetingBuilder_ == null) {
+        audienceTargeting_ = builderForValue.build();
+        onChanged();
+      } else {
+        audienceTargetingBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Targeted audiences.
+     * If not specified, does not target any specific audience.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.services.AudienceTargeting audience_targeting = 7;</code>
+     */
+    public Builder mergeAudienceTargeting(com.google.ads.googleads.v11.services.AudienceTargeting value) {
+      if (audienceTargetingBuilder_ == null) {
+        if (audienceTargeting_ != null) {
+          audienceTargeting_ =
+            com.google.ads.googleads.v11.services.AudienceTargeting.newBuilder(audienceTargeting_).mergeFrom(value).buildPartial();
+        } else {
+          audienceTargeting_ = value;
+        }
+        onChanged();
+      } else {
+        audienceTargetingBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Targeted audiences.
+     * If not specified, does not target any specific audience.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.services.AudienceTargeting audience_targeting = 7;</code>
+     */
+    public Builder clearAudienceTargeting() {
+      if (audienceTargetingBuilder_ == null) {
+        audienceTargeting_ = null;
+        onChanged();
+      } else {
+        audienceTargeting_ = null;
+        audienceTargetingBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     * <pre>
+     * Targeted audiences.
+     * If not specified, does not target any specific audience.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.services.AudienceTargeting audience_targeting = 7;</code>
+     */
+    public com.google.ads.googleads.v11.services.AudienceTargeting.Builder getAudienceTargetingBuilder() {
+      
+      onChanged();
+      return getAudienceTargetingFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Targeted audiences.
+     * If not specified, does not target any specific audience.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.services.AudienceTargeting audience_targeting = 7;</code>
+     */
+    public com.google.ads.googleads.v11.services.AudienceTargetingOrBuilder getAudienceTargetingOrBuilder() {
+      if (audienceTargetingBuilder_ != null) {
+        return audienceTargetingBuilder_.getMessageOrBuilder();
+      } else {
+        return audienceTargeting_ == null ?
+            com.google.ads.googleads.v11.services.AudienceTargeting.getDefaultInstance() : audienceTargeting_;
+      }
+    }
+    /**
+     * <pre>
+     * Targeted audiences.
+     * If not specified, does not target any specific audience.
+     * </pre>
+     *
+     * <code>.google.ads.googleads.v11.services.AudienceTargeting audience_targeting = 7;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.ads.googleads.v11.services.AudienceTargeting, com.google.ads.googleads.v11.services.AudienceTargeting.Builder, com.google.ads.googleads.v11.services.AudienceTargetingOrBuilder> 
+        getAudienceTargetingFieldBuilder() {
+      if (audienceTargetingBuilder_ == null) {
+        audienceTargetingBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.ads.googleads.v11.services.AudienceTargeting, com.google.ads.googleads.v11.services.AudienceTargeting.Builder, com.google.ads.googleads.v11.services.AudienceTargetingOrBuilder>(
+                getAudienceTargeting(),
+                getParentForChildren(),
+                isClean());
+        audienceTargeting_ = null;
+      }
+      return audienceTargetingBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

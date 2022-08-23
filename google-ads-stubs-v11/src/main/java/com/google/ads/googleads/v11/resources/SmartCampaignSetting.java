@@ -1048,7 +1048,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Enabling a lead form on your business profile enables prospective
      * customers to contact your business by filling out a simple form,
-     * and you'll receive their information via email.
+     * and you'll receive their information through email.
      * </pre>
      *
      * <code>bool include_lead_form = 1;</code>
@@ -1151,7 +1151,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Enabling a lead form on your business profile enables prospective
      * customers to contact your business by filling out a simple form,
-     * and you'll receive their information via email.
+     * and you'll receive their information through email.
      * </pre>
      *
      * <code>bool include_lead_form = 1;</code>
@@ -1475,7 +1475,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Enabling a lead form on your business profile enables prospective
        * customers to contact your business by filling out a simple form,
-       * and you'll receive their information via email.
+       * and you'll receive their information through email.
        * </pre>
        *
        * <code>bool include_lead_form = 1;</code>
@@ -1489,7 +1489,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Enabling a lead form on your business profile enables prospective
        * customers to contact your business by filling out a simple form,
-       * and you'll receive their information via email.
+       * and you'll receive their information through email.
        * </pre>
        *
        * <code>bool include_lead_form = 1;</code>
@@ -1506,7 +1506,7 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Enabling a lead form on your business profile enables prospective
        * customers to contact your business by filling out a simple form,
-       * and you'll receive their information via email.
+       * and you'll receive their information through email.
        * </pre>
        *
        * <code>bool include_lead_form = 1;</code>
@@ -1902,7 +1902,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Settings for configuring a business profile optimized for ads as this
    * campaign's landing page.  This campaign must be linked to a business
-   * profile to use this option.  For more information on this feature, please
+   * profile to use this option.  For more information on this feature,
    * consult https://support.google.com/google-ads/answer/9827068.
    * </pre>
    *
@@ -1917,7 +1917,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Settings for configuring a business profile optimized for ads as this
    * campaign's landing page.  This campaign must be linked to a business
-   * profile to use this option.  For more information on this feature, please
+   * profile to use this option.  For more information on this feature,
    * consult https://support.google.com/google-ads/answer/9827068.
    * </pre>
    *
@@ -1935,7 +1935,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Settings for configuring a business profile optimized for ads as this
    * campaign's landing page.  This campaign must be linked to a business
-   * profile to use this option.  For more information on this feature, please
+   * profile to use this option.  For more information on this feature,
    * consult https://support.google.com/google-ads/answer/9827068.
    * </pre>
    *
@@ -2017,8 +2017,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The resource name of a Business Profile location.
-   * Business Profile location resource names can be fetched via the Business
-   * Profile API and adhere to the following format:
+   * Business Profile location resource names can be fetched through the
+   * Business Profile API and adhere to the following format:
    * `locations/{locationId}`.
    * See the [Business Profile API]
    * (https://developers.google.com/my-business/reference/businessinformation/rest/v1/accounts.locations)
@@ -2034,8 +2034,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The resource name of a Business Profile location.
-   * Business Profile location resource names can be fetched via the Business
-   * Profile API and adhere to the following format:
+   * Business Profile location resource names can be fetched through the
+   * Business Profile API and adhere to the following format:
    * `locations/{locationId}`.
    * See the [Business Profile API]
    * (https://developers.google.com/my-business/reference/businessinformation/rest/v1/accounts.locations)
@@ -2065,8 +2065,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The resource name of a Business Profile location.
-   * Business Profile location resource names can be fetched via the Business
-   * Profile API and adhere to the following format:
+   * Business Profile location resource names can be fetched through the
+   * Business Profile API and adhere to the following format:
    * `locations/{locationId}`.
    * See the [Business Profile API]
    * (https://developers.google.com/my-business/reference/businessinformation/rest/v1/accounts.locations)
@@ -3204,7 +3204,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Settings for configuring a business profile optimized for ads as this
      * campaign's landing page.  This campaign must be linked to a business
-     * profile to use this option.  For more information on this feature, please
+     * profile to use this option.  For more information on this feature,
      * consult https://support.google.com/google-ads/answer/9827068.
      * </pre>
      *
@@ -3219,7 +3219,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Settings for configuring a business profile optimized for ads as this
      * campaign's landing page.  This campaign must be linked to a business
-     * profile to use this option.  For more information on this feature, please
+     * profile to use this option.  For more information on this feature,
      * consult https://support.google.com/google-ads/answer/9827068.
      * </pre>
      *
@@ -3244,7 +3244,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Settings for configuring a business profile optimized for ads as this
      * campaign's landing page.  This campaign must be linked to a business
-     * profile to use this option.  For more information on this feature, please
+     * profile to use this option.  For more information on this feature,
      * consult https://support.google.com/google-ads/answer/9827068.
      * </pre>
      *
@@ -3267,7 +3267,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Settings for configuring a business profile optimized for ads as this
      * campaign's landing page.  This campaign must be linked to a business
-     * profile to use this option.  For more information on this feature, please
+     * profile to use this option.  For more information on this feature,
      * consult https://support.google.com/google-ads/answer/9827068.
      * </pre>
      *
@@ -3288,7 +3288,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Settings for configuring a business profile optimized for ads as this
      * campaign's landing page.  This campaign must be linked to a business
-     * profile to use this option.  For more information on this feature, please
+     * profile to use this option.  For more information on this feature,
      * consult https://support.google.com/google-ads/answer/9827068.
      * </pre>
      *
@@ -3318,7 +3318,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Settings for configuring a business profile optimized for ads as this
      * campaign's landing page.  This campaign must be linked to a business
-     * profile to use this option.  For more information on this feature, please
+     * profile to use this option.  For more information on this feature,
      * consult https://support.google.com/google-ads/answer/9827068.
      * </pre>
      *
@@ -3344,7 +3344,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Settings for configuring a business profile optimized for ads as this
      * campaign's landing page.  This campaign must be linked to a business
-     * profile to use this option.  For more information on this feature, please
+     * profile to use this option.  For more information on this feature,
      * consult https://support.google.com/google-ads/answer/9827068.
      * </pre>
      *
@@ -3357,7 +3357,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Settings for configuring a business profile optimized for ads as this
      * campaign's landing page.  This campaign must be linked to a business
-     * profile to use this option.  For more information on this feature, please
+     * profile to use this option.  For more information on this feature,
      * consult https://support.google.com/google-ads/answer/9827068.
      * </pre>
      *
@@ -3378,7 +3378,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Settings for configuring a business profile optimized for ads as this
      * campaign's landing page.  This campaign must be linked to a business
-     * profile to use this option.  For more information on this feature, please
+     * profile to use this option.  For more information on this feature,
      * consult https://support.google.com/google-ads/answer/9827068.
      * </pre>
      *
@@ -3527,8 +3527,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The resource name of a Business Profile location.
-     * Business Profile location resource names can be fetched via the Business
-     * Profile API and adhere to the following format:
+     * Business Profile location resource names can be fetched through the
+     * Business Profile API and adhere to the following format:
      * `locations/{locationId}`.
      * See the [Business Profile API]
      * (https://developers.google.com/my-business/reference/businessinformation/rest/v1/accounts.locations)
@@ -3545,8 +3545,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The resource name of a Business Profile location.
-     * Business Profile location resource names can be fetched via the Business
-     * Profile API and adhere to the following format:
+     * Business Profile location resource names can be fetched through the
+     * Business Profile API and adhere to the following format:
      * `locations/{locationId}`.
      * See the [Business Profile API]
      * (https://developers.google.com/my-business/reference/businessinformation/rest/v1/accounts.locations)
@@ -3577,8 +3577,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The resource name of a Business Profile location.
-     * Business Profile location resource names can be fetched via the Business
-     * Profile API and adhere to the following format:
+     * Business Profile location resource names can be fetched through the
+     * Business Profile API and adhere to the following format:
      * `locations/{locationId}`.
      * See the [Business Profile API]
      * (https://developers.google.com/my-business/reference/businessinformation/rest/v1/accounts.locations)
@@ -3610,8 +3610,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The resource name of a Business Profile location.
-     * Business Profile location resource names can be fetched via the Business
-     * Profile API and adhere to the following format:
+     * Business Profile location resource names can be fetched through the
+     * Business Profile API and adhere to the following format:
      * `locations/{locationId}`.
      * See the [Business Profile API]
      * (https://developers.google.com/my-business/reference/businessinformation/rest/v1/accounts.locations)
@@ -3635,8 +3635,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The resource name of a Business Profile location.
-     * Business Profile location resource names can be fetched via the Business
-     * Profile API and adhere to the following format:
+     * Business Profile location resource names can be fetched through the
+     * Business Profile API and adhere to the following format:
      * `locations/{locationId}`.
      * See the [Business Profile API]
      * (https://developers.google.com/my-business/reference/businessinformation/rest/v1/accounts.locations)
@@ -3657,8 +3657,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The resource name of a Business Profile location.
-     * Business Profile location resource names can be fetched via the Business
-     * Profile API and adhere to the following format:
+     * Business Profile location resource names can be fetched through the
+     * Business Profile API and adhere to the following format:
      * `locations/{locationId}`.
      * See the [Business Profile API]
      * (https://developers.google.com/my-business/reference/businessinformation/rest/v1/accounts.locations)

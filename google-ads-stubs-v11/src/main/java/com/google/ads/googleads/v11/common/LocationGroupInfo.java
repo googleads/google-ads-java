@@ -5,7 +5,7 @@ package com.google.ads.googleads.v11.common;
 
 /**
  * <pre>
- * A radius around a list of locations specified via a feed.
+ * A radius around a list of locations specified through a feed.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v11.common.LocationGroupInfo}
@@ -594,7 +594,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A radius around a list of locations specified via a feed.
+   * A radius around a list of locations specified through a feed.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v11.common.LocationGroupInfo}

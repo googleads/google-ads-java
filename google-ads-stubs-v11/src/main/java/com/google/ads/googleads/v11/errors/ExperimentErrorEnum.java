@@ -114,7 +114,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The start date of an experiment cannot be set in the past.
-     * Please use a start date in the future.
+     * Use a start date in the future.
      * </pre>
      *
      * <code>CANNOT_SET_START_DATE_IN_PAST = 2;</code>
@@ -123,7 +123,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The end date of an experiment is before its start date.
-     * Please use an end date after the start date.
+     * Use an end date after the start date.
      * </pre>
      *
      * <code>END_DATE_BEFORE_START_DATE = 3;</code>
@@ -132,7 +132,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The start date of an experiment is too far in the future.
-     * Please use a start date no more than 1 year in the future.
+     * Use a start date no more than 1 year in the future.
      * </pre>
      *
      * <code>START_DATE_TOO_FAR_IN_FUTURE = 4;</code>
@@ -331,7 +331,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The start date of an experiment cannot be set in the past.
-     * Please use a start date in the future.
+     * Use a start date in the future.
      * </pre>
      *
      * <code>CANNOT_SET_START_DATE_IN_PAST = 2;</code>
@@ -340,7 +340,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The end date of an experiment is before its start date.
-     * Please use an end date after the start date.
+     * Use an end date after the start date.
      * </pre>
      *
      * <code>END_DATE_BEFORE_START_DATE = 3;</code>
@@ -349,7 +349,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The start date of an experiment is too far in the future.
-     * Please use a start date no more than 1 year in the future.
+     * Use a start date no more than 1 year in the future.
      * </pre>
      *
      * <code>START_DATE_TOO_FAR_IN_FUTURE = 4;</code>

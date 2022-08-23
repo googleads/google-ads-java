@@ -109,7 +109,7 @@ private static final long serialVersionUID = 0L;
   private long year_;
   /**
    * <pre>
-   * The year of the search volume (e.g. 2020).
+   * The year of the search volume (for example, 2020).
    * </pre>
    *
    * <code>optional int64 year = 4;</code>
@@ -121,7 +121,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The year of the search volume (e.g. 2020).
+   * The year of the search volume (for example, 2020).
    * </pre>
    *
    * <code>optional int64 year = 4;</code>
@@ -554,7 +554,7 @@ private static final long serialVersionUID = 0L;
     private long year_ ;
     /**
      * <pre>
-     * The year of the search volume (e.g. 2020).
+     * The year of the search volume (for example, 2020).
      * </pre>
      *
      * <code>optional int64 year = 4;</code>
@@ -566,7 +566,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The year of the search volume (e.g. 2020).
+     * The year of the search volume (for example, 2020).
      * </pre>
      *
      * <code>optional int64 year = 4;</code>
@@ -578,7 +578,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The year of the search volume (e.g. 2020).
+     * The year of the search volume (for example, 2020).
      * </pre>
      *
      * <code>optional int64 year = 4;</code>
@@ -593,7 +593,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The year of the search volume (e.g. 2020).
+     * The year of the search volume (for example, 2020).
      * </pre>
      *
      * <code>optional int64 year = 4;</code>

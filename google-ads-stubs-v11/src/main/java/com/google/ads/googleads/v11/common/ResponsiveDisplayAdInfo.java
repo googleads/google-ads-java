@@ -839,7 +839,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object mainColor_;
   /**
    * <pre>
-   * The main color of the ad in hexadecimal, e.g. #ffffff for white.
+   * The main color of the ad in hexadecimal, for example, #ffffff for white.
    * If one of `main_color` and `accent_color` is set, the other is required as
    * well.
    * </pre>
@@ -853,7 +853,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The main color of the ad in hexadecimal, e.g. #ffffff for white.
+   * The main color of the ad in hexadecimal, for example, #ffffff for white.
    * If one of `main_color` and `accent_color` is set, the other is required as
    * well.
    * </pre>
@@ -876,7 +876,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The main color of the ad in hexadecimal, e.g. #ffffff for white.
+   * The main color of the ad in hexadecimal, for example, #ffffff for white.
    * If one of `main_color` and `accent_color` is set, the other is required as
    * well.
    * </pre>
@@ -903,7 +903,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object accentColor_;
   /**
    * <pre>
-   * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
+   * The accent color of the ad in hexadecimal, for example, #ffffff for white.
    * If one of `main_color` and `accent_color` is set, the other is required as
    * well.
    * </pre>
@@ -917,7 +917,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
+   * The accent color of the ad in hexadecimal, for example, #ffffff for white.
    * If one of `main_color` and `accent_color` is set, the other is required as
    * well.
    * </pre>
@@ -940,7 +940,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
+   * The accent color of the ad in hexadecimal, for example, #ffffff for white.
    * If one of `main_color` and `accent_color` is set, the other is required as
    * well.
    * </pre>
@@ -1060,7 +1060,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object pricePrefix_;
   /**
    * <pre>
-   * Prefix before price. E.g. 'as low as'.
+   * Prefix before price. For example, 'as low as'.
    * </pre>
    *
    * <code>optional string price_prefix = 22;</code>
@@ -1072,7 +1072,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Prefix before price. E.g. 'as low as'.
+   * Prefix before price. For example, 'as low as'.
    * </pre>
    *
    * <code>optional string price_prefix = 22;</code>
@@ -1093,7 +1093,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Prefix before price. E.g. 'as low as'.
+   * Prefix before price. For example, 'as low as'.
    * </pre>
    *
    * <code>optional string price_prefix = 22;</code>
@@ -4841,7 +4841,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object mainColor_ = "";
     /**
      * <pre>
-     * The main color of the ad in hexadecimal, e.g. #ffffff for white.
+     * The main color of the ad in hexadecimal, for example, #ffffff for white.
      * If one of `main_color` and `accent_color` is set, the other is required as
      * well.
      * </pre>
@@ -4854,7 +4854,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The main color of the ad in hexadecimal, e.g. #ffffff for white.
+     * The main color of the ad in hexadecimal, for example, #ffffff for white.
      * If one of `main_color` and `accent_color` is set, the other is required as
      * well.
      * </pre>
@@ -4876,7 +4876,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The main color of the ad in hexadecimal, e.g. #ffffff for white.
+     * The main color of the ad in hexadecimal, for example, #ffffff for white.
      * If one of `main_color` and `accent_color` is set, the other is required as
      * well.
      * </pre>
@@ -4899,7 +4899,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The main color of the ad in hexadecimal, e.g. #ffffff for white.
+     * The main color of the ad in hexadecimal, for example, #ffffff for white.
      * If one of `main_color` and `accent_color` is set, the other is required as
      * well.
      * </pre>
@@ -4920,7 +4920,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The main color of the ad in hexadecimal, e.g. #ffffff for white.
+     * The main color of the ad in hexadecimal, for example, #ffffff for white.
      * If one of `main_color` and `accent_color` is set, the other is required as
      * well.
      * </pre>
@@ -4936,7 +4936,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The main color of the ad in hexadecimal, e.g. #ffffff for white.
+     * The main color of the ad in hexadecimal, for example, #ffffff for white.
      * If one of `main_color` and `accent_color` is set, the other is required as
      * well.
      * </pre>
@@ -4960,7 +4960,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object accentColor_ = "";
     /**
      * <pre>
-     * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
+     * The accent color of the ad in hexadecimal, for example, #ffffff for white.
      * If one of `main_color` and `accent_color` is set, the other is required as
      * well.
      * </pre>
@@ -4973,7 +4973,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
+     * The accent color of the ad in hexadecimal, for example, #ffffff for white.
      * If one of `main_color` and `accent_color` is set, the other is required as
      * well.
      * </pre>
@@ -4995,7 +4995,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
+     * The accent color of the ad in hexadecimal, for example, #ffffff for white.
      * If one of `main_color` and `accent_color` is set, the other is required as
      * well.
      * </pre>
@@ -5018,7 +5018,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
+     * The accent color of the ad in hexadecimal, for example, #ffffff for white.
      * If one of `main_color` and `accent_color` is set, the other is required as
      * well.
      * </pre>
@@ -5039,7 +5039,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
+     * The accent color of the ad in hexadecimal, for example, #ffffff for white.
      * If one of `main_color` and `accent_color` is set, the other is required as
      * well.
      * </pre>
@@ -5055,7 +5055,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
+     * The accent color of the ad in hexadecimal, for example, #ffffff for white.
      * If one of `main_color` and `accent_color` is set, the other is required as
      * well.
      * </pre>
@@ -5257,7 +5257,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object pricePrefix_ = "";
     /**
      * <pre>
-     * Prefix before price. E.g. 'as low as'.
+     * Prefix before price. For example, 'as low as'.
      * </pre>
      *
      * <code>optional string price_prefix = 22;</code>
@@ -5268,7 +5268,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Prefix before price. E.g. 'as low as'.
+     * Prefix before price. For example, 'as low as'.
      * </pre>
      *
      * <code>optional string price_prefix = 22;</code>
@@ -5288,7 +5288,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Prefix before price. E.g. 'as low as'.
+     * Prefix before price. For example, 'as low as'.
      * </pre>
      *
      * <code>optional string price_prefix = 22;</code>
@@ -5309,7 +5309,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Prefix before price. E.g. 'as low as'.
+     * Prefix before price. For example, 'as low as'.
      * </pre>
      *
      * <code>optional string price_prefix = 22;</code>
@@ -5328,7 +5328,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Prefix before price. E.g. 'as low as'.
+     * Prefix before price. For example, 'as low as'.
      * </pre>
      *
      * <code>optional string price_prefix = 22;</code>
@@ -5342,7 +5342,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Prefix before price. E.g. 'as low as'.
+     * Prefix before price. For example, 'as low as'.
      * </pre>
      *
      * <code>optional string price_prefix = 22;</code>

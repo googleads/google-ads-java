@@ -23,6 +23,9 @@ private static final long serialVersionUID = 0L;
   private UserAttribute() {
     lastPurchaseDateTime_ = "";
     acquisitionDateTime_ = "";
+    lifecycleStage_ = "";
+    firstPurchaseDateTime_ = "";
+    eventAttribute_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -101,6 +104,27 @@ private static final long serialVersionUID = 0L;
             bitField0_ |= 0x00000004;
             break;
           }
+          case 66: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            lifecycleStage_ = s;
+            break;
+          }
+          case 74: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            firstPurchaseDateTime_ = s;
+            break;
+          }
+          case 82: {
+            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+              eventAttribute_ = new java.util.ArrayList<com.google.ads.googleads.v11.common.EventAttribute>();
+              mutable_bitField0_ |= 0x00000008;
+            }
+            eventAttribute_.add(
+                input.readMessage(com.google.ads.googleads.v11.common.EventAttribute.parser(), extensionRegistry));
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -118,6 +142,9 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
+      if (((mutable_bitField0_ & 0x00000008) != 0)) {
+        eventAttribute_ = java.util.Collections.unmodifiableList(eventAttribute_);
+      }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
@@ -373,6 +400,171 @@ private static final long serialVersionUID = 0L;
     return shoppingLoyalty_ == null ? com.google.ads.googleads.v11.common.ShoppingLoyalty.getDefaultInstance() : shoppingLoyalty_;
   }
 
+  public static final int LIFECYCLE_STAGE_FIELD_NUMBER = 8;
+  private volatile java.lang.Object lifecycleStage_;
+  /**
+   * <pre>
+   * Optional. Advertiser defined lifecycle stage for the user. The accepted values are
+   * “Lead”, “Active” and “Churned”.
+   * </pre>
+   *
+   * <code>string lifecycle_stage = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The lifecycleStage.
+   */
+  @java.lang.Override
+  public java.lang.String getLifecycleStage() {
+    java.lang.Object ref = lifecycleStage_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      lifecycleStage_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Optional. Advertiser defined lifecycle stage for the user. The accepted values are
+   * “Lead”, “Active” and “Churned”.
+   * </pre>
+   *
+   * <code>string lifecycle_stage = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The bytes for lifecycleStage.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getLifecycleStageBytes() {
+    java.lang.Object ref = lifecycleStage_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      lifecycleStage_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int FIRST_PURCHASE_DATE_TIME_FIELD_NUMBER = 9;
+  private volatile java.lang.Object firstPurchaseDateTime_;
+  /**
+   * <pre>
+   * Optional. Timestamp of the first purchase made by the user.
+   * The format is YYYY-MM-DD HH:MM:SS[+/-HH:MM], where [+/-HH:MM] is an
+   * optional timezone offset from UTC. If the offset is absent, the API will
+   * use the account's timezone as default.
+   * </pre>
+   *
+   * <code>string first_purchase_date_time = 9 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The firstPurchaseDateTime.
+   */
+  @java.lang.Override
+  public java.lang.String getFirstPurchaseDateTime() {
+    java.lang.Object ref = firstPurchaseDateTime_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      firstPurchaseDateTime_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Optional. Timestamp of the first purchase made by the user.
+   * The format is YYYY-MM-DD HH:MM:SS[+/-HH:MM], where [+/-HH:MM] is an
+   * optional timezone offset from UTC. If the offset is absent, the API will
+   * use the account's timezone as default.
+   * </pre>
+   *
+   * <code>string first_purchase_date_time = 9 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The bytes for firstPurchaseDateTime.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getFirstPurchaseDateTimeBytes() {
+    java.lang.Object ref = firstPurchaseDateTime_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      firstPurchaseDateTime_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int EVENT_ATTRIBUTE_FIELD_NUMBER = 10;
+  private java.util.List<com.google.ads.googleads.v11.common.EventAttribute> eventAttribute_;
+  /**
+   * <pre>
+   * Optional. Advertiser defined events and their attributes. All the values in the
+   * nested fields are required. Currently this field is in beta.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.google.ads.googleads.v11.common.EventAttribute> getEventAttributeList() {
+    return eventAttribute_;
+  }
+  /**
+   * <pre>
+   * Optional. Advertiser defined events and their attributes. All the values in the
+   * nested fields are required. Currently this field is in beta.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.google.ads.googleads.v11.common.EventAttributeOrBuilder> 
+      getEventAttributeOrBuilderList() {
+    return eventAttribute_;
+  }
+  /**
+   * <pre>
+   * Optional. Advertiser defined events and their attributes. All the values in the
+   * nested fields are required. Currently this field is in beta.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+   */
+  @java.lang.Override
+  public int getEventAttributeCount() {
+    return eventAttribute_.size();
+  }
+  /**
+   * <pre>
+   * Optional. Advertiser defined events and their attributes. All the values in the
+   * nested fields are required. Currently this field is in beta.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v11.common.EventAttribute getEventAttribute(int index) {
+    return eventAttribute_.get(index);
+  }
+  /**
+   * <pre>
+   * Optional. Advertiser defined events and their attributes. All the values in the
+   * nested fields are required. Currently this field is in beta.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+   */
+  @java.lang.Override
+  public com.google.ads.googleads.v11.common.EventAttributeOrBuilder getEventAttributeOrBuilder(
+      int index) {
+    return eventAttribute_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -408,6 +600,15 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000004) != 0)) {
       output.writeMessage(7, getShoppingLoyalty());
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lifecycleStage_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, lifecycleStage_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(firstPurchaseDateTime_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 9, firstPurchaseDateTime_);
+    }
+    for (int i = 0; i < eventAttribute_.size(); i++) {
+      output.writeMessage(10, eventAttribute_.get(i));
+    }
     unknownFields.writeTo(output);
   }
 
@@ -442,6 +643,16 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000004) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getShoppingLoyalty());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lifecycleStage_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, lifecycleStage_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(firstPurchaseDateTime_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, firstPurchaseDateTime_);
+    }
+    for (int i = 0; i < eventAttribute_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, eventAttribute_.get(i));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -481,6 +692,12 @@ private static final long serialVersionUID = 0L;
       if (!getShoppingLoyalty()
           .equals(other.getShoppingLoyalty())) return false;
     }
+    if (!getLifecycleStage()
+        .equals(other.getLifecycleStage())) return false;
+    if (!getFirstPurchaseDateTime()
+        .equals(other.getFirstPurchaseDateTime())) return false;
+    if (!getEventAttributeList()
+        .equals(other.getEventAttributeList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -513,6 +730,14 @@ private static final long serialVersionUID = 0L;
     if (hasShoppingLoyalty()) {
       hash = (37 * hash) + SHOPPING_LOYALTY_FIELD_NUMBER;
       hash = (53 * hash) + getShoppingLoyalty().hashCode();
+    }
+    hash = (37 * hash) + LIFECYCLE_STAGE_FIELD_NUMBER;
+    hash = (53 * hash) + getLifecycleStage().hashCode();
+    hash = (37 * hash) + FIRST_PURCHASE_DATE_TIME_FIELD_NUMBER;
+    hash = (53 * hash) + getFirstPurchaseDateTime().hashCode();
+    if (getEventAttributeCount() > 0) {
+      hash = (37 * hash) + EVENT_ATTRIBUTE_FIELD_NUMBER;
+      hash = (53 * hash) + getEventAttributeList().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -648,6 +873,7 @@ private static final long serialVersionUID = 0L;
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
         getShoppingLoyaltyFieldBuilder();
+        getEventAttributeFieldBuilder();
       }
     }
     @java.lang.Override
@@ -671,6 +897,16 @@ private static final long serialVersionUID = 0L;
         shoppingLoyaltyBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000004);
+      lifecycleStage_ = "";
+
+      firstPurchaseDateTime_ = "";
+
+      if (eventAttributeBuilder_ == null) {
+        eventAttribute_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+      } else {
+        eventAttributeBuilder_.clear();
+      }
       return this;
     }
 
@@ -718,6 +954,17 @@ private static final long serialVersionUID = 0L;
           result.shoppingLoyalty_ = shoppingLoyaltyBuilder_.build();
         }
         to_bitField0_ |= 0x00000004;
+      }
+      result.lifecycleStage_ = lifecycleStage_;
+      result.firstPurchaseDateTime_ = firstPurchaseDateTime_;
+      if (eventAttributeBuilder_ == null) {
+        if (((bitField0_ & 0x00000008) != 0)) {
+          eventAttribute_ = java.util.Collections.unmodifiableList(eventAttribute_);
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.eventAttribute_ = eventAttribute_;
+      } else {
+        result.eventAttribute_ = eventAttributeBuilder_.build();
       }
       result.bitField0_ = to_bitField0_;
       onBuilt();
@@ -790,6 +1037,40 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasShoppingLoyalty()) {
         mergeShoppingLoyalty(other.getShoppingLoyalty());
+      }
+      if (!other.getLifecycleStage().isEmpty()) {
+        lifecycleStage_ = other.lifecycleStage_;
+        onChanged();
+      }
+      if (!other.getFirstPurchaseDateTime().isEmpty()) {
+        firstPurchaseDateTime_ = other.firstPurchaseDateTime_;
+        onChanged();
+      }
+      if (eventAttributeBuilder_ == null) {
+        if (!other.eventAttribute_.isEmpty()) {
+          if (eventAttribute_.isEmpty()) {
+            eventAttribute_ = other.eventAttribute_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureEventAttributeIsMutable();
+            eventAttribute_.addAll(other.eventAttribute_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.eventAttribute_.isEmpty()) {
+          if (eventAttributeBuilder_.isEmpty()) {
+            eventAttributeBuilder_.dispose();
+            eventAttributeBuilder_ = null;
+            eventAttribute_ = other.eventAttribute_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+            eventAttributeBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getEventAttributeFieldBuilder() : null;
+          } else {
+            eventAttributeBuilder_.addAllMessages(other.eventAttribute_);
+          }
+        }
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1422,6 +1703,548 @@ private static final long serialVersionUID = 0L;
         shoppingLoyalty_ = null;
       }
       return shoppingLoyaltyBuilder_;
+    }
+
+    private java.lang.Object lifecycleStage_ = "";
+    /**
+     * <pre>
+     * Optional. Advertiser defined lifecycle stage for the user. The accepted values are
+     * “Lead”, “Active” and “Churned”.
+     * </pre>
+     *
+     * <code>string lifecycle_stage = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @return The lifecycleStage.
+     */
+    public java.lang.String getLifecycleStage() {
+      java.lang.Object ref = lifecycleStage_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        lifecycleStage_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Optional. Advertiser defined lifecycle stage for the user. The accepted values are
+     * “Lead”, “Active” and “Churned”.
+     * </pre>
+     *
+     * <code>string lifecycle_stage = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @return The bytes for lifecycleStage.
+     */
+    public com.google.protobuf.ByteString
+        getLifecycleStageBytes() {
+      java.lang.Object ref = lifecycleStage_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        lifecycleStage_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Optional. Advertiser defined lifecycle stage for the user. The accepted values are
+     * “Lead”, “Active” and “Churned”.
+     * </pre>
+     *
+     * <code>string lifecycle_stage = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @param value The lifecycleStage to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLifecycleStage(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      lifecycleStage_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Advertiser defined lifecycle stage for the user. The accepted values are
+     * “Lead”, “Active” and “Churned”.
+     * </pre>
+     *
+     * <code>string lifecycle_stage = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearLifecycleStage() {
+      
+      lifecycleStage_ = getDefaultInstance().getLifecycleStage();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Advertiser defined lifecycle stage for the user. The accepted values are
+     * “Lead”, “Active” and “Churned”.
+     * </pre>
+     *
+     * <code>string lifecycle_stage = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @param value The bytes for lifecycleStage to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLifecycleStageBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      lifecycleStage_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object firstPurchaseDateTime_ = "";
+    /**
+     * <pre>
+     * Optional. Timestamp of the first purchase made by the user.
+     * The format is YYYY-MM-DD HH:MM:SS[+/-HH:MM], where [+/-HH:MM] is an
+     * optional timezone offset from UTC. If the offset is absent, the API will
+     * use the account's timezone as default.
+     * </pre>
+     *
+     * <code>string first_purchase_date_time = 9 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @return The firstPurchaseDateTime.
+     */
+    public java.lang.String getFirstPurchaseDateTime() {
+      java.lang.Object ref = firstPurchaseDateTime_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        firstPurchaseDateTime_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Optional. Timestamp of the first purchase made by the user.
+     * The format is YYYY-MM-DD HH:MM:SS[+/-HH:MM], where [+/-HH:MM] is an
+     * optional timezone offset from UTC. If the offset is absent, the API will
+     * use the account's timezone as default.
+     * </pre>
+     *
+     * <code>string first_purchase_date_time = 9 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @return The bytes for firstPurchaseDateTime.
+     */
+    public com.google.protobuf.ByteString
+        getFirstPurchaseDateTimeBytes() {
+      java.lang.Object ref = firstPurchaseDateTime_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        firstPurchaseDateTime_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Optional. Timestamp of the first purchase made by the user.
+     * The format is YYYY-MM-DD HH:MM:SS[+/-HH:MM], where [+/-HH:MM] is an
+     * optional timezone offset from UTC. If the offset is absent, the API will
+     * use the account's timezone as default.
+     * </pre>
+     *
+     * <code>string first_purchase_date_time = 9 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @param value The firstPurchaseDateTime to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFirstPurchaseDateTime(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      firstPurchaseDateTime_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Timestamp of the first purchase made by the user.
+     * The format is YYYY-MM-DD HH:MM:SS[+/-HH:MM], where [+/-HH:MM] is an
+     * optional timezone offset from UTC. If the offset is absent, the API will
+     * use the account's timezone as default.
+     * </pre>
+     *
+     * <code>string first_purchase_date_time = 9 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFirstPurchaseDateTime() {
+      
+      firstPurchaseDateTime_ = getDefaultInstance().getFirstPurchaseDateTime();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Timestamp of the first purchase made by the user.
+     * The format is YYYY-MM-DD HH:MM:SS[+/-HH:MM], where [+/-HH:MM] is an
+     * optional timezone offset from UTC. If the offset is absent, the API will
+     * use the account's timezone as default.
+     * </pre>
+     *
+     * <code>string first_purchase_date_time = 9 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @param value The bytes for firstPurchaseDateTime to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFirstPurchaseDateTimeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      firstPurchaseDateTime_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<com.google.ads.googleads.v11.common.EventAttribute> eventAttribute_ =
+      java.util.Collections.emptyList();
+    private void ensureEventAttributeIsMutable() {
+      if (!((bitField0_ & 0x00000008) != 0)) {
+        eventAttribute_ = new java.util.ArrayList<com.google.ads.googleads.v11.common.EventAttribute>(eventAttribute_);
+        bitField0_ |= 0x00000008;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.ads.googleads.v11.common.EventAttribute, com.google.ads.googleads.v11.common.EventAttribute.Builder, com.google.ads.googleads.v11.common.EventAttributeOrBuilder> eventAttributeBuilder_;
+
+    /**
+     * <pre>
+     * Optional. Advertiser defined events and their attributes. All the values in the
+     * nested fields are required. Currently this field is in beta.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public java.util.List<com.google.ads.googleads.v11.common.EventAttribute> getEventAttributeList() {
+      if (eventAttributeBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(eventAttribute_);
+      } else {
+        return eventAttributeBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Optional. Advertiser defined events and their attributes. All the values in the
+     * nested fields are required. Currently this field is in beta.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public int getEventAttributeCount() {
+      if (eventAttributeBuilder_ == null) {
+        return eventAttribute_.size();
+      } else {
+        return eventAttributeBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Optional. Advertiser defined events and their attributes. All the values in the
+     * nested fields are required. Currently this field is in beta.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public com.google.ads.googleads.v11.common.EventAttribute getEventAttribute(int index) {
+      if (eventAttributeBuilder_ == null) {
+        return eventAttribute_.get(index);
+      } else {
+        return eventAttributeBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Optional. Advertiser defined events and their attributes. All the values in the
+     * nested fields are required. Currently this field is in beta.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public Builder setEventAttribute(
+        int index, com.google.ads.googleads.v11.common.EventAttribute value) {
+      if (eventAttributeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureEventAttributeIsMutable();
+        eventAttribute_.set(index, value);
+        onChanged();
+      } else {
+        eventAttributeBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Advertiser defined events and their attributes. All the values in the
+     * nested fields are required. Currently this field is in beta.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public Builder setEventAttribute(
+        int index, com.google.ads.googleads.v11.common.EventAttribute.Builder builderForValue) {
+      if (eventAttributeBuilder_ == null) {
+        ensureEventAttributeIsMutable();
+        eventAttribute_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        eventAttributeBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Advertiser defined events and their attributes. All the values in the
+     * nested fields are required. Currently this field is in beta.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public Builder addEventAttribute(com.google.ads.googleads.v11.common.EventAttribute value) {
+      if (eventAttributeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureEventAttributeIsMutable();
+        eventAttribute_.add(value);
+        onChanged();
+      } else {
+        eventAttributeBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Advertiser defined events and their attributes. All the values in the
+     * nested fields are required. Currently this field is in beta.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public Builder addEventAttribute(
+        int index, com.google.ads.googleads.v11.common.EventAttribute value) {
+      if (eventAttributeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureEventAttributeIsMutable();
+        eventAttribute_.add(index, value);
+        onChanged();
+      } else {
+        eventAttributeBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Advertiser defined events and their attributes. All the values in the
+     * nested fields are required. Currently this field is in beta.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public Builder addEventAttribute(
+        com.google.ads.googleads.v11.common.EventAttribute.Builder builderForValue) {
+      if (eventAttributeBuilder_ == null) {
+        ensureEventAttributeIsMutable();
+        eventAttribute_.add(builderForValue.build());
+        onChanged();
+      } else {
+        eventAttributeBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Advertiser defined events and their attributes. All the values in the
+     * nested fields are required. Currently this field is in beta.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public Builder addEventAttribute(
+        int index, com.google.ads.googleads.v11.common.EventAttribute.Builder builderForValue) {
+      if (eventAttributeBuilder_ == null) {
+        ensureEventAttributeIsMutable();
+        eventAttribute_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        eventAttributeBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Advertiser defined events and their attributes. All the values in the
+     * nested fields are required. Currently this field is in beta.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public Builder addAllEventAttribute(
+        java.lang.Iterable<? extends com.google.ads.googleads.v11.common.EventAttribute> values) {
+      if (eventAttributeBuilder_ == null) {
+        ensureEventAttributeIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, eventAttribute_);
+        onChanged();
+      } else {
+        eventAttributeBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Advertiser defined events and their attributes. All the values in the
+     * nested fields are required. Currently this field is in beta.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public Builder clearEventAttribute() {
+      if (eventAttributeBuilder_ == null) {
+        eventAttribute_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+      } else {
+        eventAttributeBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Advertiser defined events and their attributes. All the values in the
+     * nested fields are required. Currently this field is in beta.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public Builder removeEventAttribute(int index) {
+      if (eventAttributeBuilder_ == null) {
+        ensureEventAttributeIsMutable();
+        eventAttribute_.remove(index);
+        onChanged();
+      } else {
+        eventAttributeBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Advertiser defined events and their attributes. All the values in the
+     * nested fields are required. Currently this field is in beta.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public com.google.ads.googleads.v11.common.EventAttribute.Builder getEventAttributeBuilder(
+        int index) {
+      return getEventAttributeFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Optional. Advertiser defined events and their attributes. All the values in the
+     * nested fields are required. Currently this field is in beta.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public com.google.ads.googleads.v11.common.EventAttributeOrBuilder getEventAttributeOrBuilder(
+        int index) {
+      if (eventAttributeBuilder_ == null) {
+        return eventAttribute_.get(index);  } else {
+        return eventAttributeBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Optional. Advertiser defined events and their attributes. All the values in the
+     * nested fields are required. Currently this field is in beta.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public java.util.List<? extends com.google.ads.googleads.v11.common.EventAttributeOrBuilder> 
+         getEventAttributeOrBuilderList() {
+      if (eventAttributeBuilder_ != null) {
+        return eventAttributeBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(eventAttribute_);
+      }
+    }
+    /**
+     * <pre>
+     * Optional. Advertiser defined events and their attributes. All the values in the
+     * nested fields are required. Currently this field is in beta.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public com.google.ads.googleads.v11.common.EventAttribute.Builder addEventAttributeBuilder() {
+      return getEventAttributeFieldBuilder().addBuilder(
+          com.google.ads.googleads.v11.common.EventAttribute.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Optional. Advertiser defined events and their attributes. All the values in the
+     * nested fields are required. Currently this field is in beta.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public com.google.ads.googleads.v11.common.EventAttribute.Builder addEventAttributeBuilder(
+        int index) {
+      return getEventAttributeFieldBuilder().addBuilder(
+          index, com.google.ads.googleads.v11.common.EventAttribute.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Optional. Advertiser defined events and their attributes. All the values in the
+     * nested fields are required. Currently this field is in beta.
+     * </pre>
+     *
+     * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public java.util.List<com.google.ads.googleads.v11.common.EventAttribute.Builder> 
+         getEventAttributeBuilderList() {
+      return getEventAttributeFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.ads.googleads.v11.common.EventAttribute, com.google.ads.googleads.v11.common.EventAttribute.Builder, com.google.ads.googleads.v11.common.EventAttributeOrBuilder> 
+        getEventAttributeFieldBuilder() {
+      if (eventAttributeBuilder_ == null) {
+        eventAttributeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.ads.googleads.v11.common.EventAttribute, com.google.ads.googleads.v11.common.EventAttribute.Builder, com.google.ads.googleads.v11.common.EventAttributeOrBuilder>(
+                eventAttribute_,
+                ((bitField0_ & 0x00000008) != 0),
+                getParentForChildren(),
+                isClean());
+        eventAttribute_ = null;
+      }
+      return eventAttributeBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

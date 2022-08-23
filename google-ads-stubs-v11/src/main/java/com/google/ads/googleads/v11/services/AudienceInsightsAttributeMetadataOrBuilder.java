@@ -112,4 +112,60 @@ public interface AudienceInsightsAttributeMetadataOrBuilder extends
    */
   com.google.protobuf.ByteString
       getDisplayInfoBytes();
+
+  /**
+   * <pre>
+   * Special metadata for a YouTube channel.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.services.YouTubeChannelAttributeMetadata youtube_channel_metadata = 6;</code>
+   * @return Whether the youtubeChannelMetadata field is set.
+   */
+  boolean hasYoutubeChannelMetadata();
+  /**
+   * <pre>
+   * Special metadata for a YouTube channel.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.services.YouTubeChannelAttributeMetadata youtube_channel_metadata = 6;</code>
+   * @return The youtubeChannelMetadata.
+   */
+  com.google.ads.googleads.v11.services.YouTubeChannelAttributeMetadata getYoutubeChannelMetadata();
+  /**
+   * <pre>
+   * Special metadata for a YouTube channel.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.services.YouTubeChannelAttributeMetadata youtube_channel_metadata = 6;</code>
+   */
+  com.google.ads.googleads.v11.services.YouTubeChannelAttributeMetadataOrBuilder getYoutubeChannelMetadataOrBuilder();
+
+  /**
+   * <pre>
+   * Special metadata for a YouTube Dynamic Lineup.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.services.DynamicLineupAttributeMetadata dynamic_attribute_metadata = 7;</code>
+   * @return Whether the dynamicAttributeMetadata field is set.
+   */
+  boolean hasDynamicAttributeMetadata();
+  /**
+   * <pre>
+   * Special metadata for a YouTube Dynamic Lineup.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.services.DynamicLineupAttributeMetadata dynamic_attribute_metadata = 7;</code>
+   * @return The dynamicAttributeMetadata.
+   */
+  com.google.ads.googleads.v11.services.DynamicLineupAttributeMetadata getDynamicAttributeMetadata();
+  /**
+   * <pre>
+   * Special metadata for a YouTube Dynamic Lineup.
+   * </pre>
+   *
+   * <code>.google.ads.googleads.v11.services.DynamicLineupAttributeMetadata dynamic_attribute_metadata = 7;</code>
+   */
+  com.google.ads.googleads.v11.services.DynamicLineupAttributeMetadataOrBuilder getDynamicAttributeMetadataOrBuilder();
+
+  public com.google.ads.googleads.v11.services.AudienceInsightsAttributeMetadata.DimensionMetadataCase getDimensionMetadataCase();
 }

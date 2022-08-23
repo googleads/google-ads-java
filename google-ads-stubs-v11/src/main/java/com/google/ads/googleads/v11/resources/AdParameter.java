@@ -10,7 +10,7 @@ package com.google.ads.googleads.v11.resources;
  * be a maximum of two AdParameters per ad group criterion. (One with
  * parameter_index = 1 and one with parameter_index = 2.)
  * In the ad the parameters are referenced by a placeholder of the form
- * "{param#:value}". E.g. "{param1:$17}"
+ * "{param#:value}". For example, "{param1:$17}"
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v11.resources.AdParameter}
@@ -556,7 +556,7 @@ private static final long serialVersionUID = 0L;
    * be a maximum of two AdParameters per ad group criterion. (One with
    * parameter_index = 1 and one with parameter_index = 2.)
    * In the ad the parameters are referenced by a placeholder of the form
-   * "{param#:value}". E.g. "{param1:$17}"
+   * "{param#:value}". For example, "{param1:$17}"
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v11.resources.AdParameter}

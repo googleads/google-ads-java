@@ -113,7 +113,7 @@ private static final long serialVersionUID = 0L;
     UNKNOWN(1),
     /**
      * <pre>
-     * Keyword. e.g. 'mars cruise'.
+     * Keyword, for example, 'mars cruise'.
      * </pre>
      *
      * <code>KEYWORD = 2;</code>
@@ -121,7 +121,7 @@ private static final long serialVersionUID = 0L;
     KEYWORD(2),
     /**
      * <pre>
-     * Placement, aka Website. e.g. 'www.flowers4sale.com'
+     * Placement, also known as Website, for example, 'www.flowers4sale.com'
      * </pre>
      *
      * <code>PLACEMENT = 3;</code>
@@ -241,7 +241,7 @@ private static final long serialVersionUID = 0L;
     PROXIMITY(17),
     /**
      * <pre>
-     * A topic target on the display network (e.g. "Pets &amp; Animals").
+     * A topic target on the display network (for example, "Pets &amp; Animals").
      * </pre>
      *
      * <code>TOPIC = 18;</code>
@@ -404,7 +404,7 @@ private static final long serialVersionUID = 0L;
     public static final int UNKNOWN_VALUE = 1;
     /**
      * <pre>
-     * Keyword. e.g. 'mars cruise'.
+     * Keyword, for example, 'mars cruise'.
      * </pre>
      *
      * <code>KEYWORD = 2;</code>
@@ -412,7 +412,7 @@ private static final long serialVersionUID = 0L;
     public static final int KEYWORD_VALUE = 2;
     /**
      * <pre>
-     * Placement, aka Website. e.g. 'www.flowers4sale.com'
+     * Placement, also known as Website, for example, 'www.flowers4sale.com'
      * </pre>
      *
      * <code>PLACEMENT = 3;</code>
@@ -532,7 +532,7 @@ private static final long serialVersionUID = 0L;
     public static final int PROXIMITY_VALUE = 17;
     /**
      * <pre>
-     * A topic target on the display network (e.g. "Pets &amp; Animals").
+     * A topic target on the display network (for example, "Pets &amp; Animals").
      * </pre>
      *
      * <code>TOPIC = 18;</code>

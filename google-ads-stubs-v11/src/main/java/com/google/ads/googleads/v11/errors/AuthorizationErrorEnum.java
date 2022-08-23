@@ -158,7 +158,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The user does not have permission to perform this action
-     * (e.g., ADD, UPDATE, REMOVE) on the resource or call a method.
+     * (for example, ADD, UPDATE, REMOVE) on the resource or call a method.
      * </pre>
      *
      * <code>ACTION_NOT_PERMITTED = 7;</code>
@@ -298,7 +298,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The user does not have permission to perform this action
-     * (e.g., ADD, UPDATE, REMOVE) on the resource or call a method.
+     * (for example, ADD, UPDATE, REMOVE) on the resource or call a method.
      * </pre>
      *
      * <code>ACTION_NOT_PERMITTED = 7;</code>

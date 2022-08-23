@@ -167,7 +167,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The text that violates the policy if specified.
    * Otherwise, refers to the policy in general
-   * (e.g., when requesting to be exempt from the whole policy).
+   * (for example, when requesting to be exempt from the whole policy).
    * If not specified for criterion exemptions, the whole policy is implied.
    * Must be specified for ad exemptions.
    * </pre>
@@ -183,7 +183,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The text that violates the policy if specified.
    * Otherwise, refers to the policy in general
-   * (e.g., when requesting to be exempt from the whole policy).
+   * (for example, when requesting to be exempt from the whole policy).
    * If not specified for criterion exemptions, the whole policy is implied.
    * Must be specified for ad exemptions.
    * </pre>
@@ -208,7 +208,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The text that violates the policy if specified.
    * Otherwise, refers to the policy in general
-   * (e.g., when requesting to be exempt from the whole policy).
+   * (for example, when requesting to be exempt from the whole policy).
    * If not specified for criterion exemptions, the whole policy is implied.
    * Must be specified for ad exemptions.
    * </pre>
@@ -689,7 +689,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The text that violates the policy if specified.
      * Otherwise, refers to the policy in general
-     * (e.g., when requesting to be exempt from the whole policy).
+     * (for example, when requesting to be exempt from the whole policy).
      * If not specified for criterion exemptions, the whole policy is implied.
      * Must be specified for ad exemptions.
      * </pre>
@@ -704,7 +704,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The text that violates the policy if specified.
      * Otherwise, refers to the policy in general
-     * (e.g., when requesting to be exempt from the whole policy).
+     * (for example, when requesting to be exempt from the whole policy).
      * If not specified for criterion exemptions, the whole policy is implied.
      * Must be specified for ad exemptions.
      * </pre>
@@ -728,7 +728,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The text that violates the policy if specified.
      * Otherwise, refers to the policy in general
-     * (e.g., when requesting to be exempt from the whole policy).
+     * (for example, when requesting to be exempt from the whole policy).
      * If not specified for criterion exemptions, the whole policy is implied.
      * Must be specified for ad exemptions.
      * </pre>
@@ -753,7 +753,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The text that violates the policy if specified.
      * Otherwise, refers to the policy in general
-     * (e.g., when requesting to be exempt from the whole policy).
+     * (for example, when requesting to be exempt from the whole policy).
      * If not specified for criterion exemptions, the whole policy is implied.
      * Must be specified for ad exemptions.
      * </pre>
@@ -776,7 +776,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The text that violates the policy if specified.
      * Otherwise, refers to the policy in general
-     * (e.g., when requesting to be exempt from the whole policy).
+     * (for example, when requesting to be exempt from the whole policy).
      * If not specified for criterion exemptions, the whole policy is implied.
      * Must be specified for ad exemptions.
      * </pre>
@@ -794,7 +794,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The text that violates the policy if specified.
      * Otherwise, refers to the policy in general
-     * (e.g., when requesting to be exempt from the whole policy).
+     * (for example, when requesting to be exempt from the whole policy).
      * If not specified for criterion exemptions, the whole policy is implied.
      * Must be specified for ad exemptions.
      * </pre>

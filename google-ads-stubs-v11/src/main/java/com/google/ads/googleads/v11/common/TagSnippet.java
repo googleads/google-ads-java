@@ -148,7 +148,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The format of the web page where the tracking tag and snippet will be
-   * installed, e.g. HTML.
+   * installed, for example, HTML.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.TrackingCodePageFormatEnum.TrackingCodePageFormat page_format = 2;</code>
@@ -160,7 +160,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The format of the web page where the tracking tag and snippet will be
-   * installed, e.g. HTML.
+   * installed, for example, HTML.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.TrackingCodePageFormatEnum.TrackingCodePageFormat page_format = 2;</code>
@@ -749,7 +749,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The format of the web page where the tracking tag and snippet will be
-     * installed, e.g. HTML.
+     * installed, for example, HTML.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.TrackingCodePageFormatEnum.TrackingCodePageFormat page_format = 2;</code>
@@ -761,7 +761,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The format of the web page where the tracking tag and snippet will be
-     * installed, e.g. HTML.
+     * installed, for example, HTML.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.TrackingCodePageFormatEnum.TrackingCodePageFormat page_format = 2;</code>
@@ -777,7 +777,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The format of the web page where the tracking tag and snippet will be
-     * installed, e.g. HTML.
+     * installed, for example, HTML.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.TrackingCodePageFormatEnum.TrackingCodePageFormat page_format = 2;</code>
@@ -792,7 +792,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The format of the web page where the tracking tag and snippet will be
-     * installed, e.g. HTML.
+     * installed, for example, HTML.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.TrackingCodePageFormatEnum.TrackingCodePageFormat page_format = 2;</code>
@@ -811,7 +811,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The format of the web page where the tracking tag and snippet will be
-     * installed, e.g. HTML.
+     * installed, for example, HTML.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.TrackingCodePageFormatEnum.TrackingCodePageFormat page_format = 2;</code>

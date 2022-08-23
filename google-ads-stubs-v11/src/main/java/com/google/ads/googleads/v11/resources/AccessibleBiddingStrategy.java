@@ -1889,8 +1889,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * The desired fraction of ads to be shown in the targeted location in
-     * micros. E.g. 1% equals 10,000.
+     * The chosen fraction of ads to be shown in the targeted location in
+     * micros. For example, 1% equals 10,000.
      * </pre>
      *
      * <code>optional int64 location_fraction_micros = 2;</code>
@@ -1899,8 +1899,8 @@ private static final long serialVersionUID = 0L;
     boolean hasLocationFractionMicros();
     /**
      * <pre>
-     * The desired fraction of ads to be shown in the targeted location in
-     * micros. E.g. 1% equals 10,000.
+     * The chosen fraction of ads to be shown in the targeted location in
+     * micros. For example, 1% equals 10,000.
      * </pre>
      *
      * <code>optional int64 location_fraction_micros = 2;</code>
@@ -2066,8 +2066,8 @@ private static final long serialVersionUID = 0L;
     private long locationFractionMicros_;
     /**
      * <pre>
-     * The desired fraction of ads to be shown in the targeted location in
-     * micros. E.g. 1% equals 10,000.
+     * The chosen fraction of ads to be shown in the targeted location in
+     * micros. For example, 1% equals 10,000.
      * </pre>
      *
      * <code>optional int64 location_fraction_micros = 2;</code>
@@ -2079,8 +2079,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The desired fraction of ads to be shown in the targeted location in
-     * micros. E.g. 1% equals 10,000.
+     * The chosen fraction of ads to be shown in the targeted location in
+     * micros. For example, 1% equals 10,000.
      * </pre>
      *
      * <code>optional int64 location_fraction_micros = 2;</code>
@@ -2562,8 +2562,8 @@ private static final long serialVersionUID = 0L;
       private long locationFractionMicros_ ;
       /**
        * <pre>
-       * The desired fraction of ads to be shown in the targeted location in
-       * micros. E.g. 1% equals 10,000.
+       * The chosen fraction of ads to be shown in the targeted location in
+       * micros. For example, 1% equals 10,000.
        * </pre>
        *
        * <code>optional int64 location_fraction_micros = 2;</code>
@@ -2575,8 +2575,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The desired fraction of ads to be shown in the targeted location in
-       * micros. E.g. 1% equals 10,000.
+       * The chosen fraction of ads to be shown in the targeted location in
+       * micros. For example, 1% equals 10,000.
        * </pre>
        *
        * <code>optional int64 location_fraction_micros = 2;</code>
@@ -2588,8 +2588,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The desired fraction of ads to be shown in the targeted location in
-       * micros. E.g. 1% equals 10,000.
+       * The chosen fraction of ads to be shown in the targeted location in
+       * micros. For example, 1% equals 10,000.
        * </pre>
        *
        * <code>optional int64 location_fraction_micros = 2;</code>
@@ -2604,8 +2604,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * The desired fraction of ads to be shown in the targeted location in
-       * micros. E.g. 1% equals 10,000.
+       * The chosen fraction of ads to be shown in the targeted location in
+       * micros. For example, 1% equals 10,000.
        * </pre>
        *
        * <code>optional int64 location_fraction_micros = 2;</code>
@@ -2739,7 +2739,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The desired revenue (based on conversion data) per unit of spend.
+     * Output only. The chosen revenue (based on conversion data) per unit of spend.
      * </pre>
      *
      * <code>optional double target_roas = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2748,7 +2748,7 @@ private static final long serialVersionUID = 0L;
     boolean hasTargetRoas();
     /**
      * <pre>
-     * Output only. The desired revenue (based on conversion data) per unit of spend.
+     * Output only. The chosen revenue (based on conversion data) per unit of spend.
      * </pre>
      *
      * <code>optional double target_roas = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2851,7 +2851,7 @@ private static final long serialVersionUID = 0L;
     private double targetRoas_;
     /**
      * <pre>
-     * Output only. The desired revenue (based on conversion data) per unit of spend.
+     * Output only. The chosen revenue (based on conversion data) per unit of spend.
      * </pre>
      *
      * <code>optional double target_roas = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2863,7 +2863,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The desired revenue (based on conversion data) per unit of spend.
+     * Output only. The chosen revenue (based on conversion data) per unit of spend.
      * </pre>
      *
      * <code>optional double target_roas = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3198,7 +3198,7 @@ private static final long serialVersionUID = 0L;
       private double targetRoas_ ;
       /**
        * <pre>
-       * Output only. The desired revenue (based on conversion data) per unit of spend.
+       * Output only. The chosen revenue (based on conversion data) per unit of spend.
        * </pre>
        *
        * <code>optional double target_roas = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3210,7 +3210,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The desired revenue (based on conversion data) per unit of spend.
+       * Output only. The chosen revenue (based on conversion data) per unit of spend.
        * </pre>
        *
        * <code>optional double target_roas = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3222,7 +3222,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The desired revenue (based on conversion data) per unit of spend.
+       * Output only. The chosen revenue (based on conversion data) per unit of spend.
        * </pre>
        *
        * <code>optional double target_roas = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3237,7 +3237,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The desired revenue (based on conversion data) per unit of spend.
+       * Output only. The chosen revenue (based on conversion data) per unit of spend.
        * </pre>
        *
        * <code>optional double target_roas = 1 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4463,7 +4463,7 @@ private static final long serialVersionUID = 0L;
   public static final int TARGET_IMPRESSION_SHARE_FIELD_NUMBER = 10;
   /**
    * <pre>
-   * Output only. A bidding strategy that automatically optimizes towards a desired
+   * Output only. A bidding strategy that automatically optimizes towards a chosen
    * percentage of impressions.
    * </pre>
    *
@@ -4476,7 +4476,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. A bidding strategy that automatically optimizes towards a desired
+   * Output only. A bidding strategy that automatically optimizes towards a chosen
    * percentage of impressions.
    * </pre>
    *
@@ -4492,7 +4492,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. A bidding strategy that automatically optimizes towards a desired
+   * Output only. A bidding strategy that automatically optimizes towards a chosen
    * percentage of impressions.
    * </pre>
    *
@@ -6205,7 +6205,7 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetImpressionShare, com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetImpressionShare.Builder, com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.TargetImpressionShareOrBuilder> targetImpressionShareBuilder_;
     /**
      * <pre>
-     * Output only. A bidding strategy that automatically optimizes towards a desired
+     * Output only. A bidding strategy that automatically optimizes towards a chosen
      * percentage of impressions.
      * </pre>
      *
@@ -6218,7 +6218,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bidding strategy that automatically optimizes towards a desired
+     * Output only. A bidding strategy that automatically optimizes towards a chosen
      * percentage of impressions.
      * </pre>
      *
@@ -6241,7 +6241,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bidding strategy that automatically optimizes towards a desired
+     * Output only. A bidding strategy that automatically optimizes towards a chosen
      * percentage of impressions.
      * </pre>
      *
@@ -6262,7 +6262,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bidding strategy that automatically optimizes towards a desired
+     * Output only. A bidding strategy that automatically optimizes towards a chosen
      * percentage of impressions.
      * </pre>
      *
@@ -6281,7 +6281,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bidding strategy that automatically optimizes towards a desired
+     * Output only. A bidding strategy that automatically optimizes towards a chosen
      * percentage of impressions.
      * </pre>
      *
@@ -6309,7 +6309,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bidding strategy that automatically optimizes towards a desired
+     * Output only. A bidding strategy that automatically optimizes towards a chosen
      * percentage of impressions.
      * </pre>
      *
@@ -6333,7 +6333,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bidding strategy that automatically optimizes towards a desired
+     * Output only. A bidding strategy that automatically optimizes towards a chosen
      * percentage of impressions.
      * </pre>
      *
@@ -6344,7 +6344,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bidding strategy that automatically optimizes towards a desired
+     * Output only. A bidding strategy that automatically optimizes towards a chosen
      * percentage of impressions.
      * </pre>
      *
@@ -6363,7 +6363,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A bidding strategy that automatically optimizes towards a desired
+     * Output only. A bidding strategy that automatically optimizes towards a chosen
      * percentage of impressions.
      * </pre>
      *

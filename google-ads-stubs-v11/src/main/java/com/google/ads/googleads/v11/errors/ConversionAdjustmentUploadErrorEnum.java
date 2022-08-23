@@ -114,7 +114,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The specified conversion action was created too recently.
-     * Please try the upload again after 4-6 hours have passed since the
+     * Try the upload again after 4-6 hours have passed since the
      * conversion action was created.
      * </pre>
      *
@@ -210,7 +210,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A restatement with this timestamp already exists for this conversion. To
-     * upload another adjustment, please use a different timestamp.
+     * upload another adjustment, use a different timestamp.
      * </pre>
      *
      * <code>RESTATEMENT_ALREADY_EXISTS = 13;</code>
@@ -219,7 +219,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * This adjustment has the same timestamp as another adjustment in the
-     * request for this conversion. To upload another adjustment, please use a
+     * request for this conversion. To upload another adjustment, use a
      * different timestamp.
      * </pre>
      *
@@ -292,7 +292,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Per our customer data policies, enhancement has been prohibited in your
-     * account. If you have any questions, please contact your Google
+     * account. If you have any questions, contact your Google
      * representative.
      * </pre>
      *
@@ -340,7 +340,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The specified conversion action was created too recently.
-     * Please try the upload again after 4-6 hours have passed since the
+     * Try the upload again after 4-6 hours have passed since the
      * conversion action was created.
      * </pre>
      *
@@ -436,7 +436,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A restatement with this timestamp already exists for this conversion. To
-     * upload another adjustment, please use a different timestamp.
+     * upload another adjustment, use a different timestamp.
      * </pre>
      *
      * <code>RESTATEMENT_ALREADY_EXISTS = 13;</code>
@@ -445,7 +445,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * This adjustment has the same timestamp as another adjustment in the
-     * request for this conversion. To upload another adjustment, please use a
+     * request for this conversion. To upload another adjustment, use a
      * different timestamp.
      * </pre>
      *
@@ -518,7 +518,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Per our customer data policies, enhancement has been prohibited in your
-     * account. If you have any questions, please contact your Google
+     * account. If you have any questions, contact your Google
      * representative.
      * </pre>
      *

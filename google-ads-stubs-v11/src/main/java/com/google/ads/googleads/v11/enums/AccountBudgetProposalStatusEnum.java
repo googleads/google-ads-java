@@ -148,7 +148,7 @@ private static final long serialVersionUID = 0L;
     CANCELLED(5),
     /**
      * <pre>
-     * The proposal has been rejected by the user, e.g. by rejecting an
+     * The proposal has been rejected by the user, for example, by rejecting an
      * acceptance email.
      * </pre>
      *
@@ -211,7 +211,7 @@ private static final long serialVersionUID = 0L;
     public static final int CANCELLED_VALUE = 5;
     /**
      * <pre>
-     * The proposal has been rejected by the user, e.g. by rejecting an
+     * The proposal has been rejected by the user, for example, by rejecting an
      * acceptance email.
      * </pre>
      *

@@ -982,8 +982,8 @@ public final class GoogleAdsServiceProto {
       "e.ads.googleads.v11.services.SmartCampai" +
       "gnSettingOperationH\000\022S\n\023user_list_operat" +
       "ion\030\020 \001(\01324.google.ads.googleads.v11.ser" +
-      "vices.UserListOperationH\000B\013\n\toperation\"\275" +
-      ":\n\027MutateOperationResponse\022a\n\030ad_group_a" +
+      "vices.UserListOperationH\000B\013\n\toperation\"\364" +
+      ";\n\027MutateOperationResponse\022a\n\030ad_group_a" +
       "d_label_result\030\021 \001(\0132=.google.ads.google" +
       "ads.v11.services.MutateAdGroupAdLabelRes" +
       "ultH\000\022V\n\022ad_group_ad_result\030\001 \001(\01328.goog" +
@@ -1123,79 +1123,84 @@ public final class GoogleAdsServiceProto {
       "ads.v11.services.MutateCustomerResultH\000\022" +
       "i\n\033customizer_attribute_result\030F \001(\0132B.g" +
       "oogle.ads.googleads.v11.services.MutateC" +
-      "ustomizerAttributeResultH\000\022f\n\032extension_" +
-      "feed_item_result\030$ \001(\0132@.google.ads.goog" +
-      "leads.v11.services.MutateExtensionFeedIt" +
-      "emResultH\000\022S\n\020feed_item_result\030% \001(\01327.g" +
-      "oogle.ads.googleads.v11.services.MutateF" +
-      "eedItemResultH\000\022Z\n\024feed_item_set_result\030" +
-      "5 \001(\0132:.google.ads.googleads.v11.service" +
-      "s.MutateFeedItemSetResultH\000\022c\n\031feed_item" +
-      "_set_link_result\0306 \001(\0132>.google.ads.goog" +
-      "leads.v11.services.MutateFeedItemSetLink" +
-      "ResultH\000\022`\n\027feed_item_target_result\030& \001(" +
-      "\0132=.google.ads.googleads.v11.services.Mu" +
-      "tateFeedItemTargetResultH\000\022Y\n\023feed_mappi" +
-      "ng_result\030\' \001(\0132:.google.ads.googleads.v" +
-      "11.services.MutateFeedMappingResultH\000\022J\n" +
-      "\013feed_result\030( \001(\01323.google.ads.googlead" +
-      "s.v11.services.MutateFeedResultH\000\022i\n\034key" +
-      "word_plan_ad_group_result\030, \001(\0132A.google" +
-      ".ads.googleads.v11.services.MutateKeywor" +
-      "dPlanAdGroupResultH\000\022j\n\034keyword_plan_cam" +
-      "paign_result\030- \001(\0132B.google.ads.googlead" +
-      "s.v11.services.MutateKeywordPlanCampaign" +
-      "ResultH\000\022x\n$keyword_plan_ad_group_keywor" +
-      "d_result\0302 \001(\0132H.google.ads.googleads.v1" +
-      "1.services.MutateKeywordPlanAdGroupKeywo" +
-      "rdResultH\000\022y\n$keyword_plan_campaign_keyw" +
-      "ord_result\0303 \001(\0132I.google.ads.googleads." +
-      "v11.services.MutateKeywordPlanCampaignKe" +
-      "ywordResultH\000\022Z\n\023keyword_plan_result\0300 \001" +
-      "(\0132;.google.ads.googleads.v11.services.M" +
-      "utateKeywordPlansResultH\000\022L\n\014label_resul" +
-      "t\030) \001(\01324.google.ads.googleads.v11.servi" +
-      "ces.MutateLabelResultH\000\022U\n\021media_file_re" +
-      "sult\030* \001(\01328.google.ads.googleads.v11.se" +
-      "rvices.MutateMediaFileResultH\000\022e\n\031remark" +
-      "eting_action_result\030+ \001(\0132@.google.ads.g" +
-      "oogleads.v11.services.MutateRemarketingA" +
-      "ctionResultH\000\022a\n\027shared_criterion_result" +
-      "\030\016 \001(\0132>.google.ads.googleads.v11.servic" +
-      "es.MutateSharedCriterionResultH\000\022U\n\021shar" +
-      "ed_set_result\030\017 \001(\01328.google.ads.googlea" +
-      "ds.v11.services.MutateSharedSetResultH\000\022" +
-      "l\n\035smart_campaign_setting_result\030= \001(\0132C" +
+      "ustomizerAttributeResultH\000\022V\n\021experiment" +
+      "_result\030Q \001(\01329.google.ads.googleads.v11" +
+      ".services.MutateExperimentResultH\000\022]\n\025ex" +
+      "periment_arm_result\030R \001(\0132<.google.ads.g" +
+      "oogleads.v11.services.MutateExperimentAr" +
+      "mResultH\000\022f\n\032extension_feed_item_result\030" +
+      "$ \001(\0132@.google.ads.googleads.v11.service" +
+      "s.MutateExtensionFeedItemResultH\000\022S\n\020fee" +
+      "d_item_result\030% \001(\01327.google.ads.googlea" +
+      "ds.v11.services.MutateFeedItemResultH\000\022Z" +
+      "\n\024feed_item_set_result\0305 \001(\0132:.google.ad" +
+      "s.googleads.v11.services.MutateFeedItemS" +
+      "etResultH\000\022c\n\031feed_item_set_link_result\030" +
+      "6 \001(\0132>.google.ads.googleads.v11.service" +
+      "s.MutateFeedItemSetLinkResultH\000\022`\n\027feed_" +
+      "item_target_result\030& \001(\0132=.google.ads.go" +
+      "ogleads.v11.services.MutateFeedItemTarge" +
+      "tResultH\000\022Y\n\023feed_mapping_result\030\' \001(\0132:" +
       ".google.ads.googleads.v11.services.Mutat" +
-      "eSmartCampaignSettingResultH\000\022S\n\020user_li" +
-      "st_result\030\020 \001(\01327.google.ads.googleads.v" +
-      "11.services.MutateUserListResultH\000B\n\n\010re" +
-      "sponse2\365\005\n\020GoogleAdsService\022\317\001\n\006Search\0229" +
-      ".google.ads.googleads.v11.services.Searc" +
-      "hGoogleAdsRequest\032:.google.ads.googleads" +
-      ".v11.services.SearchGoogleAdsResponse\"N\202" +
-      "\323\344\223\0024\"//v11/customers/{customer_id=*}/go" +
-      "ogleAds:search:\001*\332A\021customer_id,query\022\351\001" +
-      "\n\014SearchStream\022?.google.ads.googleads.v1" +
-      "1.services.SearchGoogleAdsStreamRequest\032" +
-      "@.google.ads.googleads.v11.services.Sear" +
-      "chGoogleAdsStreamResponse\"T\202\323\344\223\002:\"5/v11/" +
-      "customers/{customer_id=*}/googleAds:sear" +
-      "chStream:\001*\332A\021customer_id,query0\001\022\333\001\n\006Mu" +
-      "tate\0229.google.ads.googleads.v11.services" +
-      ".MutateGoogleAdsRequest\032:.google.ads.goo" +
-      "gleads.v11.services.MutateGoogleAdsRespo" +
-      "nse\"Z\202\323\344\223\0024\"//v11/customers/{customer_id" +
-      "=*}/googleAds:mutate:\001*\332A\035customer_id,mu" +
-      "tate_operations\032E\312A\030googleads.googleapis" +
-      ".com\322A\'https://www.googleapis.com/auth/a" +
-      "dwordsB\201\002\n%com.google.ads.googleads.v11." +
-      "servicesB\025GoogleAdsServiceProtoP\001ZIgoogl" +
-      "e.golang.org/genproto/googleapis/ads/goo" +
-      "gleads/v11/services;services\242\002\003GAA\252\002!Goo" +
-      "gle.Ads.GoogleAds.V11.Services\312\002!Google\\" +
-      "Ads\\GoogleAds\\V11\\Services\352\002%Google::Ads" +
-      "::GoogleAds::V11::Servicesb\006proto3"
+      "eFeedMappingResultH\000\022J\n\013feed_result\030( \001(" +
+      "\01323.google.ads.googleads.v11.services.Mu" +
+      "tateFeedResultH\000\022i\n\034keyword_plan_ad_grou" +
+      "p_result\030, \001(\0132A.google.ads.googleads.v1" +
+      "1.services.MutateKeywordPlanAdGroupResul" +
+      "tH\000\022j\n\034keyword_plan_campaign_result\030- \001(" +
+      "\0132B.google.ads.googleads.v11.services.Mu" +
+      "tateKeywordPlanCampaignResultH\000\022x\n$keywo" +
+      "rd_plan_ad_group_keyword_result\0302 \001(\0132H." +
+      "google.ads.googleads.v11.services.Mutate" +
+      "KeywordPlanAdGroupKeywordResultH\000\022y\n$key" +
+      "word_plan_campaign_keyword_result\0303 \001(\0132" +
+      "I.google.ads.googleads.v11.services.Muta" +
+      "teKeywordPlanCampaignKeywordResultH\000\022Z\n\023" +
+      "keyword_plan_result\0300 \001(\0132;.google.ads.g" +
+      "oogleads.v11.services.MutateKeywordPlans" +
+      "ResultH\000\022L\n\014label_result\030) \001(\01324.google." +
+      "ads.googleads.v11.services.MutateLabelRe" +
+      "sultH\000\022U\n\021media_file_result\030* \001(\01328.goog" +
+      "le.ads.googleads.v11.services.MutateMedi" +
+      "aFileResultH\000\022e\n\031remarketing_action_resu" +
+      "lt\030+ \001(\0132@.google.ads.googleads.v11.serv" +
+      "ices.MutateRemarketingActionResultH\000\022a\n\027" +
+      "shared_criterion_result\030\016 \001(\0132>.google.a" +
+      "ds.googleads.v11.services.MutateSharedCr" +
+      "iterionResultH\000\022U\n\021shared_set_result\030\017 \001" +
+      "(\01328.google.ads.googleads.v11.services.M" +
+      "utateSharedSetResultH\000\022l\n\035smart_campaign" +
+      "_setting_result\030= \001(\0132C.google.ads.googl" +
+      "eads.v11.services.MutateSmartCampaignSet" +
+      "tingResultH\000\022S\n\020user_list_result\030\020 \001(\01327" +
+      ".google.ads.googleads.v11.services.Mutat" +
+      "eUserListResultH\000B\n\n\010response2\365\005\n\020Google" +
+      "AdsService\022\317\001\n\006Search\0229.google.ads.googl" +
+      "eads.v11.services.SearchGoogleAdsRequest" +
+      "\032:.google.ads.googleads.v11.services.Sea" +
+      "rchGoogleAdsResponse\"N\202\323\344\223\0024\"//v11/custo" +
+      "mers/{customer_id=*}/googleAds:search:\001*" +
+      "\332A\021customer_id,query\022\351\001\n\014SearchStream\022?." +
+      "google.ads.googleads.v11.services.Search" +
+      "GoogleAdsStreamRequest\032@.google.ads.goog" +
+      "leads.v11.services.SearchGoogleAdsStream" +
+      "Response\"T\202\323\344\223\002:\"5/v11/customers/{custom" +
+      "er_id=*}/googleAds:searchStream:\001*\332A\021cus" +
+      "tomer_id,query0\001\022\333\001\n\006Mutate\0229.google.ads" +
+      ".googleads.v11.services.MutateGoogleAdsR" +
+      "equest\032:.google.ads.googleads.v11.servic" +
+      "es.MutateGoogleAdsResponse\"Z\202\323\344\223\0024\"//v11" +
+      "/customers/{customer_id=*}/googleAds:mut" +
+      "ate:\001*\332A\035customer_id,mutate_operations\032E" +
+      "\312A\030googleads.googleapis.com\322A\'https://ww" +
+      "w.googleapis.com/auth/adwordsB\201\002\n%com.go" +
+      "ogle.ads.googleads.v11.servicesB\025GoogleA" +
+      "dsServiceProtoP\001ZIgoogle.golang.org/genp" +
+      "roto/googleapis/ads/googleads/v11/servic" +
+      "es;services\242\002\003GAA\252\002!Google.Ads.GoogleAds" +
+      ".V11.Services\312\002!Google\\Ads\\GoogleAds\\V11" +
+      "\\Services\352\002%Google::Ads::GoogleAds::V11:" +
+      ":Servicesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1490,7 +1495,7 @@ public final class GoogleAdsServiceProto {
     internal_static_google_ads_googleads_v11_services_MutateOperationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_google_ads_googleads_v11_services_MutateOperationResponse_descriptor,
-        new java.lang.String[] { "AdGroupAdLabelResult", "AdGroupAdResult", "AdGroupAssetResult", "AdGroupBidModifierResult", "AdGroupCriterionCustomizerResult", "AdGroupCriterionLabelResult", "AdGroupCriterionResult", "AdGroupCustomizerResult", "AdGroupExtensionSettingResult", "AdGroupFeedResult", "AdGroupLabelResult", "AdGroupResult", "AdParameterResult", "AdResult", "AssetResult", "AssetGroupAssetResult", "AssetGroupListingGroupFilterResult", "AssetGroupSignalResult", "AssetGroupResult", "AssetSetAssetResult", "AssetSetResult", "AudienceResult", "BiddingDataExclusionResult", "BiddingSeasonalityAdjustmentResult", "BiddingStrategyResult", "CampaignAssetResult", "CampaignAssetSetResult", "CampaignBidModifierResult", "CampaignBudgetResult", "CampaignConversionGoalResult", "CampaignCriterionResult", "CampaignCustomizerResult", "CampaignDraftResult", "CampaignExperimentResult", "CampaignExtensionSettingResult", "CampaignFeedResult", "CampaignGroupResult", "CampaignLabelResult", "CampaignResult", "CampaignSharedSetResult", "ConversionActionResult", "ConversionCustomVariableResult", "ConversionGoalCampaignConfigResult", "ConversionValueRuleResult", "ConversionValueRuleSetResult", "CustomConversionGoalResult", "CustomerAssetResult", "CustomerConversionGoalResult", "CustomerCustomizerResult", "CustomerExtensionSettingResult", "CustomerFeedResult", "CustomerLabelResult", "CustomerNegativeCriterionResult", "CustomerResult", "CustomizerAttributeResult", "ExtensionFeedItemResult", "FeedItemResult", "FeedItemSetResult", "FeedItemSetLinkResult", "FeedItemTargetResult", "FeedMappingResult", "FeedResult", "KeywordPlanAdGroupResult", "KeywordPlanCampaignResult", "KeywordPlanAdGroupKeywordResult", "KeywordPlanCampaignKeywordResult", "KeywordPlanResult", "LabelResult", "MediaFileResult", "RemarketingActionResult", "SharedCriterionResult", "SharedSetResult", "SmartCampaignSettingResult", "UserListResult", "Response", });
+        new java.lang.String[] { "AdGroupAdLabelResult", "AdGroupAdResult", "AdGroupAssetResult", "AdGroupBidModifierResult", "AdGroupCriterionCustomizerResult", "AdGroupCriterionLabelResult", "AdGroupCriterionResult", "AdGroupCustomizerResult", "AdGroupExtensionSettingResult", "AdGroupFeedResult", "AdGroupLabelResult", "AdGroupResult", "AdParameterResult", "AdResult", "AssetResult", "AssetGroupAssetResult", "AssetGroupListingGroupFilterResult", "AssetGroupSignalResult", "AssetGroupResult", "AssetSetAssetResult", "AssetSetResult", "AudienceResult", "BiddingDataExclusionResult", "BiddingSeasonalityAdjustmentResult", "BiddingStrategyResult", "CampaignAssetResult", "CampaignAssetSetResult", "CampaignBidModifierResult", "CampaignBudgetResult", "CampaignConversionGoalResult", "CampaignCriterionResult", "CampaignCustomizerResult", "CampaignDraftResult", "CampaignExperimentResult", "CampaignExtensionSettingResult", "CampaignFeedResult", "CampaignGroupResult", "CampaignLabelResult", "CampaignResult", "CampaignSharedSetResult", "ConversionActionResult", "ConversionCustomVariableResult", "ConversionGoalCampaignConfigResult", "ConversionValueRuleResult", "ConversionValueRuleSetResult", "CustomConversionGoalResult", "CustomerAssetResult", "CustomerConversionGoalResult", "CustomerCustomizerResult", "CustomerExtensionSettingResult", "CustomerFeedResult", "CustomerLabelResult", "CustomerNegativeCriterionResult", "CustomerResult", "CustomizerAttributeResult", "ExperimentResult", "ExperimentArmResult", "ExtensionFeedItemResult", "FeedItemResult", "FeedItemSetResult", "FeedItemSetLinkResult", "FeedItemTargetResult", "FeedMappingResult", "FeedResult", "KeywordPlanAdGroupResult", "KeywordPlanCampaignResult", "KeywordPlanAdGroupKeywordResult", "KeywordPlanCampaignKeywordResult", "KeywordPlanResult", "LabelResult", "MediaFileResult", "RemarketingActionResult", "SharedCriterionResult", "SharedSetResult", "SmartCampaignSettingResult", "UserListResult", "Response", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.ClientProto.defaultHost);

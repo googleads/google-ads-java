@@ -432,8 +432,8 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object secondaryPaymentsProfileId_;
   /**
    * <pre>
-   * Output only. A secondary payments profile ID present in uncommon situations, e.g.
-   * when a sequential liability agreement has been arranged.
+   * Output only. A secondary payments profile ID present in uncommon situations, for
+   * example, when a sequential liability agreement has been arranged.
    * </pre>
    *
    * <code>optional string secondary_payments_profile_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -445,8 +445,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. A secondary payments profile ID present in uncommon situations, e.g.
-   * when a sequential liability agreement has been arranged.
+   * Output only. A secondary payments profile ID present in uncommon situations, for
+   * example, when a sequential liability agreement has been arranged.
    * </pre>
    *
    * <code>optional string secondary_payments_profile_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -467,8 +467,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. A secondary payments profile ID present in uncommon situations, e.g.
-   * when a sequential liability agreement has been arranged.
+   * Output only. A secondary payments profile ID present in uncommon situations, for
+   * example, when a sequential liability agreement has been arranged.
    * </pre>
    *
    * <code>optional string secondary_payments_profile_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1568,8 +1568,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object secondaryPaymentsProfileId_ = "";
     /**
      * <pre>
-     * Output only. A secondary payments profile ID present in uncommon situations, e.g.
-     * when a sequential liability agreement has been arranged.
+     * Output only. A secondary payments profile ID present in uncommon situations, for
+     * example, when a sequential liability agreement has been arranged.
      * </pre>
      *
      * <code>optional string secondary_payments_profile_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1580,8 +1580,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A secondary payments profile ID present in uncommon situations, e.g.
-     * when a sequential liability agreement has been arranged.
+     * Output only. A secondary payments profile ID present in uncommon situations, for
+     * example, when a sequential liability agreement has been arranged.
      * </pre>
      *
      * <code>optional string secondary_payments_profile_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1601,8 +1601,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A secondary payments profile ID present in uncommon situations, e.g.
-     * when a sequential liability agreement has been arranged.
+     * Output only. A secondary payments profile ID present in uncommon situations, for
+     * example, when a sequential liability agreement has been arranged.
      * </pre>
      *
      * <code>optional string secondary_payments_profile_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1623,8 +1623,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A secondary payments profile ID present in uncommon situations, e.g.
-     * when a sequential liability agreement has been arranged.
+     * Output only. A secondary payments profile ID present in uncommon situations, for
+     * example, when a sequential liability agreement has been arranged.
      * </pre>
      *
      * <code>optional string secondary_payments_profile_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1643,8 +1643,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A secondary payments profile ID present in uncommon situations, e.g.
-     * when a sequential liability agreement has been arranged.
+     * Output only. A secondary payments profile ID present in uncommon situations, for
+     * example, when a sequential liability agreement has been arranged.
      * </pre>
      *
      * <code>optional string secondary_payments_profile_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1658,8 +1658,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A secondary payments profile ID present in uncommon situations, e.g.
-     * when a sequential liability agreement has been arranged.
+     * Output only. A secondary payments profile ID present in uncommon situations, for
+     * example, when a sequential liability agreement has been arranged.
      * </pre>
      *
      * <code>optional string secondary_payments_profile_id = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

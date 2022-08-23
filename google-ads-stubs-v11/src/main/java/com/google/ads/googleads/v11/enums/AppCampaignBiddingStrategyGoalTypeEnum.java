@@ -143,9 +143,9 @@ private static final long serialVersionUID = 0L;
     OPTIMIZE_IN_APP_CONVERSIONS_TARGET_CONVERSION_COST(4),
     /**
      * <pre>
-     * Aim to maximize all conversions' value, i.e. install + selected in-app
-     * conversions while achieving or exceeding target return on advertising
-     * spend.
+     * Aim to maximize all conversions' value, for example, install + selected
+     * in-app conversions while achieving or exceeding target return on
+     * advertising spend.
      * </pre>
      *
      * <code>OPTIMIZE_RETURN_ON_ADVERTISING_SPEND = 5;</code>
@@ -217,9 +217,9 @@ private static final long serialVersionUID = 0L;
     public static final int OPTIMIZE_IN_APP_CONVERSIONS_TARGET_CONVERSION_COST_VALUE = 4;
     /**
      * <pre>
-     * Aim to maximize all conversions' value, i.e. install + selected in-app
-     * conversions while achieving or exceeding target return on advertising
-     * spend.
+     * Aim to maximize all conversions' value, for example, install + selected
+     * in-app conversions while achieving or exceeding target return on
+     * advertising spend.
      * </pre>
      *
      * <code>OPTIMIZE_RETURN_ON_ADVERTISING_SPEND = 5;</code>

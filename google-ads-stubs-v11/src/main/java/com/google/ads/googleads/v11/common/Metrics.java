@@ -2154,9 +2154,9 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The last date/time a conversion tag for this conversion action successfully
    * fired and was seen by Google Ads. This firing event may not have been the
-   * result of an attributable conversion (e.g. because the tag was fired from a
-   * browser that did not previously click an ad from an appropriate
-   * advertiser). The date/time is in the customer's time zone.
+   * result of an attributable conversion (for example, because the tag was
+   * fired from a browser that did not previously click an ad from an
+   * appropriate advertiser). The date/time is in the customer's time zone.
    * </pre>
    *
    * <code>optional string conversion_last_received_request_date_time = 161;</code>
@@ -2170,9 +2170,9 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The last date/time a conversion tag for this conversion action successfully
    * fired and was seen by Google Ads. This firing event may not have been the
-   * result of an attributable conversion (e.g. because the tag was fired from a
-   * browser that did not previously click an ad from an appropriate
-   * advertiser). The date/time is in the customer's time zone.
+   * result of an attributable conversion (for example, because the tag was
+   * fired from a browser that did not previously click an ad from an
+   * appropriate advertiser). The date/time is in the customer's time zone.
    * </pre>
    *
    * <code>optional string conversion_last_received_request_date_time = 161;</code>
@@ -2195,9 +2195,9 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The last date/time a conversion tag for this conversion action successfully
    * fired and was seen by Google Ads. This firing event may not have been the
-   * result of an attributable conversion (e.g. because the tag was fired from a
-   * browser that did not previously click an ad from an appropriate
-   * advertiser). The date/time is in the customer's time zone.
+   * result of an attributable conversion (for example, because the tag was
+   * fired from a browser that did not previously click an ad from an
+   * appropriate advertiser). The date/time is in the customer's time zone.
    * </pre>
    *
    * <code>optional string conversion_last_received_request_date_time = 161;</code>
@@ -4847,7 +4847,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The total number of view-through conversions.
    * These happen when a customer sees an image or rich media ad, then later
-   * completes a conversion on your site without interacting with (e.g.,
+   * completes a conversion on your site without interacting with (for example,
    * clicking on) another ad.
    * </pre>
    *
@@ -4862,7 +4862,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The total number of view-through conversions.
    * These happen when a customer sees an image or rich media ad, then later
-   * completes a conversion on your site without interacting with (e.g.,
+   * completes a conversion on your site without interacting with (for example,
    * clicking on) another ad.
    * </pre>
    *
@@ -11453,9 +11453,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The last date/time a conversion tag for this conversion action successfully
      * fired and was seen by Google Ads. This firing event may not have been the
-     * result of an attributable conversion (e.g. because the tag was fired from a
-     * browser that did not previously click an ad from an appropriate
-     * advertiser). The date/time is in the customer's time zone.
+     * result of an attributable conversion (for example, because the tag was
+     * fired from a browser that did not previously click an ad from an
+     * appropriate advertiser). The date/time is in the customer's time zone.
      * </pre>
      *
      * <code>optional string conversion_last_received_request_date_time = 161;</code>
@@ -11468,9 +11468,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The last date/time a conversion tag for this conversion action successfully
      * fired and was seen by Google Ads. This firing event may not have been the
-     * result of an attributable conversion (e.g. because the tag was fired from a
-     * browser that did not previously click an ad from an appropriate
-     * advertiser). The date/time is in the customer's time zone.
+     * result of an attributable conversion (for example, because the tag was
+     * fired from a browser that did not previously click an ad from an
+     * appropriate advertiser). The date/time is in the customer's time zone.
      * </pre>
      *
      * <code>optional string conversion_last_received_request_date_time = 161;</code>
@@ -11492,9 +11492,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The last date/time a conversion tag for this conversion action successfully
      * fired and was seen by Google Ads. This firing event may not have been the
-     * result of an attributable conversion (e.g. because the tag was fired from a
-     * browser that did not previously click an ad from an appropriate
-     * advertiser). The date/time is in the customer's time zone.
+     * result of an attributable conversion (for example, because the tag was
+     * fired from a browser that did not previously click an ad from an
+     * appropriate advertiser). The date/time is in the customer's time zone.
      * </pre>
      *
      * <code>optional string conversion_last_received_request_date_time = 161;</code>
@@ -11517,9 +11517,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The last date/time a conversion tag for this conversion action successfully
      * fired and was seen by Google Ads. This firing event may not have been the
-     * result of an attributable conversion (e.g. because the tag was fired from a
-     * browser that did not previously click an ad from an appropriate
-     * advertiser). The date/time is in the customer's time zone.
+     * result of an attributable conversion (for example, because the tag was
+     * fired from a browser that did not previously click an ad from an
+     * appropriate advertiser). The date/time is in the customer's time zone.
      * </pre>
      *
      * <code>optional string conversion_last_received_request_date_time = 161;</code>
@@ -11540,9 +11540,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The last date/time a conversion tag for this conversion action successfully
      * fired and was seen by Google Ads. This firing event may not have been the
-     * result of an attributable conversion (e.g. because the tag was fired from a
-     * browser that did not previously click an ad from an appropriate
-     * advertiser). The date/time is in the customer's time zone.
+     * result of an attributable conversion (for example, because the tag was
+     * fired from a browser that did not previously click an ad from an
+     * appropriate advertiser). The date/time is in the customer's time zone.
      * </pre>
      *
      * <code>optional string conversion_last_received_request_date_time = 161;</code>
@@ -11558,9 +11558,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The last date/time a conversion tag for this conversion action successfully
      * fired and was seen by Google Ads. This firing event may not have been the
-     * result of an attributable conversion (e.g. because the tag was fired from a
-     * browser that did not previously click an ad from an appropriate
-     * advertiser). The date/time is in the customer's time zone.
+     * result of an attributable conversion (for example, because the tag was
+     * fired from a browser that did not previously click an ad from an
+     * appropriate advertiser). The date/time is in the customer's time zone.
      * </pre>
      *
      * <code>optional string conversion_last_received_request_date_time = 161;</code>
@@ -14203,8 +14203,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of interactionEventTypes at the given index.
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for interactionEventTypes to set.
      * @return This builder for chaining.
      */
     public Builder setInteractionEventTypesValue(
@@ -17016,7 +17016,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The total number of view-through conversions.
      * These happen when a customer sees an image or rich media ad, then later
-     * completes a conversion on your site without interacting with (e.g.,
+     * completes a conversion on your site without interacting with (for example,
      * clicking on) another ad.
      * </pre>
      *
@@ -17031,7 +17031,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The total number of view-through conversions.
      * These happen when a customer sees an image or rich media ad, then later
-     * completes a conversion on your site without interacting with (e.g.,
+     * completes a conversion on your site without interacting with (for example,
      * clicking on) another ad.
      * </pre>
      *
@@ -17046,7 +17046,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The total number of view-through conversions.
      * These happen when a customer sees an image or rich media ad, then later
-     * completes a conversion on your site without interacting with (e.g.,
+     * completes a conversion on your site without interacting with (for example,
      * clicking on) another ad.
      * </pre>
      *
@@ -17064,7 +17064,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The total number of view-through conversions.
      * These happen when a customer sees an image or rich media ad, then later
-     * completes a conversion on your site without interacting with (e.g.,
+     * completes a conversion on your site without interacting with (for example,
      * clicking on) another ad.
      * </pre>
      *

@@ -6,7 +6,8 @@ package com.google.ads.googleads.v11.resources;
 /**
  * <pre>
  * A link between an AdGroupAd and an Asset.
- * Currently we only support AdGroupAdAssetView for AppAds.
+ * Currently we only support AdGroupAdAssetView for AppAds and Responsive Search
+ * Ads.
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v11.resources.AdGroupAdAssetView}
@@ -677,7 +678,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A link between an AdGroupAd and an Asset.
-   * Currently we only support AdGroupAdAssetView for AppAds.
+   * Currently we only support AdGroupAdAssetView for AppAds and Responsive Search
+   * Ads.
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v11.resources.AdGroupAdAssetView}

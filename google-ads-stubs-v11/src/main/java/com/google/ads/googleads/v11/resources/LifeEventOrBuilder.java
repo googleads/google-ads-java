@@ -43,7 +43,7 @@ public interface LifeEventOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The name of the life event. E.g.,"Recently Moved"
+   * Output only. The name of the life event, for example,"Recently Moved"
    * </pre>
    *
    * <code>string name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -52,7 +52,7 @@ public interface LifeEventOrBuilder extends
   java.lang.String getName();
   /**
    * <pre>
-   * Output only. The name of the life event. E.g.,"Recently Moved"
+   * Output only. The name of the life event, for example,"Recently Moved"
    * </pre>
    *
    * <code>string name = 3 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

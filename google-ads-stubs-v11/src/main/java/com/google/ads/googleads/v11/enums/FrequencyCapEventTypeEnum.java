@@ -88,7 +88,7 @@ private static final long serialVersionUID = 0L;
 
   /**
    * <pre>
-   * The type of event that the cap applies to (e.g. impression).
+   * The type of event that the cap applies to (for example, impression).
    * </pre>
    *
    * Protobuf enum {@code google.ads.googleads.v11.enums.FrequencyCapEventTypeEnum.FrequencyCapEventType}

@@ -5,8 +5,8 @@ package com.google.ads.googleads.v11.common;
 
 /**
  * <pre>
- * Policy finding attached to a resource (e.g. alcohol policy associated with
- * a site that sells alcohol).
+ * Policy finding attached to a resource (for example, alcohol policy associated
+ * with a site that sells alcohol).
  * Each PolicyTopicEntry has a topic that indicates the specific ads policy
  * the entry is about and a type to indicate the effect that the entry will have
  * on serving. It may optionally have one or more evidences that indicate the
@@ -233,7 +233,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Additional information that explains policy finding
-   * (e.g. the brand name for a trademark finding).
+   * (for example, the brand name for a trademark finding).
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.PolicyTopicEvidence evidences = 3;</code>
@@ -245,7 +245,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Additional information that explains policy finding
-   * (e.g. the brand name for a trademark finding).
+   * (for example, the brand name for a trademark finding).
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.PolicyTopicEvidence evidences = 3;</code>
@@ -258,7 +258,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Additional information that explains policy finding
-   * (e.g. the brand name for a trademark finding).
+   * (for example, the brand name for a trademark finding).
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.PolicyTopicEvidence evidences = 3;</code>
@@ -270,7 +270,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Additional information that explains policy finding
-   * (e.g. the brand name for a trademark finding).
+   * (for example, the brand name for a trademark finding).
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.PolicyTopicEvidence evidences = 3;</code>
@@ -282,7 +282,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Additional information that explains policy finding
-   * (e.g. the brand name for a trademark finding).
+   * (for example, the brand name for a trademark finding).
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.PolicyTopicEvidence evidences = 3;</code>
@@ -297,8 +297,8 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.google.ads.googleads.v11.common.PolicyTopicConstraint> constraints_;
   /**
    * <pre>
-   * Indicates how serving of this resource may be affected (e.g. not serving
-   * in a country).
+   * Indicates how serving of this resource may be affected (for example, not
+   * serving in a country).
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.PolicyTopicConstraint constraints = 4;</code>
@@ -309,8 +309,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Indicates how serving of this resource may be affected (e.g. not serving
-   * in a country).
+   * Indicates how serving of this resource may be affected (for example, not
+   * serving in a country).
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.PolicyTopicConstraint constraints = 4;</code>
@@ -322,8 +322,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Indicates how serving of this resource may be affected (e.g. not serving
-   * in a country).
+   * Indicates how serving of this resource may be affected (for example, not
+   * serving in a country).
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.PolicyTopicConstraint constraints = 4;</code>
@@ -334,8 +334,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Indicates how serving of this resource may be affected (e.g. not serving
-   * in a country).
+   * Indicates how serving of this resource may be affected (for example, not
+   * serving in a country).
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.PolicyTopicConstraint constraints = 4;</code>
@@ -346,8 +346,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Indicates how serving of this resource may be affected (e.g. not serving
-   * in a country).
+   * Indicates how serving of this resource may be affected (for example, not
+   * serving in a country).
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.PolicyTopicConstraint constraints = 4;</code>
@@ -555,8 +555,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Policy finding attached to a resource (e.g. alcohol policy associated with
-   * a site that sells alcohol).
+   * Policy finding attached to a resource (for example, alcohol policy associated
+   * with a site that sells alcohol).
    * Each PolicyTopicEntry has a topic that indicates the specific ads policy
    * the entry is about and a type to indicate the effect that the entry will have
    * on serving. It may optionally have one or more evidences that indicate the
@@ -1023,7 +1023,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Additional information that explains policy finding
-     * (e.g. the brand name for a trademark finding).
+     * (for example, the brand name for a trademark finding).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.PolicyTopicEvidence evidences = 3;</code>
@@ -1038,7 +1038,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Additional information that explains policy finding
-     * (e.g. the brand name for a trademark finding).
+     * (for example, the brand name for a trademark finding).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.PolicyTopicEvidence evidences = 3;</code>
@@ -1053,7 +1053,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Additional information that explains policy finding
-     * (e.g. the brand name for a trademark finding).
+     * (for example, the brand name for a trademark finding).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.PolicyTopicEvidence evidences = 3;</code>
@@ -1068,7 +1068,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Additional information that explains policy finding
-     * (e.g. the brand name for a trademark finding).
+     * (for example, the brand name for a trademark finding).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.PolicyTopicEvidence evidences = 3;</code>
@@ -1090,7 +1090,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Additional information that explains policy finding
-     * (e.g. the brand name for a trademark finding).
+     * (for example, the brand name for a trademark finding).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.PolicyTopicEvidence evidences = 3;</code>
@@ -1109,7 +1109,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Additional information that explains policy finding
-     * (e.g. the brand name for a trademark finding).
+     * (for example, the brand name for a trademark finding).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.PolicyTopicEvidence evidences = 3;</code>
@@ -1130,7 +1130,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Additional information that explains policy finding
-     * (e.g. the brand name for a trademark finding).
+     * (for example, the brand name for a trademark finding).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.PolicyTopicEvidence evidences = 3;</code>
@@ -1152,7 +1152,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Additional information that explains policy finding
-     * (e.g. the brand name for a trademark finding).
+     * (for example, the brand name for a trademark finding).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.PolicyTopicEvidence evidences = 3;</code>
@@ -1171,7 +1171,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Additional information that explains policy finding
-     * (e.g. the brand name for a trademark finding).
+     * (for example, the brand name for a trademark finding).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.PolicyTopicEvidence evidences = 3;</code>
@@ -1190,7 +1190,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Additional information that explains policy finding
-     * (e.g. the brand name for a trademark finding).
+     * (for example, the brand name for a trademark finding).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.PolicyTopicEvidence evidences = 3;</code>
@@ -1210,7 +1210,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Additional information that explains policy finding
-     * (e.g. the brand name for a trademark finding).
+     * (for example, the brand name for a trademark finding).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.PolicyTopicEvidence evidences = 3;</code>
@@ -1228,7 +1228,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Additional information that explains policy finding
-     * (e.g. the brand name for a trademark finding).
+     * (for example, the brand name for a trademark finding).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.PolicyTopicEvidence evidences = 3;</code>
@@ -1246,7 +1246,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Additional information that explains policy finding
-     * (e.g. the brand name for a trademark finding).
+     * (for example, the brand name for a trademark finding).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.PolicyTopicEvidence evidences = 3;</code>
@@ -1258,7 +1258,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Additional information that explains policy finding
-     * (e.g. the brand name for a trademark finding).
+     * (for example, the brand name for a trademark finding).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.PolicyTopicEvidence evidences = 3;</code>
@@ -1273,7 +1273,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Additional information that explains policy finding
-     * (e.g. the brand name for a trademark finding).
+     * (for example, the brand name for a trademark finding).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.PolicyTopicEvidence evidences = 3;</code>
@@ -1289,7 +1289,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Additional information that explains policy finding
-     * (e.g. the brand name for a trademark finding).
+     * (for example, the brand name for a trademark finding).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.PolicyTopicEvidence evidences = 3;</code>
@@ -1301,7 +1301,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Additional information that explains policy finding
-     * (e.g. the brand name for a trademark finding).
+     * (for example, the brand name for a trademark finding).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.PolicyTopicEvidence evidences = 3;</code>
@@ -1314,7 +1314,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Additional information that explains policy finding
-     * (e.g. the brand name for a trademark finding).
+     * (for example, the brand name for a trademark finding).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.PolicyTopicEvidence evidences = 3;</code>
@@ -1352,8 +1352,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Indicates how serving of this resource may be affected (e.g. not serving
-     * in a country).
+     * Indicates how serving of this resource may be affected (for example, not
+     * serving in a country).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.PolicyTopicConstraint constraints = 4;</code>
@@ -1367,8 +1367,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates how serving of this resource may be affected (e.g. not serving
-     * in a country).
+     * Indicates how serving of this resource may be affected (for example, not
+     * serving in a country).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.PolicyTopicConstraint constraints = 4;</code>
@@ -1382,8 +1382,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates how serving of this resource may be affected (e.g. not serving
-     * in a country).
+     * Indicates how serving of this resource may be affected (for example, not
+     * serving in a country).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.PolicyTopicConstraint constraints = 4;</code>
@@ -1397,8 +1397,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates how serving of this resource may be affected (e.g. not serving
-     * in a country).
+     * Indicates how serving of this resource may be affected (for example, not
+     * serving in a country).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.PolicyTopicConstraint constraints = 4;</code>
@@ -1419,8 +1419,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates how serving of this resource may be affected (e.g. not serving
-     * in a country).
+     * Indicates how serving of this resource may be affected (for example, not
+     * serving in a country).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.PolicyTopicConstraint constraints = 4;</code>
@@ -1438,8 +1438,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates how serving of this resource may be affected (e.g. not serving
-     * in a country).
+     * Indicates how serving of this resource may be affected (for example, not
+     * serving in a country).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.PolicyTopicConstraint constraints = 4;</code>
@@ -1459,8 +1459,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates how serving of this resource may be affected (e.g. not serving
-     * in a country).
+     * Indicates how serving of this resource may be affected (for example, not
+     * serving in a country).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.PolicyTopicConstraint constraints = 4;</code>
@@ -1481,8 +1481,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates how serving of this resource may be affected (e.g. not serving
-     * in a country).
+     * Indicates how serving of this resource may be affected (for example, not
+     * serving in a country).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.PolicyTopicConstraint constraints = 4;</code>
@@ -1500,8 +1500,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates how serving of this resource may be affected (e.g. not serving
-     * in a country).
+     * Indicates how serving of this resource may be affected (for example, not
+     * serving in a country).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.PolicyTopicConstraint constraints = 4;</code>
@@ -1519,8 +1519,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates how serving of this resource may be affected (e.g. not serving
-     * in a country).
+     * Indicates how serving of this resource may be affected (for example, not
+     * serving in a country).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.PolicyTopicConstraint constraints = 4;</code>
@@ -1539,8 +1539,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates how serving of this resource may be affected (e.g. not serving
-     * in a country).
+     * Indicates how serving of this resource may be affected (for example, not
+     * serving in a country).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.PolicyTopicConstraint constraints = 4;</code>
@@ -1557,8 +1557,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates how serving of this resource may be affected (e.g. not serving
-     * in a country).
+     * Indicates how serving of this resource may be affected (for example, not
+     * serving in a country).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.PolicyTopicConstraint constraints = 4;</code>
@@ -1575,8 +1575,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates how serving of this resource may be affected (e.g. not serving
-     * in a country).
+     * Indicates how serving of this resource may be affected (for example, not
+     * serving in a country).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.PolicyTopicConstraint constraints = 4;</code>
@@ -1587,8 +1587,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates how serving of this resource may be affected (e.g. not serving
-     * in a country).
+     * Indicates how serving of this resource may be affected (for example, not
+     * serving in a country).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.PolicyTopicConstraint constraints = 4;</code>
@@ -1602,8 +1602,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates how serving of this resource may be affected (e.g. not serving
-     * in a country).
+     * Indicates how serving of this resource may be affected (for example, not
+     * serving in a country).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.PolicyTopicConstraint constraints = 4;</code>
@@ -1618,8 +1618,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates how serving of this resource may be affected (e.g. not serving
-     * in a country).
+     * Indicates how serving of this resource may be affected (for example, not
+     * serving in a country).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.PolicyTopicConstraint constraints = 4;</code>
@@ -1630,8 +1630,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates how serving of this resource may be affected (e.g. not serving
-     * in a country).
+     * Indicates how serving of this resource may be affected (for example, not
+     * serving in a country).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.PolicyTopicConstraint constraints = 4;</code>
@@ -1643,8 +1643,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Indicates how serving of this resource may be affected (e.g. not serving
-     * in a country).
+     * Indicates how serving of this resource may be affected (for example, not
+     * serving in a country).
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.PolicyTopicConstraint constraints = 4;</code>

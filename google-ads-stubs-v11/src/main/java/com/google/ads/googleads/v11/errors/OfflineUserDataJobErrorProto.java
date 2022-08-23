@@ -30,8 +30,8 @@ public final class OfflineUserDataJobErrorProto {
     java.lang.String[] descriptorData = {
       "\nAgoogle/ads/googleads/v11/errors/offlin" +
       "e_user_data_job_error.proto\022\037google.ads." +
-      "googleads.v11.errors\"\262\t\n\033OfflineUserData" +
-      "JobErrorEnum\"\222\t\n\027OfflineUserDataJobError" +
+      "googleads.v11.errors\"\316\n\n\033OfflineUserData" +
+      "JobErrorEnum\"\256\n\n\027OfflineUserDataJobError" +
       "\022\017\n\013UNSPECIFIED\020\000\022\013\n\007UNKNOWN\020\001\022\030\n\024INVALI" +
       "D_USER_LIST_ID\020\003\022\032\n\026INVALID_USER_LIST_TY" +
       "PE\020\004\022 \n\034NOT_ON_ALLOWLIST_FOR_USER_ID\020!\022 " +
@@ -60,14 +60,18 @@ public final class OfflineUserDataJobErrorProto {
       "BUTES\020$\022\033\n\027FUTURE_TIME_NOT_ALLOWED\020%\0221\n-" +
       "LAST_PURCHASE_TIME_LESS_THAN_ACQUISITION" +
       "_TIME\020&\022#\n\037CUSTOMER_IDENTIFIER_NOT_ALLOW" +
-      "ED\020\'\022\023\n\017INVALID_ITEM_ID\020(B\374\001\n#com.google" +
-      ".ads.googleads.v11.errorsB\034OfflineUserDa" +
-      "taJobErrorProtoP\001ZEgoogle.golang.org/gen" +
-      "proto/googleapis/ads/googleads/v11/error" +
-      "s;errors\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V1" +
-      "1.Errors\312\002\037Google\\Ads\\GoogleAds\\V11\\Erro" +
-      "rs\352\002#Google::Ads::GoogleAds::V11::Errors" +
-      "b\006proto3"
+      "ED\020\'\022\023\n\017INVALID_ITEM_ID\020(\0227\n3FIRST_PURCH" +
+      "ASE_TIME_GREATER_THAN_LAST_PURCHASE_TIME" +
+      "\020*\022\033\n\027INVALID_LIFECYCLE_STAGE\020+\022\027\n\023INVAL" +
+      "ID_EVENT_VALUE\020,\022+\n\'EVENT_ATTRIBUTE_ALL_" +
+      "FIELDS_ARE_REQUIRED\020-B\374\001\n#com.google.ads" +
+      ".googleads.v11.errorsB\034OfflineUserDataJo" +
+      "bErrorProtoP\001ZEgoogle.golang.org/genprot" +
+      "o/googleapis/ads/googleads/v11/errors;er" +
+      "rors\242\002\003GAA\252\002\037Google.Ads.GoogleAds.V11.Er" +
+      "rors\312\002\037Google\\Ads\\GoogleAds\\V11\\Errors\352\002" +
+      "#Google::Ads::GoogleAds::V11::Errorsb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

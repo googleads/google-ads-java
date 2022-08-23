@@ -351,7 +351,7 @@ public class GoogleAdsServiceClient implements BackgroundResource {
    *
    * <p>Atomicity makes error handling much easier. If you're making a series of changes and one
    * fails, it can leave your account in an inconsistent state. With atomicity, you either reach the
-   * desired state directly, or the request fails and you can retry.
+   * chosen state directly, or the request fails and you can retry.
    *
    * <p>## Temp Resource Names
    *
@@ -441,7 +441,7 @@ public class GoogleAdsServiceClient implements BackgroundResource {
    *
    * <p>Atomicity makes error handling much easier. If you're making a series of changes and one
    * fails, it can leave your account in an inconsistent state. With atomicity, you either reach the
-   * desired state directly, or the request fails and you can retry.
+   * chosen state directly, or the request fails and you can retry.
    *
    * <p>## Temp Resource Names
    *
@@ -528,7 +528,7 @@ public class GoogleAdsServiceClient implements BackgroundResource {
    *
    * <p>Atomicity makes error handling much easier. If you're making a series of changes and one
    * fails, it can leave your account in an inconsistent state. With atomicity, you either reach the
-   * desired state directly, or the request fails and you can retry.
+   * chosen state directly, or the request fails and you can retry.
    *
    * <p>## Temp Resource Names
    *

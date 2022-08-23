@@ -129,11 +129,10 @@ public interface KeywordPlanAdGroupKeywordOrBuilder extends
 
   /**
    * <pre>
-   * A keyword level max cpc bid in micros (e.g. $1 = 1mm). The currency is the
-   * same as the account currency code. This will override any CPC bid set at
-   * the keyword plan ad group level.
-   * Not applicable for negative keywords. (negative = true)
-   * This field is Optional.
+   * A keyword level max cpc bid in micros (for example, $1 = 1mm). The currency
+   * is the same as the account currency code. This will override any CPC bid
+   * set at the keyword plan ad group level. Not applicable for negative
+   * keywords. (negative = true) This field is Optional.
    * </pre>
    *
    * <code>optional int64 cpc_bid_micros = 11;</code>
@@ -142,11 +141,10 @@ public interface KeywordPlanAdGroupKeywordOrBuilder extends
   boolean hasCpcBidMicros();
   /**
    * <pre>
-   * A keyword level max cpc bid in micros (e.g. $1 = 1mm). The currency is the
-   * same as the account currency code. This will override any CPC bid set at
-   * the keyword plan ad group level.
-   * Not applicable for negative keywords. (negative = true)
-   * This field is Optional.
+   * A keyword level max cpc bid in micros (for example, $1 = 1mm). The currency
+   * is the same as the account currency code. This will override any CPC bid
+   * set at the keyword plan ad group level. Not applicable for negative
+   * keywords. (negative = true) This field is Optional.
    * </pre>
    *
    * <code>optional int64 cpc_bid_micros = 11;</code>

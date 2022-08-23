@@ -149,7 +149,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The click associated with the given identifier or iOS URL parameter
-     * occurred too recently. Please try uploading again after 6 hours have
+     * occurred too recently. Try uploading again after 6 hours have
      * passed since the click occurred.
      * </pre>
      *
@@ -187,7 +187,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The specified conversion action was created too recently.
-     * Please try the upload again after 4-6 hours have passed since the
+     * Try the upload again after 4-6 hours have passed since the
      * conversion action was created.
      * </pre>
      *
@@ -252,7 +252,7 @@ private static final long serialVersionUID = 0L;
     DUPLICATE_ORDER_ID(16),
     /**
      * <pre>
-     * The call occurred too recently. Please try uploading again after 12 hours
+     * The call occurred too recently. Try uploading again after 12 hours
      * have passed since the call occurred.
      * </pre>
      *
@@ -306,7 +306,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A conversion with this timestamp already exists for this click. To upload
-     * another conversion, please use a different timestamp.
+     * another conversion, use a different timestamp.
      * </pre>
      *
      * <code>CLICK_CONVERSION_ALREADY_EXISTS = 23;</code>
@@ -315,7 +315,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A conversion with this timestamp already exists for this call. To upload
-     * another conversion, please use a different timestamp.
+     * another conversion, use a different timestamp.
      * </pre>
      *
      * <code>CALL_CONVERSION_ALREADY_EXISTS = 24;</code>
@@ -324,7 +324,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * This conversion has the same click and timestamp as another conversion in
-     * the request. To upload another conversion for this click, please use a
+     * the request. To upload another conversion for this click, use a
      * different timestamp.
      * </pre>
      *
@@ -334,7 +334,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * This conversion has the same call and timestamp as another conversion in
-     * the request. To upload another conversion for this call, please use a
+     * the request. To upload another conversion for this call, use a
      * different timestamp.
      * </pre>
      *
@@ -458,7 +458,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Per our customer data policies, enhanced conversions have been prohibited
-     * in your account. If you have any questions, please contact your Google
+     * in your account. If you have any questions, contact your Google
      * representative.
      * </pre>
      *
@@ -540,7 +540,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The click associated with the given identifier or iOS URL parameter
-     * occurred too recently. Please try uploading again after 6 hours have
+     * occurred too recently. Try uploading again after 6 hours have
      * passed since the click occurred.
      * </pre>
      *
@@ -578,7 +578,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The specified conversion action was created too recently.
-     * Please try the upload again after 4-6 hours have passed since the
+     * Try the upload again after 4-6 hours have passed since the
      * conversion action was created.
      * </pre>
      *
@@ -643,7 +643,7 @@ private static final long serialVersionUID = 0L;
     public static final int DUPLICATE_ORDER_ID_VALUE = 16;
     /**
      * <pre>
-     * The call occurred too recently. Please try uploading again after 12 hours
+     * The call occurred too recently. Try uploading again after 12 hours
      * have passed since the call occurred.
      * </pre>
      *
@@ -697,7 +697,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A conversion with this timestamp already exists for this click. To upload
-     * another conversion, please use a different timestamp.
+     * another conversion, use a different timestamp.
      * </pre>
      *
      * <code>CLICK_CONVERSION_ALREADY_EXISTS = 23;</code>
@@ -706,7 +706,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A conversion with this timestamp already exists for this call. To upload
-     * another conversion, please use a different timestamp.
+     * another conversion, use a different timestamp.
      * </pre>
      *
      * <code>CALL_CONVERSION_ALREADY_EXISTS = 24;</code>
@@ -715,7 +715,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * This conversion has the same click and timestamp as another conversion in
-     * the request. To upload another conversion for this click, please use a
+     * the request. To upload another conversion for this click, use a
      * different timestamp.
      * </pre>
      *
@@ -725,7 +725,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * This conversion has the same call and timestamp as another conversion in
-     * the request. To upload another conversion for this call, please use a
+     * the request. To upload another conversion for this call, use a
      * different timestamp.
      * </pre>
      *
@@ -849,7 +849,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Per our customer data policies, enhanced conversions have been prohibited
-     * in your account. If you have any questions, please contact your Google
+     * in your account. If you have any questions, contact your Google
      * representative.
      * </pre>
      *

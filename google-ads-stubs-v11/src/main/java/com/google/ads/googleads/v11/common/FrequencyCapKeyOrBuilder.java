@@ -9,8 +9,8 @@ public interface FrequencyCapKeyOrBuilder extends
 
   /**
    * <pre>
-   * The level on which the cap is to be applied (e.g. ad group ad, ad group).
-   * The cap is applied to all the entities of this level.
+   * The level on which the cap is to be applied (for example, ad group ad, ad
+   * group). The cap is applied to all the entities of this level.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.FrequencyCapLevelEnum.FrequencyCapLevel level = 1;</code>
@@ -19,8 +19,8 @@ public interface FrequencyCapKeyOrBuilder extends
   int getLevelValue();
   /**
    * <pre>
-   * The level on which the cap is to be applied (e.g. ad group ad, ad group).
-   * The cap is applied to all the entities of this level.
+   * The level on which the cap is to be applied (for example, ad group ad, ad
+   * group). The cap is applied to all the entities of this level.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.FrequencyCapLevelEnum.FrequencyCapLevel level = 1;</code>
@@ -30,7 +30,7 @@ public interface FrequencyCapKeyOrBuilder extends
 
   /**
    * <pre>
-   * The type of event that the cap applies to (e.g. impression).
+   * The type of event that the cap applies to (for example, impression).
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.FrequencyCapEventTypeEnum.FrequencyCapEventType event_type = 3;</code>
@@ -39,7 +39,7 @@ public interface FrequencyCapKeyOrBuilder extends
   int getEventTypeValue();
   /**
    * <pre>
-   * The type of event that the cap applies to (e.g. impression).
+   * The type of event that the cap applies to (for example, impression).
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.FrequencyCapEventTypeEnum.FrequencyCapEventType event_type = 3;</code>
@@ -49,7 +49,7 @@ public interface FrequencyCapKeyOrBuilder extends
 
   /**
    * <pre>
-   * Unit of time the cap is defined at (e.g. day, week).
+   * Unit of time the cap is defined at (for example, day, week).
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit time_unit = 2;</code>
@@ -58,7 +58,7 @@ public interface FrequencyCapKeyOrBuilder extends
   int getTimeUnitValue();
   /**
    * <pre>
-   * Unit of time the cap is defined at (e.g. day, week).
+   * Unit of time the cap is defined at (for example, day, week).
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit time_unit = 2;</code>

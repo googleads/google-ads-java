@@ -169,7 +169,7 @@ private static final long serialVersionUID = 0L;
     PENDING_INVITATIONS_LIMIT_EXCEEDED(8),
     /**
      * <pre>
-     * Email address doesn't conform to the email domain policy. Please see
+     * Email address doesn't conform to the email domain policy. See
      * https://support.google.com/google-ads/answer/2375456
      * </pre>
      *
@@ -253,7 +253,7 @@ private static final long serialVersionUID = 0L;
     public static final int PENDING_INVITATIONS_LIMIT_EXCEEDED_VALUE = 8;
     /**
      * <pre>
-     * Email address doesn't conform to the email domain policy. Please see
+     * Email address doesn't conform to the email domain policy. See
      * https://support.google.com/google-ads/answer/2375456
      * </pre>
      *

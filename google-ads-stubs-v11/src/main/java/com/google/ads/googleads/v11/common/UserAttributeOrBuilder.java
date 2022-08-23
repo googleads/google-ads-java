@@ -154,4 +154,101 @@ public interface UserAttributeOrBuilder extends
    * <code>optional .google.ads.googleads.v11.common.ShoppingLoyalty shopping_loyalty = 7;</code>
    */
   com.google.ads.googleads.v11.common.ShoppingLoyaltyOrBuilder getShoppingLoyaltyOrBuilder();
+
+  /**
+   * <pre>
+   * Optional. Advertiser defined lifecycle stage for the user. The accepted values are
+   * “Lead”, “Active” and “Churned”.
+   * </pre>
+   *
+   * <code>string lifecycle_stage = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The lifecycleStage.
+   */
+  java.lang.String getLifecycleStage();
+  /**
+   * <pre>
+   * Optional. Advertiser defined lifecycle stage for the user. The accepted values are
+   * “Lead”, “Active” and “Churned”.
+   * </pre>
+   *
+   * <code>string lifecycle_stage = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The bytes for lifecycleStage.
+   */
+  com.google.protobuf.ByteString
+      getLifecycleStageBytes();
+
+  /**
+   * <pre>
+   * Optional. Timestamp of the first purchase made by the user.
+   * The format is YYYY-MM-DD HH:MM:SS[+/-HH:MM], where [+/-HH:MM] is an
+   * optional timezone offset from UTC. If the offset is absent, the API will
+   * use the account's timezone as default.
+   * </pre>
+   *
+   * <code>string first_purchase_date_time = 9 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The firstPurchaseDateTime.
+   */
+  java.lang.String getFirstPurchaseDateTime();
+  /**
+   * <pre>
+   * Optional. Timestamp of the first purchase made by the user.
+   * The format is YYYY-MM-DD HH:MM:SS[+/-HH:MM], where [+/-HH:MM] is an
+   * optional timezone offset from UTC. If the offset is absent, the API will
+   * use the account's timezone as default.
+   * </pre>
+   *
+   * <code>string first_purchase_date_time = 9 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The bytes for firstPurchaseDateTime.
+   */
+  com.google.protobuf.ByteString
+      getFirstPurchaseDateTimeBytes();
+
+  /**
+   * <pre>
+   * Optional. Advertiser defined events and their attributes. All the values in the
+   * nested fields are required. Currently this field is in beta.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+   */
+  java.util.List<com.google.ads.googleads.v11.common.EventAttribute> 
+      getEventAttributeList();
+  /**
+   * <pre>
+   * Optional. Advertiser defined events and their attributes. All the values in the
+   * nested fields are required. Currently this field is in beta.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+   */
+  com.google.ads.googleads.v11.common.EventAttribute getEventAttribute(int index);
+  /**
+   * <pre>
+   * Optional. Advertiser defined events and their attributes. All the values in the
+   * nested fields are required. Currently this field is in beta.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+   */
+  int getEventAttributeCount();
+  /**
+   * <pre>
+   * Optional. Advertiser defined events and their attributes. All the values in the
+   * nested fields are required. Currently this field is in beta.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+   */
+  java.util.List<? extends com.google.ads.googleads.v11.common.EventAttributeOrBuilder> 
+      getEventAttributeOrBuilderList();
+  /**
+   * <pre>
+   * Optional. Advertiser defined events and their attributes. All the values in the
+   * nested fields are required. Currently this field is in beta.
+   * </pre>
+   *
+   * <code>repeated .google.ads.googleads.v11.common.EventAttribute event_attribute = 10 [(.google.api.field_behavior) = OPTIONAL];</code>
+   */
+  com.google.ads.googleads.v11.common.EventAttributeOrBuilder getEventAttributeOrBuilder(
+      int index);
 }

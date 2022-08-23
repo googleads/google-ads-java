@@ -206,8 +206,8 @@ private static final long serialVersionUID = 0L;
     INVALID_DOMESTIC_PHONE_NUMBER_FORMAT(12),
     /**
      * <pre>
-     * Vanity phone numbers (i.e. those including letters) are not allowed for
-     * call extensions.
+     * Vanity phone numbers (for example, those including letters) are not
+     * allowed for call extensions.
      * </pre>
      *
      * <code>VANITY_PHONE_NUMBER_NOT_ALLOWED = 13;</code>
@@ -242,7 +242,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Customer hasn't consented for call recording, which is required for
-     * creating/updating call feed items. Please see
+     * creating/updating call feed items. See
      * https://support.google.com/google-ads/answer/7412639.
      * </pre>
      *
@@ -357,8 +357,8 @@ private static final long serialVersionUID = 0L;
     INVALID_DEVICE_PREFERENCE(30),
     /**
      * <pre>
-     * Invalid feed item schedule end time (i.e., endHour = 24 and endMinute !=
-     * 0).
+     * Invalid feed item schedule end time (for example, endHour = 24 and
+     * endMinute != 0).
      * </pre>
      *
      * <code>INVALID_SCHEDULE_END = 31;</code>
@@ -416,7 +416,7 @@ private static final long serialVersionUID = 0L;
     EXTENSION_TYPE_MISMATCH(37),
     /**
      * <pre>
-     * The oneof field extension i.e. subtype of extension feed item is
+     * The oneof field extension for example, subtype of extension feed item is
      * required.
      * </pre>
      *
@@ -601,8 +601,8 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_DOMESTIC_PHONE_NUMBER_FORMAT_VALUE = 12;
     /**
      * <pre>
-     * Vanity phone numbers (i.e. those including letters) are not allowed for
-     * call extensions.
+     * Vanity phone numbers (for example, those including letters) are not
+     * allowed for call extensions.
      * </pre>
      *
      * <code>VANITY_PHONE_NUMBER_NOT_ALLOWED = 13;</code>
@@ -637,7 +637,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Customer hasn't consented for call recording, which is required for
-     * creating/updating call feed items. Please see
+     * creating/updating call feed items. See
      * https://support.google.com/google-ads/answer/7412639.
      * </pre>
      *
@@ -752,8 +752,8 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_DEVICE_PREFERENCE_VALUE = 30;
     /**
      * <pre>
-     * Invalid feed item schedule end time (i.e., endHour = 24 and endMinute !=
-     * 0).
+     * Invalid feed item schedule end time (for example, endHour = 24 and
+     * endMinute != 0).
      * </pre>
      *
      * <code>INVALID_SCHEDULE_END = 31;</code>
@@ -811,7 +811,7 @@ private static final long serialVersionUID = 0L;
     public static final int EXTENSION_TYPE_MISMATCH_VALUE = 37;
     /**
      * <pre>
-     * The oneof field extension i.e. subtype of extension feed item is
+     * The oneof field extension for example, subtype of extension feed item is
      * required.
      * </pre>
      *

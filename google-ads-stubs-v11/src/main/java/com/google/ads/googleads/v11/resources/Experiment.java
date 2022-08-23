@@ -433,7 +433,7 @@ private static final long serialVersionUID = 0L;
   private int status_;
   /**
    * <pre>
-   * The Advertiser-desired status of this experiment.
+   * The Advertiser-chosen status of this experiment.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.ExperimentStatusEnum.ExperimentStatus status = 14;</code>
@@ -444,7 +444,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The Advertiser-desired status of this experiment.
+   * The Advertiser-chosen status of this experiment.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.ExperimentStatusEnum.ExperimentStatus status = 14;</code>
@@ -1870,7 +1870,7 @@ private static final long serialVersionUID = 0L;
     private int status_ = 0;
     /**
      * <pre>
-     * The Advertiser-desired status of this experiment.
+     * The Advertiser-chosen status of this experiment.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.ExperimentStatusEnum.ExperimentStatus status = 14;</code>
@@ -1881,7 +1881,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Advertiser-desired status of this experiment.
+     * The Advertiser-chosen status of this experiment.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.ExperimentStatusEnum.ExperimentStatus status = 14;</code>
@@ -1896,7 +1896,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Advertiser-desired status of this experiment.
+     * The Advertiser-chosen status of this experiment.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.ExperimentStatusEnum.ExperimentStatus status = 14;</code>
@@ -1910,7 +1910,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Advertiser-desired status of this experiment.
+     * The Advertiser-chosen status of this experiment.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.ExperimentStatusEnum.ExperimentStatus status = 14;</code>
@@ -1928,7 +1928,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The Advertiser-desired status of this experiment.
+     * The Advertiser-chosen status of this experiment.
      * </pre>
      *
      * <code>.google.ads.googleads.v11.enums.ExperimentStatusEnum.ExperimentStatus status = 14;</code>

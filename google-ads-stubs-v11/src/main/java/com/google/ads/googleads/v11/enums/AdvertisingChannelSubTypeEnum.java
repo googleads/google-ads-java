@@ -193,7 +193,7 @@ private static final long serialVersionUID = 0L;
     VIDEO_NON_SKIPPABLE(11),
     /**
      * <pre>
-     * App Campaign that allows you to easily promote your Android or iOS app
+     * App Campaign that lets you easily promote your Android or iOS app
      * across Google's top properties including Search, Play, YouTube, and the
      * Google Display Network.
      * </pre>
@@ -355,7 +355,7 @@ private static final long serialVersionUID = 0L;
     public static final int VIDEO_NON_SKIPPABLE_VALUE = 11;
     /**
      * <pre>
-     * App Campaign that allows you to easily promote your Android or iOS app
+     * App Campaign that lets you easily promote your Android or iOS app
      * across Google's top properties including Search, Play, YouTube, and the
      * Google Display Network.
      * </pre>

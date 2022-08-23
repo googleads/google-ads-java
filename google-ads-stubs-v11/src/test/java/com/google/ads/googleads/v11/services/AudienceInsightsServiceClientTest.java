@@ -169,4 +169,50 @@ public class AudienceInsightsServiceClientTest {
       // Expected exception.
     }
   }
+
+  @Test
+  public void generateAudienceCompositionInsightsTest() throws Exception {
+    GenerateAudienceCompositionInsightsResponse expectedResponse =
+        GenerateAudienceCompositionInsightsResponse.newBuilder()
+            .addAllSections(new ArrayList<AudienceCompositionSection>())
+            .build();
+    mockAudienceInsightsService.addResponse(expectedResponse);
+
+    String customerId = "customerId-1581184615";
+    InsightsAudience audience = InsightsAudience.newBuilder().build();
+    List<AudienceInsightsDimensionEnum.AudienceInsightsDimension> dimensions = new ArrayList<>();
+
+    GenerateAudienceCompositionInsightsResponse actualResponse =
+        client.generateAudienceCompositionInsights(customerId, audience, dimensions);
+    Assert.assertEquals(expectedResponse, actualResponse);
+
+    List<AbstractMessage> actualRequests = mockAudienceInsightsService.getRequests();
+    Assert.assertEquals(1, actualRequests.size());
+    GenerateAudienceCompositionInsightsRequest actualRequest =
+        ((GenerateAudienceCompositionInsightsRequest) actualRequests.get(0));
+
+    Assert.assertEquals(customerId, actualRequest.getCustomerId());
+    Assert.assertEquals(audience, actualRequest.getAudience());
+    Assert.assertEquals(dimensions, actualRequest.getDimensionsList());
+    Assert.assertTrue(
+        channelProvider.isHeaderSent(
+            ApiClientHeaderProvider.getDefaultApiClientHeaderKey(),
+            GaxGrpcProperties.getDefaultApiClientHeaderPattern()));
+  }
+
+  @Test
+  public void generateAudienceCompositionInsightsExceptionTest() throws Exception {
+    StatusRuntimeException exception = new StatusRuntimeException(io.grpc.Status.INVALID_ARGUMENT);
+    mockAudienceInsightsService.addException(exception);
+
+    try {
+      String customerId = "customerId-1581184615";
+      InsightsAudience audience = InsightsAudience.newBuilder().build();
+      List<AudienceInsightsDimensionEnum.AudienceInsightsDimension> dimensions = new ArrayList<>();
+      client.generateAudienceCompositionInsights(customerId, audience, dimensions);
+      Assert.fail("No exception raised");
+    } catch (InvalidArgumentException e) {
+      // Expected exception.
+    }
+  }
 }

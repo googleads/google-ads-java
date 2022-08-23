@@ -234,7 +234,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The list of policy violation keys that should not cause a
    * PolicyViolationError to be reported. Not all policy violations are
-   * exemptable, please refer to the is_exemptible field in the returned
+   * exemptable, refer to the is_exemptible field in the returned
    * PolicyViolationError.
    * Resources violating these polices will be saved, but will not be eligible
    * to serve. They may begin serving at a later time due to a change in
@@ -252,7 +252,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The list of policy violation keys that should not cause a
    * PolicyViolationError to be reported. Not all policy violations are
-   * exemptable, please refer to the is_exemptible field in the returned
+   * exemptable, refer to the is_exemptible field in the returned
    * PolicyViolationError.
    * Resources violating these polices will be saved, but will not be eligible
    * to serve. They may begin serving at a later time due to a change in
@@ -271,7 +271,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The list of policy violation keys that should not cause a
    * PolicyViolationError to be reported. Not all policy violations are
-   * exemptable, please refer to the is_exemptible field in the returned
+   * exemptable, refer to the is_exemptible field in the returned
    * PolicyViolationError.
    * Resources violating these polices will be saved, but will not be eligible
    * to serve. They may begin serving at a later time due to a change in
@@ -289,7 +289,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The list of policy violation keys that should not cause a
    * PolicyViolationError to be reported. Not all policy violations are
-   * exemptable, please refer to the is_exemptible field in the returned
+   * exemptable, refer to the is_exemptible field in the returned
    * PolicyViolationError.
    * Resources violating these polices will be saved, but will not be eligible
    * to serve. They may begin serving at a later time due to a change in
@@ -307,7 +307,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The list of policy violation keys that should not cause a
    * PolicyViolationError to be reported. Not all policy violations are
-   * exemptable, please refer to the is_exemptible field in the returned
+   * exemptable, refer to the is_exemptible field in the returned
    * PolicyViolationError.
    * Resources violating these polices will be saved, but will not be eligible
    * to serve. They may begin serving at a later time due to a change in
@@ -1136,7 +1136,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of policy violation keys that should not cause a
      * PolicyViolationError to be reported. Not all policy violations are
-     * exemptable, please refer to the is_exemptible field in the returned
+     * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
@@ -1157,7 +1157,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of policy violation keys that should not cause a
      * PolicyViolationError to be reported. Not all policy violations are
-     * exemptable, please refer to the is_exemptible field in the returned
+     * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
@@ -1178,7 +1178,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of policy violation keys that should not cause a
      * PolicyViolationError to be reported. Not all policy violations are
-     * exemptable, please refer to the is_exemptible field in the returned
+     * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
@@ -1199,7 +1199,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of policy violation keys that should not cause a
      * PolicyViolationError to be reported. Not all policy violations are
-     * exemptable, please refer to the is_exemptible field in the returned
+     * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
@@ -1227,7 +1227,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of policy violation keys that should not cause a
      * PolicyViolationError to be reported. Not all policy violations are
-     * exemptable, please refer to the is_exemptible field in the returned
+     * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
@@ -1252,7 +1252,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of policy violation keys that should not cause a
      * PolicyViolationError to be reported. Not all policy violations are
-     * exemptable, please refer to the is_exemptible field in the returned
+     * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
@@ -1279,7 +1279,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of policy violation keys that should not cause a
      * PolicyViolationError to be reported. Not all policy violations are
-     * exemptable, please refer to the is_exemptible field in the returned
+     * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
@@ -1307,7 +1307,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of policy violation keys that should not cause a
      * PolicyViolationError to be reported. Not all policy violations are
-     * exemptable, please refer to the is_exemptible field in the returned
+     * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
@@ -1332,7 +1332,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of policy violation keys that should not cause a
      * PolicyViolationError to be reported. Not all policy violations are
-     * exemptable, please refer to the is_exemptible field in the returned
+     * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
@@ -1357,7 +1357,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of policy violation keys that should not cause a
      * PolicyViolationError to be reported. Not all policy violations are
-     * exemptable, please refer to the is_exemptible field in the returned
+     * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
@@ -1383,7 +1383,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of policy violation keys that should not cause a
      * PolicyViolationError to be reported. Not all policy violations are
-     * exemptable, please refer to the is_exemptible field in the returned
+     * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
@@ -1407,7 +1407,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of policy violation keys that should not cause a
      * PolicyViolationError to be reported. Not all policy violations are
-     * exemptable, please refer to the is_exemptible field in the returned
+     * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
@@ -1431,7 +1431,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of policy violation keys that should not cause a
      * PolicyViolationError to be reported. Not all policy violations are
-     * exemptable, please refer to the is_exemptible field in the returned
+     * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
@@ -1449,7 +1449,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of policy violation keys that should not cause a
      * PolicyViolationError to be reported. Not all policy violations are
-     * exemptable, please refer to the is_exemptible field in the returned
+     * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
@@ -1470,7 +1470,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of policy violation keys that should not cause a
      * PolicyViolationError to be reported. Not all policy violations are
-     * exemptable, please refer to the is_exemptible field in the returned
+     * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
@@ -1492,7 +1492,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of policy violation keys that should not cause a
      * PolicyViolationError to be reported. Not all policy violations are
-     * exemptable, please refer to the is_exemptible field in the returned
+     * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
@@ -1510,7 +1510,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of policy violation keys that should not cause a
      * PolicyViolationError to be reported. Not all policy violations are
-     * exemptable, please refer to the is_exemptible field in the returned
+     * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in
@@ -1529,7 +1529,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of policy violation keys that should not cause a
      * PolicyViolationError to be reported. Not all policy violations are
-     * exemptable, please refer to the is_exemptible field in the returned
+     * exemptable, refer to the is_exemptible field in the returned
      * PolicyViolationError.
      * Resources violating these polices will be saved, but will not be eligible
      * to serve. They may begin serving at a later time due to a change in

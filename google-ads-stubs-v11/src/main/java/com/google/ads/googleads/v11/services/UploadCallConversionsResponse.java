@@ -119,8 +119,8 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Errors that pertain to conversion failures in the partial failure mode.
    * Returned when all errors occur inside the conversions. If any errors occur
-   * outside the conversions (e.g. auth errors), we return an RPC level error.
-   * See
+   * outside the conversions (for example, auth errors), we return an RPC level
+   * error. See
    * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
    * for more information about partial failure.
    * </pre>
@@ -136,8 +136,8 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Errors that pertain to conversion failures in the partial failure mode.
    * Returned when all errors occur inside the conversions. If any errors occur
-   * outside the conversions (e.g. auth errors), we return an RPC level error.
-   * See
+   * outside the conversions (for example, auth errors), we return an RPC level
+   * error. See
    * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
    * for more information about partial failure.
    * </pre>
@@ -153,8 +153,8 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * Errors that pertain to conversion failures in the partial failure mode.
    * Returned when all errors occur inside the conversions. If any errors occur
-   * outside the conversions (e.g. auth errors), we return an RPC level error.
-   * See
+   * outside the conversions (for example, auth errors), we return an RPC level
+   * error. See
    * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
    * for more information about partial failure.
    * </pre>
@@ -619,8 +619,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Errors that pertain to conversion failures in the partial failure mode.
      * Returned when all errors occur inside the conversions. If any errors occur
-     * outside the conversions (e.g. auth errors), we return an RPC level error.
-     * See
+     * outside the conversions (for example, auth errors), we return an RPC level
+     * error. See
      * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
      * for more information about partial failure.
      * </pre>
@@ -635,8 +635,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Errors that pertain to conversion failures in the partial failure mode.
      * Returned when all errors occur inside the conversions. If any errors occur
-     * outside the conversions (e.g. auth errors), we return an RPC level error.
-     * See
+     * outside the conversions (for example, auth errors), we return an RPC level
+     * error. See
      * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
      * for more information about partial failure.
      * </pre>
@@ -655,8 +655,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Errors that pertain to conversion failures in the partial failure mode.
      * Returned when all errors occur inside the conversions. If any errors occur
-     * outside the conversions (e.g. auth errors), we return an RPC level error.
-     * See
+     * outside the conversions (for example, auth errors), we return an RPC level
+     * error. See
      * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
      * for more information about partial failure.
      * </pre>
@@ -680,8 +680,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Errors that pertain to conversion failures in the partial failure mode.
      * Returned when all errors occur inside the conversions. If any errors occur
-     * outside the conversions (e.g. auth errors), we return an RPC level error.
-     * See
+     * outside the conversions (for example, auth errors), we return an RPC level
+     * error. See
      * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
      * for more information about partial failure.
      * </pre>
@@ -703,8 +703,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Errors that pertain to conversion failures in the partial failure mode.
      * Returned when all errors occur inside the conversions. If any errors occur
-     * outside the conversions (e.g. auth errors), we return an RPC level error.
-     * See
+     * outside the conversions (for example, auth errors), we return an RPC level
+     * error. See
      * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
      * for more information about partial failure.
      * </pre>
@@ -730,8 +730,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Errors that pertain to conversion failures in the partial failure mode.
      * Returned when all errors occur inside the conversions. If any errors occur
-     * outside the conversions (e.g. auth errors), we return an RPC level error.
-     * See
+     * outside the conversions (for example, auth errors), we return an RPC level
+     * error. See
      * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
      * for more information about partial failure.
      * </pre>
@@ -753,8 +753,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Errors that pertain to conversion failures in the partial failure mode.
      * Returned when all errors occur inside the conversions. If any errors occur
-     * outside the conversions (e.g. auth errors), we return an RPC level error.
-     * See
+     * outside the conversions (for example, auth errors), we return an RPC level
+     * error. See
      * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
      * for more information about partial failure.
      * </pre>
@@ -770,8 +770,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Errors that pertain to conversion failures in the partial failure mode.
      * Returned when all errors occur inside the conversions. If any errors occur
-     * outside the conversions (e.g. auth errors), we return an RPC level error.
-     * See
+     * outside the conversions (for example, auth errors), we return an RPC level
+     * error. See
      * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
      * for more information about partial failure.
      * </pre>
@@ -790,8 +790,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Errors that pertain to conversion failures in the partial failure mode.
      * Returned when all errors occur inside the conversions. If any errors occur
-     * outside the conversions (e.g. auth errors), we return an RPC level error.
-     * See
+     * outside the conversions (for example, auth errors), we return an RPC level
+     * error. See
      * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
      * for more information about partial failure.
      * </pre>

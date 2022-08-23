@@ -200,7 +200,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object code_;
   /**
    * <pre>
-   * Output only. The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
+   * Output only. The language code, for example, "en_US", "en_AU", "es", "fr", etc.
    * </pre>
    *
    * <code>optional string code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -212,7 +212,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
+   * Output only. The language code, for example, "en_US", "en_AU", "es", "fr", etc.
    * </pre>
    *
    * <code>optional string code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -233,7 +233,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
+   * Output only. The language code, for example, "en_US", "en_AU", "es", "fr", etc.
    * </pre>
    *
    * <code>optional string code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -258,8 +258,8 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object name_;
   /**
    * <pre>
-   * Output only. The full name of the language in English, e.g., "English (US)", "Spanish",
-   * etc.
+   * Output only. The full name of the language in English, for example, "English (US)",
+   * "Spanish", etc.
    * </pre>
    *
    * <code>optional string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -271,8 +271,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The full name of the language in English, e.g., "English (US)", "Spanish",
-   * etc.
+   * Output only. The full name of the language in English, for example, "English (US)",
+   * "Spanish", etc.
    * </pre>
    *
    * <code>optional string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -293,8 +293,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The full name of the language in English, e.g., "English (US)", "Spanish",
-   * etc.
+   * Output only. The full name of the language in English, for example, "English (US)",
+   * "Spanish", etc.
    * </pre>
    *
    * <code>optional string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -920,7 +920,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object code_ = "";
     /**
      * <pre>
-     * Output only. The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
+     * Output only. The language code, for example, "en_US", "en_AU", "es", "fr", etc.
      * </pre>
      *
      * <code>optional string code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -931,7 +931,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
+     * Output only. The language code, for example, "en_US", "en_AU", "es", "fr", etc.
      * </pre>
      *
      * <code>optional string code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -951,7 +951,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
+     * Output only. The language code, for example, "en_US", "en_AU", "es", "fr", etc.
      * </pre>
      *
      * <code>optional string code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -972,7 +972,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
+     * Output only. The language code, for example, "en_US", "en_AU", "es", "fr", etc.
      * </pre>
      *
      * <code>optional string code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -991,7 +991,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
+     * Output only. The language code, for example, "en_US", "en_AU", "es", "fr", etc.
      * </pre>
      *
      * <code>optional string code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1005,7 +1005,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The language code, e.g. "en_US", "en_AU", "es", "fr", etc.
+     * Output only. The language code, for example, "en_US", "en_AU", "es", "fr", etc.
      * </pre>
      *
      * <code>optional string code = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1027,8 +1027,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object name_ = "";
     /**
      * <pre>
-     * Output only. The full name of the language in English, e.g., "English (US)", "Spanish",
-     * etc.
+     * Output only. The full name of the language in English, for example, "English (US)",
+     * "Spanish", etc.
      * </pre>
      *
      * <code>optional string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1039,8 +1039,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The full name of the language in English, e.g., "English (US)", "Spanish",
-     * etc.
+     * Output only. The full name of the language in English, for example, "English (US)",
+     * "Spanish", etc.
      * </pre>
      *
      * <code>optional string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1060,8 +1060,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The full name of the language in English, e.g., "English (US)", "Spanish",
-     * etc.
+     * Output only. The full name of the language in English, for example, "English (US)",
+     * "Spanish", etc.
      * </pre>
      *
      * <code>optional string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1082,8 +1082,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The full name of the language in English, e.g., "English (US)", "Spanish",
-     * etc.
+     * Output only. The full name of the language in English, for example, "English (US)",
+     * "Spanish", etc.
      * </pre>
      *
      * <code>optional string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1102,8 +1102,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The full name of the language in English, e.g., "English (US)", "Spanish",
-     * etc.
+     * Output only. The full name of the language in English, for example, "English (US)",
+     * "Spanish", etc.
      * </pre>
      *
      * <code>optional string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1117,8 +1117,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The full name of the language in English, e.g., "English (US)", "Spanish",
-     * etc.
+     * Output only. The full name of the language in English, for example, "English (US)",
+     * "Spanish", etc.
      * </pre>
      *
      * <code>optional string name = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

@@ -30,7 +30,7 @@ public final class RecommendationTypeProto {
     java.lang.String[] descriptorData = {
       "\n8google/ads/googleads/v11/enums/recomme" +
       "ndation_type.proto\022\036google.ads.googleads" +
-      ".v11.enums\"\252\005\n\026RecommendationTypeEnum\"\217\005" +
+      ".v11.enums\"\367\005\n\026RecommendationTypeEnum\"\334\005" +
       "\n\022RecommendationType\022\017\n\013UNSPECIFIED\020\000\022\013\n" +
       "\007UNKNOWN\020\001\022\023\n\017CAMPAIGN_BUDGET\020\002\022\013\n\007KEYWO" +
       "RD\020\003\022\013\n\007TEXT_AD\020\004\022\025\n\021TARGET_CPA_OPT_IN\020\005" +
@@ -47,13 +47,15 @@ public final class RecommendationTypeProto {
       "\024\022\036\n\032RESPONSIVE_SEARCH_AD_ASSET\020\025\0226\n2UPG" +
       "RADE_SMART_SHOPPING_CAMPAIGN_TO_PERFORMA" +
       "NCE_MAX\020\026\022,\n(RESPONSIVE_SEARCH_AD_IMPROV" +
-      "E_AD_STRENGTH\020\027B\361\001\n\"com.google.ads.googl" +
-      "eads.v11.enumsB\027RecommendationTypeProtoP" +
-      "\001ZCgoogle.golang.org/genproto/googleapis" +
-      "/ads/googleads/v11/enums;enums\242\002\003GAA\252\002\036G" +
-      "oogle.Ads.GoogleAds.V11.Enums\312\002\036Google\\A" +
-      "ds\\GoogleAds\\V11\\Enums\352\002\"Google::Ads::Go" +
-      "ogleAds::V11::Enumsb\006proto3"
+      "E_AD_STRENGTH\020\027\022\034\n\030DISPLAY_EXPANSION_OPT" +
+      "_IN\020\030\022-\n)UPGRADE_LOCAL_CAMPAIGN_TO_PERFO" +
+      "RMANCE_MAX\020\031B\361\001\n\"com.google.ads.googlead" +
+      "s.v11.enumsB\027RecommendationTypeProtoP\001ZC" +
+      "google.golang.org/genproto/googleapis/ad" +
+      "s/googleads/v11/enums;enums\242\002\003GAA\252\002\036Goog" +
+      "le.Ads.GoogleAds.V11.Enums\312\002\036Google\\Ads\\" +
+      "GoogleAds\\V11\\Enums\352\002\"Google::Ads::Googl" +
+      "eAds::V11::Enumsb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

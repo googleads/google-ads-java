@@ -138,8 +138,8 @@ private static final long serialVersionUID = 0L;
   private long locationFractionMicros_;
   /**
    * <pre>
-   * The desired fraction of ads to be shown in the targeted location in micros.
-   * E.g. 1% equals 10,000.
+   * The chosen fraction of ads to be shown in the targeted location in micros.
+   * For example, 1% equals 10,000.
    * </pre>
    *
    * <code>optional int64 location_fraction_micros = 4;</code>
@@ -151,8 +151,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The desired fraction of ads to be shown in the targeted location in micros.
-   * E.g. 1% equals 10,000.
+   * The chosen fraction of ads to be shown in the targeted location in micros.
+   * For example, 1% equals 10,000.
    * </pre>
    *
    * <code>optional int64 location_fraction_micros = 4;</code>
@@ -634,8 +634,8 @@ private static final long serialVersionUID = 0L;
     private long locationFractionMicros_ ;
     /**
      * <pre>
-     * The desired fraction of ads to be shown in the targeted location in micros.
-     * E.g. 1% equals 10,000.
+     * The chosen fraction of ads to be shown in the targeted location in micros.
+     * For example, 1% equals 10,000.
      * </pre>
      *
      * <code>optional int64 location_fraction_micros = 4;</code>
@@ -647,8 +647,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The desired fraction of ads to be shown in the targeted location in micros.
-     * E.g. 1% equals 10,000.
+     * The chosen fraction of ads to be shown in the targeted location in micros.
+     * For example, 1% equals 10,000.
      * </pre>
      *
      * <code>optional int64 location_fraction_micros = 4;</code>
@@ -660,8 +660,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The desired fraction of ads to be shown in the targeted location in micros.
-     * E.g. 1% equals 10,000.
+     * The chosen fraction of ads to be shown in the targeted location in micros.
+     * For example, 1% equals 10,000.
      * </pre>
      *
      * <code>optional int64 location_fraction_micros = 4;</code>
@@ -676,8 +676,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The desired fraction of ads to be shown in the targeted location in micros.
-     * E.g. 1% equals 10,000.
+     * The chosen fraction of ads to be shown in the targeted location in micros.
+     * For example, 1% equals 10,000.
      * </pre>
      *
      * <code>optional int64 location_fraction_micros = 4;</code>

@@ -146,7 +146,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The caller id from which this call was placed. Caller id is expected to be
-   * in E.164 format with preceding '+' sign. e.g. "+16502531234".
+   * in E.164 format with preceding '+' sign, for example, "+16502531234".
    * </pre>
    *
    * <code>optional string caller_id = 7;</code>
@@ -159,7 +159,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The caller id from which this call was placed. Caller id is expected to be
-   * in E.164 format with preceding '+' sign. e.g. "+16502531234".
+   * in E.164 format with preceding '+' sign, for example, "+16502531234".
    * </pre>
    *
    * <code>optional string caller_id = 7;</code>
@@ -181,7 +181,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The caller id from which this call was placed. Caller id is expected to be
-   * in E.164 format with preceding '+' sign. e.g. "+16502531234".
+   * in E.164 format with preceding '+' sign, for example, "+16502531234".
    * </pre>
    *
    * <code>optional string caller_id = 7;</code>
@@ -208,7 +208,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The date time at which the call occurred. The timezone must be specified.
    * The format is "yyyy-mm-dd hh:mm:ss+|-hh:mm",
-   * e.g. "2019-01-01 12:32:45-08:00".
+   * for example, "2019-01-01 12:32:45-08:00".
    * </pre>
    *
    * <code>optional string call_start_date_time = 8;</code>
@@ -222,7 +222,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The date time at which the call occurred. The timezone must be specified.
    * The format is "yyyy-mm-dd hh:mm:ss+|-hh:mm",
-   * e.g. "2019-01-01 12:32:45-08:00".
+   * for example, "2019-01-01 12:32:45-08:00".
    * </pre>
    *
    * <code>optional string call_start_date_time = 8;</code>
@@ -245,7 +245,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The date time at which the call occurred. The timezone must be specified.
    * The format is "yyyy-mm-dd hh:mm:ss+|-hh:mm",
-   * e.g. "2019-01-01 12:32:45-08:00".
+   * for example, "2019-01-01 12:32:45-08:00".
    * </pre>
    *
    * <code>optional string call_start_date_time = 8;</code>
@@ -339,7 +339,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The date time at which the conversion occurred. Must be after the call
    * time. The timezone must be specified. The format is
-   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
    * </pre>
    *
    * <code>optional string conversion_date_time = 10;</code>
@@ -353,7 +353,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The date time at which the conversion occurred. Must be after the call
    * time. The timezone must be specified. The format is
-   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
    * </pre>
    *
    * <code>optional string conversion_date_time = 10;</code>
@@ -376,7 +376,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The date time at which the conversion occurred. Must be after the call
    * time. The timezone must be specified. The format is
-   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
    * </pre>
    *
    * <code>optional string conversion_date_time = 10;</code>
@@ -1054,7 +1054,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The caller id from which this call was placed. Caller id is expected to be
-     * in E.164 format with preceding '+' sign. e.g. "+16502531234".
+     * in E.164 format with preceding '+' sign, for example, "+16502531234".
      * </pre>
      *
      * <code>optional string caller_id = 7;</code>
@@ -1066,7 +1066,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The caller id from which this call was placed. Caller id is expected to be
-     * in E.164 format with preceding '+' sign. e.g. "+16502531234".
+     * in E.164 format with preceding '+' sign, for example, "+16502531234".
      * </pre>
      *
      * <code>optional string caller_id = 7;</code>
@@ -1087,7 +1087,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The caller id from which this call was placed. Caller id is expected to be
-     * in E.164 format with preceding '+' sign. e.g. "+16502531234".
+     * in E.164 format with preceding '+' sign, for example, "+16502531234".
      * </pre>
      *
      * <code>optional string caller_id = 7;</code>
@@ -1109,7 +1109,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The caller id from which this call was placed. Caller id is expected to be
-     * in E.164 format with preceding '+' sign. e.g. "+16502531234".
+     * in E.164 format with preceding '+' sign, for example, "+16502531234".
      * </pre>
      *
      * <code>optional string caller_id = 7;</code>
@@ -1129,7 +1129,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The caller id from which this call was placed. Caller id is expected to be
-     * in E.164 format with preceding '+' sign. e.g. "+16502531234".
+     * in E.164 format with preceding '+' sign, for example, "+16502531234".
      * </pre>
      *
      * <code>optional string caller_id = 7;</code>
@@ -1144,7 +1144,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The caller id from which this call was placed. Caller id is expected to be
-     * in E.164 format with preceding '+' sign. e.g. "+16502531234".
+     * in E.164 format with preceding '+' sign, for example, "+16502531234".
      * </pre>
      *
      * <code>optional string caller_id = 7;</code>
@@ -1168,7 +1168,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The date time at which the call occurred. The timezone must be specified.
      * The format is "yyyy-mm-dd hh:mm:ss+|-hh:mm",
-     * e.g. "2019-01-01 12:32:45-08:00".
+     * for example, "2019-01-01 12:32:45-08:00".
      * </pre>
      *
      * <code>optional string call_start_date_time = 8;</code>
@@ -1181,7 +1181,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The date time at which the call occurred. The timezone must be specified.
      * The format is "yyyy-mm-dd hh:mm:ss+|-hh:mm",
-     * e.g. "2019-01-01 12:32:45-08:00".
+     * for example, "2019-01-01 12:32:45-08:00".
      * </pre>
      *
      * <code>optional string call_start_date_time = 8;</code>
@@ -1203,7 +1203,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The date time at which the call occurred. The timezone must be specified.
      * The format is "yyyy-mm-dd hh:mm:ss+|-hh:mm",
-     * e.g. "2019-01-01 12:32:45-08:00".
+     * for example, "2019-01-01 12:32:45-08:00".
      * </pre>
      *
      * <code>optional string call_start_date_time = 8;</code>
@@ -1226,7 +1226,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The date time at which the call occurred. The timezone must be specified.
      * The format is "yyyy-mm-dd hh:mm:ss+|-hh:mm",
-     * e.g. "2019-01-01 12:32:45-08:00".
+     * for example, "2019-01-01 12:32:45-08:00".
      * </pre>
      *
      * <code>optional string call_start_date_time = 8;</code>
@@ -1247,7 +1247,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The date time at which the call occurred. The timezone must be specified.
      * The format is "yyyy-mm-dd hh:mm:ss+|-hh:mm",
-     * e.g. "2019-01-01 12:32:45-08:00".
+     * for example, "2019-01-01 12:32:45-08:00".
      * </pre>
      *
      * <code>optional string call_start_date_time = 8;</code>
@@ -1263,7 +1263,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The date time at which the call occurred. The timezone must be specified.
      * The format is "yyyy-mm-dd hh:mm:ss+|-hh:mm",
-     * e.g. "2019-01-01 12:32:45-08:00".
+     * for example, "2019-01-01 12:32:45-08:00".
      * </pre>
      *
      * <code>optional string call_start_date_time = 8;</code>
@@ -1412,7 +1412,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The date time at which the conversion occurred. Must be after the call
      * time. The timezone must be specified. The format is
-     * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+     * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
      * </pre>
      *
      * <code>optional string conversion_date_time = 10;</code>
@@ -1425,7 +1425,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The date time at which the conversion occurred. Must be after the call
      * time. The timezone must be specified. The format is
-     * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+     * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
      * </pre>
      *
      * <code>optional string conversion_date_time = 10;</code>
@@ -1447,7 +1447,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The date time at which the conversion occurred. Must be after the call
      * time. The timezone must be specified. The format is
-     * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+     * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
      * </pre>
      *
      * <code>optional string conversion_date_time = 10;</code>
@@ -1470,7 +1470,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The date time at which the conversion occurred. Must be after the call
      * time. The timezone must be specified. The format is
-     * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+     * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
      * </pre>
      *
      * <code>optional string conversion_date_time = 10;</code>
@@ -1491,7 +1491,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The date time at which the conversion occurred. Must be after the call
      * time. The timezone must be specified. The format is
-     * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+     * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
      * </pre>
      *
      * <code>optional string conversion_date_time = 10;</code>
@@ -1507,7 +1507,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The date time at which the conversion occurred. Must be after the call
      * time. The timezone must be specified. The format is
-     * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+     * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
      * </pre>
      *
      * <code>optional string conversion_date_time = 10;</code>

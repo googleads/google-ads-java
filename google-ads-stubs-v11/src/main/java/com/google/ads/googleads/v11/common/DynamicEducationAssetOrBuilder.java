@@ -53,7 +53,7 @@ public interface DynamicEducationAssetOrBuilder extends
 
   /**
    * <pre>
-   * Required. Program name, e.g. Nursing. Required.
+   * Required. Program name, for example, Nursing. Required.
    * </pre>
    *
    * <code>string program_name = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -62,7 +62,7 @@ public interface DynamicEducationAssetOrBuilder extends
   java.lang.String getProgramName();
   /**
    * <pre>
-   * Required. Program name, e.g. Nursing. Required.
+   * Required. Program name, for example, Nursing. Required.
    * </pre>
    *
    * <code>string program_name = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -73,7 +73,7 @@ public interface DynamicEducationAssetOrBuilder extends
 
   /**
    * <pre>
-   * Subject of study, e.g. Health.
+   * Subject of study, for example, Health.
    * </pre>
    *
    * <code>string subject = 4;</code>
@@ -82,7 +82,7 @@ public interface DynamicEducationAssetOrBuilder extends
   java.lang.String getSubject();
   /**
    * <pre>
-   * Subject of study, e.g. Health.
+   * Subject of study, for example, Health.
    * </pre>
    *
    * <code>string subject = 4;</code>
@@ -93,7 +93,7 @@ public interface DynamicEducationAssetOrBuilder extends
 
   /**
    * <pre>
-   * Program description, e.g. Nursing Certification.
+   * Program description, for example, Nursing Certification.
    * </pre>
    *
    * <code>string program_description = 5;</code>
@@ -102,7 +102,7 @@ public interface DynamicEducationAssetOrBuilder extends
   java.lang.String getProgramDescription();
   /**
    * <pre>
-   * Program description, e.g. Nursing Certification.
+   * Program description, for example, Nursing Certification.
    * </pre>
    *
    * <code>string program_description = 5;</code>
@@ -113,7 +113,7 @@ public interface DynamicEducationAssetOrBuilder extends
 
   /**
    * <pre>
-   * School name, e.g. Mountain View School of Nursing.
+   * School name, for example, Mountain View School of Nursing.
    * </pre>
    *
    * <code>string school_name = 6;</code>
@@ -122,7 +122,7 @@ public interface DynamicEducationAssetOrBuilder extends
   java.lang.String getSchoolName();
   /**
    * <pre>
-   * School name, e.g. Mountain View School of Nursing.
+   * School name, for example, Mountain View School of Nursing.
    * </pre>
    *
    * <code>string school_name = 6;</code>
@@ -134,9 +134,9 @@ public interface DynamicEducationAssetOrBuilder extends
   /**
    * <pre>
    * School address which can be specified in one of the following formats.
-   * (1) City, state, code, country, e.g. Mountain View, CA, USA.
-   * (2) Full address, e.g. 123 Boulevard St, Mountain View, CA 94043.
-   * (3) Latitude-longitude in the DDD format, e.g. 41.40338, 2.17403
+   * (1) City, state, code, country, for example, Mountain View, CA, USA.
+   * (2) Full address, for example, 123 Boulevard St, Mountain View, CA 94043.
+   * (3) Latitude-longitude in the DDD format, for example, 41.40338, 2.17403
    * </pre>
    *
    * <code>string address = 7;</code>
@@ -146,9 +146,9 @@ public interface DynamicEducationAssetOrBuilder extends
   /**
    * <pre>
    * School address which can be specified in one of the following formats.
-   * (1) City, state, code, country, e.g. Mountain View, CA, USA.
-   * (2) Full address, e.g. 123 Boulevard St, Mountain View, CA 94043.
-   * (3) Latitude-longitude in the DDD format, e.g. 41.40338, 2.17403
+   * (1) City, state, code, country, for example, Mountain View, CA, USA.
+   * (2) Full address, for example, 123 Boulevard St, Mountain View, CA 94043.
+   * (3) Latitude-longitude in the DDD format, for example, 41.40338, 2.17403
    * </pre>
    *
    * <code>string address = 7;</code>
@@ -159,7 +159,8 @@ public interface DynamicEducationAssetOrBuilder extends
 
   /**
    * <pre>
-   * Contextual keywords, e.g. Nursing certification, Health, Mountain View.
+   * Contextual keywords, for example, Nursing certification, Health, Mountain
+   * View.
    * </pre>
    *
    * <code>repeated string contextual_keywords = 8;</code>
@@ -169,7 +170,8 @@ public interface DynamicEducationAssetOrBuilder extends
       getContextualKeywordsList();
   /**
    * <pre>
-   * Contextual keywords, e.g. Nursing certification, Health, Mountain View.
+   * Contextual keywords, for example, Nursing certification, Health, Mountain
+   * View.
    * </pre>
    *
    * <code>repeated string contextual_keywords = 8;</code>
@@ -178,7 +180,8 @@ public interface DynamicEducationAssetOrBuilder extends
   int getContextualKeywordsCount();
   /**
    * <pre>
-   * Contextual keywords, e.g. Nursing certification, Health, Mountain View.
+   * Contextual keywords, for example, Nursing certification, Health, Mountain
+   * View.
    * </pre>
    *
    * <code>repeated string contextual_keywords = 8;</code>
@@ -188,7 +191,8 @@ public interface DynamicEducationAssetOrBuilder extends
   java.lang.String getContextualKeywords(int index);
   /**
    * <pre>
-   * Contextual keywords, e.g. Nursing certification, Health, Mountain View.
+   * Contextual keywords, for example, Nursing certification, Health, Mountain
+   * View.
    * </pre>
    *
    * <code>repeated string contextual_keywords = 8;</code>
@@ -200,7 +204,7 @@ public interface DynamicEducationAssetOrBuilder extends
 
   /**
    * <pre>
-   * Android deep link, e.g.
+   * Android deep link, for example,
    * android-app://com.example.android/http/example.com/gizmos?1234.
    * </pre>
    *
@@ -210,7 +214,7 @@ public interface DynamicEducationAssetOrBuilder extends
   java.lang.String getAndroidAppLink();
   /**
    * <pre>
-   * Android deep link, e.g.
+   * Android deep link, for example,
    * android-app://com.example.android/http/example.com/gizmos?1234.
    * </pre>
    *
@@ -263,7 +267,7 @@ public interface DynamicEducationAssetOrBuilder extends
 
   /**
    * <pre>
-   * iOS deep link, e.g. exampleApp://content/page.
+   * iOS deep link, for example, exampleApp://content/page.
    * </pre>
    *
    * <code>string ios_app_link = 11;</code>
@@ -272,7 +276,7 @@ public interface DynamicEducationAssetOrBuilder extends
   java.lang.String getIosAppLink();
   /**
    * <pre>
-   * iOS deep link, e.g. exampleApp://content/page.
+   * iOS deep link, for example, exampleApp://content/page.
    * </pre>
    *
    * <code>string ios_app_link = 11;</code>
@@ -295,7 +299,7 @@ public interface DynamicEducationAssetOrBuilder extends
 
   /**
    * <pre>
-   * Thumbnail image url, e.g. http://www.example.com/thumbnail.png. The
+   * Thumbnail image url, for example, http://www.example.com/thumbnail.png. The
    * thumbnail image will not be uploaded as image asset.
    * </pre>
    *
@@ -305,7 +309,7 @@ public interface DynamicEducationAssetOrBuilder extends
   java.lang.String getThumbnailImageUrl();
   /**
    * <pre>
-   * Thumbnail image url, e.g. http://www.example.com/thumbnail.png. The
+   * Thumbnail image url, for example, http://www.example.com/thumbnail.png. The
    * thumbnail image will not be uploaded as image asset.
    * </pre>
    *
@@ -317,8 +321,8 @@ public interface DynamicEducationAssetOrBuilder extends
 
   /**
    * <pre>
-   * Image url, e.g. http://www.example.com/image.png. The image will not be
-   * uploaded as image asset.
+   * Image url, for example, http://www.example.com/image.png. The image will
+   * not be uploaded as image asset.
    * </pre>
    *
    * <code>string image_url = 14;</code>
@@ -327,8 +331,8 @@ public interface DynamicEducationAssetOrBuilder extends
   java.lang.String getImageUrl();
   /**
    * <pre>
-   * Image url, e.g. http://www.example.com/image.png. The image will not be
-   * uploaded as image asset.
+   * Image url, for example, http://www.example.com/image.png. The image will
+   * not be uploaded as image asset.
    * </pre>
    *
    * <code>string image_url = 14;</code>
