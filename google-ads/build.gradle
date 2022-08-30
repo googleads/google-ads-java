@@ -127,7 +127,9 @@ task generateLicenses(type: nl.javadude.gradle.plugins.license.DownloadLicenses)
             'apacheTwo'      : license('Apache License, Version 2.0', 'http://opensource.org/licenses/Apache-2.0'),
             'bsdThreeClause' : license('3-Clause BSD License', 'https://opensource.org/licenses/BSD-3-Clause'),
             'mit'            : license('MIT License', 'https://opensource.org/licenses/mit-license.php'),
-            'cddlAndGplv2Cpe': license('CDDL + GPLv2 with classpath exception', 'https://github.com/javaee/javax.annotation/blob/master/LICENSE')
+            'cddlAndGplv2Cpe': license('CDDL + GPLv2 with classpath exception', 'https://github.com/javaee/javax.annotation/blob/master/LICENSE'),
+            'go'             : license('Go License', 'https://go.dev/LICENSE'),
+            'bouncyCastle'   : license('Bouncy Castle Licence', 'https://www.bouncycastle.org/licence.html')
     ]
 
     // Specifies aliases for the known licenses so the report will use the
