@@ -1,10 +1,12 @@
-21.0.0 - 2022-08-23
+21.0.0 - 2022-08-30
 -------------------
 - Add support and examples for Google Ads API v11.1.
 - Update to version 2.8.0 of
   `com.google.cloud:google-cloud-shared-dependencies`.
 - Update to version 1.5.3 of `com.google.auth:google-auth-library-credentials`.
 - Replace ETA examples with RSA examples.
+- Add Go and Bouncy Castle licenses to THIRD-PARTY-LICENSES.txt and allowed
+  third party licenses.
 
 20.0.0 - 2022-07-19
 -------------------
