@@ -71,7 +71,7 @@ public final class ArgumentNames {
   public static final String FEED_ITEM_SET_ID = "--feedItemSetId";
   public static final String FINAL_URL = "--finalUrl";
   public static final String FLIGHT_PLACEHOLDER_FIELD_NAME = "--flightPlaceholderFieldName";
-  public static final String FREEFORM_KEYWORD_TEXT = "--freeformKeywordText";
+  public static final String FREE_FORM_KEYWORD_TEXT = "--freeFormKeywordText";
   public static final String GBRAID = "--gbraid";
   public static final String GCLID = "--gclid";
   public static final String GEO_TARGET_CONSTANT_ID = "--geoTargetConstantId";
