@@ -30,7 +30,9 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
   /**
    * <pre>
    * The resource name of the language to target.
-   * Required
+   * Each keyword belongs to some set of languages; a keyword is included if
+   * language is one of its languages.
+   * If not set, all keywords will be included.
    * </pre>
    *
    * <code>optional string language = 14;</code>
@@ -40,7 +42,9 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
   /**
    * <pre>
    * The resource name of the language to target.
-   * Required
+   * Each keyword belongs to some set of languages; a keyword is included if
+   * language is one of its languages.
+   * If not set, all keywords will be included.
    * </pre>
    *
    * <code>optional string language = 14;</code>
@@ -50,7 +54,9 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
   /**
    * <pre>
    * The resource name of the language to target.
-   * Required
+   * Each keyword belongs to some set of languages; a keyword is included if
+   * language is one of its languages.
+   * If not set, all keywords will be included.
    * </pre>
    *
    * <code>optional string language = 14;</code>
@@ -61,8 +67,8 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
 
   /**
    * <pre>
-   * The resource names of the location to target.
-   * Max 10
+   * The resource names of the location to target. Maximum is 10.
+   * An empty list MAY be used to specify all targeting geos.
    * </pre>
    *
    * <code>repeated string geo_target_constants = 15;</code>
@@ -72,8 +78,8 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
       getGeoTargetConstantsList();
   /**
    * <pre>
-   * The resource names of the location to target.
-   * Max 10
+   * The resource names of the location to target. Maximum is 10.
+   * An empty list MAY be used to specify all targeting geos.
    * </pre>
    *
    * <code>repeated string geo_target_constants = 15;</code>
@@ -82,8 +88,8 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
   int getGeoTargetConstantsCount();
   /**
    * <pre>
-   * The resource names of the location to target.
-   * Max 10
+   * The resource names of the location to target. Maximum is 10.
+   * An empty list MAY be used to specify all targeting geos.
    * </pre>
    *
    * <code>repeated string geo_target_constants = 15;</code>
@@ -93,8 +99,8 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
   java.lang.String getGeoTargetConstants(int index);
   /**
    * <pre>
-   * The resource names of the location to target.
-   * Max 10
+   * The resource names of the location to target. Maximum is 10.
+   * An empty list MAY be used to specify all targeting geos.
    * </pre>
    *
    * <code>repeated string geo_target_constants = 15;</code>
@@ -160,6 +166,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
   /**
    * <pre>
    * Targeting network.
+   * If not set, Google Search And Partners Network will be used.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork keyword_plan_network = 9;</code>
@@ -169,6 +176,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
   /**
    * <pre>
    * Targeting network.
+   * If not set, Google Search And Partners Network will be used.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork keyword_plan_network = 9;</code>
@@ -282,7 +290,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
   /**
    * <pre>
    * A Keyword and a specific Url to generate ideas from
-   * e.g. cars, www.example.com/cars.
+   * for example, cars, www.example.com/cars.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.services.KeywordAndUrlSeed keyword_and_url_seed = 2;</code>
@@ -292,7 +300,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
   /**
    * <pre>
    * A Keyword and a specific Url to generate ideas from
-   * e.g. cars, www.example.com/cars.
+   * for example, cars, www.example.com/cars.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.services.KeywordAndUrlSeed keyword_and_url_seed = 2;</code>
@@ -302,7 +310,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
   /**
    * <pre>
    * A Keyword and a specific Url to generate ideas from
-   * e.g. cars, www.example.com/cars.
+   * for example, cars, www.example.com/cars.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.services.KeywordAndUrlSeed keyword_and_url_seed = 2;</code>
@@ -311,7 +319,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
 
   /**
    * <pre>
-   * A Keyword or phrase to generate ideas from, e.g. cars.
+   * A Keyword or phrase to generate ideas from, for example, cars.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.services.KeywordSeed keyword_seed = 3;</code>
@@ -320,7 +328,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
   boolean hasKeywordSeed();
   /**
    * <pre>
-   * A Keyword or phrase to generate ideas from, e.g. cars.
+   * A Keyword or phrase to generate ideas from, for example, cars.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.services.KeywordSeed keyword_seed = 3;</code>
@@ -329,7 +337,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
   com.google.ads.googleads.v10.services.KeywordSeed getKeywordSeed();
   /**
    * <pre>
-   * A Keyword or phrase to generate ideas from, e.g. cars.
+   * A Keyword or phrase to generate ideas from, for example, cars.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.services.KeywordSeed keyword_seed = 3;</code>
@@ -338,7 +346,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
 
   /**
    * <pre>
-   * A specific url to generate ideas from, e.g. www.example.com/cars.
+   * A specific url to generate ideas from, for example, www.example.com/cars.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.services.UrlSeed url_seed = 5;</code>
@@ -347,7 +355,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
   boolean hasUrlSeed();
   /**
    * <pre>
-   * A specific url to generate ideas from, e.g. www.example.com/cars.
+   * A specific url to generate ideas from, for example, www.example.com/cars.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.services.UrlSeed url_seed = 5;</code>
@@ -356,7 +364,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
   com.google.ads.googleads.v10.services.UrlSeed getUrlSeed();
   /**
    * <pre>
-   * A specific url to generate ideas from, e.g. www.example.com/cars.
+   * A specific url to generate ideas from, for example, www.example.com/cars.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.services.UrlSeed url_seed = 5;</code>
@@ -365,7 +373,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
 
   /**
    * <pre>
-   * The site to generate ideas from, e.g. www.example.com.
+   * The site to generate ideas from, for example, www.example.com.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.services.SiteSeed site_seed = 11;</code>
@@ -374,7 +382,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
   boolean hasSiteSeed();
   /**
    * <pre>
-   * The site to generate ideas from, e.g. www.example.com.
+   * The site to generate ideas from, for example, www.example.com.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.services.SiteSeed site_seed = 11;</code>
@@ -383,7 +391,7 @@ public interface GenerateKeywordIdeasRequestOrBuilder extends
   com.google.ads.googleads.v10.services.SiteSeed getSiteSeed();
   /**
    * <pre>
-   * The site to generate ideas from, e.g. www.example.com.
+   * The site to generate ideas from, for example, www.example.com.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.services.SiteSeed site_seed = 11;</code>

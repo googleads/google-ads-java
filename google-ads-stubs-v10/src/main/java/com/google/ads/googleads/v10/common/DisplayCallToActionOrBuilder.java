@@ -38,8 +38,8 @@ public interface DisplayCallToActionOrBuilder extends
 
   /**
    * <pre>
-   * Text color for the display-call-to-action in hexadecimal, e.g. #ffffff for
-   * white.
+   * Text color for the display-call-to-action in hexadecimal, for example,
+   * # ffffff for white.
    * </pre>
    *
    * <code>optional string text_color = 6;</code>
@@ -48,8 +48,8 @@ public interface DisplayCallToActionOrBuilder extends
   boolean hasTextColor();
   /**
    * <pre>
-   * Text color for the display-call-to-action in hexadecimal, e.g. #ffffff for
-   * white.
+   * Text color for the display-call-to-action in hexadecimal, for example,
+   * # ffffff for white.
    * </pre>
    *
    * <code>optional string text_color = 6;</code>
@@ -58,8 +58,8 @@ public interface DisplayCallToActionOrBuilder extends
   java.lang.String getTextColor();
   /**
    * <pre>
-   * Text color for the display-call-to-action in hexadecimal, e.g. #ffffff for
-   * white.
+   * Text color for the display-call-to-action in hexadecimal, for example,
+   * # ffffff for white.
    * </pre>
    *
    * <code>optional string text_color = 6;</code>

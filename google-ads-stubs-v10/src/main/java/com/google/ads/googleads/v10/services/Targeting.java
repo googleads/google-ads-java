@@ -39,88 +39,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private Targeting(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 16: {
-            int rawValue = input.readEnum();
-
-            ageRange_ = rawValue;
-            break;
-          }
-          case 26: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              genders_ = new java.util.ArrayList<com.google.ads.googleads.v10.common.GenderInfo>();
-              mutable_bitField0_ |= 0x00000002;
-            }
-            genders_.add(
-                input.readMessage(com.google.ads.googleads.v10.common.GenderInfo.parser(), extensionRegistry));
-            break;
-          }
-          case 34: {
-            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-              devices_ = new java.util.ArrayList<com.google.ads.googleads.v10.common.DeviceInfo>();
-              mutable_bitField0_ |= 0x00000004;
-            }
-            devices_.add(
-                input.readMessage(com.google.ads.googleads.v10.common.DeviceInfo.parser(), extensionRegistry));
-            break;
-          }
-          case 40: {
-            int rawValue = input.readEnum();
-
-            network_ = rawValue;
-            break;
-          }
-          case 50: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000001;
-            plannableLocationId_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
-        genders_ = java.util.Collections.unmodifiableList(genders_);
-      }
-      if (((mutable_bitField0_ & 0x00000004) != 0)) {
-        devices_ = java.util.Collections.unmodifiableList(devices_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v10.services.ReachPlanServiceProto.internal_static_google_ads_googleads_v10_services_Targeting_descriptor;
@@ -139,8 +57,11 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object plannableLocationId_;
   /**
    * <pre>
-   * Required. The ID of the selected location. Plannable location IDs can be
+   * The ID of the selected location. Plannable location IDs can be
    * obtained from [ReachPlanService.ListPlannableLocations][google.ads.googleads.v10.services.ReachPlanService.ListPlannableLocations].
+   * Requests must set either this field or `plannable_location_ids`.
+   * This field is deprecated as of V12 and will be removed in a future release.
+   * Use `plannable_location_ids` instead.
    * </pre>
    *
    * <code>optional string plannable_location_id = 6;</code>
@@ -152,8 +73,11 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. The ID of the selected location. Plannable location IDs can be
+   * The ID of the selected location. Plannable location IDs can be
    * obtained from [ReachPlanService.ListPlannableLocations][google.ads.googleads.v10.services.ReachPlanService.ListPlannableLocations].
+   * Requests must set either this field or `plannable_location_ids`.
+   * This field is deprecated as of V12 and will be removed in a future release.
+   * Use `plannable_location_ids` instead.
    * </pre>
    *
    * <code>optional string plannable_location_id = 6;</code>
@@ -174,8 +98,11 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. The ID of the selected location. Plannable location IDs can be
+   * The ID of the selected location. Plannable location IDs can be
    * obtained from [ReachPlanService.ListPlannableLocations][google.ads.googleads.v10.services.ReachPlanService.ListPlannableLocations].
+   * Requests must set either this field or `plannable_location_ids`.
+   * This field is deprecated as of V12 and will be removed in a future release.
+   * Use `plannable_location_ids` instead.
    * </pre>
    *
    * <code>optional string plannable_location_id = 6;</code>
@@ -427,7 +354,7 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, plannableLocationId_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -455,7 +382,7 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, plannableLocationId_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -481,7 +408,7 @@ private static final long serialVersionUID = 0L;
     if (!getDevicesList()
         .equals(other.getDevicesList())) return false;
     if (network_ != other.network_) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -508,7 +435,7 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + NETWORK_FIELD_NUMBER;
     hash = (53 * hash) + network_;
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -629,20 +556,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v10.services.Targeting.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getGendersFieldBuilder();
-        getDevicesFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -653,16 +573,18 @@ private static final long serialVersionUID = 0L;
 
       if (gendersBuilder_ == null) {
         genders_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
+        genders_ = null;
         gendersBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000002);
       if (devicesBuilder_ == null) {
         devices_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
       } else {
+        devices_ = null;
         devicesBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000004);
       network_ = 0;
 
       return this;
@@ -829,7 +751,7 @@ private static final long serialVersionUID = 0L;
       if (other.network_ != 0) {
         setNetworkValue(other.getNetworkValue());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -844,17 +766,71 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.ads.googleads.v10.services.Targeting parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 16: {
+              ageRange_ = input.readEnum();
+
+              break;
+            } // case 16
+            case 26: {
+              com.google.ads.googleads.v10.common.GenderInfo m =
+                  input.readMessage(
+                      com.google.ads.googleads.v10.common.GenderInfo.parser(),
+                      extensionRegistry);
+              if (gendersBuilder_ == null) {
+                ensureGendersIsMutable();
+                genders_.add(m);
+              } else {
+                gendersBuilder_.addMessage(m);
+              }
+              break;
+            } // case 26
+            case 34: {
+              com.google.ads.googleads.v10.common.DeviceInfo m =
+                  input.readMessage(
+                      com.google.ads.googleads.v10.common.DeviceInfo.parser(),
+                      extensionRegistry);
+              if (devicesBuilder_ == null) {
+                ensureDevicesIsMutable();
+                devices_.add(m);
+              } else {
+                devicesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 34
+            case 40: {
+              network_ = input.readEnum();
+
+              break;
+            } // case 40
+            case 50: {
+              plannableLocationId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 50
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v10.services.Targeting) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -862,8 +838,11 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object plannableLocationId_ = "";
     /**
      * <pre>
-     * Required. The ID of the selected location. Plannable location IDs can be
+     * The ID of the selected location. Plannable location IDs can be
      * obtained from [ReachPlanService.ListPlannableLocations][google.ads.googleads.v10.services.ReachPlanService.ListPlannableLocations].
+     * Requests must set either this field or `plannable_location_ids`.
+     * This field is deprecated as of V12 and will be removed in a future release.
+     * Use `plannable_location_ids` instead.
      * </pre>
      *
      * <code>optional string plannable_location_id = 6;</code>
@@ -874,8 +853,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The ID of the selected location. Plannable location IDs can be
+     * The ID of the selected location. Plannable location IDs can be
      * obtained from [ReachPlanService.ListPlannableLocations][google.ads.googleads.v10.services.ReachPlanService.ListPlannableLocations].
+     * Requests must set either this field or `plannable_location_ids`.
+     * This field is deprecated as of V12 and will be removed in a future release.
+     * Use `plannable_location_ids` instead.
      * </pre>
      *
      * <code>optional string plannable_location_id = 6;</code>
@@ -895,8 +877,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The ID of the selected location. Plannable location IDs can be
+     * The ID of the selected location. Plannable location IDs can be
      * obtained from [ReachPlanService.ListPlannableLocations][google.ads.googleads.v10.services.ReachPlanService.ListPlannableLocations].
+     * Requests must set either this field or `plannable_location_ids`.
+     * This field is deprecated as of V12 and will be removed in a future release.
+     * Use `plannable_location_ids` instead.
      * </pre>
      *
      * <code>optional string plannable_location_id = 6;</code>
@@ -917,8 +902,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The ID of the selected location. Plannable location IDs can be
+     * The ID of the selected location. Plannable location IDs can be
      * obtained from [ReachPlanService.ListPlannableLocations][google.ads.googleads.v10.services.ReachPlanService.ListPlannableLocations].
+     * Requests must set either this field or `plannable_location_ids`.
+     * This field is deprecated as of V12 and will be removed in a future release.
+     * Use `plannable_location_ids` instead.
      * </pre>
      *
      * <code>optional string plannable_location_id = 6;</code>
@@ -937,8 +925,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The ID of the selected location. Plannable location IDs can be
+     * The ID of the selected location. Plannable location IDs can be
      * obtained from [ReachPlanService.ListPlannableLocations][google.ads.googleads.v10.services.ReachPlanService.ListPlannableLocations].
+     * Requests must set either this field or `plannable_location_ids`.
+     * This field is deprecated as of V12 and will be removed in a future release.
+     * Use `plannable_location_ids` instead.
      * </pre>
      *
      * <code>optional string plannable_location_id = 6;</code>
@@ -952,8 +943,11 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. The ID of the selected location. Plannable location IDs can be
+     * The ID of the selected location. Plannable location IDs can be
      * obtained from [ReachPlanService.ListPlannableLocations][google.ads.googleads.v10.services.ReachPlanService.ListPlannableLocations].
+     * Requests must set either this field or `plannable_location_ids`.
+     * This field is deprecated as of V12 and will be removed in a future release.
+     * Use `plannable_location_ids` instead.
      * </pre>
      *
      * <code>optional string plannable_location_id = 6;</code>
@@ -1868,7 +1862,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new Targeting(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

@@ -34,45 +34,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private ExtensionFeedItemErrorEnum(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v10.errors.ExtensionFeedItemErrorProto.internal_static_google_ads_googleads_v10_errors_ExtensionFeedItemErrorEnum_descriptor;
@@ -206,8 +167,8 @@ private static final long serialVersionUID = 0L;
     INVALID_DOMESTIC_PHONE_NUMBER_FORMAT(12),
     /**
      * <pre>
-     * Vanity phone numbers (i.e. those including letters) are not allowed for
-     * call extensions.
+     * Vanity phone numbers (for example, those including letters) are not
+     * allowed for call extensions.
      * </pre>
      *
      * <code>VANITY_PHONE_NUMBER_NOT_ALLOWED = 13;</code>
@@ -242,7 +203,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Customer hasn't consented for call recording, which is required for
-     * creating/updating call feed items. Please see
+     * creating/updating call feed items. See
      * https://support.google.com/google-ads/answer/7412639.
      * </pre>
      *
@@ -357,8 +318,8 @@ private static final long serialVersionUID = 0L;
     INVALID_DEVICE_PREFERENCE(30),
     /**
      * <pre>
-     * Invalid feed item schedule end time (i.e., endHour = 24 and endMinute !=
-     * 0).
+     * Invalid feed item schedule end time (for example, endHour = 24 and
+     * endMinute != 0).
      * </pre>
      *
      * <code>INVALID_SCHEDULE_END = 31;</code>
@@ -416,7 +377,7 @@ private static final long serialVersionUID = 0L;
     EXTENSION_TYPE_MISMATCH(37),
     /**
      * <pre>
-     * The oneof field extension i.e. subtype of extension feed item is
+     * The oneof field extension for example, subtype of extension feed item is
      * required.
      * </pre>
      *
@@ -601,8 +562,8 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_DOMESTIC_PHONE_NUMBER_FORMAT_VALUE = 12;
     /**
      * <pre>
-     * Vanity phone numbers (i.e. those including letters) are not allowed for
-     * call extensions.
+     * Vanity phone numbers (for example, those including letters) are not
+     * allowed for call extensions.
      * </pre>
      *
      * <code>VANITY_PHONE_NUMBER_NOT_ALLOWED = 13;</code>
@@ -637,7 +598,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Customer hasn't consented for call recording, which is required for
-     * creating/updating call feed items. Please see
+     * creating/updating call feed items. See
      * https://support.google.com/google-ads/answer/7412639.
      * </pre>
      *
@@ -752,8 +713,8 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_DEVICE_PREFERENCE_VALUE = 30;
     /**
      * <pre>
-     * Invalid feed item schedule end time (i.e., endHour = 24 and endMinute !=
-     * 0).
+     * Invalid feed item schedule end time (for example, endHour = 24 and
+     * endMinute != 0).
      * </pre>
      *
      * <code>INVALID_SCHEDULE_END = 31;</code>
@@ -811,7 +772,7 @@ private static final long serialVersionUID = 0L;
     public static final int EXTENSION_TYPE_MISMATCH_VALUE = 37;
     /**
      * <pre>
-     * The oneof field extension i.e. subtype of extension feed item is
+     * The oneof field extension for example, subtype of extension feed item is
      * required.
      * </pre>
      *
@@ -1025,7 +986,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -1034,7 +995,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -1049,7 +1010,7 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v10.errors.ExtensionFeedItemErrorEnum other = (com.google.ads.googleads.v10.errors.ExtensionFeedItemErrorEnum) obj;
 
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -1060,7 +1021,7 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -1181,18 +1142,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v10.errors.ExtensionFeedItemErrorEnum.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -1271,7 +1227,7 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.google.ads.googleads.v10.errors.ExtensionFeedItemErrorEnum other) {
       if (other == com.google.ads.googleads.v10.errors.ExtensionFeedItemErrorEnum.getDefaultInstance()) return this;
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1286,17 +1242,30 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.ads.googleads.v10.errors.ExtensionFeedItemErrorEnum parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v10.errors.ExtensionFeedItemErrorEnum) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     @java.lang.Override
@@ -1332,7 +1301,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new ExtensionFeedItemErrorEnum(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

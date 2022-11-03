@@ -47,500 +47,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private Ad(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 40: {
-            int rawValue = input.readEnum();
-
-            type_ = rawValue;
-            break;
-          }
-          case 50: {
-            com.google.ads.googleads.v10.common.TextAdInfo.Builder subBuilder = null;
-            if (adDataCase_ == 6) {
-              subBuilder = ((com.google.ads.googleads.v10.common.TextAdInfo) adData_).toBuilder();
-            }
-            adData_ =
-                input.readMessage(com.google.ads.googleads.v10.common.TextAdInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.TextAdInfo) adData_);
-              adData_ = subBuilder.buildPartial();
-            }
-            adDataCase_ = 6;
-            break;
-          }
-          case 58: {
-            com.google.ads.googleads.v10.common.ExpandedTextAdInfo.Builder subBuilder = null;
-            if (adDataCase_ == 7) {
-              subBuilder = ((com.google.ads.googleads.v10.common.ExpandedTextAdInfo) adData_).toBuilder();
-            }
-            adData_ =
-                input.readMessage(com.google.ads.googleads.v10.common.ExpandedTextAdInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.ExpandedTextAdInfo) adData_);
-              adData_ = subBuilder.buildPartial();
-            }
-            adDataCase_ = 7;
-            break;
-          }
-          case 82: {
-            if (!((mutable_bitField0_ & 0x00000040) != 0)) {
-              urlCustomParameters_ = new java.util.ArrayList<com.google.ads.googleads.v10.common.CustomParameter>();
-              mutable_bitField0_ |= 0x00000040;
-            }
-            urlCustomParameters_.add(
-                input.readMessage(com.google.ads.googleads.v10.common.CustomParameter.parser(), extensionRegistry));
-            break;
-          }
-          case 114: {
-            com.google.ads.googleads.v10.common.ExpandedDynamicSearchAdInfo.Builder subBuilder = null;
-            if (adDataCase_ == 14) {
-              subBuilder = ((com.google.ads.googleads.v10.common.ExpandedDynamicSearchAdInfo) adData_).toBuilder();
-            }
-            adData_ =
-                input.readMessage(com.google.ads.googleads.v10.common.ExpandedDynamicSearchAdInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.ExpandedDynamicSearchAdInfo) adData_);
-              adData_ = subBuilder.buildPartial();
-            }
-            adDataCase_ = 14;
-            break;
-          }
-          case 122: {
-            com.google.ads.googleads.v10.common.HotelAdInfo.Builder subBuilder = null;
-            if (adDataCase_ == 15) {
-              subBuilder = ((com.google.ads.googleads.v10.common.HotelAdInfo) adData_).toBuilder();
-            }
-            adData_ =
-                input.readMessage(com.google.ads.googleads.v10.common.HotelAdInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.HotelAdInfo) adData_);
-              adData_ = subBuilder.buildPartial();
-            }
-            adDataCase_ = 15;
-            break;
-          }
-          case 138: {
-            com.google.ads.googleads.v10.common.ShoppingSmartAdInfo.Builder subBuilder = null;
-            if (adDataCase_ == 17) {
-              subBuilder = ((com.google.ads.googleads.v10.common.ShoppingSmartAdInfo) adData_).toBuilder();
-            }
-            adData_ =
-                input.readMessage(com.google.ads.googleads.v10.common.ShoppingSmartAdInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.ShoppingSmartAdInfo) adData_);
-              adData_ = subBuilder.buildPartial();
-            }
-            adDataCase_ = 17;
-            break;
-          }
-          case 146: {
-            com.google.ads.googleads.v10.common.ShoppingProductAdInfo.Builder subBuilder = null;
-            if (adDataCase_ == 18) {
-              subBuilder = ((com.google.ads.googleads.v10.common.ShoppingProductAdInfo) adData_).toBuilder();
-            }
-            adData_ =
-                input.readMessage(com.google.ads.googleads.v10.common.ShoppingProductAdInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.ShoppingProductAdInfo) adData_);
-              adData_ = subBuilder.buildPartial();
-            }
-            adDataCase_ = 18;
-            break;
-          }
-          case 160: {
-            int rawValue = input.readEnum();
-
-            devicePreference_ = rawValue;
-            break;
-          }
-          case 170: {
-            com.google.ads.googleads.v10.common.GmailAdInfo.Builder subBuilder = null;
-            if (adDataCase_ == 21) {
-              subBuilder = ((com.google.ads.googleads.v10.common.GmailAdInfo) adData_).toBuilder();
-            }
-            adData_ =
-                input.readMessage(com.google.ads.googleads.v10.common.GmailAdInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.GmailAdInfo) adData_);
-              adData_ = subBuilder.buildPartial();
-            }
-            adDataCase_ = 21;
-            break;
-          }
-          case 178: {
-            com.google.ads.googleads.v10.common.ImageAdInfo.Builder subBuilder = null;
-            if (adDataCase_ == 22) {
-              subBuilder = ((com.google.ads.googleads.v10.common.ImageAdInfo) adData_).toBuilder();
-            }
-            adData_ =
-                input.readMessage(com.google.ads.googleads.v10.common.ImageAdInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.ImageAdInfo) adData_);
-              adData_ = subBuilder.buildPartial();
-            }
-            adDataCase_ = 22;
-            break;
-          }
-          case 194: {
-            com.google.ads.googleads.v10.common.VideoAdInfo.Builder subBuilder = null;
-            if (adDataCase_ == 24) {
-              subBuilder = ((com.google.ads.googleads.v10.common.VideoAdInfo) adData_).toBuilder();
-            }
-            adData_ =
-                input.readMessage(com.google.ads.googleads.v10.common.VideoAdInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.VideoAdInfo) adData_);
-              adData_ = subBuilder.buildPartial();
-            }
-            adDataCase_ = 24;
-            break;
-          }
-          case 202: {
-            com.google.ads.googleads.v10.common.ResponsiveSearchAdInfo.Builder subBuilder = null;
-            if (adDataCase_ == 25) {
-              subBuilder = ((com.google.ads.googleads.v10.common.ResponsiveSearchAdInfo) adData_).toBuilder();
-            }
-            adData_ =
-                input.readMessage(com.google.ads.googleads.v10.common.ResponsiveSearchAdInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.ResponsiveSearchAdInfo) adData_);
-              adData_ = subBuilder.buildPartial();
-            }
-            adDataCase_ = 25;
-            break;
-          }
-          case 210: {
-            if (!((mutable_bitField0_ & 0x00000200) != 0)) {
-              urlCollections_ = new java.util.ArrayList<com.google.ads.googleads.v10.common.UrlCollection>();
-              mutable_bitField0_ |= 0x00000200;
-            }
-            urlCollections_.add(
-                input.readMessage(com.google.ads.googleads.v10.common.UrlCollection.parser(), extensionRegistry));
-            break;
-          }
-          case 216: {
-            int rawValue = input.readEnum();
-
-            systemManagedResourceSource_ = rawValue;
-            break;
-          }
-          case 226: {
-            com.google.ads.googleads.v10.common.LegacyResponsiveDisplayAdInfo.Builder subBuilder = null;
-            if (adDataCase_ == 28) {
-              subBuilder = ((com.google.ads.googleads.v10.common.LegacyResponsiveDisplayAdInfo) adData_).toBuilder();
-            }
-            adData_ =
-                input.readMessage(com.google.ads.googleads.v10.common.LegacyResponsiveDisplayAdInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.LegacyResponsiveDisplayAdInfo) adData_);
-              adData_ = subBuilder.buildPartial();
-            }
-            adDataCase_ = 28;
-            break;
-          }
-          case 234: {
-            com.google.ads.googleads.v10.common.AppAdInfo.Builder subBuilder = null;
-            if (adDataCase_ == 29) {
-              subBuilder = ((com.google.ads.googleads.v10.common.AppAdInfo) adData_).toBuilder();
-            }
-            adData_ =
-                input.readMessage(com.google.ads.googleads.v10.common.AppAdInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.AppAdInfo) adData_);
-              adData_ = subBuilder.buildPartial();
-            }
-            adDataCase_ = 29;
-            break;
-          }
-          case 242: {
-            com.google.ads.googleads.v10.common.LegacyAppInstallAdInfo.Builder subBuilder = null;
-            if (adDataCase_ == 30) {
-              subBuilder = ((com.google.ads.googleads.v10.common.LegacyAppInstallAdInfo) adData_).toBuilder();
-            }
-            adData_ =
-                input.readMessage(com.google.ads.googleads.v10.common.LegacyAppInstallAdInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.LegacyAppInstallAdInfo) adData_);
-              adData_ = subBuilder.buildPartial();
-            }
-            adDataCase_ = 30;
-            break;
-          }
-          case 250: {
-            com.google.ads.googleads.v10.common.ResponsiveDisplayAdInfo.Builder subBuilder = null;
-            if (adDataCase_ == 31) {
-              subBuilder = ((com.google.ads.googleads.v10.common.ResponsiveDisplayAdInfo) adData_).toBuilder();
-            }
-            adData_ =
-                input.readMessage(com.google.ads.googleads.v10.common.ResponsiveDisplayAdInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.ResponsiveDisplayAdInfo) adData_);
-              adData_ = subBuilder.buildPartial();
-            }
-            adDataCase_ = 31;
-            break;
-          }
-          case 258: {
-            com.google.ads.googleads.v10.common.LocalAdInfo.Builder subBuilder = null;
-            if (adDataCase_ == 32) {
-              subBuilder = ((com.google.ads.googleads.v10.common.LocalAdInfo) adData_).toBuilder();
-            }
-            adData_ =
-                input.readMessage(com.google.ads.googleads.v10.common.LocalAdInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.LocalAdInfo) adData_);
-              adData_ = subBuilder.buildPartial();
-            }
-            adDataCase_ = 32;
-            break;
-          }
-          case 266: {
-            com.google.ads.googleads.v10.common.DisplayUploadAdInfo.Builder subBuilder = null;
-            if (adDataCase_ == 33) {
-              subBuilder = ((com.google.ads.googleads.v10.common.DisplayUploadAdInfo) adData_).toBuilder();
-            }
-            adData_ =
-                input.readMessage(com.google.ads.googleads.v10.common.DisplayUploadAdInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.DisplayUploadAdInfo) adData_);
-              adData_ = subBuilder.buildPartial();
-            }
-            adDataCase_ = 33;
-            break;
-          }
-          case 274: {
-            com.google.ads.googleads.v10.common.AppEngagementAdInfo.Builder subBuilder = null;
-            if (adDataCase_ == 34) {
-              subBuilder = ((com.google.ads.googleads.v10.common.AppEngagementAdInfo) adData_).toBuilder();
-            }
-            adData_ =
-                input.readMessage(com.google.ads.googleads.v10.common.AppEngagementAdInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.AppEngagementAdInfo) adData_);
-              adData_ = subBuilder.buildPartial();
-            }
-            adDataCase_ = 34;
-            break;
-          }
-          case 282: {
-            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-              finalAppUrls_ = new java.util.ArrayList<com.google.ads.googleads.v10.common.FinalAppUrl>();
-              mutable_bitField0_ |= 0x00000004;
-            }
-            finalAppUrls_.add(
-                input.readMessage(com.google.ads.googleads.v10.common.FinalAppUrl.parser(), extensionRegistry));
-            break;
-          }
-          case 290: {
-            com.google.ads.googleads.v10.common.ShoppingComparisonListingAdInfo.Builder subBuilder = null;
-            if (adDataCase_ == 36) {
-              subBuilder = ((com.google.ads.googleads.v10.common.ShoppingComparisonListingAdInfo) adData_).toBuilder();
-            }
-            adData_ =
-                input.readMessage(com.google.ads.googleads.v10.common.ShoppingComparisonListingAdInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.ShoppingComparisonListingAdInfo) adData_);
-              adData_ = subBuilder.buildPartial();
-            }
-            adDataCase_ = 36;
-            break;
-          }
-          case 298: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            resourceName_ = s;
-            break;
-          }
-          case 314: {
-            com.google.ads.googleads.v10.common.VideoResponsiveAdInfo.Builder subBuilder = null;
-            if (adDataCase_ == 39) {
-              subBuilder = ((com.google.ads.googleads.v10.common.VideoResponsiveAdInfo) adData_).toBuilder();
-            }
-            adData_ =
-                input.readMessage(com.google.ads.googleads.v10.common.VideoResponsiveAdInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.VideoResponsiveAdInfo) adData_);
-              adData_ = subBuilder.buildPartial();
-            }
-            adDataCase_ = 39;
-            break;
-          }
-          case 320: {
-            bitField0_ |= 0x00000001;
-            id_ = input.readInt64();
-            break;
-          }
-          case 330: {
-            java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              finalUrls_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000002;
-            }
-            finalUrls_.add(s);
-            break;
-          }
-          case 338: {
-            java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-              finalMobileUrls_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000008;
-            }
-            finalMobileUrls_.add(s);
-            break;
-          }
-          case 346: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000002;
-            trackingUrlTemplate_ = s;
-            break;
-          }
-          case 354: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000004;
-            finalUrlSuffix_ = s;
-            break;
-          }
-          case 362: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000008;
-            displayUrl_ = s;
-            break;
-          }
-          case 368: {
-            bitField0_ |= 0x00000010;
-            addedByGoogleAds_ = input.readBool();
-            break;
-          }
-          case 378: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000020;
-            name_ = s;
-            break;
-          }
-          case 386: {
-            com.google.ads.googleads.v10.common.SmartCampaignAdInfo.Builder subBuilder = null;
-            if (adDataCase_ == 48) {
-              subBuilder = ((com.google.ads.googleads.v10.common.SmartCampaignAdInfo) adData_).toBuilder();
-            }
-            adData_ =
-                input.readMessage(com.google.ads.googleads.v10.common.SmartCampaignAdInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.SmartCampaignAdInfo) adData_);
-              adData_ = subBuilder.buildPartial();
-            }
-            adDataCase_ = 48;
-            break;
-          }
-          case 394: {
-            com.google.ads.googleads.v10.common.CallAdInfo.Builder subBuilder = null;
-            if (adDataCase_ == 49) {
-              subBuilder = ((com.google.ads.googleads.v10.common.CallAdInfo) adData_).toBuilder();
-            }
-            adData_ =
-                input.readMessage(com.google.ads.googleads.v10.common.CallAdInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.CallAdInfo) adData_);
-              adData_ = subBuilder.buildPartial();
-            }
-            adDataCase_ = 49;
-            break;
-          }
-          case 402: {
-            com.google.ads.googleads.v10.common.AppPreRegistrationAdInfo.Builder subBuilder = null;
-            if (adDataCase_ == 50) {
-              subBuilder = ((com.google.ads.googleads.v10.common.AppPreRegistrationAdInfo) adData_).toBuilder();
-            }
-            adData_ =
-                input.readMessage(com.google.ads.googleads.v10.common.AppPreRegistrationAdInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.AppPreRegistrationAdInfo) adData_);
-              adData_ = subBuilder.buildPartial();
-            }
-            adDataCase_ = 50;
-            break;
-          }
-          case 410: {
-            com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo.Builder subBuilder = null;
-            if (adDataCase_ == 51) {
-              subBuilder = ((com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo) adData_).toBuilder();
-            }
-            adData_ =
-                input.readMessage(com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.DiscoveryMultiAssetAdInfo) adData_);
-              adData_ = subBuilder.buildPartial();
-            }
-            adDataCase_ = 51;
-            break;
-          }
-          case 418: {
-            com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo.Builder subBuilder = null;
-            if (adDataCase_ == 52) {
-              subBuilder = ((com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo) adData_).toBuilder();
-            }
-            adData_ =
-                input.readMessage(com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo) adData_);
-              adData_ = subBuilder.buildPartial();
-            }
-            adDataCase_ = 52;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000040) != 0)) {
-        urlCustomParameters_ = java.util.Collections.unmodifiableList(urlCustomParameters_);
-      }
-      if (((mutable_bitField0_ & 0x00000200) != 0)) {
-        urlCollections_ = java.util.Collections.unmodifiableList(urlCollections_);
-      }
-      if (((mutable_bitField0_ & 0x00000004) != 0)) {
-        finalAppUrls_ = java.util.Collections.unmodifiableList(finalAppUrls_);
-      }
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
-        finalUrls_ = finalUrls_.getUnmodifiableView();
-      }
-      if (((mutable_bitField0_ & 0x00000008) != 0)) {
-        finalMobileUrls_ = finalMobileUrls_.getUnmodifiableView();
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v10.resources.AdProto.internal_static_google_ads_googleads_v10_resources_Ad_descriptor;
@@ -567,7 +73,7 @@ private static final long serialVersionUID = 0L;
     HOTEL_AD(15),
     SHOPPING_SMART_AD(17),
     SHOPPING_PRODUCT_AD(18),
-    GMAIL_AD(21),
+    @java.lang.Deprecated GMAIL_AD(21),
     IMAGE_AD(22),
     VIDEO_AD(24),
     VIDEO_RESPONSIVE_AD(39),
@@ -1014,7 +520,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The list of mappings that can be used to substitute custom parameter tags
    * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
-   * For mutates, please use url custom parameter operations.
+   * For mutates, use url custom parameter operations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.CustomParameter url_custom_parameters = 10;</code>
@@ -1027,7 +533,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The list of mappings that can be used to substitute custom parameter tags
    * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
-   * For mutates, please use url custom parameter operations.
+   * For mutates, use url custom parameter operations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.CustomParameter url_custom_parameters = 10;</code>
@@ -1041,7 +547,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The list of mappings that can be used to substitute custom parameter tags
    * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
-   * For mutates, please use url custom parameter operations.
+   * For mutates, use url custom parameter operations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.CustomParameter url_custom_parameters = 10;</code>
@@ -1054,7 +560,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The list of mappings that can be used to substitute custom parameter tags
    * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
-   * For mutates, please use url custom parameter operations.
+   * For mutates, use url custom parameter operations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.CustomParameter url_custom_parameters = 10;</code>
@@ -1067,7 +573,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The list of mappings that can be used to substitute custom parameter tags
    * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
-   * For mutates, please use url custom parameter operations.
+   * For mutates, use url custom parameter operations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.CustomParameter url_custom_parameters = 10;</code>
@@ -1203,8 +709,8 @@ private static final long serialVersionUID = 0L;
    * The device preference for the ad. You can only specify a preference for
    * mobile devices. When this preference is set the ad will be preferred over
    * other ads when being displayed on a mobile device. The ad can still be
-   * displayed on other device types, e.g. if no other ads are available.
-   * If unspecified (no device preference), all devices are targeted.
+   * displayed on other device types, for example, if no other ads are
+   * available. If unspecified (no device preference), all devices are targeted.
    * This is only supported by some ad types.
    * </pre>
    *
@@ -1219,8 +725,8 @@ private static final long serialVersionUID = 0L;
    * The device preference for the ad. You can only specify a preference for
    * mobile devices. When this preference is set the ad will be preferred over
    * other ads when being displayed on a mobile device. The ad can still be
-   * displayed on other device types, e.g. if no other ads are available.
-   * If unspecified (no device preference), all devices are targeted.
+   * displayed on other device types, for example, if no other ads are
+   * available. If unspecified (no device preference), all devices are targeted.
    * This is only supported by some ad types.
    * </pre>
    *
@@ -1713,11 +1219,13 @@ private static final long serialVersionUID = 0L;
    * Immutable. Details pertaining to a Gmail ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v10.common.GmailAdInfo gmail_ad = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>.google.ads.googleads.v10.common.GmailAdInfo gmail_ad = 21 [deprecated = true, (.google.api.field_behavior) = IMMUTABLE];</code>
+   * @deprecated google.ads.googleads.v10.resources.Ad.gmail_ad is deprecated.
+   *     See google/ads/googleads/v10/resources/ad.proto;l=145
    * @return Whether the gmailAd field is set.
    */
   @java.lang.Override
-  public boolean hasGmailAd() {
+  @java.lang.Deprecated public boolean hasGmailAd() {
     return adDataCase_ == 21;
   }
   /**
@@ -1725,11 +1233,13 @@ private static final long serialVersionUID = 0L;
    * Immutable. Details pertaining to a Gmail ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v10.common.GmailAdInfo gmail_ad = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>.google.ads.googleads.v10.common.GmailAdInfo gmail_ad = 21 [deprecated = true, (.google.api.field_behavior) = IMMUTABLE];</code>
+   * @deprecated google.ads.googleads.v10.resources.Ad.gmail_ad is deprecated.
+   *     See google/ads/googleads/v10/resources/ad.proto;l=145
    * @return The gmailAd.
    */
   @java.lang.Override
-  public com.google.ads.googleads.v10.common.GmailAdInfo getGmailAd() {
+  @java.lang.Deprecated public com.google.ads.googleads.v10.common.GmailAdInfo getGmailAd() {
     if (adDataCase_ == 21) {
        return (com.google.ads.googleads.v10.common.GmailAdInfo) adData_;
     }
@@ -1740,10 +1250,10 @@ private static final long serialVersionUID = 0L;
    * Immutable. Details pertaining to a Gmail ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v10.common.GmailAdInfo gmail_ad = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>.google.ads.googleads.v10.common.GmailAdInfo gmail_ad = 21 [deprecated = true, (.google.api.field_behavior) = IMMUTABLE];</code>
    */
   @java.lang.Override
-  public com.google.ads.googleads.v10.common.GmailAdInfoOrBuilder getGmailAdOrBuilder() {
+  @java.lang.Deprecated public com.google.ads.googleads.v10.common.GmailAdInfoOrBuilder getGmailAdOrBuilder() {
     if (adDataCase_ == 21) {
        return (com.google.ads.googleads.v10.common.GmailAdInfo) adData_;
     }
@@ -2569,7 +2079,7 @@ private static final long serialVersionUID = 0L;
     if (adDataCase_ == 52) {
       output.writeMessage(52, (com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo) adData_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -2737,7 +2247,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(52, (com.google.ads.googleads.v10.common.DiscoveryCarouselAdInfo) adData_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -2898,7 +2408,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -3063,7 +2573,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -3184,21 +2694,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v10.resources.Ad.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getFinalAppUrlsFieldBuilder();
-        getUrlCustomParametersFieldBuilder();
-        getUrlCollectionsFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -3211,10 +2713,11 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000002);
       if (finalAppUrlsBuilder_ == null) {
         finalAppUrls_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
       } else {
+        finalAppUrls_ = null;
         finalAppUrlsBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000004);
       finalMobileUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       bitField0_ = (bitField0_ & ~0x00000008);
       trackingUrlTemplate_ = "";
@@ -3223,10 +2726,11 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000020);
       if (urlCustomParametersBuilder_ == null) {
         urlCustomParameters_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000040);
       } else {
+        urlCustomParameters_ = null;
         urlCustomParametersBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000040);
       displayUrl_ = "";
       bitField0_ = (bitField0_ & ~0x00000080);
       type_ = 0;
@@ -3237,14 +2741,87 @@ private static final long serialVersionUID = 0L;
 
       if (urlCollectionsBuilder_ == null) {
         urlCollections_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000200);
       } else {
+        urlCollections_ = null;
         urlCollectionsBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000200);
       name_ = "";
       bitField0_ = (bitField0_ & ~0x00000400);
       systemManagedResourceSource_ = 0;
 
+      if (textAdBuilder_ != null) {
+        textAdBuilder_.clear();
+      }
+      if (expandedTextAdBuilder_ != null) {
+        expandedTextAdBuilder_.clear();
+      }
+      if (callAdBuilder_ != null) {
+        callAdBuilder_.clear();
+      }
+      if (expandedDynamicSearchAdBuilder_ != null) {
+        expandedDynamicSearchAdBuilder_.clear();
+      }
+      if (hotelAdBuilder_ != null) {
+        hotelAdBuilder_.clear();
+      }
+      if (shoppingSmartAdBuilder_ != null) {
+        shoppingSmartAdBuilder_.clear();
+      }
+      if (shoppingProductAdBuilder_ != null) {
+        shoppingProductAdBuilder_.clear();
+      }
+      if (gmailAdBuilder_ != null) {
+        gmailAdBuilder_.clear();
+      }
+      if (imageAdBuilder_ != null) {
+        imageAdBuilder_.clear();
+      }
+      if (videoAdBuilder_ != null) {
+        videoAdBuilder_.clear();
+      }
+      if (videoResponsiveAdBuilder_ != null) {
+        videoResponsiveAdBuilder_.clear();
+      }
+      if (responsiveSearchAdBuilder_ != null) {
+        responsiveSearchAdBuilder_.clear();
+      }
+      if (legacyResponsiveDisplayAdBuilder_ != null) {
+        legacyResponsiveDisplayAdBuilder_.clear();
+      }
+      if (appAdBuilder_ != null) {
+        appAdBuilder_.clear();
+      }
+      if (legacyAppInstallAdBuilder_ != null) {
+        legacyAppInstallAdBuilder_.clear();
+      }
+      if (responsiveDisplayAdBuilder_ != null) {
+        responsiveDisplayAdBuilder_.clear();
+      }
+      if (localAdBuilder_ != null) {
+        localAdBuilder_.clear();
+      }
+      if (displayUploadAdBuilder_ != null) {
+        displayUploadAdBuilder_.clear();
+      }
+      if (appEngagementAdBuilder_ != null) {
+        appEngagementAdBuilder_.clear();
+      }
+      if (shoppingComparisonListingAdBuilder_ != null) {
+        shoppingComparisonListingAdBuilder_.clear();
+      }
+      if (smartCampaignAdBuilder_ != null) {
+        smartCampaignAdBuilder_.clear();
+      }
+      if (appPreRegistrationAdBuilder_ != null) {
+        appPreRegistrationAdBuilder_.clear();
+      }
+      if (discoveryMultiAssetAdBuilder_ != null) {
+        discoveryMultiAssetAdBuilder_.clear();
+      }
+      if (discoveryCarouselAdBuilder_ != null) {
+        discoveryCarouselAdBuilder_.clear();
+      }
       adDataCase_ = 0;
       adData_ = null;
       return this;
@@ -3796,7 +3373,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -3811,17 +3388,299 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.ads.googleads.v10.resources.Ad parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 40: {
+              type_ = input.readEnum();
+
+              break;
+            } // case 40
+            case 50: {
+              input.readMessage(
+                  getTextAdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              adDataCase_ = 6;
+              break;
+            } // case 50
+            case 58: {
+              input.readMessage(
+                  getExpandedTextAdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              adDataCase_ = 7;
+              break;
+            } // case 58
+            case 82: {
+              com.google.ads.googleads.v10.common.CustomParameter m =
+                  input.readMessage(
+                      com.google.ads.googleads.v10.common.CustomParameter.parser(),
+                      extensionRegistry);
+              if (urlCustomParametersBuilder_ == null) {
+                ensureUrlCustomParametersIsMutable();
+                urlCustomParameters_.add(m);
+              } else {
+                urlCustomParametersBuilder_.addMessage(m);
+              }
+              break;
+            } // case 82
+            case 114: {
+              input.readMessage(
+                  getExpandedDynamicSearchAdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              adDataCase_ = 14;
+              break;
+            } // case 114
+            case 122: {
+              input.readMessage(
+                  getHotelAdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              adDataCase_ = 15;
+              break;
+            } // case 122
+            case 138: {
+              input.readMessage(
+                  getShoppingSmartAdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              adDataCase_ = 17;
+              break;
+            } // case 138
+            case 146: {
+              input.readMessage(
+                  getShoppingProductAdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              adDataCase_ = 18;
+              break;
+            } // case 146
+            case 160: {
+              devicePreference_ = input.readEnum();
+
+              break;
+            } // case 160
+            case 170: {
+              input.readMessage(
+                  getGmailAdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              adDataCase_ = 21;
+              break;
+            } // case 170
+            case 178: {
+              input.readMessage(
+                  getImageAdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              adDataCase_ = 22;
+              break;
+            } // case 178
+            case 194: {
+              input.readMessage(
+                  getVideoAdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              adDataCase_ = 24;
+              break;
+            } // case 194
+            case 202: {
+              input.readMessage(
+                  getResponsiveSearchAdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              adDataCase_ = 25;
+              break;
+            } // case 202
+            case 210: {
+              com.google.ads.googleads.v10.common.UrlCollection m =
+                  input.readMessage(
+                      com.google.ads.googleads.v10.common.UrlCollection.parser(),
+                      extensionRegistry);
+              if (urlCollectionsBuilder_ == null) {
+                ensureUrlCollectionsIsMutable();
+                urlCollections_.add(m);
+              } else {
+                urlCollectionsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 210
+            case 216: {
+              systemManagedResourceSource_ = input.readEnum();
+
+              break;
+            } // case 216
+            case 226: {
+              input.readMessage(
+                  getLegacyResponsiveDisplayAdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              adDataCase_ = 28;
+              break;
+            } // case 226
+            case 234: {
+              input.readMessage(
+                  getAppAdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              adDataCase_ = 29;
+              break;
+            } // case 234
+            case 242: {
+              input.readMessage(
+                  getLegacyAppInstallAdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              adDataCase_ = 30;
+              break;
+            } // case 242
+            case 250: {
+              input.readMessage(
+                  getResponsiveDisplayAdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              adDataCase_ = 31;
+              break;
+            } // case 250
+            case 258: {
+              input.readMessage(
+                  getLocalAdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              adDataCase_ = 32;
+              break;
+            } // case 258
+            case 266: {
+              input.readMessage(
+                  getDisplayUploadAdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              adDataCase_ = 33;
+              break;
+            } // case 266
+            case 274: {
+              input.readMessage(
+                  getAppEngagementAdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              adDataCase_ = 34;
+              break;
+            } // case 274
+            case 282: {
+              com.google.ads.googleads.v10.common.FinalAppUrl m =
+                  input.readMessage(
+                      com.google.ads.googleads.v10.common.FinalAppUrl.parser(),
+                      extensionRegistry);
+              if (finalAppUrlsBuilder_ == null) {
+                ensureFinalAppUrlsIsMutable();
+                finalAppUrls_.add(m);
+              } else {
+                finalAppUrlsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 282
+            case 290: {
+              input.readMessage(
+                  getShoppingComparisonListingAdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              adDataCase_ = 36;
+              break;
+            } // case 290
+            case 298: {
+              resourceName_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 298
+            case 314: {
+              input.readMessage(
+                  getVideoResponsiveAdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              adDataCase_ = 39;
+              break;
+            } // case 314
+            case 320: {
+              id_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 320
+            case 330: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureFinalUrlsIsMutable();
+              finalUrls_.add(s);
+              break;
+            } // case 330
+            case 338: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureFinalMobileUrlsIsMutable();
+              finalMobileUrls_.add(s);
+              break;
+            } // case 338
+            case 346: {
+              trackingUrlTemplate_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 346
+            case 354: {
+              finalUrlSuffix_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 354
+            case 362: {
+              displayUrl_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 362
+            case 368: {
+              addedByGoogleAds_ = input.readBool();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 368
+            case 378: {
+              name_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 378
+            case 386: {
+              input.readMessage(
+                  getSmartCampaignAdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              adDataCase_ = 48;
+              break;
+            } // case 386
+            case 394: {
+              input.readMessage(
+                  getCallAdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              adDataCase_ = 49;
+              break;
+            } // case 394
+            case 402: {
+              input.readMessage(
+                  getAppPreRegistrationAdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              adDataCase_ = 50;
+              break;
+            } // case 402
+            case 410: {
+              input.readMessage(
+                  getDiscoveryMultiAssetAdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              adDataCase_ = 51;
+              break;
+            } // case 410
+            case 418: {
+              input.readMessage(
+                  getDiscoveryCarouselAdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              adDataCase_ = 52;
+              break;
+            } // case 418
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v10.resources.Ad) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int adDataCase_ = 0;
@@ -4872,7 +4731,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of mappings that can be used to substitute custom parameter tags
      * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
-     * For mutates, please use url custom parameter operations.
+     * For mutates, use url custom parameter operations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.common.CustomParameter url_custom_parameters = 10;</code>
@@ -4888,7 +4747,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of mappings that can be used to substitute custom parameter tags
      * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
-     * For mutates, please use url custom parameter operations.
+     * For mutates, use url custom parameter operations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.common.CustomParameter url_custom_parameters = 10;</code>
@@ -4904,7 +4763,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of mappings that can be used to substitute custom parameter tags
      * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
-     * For mutates, please use url custom parameter operations.
+     * For mutates, use url custom parameter operations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.common.CustomParameter url_custom_parameters = 10;</code>
@@ -4920,7 +4779,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of mappings that can be used to substitute custom parameter tags
      * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
-     * For mutates, please use url custom parameter operations.
+     * For mutates, use url custom parameter operations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.common.CustomParameter url_custom_parameters = 10;</code>
@@ -4943,7 +4802,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of mappings that can be used to substitute custom parameter tags
      * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
-     * For mutates, please use url custom parameter operations.
+     * For mutates, use url custom parameter operations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.common.CustomParameter url_custom_parameters = 10;</code>
@@ -4963,7 +4822,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of mappings that can be used to substitute custom parameter tags
      * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
-     * For mutates, please use url custom parameter operations.
+     * For mutates, use url custom parameter operations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.common.CustomParameter url_custom_parameters = 10;</code>
@@ -4985,7 +4844,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of mappings that can be used to substitute custom parameter tags
      * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
-     * For mutates, please use url custom parameter operations.
+     * For mutates, use url custom parameter operations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.common.CustomParameter url_custom_parameters = 10;</code>
@@ -5008,7 +4867,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of mappings that can be used to substitute custom parameter tags
      * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
-     * For mutates, please use url custom parameter operations.
+     * For mutates, use url custom parameter operations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.common.CustomParameter url_custom_parameters = 10;</code>
@@ -5028,7 +4887,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of mappings that can be used to substitute custom parameter tags
      * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
-     * For mutates, please use url custom parameter operations.
+     * For mutates, use url custom parameter operations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.common.CustomParameter url_custom_parameters = 10;</code>
@@ -5048,7 +4907,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of mappings that can be used to substitute custom parameter tags
      * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
-     * For mutates, please use url custom parameter operations.
+     * For mutates, use url custom parameter operations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.common.CustomParameter url_custom_parameters = 10;</code>
@@ -5069,7 +4928,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of mappings that can be used to substitute custom parameter tags
      * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
-     * For mutates, please use url custom parameter operations.
+     * For mutates, use url custom parameter operations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.common.CustomParameter url_custom_parameters = 10;</code>
@@ -5088,7 +4947,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of mappings that can be used to substitute custom parameter tags
      * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
-     * For mutates, please use url custom parameter operations.
+     * For mutates, use url custom parameter operations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.common.CustomParameter url_custom_parameters = 10;</code>
@@ -5107,7 +4966,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of mappings that can be used to substitute custom parameter tags
      * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
-     * For mutates, please use url custom parameter operations.
+     * For mutates, use url custom parameter operations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.common.CustomParameter url_custom_parameters = 10;</code>
@@ -5120,7 +4979,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of mappings that can be used to substitute custom parameter tags
      * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
-     * For mutates, please use url custom parameter operations.
+     * For mutates, use url custom parameter operations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.common.CustomParameter url_custom_parameters = 10;</code>
@@ -5136,7 +4995,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of mappings that can be used to substitute custom parameter tags
      * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
-     * For mutates, please use url custom parameter operations.
+     * For mutates, use url custom parameter operations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.common.CustomParameter url_custom_parameters = 10;</code>
@@ -5153,7 +5012,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of mappings that can be used to substitute custom parameter tags
      * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
-     * For mutates, please use url custom parameter operations.
+     * For mutates, use url custom parameter operations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.common.CustomParameter url_custom_parameters = 10;</code>
@@ -5166,7 +5025,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of mappings that can be used to substitute custom parameter tags
      * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
-     * For mutates, please use url custom parameter operations.
+     * For mutates, use url custom parameter operations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.common.CustomParameter url_custom_parameters = 10;</code>
@@ -5180,7 +5039,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The list of mappings that can be used to substitute custom parameter tags
      * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
-     * For mutates, please use url custom parameter operations.
+     * For mutates, use url custom parameter operations.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.common.CustomParameter url_custom_parameters = 10;</code>
@@ -5458,8 +5317,8 @@ private static final long serialVersionUID = 0L;
      * The device preference for the ad. You can only specify a preference for
      * mobile devices. When this preference is set the ad will be preferred over
      * other ads when being displayed on a mobile device. The ad can still be
-     * displayed on other device types, e.g. if no other ads are available.
-     * If unspecified (no device preference), all devices are targeted.
+     * displayed on other device types, for example, if no other ads are
+     * available. If unspecified (no device preference), all devices are targeted.
      * This is only supported by some ad types.
      * </pre>
      *
@@ -5474,8 +5333,8 @@ private static final long serialVersionUID = 0L;
      * The device preference for the ad. You can only specify a preference for
      * mobile devices. When this preference is set the ad will be preferred over
      * other ads when being displayed on a mobile device. The ad can still be
-     * displayed on other device types, e.g. if no other ads are available.
-     * If unspecified (no device preference), all devices are targeted.
+     * displayed on other device types, for example, if no other ads are
+     * available. If unspecified (no device preference), all devices are targeted.
      * This is only supported by some ad types.
      * </pre>
      *
@@ -5494,8 +5353,8 @@ private static final long serialVersionUID = 0L;
      * The device preference for the ad. You can only specify a preference for
      * mobile devices. When this preference is set the ad will be preferred over
      * other ads when being displayed on a mobile device. The ad can still be
-     * displayed on other device types, e.g. if no other ads are available.
-     * If unspecified (no device preference), all devices are targeted.
+     * displayed on other device types, for example, if no other ads are
+     * available. If unspecified (no device preference), all devices are targeted.
      * This is only supported by some ad types.
      * </pre>
      *
@@ -5513,8 +5372,8 @@ private static final long serialVersionUID = 0L;
      * The device preference for the ad. You can only specify a preference for
      * mobile devices. When this preference is set the ad will be preferred over
      * other ads when being displayed on a mobile device. The ad can still be
-     * displayed on other device types, e.g. if no other ads are available.
-     * If unspecified (no device preference), all devices are targeted.
+     * displayed on other device types, for example, if no other ads are
+     * available. If unspecified (no device preference), all devices are targeted.
      * This is only supported by some ad types.
      * </pre>
      *
@@ -5536,8 +5395,8 @@ private static final long serialVersionUID = 0L;
      * The device preference for the ad. You can only specify a preference for
      * mobile devices. When this preference is set the ad will be preferred over
      * other ads when being displayed on a mobile device. The ad can still be
-     * displayed on other device types, e.g. if no other ads are available.
-     * If unspecified (no device preference), all devices are targeted.
+     * displayed on other device types, for example, if no other ads are
+     * available. If unspecified (no device preference), all devices are targeted.
      * This is only supported by some ad types.
      * </pre>
      *
@@ -7374,11 +7233,13 @@ private static final long serialVersionUID = 0L;
      * Immutable. Details pertaining to a Gmail ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v10.common.GmailAdInfo gmail_ad = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>.google.ads.googleads.v10.common.GmailAdInfo gmail_ad = 21 [deprecated = true, (.google.api.field_behavior) = IMMUTABLE];</code>
+     * @deprecated google.ads.googleads.v10.resources.Ad.gmail_ad is deprecated.
+     *     See google/ads/googleads/v10/resources/ad.proto;l=145
      * @return Whether the gmailAd field is set.
      */
     @java.lang.Override
-    public boolean hasGmailAd() {
+    @java.lang.Deprecated public boolean hasGmailAd() {
       return adDataCase_ == 21;
     }
     /**
@@ -7386,11 +7247,13 @@ private static final long serialVersionUID = 0L;
      * Immutable. Details pertaining to a Gmail ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v10.common.GmailAdInfo gmail_ad = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>.google.ads.googleads.v10.common.GmailAdInfo gmail_ad = 21 [deprecated = true, (.google.api.field_behavior) = IMMUTABLE];</code>
+     * @deprecated google.ads.googleads.v10.resources.Ad.gmail_ad is deprecated.
+     *     See google/ads/googleads/v10/resources/ad.proto;l=145
      * @return The gmailAd.
      */
     @java.lang.Override
-    public com.google.ads.googleads.v10.common.GmailAdInfo getGmailAd() {
+    @java.lang.Deprecated public com.google.ads.googleads.v10.common.GmailAdInfo getGmailAd() {
       if (gmailAdBuilder_ == null) {
         if (adDataCase_ == 21) {
           return (com.google.ads.googleads.v10.common.GmailAdInfo) adData_;
@@ -7408,9 +7271,9 @@ private static final long serialVersionUID = 0L;
      * Immutable. Details pertaining to a Gmail ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v10.common.GmailAdInfo gmail_ad = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>.google.ads.googleads.v10.common.GmailAdInfo gmail_ad = 21 [deprecated = true, (.google.api.field_behavior) = IMMUTABLE];</code>
      */
-    public Builder setGmailAd(com.google.ads.googleads.v10.common.GmailAdInfo value) {
+    @java.lang.Deprecated public Builder setGmailAd(com.google.ads.googleads.v10.common.GmailAdInfo value) {
       if (gmailAdBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -7428,9 +7291,9 @@ private static final long serialVersionUID = 0L;
      * Immutable. Details pertaining to a Gmail ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v10.common.GmailAdInfo gmail_ad = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>.google.ads.googleads.v10.common.GmailAdInfo gmail_ad = 21 [deprecated = true, (.google.api.field_behavior) = IMMUTABLE];</code>
      */
-    public Builder setGmailAd(
+    @java.lang.Deprecated public Builder setGmailAd(
         com.google.ads.googleads.v10.common.GmailAdInfo.Builder builderForValue) {
       if (gmailAdBuilder_ == null) {
         adData_ = builderForValue.build();
@@ -7446,9 +7309,9 @@ private static final long serialVersionUID = 0L;
      * Immutable. Details pertaining to a Gmail ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v10.common.GmailAdInfo gmail_ad = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>.google.ads.googleads.v10.common.GmailAdInfo gmail_ad = 21 [deprecated = true, (.google.api.field_behavior) = IMMUTABLE];</code>
      */
-    public Builder mergeGmailAd(com.google.ads.googleads.v10.common.GmailAdInfo value) {
+    @java.lang.Deprecated public Builder mergeGmailAd(com.google.ads.googleads.v10.common.GmailAdInfo value) {
       if (gmailAdBuilder_ == null) {
         if (adDataCase_ == 21 &&
             adData_ != com.google.ads.googleads.v10.common.GmailAdInfo.getDefaultInstance()) {
@@ -7473,9 +7336,9 @@ private static final long serialVersionUID = 0L;
      * Immutable. Details pertaining to a Gmail ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v10.common.GmailAdInfo gmail_ad = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>.google.ads.googleads.v10.common.GmailAdInfo gmail_ad = 21 [deprecated = true, (.google.api.field_behavior) = IMMUTABLE];</code>
      */
-    public Builder clearGmailAd() {
+    @java.lang.Deprecated public Builder clearGmailAd() {
       if (gmailAdBuilder_ == null) {
         if (adDataCase_ == 21) {
           adDataCase_ = 0;
@@ -7496,9 +7359,9 @@ private static final long serialVersionUID = 0L;
      * Immutable. Details pertaining to a Gmail ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v10.common.GmailAdInfo gmail_ad = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>.google.ads.googleads.v10.common.GmailAdInfo gmail_ad = 21 [deprecated = true, (.google.api.field_behavior) = IMMUTABLE];</code>
      */
-    public com.google.ads.googleads.v10.common.GmailAdInfo.Builder getGmailAdBuilder() {
+    @java.lang.Deprecated public com.google.ads.googleads.v10.common.GmailAdInfo.Builder getGmailAdBuilder() {
       return getGmailAdFieldBuilder().getBuilder();
     }
     /**
@@ -7506,10 +7369,10 @@ private static final long serialVersionUID = 0L;
      * Immutable. Details pertaining to a Gmail ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v10.common.GmailAdInfo gmail_ad = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>.google.ads.googleads.v10.common.GmailAdInfo gmail_ad = 21 [deprecated = true, (.google.api.field_behavior) = IMMUTABLE];</code>
      */
     @java.lang.Override
-    public com.google.ads.googleads.v10.common.GmailAdInfoOrBuilder getGmailAdOrBuilder() {
+    @java.lang.Deprecated public com.google.ads.googleads.v10.common.GmailAdInfoOrBuilder getGmailAdOrBuilder() {
       if ((adDataCase_ == 21) && (gmailAdBuilder_ != null)) {
         return gmailAdBuilder_.getMessageOrBuilder();
       } else {
@@ -7524,7 +7387,7 @@ private static final long serialVersionUID = 0L;
      * Immutable. Details pertaining to a Gmail ad.
      * </pre>
      *
-     * <code>.google.ads.googleads.v10.common.GmailAdInfo gmail_ad = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>.google.ads.googleads.v10.common.GmailAdInfo gmail_ad = 21 [deprecated = true, (.google.api.field_behavior) = IMMUTABLE];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         com.google.ads.googleads.v10.common.GmailAdInfo, com.google.ads.googleads.v10.common.GmailAdInfo.Builder, com.google.ads.googleads.v10.common.GmailAdInfoOrBuilder> 
@@ -10425,7 +10288,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new Ad(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

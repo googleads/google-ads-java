@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Google LLC
+ * Copyright 2022 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,6 @@ import com.google.ads.googleads.v10.services.stub.ExperimentServiceStub;
 import com.google.ads.googleads.v10.services.stub.ExperimentServiceStubSettings;
 import com.google.api.core.ApiFuture;
 import com.google.api.core.ApiFutures;
-import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.longrunning.OperationFuture;
 import com.google.api.gax.paging.AbstractFixedSizeCollection;
@@ -48,6 +47,11 @@ import javax.annotation.Generated;
  * calls that map to API methods. Sample code to get started:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (ExperimentServiceClient experimentServiceClient = ExperimentServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
  *   List<ExperimentOperation> operations = new ArrayList<>();
@@ -64,13 +68,13 @@ import javax.annotation.Generated;
  * methods:
  *
  * <ol>
- *   <li> A "flattened" method. With this type of method, the fields of the request type have been
+ *   <li>A "flattened" method. With this type of method, the fields of the request type have been
  *       converted into function parameters. It may be the case that not all fields are available as
  *       parameters, and not every API method will have a flattened method entry point.
- *   <li> A "request object" method. This type of method only takes one parameter, a request object,
+ *   <li>A "request object" method. This type of method only takes one parameter, a request object,
  *       which must be constructed before the call. Not every API method will have a request object
  *       method.
- *   <li> A "callable" method. This type of method takes no parameters and returns an immutable API
+ *   <li>A "callable" method. This type of method takes no parameters and returns an immutable API
  *       callable object, which can be used to initiate calls to the service.
  * </ol>
  *
@@ -86,6 +90,11 @@ import javax.annotation.Generated;
  * <p>To customize credentials:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * ExperimentServiceSettings experimentServiceSettings =
  *     ExperimentServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
@@ -97,6 +106,11 @@ import javax.annotation.Generated;
  * <p>To customize the endpoint:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * ExperimentServiceSettings experimentServiceSettings =
  *     ExperimentServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * ExperimentServiceClient experimentServiceClient =
@@ -129,7 +143,6 @@ public class ExperimentServiceClient implements BackgroundResource {
    * Constructs an instance of ExperimentServiceClient, using the given stub for making calls. This
    * is for advanced usage - prefer using create(ExperimentServiceSettings).
    */
-  @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final ExperimentServiceClient create(ExperimentServiceStub stub) {
     return new ExperimentServiceClient(stub);
   }
@@ -145,7 +158,6 @@ public class ExperimentServiceClient implements BackgroundResource {
     this.operationsClient = OperationsClient.create(this.stub.getOperationsStub());
   }
 
-  @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   protected ExperimentServiceClient(ExperimentServiceStub stub) {
     this.settings = null;
     this.stub = stub;
@@ -156,7 +168,6 @@ public class ExperimentServiceClient implements BackgroundResource {
     return settings;
   }
 
-  @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public ExperimentServiceStub getStub() {
     return stub;
   }
@@ -179,6 +190,11 @@ public class ExperimentServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (ExperimentServiceClient experimentServiceClient = ExperimentServiceClient.create()) {
    *   String customerId = "customerId-1581184615";
    *   List<ExperimentOperation> operations = new ArrayList<>();
@@ -211,6 +227,11 @@ public class ExperimentServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (ExperimentServiceClient experimentServiceClient = ExperimentServiceClient.create()) {
    *   MutateExperimentsRequest request =
    *       MutateExperimentsRequest.newBuilder()
@@ -240,6 +261,11 @@ public class ExperimentServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (ExperimentServiceClient experimentServiceClient = ExperimentServiceClient.create()) {
    *   MutateExperimentsRequest request =
    *       MutateExperimentsRequest.newBuilder()
@@ -271,6 +297,11 @@ public class ExperimentServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (ExperimentServiceClient experimentServiceClient = ExperimentServiceClient.create()) {
    *   ExperimentName experiment = ExperimentName.of("[CUSTOMER_ID]", "[TRIAL_ID]");
    *   experimentServiceClient.endExperiment(experiment);
@@ -299,6 +330,11 @@ public class ExperimentServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (ExperimentServiceClient experimentServiceClient = ExperimentServiceClient.create()) {
    *   String experiment = ExperimentName.of("[CUSTOMER_ID]", "[TRIAL_ID]").toString();
    *   experimentServiceClient.endExperiment(experiment);
@@ -325,6 +361,11 @@ public class ExperimentServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (ExperimentServiceClient experimentServiceClient = ExperimentServiceClient.create()) {
    *   EndExperimentRequest request =
    *       EndExperimentRequest.newBuilder()
@@ -353,6 +394,11 @@ public class ExperimentServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (ExperimentServiceClient experimentServiceClient = ExperimentServiceClient.create()) {
    *   EndExperimentRequest request =
    *       EndExperimentRequest.newBuilder()
@@ -380,6 +426,11 @@ public class ExperimentServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (ExperimentServiceClient experimentServiceClient = ExperimentServiceClient.create()) {
    *   ExperimentName resourceName = ExperimentName.of("[CUSTOMER_ID]", "[TRIAL_ID]");
    *   for (Status element :
@@ -413,6 +464,11 @@ public class ExperimentServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (ExperimentServiceClient experimentServiceClient = ExperimentServiceClient.create()) {
    *   String resourceName = ExperimentName.of("[CUSTOMER_ID]", "[TRIAL_ID]").toString();
    *   for (Status element :
@@ -444,6 +500,11 @@ public class ExperimentServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (ExperimentServiceClient experimentServiceClient = ExperimentServiceClient.create()) {
    *   ListExperimentAsyncErrorsRequest request =
    *       ListExperimentAsyncErrorsRequest.newBuilder()
@@ -477,6 +538,11 @@ public class ExperimentServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (ExperimentServiceClient experimentServiceClient = ExperimentServiceClient.create()) {
    *   ListExperimentAsyncErrorsRequest request =
    *       ListExperimentAsyncErrorsRequest.newBuilder()
@@ -510,6 +576,11 @@ public class ExperimentServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (ExperimentServiceClient experimentServiceClient = ExperimentServiceClient.create()) {
    *   ListExperimentAsyncErrorsRequest request =
    *       ListExperimentAsyncErrorsRequest.newBuilder()
@@ -520,7 +591,7 @@ public class ExperimentServiceClient implements BackgroundResource {
    *   while (true) {
    *     ListExperimentAsyncErrorsResponse response =
    *         experimentServiceClient.listExperimentAsyncErrorsCallable().call(request);
-   *     for (Status element : response.getResponsesList()) {
+   *     for (Status element : response.getErrorsList()) {
    *       // doThingsWith(element);
    *     }
    *     String nextPageToken = response.getNextPageToken();
@@ -548,6 +619,11 @@ public class ExperimentServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (ExperimentServiceClient experimentServiceClient = ExperimentServiceClient.create()) {
    *   ExperimentName experiment = ExperimentName.of("[CUSTOMER_ID]", "[TRIAL_ID]");
    *   List<CampaignBudgetMapping> campaignBudgetMappings = new ArrayList<>();
@@ -581,6 +657,11 @@ public class ExperimentServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (ExperimentServiceClient experimentServiceClient = ExperimentServiceClient.create()) {
    *   String experiment = ExperimentName.of("[CUSTOMER_ID]", "[TRIAL_ID]").toString();
    *   List<CampaignBudgetMapping> campaignBudgetMappings = new ArrayList<>();
@@ -614,6 +695,11 @@ public class ExperimentServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (ExperimentServiceClient experimentServiceClient = ExperimentServiceClient.create()) {
    *   GraduateExperimentRequest request =
    *       GraduateExperimentRequest.newBuilder()
@@ -642,6 +728,11 @@ public class ExperimentServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (ExperimentServiceClient experimentServiceClient = ExperimentServiceClient.create()) {
    *   GraduateExperimentRequest request =
    *       GraduateExperimentRequest.newBuilder()
@@ -677,6 +768,11 @@ public class ExperimentServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (ExperimentServiceClient experimentServiceClient = ExperimentServiceClient.create()) {
    *   ExperimentName resourceName = ExperimentName.of("[CUSTOMER_ID]", "[TRIAL_ID]");
    *   experimentServiceClient.scheduleExperimentAsync(resourceName).get();
@@ -712,6 +808,11 @@ public class ExperimentServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (ExperimentServiceClient experimentServiceClient = ExperimentServiceClient.create()) {
    *   String resourceName = ExperimentName.of("[CUSTOMER_ID]", "[TRIAL_ID]").toString();
    *   experimentServiceClient.scheduleExperimentAsync(resourceName).get();
@@ -745,6 +846,11 @@ public class ExperimentServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (ExperimentServiceClient experimentServiceClient = ExperimentServiceClient.create()) {
    *   ScheduleExperimentRequest request =
    *       ScheduleExperimentRequest.newBuilder()
@@ -780,6 +886,11 @@ public class ExperimentServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (ExperimentServiceClient experimentServiceClient = ExperimentServiceClient.create()) {
    *   ScheduleExperimentRequest request =
    *       ScheduleExperimentRequest.newBuilder()
@@ -815,6 +926,11 @@ public class ExperimentServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (ExperimentServiceClient experimentServiceClient = ExperimentServiceClient.create()) {
    *   ScheduleExperimentRequest request =
    *       ScheduleExperimentRequest.newBuilder()
@@ -846,6 +962,11 @@ public class ExperimentServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (ExperimentServiceClient experimentServiceClient = ExperimentServiceClient.create()) {
    *   ExperimentName resourceName = ExperimentName.of("[CUSTOMER_ID]", "[TRIAL_ID]");
    *   experimentServiceClient.promoteExperimentAsync(resourceName).get();
@@ -878,6 +999,11 @@ public class ExperimentServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (ExperimentServiceClient experimentServiceClient = ExperimentServiceClient.create()) {
    *   String resourceName = ExperimentName.of("[CUSTOMER_ID]", "[TRIAL_ID]").toString();
    *   experimentServiceClient.promoteExperimentAsync(resourceName).get();
@@ -908,6 +1034,11 @@ public class ExperimentServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (ExperimentServiceClient experimentServiceClient = ExperimentServiceClient.create()) {
    *   PromoteExperimentRequest request =
    *       PromoteExperimentRequest.newBuilder()
@@ -940,6 +1071,11 @@ public class ExperimentServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (ExperimentServiceClient experimentServiceClient = ExperimentServiceClient.create()) {
    *   PromoteExperimentRequest request =
    *       PromoteExperimentRequest.newBuilder()
@@ -972,6 +1108,11 @@ public class ExperimentServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (ExperimentServiceClient experimentServiceClient = ExperimentServiceClient.create()) {
    *   PromoteExperimentRequest request =
    *       PromoteExperimentRequest.newBuilder()
@@ -1021,8 +1162,11 @@ public class ExperimentServiceClient implements BackgroundResource {
 
   public static class ListExperimentAsyncErrorsPagedResponse
       extends AbstractPagedListResponse<
-          ListExperimentAsyncErrorsRequest, ListExperimentAsyncErrorsResponse, Status,
-          ListExperimentAsyncErrorsPage, ListExperimentAsyncErrorsFixedSizeCollection> {
+          ListExperimentAsyncErrorsRequest,
+          ListExperimentAsyncErrorsResponse,
+          Status,
+          ListExperimentAsyncErrorsPage,
+          ListExperimentAsyncErrorsFixedSizeCollection> {
 
     public static ApiFuture<ListExperimentAsyncErrorsPagedResponse> createAsync(
         PageContext<ListExperimentAsyncErrorsRequest, ListExperimentAsyncErrorsResponse, Status>
@@ -1043,7 +1187,9 @@ public class ExperimentServiceClient implements BackgroundResource {
 
   public static class ListExperimentAsyncErrorsPage
       extends AbstractPage<
-          ListExperimentAsyncErrorsRequest, ListExperimentAsyncErrorsResponse, Status,
+          ListExperimentAsyncErrorsRequest,
+          ListExperimentAsyncErrorsResponse,
+          Status,
           ListExperimentAsyncErrorsPage> {
 
     private ListExperimentAsyncErrorsPage(
@@ -1076,8 +1222,11 @@ public class ExperimentServiceClient implements BackgroundResource {
 
   public static class ListExperimentAsyncErrorsFixedSizeCollection
       extends AbstractFixedSizeCollection<
-          ListExperimentAsyncErrorsRequest, ListExperimentAsyncErrorsResponse, Status,
-          ListExperimentAsyncErrorsPage, ListExperimentAsyncErrorsFixedSizeCollection> {
+          ListExperimentAsyncErrorsRequest,
+          ListExperimentAsyncErrorsResponse,
+          Status,
+          ListExperimentAsyncErrorsPage,
+          ListExperimentAsyncErrorsFixedSizeCollection> {
 
     private ListExperimentAsyncErrorsFixedSizeCollection(
         List<ListExperimentAsyncErrorsPage> pages, int collectionSize) {

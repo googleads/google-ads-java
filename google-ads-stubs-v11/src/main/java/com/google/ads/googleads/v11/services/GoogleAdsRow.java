@@ -34,2034 +34,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private GoogleAdsRow(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            com.google.ads.googleads.v11.resources.Customer.Builder subBuilder = null;
-            if (customer_ != null) {
-              subBuilder = customer_.toBuilder();
-            }
-            customer_ = input.readMessage(com.google.ads.googleads.v11.resources.Customer.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(customer_);
-              customer_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 18: {
-            com.google.ads.googleads.v11.resources.Campaign.Builder subBuilder = null;
-            if (campaign_ != null) {
-              subBuilder = campaign_.toBuilder();
-            }
-            campaign_ = input.readMessage(com.google.ads.googleads.v11.resources.Campaign.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(campaign_);
-              campaign_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 26: {
-            com.google.ads.googleads.v11.resources.AdGroup.Builder subBuilder = null;
-            if (adGroup_ != null) {
-              subBuilder = adGroup_.toBuilder();
-            }
-            adGroup_ = input.readMessage(com.google.ads.googleads.v11.resources.AdGroup.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(adGroup_);
-              adGroup_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 34: {
-            com.google.ads.googleads.v11.common.Metrics.Builder subBuilder = null;
-            if (metrics_ != null) {
-              subBuilder = metrics_.toBuilder();
-            }
-            metrics_ = input.readMessage(com.google.ads.googleads.v11.common.Metrics.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(metrics_);
-              metrics_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 130: {
-            com.google.ads.googleads.v11.resources.AdGroupAd.Builder subBuilder = null;
-            if (adGroupAd_ != null) {
-              subBuilder = adGroupAd_.toBuilder();
-            }
-            adGroupAd_ = input.readMessage(com.google.ads.googleads.v11.resources.AdGroupAd.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(adGroupAd_);
-              adGroupAd_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 138: {
-            com.google.ads.googleads.v11.resources.AdGroupCriterion.Builder subBuilder = null;
-            if (adGroupCriterion_ != null) {
-              subBuilder = adGroupCriterion_.toBuilder();
-            }
-            adGroupCriterion_ = input.readMessage(com.google.ads.googleads.v11.resources.AdGroupCriterion.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(adGroupCriterion_);
-              adGroupCriterion_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 146: {
-            com.google.ads.googleads.v11.resources.BiddingStrategy.Builder subBuilder = null;
-            if (biddingStrategy_ != null) {
-              subBuilder = biddingStrategy_.toBuilder();
-            }
-            biddingStrategy_ = input.readMessage(com.google.ads.googleads.v11.resources.BiddingStrategy.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(biddingStrategy_);
-              biddingStrategy_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 154: {
-            com.google.ads.googleads.v11.resources.CampaignBudget.Builder subBuilder = null;
-            if (campaignBudget_ != null) {
-              subBuilder = campaignBudget_.toBuilder();
-            }
-            campaignBudget_ = input.readMessage(com.google.ads.googleads.v11.resources.CampaignBudget.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(campaignBudget_);
-              campaignBudget_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 162: {
-            com.google.ads.googleads.v11.resources.CampaignCriterion.Builder subBuilder = null;
-            if (campaignCriterion_ != null) {
-              subBuilder = campaignCriterion_.toBuilder();
-            }
-            campaignCriterion_ = input.readMessage(com.google.ads.googleads.v11.resources.CampaignCriterion.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(campaignCriterion_);
-              campaignCriterion_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 170: {
-            com.google.ads.googleads.v11.resources.KeywordView.Builder subBuilder = null;
-            if (keywordView_ != null) {
-              subBuilder = keywordView_.toBuilder();
-            }
-            keywordView_ = input.readMessage(com.google.ads.googleads.v11.resources.KeywordView.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(keywordView_);
-              keywordView_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 178: {
-            com.google.ads.googleads.v11.resources.Recommendation.Builder subBuilder = null;
-            if (recommendation_ != null) {
-              subBuilder = recommendation_.toBuilder();
-            }
-            recommendation_ = input.readMessage(com.google.ads.googleads.v11.resources.Recommendation.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(recommendation_);
-              recommendation_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 186: {
-            com.google.ads.googleads.v11.resources.GeoTargetConstant.Builder subBuilder = null;
-            if (geoTargetConstant_ != null) {
-              subBuilder = geoTargetConstant_.toBuilder();
-            }
-            geoTargetConstant_ = input.readMessage(com.google.ads.googleads.v11.resources.GeoTargetConstant.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(geoTargetConstant_);
-              geoTargetConstant_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 194: {
-            com.google.ads.googleads.v11.resources.AdGroupBidModifier.Builder subBuilder = null;
-            if (adGroupBidModifier_ != null) {
-              subBuilder = adGroupBidModifier_.toBuilder();
-            }
-            adGroupBidModifier_ = input.readMessage(com.google.ads.googleads.v11.resources.AdGroupBidModifier.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(adGroupBidModifier_);
-              adGroupBidModifier_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 202: {
-            com.google.ads.googleads.v11.resources.CampaignGroup.Builder subBuilder = null;
-            if (campaignGroup_ != null) {
-              subBuilder = campaignGroup_.toBuilder();
-            }
-            campaignGroup_ = input.readMessage(com.google.ads.googleads.v11.resources.CampaignGroup.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(campaignGroup_);
-              campaignGroup_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 210: {
-            com.google.ads.googleads.v11.resources.CampaignBidModifier.Builder subBuilder = null;
-            if (campaignBidModifier_ != null) {
-              subBuilder = campaignBidModifier_.toBuilder();
-            }
-            campaignBidModifier_ = input.readMessage(com.google.ads.googleads.v11.resources.CampaignBidModifier.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(campaignBidModifier_);
-              campaignBidModifier_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 218: {
-            com.google.ads.googleads.v11.resources.SharedSet.Builder subBuilder = null;
-            if (sharedSet_ != null) {
-              subBuilder = sharedSet_.toBuilder();
-            }
-            sharedSet_ = input.readMessage(com.google.ads.googleads.v11.resources.SharedSet.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(sharedSet_);
-              sharedSet_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 234: {
-            com.google.ads.googleads.v11.resources.SharedCriterion.Builder subBuilder = null;
-            if (sharedCriterion_ != null) {
-              subBuilder = sharedCriterion_.toBuilder();
-            }
-            sharedCriterion_ = input.readMessage(com.google.ads.googleads.v11.resources.SharedCriterion.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(sharedCriterion_);
-              sharedCriterion_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 242: {
-            com.google.ads.googleads.v11.resources.CampaignSharedSet.Builder subBuilder = null;
-            if (campaignSharedSet_ != null) {
-              subBuilder = campaignSharedSet_.toBuilder();
-            }
-            campaignSharedSet_ = input.readMessage(com.google.ads.googleads.v11.resources.CampaignSharedSet.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(campaignSharedSet_);
-              campaignSharedSet_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 250: {
-            com.google.ads.googleads.v11.resources.TopicConstant.Builder subBuilder = null;
-            if (topicConstant_ != null) {
-              subBuilder = topicConstant_.toBuilder();
-            }
-            topicConstant_ = input.readMessage(com.google.ads.googleads.v11.resources.TopicConstant.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(topicConstant_);
-              topicConstant_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 258: {
-            com.google.ads.googleads.v11.resources.KeywordPlan.Builder subBuilder = null;
-            if (keywordPlan_ != null) {
-              subBuilder = keywordPlan_.toBuilder();
-            }
-            keywordPlan_ = input.readMessage(com.google.ads.googleads.v11.resources.KeywordPlan.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(keywordPlan_);
-              keywordPlan_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 266: {
-            com.google.ads.googleads.v11.resources.KeywordPlanCampaign.Builder subBuilder = null;
-            if (keywordPlanCampaign_ != null) {
-              subBuilder = keywordPlanCampaign_.toBuilder();
-            }
-            keywordPlanCampaign_ = input.readMessage(com.google.ads.googleads.v11.resources.KeywordPlanCampaign.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(keywordPlanCampaign_);
-              keywordPlanCampaign_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 282: {
-            com.google.ads.googleads.v11.resources.KeywordPlanAdGroup.Builder subBuilder = null;
-            if (keywordPlanAdGroup_ != null) {
-              subBuilder = keywordPlanAdGroup_.toBuilder();
-            }
-            keywordPlanAdGroup_ = input.readMessage(com.google.ads.googleads.v11.resources.KeywordPlanAdGroup.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(keywordPlanAdGroup_);
-              keywordPlanAdGroup_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 298: {
-            com.google.ads.googleads.v11.resources.ChangeStatus.Builder subBuilder = null;
-            if (changeStatus_ != null) {
-              subBuilder = changeStatus_.toBuilder();
-            }
-            changeStatus_ = input.readMessage(com.google.ads.googleads.v11.resources.ChangeStatus.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(changeStatus_);
-              changeStatus_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 306: {
-            com.google.ads.googleads.v11.resources.UserList.Builder subBuilder = null;
-            if (userList_ != null) {
-              subBuilder = userList_.toBuilder();
-            }
-            userList_ = input.readMessage(com.google.ads.googleads.v11.resources.UserList.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(userList_);
-              userList_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 314: {
-            com.google.ads.googleads.v11.resources.Video.Builder subBuilder = null;
-            if (video_ != null) {
-              subBuilder = video_.toBuilder();
-            }
-            video_ = input.readMessage(com.google.ads.googleads.v11.resources.Video.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(video_);
-              video_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 322: {
-            com.google.ads.googleads.v11.resources.GenderView.Builder subBuilder = null;
-            if (genderView_ != null) {
-              subBuilder = genderView_.toBuilder();
-            }
-            genderView_ = input.readMessage(com.google.ads.googleads.v11.resources.GenderView.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(genderView_);
-              genderView_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 330: {
-            com.google.ads.googleads.v11.resources.BillingSetup.Builder subBuilder = null;
-            if (billingSetup_ != null) {
-              subBuilder = billingSetup_.toBuilder();
-            }
-            billingSetup_ = input.readMessage(com.google.ads.googleads.v11.resources.BillingSetup.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(billingSetup_);
-              billingSetup_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 338: {
-            com.google.ads.googleads.v11.resources.AccountBudget.Builder subBuilder = null;
-            if (accountBudget_ != null) {
-              subBuilder = accountBudget_.toBuilder();
-            }
-            accountBudget_ = input.readMessage(com.google.ads.googleads.v11.resources.AccountBudget.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(accountBudget_);
-              accountBudget_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 346: {
-            com.google.ads.googleads.v11.resources.AccountBudgetProposal.Builder subBuilder = null;
-            if (accountBudgetProposal_ != null) {
-              subBuilder = accountBudgetProposal_.toBuilder();
-            }
-            accountBudgetProposal_ = input.readMessage(com.google.ads.googleads.v11.resources.AccountBudgetProposal.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(accountBudgetProposal_);
-              accountBudgetProposal_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 354: {
-            com.google.ads.googleads.v11.resources.TopicView.Builder subBuilder = null;
-            if (topicView_ != null) {
-              subBuilder = topicView_.toBuilder();
-            }
-            topicView_ = input.readMessage(com.google.ads.googleads.v11.resources.TopicView.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(topicView_);
-              topicView_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 362: {
-            com.google.ads.googleads.v11.resources.ParentalStatusView.Builder subBuilder = null;
-            if (parentalStatusView_ != null) {
-              subBuilder = parentalStatusView_.toBuilder();
-            }
-            parentalStatusView_ = input.readMessage(com.google.ads.googleads.v11.resources.ParentalStatusView.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(parentalStatusView_);
-              parentalStatusView_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 370: {
-            com.google.ads.googleads.v11.resources.Feed.Builder subBuilder = null;
-            if (feed_ != null) {
-              subBuilder = feed_.toBuilder();
-            }
-            feed_ = input.readMessage(com.google.ads.googleads.v11.resources.Feed.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(feed_);
-              feed_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 378: {
-            com.google.ads.googleads.v11.resources.DisplayKeywordView.Builder subBuilder = null;
-            if (displayKeywordView_ != null) {
-              subBuilder = displayKeywordView_.toBuilder();
-            }
-            displayKeywordView_ = input.readMessage(com.google.ads.googleads.v11.resources.DisplayKeywordView.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(displayKeywordView_);
-              displayKeywordView_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 386: {
-            com.google.ads.googleads.v11.resources.AgeRangeView.Builder subBuilder = null;
-            if (ageRangeView_ != null) {
-              subBuilder = ageRangeView_.toBuilder();
-            }
-            ageRangeView_ = input.readMessage(com.google.ads.googleads.v11.resources.AgeRangeView.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(ageRangeView_);
-              ageRangeView_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 394: {
-            com.google.ads.googleads.v11.resources.CampaignDraft.Builder subBuilder = null;
-            if (campaignDraft_ != null) {
-              subBuilder = campaignDraft_.toBuilder();
-            }
-            campaignDraft_ = input.readMessage(com.google.ads.googleads.v11.resources.CampaignDraft.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(campaignDraft_);
-              campaignDraft_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 402: {
-            com.google.ads.googleads.v11.resources.FeedItem.Builder subBuilder = null;
-            if (feedItem_ != null) {
-              subBuilder = feedItem_.toBuilder();
-            }
-            feedItem_ = input.readMessage(com.google.ads.googleads.v11.resources.FeedItem.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(feedItem_);
-              feedItem_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 410: {
-            com.google.ads.googleads.v11.resources.HotelGroupView.Builder subBuilder = null;
-            if (hotelGroupView_ != null) {
-              subBuilder = hotelGroupView_.toBuilder();
-            }
-            hotelGroupView_ = input.readMessage(com.google.ads.googleads.v11.resources.HotelGroupView.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(hotelGroupView_);
-              hotelGroupView_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 418: {
-            com.google.ads.googleads.v11.resources.Label.Builder subBuilder = null;
-            if (label_ != null) {
-              subBuilder = label_.toBuilder();
-            }
-            label_ = input.readMessage(com.google.ads.googleads.v11.resources.Label.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(label_);
-              label_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 426: {
-            com.google.ads.googleads.v11.resources.ManagedPlacementView.Builder subBuilder = null;
-            if (managedPlacementView_ != null) {
-              subBuilder = managedPlacementView_.toBuilder();
-            }
-            managedPlacementView_ = input.readMessage(com.google.ads.googleads.v11.resources.ManagedPlacementView.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(managedPlacementView_);
-              managedPlacementView_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 434: {
-            com.google.ads.googleads.v11.resources.ProductGroupView.Builder subBuilder = null;
-            if (productGroupView_ != null) {
-              subBuilder = productGroupView_.toBuilder();
-            }
-            productGroupView_ = input.readMessage(com.google.ads.googleads.v11.resources.ProductGroupView.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(productGroupView_);
-              productGroupView_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 442: {
-            com.google.ads.googleads.v11.resources.LanguageConstant.Builder subBuilder = null;
-            if (languageConstant_ != null) {
-              subBuilder = languageConstant_.toBuilder();
-            }
-            languageConstant_ = input.readMessage(com.google.ads.googleads.v11.resources.LanguageConstant.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(languageConstant_);
-              languageConstant_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 458: {
-            com.google.ads.googleads.v11.resources.AdGroupAudienceView.Builder subBuilder = null;
-            if (adGroupAudienceView_ != null) {
-              subBuilder = adGroupAudienceView_.toBuilder();
-            }
-            adGroupAudienceView_ = input.readMessage(com.google.ads.googleads.v11.resources.AdGroupAudienceView.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(adGroupAudienceView_);
-              adGroupAudienceView_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 466: {
-            com.google.ads.googleads.v11.resources.FeedMapping.Builder subBuilder = null;
-            if (feedMapping_ != null) {
-              subBuilder = feedMapping_.toBuilder();
-            }
-            feedMapping_ = input.readMessage(com.google.ads.googleads.v11.resources.FeedMapping.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(feedMapping_);
-              feedMapping_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 474: {
-            com.google.ads.googleads.v11.resources.UserInterest.Builder subBuilder = null;
-            if (userInterest_ != null) {
-              subBuilder = userInterest_.toBuilder();
-            }
-            userInterest_ = input.readMessage(com.google.ads.googleads.v11.resources.UserInterest.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(userInterest_);
-              userInterest_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 482: {
-            com.google.ads.googleads.v11.resources.RemarketingAction.Builder subBuilder = null;
-            if (remarketingAction_ != null) {
-              subBuilder = remarketingAction_.toBuilder();
-            }
-            remarketingAction_ = input.readMessage(com.google.ads.googleads.v11.resources.RemarketingAction.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(remarketingAction_);
-              remarketingAction_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 490: {
-            com.google.ads.googleads.v11.resources.CustomerManagerLink.Builder subBuilder = null;
-            if (customerManagerLink_ != null) {
-              subBuilder = customerManagerLink_.toBuilder();
-            }
-            customerManagerLink_ = input.readMessage(com.google.ads.googleads.v11.resources.CustomerManagerLink.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(customerManagerLink_);
-              customerManagerLink_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 498: {
-            com.google.ads.googleads.v11.resources.CustomerClientLink.Builder subBuilder = null;
-            if (customerClientLink_ != null) {
-              subBuilder = customerClientLink_.toBuilder();
-            }
-            customerClientLink_ = input.readMessage(com.google.ads.googleads.v11.resources.CustomerClientLink.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(customerClientLink_);
-              customerClientLink_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 506: {
-            com.google.ads.googleads.v11.resources.CampaignFeed.Builder subBuilder = null;
-            if (campaignFeed_ != null) {
-              subBuilder = campaignFeed_.toBuilder();
-            }
-            campaignFeed_ = input.readMessage(com.google.ads.googleads.v11.resources.CampaignFeed.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(campaignFeed_);
-              campaignFeed_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 514: {
-            com.google.ads.googleads.v11.resources.CustomerFeed.Builder subBuilder = null;
-            if (customerFeed_ != null) {
-              subBuilder = customerFeed_.toBuilder();
-            }
-            customerFeed_ = input.readMessage(com.google.ads.googleads.v11.resources.CustomerFeed.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(customerFeed_);
-              customerFeed_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 530: {
-            com.google.ads.googleads.v11.resources.CarrierConstant.Builder subBuilder = null;
-            if (carrierConstant_ != null) {
-              subBuilder = carrierConstant_.toBuilder();
-            }
-            carrierConstant_ = input.readMessage(com.google.ads.googleads.v11.resources.CarrierConstant.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(carrierConstant_);
-              carrierConstant_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 538: {
-            com.google.ads.googleads.v11.resources.AdGroupFeed.Builder subBuilder = null;
-            if (adGroupFeed_ != null) {
-              subBuilder = adGroupFeed_.toBuilder();
-            }
-            adGroupFeed_ = input.readMessage(com.google.ads.googleads.v11.resources.AdGroupFeed.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(adGroupFeed_);
-              adGroupFeed_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 546: {
-            com.google.ads.googleads.v11.resources.SearchTermView.Builder subBuilder = null;
-            if (searchTermView_ != null) {
-              subBuilder = searchTermView_.toBuilder();
-            }
-            searchTermView_ = input.readMessage(com.google.ads.googleads.v11.resources.SearchTermView.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(searchTermView_);
-              searchTermView_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 554: {
-            com.google.ads.googleads.v11.resources.CampaignAudienceView.Builder subBuilder = null;
-            if (campaignAudienceView_ != null) {
-              subBuilder = campaignAudienceView_.toBuilder();
-            }
-            campaignAudienceView_ = input.readMessage(com.google.ads.googleads.v11.resources.CampaignAudienceView.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(campaignAudienceView_);
-              campaignAudienceView_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 562: {
-            com.google.ads.googleads.v11.resources.CustomerClient.Builder subBuilder = null;
-            if (customerClient_ != null) {
-              subBuilder = customerClient_.toBuilder();
-            }
-            customerClient_ = input.readMessage(com.google.ads.googleads.v11.resources.CustomerClient.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(customerClient_);
-              customerClient_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 570: {
-            com.google.ads.googleads.v11.resources.HotelPerformanceView.Builder subBuilder = null;
-            if (hotelPerformanceView_ != null) {
-              subBuilder = hotelPerformanceView_.toBuilder();
-            }
-            hotelPerformanceView_ = input.readMessage(com.google.ads.googleads.v11.resources.HotelPerformanceView.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(hotelPerformanceView_);
-              hotelPerformanceView_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 674: {
-            com.google.ads.googleads.v11.resources.CampaignExperiment.Builder subBuilder = null;
-            if (campaignExperiment_ != null) {
-              subBuilder = campaignExperiment_.toBuilder();
-            }
-            campaignExperiment_ = input.readMessage(com.google.ads.googleads.v11.resources.CampaignExperiment.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(campaignExperiment_);
-              campaignExperiment_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 682: {
-            com.google.ads.googleads.v11.resources.ExtensionFeedItem.Builder subBuilder = null;
-            if (extensionFeedItem_ != null) {
-              subBuilder = extensionFeedItem_.toBuilder();
-            }
-            extensionFeedItem_ = input.readMessage(com.google.ads.googleads.v11.resources.ExtensionFeedItem.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(extensionFeedItem_);
-              extensionFeedItem_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 690: {
-            com.google.ads.googleads.v11.resources.OperatingSystemVersionConstant.Builder subBuilder = null;
-            if (operatingSystemVersionConstant_ != null) {
-              subBuilder = operatingSystemVersionConstant_.toBuilder();
-            }
-            operatingSystemVersionConstant_ = input.readMessage(com.google.ads.googleads.v11.resources.OperatingSystemVersionConstant.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(operatingSystemVersionConstant_);
-              operatingSystemVersionConstant_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 698: {
-            com.google.ads.googleads.v11.resources.MobileAppCategoryConstant.Builder subBuilder = null;
-            if (mobileAppCategoryConstant_ != null) {
-              subBuilder = mobileAppCategoryConstant_.toBuilder();
-            }
-            mobileAppCategoryConstant_ = input.readMessage(com.google.ads.googleads.v11.resources.MobileAppCategoryConstant.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(mobileAppCategoryConstant_);
-              mobileAppCategoryConstant_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 706: {
-            com.google.ads.googleads.v11.resources.CustomerNegativeCriterion.Builder subBuilder = null;
-            if (customerNegativeCriterion_ != null) {
-              subBuilder = customerNegativeCriterion_.toBuilder();
-            }
-            customerNegativeCriterion_ = input.readMessage(com.google.ads.googleads.v11.resources.CustomerNegativeCriterion.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(customerNegativeCriterion_);
-              customerNegativeCriterion_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 714: {
-            com.google.ads.googleads.v11.resources.AdScheduleView.Builder subBuilder = null;
-            if (adScheduleView_ != null) {
-              subBuilder = adScheduleView_.toBuilder();
-            }
-            adScheduleView_ = input.readMessage(com.google.ads.googleads.v11.resources.AdScheduleView.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(adScheduleView_);
-              adScheduleView_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 722: {
-            com.google.ads.googleads.v11.resources.MediaFile.Builder subBuilder = null;
-            if (mediaFile_ != null) {
-              subBuilder = mediaFile_.toBuilder();
-            }
-            mediaFile_ = input.readMessage(com.google.ads.googleads.v11.resources.MediaFile.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(mediaFile_);
-              mediaFile_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 730: {
-            com.google.ads.googleads.v11.resources.DomainCategory.Builder subBuilder = null;
-            if (domainCategory_ != null) {
-              subBuilder = domainCategory_.toBuilder();
-            }
-            domainCategory_ = input.readMessage(com.google.ads.googleads.v11.resources.DomainCategory.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(domainCategory_);
-              domainCategory_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 778: {
-            com.google.ads.googleads.v11.resources.FeedPlaceholderView.Builder subBuilder = null;
-            if (feedPlaceholderView_ != null) {
-              subBuilder = feedPlaceholderView_.toBuilder();
-            }
-            feedPlaceholderView_ = input.readMessage(com.google.ads.googleads.v11.resources.FeedPlaceholderView.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(feedPlaceholderView_);
-              feedPlaceholderView_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 786: {
-            com.google.ads.googleads.v11.resources.MobileDeviceConstant.Builder subBuilder = null;
-            if (mobileDeviceConstant_ != null) {
-              subBuilder = mobileDeviceConstant_.toBuilder();
-            }
-            mobileDeviceConstant_ = input.readMessage(com.google.ads.googleads.v11.resources.MobileDeviceConstant.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(mobileDeviceConstant_);
-              mobileDeviceConstant_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 818: {
-            com.google.ads.googleads.v11.common.Segments.Builder subBuilder = null;
-            if (segments_ != null) {
-              subBuilder = segments_.toBuilder();
-            }
-            segments_ = input.readMessage(com.google.ads.googleads.v11.common.Segments.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(segments_);
-              segments_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 826: {
-            com.google.ads.googleads.v11.resources.ConversionAction.Builder subBuilder = null;
-            if (conversionAction_ != null) {
-              subBuilder = conversionAction_.toBuilder();
-            }
-            conversionAction_ = input.readMessage(com.google.ads.googleads.v11.resources.ConversionAction.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(conversionAction_);
-              conversionAction_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 834: {
-            com.google.ads.googleads.v11.resources.CustomInterest.Builder subBuilder = null;
-            if (customInterest_ != null) {
-              subBuilder = customInterest_.toBuilder();
-            }
-            customInterest_ = input.readMessage(com.google.ads.googleads.v11.resources.CustomInterest.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(customInterest_);
-              customInterest_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 842: {
-            com.google.ads.googleads.v11.resources.Asset.Builder subBuilder = null;
-            if (asset_ != null) {
-              subBuilder = asset_.toBuilder();
-            }
-            asset_ = input.readMessage(com.google.ads.googleads.v11.resources.Asset.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(asset_);
-              asset_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 850: {
-            com.google.ads.googleads.v11.resources.DynamicSearchAdsSearchTermView.Builder subBuilder = null;
-            if (dynamicSearchAdsSearchTermView_ != null) {
-              subBuilder = dynamicSearchAdsSearchTermView_.toBuilder();
-            }
-            dynamicSearchAdsSearchTermView_ = input.readMessage(com.google.ads.googleads.v11.resources.DynamicSearchAdsSearchTermView.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(dynamicSearchAdsSearchTermView_);
-              dynamicSearchAdsSearchTermView_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 858: {
-            com.google.ads.googleads.v11.resources.AdGroupSimulation.Builder subBuilder = null;
-            if (adGroupSimulation_ != null) {
-              subBuilder = adGroupSimulation_.toBuilder();
-            }
-            adGroupSimulation_ = input.readMessage(com.google.ads.googleads.v11.resources.AdGroupSimulation.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(adGroupSimulation_);
-              adGroupSimulation_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 866: {
-            com.google.ads.googleads.v11.resources.CampaignLabel.Builder subBuilder = null;
-            if (campaignLabel_ != null) {
-              subBuilder = campaignLabel_.toBuilder();
-            }
-            campaignLabel_ = input.readMessage(com.google.ads.googleads.v11.resources.CampaignLabel.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(campaignLabel_);
-              campaignLabel_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 874: {
-            com.google.ads.googleads.v11.resources.ProductBiddingCategoryConstant.Builder subBuilder = null;
-            if (productBiddingCategoryConstant_ != null) {
-              subBuilder = productBiddingCategoryConstant_.toBuilder();
-            }
-            productBiddingCategoryConstant_ = input.readMessage(com.google.ads.googleads.v11.resources.ProductBiddingCategoryConstant.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(productBiddingCategoryConstant_);
-              productBiddingCategoryConstant_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 882: {
-            com.google.ads.googleads.v11.resources.AdGroupCriterionSimulation.Builder subBuilder = null;
-            if (adGroupCriterionSimulation_ != null) {
-              subBuilder = adGroupCriterionSimulation_.toBuilder();
-            }
-            adGroupCriterionSimulation_ = input.readMessage(com.google.ads.googleads.v11.resources.AdGroupCriterionSimulation.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(adGroupCriterionSimulation_);
-              adGroupCriterionSimulation_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 890: {
-            com.google.ads.googleads.v11.resources.CampaignCriterionSimulation.Builder subBuilder = null;
-            if (campaignCriterionSimulation_ != null) {
-              subBuilder = campaignCriterionSimulation_.toBuilder();
-            }
-            campaignCriterionSimulation_ = input.readMessage(com.google.ads.googleads.v11.resources.CampaignCriterionSimulation.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(campaignCriterionSimulation_);
-              campaignCriterionSimulation_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 898: {
-            com.google.ads.googleads.v11.resources.AdGroupExtensionSetting.Builder subBuilder = null;
-            if (adGroupExtensionSetting_ != null) {
-              subBuilder = adGroupExtensionSetting_.toBuilder();
-            }
-            adGroupExtensionSetting_ = input.readMessage(com.google.ads.googleads.v11.resources.AdGroupExtensionSetting.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(adGroupExtensionSetting_);
-              adGroupExtensionSetting_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 906: {
-            com.google.ads.googleads.v11.resources.CampaignExtensionSetting.Builder subBuilder = null;
-            if (campaignExtensionSetting_ != null) {
-              subBuilder = campaignExtensionSetting_.toBuilder();
-            }
-            campaignExtensionSetting_ = input.readMessage(com.google.ads.googleads.v11.resources.CampaignExtensionSetting.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(campaignExtensionSetting_);
-              campaignExtensionSetting_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 914: {
-            com.google.ads.googleads.v11.resources.CustomerExtensionSetting.Builder subBuilder = null;
-            if (customerExtensionSetting_ != null) {
-              subBuilder = customerExtensionSetting_.toBuilder();
-            }
-            customerExtensionSetting_ = input.readMessage(com.google.ads.googleads.v11.resources.CustomerExtensionSetting.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(customerExtensionSetting_);
-              customerExtensionSetting_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 922: {
-            com.google.ads.googleads.v11.resources.AdGroupLabel.Builder subBuilder = null;
-            if (adGroupLabel_ != null) {
-              subBuilder = adGroupLabel_.toBuilder();
-            }
-            adGroupLabel_ = input.readMessage(com.google.ads.googleads.v11.resources.AdGroupLabel.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(adGroupLabel_);
-              adGroupLabel_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 930: {
-            com.google.ads.googleads.v11.resources.FeedItemTarget.Builder subBuilder = null;
-            if (feedItemTarget_ != null) {
-              subBuilder = feedItemTarget_.toBuilder();
-            }
-            feedItemTarget_ = input.readMessage(com.google.ads.googleads.v11.resources.FeedItemTarget.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(feedItemTarget_);
-              feedItemTarget_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 938: {
-            com.google.ads.googleads.v11.resources.ShoppingPerformanceView.Builder subBuilder = null;
-            if (shoppingPerformanceView_ != null) {
-              subBuilder = shoppingPerformanceView_.toBuilder();
-            }
-            shoppingPerformanceView_ = input.readMessage(com.google.ads.googleads.v11.resources.ShoppingPerformanceView.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(shoppingPerformanceView_);
-              shoppingPerformanceView_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 946: {
-            com.google.ads.googleads.v11.resources.DetailPlacementView.Builder subBuilder = null;
-            if (detailPlacementView_ != null) {
-              subBuilder = detailPlacementView_.toBuilder();
-            }
-            detailPlacementView_ = input.readMessage(com.google.ads.googleads.v11.resources.DetailPlacementView.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(detailPlacementView_);
-              detailPlacementView_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 954: {
-            com.google.ads.googleads.v11.resources.GroupPlacementView.Builder subBuilder = null;
-            if (groupPlacementView_ != null) {
-              subBuilder = groupPlacementView_.toBuilder();
-            }
-            groupPlacementView_ = input.readMessage(com.google.ads.googleads.v11.resources.GroupPlacementView.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(groupPlacementView_);
-              groupPlacementView_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 962: {
-            com.google.ads.googleads.v11.resources.AdGroupAdLabel.Builder subBuilder = null;
-            if (adGroupAdLabel_ != null) {
-              subBuilder = adGroupAdLabel_.toBuilder();
-            }
-            adGroupAdLabel_ = input.readMessage(com.google.ads.googleads.v11.resources.AdGroupAdLabel.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(adGroupAdLabel_);
-              adGroupAdLabel_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 970: {
-            com.google.ads.googleads.v11.resources.AdGroupCriterionLabel.Builder subBuilder = null;
-            if (adGroupCriterionLabel_ != null) {
-              subBuilder = adGroupCriterionLabel_.toBuilder();
-            }
-            adGroupCriterionLabel_ = input.readMessage(com.google.ads.googleads.v11.resources.AdGroupCriterionLabel.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(adGroupCriterionLabel_);
-              adGroupCriterionLabel_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 978: {
-            com.google.ads.googleads.v11.resources.ClickView.Builder subBuilder = null;
-            if (clickView_ != null) {
-              subBuilder = clickView_.toBuilder();
-            }
-            clickView_ = input.readMessage(com.google.ads.googleads.v11.resources.ClickView.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(clickView_);
-              clickView_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 986: {
-            com.google.ads.googleads.v11.resources.LocationView.Builder subBuilder = null;
-            if (locationView_ != null) {
-              subBuilder = locationView_.toBuilder();
-            }
-            locationView_ = input.readMessage(com.google.ads.googleads.v11.resources.LocationView.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(locationView_);
-              locationView_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 994: {
-            com.google.ads.googleads.v11.resources.CustomerLabel.Builder subBuilder = null;
-            if (customerLabel_ != null) {
-              subBuilder = customerLabel_.toBuilder();
-            }
-            customerLabel_ = input.readMessage(com.google.ads.googleads.v11.resources.CustomerLabel.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(customerLabel_);
-              customerLabel_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1002: {
-            com.google.ads.googleads.v11.resources.GeographicView.Builder subBuilder = null;
-            if (geographicView_ != null) {
-              subBuilder = geographicView_.toBuilder();
-            }
-            geographicView_ = input.readMessage(com.google.ads.googleads.v11.resources.GeographicView.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(geographicView_);
-              geographicView_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1010: {
-            com.google.ads.googleads.v11.resources.LandingPageView.Builder subBuilder = null;
-            if (landingPageView_ != null) {
-              subBuilder = landingPageView_.toBuilder();
-            }
-            landingPageView_ = input.readMessage(com.google.ads.googleads.v11.resources.LandingPageView.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(landingPageView_);
-              landingPageView_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1026: {
-            com.google.ads.googleads.v11.resources.ExpandedLandingPageView.Builder subBuilder = null;
-            if (expandedLandingPageView_ != null) {
-              subBuilder = expandedLandingPageView_.toBuilder();
-            }
-            expandedLandingPageView_ = input.readMessage(com.google.ads.googleads.v11.resources.ExpandedLandingPageView.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(expandedLandingPageView_);
-              expandedLandingPageView_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1034: {
-            com.google.ads.googleads.v11.resources.PaidOrganicSearchTermView.Builder subBuilder = null;
-            if (paidOrganicSearchTermView_ != null) {
-              subBuilder = paidOrganicSearchTermView_.toBuilder();
-            }
-            paidOrganicSearchTermView_ = input.readMessage(com.google.ads.googleads.v11.resources.PaidOrganicSearchTermView.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(paidOrganicSearchTermView_);
-              paidOrganicSearchTermView_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1042: {
-            com.google.ads.googleads.v11.resources.AdParameter.Builder subBuilder = null;
-            if (adParameter_ != null) {
-              subBuilder = adParameter_.toBuilder();
-            }
-            adParameter_ = input.readMessage(com.google.ads.googleads.v11.resources.AdParameter.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(adParameter_);
-              adParameter_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1050: {
-            com.google.ads.googleads.v11.resources.AdGroupAdAssetView.Builder subBuilder = null;
-            if (adGroupAdAssetView_ != null) {
-              subBuilder = adGroupAdAssetView_.toBuilder();
-            }
-            adGroupAdAssetView_ = input.readMessage(com.google.ads.googleads.v11.resources.AdGroupAdAssetView.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(adGroupAdAssetView_);
-              adGroupAdAssetView_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1058: {
-            com.google.ads.googleads.v11.resources.DistanceView.Builder subBuilder = null;
-            if (distanceView_ != null) {
-              subBuilder = distanceView_.toBuilder();
-            }
-            distanceView_ = input.readMessage(com.google.ads.googleads.v11.resources.DistanceView.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(distanceView_);
-              distanceView_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1066: {
-            com.google.ads.googleads.v11.resources.Experiment.Builder subBuilder = null;
-            if (experiment_ != null) {
-              subBuilder = experiment_.toBuilder();
-            }
-            experiment_ = input.readMessage(com.google.ads.googleads.v11.resources.Experiment.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(experiment_);
-              experiment_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1074: {
-            com.google.ads.googleads.v11.resources.CurrencyConstant.Builder subBuilder = null;
-            if (currencyConstant_ != null) {
-              subBuilder = currencyConstant_.toBuilder();
-            }
-            currencyConstant_ = input.readMessage(com.google.ads.googleads.v11.resources.CurrencyConstant.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(currencyConstant_);
-              currencyConstant_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1082: {
-            com.google.ads.googleads.v11.resources.UserLocationView.Builder subBuilder = null;
-            if (userLocationView_ != null) {
-              subBuilder = userLocationView_.toBuilder();
-            }
-            userLocationView_ = input.readMessage(com.google.ads.googleads.v11.resources.UserLocationView.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(userLocationView_);
-              userLocationView_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1098: {
-            com.google.ads.googleads.v11.resources.OfflineUserDataJob.Builder subBuilder = null;
-            if (offlineUserDataJob_ != null) {
-              subBuilder = offlineUserDataJob_.toBuilder();
-            }
-            offlineUserDataJob_ = input.readMessage(com.google.ads.googleads.v11.resources.OfflineUserDataJob.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(offlineUserDataJob_);
-              offlineUserDataJob_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1106: {
-            com.google.ads.googleads.v11.resources.IncomeRangeView.Builder subBuilder = null;
-            if (incomeRangeView_ != null) {
-              subBuilder = incomeRangeView_.toBuilder();
-            }
-            incomeRangeView_ = input.readMessage(com.google.ads.googleads.v11.resources.IncomeRangeView.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(incomeRangeView_);
-              incomeRangeView_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1114: {
-            com.google.ads.googleads.v11.resources.BatchJob.Builder subBuilder = null;
-            if (batchJob_ != null) {
-              subBuilder = batchJob_.toBuilder();
-            }
-            batchJob_ = input.readMessage(com.google.ads.googleads.v11.resources.BatchJob.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(batchJob_);
-              batchJob_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1122: {
-            com.google.ads.googleads.v11.resources.KeywordPlanCampaignKeyword.Builder subBuilder = null;
-            if (keywordPlanCampaignKeyword_ != null) {
-              subBuilder = keywordPlanCampaignKeyword_.toBuilder();
-            }
-            keywordPlanCampaignKeyword_ = input.readMessage(com.google.ads.googleads.v11.resources.KeywordPlanCampaignKeyword.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(keywordPlanCampaignKeyword_);
-              keywordPlanCampaignKeyword_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1130: {
-            com.google.ads.googleads.v11.resources.KeywordPlanAdGroupKeyword.Builder subBuilder = null;
-            if (keywordPlanAdGroupKeyword_ != null) {
-              subBuilder = keywordPlanAdGroupKeyword_.toBuilder();
-            }
-            keywordPlanAdGroupKeyword_ = input.readMessage(com.google.ads.googleads.v11.resources.KeywordPlanAdGroupKeyword.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(keywordPlanAdGroupKeyword_);
-              keywordPlanAdGroupKeyword_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1138: {
-            com.google.ads.googleads.v11.resources.CampaignAsset.Builder subBuilder = null;
-            if (campaignAsset_ != null) {
-              subBuilder = campaignAsset_.toBuilder();
-            }
-            campaignAsset_ = input.readMessage(com.google.ads.googleads.v11.resources.CampaignAsset.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(campaignAsset_);
-              campaignAsset_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1146: {
-            com.google.ads.googleads.v11.resources.AccountLink.Builder subBuilder = null;
-            if (accountLink_ != null) {
-              subBuilder = accountLink_.toBuilder();
-            }
-            accountLink_ = input.readMessage(com.google.ads.googleads.v11.resources.AccountLink.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(accountLink_);
-              accountLink_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1154: {
-            com.google.ads.googleads.v11.resources.ThirdPartyAppAnalyticsLink.Builder subBuilder = null;
-            if (thirdPartyAppAnalyticsLink_ != null) {
-              subBuilder = thirdPartyAppAnalyticsLink_.toBuilder();
-            }
-            thirdPartyAppAnalyticsLink_ = input.readMessage(com.google.ads.googleads.v11.resources.ThirdPartyAppAnalyticsLink.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(thirdPartyAppAnalyticsLink_);
-              thirdPartyAppAnalyticsLink_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1162: {
-            com.google.ads.googleads.v11.resources.ChangeEvent.Builder subBuilder = null;
-            if (changeEvent_ != null) {
-              subBuilder = changeEvent_.toBuilder();
-            }
-            changeEvent_ = input.readMessage(com.google.ads.googleads.v11.resources.ChangeEvent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(changeEvent_);
-              changeEvent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1170: {
-            com.google.ads.googleads.v11.resources.CustomerUserAccess.Builder subBuilder = null;
-            if (customerUserAccess_ != null) {
-              subBuilder = customerUserAccess_.toBuilder();
-            }
-            customerUserAccess_ = input.readMessage(com.google.ads.googleads.v11.resources.CustomerUserAccess.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(customerUserAccess_);
-              customerUserAccess_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1178: {
-            com.google.ads.googleads.v11.resources.CustomAudience.Builder subBuilder = null;
-            if (customAudience_ != null) {
-              subBuilder = customAudience_.toBuilder();
-            }
-            customAudience_ = input.readMessage(com.google.ads.googleads.v11.resources.CustomAudience.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(customAudience_);
-              customAudience_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1186: {
-            com.google.ads.googleads.v11.resources.CombinedAudience.Builder subBuilder = null;
-            if (combinedAudience_ != null) {
-              subBuilder = combinedAudience_.toBuilder();
-            }
-            combinedAudience_ = input.readMessage(com.google.ads.googleads.v11.resources.CombinedAudience.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(combinedAudience_);
-              combinedAudience_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1194: {
-            com.google.ads.googleads.v11.resources.FeedItemSet.Builder subBuilder = null;
-            if (feedItemSet_ != null) {
-              subBuilder = feedItemSet_.toBuilder();
-            }
-            feedItemSet_ = input.readMessage(com.google.ads.googleads.v11.resources.FeedItemSet.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(feedItemSet_);
-              feedItemSet_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1202: {
-            com.google.ads.googleads.v11.resources.CustomerUserAccessInvitation.Builder subBuilder = null;
-            if (customerUserAccessInvitation_ != null) {
-              subBuilder = customerUserAccessInvitation_.toBuilder();
-            }
-            customerUserAccessInvitation_ = input.readMessage(com.google.ads.googleads.v11.resources.CustomerUserAccessInvitation.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(customerUserAccessInvitation_);
-              customerUserAccessInvitation_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1210: {
-            com.google.ads.googleads.v11.resources.FeedItemSetLink.Builder subBuilder = null;
-            if (feedItemSetLink_ != null) {
-              subBuilder = feedItemSetLink_.toBuilder();
-            }
-            feedItemSetLink_ = input.readMessage(com.google.ads.googleads.v11.resources.FeedItemSetLink.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(feedItemSetLink_);
-              feedItemSetLink_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1218: {
-            com.google.ads.googleads.v11.resources.CallView.Builder subBuilder = null;
-            if (callView_ != null) {
-              subBuilder = callView_.toBuilder();
-            }
-            callView_ = input.readMessage(com.google.ads.googleads.v11.resources.CallView.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(callView_);
-              callView_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1226: {
-            com.google.ads.googleads.v11.resources.ConversionCustomVariable.Builder subBuilder = null;
-            if (conversionCustomVariable_ != null) {
-              subBuilder = conversionCustomVariable_.toBuilder();
-            }
-            conversionCustomVariable_ = input.readMessage(com.google.ads.googleads.v11.resources.ConversionCustomVariable.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(conversionCustomVariable_);
-              conversionCustomVariable_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1234: {
-            com.google.ads.googleads.v11.resources.AdGroupAsset.Builder subBuilder = null;
-            if (adGroupAsset_ != null) {
-              subBuilder = adGroupAsset_.toBuilder();
-            }
-            adGroupAsset_ = input.readMessage(com.google.ads.googleads.v11.resources.AdGroupAsset.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(adGroupAsset_);
-              adGroupAsset_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1242: {
-            com.google.ads.googleads.v11.resources.CustomerAsset.Builder subBuilder = null;
-            if (customerAsset_ != null) {
-              subBuilder = customerAsset_.toBuilder();
-            }
-            customerAsset_ = input.readMessage(com.google.ads.googleads.v11.resources.CustomerAsset.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(customerAsset_);
-              customerAsset_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1258: {
-            com.google.ads.googleads.v11.resources.CampaignSimulation.Builder subBuilder = null;
-            if (campaignSimulation_ != null) {
-              subBuilder = campaignSimulation_.toBuilder();
-            }
-            campaignSimulation_ = input.readMessage(com.google.ads.googleads.v11.resources.CampaignSimulation.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(campaignSimulation_);
-              campaignSimulation_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1266: {
-            com.google.ads.googleads.v11.resources.BiddingStrategySimulation.Builder subBuilder = null;
-            if (biddingStrategySimulation_ != null) {
-              subBuilder = biddingStrategySimulation_.toBuilder();
-            }
-            biddingStrategySimulation_ = input.readMessage(com.google.ads.googleads.v11.resources.BiddingStrategySimulation.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(biddingStrategySimulation_);
-              biddingStrategySimulation_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1274: {
-            com.google.ads.googleads.v11.resources.BiddingDataExclusion.Builder subBuilder = null;
-            if (biddingDataExclusion_ != null) {
-              subBuilder = biddingDataExclusion_.toBuilder();
-            }
-            biddingDataExclusion_ = input.readMessage(com.google.ads.googleads.v11.resources.BiddingDataExclusion.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(biddingDataExclusion_);
-              biddingDataExclusion_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1282: {
-            com.google.ads.googleads.v11.resources.BiddingSeasonalityAdjustment.Builder subBuilder = null;
-            if (biddingSeasonalityAdjustment_ != null) {
-              subBuilder = biddingSeasonalityAdjustment_.toBuilder();
-            }
-            biddingSeasonalityAdjustment_ = input.readMessage(com.google.ads.googleads.v11.resources.BiddingSeasonalityAdjustment.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(biddingSeasonalityAdjustment_);
-              biddingSeasonalityAdjustment_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1290: {
-            com.google.ads.googleads.v11.resources.LifeEvent.Builder subBuilder = null;
-            if (lifeEvent_ != null) {
-              subBuilder = lifeEvent_.toBuilder();
-            }
-            lifeEvent_ = input.readMessage(com.google.ads.googleads.v11.resources.LifeEvent.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(lifeEvent_);
-              lifeEvent_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1298: {
-            com.google.ads.googleads.v11.resources.WebpageView.Builder subBuilder = null;
-            if (webpageView_ != null) {
-              subBuilder = webpageView_.toBuilder();
-            }
-            webpageView_ = input.readMessage(com.google.ads.googleads.v11.resources.WebpageView.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(webpageView_);
-              webpageView_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1306: {
-            com.google.ads.googleads.v11.resources.KeywordThemeConstant.Builder subBuilder = null;
-            if (keywordThemeConstant_ != null) {
-              subBuilder = keywordThemeConstant_.toBuilder();
-            }
-            keywordThemeConstant_ = input.readMessage(com.google.ads.googleads.v11.resources.KeywordThemeConstant.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(keywordThemeConstant_);
-              keywordThemeConstant_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1314: {
-            com.google.ads.googleads.v11.resources.ConversionValueRule.Builder subBuilder = null;
-            if (conversionValueRule_ != null) {
-              subBuilder = conversionValueRule_.toBuilder();
-            }
-            conversionValueRule_ = input.readMessage(com.google.ads.googleads.v11.resources.ConversionValueRule.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(conversionValueRule_);
-              conversionValueRule_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1322: {
-            com.google.ads.googleads.v11.resources.ConversionValueRuleSet.Builder subBuilder = null;
-            if (conversionValueRuleSet_ != null) {
-              subBuilder = conversionValueRuleSet_.toBuilder();
-            }
-            conversionValueRuleSet_ = input.readMessage(com.google.ads.googleads.v11.resources.ConversionValueRuleSet.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(conversionValueRuleSet_);
-              conversionValueRuleSet_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1330: {
-            com.google.ads.googleads.v11.resources.DetailedDemographic.Builder subBuilder = null;
-            if (detailedDemographic_ != null) {
-              subBuilder = detailedDemographic_.toBuilder();
-            }
-            detailedDemographic_ = input.readMessage(com.google.ads.googleads.v11.resources.DetailedDemographic.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(detailedDemographic_);
-              detailedDemographic_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1338: {
-            com.google.ads.googleads.v11.resources.SmartCampaignSetting.Builder subBuilder = null;
-            if (smartCampaignSetting_ != null) {
-              subBuilder = smartCampaignSetting_.toBuilder();
-            }
-            smartCampaignSetting_ = input.readMessage(com.google.ads.googleads.v11.resources.SmartCampaignSetting.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(smartCampaignSetting_);
-              smartCampaignSetting_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1346: {
-            com.google.ads.googleads.v11.resources.AssetFieldTypeView.Builder subBuilder = null;
-            if (assetFieldTypeView_ != null) {
-              subBuilder = assetFieldTypeView_.toBuilder();
-            }
-            assetFieldTypeView_ = input.readMessage(com.google.ads.googleads.v11.resources.AssetFieldTypeView.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(assetFieldTypeView_);
-              assetFieldTypeView_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1354: {
-            com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.Builder subBuilder = null;
-            if (accessibleBiddingStrategy_ != null) {
-              subBuilder = accessibleBiddingStrategy_.toBuilder();
-            }
-            accessibleBiddingStrategy_ = input.readMessage(com.google.ads.googleads.v11.resources.AccessibleBiddingStrategy.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(accessibleBiddingStrategy_);
-              accessibleBiddingStrategy_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1362: {
-            com.google.ads.googleads.v11.resources.SmartCampaignSearchTermView.Builder subBuilder = null;
-            if (smartCampaignSearchTermView_ != null) {
-              subBuilder = smartCampaignSearchTermView_.toBuilder();
-            }
-            smartCampaignSearchTermView_ = input.readMessage(com.google.ads.googleads.v11.resources.SmartCampaignSearchTermView.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(smartCampaignSearchTermView_);
-              smartCampaignSearchTermView_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1378: {
-            com.google.ads.googleads.v11.resources.AssetGroup.Builder subBuilder = null;
-            if (assetGroup_ != null) {
-              subBuilder = assetGroup_.toBuilder();
-            }
-            assetGroup_ = input.readMessage(com.google.ads.googleads.v11.resources.AssetGroup.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(assetGroup_);
-              assetGroup_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1386: {
-            com.google.ads.googleads.v11.resources.AssetGroupAsset.Builder subBuilder = null;
-            if (assetGroupAsset_ != null) {
-              subBuilder = assetGroupAsset_.toBuilder();
-            }
-            assetGroupAsset_ = input.readMessage(com.google.ads.googleads.v11.resources.AssetGroupAsset.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(assetGroupAsset_);
-              assetGroupAsset_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1394: {
-            com.google.ads.googleads.v11.resources.CustomerConversionGoal.Builder subBuilder = null;
-            if (customerConversionGoal_ != null) {
-              subBuilder = customerConversionGoal_.toBuilder();
-            }
-            customerConversionGoal_ = input.readMessage(com.google.ads.googleads.v11.resources.CustomerConversionGoal.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(customerConversionGoal_);
-              customerConversionGoal_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1402: {
-            com.google.ads.googleads.v11.resources.CampaignConversionGoal.Builder subBuilder = null;
-            if (campaignConversionGoal_ != null) {
-              subBuilder = campaignConversionGoal_.toBuilder();
-            }
-            campaignConversionGoal_ = input.readMessage(com.google.ads.googleads.v11.resources.CampaignConversionGoal.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(campaignConversionGoal_);
-              campaignConversionGoal_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1410: {
-            com.google.ads.googleads.v11.resources.CustomConversionGoal.Builder subBuilder = null;
-            if (customConversionGoal_ != null) {
-              subBuilder = customConversionGoal_.toBuilder();
-            }
-            customConversionGoal_ = input.readMessage(com.google.ads.googleads.v11.resources.CustomConversionGoal.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(customConversionGoal_);
-              customConversionGoal_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1418: {
-            com.google.ads.googleads.v11.resources.ConversionGoalCampaignConfig.Builder subBuilder = null;
-            if (conversionGoalCampaignConfig_ != null) {
-              subBuilder = conversionGoalCampaignConfig_.toBuilder();
-            }
-            conversionGoalCampaignConfig_ = input.readMessage(com.google.ads.googleads.v11.resources.ConversionGoalCampaignConfig.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(conversionGoalCampaignConfig_);
-              conversionGoalCampaignConfig_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1426: {
-            com.google.ads.googleads.v11.resources.CustomizerAttribute.Builder subBuilder = null;
-            if (customizerAttribute_ != null) {
-              subBuilder = customizerAttribute_.toBuilder();
-            }
-            customizerAttribute_ = input.readMessage(com.google.ads.googleads.v11.resources.CustomizerAttribute.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(customizerAttribute_);
-              customizerAttribute_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1434: {
-            com.google.ads.googleads.v11.resources.AssetSet.Builder subBuilder = null;
-            if (assetSet_ != null) {
-              subBuilder = assetSet_.toBuilder();
-            }
-            assetSet_ = input.readMessage(com.google.ads.googleads.v11.resources.AssetSet.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(assetSet_);
-              assetSet_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1442: {
-            com.google.ads.googleads.v11.resources.AssetSetAsset.Builder subBuilder = null;
-            if (assetSetAsset_ != null) {
-              subBuilder = assetSetAsset_.toBuilder();
-            }
-            assetSetAsset_ = input.readMessage(com.google.ads.googleads.v11.resources.AssetSetAsset.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(assetSetAsset_);
-              assetSetAsset_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1450: {
-            com.google.ads.googleads.v11.resources.CampaignAssetSet.Builder subBuilder = null;
-            if (campaignAssetSet_ != null) {
-              subBuilder = campaignAssetSet_.toBuilder();
-            }
-            campaignAssetSet_ = input.readMessage(com.google.ads.googleads.v11.resources.CampaignAssetSet.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(campaignAssetSet_);
-              campaignAssetSet_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1458: {
-            com.google.ads.googleads.v11.resources.AssetGroupListingGroupFilter.Builder subBuilder = null;
-            if (assetGroupListingGroupFilter_ != null) {
-              subBuilder = assetGroupListingGroupFilter_.toBuilder();
-            }
-            assetGroupListingGroupFilter_ = input.readMessage(com.google.ads.googleads.v11.resources.AssetGroupListingGroupFilter.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(assetGroupListingGroupFilter_);
-              assetGroupListingGroupFilter_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1466: {
-            com.google.ads.googleads.v11.resources.ExperimentArm.Builder subBuilder = null;
-            if (experimentArm_ != null) {
-              subBuilder = experimentArm_.toBuilder();
-            }
-            experimentArm_ = input.readMessage(com.google.ads.googleads.v11.resources.ExperimentArm.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(experimentArm_);
-              experimentArm_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1474: {
-            com.google.ads.googleads.v11.resources.CustomerCustomizer.Builder subBuilder = null;
-            if (customerCustomizer_ != null) {
-              subBuilder = customerCustomizer_.toBuilder();
-            }
-            customerCustomizer_ = input.readMessage(com.google.ads.googleads.v11.resources.CustomerCustomizer.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(customerCustomizer_);
-              customerCustomizer_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1482: {
-            com.google.ads.googleads.v11.resources.AdGroupCustomizer.Builder subBuilder = null;
-            if (adGroupCustomizer_ != null) {
-              subBuilder = adGroupCustomizer_.toBuilder();
-            }
-            adGroupCustomizer_ = input.readMessage(com.google.ads.googleads.v11.resources.AdGroupCustomizer.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(adGroupCustomizer_);
-              adGroupCustomizer_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1490: {
-            com.google.ads.googleads.v11.resources.CampaignCustomizer.Builder subBuilder = null;
-            if (campaignCustomizer_ != null) {
-              subBuilder = campaignCustomizer_.toBuilder();
-            }
-            campaignCustomizer_ = input.readMessage(com.google.ads.googleads.v11.resources.CampaignCustomizer.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(campaignCustomizer_);
-              campaignCustomizer_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1498: {
-            com.google.ads.googleads.v11.resources.AdGroupCriterionCustomizer.Builder subBuilder = null;
-            if (adGroupCriterionCustomizer_ != null) {
-              subBuilder = adGroupCriterionCustomizer_.toBuilder();
-            }
-            adGroupCriterionCustomizer_ = input.readMessage(com.google.ads.googleads.v11.resources.AdGroupCriterionCustomizer.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(adGroupCriterionCustomizer_);
-              adGroupCriterionCustomizer_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1506: {
-            com.google.ads.googleads.v11.resources.HotelReconciliation.Builder subBuilder = null;
-            if (hotelReconciliation_ != null) {
-              subBuilder = hotelReconciliation_.toBuilder();
-            }
-            hotelReconciliation_ = input.readMessage(com.google.ads.googleads.v11.resources.HotelReconciliation.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(hotelReconciliation_);
-              hotelReconciliation_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1514: {
-            com.google.ads.googleads.v11.resources.AssetGroupProductGroupView.Builder subBuilder = null;
-            if (assetGroupProductGroupView_ != null) {
-              subBuilder = assetGroupProductGroupView_.toBuilder();
-            }
-            assetGroupProductGroupView_ = input.readMessage(com.google.ads.googleads.v11.resources.AssetGroupProductGroupView.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(assetGroupProductGroupView_);
-              assetGroupProductGroupView_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1522: {
-            com.google.ads.googleads.v11.resources.Audience.Builder subBuilder = null;
-            if (audience_ != null) {
-              subBuilder = audience_.toBuilder();
-            }
-            audience_ = input.readMessage(com.google.ads.googleads.v11.resources.Audience.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(audience_);
-              audience_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1530: {
-            com.google.ads.googleads.v11.resources.AssetGroupSignal.Builder subBuilder = null;
-            if (assetGroupSignal_ != null) {
-              subBuilder = assetGroupSignal_.toBuilder();
-            }
-            assetGroupSignal_ = input.readMessage(com.google.ads.googleads.v11.resources.AssetGroupSignal.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(assetGroupSignal_);
-              assetGroupSignal_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1538: {
-            com.google.ads.googleads.v11.resources.LeadFormSubmissionData.Builder subBuilder = null;
-            if (leadFormSubmissionData_ != null) {
-              subBuilder = leadFormSubmissionData_.toBuilder();
-            }
-            leadFormSubmissionData_ = input.readMessage(com.google.ads.googleads.v11.resources.LeadFormSubmissionData.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(leadFormSubmissionData_);
-              leadFormSubmissionData_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1546: {
-            com.google.ads.googleads.v11.resources.AdGroupAdAssetCombinationView.Builder subBuilder = null;
-            if (adGroupAdAssetCombinationView_ != null) {
-              subBuilder = adGroupAdAssetCombinationView_.toBuilder();
-            }
-            adGroupAdAssetCombinationView_ = input.readMessage(com.google.ads.googleads.v11.resources.AdGroupAdAssetCombinationView.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(adGroupAdAssetCombinationView_);
-              adGroupAdAssetCombinationView_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v11.services.GoogleAdsServiceProto.internal_static_google_ads_googleads_v11_services_GoogleAdsRow_descriptor;
@@ -8362,7 +6334,7 @@ private static final long serialVersionUID = 0L;
     if (adGroupAdAssetCombinationView_ != null) {
       output.writeMessage(193, getAdGroupAdAssetCombinationView());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -8983,7 +6955,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(193, getAdGroupAdAssetCombinationView());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -9763,7 +7735,7 @@ private static final long serialVersionUID = 0L;
       if (!getSegments()
           .equals(other.getSegments())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -10386,7 +8358,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SEGMENTS_FIELD_NUMBER;
       hash = (53 * hash) + getSegments().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -10507,18 +8479,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v11.services.GoogleAdsRow.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -12739,7 +10706,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasSegments()) {
         mergeSegments(other.getSegments());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -12754,17 +10721,1101 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.ads.googleads.v11.services.GoogleAdsRow parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getCustomerFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 10
+            case 18: {
+              input.readMessage(
+                  getCampaignFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 18
+            case 26: {
+              input.readMessage(
+                  getAdGroupFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 26
+            case 34: {
+              input.readMessage(
+                  getMetricsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 34
+            case 130: {
+              input.readMessage(
+                  getAdGroupAdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 130
+            case 138: {
+              input.readMessage(
+                  getAdGroupCriterionFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 138
+            case 146: {
+              input.readMessage(
+                  getBiddingStrategyFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 146
+            case 154: {
+              input.readMessage(
+                  getCampaignBudgetFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 154
+            case 162: {
+              input.readMessage(
+                  getCampaignCriterionFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 162
+            case 170: {
+              input.readMessage(
+                  getKeywordViewFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 170
+            case 178: {
+              input.readMessage(
+                  getRecommendationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 178
+            case 186: {
+              input.readMessage(
+                  getGeoTargetConstantFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 186
+            case 194: {
+              input.readMessage(
+                  getAdGroupBidModifierFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 194
+            case 202: {
+              input.readMessage(
+                  getCampaignGroupFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 202
+            case 210: {
+              input.readMessage(
+                  getCampaignBidModifierFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 210
+            case 218: {
+              input.readMessage(
+                  getSharedSetFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 218
+            case 234: {
+              input.readMessage(
+                  getSharedCriterionFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 234
+            case 242: {
+              input.readMessage(
+                  getCampaignSharedSetFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 242
+            case 250: {
+              input.readMessage(
+                  getTopicConstantFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 250
+            case 258: {
+              input.readMessage(
+                  getKeywordPlanFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 258
+            case 266: {
+              input.readMessage(
+                  getKeywordPlanCampaignFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 266
+            case 282: {
+              input.readMessage(
+                  getKeywordPlanAdGroupFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 282
+            case 298: {
+              input.readMessage(
+                  getChangeStatusFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 298
+            case 306: {
+              input.readMessage(
+                  getUserListFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 306
+            case 314: {
+              input.readMessage(
+                  getVideoFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 314
+            case 322: {
+              input.readMessage(
+                  getGenderViewFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 322
+            case 330: {
+              input.readMessage(
+                  getBillingSetupFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 330
+            case 338: {
+              input.readMessage(
+                  getAccountBudgetFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 338
+            case 346: {
+              input.readMessage(
+                  getAccountBudgetProposalFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 346
+            case 354: {
+              input.readMessage(
+                  getTopicViewFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 354
+            case 362: {
+              input.readMessage(
+                  getParentalStatusViewFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 362
+            case 370: {
+              input.readMessage(
+                  getFeedFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 370
+            case 378: {
+              input.readMessage(
+                  getDisplayKeywordViewFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 378
+            case 386: {
+              input.readMessage(
+                  getAgeRangeViewFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 386
+            case 394: {
+              input.readMessage(
+                  getCampaignDraftFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 394
+            case 402: {
+              input.readMessage(
+                  getFeedItemFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 402
+            case 410: {
+              input.readMessage(
+                  getHotelGroupViewFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 410
+            case 418: {
+              input.readMessage(
+                  getLabelFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 418
+            case 426: {
+              input.readMessage(
+                  getManagedPlacementViewFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 426
+            case 434: {
+              input.readMessage(
+                  getProductGroupViewFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 434
+            case 442: {
+              input.readMessage(
+                  getLanguageConstantFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 442
+            case 458: {
+              input.readMessage(
+                  getAdGroupAudienceViewFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 458
+            case 466: {
+              input.readMessage(
+                  getFeedMappingFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 466
+            case 474: {
+              input.readMessage(
+                  getUserInterestFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 474
+            case 482: {
+              input.readMessage(
+                  getRemarketingActionFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 482
+            case 490: {
+              input.readMessage(
+                  getCustomerManagerLinkFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 490
+            case 498: {
+              input.readMessage(
+                  getCustomerClientLinkFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 498
+            case 506: {
+              input.readMessage(
+                  getCampaignFeedFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 506
+            case 514: {
+              input.readMessage(
+                  getCustomerFeedFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 514
+            case 530: {
+              input.readMessage(
+                  getCarrierConstantFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 530
+            case 538: {
+              input.readMessage(
+                  getAdGroupFeedFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 538
+            case 546: {
+              input.readMessage(
+                  getSearchTermViewFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 546
+            case 554: {
+              input.readMessage(
+                  getCampaignAudienceViewFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 554
+            case 562: {
+              input.readMessage(
+                  getCustomerClientFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 562
+            case 570: {
+              input.readMessage(
+                  getHotelPerformanceViewFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 570
+            case 674: {
+              input.readMessage(
+                  getCampaignExperimentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 674
+            case 682: {
+              input.readMessage(
+                  getExtensionFeedItemFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 682
+            case 690: {
+              input.readMessage(
+                  getOperatingSystemVersionConstantFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 690
+            case 698: {
+              input.readMessage(
+                  getMobileAppCategoryConstantFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 698
+            case 706: {
+              input.readMessage(
+                  getCustomerNegativeCriterionFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 706
+            case 714: {
+              input.readMessage(
+                  getAdScheduleViewFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 714
+            case 722: {
+              input.readMessage(
+                  getMediaFileFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 722
+            case 730: {
+              input.readMessage(
+                  getDomainCategoryFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 730
+            case 778: {
+              input.readMessage(
+                  getFeedPlaceholderViewFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 778
+            case 786: {
+              input.readMessage(
+                  getMobileDeviceConstantFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 786
+            case 818: {
+              input.readMessage(
+                  getSegmentsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 818
+            case 826: {
+              input.readMessage(
+                  getConversionActionFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 826
+            case 834: {
+              input.readMessage(
+                  getCustomInterestFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 834
+            case 842: {
+              input.readMessage(
+                  getAssetFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 842
+            case 850: {
+              input.readMessage(
+                  getDynamicSearchAdsSearchTermViewFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 850
+            case 858: {
+              input.readMessage(
+                  getAdGroupSimulationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 858
+            case 866: {
+              input.readMessage(
+                  getCampaignLabelFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 866
+            case 874: {
+              input.readMessage(
+                  getProductBiddingCategoryConstantFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 874
+            case 882: {
+              input.readMessage(
+                  getAdGroupCriterionSimulationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 882
+            case 890: {
+              input.readMessage(
+                  getCampaignCriterionSimulationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 890
+            case 898: {
+              input.readMessage(
+                  getAdGroupExtensionSettingFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 898
+            case 906: {
+              input.readMessage(
+                  getCampaignExtensionSettingFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 906
+            case 914: {
+              input.readMessage(
+                  getCustomerExtensionSettingFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 914
+            case 922: {
+              input.readMessage(
+                  getAdGroupLabelFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 922
+            case 930: {
+              input.readMessage(
+                  getFeedItemTargetFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 930
+            case 938: {
+              input.readMessage(
+                  getShoppingPerformanceViewFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 938
+            case 946: {
+              input.readMessage(
+                  getDetailPlacementViewFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 946
+            case 954: {
+              input.readMessage(
+                  getGroupPlacementViewFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 954
+            case 962: {
+              input.readMessage(
+                  getAdGroupAdLabelFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 962
+            case 970: {
+              input.readMessage(
+                  getAdGroupCriterionLabelFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 970
+            case 978: {
+              input.readMessage(
+                  getClickViewFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 978
+            case 986: {
+              input.readMessage(
+                  getLocationViewFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 986
+            case 994: {
+              input.readMessage(
+                  getCustomerLabelFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 994
+            case 1002: {
+              input.readMessage(
+                  getGeographicViewFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1002
+            case 1010: {
+              input.readMessage(
+                  getLandingPageViewFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1010
+            case 1026: {
+              input.readMessage(
+                  getExpandedLandingPageViewFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1026
+            case 1034: {
+              input.readMessage(
+                  getPaidOrganicSearchTermViewFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1034
+            case 1042: {
+              input.readMessage(
+                  getAdParameterFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1042
+            case 1050: {
+              input.readMessage(
+                  getAdGroupAdAssetViewFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1050
+            case 1058: {
+              input.readMessage(
+                  getDistanceViewFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1058
+            case 1066: {
+              input.readMessage(
+                  getExperimentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1066
+            case 1074: {
+              input.readMessage(
+                  getCurrencyConstantFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1074
+            case 1082: {
+              input.readMessage(
+                  getUserLocationViewFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1082
+            case 1098: {
+              input.readMessage(
+                  getOfflineUserDataJobFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1098
+            case 1106: {
+              input.readMessage(
+                  getIncomeRangeViewFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1106
+            case 1114: {
+              input.readMessage(
+                  getBatchJobFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1114
+            case 1122: {
+              input.readMessage(
+                  getKeywordPlanCampaignKeywordFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1122
+            case 1130: {
+              input.readMessage(
+                  getKeywordPlanAdGroupKeywordFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1130
+            case 1138: {
+              input.readMessage(
+                  getCampaignAssetFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1138
+            case 1146: {
+              input.readMessage(
+                  getAccountLinkFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1146
+            case 1154: {
+              input.readMessage(
+                  getThirdPartyAppAnalyticsLinkFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1154
+            case 1162: {
+              input.readMessage(
+                  getChangeEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1162
+            case 1170: {
+              input.readMessage(
+                  getCustomerUserAccessFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1170
+            case 1178: {
+              input.readMessage(
+                  getCustomAudienceFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1178
+            case 1186: {
+              input.readMessage(
+                  getCombinedAudienceFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1186
+            case 1194: {
+              input.readMessage(
+                  getFeedItemSetFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1194
+            case 1202: {
+              input.readMessage(
+                  getCustomerUserAccessInvitationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1202
+            case 1210: {
+              input.readMessage(
+                  getFeedItemSetLinkFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1210
+            case 1218: {
+              input.readMessage(
+                  getCallViewFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1218
+            case 1226: {
+              input.readMessage(
+                  getConversionCustomVariableFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1226
+            case 1234: {
+              input.readMessage(
+                  getAdGroupAssetFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1234
+            case 1242: {
+              input.readMessage(
+                  getCustomerAssetFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1242
+            case 1258: {
+              input.readMessage(
+                  getCampaignSimulationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1258
+            case 1266: {
+              input.readMessage(
+                  getBiddingStrategySimulationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1266
+            case 1274: {
+              input.readMessage(
+                  getBiddingDataExclusionFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1274
+            case 1282: {
+              input.readMessage(
+                  getBiddingSeasonalityAdjustmentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1282
+            case 1290: {
+              input.readMessage(
+                  getLifeEventFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1290
+            case 1298: {
+              input.readMessage(
+                  getWebpageViewFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1298
+            case 1306: {
+              input.readMessage(
+                  getKeywordThemeConstantFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1306
+            case 1314: {
+              input.readMessage(
+                  getConversionValueRuleFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1314
+            case 1322: {
+              input.readMessage(
+                  getConversionValueRuleSetFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1322
+            case 1330: {
+              input.readMessage(
+                  getDetailedDemographicFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1330
+            case 1338: {
+              input.readMessage(
+                  getSmartCampaignSettingFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1338
+            case 1346: {
+              input.readMessage(
+                  getAssetFieldTypeViewFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1346
+            case 1354: {
+              input.readMessage(
+                  getAccessibleBiddingStrategyFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1354
+            case 1362: {
+              input.readMessage(
+                  getSmartCampaignSearchTermViewFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1362
+            case 1378: {
+              input.readMessage(
+                  getAssetGroupFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1378
+            case 1386: {
+              input.readMessage(
+                  getAssetGroupAssetFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1386
+            case 1394: {
+              input.readMessage(
+                  getCustomerConversionGoalFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1394
+            case 1402: {
+              input.readMessage(
+                  getCampaignConversionGoalFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1402
+            case 1410: {
+              input.readMessage(
+                  getCustomConversionGoalFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1410
+            case 1418: {
+              input.readMessage(
+                  getConversionGoalCampaignConfigFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1418
+            case 1426: {
+              input.readMessage(
+                  getCustomizerAttributeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1426
+            case 1434: {
+              input.readMessage(
+                  getAssetSetFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1434
+            case 1442: {
+              input.readMessage(
+                  getAssetSetAssetFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1442
+            case 1450: {
+              input.readMessage(
+                  getCampaignAssetSetFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1450
+            case 1458: {
+              input.readMessage(
+                  getAssetGroupListingGroupFilterFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1458
+            case 1466: {
+              input.readMessage(
+                  getExperimentArmFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1466
+            case 1474: {
+              input.readMessage(
+                  getCustomerCustomizerFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1474
+            case 1482: {
+              input.readMessage(
+                  getAdGroupCustomizerFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1482
+            case 1490: {
+              input.readMessage(
+                  getCampaignCustomizerFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1490
+            case 1498: {
+              input.readMessage(
+                  getAdGroupCriterionCustomizerFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1498
+            case 1506: {
+              input.readMessage(
+                  getHotelReconciliationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1506
+            case 1514: {
+              input.readMessage(
+                  getAssetGroupProductGroupViewFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1514
+            case 1522: {
+              input.readMessage(
+                  getAudienceFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1522
+            case 1530: {
+              input.readMessage(
+                  getAssetGroupSignalFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1530
+            case 1538: {
+              input.readMessage(
+                  getLeadFormSubmissionDataFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1538
+            case 1546: {
+              input.readMessage(
+                  getAdGroupAdAssetCombinationViewFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1546
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v11.services.GoogleAdsRow) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
 
@@ -36515,7 +35566,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new GoogleAdsRow(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

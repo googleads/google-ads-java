@@ -34,45 +34,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private UrlFieldErrorEnum(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v10.errors.UrlFieldErrorProto.internal_static_google_ads_googleads_v10_errors_UrlFieldErrorEnum_descriptor;
@@ -129,9 +90,9 @@ private static final long serialVersionUID = 0L;
     INVALID_TAG_IN_TRACKING_URL_TEMPLATE(3),
     /**
      * <pre>
-     * The tracking url template must contain at least one tag (e.g. {lpurl}),
-     * This applies only to tracking url template associated with website ads or
-     * product ads.
+     * The tracking url template must contain at least one tag (for example,
+     * {lpurl}), This applies only to tracking url template associated with
+     * website ads or product ads.
      * </pre>
      *
      * <code>MISSING_TRACKING_URL_TEMPLATE_TAG = 4;</code>
@@ -182,7 +143,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The tracking url template contains nested occurrences of the same
-     * conditional tag (i.e. {ifmobile:{ifmobile:x}}).
+     * conditional tag (for example, {ifmobile:{ifmobile:x}}).
      * </pre>
      *
      * <code>REDUNDANT_NESTED_TRACKING_URL_TEMPLATE_TAG = 10;</code>
@@ -207,7 +168,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The final url contains nested occurrences of the same conditional tag
-     * (i.e. {ifmobile:{ifmobile:x}}).
+     * (for example, {ifmobile:{ifmobile:x}}).
      * </pre>
      *
      * <code>REDUNDANT_NESTED_FINAL_URL_TAG = 13;</code>
@@ -273,7 +234,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The final mobile url contains nested occurrences of the same conditional
-     * tag (i.e. {ifmobile:{ifmobile:x}}).
+     * tag (for example, {ifmobile:{ifmobile:x}}).
      * </pre>
      *
      * <code>REDUNDANT_NESTED_FINAL_MOBILE_URL_TAG = 21;</code>
@@ -339,7 +300,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The final app url contains nested occurrences of the same conditional tag
-     * (i.e. {ifmobile:{ifmobile:x}}).
+     * (for example, {ifmobile:{ifmobile:x}}).
      * </pre>
      *
      * <code>REDUNDANT_NESTED_FINAL_APP_URL_TAG = 29;</code>
@@ -363,7 +324,8 @@ private static final long serialVersionUID = 0L;
     INVALID_OSTYPE(31),
     /**
      * <pre>
-     * The protocol given for an app url is not valid. (E.g. "android-app://")
+     * The protocol given for an app url is not valid. (For example,
+     * "android-app://")
      * </pre>
      *
      * <code>INVALID_PROTOCOL_FOR_APP_URL = 32;</code>
@@ -413,7 +375,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The custom parameter contains nested occurrences of the same conditional
-     * tag (i.e. {ifmobile:{ifmobile:x}}).
+     * tag (for example, {ifmobile:{ifmobile:x}}).
      * </pre>
      *
      * <code>REDUNDANT_NESTED_URL_CUSTOM_PARAMETER_TAG = 42;</code>
@@ -461,7 +423,7 @@ private static final long serialVersionUID = 0L;
     INVALID_TAG_IN_URL(46),
     /**
      * <pre>
-     * The url must contain at least one tag (e.g. {lpurl}).
+     * The url must contain at least one tag (for example, {lpurl}).
      * </pre>
      *
      * <code>MISSING_URL_TAG = 47;</code>
@@ -502,8 +464,8 @@ private static final long serialVersionUID = 0L;
     INVALID_TAG_IN_FINAL_URL_SUFFIX(51),
     /**
      * <pre>
-     * The top level domain is invalid, e.g. not a public top level domain
-     * listed in publicsuffix.org.
+     * The top level domain is invalid, for example, not a public top level
+     * domain listed in publicsuffix.org.
      * </pre>
      *
      * <code>INVALID_TOP_LEVEL_DOMAIN = 53;</code>
@@ -586,9 +548,9 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_TAG_IN_TRACKING_URL_TEMPLATE_VALUE = 3;
     /**
      * <pre>
-     * The tracking url template must contain at least one tag (e.g. {lpurl}),
-     * This applies only to tracking url template associated with website ads or
-     * product ads.
+     * The tracking url template must contain at least one tag (for example,
+     * {lpurl}), This applies only to tracking url template associated with
+     * website ads or product ads.
      * </pre>
      *
      * <code>MISSING_TRACKING_URL_TEMPLATE_TAG = 4;</code>
@@ -639,7 +601,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The tracking url template contains nested occurrences of the same
-     * conditional tag (i.e. {ifmobile:{ifmobile:x}}).
+     * conditional tag (for example, {ifmobile:{ifmobile:x}}).
      * </pre>
      *
      * <code>REDUNDANT_NESTED_TRACKING_URL_TEMPLATE_TAG = 10;</code>
@@ -664,7 +626,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The final url contains nested occurrences of the same conditional tag
-     * (i.e. {ifmobile:{ifmobile:x}}).
+     * (for example, {ifmobile:{ifmobile:x}}).
      * </pre>
      *
      * <code>REDUNDANT_NESTED_FINAL_URL_TAG = 13;</code>
@@ -730,7 +692,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The final mobile url contains nested occurrences of the same conditional
-     * tag (i.e. {ifmobile:{ifmobile:x}}).
+     * tag (for example, {ifmobile:{ifmobile:x}}).
      * </pre>
      *
      * <code>REDUNDANT_NESTED_FINAL_MOBILE_URL_TAG = 21;</code>
@@ -796,7 +758,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The final app url contains nested occurrences of the same conditional tag
-     * (i.e. {ifmobile:{ifmobile:x}}).
+     * (for example, {ifmobile:{ifmobile:x}}).
      * </pre>
      *
      * <code>REDUNDANT_NESTED_FINAL_APP_URL_TAG = 29;</code>
@@ -820,7 +782,8 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_OSTYPE_VALUE = 31;
     /**
      * <pre>
-     * The protocol given for an app url is not valid. (E.g. "android-app://")
+     * The protocol given for an app url is not valid. (For example,
+     * "android-app://")
      * </pre>
      *
      * <code>INVALID_PROTOCOL_FOR_APP_URL = 32;</code>
@@ -870,7 +833,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The custom parameter contains nested occurrences of the same conditional
-     * tag (i.e. {ifmobile:{ifmobile:x}}).
+     * tag (for example, {ifmobile:{ifmobile:x}}).
      * </pre>
      *
      * <code>REDUNDANT_NESTED_URL_CUSTOM_PARAMETER_TAG = 42;</code>
@@ -918,7 +881,7 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_TAG_IN_URL_VALUE = 46;
     /**
      * <pre>
-     * The url must contain at least one tag (e.g. {lpurl}).
+     * The url must contain at least one tag (for example, {lpurl}).
      * </pre>
      *
      * <code>MISSING_URL_TAG = 47;</code>
@@ -959,8 +922,8 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_TAG_IN_FINAL_URL_SUFFIX_VALUE = 51;
     /**
      * <pre>
-     * The top level domain is invalid, e.g. not a public top level domain
-     * listed in publicsuffix.org.
+     * The top level domain is invalid, for example, not a public top level
+     * domain listed in publicsuffix.org.
      * </pre>
      *
      * <code>INVALID_TOP_LEVEL_DOMAIN = 53;</code>
@@ -1157,7 +1120,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -1166,7 +1129,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -1181,7 +1144,7 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v10.errors.UrlFieldErrorEnum other = (com.google.ads.googleads.v10.errors.UrlFieldErrorEnum) obj;
 
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -1192,7 +1155,7 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -1313,18 +1276,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v10.errors.UrlFieldErrorEnum.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -1403,7 +1361,7 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.google.ads.googleads.v10.errors.UrlFieldErrorEnum other) {
       if (other == com.google.ads.googleads.v10.errors.UrlFieldErrorEnum.getDefaultInstance()) return this;
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1418,17 +1376,30 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.ads.googleads.v10.errors.UrlFieldErrorEnum parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v10.errors.UrlFieldErrorEnum) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     @java.lang.Override
@@ -1464,7 +1435,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new UrlFieldErrorEnum(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

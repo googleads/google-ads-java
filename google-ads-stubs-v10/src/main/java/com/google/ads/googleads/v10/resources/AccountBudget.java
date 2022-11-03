@@ -11,8 +11,8 @@ package com.google.ads.googleads.v10.resources;
  * approval, if any, are found in 'pending_proposal'.  Effective details about
  * the budget are found in fields prefixed 'approved_', 'adjusted_' and those
  * without a prefix.  Since some effective details may differ from what the user
- * had originally requested (e.g. spending limit), these differences are
- * juxtaposed via 'proposed_', 'approved_', and possibly 'adjusted_' fields.
+ * had originally requested (for example, spending limit), these differences are
+ * juxtaposed through 'proposed_', 'approved_', and possibly 'adjusted_' fields.
  * This resource is mutated using AccountBudgetProposal and cannot be mutated
  * directly. A budget may have at most one pending proposal at any given time.
  * It is read through pending_proposal.
@@ -54,179 +54,6 @@ private static final long serialVersionUID = 0L;
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
-  }
-  private AccountBudget(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            resourceName_ = s;
-            break;
-          }
-          case 32: {
-            int rawValue = input.readEnum();
-
-            status_ = rawValue;
-            break;
-          }
-          case 72: {
-            int rawValue = input.readEnum();
-            proposedEndTimeCase_ = 9;
-            proposedEndTime_ = rawValue;
-            break;
-          }
-          case 88: {
-            int rawValue = input.readEnum();
-            approvedEndTimeCase_ = 11;
-            approvedEndTime_ = rawValue;
-            break;
-          }
-          case 104: {
-            int rawValue = input.readEnum();
-            proposedSpendingLimitCase_ = 13;
-            proposedSpendingLimit_ = rawValue;
-            break;
-          }
-          case 120: {
-            int rawValue = input.readEnum();
-            approvedSpendingLimitCase_ = 15;
-            approvedSpendingLimit_ = rawValue;
-            break;
-          }
-          case 136: {
-            int rawValue = input.readEnum();
-            adjustedSpendingLimitCase_ = 17;
-            adjustedSpendingLimit_ = rawValue;
-            break;
-          }
-          case 178: {
-            com.google.ads.googleads.v10.resources.AccountBudget.PendingAccountBudgetProposal.Builder subBuilder = null;
-            if (pendingProposal_ != null) {
-              subBuilder = pendingProposal_.toBuilder();
-            }
-            pendingProposal_ = input.readMessage(com.google.ads.googleads.v10.resources.AccountBudget.PendingAccountBudgetProposal.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(pendingProposal_);
-              pendingProposal_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 184: {
-            bitField0_ |= 0x00000001;
-            id_ = input.readInt64();
-            break;
-          }
-          case 194: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000002;
-            billingSetup_ = s;
-            break;
-          }
-          case 202: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000004;
-            name_ = s;
-            break;
-          }
-          case 210: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000008;
-            proposedStartDateTime_ = s;
-            break;
-          }
-          case 218: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000010;
-            approvedStartDateTime_ = s;
-            break;
-          }
-          case 226: {
-            java.lang.String s = input.readStringRequireUtf8();
-            proposedEndTimeCase_ = 28;
-            proposedEndTime_ = s;
-            break;
-          }
-          case 234: {
-            java.lang.String s = input.readStringRequireUtf8();
-            approvedEndTimeCase_ = 29;
-            approvedEndTime_ = s;
-            break;
-          }
-          case 240: {
-            proposedSpendingLimit_ = input.readInt64();
-            proposedSpendingLimitCase_ = 30;
-            break;
-          }
-          case 248: {
-            approvedSpendingLimit_ = input.readInt64();
-            approvedSpendingLimitCase_ = 31;
-            break;
-          }
-          case 256: {
-            adjustedSpendingLimit_ = input.readInt64();
-            adjustedSpendingLimitCase_ = 32;
-            break;
-          }
-          case 264: {
-
-            totalAdjustmentsMicros_ = input.readInt64();
-            break;
-          }
-          case 272: {
-
-            amountServedMicros_ = input.readInt64();
-            break;
-          }
-          case 282: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000020;
-            purchaseOrderNumber_ = s;
-            break;
-          }
-          case 290: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000040;
-            notes_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
@@ -282,7 +109,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The type of this proposal, e.g. END to end the budget associated
+     * Output only. The type of this proposal, for example, END to end the budget associated
      * with this proposal.
      * </pre>
      *
@@ -292,7 +119,7 @@ private static final long serialVersionUID = 0L;
     int getProposalTypeValue();
     /**
      * <pre>
-     * Output only. The type of this proposal, e.g. END to end the budget associated
+     * Output only. The type of this proposal, for example, END to end the budget associated
      * with this proposal.
      * </pre>
      *
@@ -483,7 +310,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The end time as a well-defined type, e.g. FOREVER.
+     * Output only. The end time as a well-defined type, for example, FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.TimeTypeEnum.TimeType end_time_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -492,7 +319,7 @@ private static final long serialVersionUID = 0L;
     boolean hasEndTimeType();
     /**
      * <pre>
-     * Output only. The end time as a well-defined type, e.g. FOREVER.
+     * Output only. The end time as a well-defined type, for example, FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.TimeTypeEnum.TimeType end_time_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -501,7 +328,7 @@ private static final long serialVersionUID = 0L;
     int getEndTimeTypeValue();
     /**
      * <pre>
-     * Output only. The end time as a well-defined type, e.g. FOREVER.
+     * Output only. The end time as a well-defined type, for example, FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.TimeTypeEnum.TimeType end_time_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -532,7 +359,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The spending limit as a well-defined type, e.g. INFINITE.
+     * Output only. The spending limit as a well-defined type, for example, INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -541,7 +368,7 @@ private static final long serialVersionUID = 0L;
     boolean hasSpendingLimitType();
     /**
      * <pre>
-     * Output only. The spending limit as a well-defined type, e.g. INFINITE.
+     * Output only. The spending limit as a well-defined type, for example, INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -550,7 +377,7 @@ private static final long serialVersionUID = 0L;
     int getSpendingLimitTypeValue();
     /**
      * <pre>
-     * Output only. The spending limit as a well-defined type, e.g. INFINITE.
+     * Output only. The spending limit as a well-defined type, for example, INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -600,111 +427,6 @@ private static final long serialVersionUID = 0L;
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private PendingAccountBudgetProposal(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 16: {
-              int rawValue = input.readEnum();
-
-              proposalType_ = rawValue;
-              break;
-            }
-            case 48: {
-              int rawValue = input.readEnum();
-              endTimeCase_ = 6;
-              endTime_ = rawValue;
-              break;
-            }
-            case 64: {
-              int rawValue = input.readEnum();
-              spendingLimitCase_ = 8;
-              spendingLimit_ = rawValue;
-              break;
-            }
-            case 98: {
-              java.lang.String s = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              accountBudgetProposal_ = s;
-              break;
-            }
-            case 106: {
-              java.lang.String s = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              name_ = s;
-              break;
-            }
-            case 114: {
-              java.lang.String s = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              startDateTime_ = s;
-              break;
-            }
-            case 122: {
-              java.lang.String s = input.readStringRequireUtf8();
-              endTimeCase_ = 15;
-              endTime_ = s;
-              break;
-            }
-            case 128: {
-              spendingLimit_ = input.readInt64();
-              spendingLimitCase_ = 16;
-              break;
-            }
-            case 138: {
-              java.lang.String s = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
-              purchaseOrderNumber_ = s;
-              break;
-            }
-            case 146: {
-              java.lang.String s = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
-              notes_ = s;
-              break;
-            }
-            case 154: {
-              java.lang.String s = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
-              creationDateTime_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -870,7 +592,7 @@ private static final long serialVersionUID = 0L;
     private int proposalType_;
     /**
      * <pre>
-     * Output only. The type of this proposal, e.g. END to end the budget associated
+     * Output only. The type of this proposal, for example, END to end the budget associated
      * with this proposal.
      * </pre>
      *
@@ -882,7 +604,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The type of this proposal, e.g. END to end the budget associated
+     * Output only. The type of this proposal, for example, END to end the budget associated
      * with this proposal.
      * </pre>
      *
@@ -1258,7 +980,7 @@ private static final long serialVersionUID = 0L;
     public static final int END_TIME_TYPE_FIELD_NUMBER = 6;
     /**
      * <pre>
-     * Output only. The end time as a well-defined type, e.g. FOREVER.
+     * Output only. The end time as a well-defined type, for example, FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.TimeTypeEnum.TimeType end_time_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1269,7 +991,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The end time as a well-defined type, e.g. FOREVER.
+     * Output only. The end time as a well-defined type, for example, FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.TimeTypeEnum.TimeType end_time_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1283,7 +1005,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The end time as a well-defined type, e.g. FOREVER.
+     * Output only. The end time as a well-defined type, for example, FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.TimeTypeEnum.TimeType end_time_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1333,7 +1055,7 @@ private static final long serialVersionUID = 0L;
     public static final int SPENDING_LIMIT_TYPE_FIELD_NUMBER = 8;
     /**
      * <pre>
-     * Output only. The spending limit as a well-defined type, e.g. INFINITE.
+     * Output only. The spending limit as a well-defined type, for example, INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1344,7 +1066,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The spending limit as a well-defined type, e.g. INFINITE.
+     * Output only. The spending limit as a well-defined type, for example, INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1358,7 +1080,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The spending limit as a well-defined type, e.g. INFINITE.
+     * Output only. The spending limit as a well-defined type, for example, INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1422,7 +1144,7 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000020) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 19, creationDateTime_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1469,7 +1191,7 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000020) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(19, creationDateTime_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1541,7 +1263,7 @@ private static final long serialVersionUID = 0L;
         case 0:
         default:
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1603,7 +1325,7 @@ private static final long serialVersionUID = 0L;
         case 0:
         default:
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1725,18 +1447,13 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.google.ads.googleads.v10.resources.AccountBudget.PendingAccountBudgetProposal.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1936,7 +1653,7 @@ private static final long serialVersionUID = 0L;
             break;
           }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1951,17 +1668,88 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.ads.googleads.v10.resources.AccountBudget.PendingAccountBudgetProposal parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 16: {
+                proposalType_ = input.readEnum();
+
+                break;
+              } // case 16
+              case 48: {
+                int rawValue = input.readEnum();
+                endTimeCase_ = 6;
+                endTime_ = rawValue;
+                break;
+              } // case 48
+              case 64: {
+                int rawValue = input.readEnum();
+                spendingLimitCase_ = 8;
+                spendingLimit_ = rawValue;
+                break;
+              } // case 64
+              case 98: {
+                accountBudgetProposal_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 98
+              case 106: {
+                name_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 106
+              case 114: {
+                startDateTime_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 114
+              case 122: {
+                java.lang.String s = input.readStringRequireUtf8();
+                endTimeCase_ = 15;
+                endTime_ = s;
+                break;
+              } // case 122
+              case 128: {
+                spendingLimit_ = input.readInt64();
+                spendingLimitCase_ = 16;
+                break;
+              } // case 128
+              case 138: {
+                purchaseOrderNumber_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 138
+              case 146: {
+                notes_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 146
+              case 154: {
+                creationDateTime_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 154
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.google.ads.googleads.v10.resources.AccountBudget.PendingAccountBudgetProposal) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int endTimeCase_ = 0;
@@ -2118,7 +1906,7 @@ private static final long serialVersionUID = 0L;
       private int proposalType_ = 0;
       /**
        * <pre>
-       * Output only. The type of this proposal, e.g. END to end the budget associated
+       * Output only. The type of this proposal, for example, END to end the budget associated
        * with this proposal.
        * </pre>
        *
@@ -2130,7 +1918,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The type of this proposal, e.g. END to end the budget associated
+       * Output only. The type of this proposal, for example, END to end the budget associated
        * with this proposal.
        * </pre>
        *
@@ -2146,7 +1934,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The type of this proposal, e.g. END to end the budget associated
+       * Output only. The type of this proposal, for example, END to end the budget associated
        * with this proposal.
        * </pre>
        *
@@ -2161,7 +1949,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The type of this proposal, e.g. END to end the budget associated
+       * Output only. The type of this proposal, for example, END to end the budget associated
        * with this proposal.
        * </pre>
        *
@@ -2180,7 +1968,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The type of this proposal, e.g. END to end the budget associated
+       * Output only. The type of this proposal, for example, END to end the budget associated
        * with this proposal.
        * </pre>
        *
@@ -2864,7 +2652,7 @@ private static final long serialVersionUID = 0L;
 
       /**
        * <pre>
-       * Output only. The end time as a well-defined type, e.g. FOREVER.
+       * Output only. The end time as a well-defined type, for example, FOREVER.
        * </pre>
        *
        * <code>.google.ads.googleads.v10.enums.TimeTypeEnum.TimeType end_time_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2876,7 +2664,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The end time as a well-defined type, e.g. FOREVER.
+       * Output only. The end time as a well-defined type, for example, FOREVER.
        * </pre>
        *
        * <code>.google.ads.googleads.v10.enums.TimeTypeEnum.TimeType end_time_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2891,7 +2679,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The end time as a well-defined type, e.g. FOREVER.
+       * Output only. The end time as a well-defined type, for example, FOREVER.
        * </pre>
        *
        * <code>.google.ads.googleads.v10.enums.TimeTypeEnum.TimeType end_time_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2906,7 +2694,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The end time as a well-defined type, e.g. FOREVER.
+       * Output only. The end time as a well-defined type, for example, FOREVER.
        * </pre>
        *
        * <code>.google.ads.googleads.v10.enums.TimeTypeEnum.TimeType end_time_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2924,7 +2712,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The end time as a well-defined type, e.g. FOREVER.
+       * Output only. The end time as a well-defined type, for example, FOREVER.
        * </pre>
        *
        * <code>.google.ads.googleads.v10.enums.TimeTypeEnum.TimeType end_time_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2942,7 +2730,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The end time as a well-defined type, e.g. FOREVER.
+       * Output only. The end time as a well-defined type, for example, FOREVER.
        * </pre>
        *
        * <code>.google.ads.googleads.v10.enums.TimeTypeEnum.TimeType end_time_type = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3020,7 +2808,7 @@ private static final long serialVersionUID = 0L;
 
       /**
        * <pre>
-       * Output only. The spending limit as a well-defined type, e.g. INFINITE.
+       * Output only. The spending limit as a well-defined type, for example, INFINITE.
        * </pre>
        *
        * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3032,7 +2820,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The spending limit as a well-defined type, e.g. INFINITE.
+       * Output only. The spending limit as a well-defined type, for example, INFINITE.
        * </pre>
        *
        * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3047,7 +2835,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The spending limit as a well-defined type, e.g. INFINITE.
+       * Output only. The spending limit as a well-defined type, for example, INFINITE.
        * </pre>
        *
        * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3062,7 +2850,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The spending limit as a well-defined type, e.g. INFINITE.
+       * Output only. The spending limit as a well-defined type, for example, INFINITE.
        * </pre>
        *
        * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3080,7 +2868,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The spending limit as a well-defined type, e.g. INFINITE.
+       * Output only. The spending limit as a well-defined type, for example, INFINITE.
        * </pre>
        *
        * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3098,7 +2886,7 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. The spending limit as a well-defined type, e.g. INFINITE.
+       * Output only. The spending limit as a well-defined type, for example, INFINITE.
        * </pre>
        *
        * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType spending_limit_type = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3145,7 +2933,18 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PendingAccountBudgetProposal(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -3985,7 +3784,7 @@ private static final long serialVersionUID = 0L;
   public static final int PROPOSED_END_TIME_TYPE_FIELD_NUMBER = 9;
   /**
    * <pre>
-   * Output only. The proposed end time as a well-defined type, e.g. FOREVER.
+   * Output only. The proposed end time as a well-defined type, for example, FOREVER.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3996,7 +3795,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The proposed end time as a well-defined type, e.g. FOREVER.
+   * Output only. The proposed end time as a well-defined type, for example, FOREVER.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4010,7 +3809,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The proposed end time as a well-defined type, e.g. FOREVER.
+   * Output only. The proposed end time as a well-defined type, for example, FOREVER.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4093,7 +3892,7 @@ private static final long serialVersionUID = 0L;
   public static final int APPROVED_END_TIME_TYPE_FIELD_NUMBER = 11;
   /**
    * <pre>
-   * Output only. The approved end time as a well-defined type, e.g. FOREVER.
+   * Output only. The approved end time as a well-defined type, for example, FOREVER.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.enums.TimeTypeEnum.TimeType approved_end_time_type = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4104,7 +3903,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The approved end time as a well-defined type, e.g. FOREVER.
+   * Output only. The approved end time as a well-defined type, for example, FOREVER.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.enums.TimeTypeEnum.TimeType approved_end_time_type = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4118,7 +3917,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The approved end time as a well-defined type, e.g. FOREVER.
+   * Output only. The approved end time as a well-defined type, for example, FOREVER.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.enums.TimeTypeEnum.TimeType approved_end_time_type = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4168,7 +3967,8 @@ private static final long serialVersionUID = 0L;
   public static final int PROPOSED_SPENDING_LIMIT_TYPE_FIELD_NUMBER = 13;
   /**
    * <pre>
-   * Output only. The proposed spending limit as a well-defined type, e.g. INFINITE.
+   * Output only. The proposed spending limit as a well-defined type, for example,
+   * INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4179,7 +3979,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The proposed spending limit as a well-defined type, e.g. INFINITE.
+   * Output only. The proposed spending limit as a well-defined type, for example,
+   * INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4193,7 +3994,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The proposed spending limit as a well-defined type, e.g. INFINITE.
+   * Output only. The proposed spending limit as a well-defined type, for example,
+   * INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4247,8 +4049,9 @@ private static final long serialVersionUID = 0L;
   public static final int APPROVED_SPENDING_LIMIT_TYPE_FIELD_NUMBER = 15;
   /**
    * <pre>
-   * Output only. The approved spending limit as a well-defined type, e.g. INFINITE.  This
-   * will only be populated if the approved spending limit is INFINITE.
+   * Output only. The approved spending limit as a well-defined type, for example,
+   * INFINITE.  This will only be populated if the approved spending limit is
+   * INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4259,8 +4062,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The approved spending limit as a well-defined type, e.g. INFINITE.  This
-   * will only be populated if the approved spending limit is INFINITE.
+   * Output only. The approved spending limit as a well-defined type, for example,
+   * INFINITE.  This will only be populated if the approved spending limit is
+   * INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4274,8 +4078,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The approved spending limit as a well-defined type, e.g. INFINITE.  This
-   * will only be populated if the approved spending limit is INFINITE.
+   * Output only. The approved spending limit as a well-defined type, for example,
+   * INFINITE.  This will only be populated if the approved spending limit is
+   * INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4339,10 +4144,10 @@ private static final long serialVersionUID = 0L;
   public static final int ADJUSTED_SPENDING_LIMIT_TYPE_FIELD_NUMBER = 17;
   /**
    * <pre>
-   * Output only. The adjusted spending limit as a well-defined type, e.g. INFINITE.
-   * This will only be populated if the adjusted spending limit is INFINITE,
-   * which is guaranteed to be true if the approved spending limit is
-   * INFINITE.
+   * Output only. The adjusted spending limit as a well-defined type, for example,
+   * INFINITE. This will only be populated if the adjusted spending limit is
+   * INFINITE, which is guaranteed to be true if the approved spending limit
+   * is INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType adjusted_spending_limit_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4353,10 +4158,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The adjusted spending limit as a well-defined type, e.g. INFINITE.
-   * This will only be populated if the adjusted spending limit is INFINITE,
-   * which is guaranteed to be true if the approved spending limit is
-   * INFINITE.
+   * Output only. The adjusted spending limit as a well-defined type, for example,
+   * INFINITE. This will only be populated if the adjusted spending limit is
+   * INFINITE, which is guaranteed to be true if the approved spending limit
+   * is INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType adjusted_spending_limit_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4370,10 +4175,10 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Output only. The adjusted spending limit as a well-defined type, e.g. INFINITE.
-   * This will only be populated if the adjusted spending limit is INFINITE,
-   * which is guaranteed to be true if the approved spending limit is
-   * INFINITE.
+   * Output only. The adjusted spending limit as a well-defined type, for example,
+   * INFINITE. This will only be populated if the adjusted spending limit is
+   * INFINITE, which is guaranteed to be true if the approved spending limit
+   * is INFINITE.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType adjusted_spending_limit_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4472,7 +4277,7 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000040) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 36, notes_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -4563,7 +4368,7 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000040) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(36, notes_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -4690,7 +4495,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -4807,7 +4612,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -4910,8 +4715,8 @@ private static final long serialVersionUID = 0L;
    * approval, if any, are found in 'pending_proposal'.  Effective details about
    * the budget are found in fields prefixed 'approved_', 'adjusted_' and those
    * without a prefix.  Since some effective details may differ from what the user
-   * had originally requested (e.g. spending limit), these differences are
-   * juxtaposed via 'proposed_', 'approved_', and possibly 'adjusted_' fields.
+   * had originally requested (for example, spending limit), these differences are
+   * juxtaposed through 'proposed_', 'approved_', and possibly 'adjusted_' fields.
    * This resource is mutated using AccountBudgetProposal and cannot be mutated
    * directly. A budget may have at most one pending proposal at any given time.
    * It is read through pending_proposal.
@@ -4941,18 +4746,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v10.resources.AccountBudget.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -5262,7 +5062,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -5277,17 +5077,149 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.ads.googleads.v10.resources.AccountBudget parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              resourceName_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 10
+            case 32: {
+              status_ = input.readEnum();
+
+              break;
+            } // case 32
+            case 72: {
+              int rawValue = input.readEnum();
+              proposedEndTimeCase_ = 9;
+              proposedEndTime_ = rawValue;
+              break;
+            } // case 72
+            case 88: {
+              int rawValue = input.readEnum();
+              approvedEndTimeCase_ = 11;
+              approvedEndTime_ = rawValue;
+              break;
+            } // case 88
+            case 104: {
+              int rawValue = input.readEnum();
+              proposedSpendingLimitCase_ = 13;
+              proposedSpendingLimit_ = rawValue;
+              break;
+            } // case 104
+            case 120: {
+              int rawValue = input.readEnum();
+              approvedSpendingLimitCase_ = 15;
+              approvedSpendingLimit_ = rawValue;
+              break;
+            } // case 120
+            case 136: {
+              int rawValue = input.readEnum();
+              adjustedSpendingLimitCase_ = 17;
+              adjustedSpendingLimit_ = rawValue;
+              break;
+            } // case 136
+            case 178: {
+              input.readMessage(
+                  getPendingProposalFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 178
+            case 184: {
+              id_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 184
+            case 194: {
+              billingSetup_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 194
+            case 202: {
+              name_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 202
+            case 210: {
+              proposedStartDateTime_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 210
+            case 218: {
+              approvedStartDateTime_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 218
+            case 226: {
+              java.lang.String s = input.readStringRequireUtf8();
+              proposedEndTimeCase_ = 28;
+              proposedEndTime_ = s;
+              break;
+            } // case 226
+            case 234: {
+              java.lang.String s = input.readStringRequireUtf8();
+              approvedEndTimeCase_ = 29;
+              approvedEndTime_ = s;
+              break;
+            } // case 234
+            case 240: {
+              proposedSpendingLimit_ = input.readInt64();
+              proposedSpendingLimitCase_ = 30;
+              break;
+            } // case 240
+            case 248: {
+              approvedSpendingLimit_ = input.readInt64();
+              approvedSpendingLimitCase_ = 31;
+              break;
+            } // case 248
+            case 256: {
+              adjustedSpendingLimit_ = input.readInt64();
+              adjustedSpendingLimitCase_ = 32;
+              break;
+            } // case 256
+            case 264: {
+              totalAdjustmentsMicros_ = input.readInt64();
+
+              break;
+            } // case 264
+            case 272: {
+              amountServedMicros_ = input.readInt64();
+
+              break;
+            } // case 272
+            case 282: {
+              purchaseOrderNumber_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 282
+            case 290: {
+              notes_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 290
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v10.resources.AccountBudget) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int proposedEndTimeCase_ = 0;
@@ -6665,7 +6597,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The proposed end time as a well-defined type, e.g. FOREVER.
+     * Output only. The proposed end time as a well-defined type, for example, FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6677,7 +6609,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The proposed end time as a well-defined type, e.g. FOREVER.
+     * Output only. The proposed end time as a well-defined type, for example, FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6692,7 +6624,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The proposed end time as a well-defined type, e.g. FOREVER.
+     * Output only. The proposed end time as a well-defined type, for example, FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6707,7 +6639,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The proposed end time as a well-defined type, e.g. FOREVER.
+     * Output only. The proposed end time as a well-defined type, for example, FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6725,7 +6657,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The proposed end time as a well-defined type, e.g. FOREVER.
+     * Output only. The proposed end time as a well-defined type, for example, FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6743,7 +6675,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The proposed end time as a well-defined type, e.g. FOREVER.
+     * Output only. The proposed end time as a well-defined type, for example, FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.TimeTypeEnum.TimeType proposed_end_time_type = 9 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6881,7 +6813,7 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The approved end time as a well-defined type, e.g. FOREVER.
+     * Output only. The approved end time as a well-defined type, for example, FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.TimeTypeEnum.TimeType approved_end_time_type = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6893,7 +6825,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The approved end time as a well-defined type, e.g. FOREVER.
+     * Output only. The approved end time as a well-defined type, for example, FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.TimeTypeEnum.TimeType approved_end_time_type = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6908,7 +6840,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The approved end time as a well-defined type, e.g. FOREVER.
+     * Output only. The approved end time as a well-defined type, for example, FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.TimeTypeEnum.TimeType approved_end_time_type = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6923,7 +6855,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The approved end time as a well-defined type, e.g. FOREVER.
+     * Output only. The approved end time as a well-defined type, for example, FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.TimeTypeEnum.TimeType approved_end_time_type = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6941,7 +6873,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The approved end time as a well-defined type, e.g. FOREVER.
+     * Output only. The approved end time as a well-defined type, for example, FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.TimeTypeEnum.TimeType approved_end_time_type = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6959,7 +6891,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The approved end time as a well-defined type, e.g. FOREVER.
+     * Output only. The approved end time as a well-defined type, for example, FOREVER.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.TimeTypeEnum.TimeType approved_end_time_type = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7037,7 +6969,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The proposed spending limit as a well-defined type, e.g. INFINITE.
+     * Output only. The proposed spending limit as a well-defined type, for example,
+     * INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7049,7 +6982,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The proposed spending limit as a well-defined type, e.g. INFINITE.
+     * Output only. The proposed spending limit as a well-defined type, for example,
+     * INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7064,7 +6998,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The proposed spending limit as a well-defined type, e.g. INFINITE.
+     * Output only. The proposed spending limit as a well-defined type, for example,
+     * INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7079,7 +7014,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The proposed spending limit as a well-defined type, e.g. INFINITE.
+     * Output only. The proposed spending limit as a well-defined type, for example,
+     * INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7097,7 +7033,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The proposed spending limit as a well-defined type, e.g. INFINITE.
+     * Output only. The proposed spending limit as a well-defined type, for example,
+     * INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7115,7 +7052,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The proposed spending limit as a well-defined type, e.g. INFINITE.
+     * Output only. The proposed spending limit as a well-defined type, for example,
+     * INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType proposed_spending_limit_type = 13 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7201,8 +7139,9 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The approved spending limit as a well-defined type, e.g. INFINITE.  This
-     * will only be populated if the approved spending limit is INFINITE.
+     * Output only. The approved spending limit as a well-defined type, for example,
+     * INFINITE.  This will only be populated if the approved spending limit is
+     * INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7214,8 +7153,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The approved spending limit as a well-defined type, e.g. INFINITE.  This
-     * will only be populated if the approved spending limit is INFINITE.
+     * Output only. The approved spending limit as a well-defined type, for example,
+     * INFINITE.  This will only be populated if the approved spending limit is
+     * INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7230,8 +7170,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The approved spending limit as a well-defined type, e.g. INFINITE.  This
-     * will only be populated if the approved spending limit is INFINITE.
+     * Output only. The approved spending limit as a well-defined type, for example,
+     * INFINITE.  This will only be populated if the approved spending limit is
+     * INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7246,8 +7187,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The approved spending limit as a well-defined type, e.g. INFINITE.  This
-     * will only be populated if the approved spending limit is INFINITE.
+     * Output only. The approved spending limit as a well-defined type, for example,
+     * INFINITE.  This will only be populated if the approved spending limit is
+     * INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7265,8 +7207,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The approved spending limit as a well-defined type, e.g. INFINITE.  This
-     * will only be populated if the approved spending limit is INFINITE.
+     * Output only. The approved spending limit as a well-defined type, for example,
+     * INFINITE.  This will only be populated if the approved spending limit is
+     * INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7284,8 +7227,9 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The approved spending limit as a well-defined type, e.g. INFINITE.  This
-     * will only be populated if the approved spending limit is INFINITE.
+     * Output only. The approved spending limit as a well-defined type, for example,
+     * INFINITE.  This will only be populated if the approved spending limit is
+     * INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType approved_spending_limit_type = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7391,10 +7335,10 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. The adjusted spending limit as a well-defined type, e.g. INFINITE.
-     * This will only be populated if the adjusted spending limit is INFINITE,
-     * which is guaranteed to be true if the approved spending limit is
-     * INFINITE.
+     * Output only. The adjusted spending limit as a well-defined type, for example,
+     * INFINITE. This will only be populated if the adjusted spending limit is
+     * INFINITE, which is guaranteed to be true if the approved spending limit
+     * is INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType adjusted_spending_limit_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7406,10 +7350,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The adjusted spending limit as a well-defined type, e.g. INFINITE.
-     * This will only be populated if the adjusted spending limit is INFINITE,
-     * which is guaranteed to be true if the approved spending limit is
-     * INFINITE.
+     * Output only. The adjusted spending limit as a well-defined type, for example,
+     * INFINITE. This will only be populated if the adjusted spending limit is
+     * INFINITE, which is guaranteed to be true if the approved spending limit
+     * is INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType adjusted_spending_limit_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7424,10 +7368,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The adjusted spending limit as a well-defined type, e.g. INFINITE.
-     * This will only be populated if the adjusted spending limit is INFINITE,
-     * which is guaranteed to be true if the approved spending limit is
-     * INFINITE.
+     * Output only. The adjusted spending limit as a well-defined type, for example,
+     * INFINITE. This will only be populated if the adjusted spending limit is
+     * INFINITE, which is guaranteed to be true if the approved spending limit
+     * is INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType adjusted_spending_limit_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7442,10 +7386,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The adjusted spending limit as a well-defined type, e.g. INFINITE.
-     * This will only be populated if the adjusted spending limit is INFINITE,
-     * which is guaranteed to be true if the approved spending limit is
-     * INFINITE.
+     * Output only. The adjusted spending limit as a well-defined type, for example,
+     * INFINITE. This will only be populated if the adjusted spending limit is
+     * INFINITE, which is guaranteed to be true if the approved spending limit
+     * is INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType adjusted_spending_limit_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7463,10 +7407,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The adjusted spending limit as a well-defined type, e.g. INFINITE.
-     * This will only be populated if the adjusted spending limit is INFINITE,
-     * which is guaranteed to be true if the approved spending limit is
-     * INFINITE.
+     * Output only. The adjusted spending limit as a well-defined type, for example,
+     * INFINITE. This will only be populated if the adjusted spending limit is
+     * INFINITE, which is guaranteed to be true if the approved spending limit
+     * is INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType adjusted_spending_limit_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7484,10 +7428,10 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. The adjusted spending limit as a well-defined type, e.g. INFINITE.
-     * This will only be populated if the adjusted spending limit is INFINITE,
-     * which is guaranteed to be true if the approved spending limit is
-     * INFINITE.
+     * Output only. The adjusted spending limit as a well-defined type, for example,
+     * INFINITE. This will only be populated if the adjusted spending limit is
+     * INFINITE, which is guaranteed to be true if the approved spending limit
+     * is INFINITE.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.SpendingLimitTypeEnum.SpendingLimitType adjusted_spending_limit_type = 17 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -7534,7 +7478,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new AccountBudget(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

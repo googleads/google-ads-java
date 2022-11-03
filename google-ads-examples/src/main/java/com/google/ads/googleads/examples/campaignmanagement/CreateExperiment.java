@@ -21,24 +21,24 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.utils.FieldMasks;
-import com.google.ads.googleads.v11.enums.ExperimentStatusEnum.ExperimentStatus;
-import com.google.ads.googleads.v11.enums.ExperimentTypeEnum.ExperimentType;
-import com.google.ads.googleads.v11.errors.GoogleAdsError;
-import com.google.ads.googleads.v11.errors.GoogleAdsException;
-import com.google.ads.googleads.v11.resources.Campaign;
-import com.google.ads.googleads.v11.resources.Experiment;
-import com.google.ads.googleads.v11.resources.ExperimentArm;
-import com.google.ads.googleads.v11.services.CampaignOperation;
-import com.google.ads.googleads.v11.services.CampaignServiceClient;
-import com.google.ads.googleads.v11.services.ExperimentArmOperation;
-import com.google.ads.googleads.v11.services.ExperimentArmServiceClient;
-import com.google.ads.googleads.v11.services.ExperimentOperation;
-import com.google.ads.googleads.v11.services.ExperimentServiceClient;
-import com.google.ads.googleads.v11.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v11.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v11.services.MutateExperimentArmsResponse;
-import com.google.ads.googleads.v11.services.MutateExperimentsResponse;
-import com.google.ads.googleads.v11.utils.ResourceNames;
+import com.google.ads.googleads.v12.enums.ExperimentStatusEnum.ExperimentStatus;
+import com.google.ads.googleads.v12.enums.ExperimentTypeEnum.ExperimentType;
+import com.google.ads.googleads.v12.errors.GoogleAdsError;
+import com.google.ads.googleads.v12.errors.GoogleAdsException;
+import com.google.ads.googleads.v12.resources.Campaign;
+import com.google.ads.googleads.v12.resources.Experiment;
+import com.google.ads.googleads.v12.resources.ExperimentArm;
+import com.google.ads.googleads.v12.services.CampaignOperation;
+import com.google.ads.googleads.v12.services.CampaignServiceClient;
+import com.google.ads.googleads.v12.services.ExperimentArmOperation;
+import com.google.ads.googleads.v12.services.ExperimentArmServiceClient;
+import com.google.ads.googleads.v12.services.ExperimentOperation;
+import com.google.ads.googleads.v12.services.ExperimentServiceClient;
+import com.google.ads.googleads.v12.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v12.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v12.services.MutateExperimentArmsResponse;
+import com.google.ads.googleads.v12.services.MutateExperimentsResponse;
+import com.google.ads.googleads.v12.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -105,7 +105,8 @@ public class CreateExperiment {
    */
   private void runExample(GoogleAdsClient googleAdsClient, long customerId, long baseCampaignId) {
     String experiment = createExperimentResource(googleAdsClient, customerId);
-    String treatmentArm = createExperimentArms(googleAdsClient, customerId, baseCampaignId, experiment);
+    String treatmentArm =
+        createExperimentArms(googleAdsClient, customerId, baseCampaignId, experiment);
     String draftCampaign = fetchDraftCampaign(googleAdsClient, customerId, treatmentArm);
 
     modifyDraftCampaign(googleAdsClient, customerId, draftCampaign);
@@ -157,7 +158,7 @@ public class CreateExperiment {
                 ExperimentArm.newBuilder()
                     .setControl(true)
                     .addCampaigns(ResourceNames.campaign(customerId, campaignId))
-                    .setTrial(experiment)
+                    .setExperiment(experiment)
                     .setName("control arm")
                     .setTrafficSplit(40)
                     .build())
@@ -169,7 +170,7 @@ public class CreateExperiment {
                 // generate draft campaigns that you can modify before starting the experiment.
                 ExperimentArm.newBuilder()
                     .setControl(false)
-                    .setTrial(experiment)
+                    .setExperiment(experiment)
                     .setName("experiment arm")
                     .setTrafficSplit(60)
                     .build())

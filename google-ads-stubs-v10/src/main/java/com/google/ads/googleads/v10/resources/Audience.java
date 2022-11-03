@@ -5,7 +5,7 @@ package com.google.ads.googleads.v10.resources;
 
 /**
  * <pre>
- * Audience is an effective targeting option that allows you to
+ * Audience is an effective targeting option that lets you
  * intersect different segment attributes, such as detailed demographics and
  * affinities, to create audiences that represent sections of your target
  * segments.
@@ -41,100 +41,6 @@ private static final long serialVersionUID = 0L;
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
-  }
-  private Audience(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            resourceName_ = s;
-            break;
-          }
-          case 16: {
-
-            id_ = input.readInt64();
-            break;
-          }
-          case 24: {
-            int rawValue = input.readEnum();
-
-            status_ = rawValue;
-            break;
-          }
-          case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            name_ = s;
-            break;
-          }
-          case 42: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            description_ = s;
-            break;
-          }
-          case 50: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              dimensions_ = new java.util.ArrayList<com.google.ads.googleads.v10.common.AudienceDimension>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            dimensions_.add(
-                input.readMessage(com.google.ads.googleads.v10.common.AudienceDimension.parser(), extensionRegistry));
-            break;
-          }
-          case 58: {
-            com.google.ads.googleads.v10.common.AudienceExclusionDimension.Builder subBuilder = null;
-            if (exclusionDimension_ != null) {
-              subBuilder = exclusionDimension_.toBuilder();
-            }
-            exclusionDimension_ = input.readMessage(com.google.ads.googleads.v10.common.AudienceExclusionDimension.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(exclusionDimension_);
-              exclusionDimension_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        dimensions_ = java.util.Collections.unmodifiableList(dimensions_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
@@ -472,7 +378,7 @@ private static final long serialVersionUID = 0L;
     if (exclusionDimension_ != null) {
       output.writeMessage(7, getExclusionDimension());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -506,7 +412,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(7, getExclusionDimension());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -537,7 +443,7 @@ private static final long serialVersionUID = 0L;
       if (!getExclusionDimension()
           .equals(other.getExclusionDimension())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -567,7 +473,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + EXCLUSION_DIMENSION_FIELD_NUMBER;
       hash = (53 * hash) + getExclusionDimension().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -664,7 +570,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Audience is an effective targeting option that allows you to
+   * Audience is an effective targeting option that lets you
    * intersect different segment attributes, such as detailed demographics and
    * affinities, to create audiences that represent sections of your target
    * segments.
@@ -691,19 +597,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v10.resources.Audience.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getDimensionsFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -720,10 +620,11 @@ private static final long serialVersionUID = 0L;
 
       if (dimensionsBuilder_ == null) {
         dimensions_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        dimensions_ = null;
         dimensionsBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000001);
       if (exclusionDimensionBuilder_ == null) {
         exclusionDimension_ = null;
       } else {
@@ -871,7 +772,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasExclusionDimension()) {
         mergeExclusionDimension(other.getExclusionDimension());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -886,17 +787,75 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.ads.googleads.v10.resources.Audience parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              resourceName_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 10
+            case 16: {
+              id_ = input.readInt64();
+
+              break;
+            } // case 16
+            case 24: {
+              status_ = input.readEnum();
+
+              break;
+            } // case 24
+            case 34: {
+              name_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 34
+            case 42: {
+              description_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 42
+            case 50: {
+              com.google.ads.googleads.v10.common.AudienceDimension m =
+                  input.readMessage(
+                      com.google.ads.googleads.v10.common.AudienceDimension.parser(),
+                      extensionRegistry);
+              if (dimensionsBuilder_ == null) {
+                ensureDimensionsIsMutable();
+                dimensions_.add(m);
+              } else {
+                dimensionsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 50
+            case 58: {
+              input.readMessage(
+                  getExclusionDimensionFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 58
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v10.resources.Audience) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -1830,7 +1789,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new Audience(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

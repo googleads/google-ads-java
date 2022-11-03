@@ -200,7 +200,8 @@ public interface LeadFormAssetOrBuilder extends
 
   /**
    * <pre>
-   * Ordered list of input fields.
+   * Ordered list of input fields. This field can be updated by reordering
+   * questions, but not by adding or removing questions.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.LeadFormField fields = 8;</code>
@@ -209,7 +210,8 @@ public interface LeadFormAssetOrBuilder extends
       getFieldsList();
   /**
    * <pre>
-   * Ordered list of input fields.
+   * Ordered list of input fields. This field can be updated by reordering
+   * questions, but not by adding or removing questions.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.LeadFormField fields = 8;</code>
@@ -217,7 +219,8 @@ public interface LeadFormAssetOrBuilder extends
   com.google.ads.googleads.v11.common.LeadFormField getFields(int index);
   /**
    * <pre>
-   * Ordered list of input fields.
+   * Ordered list of input fields. This field can be updated by reordering
+   * questions, but not by adding or removing questions.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.LeadFormField fields = 8;</code>
@@ -225,7 +228,8 @@ public interface LeadFormAssetOrBuilder extends
   int getFieldsCount();
   /**
    * <pre>
-   * Ordered list of input fields.
+   * Ordered list of input fields. This field can be updated by reordering
+   * questions, but not by adding or removing questions.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.LeadFormField fields = 8;</code>
@@ -234,7 +238,8 @@ public interface LeadFormAssetOrBuilder extends
       getFieldsOrBuilderList();
   /**
    * <pre>
-   * Ordered list of input fields.
+   * Ordered list of input fields. This field can be updated by reordering
+   * questions, but not by adding or removing questions.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.LeadFormField fields = 8;</code>

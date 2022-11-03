@@ -34,297 +34,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private ListingDimensionInfo(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 18: {
-            com.google.ads.googleads.v11.common.HotelIdInfo.Builder subBuilder = null;
-            if (dimensionCase_ == 2) {
-              subBuilder = ((com.google.ads.googleads.v11.common.HotelIdInfo) dimension_).toBuilder();
-            }
-            dimension_ =
-                input.readMessage(com.google.ads.googleads.v11.common.HotelIdInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v11.common.HotelIdInfo) dimension_);
-              dimension_ = subBuilder.buildPartial();
-            }
-            dimensionCase_ = 2;
-            break;
-          }
-          case 26: {
-            com.google.ads.googleads.v11.common.HotelClassInfo.Builder subBuilder = null;
-            if (dimensionCase_ == 3) {
-              subBuilder = ((com.google.ads.googleads.v11.common.HotelClassInfo) dimension_).toBuilder();
-            }
-            dimension_ =
-                input.readMessage(com.google.ads.googleads.v11.common.HotelClassInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v11.common.HotelClassInfo) dimension_);
-              dimension_ = subBuilder.buildPartial();
-            }
-            dimensionCase_ = 3;
-            break;
-          }
-          case 34: {
-            com.google.ads.googleads.v11.common.HotelCountryRegionInfo.Builder subBuilder = null;
-            if (dimensionCase_ == 4) {
-              subBuilder = ((com.google.ads.googleads.v11.common.HotelCountryRegionInfo) dimension_).toBuilder();
-            }
-            dimension_ =
-                input.readMessage(com.google.ads.googleads.v11.common.HotelCountryRegionInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v11.common.HotelCountryRegionInfo) dimension_);
-              dimension_ = subBuilder.buildPartial();
-            }
-            dimensionCase_ = 4;
-            break;
-          }
-          case 42: {
-            com.google.ads.googleads.v11.common.HotelStateInfo.Builder subBuilder = null;
-            if (dimensionCase_ == 5) {
-              subBuilder = ((com.google.ads.googleads.v11.common.HotelStateInfo) dimension_).toBuilder();
-            }
-            dimension_ =
-                input.readMessage(com.google.ads.googleads.v11.common.HotelStateInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v11.common.HotelStateInfo) dimension_);
-              dimension_ = subBuilder.buildPartial();
-            }
-            dimensionCase_ = 5;
-            break;
-          }
-          case 50: {
-            com.google.ads.googleads.v11.common.HotelCityInfo.Builder subBuilder = null;
-            if (dimensionCase_ == 6) {
-              subBuilder = ((com.google.ads.googleads.v11.common.HotelCityInfo) dimension_).toBuilder();
-            }
-            dimension_ =
-                input.readMessage(com.google.ads.googleads.v11.common.HotelCityInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v11.common.HotelCityInfo) dimension_);
-              dimension_ = subBuilder.buildPartial();
-            }
-            dimensionCase_ = 6;
-            break;
-          }
-          case 66: {
-            com.google.ads.googleads.v11.common.ProductChannelInfo.Builder subBuilder = null;
-            if (dimensionCase_ == 8) {
-              subBuilder = ((com.google.ads.googleads.v11.common.ProductChannelInfo) dimension_).toBuilder();
-            }
-            dimension_ =
-                input.readMessage(com.google.ads.googleads.v11.common.ProductChannelInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v11.common.ProductChannelInfo) dimension_);
-              dimension_ = subBuilder.buildPartial();
-            }
-            dimensionCase_ = 8;
-            break;
-          }
-          case 74: {
-            com.google.ads.googleads.v11.common.ProductChannelExclusivityInfo.Builder subBuilder = null;
-            if (dimensionCase_ == 9) {
-              subBuilder = ((com.google.ads.googleads.v11.common.ProductChannelExclusivityInfo) dimension_).toBuilder();
-            }
-            dimension_ =
-                input.readMessage(com.google.ads.googleads.v11.common.ProductChannelExclusivityInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v11.common.ProductChannelExclusivityInfo) dimension_);
-              dimension_ = subBuilder.buildPartial();
-            }
-            dimensionCase_ = 9;
-            break;
-          }
-          case 82: {
-            com.google.ads.googleads.v11.common.ProductConditionInfo.Builder subBuilder = null;
-            if (dimensionCase_ == 10) {
-              subBuilder = ((com.google.ads.googleads.v11.common.ProductConditionInfo) dimension_).toBuilder();
-            }
-            dimension_ =
-                input.readMessage(com.google.ads.googleads.v11.common.ProductConditionInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v11.common.ProductConditionInfo) dimension_);
-              dimension_ = subBuilder.buildPartial();
-            }
-            dimensionCase_ = 10;
-            break;
-          }
-          case 90: {
-            com.google.ads.googleads.v11.common.ProductItemIdInfo.Builder subBuilder = null;
-            if (dimensionCase_ == 11) {
-              subBuilder = ((com.google.ads.googleads.v11.common.ProductItemIdInfo) dimension_).toBuilder();
-            }
-            dimension_ =
-                input.readMessage(com.google.ads.googleads.v11.common.ProductItemIdInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v11.common.ProductItemIdInfo) dimension_);
-              dimension_ = subBuilder.buildPartial();
-            }
-            dimensionCase_ = 11;
-            break;
-          }
-          case 98: {
-            com.google.ads.googleads.v11.common.ProductTypeInfo.Builder subBuilder = null;
-            if (dimensionCase_ == 12) {
-              subBuilder = ((com.google.ads.googleads.v11.common.ProductTypeInfo) dimension_).toBuilder();
-            }
-            dimension_ =
-                input.readMessage(com.google.ads.googleads.v11.common.ProductTypeInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v11.common.ProductTypeInfo) dimension_);
-              dimension_ = subBuilder.buildPartial();
-            }
-            dimensionCase_ = 12;
-            break;
-          }
-          case 106: {
-            com.google.ads.googleads.v11.common.ProductBiddingCategoryInfo.Builder subBuilder = null;
-            if (dimensionCase_ == 13) {
-              subBuilder = ((com.google.ads.googleads.v11.common.ProductBiddingCategoryInfo) dimension_).toBuilder();
-            }
-            dimension_ =
-                input.readMessage(com.google.ads.googleads.v11.common.ProductBiddingCategoryInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v11.common.ProductBiddingCategoryInfo) dimension_);
-              dimension_ = subBuilder.buildPartial();
-            }
-            dimensionCase_ = 13;
-            break;
-          }
-          case 114: {
-            com.google.ads.googleads.v11.common.UnknownListingDimensionInfo.Builder subBuilder = null;
-            if (dimensionCase_ == 14) {
-              subBuilder = ((com.google.ads.googleads.v11.common.UnknownListingDimensionInfo) dimension_).toBuilder();
-            }
-            dimension_ =
-                input.readMessage(com.google.ads.googleads.v11.common.UnknownListingDimensionInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v11.common.UnknownListingDimensionInfo) dimension_);
-              dimension_ = subBuilder.buildPartial();
-            }
-            dimensionCase_ = 14;
-            break;
-          }
-          case 122: {
-            com.google.ads.googleads.v11.common.ProductBrandInfo.Builder subBuilder = null;
-            if (dimensionCase_ == 15) {
-              subBuilder = ((com.google.ads.googleads.v11.common.ProductBrandInfo) dimension_).toBuilder();
-            }
-            dimension_ =
-                input.readMessage(com.google.ads.googleads.v11.common.ProductBrandInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v11.common.ProductBrandInfo) dimension_);
-              dimension_ = subBuilder.buildPartial();
-            }
-            dimensionCase_ = 15;
-            break;
-          }
-          case 130: {
-            com.google.ads.googleads.v11.common.ProductCustomAttributeInfo.Builder subBuilder = null;
-            if (dimensionCase_ == 16) {
-              subBuilder = ((com.google.ads.googleads.v11.common.ProductCustomAttributeInfo) dimension_).toBuilder();
-            }
-            dimension_ =
-                input.readMessage(com.google.ads.googleads.v11.common.ProductCustomAttributeInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v11.common.ProductCustomAttributeInfo) dimension_);
-              dimension_ = subBuilder.buildPartial();
-            }
-            dimensionCase_ = 16;
-            break;
-          }
-          case 138: {
-            com.google.ads.googleads.v11.common.ProductGroupingInfo.Builder subBuilder = null;
-            if (dimensionCase_ == 17) {
-              subBuilder = ((com.google.ads.googleads.v11.common.ProductGroupingInfo) dimension_).toBuilder();
-            }
-            dimension_ =
-                input.readMessage(com.google.ads.googleads.v11.common.ProductGroupingInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v11.common.ProductGroupingInfo) dimension_);
-              dimension_ = subBuilder.buildPartial();
-            }
-            dimensionCase_ = 17;
-            break;
-          }
-          case 146: {
-            com.google.ads.googleads.v11.common.ProductLabelsInfo.Builder subBuilder = null;
-            if (dimensionCase_ == 18) {
-              subBuilder = ((com.google.ads.googleads.v11.common.ProductLabelsInfo) dimension_).toBuilder();
-            }
-            dimension_ =
-                input.readMessage(com.google.ads.googleads.v11.common.ProductLabelsInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v11.common.ProductLabelsInfo) dimension_);
-              dimension_ = subBuilder.buildPartial();
-            }
-            dimensionCase_ = 18;
-            break;
-          }
-          case 154: {
-            com.google.ads.googleads.v11.common.ProductLegacyConditionInfo.Builder subBuilder = null;
-            if (dimensionCase_ == 19) {
-              subBuilder = ((com.google.ads.googleads.v11.common.ProductLegacyConditionInfo) dimension_).toBuilder();
-            }
-            dimension_ =
-                input.readMessage(com.google.ads.googleads.v11.common.ProductLegacyConditionInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v11.common.ProductLegacyConditionInfo) dimension_);
-              dimension_ = subBuilder.buildPartial();
-            }
-            dimensionCase_ = 19;
-            break;
-          }
-          case 162: {
-            com.google.ads.googleads.v11.common.ProductTypeFullInfo.Builder subBuilder = null;
-            if (dimensionCase_ == 20) {
-              subBuilder = ((com.google.ads.googleads.v11.common.ProductTypeFullInfo) dimension_).toBuilder();
-            }
-            dimension_ =
-                input.readMessage(com.google.ads.googleads.v11.common.ProductTypeFullInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v11.common.ProductTypeFullInfo) dimension_);
-              dimension_ = subBuilder.buildPartial();
-            }
-            dimensionCase_ = 20;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v11.common.CriteriaProto.internal_static_google_ads_googleads_v11_common_ListingDimensionInfo_descriptor;
@@ -1253,7 +962,7 @@ private static final long serialVersionUID = 0L;
     if (dimensionCase_ == 20) {
       output.writeMessage(20, (com.google.ads.googleads.v11.common.ProductTypeFullInfo) dimension_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -1334,7 +1043,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(20, (com.google.ads.googleads.v11.common.ProductTypeFullInfo) dimension_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -1426,7 +1135,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -1513,7 +1222,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -1634,22 +1343,71 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v11.common.ListingDimensionInfo.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      if (hotelIdBuilder_ != null) {
+        hotelIdBuilder_.clear();
+      }
+      if (hotelClassBuilder_ != null) {
+        hotelClassBuilder_.clear();
+      }
+      if (hotelCountryRegionBuilder_ != null) {
+        hotelCountryRegionBuilder_.clear();
+      }
+      if (hotelStateBuilder_ != null) {
+        hotelStateBuilder_.clear();
+      }
+      if (hotelCityBuilder_ != null) {
+        hotelCityBuilder_.clear();
+      }
+      if (productBiddingCategoryBuilder_ != null) {
+        productBiddingCategoryBuilder_.clear();
+      }
+      if (productBrandBuilder_ != null) {
+        productBrandBuilder_.clear();
+      }
+      if (productChannelBuilder_ != null) {
+        productChannelBuilder_.clear();
+      }
+      if (productChannelExclusivityBuilder_ != null) {
+        productChannelExclusivityBuilder_.clear();
+      }
+      if (productConditionBuilder_ != null) {
+        productConditionBuilder_.clear();
+      }
+      if (productCustomAttributeBuilder_ != null) {
+        productCustomAttributeBuilder_.clear();
+      }
+      if (productItemIdBuilder_ != null) {
+        productItemIdBuilder_.clear();
+      }
+      if (productTypeBuilder_ != null) {
+        productTypeBuilder_.clear();
+      }
+      if (productGroupingBuilder_ != null) {
+        productGroupingBuilder_.clear();
+      }
+      if (productLabelsBuilder_ != null) {
+        productLabelsBuilder_.clear();
+      }
+      if (productLegacyConditionBuilder_ != null) {
+        productLegacyConditionBuilder_.clear();
+      }
+      if (productTypeFullBuilder_ != null) {
+        productTypeFullBuilder_.clear();
+      }
+      if (unknownListingDimensionBuilder_ != null) {
+        unknownListingDimensionBuilder_.clear();
+      }
       dimensionCase_ = 0;
       dimension_ = null;
       return this;
@@ -1930,7 +1688,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1945,17 +1703,156 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.ads.googleads.v11.common.ListingDimensionInfo parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 18: {
+              input.readMessage(
+                  getHotelIdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              dimensionCase_ = 2;
+              break;
+            } // case 18
+            case 26: {
+              input.readMessage(
+                  getHotelClassFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              dimensionCase_ = 3;
+              break;
+            } // case 26
+            case 34: {
+              input.readMessage(
+                  getHotelCountryRegionFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              dimensionCase_ = 4;
+              break;
+            } // case 34
+            case 42: {
+              input.readMessage(
+                  getHotelStateFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              dimensionCase_ = 5;
+              break;
+            } // case 42
+            case 50: {
+              input.readMessage(
+                  getHotelCityFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              dimensionCase_ = 6;
+              break;
+            } // case 50
+            case 66: {
+              input.readMessage(
+                  getProductChannelFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              dimensionCase_ = 8;
+              break;
+            } // case 66
+            case 74: {
+              input.readMessage(
+                  getProductChannelExclusivityFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              dimensionCase_ = 9;
+              break;
+            } // case 74
+            case 82: {
+              input.readMessage(
+                  getProductConditionFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              dimensionCase_ = 10;
+              break;
+            } // case 82
+            case 90: {
+              input.readMessage(
+                  getProductItemIdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              dimensionCase_ = 11;
+              break;
+            } // case 90
+            case 98: {
+              input.readMessage(
+                  getProductTypeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              dimensionCase_ = 12;
+              break;
+            } // case 98
+            case 106: {
+              input.readMessage(
+                  getProductBiddingCategoryFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              dimensionCase_ = 13;
+              break;
+            } // case 106
+            case 114: {
+              input.readMessage(
+                  getUnknownListingDimensionFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              dimensionCase_ = 14;
+              break;
+            } // case 114
+            case 122: {
+              input.readMessage(
+                  getProductBrandFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              dimensionCase_ = 15;
+              break;
+            } // case 122
+            case 130: {
+              input.readMessage(
+                  getProductCustomAttributeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              dimensionCase_ = 16;
+              break;
+            } // case 130
+            case 138: {
+              input.readMessage(
+                  getProductGroupingFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              dimensionCase_ = 17;
+              break;
+            } // case 138
+            case 146: {
+              input.readMessage(
+                  getProductLabelsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              dimensionCase_ = 18;
+              break;
+            } // case 146
+            case 154: {
+              input.readMessage(
+                  getProductLegacyConditionFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              dimensionCase_ = 19;
+              break;
+            } // case 154
+            case 162: {
+              input.readMessage(
+                  getProductTypeFullFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              dimensionCase_ = 20;
+              break;
+            } // case 162
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v11.common.ListingDimensionInfo) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int dimensionCase_ = 0;
@@ -5210,7 +5107,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new ListingDimensionInfo(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

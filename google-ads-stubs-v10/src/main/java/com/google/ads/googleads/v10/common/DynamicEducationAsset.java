@@ -47,141 +47,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private DynamicEducationAsset(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            programId_ = s;
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            locationId_ = s;
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            programName_ = s;
-            break;
-          }
-          case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            subject_ = s;
-            break;
-          }
-          case 42: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            programDescription_ = s;
-            break;
-          }
-          case 50: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            schoolName_ = s;
-            break;
-          }
-          case 58: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            address_ = s;
-            break;
-          }
-          case 66: {
-            java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              contextualKeywords_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            contextualKeywords_.add(s);
-            break;
-          }
-          case 74: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            androidAppLink_ = s;
-            break;
-          }
-          case 82: {
-            java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              similarProgramIds_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000002;
-            }
-            similarProgramIds_.add(s);
-            break;
-          }
-          case 90: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            iosAppLink_ = s;
-            break;
-          }
-          case 96: {
-
-            iosAppStoreId_ = input.readInt64();
-            break;
-          }
-          case 106: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            thumbnailImageUrl_ = s;
-            break;
-          }
-          case 114: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            imageUrl_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        contextualKeywords_ = contextualKeywords_.getUnmodifiableView();
-      }
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
-        similarProgramIds_ = similarProgramIds_.getUnmodifiableView();
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v10.common.AssetTypesProto.internal_static_google_ads_googleads_v10_common_DynamicEducationAsset_descriptor;
@@ -295,7 +160,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object programName_;
   /**
    * <pre>
-   * Required. Program name, e.g. Nursing. Required.
+   * Required. Program name, for example, Nursing. Required.
    * </pre>
    *
    * <code>string program_name = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -316,7 +181,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. Program name, e.g. Nursing. Required.
+   * Required. Program name, for example, Nursing. Required.
    * </pre>
    *
    * <code>string program_name = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -341,7 +206,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object subject_;
   /**
    * <pre>
-   * Subject of study, e.g. Health.
+   * Subject of study, for example, Health.
    * </pre>
    *
    * <code>string subject = 4;</code>
@@ -362,7 +227,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Subject of study, e.g. Health.
+   * Subject of study, for example, Health.
    * </pre>
    *
    * <code>string subject = 4;</code>
@@ -387,7 +252,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object programDescription_;
   /**
    * <pre>
-   * Program description, e.g. Nursing Certification.
+   * Program description, for example, Nursing Certification.
    * </pre>
    *
    * <code>string program_description = 5;</code>
@@ -408,7 +273,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Program description, e.g. Nursing Certification.
+   * Program description, for example, Nursing Certification.
    * </pre>
    *
    * <code>string program_description = 5;</code>
@@ -433,7 +298,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object schoolName_;
   /**
    * <pre>
-   * School name, e.g. Mountain View School of Nursing.
+   * School name, for example, Mountain View School of Nursing.
    * </pre>
    *
    * <code>string school_name = 6;</code>
@@ -454,7 +319,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * School name, e.g. Mountain View School of Nursing.
+   * School name, for example, Mountain View School of Nursing.
    * </pre>
    *
    * <code>string school_name = 6;</code>
@@ -480,9 +345,9 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * School address which can be specified in one of the following formats.
-   * (1) City, state, code, country, e.g. Mountain View, CA, USA.
-   * (2) Full address, e.g. 123 Boulevard St, Mountain View, CA 94043.
-   * (3) Latitude-longitude in the DDD format, e.g. 41.40338, 2.17403
+   * (1) City, state, code, country, for example, Mountain View, CA, USA.
+   * (2) Full address, for example, 123 Boulevard St, Mountain View, CA 94043.
+   * (3) Latitude-longitude in the DDD format, for example, 41.40338, 2.17403
    * </pre>
    *
    * <code>string address = 7;</code>
@@ -504,9 +369,9 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * School address which can be specified in one of the following formats.
-   * (1) City, state, code, country, e.g. Mountain View, CA, USA.
-   * (2) Full address, e.g. 123 Boulevard St, Mountain View, CA 94043.
-   * (3) Latitude-longitude in the DDD format, e.g. 41.40338, 2.17403
+   * (1) City, state, code, country, for example, Mountain View, CA, USA.
+   * (2) Full address, for example, 123 Boulevard St, Mountain View, CA 94043.
+   * (3) Latitude-longitude in the DDD format, for example, 41.40338, 2.17403
    * </pre>
    *
    * <code>string address = 7;</code>
@@ -531,7 +396,8 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.LazyStringList contextualKeywords_;
   /**
    * <pre>
-   * Contextual keywords, e.g. Nursing certification, Health, Mountain View.
+   * Contextual keywords, for example, Nursing certification, Health, Mountain
+   * View.
    * </pre>
    *
    * <code>repeated string contextual_keywords = 8;</code>
@@ -543,7 +409,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Contextual keywords, e.g. Nursing certification, Health, Mountain View.
+   * Contextual keywords, for example, Nursing certification, Health, Mountain
+   * View.
    * </pre>
    *
    * <code>repeated string contextual_keywords = 8;</code>
@@ -554,7 +421,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Contextual keywords, e.g. Nursing certification, Health, Mountain View.
+   * Contextual keywords, for example, Nursing certification, Health, Mountain
+   * View.
    * </pre>
    *
    * <code>repeated string contextual_keywords = 8;</code>
@@ -566,7 +434,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Contextual keywords, e.g. Nursing certification, Health, Mountain View.
+   * Contextual keywords, for example, Nursing certification, Health, Mountain
+   * View.
    * </pre>
    *
    * <code>repeated string contextual_keywords = 8;</code>
@@ -582,7 +451,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object androidAppLink_;
   /**
    * <pre>
-   * Android deep link, e.g.
+   * Android deep link, for example,
    * android-app://com.example.android/http/example.com/gizmos?1234.
    * </pre>
    *
@@ -604,7 +473,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Android deep link, e.g.
+   * Android deep link, for example,
    * android-app://com.example.android/http/example.com/gizmos?1234.
    * </pre>
    *
@@ -681,7 +550,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object iosAppLink_;
   /**
    * <pre>
-   * iOS deep link, e.g. exampleApp://content/page.
+   * iOS deep link, for example, exampleApp://content/page.
    * </pre>
    *
    * <code>string ios_app_link = 11;</code>
@@ -702,7 +571,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * iOS deep link, e.g. exampleApp://content/page.
+   * iOS deep link, for example, exampleApp://content/page.
    * </pre>
    *
    * <code>string ios_app_link = 11;</code>
@@ -744,7 +613,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object thumbnailImageUrl_;
   /**
    * <pre>
-   * Thumbnail image url, e.g. http://www.example.com/thumbnail.png. The
+   * Thumbnail image url, for example, http://www.example.com/thumbnail.png. The
    * thumbnail image will not be uploaded as image asset.
    * </pre>
    *
@@ -766,7 +635,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Thumbnail image url, e.g. http://www.example.com/thumbnail.png. The
+   * Thumbnail image url, for example, http://www.example.com/thumbnail.png. The
    * thumbnail image will not be uploaded as image asset.
    * </pre>
    *
@@ -792,8 +661,8 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object imageUrl_;
   /**
    * <pre>
-   * Image url, e.g. http://www.example.com/image.png. The image will not be
-   * uploaded as image asset.
+   * Image url, for example, http://www.example.com/image.png. The image will
+   * not be uploaded as image asset.
    * </pre>
    *
    * <code>string image_url = 14;</code>
@@ -814,8 +683,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Image url, e.g. http://www.example.com/image.png. The image will not be
-   * uploaded as image asset.
+   * Image url, for example, http://www.example.com/image.png. The image will
+   * not be uploaded as image asset.
    * </pre>
    *
    * <code>string image_url = 14;</code>
@@ -892,7 +761,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageUrl_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 14, imageUrl_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -954,7 +823,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageUrl_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, imageUrl_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -997,7 +866,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getThumbnailImageUrl())) return false;
     if (!getImageUrl()
         .equals(other.getImageUrl())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -1041,7 +910,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getThumbnailImageUrl().hashCode();
     hash = (37 * hash) + IMAGE_URL_FIELD_NUMBER;
     hash = (53 * hash) + getImageUrl().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -1162,18 +1031,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v10.common.DynamicEducationAsset.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -1370,7 +1234,7 @@ private static final long serialVersionUID = 0L;
         imageUrl_ = other.imageUrl_;
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1385,17 +1249,102 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.ads.googleads.v10.common.DynamicEducationAsset parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              programId_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 10
+            case 18: {
+              locationId_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 18
+            case 26: {
+              programName_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 26
+            case 34: {
+              subject_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 34
+            case 42: {
+              programDescription_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 42
+            case 50: {
+              schoolName_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 50
+            case 58: {
+              address_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 58
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureContextualKeywordsIsMutable();
+              contextualKeywords_.add(s);
+              break;
+            } // case 66
+            case 74: {
+              androidAppLink_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 74
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureSimilarProgramIdsIsMutable();
+              similarProgramIds_.add(s);
+              break;
+            } // case 82
+            case 90: {
+              iosAppLink_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 90
+            case 96: {
+              iosAppStoreId_ = input.readInt64();
+
+              break;
+            } // case 96
+            case 106: {
+              thumbnailImageUrl_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 106
+            case 114: {
+              imageUrl_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 114
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v10.common.DynamicEducationAsset) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -1605,7 +1554,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object programName_ = "";
     /**
      * <pre>
-     * Required. Program name, e.g. Nursing. Required.
+     * Required. Program name, for example, Nursing. Required.
      * </pre>
      *
      * <code>string program_name = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1625,7 +1574,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Program name, e.g. Nursing. Required.
+     * Required. Program name, for example, Nursing. Required.
      * </pre>
      *
      * <code>string program_name = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1646,7 +1595,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Program name, e.g. Nursing. Required.
+     * Required. Program name, for example, Nursing. Required.
      * </pre>
      *
      * <code>string program_name = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1665,7 +1614,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Program name, e.g. Nursing. Required.
+     * Required. Program name, for example, Nursing. Required.
      * </pre>
      *
      * <code>string program_name = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1679,7 +1628,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Program name, e.g. Nursing. Required.
+     * Required. Program name, for example, Nursing. Required.
      * </pre>
      *
      * <code>string program_name = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1701,7 +1650,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object subject_ = "";
     /**
      * <pre>
-     * Subject of study, e.g. Health.
+     * Subject of study, for example, Health.
      * </pre>
      *
      * <code>string subject = 4;</code>
@@ -1721,7 +1670,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Subject of study, e.g. Health.
+     * Subject of study, for example, Health.
      * </pre>
      *
      * <code>string subject = 4;</code>
@@ -1742,7 +1691,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Subject of study, e.g. Health.
+     * Subject of study, for example, Health.
      * </pre>
      *
      * <code>string subject = 4;</code>
@@ -1761,7 +1710,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Subject of study, e.g. Health.
+     * Subject of study, for example, Health.
      * </pre>
      *
      * <code>string subject = 4;</code>
@@ -1775,7 +1724,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Subject of study, e.g. Health.
+     * Subject of study, for example, Health.
      * </pre>
      *
      * <code>string subject = 4;</code>
@@ -1797,7 +1746,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object programDescription_ = "";
     /**
      * <pre>
-     * Program description, e.g. Nursing Certification.
+     * Program description, for example, Nursing Certification.
      * </pre>
      *
      * <code>string program_description = 5;</code>
@@ -1817,7 +1766,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Program description, e.g. Nursing Certification.
+     * Program description, for example, Nursing Certification.
      * </pre>
      *
      * <code>string program_description = 5;</code>
@@ -1838,7 +1787,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Program description, e.g. Nursing Certification.
+     * Program description, for example, Nursing Certification.
      * </pre>
      *
      * <code>string program_description = 5;</code>
@@ -1857,7 +1806,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Program description, e.g. Nursing Certification.
+     * Program description, for example, Nursing Certification.
      * </pre>
      *
      * <code>string program_description = 5;</code>
@@ -1871,7 +1820,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Program description, e.g. Nursing Certification.
+     * Program description, for example, Nursing Certification.
      * </pre>
      *
      * <code>string program_description = 5;</code>
@@ -1893,7 +1842,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object schoolName_ = "";
     /**
      * <pre>
-     * School name, e.g. Mountain View School of Nursing.
+     * School name, for example, Mountain View School of Nursing.
      * </pre>
      *
      * <code>string school_name = 6;</code>
@@ -1913,7 +1862,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * School name, e.g. Mountain View School of Nursing.
+     * School name, for example, Mountain View School of Nursing.
      * </pre>
      *
      * <code>string school_name = 6;</code>
@@ -1934,7 +1883,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * School name, e.g. Mountain View School of Nursing.
+     * School name, for example, Mountain View School of Nursing.
      * </pre>
      *
      * <code>string school_name = 6;</code>
@@ -1953,7 +1902,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * School name, e.g. Mountain View School of Nursing.
+     * School name, for example, Mountain View School of Nursing.
      * </pre>
      *
      * <code>string school_name = 6;</code>
@@ -1967,7 +1916,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * School name, e.g. Mountain View School of Nursing.
+     * School name, for example, Mountain View School of Nursing.
      * </pre>
      *
      * <code>string school_name = 6;</code>
@@ -1990,9 +1939,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * School address which can be specified in one of the following formats.
-     * (1) City, state, code, country, e.g. Mountain View, CA, USA.
-     * (2) Full address, e.g. 123 Boulevard St, Mountain View, CA 94043.
-     * (3) Latitude-longitude in the DDD format, e.g. 41.40338, 2.17403
+     * (1) City, state, code, country, for example, Mountain View, CA, USA.
+     * (2) Full address, for example, 123 Boulevard St, Mountain View, CA 94043.
+     * (3) Latitude-longitude in the DDD format, for example, 41.40338, 2.17403
      * </pre>
      *
      * <code>string address = 7;</code>
@@ -2013,9 +1962,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * School address which can be specified in one of the following formats.
-     * (1) City, state, code, country, e.g. Mountain View, CA, USA.
-     * (2) Full address, e.g. 123 Boulevard St, Mountain View, CA 94043.
-     * (3) Latitude-longitude in the DDD format, e.g. 41.40338, 2.17403
+     * (1) City, state, code, country, for example, Mountain View, CA, USA.
+     * (2) Full address, for example, 123 Boulevard St, Mountain View, CA 94043.
+     * (3) Latitude-longitude in the DDD format, for example, 41.40338, 2.17403
      * </pre>
      *
      * <code>string address = 7;</code>
@@ -2037,9 +1986,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * School address which can be specified in one of the following formats.
-     * (1) City, state, code, country, e.g. Mountain View, CA, USA.
-     * (2) Full address, e.g. 123 Boulevard St, Mountain View, CA 94043.
-     * (3) Latitude-longitude in the DDD format, e.g. 41.40338, 2.17403
+     * (1) City, state, code, country, for example, Mountain View, CA, USA.
+     * (2) Full address, for example, 123 Boulevard St, Mountain View, CA 94043.
+     * (3) Latitude-longitude in the DDD format, for example, 41.40338, 2.17403
      * </pre>
      *
      * <code>string address = 7;</code>
@@ -2059,9 +2008,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * School address which can be specified in one of the following formats.
-     * (1) City, state, code, country, e.g. Mountain View, CA, USA.
-     * (2) Full address, e.g. 123 Boulevard St, Mountain View, CA 94043.
-     * (3) Latitude-longitude in the DDD format, e.g. 41.40338, 2.17403
+     * (1) City, state, code, country, for example, Mountain View, CA, USA.
+     * (2) Full address, for example, 123 Boulevard St, Mountain View, CA 94043.
+     * (3) Latitude-longitude in the DDD format, for example, 41.40338, 2.17403
      * </pre>
      *
      * <code>string address = 7;</code>
@@ -2076,9 +2025,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * School address which can be specified in one of the following formats.
-     * (1) City, state, code, country, e.g. Mountain View, CA, USA.
-     * (2) Full address, e.g. 123 Boulevard St, Mountain View, CA 94043.
-     * (3) Latitude-longitude in the DDD format, e.g. 41.40338, 2.17403
+     * (1) City, state, code, country, for example, Mountain View, CA, USA.
+     * (2) Full address, for example, 123 Boulevard St, Mountain View, CA 94043.
+     * (3) Latitude-longitude in the DDD format, for example, 41.40338, 2.17403
      * </pre>
      *
      * <code>string address = 7;</code>
@@ -2106,7 +2055,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contextual keywords, e.g. Nursing certification, Health, Mountain View.
+     * Contextual keywords, for example, Nursing certification, Health, Mountain
+     * View.
      * </pre>
      *
      * <code>repeated string contextual_keywords = 8;</code>
@@ -2118,7 +2068,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contextual keywords, e.g. Nursing certification, Health, Mountain View.
+     * Contextual keywords, for example, Nursing certification, Health, Mountain
+     * View.
      * </pre>
      *
      * <code>repeated string contextual_keywords = 8;</code>
@@ -2129,7 +2080,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contextual keywords, e.g. Nursing certification, Health, Mountain View.
+     * Contextual keywords, for example, Nursing certification, Health, Mountain
+     * View.
      * </pre>
      *
      * <code>repeated string contextual_keywords = 8;</code>
@@ -2141,7 +2093,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contextual keywords, e.g. Nursing certification, Health, Mountain View.
+     * Contextual keywords, for example, Nursing certification, Health, Mountain
+     * View.
      * </pre>
      *
      * <code>repeated string contextual_keywords = 8;</code>
@@ -2154,7 +2107,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contextual keywords, e.g. Nursing certification, Health, Mountain View.
+     * Contextual keywords, for example, Nursing certification, Health, Mountain
+     * View.
      * </pre>
      *
      * <code>repeated string contextual_keywords = 8;</code>
@@ -2174,7 +2128,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contextual keywords, e.g. Nursing certification, Health, Mountain View.
+     * Contextual keywords, for example, Nursing certification, Health, Mountain
+     * View.
      * </pre>
      *
      * <code>repeated string contextual_keywords = 8;</code>
@@ -2193,7 +2148,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contextual keywords, e.g. Nursing certification, Health, Mountain View.
+     * Contextual keywords, for example, Nursing certification, Health, Mountain
+     * View.
      * </pre>
      *
      * <code>repeated string contextual_keywords = 8;</code>
@@ -2210,7 +2166,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contextual keywords, e.g. Nursing certification, Health, Mountain View.
+     * Contextual keywords, for example, Nursing certification, Health, Mountain
+     * View.
      * </pre>
      *
      * <code>repeated string contextual_keywords = 8;</code>
@@ -2224,7 +2181,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contextual keywords, e.g. Nursing certification, Health, Mountain View.
+     * Contextual keywords, for example, Nursing certification, Health, Mountain
+     * View.
      * </pre>
      *
      * <code>repeated string contextual_keywords = 8;</code>
@@ -2246,7 +2204,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object androidAppLink_ = "";
     /**
      * <pre>
-     * Android deep link, e.g.
+     * Android deep link, for example,
      * android-app://com.example.android/http/example.com/gizmos?1234.
      * </pre>
      *
@@ -2267,7 +2225,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Android deep link, e.g.
+     * Android deep link, for example,
      * android-app://com.example.android/http/example.com/gizmos?1234.
      * </pre>
      *
@@ -2289,7 +2247,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Android deep link, e.g.
+     * Android deep link, for example,
      * android-app://com.example.android/http/example.com/gizmos?1234.
      * </pre>
      *
@@ -2309,7 +2267,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Android deep link, e.g.
+     * Android deep link, for example,
      * android-app://com.example.android/http/example.com/gizmos?1234.
      * </pre>
      *
@@ -2324,7 +2282,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Android deep link, e.g.
+     * Android deep link, for example,
      * android-app://com.example.android/http/example.com/gizmos?1234.
      * </pre>
      *
@@ -2493,7 +2451,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object iosAppLink_ = "";
     /**
      * <pre>
-     * iOS deep link, e.g. exampleApp://content/page.
+     * iOS deep link, for example, exampleApp://content/page.
      * </pre>
      *
      * <code>string ios_app_link = 11;</code>
@@ -2513,7 +2471,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * iOS deep link, e.g. exampleApp://content/page.
+     * iOS deep link, for example, exampleApp://content/page.
      * </pre>
      *
      * <code>string ios_app_link = 11;</code>
@@ -2534,7 +2492,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * iOS deep link, e.g. exampleApp://content/page.
+     * iOS deep link, for example, exampleApp://content/page.
      * </pre>
      *
      * <code>string ios_app_link = 11;</code>
@@ -2553,7 +2511,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * iOS deep link, e.g. exampleApp://content/page.
+     * iOS deep link, for example, exampleApp://content/page.
      * </pre>
      *
      * <code>string ios_app_link = 11;</code>
@@ -2567,7 +2525,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * iOS deep link, e.g. exampleApp://content/page.
+     * iOS deep link, for example, exampleApp://content/page.
      * </pre>
      *
      * <code>string ios_app_link = 11;</code>
@@ -2638,7 +2596,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object thumbnailImageUrl_ = "";
     /**
      * <pre>
-     * Thumbnail image url, e.g. http://www.example.com/thumbnail.png. The
+     * Thumbnail image url, for example, http://www.example.com/thumbnail.png. The
      * thumbnail image will not be uploaded as image asset.
      * </pre>
      *
@@ -2659,7 +2617,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Thumbnail image url, e.g. http://www.example.com/thumbnail.png. The
+     * Thumbnail image url, for example, http://www.example.com/thumbnail.png. The
      * thumbnail image will not be uploaded as image asset.
      * </pre>
      *
@@ -2681,7 +2639,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Thumbnail image url, e.g. http://www.example.com/thumbnail.png. The
+     * Thumbnail image url, for example, http://www.example.com/thumbnail.png. The
      * thumbnail image will not be uploaded as image asset.
      * </pre>
      *
@@ -2701,7 +2659,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Thumbnail image url, e.g. http://www.example.com/thumbnail.png. The
+     * Thumbnail image url, for example, http://www.example.com/thumbnail.png. The
      * thumbnail image will not be uploaded as image asset.
      * </pre>
      *
@@ -2716,7 +2674,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Thumbnail image url, e.g. http://www.example.com/thumbnail.png. The
+     * Thumbnail image url, for example, http://www.example.com/thumbnail.png. The
      * thumbnail image will not be uploaded as image asset.
      * </pre>
      *
@@ -2739,8 +2697,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object imageUrl_ = "";
     /**
      * <pre>
-     * Image url, e.g. http://www.example.com/image.png. The image will not be
-     * uploaded as image asset.
+     * Image url, for example, http://www.example.com/image.png. The image will
+     * not be uploaded as image asset.
      * </pre>
      *
      * <code>string image_url = 14;</code>
@@ -2760,8 +2718,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Image url, e.g. http://www.example.com/image.png. The image will not be
-     * uploaded as image asset.
+     * Image url, for example, http://www.example.com/image.png. The image will
+     * not be uploaded as image asset.
      * </pre>
      *
      * <code>string image_url = 14;</code>
@@ -2782,8 +2740,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Image url, e.g. http://www.example.com/image.png. The image will not be
-     * uploaded as image asset.
+     * Image url, for example, http://www.example.com/image.png. The image will
+     * not be uploaded as image asset.
      * </pre>
      *
      * <code>string image_url = 14;</code>
@@ -2802,8 +2760,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Image url, e.g. http://www.example.com/image.png. The image will not be
-     * uploaded as image asset.
+     * Image url, for example, http://www.example.com/image.png. The image will
+     * not be uploaded as image asset.
      * </pre>
      *
      * <code>string image_url = 14;</code>
@@ -2817,8 +2775,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Image url, e.g. http://www.example.com/image.png. The image will not be
-     * uploaded as image asset.
+     * Image url, for example, http://www.example.com/image.png. The image will
+     * not be uploaded as image asset.
      * </pre>
      *
      * <code>string image_url = 14;</code>
@@ -2869,7 +2827,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new DynamicEducationAsset(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

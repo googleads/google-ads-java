@@ -34,45 +34,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private ConversionUploadErrorEnum(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v10.errors.ConversionUploadErrorProto.internal_static_google_ads_googleads_v10_errors_ConversionUploadErrorEnum_descriptor;
@@ -149,7 +110,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The click associated with the given identifier or iOS URL parameter
-     * occurred too recently. Please try uploading again after 6 hours have
+     * occurred too recently. Try uploading again after 6 hours have
      * passed since the click occurred.
      * </pre>
      *
@@ -187,7 +148,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The specified conversion action was created too recently.
-     * Please try the upload again after 4-6 hours have passed since the
+     * Try the upload again after 4-6 hours have passed since the
      * conversion action was created.
      * </pre>
      *
@@ -252,7 +213,7 @@ private static final long serialVersionUID = 0L;
     DUPLICATE_ORDER_ID(16),
     /**
      * <pre>
-     * The call occurred too recently. Please try uploading again after 12 hours
+     * The call occurred too recently. Try uploading again after 12 hours
      * have passed since the call occurred.
      * </pre>
      *
@@ -306,7 +267,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A conversion with this timestamp already exists for this click. To upload
-     * another conversion, please use a different timestamp.
+     * another conversion, use a different timestamp.
      * </pre>
      *
      * <code>CLICK_CONVERSION_ALREADY_EXISTS = 23;</code>
@@ -315,7 +276,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A conversion with this timestamp already exists for this call. To upload
-     * another conversion, please use a different timestamp.
+     * another conversion, use a different timestamp.
      * </pre>
      *
      * <code>CALL_CONVERSION_ALREADY_EXISTS = 24;</code>
@@ -324,7 +285,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * This conversion has the same click and timestamp as another conversion in
-     * the request. To upload another conversion for this click, please use a
+     * the request. To upload another conversion for this click, use a
      * different timestamp.
      * </pre>
      *
@@ -334,7 +295,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * This conversion has the same call and timestamp as another conversion in
-     * the request. To upload another conversion for this call, please use a
+     * the request. To upload another conversion for this call, use a
      * different timestamp.
      * </pre>
      *
@@ -388,8 +349,8 @@ private static final long serialVersionUID = 0L;
     CONVERSION_NOT_COMPLIANT_WITH_ATT_POLICY(32),
     /**
      * <pre>
-     * No click was found for the provided user identifiers that could be
-     * applied to the specified conversion action.
+     * No click was found for the provided user identifiers. This may be because
+     * the conversion did not come from a Google Ads campaign.
      * </pre>
      *
      * <code>CLICK_NOT_FOUND = 33;</code>
@@ -467,7 +428,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Per our customer data policies, enhanced conversions have been prohibited
-     * in your account. If you have any questions, please contact your Google
+     * in your account. If you have any questions, contact your Google
      * representative.
      * </pre>
      *
@@ -540,7 +501,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The click associated with the given identifier or iOS URL parameter
-     * occurred too recently. Please try uploading again after 6 hours have
+     * occurred too recently. Try uploading again after 6 hours have
      * passed since the click occurred.
      * </pre>
      *
@@ -578,7 +539,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The specified conversion action was created too recently.
-     * Please try the upload again after 4-6 hours have passed since the
+     * Try the upload again after 4-6 hours have passed since the
      * conversion action was created.
      * </pre>
      *
@@ -643,7 +604,7 @@ private static final long serialVersionUID = 0L;
     public static final int DUPLICATE_ORDER_ID_VALUE = 16;
     /**
      * <pre>
-     * The call occurred too recently. Please try uploading again after 12 hours
+     * The call occurred too recently. Try uploading again after 12 hours
      * have passed since the call occurred.
      * </pre>
      *
@@ -697,7 +658,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A conversion with this timestamp already exists for this click. To upload
-     * another conversion, please use a different timestamp.
+     * another conversion, use a different timestamp.
      * </pre>
      *
      * <code>CLICK_CONVERSION_ALREADY_EXISTS = 23;</code>
@@ -706,7 +667,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A conversion with this timestamp already exists for this call. To upload
-     * another conversion, please use a different timestamp.
+     * another conversion, use a different timestamp.
      * </pre>
      *
      * <code>CALL_CONVERSION_ALREADY_EXISTS = 24;</code>
@@ -715,7 +676,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * This conversion has the same click and timestamp as another conversion in
-     * the request. To upload another conversion for this click, please use a
+     * the request. To upload another conversion for this click, use a
      * different timestamp.
      * </pre>
      *
@@ -725,7 +686,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * This conversion has the same call and timestamp as another conversion in
-     * the request. To upload another conversion for this call, please use a
+     * the request. To upload another conversion for this call, use a
      * different timestamp.
      * </pre>
      *
@@ -779,8 +740,8 @@ private static final long serialVersionUID = 0L;
     public static final int CONVERSION_NOT_COMPLIANT_WITH_ATT_POLICY_VALUE = 32;
     /**
      * <pre>
-     * No click was found for the provided user identifiers that could be
-     * applied to the specified conversion action.
+     * No click was found for the provided user identifiers. This may be because
+     * the conversion did not come from a Google Ads campaign.
      * </pre>
      *
      * <code>CLICK_NOT_FOUND = 33;</code>
@@ -858,7 +819,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Per our customer data policies, enhanced conversions have been prohibited
-     * in your account. If you have any questions, please contact your Google
+     * in your account. If you have any questions, contact your Google
      * representative.
      * </pre>
      *
@@ -1013,7 +974,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -1022,7 +983,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -1037,7 +998,7 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v10.errors.ConversionUploadErrorEnum other = (com.google.ads.googleads.v10.errors.ConversionUploadErrorEnum) obj;
 
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -1048,7 +1009,7 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -1169,18 +1130,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v10.errors.ConversionUploadErrorEnum.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -1259,7 +1215,7 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.google.ads.googleads.v10.errors.ConversionUploadErrorEnum other) {
       if (other == com.google.ads.googleads.v10.errors.ConversionUploadErrorEnum.getDefaultInstance()) return this;
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1274,17 +1230,30 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.ads.googleads.v10.errors.ConversionUploadErrorEnum parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v10.errors.ConversionUploadErrorEnum) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     @java.lang.Override
@@ -1320,7 +1289,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new ConversionUploadErrorEnum(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

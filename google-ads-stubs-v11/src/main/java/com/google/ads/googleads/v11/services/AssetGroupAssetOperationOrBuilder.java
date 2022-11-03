@@ -37,7 +37,7 @@ public interface AssetGroupAssetOperationOrBuilder extends
   /**
    * <pre>
    * Create operation: No resource name is expected for the new asset group
-   * asset
+   * asset.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.resources.AssetGroupAsset create = 1;</code>
@@ -47,7 +47,7 @@ public interface AssetGroupAssetOperationOrBuilder extends
   /**
    * <pre>
    * Create operation: No resource name is expected for the new asset group
-   * asset
+   * asset.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.resources.AssetGroupAsset create = 1;</code>
@@ -57,7 +57,7 @@ public interface AssetGroupAssetOperationOrBuilder extends
   /**
    * <pre>
    * Create operation: No resource name is expected for the new asset group
-   * asset
+   * asset.
    * </pre>
    *
    * <code>.google.ads.googleads.v11.resources.AssetGroupAsset create = 1;</code>
@@ -66,7 +66,7 @@ public interface AssetGroupAssetOperationOrBuilder extends
 
   /**
    * <pre>
-   * Update operation: The asset group asset sis expected to have a valid
+   * Update operation: The asset group asset is expected to have a valid
    * resource name.
    * </pre>
    *
@@ -76,7 +76,7 @@ public interface AssetGroupAssetOperationOrBuilder extends
   boolean hasUpdate();
   /**
    * <pre>
-   * Update operation: The asset group asset sis expected to have a valid
+   * Update operation: The asset group asset is expected to have a valid
    * resource name.
    * </pre>
    *
@@ -86,7 +86,7 @@ public interface AssetGroupAssetOperationOrBuilder extends
   com.google.ads.googleads.v11.resources.AssetGroupAsset getUpdate();
   /**
    * <pre>
-   * Update operation: The asset group asset sis expected to have a valid
+   * Update operation: The asset group asset is expected to have a valid
    * resource name.
    * </pre>
    *

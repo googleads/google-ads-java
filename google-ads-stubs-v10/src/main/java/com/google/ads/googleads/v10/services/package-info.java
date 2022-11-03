@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Google LLC
+ * Copyright 2022 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@
  *
  * <p>======================= AccountBudgetProposalServiceClient =======================
  *
- * <p>Service Description: A service for managing account-level budgets via proposals.
+ * <p>Service Description: A service for managing account-level budgets through proposals.
  *
  * <p>A proposal is a request to create a new budget or make changes to an existing one.
  *
@@ -29,6 +29,11 @@
  * <p>Sample for AccountBudgetProposalServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (AccountBudgetProposalServiceClient accountBudgetProposalServiceClient =
  *     AccountBudgetProposalServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -47,6 +52,11 @@
  * <p>Sample for AccountLinkServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (AccountLinkServiceClient accountLinkServiceClient = AccountLinkServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
  *   AccountLink accountLink = AccountLink.newBuilder().build();
@@ -62,6 +72,11 @@
  * <p>Sample for AdGroupAdLabelServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (AdGroupAdLabelServiceClient adGroupAdLabelServiceClient =
  *     AdGroupAdLabelServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -78,6 +93,11 @@
  * <p>Sample for AdGroupAdServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (AdGroupAdServiceClient adGroupAdServiceClient = AdGroupAdServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
  *   List<AdGroupAdOperation> operations = new ArrayList<>();
@@ -93,6 +113,11 @@
  * <p>Sample for AdGroupAssetServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (AdGroupAssetServiceClient adGroupAssetServiceClient = AdGroupAssetServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
  *   List<AdGroupAssetOperation> operations = new ArrayList<>();
@@ -108,6 +133,11 @@
  * <p>Sample for AdGroupBidModifierServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (AdGroupBidModifierServiceClient adGroupBidModifierServiceClient =
  *     AdGroupBidModifierServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -124,6 +154,11 @@
  * <p>Sample for AdGroupCriterionCustomizerServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (AdGroupCriterionCustomizerServiceClient adGroupCriterionCustomizerServiceClient =
  *     AdGroupCriterionCustomizerServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -141,6 +176,11 @@
  * <p>Sample for AdGroupCriterionLabelServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (AdGroupCriterionLabelServiceClient adGroupCriterionLabelServiceClient =
  *     AdGroupCriterionLabelServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -157,6 +197,11 @@
  * <p>Sample for AdGroupCriterionServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (AdGroupCriterionServiceClient adGroupCriterionServiceClient =
  *     AdGroupCriterionServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -173,6 +218,11 @@
  * <p>Sample for AdGroupCustomizerServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (AdGroupCustomizerServiceClient adGroupCustomizerServiceClient =
  *     AdGroupCustomizerServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -189,6 +239,11 @@
  * <p>Sample for AdGroupExtensionSettingServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (AdGroupExtensionSettingServiceClient adGroupExtensionSettingServiceClient =
  *     AdGroupExtensionSettingServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -206,6 +261,11 @@
  * <p>Sample for AdGroupFeedServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (AdGroupFeedServiceClient adGroupFeedServiceClient = AdGroupFeedServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
  *   List<AdGroupFeedOperation> operations = new ArrayList<>();
@@ -221,6 +281,11 @@
  * <p>Sample for AdGroupLabelServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (AdGroupLabelServiceClient adGroupLabelServiceClient = AdGroupLabelServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
  *   List<AdGroupLabelOperation> operations = new ArrayList<>();
@@ -236,6 +301,11 @@
  * <p>Sample for AdGroupServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (AdGroupServiceClient adGroupServiceClient = AdGroupServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
  *   List<AdGroupOperation> operations = new ArrayList<>();
@@ -250,6 +320,11 @@
  * <p>Sample for AdParameterServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (AdParameterServiceClient adParameterServiceClient = AdParameterServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
  *   List<AdParameterOperation> operations = new ArrayList<>();
@@ -265,6 +340,11 @@
  * <p>Sample for AdServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (AdServiceClient adServiceClient = AdServiceClient.create()) {
  *   AdName resourceName = AdName.of("[CUSTOMER_ID]", "[AD_ID]");
  *   Ad response = adServiceClient.getAd(resourceName);
@@ -278,6 +358,11 @@
  * <p>Sample for AssetGroupAssetServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (AssetGroupAssetServiceClient assetGroupAssetServiceClient =
  *     AssetGroupAssetServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -294,6 +379,11 @@
  * <p>Sample for AssetGroupListingGroupFilterServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (AssetGroupListingGroupFilterServiceClient assetGroupListingGroupFilterServiceClient =
  *     AssetGroupListingGroupFilterServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -311,6 +401,11 @@
  * <p>Sample for AssetGroupServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (AssetGroupServiceClient assetGroupServiceClient = AssetGroupServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
  *   List<AssetGroupOperation> operations = new ArrayList<>();
@@ -326,6 +421,11 @@
  * <p>Sample for AssetGroupSignalServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (AssetGroupSignalServiceClient assetGroupSignalServiceClient =
  *     AssetGroupSignalServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -344,6 +444,11 @@
  * <p>Sample for AssetServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (AssetServiceClient assetServiceClient = AssetServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
  *   List<AssetOperation> operations = new ArrayList<>();
@@ -358,6 +463,11 @@
  * <p>Sample for AssetSetAssetServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (AssetSetAssetServiceClient assetSetAssetServiceClient =
  *     AssetSetAssetServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -374,6 +484,11 @@
  * <p>Sample for AssetSetServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (AssetSetServiceClient assetSetServiceClient = AssetSetServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
  *   List<AssetSetOperation> operations = new ArrayList<>();
@@ -389,6 +504,11 @@
  * <p>Sample for AudienceServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (AudienceServiceClient audienceServiceClient = AudienceServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
  *   List<AudienceOperation> operations = new ArrayList<>();
@@ -404,6 +524,11 @@
  * <p>Sample for BatchJobServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (BatchJobServiceClient batchJobServiceClient = BatchJobServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
  *   BatchJobOperation operation = BatchJobOperation.newBuilder().build();
@@ -418,6 +543,11 @@
  * <p>Sample for BiddingDataExclusionServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (BiddingDataExclusionServiceClient biddingDataExclusionServiceClient =
  *     BiddingDataExclusionServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -434,6 +564,11 @@
  * <p>Sample for BiddingSeasonalityAdjustmentServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (BiddingSeasonalityAdjustmentServiceClient biddingSeasonalityAdjustmentServiceClient =
  *     BiddingSeasonalityAdjustmentServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -451,6 +586,11 @@
  * <p>Sample for BiddingStrategyServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (BiddingStrategyServiceClient biddingStrategyServiceClient =
  *     BiddingStrategyServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -475,6 +615,11 @@
  * <p>Sample for BillingSetupServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (BillingSetupServiceClient billingSetupServiceClient = BillingSetupServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
  *   BillingSetupOperation operation = BillingSetupOperation.newBuilder().build();
@@ -490,6 +635,11 @@
  * <p>Sample for CampaignAssetServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (CampaignAssetServiceClient campaignAssetServiceClient =
  *     CampaignAssetServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -506,6 +656,11 @@
  * <p>Sample for CampaignAssetSetServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (CampaignAssetSetServiceClient campaignAssetSetServiceClient =
  *     CampaignAssetSetServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -522,6 +677,11 @@
  * <p>Sample for CampaignBidModifierServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (CampaignBidModifierServiceClient campaignBidModifierServiceClient =
  *     CampaignBidModifierServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -538,6 +698,11 @@
  * <p>Sample for CampaignBudgetServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (CampaignBudgetServiceClient campaignBudgetServiceClient =
  *     CampaignBudgetServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -554,6 +719,11 @@
  * <p>Sample for CampaignConversionGoalServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (CampaignConversionGoalServiceClient campaignConversionGoalServiceClient =
  *     CampaignConversionGoalServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -570,6 +740,11 @@
  * <p>Sample for CampaignCriterionServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (CampaignCriterionServiceClient campaignCriterionServiceClient =
  *     CampaignCriterionServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -586,6 +761,11 @@
  * <p>Sample for CampaignCustomizerServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (CampaignCustomizerServiceClient campaignCustomizerServiceClient =
  *     CampaignCustomizerServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -602,6 +782,11 @@
  * <p>Sample for CampaignDraftServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (CampaignDraftServiceClient campaignDraftServiceClient =
  *     CampaignDraftServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -626,6 +811,11 @@
  * <p>Sample for CampaignExperimentServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (CampaignExperimentServiceClient campaignExperimentServiceClient =
  *     CampaignExperimentServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -642,6 +832,11 @@
  * <p>Sample for CampaignExtensionSettingServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (CampaignExtensionSettingServiceClient campaignExtensionSettingServiceClient =
  *     CampaignExtensionSettingServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -659,6 +854,11 @@
  * <p>Sample for CampaignFeedServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (CampaignFeedServiceClient campaignFeedServiceClient = CampaignFeedServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
  *   List<CampaignFeedOperation> operations = new ArrayList<>();
@@ -674,6 +874,11 @@
  * <p>Sample for CampaignGroupServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (CampaignGroupServiceClient campaignGroupServiceClient =
  *     CampaignGroupServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -690,6 +895,11 @@
  * <p>Sample for CampaignLabelServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (CampaignLabelServiceClient campaignLabelServiceClient =
  *     CampaignLabelServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -706,6 +916,11 @@
  * <p>Sample for CampaignServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (CampaignServiceClient campaignServiceClient = CampaignServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
  *   List<CampaignOperation> operations = new ArrayList<>();
@@ -721,6 +936,11 @@
  * <p>Sample for CampaignSharedSetServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (CampaignSharedSetServiceClient campaignSharedSetServiceClient =
  *     CampaignSharedSetServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -737,6 +957,11 @@
  * <p>Sample for ConversionActionServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (ConversionActionServiceClient conversionActionServiceClient =
  *     ConversionActionServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -753,6 +978,11 @@
  * <p>Sample for ConversionAdjustmentUploadServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (ConversionAdjustmentUploadServiceClient conversionAdjustmentUploadServiceClient =
  *     ConversionAdjustmentUploadServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -771,6 +1001,11 @@
  * <p>Sample for ConversionCustomVariableServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (ConversionCustomVariableServiceClient conversionCustomVariableServiceClient =
  *     ConversionCustomVariableServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -788,6 +1023,11 @@
  * <p>Sample for ConversionGoalCampaignConfigServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (ConversionGoalCampaignConfigServiceClient conversionGoalCampaignConfigServiceClient =
  *     ConversionGoalCampaignConfigServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -805,6 +1045,11 @@
  * <p>Sample for ConversionUploadServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (ConversionUploadServiceClient conversionUploadServiceClient =
  *     ConversionUploadServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -823,6 +1068,11 @@
  * <p>Sample for ConversionValueRuleServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (ConversionValueRuleServiceClient conversionValueRuleServiceClient =
  *     ConversionValueRuleServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -839,6 +1089,11 @@
  * <p>Sample for ConversionValueRuleSetServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (ConversionValueRuleSetServiceClient conversionValueRuleSetServiceClient =
  *     ConversionValueRuleSetServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -855,6 +1110,11 @@
  * <p>Sample for CustomAudienceServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (CustomAudienceServiceClient customAudienceServiceClient =
  *     CustomAudienceServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -871,6 +1131,11 @@
  * <p>Sample for CustomConversionGoalServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (CustomConversionGoalServiceClient customConversionGoalServiceClient =
  *     CustomConversionGoalServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -887,6 +1152,11 @@
  * <p>Sample for CustomInterestServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (CustomInterestServiceClient customInterestServiceClient =
  *     CustomInterestServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -903,6 +1173,11 @@
  * <p>Sample for CustomerAssetServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (CustomerAssetServiceClient customerAssetServiceClient =
  *     CustomerAssetServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -919,6 +1194,11 @@
  * <p>Sample for CustomerClientLinkServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (CustomerClientLinkServiceClient customerClientLinkServiceClient =
  *     CustomerClientLinkServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -935,6 +1215,11 @@
  * <p>Sample for CustomerConversionGoalServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (CustomerConversionGoalServiceClient customerConversionGoalServiceClient =
  *     CustomerConversionGoalServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -951,6 +1236,11 @@
  * <p>Sample for CustomerCustomizerServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (CustomerCustomizerServiceClient customerCustomizerServiceClient =
  *     CustomerCustomizerServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -967,6 +1257,11 @@
  * <p>Sample for CustomerExtensionSettingServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (CustomerExtensionSettingServiceClient customerExtensionSettingServiceClient =
  *     CustomerExtensionSettingServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -984,6 +1279,11 @@
  * <p>Sample for CustomerFeedServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (CustomerFeedServiceClient customerFeedServiceClient = CustomerFeedServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
  *   List<CustomerFeedOperation> operations = new ArrayList<>();
@@ -999,6 +1299,11 @@
  * <p>Sample for CustomerLabelServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (CustomerLabelServiceClient customerLabelServiceClient =
  *     CustomerLabelServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -1015,6 +1320,11 @@
  * <p>Sample for CustomerManagerLinkServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (CustomerManagerLinkServiceClient customerManagerLinkServiceClient =
  *     CustomerManagerLinkServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -1031,6 +1341,11 @@
  * <p>Sample for CustomerNegativeCriterionServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (CustomerNegativeCriterionServiceClient customerNegativeCriterionServiceClient =
  *     CustomerNegativeCriterionServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -1048,6 +1363,11 @@
  * <p>Sample for CustomerServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (CustomerServiceClient customerServiceClient = CustomerServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
  *   CustomerOperation operation = CustomerOperation.newBuilder().build();
@@ -1063,6 +1383,11 @@
  * <p>Sample for CustomerUserAccessInvitationServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (CustomerUserAccessInvitationServiceClient customerUserAccessInvitationServiceClient =
  *     CustomerUserAccessInvitationServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -1081,6 +1406,11 @@
  * <p>Sample for CustomerUserAccessServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (CustomerUserAccessServiceClient customerUserAccessServiceClient =
  *     CustomerUserAccessServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -1097,6 +1427,11 @@
  * <p>Sample for CustomizerAttributeServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (CustomizerAttributeServiceClient customizerAttributeServiceClient =
  *     CustomizerAttributeServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -1113,6 +1448,11 @@
  * <p>Sample for ExperimentArmServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (ExperimentArmServiceClient experimentArmServiceClient =
  *     ExperimentArmServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -1129,6 +1469,11 @@
  * <p>Sample for ExperimentServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (ExperimentServiceClient experimentServiceClient = ExperimentServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
  *   List<ExperimentOperation> operations = new ArrayList<>();
@@ -1144,6 +1489,11 @@
  * <p>Sample for ExtensionFeedItemServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (ExtensionFeedItemServiceClient extensionFeedItemServiceClient =
  *     ExtensionFeedItemServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -1160,6 +1510,11 @@
  * <p>Sample for FeedItemServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (FeedItemServiceClient feedItemServiceClient = FeedItemServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
  *   List<FeedItemOperation> operations = new ArrayList<>();
@@ -1175,6 +1530,11 @@
  * <p>Sample for FeedItemSetLinkServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (FeedItemSetLinkServiceClient feedItemSetLinkServiceClient =
  *     FeedItemSetLinkServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -1191,6 +1551,11 @@
  * <p>Sample for FeedItemSetServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (FeedItemSetServiceClient feedItemSetServiceClient = FeedItemSetServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
  *   List<FeedItemSetOperation> operations = new ArrayList<>();
@@ -1206,6 +1571,11 @@
  * <p>Sample for FeedItemTargetServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (FeedItemTargetServiceClient feedItemTargetServiceClient =
  *     FeedItemTargetServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -1222,6 +1592,11 @@
  * <p>Sample for FeedMappingServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (FeedMappingServiceClient feedMappingServiceClient = FeedMappingServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
  *   List<FeedMappingOperation> operations = new ArrayList<>();
@@ -1237,6 +1612,11 @@
  * <p>Sample for FeedServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (FeedServiceClient feedServiceClient = FeedServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
  *   List<FeedOperation> operations = new ArrayList<>();
@@ -1251,6 +1631,11 @@
  * <p>Sample for GeoTargetConstantServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (GeoTargetConstantServiceClient geoTargetConstantServiceClient =
  *     GeoTargetConstantServiceClient.create()) {
  *   SuggestGeoTargetConstantsRequest request =
@@ -1270,6 +1655,11 @@
  * <p>Sample for GoogleAdsFieldServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (GoogleAdsFieldServiceClient googleAdsFieldServiceClient =
  *     GoogleAdsFieldServiceClient.create()) {
  *   GoogleAdsFieldName resourceName = GoogleAdsFieldName.of("[GOOGLE_ADS_FIELD]");
@@ -1284,6 +1674,11 @@
  * <p>Sample for GoogleAdsServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (GoogleAdsServiceClient googleAdsServiceClient = GoogleAdsServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
  *   List<MutateOperation> mutateOperations = new ArrayList<>();
@@ -1300,6 +1695,11 @@
  * <p>Sample for InvoiceServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (InvoiceServiceClient invoiceServiceClient = InvoiceServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
  *   String billingSetup = "billingSetup-1435075390";
@@ -1321,6 +1721,11 @@
  * <p>Sample for KeywordPlanAdGroupKeywordServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (KeywordPlanAdGroupKeywordServiceClient keywordPlanAdGroupKeywordServiceClient =
  *     KeywordPlanAdGroupKeywordServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -1338,6 +1743,11 @@
  * <p>Sample for KeywordPlanAdGroupServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (KeywordPlanAdGroupServiceClient keywordPlanAdGroupServiceClient =
  *     KeywordPlanAdGroupServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -1357,6 +1767,11 @@
  * <p>Sample for KeywordPlanCampaignKeywordServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (KeywordPlanCampaignKeywordServiceClient keywordPlanCampaignKeywordServiceClient =
  *     KeywordPlanCampaignKeywordServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -1374,6 +1789,11 @@
  * <p>Sample for KeywordPlanCampaignServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (KeywordPlanCampaignServiceClient keywordPlanCampaignServiceClient =
  *     KeywordPlanCampaignServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -1390,6 +1810,11 @@
  * <p>Sample for KeywordPlanIdeaServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (KeywordPlanIdeaServiceClient keywordPlanIdeaServiceClient =
  *     KeywordPlanIdeaServiceClient.create()) {
  *   GenerateKeywordHistoricalMetricsRequest request =
@@ -1410,6 +1835,11 @@
  * <p>Sample for KeywordPlanServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (KeywordPlanServiceClient keywordPlanServiceClient = KeywordPlanServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
  *   List<KeywordPlanOperation> operations = new ArrayList<>();
@@ -1425,6 +1855,11 @@
  * <p>Sample for KeywordThemeConstantServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (KeywordThemeConstantServiceClient keywordThemeConstantServiceClient =
  *     KeywordThemeConstantServiceClient.create()) {
  *   SuggestKeywordThemeConstantsRequest request =
@@ -1445,6 +1880,11 @@
  * <p>Sample for LabelServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (LabelServiceClient labelServiceClient = LabelServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
  *   List<LabelOperation> operations = new ArrayList<>();
@@ -1459,6 +1899,11 @@
  * <p>Sample for MediaFileServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (MediaFileServiceClient mediaFileServiceClient = MediaFileServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
  *   List<MediaFileOperation> operations = new ArrayList<>();
@@ -1475,6 +1920,11 @@
  * <p>Sample for MerchantCenterLinkServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (MerchantCenterLinkServiceClient merchantCenterLinkServiceClient =
  *     MerchantCenterLinkServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -1490,6 +1940,11 @@
  * <p>Sample for OfflineUserDataJobServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (OfflineUserDataJobServiceClient offlineUserDataJobServiceClient =
  *     OfflineUserDataJobServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -1507,6 +1962,11 @@
  * <p>Sample for PaymentsAccountServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (PaymentsAccountServiceClient paymentsAccountServiceClient =
  *     PaymentsAccountServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -1525,6 +1985,11 @@
  * <p>Sample for ReachPlanServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (ReachPlanServiceClient reachPlanServiceClient = ReachPlanServiceClient.create()) {
  *   ListPlannableLocationsRequest request = ListPlannableLocationsRequest.newBuilder().build();
  *   ListPlannableLocationsResponse response =
@@ -1539,6 +2004,11 @@
  * <p>Sample for RecommendationServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (RecommendationServiceClient recommendationServiceClient =
  *     RecommendationServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -1555,6 +2025,11 @@
  * <p>Sample for RemarketingActionServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (RemarketingActionServiceClient remarketingActionServiceClient =
  *     RemarketingActionServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -1571,6 +2046,11 @@
  * <p>Sample for SharedCriterionServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (SharedCriterionServiceClient sharedCriterionServiceClient =
  *     SharedCriterionServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -1587,6 +2067,11 @@
  * <p>Sample for SharedSetServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (SharedSetServiceClient sharedSetServiceClient = SharedSetServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
  *   List<SharedSetOperation> operations = new ArrayList<>();
@@ -1602,6 +2087,11 @@
  * <p>Sample for SmartCampaignSettingServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (SmartCampaignSettingServiceClient smartCampaignSettingServiceClient =
  *     SmartCampaignSettingServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
@@ -1618,6 +2108,11 @@
  * <p>Sample for SmartCampaignSuggestServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (SmartCampaignSuggestServiceClient smartCampaignSuggestServiceClient =
  *     SmartCampaignSuggestServiceClient.create()) {
  *   SuggestSmartCampaignBudgetOptionsRequest request =
@@ -1637,6 +2132,11 @@
  * <p>Sample for ThirdPartyAppAnalyticsLinkServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (ThirdPartyAppAnalyticsLinkServiceClient thirdPartyAppAnalyticsLinkServiceClient =
  *     ThirdPartyAppAnalyticsLinkServiceClient.create()) {
  *   RegenerateShareableLinkIdRequest request =
@@ -1652,11 +2152,20 @@
  *
  * <p>======================= UserDataServiceClient =======================
  *
- * <p>Service Description: Service to manage user data uploads.
+ * <p>Service Description: Service to manage user data uploads. Any uploads made to a Customer Match
+ * list through this service will be eligible for matching as per the customer matching process. See
+ * https://support.google.com/google-ads/answer/7474263. However, the uploads made through this
+ * service will not be visible under the 'Segment members' section for the Customer Match List in
+ * the Google Ads UI.
  *
  * <p>Sample for UserDataServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (UserDataServiceClient userDataServiceClient = UserDataServiceClient.create()) {
  *   UploadUserDataRequest request =
  *       UploadUserDataRequest.newBuilder()
@@ -1674,6 +2183,11 @@
  * <p>Sample for UserListServiceClient:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (UserListServiceClient userListServiceClient = UserListServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
  *   List<UserListOperation> operations = new ArrayList<>();

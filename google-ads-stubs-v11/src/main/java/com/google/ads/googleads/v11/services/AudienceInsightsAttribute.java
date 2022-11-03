@@ -35,185 +35,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private AudienceInsightsAttribute(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            com.google.ads.googleads.v11.common.AgeRangeInfo.Builder subBuilder = null;
-            if (attributeCase_ == 1) {
-              subBuilder = ((com.google.ads.googleads.v11.common.AgeRangeInfo) attribute_).toBuilder();
-            }
-            attribute_ =
-                input.readMessage(com.google.ads.googleads.v11.common.AgeRangeInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v11.common.AgeRangeInfo) attribute_);
-              attribute_ = subBuilder.buildPartial();
-            }
-            attributeCase_ = 1;
-            break;
-          }
-          case 18: {
-            com.google.ads.googleads.v11.common.GenderInfo.Builder subBuilder = null;
-            if (attributeCase_ == 2) {
-              subBuilder = ((com.google.ads.googleads.v11.common.GenderInfo) attribute_).toBuilder();
-            }
-            attribute_ =
-                input.readMessage(com.google.ads.googleads.v11.common.GenderInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v11.common.GenderInfo) attribute_);
-              attribute_ = subBuilder.buildPartial();
-            }
-            attributeCase_ = 2;
-            break;
-          }
-          case 26: {
-            com.google.ads.googleads.v11.common.LocationInfo.Builder subBuilder = null;
-            if (attributeCase_ == 3) {
-              subBuilder = ((com.google.ads.googleads.v11.common.LocationInfo) attribute_).toBuilder();
-            }
-            attribute_ =
-                input.readMessage(com.google.ads.googleads.v11.common.LocationInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v11.common.LocationInfo) attribute_);
-              attribute_ = subBuilder.buildPartial();
-            }
-            attributeCase_ = 3;
-            break;
-          }
-          case 34: {
-            com.google.ads.googleads.v11.common.UserInterestInfo.Builder subBuilder = null;
-            if (attributeCase_ == 4) {
-              subBuilder = ((com.google.ads.googleads.v11.common.UserInterestInfo) attribute_).toBuilder();
-            }
-            attribute_ =
-                input.readMessage(com.google.ads.googleads.v11.common.UserInterestInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v11.common.UserInterestInfo) attribute_);
-              attribute_ = subBuilder.buildPartial();
-            }
-            attributeCase_ = 4;
-            break;
-          }
-          case 42: {
-            com.google.ads.googleads.v11.services.AudienceInsightsEntity.Builder subBuilder = null;
-            if (attributeCase_ == 5) {
-              subBuilder = ((com.google.ads.googleads.v11.services.AudienceInsightsEntity) attribute_).toBuilder();
-            }
-            attribute_ =
-                input.readMessage(com.google.ads.googleads.v11.services.AudienceInsightsEntity.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v11.services.AudienceInsightsEntity) attribute_);
-              attribute_ = subBuilder.buildPartial();
-            }
-            attributeCase_ = 5;
-            break;
-          }
-          case 50: {
-            com.google.ads.googleads.v11.services.AudienceInsightsCategory.Builder subBuilder = null;
-            if (attributeCase_ == 6) {
-              subBuilder = ((com.google.ads.googleads.v11.services.AudienceInsightsCategory) attribute_).toBuilder();
-            }
-            attribute_ =
-                input.readMessage(com.google.ads.googleads.v11.services.AudienceInsightsCategory.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v11.services.AudienceInsightsCategory) attribute_);
-              attribute_ = subBuilder.buildPartial();
-            }
-            attributeCase_ = 6;
-            break;
-          }
-          case 58: {
-            com.google.ads.googleads.v11.services.AudienceInsightsDynamicLineup.Builder subBuilder = null;
-            if (attributeCase_ == 7) {
-              subBuilder = ((com.google.ads.googleads.v11.services.AudienceInsightsDynamicLineup) attribute_).toBuilder();
-            }
-            attribute_ =
-                input.readMessage(com.google.ads.googleads.v11.services.AudienceInsightsDynamicLineup.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v11.services.AudienceInsightsDynamicLineup) attribute_);
-              attribute_ = subBuilder.buildPartial();
-            }
-            attributeCase_ = 7;
-            break;
-          }
-          case 66: {
-            com.google.ads.googleads.v11.common.ParentalStatusInfo.Builder subBuilder = null;
-            if (attributeCase_ == 8) {
-              subBuilder = ((com.google.ads.googleads.v11.common.ParentalStatusInfo) attribute_).toBuilder();
-            }
-            attribute_ =
-                input.readMessage(com.google.ads.googleads.v11.common.ParentalStatusInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v11.common.ParentalStatusInfo) attribute_);
-              attribute_ = subBuilder.buildPartial();
-            }
-            attributeCase_ = 8;
-            break;
-          }
-          case 74: {
-            com.google.ads.googleads.v11.common.IncomeRangeInfo.Builder subBuilder = null;
-            if (attributeCase_ == 9) {
-              subBuilder = ((com.google.ads.googleads.v11.common.IncomeRangeInfo) attribute_).toBuilder();
-            }
-            attribute_ =
-                input.readMessage(com.google.ads.googleads.v11.common.IncomeRangeInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v11.common.IncomeRangeInfo) attribute_);
-              attribute_ = subBuilder.buildPartial();
-            }
-            attributeCase_ = 9;
-            break;
-          }
-          case 82: {
-            com.google.ads.googleads.v11.common.YouTubeChannelInfo.Builder subBuilder = null;
-            if (attributeCase_ == 10) {
-              subBuilder = ((com.google.ads.googleads.v11.common.YouTubeChannelInfo) attribute_).toBuilder();
-            }
-            attribute_ =
-                input.readMessage(com.google.ads.googleads.v11.common.YouTubeChannelInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v11.common.YouTubeChannelInfo) attribute_);
-              attribute_ = subBuilder.buildPartial();
-            }
-            attributeCase_ = 10;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v11.services.AudienceInsightsServiceProto.internal_static_google_ads_googleads_v11_services_AudienceInsightsAttribute_descriptor;
@@ -764,7 +585,7 @@ private static final long serialVersionUID = 0L;
     if (attributeCase_ == 10) {
       output.writeMessage(10, (com.google.ads.googleads.v11.common.YouTubeChannelInfo) attribute_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -813,7 +634,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(10, (com.google.ads.googleads.v11.common.YouTubeChannelInfo) attribute_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -873,7 +694,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -928,7 +749,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -1050,22 +871,47 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v11.services.AudienceInsightsAttribute.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      if (ageRangeBuilder_ != null) {
+        ageRangeBuilder_.clear();
+      }
+      if (genderBuilder_ != null) {
+        genderBuilder_.clear();
+      }
+      if (locationBuilder_ != null) {
+        locationBuilder_.clear();
+      }
+      if (userInterestBuilder_ != null) {
+        userInterestBuilder_.clear();
+      }
+      if (entityBuilder_ != null) {
+        entityBuilder_.clear();
+      }
+      if (categoryBuilder_ != null) {
+        categoryBuilder_.clear();
+      }
+      if (dynamicLineupBuilder_ != null) {
+        dynamicLineupBuilder_.clear();
+      }
+      if (parentalStatusBuilder_ != null) {
+        parentalStatusBuilder_.clear();
+      }
+      if (incomeRangeBuilder_ != null) {
+        incomeRangeBuilder_.clear();
+      }
+      if (youtubeChannelBuilder_ != null) {
+        youtubeChannelBuilder_.clear();
+      }
       attributeCase_ = 0;
       attribute_ = null;
       return this;
@@ -1258,7 +1104,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1273,17 +1119,100 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.ads.googleads.v11.services.AudienceInsightsAttribute parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getAgeRangeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              attributeCase_ = 1;
+              break;
+            } // case 10
+            case 18: {
+              input.readMessage(
+                  getGenderFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              attributeCase_ = 2;
+              break;
+            } // case 18
+            case 26: {
+              input.readMessage(
+                  getLocationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              attributeCase_ = 3;
+              break;
+            } // case 26
+            case 34: {
+              input.readMessage(
+                  getUserInterestFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              attributeCase_ = 4;
+              break;
+            } // case 34
+            case 42: {
+              input.readMessage(
+                  getEntityFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              attributeCase_ = 5;
+              break;
+            } // case 42
+            case 50: {
+              input.readMessage(
+                  getCategoryFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              attributeCase_ = 6;
+              break;
+            } // case 50
+            case 58: {
+              input.readMessage(
+                  getDynamicLineupFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              attributeCase_ = 7;
+              break;
+            } // case 58
+            case 66: {
+              input.readMessage(
+                  getParentalStatusFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              attributeCase_ = 8;
+              break;
+            } // case 66
+            case 74: {
+              input.readMessage(
+                  getIncomeRangeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              attributeCase_ = 9;
+              break;
+            } // case 74
+            case 82: {
+              input.readMessage(
+                  getYoutubeChannelFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              attributeCase_ = 10;
+              break;
+            } // case 82
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v11.services.AudienceInsightsAttribute) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int attributeCase_ = 0;
@@ -3132,7 +3061,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new AudienceInsightsAttribute(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

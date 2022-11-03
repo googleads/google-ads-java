@@ -122,7 +122,7 @@ public interface ClickConversionOrBuilder extends
    * <pre>
    * The date time at which the conversion occurred. Must be after
    * the click time. The timezone must be specified. The format is
-   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
    * </pre>
    *
    * <code>optional string conversion_date_time = 11;</code>
@@ -133,7 +133,7 @@ public interface ClickConversionOrBuilder extends
    * <pre>
    * The date time at which the conversion occurred. Must be after
    * the click time. The timezone must be specified. The format is
-   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
    * </pre>
    *
    * <code>optional string conversion_date_time = 11;</code>
@@ -144,7 +144,7 @@ public interface ClickConversionOrBuilder extends
    * <pre>
    * The date time at which the conversion occurred. Must be after
    * the click time. The timezone must be specified. The format is
-   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
    * </pre>
    *
    * <code>optional string conversion_date_time = 11;</code>
@@ -396,7 +396,7 @@ public interface ClickConversionOrBuilder extends
 
   /**
    * <pre>
-   * The environment this conversion was recorded on. e.g. App or Web.
+   * The environment this conversion was recorded on, for example, App or Web.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.enums.ConversionEnvironmentEnum.ConversionEnvironment conversion_environment = 20;</code>
@@ -405,7 +405,7 @@ public interface ClickConversionOrBuilder extends
   int getConversionEnvironmentValue();
   /**
    * <pre>
-   * The environment this conversion was recorded on. e.g. App or Web.
+   * The environment this conversion was recorded on, for example, App or Web.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.enums.ConversionEnvironmentEnum.ConversionEnvironment conversion_environment = 20;</code>

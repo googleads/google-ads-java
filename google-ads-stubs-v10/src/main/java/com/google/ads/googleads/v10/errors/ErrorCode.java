@@ -34,879 +34,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private ErrorCode(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 1;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 16: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 2;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 24: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 3;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 32: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 4;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 40: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 5;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 56: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 7;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 64: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 8;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 72: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 9;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 80: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 10;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 88: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 11;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 96: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 12;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 104: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 13;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 112: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 14;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 120: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 15;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 136: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 17;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 144: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 18;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 152: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 19;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 168: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 21;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 192: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 24;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 200: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 25;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 208: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 26;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 232: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 29;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 248: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 31;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 256: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 32;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 264: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 33;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 272: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 34;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 280: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 35;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 288: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 36;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 296: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 37;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 304: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 38;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 312: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 39;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 320: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 40;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 336: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 42;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 352: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 44;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 360: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 45;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 368: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 46;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 376: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 47;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 384: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 48;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 392: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 49;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 408: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 51;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 416: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 52;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 424: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 53;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 432: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 54;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 440: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 55;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 448: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 56;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 456: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 57;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 464: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 58;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 472: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 59;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 480: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 60;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 488: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 61;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 496: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 62;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 504: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 63;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 512: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 64;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 520: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 65;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 528: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 66;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 536: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 67;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 544: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 68;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 560: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 70;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 568: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 71;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 576: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 72;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 592: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 74;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 608: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 76;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 616: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 77;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 624: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 78;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 632: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 79;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 640: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 80;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 648: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 81;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 656: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 82;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 664: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 83;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 672: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 84;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 688: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 86;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 696: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 87;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 704: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 88;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 720: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 90;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 728: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 91;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 736: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 92;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 744: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 93;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 752: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 94;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 768: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 96;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 776: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 97;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 784: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 98;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 800: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 100;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 808: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 101;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 816: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 102;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 824: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 103;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 832: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 104;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 840: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 105;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 856: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 107;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 872: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 109;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 880: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 110;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 888: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 111;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 896: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 112;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 912: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 114;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 920: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 115;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 928: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 116;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 936: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 117;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 944: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 118;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 952: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 119;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 968: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 121;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 976: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 122;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 984: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 123;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 992: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 124;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 1000: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 125;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 1008: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 126;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 1016: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 127;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 1024: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 128;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 1032: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 129;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 1040: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 130;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 1048: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 131;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 1056: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 132;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 1064: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 133;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 1072: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 134;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 1080: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 135;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 1088: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 136;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 1096: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 137;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 1104: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 138;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 1112: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 139;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 1120: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 140;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 1128: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 141;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 1144: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 143;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 1160: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 145;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 1168: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 146;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 1184: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 148;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 1192: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 149;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 1200: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 150;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 1208: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 151;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 1216: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 152;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 1224: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 153;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 1232: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 154;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 1240: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 155;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 1248: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 156;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 1264: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 158;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 1272: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 159;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 1280: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 160;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 1288: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 161;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 1296: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 162;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 1312: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 164;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 1320: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 165;
-            errorCode_ = rawValue;
-            break;
-          }
-          case 1328: {
-            int rawValue = input.readEnum();
-            errorCodeCase_ = 166;
-            errorCode_ = rawValue;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v10.errors.ErrorsProto.internal_static_google_ads_googleads_v10_errors_ErrorCode_descriptor;
@@ -7782,7 +6909,7 @@ private static final long serialVersionUID = 0L;
     if (errorCodeCase_ == 166) {
       output.writeEnum(166, ((java.lang.Integer) errorCode_));
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -8347,7 +7474,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(166, ((java.lang.Integer) errorCode_));
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -8923,7 +8050,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -9494,7 +8621,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -9615,18 +8742,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v10.errors.ErrorCode.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -10686,7 +9808,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -10701,17 +9823,864 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.ads.googleads.v10.errors.ErrorCode parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 1;
+              errorCode_ = rawValue;
+              break;
+            } // case 8
+            case 16: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 2;
+              errorCode_ = rawValue;
+              break;
+            } // case 16
+            case 24: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 3;
+              errorCode_ = rawValue;
+              break;
+            } // case 24
+            case 32: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 4;
+              errorCode_ = rawValue;
+              break;
+            } // case 32
+            case 40: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 5;
+              errorCode_ = rawValue;
+              break;
+            } // case 40
+            case 56: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 7;
+              errorCode_ = rawValue;
+              break;
+            } // case 56
+            case 64: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 8;
+              errorCode_ = rawValue;
+              break;
+            } // case 64
+            case 72: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 9;
+              errorCode_ = rawValue;
+              break;
+            } // case 72
+            case 80: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 10;
+              errorCode_ = rawValue;
+              break;
+            } // case 80
+            case 88: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 11;
+              errorCode_ = rawValue;
+              break;
+            } // case 88
+            case 96: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 12;
+              errorCode_ = rawValue;
+              break;
+            } // case 96
+            case 104: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 13;
+              errorCode_ = rawValue;
+              break;
+            } // case 104
+            case 112: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 14;
+              errorCode_ = rawValue;
+              break;
+            } // case 112
+            case 120: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 15;
+              errorCode_ = rawValue;
+              break;
+            } // case 120
+            case 136: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 17;
+              errorCode_ = rawValue;
+              break;
+            } // case 136
+            case 144: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 18;
+              errorCode_ = rawValue;
+              break;
+            } // case 144
+            case 152: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 19;
+              errorCode_ = rawValue;
+              break;
+            } // case 152
+            case 168: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 21;
+              errorCode_ = rawValue;
+              break;
+            } // case 168
+            case 192: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 24;
+              errorCode_ = rawValue;
+              break;
+            } // case 192
+            case 200: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 25;
+              errorCode_ = rawValue;
+              break;
+            } // case 200
+            case 208: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 26;
+              errorCode_ = rawValue;
+              break;
+            } // case 208
+            case 232: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 29;
+              errorCode_ = rawValue;
+              break;
+            } // case 232
+            case 248: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 31;
+              errorCode_ = rawValue;
+              break;
+            } // case 248
+            case 256: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 32;
+              errorCode_ = rawValue;
+              break;
+            } // case 256
+            case 264: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 33;
+              errorCode_ = rawValue;
+              break;
+            } // case 264
+            case 272: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 34;
+              errorCode_ = rawValue;
+              break;
+            } // case 272
+            case 280: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 35;
+              errorCode_ = rawValue;
+              break;
+            } // case 280
+            case 288: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 36;
+              errorCode_ = rawValue;
+              break;
+            } // case 288
+            case 296: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 37;
+              errorCode_ = rawValue;
+              break;
+            } // case 296
+            case 304: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 38;
+              errorCode_ = rawValue;
+              break;
+            } // case 304
+            case 312: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 39;
+              errorCode_ = rawValue;
+              break;
+            } // case 312
+            case 320: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 40;
+              errorCode_ = rawValue;
+              break;
+            } // case 320
+            case 336: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 42;
+              errorCode_ = rawValue;
+              break;
+            } // case 336
+            case 352: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 44;
+              errorCode_ = rawValue;
+              break;
+            } // case 352
+            case 360: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 45;
+              errorCode_ = rawValue;
+              break;
+            } // case 360
+            case 368: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 46;
+              errorCode_ = rawValue;
+              break;
+            } // case 368
+            case 376: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 47;
+              errorCode_ = rawValue;
+              break;
+            } // case 376
+            case 384: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 48;
+              errorCode_ = rawValue;
+              break;
+            } // case 384
+            case 392: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 49;
+              errorCode_ = rawValue;
+              break;
+            } // case 392
+            case 408: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 51;
+              errorCode_ = rawValue;
+              break;
+            } // case 408
+            case 416: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 52;
+              errorCode_ = rawValue;
+              break;
+            } // case 416
+            case 424: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 53;
+              errorCode_ = rawValue;
+              break;
+            } // case 424
+            case 432: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 54;
+              errorCode_ = rawValue;
+              break;
+            } // case 432
+            case 440: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 55;
+              errorCode_ = rawValue;
+              break;
+            } // case 440
+            case 448: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 56;
+              errorCode_ = rawValue;
+              break;
+            } // case 448
+            case 456: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 57;
+              errorCode_ = rawValue;
+              break;
+            } // case 456
+            case 464: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 58;
+              errorCode_ = rawValue;
+              break;
+            } // case 464
+            case 472: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 59;
+              errorCode_ = rawValue;
+              break;
+            } // case 472
+            case 480: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 60;
+              errorCode_ = rawValue;
+              break;
+            } // case 480
+            case 488: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 61;
+              errorCode_ = rawValue;
+              break;
+            } // case 488
+            case 496: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 62;
+              errorCode_ = rawValue;
+              break;
+            } // case 496
+            case 504: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 63;
+              errorCode_ = rawValue;
+              break;
+            } // case 504
+            case 512: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 64;
+              errorCode_ = rawValue;
+              break;
+            } // case 512
+            case 520: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 65;
+              errorCode_ = rawValue;
+              break;
+            } // case 520
+            case 528: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 66;
+              errorCode_ = rawValue;
+              break;
+            } // case 528
+            case 536: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 67;
+              errorCode_ = rawValue;
+              break;
+            } // case 536
+            case 544: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 68;
+              errorCode_ = rawValue;
+              break;
+            } // case 544
+            case 560: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 70;
+              errorCode_ = rawValue;
+              break;
+            } // case 560
+            case 568: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 71;
+              errorCode_ = rawValue;
+              break;
+            } // case 568
+            case 576: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 72;
+              errorCode_ = rawValue;
+              break;
+            } // case 576
+            case 592: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 74;
+              errorCode_ = rawValue;
+              break;
+            } // case 592
+            case 608: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 76;
+              errorCode_ = rawValue;
+              break;
+            } // case 608
+            case 616: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 77;
+              errorCode_ = rawValue;
+              break;
+            } // case 616
+            case 624: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 78;
+              errorCode_ = rawValue;
+              break;
+            } // case 624
+            case 632: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 79;
+              errorCode_ = rawValue;
+              break;
+            } // case 632
+            case 640: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 80;
+              errorCode_ = rawValue;
+              break;
+            } // case 640
+            case 648: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 81;
+              errorCode_ = rawValue;
+              break;
+            } // case 648
+            case 656: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 82;
+              errorCode_ = rawValue;
+              break;
+            } // case 656
+            case 664: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 83;
+              errorCode_ = rawValue;
+              break;
+            } // case 664
+            case 672: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 84;
+              errorCode_ = rawValue;
+              break;
+            } // case 672
+            case 688: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 86;
+              errorCode_ = rawValue;
+              break;
+            } // case 688
+            case 696: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 87;
+              errorCode_ = rawValue;
+              break;
+            } // case 696
+            case 704: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 88;
+              errorCode_ = rawValue;
+              break;
+            } // case 704
+            case 720: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 90;
+              errorCode_ = rawValue;
+              break;
+            } // case 720
+            case 728: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 91;
+              errorCode_ = rawValue;
+              break;
+            } // case 728
+            case 736: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 92;
+              errorCode_ = rawValue;
+              break;
+            } // case 736
+            case 744: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 93;
+              errorCode_ = rawValue;
+              break;
+            } // case 744
+            case 752: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 94;
+              errorCode_ = rawValue;
+              break;
+            } // case 752
+            case 768: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 96;
+              errorCode_ = rawValue;
+              break;
+            } // case 768
+            case 776: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 97;
+              errorCode_ = rawValue;
+              break;
+            } // case 776
+            case 784: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 98;
+              errorCode_ = rawValue;
+              break;
+            } // case 784
+            case 800: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 100;
+              errorCode_ = rawValue;
+              break;
+            } // case 800
+            case 808: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 101;
+              errorCode_ = rawValue;
+              break;
+            } // case 808
+            case 816: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 102;
+              errorCode_ = rawValue;
+              break;
+            } // case 816
+            case 824: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 103;
+              errorCode_ = rawValue;
+              break;
+            } // case 824
+            case 832: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 104;
+              errorCode_ = rawValue;
+              break;
+            } // case 832
+            case 840: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 105;
+              errorCode_ = rawValue;
+              break;
+            } // case 840
+            case 856: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 107;
+              errorCode_ = rawValue;
+              break;
+            } // case 856
+            case 872: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 109;
+              errorCode_ = rawValue;
+              break;
+            } // case 872
+            case 880: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 110;
+              errorCode_ = rawValue;
+              break;
+            } // case 880
+            case 888: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 111;
+              errorCode_ = rawValue;
+              break;
+            } // case 888
+            case 896: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 112;
+              errorCode_ = rawValue;
+              break;
+            } // case 896
+            case 912: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 114;
+              errorCode_ = rawValue;
+              break;
+            } // case 912
+            case 920: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 115;
+              errorCode_ = rawValue;
+              break;
+            } // case 920
+            case 928: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 116;
+              errorCode_ = rawValue;
+              break;
+            } // case 928
+            case 936: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 117;
+              errorCode_ = rawValue;
+              break;
+            } // case 936
+            case 944: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 118;
+              errorCode_ = rawValue;
+              break;
+            } // case 944
+            case 952: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 119;
+              errorCode_ = rawValue;
+              break;
+            } // case 952
+            case 968: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 121;
+              errorCode_ = rawValue;
+              break;
+            } // case 968
+            case 976: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 122;
+              errorCode_ = rawValue;
+              break;
+            } // case 976
+            case 984: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 123;
+              errorCode_ = rawValue;
+              break;
+            } // case 984
+            case 992: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 124;
+              errorCode_ = rawValue;
+              break;
+            } // case 992
+            case 1000: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 125;
+              errorCode_ = rawValue;
+              break;
+            } // case 1000
+            case 1008: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 126;
+              errorCode_ = rawValue;
+              break;
+            } // case 1008
+            case 1016: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 127;
+              errorCode_ = rawValue;
+              break;
+            } // case 1016
+            case 1024: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 128;
+              errorCode_ = rawValue;
+              break;
+            } // case 1024
+            case 1032: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 129;
+              errorCode_ = rawValue;
+              break;
+            } // case 1032
+            case 1040: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 130;
+              errorCode_ = rawValue;
+              break;
+            } // case 1040
+            case 1048: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 131;
+              errorCode_ = rawValue;
+              break;
+            } // case 1048
+            case 1056: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 132;
+              errorCode_ = rawValue;
+              break;
+            } // case 1056
+            case 1064: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 133;
+              errorCode_ = rawValue;
+              break;
+            } // case 1064
+            case 1072: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 134;
+              errorCode_ = rawValue;
+              break;
+            } // case 1072
+            case 1080: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 135;
+              errorCode_ = rawValue;
+              break;
+            } // case 1080
+            case 1088: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 136;
+              errorCode_ = rawValue;
+              break;
+            } // case 1088
+            case 1096: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 137;
+              errorCode_ = rawValue;
+              break;
+            } // case 1096
+            case 1104: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 138;
+              errorCode_ = rawValue;
+              break;
+            } // case 1104
+            case 1112: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 139;
+              errorCode_ = rawValue;
+              break;
+            } // case 1112
+            case 1120: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 140;
+              errorCode_ = rawValue;
+              break;
+            } // case 1120
+            case 1128: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 141;
+              errorCode_ = rawValue;
+              break;
+            } // case 1128
+            case 1144: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 143;
+              errorCode_ = rawValue;
+              break;
+            } // case 1144
+            case 1160: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 145;
+              errorCode_ = rawValue;
+              break;
+            } // case 1160
+            case 1168: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 146;
+              errorCode_ = rawValue;
+              break;
+            } // case 1168
+            case 1184: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 148;
+              errorCode_ = rawValue;
+              break;
+            } // case 1184
+            case 1192: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 149;
+              errorCode_ = rawValue;
+              break;
+            } // case 1192
+            case 1200: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 150;
+              errorCode_ = rawValue;
+              break;
+            } // case 1200
+            case 1208: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 151;
+              errorCode_ = rawValue;
+              break;
+            } // case 1208
+            case 1216: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 152;
+              errorCode_ = rawValue;
+              break;
+            } // case 1216
+            case 1224: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 153;
+              errorCode_ = rawValue;
+              break;
+            } // case 1224
+            case 1232: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 154;
+              errorCode_ = rawValue;
+              break;
+            } // case 1232
+            case 1240: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 155;
+              errorCode_ = rawValue;
+              break;
+            } // case 1240
+            case 1248: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 156;
+              errorCode_ = rawValue;
+              break;
+            } // case 1248
+            case 1264: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 158;
+              errorCode_ = rawValue;
+              break;
+            } // case 1264
+            case 1272: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 159;
+              errorCode_ = rawValue;
+              break;
+            } // case 1272
+            case 1280: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 160;
+              errorCode_ = rawValue;
+              break;
+            } // case 1280
+            case 1288: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 161;
+              errorCode_ = rawValue;
+              break;
+            } // case 1288
+            case 1296: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 162;
+              errorCode_ = rawValue;
+              break;
+            } // case 1296
+            case 1312: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 164;
+              errorCode_ = rawValue;
+              break;
+            } // case 1312
+            case 1320: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 165;
+              errorCode_ = rawValue;
+              break;
+            } // case 1320
+            case 1328: {
+              int rawValue = input.readEnum();
+              errorCodeCase_ = 166;
+              errorCode_ = rawValue;
+              break;
+            } // case 1328
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v10.errors.ErrorCode) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int errorCodeCase_ = 0;
@@ -23967,7 +23936,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new ErrorCode(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

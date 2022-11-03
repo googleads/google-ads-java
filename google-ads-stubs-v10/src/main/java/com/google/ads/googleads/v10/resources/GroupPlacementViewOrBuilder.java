@@ -94,8 +94,8 @@ public interface GroupPlacementViewOrBuilder extends
 
   /**
    * <pre>
-   * Output only. URL of the group placement, e.g. domain, link to the mobile application in
-   * app store, or a YouTube channel URL.
+   * Output only. URL of the group placement, for example, domain, link to the mobile
+   * application in app store, or a YouTube channel URL.
    * </pre>
    *
    * <code>optional string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -104,8 +104,8 @@ public interface GroupPlacementViewOrBuilder extends
   boolean hasTargetUrl();
   /**
    * <pre>
-   * Output only. URL of the group placement, e.g. domain, link to the mobile application in
-   * app store, or a YouTube channel URL.
+   * Output only. URL of the group placement, for example, domain, link to the mobile
+   * application in app store, or a YouTube channel URL.
    * </pre>
    *
    * <code>optional string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -114,8 +114,8 @@ public interface GroupPlacementViewOrBuilder extends
   java.lang.String getTargetUrl();
   /**
    * <pre>
-   * Output only. URL of the group placement, e.g. domain, link to the mobile application in
-   * app store, or a YouTube channel URL.
+   * Output only. URL of the group placement, for example, domain, link to the mobile
+   * application in app store, or a YouTube channel URL.
    * </pre>
    *
    * <code>optional string target_url = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -126,7 +126,8 @@ public interface GroupPlacementViewOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Type of the placement, e.g. Website, YouTube Channel, Mobile Application.
+   * Output only. Type of the placement, for example, Website, YouTube Channel, Mobile
+   * Application.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.enums.PlacementTypeEnum.PlacementType placement_type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -135,7 +136,8 @@ public interface GroupPlacementViewOrBuilder extends
   int getPlacementTypeValue();
   /**
    * <pre>
-   * Output only. Type of the placement, e.g. Website, YouTube Channel, Mobile Application.
+   * Output only. Type of the placement, for example, Website, YouTube Channel, Mobile
+   * Application.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.enums.PlacementTypeEnum.PlacementType placement_type = 5 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

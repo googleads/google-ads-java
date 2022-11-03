@@ -73,9 +73,9 @@ import org.threeten.bp.Duration;
  * <p>The default instance has everything set to sensible defaults:
  *
  * <ul>
- *   <li> The default service address (googleads.googleapis.com) and default port (443) are used.
- *   <li> Credentials are acquired automatically through Application Default Credentials.
- *   <li> Retries are configured for idempotent methods but not for non-idempotent methods.
+ *   <li>The default service address (googleads.googleapis.com) and default port (443) are used.
+ *   <li>Credentials are acquired automatically through Application Default Credentials.
+ *   <li>Retries are configured for idempotent methods but not for non-idempotent methods.
  * </ul>
  *
  * <p>The builder of this class is recursive, so contained classes are themselves builders. When
@@ -84,8 +84,11 @@ import org.threeten.bp.Duration;
  * <p>For example, to set the total timeout of mutateExperiments to 30 seconds:
  *
  * <pre>{@code
- * // This snippet has been automatically generated for illustrative purposes only.
- * // It may require modifications to work in your environment.
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * ExperimentServiceStubSettings.Builder experimentServiceSettingsBuilder =
  *     ExperimentServiceStubSettings.newBuilder();
  * experimentServiceSettingsBuilder
@@ -111,7 +114,8 @@ public class ExperimentServiceStubSettings extends StubSettings<ExperimentServic
       mutateExperimentsSettings;
   private final UnaryCallSettings<EndExperimentRequest, Empty> endExperimentSettings;
   private final PagedCallSettings<
-          ListExperimentAsyncErrorsRequest, ListExperimentAsyncErrorsResponse,
+          ListExperimentAsyncErrorsRequest,
+          ListExperimentAsyncErrorsResponse,
           ListExperimentAsyncErrorsPagedResponse>
       listExperimentAsyncErrorsSettings;
   private final UnaryCallSettings<GraduateExperimentRequest, Empty> graduateExperimentSettings;
@@ -167,11 +171,13 @@ public class ExperimentServiceStubSettings extends StubSettings<ExperimentServic
           };
 
   private static final PagedListResponseFactory<
-          ListExperimentAsyncErrorsRequest, ListExperimentAsyncErrorsResponse,
+          ListExperimentAsyncErrorsRequest,
+          ListExperimentAsyncErrorsResponse,
           ListExperimentAsyncErrorsPagedResponse>
       LIST_EXPERIMENT_ASYNC_ERRORS_PAGE_STR_FACT =
           new PagedListResponseFactory<
-              ListExperimentAsyncErrorsRequest, ListExperimentAsyncErrorsResponse,
+              ListExperimentAsyncErrorsRequest,
+              ListExperimentAsyncErrorsResponse,
               ListExperimentAsyncErrorsPagedResponse>() {
             @Override
             public ApiFuture<ListExperimentAsyncErrorsPagedResponse> getFuturePagedResponse(
@@ -203,7 +209,8 @@ public class ExperimentServiceStubSettings extends StubSettings<ExperimentServic
 
   /** Returns the object with the settings used for calls to listExperimentAsyncErrors. */
   public PagedCallSettings<
-          ListExperimentAsyncErrorsRequest, ListExperimentAsyncErrorsResponse,
+          ListExperimentAsyncErrorsRequest,
+          ListExperimentAsyncErrorsResponse,
           ListExperimentAsyncErrorsPagedResponse>
       listExperimentAsyncErrorsSettings() {
     return listExperimentAsyncErrorsSettings;
@@ -330,7 +337,8 @@ public class ExperimentServiceStubSettings extends StubSettings<ExperimentServic
         mutateExperimentsSettings;
     private final UnaryCallSettings.Builder<EndExperimentRequest, Empty> endExperimentSettings;
     private final PagedCallSettings.Builder<
-            ListExperimentAsyncErrorsRequest, ListExperimentAsyncErrorsResponse,
+            ListExperimentAsyncErrorsRequest,
+            ListExperimentAsyncErrorsResponse,
             ListExperimentAsyncErrorsPagedResponse>
         listExperimentAsyncErrorsSettings;
     private final UnaryCallSettings.Builder<GraduateExperimentRequest, Empty>
@@ -554,7 +562,8 @@ public class ExperimentServiceStubSettings extends StubSettings<ExperimentServic
 
     /** Returns the builder for the settings used for calls to listExperimentAsyncErrors. */
     public PagedCallSettings.Builder<
-            ListExperimentAsyncErrorsRequest, ListExperimentAsyncErrorsResponse,
+            ListExperimentAsyncErrorsRequest,
+            ListExperimentAsyncErrorsResponse,
             ListExperimentAsyncErrorsPagedResponse>
         listExperimentAsyncErrorsSettings() {
       return listExperimentAsyncErrorsSettings;

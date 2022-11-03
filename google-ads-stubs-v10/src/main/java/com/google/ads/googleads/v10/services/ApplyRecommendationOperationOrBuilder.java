@@ -335,7 +335,8 @@ public interface ApplyRecommendationOperationOrBuilder extends
 
   /**
    * <pre>
-   * Parameters to use when applying a responsive search ad recommendation.
+   * Parameters to use when applying a responsive search ad asset
+   * recommendation.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.services.ApplyRecommendationOperation.ResponsiveSearchAdAssetParameters responsive_search_ad_asset = 13;</code>
@@ -344,7 +345,8 @@ public interface ApplyRecommendationOperationOrBuilder extends
   boolean hasResponsiveSearchAdAsset();
   /**
    * <pre>
-   * Parameters to use when applying a responsive search ad recommendation.
+   * Parameters to use when applying a responsive search ad asset
+   * recommendation.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.services.ApplyRecommendationOperation.ResponsiveSearchAdAssetParameters responsive_search_ad_asset = 13;</code>
@@ -353,7 +355,8 @@ public interface ApplyRecommendationOperationOrBuilder extends
   com.google.ads.googleads.v10.services.ApplyRecommendationOperation.ResponsiveSearchAdAssetParameters getResponsiveSearchAdAsset();
   /**
    * <pre>
-   * Parameters to use when applying a responsive search ad recommendation.
+   * Parameters to use when applying a responsive search ad asset
+   * recommendation.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.services.ApplyRecommendationOperation.ResponsiveSearchAdAssetParameters responsive_search_ad_asset = 13;</code>

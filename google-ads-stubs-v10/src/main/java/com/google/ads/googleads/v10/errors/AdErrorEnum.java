@@ -34,45 +34,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private AdErrorEnum(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v10.errors.AdErrorProto.internal_static_google_ads_googleads_v10_errors_AdErrorEnum_descriptor;
@@ -314,8 +275,8 @@ private static final long serialVersionUID = 0L;
     DISPLAY_URL_CANNOT_BE_SPECIFIED(27),
     /**
      * <pre>
-     * Telephone number contains invalid characters or invalid format. Please
-     * re-enter your number using digits (0-9), dashes (-), and parentheses
+     * Telephone number contains invalid characters or invalid format.
+     * Re-enter your number using digits (0-9), dashes (-), and parentheses
      * only.
      * </pre>
      *
@@ -324,7 +285,7 @@ private static final long serialVersionUID = 0L;
     DOMESTIC_PHONE_NUMBER_FORMAT(28),
     /**
      * <pre>
-     * Emergency telephone numbers are not allowed. Please enter a valid
+     * Emergency telephone numbers are not allowed. Enter a valid
      * domestic phone number to connect customers to your business.
      * </pre>
      *
@@ -516,7 +477,7 @@ private static final long serialVersionUID = 0L;
     INVALID_NUMBER_OF_ELEMENTS(52),
     /**
      * <pre>
-     * The format of the telephone number is incorrect. Please re-enter the
+     * The format of the telephone number is incorrect. Re-enter the
      * number using the correct format.
      * </pre>
      *
@@ -614,7 +575,7 @@ private static final long serialVersionUID = 0L;
     MISSING_DESCRIPTION2(64),
     /**
      * <pre>
-     * The destination url must contain at least one tag (e.g. {lpurl})
+     * The destination url must contain at least one tag (for example, {lpurl})
      * </pre>
      *
      * <code>MISSING_DESTINATION_URL_TAG = 65;</code>
@@ -623,7 +584,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The tracking url template of ExpandedDynamicSearchAd must contain at
-     * least one tag. (e.g. {lpurl})
+     * least one tag. (for example, {lpurl})
      * </pre>
      *
      * <code>MISSING_LANDING_PAGE_URL_TAG = 66;</code>
@@ -906,7 +867,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A url scheme is not allowed in front of tag in tracking url template
-     * (e.g. http://{lpurl})
+     * (for example, http://{lpurl})
      * </pre>
      *
      * <code>URL_SCHEME_BEFORE_EXPANDED_DYNAMIC_SEARCH_AD_TAG = 102;</code>
@@ -1144,7 +1105,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Consent for call recording is required for creating/updating call only
-     * ads. Please see https://support.google.com/google-ads/answer/7412639.
+     * ads. See https://support.google.com/google-ads/answer/7412639.
      * </pre>
      *
      * <code>CUSTOMER_CONSENT_FOR_CALL_RECORDING_REQUIRED = 131;</code>
@@ -1579,8 +1540,8 @@ private static final long serialVersionUID = 0L;
     public static final int DISPLAY_URL_CANNOT_BE_SPECIFIED_VALUE = 27;
     /**
      * <pre>
-     * Telephone number contains invalid characters or invalid format. Please
-     * re-enter your number using digits (0-9), dashes (-), and parentheses
+     * Telephone number contains invalid characters or invalid format.
+     * Re-enter your number using digits (0-9), dashes (-), and parentheses
      * only.
      * </pre>
      *
@@ -1589,7 +1550,7 @@ private static final long serialVersionUID = 0L;
     public static final int DOMESTIC_PHONE_NUMBER_FORMAT_VALUE = 28;
     /**
      * <pre>
-     * Emergency telephone numbers are not allowed. Please enter a valid
+     * Emergency telephone numbers are not allowed. Enter a valid
      * domestic phone number to connect customers to your business.
      * </pre>
      *
@@ -1781,7 +1742,7 @@ private static final long serialVersionUID = 0L;
     public static final int INVALID_NUMBER_OF_ELEMENTS_VALUE = 52;
     /**
      * <pre>
-     * The format of the telephone number is incorrect. Please re-enter the
+     * The format of the telephone number is incorrect. Re-enter the
      * number using the correct format.
      * </pre>
      *
@@ -1879,7 +1840,7 @@ private static final long serialVersionUID = 0L;
     public static final int MISSING_DESCRIPTION2_VALUE = 64;
     /**
      * <pre>
-     * The destination url must contain at least one tag (e.g. {lpurl})
+     * The destination url must contain at least one tag (for example, {lpurl})
      * </pre>
      *
      * <code>MISSING_DESTINATION_URL_TAG = 65;</code>
@@ -1888,7 +1849,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The tracking url template of ExpandedDynamicSearchAd must contain at
-     * least one tag. (e.g. {lpurl})
+     * least one tag. (for example, {lpurl})
      * </pre>
      *
      * <code>MISSING_LANDING_PAGE_URL_TAG = 66;</code>
@@ -2171,7 +2132,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A url scheme is not allowed in front of tag in tracking url template
-     * (e.g. http://{lpurl})
+     * (for example, http://{lpurl})
      * </pre>
      *
      * <code>URL_SCHEME_BEFORE_EXPANDED_DYNAMIC_SEARCH_AD_TAG = 102;</code>
@@ -2409,7 +2370,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Consent for call recording is required for creating/updating call only
-     * ads. Please see https://support.google.com/google-ads/answer/7412639.
+     * ads. See https://support.google.com/google-ads/answer/7412639.
      * </pre>
      *
      * <code>CUSTOMER_CONSENT_FOR_CALL_RECORDING_REQUIRED = 131;</code>
@@ -2872,7 +2833,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -2881,7 +2842,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -2896,7 +2857,7 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v10.errors.AdErrorEnum other = (com.google.ads.googleads.v10.errors.AdErrorEnum) obj;
 
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -2907,7 +2868,7 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -3028,18 +2989,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v10.errors.AdErrorEnum.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -3118,7 +3074,7 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.google.ads.googleads.v10.errors.AdErrorEnum other) {
       if (other == com.google.ads.googleads.v10.errors.AdErrorEnum.getDefaultInstance()) return this;
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -3133,17 +3089,30 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.ads.googleads.v10.errors.AdErrorEnum parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v10.errors.AdErrorEnum) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     @java.lang.Override
@@ -3179,7 +3148,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new AdErrorEnum(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

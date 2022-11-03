@@ -49,158 +49,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private DynamicHotelsAndRentalsAsset(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            propertyId_ = s;
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            propertyName_ = s;
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            imageUrl_ = s;
-            break;
-          }
-          case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            destinationName_ = s;
-            break;
-          }
-          case 42: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            description_ = s;
-            break;
-          }
-          case 50: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            price_ = s;
-            break;
-          }
-          case 58: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            salePrice_ = s;
-            break;
-          }
-          case 64: {
-
-            starRating_ = input.readInt64();
-            break;
-          }
-          case 74: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            category_ = s;
-            break;
-          }
-          case 82: {
-            java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              contextualKeywords_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            contextualKeywords_.add(s);
-            break;
-          }
-          case 90: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            address_ = s;
-            break;
-          }
-          case 98: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            androidAppLink_ = s;
-            break;
-          }
-          case 106: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            iosAppLink_ = s;
-            break;
-          }
-          case 112: {
-
-            iosAppStoreId_ = input.readInt64();
-            break;
-          }
-          case 122: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            formattedPrice_ = s;
-            break;
-          }
-          case 130: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            formattedSalePrice_ = s;
-            break;
-          }
-          case 138: {
-            java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              similarPropertyIds_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000002;
-            }
-            similarPropertyIds_.add(s);
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        contextualKeywords_ = contextualKeywords_.getUnmodifiableView();
-      }
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
-        similarPropertyIds_ = similarPropertyIds_.getUnmodifiableView();
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v11.common.AssetTypesProto.internal_static_google_ads_googleads_v11_common_DynamicHotelsAndRentalsAsset_descriptor;
@@ -1031,7 +879,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < similarPropertyIds_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 17, similarPropertyIds_.getRaw(i));
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -1103,7 +951,7 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 2 * getSimilarPropertyIdsList().size();
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -1152,7 +1000,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getFormattedSalePrice())) return false;
     if (!getSimilarPropertyIdsList()
         .equals(other.getSimilarPropertyIdsList())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -1203,7 +1051,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SIMILAR_PROPERTY_IDS_FIELD_NUMBER;
       hash = (53 * hash) + getSimilarPropertyIdsList().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -1324,18 +1172,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v11.common.DynamicHotelsAndRentalsAsset.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -1552,7 +1395,7 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1567,17 +1410,117 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.ads.googleads.v11.common.DynamicHotelsAndRentalsAsset parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              propertyId_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 10
+            case 18: {
+              propertyName_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 18
+            case 26: {
+              imageUrl_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 26
+            case 34: {
+              destinationName_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 34
+            case 42: {
+              description_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 42
+            case 50: {
+              price_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 50
+            case 58: {
+              salePrice_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 58
+            case 64: {
+              starRating_ = input.readInt64();
+
+              break;
+            } // case 64
+            case 74: {
+              category_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 74
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureContextualKeywordsIsMutable();
+              contextualKeywords_.add(s);
+              break;
+            } // case 82
+            case 90: {
+              address_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 90
+            case 98: {
+              androidAppLink_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 98
+            case 106: {
+              iosAppLink_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 106
+            case 112: {
+              iosAppStoreId_ = input.readInt64();
+
+              break;
+            } // case 112
+            case 122: {
+              formattedPrice_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 122
+            case 130: {
+              formattedSalePrice_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 130
+            case 138: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureSimilarPropertyIdsIsMutable();
+              similarPropertyIds_.add(s);
+              break;
+            } // case 138
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v11.common.DynamicHotelsAndRentalsAsset) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -3296,7 +3239,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new DynamicHotelsAndRentalsAsset(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

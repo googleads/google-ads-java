@@ -717,27 +717,31 @@ public interface AdOrBuilder extends
    * Immutable. Details pertaining to a Gmail ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v11.common.GmailAdInfo gmail_ad = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>.google.ads.googleads.v11.common.GmailAdInfo gmail_ad = 21 [deprecated = true, (.google.api.field_behavior) = IMMUTABLE];</code>
+   * @deprecated google.ads.googleads.v11.resources.Ad.gmail_ad is deprecated.
+   *     See google/ads/googleads/v11/resources/ad.proto;l=145
    * @return Whether the gmailAd field is set.
    */
-  boolean hasGmailAd();
+  @java.lang.Deprecated boolean hasGmailAd();
   /**
    * <pre>
    * Immutable. Details pertaining to a Gmail ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v11.common.GmailAdInfo gmail_ad = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>.google.ads.googleads.v11.common.GmailAdInfo gmail_ad = 21 [deprecated = true, (.google.api.field_behavior) = IMMUTABLE];</code>
+   * @deprecated google.ads.googleads.v11.resources.Ad.gmail_ad is deprecated.
+   *     See google/ads/googleads/v11/resources/ad.proto;l=145
    * @return The gmailAd.
    */
-  com.google.ads.googleads.v11.common.GmailAdInfo getGmailAd();
+  @java.lang.Deprecated com.google.ads.googleads.v11.common.GmailAdInfo getGmailAd();
   /**
    * <pre>
    * Immutable. Details pertaining to a Gmail ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v11.common.GmailAdInfo gmail_ad = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>.google.ads.googleads.v11.common.GmailAdInfo gmail_ad = 21 [deprecated = true, (.google.api.field_behavior) = IMMUTABLE];</code>
    */
-  com.google.ads.googleads.v11.common.GmailAdInfoOrBuilder getGmailAdOrBuilder();
+  @java.lang.Deprecated com.google.ads.googleads.v11.common.GmailAdInfoOrBuilder getGmailAdOrBuilder();
 
   /**
    * <pre>

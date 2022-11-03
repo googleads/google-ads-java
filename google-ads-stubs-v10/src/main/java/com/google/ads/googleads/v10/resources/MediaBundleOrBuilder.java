@@ -29,7 +29,7 @@ public interface MediaBundleOrBuilder extends
   /**
    * <pre>
    * Output only. The url to access the uploaded zipped data.
-   * E.g. https://tpc.googlesyndication.com/simgad/123
+   * For example, https://tpc.googlesyndication.com/simgad/123
    * This field is read-only.
    * </pre>
    *
@@ -40,7 +40,7 @@ public interface MediaBundleOrBuilder extends
   /**
    * <pre>
    * Output only. The url to access the uploaded zipped data.
-   * E.g. https://tpc.googlesyndication.com/simgad/123
+   * For example, https://tpc.googlesyndication.com/simgad/123
    * This field is read-only.
    * </pre>
    *
@@ -51,7 +51,7 @@ public interface MediaBundleOrBuilder extends
   /**
    * <pre>
    * Output only. The url to access the uploaded zipped data.
-   * E.g. https://tpc.googlesyndication.com/simgad/123
+   * For example, https://tpc.googlesyndication.com/simgad/123
    * This field is read-only.
    * </pre>
    *

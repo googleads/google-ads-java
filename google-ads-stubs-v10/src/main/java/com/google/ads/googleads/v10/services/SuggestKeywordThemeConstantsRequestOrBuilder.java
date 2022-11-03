@@ -10,7 +10,7 @@ public interface SuggestKeywordThemeConstantsRequestOrBuilder extends
   /**
    * <pre>
    * The query text of a keyword theme that will be used to map to similar
-   * keyword themes. E.g. "plumber" or "roofer".
+   * keyword themes. For example, "plumber" or "roofer".
    * </pre>
    *
    * <code>string query_text = 1;</code>
@@ -20,7 +20,7 @@ public interface SuggestKeywordThemeConstantsRequestOrBuilder extends
   /**
    * <pre>
    * The query text of a keyword theme that will be used to map to similar
-   * keyword themes. E.g. "plumber" or "roofer".
+   * keyword themes. For example, "plumber" or "roofer".
    * </pre>
    *
    * <code>string query_text = 1;</code>

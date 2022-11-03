@@ -40,7 +40,7 @@ public final class AdProto {
       "leads/v11/enums/device.proto\032Agoogle/ads" +
       "/googleads/v11/enums/system_managed_enti" +
       "ty_source.proto\032\037google/api/field_behavi" +
-      "or.proto\032\031google/api/resource.proto\"\244\027\n\002" +
+      "or.proto\032\031google/api/resource.proto\"\246\027\n\002" +
       "Ad\022:\n\rresource_name\030% \001(\tB#\340A\005\372A\035\n\033googl" +
       "eads.googleapis.com/Ad\022\024\n\002id\030( \001(\003B\003\340A\003H" +
       "\001\210\001\001\022\022\n\nfinal_urls\030) \003(\t\022D\n\016final_app_ur" +
@@ -74,54 +74,54 @@ public final class AdProto {
       "t_ad\030\021 \001(\01324.google.ads.googleads.v11.co" +
       "mmon.ShoppingSmartAdInfoH\000\022U\n\023shopping_p" +
       "roduct_ad\030\022 \001(\01326.google.ads.googleads.v" +
-      "11.common.ShoppingProductAdInfoH\000\022E\n\010gma" +
+      "11.common.ShoppingProductAdInfoH\000\022G\n\010gma" +
       "il_ad\030\025 \001(\0132,.google.ads.googleads.v11.c" +
-      "ommon.GmailAdInfoB\003\340A\005H\000\022E\n\010image_ad\030\026 \001" +
-      "(\0132,.google.ads.googleads.v11.common.Ima" +
-      "geAdInfoB\003\340A\005H\000\022@\n\010video_ad\030\030 \001(\0132,.goog" +
-      "le.ads.googleads.v11.common.VideoAdInfoH" +
-      "\000\022U\n\023video_responsive_ad\030\' \001(\01326.google." +
-      "ads.googleads.v11.common.VideoResponsive" +
-      "AdInfoH\000\022W\n\024responsive_search_ad\030\031 \001(\01327" +
-      ".google.ads.googleads.v11.common.Respons" +
-      "iveSearchAdInfoH\000\022f\n\034legacy_responsive_d" +
-      "isplay_ad\030\034 \001(\0132>.google.ads.googleads.v" +
-      "11.common.LegacyResponsiveDisplayAdInfoH" +
-      "\000\022<\n\006app_ad\030\035 \001(\0132*.google.ads.googleads" +
-      ".v11.common.AppAdInfoH\000\022]\n\025legacy_app_in" +
-      "stall_ad\030\036 \001(\01327.google.ads.googleads.v1" +
-      "1.common.LegacyAppInstallAdInfoB\003\340A\005H\000\022Y" +
-      "\n\025responsive_display_ad\030\037 \001(\01328.google.a" +
-      "ds.googleads.v11.common.ResponsiveDispla" +
-      "yAdInfoH\000\022@\n\010local_ad\030  \001(\0132,.google.ads" +
-      ".googleads.v11.common.LocalAdInfoH\000\022Q\n\021d" +
-      "isplay_upload_ad\030! \001(\01324.google.ads.goog" +
-      "leads.v11.common.DisplayUploadAdInfoH\000\022Q" +
-      "\n\021app_engagement_ad\030\" \001(\01324.google.ads.g" +
-      "oogleads.v11.common.AppEngagementAdInfoH" +
-      "\000\022j\n\036shopping_comparison_listing_ad\030$ \001(" +
-      "\0132@.google.ads.googleads.v11.common.Shop" +
-      "pingComparisonListingAdInfoH\000\022Q\n\021smart_c" +
-      "ampaign_ad\0300 \001(\01324.google.ads.googleads." +
-      "v11.common.SmartCampaignAdInfoH\000\022\\\n\027app_" +
-      "pre_registration_ad\0302 \001(\01329.google.ads.g" +
-      "oogleads.v11.common.AppPreRegistrationAd" +
-      "InfoH\000\022^\n\030discovery_multi_asset_ad\0303 \001(\013" +
-      "2:.google.ads.googleads.v11.common.Disco" +
-      "veryMultiAssetAdInfoH\000\022Y\n\025discovery_caro" +
-      "usel_ad\0304 \001(\01328.google.ads.googleads.v11" +
-      ".common.DiscoveryCarouselAdInfoH\000:E\352AB\n\033" +
-      "googleads.googleapis.com/Ad\022#customers/{" +
-      "customer_id}/ads/{ad_id}B\t\n\007ad_dataB\005\n\003_" +
-      "idB\030\n\026_tracking_url_templateB\023\n\021_final_u" +
-      "rl_suffixB\016\n\014_display_urlB\026\n\024_added_by_g" +
-      "oogle_adsB\007\n\005_nameB\371\001\n&com.google.ads.go" +
-      "ogleads.v11.resourcesB\007AdProtoP\001ZKgoogle" +
-      ".golang.org/genproto/googleapis/ads/goog" +
-      "leads/v11/resources;resources\242\002\003GAA\252\002\"Go" +
-      "ogle.Ads.GoogleAds.V11.Resources\312\002\"Googl" +
-      "e\\Ads\\GoogleAds\\V11\\Resources\352\002&Google::" +
-      "Ads::GoogleAds::V11::Resourcesb\006proto3"
+      "ommon.GmailAdInfoB\005\030\001\340A\005H\000\022E\n\010image_ad\030\026" +
+      " \001(\0132,.google.ads.googleads.v11.common.I" +
+      "mageAdInfoB\003\340A\005H\000\022@\n\010video_ad\030\030 \001(\0132,.go" +
+      "ogle.ads.googleads.v11.common.VideoAdInf" +
+      "oH\000\022U\n\023video_responsive_ad\030\' \001(\01326.googl" +
+      "e.ads.googleads.v11.common.VideoResponsi" +
+      "veAdInfoH\000\022W\n\024responsive_search_ad\030\031 \001(\013" +
+      "27.google.ads.googleads.v11.common.Respo" +
+      "nsiveSearchAdInfoH\000\022f\n\034legacy_responsive" +
+      "_display_ad\030\034 \001(\0132>.google.ads.googleads" +
+      ".v11.common.LegacyResponsiveDisplayAdInf" +
+      "oH\000\022<\n\006app_ad\030\035 \001(\0132*.google.ads.googlea" +
+      "ds.v11.common.AppAdInfoH\000\022]\n\025legacy_app_" +
+      "install_ad\030\036 \001(\01327.google.ads.googleads." +
+      "v11.common.LegacyAppInstallAdInfoB\003\340A\005H\000" +
+      "\022Y\n\025responsive_display_ad\030\037 \001(\01328.google" +
+      ".ads.googleads.v11.common.ResponsiveDisp" +
+      "layAdInfoH\000\022@\n\010local_ad\030  \001(\0132,.google.a" +
+      "ds.googleads.v11.common.LocalAdInfoH\000\022Q\n" +
+      "\021display_upload_ad\030! \001(\01324.google.ads.go" +
+      "ogleads.v11.common.DisplayUploadAdInfoH\000" +
+      "\022Q\n\021app_engagement_ad\030\" \001(\01324.google.ads" +
+      ".googleads.v11.common.AppEngagementAdInf" +
+      "oH\000\022j\n\036shopping_comparison_listing_ad\030$ " +
+      "\001(\0132@.google.ads.googleads.v11.common.Sh" +
+      "oppingComparisonListingAdInfoH\000\022Q\n\021smart" +
+      "_campaign_ad\0300 \001(\01324.google.ads.googlead" +
+      "s.v11.common.SmartCampaignAdInfoH\000\022\\\n\027ap" +
+      "p_pre_registration_ad\0302 \001(\01329.google.ads" +
+      ".googleads.v11.common.AppPreRegistration" +
+      "AdInfoH\000\022^\n\030discovery_multi_asset_ad\0303 \001" +
+      "(\0132:.google.ads.googleads.v11.common.Dis" +
+      "coveryMultiAssetAdInfoH\000\022Y\n\025discovery_ca" +
+      "rousel_ad\0304 \001(\01328.google.ads.googleads.v" +
+      "11.common.DiscoveryCarouselAdInfoH\000:E\352AB" +
+      "\n\033googleads.googleapis.com/Ad\022#customers" +
+      "/{customer_id}/ads/{ad_id}B\t\n\007ad_dataB\005\n" +
+      "\003_idB\030\n\026_tracking_url_templateB\023\n\021_final" +
+      "_url_suffixB\016\n\014_display_urlB\026\n\024_added_by" +
+      "_google_adsB\007\n\005_nameB\371\001\n&com.google.ads." +
+      "googleads.v11.resourcesB\007AdProtoP\001ZKgoog" +
+      "le.golang.org/genproto/googleapis/ads/go" +
+      "ogleads/v11/resources;resources\242\002\003GAA\252\002\"" +
+      "Google.Ads.GoogleAds.V11.Resources\312\002\"Goo" +
+      "gle\\Ads\\GoogleAds\\V11\\Resources\352\002&Google" +
+      "::Ads::GoogleAds::V11::Resourcesb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

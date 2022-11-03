@@ -9,8 +9,11 @@ public interface TargetingOrBuilder extends
 
   /**
    * <pre>
-   * Required. The ID of the selected location. Plannable location IDs can be
+   * The ID of the selected location. Plannable location IDs can be
    * obtained from [ReachPlanService.ListPlannableLocations][google.ads.googleads.v11.services.ReachPlanService.ListPlannableLocations].
+   * Requests must set either this field or `plannable_location_ids`.
+   * This field is deprecated as of V12 and will be removed in a future release.
+   * Use `plannable_location_ids` instead.
    * </pre>
    *
    * <code>optional string plannable_location_id = 6;</code>
@@ -19,8 +22,11 @@ public interface TargetingOrBuilder extends
   boolean hasPlannableLocationId();
   /**
    * <pre>
-   * Required. The ID of the selected location. Plannable location IDs can be
+   * The ID of the selected location. Plannable location IDs can be
    * obtained from [ReachPlanService.ListPlannableLocations][google.ads.googleads.v11.services.ReachPlanService.ListPlannableLocations].
+   * Requests must set either this field or `plannable_location_ids`.
+   * This field is deprecated as of V12 and will be removed in a future release.
+   * Use `plannable_location_ids` instead.
    * </pre>
    *
    * <code>optional string plannable_location_id = 6;</code>
@@ -29,8 +35,11 @@ public interface TargetingOrBuilder extends
   java.lang.String getPlannableLocationId();
   /**
    * <pre>
-   * Required. The ID of the selected location. Plannable location IDs can be
+   * The ID of the selected location. Plannable location IDs can be
    * obtained from [ReachPlanService.ListPlannableLocations][google.ads.googleads.v11.services.ReachPlanService.ListPlannableLocations].
+   * Requests must set either this field or `plannable_location_ids`.
+   * This field is deprecated as of V12 and will be removed in a future release.
+   * Use `plannable_location_ids` instead.
    * </pre>
    *
    * <code>optional string plannable_location_id = 6;</code>

@@ -67,7 +67,7 @@ public interface PolicyTopicEntryOrBuilder extends
   /**
    * <pre>
    * Additional information that explains policy finding
-   * (e.g. the brand name for a trademark finding).
+   * (for example, the brand name for a trademark finding).
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.PolicyTopicEvidence evidences = 3;</code>
@@ -77,7 +77,7 @@ public interface PolicyTopicEntryOrBuilder extends
   /**
    * <pre>
    * Additional information that explains policy finding
-   * (e.g. the brand name for a trademark finding).
+   * (for example, the brand name for a trademark finding).
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.PolicyTopicEvidence evidences = 3;</code>
@@ -86,7 +86,7 @@ public interface PolicyTopicEntryOrBuilder extends
   /**
    * <pre>
    * Additional information that explains policy finding
-   * (e.g. the brand name for a trademark finding).
+   * (for example, the brand name for a trademark finding).
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.PolicyTopicEvidence evidences = 3;</code>
@@ -95,7 +95,7 @@ public interface PolicyTopicEntryOrBuilder extends
   /**
    * <pre>
    * Additional information that explains policy finding
-   * (e.g. the brand name for a trademark finding).
+   * (for example, the brand name for a trademark finding).
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.PolicyTopicEvidence evidences = 3;</code>
@@ -105,7 +105,7 @@ public interface PolicyTopicEntryOrBuilder extends
   /**
    * <pre>
    * Additional information that explains policy finding
-   * (e.g. the brand name for a trademark finding).
+   * (for example, the brand name for a trademark finding).
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.PolicyTopicEvidence evidences = 3;</code>
@@ -115,8 +115,8 @@ public interface PolicyTopicEntryOrBuilder extends
 
   /**
    * <pre>
-   * Indicates how serving of this resource may be affected (e.g. not serving
-   * in a country).
+   * Indicates how serving of this resource may be affected (for example, not
+   * serving in a country).
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.PolicyTopicConstraint constraints = 4;</code>
@@ -125,8 +125,8 @@ public interface PolicyTopicEntryOrBuilder extends
       getConstraintsList();
   /**
    * <pre>
-   * Indicates how serving of this resource may be affected (e.g. not serving
-   * in a country).
+   * Indicates how serving of this resource may be affected (for example, not
+   * serving in a country).
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.PolicyTopicConstraint constraints = 4;</code>
@@ -134,8 +134,8 @@ public interface PolicyTopicEntryOrBuilder extends
   com.google.ads.googleads.v10.common.PolicyTopicConstraint getConstraints(int index);
   /**
    * <pre>
-   * Indicates how serving of this resource may be affected (e.g. not serving
-   * in a country).
+   * Indicates how serving of this resource may be affected (for example, not
+   * serving in a country).
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.PolicyTopicConstraint constraints = 4;</code>
@@ -143,8 +143,8 @@ public interface PolicyTopicEntryOrBuilder extends
   int getConstraintsCount();
   /**
    * <pre>
-   * Indicates how serving of this resource may be affected (e.g. not serving
-   * in a country).
+   * Indicates how serving of this resource may be affected (for example, not
+   * serving in a country).
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.PolicyTopicConstraint constraints = 4;</code>
@@ -153,8 +153,8 @@ public interface PolicyTopicEntryOrBuilder extends
       getConstraintsOrBuilderList();
   /**
    * <pre>
-   * Indicates how serving of this resource may be affected (e.g. not serving
-   * in a country).
+   * Indicates how serving of this resource may be affected (for example, not
+   * serving in a country).
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.PolicyTopicConstraint constraints = 4;</code>

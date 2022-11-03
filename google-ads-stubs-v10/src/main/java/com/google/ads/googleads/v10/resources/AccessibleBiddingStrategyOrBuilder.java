@@ -202,7 +202,7 @@ public interface AccessibleBiddingStrategyOrBuilder extends
 
   /**
    * <pre>
-   * Output only. A bidding strategy that automatically optimizes towards a desired
+   * Output only. A bidding strategy that automatically optimizes towards a chosen
    * percentage of impressions.
    * </pre>
    *
@@ -212,7 +212,7 @@ public interface AccessibleBiddingStrategyOrBuilder extends
   boolean hasTargetImpressionShare();
   /**
    * <pre>
-   * Output only. A bidding strategy that automatically optimizes towards a desired
+   * Output only. A bidding strategy that automatically optimizes towards a chosen
    * percentage of impressions.
    * </pre>
    *
@@ -222,7 +222,7 @@ public interface AccessibleBiddingStrategyOrBuilder extends
   com.google.ads.googleads.v10.resources.AccessibleBiddingStrategy.TargetImpressionShare getTargetImpressionShare();
   /**
    * <pre>
-   * Output only. A bidding strategy that automatically optimizes towards a desired
+   * Output only. A bidding strategy that automatically optimizes towards a chosen
    * percentage of impressions.
    * </pre>
    *

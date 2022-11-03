@@ -38,106 +38,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private BillingSetup(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            resourceName_ = s;
-            break;
-          }
-          case 24: {
-            int rawValue = input.readEnum();
-
-            status_ = rawValue;
-            break;
-          }
-          case 80: {
-            int rawValue = input.readEnum();
-            startTimeCase_ = 10;
-            startTime_ = rawValue;
-            break;
-          }
-          case 98: {
-            com.google.ads.googleads.v10.resources.BillingSetup.PaymentsAccountInfo.Builder subBuilder = null;
-            if (paymentsAccountInfo_ != null) {
-              subBuilder = paymentsAccountInfo_.toBuilder();
-            }
-            paymentsAccountInfo_ = input.readMessage(com.google.ads.googleads.v10.resources.BillingSetup.PaymentsAccountInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(paymentsAccountInfo_);
-              paymentsAccountInfo_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 112: {
-            int rawValue = input.readEnum();
-            endTimeCase_ = 14;
-            endTime_ = rawValue;
-            break;
-          }
-          case 120: {
-            bitField0_ |= 0x00000001;
-            id_ = input.readInt64();
-            break;
-          }
-          case 130: {
-            java.lang.String s = input.readStringRequireUtf8();
-            startTimeCase_ = 16;
-            startTime_ = s;
-            break;
-          }
-          case 138: {
-            java.lang.String s = input.readStringRequireUtf8();
-            endTimeCase_ = 17;
-            endTime_ = s;
-            break;
-          }
-          case 146: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000002;
-            paymentsAccount_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v10.resources.BillingSetupProto.internal_static_google_ads_googleads_v10_resources_BillingSetup_descriptor;
@@ -159,7 +59,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. A 16 digit id used to identify the payments account associated with the
      * billing setup.
-     * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+     * This must be passed as a string with dashes, for example,
+     * "1234-5678-9012-3456".
      * </pre>
      *
      * <code>optional string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -170,7 +71,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. A 16 digit id used to identify the payments account associated with the
      * billing setup.
-     * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+     * This must be passed as a string with dashes, for example,
+     * "1234-5678-9012-3456".
      * </pre>
      *
      * <code>optional string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -181,7 +83,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. A 16 digit id used to identify the payments account associated with the
      * billing setup.
-     * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+     * This must be passed as a string with dashes, for example,
+     * "1234-5678-9012-3456".
      * </pre>
      *
      * <code>optional string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -232,7 +135,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. A 12 digit id used to identify the payments profile associated with the
      * billing setup.
-     * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+     * This must be passed in as a string with dashes, for example,
+     * "1234-5678-9012".
      * </pre>
      *
      * <code>optional string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -243,7 +147,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. A 12 digit id used to identify the payments profile associated with the
      * billing setup.
-     * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+     * This must be passed in as a string with dashes, for example,
+     * "1234-5678-9012".
      * </pre>
      *
      * <code>optional string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -254,7 +159,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. A 12 digit id used to identify the payments profile associated with the
      * billing setup.
-     * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+     * This must be passed in as a string with dashes, for example,
+     * "1234-5678-9012".
      * </pre>
      *
      * <code>optional string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -294,8 +200,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Output only. A secondary payments profile id present in uncommon situations, e.g.
-     * when a sequential liability agreement has been arranged.
+     * Output only. A secondary payments profile id present in uncommon situations, for
+     * example, when a sequential liability agreement has been arranged.
      * </pre>
      *
      * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -304,8 +210,8 @@ private static final long serialVersionUID = 0L;
     boolean hasSecondaryPaymentsProfileId();
     /**
      * <pre>
-     * Output only. A secondary payments profile id present in uncommon situations, e.g.
-     * when a sequential liability agreement has been arranged.
+     * Output only. A secondary payments profile id present in uncommon situations, for
+     * example, when a sequential liability agreement has been arranged.
      * </pre>
      *
      * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -314,8 +220,8 @@ private static final long serialVersionUID = 0L;
     java.lang.String getSecondaryPaymentsProfileId();
     /**
      * <pre>
-     * Output only. A secondary payments profile id present in uncommon situations, e.g.
-     * when a sequential liability agreement has been arranged.
+     * Output only. A secondary payments profile id present in uncommon situations, for
+     * example, when a sequential liability agreement has been arranged.
      * </pre>
      *
      * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -360,76 +266,6 @@ private static final long serialVersionUID = 0L;
     getUnknownFields() {
       return this.unknownFields;
     }
-    private PaymentsAccountInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              paymentsAccountId_ = s;
-              break;
-            }
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              paymentsAccountName_ = s;
-              break;
-            }
-            case 66: {
-              java.lang.String s = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              paymentsProfileId_ = s;
-              break;
-            }
-            case 74: {
-              java.lang.String s = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
-              paymentsProfileName_ = s;
-              break;
-            }
-            case 82: {
-              java.lang.String s = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
-              secondaryPaymentsProfileId_ = s;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v10.resources.BillingSetupProto.internal_static_google_ads_googleads_v10_resources_BillingSetup_PaymentsAccountInfo_descriptor;
@@ -450,7 +286,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. A 16 digit id used to identify the payments account associated with the
      * billing setup.
-     * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+     * This must be passed as a string with dashes, for example,
+     * "1234-5678-9012-3456".
      * </pre>
      *
      * <code>optional string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -464,7 +301,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. A 16 digit id used to identify the payments account associated with the
      * billing setup.
-     * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+     * This must be passed as a string with dashes, for example,
+     * "1234-5678-9012-3456".
      * </pre>
      *
      * <code>optional string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -487,7 +325,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Output only. A 16 digit id used to identify the payments account associated with the
      * billing setup.
-     * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+     * This must be passed as a string with dashes, for example,
+     * "1234-5678-9012-3456".
      * </pre>
      *
      * <code>optional string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -581,7 +420,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. A 12 digit id used to identify the payments profile associated with the
      * billing setup.
-     * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+     * This must be passed in as a string with dashes, for example,
+     * "1234-5678-9012".
      * </pre>
      *
      * <code>optional string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -595,7 +435,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. A 12 digit id used to identify the payments profile associated with the
      * billing setup.
-     * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+     * This must be passed in as a string with dashes, for example,
+     * "1234-5678-9012".
      * </pre>
      *
      * <code>optional string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -618,7 +459,8 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * Immutable. A 12 digit id used to identify the payments profile associated with the
      * billing setup.
-     * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+     * This must be passed in as a string with dashes, for example,
+     * "1234-5678-9012".
      * </pre>
      *
      * <code>optional string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -701,8 +543,8 @@ private static final long serialVersionUID = 0L;
     private volatile java.lang.Object secondaryPaymentsProfileId_;
     /**
      * <pre>
-     * Output only. A secondary payments profile id present in uncommon situations, e.g.
-     * when a sequential liability agreement has been arranged.
+     * Output only. A secondary payments profile id present in uncommon situations, for
+     * example, when a sequential liability agreement has been arranged.
      * </pre>
      *
      * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -714,8 +556,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A secondary payments profile id present in uncommon situations, e.g.
-     * when a sequential liability agreement has been arranged.
+     * Output only. A secondary payments profile id present in uncommon situations, for
+     * example, when a sequential liability agreement has been arranged.
      * </pre>
      *
      * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -736,8 +578,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Output only. A secondary payments profile id present in uncommon situations, e.g.
-     * when a sequential liability agreement has been arranged.
+     * Output only. A secondary payments profile id present in uncommon situations, for
+     * example, when a sequential liability agreement has been arranged.
      * </pre>
      *
      * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -787,7 +629,7 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000010) != 0)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 10, secondaryPaymentsProfileId_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -811,7 +653,7 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000010) != 0)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, secondaryPaymentsProfileId_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -851,7 +693,7 @@ private static final long serialVersionUID = 0L;
         if (!getSecondaryPaymentsProfileId()
             .equals(other.getSecondaryPaymentsProfileId())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -882,7 +724,7 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + SECONDARY_PAYMENTS_PROFILE_ID_FIELD_NUMBER;
         hash = (53 * hash) + getSecondaryPaymentsProfileId().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1003,18 +845,13 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.google.ads.googleads.v10.resources.BillingSetup.PaymentsAccountInfo.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1151,7 +988,7 @@ private static final long serialVersionUID = 0L;
           secondaryPaymentsProfileId_ = other.secondaryPaymentsProfileId_;
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1166,17 +1003,55 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.ads.googleads.v10.resources.BillingSetup.PaymentsAccountInfo parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 50: {
+                paymentsAccountId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 50
+              case 58: {
+                paymentsAccountName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 58
+              case 66: {
+                paymentsProfileId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 66
+              case 74: {
+                paymentsProfileName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 74
+              case 82: {
+                secondaryPaymentsProfileId_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 82
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.google.ads.googleads.v10.resources.BillingSetup.PaymentsAccountInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -1186,7 +1061,8 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Output only. A 16 digit id used to identify the payments account associated with the
        * billing setup.
-       * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+       * This must be passed as a string with dashes, for example,
+       * "1234-5678-9012-3456".
        * </pre>
        *
        * <code>optional string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1199,7 +1075,8 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Output only. A 16 digit id used to identify the payments account associated with the
        * billing setup.
-       * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+       * This must be passed as a string with dashes, for example,
+       * "1234-5678-9012-3456".
        * </pre>
        *
        * <code>optional string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1221,7 +1098,8 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Output only. A 16 digit id used to identify the payments account associated with the
        * billing setup.
-       * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+       * This must be passed as a string with dashes, for example,
+       * "1234-5678-9012-3456".
        * </pre>
        *
        * <code>optional string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1244,7 +1122,8 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Output only. A 16 digit id used to identify the payments account associated with the
        * billing setup.
-       * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+       * This must be passed as a string with dashes, for example,
+       * "1234-5678-9012-3456".
        * </pre>
        *
        * <code>optional string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1265,7 +1144,8 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Output only. A 16 digit id used to identify the payments account associated with the
        * billing setup.
-       * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+       * This must be passed as a string with dashes, for example,
+       * "1234-5678-9012-3456".
        * </pre>
        *
        * <code>optional string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1281,7 +1161,8 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Output only. A 16 digit id used to identify the payments account associated with the
        * billing setup.
-       * This must be passed as a string with dashes, e.g. "1234-5678-9012-3456".
+       * This must be passed as a string with dashes, for example,
+       * "1234-5678-9012-3456".
        * </pre>
        *
        * <code>optional string payments_account_id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1430,7 +1311,8 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Immutable. A 12 digit id used to identify the payments profile associated with the
        * billing setup.
-       * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+       * This must be passed in as a string with dashes, for example,
+       * "1234-5678-9012".
        * </pre>
        *
        * <code>optional string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1443,7 +1325,8 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Immutable. A 12 digit id used to identify the payments profile associated with the
        * billing setup.
-       * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+       * This must be passed in as a string with dashes, for example,
+       * "1234-5678-9012".
        * </pre>
        *
        * <code>optional string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1465,7 +1348,8 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Immutable. A 12 digit id used to identify the payments profile associated with the
        * billing setup.
-       * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+       * This must be passed in as a string with dashes, for example,
+       * "1234-5678-9012".
        * </pre>
        *
        * <code>optional string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1488,7 +1372,8 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Immutable. A 12 digit id used to identify the payments profile associated with the
        * billing setup.
-       * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+       * This must be passed in as a string with dashes, for example,
+       * "1234-5678-9012".
        * </pre>
        *
        * <code>optional string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1509,7 +1394,8 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Immutable. A 12 digit id used to identify the payments profile associated with the
        * billing setup.
-       * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+       * This must be passed in as a string with dashes, for example,
+       * "1234-5678-9012".
        * </pre>
        *
        * <code>optional string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1525,7 +1411,8 @@ private static final long serialVersionUID = 0L;
        * <pre>
        * Immutable. A 12 digit id used to identify the payments profile associated with the
        * billing setup.
-       * This must be passed in as a string with dashes, e.g. "1234-5678-9012".
+       * This must be passed in as a string with dashes, for example,
+       * "1234-5678-9012".
        * </pre>
        *
        * <code>optional string payments_profile_id = 8 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -1654,8 +1541,8 @@ private static final long serialVersionUID = 0L;
       private java.lang.Object secondaryPaymentsProfileId_ = "";
       /**
        * <pre>
-       * Output only. A secondary payments profile id present in uncommon situations, e.g.
-       * when a sequential liability agreement has been arranged.
+       * Output only. A secondary payments profile id present in uncommon situations, for
+       * example, when a sequential liability agreement has been arranged.
        * </pre>
        *
        * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1666,8 +1553,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. A secondary payments profile id present in uncommon situations, e.g.
-       * when a sequential liability agreement has been arranged.
+       * Output only. A secondary payments profile id present in uncommon situations, for
+       * example, when a sequential liability agreement has been arranged.
        * </pre>
        *
        * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1687,8 +1574,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. A secondary payments profile id present in uncommon situations, e.g.
-       * when a sequential liability agreement has been arranged.
+       * Output only. A secondary payments profile id present in uncommon situations, for
+       * example, when a sequential liability agreement has been arranged.
        * </pre>
        *
        * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1709,8 +1596,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. A secondary payments profile id present in uncommon situations, e.g.
-       * when a sequential liability agreement has been arranged.
+       * Output only. A secondary payments profile id present in uncommon situations, for
+       * example, when a sequential liability agreement has been arranged.
        * </pre>
        *
        * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1729,8 +1616,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. A secondary payments profile id present in uncommon situations, e.g.
-       * when a sequential liability agreement has been arranged.
+       * Output only. A secondary payments profile id present in uncommon situations, for
+       * example, when a sequential liability agreement has been arranged.
        * </pre>
        *
        * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1744,8 +1631,8 @@ private static final long serialVersionUID = 0L;
       }
       /**
        * <pre>
-       * Output only. A secondary payments profile id present in uncommon situations, e.g.
-       * when a sequential liability agreement has been arranged.
+       * Output only. A secondary payments profile id present in uncommon situations, for
+       * example, when a sequential liability agreement has been arranged.
        * </pre>
        *
        * <code>optional string secondary_payments_profile_id = 10 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -1796,7 +1683,18 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PaymentsAccountInfo(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -2389,7 +2287,7 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 18, paymentsAccount_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -2430,7 +2328,7 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, paymentsAccount_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -2489,7 +2387,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -2541,7 +2439,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -2663,18 +2561,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v10.resources.BillingSetup.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -2851,7 +2744,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -2866,17 +2759,81 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.ads.googleads.v10.resources.BillingSetup parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              resourceName_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 10
+            case 24: {
+              status_ = input.readEnum();
+
+              break;
+            } // case 24
+            case 80: {
+              int rawValue = input.readEnum();
+              startTimeCase_ = 10;
+              startTime_ = rawValue;
+              break;
+            } // case 80
+            case 98: {
+              input.readMessage(
+                  getPaymentsAccountInfoFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 98
+            case 112: {
+              int rawValue = input.readEnum();
+              endTimeCase_ = 14;
+              endTime_ = rawValue;
+              break;
+            } // case 112
+            case 120: {
+              id_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 120
+            case 130: {
+              java.lang.String s = input.readStringRequireUtf8();
+              startTimeCase_ = 16;
+              startTime_ = s;
+              break;
+            } // case 130
+            case 138: {
+              java.lang.String s = input.readStringRequireUtf8();
+              endTimeCase_ = 17;
+              endTime_ = s;
+              break;
+            } // case 138
+            case 146: {
+              paymentsAccount_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 146
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v10.resources.BillingSetup) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int startTimeCase_ = 0;
@@ -3950,7 +3907,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new BillingSetup(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

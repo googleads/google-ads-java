@@ -37,132 +37,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private GenerateReachForecastRequest(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            customerId_ = s;
-            break;
-          }
-          case 26: {
-            com.google.ads.googleads.v10.services.CampaignDuration.Builder subBuilder = null;
-            if (campaignDuration_ != null) {
-              subBuilder = campaignDuration_.toBuilder();
-            }
-            campaignDuration_ = input.readMessage(com.google.ads.googleads.v10.services.CampaignDuration.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(campaignDuration_);
-              campaignDuration_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 50: {
-            com.google.ads.googleads.v10.services.Targeting.Builder subBuilder = null;
-            if (targeting_ != null) {
-              subBuilder = targeting_.toBuilder();
-            }
-            targeting_ = input.readMessage(com.google.ads.googleads.v10.services.Targeting.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(targeting_);
-              targeting_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 58: {
-            if (!((mutable_bitField0_ & 0x00000010) != 0)) {
-              plannedProducts_ = new java.util.ArrayList<com.google.ads.googleads.v10.services.PlannedProduct>();
-              mutable_bitField0_ |= 0x00000010;
-            }
-            plannedProducts_.add(
-                input.readMessage(com.google.ads.googleads.v10.services.PlannedProduct.parser(), extensionRegistry));
-            break;
-          }
-          case 66: {
-            com.google.ads.googleads.v10.services.FrequencyCap.Builder subBuilder = null;
-            if (cookieFrequencyCapSetting_ != null) {
-              subBuilder = cookieFrequencyCapSetting_.toBuilder();
-            }
-            cookieFrequencyCapSetting_ = input.readMessage(com.google.ads.googleads.v10.services.FrequencyCap.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(cookieFrequencyCapSetting_);
-              cookieFrequencyCapSetting_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 74: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000001;
-            currencyCode_ = s;
-            break;
-          }
-          case 80: {
-            bitField0_ |= 0x00000002;
-            cookieFrequencyCap_ = input.readInt32();
-            break;
-          }
-          case 88: {
-            bitField0_ |= 0x00000004;
-            minEffectiveFrequency_ = input.readInt32();
-            break;
-          }
-          case 98: {
-            com.google.ads.googleads.v10.services.EffectiveFrequencyLimit.Builder subBuilder = null;
-            if (((bitField0_ & 0x00000008) != 0)) {
-              subBuilder = effectiveFrequencyLimit_.toBuilder();
-            }
-            effectiveFrequencyLimit_ = input.readMessage(com.google.ads.googleads.v10.services.EffectiveFrequencyLimit.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(effectiveFrequencyLimit_);
-              effectiveFrequencyLimit_ = subBuilder.buildPartial();
-            }
-            bitField0_ |= 0x00000008;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000010) != 0)) {
-        plannedProducts_ = java.util.Collections.unmodifiableList(plannedProducts_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v10.services.ReachPlanServiceProto.internal_static_google_ads_googleads_v10_services_GenerateReachForecastRequest_descriptor;
@@ -326,13 +200,13 @@ private static final long serialVersionUID = 0L;
   private int cookieFrequencyCap_;
   /**
    * <pre>
-   * Desired cookie frequency cap to be applied to each planned product.
+   * Chosen cookie frequency cap to be applied to each planned product.
    * This is equivalent to the frequency cap exposed in Google Ads when creating
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user.
    * If not specified, no cap is applied.
    * This field is deprecated in v4 and will eventually be removed.
-   * Please use cookie_frequency_cap_setting instead.
+   * Use cookie_frequency_cap_setting instead.
    * </pre>
    *
    * <code>optional int32 cookie_frequency_cap = 10;</code>
@@ -344,13 +218,13 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Desired cookie frequency cap to be applied to each planned product.
+   * Chosen cookie frequency cap to be applied to each planned product.
    * This is equivalent to the frequency cap exposed in Google Ads when creating
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user.
    * If not specified, no cap is applied.
    * This field is deprecated in v4 and will eventually be removed.
-   * Please use cookie_frequency_cap_setting instead.
+   * Use cookie_frequency_cap_setting instead.
    * </pre>
    *
    * <code>optional int32 cookie_frequency_cap = 10;</code>
@@ -365,7 +239,7 @@ private static final long serialVersionUID = 0L;
   private com.google.ads.googleads.v10.services.FrequencyCap cookieFrequencyCapSetting_;
   /**
    * <pre>
-   * Desired cookie frequency cap to be applied to each planned product.
+   * Chosen cookie frequency cap to be applied to each planned product.
    * This is equivalent to the frequency cap exposed in Google Ads when creating
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user during a specified time interval.
@@ -382,7 +256,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Desired cookie frequency cap to be applied to each planned product.
+   * Chosen cookie frequency cap to be applied to each planned product.
    * This is equivalent to the frequency cap exposed in Google Ads when creating
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user during a specified time interval.
@@ -399,7 +273,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Desired cookie frequency cap to be applied to each planned product.
+   * Chosen cookie frequency cap to be applied to each planned product.
    * This is equivalent to the frequency cap exposed in Google Ads when creating
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user during a specified time interval.
@@ -418,7 +292,7 @@ private static final long serialVersionUID = 0L;
   private int minEffectiveFrequency_;
   /**
    * <pre>
-   * Desired minimum effective frequency (the number of times a person was
+   * Chosen minimum effective frequency (the number of times a person was
    * exposed to the ad) for the reported reach metrics [1-10].
    * This won't affect the targeting, but just the reporting.
    * If not specified, a default of 1 is applied.
@@ -434,7 +308,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Desired minimum effective frequency (the number of times a person was
+   * Chosen minimum effective frequency (the number of times a person was
    * exposed to the ad) for the reported reach metrics [1-10].
    * This won't affect the targeting, but just the reporting.
    * If not specified, a default of 1 is applied.
@@ -514,7 +388,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The targeting to be applied to all products selected in the product mix.
    * This is planned targeting: execution details might vary based on the
-   * advertising product, please consult an implementation specialist.
+   * advertising product, consult an implementation specialist.
    * See specific metrics for details on how targeting affects them.
    * </pre>
    *
@@ -529,7 +403,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The targeting to be applied to all products selected in the product mix.
    * This is planned targeting: execution details might vary based on the
-   * advertising product, please consult an implementation specialist.
+   * advertising product, consult an implementation specialist.
    * See specific metrics for details on how targeting affects them.
    * </pre>
    *
@@ -544,7 +418,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The targeting to be applied to all products selected in the product mix.
    * This is planned targeting: execution details might vary based on the
-   * advertising product, please consult an implementation specialist.
+   * advertising product, consult an implementation specialist.
    * See specific metrics for details on how targeting affects them.
    * </pre>
    *
@@ -661,7 +535,7 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000008) != 0)) {
       output.writeMessage(12, getEffectiveFrequencyLimit());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -704,7 +578,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(12, getEffectiveFrequencyLimit());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -758,7 +632,7 @@ private static final long serialVersionUID = 0L;
     }
     if (!getPlannedProductsList()
         .equals(other.getPlannedProductsList())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -803,7 +677,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + PLANNED_PRODUCTS_FIELD_NUMBER;
       hash = (53 * hash) + getPlannedProductsList().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -976,10 +850,11 @@ private static final long serialVersionUID = 0L;
       }
       if (plannedProductsBuilder_ == null) {
         plannedProducts_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
       } else {
+        plannedProducts_ = null;
         plannedProductsBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000010);
       return this;
     }
 
@@ -1155,7 +1030,7 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1170,17 +1045,91 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.ads.googleads.v10.services.GenerateReachForecastRequest parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              customerId_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 10
+            case 26: {
+              input.readMessage(
+                  getCampaignDurationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 26
+            case 50: {
+              input.readMessage(
+                  getTargetingFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 50
+            case 58: {
+              com.google.ads.googleads.v10.services.PlannedProduct m =
+                  input.readMessage(
+                      com.google.ads.googleads.v10.services.PlannedProduct.parser(),
+                      extensionRegistry);
+              if (plannedProductsBuilder_ == null) {
+                ensurePlannedProductsIsMutable();
+                plannedProducts_.add(m);
+              } else {
+                plannedProductsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 58
+            case 66: {
+              input.readMessage(
+                  getCookieFrequencyCapSettingFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 66
+            case 74: {
+              currencyCode_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 74
+            case 80: {
+              cookieFrequencyCap_ = input.readInt32();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 80
+            case 88: {
+              minEffectiveFrequency_ = input.readInt32();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 88
+            case 98: {
+              input.readMessage(
+                  getEffectiveFrequencyLimitFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 98
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v10.services.GenerateReachForecastRequest) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -1552,13 +1501,13 @@ private static final long serialVersionUID = 0L;
     private int cookieFrequencyCap_ ;
     /**
      * <pre>
-     * Desired cookie frequency cap to be applied to each planned product.
+     * Chosen cookie frequency cap to be applied to each planned product.
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user.
      * If not specified, no cap is applied.
      * This field is deprecated in v4 and will eventually be removed.
-     * Please use cookie_frequency_cap_setting instead.
+     * Use cookie_frequency_cap_setting instead.
      * </pre>
      *
      * <code>optional int32 cookie_frequency_cap = 10;</code>
@@ -1570,13 +1519,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Desired cookie frequency cap to be applied to each planned product.
+     * Chosen cookie frequency cap to be applied to each planned product.
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user.
      * If not specified, no cap is applied.
      * This field is deprecated in v4 and will eventually be removed.
-     * Please use cookie_frequency_cap_setting instead.
+     * Use cookie_frequency_cap_setting instead.
      * </pre>
      *
      * <code>optional int32 cookie_frequency_cap = 10;</code>
@@ -1588,13 +1537,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Desired cookie frequency cap to be applied to each planned product.
+     * Chosen cookie frequency cap to be applied to each planned product.
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user.
      * If not specified, no cap is applied.
      * This field is deprecated in v4 and will eventually be removed.
-     * Please use cookie_frequency_cap_setting instead.
+     * Use cookie_frequency_cap_setting instead.
      * </pre>
      *
      * <code>optional int32 cookie_frequency_cap = 10;</code>
@@ -1609,13 +1558,13 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Desired cookie frequency cap to be applied to each planned product.
+     * Chosen cookie frequency cap to be applied to each planned product.
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user.
      * If not specified, no cap is applied.
      * This field is deprecated in v4 and will eventually be removed.
-     * Please use cookie_frequency_cap_setting instead.
+     * Use cookie_frequency_cap_setting instead.
      * </pre>
      *
      * <code>optional int32 cookie_frequency_cap = 10;</code>
@@ -1633,7 +1582,7 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v10.services.FrequencyCap, com.google.ads.googleads.v10.services.FrequencyCap.Builder, com.google.ads.googleads.v10.services.FrequencyCapOrBuilder> cookieFrequencyCapSettingBuilder_;
     /**
      * <pre>
-     * Desired cookie frequency cap to be applied to each planned product.
+     * Chosen cookie frequency cap to be applied to each planned product.
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user during a specified time interval.
@@ -1649,7 +1598,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Desired cookie frequency cap to be applied to each planned product.
+     * Chosen cookie frequency cap to be applied to each planned product.
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user during a specified time interval.
@@ -1669,7 +1618,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Desired cookie frequency cap to be applied to each planned product.
+     * Chosen cookie frequency cap to be applied to each planned product.
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user during a specified time interval.
@@ -1694,7 +1643,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Desired cookie frequency cap to be applied to each planned product.
+     * Chosen cookie frequency cap to be applied to each planned product.
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user during a specified time interval.
@@ -1717,7 +1666,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Desired cookie frequency cap to be applied to each planned product.
+     * Chosen cookie frequency cap to be applied to each planned product.
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user during a specified time interval.
@@ -1744,7 +1693,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Desired cookie frequency cap to be applied to each planned product.
+     * Chosen cookie frequency cap to be applied to each planned product.
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user during a specified time interval.
@@ -1767,7 +1716,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Desired cookie frequency cap to be applied to each planned product.
+     * Chosen cookie frequency cap to be applied to each planned product.
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user during a specified time interval.
@@ -1784,7 +1733,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Desired cookie frequency cap to be applied to each planned product.
+     * Chosen cookie frequency cap to be applied to each planned product.
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user during a specified time interval.
@@ -1804,7 +1753,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Desired cookie frequency cap to be applied to each planned product.
+     * Chosen cookie frequency cap to be applied to each planned product.
      * This is equivalent to the frequency cap exposed in Google Ads when creating
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user during a specified time interval.
@@ -1831,7 +1780,7 @@ private static final long serialVersionUID = 0L;
     private int minEffectiveFrequency_ ;
     /**
      * <pre>
-     * Desired minimum effective frequency (the number of times a person was
+     * Chosen minimum effective frequency (the number of times a person was
      * exposed to the ad) for the reported reach metrics [1-10].
      * This won't affect the targeting, but just the reporting.
      * If not specified, a default of 1 is applied.
@@ -1847,7 +1796,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Desired minimum effective frequency (the number of times a person was
+     * Chosen minimum effective frequency (the number of times a person was
      * exposed to the ad) for the reported reach metrics [1-10].
      * This won't affect the targeting, but just the reporting.
      * If not specified, a default of 1 is applied.
@@ -1863,7 +1812,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Desired minimum effective frequency (the number of times a person was
+     * Chosen minimum effective frequency (the number of times a person was
      * exposed to the ad) for the reported reach metrics [1-10].
      * This won't affect the targeting, but just the reporting.
      * If not specified, a default of 1 is applied.
@@ -1882,7 +1831,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Desired minimum effective frequency (the number of times a person was
+     * Chosen minimum effective frequency (the number of times a person was
      * exposed to the ad) for the reported reach metrics [1-10].
      * This won't affect the targeting, but just the reporting.
      * If not specified, a default of 1 is applied.
@@ -2125,7 +2074,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The targeting to be applied to all products selected in the product mix.
      * This is planned targeting: execution details might vary based on the
-     * advertising product, please consult an implementation specialist.
+     * advertising product, consult an implementation specialist.
      * See specific metrics for details on how targeting affects them.
      * </pre>
      *
@@ -2139,7 +2088,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The targeting to be applied to all products selected in the product mix.
      * This is planned targeting: execution details might vary based on the
-     * advertising product, please consult an implementation specialist.
+     * advertising product, consult an implementation specialist.
      * See specific metrics for details on how targeting affects them.
      * </pre>
      *
@@ -2157,7 +2106,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The targeting to be applied to all products selected in the product mix.
      * This is planned targeting: execution details might vary based on the
-     * advertising product, please consult an implementation specialist.
+     * advertising product, consult an implementation specialist.
      * See specific metrics for details on how targeting affects them.
      * </pre>
      *
@@ -2180,7 +2129,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The targeting to be applied to all products selected in the product mix.
      * This is planned targeting: execution details might vary based on the
-     * advertising product, please consult an implementation specialist.
+     * advertising product, consult an implementation specialist.
      * See specific metrics for details on how targeting affects them.
      * </pre>
      *
@@ -2201,7 +2150,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The targeting to be applied to all products selected in the product mix.
      * This is planned targeting: execution details might vary based on the
-     * advertising product, please consult an implementation specialist.
+     * advertising product, consult an implementation specialist.
      * See specific metrics for details on how targeting affects them.
      * </pre>
      *
@@ -2226,7 +2175,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The targeting to be applied to all products selected in the product mix.
      * This is planned targeting: execution details might vary based on the
-     * advertising product, please consult an implementation specialist.
+     * advertising product, consult an implementation specialist.
      * See specific metrics for details on how targeting affects them.
      * </pre>
      *
@@ -2247,7 +2196,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The targeting to be applied to all products selected in the product mix.
      * This is planned targeting: execution details might vary based on the
-     * advertising product, please consult an implementation specialist.
+     * advertising product, consult an implementation specialist.
      * See specific metrics for details on how targeting affects them.
      * </pre>
      *
@@ -2262,7 +2211,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The targeting to be applied to all products selected in the product mix.
      * This is planned targeting: execution details might vary based on the
-     * advertising product, please consult an implementation specialist.
+     * advertising product, consult an implementation specialist.
      * See specific metrics for details on how targeting affects them.
      * </pre>
      *
@@ -2280,7 +2229,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The targeting to be applied to all products selected in the product mix.
      * This is planned targeting: execution details might vary based on the
-     * advertising product, please consult an implementation specialist.
+     * advertising product, consult an implementation specialist.
      * See specific metrics for details on how targeting affects them.
      * </pre>
      *
@@ -2662,7 +2611,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new GenerateReachForecastRequest(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

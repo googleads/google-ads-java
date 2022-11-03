@@ -373,7 +373,7 @@ public interface BiddingStrategyOrBuilder extends
 
   /**
    * <pre>
-   * A bidding strategy that automatically optimizes towards a desired
+   * A bidding strategy that automatically optimizes towards a chosen
    * percentage of impressions.
    * </pre>
    *
@@ -383,7 +383,7 @@ public interface BiddingStrategyOrBuilder extends
   boolean hasTargetImpressionShare();
   /**
    * <pre>
-   * A bidding strategy that automatically optimizes towards a desired
+   * A bidding strategy that automatically optimizes towards a chosen
    * percentage of impressions.
    * </pre>
    *
@@ -393,7 +393,7 @@ public interface BiddingStrategyOrBuilder extends
   com.google.ads.googleads.v10.common.TargetImpressionShare getTargetImpressionShare();
   /**
    * <pre>
-   * A bidding strategy that automatically optimizes towards a desired
+   * A bidding strategy that automatically optimizes towards a chosen
    * percentage of impressions.
    * </pre>
    *

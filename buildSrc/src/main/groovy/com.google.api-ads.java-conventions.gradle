@@ -142,7 +142,9 @@ tasks.withType(JavaCompile) {
 dependencies {
   api 'com.google.api:gax'
   api 'com.google.api:gax-grpc'
-  api 'com.google.protobuf:protobuf-java'
+  // Generated code requires at least 3.19.6 of protobuf-java.
+  api 'com.google.protobuf:protobuf-java:3.19.6'
+  api 'com.google.protobuf:protobuf-java-util:3.19.6'
   api 'io.grpc:grpc-stub'
   api 'io.grpc:grpc-protobuf'
   api 'com.google.auth:google-auth-library-oauth2-http:1.5.3'
@@ -264,14 +266,6 @@ class ListExamplesTask extends DefaultTask {
   private static final String MAIN_EXAMPLES_BASE_DIRECTORY =
     'src/main/java/com/google/ads/googleads/examples/'
 
-  // The base directory containing all examples.
-  private static final String MIGRATION_EXAMPLES_BASE_DIRECTORY =
-    '../google-ads-migration-examples/src/main/java/com/google/ads/googleads/migration/'
-
-  // The name of the package with the migration examples (currently only one
-  // such package exists).
-  private static final String MIGRATION_PACKAGE_NAME = 'campaignmanagement'
-
   // A list of subdirectories to exclude from the printout.
   @Input
   List<String> directoriesToExclude = ['utils']
@@ -364,17 +358,9 @@ class ListExamplesTask extends DefaultTask {
   void exec() {
     String mainExamplesDirectory = subdirectory ?
       MAIN_EXAMPLES_BASE_DIRECTORY + subdirectory + '/' : MAIN_EXAMPLES_BASE_DIRECTORY
-    String migrationExamplesDirectory = subdirectory ?
-      MIGRATION_EXAMPLES_BASE_DIRECTORY + subdirectory + '/' : MIGRATION_EXAMPLES_BASE_DIRECTORY
     int count = 0
 
     count += traverseDirectory(mainExamplesDirectory, count)
-
-    // Only print the migration examples if printing all examples or examples
-    // with the campaignmanagement package name.
-    if (!subdirectory || subdirectory == MIGRATION_PACKAGE_NAME) {
-      count += traverseDirectory(migrationExamplesDirectory, count)
-    }
 
     println "\nTotal examples: $count"
   }

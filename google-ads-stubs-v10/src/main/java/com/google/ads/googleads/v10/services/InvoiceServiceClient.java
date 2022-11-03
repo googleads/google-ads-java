@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Google LLC
+ * Copyright 2022 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,7 +19,6 @@ package com.google.ads.googleads.v10.services;
 import com.google.ads.googleads.v10.enums.MonthOfYearEnum;
 import com.google.ads.googleads.v10.services.stub.InvoiceServiceStub;
 import com.google.ads.googleads.v10.services.stub.InvoiceServiceStubSettings;
-import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.rpc.UnaryCallable;
 import java.io.IOException;
@@ -34,6 +33,11 @@ import javax.annotation.Generated;
  * calls that map to API methods. Sample code to get started:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (InvoiceServiceClient invoiceServiceClient = InvoiceServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
  *   String billingSetup = "billingSetup-1435075390";
@@ -51,13 +55,13 @@ import javax.annotation.Generated;
  * methods:
  *
  * <ol>
- *   <li> A "flattened" method. With this type of method, the fields of the request type have been
+ *   <li>A "flattened" method. With this type of method, the fields of the request type have been
  *       converted into function parameters. It may be the case that not all fields are available as
  *       parameters, and not every API method will have a flattened method entry point.
- *   <li> A "request object" method. This type of method only takes one parameter, a request object,
+ *   <li>A "request object" method. This type of method only takes one parameter, a request object,
  *       which must be constructed before the call. Not every API method will have a request object
  *       method.
- *   <li> A "callable" method. This type of method takes no parameters and returns an immutable API
+ *   <li>A "callable" method. This type of method takes no parameters and returns an immutable API
  *       callable object, which can be used to initiate calls to the service.
  * </ol>
  *
@@ -73,6 +77,11 @@ import javax.annotation.Generated;
  * <p>To customize credentials:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * InvoiceServiceSettings invoiceServiceSettings =
  *     InvoiceServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
@@ -83,6 +92,11 @@ import javax.annotation.Generated;
  * <p>To customize the endpoint:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * InvoiceServiceSettings invoiceServiceSettings =
  *     InvoiceServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * InvoiceServiceClient invoiceServiceClient = InvoiceServiceClient.create(invoiceServiceSettings);
@@ -113,7 +127,6 @@ public class InvoiceServiceClient implements BackgroundResource {
    * Constructs an instance of InvoiceServiceClient, using the given stub for making calls. This is
    * for advanced usage - prefer using create(InvoiceServiceSettings).
    */
-  @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final InvoiceServiceClient create(InvoiceServiceStub stub) {
     return new InvoiceServiceClient(stub);
   }
@@ -128,7 +141,6 @@ public class InvoiceServiceClient implements BackgroundResource {
     this.stub = ((InvoiceServiceStubSettings) settings.getStubSettings()).createStub();
   }
 
-  @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   protected InvoiceServiceClient(InvoiceServiceStub stub) {
     this.settings = null;
     this.stub = stub;
@@ -138,7 +150,6 @@ public class InvoiceServiceClient implements BackgroundResource {
     return settings;
   }
 
-  @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public InvoiceServiceStub getStub() {
     return stub;
   }
@@ -153,6 +164,11 @@ public class InvoiceServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (InvoiceServiceClient invoiceServiceClient = InvoiceServiceClient.create()) {
    *   String customerId = "customerId-1581184615";
    *   String billingSetup = "billingSetup-1435075390";
@@ -196,6 +212,11 @@ public class InvoiceServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (InvoiceServiceClient invoiceServiceClient = InvoiceServiceClient.create()) {
    *   ListInvoicesRequest request =
    *       ListInvoicesRequest.newBuilder()
@@ -224,6 +245,11 @@ public class InvoiceServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (InvoiceServiceClient invoiceServiceClient = InvoiceServiceClient.create()) {
    *   ListInvoicesRequest request =
    *       ListInvoicesRequest.newBuilder()

@@ -28,8 +28,8 @@ public interface TargetImpressionShareOrBuilder extends
 
   /**
    * <pre>
-   * The desired fraction of ads to be shown in the targeted location in micros.
-   * E.g. 1% equals 10,000.
+   * The chosen fraction of ads to be shown in the targeted location in micros.
+   * For example, 1% equals 10,000.
    * </pre>
    *
    * <code>optional int64 location_fraction_micros = 4;</code>
@@ -38,8 +38,8 @@ public interface TargetImpressionShareOrBuilder extends
   boolean hasLocationFractionMicros();
   /**
    * <pre>
-   * The desired fraction of ads to be shown in the targeted location in micros.
-   * E.g. 1% equals 10,000.
+   * The chosen fraction of ads to be shown in the targeted location in micros.
+   * For example, 1% equals 10,000.
    * </pre>
    *
    * <code>optional int64 location_fraction_micros = 4;</code>

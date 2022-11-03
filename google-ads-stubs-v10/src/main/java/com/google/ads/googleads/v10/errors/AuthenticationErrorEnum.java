@@ -34,45 +34,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private AuthenticationErrorEnum(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v10.errors.AuthenticationErrorProto.internal_static_google_ads_googleads_v10_errors_AuthenticationErrorEnum_descriptor;
@@ -121,7 +82,7 @@ private static final long serialVersionUID = 0L;
     AUTHENTICATION_ERROR(2),
     /**
      * <pre>
-     * Client Customer ID is not a number.
+     * Client customer ID is not a number.
      * </pre>
      *
      * <code>CLIENT_CUSTOMER_ID_INVALID = 5;</code>
@@ -137,7 +98,7 @@ private static final long serialVersionUID = 0L;
     CUSTOMER_NOT_FOUND(8),
     /**
      * <pre>
-     * Client's Google Account is deleted.
+     * Client's Google account is deleted.
      * </pre>
      *
      * <code>GOOGLE_ACCOUNT_DELETED = 9;</code>
@@ -186,7 +147,7 @@ private static final long serialVersionUID = 0L;
     NOT_ADS_USER(14),
     /**
      * <pre>
-     * Oauth token in the header is not valid.
+     * OAuth token in the header is not valid.
      * </pre>
      *
      * <code>OAUTH_TOKEN_INVALID = 15;</code>
@@ -194,7 +155,7 @@ private static final long serialVersionUID = 0L;
     OAUTH_TOKEN_INVALID(15),
     /**
      * <pre>
-     * Oauth token in the header has expired.
+     * OAuth token in the header has expired.
      * </pre>
      *
      * <code>OAUTH_TOKEN_EXPIRED = 16;</code>
@@ -202,7 +163,7 @@ private static final long serialVersionUID = 0L;
     OAUTH_TOKEN_EXPIRED(16),
     /**
      * <pre>
-     * Oauth token in the header has been disabled.
+     * OAuth token in the header has been disabled.
      * </pre>
      *
      * <code>OAUTH_TOKEN_DISABLED = 17;</code>
@@ -210,7 +171,7 @@ private static final long serialVersionUID = 0L;
     OAUTH_TOKEN_DISABLED(17),
     /**
      * <pre>
-     * Oauth token in the header has been revoked.
+     * OAuth token in the header has been revoked.
      * </pre>
      *
      * <code>OAUTH_TOKEN_REVOKED = 18;</code>
@@ -218,7 +179,7 @@ private static final long serialVersionUID = 0L;
     OAUTH_TOKEN_REVOKED(18),
     /**
      * <pre>
-     * Oauth token HTTP header is malformed.
+     * OAuth token HTTP header is malformed.
      * </pre>
      *
      * <code>OAUTH_TOKEN_HEADER_INVALID = 19;</code>
@@ -234,7 +195,7 @@ private static final long serialVersionUID = 0L;
     LOGIN_COOKIE_INVALID(20),
     /**
      * <pre>
-     * User Id in the header is not a valid id.
+     * User ID in the header is not a valid ID.
      * </pre>
      *
      * <code>USER_ID_INVALID = 22;</code>
@@ -289,7 +250,7 @@ private static final long serialVersionUID = 0L;
     public static final int AUTHENTICATION_ERROR_VALUE = 2;
     /**
      * <pre>
-     * Client Customer ID is not a number.
+     * Client customer ID is not a number.
      * </pre>
      *
      * <code>CLIENT_CUSTOMER_ID_INVALID = 5;</code>
@@ -305,7 +266,7 @@ private static final long serialVersionUID = 0L;
     public static final int CUSTOMER_NOT_FOUND_VALUE = 8;
     /**
      * <pre>
-     * Client's Google Account is deleted.
+     * Client's Google account is deleted.
      * </pre>
      *
      * <code>GOOGLE_ACCOUNT_DELETED = 9;</code>
@@ -354,7 +315,7 @@ private static final long serialVersionUID = 0L;
     public static final int NOT_ADS_USER_VALUE = 14;
     /**
      * <pre>
-     * Oauth token in the header is not valid.
+     * OAuth token in the header is not valid.
      * </pre>
      *
      * <code>OAUTH_TOKEN_INVALID = 15;</code>
@@ -362,7 +323,7 @@ private static final long serialVersionUID = 0L;
     public static final int OAUTH_TOKEN_INVALID_VALUE = 15;
     /**
      * <pre>
-     * Oauth token in the header has expired.
+     * OAuth token in the header has expired.
      * </pre>
      *
      * <code>OAUTH_TOKEN_EXPIRED = 16;</code>
@@ -370,7 +331,7 @@ private static final long serialVersionUID = 0L;
     public static final int OAUTH_TOKEN_EXPIRED_VALUE = 16;
     /**
      * <pre>
-     * Oauth token in the header has been disabled.
+     * OAuth token in the header has been disabled.
      * </pre>
      *
      * <code>OAUTH_TOKEN_DISABLED = 17;</code>
@@ -378,7 +339,7 @@ private static final long serialVersionUID = 0L;
     public static final int OAUTH_TOKEN_DISABLED_VALUE = 17;
     /**
      * <pre>
-     * Oauth token in the header has been revoked.
+     * OAuth token in the header has been revoked.
      * </pre>
      *
      * <code>OAUTH_TOKEN_REVOKED = 18;</code>
@@ -386,7 +347,7 @@ private static final long serialVersionUID = 0L;
     public static final int OAUTH_TOKEN_REVOKED_VALUE = 18;
     /**
      * <pre>
-     * Oauth token HTTP header is malformed.
+     * OAuth token HTTP header is malformed.
      * </pre>
      *
      * <code>OAUTH_TOKEN_HEADER_INVALID = 19;</code>
@@ -402,7 +363,7 @@ private static final long serialVersionUID = 0L;
     public static final int LOGIN_COOKIE_INVALID_VALUE = 20;
     /**
      * <pre>
-     * User Id in the header is not a valid id.
+     * User ID in the header is not a valid ID.
      * </pre>
      *
      * <code>USER_ID_INVALID = 22;</code>
@@ -544,7 +505,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -553,7 +514,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -568,7 +529,7 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v10.errors.AuthenticationErrorEnum other = (com.google.ads.googleads.v10.errors.AuthenticationErrorEnum) obj;
 
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -579,7 +540,7 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -700,18 +661,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v10.errors.AuthenticationErrorEnum.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -790,7 +746,7 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.google.ads.googleads.v10.errors.AuthenticationErrorEnum other) {
       if (other == com.google.ads.googleads.v10.errors.AuthenticationErrorEnum.getDefaultInstance()) return this;
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -805,17 +761,30 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.ads.googleads.v10.errors.AuthenticationErrorEnum parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v10.errors.AuthenticationErrorEnum) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     @java.lang.Override
@@ -851,7 +820,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new AuthenticationErrorEnum(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

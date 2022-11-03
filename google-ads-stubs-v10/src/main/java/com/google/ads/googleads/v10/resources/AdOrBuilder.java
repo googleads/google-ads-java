@@ -251,7 +251,7 @@ public interface AdOrBuilder extends
    * <pre>
    * The list of mappings that can be used to substitute custom parameter tags
    * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
-   * For mutates, please use url custom parameter operations.
+   * For mutates, use url custom parameter operations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.CustomParameter url_custom_parameters = 10;</code>
@@ -262,7 +262,7 @@ public interface AdOrBuilder extends
    * <pre>
    * The list of mappings that can be used to substitute custom parameter tags
    * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
-   * For mutates, please use url custom parameter operations.
+   * For mutates, use url custom parameter operations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.CustomParameter url_custom_parameters = 10;</code>
@@ -272,7 +272,7 @@ public interface AdOrBuilder extends
    * <pre>
    * The list of mappings that can be used to substitute custom parameter tags
    * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
-   * For mutates, please use url custom parameter operations.
+   * For mutates, use url custom parameter operations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.CustomParameter url_custom_parameters = 10;</code>
@@ -282,7 +282,7 @@ public interface AdOrBuilder extends
    * <pre>
    * The list of mappings that can be used to substitute custom parameter tags
    * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
-   * For mutates, please use url custom parameter operations.
+   * For mutates, use url custom parameter operations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.CustomParameter url_custom_parameters = 10;</code>
@@ -293,7 +293,7 @@ public interface AdOrBuilder extends
    * <pre>
    * The list of mappings that can be used to substitute custom parameter tags
    * in a `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
-   * For mutates, please use url custom parameter operations.
+   * For mutates, use url custom parameter operations.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.CustomParameter url_custom_parameters = 10;</code>
@@ -379,8 +379,8 @@ public interface AdOrBuilder extends
    * The device preference for the ad. You can only specify a preference for
    * mobile devices. When this preference is set the ad will be preferred over
    * other ads when being displayed on a mobile device. The ad can still be
-   * displayed on other device types, e.g. if no other ads are available.
-   * If unspecified (no device preference), all devices are targeted.
+   * displayed on other device types, for example, if no other ads are
+   * available. If unspecified (no device preference), all devices are targeted.
    * This is only supported by some ad types.
    * </pre>
    *
@@ -393,8 +393,8 @@ public interface AdOrBuilder extends
    * The device preference for the ad. You can only specify a preference for
    * mobile devices. When this preference is set the ad will be preferred over
    * other ads when being displayed on a mobile device. The ad can still be
-   * displayed on other device types, e.g. if no other ads are available.
-   * If unspecified (no device preference), all devices are targeted.
+   * displayed on other device types, for example, if no other ads are
+   * available. If unspecified (no device preference), all devices are targeted.
    * This is only supported by some ad types.
    * </pre>
    *
@@ -717,27 +717,31 @@ public interface AdOrBuilder extends
    * Immutable. Details pertaining to a Gmail ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v10.common.GmailAdInfo gmail_ad = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>.google.ads.googleads.v10.common.GmailAdInfo gmail_ad = 21 [deprecated = true, (.google.api.field_behavior) = IMMUTABLE];</code>
+   * @deprecated google.ads.googleads.v10.resources.Ad.gmail_ad is deprecated.
+   *     See google/ads/googleads/v10/resources/ad.proto;l=145
    * @return Whether the gmailAd field is set.
    */
-  boolean hasGmailAd();
+  @java.lang.Deprecated boolean hasGmailAd();
   /**
    * <pre>
    * Immutable. Details pertaining to a Gmail ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v10.common.GmailAdInfo gmail_ad = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>.google.ads.googleads.v10.common.GmailAdInfo gmail_ad = 21 [deprecated = true, (.google.api.field_behavior) = IMMUTABLE];</code>
+   * @deprecated google.ads.googleads.v10.resources.Ad.gmail_ad is deprecated.
+   *     See google/ads/googleads/v10/resources/ad.proto;l=145
    * @return The gmailAd.
    */
-  com.google.ads.googleads.v10.common.GmailAdInfo getGmailAd();
+  @java.lang.Deprecated com.google.ads.googleads.v10.common.GmailAdInfo getGmailAd();
   /**
    * <pre>
    * Immutable. Details pertaining to a Gmail ad.
    * </pre>
    *
-   * <code>.google.ads.googleads.v10.common.GmailAdInfo gmail_ad = 21 [(.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>.google.ads.googleads.v10.common.GmailAdInfo gmail_ad = 21 [deprecated = true, (.google.api.field_behavior) = IMMUTABLE];</code>
    */
-  com.google.ads.googleads.v10.common.GmailAdInfoOrBuilder getGmailAdOrBuilder();
+  @java.lang.Deprecated com.google.ads.googleads.v10.common.GmailAdInfoOrBuilder getGmailAdOrBuilder();
 
   /**
    * <pre>

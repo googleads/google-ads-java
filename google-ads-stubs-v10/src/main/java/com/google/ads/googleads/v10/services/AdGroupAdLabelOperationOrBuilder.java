@@ -41,7 +41,7 @@ public interface AdGroupAdLabelOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the ad group ad label
    * being removed, in this format:
-   * `customers/{customer_id}/adGroupAdLabels/{ad_group_id}~{ad_id}_{label_id}`
+   * `customers/{customer_id}/adGroupAdLabels/{ad_group_id}~{ad_id}~{label_id}`
    * </pre>
    *
    * <code>string remove = 2 [(.google.api.resource_reference) = { ... }</code>
@@ -52,7 +52,7 @@ public interface AdGroupAdLabelOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the ad group ad label
    * being removed, in this format:
-   * `customers/{customer_id}/adGroupAdLabels/{ad_group_id}~{ad_id}_{label_id}`
+   * `customers/{customer_id}/adGroupAdLabels/{ad_group_id}~{ad_id}~{label_id}`
    * </pre>
    *
    * <code>string remove = 2 [(.google.api.resource_reference) = { ... }</code>
@@ -63,7 +63,7 @@ public interface AdGroupAdLabelOperationOrBuilder extends
    * <pre>
    * Remove operation: A resource name for the ad group ad label
    * being removed, in this format:
-   * `customers/{customer_id}/adGroupAdLabels/{ad_group_id}~{ad_id}_{label_id}`
+   * `customers/{customer_id}/adGroupAdLabels/{ad_group_id}~{ad_id}~{label_id}`
    * </pre>
    *
    * <code>string remove = 2 [(.google.api.resource_reference) = { ... }</code>

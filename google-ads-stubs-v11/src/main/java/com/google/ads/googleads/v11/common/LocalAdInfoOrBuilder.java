@@ -118,8 +118,8 @@ public interface LocalAdInfoOrBuilder extends
   /**
    * <pre>
    * List of text assets for call-to-actions. When the ad serves the
-   * call-to-actions will be selected from this list. Call-to-actions are
-   * optional and at most 5 can be specified.
+   * call-to-actions will be selected from this list. At least 1 and at most
+   * 5 call-to-actions must be specified.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.AdTextAsset call_to_actions = 3;</code>
@@ -129,8 +129,8 @@ public interface LocalAdInfoOrBuilder extends
   /**
    * <pre>
    * List of text assets for call-to-actions. When the ad serves the
-   * call-to-actions will be selected from this list. Call-to-actions are
-   * optional and at most 5 can be specified.
+   * call-to-actions will be selected from this list. At least 1 and at most
+   * 5 call-to-actions must be specified.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.AdTextAsset call_to_actions = 3;</code>
@@ -139,8 +139,8 @@ public interface LocalAdInfoOrBuilder extends
   /**
    * <pre>
    * List of text assets for call-to-actions. When the ad serves the
-   * call-to-actions will be selected from this list. Call-to-actions are
-   * optional and at most 5 can be specified.
+   * call-to-actions will be selected from this list. At least 1 and at most
+   * 5 call-to-actions must be specified.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.AdTextAsset call_to_actions = 3;</code>
@@ -149,8 +149,8 @@ public interface LocalAdInfoOrBuilder extends
   /**
    * <pre>
    * List of text assets for call-to-actions. When the ad serves the
-   * call-to-actions will be selected from this list. Call-to-actions are
-   * optional and at most 5 can be specified.
+   * call-to-actions will be selected from this list. At least 1 and at most
+   * 5 call-to-actions must be specified.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.AdTextAsset call_to_actions = 3;</code>
@@ -160,8 +160,8 @@ public interface LocalAdInfoOrBuilder extends
   /**
    * <pre>
    * List of text assets for call-to-actions. When the ad serves the
-   * call-to-actions will be selected from this list. Call-to-actions are
-   * optional and at most 5 can be specified.
+   * call-to-actions will be selected from this list. At least 1 and at most
+   * 5 call-to-actions must be specified.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.AdTextAsset call_to_actions = 3;</code>
@@ -279,8 +279,8 @@ public interface LocalAdInfoOrBuilder extends
 
   /**
    * <pre>
-   * List of YouTube video assets that may be displayed with the ad. Videos
-   * are optional and at most 20 can be specified.
+   * List of YouTube video assets that may be displayed with the ad. At least 1
+   * and at most 20 video assets must be specified.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.AdVideoAsset videos = 6;</code>
@@ -289,8 +289,8 @@ public interface LocalAdInfoOrBuilder extends
       getVideosList();
   /**
    * <pre>
-   * List of YouTube video assets that may be displayed with the ad. Videos
-   * are optional and at most 20 can be specified.
+   * List of YouTube video assets that may be displayed with the ad. At least 1
+   * and at most 20 video assets must be specified.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.AdVideoAsset videos = 6;</code>
@@ -298,8 +298,8 @@ public interface LocalAdInfoOrBuilder extends
   com.google.ads.googleads.v11.common.AdVideoAsset getVideos(int index);
   /**
    * <pre>
-   * List of YouTube video assets that may be displayed with the ad. Videos
-   * are optional and at most 20 can be specified.
+   * List of YouTube video assets that may be displayed with the ad. At least 1
+   * and at most 20 video assets must be specified.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.AdVideoAsset videos = 6;</code>
@@ -307,8 +307,8 @@ public interface LocalAdInfoOrBuilder extends
   int getVideosCount();
   /**
    * <pre>
-   * List of YouTube video assets that may be displayed with the ad. Videos
-   * are optional and at most 20 can be specified.
+   * List of YouTube video assets that may be displayed with the ad. At least 1
+   * and at most 20 video assets must be specified.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.AdVideoAsset videos = 6;</code>
@@ -317,8 +317,8 @@ public interface LocalAdInfoOrBuilder extends
       getVideosOrBuilderList();
   /**
    * <pre>
-   * List of YouTube video assets that may be displayed with the ad. Videos
-   * are optional and at most 20 can be specified.
+   * List of YouTube video assets that may be displayed with the ad. At least 1
+   * and at most 20 video assets must be specified.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.AdVideoAsset videos = 6;</code>

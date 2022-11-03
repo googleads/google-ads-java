@@ -38,69 +38,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private FrequencyCapKey(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-            int rawValue = input.readEnum();
-
-            level_ = rawValue;
-            break;
-          }
-          case 16: {
-            int rawValue = input.readEnum();
-
-            timeUnit_ = rawValue;
-            break;
-          }
-          case 24: {
-            int rawValue = input.readEnum();
-
-            eventType_ = rawValue;
-            break;
-          }
-          case 40: {
-            bitField0_ |= 0x00000001;
-            timeLength_ = input.readInt32();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v10.common.FrequencyCapProto.internal_static_google_ads_googleads_v10_common_FrequencyCapKey_descriptor;
@@ -119,8 +56,8 @@ private static final long serialVersionUID = 0L;
   private int level_;
   /**
    * <pre>
-   * The level on which the cap is to be applied (e.g. ad group ad, ad group).
-   * The cap is applied to all the entities of this level.
+   * The level on which the cap is to be applied (for example, ad group ad, ad
+   * group). The cap is applied to all the entities of this level.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.enums.FrequencyCapLevelEnum.FrequencyCapLevel level = 1;</code>
@@ -131,8 +68,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The level on which the cap is to be applied (e.g. ad group ad, ad group).
-   * The cap is applied to all the entities of this level.
+   * The level on which the cap is to be applied (for example, ad group ad, ad
+   * group). The cap is applied to all the entities of this level.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.enums.FrequencyCapLevelEnum.FrequencyCapLevel level = 1;</code>
@@ -148,7 +85,7 @@ private static final long serialVersionUID = 0L;
   private int eventType_;
   /**
    * <pre>
-   * The type of event that the cap applies to (e.g. impression).
+   * The type of event that the cap applies to (for example, impression).
    * </pre>
    *
    * <code>.google.ads.googleads.v10.enums.FrequencyCapEventTypeEnum.FrequencyCapEventType event_type = 3;</code>
@@ -159,7 +96,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The type of event that the cap applies to (e.g. impression).
+   * The type of event that the cap applies to (for example, impression).
    * </pre>
    *
    * <code>.google.ads.googleads.v10.enums.FrequencyCapEventTypeEnum.FrequencyCapEventType event_type = 3;</code>
@@ -175,7 +112,7 @@ private static final long serialVersionUID = 0L;
   private int timeUnit_;
   /**
    * <pre>
-   * Unit of time the cap is defined at (e.g. day, week).
+   * Unit of time the cap is defined at (for example, day, week).
    * </pre>
    *
    * <code>.google.ads.googleads.v10.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit time_unit = 2;</code>
@@ -186,7 +123,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Unit of time the cap is defined at (e.g. day, week).
+   * Unit of time the cap is defined at (for example, day, week).
    * </pre>
    *
    * <code>.google.ads.googleads.v10.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit time_unit = 2;</code>
@@ -251,7 +188,7 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeInt32(5, timeLength_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -276,7 +213,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(5, timeLength_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -299,7 +236,7 @@ private static final long serialVersionUID = 0L;
       if (getTimeLength()
           != other.getTimeLength()) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -320,7 +257,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TIME_LENGTH_FIELD_NUMBER;
       hash = (53 * hash) + getTimeLength();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -442,18 +379,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v10.common.FrequencyCapKey.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -562,7 +494,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasTimeLength()) {
         setTimeLength(other.getTimeLength());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -577,17 +509,50 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.ads.googleads.v10.common.FrequencyCapKey parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              level_ = input.readEnum();
+
+              break;
+            } // case 8
+            case 16: {
+              timeUnit_ = input.readEnum();
+
+              break;
+            } // case 16
+            case 24: {
+              eventType_ = input.readEnum();
+
+              break;
+            } // case 24
+            case 40: {
+              timeLength_ = input.readInt32();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 40
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v10.common.FrequencyCapKey) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -595,8 +560,8 @@ private static final long serialVersionUID = 0L;
     private int level_ = 0;
     /**
      * <pre>
-     * The level on which the cap is to be applied (e.g. ad group ad, ad group).
-     * The cap is applied to all the entities of this level.
+     * The level on which the cap is to be applied (for example, ad group ad, ad
+     * group). The cap is applied to all the entities of this level.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.FrequencyCapLevelEnum.FrequencyCapLevel level = 1;</code>
@@ -607,8 +572,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The level on which the cap is to be applied (e.g. ad group ad, ad group).
-     * The cap is applied to all the entities of this level.
+     * The level on which the cap is to be applied (for example, ad group ad, ad
+     * group). The cap is applied to all the entities of this level.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.FrequencyCapLevelEnum.FrequencyCapLevel level = 1;</code>
@@ -623,8 +588,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The level on which the cap is to be applied (e.g. ad group ad, ad group).
-     * The cap is applied to all the entities of this level.
+     * The level on which the cap is to be applied (for example, ad group ad, ad
+     * group). The cap is applied to all the entities of this level.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.FrequencyCapLevelEnum.FrequencyCapLevel level = 1;</code>
@@ -638,8 +603,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The level on which the cap is to be applied (e.g. ad group ad, ad group).
-     * The cap is applied to all the entities of this level.
+     * The level on which the cap is to be applied (for example, ad group ad, ad
+     * group). The cap is applied to all the entities of this level.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.FrequencyCapLevelEnum.FrequencyCapLevel level = 1;</code>
@@ -657,8 +622,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The level on which the cap is to be applied (e.g. ad group ad, ad group).
-     * The cap is applied to all the entities of this level.
+     * The level on which the cap is to be applied (for example, ad group ad, ad
+     * group). The cap is applied to all the entities of this level.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.FrequencyCapLevelEnum.FrequencyCapLevel level = 1;</code>
@@ -674,7 +639,7 @@ private static final long serialVersionUID = 0L;
     private int eventType_ = 0;
     /**
      * <pre>
-     * The type of event that the cap applies to (e.g. impression).
+     * The type of event that the cap applies to (for example, impression).
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.FrequencyCapEventTypeEnum.FrequencyCapEventType event_type = 3;</code>
@@ -685,7 +650,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of event that the cap applies to (e.g. impression).
+     * The type of event that the cap applies to (for example, impression).
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.FrequencyCapEventTypeEnum.FrequencyCapEventType event_type = 3;</code>
@@ -700,7 +665,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of event that the cap applies to (e.g. impression).
+     * The type of event that the cap applies to (for example, impression).
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.FrequencyCapEventTypeEnum.FrequencyCapEventType event_type = 3;</code>
@@ -714,7 +679,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of event that the cap applies to (e.g. impression).
+     * The type of event that the cap applies to (for example, impression).
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.FrequencyCapEventTypeEnum.FrequencyCapEventType event_type = 3;</code>
@@ -732,7 +697,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The type of event that the cap applies to (e.g. impression).
+     * The type of event that the cap applies to (for example, impression).
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.FrequencyCapEventTypeEnum.FrequencyCapEventType event_type = 3;</code>
@@ -748,7 +713,7 @@ private static final long serialVersionUID = 0L;
     private int timeUnit_ = 0;
     /**
      * <pre>
-     * Unit of time the cap is defined at (e.g. day, week).
+     * Unit of time the cap is defined at (for example, day, week).
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit time_unit = 2;</code>
@@ -759,7 +724,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Unit of time the cap is defined at (e.g. day, week).
+     * Unit of time the cap is defined at (for example, day, week).
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit time_unit = 2;</code>
@@ -774,7 +739,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Unit of time the cap is defined at (e.g. day, week).
+     * Unit of time the cap is defined at (for example, day, week).
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit time_unit = 2;</code>
@@ -788,7 +753,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Unit of time the cap is defined at (e.g. day, week).
+     * Unit of time the cap is defined at (for example, day, week).
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit time_unit = 2;</code>
@@ -806,7 +771,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Unit of time the cap is defined at (e.g. day, week).
+     * Unit of time the cap is defined at (for example, day, week).
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.FrequencyCapTimeUnitEnum.FrequencyCapTimeUnit time_unit = 2;</code>
@@ -906,7 +871,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new FrequencyCapKey(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

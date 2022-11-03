@@ -40,200 +40,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private GenerateKeywordIdeasRequest(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            customerId_ = s;
-            break;
-          }
-          case 18: {
-            com.google.ads.googleads.v10.services.KeywordAndUrlSeed.Builder subBuilder = null;
-            if (seedCase_ == 2) {
-              subBuilder = ((com.google.ads.googleads.v10.services.KeywordAndUrlSeed) seed_).toBuilder();
-            }
-            seed_ =
-                input.readMessage(com.google.ads.googleads.v10.services.KeywordAndUrlSeed.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.KeywordAndUrlSeed) seed_);
-              seed_ = subBuilder.buildPartial();
-            }
-            seedCase_ = 2;
-            break;
-          }
-          case 26: {
-            com.google.ads.googleads.v10.services.KeywordSeed.Builder subBuilder = null;
-            if (seedCase_ == 3) {
-              subBuilder = ((com.google.ads.googleads.v10.services.KeywordSeed) seed_).toBuilder();
-            }
-            seed_ =
-                input.readMessage(com.google.ads.googleads.v10.services.KeywordSeed.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.KeywordSeed) seed_);
-              seed_ = subBuilder.buildPartial();
-            }
-            seedCase_ = 3;
-            break;
-          }
-          case 42: {
-            com.google.ads.googleads.v10.services.UrlSeed.Builder subBuilder = null;
-            if (seedCase_ == 5) {
-              subBuilder = ((com.google.ads.googleads.v10.services.UrlSeed) seed_).toBuilder();
-            }
-            seed_ =
-                input.readMessage(com.google.ads.googleads.v10.services.UrlSeed.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.UrlSeed) seed_);
-              seed_ = subBuilder.buildPartial();
-            }
-            seedCase_ = 5;
-            break;
-          }
-          case 72: {
-            int rawValue = input.readEnum();
-
-            keywordPlanNetwork_ = rawValue;
-            break;
-          }
-          case 80: {
-
-            includeAdultKeywords_ = input.readBool();
-            break;
-          }
-          case 90: {
-            com.google.ads.googleads.v10.services.SiteSeed.Builder subBuilder = null;
-            if (seedCase_ == 11) {
-              subBuilder = ((com.google.ads.googleads.v10.services.SiteSeed) seed_).toBuilder();
-            }
-            seed_ =
-                input.readMessage(com.google.ads.googleads.v10.services.SiteSeed.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.SiteSeed) seed_);
-              seed_ = subBuilder.buildPartial();
-            }
-            seedCase_ = 11;
-            break;
-          }
-          case 98: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            pageToken_ = s;
-            break;
-          }
-          case 104: {
-
-            pageSize_ = input.readInt32();
-            break;
-          }
-          case 114: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000001;
-            language_ = s;
-            break;
-          }
-          case 122: {
-            java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              geoTargetConstants_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000002;
-            }
-            geoTargetConstants_.add(s);
-            break;
-          }
-          case 130: {
-            com.google.ads.googleads.v10.common.KeywordPlanAggregateMetrics.Builder subBuilder = null;
-            if (aggregateMetrics_ != null) {
-              subBuilder = aggregateMetrics_.toBuilder();
-            }
-            aggregateMetrics_ = input.readMessage(com.google.ads.googleads.v10.common.KeywordPlanAggregateMetrics.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(aggregateMetrics_);
-              aggregateMetrics_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 136: {
-            int rawValue = input.readEnum();
-            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-              keywordAnnotation_ = new java.util.ArrayList<java.lang.Integer>();
-              mutable_bitField0_ |= 0x00000004;
-            }
-            keywordAnnotation_.add(rawValue);
-            break;
-          }
-          case 138: {
-            int length = input.readRawVarint32();
-            int oldLimit = input.pushLimit(length);
-            while(input.getBytesUntilLimit() > 0) {
-              int rawValue = input.readEnum();
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                keywordAnnotation_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              keywordAnnotation_.add(rawValue);
-            }
-            input.popLimit(oldLimit);
-            break;
-          }
-          case 146: {
-            com.google.ads.googleads.v10.common.HistoricalMetricsOptions.Builder subBuilder = null;
-            if (historicalMetricsOptions_ != null) {
-              subBuilder = historicalMetricsOptions_.toBuilder();
-            }
-            historicalMetricsOptions_ = input.readMessage(com.google.ads.googleads.v10.common.HistoricalMetricsOptions.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(historicalMetricsOptions_);
-              historicalMetricsOptions_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
-        geoTargetConstants_ = geoTargetConstants_.getUnmodifiableView();
-      }
-      if (((mutable_bitField0_ & 0x00000004) != 0)) {
-        keywordAnnotation_ = java.util.Collections.unmodifiableList(keywordAnnotation_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v10.services.KeywordPlanIdeaServiceProto.internal_static_google_ads_googleads_v10_services_GenerateKeywordIdeasRequest_descriptor;
@@ -344,7 +150,9 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The resource name of the language to target.
-   * Required
+   * Each keyword belongs to some set of languages; a keyword is included if
+   * language is one of its languages.
+   * If not set, all keywords will be included.
    * </pre>
    *
    * <code>optional string language = 14;</code>
@@ -357,7 +165,9 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The resource name of the language to target.
-   * Required
+   * Each keyword belongs to some set of languages; a keyword is included if
+   * language is one of its languages.
+   * If not set, all keywords will be included.
    * </pre>
    *
    * <code>optional string language = 14;</code>
@@ -379,7 +189,9 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The resource name of the language to target.
-   * Required
+   * Each keyword belongs to some set of languages; a keyword is included if
+   * language is one of its languages.
+   * If not set, all keywords will be included.
    * </pre>
    *
    * <code>optional string language = 14;</code>
@@ -404,8 +216,8 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.LazyStringList geoTargetConstants_;
   /**
    * <pre>
-   * The resource names of the location to target.
-   * Max 10
+   * The resource names of the location to target. Maximum is 10.
+   * An empty list MAY be used to specify all targeting geos.
    * </pre>
    *
    * <code>repeated string geo_target_constants = 15;</code>
@@ -417,8 +229,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource names of the location to target.
-   * Max 10
+   * The resource names of the location to target. Maximum is 10.
+   * An empty list MAY be used to specify all targeting geos.
    * </pre>
    *
    * <code>repeated string geo_target_constants = 15;</code>
@@ -429,8 +241,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource names of the location to target.
-   * Max 10
+   * The resource names of the location to target. Maximum is 10.
+   * An empty list MAY be used to specify all targeting geos.
    * </pre>
    *
    * <code>repeated string geo_target_constants = 15;</code>
@@ -442,8 +254,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The resource names of the location to target.
-   * Max 10
+   * The resource names of the location to target. Maximum is 10.
+   * An empty list MAY be used to specify all targeting geos.
    * </pre>
    *
    * <code>repeated string geo_target_constants = 15;</code>
@@ -549,6 +361,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Targeting network.
+   * If not set, Google Search And Partners Network will be used.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork keyword_plan_network = 9;</code>
@@ -560,6 +373,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Targeting network.
+   * If not set, Google Search And Partners Network will be used.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork keyword_plan_network = 9;</code>
@@ -729,7 +543,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A Keyword and a specific Url to generate ideas from
-   * e.g. cars, www.example.com/cars.
+   * for example, cars, www.example.com/cars.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.services.KeywordAndUrlSeed keyword_and_url_seed = 2;</code>
@@ -742,7 +556,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A Keyword and a specific Url to generate ideas from
-   * e.g. cars, www.example.com/cars.
+   * for example, cars, www.example.com/cars.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.services.KeywordAndUrlSeed keyword_and_url_seed = 2;</code>
@@ -758,7 +572,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A Keyword and a specific Url to generate ideas from
-   * e.g. cars, www.example.com/cars.
+   * for example, cars, www.example.com/cars.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.services.KeywordAndUrlSeed keyword_and_url_seed = 2;</code>
@@ -774,7 +588,7 @@ private static final long serialVersionUID = 0L;
   public static final int KEYWORD_SEED_FIELD_NUMBER = 3;
   /**
    * <pre>
-   * A Keyword or phrase to generate ideas from, e.g. cars.
+   * A Keyword or phrase to generate ideas from, for example, cars.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.services.KeywordSeed keyword_seed = 3;</code>
@@ -786,7 +600,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A Keyword or phrase to generate ideas from, e.g. cars.
+   * A Keyword or phrase to generate ideas from, for example, cars.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.services.KeywordSeed keyword_seed = 3;</code>
@@ -801,7 +615,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A Keyword or phrase to generate ideas from, e.g. cars.
+   * A Keyword or phrase to generate ideas from, for example, cars.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.services.KeywordSeed keyword_seed = 3;</code>
@@ -817,7 +631,7 @@ private static final long serialVersionUID = 0L;
   public static final int URL_SEED_FIELD_NUMBER = 5;
   /**
    * <pre>
-   * A specific url to generate ideas from, e.g. www.example.com/cars.
+   * A specific url to generate ideas from, for example, www.example.com/cars.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.services.UrlSeed url_seed = 5;</code>
@@ -829,7 +643,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A specific url to generate ideas from, e.g. www.example.com/cars.
+   * A specific url to generate ideas from, for example, www.example.com/cars.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.services.UrlSeed url_seed = 5;</code>
@@ -844,7 +658,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * A specific url to generate ideas from, e.g. www.example.com/cars.
+   * A specific url to generate ideas from, for example, www.example.com/cars.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.services.UrlSeed url_seed = 5;</code>
@@ -860,7 +674,7 @@ private static final long serialVersionUID = 0L;
   public static final int SITE_SEED_FIELD_NUMBER = 11;
   /**
    * <pre>
-   * The site to generate ideas from, e.g. www.example.com.
+   * The site to generate ideas from, for example, www.example.com.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.services.SiteSeed site_seed = 11;</code>
@@ -872,7 +686,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The site to generate ideas from, e.g. www.example.com.
+   * The site to generate ideas from, for example, www.example.com.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.services.SiteSeed site_seed = 11;</code>
@@ -887,7 +701,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The site to generate ideas from, e.g. www.example.com.
+   * The site to generate ideas from, for example, www.example.com.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.services.SiteSeed site_seed = 11;</code>
@@ -961,7 +775,7 @@ private static final long serialVersionUID = 0L;
     if (historicalMetricsOptions_ != null) {
       output.writeMessage(18, getHistoricalMetricsOptions());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -1035,7 +849,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(18, getHistoricalMetricsOptions());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -1098,7 +912,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -1160,7 +974,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -1281,18 +1095,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v10.services.GenerateKeywordIdeasRequest.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -1324,6 +1133,18 @@ private static final long serialVersionUID = 0L;
       } else {
         historicalMetricsOptions_ = null;
         historicalMetricsOptionsBuilder_ = null;
+      }
+      if (keywordAndUrlSeedBuilder_ != null) {
+        keywordAndUrlSeedBuilder_.clear();
+      }
+      if (keywordSeedBuilder_ != null) {
+        keywordSeedBuilder_.clear();
+      }
+      if (urlSeedBuilder_ != null) {
+        urlSeedBuilder_.clear();
+      }
+      if (siteSeedBuilder_ != null) {
+        siteSeedBuilder_.clear();
       }
       seedCase_ = 0;
       seed_ = null;
@@ -1531,7 +1352,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1546,17 +1367,125 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.ads.googleads.v10.services.GenerateKeywordIdeasRequest parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              customerId_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 10
+            case 18: {
+              input.readMessage(
+                  getKeywordAndUrlSeedFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              seedCase_ = 2;
+              break;
+            } // case 18
+            case 26: {
+              input.readMessage(
+                  getKeywordSeedFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              seedCase_ = 3;
+              break;
+            } // case 26
+            case 42: {
+              input.readMessage(
+                  getUrlSeedFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              seedCase_ = 5;
+              break;
+            } // case 42
+            case 72: {
+              keywordPlanNetwork_ = input.readEnum();
+
+              break;
+            } // case 72
+            case 80: {
+              includeAdultKeywords_ = input.readBool();
+
+              break;
+            } // case 80
+            case 90: {
+              input.readMessage(
+                  getSiteSeedFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              seedCase_ = 11;
+              break;
+            } // case 90
+            case 98: {
+              pageToken_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 98
+            case 104: {
+              pageSize_ = input.readInt32();
+
+              break;
+            } // case 104
+            case 114: {
+              language_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 114
+            case 122: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureGeoTargetConstantsIsMutable();
+              geoTargetConstants_.add(s);
+              break;
+            } // case 122
+            case 130: {
+              input.readMessage(
+                  getAggregateMetricsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 130
+            case 136: {
+              int tmpRaw = input.readEnum();
+              ensureKeywordAnnotationIsMutable();
+              keywordAnnotation_.add(tmpRaw);
+              break;
+            } // case 136
+            case 138: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int tmpRaw = input.readEnum();
+                ensureKeywordAnnotationIsMutable();
+                keywordAnnotation_.add(tmpRaw);
+              }
+              input.popLimit(oldLimit);
+              break;
+            } // case 138
+            case 146: {
+              input.readMessage(
+                  getHistoricalMetricsOptionsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 146
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v10.services.GenerateKeywordIdeasRequest) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int seedCase_ = 0;
@@ -1676,7 +1605,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The resource name of the language to target.
-     * Required
+     * Each keyword belongs to some set of languages; a keyword is included if
+     * language is one of its languages.
+     * If not set, all keywords will be included.
      * </pre>
      *
      * <code>optional string language = 14;</code>
@@ -1688,7 +1619,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The resource name of the language to target.
-     * Required
+     * Each keyword belongs to some set of languages; a keyword is included if
+     * language is one of its languages.
+     * If not set, all keywords will be included.
      * </pre>
      *
      * <code>optional string language = 14;</code>
@@ -1709,7 +1642,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The resource name of the language to target.
-     * Required
+     * Each keyword belongs to some set of languages; a keyword is included if
+     * language is one of its languages.
+     * If not set, all keywords will be included.
      * </pre>
      *
      * <code>optional string language = 14;</code>
@@ -1731,7 +1666,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The resource name of the language to target.
-     * Required
+     * Each keyword belongs to some set of languages; a keyword is included if
+     * language is one of its languages.
+     * If not set, all keywords will be included.
      * </pre>
      *
      * <code>optional string language = 14;</code>
@@ -1751,7 +1688,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The resource name of the language to target.
-     * Required
+     * Each keyword belongs to some set of languages; a keyword is included if
+     * language is one of its languages.
+     * If not set, all keywords will be included.
      * </pre>
      *
      * <code>optional string language = 14;</code>
@@ -1766,7 +1705,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The resource name of the language to target.
-     * Required
+     * Each keyword belongs to some set of languages; a keyword is included if
+     * language is one of its languages.
+     * If not set, all keywords will be included.
      * </pre>
      *
      * <code>optional string language = 14;</code>
@@ -1794,8 +1735,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of the location to target.
-     * Max 10
+     * The resource names of the location to target. Maximum is 10.
+     * An empty list MAY be used to specify all targeting geos.
      * </pre>
      *
      * <code>repeated string geo_target_constants = 15;</code>
@@ -1807,8 +1748,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of the location to target.
-     * Max 10
+     * The resource names of the location to target. Maximum is 10.
+     * An empty list MAY be used to specify all targeting geos.
      * </pre>
      *
      * <code>repeated string geo_target_constants = 15;</code>
@@ -1819,8 +1760,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of the location to target.
-     * Max 10
+     * The resource names of the location to target. Maximum is 10.
+     * An empty list MAY be used to specify all targeting geos.
      * </pre>
      *
      * <code>repeated string geo_target_constants = 15;</code>
@@ -1832,8 +1773,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of the location to target.
-     * Max 10
+     * The resource names of the location to target. Maximum is 10.
+     * An empty list MAY be used to specify all targeting geos.
      * </pre>
      *
      * <code>repeated string geo_target_constants = 15;</code>
@@ -1846,8 +1787,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of the location to target.
-     * Max 10
+     * The resource names of the location to target. Maximum is 10.
+     * An empty list MAY be used to specify all targeting geos.
      * </pre>
      *
      * <code>repeated string geo_target_constants = 15;</code>
@@ -1867,8 +1808,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of the location to target.
-     * Max 10
+     * The resource names of the location to target. Maximum is 10.
+     * An empty list MAY be used to specify all targeting geos.
      * </pre>
      *
      * <code>repeated string geo_target_constants = 15;</code>
@@ -1887,8 +1828,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of the location to target.
-     * Max 10
+     * The resource names of the location to target. Maximum is 10.
+     * An empty list MAY be used to specify all targeting geos.
      * </pre>
      *
      * <code>repeated string geo_target_constants = 15;</code>
@@ -1905,8 +1846,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of the location to target.
-     * Max 10
+     * The resource names of the location to target. Maximum is 10.
+     * An empty list MAY be used to specify all targeting geos.
      * </pre>
      *
      * <code>repeated string geo_target_constants = 15;</code>
@@ -1920,8 +1861,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The resource names of the location to target.
-     * Max 10
+     * The resource names of the location to target. Maximum is 10.
+     * An empty list MAY be used to specify all targeting geos.
      * </pre>
      *
      * <code>repeated string geo_target_constants = 15;</code>
@@ -2162,6 +2103,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Targeting network.
+     * If not set, Google Search And Partners Network will be used.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork keyword_plan_network = 9;</code>
@@ -2173,6 +2115,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Targeting network.
+     * If not set, Google Search And Partners Network will be used.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork keyword_plan_network = 9;</code>
@@ -2188,6 +2131,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Targeting network.
+     * If not set, Google Search And Partners Network will be used.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork keyword_plan_network = 9;</code>
@@ -2202,6 +2146,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Targeting network.
+     * If not set, Google Search And Partners Network will be used.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork keyword_plan_network = 9;</code>
@@ -2220,6 +2165,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Targeting network.
+     * If not set, Google Search And Partners Network will be used.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.enums.KeywordPlanNetworkEnum.KeywordPlanNetwork keyword_plan_network = 9;</code>
@@ -2375,8 +2321,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.enums.KeywordPlanKeywordAnnotationEnum.KeywordPlanKeywordAnnotation keyword_annotation = 17;</code>
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of keywordAnnotation at the given index.
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for keywordAnnotation to set.
      * @return This builder for chaining.
      */
     public Builder setKeywordAnnotationValue(
@@ -2735,7 +2681,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A Keyword and a specific Url to generate ideas from
-     * e.g. cars, www.example.com/cars.
+     * for example, cars, www.example.com/cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.services.KeywordAndUrlSeed keyword_and_url_seed = 2;</code>
@@ -2748,7 +2694,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A Keyword and a specific Url to generate ideas from
-     * e.g. cars, www.example.com/cars.
+     * for example, cars, www.example.com/cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.services.KeywordAndUrlSeed keyword_and_url_seed = 2;</code>
@@ -2771,7 +2717,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A Keyword and a specific Url to generate ideas from
-     * e.g. cars, www.example.com/cars.
+     * for example, cars, www.example.com/cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.services.KeywordAndUrlSeed keyword_and_url_seed = 2;</code>
@@ -2792,7 +2738,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A Keyword and a specific Url to generate ideas from
-     * e.g. cars, www.example.com/cars.
+     * for example, cars, www.example.com/cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.services.KeywordAndUrlSeed keyword_and_url_seed = 2;</code>
@@ -2811,7 +2757,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A Keyword and a specific Url to generate ideas from
-     * e.g. cars, www.example.com/cars.
+     * for example, cars, www.example.com/cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.services.KeywordAndUrlSeed keyword_and_url_seed = 2;</code>
@@ -2839,7 +2785,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A Keyword and a specific Url to generate ideas from
-     * e.g. cars, www.example.com/cars.
+     * for example, cars, www.example.com/cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.services.KeywordAndUrlSeed keyword_and_url_seed = 2;</code>
@@ -2863,7 +2809,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A Keyword and a specific Url to generate ideas from
-     * e.g. cars, www.example.com/cars.
+     * for example, cars, www.example.com/cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.services.KeywordAndUrlSeed keyword_and_url_seed = 2;</code>
@@ -2874,7 +2820,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A Keyword and a specific Url to generate ideas from
-     * e.g. cars, www.example.com/cars.
+     * for example, cars, www.example.com/cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.services.KeywordAndUrlSeed keyword_and_url_seed = 2;</code>
@@ -2893,7 +2839,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A Keyword and a specific Url to generate ideas from
-     * e.g. cars, www.example.com/cars.
+     * for example, cars, www.example.com/cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.services.KeywordAndUrlSeed keyword_and_url_seed = 2;</code>
@@ -2921,7 +2867,7 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v10.services.KeywordSeed, com.google.ads.googleads.v10.services.KeywordSeed.Builder, com.google.ads.googleads.v10.services.KeywordSeedOrBuilder> keywordSeedBuilder_;
     /**
      * <pre>
-     * A Keyword or phrase to generate ideas from, e.g. cars.
+     * A Keyword or phrase to generate ideas from, for example, cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.services.KeywordSeed keyword_seed = 3;</code>
@@ -2933,7 +2879,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A Keyword or phrase to generate ideas from, e.g. cars.
+     * A Keyword or phrase to generate ideas from, for example, cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.services.KeywordSeed keyword_seed = 3;</code>
@@ -2955,7 +2901,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A Keyword or phrase to generate ideas from, e.g. cars.
+     * A Keyword or phrase to generate ideas from, for example, cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.services.KeywordSeed keyword_seed = 3;</code>
@@ -2975,7 +2921,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A Keyword or phrase to generate ideas from, e.g. cars.
+     * A Keyword or phrase to generate ideas from, for example, cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.services.KeywordSeed keyword_seed = 3;</code>
@@ -2993,7 +2939,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A Keyword or phrase to generate ideas from, e.g. cars.
+     * A Keyword or phrase to generate ideas from, for example, cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.services.KeywordSeed keyword_seed = 3;</code>
@@ -3020,7 +2966,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A Keyword or phrase to generate ideas from, e.g. cars.
+     * A Keyword or phrase to generate ideas from, for example, cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.services.KeywordSeed keyword_seed = 3;</code>
@@ -3043,7 +2989,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A Keyword or phrase to generate ideas from, e.g. cars.
+     * A Keyword or phrase to generate ideas from, for example, cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.services.KeywordSeed keyword_seed = 3;</code>
@@ -3053,7 +2999,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A Keyword or phrase to generate ideas from, e.g. cars.
+     * A Keyword or phrase to generate ideas from, for example, cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.services.KeywordSeed keyword_seed = 3;</code>
@@ -3071,7 +3017,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A Keyword or phrase to generate ideas from, e.g. cars.
+     * A Keyword or phrase to generate ideas from, for example, cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.services.KeywordSeed keyword_seed = 3;</code>
@@ -3099,7 +3045,7 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v10.services.UrlSeed, com.google.ads.googleads.v10.services.UrlSeed.Builder, com.google.ads.googleads.v10.services.UrlSeedOrBuilder> urlSeedBuilder_;
     /**
      * <pre>
-     * A specific url to generate ideas from, e.g. www.example.com/cars.
+     * A specific url to generate ideas from, for example, www.example.com/cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.services.UrlSeed url_seed = 5;</code>
@@ -3111,7 +3057,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A specific url to generate ideas from, e.g. www.example.com/cars.
+     * A specific url to generate ideas from, for example, www.example.com/cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.services.UrlSeed url_seed = 5;</code>
@@ -3133,7 +3079,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A specific url to generate ideas from, e.g. www.example.com/cars.
+     * A specific url to generate ideas from, for example, www.example.com/cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.services.UrlSeed url_seed = 5;</code>
@@ -3153,7 +3099,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A specific url to generate ideas from, e.g. www.example.com/cars.
+     * A specific url to generate ideas from, for example, www.example.com/cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.services.UrlSeed url_seed = 5;</code>
@@ -3171,7 +3117,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A specific url to generate ideas from, e.g. www.example.com/cars.
+     * A specific url to generate ideas from, for example, www.example.com/cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.services.UrlSeed url_seed = 5;</code>
@@ -3198,7 +3144,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A specific url to generate ideas from, e.g. www.example.com/cars.
+     * A specific url to generate ideas from, for example, www.example.com/cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.services.UrlSeed url_seed = 5;</code>
@@ -3221,7 +3167,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A specific url to generate ideas from, e.g. www.example.com/cars.
+     * A specific url to generate ideas from, for example, www.example.com/cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.services.UrlSeed url_seed = 5;</code>
@@ -3231,7 +3177,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A specific url to generate ideas from, e.g. www.example.com/cars.
+     * A specific url to generate ideas from, for example, www.example.com/cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.services.UrlSeed url_seed = 5;</code>
@@ -3249,7 +3195,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * A specific url to generate ideas from, e.g. www.example.com/cars.
+     * A specific url to generate ideas from, for example, www.example.com/cars.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.services.UrlSeed url_seed = 5;</code>
@@ -3277,7 +3223,7 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v10.services.SiteSeed, com.google.ads.googleads.v10.services.SiteSeed.Builder, com.google.ads.googleads.v10.services.SiteSeedOrBuilder> siteSeedBuilder_;
     /**
      * <pre>
-     * The site to generate ideas from, e.g. www.example.com.
+     * The site to generate ideas from, for example, www.example.com.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.services.SiteSeed site_seed = 11;</code>
@@ -3289,7 +3235,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The site to generate ideas from, e.g. www.example.com.
+     * The site to generate ideas from, for example, www.example.com.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.services.SiteSeed site_seed = 11;</code>
@@ -3311,7 +3257,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The site to generate ideas from, e.g. www.example.com.
+     * The site to generate ideas from, for example, www.example.com.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.services.SiteSeed site_seed = 11;</code>
@@ -3331,7 +3277,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The site to generate ideas from, e.g. www.example.com.
+     * The site to generate ideas from, for example, www.example.com.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.services.SiteSeed site_seed = 11;</code>
@@ -3349,7 +3295,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The site to generate ideas from, e.g. www.example.com.
+     * The site to generate ideas from, for example, www.example.com.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.services.SiteSeed site_seed = 11;</code>
@@ -3376,7 +3322,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The site to generate ideas from, e.g. www.example.com.
+     * The site to generate ideas from, for example, www.example.com.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.services.SiteSeed site_seed = 11;</code>
@@ -3399,7 +3345,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The site to generate ideas from, e.g. www.example.com.
+     * The site to generate ideas from, for example, www.example.com.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.services.SiteSeed site_seed = 11;</code>
@@ -3409,7 +3355,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The site to generate ideas from, e.g. www.example.com.
+     * The site to generate ideas from, for example, www.example.com.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.services.SiteSeed site_seed = 11;</code>
@@ -3427,7 +3373,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The site to generate ideas from, e.g. www.example.com.
+     * The site to generate ideas from, for example, www.example.com.
      * </pre>
      *
      * <code>.google.ads.googleads.v10.services.SiteSeed site_seed = 11;</code>
@@ -3483,7 +3429,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new GenerateKeywordIdeasRequest(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

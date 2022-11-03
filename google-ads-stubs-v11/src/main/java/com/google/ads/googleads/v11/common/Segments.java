@@ -108,598 +108,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private Segments(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    int mutable_bitField1_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8: {
-            int rawValue = input.readEnum();
-
-            device_ = rawValue;
-            break;
-          }
-          case 16: {
-            int rawValue = input.readEnum();
-
-            conversionAttributionEventType_ = rawValue;
-            break;
-          }
-          case 24: {
-            int rawValue = input.readEnum();
-
-            adNetworkType_ = rawValue;
-            break;
-          }
-          case 40: {
-            int rawValue = input.readEnum();
-
-            dayOfWeek_ = rawValue;
-            break;
-          }
-          case 72: {
-            int rawValue = input.readEnum();
-
-            hotelCheckInDayOfWeek_ = rawValue;
-            break;
-          }
-          case 104: {
-            int rawValue = input.readEnum();
-
-            hotelDateSelectionType_ = rawValue;
-            break;
-          }
-          case 144: {
-            int rawValue = input.readEnum();
-
-            monthOfYear_ = rawValue;
-            break;
-          }
-          case 160: {
-            int rawValue = input.readEnum();
-
-            placeholderType_ = rawValue;
-            break;
-          }
-          case 176: {
-            int rawValue = input.readEnum();
-
-            searchTermMatchType_ = rawValue;
-            break;
-          }
-          case 184: {
-            int rawValue = input.readEnum();
-
-            slot_ = rawValue;
-            break;
-          }
-          case 208: {
-            int rawValue = input.readEnum();
-
-            clickType_ = rawValue;
-            break;
-          }
-          case 240: {
-            int rawValue = input.readEnum();
-
-            productChannel_ = rawValue;
-            break;
-          }
-          case 248: {
-            int rawValue = input.readEnum();
-
-            productChannelExclusivity_ = rawValue;
-            break;
-          }
-          case 256: {
-            int rawValue = input.readEnum();
-
-            productCondition_ = rawValue;
-            break;
-          }
-          case 400: {
-            int rawValue = input.readEnum();
-
-            conversionLagBucket_ = rawValue;
-            break;
-          }
-          case 408: {
-            int rawValue = input.readEnum();
-
-            conversionOrAdjustmentLagBucket_ = rawValue;
-            break;
-          }
-          case 424: {
-            int rawValue = input.readEnum();
-
-            conversionActionCategory_ = rawValue;
-            break;
-          }
-          case 440: {
-            int rawValue = input.readEnum();
-
-            externalConversionSource_ = rawValue;
-            break;
-          }
-          case 490: {
-            com.google.ads.googleads.v11.common.Keyword.Builder subBuilder = null;
-            if (keyword_ != null) {
-              subBuilder = keyword_.toBuilder();
-            }
-            keyword_ = input.readMessage(com.google.ads.googleads.v11.common.Keyword.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(keyword_);
-              keyword_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 560: {
-            int rawValue = input.readEnum();
-
-            searchEngineResultsPageType_ = rawValue;
-            break;
-          }
-          case 592: {
-            int rawValue = input.readEnum();
-
-            hotelRateType_ = rawValue;
-            break;
-          }
-          case 624: {
-            int rawValue = input.readEnum();
-
-            hotelPriceBucket_ = rawValue;
-            break;
-          }
-          case 634: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000010;
-            date_ = s;
-            break;
-          }
-          case 640: {
-            bitField0_ |= 0x00040000;
-            hotelCenterId_ = input.readInt64();
-            break;
-          }
-          case 650: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00080000;
-            hotelCheckInDate_ = s;
-            break;
-          }
-          case 658: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00100000;
-            hotelCity_ = s;
-            break;
-          }
-          case 664: {
-            bitField0_ |= 0x00200000;
-            hotelClass_ = input.readInt32();
-            break;
-          }
-          case 674: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00400000;
-            hotelCountry_ = s;
-            break;
-          }
-          case 680: {
-            bitField0_ |= 0x00800000;
-            hotelLengthOfStay_ = input.readInt32();
-            break;
-          }
-          case 690: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x01000000;
-            hotelRateRuleId_ = s;
-            break;
-          }
-          case 698: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x02000000;
-            hotelState_ = s;
-            break;
-          }
-          case 704: {
-            bitField0_ |= 0x04000000;
-            hour_ = input.readInt32();
-            break;
-          }
-          case 712: {
-            bitField0_ |= 0x08000000;
-            interactionOnThisExtension_ = input.readBool();
-            break;
-          }
-          case 722: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x10000000;
-            month_ = s;
-            break;
-          }
-          case 730: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x20000000;
-            partnerHotelId_ = s;
-            break;
-          }
-          case 738: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x80000000;
-            productBiddingCategoryLevel1_ = s;
-            break;
-          }
-          case 746: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField1_ |= 0x00000001;
-            productBiddingCategoryLevel2_ = s;
-            break;
-          }
-          case 754: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField1_ |= 0x00000002;
-            productBiddingCategoryLevel3_ = s;
-            break;
-          }
-          case 762: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField1_ |= 0x00000004;
-            productBiddingCategoryLevel4_ = s;
-            break;
-          }
-          case 770: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField1_ |= 0x00000008;
-            productBiddingCategoryLevel5_ = s;
-            break;
-          }
-          case 778: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField1_ |= 0x00000010;
-            productBrand_ = s;
-            break;
-          }
-          case 786: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField1_ |= 0x00000020;
-            productCountry_ = s;
-            break;
-          }
-          case 794: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField1_ |= 0x00000040;
-            productCustomAttribute0_ = s;
-            break;
-          }
-          case 802: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField1_ |= 0x00000080;
-            productCustomAttribute1_ = s;
-            break;
-          }
-          case 810: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField1_ |= 0x00000100;
-            productCustomAttribute2_ = s;
-            break;
-          }
-          case 818: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField1_ |= 0x00000200;
-            productCustomAttribute3_ = s;
-            break;
-          }
-          case 826: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField1_ |= 0x00000400;
-            productCustomAttribute4_ = s;
-            break;
-          }
-          case 834: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField1_ |= 0x00000800;
-            productItemId_ = s;
-            break;
-          }
-          case 842: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField1_ |= 0x00001000;
-            productLanguage_ = s;
-            break;
-          }
-          case 850: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField1_ |= 0x00004000;
-            productStoreId_ = s;
-            break;
-          }
-          case 858: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField1_ |= 0x00008000;
-            productTitle_ = s;
-            break;
-          }
-          case 866: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField1_ |= 0x00010000;
-            productTypeL1_ = s;
-            break;
-          }
-          case 874: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField1_ |= 0x00020000;
-            productTypeL2_ = s;
-            break;
-          }
-          case 882: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField1_ |= 0x00040000;
-            productTypeL3_ = s;
-            break;
-          }
-          case 890: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField1_ |= 0x00080000;
-            productTypeL4_ = s;
-            break;
-          }
-          case 898: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField1_ |= 0x00100000;
-            productTypeL5_ = s;
-            break;
-          }
-          case 906: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000002;
-            conversionAction_ = s;
-            break;
-          }
-          case 914: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000004;
-            conversionActionName_ = s;
-            break;
-          }
-          case 920: {
-            bitField0_ |= 0x00000008;
-            conversionAdjustment_ = input.readBool();
-            break;
-          }
-          case 930: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000020;
-            geoTargetAirport_ = s;
-            break;
-          }
-          case 938: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000040;
-            geoTargetCanton_ = s;
-            break;
-          }
-          case 946: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000080;
-            geoTargetCity_ = s;
-            break;
-          }
-          case 954: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000100;
-            geoTargetCountry_ = s;
-            break;
-          }
-          case 962: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000200;
-            geoTargetCounty_ = s;
-            break;
-          }
-          case 970: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000400;
-            geoTargetDistrict_ = s;
-            break;
-          }
-          case 978: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000800;
-            geoTargetMetro_ = s;
-            break;
-          }
-          case 986: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00001000;
-            geoTargetMostSpecificLocation_ = s;
-            break;
-          }
-          case 994: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00002000;
-            geoTargetPostalCode_ = s;
-            break;
-          }
-          case 1002: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00004000;
-            geoTargetProvince_ = s;
-            break;
-          }
-          case 1010: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00008000;
-            geoTargetRegion_ = s;
-            break;
-          }
-          case 1018: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00010000;
-            geoTargetState_ = s;
-            break;
-          }
-          case 1026: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField1_ |= 0x00200000;
-            quarter_ = s;
-            break;
-          }
-          case 1034: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField1_ |= 0x00400000;
-            webpage_ = s;
-            break;
-          }
-          case 1042: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField1_ |= 0x00800000;
-            week_ = s;
-            break;
-          }
-          case 1048: {
-            bitField1_ |= 0x01000000;
-            year_ = input.readInt32();
-            break;
-          }
-          case 1056: {
-            bitField0_ |= 0x40000000;
-            productAggregatorId_ = input.readInt64();
-            break;
-          }
-          case 1064: {
-            bitField1_ |= 0x00002000;
-            productMerchantId_ = input.readInt64();
-            break;
-          }
-          case 1074: {
-            com.google.ads.googleads.v11.common.BudgetCampaignAssociationStatus.Builder subBuilder = null;
-            if (budgetCampaignAssociationStatus_ != null) {
-              subBuilder = budgetCampaignAssociationStatus_.toBuilder();
-            }
-            budgetCampaignAssociationStatus_ = input.readMessage(com.google.ads.googleads.v11.common.BudgetCampaignAssociationStatus.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(budgetCampaignAssociationStatus_);
-              budgetCampaignAssociationStatus_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 1080: {
-            bitField0_ |= 0x00020000;
-            hotelBookingWindowDays_ = input.readInt64();
-            break;
-          }
-          case 1088: {
-            int rawValue = input.readEnum();
-
-            adDestinationType_ = rawValue;
-            break;
-          }
-          case 1096: {
-            bitField1_ |= 0x02000000;
-            skAdNetworkConversionValue_ = input.readInt64();
-            break;
-          }
-          case 1104: {
-            int rawValue = input.readEnum();
-
-            conversionValueRulePrimaryDimension_ = rawValue;
-            break;
-          }
-          case 1114: {
-            com.google.ads.googleads.v11.common.AssetInteractionTarget.Builder subBuilder = null;
-            if (((bitField1_ & 0x08000000) != 0)) {
-              subBuilder = assetInteractionTarget_.toBuilder();
-            }
-            assetInteractionTarget_ = input.readMessage(com.google.ads.googleads.v11.common.AssetInteractionTarget.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(assetInteractionTarget_);
-              assetInteractionTarget_ = subBuilder.buildPartial();
-            }
-            bitField1_ |= 0x08000000;
-            break;
-          }
-          case 1120: {
-            int rawValue = input.readEnum();
-
-            recommendationType_ = rawValue;
-            break;
-          }
-          case 1128: {
-            int rawValue = input.readEnum();
-
-            skAdNetworkUserType_ = rawValue;
-            break;
-          }
-          case 1136: {
-            int rawValue = input.readEnum();
-
-            skAdNetworkAdEventType_ = rawValue;
-            break;
-          }
-          case 1146: {
-            com.google.ads.googleads.v11.common.SkAdNetworkSourceApp.Builder subBuilder = null;
-            if (((bitField1_ & 0x04000000) != 0)) {
-              subBuilder = skAdNetworkSourceApp_.toBuilder();
-            }
-            skAdNetworkSourceApp_ = input.readMessage(com.google.ads.googleads.v11.common.SkAdNetworkSourceApp.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(skAdNetworkSourceApp_);
-              skAdNetworkSourceApp_ = subBuilder.buildPartial();
-            }
-            bitField1_ |= 0x04000000;
-            break;
-          }
-          case 1152: {
-            int rawValue = input.readEnum();
-
-            skAdNetworkAttributionCredit_ = rawValue;
-            break;
-          }
-          case 1162: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000001;
-            auctionInsightDomain_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v11.common.SegmentsProto.internal_static_google_ads_googleads_v11_common_Segments_descriptor;
@@ -4986,7 +4394,7 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 145, auctionInsightDomain_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -5304,7 +4712,7 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(145, auctionInsightDomain_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -5656,7 +5064,7 @@ private static final long serialVersionUID = 0L;
       if (!getAssetInteractionTarget()
           .equals(other.getAssetInteractionTarget())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -5976,7 +5384,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + ASSET_INTERACTION_TARGET_FIELD_NUMBER;
       hash = (53 * hash) + getAssetInteractionTarget().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -7035,7 +6443,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasAssetInteractionTarget()) {
         mergeAssetInteractionTarget(other.getAssetInteractionTarget());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -7050,17 +6458,483 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.ads.googleads.v11.common.Segments parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              device_ = input.readEnum();
+
+              break;
+            } // case 8
+            case 16: {
+              conversionAttributionEventType_ = input.readEnum();
+
+              break;
+            } // case 16
+            case 24: {
+              adNetworkType_ = input.readEnum();
+
+              break;
+            } // case 24
+            case 40: {
+              dayOfWeek_ = input.readEnum();
+
+              break;
+            } // case 40
+            case 72: {
+              hotelCheckInDayOfWeek_ = input.readEnum();
+
+              break;
+            } // case 72
+            case 104: {
+              hotelDateSelectionType_ = input.readEnum();
+
+              break;
+            } // case 104
+            case 144: {
+              monthOfYear_ = input.readEnum();
+
+              break;
+            } // case 144
+            case 160: {
+              placeholderType_ = input.readEnum();
+
+              break;
+            } // case 160
+            case 176: {
+              searchTermMatchType_ = input.readEnum();
+
+              break;
+            } // case 176
+            case 184: {
+              slot_ = input.readEnum();
+
+              break;
+            } // case 184
+            case 208: {
+              clickType_ = input.readEnum();
+
+              break;
+            } // case 208
+            case 240: {
+              productChannel_ = input.readEnum();
+
+              break;
+            } // case 240
+            case 248: {
+              productChannelExclusivity_ = input.readEnum();
+
+              break;
+            } // case 248
+            case 256: {
+              productCondition_ = input.readEnum();
+
+              break;
+            } // case 256
+            case 400: {
+              conversionLagBucket_ = input.readEnum();
+
+              break;
+            } // case 400
+            case 408: {
+              conversionOrAdjustmentLagBucket_ = input.readEnum();
+
+              break;
+            } // case 408
+            case 424: {
+              conversionActionCategory_ = input.readEnum();
+
+              break;
+            } // case 424
+            case 440: {
+              externalConversionSource_ = input.readEnum();
+
+              break;
+            } // case 440
+            case 490: {
+              input.readMessage(
+                  getKeywordFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 490
+            case 560: {
+              searchEngineResultsPageType_ = input.readEnum();
+
+              break;
+            } // case 560
+            case 592: {
+              hotelRateType_ = input.readEnum();
+
+              break;
+            } // case 592
+            case 624: {
+              hotelPriceBucket_ = input.readEnum();
+
+              break;
+            } // case 624
+            case 634: {
+              date_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 634
+            case 640: {
+              hotelCenterId_ = input.readInt64();
+              bitField0_ |= 0x00040000;
+              break;
+            } // case 640
+            case 650: {
+              hotelCheckInDate_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00080000;
+              break;
+            } // case 650
+            case 658: {
+              hotelCity_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00100000;
+              break;
+            } // case 658
+            case 664: {
+              hotelClass_ = input.readInt32();
+              bitField0_ |= 0x00200000;
+              break;
+            } // case 664
+            case 674: {
+              hotelCountry_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00400000;
+              break;
+            } // case 674
+            case 680: {
+              hotelLengthOfStay_ = input.readInt32();
+              bitField0_ |= 0x00800000;
+              break;
+            } // case 680
+            case 690: {
+              hotelRateRuleId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x01000000;
+              break;
+            } // case 690
+            case 698: {
+              hotelState_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x02000000;
+              break;
+            } // case 698
+            case 704: {
+              hour_ = input.readInt32();
+              bitField0_ |= 0x04000000;
+              break;
+            } // case 704
+            case 712: {
+              interactionOnThisExtension_ = input.readBool();
+              bitField0_ |= 0x08000000;
+              break;
+            } // case 712
+            case 722: {
+              month_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x10000000;
+              break;
+            } // case 722
+            case 730: {
+              partnerHotelId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x20000000;
+              break;
+            } // case 730
+            case 738: {
+              productBiddingCategoryLevel1_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x80000000;
+              break;
+            } // case 738
+            case 746: {
+              productBiddingCategoryLevel2_ = input.readStringRequireUtf8();
+              bitField1_ |= 0x00000001;
+              break;
+            } // case 746
+            case 754: {
+              productBiddingCategoryLevel3_ = input.readStringRequireUtf8();
+              bitField1_ |= 0x00000002;
+              break;
+            } // case 754
+            case 762: {
+              productBiddingCategoryLevel4_ = input.readStringRequireUtf8();
+              bitField1_ |= 0x00000004;
+              break;
+            } // case 762
+            case 770: {
+              productBiddingCategoryLevel5_ = input.readStringRequireUtf8();
+              bitField1_ |= 0x00000008;
+              break;
+            } // case 770
+            case 778: {
+              productBrand_ = input.readStringRequireUtf8();
+              bitField1_ |= 0x00000010;
+              break;
+            } // case 778
+            case 786: {
+              productCountry_ = input.readStringRequireUtf8();
+              bitField1_ |= 0x00000020;
+              break;
+            } // case 786
+            case 794: {
+              productCustomAttribute0_ = input.readStringRequireUtf8();
+              bitField1_ |= 0x00000040;
+              break;
+            } // case 794
+            case 802: {
+              productCustomAttribute1_ = input.readStringRequireUtf8();
+              bitField1_ |= 0x00000080;
+              break;
+            } // case 802
+            case 810: {
+              productCustomAttribute2_ = input.readStringRequireUtf8();
+              bitField1_ |= 0x00000100;
+              break;
+            } // case 810
+            case 818: {
+              productCustomAttribute3_ = input.readStringRequireUtf8();
+              bitField1_ |= 0x00000200;
+              break;
+            } // case 818
+            case 826: {
+              productCustomAttribute4_ = input.readStringRequireUtf8();
+              bitField1_ |= 0x00000400;
+              break;
+            } // case 826
+            case 834: {
+              productItemId_ = input.readStringRequireUtf8();
+              bitField1_ |= 0x00000800;
+              break;
+            } // case 834
+            case 842: {
+              productLanguage_ = input.readStringRequireUtf8();
+              bitField1_ |= 0x00001000;
+              break;
+            } // case 842
+            case 850: {
+              productStoreId_ = input.readStringRequireUtf8();
+              bitField1_ |= 0x00004000;
+              break;
+            } // case 850
+            case 858: {
+              productTitle_ = input.readStringRequireUtf8();
+              bitField1_ |= 0x00008000;
+              break;
+            } // case 858
+            case 866: {
+              productTypeL1_ = input.readStringRequireUtf8();
+              bitField1_ |= 0x00010000;
+              break;
+            } // case 866
+            case 874: {
+              productTypeL2_ = input.readStringRequireUtf8();
+              bitField1_ |= 0x00020000;
+              break;
+            } // case 874
+            case 882: {
+              productTypeL3_ = input.readStringRequireUtf8();
+              bitField1_ |= 0x00040000;
+              break;
+            } // case 882
+            case 890: {
+              productTypeL4_ = input.readStringRequireUtf8();
+              bitField1_ |= 0x00080000;
+              break;
+            } // case 890
+            case 898: {
+              productTypeL5_ = input.readStringRequireUtf8();
+              bitField1_ |= 0x00100000;
+              break;
+            } // case 898
+            case 906: {
+              conversionAction_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 906
+            case 914: {
+              conversionActionName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 914
+            case 920: {
+              conversionAdjustment_ = input.readBool();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 920
+            case 930: {
+              geoTargetAirport_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 930
+            case 938: {
+              geoTargetCanton_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 938
+            case 946: {
+              geoTargetCity_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 946
+            case 954: {
+              geoTargetCountry_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 954
+            case 962: {
+              geoTargetCounty_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 962
+            case 970: {
+              geoTargetDistrict_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 970
+            case 978: {
+              geoTargetMetro_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 978
+            case 986: {
+              geoTargetMostSpecificLocation_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 986
+            case 994: {
+              geoTargetPostalCode_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00002000;
+              break;
+            } // case 994
+            case 1002: {
+              geoTargetProvince_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00004000;
+              break;
+            } // case 1002
+            case 1010: {
+              geoTargetRegion_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00008000;
+              break;
+            } // case 1010
+            case 1018: {
+              geoTargetState_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00010000;
+              break;
+            } // case 1018
+            case 1026: {
+              quarter_ = input.readStringRequireUtf8();
+              bitField1_ |= 0x00200000;
+              break;
+            } // case 1026
+            case 1034: {
+              webpage_ = input.readStringRequireUtf8();
+              bitField1_ |= 0x00400000;
+              break;
+            } // case 1034
+            case 1042: {
+              week_ = input.readStringRequireUtf8();
+              bitField1_ |= 0x00800000;
+              break;
+            } // case 1042
+            case 1048: {
+              year_ = input.readInt32();
+              bitField1_ |= 0x01000000;
+              break;
+            } // case 1048
+            case 1056: {
+              productAggregatorId_ = input.readInt64();
+              bitField0_ |= 0x40000000;
+              break;
+            } // case 1056
+            case 1064: {
+              productMerchantId_ = input.readInt64();
+              bitField1_ |= 0x00002000;
+              break;
+            } // case 1064
+            case 1074: {
+              input.readMessage(
+                  getBudgetCampaignAssociationStatusFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 1074
+            case 1080: {
+              hotelBookingWindowDays_ = input.readInt64();
+              bitField0_ |= 0x00020000;
+              break;
+            } // case 1080
+            case 1088: {
+              adDestinationType_ = input.readEnum();
+
+              break;
+            } // case 1088
+            case 1096: {
+              skAdNetworkConversionValue_ = input.readInt64();
+              bitField1_ |= 0x02000000;
+              break;
+            } // case 1096
+            case 1104: {
+              conversionValueRulePrimaryDimension_ = input.readEnum();
+
+              break;
+            } // case 1104
+            case 1114: {
+              input.readMessage(
+                  getAssetInteractionTargetFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x08000000;
+              break;
+            } // case 1114
+            case 1120: {
+              recommendationType_ = input.readEnum();
+
+              break;
+            } // case 1120
+            case 1128: {
+              skAdNetworkUserType_ = input.readEnum();
+
+              break;
+            } // case 1128
+            case 1136: {
+              skAdNetworkAdEventType_ = input.readEnum();
+
+              break;
+            } // case 1136
+            case 1146: {
+              input.readMessage(
+                  getSkAdNetworkSourceAppFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x04000000;
+              break;
+            } // case 1146
+            case 1152: {
+              skAdNetworkAttributionCredit_ = input.readEnum();
+
+              break;
+            } // case 1152
+            case 1162: {
+              auctionInsightDomain_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 1162
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v11.common.Segments) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -15565,7 +15439,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new Segments(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

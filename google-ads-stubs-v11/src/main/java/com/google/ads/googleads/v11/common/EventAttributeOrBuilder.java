@@ -10,7 +10,7 @@ public interface EventAttributeOrBuilder extends
   /**
    * <pre>
    * Required. Advertiser defined event to be used for remarketing. The accepted values
-   * are “Viewed”, “Cart”, “Purchased” and “Recommended”.
+   * are "Viewed", "Cart", "Purchased" and "Recommended".
    * </pre>
    *
    * <code>string event = 1 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -20,7 +20,7 @@ public interface EventAttributeOrBuilder extends
   /**
    * <pre>
    * Required. Advertiser defined event to be used for remarketing. The accepted values
-   * are “Viewed”, “Cart”, “Purchased” and “Recommended”.
+   * are "Viewed", "Cart", "Purchased" and "Recommended".
    * </pre>
    *
    * <code>string event = 1 [(.google.api.field_behavior) = REQUIRED];</code>
