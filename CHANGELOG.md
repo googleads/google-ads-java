@@ -1,7 +1,7 @@
 22.0.0 - 2022-11-03
 -------------------
 - Add support and examples for Google Ads API v12.0.
-- Upgrade protobuf-java-util dependency to 3.19.6.
+- Upgrade protobuf-java and protobuf-java-util dependencies to 3.19.6.
 - Remove examples demonstrating deprecated (or soon to be deprecated) features.
   - AddDynamicPageFeed
   - AddLocalCampaign
