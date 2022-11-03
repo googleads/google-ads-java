@@ -48,141 +48,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private DynamicFlightsAsset(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            destinationId_ = s;
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            originId_ = s;
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            flightDescription_ = s;
-            break;
-          }
-          case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            imageUrl_ = s;
-            break;
-          }
-          case 42: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            destinationName_ = s;
-            break;
-          }
-          case 50: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            originName_ = s;
-            break;
-          }
-          case 58: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            flightPrice_ = s;
-            break;
-          }
-          case 66: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            flightSalePrice_ = s;
-            break;
-          }
-          case 74: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            formattedPrice_ = s;
-            break;
-          }
-          case 82: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            formattedSalePrice_ = s;
-            break;
-          }
-          case 90: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            androidAppLink_ = s;
-            break;
-          }
-          case 98: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            iosAppLink_ = s;
-            break;
-          }
-          case 104: {
-
-            iosAppStoreId_ = input.readInt64();
-            break;
-          }
-          case 114: {
-            java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              similarDestinationIds_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            similarDestinationIds_.add(s);
-            break;
-          }
-          case 122: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            customMapping_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        similarDestinationIds_ = similarDestinationIds_.getUnmodifiableView();
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v10.common.AssetTypesProto.internal_static_google_ads_googleads_v10_common_DynamicFlightsAsset_descriptor;
@@ -296,7 +161,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object flightDescription_;
   /**
    * <pre>
-   * Required. Flight description, e.g. Book your ticket. Required.
+   * Required. Flight description, for example, Book your ticket. Required.
    * </pre>
    *
    * <code>string flight_description = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -317,7 +182,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. Flight description, e.g. Book your ticket. Required.
+   * Required. Flight description, for example, Book your ticket. Required.
    * </pre>
    *
    * <code>string flight_description = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -342,8 +207,8 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object imageUrl_;
   /**
    * <pre>
-   * Image URL, e.g. http://www.example.com/image.png. The image will not be
-   * uploaded as image asset.
+   * Image URL, for example, http://www.example.com/image.png. The image will
+   * not be uploaded as image asset.
    * </pre>
    *
    * <code>string image_url = 4;</code>
@@ -364,8 +229,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Image URL, e.g. http://www.example.com/image.png. The image will not be
-   * uploaded as image asset.
+   * Image URL, for example, http://www.example.com/image.png. The image will
+   * not be uploaded as image asset.
    * </pre>
    *
    * <code>string image_url = 4;</code>
@@ -390,7 +255,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object destinationName_;
   /**
    * <pre>
-   * Destination name, e.g. Paris.
+   * Destination name, for example, Paris.
    * </pre>
    *
    * <code>string destination_name = 5;</code>
@@ -411,7 +276,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Destination name, e.g. Paris.
+   * Destination name, for example, Paris.
    * </pre>
    *
    * <code>string destination_name = 5;</code>
@@ -436,7 +301,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object originName_;
   /**
    * <pre>
-   * Origin name, e.g. London.
+   * Origin name, for example, London.
    * </pre>
    *
    * <code>string origin_name = 6;</code>
@@ -457,7 +322,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Origin name, e.g. London.
+   * Origin name, for example, London.
    * </pre>
    *
    * <code>string origin_name = 6;</code>
@@ -483,7 +348,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Flight price which can be number followed by the alphabetic currency code,
-   * ISO 4217 standard. Use '.' as the decimal mark. e.g. 100.00 USD.
+   * ISO 4217 standard. Use '.' as the decimal mark, for example, 100.00 USD.
    * </pre>
    *
    * <code>string flight_price = 7;</code>
@@ -505,7 +370,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Flight price which can be number followed by the alphabetic currency code,
-   * ISO 4217 standard. Use '.' as the decimal mark. e.g. 100.00 USD.
+   * ISO 4217 standard. Use '.' as the decimal mark, for example, 100.00 USD.
    * </pre>
    *
    * <code>string flight_price = 7;</code>
@@ -531,8 +396,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Flight sale price which can be number followed by the alphabetic currency
-   * code, ISO 4217 standard. Use '.' as the decimal mark, e.g. 80.00 USD.
-   * Must be less than the 'flight_price' field.
+   * code, ISO 4217 standard. Use '.' as the decimal mark, for example, 80.00
+   * USD. Must be less than the 'flight_price' field.
    * </pre>
    *
    * <code>string flight_sale_price = 8;</code>
@@ -554,8 +419,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Flight sale price which can be number followed by the alphabetic currency
-   * code, ISO 4217 standard. Use '.' as the decimal mark, e.g. 80.00 USD.
-   * Must be less than the 'flight_price' field.
+   * code, ISO 4217 standard. Use '.' as the decimal mark, for example, 80.00
+   * USD. Must be less than the 'flight_price' field.
    * </pre>
    *
    * <code>string flight_sale_price = 8;</code>
@@ -581,7 +446,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Formatted price which can be any characters. If set, this attribute will be
-   * used instead of 'price', e.g. Starting at $100.00.
+   * used instead of 'price', for example, Starting at $100.00.
    * </pre>
    *
    * <code>string formatted_price = 9;</code>
@@ -603,7 +468,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Formatted price which can be any characters. If set, this attribute will be
-   * used instead of 'price', e.g. Starting at $100.00.
+   * used instead of 'price', for example, Starting at $100.00.
    * </pre>
    *
    * <code>string formatted_price = 9;</code>
@@ -629,7 +494,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Formatted sale price which can be any characters. If set, this attribute
-   * will be used instead of 'sale price', e.g. On sale for $80.00.
+   * will be used instead of 'sale price', for example, On sale for $80.00.
    * </pre>
    *
    * <code>string formatted_sale_price = 10;</code>
@@ -651,7 +516,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Formatted sale price which can be any characters. If set, this attribute
-   * will be used instead of 'sale price', e.g. On sale for $80.00.
+   * will be used instead of 'sale price', for example, On sale for $80.00.
    * </pre>
    *
    * <code>string formatted_sale_price = 10;</code>
@@ -676,7 +541,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object androidAppLink_;
   /**
    * <pre>
-   * Android deep link, e.g.
+   * Android deep link, for example,
    * android-app://com.example.android/http/example.com/gizmos?1234.
    * </pre>
    *
@@ -698,7 +563,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Android deep link, e.g.
+   * Android deep link, for example,
    * android-app://com.example.android/http/example.com/gizmos?1234.
    * </pre>
    *
@@ -724,7 +589,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object iosAppLink_;
   /**
    * <pre>
-   * iOS deep link, e.g. exampleApp://content/page.
+   * iOS deep link, for example, exampleApp://content/page.
    * </pre>
    *
    * <code>string ios_app_link = 12;</code>
@@ -745,7 +610,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * iOS deep link, e.g. exampleApp://content/page.
+   * iOS deep link, for example, exampleApp://content/page.
    * </pre>
    *
    * <code>string ios_app_link = 12;</code>
@@ -787,7 +652,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.LazyStringList similarDestinationIds_;
   /**
    * <pre>
-   * Similar destination IDs, e.g. PAR,LON.
+   * Similar destination IDs, for example, PAR,LON.
    * </pre>
    *
    * <code>repeated string similar_destination_ids = 14;</code>
@@ -799,7 +664,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Similar destination IDs, e.g. PAR,LON.
+   * Similar destination IDs, for example, PAR,LON.
    * </pre>
    *
    * <code>repeated string similar_destination_ids = 14;</code>
@@ -810,7 +675,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Similar destination IDs, e.g. PAR,LON.
+   * Similar destination IDs, for example, PAR,LON.
    * </pre>
    *
    * <code>repeated string similar_destination_ids = 14;</code>
@@ -822,7 +687,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Similar destination IDs, e.g. PAR,LON.
+   * Similar destination IDs, for example, PAR,LON.
    * </pre>
    *
    * <code>repeated string similar_destination_ids = 14;</code>
@@ -841,8 +706,8 @@ private static final long serialVersionUID = 0L;
    * A custom field which can be multiple key to values mapping separated by
    * delimiters (",", "|" and ":"), in the forms of
    * "&lt;KEY_1&gt;: &lt;VALUE_1&gt;, &lt;VALUE_2&gt;, ... ,&lt;VALUE_N&gt; | &lt;KEY_2&gt;: &lt;VALUE_1&gt;, ...
-   * ,&lt;VALUE_N&gt; | ... | &lt;KEY_N&gt;: &lt;VALUE_1&gt;, ... ,&lt;VALUE_N&gt;" e.g. wifi: most |
-   * aircraft: 320, 77W | flights: 42 | legroom: 32".
+   * ,&lt;VALUE_N&gt; | ... | &lt;KEY_N&gt;: &lt;VALUE_1&gt;, ... ,&lt;VALUE_N&gt;" for example, wifi:
+   * most | aircraft: 320, 77W | flights: 42 | legroom: 32".
    * </pre>
    *
    * <code>string custom_mapping = 15;</code>
@@ -866,8 +731,8 @@ private static final long serialVersionUID = 0L;
    * A custom field which can be multiple key to values mapping separated by
    * delimiters (",", "|" and ":"), in the forms of
    * "&lt;KEY_1&gt;: &lt;VALUE_1&gt;, &lt;VALUE_2&gt;, ... ,&lt;VALUE_N&gt; | &lt;KEY_2&gt;: &lt;VALUE_1&gt;, ...
-   * ,&lt;VALUE_N&gt; | ... | &lt;KEY_N&gt;: &lt;VALUE_1&gt;, ... ,&lt;VALUE_N&gt;" e.g. wifi: most |
-   * aircraft: 320, 77W | flights: 42 | legroom: 32".
+   * ,&lt;VALUE_N&gt; | ... | &lt;KEY_N&gt;: &lt;VALUE_1&gt;, ... ,&lt;VALUE_N&gt;" for example, wifi:
+   * most | aircraft: 320, 77W | flights: 42 | legroom: 32".
    * </pre>
    *
    * <code>string custom_mapping = 15;</code>
@@ -947,7 +812,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customMapping_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 15, customMapping_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -1007,7 +872,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customMapping_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, customMapping_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -1052,7 +917,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getSimilarDestinationIdsList())) return false;
     if (!getCustomMapping()
         .equals(other.getCustomMapping())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -1096,7 +961,7 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + CUSTOM_MAPPING_FIELD_NUMBER;
     hash = (53 * hash) + getCustomMapping().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -1217,18 +1082,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v10.common.DynamicFlightsAsset.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -1422,7 +1282,7 @@ private static final long serialVersionUID = 0L;
         customMapping_ = other.customMapping_;
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1437,17 +1297,106 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.ads.googleads.v10.common.DynamicFlightsAsset parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              destinationId_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 10
+            case 18: {
+              originId_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 18
+            case 26: {
+              flightDescription_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 26
+            case 34: {
+              imageUrl_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 34
+            case 42: {
+              destinationName_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 42
+            case 50: {
+              originName_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 50
+            case 58: {
+              flightPrice_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 58
+            case 66: {
+              flightSalePrice_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 66
+            case 74: {
+              formattedPrice_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 74
+            case 82: {
+              formattedSalePrice_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 82
+            case 90: {
+              androidAppLink_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 90
+            case 98: {
+              iosAppLink_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 98
+            case 104: {
+              iosAppStoreId_ = input.readInt64();
+
+              break;
+            } // case 104
+            case 114: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureSimilarDestinationIdsIsMutable();
+              similarDestinationIds_.add(s);
+              break;
+            } // case 114
+            case 122: {
+              customMapping_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 122
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v10.common.DynamicFlightsAsset) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -1657,7 +1606,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object flightDescription_ = "";
     /**
      * <pre>
-     * Required. Flight description, e.g. Book your ticket. Required.
+     * Required. Flight description, for example, Book your ticket. Required.
      * </pre>
      *
      * <code>string flight_description = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1677,7 +1626,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Flight description, e.g. Book your ticket. Required.
+     * Required. Flight description, for example, Book your ticket. Required.
      * </pre>
      *
      * <code>string flight_description = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1698,7 +1647,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Flight description, e.g. Book your ticket. Required.
+     * Required. Flight description, for example, Book your ticket. Required.
      * </pre>
      *
      * <code>string flight_description = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1717,7 +1666,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Flight description, e.g. Book your ticket. Required.
+     * Required. Flight description, for example, Book your ticket. Required.
      * </pre>
      *
      * <code>string flight_description = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1731,7 +1680,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Flight description, e.g. Book your ticket. Required.
+     * Required. Flight description, for example, Book your ticket. Required.
      * </pre>
      *
      * <code>string flight_description = 3 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1753,8 +1702,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object imageUrl_ = "";
     /**
      * <pre>
-     * Image URL, e.g. http://www.example.com/image.png. The image will not be
-     * uploaded as image asset.
+     * Image URL, for example, http://www.example.com/image.png. The image will
+     * not be uploaded as image asset.
      * </pre>
      *
      * <code>string image_url = 4;</code>
@@ -1774,8 +1723,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Image URL, e.g. http://www.example.com/image.png. The image will not be
-     * uploaded as image asset.
+     * Image URL, for example, http://www.example.com/image.png. The image will
+     * not be uploaded as image asset.
      * </pre>
      *
      * <code>string image_url = 4;</code>
@@ -1796,8 +1745,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Image URL, e.g. http://www.example.com/image.png. The image will not be
-     * uploaded as image asset.
+     * Image URL, for example, http://www.example.com/image.png. The image will
+     * not be uploaded as image asset.
      * </pre>
      *
      * <code>string image_url = 4;</code>
@@ -1816,8 +1765,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Image URL, e.g. http://www.example.com/image.png. The image will not be
-     * uploaded as image asset.
+     * Image URL, for example, http://www.example.com/image.png. The image will
+     * not be uploaded as image asset.
      * </pre>
      *
      * <code>string image_url = 4;</code>
@@ -1831,8 +1780,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Image URL, e.g. http://www.example.com/image.png. The image will not be
-     * uploaded as image asset.
+     * Image URL, for example, http://www.example.com/image.png. The image will
+     * not be uploaded as image asset.
      * </pre>
      *
      * <code>string image_url = 4;</code>
@@ -1854,7 +1803,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object destinationName_ = "";
     /**
      * <pre>
-     * Destination name, e.g. Paris.
+     * Destination name, for example, Paris.
      * </pre>
      *
      * <code>string destination_name = 5;</code>
@@ -1874,7 +1823,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Destination name, e.g. Paris.
+     * Destination name, for example, Paris.
      * </pre>
      *
      * <code>string destination_name = 5;</code>
@@ -1895,7 +1844,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Destination name, e.g. Paris.
+     * Destination name, for example, Paris.
      * </pre>
      *
      * <code>string destination_name = 5;</code>
@@ -1914,7 +1863,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Destination name, e.g. Paris.
+     * Destination name, for example, Paris.
      * </pre>
      *
      * <code>string destination_name = 5;</code>
@@ -1928,7 +1877,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Destination name, e.g. Paris.
+     * Destination name, for example, Paris.
      * </pre>
      *
      * <code>string destination_name = 5;</code>
@@ -1950,7 +1899,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object originName_ = "";
     /**
      * <pre>
-     * Origin name, e.g. London.
+     * Origin name, for example, London.
      * </pre>
      *
      * <code>string origin_name = 6;</code>
@@ -1970,7 +1919,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Origin name, e.g. London.
+     * Origin name, for example, London.
      * </pre>
      *
      * <code>string origin_name = 6;</code>
@@ -1991,7 +1940,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Origin name, e.g. London.
+     * Origin name, for example, London.
      * </pre>
      *
      * <code>string origin_name = 6;</code>
@@ -2010,7 +1959,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Origin name, e.g. London.
+     * Origin name, for example, London.
      * </pre>
      *
      * <code>string origin_name = 6;</code>
@@ -2024,7 +1973,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Origin name, e.g. London.
+     * Origin name, for example, London.
      * </pre>
      *
      * <code>string origin_name = 6;</code>
@@ -2047,7 +1996,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Flight price which can be number followed by the alphabetic currency code,
-     * ISO 4217 standard. Use '.' as the decimal mark. e.g. 100.00 USD.
+     * ISO 4217 standard. Use '.' as the decimal mark, for example, 100.00 USD.
      * </pre>
      *
      * <code>string flight_price = 7;</code>
@@ -2068,7 +2017,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Flight price which can be number followed by the alphabetic currency code,
-     * ISO 4217 standard. Use '.' as the decimal mark. e.g. 100.00 USD.
+     * ISO 4217 standard. Use '.' as the decimal mark, for example, 100.00 USD.
      * </pre>
      *
      * <code>string flight_price = 7;</code>
@@ -2090,7 +2039,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Flight price which can be number followed by the alphabetic currency code,
-     * ISO 4217 standard. Use '.' as the decimal mark. e.g. 100.00 USD.
+     * ISO 4217 standard. Use '.' as the decimal mark, for example, 100.00 USD.
      * </pre>
      *
      * <code>string flight_price = 7;</code>
@@ -2110,7 +2059,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Flight price which can be number followed by the alphabetic currency code,
-     * ISO 4217 standard. Use '.' as the decimal mark. e.g. 100.00 USD.
+     * ISO 4217 standard. Use '.' as the decimal mark, for example, 100.00 USD.
      * </pre>
      *
      * <code>string flight_price = 7;</code>
@@ -2125,7 +2074,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Flight price which can be number followed by the alphabetic currency code,
-     * ISO 4217 standard. Use '.' as the decimal mark. e.g. 100.00 USD.
+     * ISO 4217 standard. Use '.' as the decimal mark, for example, 100.00 USD.
      * </pre>
      *
      * <code>string flight_price = 7;</code>
@@ -2148,8 +2097,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Flight sale price which can be number followed by the alphabetic currency
-     * code, ISO 4217 standard. Use '.' as the decimal mark, e.g. 80.00 USD.
-     * Must be less than the 'flight_price' field.
+     * code, ISO 4217 standard. Use '.' as the decimal mark, for example, 80.00
+     * USD. Must be less than the 'flight_price' field.
      * </pre>
      *
      * <code>string flight_sale_price = 8;</code>
@@ -2170,8 +2119,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Flight sale price which can be number followed by the alphabetic currency
-     * code, ISO 4217 standard. Use '.' as the decimal mark, e.g. 80.00 USD.
-     * Must be less than the 'flight_price' field.
+     * code, ISO 4217 standard. Use '.' as the decimal mark, for example, 80.00
+     * USD. Must be less than the 'flight_price' field.
      * </pre>
      *
      * <code>string flight_sale_price = 8;</code>
@@ -2193,8 +2142,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Flight sale price which can be number followed by the alphabetic currency
-     * code, ISO 4217 standard. Use '.' as the decimal mark, e.g. 80.00 USD.
-     * Must be less than the 'flight_price' field.
+     * code, ISO 4217 standard. Use '.' as the decimal mark, for example, 80.00
+     * USD. Must be less than the 'flight_price' field.
      * </pre>
      *
      * <code>string flight_sale_price = 8;</code>
@@ -2214,8 +2163,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Flight sale price which can be number followed by the alphabetic currency
-     * code, ISO 4217 standard. Use '.' as the decimal mark, e.g. 80.00 USD.
-     * Must be less than the 'flight_price' field.
+     * code, ISO 4217 standard. Use '.' as the decimal mark, for example, 80.00
+     * USD. Must be less than the 'flight_price' field.
      * </pre>
      *
      * <code>string flight_sale_price = 8;</code>
@@ -2230,8 +2179,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Flight sale price which can be number followed by the alphabetic currency
-     * code, ISO 4217 standard. Use '.' as the decimal mark, e.g. 80.00 USD.
-     * Must be less than the 'flight_price' field.
+     * code, ISO 4217 standard. Use '.' as the decimal mark, for example, 80.00
+     * USD. Must be less than the 'flight_price' field.
      * </pre>
      *
      * <code>string flight_sale_price = 8;</code>
@@ -2254,7 +2203,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Formatted price which can be any characters. If set, this attribute will be
-     * used instead of 'price', e.g. Starting at $100.00.
+     * used instead of 'price', for example, Starting at $100.00.
      * </pre>
      *
      * <code>string formatted_price = 9;</code>
@@ -2275,7 +2224,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Formatted price which can be any characters. If set, this attribute will be
-     * used instead of 'price', e.g. Starting at $100.00.
+     * used instead of 'price', for example, Starting at $100.00.
      * </pre>
      *
      * <code>string formatted_price = 9;</code>
@@ -2297,7 +2246,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Formatted price which can be any characters. If set, this attribute will be
-     * used instead of 'price', e.g. Starting at $100.00.
+     * used instead of 'price', for example, Starting at $100.00.
      * </pre>
      *
      * <code>string formatted_price = 9;</code>
@@ -2317,7 +2266,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Formatted price which can be any characters. If set, this attribute will be
-     * used instead of 'price', e.g. Starting at $100.00.
+     * used instead of 'price', for example, Starting at $100.00.
      * </pre>
      *
      * <code>string formatted_price = 9;</code>
@@ -2332,7 +2281,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Formatted price which can be any characters. If set, this attribute will be
-     * used instead of 'price', e.g. Starting at $100.00.
+     * used instead of 'price', for example, Starting at $100.00.
      * </pre>
      *
      * <code>string formatted_price = 9;</code>
@@ -2355,7 +2304,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Formatted sale price which can be any characters. If set, this attribute
-     * will be used instead of 'sale price', e.g. On sale for $80.00.
+     * will be used instead of 'sale price', for example, On sale for $80.00.
      * </pre>
      *
      * <code>string formatted_sale_price = 10;</code>
@@ -2376,7 +2325,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Formatted sale price which can be any characters. If set, this attribute
-     * will be used instead of 'sale price', e.g. On sale for $80.00.
+     * will be used instead of 'sale price', for example, On sale for $80.00.
      * </pre>
      *
      * <code>string formatted_sale_price = 10;</code>
@@ -2398,7 +2347,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Formatted sale price which can be any characters. If set, this attribute
-     * will be used instead of 'sale price', e.g. On sale for $80.00.
+     * will be used instead of 'sale price', for example, On sale for $80.00.
      * </pre>
      *
      * <code>string formatted_sale_price = 10;</code>
@@ -2418,7 +2367,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Formatted sale price which can be any characters. If set, this attribute
-     * will be used instead of 'sale price', e.g. On sale for $80.00.
+     * will be used instead of 'sale price', for example, On sale for $80.00.
      * </pre>
      *
      * <code>string formatted_sale_price = 10;</code>
@@ -2433,7 +2382,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Formatted sale price which can be any characters. If set, this attribute
-     * will be used instead of 'sale price', e.g. On sale for $80.00.
+     * will be used instead of 'sale price', for example, On sale for $80.00.
      * </pre>
      *
      * <code>string formatted_sale_price = 10;</code>
@@ -2455,7 +2404,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object androidAppLink_ = "";
     /**
      * <pre>
-     * Android deep link, e.g.
+     * Android deep link, for example,
      * android-app://com.example.android/http/example.com/gizmos?1234.
      * </pre>
      *
@@ -2476,7 +2425,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Android deep link, e.g.
+     * Android deep link, for example,
      * android-app://com.example.android/http/example.com/gizmos?1234.
      * </pre>
      *
@@ -2498,7 +2447,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Android deep link, e.g.
+     * Android deep link, for example,
      * android-app://com.example.android/http/example.com/gizmos?1234.
      * </pre>
      *
@@ -2518,7 +2467,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Android deep link, e.g.
+     * Android deep link, for example,
      * android-app://com.example.android/http/example.com/gizmos?1234.
      * </pre>
      *
@@ -2533,7 +2482,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Android deep link, e.g.
+     * Android deep link, for example,
      * android-app://com.example.android/http/example.com/gizmos?1234.
      * </pre>
      *
@@ -2556,7 +2505,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object iosAppLink_ = "";
     /**
      * <pre>
-     * iOS deep link, e.g. exampleApp://content/page.
+     * iOS deep link, for example, exampleApp://content/page.
      * </pre>
      *
      * <code>string ios_app_link = 12;</code>
@@ -2576,7 +2525,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * iOS deep link, e.g. exampleApp://content/page.
+     * iOS deep link, for example, exampleApp://content/page.
      * </pre>
      *
      * <code>string ios_app_link = 12;</code>
@@ -2597,7 +2546,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * iOS deep link, e.g. exampleApp://content/page.
+     * iOS deep link, for example, exampleApp://content/page.
      * </pre>
      *
      * <code>string ios_app_link = 12;</code>
@@ -2616,7 +2565,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * iOS deep link, e.g. exampleApp://content/page.
+     * iOS deep link, for example, exampleApp://content/page.
      * </pre>
      *
      * <code>string ios_app_link = 12;</code>
@@ -2630,7 +2579,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * iOS deep link, e.g. exampleApp://content/page.
+     * iOS deep link, for example, exampleApp://content/page.
      * </pre>
      *
      * <code>string ios_app_link = 12;</code>
@@ -2707,7 +2656,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Similar destination IDs, e.g. PAR,LON.
+     * Similar destination IDs, for example, PAR,LON.
      * </pre>
      *
      * <code>repeated string similar_destination_ids = 14;</code>
@@ -2719,7 +2668,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Similar destination IDs, e.g. PAR,LON.
+     * Similar destination IDs, for example, PAR,LON.
      * </pre>
      *
      * <code>repeated string similar_destination_ids = 14;</code>
@@ -2730,7 +2679,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Similar destination IDs, e.g. PAR,LON.
+     * Similar destination IDs, for example, PAR,LON.
      * </pre>
      *
      * <code>repeated string similar_destination_ids = 14;</code>
@@ -2742,7 +2691,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Similar destination IDs, e.g. PAR,LON.
+     * Similar destination IDs, for example, PAR,LON.
      * </pre>
      *
      * <code>repeated string similar_destination_ids = 14;</code>
@@ -2755,7 +2704,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Similar destination IDs, e.g. PAR,LON.
+     * Similar destination IDs, for example, PAR,LON.
      * </pre>
      *
      * <code>repeated string similar_destination_ids = 14;</code>
@@ -2775,7 +2724,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Similar destination IDs, e.g. PAR,LON.
+     * Similar destination IDs, for example, PAR,LON.
      * </pre>
      *
      * <code>repeated string similar_destination_ids = 14;</code>
@@ -2794,7 +2743,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Similar destination IDs, e.g. PAR,LON.
+     * Similar destination IDs, for example, PAR,LON.
      * </pre>
      *
      * <code>repeated string similar_destination_ids = 14;</code>
@@ -2811,7 +2760,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Similar destination IDs, e.g. PAR,LON.
+     * Similar destination IDs, for example, PAR,LON.
      * </pre>
      *
      * <code>repeated string similar_destination_ids = 14;</code>
@@ -2825,7 +2774,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Similar destination IDs, e.g. PAR,LON.
+     * Similar destination IDs, for example, PAR,LON.
      * </pre>
      *
      * <code>repeated string similar_destination_ids = 14;</code>
@@ -2850,8 +2799,8 @@ private static final long serialVersionUID = 0L;
      * A custom field which can be multiple key to values mapping separated by
      * delimiters (",", "|" and ":"), in the forms of
      * "&lt;KEY_1&gt;: &lt;VALUE_1&gt;, &lt;VALUE_2&gt;, ... ,&lt;VALUE_N&gt; | &lt;KEY_2&gt;: &lt;VALUE_1&gt;, ...
-     * ,&lt;VALUE_N&gt; | ... | &lt;KEY_N&gt;: &lt;VALUE_1&gt;, ... ,&lt;VALUE_N&gt;" e.g. wifi: most |
-     * aircraft: 320, 77W | flights: 42 | legroom: 32".
+     * ,&lt;VALUE_N&gt; | ... | &lt;KEY_N&gt;: &lt;VALUE_1&gt;, ... ,&lt;VALUE_N&gt;" for example, wifi:
+     * most | aircraft: 320, 77W | flights: 42 | legroom: 32".
      * </pre>
      *
      * <code>string custom_mapping = 15;</code>
@@ -2874,8 +2823,8 @@ private static final long serialVersionUID = 0L;
      * A custom field which can be multiple key to values mapping separated by
      * delimiters (",", "|" and ":"), in the forms of
      * "&lt;KEY_1&gt;: &lt;VALUE_1&gt;, &lt;VALUE_2&gt;, ... ,&lt;VALUE_N&gt; | &lt;KEY_2&gt;: &lt;VALUE_1&gt;, ...
-     * ,&lt;VALUE_N&gt; | ... | &lt;KEY_N&gt;: &lt;VALUE_1&gt;, ... ,&lt;VALUE_N&gt;" e.g. wifi: most |
-     * aircraft: 320, 77W | flights: 42 | legroom: 32".
+     * ,&lt;VALUE_N&gt; | ... | &lt;KEY_N&gt;: &lt;VALUE_1&gt;, ... ,&lt;VALUE_N&gt;" for example, wifi:
+     * most | aircraft: 320, 77W | flights: 42 | legroom: 32".
      * </pre>
      *
      * <code>string custom_mapping = 15;</code>
@@ -2899,8 +2848,8 @@ private static final long serialVersionUID = 0L;
      * A custom field which can be multiple key to values mapping separated by
      * delimiters (",", "|" and ":"), in the forms of
      * "&lt;KEY_1&gt;: &lt;VALUE_1&gt;, &lt;VALUE_2&gt;, ... ,&lt;VALUE_N&gt; | &lt;KEY_2&gt;: &lt;VALUE_1&gt;, ...
-     * ,&lt;VALUE_N&gt; | ... | &lt;KEY_N&gt;: &lt;VALUE_1&gt;, ... ,&lt;VALUE_N&gt;" e.g. wifi: most |
-     * aircraft: 320, 77W | flights: 42 | legroom: 32".
+     * ,&lt;VALUE_N&gt; | ... | &lt;KEY_N&gt;: &lt;VALUE_1&gt;, ... ,&lt;VALUE_N&gt;" for example, wifi:
+     * most | aircraft: 320, 77W | flights: 42 | legroom: 32".
      * </pre>
      *
      * <code>string custom_mapping = 15;</code>
@@ -2922,8 +2871,8 @@ private static final long serialVersionUID = 0L;
      * A custom field which can be multiple key to values mapping separated by
      * delimiters (",", "|" and ":"), in the forms of
      * "&lt;KEY_1&gt;: &lt;VALUE_1&gt;, &lt;VALUE_2&gt;, ... ,&lt;VALUE_N&gt; | &lt;KEY_2&gt;: &lt;VALUE_1&gt;, ...
-     * ,&lt;VALUE_N&gt; | ... | &lt;KEY_N&gt;: &lt;VALUE_1&gt;, ... ,&lt;VALUE_N&gt;" e.g. wifi: most |
-     * aircraft: 320, 77W | flights: 42 | legroom: 32".
+     * ,&lt;VALUE_N&gt; | ... | &lt;KEY_N&gt;: &lt;VALUE_1&gt;, ... ,&lt;VALUE_N&gt;" for example, wifi:
+     * most | aircraft: 320, 77W | flights: 42 | legroom: 32".
      * </pre>
      *
      * <code>string custom_mapping = 15;</code>
@@ -2940,8 +2889,8 @@ private static final long serialVersionUID = 0L;
      * A custom field which can be multiple key to values mapping separated by
      * delimiters (",", "|" and ":"), in the forms of
      * "&lt;KEY_1&gt;: &lt;VALUE_1&gt;, &lt;VALUE_2&gt;, ... ,&lt;VALUE_N&gt; | &lt;KEY_2&gt;: &lt;VALUE_1&gt;, ...
-     * ,&lt;VALUE_N&gt; | ... | &lt;KEY_N&gt;: &lt;VALUE_1&gt;, ... ,&lt;VALUE_N&gt;" e.g. wifi: most |
-     * aircraft: 320, 77W | flights: 42 | legroom: 32".
+     * ,&lt;VALUE_N&gt; | ... | &lt;KEY_N&gt;: &lt;VALUE_1&gt;, ... ,&lt;VALUE_N&gt;" for example, wifi:
+     * most | aircraft: 320, 77W | flights: 42 | legroom: 32".
      * </pre>
      *
      * <code>string custom_mapping = 15;</code>
@@ -2992,7 +2941,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new DynamicFlightsAsset(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

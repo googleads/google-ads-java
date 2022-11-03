@@ -34,1081 +34,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private MutateOperationResponse(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            com.google.ads.googleads.v10.services.MutateAdGroupAdResult.Builder subBuilder = null;
-            if (responseCase_ == 1) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateAdGroupAdResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateAdGroupAdResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateAdGroupAdResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 1;
-            break;
-          }
-          case 18: {
-            com.google.ads.googleads.v10.services.MutateAdGroupBidModifierResult.Builder subBuilder = null;
-            if (responseCase_ == 2) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateAdGroupBidModifierResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateAdGroupBidModifierResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateAdGroupBidModifierResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 2;
-            break;
-          }
-          case 26: {
-            com.google.ads.googleads.v10.services.MutateAdGroupCriterionResult.Builder subBuilder = null;
-            if (responseCase_ == 3) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateAdGroupCriterionResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateAdGroupCriterionResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateAdGroupCriterionResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 3;
-            break;
-          }
-          case 42: {
-            com.google.ads.googleads.v10.services.MutateAdGroupResult.Builder subBuilder = null;
-            if (responseCase_ == 5) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateAdGroupResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateAdGroupResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateAdGroupResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 5;
-            break;
-          }
-          case 50: {
-            com.google.ads.googleads.v10.services.MutateBiddingStrategyResult.Builder subBuilder = null;
-            if (responseCase_ == 6) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateBiddingStrategyResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateBiddingStrategyResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateBiddingStrategyResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 6;
-            break;
-          }
-          case 58: {
-            com.google.ads.googleads.v10.services.MutateCampaignBidModifierResult.Builder subBuilder = null;
-            if (responseCase_ == 7) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateCampaignBidModifierResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateCampaignBidModifierResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateCampaignBidModifierResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 7;
-            break;
-          }
-          case 66: {
-            com.google.ads.googleads.v10.services.MutateCampaignBudgetResult.Builder subBuilder = null;
-            if (responseCase_ == 8) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateCampaignBudgetResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateCampaignBudgetResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateCampaignBudgetResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 8;
-            break;
-          }
-          case 74: {
-            com.google.ads.googleads.v10.services.MutateCampaignGroupResult.Builder subBuilder = null;
-            if (responseCase_ == 9) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateCampaignGroupResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateCampaignGroupResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateCampaignGroupResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 9;
-            break;
-          }
-          case 82: {
-            com.google.ads.googleads.v10.services.MutateCampaignResult.Builder subBuilder = null;
-            if (responseCase_ == 10) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateCampaignResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateCampaignResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateCampaignResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 10;
-            break;
-          }
-          case 90: {
-            com.google.ads.googleads.v10.services.MutateCampaignSharedSetResult.Builder subBuilder = null;
-            if (responseCase_ == 11) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateCampaignSharedSetResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateCampaignSharedSetResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateCampaignSharedSetResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 11;
-            break;
-          }
-          case 98: {
-            com.google.ads.googleads.v10.services.MutateConversionActionResult.Builder subBuilder = null;
-            if (responseCase_ == 12) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateConversionActionResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateConversionActionResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateConversionActionResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 12;
-            break;
-          }
-          case 106: {
-            com.google.ads.googleads.v10.services.MutateCampaignCriterionResult.Builder subBuilder = null;
-            if (responseCase_ == 13) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateCampaignCriterionResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateCampaignCriterionResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateCampaignCriterionResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 13;
-            break;
-          }
-          case 114: {
-            com.google.ads.googleads.v10.services.MutateSharedCriterionResult.Builder subBuilder = null;
-            if (responseCase_ == 14) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateSharedCriterionResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateSharedCriterionResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateSharedCriterionResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 14;
-            break;
-          }
-          case 122: {
-            com.google.ads.googleads.v10.services.MutateSharedSetResult.Builder subBuilder = null;
-            if (responseCase_ == 15) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateSharedSetResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateSharedSetResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateSharedSetResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 15;
-            break;
-          }
-          case 130: {
-            com.google.ads.googleads.v10.services.MutateUserListResult.Builder subBuilder = null;
-            if (responseCase_ == 16) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateUserListResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateUserListResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateUserListResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 16;
-            break;
-          }
-          case 138: {
-            com.google.ads.googleads.v10.services.MutateAdGroupAdLabelResult.Builder subBuilder = null;
-            if (responseCase_ == 17) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateAdGroupAdLabelResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateAdGroupAdLabelResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateAdGroupAdLabelResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 17;
-            break;
-          }
-          case 146: {
-            com.google.ads.googleads.v10.services.MutateAdGroupCriterionLabelResult.Builder subBuilder = null;
-            if (responseCase_ == 18) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateAdGroupCriterionLabelResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateAdGroupCriterionLabelResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateAdGroupCriterionLabelResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 18;
-            break;
-          }
-          case 154: {
-            com.google.ads.googleads.v10.services.MutateAdGroupExtensionSettingResult.Builder subBuilder = null;
-            if (responseCase_ == 19) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateAdGroupExtensionSettingResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateAdGroupExtensionSettingResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateAdGroupExtensionSettingResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 19;
-            break;
-          }
-          case 162: {
-            com.google.ads.googleads.v10.services.MutateAdGroupFeedResult.Builder subBuilder = null;
-            if (responseCase_ == 20) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateAdGroupFeedResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateAdGroupFeedResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateAdGroupFeedResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 20;
-            break;
-          }
-          case 170: {
-            com.google.ads.googleads.v10.services.MutateAdGroupLabelResult.Builder subBuilder = null;
-            if (responseCase_ == 21) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateAdGroupLabelResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateAdGroupLabelResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateAdGroupLabelResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 21;
-            break;
-          }
-          case 178: {
-            com.google.ads.googleads.v10.services.MutateAdParameterResult.Builder subBuilder = null;
-            if (responseCase_ == 22) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateAdParameterResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateAdParameterResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateAdParameterResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 22;
-            break;
-          }
-          case 186: {
-            com.google.ads.googleads.v10.services.MutateAssetResult.Builder subBuilder = null;
-            if (responseCase_ == 23) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateAssetResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateAssetResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateAssetResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 23;
-            break;
-          }
-          case 194: {
-            com.google.ads.googleads.v10.services.MutateCampaignDraftResult.Builder subBuilder = null;
-            if (responseCase_ == 24) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateCampaignDraftResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateCampaignDraftResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateCampaignDraftResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 24;
-            break;
-          }
-          case 202: {
-            com.google.ads.googleads.v10.services.MutateCampaignExperimentResult.Builder subBuilder = null;
-            if (responseCase_ == 25) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateCampaignExperimentResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateCampaignExperimentResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateCampaignExperimentResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 25;
-            break;
-          }
-          case 210: {
-            com.google.ads.googleads.v10.services.MutateCampaignExtensionSettingResult.Builder subBuilder = null;
-            if (responseCase_ == 26) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateCampaignExtensionSettingResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateCampaignExtensionSettingResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateCampaignExtensionSettingResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 26;
-            break;
-          }
-          case 218: {
-            com.google.ads.googleads.v10.services.MutateCampaignFeedResult.Builder subBuilder = null;
-            if (responseCase_ == 27) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateCampaignFeedResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateCampaignFeedResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateCampaignFeedResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 27;
-            break;
-          }
-          case 226: {
-            com.google.ads.googleads.v10.services.MutateCampaignLabelResult.Builder subBuilder = null;
-            if (responseCase_ == 28) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateCampaignLabelResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateCampaignLabelResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateCampaignLabelResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 28;
-            break;
-          }
-          case 242: {
-            com.google.ads.googleads.v10.services.MutateCustomerExtensionSettingResult.Builder subBuilder = null;
-            if (responseCase_ == 30) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateCustomerExtensionSettingResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateCustomerExtensionSettingResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateCustomerExtensionSettingResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 30;
-            break;
-          }
-          case 250: {
-            com.google.ads.googleads.v10.services.MutateCustomerFeedResult.Builder subBuilder = null;
-            if (responseCase_ == 31) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateCustomerFeedResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateCustomerFeedResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateCustomerFeedResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 31;
-            break;
-          }
-          case 258: {
-            com.google.ads.googleads.v10.services.MutateCustomerLabelResult.Builder subBuilder = null;
-            if (responseCase_ == 32) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateCustomerLabelResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateCustomerLabelResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateCustomerLabelResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 32;
-            break;
-          }
-          case 274: {
-            com.google.ads.googleads.v10.services.MutateCustomerNegativeCriteriaResult.Builder subBuilder = null;
-            if (responseCase_ == 34) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateCustomerNegativeCriteriaResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateCustomerNegativeCriteriaResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateCustomerNegativeCriteriaResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 34;
-            break;
-          }
-          case 282: {
-            com.google.ads.googleads.v10.services.MutateCustomerResult.Builder subBuilder = null;
-            if (responseCase_ == 35) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateCustomerResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateCustomerResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateCustomerResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 35;
-            break;
-          }
-          case 290: {
-            com.google.ads.googleads.v10.services.MutateExtensionFeedItemResult.Builder subBuilder = null;
-            if (responseCase_ == 36) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateExtensionFeedItemResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateExtensionFeedItemResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateExtensionFeedItemResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 36;
-            break;
-          }
-          case 298: {
-            com.google.ads.googleads.v10.services.MutateFeedItemResult.Builder subBuilder = null;
-            if (responseCase_ == 37) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateFeedItemResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateFeedItemResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateFeedItemResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 37;
-            break;
-          }
-          case 306: {
-            com.google.ads.googleads.v10.services.MutateFeedItemTargetResult.Builder subBuilder = null;
-            if (responseCase_ == 38) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateFeedItemTargetResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateFeedItemTargetResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateFeedItemTargetResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 38;
-            break;
-          }
-          case 314: {
-            com.google.ads.googleads.v10.services.MutateFeedMappingResult.Builder subBuilder = null;
-            if (responseCase_ == 39) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateFeedMappingResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateFeedMappingResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateFeedMappingResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 39;
-            break;
-          }
-          case 322: {
-            com.google.ads.googleads.v10.services.MutateFeedResult.Builder subBuilder = null;
-            if (responseCase_ == 40) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateFeedResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateFeedResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateFeedResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 40;
-            break;
-          }
-          case 330: {
-            com.google.ads.googleads.v10.services.MutateLabelResult.Builder subBuilder = null;
-            if (responseCase_ == 41) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateLabelResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateLabelResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateLabelResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 41;
-            break;
-          }
-          case 338: {
-            com.google.ads.googleads.v10.services.MutateMediaFileResult.Builder subBuilder = null;
-            if (responseCase_ == 42) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateMediaFileResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateMediaFileResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateMediaFileResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 42;
-            break;
-          }
-          case 346: {
-            com.google.ads.googleads.v10.services.MutateRemarketingActionResult.Builder subBuilder = null;
-            if (responseCase_ == 43) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateRemarketingActionResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateRemarketingActionResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateRemarketingActionResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 43;
-            break;
-          }
-          case 354: {
-            com.google.ads.googleads.v10.services.MutateKeywordPlanAdGroupResult.Builder subBuilder = null;
-            if (responseCase_ == 44) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateKeywordPlanAdGroupResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateKeywordPlanAdGroupResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateKeywordPlanAdGroupResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 44;
-            break;
-          }
-          case 362: {
-            com.google.ads.googleads.v10.services.MutateKeywordPlanCampaignResult.Builder subBuilder = null;
-            if (responseCase_ == 45) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateKeywordPlanCampaignResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateKeywordPlanCampaignResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateKeywordPlanCampaignResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 45;
-            break;
-          }
-          case 386: {
-            com.google.ads.googleads.v10.services.MutateKeywordPlansResult.Builder subBuilder = null;
-            if (responseCase_ == 48) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateKeywordPlansResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateKeywordPlansResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateKeywordPlansResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 48;
-            break;
-          }
-          case 394: {
-            com.google.ads.googleads.v10.services.MutateAdResult.Builder subBuilder = null;
-            if (responseCase_ == 49) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateAdResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateAdResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateAdResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 49;
-            break;
-          }
-          case 402: {
-            com.google.ads.googleads.v10.services.MutateKeywordPlanAdGroupKeywordResult.Builder subBuilder = null;
-            if (responseCase_ == 50) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateKeywordPlanAdGroupKeywordResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateKeywordPlanAdGroupKeywordResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateKeywordPlanAdGroupKeywordResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 50;
-            break;
-          }
-          case 410: {
-            com.google.ads.googleads.v10.services.MutateKeywordPlanCampaignKeywordResult.Builder subBuilder = null;
-            if (responseCase_ == 51) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateKeywordPlanCampaignKeywordResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateKeywordPlanCampaignKeywordResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateKeywordPlanCampaignKeywordResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 51;
-            break;
-          }
-          case 418: {
-            com.google.ads.googleads.v10.services.MutateCampaignAssetResult.Builder subBuilder = null;
-            if (responseCase_ == 52) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateCampaignAssetResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateCampaignAssetResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateCampaignAssetResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 52;
-            break;
-          }
-          case 426: {
-            com.google.ads.googleads.v10.services.MutateFeedItemSetResult.Builder subBuilder = null;
-            if (responseCase_ == 53) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateFeedItemSetResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateFeedItemSetResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateFeedItemSetResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 53;
-            break;
-          }
-          case 434: {
-            com.google.ads.googleads.v10.services.MutateFeedItemSetLinkResult.Builder subBuilder = null;
-            if (responseCase_ == 54) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateFeedItemSetLinkResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateFeedItemSetLinkResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateFeedItemSetLinkResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 54;
-            break;
-          }
-          case 442: {
-            com.google.ads.googleads.v10.services.MutateConversionCustomVariableResult.Builder subBuilder = null;
-            if (responseCase_ == 55) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateConversionCustomVariableResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateConversionCustomVariableResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateConversionCustomVariableResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 55;
-            break;
-          }
-          case 450: {
-            com.google.ads.googleads.v10.services.MutateAdGroupAssetResult.Builder subBuilder = null;
-            if (responseCase_ == 56) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateAdGroupAssetResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateAdGroupAssetResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateAdGroupAssetResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 56;
-            break;
-          }
-          case 458: {
-            com.google.ads.googleads.v10.services.MutateCustomerAssetResult.Builder subBuilder = null;
-            if (responseCase_ == 57) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateCustomerAssetResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateCustomerAssetResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateCustomerAssetResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 57;
-            break;
-          }
-          case 466: {
-            com.google.ads.googleads.v10.services.MutateBiddingDataExclusionsResult.Builder subBuilder = null;
-            if (responseCase_ == 58) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateBiddingDataExclusionsResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateBiddingDataExclusionsResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateBiddingDataExclusionsResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 58;
-            break;
-          }
-          case 474: {
-            com.google.ads.googleads.v10.services.MutateBiddingSeasonalityAdjustmentsResult.Builder subBuilder = null;
-            if (responseCase_ == 59) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateBiddingSeasonalityAdjustmentsResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateBiddingSeasonalityAdjustmentsResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateBiddingSeasonalityAdjustmentsResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 59;
-            break;
-          }
-          case 490: {
-            com.google.ads.googleads.v10.services.MutateSmartCampaignSettingResult.Builder subBuilder = null;
-            if (responseCase_ == 61) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateSmartCampaignSettingResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateSmartCampaignSettingResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateSmartCampaignSettingResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 61;
-            break;
-          }
-          case 498: {
-            com.google.ads.googleads.v10.services.MutateAssetGroupResult.Builder subBuilder = null;
-            if (responseCase_ == 62) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateAssetGroupResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateAssetGroupResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateAssetGroupResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 62;
-            break;
-          }
-          case 506: {
-            com.google.ads.googleads.v10.services.MutateConversionValueRuleResult.Builder subBuilder = null;
-            if (responseCase_ == 63) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateConversionValueRuleResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateConversionValueRuleResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateConversionValueRuleResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 63;
-            break;
-          }
-          case 514: {
-            com.google.ads.googleads.v10.services.MutateConversionValueRuleSetResult.Builder subBuilder = null;
-            if (responseCase_ == 64) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateConversionValueRuleSetResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateConversionValueRuleSetResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateConversionValueRuleSetResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 64;
-            break;
-          }
-          case 522: {
-            com.google.ads.googleads.v10.services.MutateAssetGroupAssetResult.Builder subBuilder = null;
-            if (responseCase_ == 65) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateAssetGroupAssetResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateAssetGroupAssetResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateAssetGroupAssetResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 65;
-            break;
-          }
-          case 530: {
-            com.google.ads.googleads.v10.services.MutateCustomerConversionGoalResult.Builder subBuilder = null;
-            if (responseCase_ == 66) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateCustomerConversionGoalResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateCustomerConversionGoalResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateCustomerConversionGoalResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 66;
-            break;
-          }
-          case 538: {
-            com.google.ads.googleads.v10.services.MutateCampaignConversionGoalResult.Builder subBuilder = null;
-            if (responseCase_ == 67) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateCampaignConversionGoalResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateCampaignConversionGoalResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateCampaignConversionGoalResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 67;
-            break;
-          }
-          case 546: {
-            com.google.ads.googleads.v10.services.MutateCustomConversionGoalResult.Builder subBuilder = null;
-            if (responseCase_ == 68) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateCustomConversionGoalResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateCustomConversionGoalResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateCustomConversionGoalResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 68;
-            break;
-          }
-          case 554: {
-            com.google.ads.googleads.v10.services.MutateConversionGoalCampaignConfigResult.Builder subBuilder = null;
-            if (responseCase_ == 69) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateConversionGoalCampaignConfigResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateConversionGoalCampaignConfigResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateConversionGoalCampaignConfigResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 69;
-            break;
-          }
-          case 562: {
-            com.google.ads.googleads.v10.services.MutateCustomizerAttributeResult.Builder subBuilder = null;
-            if (responseCase_ == 70) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateCustomizerAttributeResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateCustomizerAttributeResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateCustomizerAttributeResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 70;
-            break;
-          }
-          case 570: {
-            com.google.ads.googleads.v10.services.MutateAssetSetAssetResult.Builder subBuilder = null;
-            if (responseCase_ == 71) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateAssetSetAssetResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateAssetSetAssetResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateAssetSetAssetResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 71;
-            break;
-          }
-          case 578: {
-            com.google.ads.googleads.v10.services.MutateAssetSetResult.Builder subBuilder = null;
-            if (responseCase_ == 72) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateAssetSetResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateAssetSetResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateAssetSetResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 72;
-            break;
-          }
-          case 586: {
-            com.google.ads.googleads.v10.services.MutateCampaignAssetSetResult.Builder subBuilder = null;
-            if (responseCase_ == 73) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateCampaignAssetSetResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateCampaignAssetSetResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateCampaignAssetSetResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 73;
-            break;
-          }
-          case 594: {
-            com.google.ads.googleads.v10.services.MutateCustomerCustomizerResult.Builder subBuilder = null;
-            if (responseCase_ == 74) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateCustomerCustomizerResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateCustomerCustomizerResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateCustomerCustomizerResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 74;
-            break;
-          }
-          case 602: {
-            com.google.ads.googleads.v10.services.MutateAdGroupCustomizerResult.Builder subBuilder = null;
-            if (responseCase_ == 75) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateAdGroupCustomizerResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateAdGroupCustomizerResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateAdGroupCustomizerResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 75;
-            break;
-          }
-          case 610: {
-            com.google.ads.googleads.v10.services.MutateCampaignCustomizerResult.Builder subBuilder = null;
-            if (responseCase_ == 76) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateCampaignCustomizerResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateCampaignCustomizerResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateCampaignCustomizerResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 76;
-            break;
-          }
-          case 618: {
-            com.google.ads.googleads.v10.services.MutateAdGroupCriterionCustomizerResult.Builder subBuilder = null;
-            if (responseCase_ == 77) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateAdGroupCriterionCustomizerResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateAdGroupCriterionCustomizerResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateAdGroupCriterionCustomizerResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 77;
-            break;
-          }
-          case 626: {
-            com.google.ads.googleads.v10.services.MutateAssetGroupListingGroupFilterResult.Builder subBuilder = null;
-            if (responseCase_ == 78) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateAssetGroupListingGroupFilterResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateAssetGroupListingGroupFilterResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateAssetGroupListingGroupFilterResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 78;
-            break;
-          }
-          case 634: {
-            com.google.ads.googleads.v10.services.MutateAssetGroupSignalResult.Builder subBuilder = null;
-            if (responseCase_ == 79) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateAssetGroupSignalResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateAssetGroupSignalResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateAssetGroupSignalResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 79;
-            break;
-          }
-          case 642: {
-            com.google.ads.googleads.v10.services.MutateAudienceResult.Builder subBuilder = null;
-            if (responseCase_ == 80) {
-              subBuilder = ((com.google.ads.googleads.v10.services.MutateAudienceResult) response_).toBuilder();
-            }
-            response_ =
-                input.readMessage(com.google.ads.googleads.v10.services.MutateAudienceResult.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.services.MutateAudienceResult) response_);
-              response_ = subBuilder.buildPartial();
-            }
-            responseCase_ = 80;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v10.services.GoogleAdsServiceProto.internal_static_google_ads_googleads_v10_services_MutateOperationResponse_descriptor;
@@ -4725,7 +3650,7 @@ private static final long serialVersionUID = 0L;
     if (responseCase_ == 80) {
       output.writeMessage(80, (com.google.ads.googleads.v10.services.MutateAudienceResult) response_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -5030,7 +3955,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(80, (com.google.ads.googleads.v10.services.MutateAudienceResult) response_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -5346,7 +4271,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -5657,7 +4582,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -5778,22 +4703,239 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v10.services.MutateOperationResponse.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      if (adGroupAdLabelResultBuilder_ != null) {
+        adGroupAdLabelResultBuilder_.clear();
+      }
+      if (adGroupAdResultBuilder_ != null) {
+        adGroupAdResultBuilder_.clear();
+      }
+      if (adGroupAssetResultBuilder_ != null) {
+        adGroupAssetResultBuilder_.clear();
+      }
+      if (adGroupBidModifierResultBuilder_ != null) {
+        adGroupBidModifierResultBuilder_.clear();
+      }
+      if (adGroupCriterionCustomizerResultBuilder_ != null) {
+        adGroupCriterionCustomizerResultBuilder_.clear();
+      }
+      if (adGroupCriterionLabelResultBuilder_ != null) {
+        adGroupCriterionLabelResultBuilder_.clear();
+      }
+      if (adGroupCriterionResultBuilder_ != null) {
+        adGroupCriterionResultBuilder_.clear();
+      }
+      if (adGroupCustomizerResultBuilder_ != null) {
+        adGroupCustomizerResultBuilder_.clear();
+      }
+      if (adGroupExtensionSettingResultBuilder_ != null) {
+        adGroupExtensionSettingResultBuilder_.clear();
+      }
+      if (adGroupFeedResultBuilder_ != null) {
+        adGroupFeedResultBuilder_.clear();
+      }
+      if (adGroupLabelResultBuilder_ != null) {
+        adGroupLabelResultBuilder_.clear();
+      }
+      if (adGroupResultBuilder_ != null) {
+        adGroupResultBuilder_.clear();
+      }
+      if (adParameterResultBuilder_ != null) {
+        adParameterResultBuilder_.clear();
+      }
+      if (adResultBuilder_ != null) {
+        adResultBuilder_.clear();
+      }
+      if (assetResultBuilder_ != null) {
+        assetResultBuilder_.clear();
+      }
+      if (assetGroupAssetResultBuilder_ != null) {
+        assetGroupAssetResultBuilder_.clear();
+      }
+      if (assetGroupListingGroupFilterResultBuilder_ != null) {
+        assetGroupListingGroupFilterResultBuilder_.clear();
+      }
+      if (assetGroupSignalResultBuilder_ != null) {
+        assetGroupSignalResultBuilder_.clear();
+      }
+      if (assetGroupResultBuilder_ != null) {
+        assetGroupResultBuilder_.clear();
+      }
+      if (assetSetAssetResultBuilder_ != null) {
+        assetSetAssetResultBuilder_.clear();
+      }
+      if (assetSetResultBuilder_ != null) {
+        assetSetResultBuilder_.clear();
+      }
+      if (audienceResultBuilder_ != null) {
+        audienceResultBuilder_.clear();
+      }
+      if (biddingDataExclusionResultBuilder_ != null) {
+        biddingDataExclusionResultBuilder_.clear();
+      }
+      if (biddingSeasonalityAdjustmentResultBuilder_ != null) {
+        biddingSeasonalityAdjustmentResultBuilder_.clear();
+      }
+      if (biddingStrategyResultBuilder_ != null) {
+        biddingStrategyResultBuilder_.clear();
+      }
+      if (campaignAssetResultBuilder_ != null) {
+        campaignAssetResultBuilder_.clear();
+      }
+      if (campaignAssetSetResultBuilder_ != null) {
+        campaignAssetSetResultBuilder_.clear();
+      }
+      if (campaignBidModifierResultBuilder_ != null) {
+        campaignBidModifierResultBuilder_.clear();
+      }
+      if (campaignBudgetResultBuilder_ != null) {
+        campaignBudgetResultBuilder_.clear();
+      }
+      if (campaignConversionGoalResultBuilder_ != null) {
+        campaignConversionGoalResultBuilder_.clear();
+      }
+      if (campaignCriterionResultBuilder_ != null) {
+        campaignCriterionResultBuilder_.clear();
+      }
+      if (campaignCustomizerResultBuilder_ != null) {
+        campaignCustomizerResultBuilder_.clear();
+      }
+      if (campaignDraftResultBuilder_ != null) {
+        campaignDraftResultBuilder_.clear();
+      }
+      if (campaignExperimentResultBuilder_ != null) {
+        campaignExperimentResultBuilder_.clear();
+      }
+      if (campaignExtensionSettingResultBuilder_ != null) {
+        campaignExtensionSettingResultBuilder_.clear();
+      }
+      if (campaignFeedResultBuilder_ != null) {
+        campaignFeedResultBuilder_.clear();
+      }
+      if (campaignGroupResultBuilder_ != null) {
+        campaignGroupResultBuilder_.clear();
+      }
+      if (campaignLabelResultBuilder_ != null) {
+        campaignLabelResultBuilder_.clear();
+      }
+      if (campaignResultBuilder_ != null) {
+        campaignResultBuilder_.clear();
+      }
+      if (campaignSharedSetResultBuilder_ != null) {
+        campaignSharedSetResultBuilder_.clear();
+      }
+      if (conversionActionResultBuilder_ != null) {
+        conversionActionResultBuilder_.clear();
+      }
+      if (conversionCustomVariableResultBuilder_ != null) {
+        conversionCustomVariableResultBuilder_.clear();
+      }
+      if (conversionGoalCampaignConfigResultBuilder_ != null) {
+        conversionGoalCampaignConfigResultBuilder_.clear();
+      }
+      if (conversionValueRuleResultBuilder_ != null) {
+        conversionValueRuleResultBuilder_.clear();
+      }
+      if (conversionValueRuleSetResultBuilder_ != null) {
+        conversionValueRuleSetResultBuilder_.clear();
+      }
+      if (customConversionGoalResultBuilder_ != null) {
+        customConversionGoalResultBuilder_.clear();
+      }
+      if (customerAssetResultBuilder_ != null) {
+        customerAssetResultBuilder_.clear();
+      }
+      if (customerConversionGoalResultBuilder_ != null) {
+        customerConversionGoalResultBuilder_.clear();
+      }
+      if (customerCustomizerResultBuilder_ != null) {
+        customerCustomizerResultBuilder_.clear();
+      }
+      if (customerExtensionSettingResultBuilder_ != null) {
+        customerExtensionSettingResultBuilder_.clear();
+      }
+      if (customerFeedResultBuilder_ != null) {
+        customerFeedResultBuilder_.clear();
+      }
+      if (customerLabelResultBuilder_ != null) {
+        customerLabelResultBuilder_.clear();
+      }
+      if (customerNegativeCriterionResultBuilder_ != null) {
+        customerNegativeCriterionResultBuilder_.clear();
+      }
+      if (customerResultBuilder_ != null) {
+        customerResultBuilder_.clear();
+      }
+      if (customizerAttributeResultBuilder_ != null) {
+        customizerAttributeResultBuilder_.clear();
+      }
+      if (extensionFeedItemResultBuilder_ != null) {
+        extensionFeedItemResultBuilder_.clear();
+      }
+      if (feedItemResultBuilder_ != null) {
+        feedItemResultBuilder_.clear();
+      }
+      if (feedItemSetResultBuilder_ != null) {
+        feedItemSetResultBuilder_.clear();
+      }
+      if (feedItemSetLinkResultBuilder_ != null) {
+        feedItemSetLinkResultBuilder_.clear();
+      }
+      if (feedItemTargetResultBuilder_ != null) {
+        feedItemTargetResultBuilder_.clear();
+      }
+      if (feedMappingResultBuilder_ != null) {
+        feedMappingResultBuilder_.clear();
+      }
+      if (feedResultBuilder_ != null) {
+        feedResultBuilder_.clear();
+      }
+      if (keywordPlanAdGroupResultBuilder_ != null) {
+        keywordPlanAdGroupResultBuilder_.clear();
+      }
+      if (keywordPlanCampaignResultBuilder_ != null) {
+        keywordPlanCampaignResultBuilder_.clear();
+      }
+      if (keywordPlanAdGroupKeywordResultBuilder_ != null) {
+        keywordPlanAdGroupKeywordResultBuilder_.clear();
+      }
+      if (keywordPlanCampaignKeywordResultBuilder_ != null) {
+        keywordPlanCampaignKeywordResultBuilder_.clear();
+      }
+      if (keywordPlanResultBuilder_ != null) {
+        keywordPlanResultBuilder_.clear();
+      }
+      if (labelResultBuilder_ != null) {
+        labelResultBuilder_.clear();
+      }
+      if (mediaFileResultBuilder_ != null) {
+        mediaFileResultBuilder_.clear();
+      }
+      if (remarketingActionResultBuilder_ != null) {
+        remarketingActionResultBuilder_.clear();
+      }
+      if (sharedCriterionResultBuilder_ != null) {
+        sharedCriterionResultBuilder_.clear();
+      }
+      if (sharedSetResultBuilder_ != null) {
+        sharedSetResultBuilder_.clear();
+      }
+      if (smartCampaignSettingResultBuilder_ != null) {
+        smartCampaignSettingResultBuilder_.clear();
+      }
+      if (userListResultBuilder_ != null) {
+        userListResultBuilder_.clear();
+      }
       responseCase_ = 0;
       response_ = null;
       return this;
@@ -6690,7 +5832,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -6705,17 +5847,548 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.ads.googleads.v10.services.MutateOperationResponse parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              input.readMessage(
+                  getAdGroupAdResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 1;
+              break;
+            } // case 10
+            case 18: {
+              input.readMessage(
+                  getAdGroupBidModifierResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 2;
+              break;
+            } // case 18
+            case 26: {
+              input.readMessage(
+                  getAdGroupCriterionResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 3;
+              break;
+            } // case 26
+            case 42: {
+              input.readMessage(
+                  getAdGroupResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 5;
+              break;
+            } // case 42
+            case 50: {
+              input.readMessage(
+                  getBiddingStrategyResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 6;
+              break;
+            } // case 50
+            case 58: {
+              input.readMessage(
+                  getCampaignBidModifierResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 7;
+              break;
+            } // case 58
+            case 66: {
+              input.readMessage(
+                  getCampaignBudgetResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 8;
+              break;
+            } // case 66
+            case 74: {
+              input.readMessage(
+                  getCampaignGroupResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 9;
+              break;
+            } // case 74
+            case 82: {
+              input.readMessage(
+                  getCampaignResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 10;
+              break;
+            } // case 82
+            case 90: {
+              input.readMessage(
+                  getCampaignSharedSetResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 11;
+              break;
+            } // case 90
+            case 98: {
+              input.readMessage(
+                  getConversionActionResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 12;
+              break;
+            } // case 98
+            case 106: {
+              input.readMessage(
+                  getCampaignCriterionResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 13;
+              break;
+            } // case 106
+            case 114: {
+              input.readMessage(
+                  getSharedCriterionResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 14;
+              break;
+            } // case 114
+            case 122: {
+              input.readMessage(
+                  getSharedSetResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 15;
+              break;
+            } // case 122
+            case 130: {
+              input.readMessage(
+                  getUserListResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 16;
+              break;
+            } // case 130
+            case 138: {
+              input.readMessage(
+                  getAdGroupAdLabelResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 17;
+              break;
+            } // case 138
+            case 146: {
+              input.readMessage(
+                  getAdGroupCriterionLabelResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 18;
+              break;
+            } // case 146
+            case 154: {
+              input.readMessage(
+                  getAdGroupExtensionSettingResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 19;
+              break;
+            } // case 154
+            case 162: {
+              input.readMessage(
+                  getAdGroupFeedResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 20;
+              break;
+            } // case 162
+            case 170: {
+              input.readMessage(
+                  getAdGroupLabelResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 21;
+              break;
+            } // case 170
+            case 178: {
+              input.readMessage(
+                  getAdParameterResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 22;
+              break;
+            } // case 178
+            case 186: {
+              input.readMessage(
+                  getAssetResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 23;
+              break;
+            } // case 186
+            case 194: {
+              input.readMessage(
+                  getCampaignDraftResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 24;
+              break;
+            } // case 194
+            case 202: {
+              input.readMessage(
+                  getCampaignExperimentResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 25;
+              break;
+            } // case 202
+            case 210: {
+              input.readMessage(
+                  getCampaignExtensionSettingResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 26;
+              break;
+            } // case 210
+            case 218: {
+              input.readMessage(
+                  getCampaignFeedResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 27;
+              break;
+            } // case 218
+            case 226: {
+              input.readMessage(
+                  getCampaignLabelResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 28;
+              break;
+            } // case 226
+            case 242: {
+              input.readMessage(
+                  getCustomerExtensionSettingResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 30;
+              break;
+            } // case 242
+            case 250: {
+              input.readMessage(
+                  getCustomerFeedResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 31;
+              break;
+            } // case 250
+            case 258: {
+              input.readMessage(
+                  getCustomerLabelResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 32;
+              break;
+            } // case 258
+            case 274: {
+              input.readMessage(
+                  getCustomerNegativeCriterionResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 34;
+              break;
+            } // case 274
+            case 282: {
+              input.readMessage(
+                  getCustomerResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 35;
+              break;
+            } // case 282
+            case 290: {
+              input.readMessage(
+                  getExtensionFeedItemResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 36;
+              break;
+            } // case 290
+            case 298: {
+              input.readMessage(
+                  getFeedItemResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 37;
+              break;
+            } // case 298
+            case 306: {
+              input.readMessage(
+                  getFeedItemTargetResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 38;
+              break;
+            } // case 306
+            case 314: {
+              input.readMessage(
+                  getFeedMappingResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 39;
+              break;
+            } // case 314
+            case 322: {
+              input.readMessage(
+                  getFeedResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 40;
+              break;
+            } // case 322
+            case 330: {
+              input.readMessage(
+                  getLabelResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 41;
+              break;
+            } // case 330
+            case 338: {
+              input.readMessage(
+                  getMediaFileResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 42;
+              break;
+            } // case 338
+            case 346: {
+              input.readMessage(
+                  getRemarketingActionResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 43;
+              break;
+            } // case 346
+            case 354: {
+              input.readMessage(
+                  getKeywordPlanAdGroupResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 44;
+              break;
+            } // case 354
+            case 362: {
+              input.readMessage(
+                  getKeywordPlanCampaignResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 45;
+              break;
+            } // case 362
+            case 386: {
+              input.readMessage(
+                  getKeywordPlanResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 48;
+              break;
+            } // case 386
+            case 394: {
+              input.readMessage(
+                  getAdResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 49;
+              break;
+            } // case 394
+            case 402: {
+              input.readMessage(
+                  getKeywordPlanAdGroupKeywordResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 50;
+              break;
+            } // case 402
+            case 410: {
+              input.readMessage(
+                  getKeywordPlanCampaignKeywordResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 51;
+              break;
+            } // case 410
+            case 418: {
+              input.readMessage(
+                  getCampaignAssetResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 52;
+              break;
+            } // case 418
+            case 426: {
+              input.readMessage(
+                  getFeedItemSetResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 53;
+              break;
+            } // case 426
+            case 434: {
+              input.readMessage(
+                  getFeedItemSetLinkResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 54;
+              break;
+            } // case 434
+            case 442: {
+              input.readMessage(
+                  getConversionCustomVariableResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 55;
+              break;
+            } // case 442
+            case 450: {
+              input.readMessage(
+                  getAdGroupAssetResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 56;
+              break;
+            } // case 450
+            case 458: {
+              input.readMessage(
+                  getCustomerAssetResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 57;
+              break;
+            } // case 458
+            case 466: {
+              input.readMessage(
+                  getBiddingDataExclusionResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 58;
+              break;
+            } // case 466
+            case 474: {
+              input.readMessage(
+                  getBiddingSeasonalityAdjustmentResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 59;
+              break;
+            } // case 474
+            case 490: {
+              input.readMessage(
+                  getSmartCampaignSettingResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 61;
+              break;
+            } // case 490
+            case 498: {
+              input.readMessage(
+                  getAssetGroupResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 62;
+              break;
+            } // case 498
+            case 506: {
+              input.readMessage(
+                  getConversionValueRuleResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 63;
+              break;
+            } // case 506
+            case 514: {
+              input.readMessage(
+                  getConversionValueRuleSetResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 64;
+              break;
+            } // case 514
+            case 522: {
+              input.readMessage(
+                  getAssetGroupAssetResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 65;
+              break;
+            } // case 522
+            case 530: {
+              input.readMessage(
+                  getCustomerConversionGoalResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 66;
+              break;
+            } // case 530
+            case 538: {
+              input.readMessage(
+                  getCampaignConversionGoalResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 67;
+              break;
+            } // case 538
+            case 546: {
+              input.readMessage(
+                  getCustomConversionGoalResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 68;
+              break;
+            } // case 546
+            case 554: {
+              input.readMessage(
+                  getConversionGoalCampaignConfigResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 69;
+              break;
+            } // case 554
+            case 562: {
+              input.readMessage(
+                  getCustomizerAttributeResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 70;
+              break;
+            } // case 562
+            case 570: {
+              input.readMessage(
+                  getAssetSetAssetResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 71;
+              break;
+            } // case 570
+            case 578: {
+              input.readMessage(
+                  getAssetSetResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 72;
+              break;
+            } // case 578
+            case 586: {
+              input.readMessage(
+                  getCampaignAssetSetResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 73;
+              break;
+            } // case 586
+            case 594: {
+              input.readMessage(
+                  getCustomerCustomizerResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 74;
+              break;
+            } // case 594
+            case 602: {
+              input.readMessage(
+                  getAdGroupCustomizerResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 75;
+              break;
+            } // case 602
+            case 610: {
+              input.readMessage(
+                  getCampaignCustomizerResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 76;
+              break;
+            } // case 610
+            case 618: {
+              input.readMessage(
+                  getAdGroupCriterionCustomizerResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 77;
+              break;
+            } // case 618
+            case 626: {
+              input.readMessage(
+                  getAssetGroupListingGroupFilterResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 78;
+              break;
+            } // case 626
+            case 634: {
+              input.readMessage(
+                  getAssetGroupSignalResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 79;
+              break;
+            } // case 634
+            case 642: {
+              input.readMessage(
+                  getAudienceResultFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              responseCase_ = 80;
+              break;
+            } // case 642
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v10.services.MutateOperationResponse) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int responseCase_ = 0;
@@ -19938,7 +19611,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new MutateOperationResponse(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

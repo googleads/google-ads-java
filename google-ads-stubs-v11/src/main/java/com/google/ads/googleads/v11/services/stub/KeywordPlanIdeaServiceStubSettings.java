@@ -63,9 +63,9 @@ import org.threeten.bp.Duration;
  * <p>The default instance has everything set to sensible defaults:
  *
  * <ul>
- *   <li> The default service address (googleads.googleapis.com) and default port (443) are used.
- *   <li> Credentials are acquired automatically through Application Default Credentials.
- *   <li> Retries are configured for idempotent methods but not for non-idempotent methods.
+ *   <li>The default service address (googleads.googleapis.com) and default port (443) are used.
+ *   <li>Credentials are acquired automatically through Application Default Credentials.
+ *   <li>Retries are configured for idempotent methods but not for non-idempotent methods.
  * </ul>
  *
  * <p>The builder of this class is recursive, so contained classes are themselves builders. When
@@ -74,8 +74,11 @@ import org.threeten.bp.Duration;
  * <p>For example, to set the total timeout of generateKeywordHistoricalMetrics to 30 seconds:
  *
  * <pre>{@code
- * // This snippet has been automatically generated for illustrative purposes only.
- * // It may require modifications to work in your environment.
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * KeywordPlanIdeaServiceStubSettings.Builder keywordPlanIdeaServiceSettingsBuilder =
  *     KeywordPlanIdeaServiceStubSettings.newBuilder();
  * keywordPlanIdeaServiceSettingsBuilder
@@ -99,7 +102,8 @@ public class KeywordPlanIdeaServiceStubSettings
       ImmutableList.<String>builder().add("https://www.googleapis.com/auth/adwords").build();
 
   private final PagedCallSettings<
-          GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse,
+          GenerateKeywordIdeasRequest,
+          GenerateKeywordIdeaResponse,
           GenerateKeywordIdeasPagedResponse>
       generateKeywordIdeasSettings;
   private final UnaryCallSettings<
@@ -112,7 +116,8 @@ public class KeywordPlanIdeaServiceStubSettings
           GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse, GenerateKeywordIdeaResult>
       GENERATE_KEYWORD_IDEAS_PAGE_STR_DESC =
           new PagedListDescriptor<
-              GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse,
+              GenerateKeywordIdeasRequest,
+              GenerateKeywordIdeaResponse,
               GenerateKeywordIdeaResult>() {
             @Override
             public String emptyToken() {
@@ -151,11 +156,13 @@ public class KeywordPlanIdeaServiceStubSettings
           };
 
   private static final PagedListResponseFactory<
-          GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse,
+          GenerateKeywordIdeasRequest,
+          GenerateKeywordIdeaResponse,
           GenerateKeywordIdeasPagedResponse>
       GENERATE_KEYWORD_IDEAS_PAGE_STR_FACT =
           new PagedListResponseFactory<
-              GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse,
+              GenerateKeywordIdeasRequest,
+              GenerateKeywordIdeaResponse,
               GenerateKeywordIdeasPagedResponse>() {
             @Override
             public ApiFuture<GenerateKeywordIdeasPagedResponse> getFuturePagedResponse(
@@ -164,7 +171,8 @@ public class KeywordPlanIdeaServiceStubSettings
                 ApiCallContext context,
                 ApiFuture<GenerateKeywordIdeaResponse> futureResponse) {
               PageContext<
-                      GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse,
+                      GenerateKeywordIdeasRequest,
+                      GenerateKeywordIdeaResponse,
                       GenerateKeywordIdeaResult>
                   pageContext =
                       PageContext.create(
@@ -175,7 +183,8 @@ public class KeywordPlanIdeaServiceStubSettings
 
   /** Returns the object with the settings used for calls to generateKeywordIdeas. */
   public PagedCallSettings<
-          GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse,
+          GenerateKeywordIdeasRequest,
+          GenerateKeywordIdeaResponse,
           GenerateKeywordIdeasPagedResponse>
       generateKeywordIdeasSettings() {
     return generateKeywordIdeasSettings;
@@ -280,7 +289,8 @@ public class KeywordPlanIdeaServiceStubSettings
       extends StubSettings.Builder<KeywordPlanIdeaServiceStubSettings, Builder> {
     private final ImmutableList<UnaryCallSettings.Builder<?, ?>> unaryMethodSettingsBuilders;
     private final PagedCallSettings.Builder<
-            GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse,
+            GenerateKeywordIdeasRequest,
+            GenerateKeywordIdeaResponse,
             GenerateKeywordIdeasPagedResponse>
         generateKeywordIdeasSettings;
     private final UnaryCallSettings.Builder<
@@ -406,7 +416,8 @@ public class KeywordPlanIdeaServiceStubSettings
 
     /** Returns the builder for the settings used for calls to generateKeywordIdeas. */
     public PagedCallSettings.Builder<
-            GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse,
+            GenerateKeywordIdeasRequest,
+            GenerateKeywordIdeaResponse,
             GenerateKeywordIdeasPagedResponse>
         generateKeywordIdeasSettings() {
       return generateKeywordIdeasSettings;

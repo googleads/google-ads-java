@@ -21,47 +21,47 @@ import com.google.ads.googleads.examples.utils.ArgumentNames;
 import com.google.ads.googleads.examples.utils.CodeSampleParams;
 import com.google.ads.googleads.lib.GoogleAdsClient;
 import com.google.ads.googleads.lib.utils.FieldMasks;
-import com.google.ads.googleads.v11.common.ImageAsset;
-import com.google.ads.googleads.v11.common.LanguageInfo;
-import com.google.ads.googleads.v11.common.LocationInfo;
-import com.google.ads.googleads.v11.common.MaximizeConversionValue;
-import com.google.ads.googleads.v11.common.TextAsset;
-import com.google.ads.googleads.v11.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
-import com.google.ads.googleads.v11.enums.AssetFieldTypeEnum.AssetFieldType;
-import com.google.ads.googleads.v11.enums.AssetGroupStatusEnum.AssetGroupStatus;
-import com.google.ads.googleads.v11.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
-import com.google.ads.googleads.v11.enums.CampaignStatusEnum.CampaignStatus;
-import com.google.ads.googleads.v11.enums.ConversionActionCategoryEnum.ConversionActionCategory;
-import com.google.ads.googleads.v11.enums.ConversionOriginEnum.ConversionOrigin;
-import com.google.ads.googleads.v11.enums.ListingGroupFilterTypeEnum.ListingGroupFilterType;
-import com.google.ads.googleads.v11.enums.ListingGroupFilterVerticalEnum.ListingGroupFilterVertical;
-import com.google.ads.googleads.v11.errors.GoogleAdsError;
-import com.google.ads.googleads.v11.errors.GoogleAdsException;
-import com.google.ads.googleads.v11.resources.Asset;
-import com.google.ads.googleads.v11.resources.AssetGroup;
-import com.google.ads.googleads.v11.resources.AssetGroupAsset;
-import com.google.ads.googleads.v11.resources.AssetGroupListingGroupFilter;
-import com.google.ads.googleads.v11.resources.Campaign;
-import com.google.ads.googleads.v11.resources.Campaign.ShoppingSetting;
-import com.google.ads.googleads.v11.resources.CampaignBudget;
-import com.google.ads.googleads.v11.resources.CampaignConversionGoal;
-import com.google.ads.googleads.v11.resources.CampaignCriterion;
-import com.google.ads.googleads.v11.resources.CustomerConversionGoal;
-import com.google.ads.googleads.v11.services.AssetGroupAssetOperation;
-import com.google.ads.googleads.v11.services.AssetGroupListingGroupFilterOperation;
-import com.google.ads.googleads.v11.services.AssetGroupOperation;
-import com.google.ads.googleads.v11.services.AssetOperation;
-import com.google.ads.googleads.v11.services.CampaignBudgetOperation;
-import com.google.ads.googleads.v11.services.CampaignConversionGoalOperation;
-import com.google.ads.googleads.v11.services.CampaignCriterionOperation;
-import com.google.ads.googleads.v11.services.CampaignOperation;
-import com.google.ads.googleads.v11.services.GoogleAdsRow;
-import com.google.ads.googleads.v11.services.GoogleAdsServiceClient;
-import com.google.ads.googleads.v11.services.GoogleAdsServiceClient.SearchPagedResponse;
-import com.google.ads.googleads.v11.services.MutateGoogleAdsResponse;
-import com.google.ads.googleads.v11.services.MutateOperation;
-import com.google.ads.googleads.v11.services.MutateOperationResponse;
-import com.google.ads.googleads.v11.utils.ResourceNames;
+import com.google.ads.googleads.v12.common.ImageAsset;
+import com.google.ads.googleads.v12.common.LanguageInfo;
+import com.google.ads.googleads.v12.common.LocationInfo;
+import com.google.ads.googleads.v12.common.MaximizeConversionValue;
+import com.google.ads.googleads.v12.common.TextAsset;
+import com.google.ads.googleads.v12.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType;
+import com.google.ads.googleads.v12.enums.AssetFieldTypeEnum.AssetFieldType;
+import com.google.ads.googleads.v12.enums.AssetGroupStatusEnum.AssetGroupStatus;
+import com.google.ads.googleads.v12.enums.BudgetDeliveryMethodEnum.BudgetDeliveryMethod;
+import com.google.ads.googleads.v12.enums.CampaignStatusEnum.CampaignStatus;
+import com.google.ads.googleads.v12.enums.ConversionActionCategoryEnum.ConversionActionCategory;
+import com.google.ads.googleads.v12.enums.ConversionOriginEnum.ConversionOrigin;
+import com.google.ads.googleads.v12.enums.ListingGroupFilterTypeEnum.ListingGroupFilterType;
+import com.google.ads.googleads.v12.enums.ListingGroupFilterVerticalEnum.ListingGroupFilterVertical;
+import com.google.ads.googleads.v12.errors.GoogleAdsError;
+import com.google.ads.googleads.v12.errors.GoogleAdsException;
+import com.google.ads.googleads.v12.resources.Asset;
+import com.google.ads.googleads.v12.resources.AssetGroup;
+import com.google.ads.googleads.v12.resources.AssetGroupAsset;
+import com.google.ads.googleads.v12.resources.AssetGroupListingGroupFilter;
+import com.google.ads.googleads.v12.resources.Campaign;
+import com.google.ads.googleads.v12.resources.Campaign.ShoppingSetting;
+import com.google.ads.googleads.v12.resources.CampaignBudget;
+import com.google.ads.googleads.v12.resources.CampaignConversionGoal;
+import com.google.ads.googleads.v12.resources.CampaignCriterion;
+import com.google.ads.googleads.v12.resources.CustomerConversionGoal;
+import com.google.ads.googleads.v12.services.AssetGroupAssetOperation;
+import com.google.ads.googleads.v12.services.AssetGroupListingGroupFilterOperation;
+import com.google.ads.googleads.v12.services.AssetGroupOperation;
+import com.google.ads.googleads.v12.services.AssetOperation;
+import com.google.ads.googleads.v12.services.CampaignBudgetOperation;
+import com.google.ads.googleads.v12.services.CampaignConversionGoalOperation;
+import com.google.ads.googleads.v12.services.CampaignCriterionOperation;
+import com.google.ads.googleads.v12.services.CampaignOperation;
+import com.google.ads.googleads.v12.services.GoogleAdsRow;
+import com.google.ads.googleads.v12.services.GoogleAdsServiceClient;
+import com.google.ads.googleads.v12.services.GoogleAdsServiceClient.SearchPagedResponse;
+import com.google.ads.googleads.v12.services.MutateGoogleAdsResponse;
+import com.google.ads.googleads.v12.services.MutateOperation;
+import com.google.ads.googleads.v12.services.MutateOperationResponse;
+import com.google.ads.googleads.v12.utils.ResourceNames;
 import com.google.common.collect.ImmutableList;
 import com.google.common.io.ByteStreams;
 import com.google.protobuf.ByteString;
@@ -236,17 +236,17 @@ public class AddPerformanceMaxRetailCampaign {
         createPerformanceMaxCampaignOperation(customerId, merchantCenterAccountId, salesCountry));
     mutateOperations.addAll(createCampaignCriterionOperations(customerId));
     String assetGroupResourceName = ResourceNames.assetGroup(customerId, ASSET_GROUP_TEMPORARY_ID);
-    mutateOperations.addAll(
-        createAssetGroupOperations(
-            customerId,
-            assetGroupResourceName,
-            headlineAssetResourceNames,
-            descriptionAssetResourceNames,
-            finalUrl));
-    mutateOperations.addAll(createConversionGoalOperations(customerId, customerConversionGoals));
+    mutateOperations.add(createAssetGroupOperation(customerId, assetGroupResourceName, finalUrl));
     // Retail Performance Max campaigns require listing groups, which are created via the
     // AssetGroupListingGroupFilter resource.
     mutateOperations.add(createAssetGroupListingGroupFilterOperation(assetGroupResourceName));
+    mutateOperations.addAll(
+        createAssetAndAssetGroupAssetOperations(
+            customerId,
+            assetGroupResourceName,
+            headlineAssetResourceNames,
+            descriptionAssetResourceNames));
+    mutateOperations.addAll(createConversionGoalOperations(customerId, customerConversionGoals));
 
     try (GoogleAdsServiceClient googleAdsServiceClient =
         googleAdsClient.getLatestVersion().createGoogleAdsServiceClient()) {
@@ -352,20 +352,18 @@ public class AddPerformanceMaxRetailCampaign {
     // https://developers.google.com/google-ads/api/reference/data/geotargets
     // and they can also be retrieved using the GeoTargetConstantService as shown
     // here: https://developers.google.com/google-ads/api/docs/targeting/location-targeting
-    //
-    // We will add one positive location target for New York City (ID=1023191)
-    // and one negative location target for Brooklyn (ID=1022762).
-    // First, adds the positive (negative = False) for New York City.
     campaignCriteria.add(
         CampaignCriterion.newBuilder()
             .setCampaign(campaignResourceName)
+            // Adds one positive location target for New York City (ID=1023191), specifically adding
+            // the positive criteria before the negative one.
             .setLocation(
                 LocationInfo.newBuilder()
                     .setGeoTargetConstant(ResourceNames.geoTargetConstant(1023191))
                     .build())
             .setNegative(false)
             .build());
-    // Next adds the negative target for Brooklyn.
+    // Next adds the negative target for Brooklyn (ID=1022762).
     campaignCriteria.add(
         CampaignCriterion.newBuilder()
             .setCampaign(campaignResourceName)
@@ -400,7 +398,11 @@ public class AddPerformanceMaxRetailCampaign {
   // [END add_performance_max_retail_campaign_4]
 
   // [START add_performance_max_retail_campaign_5]
-  /** Creates multiple text assets and returns the list of resource names. */
+  /**
+   * Creates multiple text assets and returns the list of resource names.
+   *
+   * <p>These repeated assets must be created in a separate request prior to creating the campaign.
+   */
   private List<String> createMultipleTextAssets(
       GoogleAdsClient googleAdsClient, long customerId, List<String> texts) {
     List<MutateOperation> mutateOperations = new ArrayList<>();
@@ -428,15 +430,10 @@ public class AddPerformanceMaxRetailCampaign {
   }
   // [END add_performance_max_retail_campaign_5]
 
-  // [START add_performance_max_retail_campaign_6]
-  /** Creates a list of MutateOperations that create a new AssetGroup. */
-  private List<MutateOperation> createAssetGroupOperations(
-      long customerId,
-      String assetGroupResourceName,
-      List<String> headlineAssetResourceNames,
-      List<String> descriptionAssetResourceNames,
-      String finalUrl)
-      throws IOException {
+  // [START add_performance_max_retail_campaign_10]
+  /** Creates a MutateOperation that create a new AssetGroup. */
+  private MutateOperation createAssetGroupOperation(
+      long customerId, String assetGroupResourceName, String finalUrl) {
     List<MutateOperation> mutateOperations = new ArrayList<>();
     String campaignResourceName =
         ResourceNames.campaign(customerId, PERFORMANCE_MAX_CAMPAIGN_TEMPORARY_ID);
@@ -452,8 +449,19 @@ public class AddPerformanceMaxRetailCampaign {
             .build();
     AssetGroupOperation assetGroupOperation =
         AssetGroupOperation.newBuilder().setCreate(assetGroup).build();
-    mutateOperations.add(
-        MutateOperation.newBuilder().setAssetGroupOperation(assetGroupOperation).build());
+    return MutateOperation.newBuilder().setAssetGroupOperation(assetGroupOperation).build();
+  }
+  // [END add_performance_max_retail_campaign_10]
+
+  // [START add_performance_max_retail_campaign_6]
+  /** Creates a list of MutateOperations that create a new AssetGroup. */
+  private List<MutateOperation> createAssetAndAssetGroupAssetOperations(
+      long customerId,
+      String assetGroupResourceName,
+      List<String> headlineAssetResourceNames,
+      List<String> descriptionAssetResourceNames)
+      throws IOException {
+    List<MutateOperation> mutateOperations = new ArrayList<>();
 
     // For the list of required assets for a Performance Max campaign, see
     // https://developers.google.com/google-ads/api/docs/performance-max/assets
@@ -521,7 +529,7 @@ public class AddPerformanceMaxRetailCampaign {
         createAndLinkImageAsset(
             customerId,
             assetGroupResourceName,
-            "https://gaagl.page.link/bjYi",
+            "https://gaagl.page.link/1Crm",
             AssetFieldType.LOGO,
             "Logo Image"));
 
@@ -543,7 +551,7 @@ public class AddPerformanceMaxRetailCampaign {
             AssetFieldType.SQUARE_MARKETING_IMAGE,
             "Square Marketing Image"));
 
-    return mutateOperations;
+    return sortAssetAndAssetGroupAssetOperations(mutateOperations);
   }
   // [END add_performance_max_retail_campaign_6]
 
@@ -621,6 +629,25 @@ public class AddPerformanceMaxRetailCampaign {
   }
   // [END add_performance_max_retail_campaign_8]
 
+  // [START add_performance_max_retail_campaign_12]
+  /**
+   * Sorts a list of asset and asset group asset operations.
+   *
+   * <p>This sorts the list such that all asset operations precede all asset group asset operations.
+   * If asset group assets are created before assets then an error will be returned by the API.
+   */
+  private List<MutateOperation> sortAssetAndAssetGroupAssetOperations(
+      List<MutateOperation> operations) {
+    List<MutateOperation> sortedOperations =
+        operations.stream().filter(o -> o.hasAssetOperation()).collect(Collectors.toList());
+    sortedOperations.addAll(
+        operations.stream()
+            .filter(o -> o.hasAssetGroupAssetOperation())
+            .collect(Collectors.toList()));
+    return sortedOperations;
+  }
+  // [END add_performance_max_retail_campaign_12]
+
   // [START add_performance_max_retail_campaign_9]
   /** Retrieves the list of customer conversion goals. */
   private static List<CustomerConversionGoal> getCustomerConversionGoals(
@@ -687,7 +714,7 @@ public class AddPerformanceMaxRetailCampaign {
   }
   // [END add_performance_max_retail_campaign_9]
 
-  // [START add_performance_max_retail_campaign_10]
+  // [START add_performance_max_retail_campaign_11]
   /** Creates a MutateOperation that creates a new asset group listing group filter. */
   private MutateOperation createAssetGroupListingGroupFilterOperation(
       String assetGroupResourceName) {
@@ -714,7 +741,7 @@ public class AddPerformanceMaxRetailCampaign {
             AssetGroupListingGroupFilterOperation.newBuilder().setCreate(listingGroupFilter))
         .build();
   }
-  // [END add_performance_max_retail_campaign_10]
+  // [END add_performance_max_retail_campaign_11]
 
   /**
    * Prints the details of a MutateGoogleAdsResponse.

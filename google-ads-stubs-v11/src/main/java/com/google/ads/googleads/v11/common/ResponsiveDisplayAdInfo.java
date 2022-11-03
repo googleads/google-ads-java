@@ -48,203 +48,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private ResponsiveDisplayAdInfo(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              marketingImages_ = new java.util.ArrayList<com.google.ads.googleads.v11.common.AdImageAsset>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            marketingImages_.add(
-                input.readMessage(com.google.ads.googleads.v11.common.AdImageAsset.parser(), extensionRegistry));
-            break;
-          }
-          case 18: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              squareMarketingImages_ = new java.util.ArrayList<com.google.ads.googleads.v11.common.AdImageAsset>();
-              mutable_bitField0_ |= 0x00000002;
-            }
-            squareMarketingImages_.add(
-                input.readMessage(com.google.ads.googleads.v11.common.AdImageAsset.parser(), extensionRegistry));
-            break;
-          }
-          case 26: {
-            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-              logoImages_ = new java.util.ArrayList<com.google.ads.googleads.v11.common.AdImageAsset>();
-              mutable_bitField0_ |= 0x00000004;
-            }
-            logoImages_.add(
-                input.readMessage(com.google.ads.googleads.v11.common.AdImageAsset.parser(), extensionRegistry));
-            break;
-          }
-          case 34: {
-            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-              squareLogoImages_ = new java.util.ArrayList<com.google.ads.googleads.v11.common.AdImageAsset>();
-              mutable_bitField0_ |= 0x00000008;
-            }
-            squareLogoImages_.add(
-                input.readMessage(com.google.ads.googleads.v11.common.AdImageAsset.parser(), extensionRegistry));
-            break;
-          }
-          case 42: {
-            if (!((mutable_bitField0_ & 0x00000010) != 0)) {
-              headlines_ = new java.util.ArrayList<com.google.ads.googleads.v11.common.AdTextAsset>();
-              mutable_bitField0_ |= 0x00000010;
-            }
-            headlines_.add(
-                input.readMessage(com.google.ads.googleads.v11.common.AdTextAsset.parser(), extensionRegistry));
-            break;
-          }
-          case 50: {
-            com.google.ads.googleads.v11.common.AdTextAsset.Builder subBuilder = null;
-            if (longHeadline_ != null) {
-              subBuilder = longHeadline_.toBuilder();
-            }
-            longHeadline_ = input.readMessage(com.google.ads.googleads.v11.common.AdTextAsset.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(longHeadline_);
-              longHeadline_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 58: {
-            if (!((mutable_bitField0_ & 0x00000020) != 0)) {
-              descriptions_ = new java.util.ArrayList<com.google.ads.googleads.v11.common.AdTextAsset>();
-              mutable_bitField0_ |= 0x00000020;
-            }
-            descriptions_.add(
-                input.readMessage(com.google.ads.googleads.v11.common.AdTextAsset.parser(), extensionRegistry));
-            break;
-          }
-          case 66: {
-            if (!((mutable_bitField0_ & 0x00000040) != 0)) {
-              youtubeVideos_ = new java.util.ArrayList<com.google.ads.googleads.v11.common.AdVideoAsset>();
-              mutable_bitField0_ |= 0x00000040;
-            }
-            youtubeVideos_.add(
-                input.readMessage(com.google.ads.googleads.v11.common.AdVideoAsset.parser(), extensionRegistry));
-            break;
-          }
-          case 128: {
-            int rawValue = input.readEnum();
-
-            formatSetting_ = rawValue;
-            break;
-          }
-          case 138: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000001;
-            businessName_ = s;
-            break;
-          }
-          case 146: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000002;
-            mainColor_ = s;
-            break;
-          }
-          case 154: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000004;
-            accentColor_ = s;
-            break;
-          }
-          case 160: {
-            bitField0_ |= 0x00000008;
-            allowFlexibleColor_ = input.readBool();
-            break;
-          }
-          case 170: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000010;
-            callToActionText_ = s;
-            break;
-          }
-          case 178: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000020;
-            pricePrefix_ = s;
-            break;
-          }
-          case 186: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000040;
-            promoText_ = s;
-            break;
-          }
-          case 194: {
-            com.google.ads.googleads.v11.common.ResponsiveDisplayAdControlSpec.Builder subBuilder = null;
-            if (controlSpec_ != null) {
-              subBuilder = controlSpec_.toBuilder();
-            }
-            controlSpec_ = input.readMessage(com.google.ads.googleads.v11.common.ResponsiveDisplayAdControlSpec.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(controlSpec_);
-              controlSpec_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        marketingImages_ = java.util.Collections.unmodifiableList(marketingImages_);
-      }
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
-        squareMarketingImages_ = java.util.Collections.unmodifiableList(squareMarketingImages_);
-      }
-      if (((mutable_bitField0_ & 0x00000004) != 0)) {
-        logoImages_ = java.util.Collections.unmodifiableList(logoImages_);
-      }
-      if (((mutable_bitField0_ & 0x00000008) != 0)) {
-        squareLogoImages_ = java.util.Collections.unmodifiableList(squareLogoImages_);
-      }
-      if (((mutable_bitField0_ & 0x00000010) != 0)) {
-        headlines_ = java.util.Collections.unmodifiableList(headlines_);
-      }
-      if (((mutable_bitField0_ & 0x00000020) != 0)) {
-        descriptions_ = java.util.Collections.unmodifiableList(descriptions_);
-      }
-      if (((mutable_bitField0_ & 0x00000040) != 0)) {
-        youtubeVideos_ = java.util.Collections.unmodifiableList(youtubeVideos_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v11.common.AdTypeInfosProto.internal_static_google_ads_googleads_v11_common_ResponsiveDisplayAdInfo_descriptor;
@@ -1305,7 +1108,7 @@ private static final long serialVersionUID = 0L;
     if (controlSpec_ != null) {
       output.writeMessage(24, getControlSpec());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -1376,7 +1179,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(24, getControlSpec());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -1451,7 +1254,7 @@ private static final long serialVersionUID = 0L;
       if (!getControlSpec()
           .equals(other.getControlSpec())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -1529,7 +1332,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + CONTROL_SPEC_FIELD_NUMBER;
       hash = (53 * hash) + getControlSpec().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -1650,59 +1453,52 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v11.common.ResponsiveDisplayAdInfo.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getMarketingImagesFieldBuilder();
-        getSquareMarketingImagesFieldBuilder();
-        getLogoImagesFieldBuilder();
-        getSquareLogoImagesFieldBuilder();
-        getHeadlinesFieldBuilder();
-        getDescriptionsFieldBuilder();
-        getYoutubeVideosFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
       if (marketingImagesBuilder_ == null) {
         marketingImages_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        marketingImages_ = null;
         marketingImagesBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000001);
       if (squareMarketingImagesBuilder_ == null) {
         squareMarketingImages_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
+        squareMarketingImages_ = null;
         squareMarketingImagesBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000002);
       if (logoImagesBuilder_ == null) {
         logoImages_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
       } else {
+        logoImages_ = null;
         logoImagesBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000004);
       if (squareLogoImagesBuilder_ == null) {
         squareLogoImages_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
       } else {
+        squareLogoImages_ = null;
         squareLogoImagesBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000008);
       if (headlinesBuilder_ == null) {
         headlines_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
       } else {
+        headlines_ = null;
         headlinesBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000010);
       if (longHeadlineBuilder_ == null) {
         longHeadline_ = null;
       } else {
@@ -1711,16 +1507,18 @@ private static final long serialVersionUID = 0L;
       }
       if (descriptionsBuilder_ == null) {
         descriptions_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000020);
       } else {
+        descriptions_ = null;
         descriptionsBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000020);
       if (youtubeVideosBuilder_ == null) {
         youtubeVideos_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000040);
       } else {
+        youtubeVideos_ = null;
         youtubeVideosBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000040);
       businessName_ = "";
       bitField0_ = (bitField0_ & ~0x00000080);
       mainColor_ = "";
@@ -2146,7 +1944,7 @@ private static final long serialVersionUID = 0L;
       if (other.hasControlSpec()) {
         mergeControlSpec(other.getControlSpec());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -2161,17 +1959,175 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.ads.googleads.v11.common.ResponsiveDisplayAdInfo parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.ads.googleads.v11.common.AdImageAsset m =
+                  input.readMessage(
+                      com.google.ads.googleads.v11.common.AdImageAsset.parser(),
+                      extensionRegistry);
+              if (marketingImagesBuilder_ == null) {
+                ensureMarketingImagesIsMutable();
+                marketingImages_.add(m);
+              } else {
+                marketingImagesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 10
+            case 18: {
+              com.google.ads.googleads.v11.common.AdImageAsset m =
+                  input.readMessage(
+                      com.google.ads.googleads.v11.common.AdImageAsset.parser(),
+                      extensionRegistry);
+              if (squareMarketingImagesBuilder_ == null) {
+                ensureSquareMarketingImagesIsMutable();
+                squareMarketingImages_.add(m);
+              } else {
+                squareMarketingImagesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 18
+            case 26: {
+              com.google.ads.googleads.v11.common.AdImageAsset m =
+                  input.readMessage(
+                      com.google.ads.googleads.v11.common.AdImageAsset.parser(),
+                      extensionRegistry);
+              if (logoImagesBuilder_ == null) {
+                ensureLogoImagesIsMutable();
+                logoImages_.add(m);
+              } else {
+                logoImagesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 26
+            case 34: {
+              com.google.ads.googleads.v11.common.AdImageAsset m =
+                  input.readMessage(
+                      com.google.ads.googleads.v11.common.AdImageAsset.parser(),
+                      extensionRegistry);
+              if (squareLogoImagesBuilder_ == null) {
+                ensureSquareLogoImagesIsMutable();
+                squareLogoImages_.add(m);
+              } else {
+                squareLogoImagesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 34
+            case 42: {
+              com.google.ads.googleads.v11.common.AdTextAsset m =
+                  input.readMessage(
+                      com.google.ads.googleads.v11.common.AdTextAsset.parser(),
+                      extensionRegistry);
+              if (headlinesBuilder_ == null) {
+                ensureHeadlinesIsMutable();
+                headlines_.add(m);
+              } else {
+                headlinesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 42
+            case 50: {
+              input.readMessage(
+                  getLongHeadlineFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 50
+            case 58: {
+              com.google.ads.googleads.v11.common.AdTextAsset m =
+                  input.readMessage(
+                      com.google.ads.googleads.v11.common.AdTextAsset.parser(),
+                      extensionRegistry);
+              if (descriptionsBuilder_ == null) {
+                ensureDescriptionsIsMutable();
+                descriptions_.add(m);
+              } else {
+                descriptionsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 58
+            case 66: {
+              com.google.ads.googleads.v11.common.AdVideoAsset m =
+                  input.readMessage(
+                      com.google.ads.googleads.v11.common.AdVideoAsset.parser(),
+                      extensionRegistry);
+              if (youtubeVideosBuilder_ == null) {
+                ensureYoutubeVideosIsMutable();
+                youtubeVideos_.add(m);
+              } else {
+                youtubeVideosBuilder_.addMessage(m);
+              }
+              break;
+            } // case 66
+            case 128: {
+              formatSetting_ = input.readEnum();
+
+              break;
+            } // case 128
+            case 138: {
+              businessName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 138
+            case 146: {
+              mainColor_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 146
+            case 154: {
+              accentColor_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 154
+            case 160: {
+              allowFlexibleColor_ = input.readBool();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 160
+            case 170: {
+              callToActionText_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 170
+            case 178: {
+              pricePrefix_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 178
+            case 186: {
+              promoText_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00002000;
+              break;
+            } // case 186
+            case 194: {
+              input.readMessage(
+                  getControlSpecFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 194
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v11.common.ResponsiveDisplayAdInfo) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -5735,7 +5691,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new ResponsiveDisplayAdInfo(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

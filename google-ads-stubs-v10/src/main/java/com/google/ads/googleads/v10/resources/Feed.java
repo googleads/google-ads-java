@@ -40,127 +40,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private Feed(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            resourceName_ = s;
-            break;
-          }
-          case 34: {
-            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-              attributes_ = new java.util.ArrayList<com.google.ads.googleads.v10.resources.FeedAttribute>();
-              mutable_bitField0_ |= 0x00000004;
-            }
-            attributes_.add(
-                input.readMessage(com.google.ads.googleads.v10.resources.FeedAttribute.parser(), extensionRegistry));
-            break;
-          }
-          case 40: {
-            int rawValue = input.readEnum();
-
-            origin_ = rawValue;
-            break;
-          }
-          case 50: {
-            com.google.ads.googleads.v10.resources.Feed.PlacesLocationFeedData.Builder subBuilder = null;
-            if (systemFeedGenerationDataCase_ == 6) {
-              subBuilder = ((com.google.ads.googleads.v10.resources.Feed.PlacesLocationFeedData) systemFeedGenerationData_).toBuilder();
-            }
-            systemFeedGenerationData_ =
-                input.readMessage(com.google.ads.googleads.v10.resources.Feed.PlacesLocationFeedData.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.resources.Feed.PlacesLocationFeedData) systemFeedGenerationData_);
-              systemFeedGenerationData_ = subBuilder.buildPartial();
-            }
-            systemFeedGenerationDataCase_ = 6;
-            break;
-          }
-          case 58: {
-            com.google.ads.googleads.v10.resources.Feed.AffiliateLocationFeedData.Builder subBuilder = null;
-            if (systemFeedGenerationDataCase_ == 7) {
-              subBuilder = ((com.google.ads.googleads.v10.resources.Feed.AffiliateLocationFeedData) systemFeedGenerationData_).toBuilder();
-            }
-            systemFeedGenerationData_ =
-                input.readMessage(com.google.ads.googleads.v10.resources.Feed.AffiliateLocationFeedData.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.resources.Feed.AffiliateLocationFeedData) systemFeedGenerationData_);
-              systemFeedGenerationData_ = subBuilder.buildPartial();
-            }
-            systemFeedGenerationDataCase_ = 7;
-            break;
-          }
-          case 64: {
-            int rawValue = input.readEnum();
-
-            status_ = rawValue;
-            break;
-          }
-          case 74: {
-            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-              attributeOperations_ = new java.util.ArrayList<com.google.ads.googleads.v10.resources.FeedAttributeOperation>();
-              mutable_bitField0_ |= 0x00000008;
-            }
-            attributeOperations_.add(
-                input.readMessage(com.google.ads.googleads.v10.resources.FeedAttributeOperation.parser(), extensionRegistry));
-            break;
-          }
-          case 88: {
-            bitField0_ |= 0x00000001;
-            id_ = input.readInt64();
-            break;
-          }
-          case 98: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000002;
-            name_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000004) != 0)) {
-        attributes_ = java.util.Collections.unmodifiableList(attributes_);
-      }
-      if (((mutable_bitField0_ & 0x00000008) != 0)) {
-        attributeOperations_ = java.util.Collections.unmodifiableList(attributeOperations_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v10.resources.FeedProto.internal_static_google_ads_googleads_v10_resources_Feed_descriptor;
@@ -446,101 +325,6 @@ private static final long serialVersionUID = 0L;
     getUnknownFields() {
       return this.unknownFields;
     }
-    private PlacesLocationFeedData(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.google.ads.googleads.v10.resources.Feed.PlacesLocationFeedData.OAuthInfo.Builder subBuilder = null;
-              if (oauthInfo_ != null) {
-                subBuilder = oauthInfo_.toBuilder();
-              }
-              oauthInfo_ = input.readMessage(com.google.ads.googleads.v10.resources.Feed.PlacesLocationFeedData.OAuthInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(oauthInfo_);
-                oauthInfo_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              emailAddress_ = s;
-              break;
-            }
-            case 66: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              businessAccountId_ = s;
-              break;
-            }
-            case 74: {
-              java.lang.String s = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              businessNameFilter_ = s;
-              break;
-            }
-            case 90: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                categoryFilters_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              categoryFilters_.add(s);
-              break;
-            }
-            case 98: {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-                labelFilters_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000008;
-              }
-              labelFilters_.add(s);
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000004) != 0)) {
-          categoryFilters_ = categoryFilters_.getUnmodifiableView();
-        }
-        if (((mutable_bitField0_ & 0x00000008) != 0)) {
-          labelFilters_ = labelFilters_.getUnmodifiableView();
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return com.google.ads.googleads.v10.resources.FeedProto.internal_static_google_ads_googleads_v10_resources_Feed_PlacesLocationFeedData_descriptor;
@@ -678,64 +462,6 @@ private static final long serialVersionUID = 0L;
       public final com.google.protobuf.UnknownFieldSet
       getUnknownFields() {
         return this.unknownFields;
-      }
-      private OAuthInfo(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 34: {
-                java.lang.String s = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                httpMethod_ = s;
-                break;
-              }
-              case 42: {
-                java.lang.String s = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
-                httpRequestUrl_ = s;
-                break;
-              }
-              case 50: {
-                java.lang.String s = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
-                httpAuthorizationHeader_ = s;
-                break;
-              }
-              default: {
-                if (!parseUnknownField(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e).setUnfinishedMessage(this);
-        } finally {
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
@@ -948,7 +674,7 @@ private static final long serialVersionUID = 0L;
         if (((bitField0_ & 0x00000004) != 0)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 6, httpAuthorizationHeader_);
         }
-        unknownFields.writeTo(output);
+        getUnknownFields().writeTo(output);
       }
 
       @java.lang.Override
@@ -966,7 +692,7 @@ private static final long serialVersionUID = 0L;
         if (((bitField0_ & 0x00000004) != 0)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, httpAuthorizationHeader_);
         }
-        size += unknownFields.getSerializedSize();
+        size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
         return size;
       }
@@ -996,7 +722,7 @@ private static final long serialVersionUID = 0L;
           if (!getHttpAuthorizationHeader()
               .equals(other.getHttpAuthorizationHeader())) return false;
         }
-        if (!unknownFields.equals(other.unknownFields)) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
         return true;
       }
 
@@ -1019,7 +745,7 @@ private static final long serialVersionUID = 0L;
           hash = (37 * hash) + HTTP_AUTHORIZATION_HEADER_FIELD_NUMBER;
           hash = (53 * hash) + getHttpAuthorizationHeader().hashCode();
         }
-        hash = (29 * hash) + unknownFields.hashCode();
+        hash = (29 * hash) + getUnknownFields().hashCode();
         memoizedHashCode = hash;
         return hash;
       }
@@ -1140,18 +866,13 @@ private static final long serialVersionUID = 0L;
 
         // Construct using com.google.ads.googleads.v10.resources.Feed.PlacesLocationFeedData.OAuthInfo.newBuilder()
         private Builder() {
-          maybeForceBuilderInitialization();
+
         }
 
         private Builder(
             com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
           super(parent);
-          maybeForceBuilderInitialization();
-        }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-                  .alwaysUseFieldBuilders) {
-          }
+
         }
         @java.lang.Override
         public Builder clear() {
@@ -1266,7 +987,7 @@ private static final long serialVersionUID = 0L;
             httpAuthorizationHeader_ = other.httpAuthorizationHeader_;
             onChanged();
           }
-          this.mergeUnknownFields(other.unknownFields);
+          this.mergeUnknownFields(other.getUnknownFields());
           onChanged();
           return this;
         }
@@ -1281,17 +1002,45 @@ private static final long serialVersionUID = 0L;
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          com.google.ads.googleads.v10.resources.Feed.PlacesLocationFeedData.OAuthInfo parsedMessage = null;
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
           try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 34: {
+                  httpMethod_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 34
+                case 42: {
+                  httpRequestUrl_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 42
+                case 50: {
+                  httpAuthorizationHeader_ = input.readStringRequireUtf8();
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 50
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (com.google.ads.googleads.v10.resources.Feed.PlacesLocationFeedData.OAuthInfo) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
+            onChanged();
+          } // finally
           return this;
         }
         private int bitField0_;
@@ -1649,7 +1398,18 @@ private static final long serialVersionUID = 0L;
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new OAuthInfo(input, extensionRegistry);
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
         }
       };
 
@@ -2049,7 +1809,7 @@ private static final long serialVersionUID = 0L;
       for (int i = 0; i < labelFilters_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 12, labelFilters_.getRaw(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -2087,7 +1847,7 @@ private static final long serialVersionUID = 0L;
         size += dataSize;
         size += 1 * getLabelFiltersList().size();
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -2123,7 +1883,7 @@ private static final long serialVersionUID = 0L;
           .equals(other.getCategoryFiltersList())) return false;
       if (!getLabelFiltersList()
           .equals(other.getLabelFiltersList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -2156,7 +1916,7 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + LABEL_FILTERS_FIELD_NUMBER;
         hash = (53 * hash) + getLabelFiltersList().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -2277,18 +2037,13 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.google.ads.googleads.v10.resources.Feed.PlacesLocationFeedData.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2447,7 +2202,7 @@ private static final long serialVersionUID = 0L;
           }
           onChanged();
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2462,17 +2217,64 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.ads.googleads.v10.resources.Feed.PlacesLocationFeedData parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getOauthInfoFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 10
+              case 58: {
+                emailAddress_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 58
+              case 66: {
+                businessAccountId_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 66
+              case 74: {
+                businessNameFilter_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 74
+              case 90: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureCategoryFiltersIsMutable();
+                categoryFilters_.add(s);
+                break;
+              } // case 90
+              case 98: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureLabelFiltersIsMutable();
+                labelFilters_.add(s);
+                break;
+              } // case 98
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.google.ads.googleads.v10.resources.Feed.PlacesLocationFeedData) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -3371,7 +3173,18 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new PlacesLocationFeedData(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -3479,76 +3292,6 @@ private static final long serialVersionUID = 0L;
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private AffiliateLocationFeedData(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 16: {
-              int rawValue = input.readEnum();
-
-              relationshipType_ = rawValue;
-              break;
-            }
-            case 24: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                chainIds_ = newLongList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              chainIds_.addLong(input.readInt64());
-              break;
-            }
-            case 26: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                chainIds_ = newLongList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                chainIds_.addLong(input.readInt64());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          chainIds_.makeImmutable(); // C
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -3658,7 +3401,7 @@ private static final long serialVersionUID = 0L;
       for (int i = 0; i < chainIds_.size(); i++) {
         output.writeInt64NoTag(chainIds_.getLong(i));
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -3685,7 +3428,7 @@ private static final long serialVersionUID = 0L;
         }
         chainIdsMemoizedSerializedSize = dataSize;
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -3703,7 +3446,7 @@ private static final long serialVersionUID = 0L;
       if (!getChainIdsList()
           .equals(other.getChainIdsList())) return false;
       if (relationshipType_ != other.relationshipType_) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -3720,7 +3463,7 @@ private static final long serialVersionUID = 0L;
       }
       hash = (37 * hash) + RELATIONSHIP_TYPE_FIELD_NUMBER;
       hash = (53 * hash) + relationshipType_;
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -3842,18 +3585,13 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.google.ads.googleads.v10.resources.Feed.AffiliateLocationFeedData.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -3956,7 +3694,7 @@ private static final long serialVersionUID = 0L;
         if (other.relationshipType_ != 0) {
           setRelationshipTypeValue(other.getRelationshipTypeValue());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -3971,17 +3709,51 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.ads.googleads.v10.resources.Feed.AffiliateLocationFeedData parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 16: {
+                relationshipType_ = input.readEnum();
+
+                break;
+              } // case 16
+              case 24: {
+                long v = input.readInt64();
+                ensureChainIdsIsMutable();
+                chainIds_.addLong(v);
+                break;
+              } // case 24
+              case 26: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureChainIdsIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  chainIds_.addLong(input.readInt64());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.google.ads.googleads.v10.resources.Feed.AffiliateLocationFeedData) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -4206,7 +3978,18 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AffiliateLocationFeedData(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -4731,7 +4514,7 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 12, name_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -4774,7 +4557,7 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, name_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -4820,7 +4603,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -4866,7 +4649,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -4987,20 +4770,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v10.resources.Feed.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getAttributesFieldBuilder();
-        getAttributeOperationsFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -5013,20 +4789,28 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000002);
       if (attributesBuilder_ == null) {
         attributes_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
       } else {
+        attributes_ = null;
         attributesBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000004);
       if (attributeOperationsBuilder_ == null) {
         attributeOperations_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
       } else {
+        attributeOperations_ = null;
         attributeOperationsBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000008);
       origin_ = 0;
 
       status_ = 0;
 
+      if (placesLocationFeedDataBuilder_ != null) {
+        placesLocationFeedDataBuilder_.clear();
+      }
+      if (affiliateLocationFeedDataBuilder_ != null) {
+        affiliateLocationFeedDataBuilder_.clear();
+      }
       systemFeedGenerationDataCase_ = 0;
       systemFeedGenerationData_ = null;
       return this;
@@ -5233,7 +5017,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -5248,17 +5032,95 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.ads.googleads.v10.resources.Feed parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              resourceName_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 10
+            case 34: {
+              com.google.ads.googleads.v10.resources.FeedAttribute m =
+                  input.readMessage(
+                      com.google.ads.googleads.v10.resources.FeedAttribute.parser(),
+                      extensionRegistry);
+              if (attributesBuilder_ == null) {
+                ensureAttributesIsMutable();
+                attributes_.add(m);
+              } else {
+                attributesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 34
+            case 40: {
+              origin_ = input.readEnum();
+
+              break;
+            } // case 40
+            case 50: {
+              input.readMessage(
+                  getPlacesLocationFeedDataFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              systemFeedGenerationDataCase_ = 6;
+              break;
+            } // case 50
+            case 58: {
+              input.readMessage(
+                  getAffiliateLocationFeedDataFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              systemFeedGenerationDataCase_ = 7;
+              break;
+            } // case 58
+            case 64: {
+              status_ = input.readEnum();
+
+              break;
+            } // case 64
+            case 74: {
+              com.google.ads.googleads.v10.resources.FeedAttributeOperation m =
+                  input.readMessage(
+                      com.google.ads.googleads.v10.resources.FeedAttributeOperation.parser(),
+                      extensionRegistry);
+              if (attributeOperationsBuilder_ == null) {
+                ensureAttributeOperationsIsMutable();
+                attributeOperations_.add(m);
+              } else {
+                attributeOperationsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 74
+            case 88: {
+              id_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 88
+            case 98: {
+              name_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 98
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v10.resources.Feed) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int systemFeedGenerationDataCase_ = 0;
@@ -6796,7 +6658,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new Feed(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

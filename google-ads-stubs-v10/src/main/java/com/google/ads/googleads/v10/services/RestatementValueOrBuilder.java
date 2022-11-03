@@ -43,7 +43,7 @@ public interface RestatementValueOrBuilder extends
    * The currency of the restated value. If not provided, then the default
    * currency from the conversion action is used, and if that is not set then
    * the account currency is used. This is the ISO 4217 3-character currency
-   * code e.g. USD or EUR.
+   * code for example, USD or EUR.
    * </pre>
    *
    * <code>optional string currency_code = 4;</code>
@@ -55,7 +55,7 @@ public interface RestatementValueOrBuilder extends
    * The currency of the restated value. If not provided, then the default
    * currency from the conversion action is used, and if that is not set then
    * the account currency is used. This is the ISO 4217 3-character currency
-   * code e.g. USD or EUR.
+   * code for example, USD or EUR.
    * </pre>
    *
    * <code>optional string currency_code = 4;</code>
@@ -67,7 +67,7 @@ public interface RestatementValueOrBuilder extends
    * The currency of the restated value. If not provided, then the default
    * currency from the conversion action is used, and if that is not set then
    * the account currency is used. This is the ISO 4217 3-character currency
-   * code e.g. USD or EUR.
+   * code for example, USD or EUR.
    * </pre>
    *
    * <code>optional string currency_code = 4;</code>

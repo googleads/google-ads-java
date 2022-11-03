@@ -48,147 +48,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private DynamicRealEstateAsset(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            listingId_ = s;
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            listingName_ = s;
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            cityName_ = s;
-            break;
-          }
-          case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            description_ = s;
-            break;
-          }
-          case 42: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            address_ = s;
-            break;
-          }
-          case 50: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            price_ = s;
-            break;
-          }
-          case 58: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            imageUrl_ = s;
-            break;
-          }
-          case 66: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            propertyType_ = s;
-            break;
-          }
-          case 74: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            listingType_ = s;
-            break;
-          }
-          case 82: {
-            java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              contextualKeywords_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            contextualKeywords_.add(s);
-            break;
-          }
-          case 90: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            formattedPrice_ = s;
-            break;
-          }
-          case 98: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            androidAppLink_ = s;
-            break;
-          }
-          case 106: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            iosAppLink_ = s;
-            break;
-          }
-          case 112: {
-
-            iosAppStoreId_ = input.readInt64();
-            break;
-          }
-          case 122: {
-            java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              similarListingIds_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000002;
-            }
-            similarListingIds_.add(s);
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        contextualKeywords_ = contextualKeywords_.getUnmodifiableView();
-      }
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
-        similarListingIds_ = similarListingIds_.getUnmodifiableView();
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v10.common.AssetTypesProto.internal_static_google_ads_googleads_v10_common_DynamicRealEstateAsset_descriptor;
@@ -254,7 +113,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object listingName_;
   /**
    * <pre>
-   * Required. Listing name, e.g. Boulevard Bungalow. Required.
+   * Required. Listing name, for example, Boulevard Bungalow. Required.
    * </pre>
    *
    * <code>string listing_name = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -275,7 +134,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Required. Listing name, e.g. Boulevard Bungalow. Required.
+   * Required. Listing name, for example, Boulevard Bungalow. Required.
    * </pre>
    *
    * <code>string listing_name = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -300,7 +159,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object cityName_;
   /**
    * <pre>
-   * City name, e.g. Mountain View, California.
+   * City name, for example, Mountain View, California.
    * </pre>
    *
    * <code>string city_name = 3;</code>
@@ -321,7 +180,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * City name, e.g. Mountain View, California.
+   * City name, for example, Mountain View, California.
    * </pre>
    *
    * <code>string city_name = 3;</code>
@@ -346,7 +205,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object description_;
   /**
    * <pre>
-   * Description, e.g. 3 beds, 2 baths, 1568 sq. ft.
+   * Description, for example, 3 beds, 2 baths, 1568 sq. ft.
    * </pre>
    *
    * <code>string description = 4;</code>
@@ -367,7 +226,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Description, e.g. 3 beds, 2 baths, 1568 sq. ft.
+   * Description, for example, 3 beds, 2 baths, 1568 sq. ft.
    * </pre>
    *
    * <code>string description = 4;</code>
@@ -393,9 +252,9 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Address which can be specified in one of the following formats.
-   * (1) City, state, code, country, e.g. Mountain View, CA, USA.
-   * (2) Full address, e.g. 123 Boulevard St, Mountain View, CA 94043.
-   * (3) Latitude-longitude in the DDD format, e.g. 41.40338, 2.17403
+   * (1) City, state, code, country, for example, Mountain View, CA, USA.
+   * (2) Full address, for example, 123 Boulevard St, Mountain View, CA 94043.
+   * (3) Latitude-longitude in the DDD format, for example, 41.40338, 2.17403
    * </pre>
    *
    * <code>string address = 5;</code>
@@ -417,9 +276,9 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Address which can be specified in one of the following formats.
-   * (1) City, state, code, country, e.g. Mountain View, CA, USA.
-   * (2) Full address, e.g. 123 Boulevard St, Mountain View, CA 94043.
-   * (3) Latitude-longitude in the DDD format, e.g. 41.40338, 2.17403
+   * (1) City, state, code, country, for example, Mountain View, CA, USA.
+   * (2) Full address, for example, 123 Boulevard St, Mountain View, CA 94043.
+   * (3) Latitude-longitude in the DDD format, for example, 41.40338, 2.17403
    * </pre>
    *
    * <code>string address = 5;</code>
@@ -445,7 +304,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Price which can be number followed by the alphabetic currency code,
-   * ISO 4217 standard. Use '.' as the decimal mark. e.g. 200,000.00 USD.
+   * ISO 4217 standard. Use '.' as the decimal mark, for example, 200,000.00
+   * USD.
    * </pre>
    *
    * <code>string price = 6;</code>
@@ -467,7 +327,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Price which can be number followed by the alphabetic currency code,
-   * ISO 4217 standard. Use '.' as the decimal mark. e.g. 200,000.00 USD.
+   * ISO 4217 standard. Use '.' as the decimal mark, for example, 200,000.00
+   * USD.
    * </pre>
    *
    * <code>string price = 6;</code>
@@ -492,8 +353,8 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object imageUrl_;
   /**
    * <pre>
-   * Image URL, e.g. http://www.example.com/image.png. The image will not be
-   * uploaded as image asset.
+   * Image URL, for example, http://www.example.com/image.png. The image will
+   * not be uploaded as image asset.
    * </pre>
    *
    * <code>string image_url = 7;</code>
@@ -514,8 +375,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Image URL, e.g. http://www.example.com/image.png. The image will not be
-   * uploaded as image asset.
+   * Image URL, for example, http://www.example.com/image.png. The image will
+   * not be uploaded as image asset.
    * </pre>
    *
    * <code>string image_url = 7;</code>
@@ -540,7 +401,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object propertyType_;
   /**
    * <pre>
-   * Property type, e.g. House.
+   * Property type, for example, House.
    * </pre>
    *
    * <code>string property_type = 8;</code>
@@ -561,7 +422,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Property type, e.g. House.
+   * Property type, for example, House.
    * </pre>
    *
    * <code>string property_type = 8;</code>
@@ -586,7 +447,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object listingType_;
   /**
    * <pre>
-   * Listing type, e.g. For sale.
+   * Listing type, for example, For sale.
    * </pre>
    *
    * <code>string listing_type = 9;</code>
@@ -607,7 +468,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Listing type, e.g. For sale.
+   * Listing type, for example, For sale.
    * </pre>
    *
    * <code>string listing_type = 9;</code>
@@ -632,7 +493,7 @@ private static final long serialVersionUID = 0L;
   private com.google.protobuf.LazyStringList contextualKeywords_;
   /**
    * <pre>
-   * Contextual keywords, e.g. For sale; Houses for sale.
+   * Contextual keywords, for example, For sale; Houses for sale.
    * </pre>
    *
    * <code>repeated string contextual_keywords = 10;</code>
@@ -644,7 +505,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Contextual keywords, e.g. For sale; Houses for sale.
+   * Contextual keywords, for example, For sale; Houses for sale.
    * </pre>
    *
    * <code>repeated string contextual_keywords = 10;</code>
@@ -655,7 +516,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Contextual keywords, e.g. For sale; Houses for sale.
+   * Contextual keywords, for example, For sale; Houses for sale.
    * </pre>
    *
    * <code>repeated string contextual_keywords = 10;</code>
@@ -667,7 +528,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Contextual keywords, e.g. For sale; Houses for sale.
+   * Contextual keywords, for example, For sale; Houses for sale.
    * </pre>
    *
    * <code>repeated string contextual_keywords = 10;</code>
@@ -684,7 +545,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Formatted price which can be any characters. If set, this attribute will be
-   * used instead of 'price', e.g. Starting at $200,000.00.
+   * used instead of 'price', for example, Starting at $200,000.00.
    * </pre>
    *
    * <code>string formatted_price = 11;</code>
@@ -706,7 +567,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Formatted price which can be any characters. If set, this attribute will be
-   * used instead of 'price', e.g. Starting at $200,000.00.
+   * used instead of 'price', for example, Starting at $200,000.00.
    * </pre>
    *
    * <code>string formatted_price = 11;</code>
@@ -731,7 +592,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object androidAppLink_;
   /**
    * <pre>
-   * Android deep link, e.g.
+   * Android deep link, for example,
    * android-app://com.example.android/http/example.com/gizmos?1234.
    * </pre>
    *
@@ -753,7 +614,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Android deep link, e.g.
+   * Android deep link, for example,
    * android-app://com.example.android/http/example.com/gizmos?1234.
    * </pre>
    *
@@ -779,7 +640,7 @@ private static final long serialVersionUID = 0L;
   private volatile java.lang.Object iosAppLink_;
   /**
    * <pre>
-   * iOS deep link, e.g. exampleApp://content/page.
+   * iOS deep link, for example, exampleApp://content/page.
    * </pre>
    *
    * <code>string ios_app_link = 13;</code>
@@ -800,7 +661,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * iOS deep link, e.g. exampleApp://content/page.
+   * iOS deep link, for example, exampleApp://content/page.
    * </pre>
    *
    * <code>string ios_app_link = 13;</code>
@@ -948,7 +809,7 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < similarListingIds_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 15, similarListingIds_.getRaw(i));
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -1013,7 +874,7 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getSimilarListingIdsList().size();
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -1058,7 +919,7 @@ private static final long serialVersionUID = 0L;
         != other.getIosAppStoreId()) return false;
     if (!getSimilarListingIdsList()
         .equals(other.getSimilarListingIdsList())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -1104,7 +965,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + SIMILAR_LISTING_IDS_FIELD_NUMBER;
       hash = (53 * hash) + getSimilarListingIdsList().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -1225,18 +1086,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v10.common.DynamicRealEstateAsset.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -1440,7 +1296,7 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1455,17 +1311,107 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.ads.googleads.v10.common.DynamicRealEstateAsset parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              listingId_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 10
+            case 18: {
+              listingName_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 18
+            case 26: {
+              cityName_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 26
+            case 34: {
+              description_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 34
+            case 42: {
+              address_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 42
+            case 50: {
+              price_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 50
+            case 58: {
+              imageUrl_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 58
+            case 66: {
+              propertyType_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 66
+            case 74: {
+              listingType_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 74
+            case 82: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureContextualKeywordsIsMutable();
+              contextualKeywords_.add(s);
+              break;
+            } // case 82
+            case 90: {
+              formattedPrice_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 90
+            case 98: {
+              androidAppLink_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 98
+            case 106: {
+              iosAppLink_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 106
+            case 112: {
+              iosAppStoreId_ = input.readInt64();
+
+              break;
+            } // case 112
+            case 122: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureSimilarListingIdsIsMutable();
+              similarListingIds_.add(s);
+              break;
+            } // case 122
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v10.common.DynamicRealEstateAsset) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -1574,7 +1520,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object listingName_ = "";
     /**
      * <pre>
-     * Required. Listing name, e.g. Boulevard Bungalow. Required.
+     * Required. Listing name, for example, Boulevard Bungalow. Required.
      * </pre>
      *
      * <code>string listing_name = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1594,7 +1540,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Listing name, e.g. Boulevard Bungalow. Required.
+     * Required. Listing name, for example, Boulevard Bungalow. Required.
      * </pre>
      *
      * <code>string listing_name = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1615,7 +1561,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Listing name, e.g. Boulevard Bungalow. Required.
+     * Required. Listing name, for example, Boulevard Bungalow. Required.
      * </pre>
      *
      * <code>string listing_name = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1634,7 +1580,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Listing name, e.g. Boulevard Bungalow. Required.
+     * Required. Listing name, for example, Boulevard Bungalow. Required.
      * </pre>
      *
      * <code>string listing_name = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1648,7 +1594,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Required. Listing name, e.g. Boulevard Bungalow. Required.
+     * Required. Listing name, for example, Boulevard Bungalow. Required.
      * </pre>
      *
      * <code>string listing_name = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -1670,7 +1616,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object cityName_ = "";
     /**
      * <pre>
-     * City name, e.g. Mountain View, California.
+     * City name, for example, Mountain View, California.
      * </pre>
      *
      * <code>string city_name = 3;</code>
@@ -1690,7 +1636,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * City name, e.g. Mountain View, California.
+     * City name, for example, Mountain View, California.
      * </pre>
      *
      * <code>string city_name = 3;</code>
@@ -1711,7 +1657,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * City name, e.g. Mountain View, California.
+     * City name, for example, Mountain View, California.
      * </pre>
      *
      * <code>string city_name = 3;</code>
@@ -1730,7 +1676,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * City name, e.g. Mountain View, California.
+     * City name, for example, Mountain View, California.
      * </pre>
      *
      * <code>string city_name = 3;</code>
@@ -1744,7 +1690,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * City name, e.g. Mountain View, California.
+     * City name, for example, Mountain View, California.
      * </pre>
      *
      * <code>string city_name = 3;</code>
@@ -1766,7 +1712,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object description_ = "";
     /**
      * <pre>
-     * Description, e.g. 3 beds, 2 baths, 1568 sq. ft.
+     * Description, for example, 3 beds, 2 baths, 1568 sq. ft.
      * </pre>
      *
      * <code>string description = 4;</code>
@@ -1786,7 +1732,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Description, e.g. 3 beds, 2 baths, 1568 sq. ft.
+     * Description, for example, 3 beds, 2 baths, 1568 sq. ft.
      * </pre>
      *
      * <code>string description = 4;</code>
@@ -1807,7 +1753,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Description, e.g. 3 beds, 2 baths, 1568 sq. ft.
+     * Description, for example, 3 beds, 2 baths, 1568 sq. ft.
      * </pre>
      *
      * <code>string description = 4;</code>
@@ -1826,7 +1772,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Description, e.g. 3 beds, 2 baths, 1568 sq. ft.
+     * Description, for example, 3 beds, 2 baths, 1568 sq. ft.
      * </pre>
      *
      * <code>string description = 4;</code>
@@ -1840,7 +1786,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Description, e.g. 3 beds, 2 baths, 1568 sq. ft.
+     * Description, for example, 3 beds, 2 baths, 1568 sq. ft.
      * </pre>
      *
      * <code>string description = 4;</code>
@@ -1863,9 +1809,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Address which can be specified in one of the following formats.
-     * (1) City, state, code, country, e.g. Mountain View, CA, USA.
-     * (2) Full address, e.g. 123 Boulevard St, Mountain View, CA 94043.
-     * (3) Latitude-longitude in the DDD format, e.g. 41.40338, 2.17403
+     * (1) City, state, code, country, for example, Mountain View, CA, USA.
+     * (2) Full address, for example, 123 Boulevard St, Mountain View, CA 94043.
+     * (3) Latitude-longitude in the DDD format, for example, 41.40338, 2.17403
      * </pre>
      *
      * <code>string address = 5;</code>
@@ -1886,9 +1832,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Address which can be specified in one of the following formats.
-     * (1) City, state, code, country, e.g. Mountain View, CA, USA.
-     * (2) Full address, e.g. 123 Boulevard St, Mountain View, CA 94043.
-     * (3) Latitude-longitude in the DDD format, e.g. 41.40338, 2.17403
+     * (1) City, state, code, country, for example, Mountain View, CA, USA.
+     * (2) Full address, for example, 123 Boulevard St, Mountain View, CA 94043.
+     * (3) Latitude-longitude in the DDD format, for example, 41.40338, 2.17403
      * </pre>
      *
      * <code>string address = 5;</code>
@@ -1910,9 +1856,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Address which can be specified in one of the following formats.
-     * (1) City, state, code, country, e.g. Mountain View, CA, USA.
-     * (2) Full address, e.g. 123 Boulevard St, Mountain View, CA 94043.
-     * (3) Latitude-longitude in the DDD format, e.g. 41.40338, 2.17403
+     * (1) City, state, code, country, for example, Mountain View, CA, USA.
+     * (2) Full address, for example, 123 Boulevard St, Mountain View, CA 94043.
+     * (3) Latitude-longitude in the DDD format, for example, 41.40338, 2.17403
      * </pre>
      *
      * <code>string address = 5;</code>
@@ -1932,9 +1878,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Address which can be specified in one of the following formats.
-     * (1) City, state, code, country, e.g. Mountain View, CA, USA.
-     * (2) Full address, e.g. 123 Boulevard St, Mountain View, CA 94043.
-     * (3) Latitude-longitude in the DDD format, e.g. 41.40338, 2.17403
+     * (1) City, state, code, country, for example, Mountain View, CA, USA.
+     * (2) Full address, for example, 123 Boulevard St, Mountain View, CA 94043.
+     * (3) Latitude-longitude in the DDD format, for example, 41.40338, 2.17403
      * </pre>
      *
      * <code>string address = 5;</code>
@@ -1949,9 +1895,9 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Address which can be specified in one of the following formats.
-     * (1) City, state, code, country, e.g. Mountain View, CA, USA.
-     * (2) Full address, e.g. 123 Boulevard St, Mountain View, CA 94043.
-     * (3) Latitude-longitude in the DDD format, e.g. 41.40338, 2.17403
+     * (1) City, state, code, country, for example, Mountain View, CA, USA.
+     * (2) Full address, for example, 123 Boulevard St, Mountain View, CA 94043.
+     * (3) Latitude-longitude in the DDD format, for example, 41.40338, 2.17403
      * </pre>
      *
      * <code>string address = 5;</code>
@@ -1974,7 +1920,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Price which can be number followed by the alphabetic currency code,
-     * ISO 4217 standard. Use '.' as the decimal mark. e.g. 200,000.00 USD.
+     * ISO 4217 standard. Use '.' as the decimal mark, for example, 200,000.00
+     * USD.
      * </pre>
      *
      * <code>string price = 6;</code>
@@ -1995,7 +1942,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Price which can be number followed by the alphabetic currency code,
-     * ISO 4217 standard. Use '.' as the decimal mark. e.g. 200,000.00 USD.
+     * ISO 4217 standard. Use '.' as the decimal mark, for example, 200,000.00
+     * USD.
      * </pre>
      *
      * <code>string price = 6;</code>
@@ -2017,7 +1965,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Price which can be number followed by the alphabetic currency code,
-     * ISO 4217 standard. Use '.' as the decimal mark. e.g. 200,000.00 USD.
+     * ISO 4217 standard. Use '.' as the decimal mark, for example, 200,000.00
+     * USD.
      * </pre>
      *
      * <code>string price = 6;</code>
@@ -2037,7 +1986,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Price which can be number followed by the alphabetic currency code,
-     * ISO 4217 standard. Use '.' as the decimal mark. e.g. 200,000.00 USD.
+     * ISO 4217 standard. Use '.' as the decimal mark, for example, 200,000.00
+     * USD.
      * </pre>
      *
      * <code>string price = 6;</code>
@@ -2052,7 +2002,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Price which can be number followed by the alphabetic currency code,
-     * ISO 4217 standard. Use '.' as the decimal mark. e.g. 200,000.00 USD.
+     * ISO 4217 standard. Use '.' as the decimal mark, for example, 200,000.00
+     * USD.
      * </pre>
      *
      * <code>string price = 6;</code>
@@ -2074,8 +2025,8 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object imageUrl_ = "";
     /**
      * <pre>
-     * Image URL, e.g. http://www.example.com/image.png. The image will not be
-     * uploaded as image asset.
+     * Image URL, for example, http://www.example.com/image.png. The image will
+     * not be uploaded as image asset.
      * </pre>
      *
      * <code>string image_url = 7;</code>
@@ -2095,8 +2046,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Image URL, e.g. http://www.example.com/image.png. The image will not be
-     * uploaded as image asset.
+     * Image URL, for example, http://www.example.com/image.png. The image will
+     * not be uploaded as image asset.
      * </pre>
      *
      * <code>string image_url = 7;</code>
@@ -2117,8 +2068,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Image URL, e.g. http://www.example.com/image.png. The image will not be
-     * uploaded as image asset.
+     * Image URL, for example, http://www.example.com/image.png. The image will
+     * not be uploaded as image asset.
      * </pre>
      *
      * <code>string image_url = 7;</code>
@@ -2137,8 +2088,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Image URL, e.g. http://www.example.com/image.png. The image will not be
-     * uploaded as image asset.
+     * Image URL, for example, http://www.example.com/image.png. The image will
+     * not be uploaded as image asset.
      * </pre>
      *
      * <code>string image_url = 7;</code>
@@ -2152,8 +2103,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Image URL, e.g. http://www.example.com/image.png. The image will not be
-     * uploaded as image asset.
+     * Image URL, for example, http://www.example.com/image.png. The image will
+     * not be uploaded as image asset.
      * </pre>
      *
      * <code>string image_url = 7;</code>
@@ -2175,7 +2126,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object propertyType_ = "";
     /**
      * <pre>
-     * Property type, e.g. House.
+     * Property type, for example, House.
      * </pre>
      *
      * <code>string property_type = 8;</code>
@@ -2195,7 +2146,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Property type, e.g. House.
+     * Property type, for example, House.
      * </pre>
      *
      * <code>string property_type = 8;</code>
@@ -2216,7 +2167,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Property type, e.g. House.
+     * Property type, for example, House.
      * </pre>
      *
      * <code>string property_type = 8;</code>
@@ -2235,7 +2186,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Property type, e.g. House.
+     * Property type, for example, House.
      * </pre>
      *
      * <code>string property_type = 8;</code>
@@ -2249,7 +2200,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Property type, e.g. House.
+     * Property type, for example, House.
      * </pre>
      *
      * <code>string property_type = 8;</code>
@@ -2271,7 +2222,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object listingType_ = "";
     /**
      * <pre>
-     * Listing type, e.g. For sale.
+     * Listing type, for example, For sale.
      * </pre>
      *
      * <code>string listing_type = 9;</code>
@@ -2291,7 +2242,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Listing type, e.g. For sale.
+     * Listing type, for example, For sale.
      * </pre>
      *
      * <code>string listing_type = 9;</code>
@@ -2312,7 +2263,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Listing type, e.g. For sale.
+     * Listing type, for example, For sale.
      * </pre>
      *
      * <code>string listing_type = 9;</code>
@@ -2331,7 +2282,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Listing type, e.g. For sale.
+     * Listing type, for example, For sale.
      * </pre>
      *
      * <code>string listing_type = 9;</code>
@@ -2345,7 +2296,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Listing type, e.g. For sale.
+     * Listing type, for example, For sale.
      * </pre>
      *
      * <code>string listing_type = 9;</code>
@@ -2373,7 +2324,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contextual keywords, e.g. For sale; Houses for sale.
+     * Contextual keywords, for example, For sale; Houses for sale.
      * </pre>
      *
      * <code>repeated string contextual_keywords = 10;</code>
@@ -2385,7 +2336,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contextual keywords, e.g. For sale; Houses for sale.
+     * Contextual keywords, for example, For sale; Houses for sale.
      * </pre>
      *
      * <code>repeated string contextual_keywords = 10;</code>
@@ -2396,7 +2347,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contextual keywords, e.g. For sale; Houses for sale.
+     * Contextual keywords, for example, For sale; Houses for sale.
      * </pre>
      *
      * <code>repeated string contextual_keywords = 10;</code>
@@ -2408,7 +2359,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contextual keywords, e.g. For sale; Houses for sale.
+     * Contextual keywords, for example, For sale; Houses for sale.
      * </pre>
      *
      * <code>repeated string contextual_keywords = 10;</code>
@@ -2421,7 +2372,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contextual keywords, e.g. For sale; Houses for sale.
+     * Contextual keywords, for example, For sale; Houses for sale.
      * </pre>
      *
      * <code>repeated string contextual_keywords = 10;</code>
@@ -2441,7 +2392,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contextual keywords, e.g. For sale; Houses for sale.
+     * Contextual keywords, for example, For sale; Houses for sale.
      * </pre>
      *
      * <code>repeated string contextual_keywords = 10;</code>
@@ -2460,7 +2411,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contextual keywords, e.g. For sale; Houses for sale.
+     * Contextual keywords, for example, For sale; Houses for sale.
      * </pre>
      *
      * <code>repeated string contextual_keywords = 10;</code>
@@ -2477,7 +2428,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contextual keywords, e.g. For sale; Houses for sale.
+     * Contextual keywords, for example, For sale; Houses for sale.
      * </pre>
      *
      * <code>repeated string contextual_keywords = 10;</code>
@@ -2491,7 +2442,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Contextual keywords, e.g. For sale; Houses for sale.
+     * Contextual keywords, for example, For sale; Houses for sale.
      * </pre>
      *
      * <code>repeated string contextual_keywords = 10;</code>
@@ -2514,7 +2465,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Formatted price which can be any characters. If set, this attribute will be
-     * used instead of 'price', e.g. Starting at $200,000.00.
+     * used instead of 'price', for example, Starting at $200,000.00.
      * </pre>
      *
      * <code>string formatted_price = 11;</code>
@@ -2535,7 +2486,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Formatted price which can be any characters. If set, this attribute will be
-     * used instead of 'price', e.g. Starting at $200,000.00.
+     * used instead of 'price', for example, Starting at $200,000.00.
      * </pre>
      *
      * <code>string formatted_price = 11;</code>
@@ -2557,7 +2508,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Formatted price which can be any characters. If set, this attribute will be
-     * used instead of 'price', e.g. Starting at $200,000.00.
+     * used instead of 'price', for example, Starting at $200,000.00.
      * </pre>
      *
      * <code>string formatted_price = 11;</code>
@@ -2577,7 +2528,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Formatted price which can be any characters. If set, this attribute will be
-     * used instead of 'price', e.g. Starting at $200,000.00.
+     * used instead of 'price', for example, Starting at $200,000.00.
      * </pre>
      *
      * <code>string formatted_price = 11;</code>
@@ -2592,7 +2543,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Formatted price which can be any characters. If set, this attribute will be
-     * used instead of 'price', e.g. Starting at $200,000.00.
+     * used instead of 'price', for example, Starting at $200,000.00.
      * </pre>
      *
      * <code>string formatted_price = 11;</code>
@@ -2614,7 +2565,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object androidAppLink_ = "";
     /**
      * <pre>
-     * Android deep link, e.g.
+     * Android deep link, for example,
      * android-app://com.example.android/http/example.com/gizmos?1234.
      * </pre>
      *
@@ -2635,7 +2586,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Android deep link, e.g.
+     * Android deep link, for example,
      * android-app://com.example.android/http/example.com/gizmos?1234.
      * </pre>
      *
@@ -2657,7 +2608,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Android deep link, e.g.
+     * Android deep link, for example,
      * android-app://com.example.android/http/example.com/gizmos?1234.
      * </pre>
      *
@@ -2677,7 +2628,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Android deep link, e.g.
+     * Android deep link, for example,
      * android-app://com.example.android/http/example.com/gizmos?1234.
      * </pre>
      *
@@ -2692,7 +2643,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Android deep link, e.g.
+     * Android deep link, for example,
      * android-app://com.example.android/http/example.com/gizmos?1234.
      * </pre>
      *
@@ -2715,7 +2666,7 @@ private static final long serialVersionUID = 0L;
     private java.lang.Object iosAppLink_ = "";
     /**
      * <pre>
-     * iOS deep link, e.g. exampleApp://content/page.
+     * iOS deep link, for example, exampleApp://content/page.
      * </pre>
      *
      * <code>string ios_app_link = 13;</code>
@@ -2735,7 +2686,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * iOS deep link, e.g. exampleApp://content/page.
+     * iOS deep link, for example, exampleApp://content/page.
      * </pre>
      *
      * <code>string ios_app_link = 13;</code>
@@ -2756,7 +2707,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * iOS deep link, e.g. exampleApp://content/page.
+     * iOS deep link, for example, exampleApp://content/page.
      * </pre>
      *
      * <code>string ios_app_link = 13;</code>
@@ -2775,7 +2726,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * iOS deep link, e.g. exampleApp://content/page.
+     * iOS deep link, for example, exampleApp://content/page.
      * </pre>
      *
      * <code>string ios_app_link = 13;</code>
@@ -2789,7 +2740,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * iOS deep link, e.g. exampleApp://content/page.
+     * iOS deep link, for example, exampleApp://content/page.
      * </pre>
      *
      * <code>string ios_app_link = 13;</code>
@@ -3035,7 +2986,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new DynamicRealEstateAsset(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

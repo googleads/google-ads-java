@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Google LLC
+ * Copyright 2022 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,7 +22,6 @@ import com.google.ads.googleads.v10.services.stub.BatchJobServiceStub;
 import com.google.ads.googleads.v10.services.stub.BatchJobServiceStubSettings;
 import com.google.api.core.ApiFuture;
 import com.google.api.core.ApiFutures;
-import com.google.api.core.BetaApi;
 import com.google.api.gax.core.BackgroundResource;
 import com.google.api.gax.longrunning.OperationFuture;
 import com.google.api.gax.paging.AbstractFixedSizeCollection;
@@ -48,6 +47,11 @@ import javax.annotation.Generated;
  * calls that map to API methods. Sample code to get started:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (BatchJobServiceClient batchJobServiceClient = BatchJobServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
  *   BatchJobOperation operation = BatchJobOperation.newBuilder().build();
@@ -63,13 +67,13 @@ import javax.annotation.Generated;
  * methods:
  *
  * <ol>
- *   <li> A "flattened" method. With this type of method, the fields of the request type have been
+ *   <li>A "flattened" method. With this type of method, the fields of the request type have been
  *       converted into function parameters. It may be the case that not all fields are available as
  *       parameters, and not every API method will have a flattened method entry point.
- *   <li> A "request object" method. This type of method only takes one parameter, a request object,
+ *   <li>A "request object" method. This type of method only takes one parameter, a request object,
  *       which must be constructed before the call. Not every API method will have a request object
  *       method.
- *   <li> A "callable" method. This type of method takes no parameters and returns an immutable API
+ *   <li>A "callable" method. This type of method takes no parameters and returns an immutable API
  *       callable object, which can be used to initiate calls to the service.
  * </ol>
  *
@@ -85,6 +89,11 @@ import javax.annotation.Generated;
  * <p>To customize credentials:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * BatchJobServiceSettings batchJobServiceSettings =
  *     BatchJobServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
@@ -96,6 +105,11 @@ import javax.annotation.Generated;
  * <p>To customize the endpoint:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * BatchJobServiceSettings batchJobServiceSettings =
  *     BatchJobServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * BatchJobServiceClient batchJobServiceClient =
@@ -128,7 +142,6 @@ public class BatchJobServiceClient implements BackgroundResource {
    * Constructs an instance of BatchJobServiceClient, using the given stub for making calls. This is
    * for advanced usage - prefer using create(BatchJobServiceSettings).
    */
-  @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public static final BatchJobServiceClient create(BatchJobServiceStub stub) {
     return new BatchJobServiceClient(stub);
   }
@@ -144,7 +157,6 @@ public class BatchJobServiceClient implements BackgroundResource {
     this.operationsClient = OperationsClient.create(this.stub.getOperationsStub());
   }
 
-  @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   protected BatchJobServiceClient(BatchJobServiceStub stub) {
     this.settings = null;
     this.stub = stub;
@@ -155,7 +167,6 @@ public class BatchJobServiceClient implements BackgroundResource {
     return settings;
   }
 
-  @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public BatchJobServiceStub getStub() {
     return stub;
   }
@@ -178,6 +189,11 @@ public class BatchJobServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (BatchJobServiceClient batchJobServiceClient = BatchJobServiceClient.create()) {
    *   String customerId = "customerId-1581184615";
    *   BatchJobOperation operation = BatchJobOperation.newBuilder().build();
@@ -209,6 +225,11 @@ public class BatchJobServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (BatchJobServiceClient batchJobServiceClient = BatchJobServiceClient.create()) {
    *   MutateBatchJobRequest request =
    *       MutateBatchJobRequest.newBuilder()
@@ -236,6 +257,11 @@ public class BatchJobServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (BatchJobServiceClient batchJobServiceClient = BatchJobServiceClient.create()) {
    *   MutateBatchJobRequest request =
    *       MutateBatchJobRequest.newBuilder()
@@ -264,6 +290,11 @@ public class BatchJobServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (BatchJobServiceClient batchJobServiceClient = BatchJobServiceClient.create()) {
    *   BatchJobName resourceName = BatchJobName.of("[CUSTOMER_ID]", "[BATCH_JOB_ID]");
    *   for (BatchJobResult element :
@@ -295,6 +326,11 @@ public class BatchJobServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (BatchJobServiceClient batchJobServiceClient = BatchJobServiceClient.create()) {
    *   String resourceName = BatchJobName.of("[CUSTOMER_ID]", "[BATCH_JOB_ID]").toString();
    *   for (BatchJobResult element :
@@ -324,6 +360,11 @@ public class BatchJobServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (BatchJobServiceClient batchJobServiceClient = BatchJobServiceClient.create()) {
    *   ListBatchJobResultsRequest request =
    *       ListBatchJobResultsRequest.newBuilder()
@@ -356,6 +397,11 @@ public class BatchJobServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (BatchJobServiceClient batchJobServiceClient = BatchJobServiceClient.create()) {
    *   ListBatchJobResultsRequest request =
    *       ListBatchJobResultsRequest.newBuilder()
@@ -387,6 +433,11 @@ public class BatchJobServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (BatchJobServiceClient batchJobServiceClient = BatchJobServiceClient.create()) {
    *   ListBatchJobResultsRequest request =
    *       ListBatchJobResultsRequest.newBuilder()
@@ -397,7 +448,7 @@ public class BatchJobServiceClient implements BackgroundResource {
    *   while (true) {
    *     ListBatchJobResultsResponse response =
    *         batchJobServiceClient.listBatchJobResultsCallable().call(request);
-   *     for (BatchJobResult element : response.getResponsesList()) {
+   *     for (BatchJobResult element : response.getResultsList()) {
    *       // doThingsWith(element);
    *     }
    *     String nextPageToken = response.getNextPageToken();
@@ -429,6 +480,11 @@ public class BatchJobServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (BatchJobServiceClient batchJobServiceClient = BatchJobServiceClient.create()) {
    *   BatchJobName resourceName = BatchJobName.of("[CUSTOMER_ID]", "[BATCH_JOB_ID]");
    *   batchJobServiceClient.runBatchJobAsync(resourceName).get();
@@ -461,6 +517,11 @@ public class BatchJobServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (BatchJobServiceClient batchJobServiceClient = BatchJobServiceClient.create()) {
    *   String resourceName = BatchJobName.of("[CUSTOMER_ID]", "[BATCH_JOB_ID]").toString();
    *   batchJobServiceClient.runBatchJobAsync(resourceName).get();
@@ -491,6 +552,11 @@ public class BatchJobServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (BatchJobServiceClient batchJobServiceClient = BatchJobServiceClient.create()) {
    *   RunBatchJobRequest request =
    *       RunBatchJobRequest.newBuilder()
@@ -522,6 +588,11 @@ public class BatchJobServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (BatchJobServiceClient batchJobServiceClient = BatchJobServiceClient.create()) {
    *   RunBatchJobRequest request =
    *       RunBatchJobRequest.newBuilder()
@@ -553,6 +624,11 @@ public class BatchJobServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (BatchJobServiceClient batchJobServiceClient = BatchJobServiceClient.create()) {
    *   RunBatchJobRequest request =
    *       RunBatchJobRequest.newBuilder()
@@ -579,6 +655,11 @@ public class BatchJobServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (BatchJobServiceClient batchJobServiceClient = BatchJobServiceClient.create()) {
    *   BatchJobName resourceName = BatchJobName.of("[CUSTOMER_ID]", "[BATCH_JOB_ID]");
    *   List<MutateOperation> mutateOperations = new ArrayList<>();
@@ -618,6 +699,11 @@ public class BatchJobServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (BatchJobServiceClient batchJobServiceClient = BatchJobServiceClient.create()) {
    *   String resourceName = BatchJobName.of("[CUSTOMER_ID]", "[BATCH_JOB_ID]").toString();
    *   List<MutateOperation> mutateOperations = new ArrayList<>();
@@ -657,6 +743,11 @@ public class BatchJobServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (BatchJobServiceClient batchJobServiceClient = BatchJobServiceClient.create()) {
    *   BatchJobName resourceName = BatchJobName.of("[CUSTOMER_ID]", "[BATCH_JOB_ID]");
    *   String sequenceToken = "sequenceToken-731053384";
@@ -703,6 +794,11 @@ public class BatchJobServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (BatchJobServiceClient batchJobServiceClient = BatchJobServiceClient.create()) {
    *   String resourceName = BatchJobName.of("[CUSTOMER_ID]", "[BATCH_JOB_ID]").toString();
    *   String sequenceToken = "sequenceToken-731053384";
@@ -749,6 +845,11 @@ public class BatchJobServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (BatchJobServiceClient batchJobServiceClient = BatchJobServiceClient.create()) {
    *   AddBatchJobOperationsRequest request =
    *       AddBatchJobOperationsRequest.newBuilder()
@@ -779,6 +880,11 @@ public class BatchJobServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (BatchJobServiceClient batchJobServiceClient = BatchJobServiceClient.create()) {
    *   AddBatchJobOperationsRequest request =
    *       AddBatchJobOperationsRequest.newBuilder()
@@ -830,8 +936,11 @@ public class BatchJobServiceClient implements BackgroundResource {
 
   public static class ListBatchJobResultsPagedResponse
       extends AbstractPagedListResponse<
-          ListBatchJobResultsRequest, ListBatchJobResultsResponse, BatchJobResult,
-          ListBatchJobResultsPage, ListBatchJobResultsFixedSizeCollection> {
+          ListBatchJobResultsRequest,
+          ListBatchJobResultsResponse,
+          BatchJobResult,
+          ListBatchJobResultsPage,
+          ListBatchJobResultsFixedSizeCollection> {
 
     public static ApiFuture<ListBatchJobResultsPagedResponse> createAsync(
         PageContext<ListBatchJobResultsRequest, ListBatchJobResultsResponse, BatchJobResult>
@@ -852,7 +961,9 @@ public class BatchJobServiceClient implements BackgroundResource {
 
   public static class ListBatchJobResultsPage
       extends AbstractPage<
-          ListBatchJobResultsRequest, ListBatchJobResultsResponse, BatchJobResult,
+          ListBatchJobResultsRequest,
+          ListBatchJobResultsResponse,
+          BatchJobResult,
           ListBatchJobResultsPage> {
 
     private ListBatchJobResultsPage(
@@ -885,8 +996,11 @@ public class BatchJobServiceClient implements BackgroundResource {
 
   public static class ListBatchJobResultsFixedSizeCollection
       extends AbstractFixedSizeCollection<
-          ListBatchJobResultsRequest, ListBatchJobResultsResponse, BatchJobResult,
-          ListBatchJobResultsPage, ListBatchJobResultsFixedSizeCollection> {
+          ListBatchJobResultsRequest,
+          ListBatchJobResultsResponse,
+          BatchJobResult,
+          ListBatchJobResultsPage,
+          ListBatchJobResultsFixedSizeCollection> {
 
     private ListBatchJobResultsFixedSizeCollection(
         List<ListBatchJobResultsPage> pages, int collectionSize) {

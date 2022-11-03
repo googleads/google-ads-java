@@ -38,178 +38,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private AdGroupBidModifier(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            resourceName_ = s;
-            break;
-          }
-          case 42: {
-            com.google.ads.googleads.v10.common.HotelDateSelectionTypeInfo.Builder subBuilder = null;
-            if (criterionCase_ == 5) {
-              subBuilder = ((com.google.ads.googleads.v10.common.HotelDateSelectionTypeInfo) criterion_).toBuilder();
-            }
-            criterion_ =
-                input.readMessage(com.google.ads.googleads.v10.common.HotelDateSelectionTypeInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.HotelDateSelectionTypeInfo) criterion_);
-              criterion_ = subBuilder.buildPartial();
-            }
-            criterionCase_ = 5;
-            break;
-          }
-          case 50: {
-            com.google.ads.googleads.v10.common.HotelAdvanceBookingWindowInfo.Builder subBuilder = null;
-            if (criterionCase_ == 6) {
-              subBuilder = ((com.google.ads.googleads.v10.common.HotelAdvanceBookingWindowInfo) criterion_).toBuilder();
-            }
-            criterion_ =
-                input.readMessage(com.google.ads.googleads.v10.common.HotelAdvanceBookingWindowInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.HotelAdvanceBookingWindowInfo) criterion_);
-              criterion_ = subBuilder.buildPartial();
-            }
-            criterionCase_ = 6;
-            break;
-          }
-          case 58: {
-            com.google.ads.googleads.v10.common.HotelLengthOfStayInfo.Builder subBuilder = null;
-            if (criterionCase_ == 7) {
-              subBuilder = ((com.google.ads.googleads.v10.common.HotelLengthOfStayInfo) criterion_).toBuilder();
-            }
-            criterion_ =
-                input.readMessage(com.google.ads.googleads.v10.common.HotelLengthOfStayInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.HotelLengthOfStayInfo) criterion_);
-              criterion_ = subBuilder.buildPartial();
-            }
-            criterionCase_ = 7;
-            break;
-          }
-          case 66: {
-            com.google.ads.googleads.v10.common.HotelCheckInDayInfo.Builder subBuilder = null;
-            if (criterionCase_ == 8) {
-              subBuilder = ((com.google.ads.googleads.v10.common.HotelCheckInDayInfo) criterion_).toBuilder();
-            }
-            criterion_ =
-                input.readMessage(com.google.ads.googleads.v10.common.HotelCheckInDayInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.HotelCheckInDayInfo) criterion_);
-              criterion_ = subBuilder.buildPartial();
-            }
-            criterionCase_ = 8;
-            break;
-          }
-          case 80: {
-            int rawValue = input.readEnum();
-
-            bidModifierSource_ = rawValue;
-            break;
-          }
-          case 90: {
-            com.google.ads.googleads.v10.common.DeviceInfo.Builder subBuilder = null;
-            if (criterionCase_ == 11) {
-              subBuilder = ((com.google.ads.googleads.v10.common.DeviceInfo) criterion_).toBuilder();
-            }
-            criterion_ =
-                input.readMessage(com.google.ads.googleads.v10.common.DeviceInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.DeviceInfo) criterion_);
-              criterion_ = subBuilder.buildPartial();
-            }
-            criterionCase_ = 11;
-            break;
-          }
-          case 98: {
-            com.google.ads.googleads.v10.common.PreferredContentInfo.Builder subBuilder = null;
-            if (criterionCase_ == 12) {
-              subBuilder = ((com.google.ads.googleads.v10.common.PreferredContentInfo) criterion_).toBuilder();
-            }
-            criterion_ =
-                input.readMessage(com.google.ads.googleads.v10.common.PreferredContentInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.PreferredContentInfo) criterion_);
-              criterion_ = subBuilder.buildPartial();
-            }
-            criterionCase_ = 12;
-            break;
-          }
-          case 106: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000001;
-            adGroup_ = s;
-            break;
-          }
-          case 112: {
-            bitField0_ |= 0x00000002;
-            criterionId_ = input.readInt64();
-            break;
-          }
-          case 121: {
-            bitField0_ |= 0x00000004;
-            bidModifier_ = input.readDouble();
-            break;
-          }
-          case 130: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000008;
-            baseAdGroup_ = s;
-            break;
-          }
-          case 138: {
-            com.google.ads.googleads.v10.common.HotelCheckInDateRangeInfo.Builder subBuilder = null;
-            if (criterionCase_ == 17) {
-              subBuilder = ((com.google.ads.googleads.v10.common.HotelCheckInDateRangeInfo) criterion_).toBuilder();
-            }
-            criterion_ =
-                input.readMessage(com.google.ads.googleads.v10.common.HotelCheckInDateRangeInfo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v10.common.HotelCheckInDateRangeInfo) criterion_);
-              criterion_ = subBuilder.buildPartial();
-            }
-            criterionCase_ = 17;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v10.resources.AdGroupBidModifierProto.internal_static_google_ads_googleads_v10_resources_AdGroupBidModifier_descriptor;
@@ -543,7 +371,7 @@ private static final long serialVersionUID = 0L;
   public static final int HOTEL_DATE_SELECTION_TYPE_FIELD_NUMBER = 5;
   /**
    * <pre>
-   * Immutable. Criterion for hotel date selection (default dates vs. user selected).
+   * Immutable. Criterion for hotel date selection (default dates versus user selected).
    * </pre>
    *
    * <code>.google.ads.googleads.v10.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -555,7 +383,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. Criterion for hotel date selection (default dates vs. user selected).
+   * Immutable. Criterion for hotel date selection (default dates versus user selected).
    * </pre>
    *
    * <code>.google.ads.googleads.v10.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -570,7 +398,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Immutable. Criterion for hotel date selection (default dates vs. user selected).
+   * Immutable. Criterion for hotel date selection (default dates versus user selected).
    * </pre>
    *
    * <code>.google.ads.googleads.v10.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -894,7 +722,7 @@ private static final long serialVersionUID = 0L;
     if (criterionCase_ == 17) {
       output.writeMessage(17, (com.google.ads.googleads.v10.common.HotelCheckInDateRangeInfo) criterion_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -952,7 +780,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(17, (com.google.ads.googleads.v10.common.HotelCheckInDateRangeInfo) criterion_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -1024,7 +852,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -1089,7 +917,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -1210,18 +1038,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v10.resources.AdGroupBidModifier.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -1238,6 +1061,27 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000008);
       bidModifierSource_ = 0;
 
+      if (hotelDateSelectionTypeBuilder_ != null) {
+        hotelDateSelectionTypeBuilder_.clear();
+      }
+      if (hotelAdvanceBookingWindowBuilder_ != null) {
+        hotelAdvanceBookingWindowBuilder_.clear();
+      }
+      if (hotelLengthOfStayBuilder_ != null) {
+        hotelLengthOfStayBuilder_.clear();
+      }
+      if (hotelCheckInDayBuilder_ != null) {
+        hotelCheckInDayBuilder_.clear();
+      }
+      if (deviceBuilder_ != null) {
+        deviceBuilder_.clear();
+      }
+      if (preferredContentBuilder_ != null) {
+        preferredContentBuilder_.clear();
+      }
+      if (hotelCheckInDateRangeBuilder_ != null) {
+        hotelCheckInDateRangeBuilder_.clear();
+      }
       criterionCase_ = 0;
       criterion_ = null;
       return this;
@@ -1441,7 +1285,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1456,17 +1300,109 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.ads.googleads.v10.resources.AdGroupBidModifier parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              resourceName_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 10
+            case 42: {
+              input.readMessage(
+                  getHotelDateSelectionTypeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              criterionCase_ = 5;
+              break;
+            } // case 42
+            case 50: {
+              input.readMessage(
+                  getHotelAdvanceBookingWindowFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              criterionCase_ = 6;
+              break;
+            } // case 50
+            case 58: {
+              input.readMessage(
+                  getHotelLengthOfStayFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              criterionCase_ = 7;
+              break;
+            } // case 58
+            case 66: {
+              input.readMessage(
+                  getHotelCheckInDayFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              criterionCase_ = 8;
+              break;
+            } // case 66
+            case 80: {
+              bidModifierSource_ = input.readEnum();
+
+              break;
+            } // case 80
+            case 90: {
+              input.readMessage(
+                  getDeviceFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              criterionCase_ = 11;
+              break;
+            } // case 90
+            case 98: {
+              input.readMessage(
+                  getPreferredContentFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              criterionCase_ = 12;
+              break;
+            } // case 98
+            case 106: {
+              adGroup_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 106
+            case 112: {
+              criterionId_ = input.readInt64();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 112
+            case 121: {
+              bidModifier_ = input.readDouble();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 121
+            case 130: {
+              baseAdGroup_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 130
+            case 138: {
+              input.readMessage(
+                  getHotelCheckInDateRangeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              criterionCase_ = 17;
+              break;
+            } // case 138
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v10.resources.AdGroupBidModifier) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int criterionCase_ = 0;
@@ -2030,7 +1966,7 @@ private static final long serialVersionUID = 0L;
         com.google.ads.googleads.v10.common.HotelDateSelectionTypeInfo, com.google.ads.googleads.v10.common.HotelDateSelectionTypeInfo.Builder, com.google.ads.googleads.v10.common.HotelDateSelectionTypeInfoOrBuilder> hotelDateSelectionTypeBuilder_;
     /**
      * <pre>
-     * Immutable. Criterion for hotel date selection (default dates vs. user selected).
+     * Immutable. Criterion for hotel date selection (default dates versus user selected).
      * </pre>
      *
      * <code>.google.ads.googleads.v10.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2042,7 +1978,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. Criterion for hotel date selection (default dates vs. user selected).
+     * Immutable. Criterion for hotel date selection (default dates versus user selected).
      * </pre>
      *
      * <code>.google.ads.googleads.v10.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2064,7 +2000,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. Criterion for hotel date selection (default dates vs. user selected).
+     * Immutable. Criterion for hotel date selection (default dates versus user selected).
      * </pre>
      *
      * <code>.google.ads.googleads.v10.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2084,7 +2020,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. Criterion for hotel date selection (default dates vs. user selected).
+     * Immutable. Criterion for hotel date selection (default dates versus user selected).
      * </pre>
      *
      * <code>.google.ads.googleads.v10.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2102,7 +2038,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. Criterion for hotel date selection (default dates vs. user selected).
+     * Immutable. Criterion for hotel date selection (default dates versus user selected).
      * </pre>
      *
      * <code>.google.ads.googleads.v10.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2129,7 +2065,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. Criterion for hotel date selection (default dates vs. user selected).
+     * Immutable. Criterion for hotel date selection (default dates versus user selected).
      * </pre>
      *
      * <code>.google.ads.googleads.v10.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2152,7 +2088,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. Criterion for hotel date selection (default dates vs. user selected).
+     * Immutable. Criterion for hotel date selection (default dates versus user selected).
      * </pre>
      *
      * <code>.google.ads.googleads.v10.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2162,7 +2098,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. Criterion for hotel date selection (default dates vs. user selected).
+     * Immutable. Criterion for hotel date selection (default dates versus user selected).
      * </pre>
      *
      * <code>.google.ads.googleads.v10.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -2180,7 +2116,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Immutable. Criterion for hotel date selection (default dates vs. user selected).
+     * Immutable. Criterion for hotel date selection (default dates versus user selected).
      * </pre>
      *
      * <code>.google.ads.googleads.v10.common.HotelDateSelectionTypeInfo hotel_date_selection_type = 5 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -3304,7 +3240,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new AdGroupBidModifier(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

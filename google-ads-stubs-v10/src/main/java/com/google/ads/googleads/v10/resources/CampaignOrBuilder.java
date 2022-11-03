@@ -806,7 +806,9 @@ public interface CampaignOrBuilder extends
   /**
    * <pre>
    * The last day of the campaign in serving customer's timezone in YYYY-MM-DD
-   * format.
+   * format. On create, defaults to 2037-12-30, which means the campaign will
+   * run indefinitely. To set an existing campaign to run indefinitely, set this
+   * field to 2037-12-30.
    * </pre>
    *
    * <code>optional string end_date = 64;</code>
@@ -816,7 +818,9 @@ public interface CampaignOrBuilder extends
   /**
    * <pre>
    * The last day of the campaign in serving customer's timezone in YYYY-MM-DD
-   * format.
+   * format. On create, defaults to 2037-12-30, which means the campaign will
+   * run indefinitely. To set an existing campaign to run indefinitely, set this
+   * field to 2037-12-30.
    * </pre>
    *
    * <code>optional string end_date = 64;</code>
@@ -826,7 +830,9 @@ public interface CampaignOrBuilder extends
   /**
    * <pre>
    * The last day of the campaign in serving customer's timezone in YYYY-MM-DD
-   * format.
+   * format. On create, defaults to 2037-12-30, which means the campaign will
+   * run indefinitely. To set an existing campaign to run indefinitely, set this
+   * field to 2037-12-30.
    * </pre>
    *
    * <code>optional string end_date = 64;</code>
@@ -1429,7 +1435,7 @@ public interface CampaignOrBuilder extends
   /**
    * <pre>
    * Target Impression Share bidding strategy. An automated bidding strategy
-   * that sets bids to achieve a desired percentage of impressions.
+   * that sets bids to achieve a chosen percentage of impressions.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.common.TargetImpressionShare target_impression_share = 48;</code>
@@ -1439,7 +1445,7 @@ public interface CampaignOrBuilder extends
   /**
    * <pre>
    * Target Impression Share bidding strategy. An automated bidding strategy
-   * that sets bids to achieve a desired percentage of impressions.
+   * that sets bids to achieve a chosen percentage of impressions.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.common.TargetImpressionShare target_impression_share = 48;</code>
@@ -1449,7 +1455,7 @@ public interface CampaignOrBuilder extends
   /**
    * <pre>
    * Target Impression Share bidding strategy. An automated bidding strategy
-   * that sets bids to achieve a desired percentage of impressions.
+   * that sets bids to achieve a chosen percentage of impressions.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.common.TargetImpressionShare target_impression_share = 48;</code>

@@ -42,130 +42,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private LocalAdInfo(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              headlines_ = new java.util.ArrayList<com.google.ads.googleads.v11.common.AdTextAsset>();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            headlines_.add(
-                input.readMessage(com.google.ads.googleads.v11.common.AdTextAsset.parser(), extensionRegistry));
-            break;
-          }
-          case 18: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              descriptions_ = new java.util.ArrayList<com.google.ads.googleads.v11.common.AdTextAsset>();
-              mutable_bitField0_ |= 0x00000002;
-            }
-            descriptions_.add(
-                input.readMessage(com.google.ads.googleads.v11.common.AdTextAsset.parser(), extensionRegistry));
-            break;
-          }
-          case 26: {
-            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-              callToActions_ = new java.util.ArrayList<com.google.ads.googleads.v11.common.AdTextAsset>();
-              mutable_bitField0_ |= 0x00000004;
-            }
-            callToActions_.add(
-                input.readMessage(com.google.ads.googleads.v11.common.AdTextAsset.parser(), extensionRegistry));
-            break;
-          }
-          case 34: {
-            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-              marketingImages_ = new java.util.ArrayList<com.google.ads.googleads.v11.common.AdImageAsset>();
-              mutable_bitField0_ |= 0x00000008;
-            }
-            marketingImages_.add(
-                input.readMessage(com.google.ads.googleads.v11.common.AdImageAsset.parser(), extensionRegistry));
-            break;
-          }
-          case 42: {
-            if (!((mutable_bitField0_ & 0x00000010) != 0)) {
-              logoImages_ = new java.util.ArrayList<com.google.ads.googleads.v11.common.AdImageAsset>();
-              mutable_bitField0_ |= 0x00000010;
-            }
-            logoImages_.add(
-                input.readMessage(com.google.ads.googleads.v11.common.AdImageAsset.parser(), extensionRegistry));
-            break;
-          }
-          case 50: {
-            if (!((mutable_bitField0_ & 0x00000020) != 0)) {
-              videos_ = new java.util.ArrayList<com.google.ads.googleads.v11.common.AdVideoAsset>();
-              mutable_bitField0_ |= 0x00000020;
-            }
-            videos_.add(
-                input.readMessage(com.google.ads.googleads.v11.common.AdVideoAsset.parser(), extensionRegistry));
-            break;
-          }
-          case 74: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000001;
-            path1_ = s;
-            break;
-          }
-          case 82: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000002;
-            path2_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        headlines_ = java.util.Collections.unmodifiableList(headlines_);
-      }
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
-        descriptions_ = java.util.Collections.unmodifiableList(descriptions_);
-      }
-      if (((mutable_bitField0_ & 0x00000004) != 0)) {
-        callToActions_ = java.util.Collections.unmodifiableList(callToActions_);
-      }
-      if (((mutable_bitField0_ & 0x00000008) != 0)) {
-        marketingImages_ = java.util.Collections.unmodifiableList(marketingImages_);
-      }
-      if (((mutable_bitField0_ & 0x00000010) != 0)) {
-        logoImages_ = java.util.Collections.unmodifiableList(logoImages_);
-      }
-      if (((mutable_bitField0_ & 0x00000020) != 0)) {
-        videos_ = java.util.Collections.unmodifiableList(videos_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v11.common.AdTypeInfosProto.internal_static_google_ads_googleads_v11_common_LocalAdInfo_descriptor;
@@ -325,8 +201,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * List of text assets for call-to-actions. When the ad serves the
-   * call-to-actions will be selected from this list. Call-to-actions are
-   * optional and at most 5 can be specified.
+   * call-to-actions will be selected from this list. At least 1 and at most
+   * 5 call-to-actions must be specified.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.AdTextAsset call_to_actions = 3;</code>
@@ -338,8 +214,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * List of text assets for call-to-actions. When the ad serves the
-   * call-to-actions will be selected from this list. Call-to-actions are
-   * optional and at most 5 can be specified.
+   * call-to-actions will be selected from this list. At least 1 and at most
+   * 5 call-to-actions must be specified.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.AdTextAsset call_to_actions = 3;</code>
@@ -352,8 +228,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * List of text assets for call-to-actions. When the ad serves the
-   * call-to-actions will be selected from this list. Call-to-actions are
-   * optional and at most 5 can be specified.
+   * call-to-actions will be selected from this list. At least 1 and at most
+   * 5 call-to-actions must be specified.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.AdTextAsset call_to_actions = 3;</code>
@@ -365,8 +241,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * List of text assets for call-to-actions. When the ad serves the
-   * call-to-actions will be selected from this list. Call-to-actions are
-   * optional and at most 5 can be specified.
+   * call-to-actions will be selected from this list. At least 1 and at most
+   * 5 call-to-actions must be specified.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.AdTextAsset call_to_actions = 3;</code>
@@ -378,8 +254,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * List of text assets for call-to-actions. When the ad serves the
-   * call-to-actions will be selected from this list. Call-to-actions are
-   * optional and at most 5 can be specified.
+   * call-to-actions will be selected from this list. At least 1 and at most
+   * 5 call-to-actions must be specified.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.AdTextAsset call_to_actions = 3;</code>
@@ -534,8 +410,8 @@ private static final long serialVersionUID = 0L;
   private java.util.List<com.google.ads.googleads.v11.common.AdVideoAsset> videos_;
   /**
    * <pre>
-   * List of YouTube video assets that may be displayed with the ad. Videos
-   * are optional and at most 20 can be specified.
+   * List of YouTube video assets that may be displayed with the ad. At least 1
+   * and at most 20 video assets must be specified.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.AdVideoAsset videos = 6;</code>
@@ -546,8 +422,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * List of YouTube video assets that may be displayed with the ad. Videos
-   * are optional and at most 20 can be specified.
+   * List of YouTube video assets that may be displayed with the ad. At least 1
+   * and at most 20 video assets must be specified.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.AdVideoAsset videos = 6;</code>
@@ -559,8 +435,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * List of YouTube video assets that may be displayed with the ad. Videos
-   * are optional and at most 20 can be specified.
+   * List of YouTube video assets that may be displayed with the ad. At least 1
+   * and at most 20 video assets must be specified.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.AdVideoAsset videos = 6;</code>
@@ -571,8 +447,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * List of YouTube video assets that may be displayed with the ad. Videos
-   * are optional and at most 20 can be specified.
+   * List of YouTube video assets that may be displayed with the ad. At least 1
+   * and at most 20 video assets must be specified.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.AdVideoAsset videos = 6;</code>
@@ -583,8 +459,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * List of YouTube video assets that may be displayed with the ad. Videos
-   * are optional and at most 20 can be specified.
+   * List of YouTube video assets that may be displayed with the ad. At least 1
+   * and at most 20 video assets must be specified.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v11.common.AdVideoAsset videos = 6;</code>
@@ -752,7 +628,7 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 10, path2_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -791,7 +667,7 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, path2_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -828,7 +704,7 @@ private static final long serialVersionUID = 0L;
       if (!getPath2()
           .equals(other.getPath2())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -871,7 +747,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + PATH2_FIELD_NUMBER;
       hash = (53 * hash) + getPath2().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -992,64 +868,59 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v11.common.LocalAdInfo.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getHeadlinesFieldBuilder();
-        getDescriptionsFieldBuilder();
-        getCallToActionsFieldBuilder();
-        getMarketingImagesFieldBuilder();
-        getLogoImagesFieldBuilder();
-        getVideosFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
       if (headlinesBuilder_ == null) {
         headlines_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        headlines_ = null;
         headlinesBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000001);
       if (descriptionsBuilder_ == null) {
         descriptions_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
       } else {
+        descriptions_ = null;
         descriptionsBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000002);
       if (callToActionsBuilder_ == null) {
         callToActions_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
       } else {
+        callToActions_ = null;
         callToActionsBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000004);
       if (marketingImagesBuilder_ == null) {
         marketingImages_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
       } else {
+        marketingImages_ = null;
         marketingImagesBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000008);
       if (logoImagesBuilder_ == null) {
         logoImages_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
       } else {
+        logoImages_ = null;
         logoImagesBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000010);
       if (videosBuilder_ == null) {
         videos_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000020);
       } else {
+        videos_ = null;
         videosBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000020);
       path1_ = "";
       bitField0_ = (bitField0_ & ~0x00000040);
       path2_ = "";
@@ -1359,7 +1230,7 @@ private static final long serialVersionUID = 0L;
         path2_ = other.path2_;
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1374,17 +1245,118 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.ads.googleads.v11.common.LocalAdInfo parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.google.ads.googleads.v11.common.AdTextAsset m =
+                  input.readMessage(
+                      com.google.ads.googleads.v11.common.AdTextAsset.parser(),
+                      extensionRegistry);
+              if (headlinesBuilder_ == null) {
+                ensureHeadlinesIsMutable();
+                headlines_.add(m);
+              } else {
+                headlinesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 10
+            case 18: {
+              com.google.ads.googleads.v11.common.AdTextAsset m =
+                  input.readMessage(
+                      com.google.ads.googleads.v11.common.AdTextAsset.parser(),
+                      extensionRegistry);
+              if (descriptionsBuilder_ == null) {
+                ensureDescriptionsIsMutable();
+                descriptions_.add(m);
+              } else {
+                descriptionsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 18
+            case 26: {
+              com.google.ads.googleads.v11.common.AdTextAsset m =
+                  input.readMessage(
+                      com.google.ads.googleads.v11.common.AdTextAsset.parser(),
+                      extensionRegistry);
+              if (callToActionsBuilder_ == null) {
+                ensureCallToActionsIsMutable();
+                callToActions_.add(m);
+              } else {
+                callToActionsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 26
+            case 34: {
+              com.google.ads.googleads.v11.common.AdImageAsset m =
+                  input.readMessage(
+                      com.google.ads.googleads.v11.common.AdImageAsset.parser(),
+                      extensionRegistry);
+              if (marketingImagesBuilder_ == null) {
+                ensureMarketingImagesIsMutable();
+                marketingImages_.add(m);
+              } else {
+                marketingImagesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 34
+            case 42: {
+              com.google.ads.googleads.v11.common.AdImageAsset m =
+                  input.readMessage(
+                      com.google.ads.googleads.v11.common.AdImageAsset.parser(),
+                      extensionRegistry);
+              if (logoImagesBuilder_ == null) {
+                ensureLogoImagesIsMutable();
+                logoImages_.add(m);
+              } else {
+                logoImagesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 42
+            case 50: {
+              com.google.ads.googleads.v11.common.AdVideoAsset m =
+                  input.readMessage(
+                      com.google.ads.googleads.v11.common.AdVideoAsset.parser(),
+                      extensionRegistry);
+              if (videosBuilder_ == null) {
+                ensureVideosIsMutable();
+                videos_.add(m);
+              } else {
+                videosBuilder_.addMessage(m);
+              }
+              break;
+            } // case 50
+            case 74: {
+              path1_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 74
+            case 82: {
+              path2_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 82
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v11.common.LocalAdInfo) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -2100,8 +2072,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * List of text assets for call-to-actions. When the ad serves the
-     * call-to-actions will be selected from this list. Call-to-actions are
-     * optional and at most 5 can be specified.
+     * call-to-actions will be selected from this list. At least 1 and at most
+     * 5 call-to-actions must be specified.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset call_to_actions = 3;</code>
@@ -2116,8 +2088,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * List of text assets for call-to-actions. When the ad serves the
-     * call-to-actions will be selected from this list. Call-to-actions are
-     * optional and at most 5 can be specified.
+     * call-to-actions will be selected from this list. At least 1 and at most
+     * 5 call-to-actions must be specified.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset call_to_actions = 3;</code>
@@ -2132,8 +2104,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * List of text assets for call-to-actions. When the ad serves the
-     * call-to-actions will be selected from this list. Call-to-actions are
-     * optional and at most 5 can be specified.
+     * call-to-actions will be selected from this list. At least 1 and at most
+     * 5 call-to-actions must be specified.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset call_to_actions = 3;</code>
@@ -2148,8 +2120,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * List of text assets for call-to-actions. When the ad serves the
-     * call-to-actions will be selected from this list. Call-to-actions are
-     * optional and at most 5 can be specified.
+     * call-to-actions will be selected from this list. At least 1 and at most
+     * 5 call-to-actions must be specified.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset call_to_actions = 3;</code>
@@ -2171,8 +2143,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * List of text assets for call-to-actions. When the ad serves the
-     * call-to-actions will be selected from this list. Call-to-actions are
-     * optional and at most 5 can be specified.
+     * call-to-actions will be selected from this list. At least 1 and at most
+     * 5 call-to-actions must be specified.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset call_to_actions = 3;</code>
@@ -2191,8 +2163,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * List of text assets for call-to-actions. When the ad serves the
-     * call-to-actions will be selected from this list. Call-to-actions are
-     * optional and at most 5 can be specified.
+     * call-to-actions will be selected from this list. At least 1 and at most
+     * 5 call-to-actions must be specified.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset call_to_actions = 3;</code>
@@ -2213,8 +2185,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * List of text assets for call-to-actions. When the ad serves the
-     * call-to-actions will be selected from this list. Call-to-actions are
-     * optional and at most 5 can be specified.
+     * call-to-actions will be selected from this list. At least 1 and at most
+     * 5 call-to-actions must be specified.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset call_to_actions = 3;</code>
@@ -2236,8 +2208,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * List of text assets for call-to-actions. When the ad serves the
-     * call-to-actions will be selected from this list. Call-to-actions are
-     * optional and at most 5 can be specified.
+     * call-to-actions will be selected from this list. At least 1 and at most
+     * 5 call-to-actions must be specified.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset call_to_actions = 3;</code>
@@ -2256,8 +2228,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * List of text assets for call-to-actions. When the ad serves the
-     * call-to-actions will be selected from this list. Call-to-actions are
-     * optional and at most 5 can be specified.
+     * call-to-actions will be selected from this list. At least 1 and at most
+     * 5 call-to-actions must be specified.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset call_to_actions = 3;</code>
@@ -2276,8 +2248,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * List of text assets for call-to-actions. When the ad serves the
-     * call-to-actions will be selected from this list. Call-to-actions are
-     * optional and at most 5 can be specified.
+     * call-to-actions will be selected from this list. At least 1 and at most
+     * 5 call-to-actions must be specified.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset call_to_actions = 3;</code>
@@ -2297,8 +2269,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * List of text assets for call-to-actions. When the ad serves the
-     * call-to-actions will be selected from this list. Call-to-actions are
-     * optional and at most 5 can be specified.
+     * call-to-actions will be selected from this list. At least 1 and at most
+     * 5 call-to-actions must be specified.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset call_to_actions = 3;</code>
@@ -2316,8 +2288,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * List of text assets for call-to-actions. When the ad serves the
-     * call-to-actions will be selected from this list. Call-to-actions are
-     * optional and at most 5 can be specified.
+     * call-to-actions will be selected from this list. At least 1 and at most
+     * 5 call-to-actions must be specified.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset call_to_actions = 3;</code>
@@ -2335,8 +2307,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * List of text assets for call-to-actions. When the ad serves the
-     * call-to-actions will be selected from this list. Call-to-actions are
-     * optional and at most 5 can be specified.
+     * call-to-actions will be selected from this list. At least 1 and at most
+     * 5 call-to-actions must be specified.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset call_to_actions = 3;</code>
@@ -2348,8 +2320,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * List of text assets for call-to-actions. When the ad serves the
-     * call-to-actions will be selected from this list. Call-to-actions are
-     * optional and at most 5 can be specified.
+     * call-to-actions will be selected from this list. At least 1 and at most
+     * 5 call-to-actions must be specified.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset call_to_actions = 3;</code>
@@ -2364,8 +2336,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * List of text assets for call-to-actions. When the ad serves the
-     * call-to-actions will be selected from this list. Call-to-actions are
-     * optional and at most 5 can be specified.
+     * call-to-actions will be selected from this list. At least 1 and at most
+     * 5 call-to-actions must be specified.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset call_to_actions = 3;</code>
@@ -2381,8 +2353,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * List of text assets for call-to-actions. When the ad serves the
-     * call-to-actions will be selected from this list. Call-to-actions are
-     * optional and at most 5 can be specified.
+     * call-to-actions will be selected from this list. At least 1 and at most
+     * 5 call-to-actions must be specified.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset call_to_actions = 3;</code>
@@ -2394,8 +2366,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * List of text assets for call-to-actions. When the ad serves the
-     * call-to-actions will be selected from this list. Call-to-actions are
-     * optional and at most 5 can be specified.
+     * call-to-actions will be selected from this list. At least 1 and at most
+     * 5 call-to-actions must be specified.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset call_to_actions = 3;</code>
@@ -2408,8 +2380,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * List of text assets for call-to-actions. When the ad serves the
-     * call-to-actions will be selected from this list. Call-to-actions are
-     * optional and at most 5 can be specified.
+     * call-to-actions will be selected from this list. At least 1 and at most
+     * 5 call-to-actions must be specified.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdTextAsset call_to_actions = 3;</code>
@@ -3143,8 +3115,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * List of YouTube video assets that may be displayed with the ad. Videos
-     * are optional and at most 20 can be specified.
+     * List of YouTube video assets that may be displayed with the ad. At least 1
+     * and at most 20 video assets must be specified.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdVideoAsset videos = 6;</code>
@@ -3158,8 +3130,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of YouTube video assets that may be displayed with the ad. Videos
-     * are optional and at most 20 can be specified.
+     * List of YouTube video assets that may be displayed with the ad. At least 1
+     * and at most 20 video assets must be specified.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdVideoAsset videos = 6;</code>
@@ -3173,8 +3145,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of YouTube video assets that may be displayed with the ad. Videos
-     * are optional and at most 20 can be specified.
+     * List of YouTube video assets that may be displayed with the ad. At least 1
+     * and at most 20 video assets must be specified.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdVideoAsset videos = 6;</code>
@@ -3188,8 +3160,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of YouTube video assets that may be displayed with the ad. Videos
-     * are optional and at most 20 can be specified.
+     * List of YouTube video assets that may be displayed with the ad. At least 1
+     * and at most 20 video assets must be specified.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdVideoAsset videos = 6;</code>
@@ -3210,8 +3182,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of YouTube video assets that may be displayed with the ad. Videos
-     * are optional and at most 20 can be specified.
+     * List of YouTube video assets that may be displayed with the ad. At least 1
+     * and at most 20 video assets must be specified.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdVideoAsset videos = 6;</code>
@@ -3229,8 +3201,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of YouTube video assets that may be displayed with the ad. Videos
-     * are optional and at most 20 can be specified.
+     * List of YouTube video assets that may be displayed with the ad. At least 1
+     * and at most 20 video assets must be specified.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdVideoAsset videos = 6;</code>
@@ -3250,8 +3222,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of YouTube video assets that may be displayed with the ad. Videos
-     * are optional and at most 20 can be specified.
+     * List of YouTube video assets that may be displayed with the ad. At least 1
+     * and at most 20 video assets must be specified.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdVideoAsset videos = 6;</code>
@@ -3272,8 +3244,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of YouTube video assets that may be displayed with the ad. Videos
-     * are optional and at most 20 can be specified.
+     * List of YouTube video assets that may be displayed with the ad. At least 1
+     * and at most 20 video assets must be specified.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdVideoAsset videos = 6;</code>
@@ -3291,8 +3263,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of YouTube video assets that may be displayed with the ad. Videos
-     * are optional and at most 20 can be specified.
+     * List of YouTube video assets that may be displayed with the ad. At least 1
+     * and at most 20 video assets must be specified.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdVideoAsset videos = 6;</code>
@@ -3310,8 +3282,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of YouTube video assets that may be displayed with the ad. Videos
-     * are optional and at most 20 can be specified.
+     * List of YouTube video assets that may be displayed with the ad. At least 1
+     * and at most 20 video assets must be specified.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdVideoAsset videos = 6;</code>
@@ -3330,8 +3302,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of YouTube video assets that may be displayed with the ad. Videos
-     * are optional and at most 20 can be specified.
+     * List of YouTube video assets that may be displayed with the ad. At least 1
+     * and at most 20 video assets must be specified.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdVideoAsset videos = 6;</code>
@@ -3348,8 +3320,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of YouTube video assets that may be displayed with the ad. Videos
-     * are optional and at most 20 can be specified.
+     * List of YouTube video assets that may be displayed with the ad. At least 1
+     * and at most 20 video assets must be specified.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdVideoAsset videos = 6;</code>
@@ -3366,8 +3338,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of YouTube video assets that may be displayed with the ad. Videos
-     * are optional and at most 20 can be specified.
+     * List of YouTube video assets that may be displayed with the ad. At least 1
+     * and at most 20 video assets must be specified.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdVideoAsset videos = 6;</code>
@@ -3378,8 +3350,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of YouTube video assets that may be displayed with the ad. Videos
-     * are optional and at most 20 can be specified.
+     * List of YouTube video assets that may be displayed with the ad. At least 1
+     * and at most 20 video assets must be specified.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdVideoAsset videos = 6;</code>
@@ -3393,8 +3365,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of YouTube video assets that may be displayed with the ad. Videos
-     * are optional and at most 20 can be specified.
+     * List of YouTube video assets that may be displayed with the ad. At least 1
+     * and at most 20 video assets must be specified.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdVideoAsset videos = 6;</code>
@@ -3409,8 +3381,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of YouTube video assets that may be displayed with the ad. Videos
-     * are optional and at most 20 can be specified.
+     * List of YouTube video assets that may be displayed with the ad. At least 1
+     * and at most 20 video assets must be specified.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdVideoAsset videos = 6;</code>
@@ -3421,8 +3393,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of YouTube video assets that may be displayed with the ad. Videos
-     * are optional and at most 20 can be specified.
+     * List of YouTube video assets that may be displayed with the ad. At least 1
+     * and at most 20 video assets must be specified.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdVideoAsset videos = 6;</code>
@@ -3434,8 +3406,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * List of YouTube video assets that may be displayed with the ad. Videos
-     * are optional and at most 20 can be specified.
+     * List of YouTube video assets that may be displayed with the ad. At least 1
+     * and at most 20 video assets must be specified.
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v11.common.AdVideoAsset videos = 6;</code>
@@ -3711,7 +3683,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new LocalAdInfo(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

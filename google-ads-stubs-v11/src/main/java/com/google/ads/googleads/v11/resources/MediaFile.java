@@ -39,142 +39,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private MediaFile(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            resourceName_ = s;
-            break;
-          }
-          case 26: {
-            com.google.ads.googleads.v11.resources.MediaImage.Builder subBuilder = null;
-            if (mediatypeCase_ == 3) {
-              subBuilder = ((com.google.ads.googleads.v11.resources.MediaImage) mediatype_).toBuilder();
-            }
-            mediatype_ =
-                input.readMessage(com.google.ads.googleads.v11.resources.MediaImage.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v11.resources.MediaImage) mediatype_);
-              mediatype_ = subBuilder.buildPartial();
-            }
-            mediatypeCase_ = 3;
-            break;
-          }
-          case 34: {
-            com.google.ads.googleads.v11.resources.MediaBundle.Builder subBuilder = null;
-            if (mediatypeCase_ == 4) {
-              subBuilder = ((com.google.ads.googleads.v11.resources.MediaBundle) mediatype_).toBuilder();
-            }
-            mediatype_ =
-                input.readMessage(com.google.ads.googleads.v11.resources.MediaBundle.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v11.resources.MediaBundle) mediatype_);
-              mediatype_ = subBuilder.buildPartial();
-            }
-            mediatypeCase_ = 4;
-            break;
-          }
-          case 40: {
-            int rawValue = input.readEnum();
-
-            type_ = rawValue;
-            break;
-          }
-          case 48: {
-            int rawValue = input.readEnum();
-
-            mimeType_ = rawValue;
-            break;
-          }
-          case 82: {
-            com.google.ads.googleads.v11.resources.MediaAudio.Builder subBuilder = null;
-            if (mediatypeCase_ == 10) {
-              subBuilder = ((com.google.ads.googleads.v11.resources.MediaAudio) mediatype_).toBuilder();
-            }
-            mediatype_ =
-                input.readMessage(com.google.ads.googleads.v11.resources.MediaAudio.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v11.resources.MediaAudio) mediatype_);
-              mediatype_ = subBuilder.buildPartial();
-            }
-            mediatypeCase_ = 10;
-            break;
-          }
-          case 90: {
-            com.google.ads.googleads.v11.resources.MediaVideo.Builder subBuilder = null;
-            if (mediatypeCase_ == 11) {
-              subBuilder = ((com.google.ads.googleads.v11.resources.MediaVideo) mediatype_).toBuilder();
-            }
-            mediatype_ =
-                input.readMessage(com.google.ads.googleads.v11.resources.MediaVideo.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v11.resources.MediaVideo) mediatype_);
-              mediatype_ = subBuilder.buildPartial();
-            }
-            mediatypeCase_ = 11;
-            break;
-          }
-          case 96: {
-            bitField0_ |= 0x00000001;
-            id_ = input.readInt64();
-            break;
-          }
-          case 106: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000002;
-            sourceUrl_ = s;
-            break;
-          }
-          case 114: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000004;
-            name_ = s;
-            break;
-          }
-          case 120: {
-            bitField0_ |= 0x00000008;
-            fileSize_ = input.readInt64();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v11.resources.MediaFileProto.internal_static_google_ads_googleads_v11_resources_MediaFile_descriptor;
@@ -733,7 +597,7 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000008) != 0)) {
       output.writeInt64(15, fileSize_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -783,7 +647,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(15, fileSize_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -843,7 +707,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -898,7 +762,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -1019,18 +883,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v11.resources.MediaFile.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -1049,6 +908,18 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000004);
       fileSize_ = 0L;
       bitField0_ = (bitField0_ & ~0x00000008);
+      if (imageBuilder_ != null) {
+        imageBuilder_.clear();
+      }
+      if (mediaBundleBuilder_ != null) {
+        mediaBundleBuilder_.clear();
+      }
+      if (audioBuilder_ != null) {
+        audioBuilder_.clear();
+      }
+      if (videoBuilder_ != null) {
+        videoBuilder_.clear();
+      }
       mediatypeCase_ = 0;
       mediatype_ = null;
       return this;
@@ -1223,7 +1094,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1238,17 +1109,93 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.ads.googleads.v11.resources.MediaFile parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              resourceName_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 10
+            case 26: {
+              input.readMessage(
+                  getImageFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              mediatypeCase_ = 3;
+              break;
+            } // case 26
+            case 34: {
+              input.readMessage(
+                  getMediaBundleFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              mediatypeCase_ = 4;
+              break;
+            } // case 34
+            case 40: {
+              type_ = input.readEnum();
+
+              break;
+            } // case 40
+            case 48: {
+              mimeType_ = input.readEnum();
+
+              break;
+            } // case 48
+            case 82: {
+              input.readMessage(
+                  getAudioFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              mediatypeCase_ = 10;
+              break;
+            } // case 82
+            case 90: {
+              input.readMessage(
+                  getVideoFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              mediatypeCase_ = 11;
+              break;
+            } // case 90
+            case 96: {
+              id_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 96
+            case 106: {
+              sourceUrl_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 106
+            case 114: {
+              name_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 114
+            case 120: {
+              fileSize_ = input.readInt64();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 120
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v11.resources.MediaFile) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int mediatypeCase_ = 0;
@@ -2602,7 +2549,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new MediaFile(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

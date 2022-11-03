@@ -34,45 +34,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private PlacementTypeEnum(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v10.enums.PlacementTypeProto.internal_static_google_ads_googleads_v10_enums_PlacementTypeEnum_descriptor;
@@ -113,7 +74,7 @@ private static final long serialVersionUID = 0L;
     UNKNOWN(1),
     /**
      * <pre>
-     * Websites(e.g. 'www.flowers4sale.com').
+     * Websites(for example, 'www.flowers4sale.com').
      * </pre>
      *
      * <code>WEBSITE = 2;</code>
@@ -121,7 +82,7 @@ private static final long serialVersionUID = 0L;
     WEBSITE(2),
     /**
      * <pre>
-     * Mobile application categories(e.g. 'Games').
+     * Mobile application categories(for example, 'Games').
      * </pre>
      *
      * <code>MOBILE_APP_CATEGORY = 3;</code>
@@ -129,7 +90,7 @@ private static final long serialVersionUID = 0L;
     MOBILE_APP_CATEGORY(3),
     /**
      * <pre>
-     * mobile applications(e.g. 'mobileapp::2-com.whatsthewordanswers').
+     * mobile applications(for example, 'mobileapp::2-com.whatsthewordanswers').
      * </pre>
      *
      * <code>MOBILE_APPLICATION = 4;</code>
@@ -137,7 +98,7 @@ private static final long serialVersionUID = 0L;
     MOBILE_APPLICATION(4),
     /**
      * <pre>
-     * YouTube videos(e.g. 'youtube.com/video/wtLJPvx7-ys').
+     * YouTube videos(for example, 'youtube.com/video/wtLJPvx7-ys').
      * </pre>
      *
      * <code>YOUTUBE_VIDEO = 5;</code>
@@ -145,7 +106,7 @@ private static final long serialVersionUID = 0L;
     YOUTUBE_VIDEO(5),
     /**
      * <pre>
-     * YouTube channels(e.g. 'youtube.com::L8ZULXASCc1I_oaOT0NaOQ').
+     * YouTube channels(for example, 'youtube.com::L8ZULXASCc1I_oaOT0NaOQ').
      * </pre>
      *
      * <code>YOUTUBE_CHANNEL = 6;</code>
@@ -172,7 +133,7 @@ private static final long serialVersionUID = 0L;
     public static final int UNKNOWN_VALUE = 1;
     /**
      * <pre>
-     * Websites(e.g. 'www.flowers4sale.com').
+     * Websites(for example, 'www.flowers4sale.com').
      * </pre>
      *
      * <code>WEBSITE = 2;</code>
@@ -180,7 +141,7 @@ private static final long serialVersionUID = 0L;
     public static final int WEBSITE_VALUE = 2;
     /**
      * <pre>
-     * Mobile application categories(e.g. 'Games').
+     * Mobile application categories(for example, 'Games').
      * </pre>
      *
      * <code>MOBILE_APP_CATEGORY = 3;</code>
@@ -188,7 +149,7 @@ private static final long serialVersionUID = 0L;
     public static final int MOBILE_APP_CATEGORY_VALUE = 3;
     /**
      * <pre>
-     * mobile applications(e.g. 'mobileapp::2-com.whatsthewordanswers').
+     * mobile applications(for example, 'mobileapp::2-com.whatsthewordanswers').
      * </pre>
      *
      * <code>MOBILE_APPLICATION = 4;</code>
@@ -196,7 +157,7 @@ private static final long serialVersionUID = 0L;
     public static final int MOBILE_APPLICATION_VALUE = 4;
     /**
      * <pre>
-     * YouTube videos(e.g. 'youtube.com/video/wtLJPvx7-ys').
+     * YouTube videos(for example, 'youtube.com/video/wtLJPvx7-ys').
      * </pre>
      *
      * <code>YOUTUBE_VIDEO = 5;</code>
@@ -204,7 +165,7 @@ private static final long serialVersionUID = 0L;
     public static final int YOUTUBE_VIDEO_VALUE = 5;
     /**
      * <pre>
-     * YouTube channels(e.g. 'youtube.com::L8ZULXASCc1I_oaOT0NaOQ').
+     * YouTube channels(for example, 'youtube.com::L8ZULXASCc1I_oaOT0NaOQ').
      * </pre>
      *
      * <code>YOUTUBE_CHANNEL = 6;</code>
@@ -313,7 +274,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -322,7 +283,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -337,7 +298,7 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v10.enums.PlacementTypeEnum other = (com.google.ads.googleads.v10.enums.PlacementTypeEnum) obj;
 
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -348,7 +309,7 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -469,18 +430,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v10.enums.PlacementTypeEnum.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -559,7 +515,7 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.google.ads.googleads.v10.enums.PlacementTypeEnum other) {
       if (other == com.google.ads.googleads.v10.enums.PlacementTypeEnum.getDefaultInstance()) return this;
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -574,17 +530,30 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.ads.googleads.v10.enums.PlacementTypeEnum parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v10.enums.PlacementTypeEnum) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     @java.lang.Override
@@ -620,7 +589,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new PlacementTypeEnum(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

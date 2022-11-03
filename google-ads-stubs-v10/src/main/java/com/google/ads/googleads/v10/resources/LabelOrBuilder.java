@@ -33,7 +33,7 @@ public interface LabelOrBuilder extends
 
   /**
    * <pre>
-   * Output only. Id of the label. Read only.
+   * Output only. ID of the label. Read only.
    * </pre>
    *
    * <code>optional int64 id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -42,7 +42,7 @@ public interface LabelOrBuilder extends
   boolean hasId();
   /**
    * <pre>
-   * Output only. Id of the label. Read only.
+   * Output only. ID of the label. Read only.
    * </pre>
    *
    * <code>optional int64 id = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

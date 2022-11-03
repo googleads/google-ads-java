@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Google LLC
+ * Copyright 2022 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -42,9 +42,9 @@ import javax.annotation.Generated;
  * <p>The default instance has everything set to sensible defaults:
  *
  * <ul>
- *   <li> The default service address (googleads.googleapis.com) and default port (443) are used.
- *   <li> Credentials are acquired automatically through Application Default Credentials.
- *   <li> Retries are configured for idempotent methods but not for non-idempotent methods.
+ *   <li>The default service address (googleads.googleapis.com) and default port (443) are used.
+ *   <li>Credentials are acquired automatically through Application Default Credentials.
+ *   <li>Retries are configured for idempotent methods but not for non-idempotent methods.
  * </ul>
  *
  * <p>The builder of this class is recursive, so contained classes are themselves builders. When
@@ -53,6 +53,11 @@ import javax.annotation.Generated;
  * <p>For example, to set the total timeout of generateKeywordHistoricalMetrics to 30 seconds:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * KeywordPlanIdeaServiceSettings.Builder keywordPlanIdeaServiceSettingsBuilder =
  *     KeywordPlanIdeaServiceSettings.newBuilder();
  * keywordPlanIdeaServiceSettingsBuilder
@@ -73,7 +78,8 @@ public class KeywordPlanIdeaServiceSettings extends ClientSettings<KeywordPlanId
 
   /** Returns the object with the settings used for calls to generateKeywordIdeas. */
   public PagedCallSettings<
-          GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse,
+          GenerateKeywordIdeasRequest,
+          GenerateKeywordIdeaResponse,
           GenerateKeywordIdeasPagedResponse>
       generateKeywordIdeasSettings() {
     return ((KeywordPlanIdeaServiceStubSettings) getStubSettings()).generateKeywordIdeasSettings();
@@ -187,7 +193,8 @@ public class KeywordPlanIdeaServiceSettings extends ClientSettings<KeywordPlanId
 
     /** Returns the builder for the settings used for calls to generateKeywordIdeas. */
     public PagedCallSettings.Builder<
-            GenerateKeywordIdeasRequest, GenerateKeywordIdeaResponse,
+            GenerateKeywordIdeasRequest,
+            GenerateKeywordIdeaResponse,
             GenerateKeywordIdeasPagedResponse>
         generateKeywordIdeasSettings() {
       return getStubSettingsBuilder().generateKeywordIdeasSettings();

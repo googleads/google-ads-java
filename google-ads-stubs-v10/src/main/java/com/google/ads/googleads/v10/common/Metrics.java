@@ -41,701 +41,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private Metrics(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    int mutable_bitField1_ = 0;
-    int mutable_bitField2_ = 0;
-    int mutable_bitField3_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 640: {
-            int rawValue = input.readEnum();
-
-            historicalCreativeQualityScore_ = rawValue;
-            break;
-          }
-          case 648: {
-            int rawValue = input.readEnum();
-
-            historicalLandingPageQualityScore_ = rawValue;
-            break;
-          }
-          case 664: {
-            int rawValue = input.readEnum();
-
-            historicalSearchPredictedCtr_ = rawValue;
-            break;
-          }
-          case 800: {
-            int rawValue = input.readEnum();
-            if (!((mutable_bitField2_ & 0x00000100) != 0)) {
-              interactionEventTypes_ = new java.util.ArrayList<java.lang.Integer>();
-              mutable_bitField2_ |= 0x00000100;
-            }
-            interactionEventTypes_.add(rawValue);
-            break;
-          }
-          case 802: {
-            int length = input.readRawVarint32();
-            int oldLimit = input.pushLimit(length);
-            while(input.getBytesUntilLimit() > 0) {
-              int rawValue = input.readEnum();
-              if (!((mutable_bitField2_ & 0x00000100) != 0)) {
-                interactionEventTypes_ = new java.util.ArrayList<java.lang.Integer>();
-                mutable_bitField2_ |= 0x00000100;
-              }
-              interactionEventTypes_.add(rawValue);
-            }
-            input.popLimit(oldLimit);
-            break;
-          }
-          case 1048: {
-            bitField1_ |= 0x00000001;
-            clicks_ = input.readInt64();
-            break;
-          }
-          case 1057: {
-            bitField3_ |= 0x00002000;
-            videoQuartileP100Rate_ = input.readDouble();
-            break;
-          }
-          case 1065: {
-            bitField3_ |= 0x00004000;
-            videoQuartileP25Rate_ = input.readDouble();
-            break;
-          }
-          case 1073: {
-            bitField3_ |= 0x00008000;
-            videoQuartileP50Rate_ = input.readDouble();
-            break;
-          }
-          case 1081: {
-            bitField3_ |= 0x00010000;
-            videoQuartileP75Rate_ = input.readDouble();
-            break;
-          }
-          case 1089: {
-            bitField2_ |= 0x04000000;
-            searchAbsoluteTopImpressionShare_ = input.readDouble();
-            break;
-          }
-          case 1097: {
-            bitField2_ |= 0x08000000;
-            searchBudgetLostAbsoluteTopImpressionShare_ = input.readDouble();
-            break;
-          }
-          case 1105: {
-            bitField2_ |= 0x10000000;
-            searchBudgetLostImpressionShare_ = input.readDouble();
-            break;
-          }
-          case 1113: {
-            bitField2_ |= 0x20000000;
-            searchBudgetLostTopImpressionShare_ = input.readDouble();
-            break;
-          }
-          case 1121: {
-            bitField2_ |= 0x40000000;
-            searchClickShare_ = input.readDouble();
-            break;
-          }
-          case 1129: {
-            bitField2_ |= 0x80000000;
-            searchExactMatchImpressionShare_ = input.readDouble();
-            break;
-          }
-          case 1137: {
-            bitField3_ |= 0x00000001;
-            searchImpressionShare_ = input.readDouble();
-            break;
-          }
-          case 1145: {
-            bitField3_ |= 0x00000002;
-            searchRankLostAbsoluteTopImpressionShare_ = input.readDouble();
-            break;
-          }
-          case 1153: {
-            bitField3_ |= 0x00000004;
-            searchRankLostImpressionShare_ = input.readDouble();
-            break;
-          }
-          case 1161: {
-            bitField3_ |= 0x00000008;
-            searchRankLostTopImpressionShare_ = input.readDouble();
-            break;
-          }
-          case 1169: {
-            bitField3_ |= 0x00000010;
-            searchTopImpressionShare_ = input.readDouble();
-            break;
-          }
-          case 1176: {
-            bitField3_ |= 0x00000020;
-            speedScore_ = input.readInt64();
-            break;
-          }
-          case 1185: {
-            bitField3_ |= 0x00000040;
-            topImpressionPercentage_ = input.readDouble();
-            break;
-          }
-          case 1193: {
-            bitField3_ |= 0x00000080;
-            validAcceleratedMobilePagesClicksPercentage_ = input.readDouble();
-            break;
-          }
-          case 1201: {
-            bitField3_ |= 0x00000100;
-            valuePerAllConversions_ = input.readDouble();
-            break;
-          }
-          case 1209: {
-            bitField3_ |= 0x00000400;
-            valuePerConversion_ = input.readDouble();
-            break;
-          }
-          case 1217: {
-            bitField3_ |= 0x00001000;
-            valuePerCurrentModelAttributedConversion_ = input.readDouble();
-            break;
-          }
-          case 1225: {
-            bitField3_ |= 0x00020000;
-            videoViewRate_ = input.readDouble();
-            break;
-          }
-          case 1232: {
-            bitField3_ |= 0x00040000;
-            videoViews_ = input.readInt64();
-            break;
-          }
-          case 1240: {
-            bitField3_ |= 0x00080000;
-            viewThroughConversions_ = input.readInt64();
-            break;
-          }
-          case 1248: {
-            bitField1_ |= 0x00000002;
-            combinedClicks_ = input.readInt64();
-            break;
-          }
-          case 1257: {
-            bitField1_ |= 0x00000004;
-            combinedClicksPerQuery_ = input.readDouble();
-            break;
-          }
-          case 1264: {
-            bitField1_ |= 0x00000008;
-            combinedQueries_ = input.readInt64();
-            break;
-          }
-          case 1273: {
-            bitField1_ |= 0x00000010;
-            contentBudgetLostImpressionShare_ = input.readDouble();
-            break;
-          }
-          case 1281: {
-            bitField1_ |= 0x00000020;
-            contentImpressionShare_ = input.readDouble();
-            break;
-          }
-          case 1290: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField1_ |= 0x00000040;
-            conversionLastReceivedRequestDateTime_ = s;
-            break;
-          }
-          case 1298: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField1_ |= 0x00000080;
-            conversionLastConversionDate_ = s;
-            break;
-          }
-          case 1305: {
-            bitField1_ |= 0x00000100;
-            contentRankLostImpressionShare_ = input.readDouble();
-            break;
-          }
-          case 1313: {
-            bitField1_ |= 0x00000200;
-            conversionsFromInteractionsRate_ = input.readDouble();
-            break;
-          }
-          case 1321: {
-            bitField1_ |= 0x00000400;
-            conversionsValue_ = input.readDouble();
-            break;
-          }
-          case 1329: {
-            bitField1_ |= 0x00000800;
-            conversionsValuePerCost_ = input.readDouble();
-            break;
-          }
-          case 1337: {
-            bitField1_ |= 0x00001000;
-            conversionsFromInteractionsValuePerInteraction_ = input.readDouble();
-            break;
-          }
-          case 1345: {
-            bitField1_ |= 0x00002000;
-            conversions_ = input.readDouble();
-            break;
-          }
-          case 1352: {
-            bitField1_ |= 0x00004000;
-            costMicros_ = input.readInt64();
-            break;
-          }
-          case 1361: {
-            bitField1_ |= 0x00008000;
-            costPerAllConversions_ = input.readDouble();
-            break;
-          }
-          case 1369: {
-            bitField1_ |= 0x00010000;
-            costPerConversion_ = input.readDouble();
-            break;
-          }
-          case 1377: {
-            bitField1_ |= 0x00020000;
-            costPerCurrentModelAttributedConversion_ = input.readDouble();
-            break;
-          }
-          case 1385: {
-            bitField1_ |= 0x00040000;
-            crossDeviceConversions_ = input.readDouble();
-            break;
-          }
-          case 1393: {
-            bitField1_ |= 0x00080000;
-            ctr_ = input.readDouble();
-            break;
-          }
-          case 1401: {
-            bitField1_ |= 0x00100000;
-            currentModelAttributedConversions_ = input.readDouble();
-            break;
-          }
-          case 1409: {
-            bitField1_ |= 0x00200000;
-            currentModelAttributedConversionsFromInteractionsRate_ = input.readDouble();
-            break;
-          }
-          case 1417: {
-            bitField1_ |= 0x00400000;
-            currentModelAttributedConversionsFromInteractionsValuePerInteraction_ = input.readDouble();
-            break;
-          }
-          case 1425: {
-            bitField1_ |= 0x00800000;
-            currentModelAttributedConversionsValue_ = input.readDouble();
-            break;
-          }
-          case 1433: {
-            bitField1_ |= 0x01000000;
-            currentModelAttributedConversionsValuePerCost_ = input.readDouble();
-            break;
-          }
-          case 1441: {
-            bitField1_ |= 0x02000000;
-            engagementRate_ = input.readDouble();
-            break;
-          }
-          case 1448: {
-            bitField1_ |= 0x04000000;
-            engagements_ = input.readInt64();
-            break;
-          }
-          case 1465: {
-            bitField0_ |= 0x00000001;
-            absoluteTopImpressionPercentage_ = input.readDouble();
-            break;
-          }
-          case 1473: {
-            bitField0_ |= 0x00000002;
-            activeViewCpm_ = input.readDouble();
-            break;
-          }
-          case 1481: {
-            bitField0_ |= 0x00000004;
-            activeViewCtr_ = input.readDouble();
-            break;
-          }
-          case 1488: {
-            bitField0_ |= 0x00000008;
-            activeViewImpressions_ = input.readInt64();
-            break;
-          }
-          case 1497: {
-            bitField0_ |= 0x00000010;
-            activeViewMeasurability_ = input.readDouble();
-            break;
-          }
-          case 1504: {
-            bitField0_ |= 0x00000020;
-            activeViewMeasurableCostMicros_ = input.readInt64();
-            break;
-          }
-          case 1512: {
-            bitField0_ |= 0x00000040;
-            activeViewMeasurableImpressions_ = input.readInt64();
-            break;
-          }
-          case 1521: {
-            bitField0_ |= 0x00000080;
-            activeViewViewability_ = input.readDouble();
-            break;
-          }
-          case 1529: {
-            bitField0_ |= 0x00000100;
-            allConversionsFromInteractionsRate_ = input.readDouble();
-            break;
-          }
-          case 1537: {
-            bitField0_ |= 0x00000200;
-            allConversionsValue_ = input.readDouble();
-            break;
-          }
-          case 1545: {
-            bitField0_ |= 0x00000400;
-            allConversions_ = input.readDouble();
-            break;
-          }
-          case 1553: {
-            bitField0_ |= 0x00000800;
-            allConversionsValuePerCost_ = input.readDouble();
-            break;
-          }
-          case 1561: {
-            bitField0_ |= 0x00001000;
-            allConversionsFromClickToCall_ = input.readDouble();
-            break;
-          }
-          case 1569: {
-            bitField0_ |= 0x00002000;
-            allConversionsFromDirections_ = input.readDouble();
-            break;
-          }
-          case 1577: {
-            bitField0_ |= 0x00004000;
-            allConversionsFromInteractionsValuePerInteraction_ = input.readDouble();
-            break;
-          }
-          case 1585: {
-            bitField0_ |= 0x00008000;
-            allConversionsFromMenu_ = input.readDouble();
-            break;
-          }
-          case 1593: {
-            bitField0_ |= 0x00010000;
-            allConversionsFromOrder_ = input.readDouble();
-            break;
-          }
-          case 1601: {
-            bitField0_ |= 0x00020000;
-            allConversionsFromOtherEngagement_ = input.readDouble();
-            break;
-          }
-          case 1609: {
-            bitField0_ |= 0x00040000;
-            allConversionsFromStoreVisit_ = input.readDouble();
-            break;
-          }
-          case 1617: {
-            bitField0_ |= 0x00080000;
-            allConversionsFromStoreWebsite_ = input.readDouble();
-            break;
-          }
-          case 1625: {
-            bitField0_ |= 0x00100000;
-            averageCost_ = input.readDouble();
-            break;
-          }
-          case 1633: {
-            bitField0_ |= 0x00200000;
-            averageCpc_ = input.readDouble();
-            break;
-          }
-          case 1641: {
-            bitField0_ |= 0x00400000;
-            averageCpe_ = input.readDouble();
-            break;
-          }
-          case 1649: {
-            bitField0_ |= 0x00800000;
-            averageCpm_ = input.readDouble();
-            break;
-          }
-          case 1657: {
-            bitField0_ |= 0x01000000;
-            averageCpv_ = input.readDouble();
-            break;
-          }
-          case 1665: {
-            bitField0_ |= 0x02000000;
-            averagePageViews_ = input.readDouble();
-            break;
-          }
-          case 1673: {
-            bitField0_ |= 0x04000000;
-            averageTimeOnSite_ = input.readDouble();
-            break;
-          }
-          case 1681: {
-            bitField0_ |= 0x08000000;
-            benchmarkAverageMaxCpc_ = input.readDouble();
-            break;
-          }
-          case 1689: {
-            bitField0_ |= 0x40000000;
-            benchmarkCtr_ = input.readDouble();
-            break;
-          }
-          case 1697: {
-            bitField0_ |= 0x80000000;
-            bounceRate_ = input.readDouble();
-            break;
-          }
-          case 1705: {
-            bitField1_ |= 0x08000000;
-            hotelAverageLeadValueMicros_ = input.readDouble();
-            break;
-          }
-          case 1713: {
-            bitField1_ |= 0x40000000;
-            hotelPriceDifferencePercentage_ = input.readDouble();
-            break;
-          }
-          case 1720: {
-            bitField1_ |= 0x80000000;
-            hotelEligibleImpressions_ = input.readInt64();
-            break;
-          }
-          case 1728: {
-            bitField2_ |= 0x00000001;
-            historicalQualityScore_ = input.readInt64();
-            break;
-          }
-          case 1736: {
-            bitField2_ |= 0x00000002;
-            gmailForwards_ = input.readInt64();
-            break;
-          }
-          case 1744: {
-            bitField2_ |= 0x00000004;
-            gmailSaves_ = input.readInt64();
-            break;
-          }
-          case 1752: {
-            bitField2_ |= 0x00000008;
-            gmailSecondaryClicks_ = input.readInt64();
-            break;
-          }
-          case 1760: {
-            bitField2_ |= 0x00000010;
-            impressionsFromStoreReach_ = input.readInt64();
-            break;
-          }
-          case 1768: {
-            bitField2_ |= 0x00000020;
-            impressions_ = input.readInt64();
-            break;
-          }
-          case 1777: {
-            bitField2_ |= 0x00000040;
-            interactionRate_ = input.readDouble();
-            break;
-          }
-          case 1784: {
-            bitField2_ |= 0x00000080;
-            interactions_ = input.readInt64();
-            break;
-          }
-          case 1793: {
-            bitField2_ |= 0x00000100;
-            invalidClickRate_ = input.readDouble();
-            break;
-          }
-          case 1800: {
-            bitField2_ |= 0x00000200;
-            invalidClicks_ = input.readInt64();
-            break;
-          }
-          case 1808: {
-            bitField2_ |= 0x00000400;
-            messageChats_ = input.readInt64();
-            break;
-          }
-          case 1816: {
-            bitField2_ |= 0x00000800;
-            messageImpressions_ = input.readInt64();
-            break;
-          }
-          case 1825: {
-            bitField2_ |= 0x00001000;
-            messageChatRate_ = input.readDouble();
-            break;
-          }
-          case 1833: {
-            bitField2_ |= 0x00002000;
-            mobileFriendlyClicksPercentage_ = input.readDouble();
-            break;
-          }
-          case 1840: {
-            bitField2_ |= 0x00010000;
-            organicClicks_ = input.readInt64();
-            break;
-          }
-          case 1849: {
-            bitField2_ |= 0x00020000;
-            organicClicksPerQuery_ = input.readDouble();
-            break;
-          }
-          case 1856: {
-            bitField2_ |= 0x00040000;
-            organicImpressions_ = input.readInt64();
-            break;
-          }
-          case 1865: {
-            bitField2_ |= 0x00080000;
-            organicImpressionsPerQuery_ = input.readDouble();
-            break;
-          }
-          case 1872: {
-            bitField2_ |= 0x00100000;
-            organicQueries_ = input.readInt64();
-            break;
-          }
-          case 1881: {
-            bitField2_ |= 0x00200000;
-            percentNewVisitors_ = input.readDouble();
-            break;
-          }
-          case 1888: {
-            bitField2_ |= 0x00400000;
-            phoneCalls_ = input.readInt64();
-            break;
-          }
-          case 1896: {
-            bitField2_ |= 0x00800000;
-            phoneImpressions_ = input.readInt64();
-            break;
-          }
-          case 1905: {
-            bitField2_ |= 0x01000000;
-            phoneThroughRate_ = input.readDouble();
-            break;
-          }
-          case 1913: {
-            bitField2_ |= 0x02000000;
-            relativeCtr_ = input.readDouble();
-            break;
-          }
-          case 1921: {
-
-            allConversionsValueByConversionDate_ = input.readDouble();
-            break;
-          }
-          case 1929: {
-
-            allConversionsByConversionDate_ = input.readDouble();
-            break;
-          }
-          case 1937: {
-
-            conversionsValueByConversionDate_ = input.readDouble();
-            break;
-          }
-          case 1945: {
-
-            conversionsByConversionDate_ = input.readDouble();
-            break;
-          }
-          case 1953: {
-            bitField3_ |= 0x00000200;
-            valuePerAllConversionsByConversionDate_ = input.readDouble();
-            break;
-          }
-          case 1961: {
-            bitField3_ |= 0x00000800;
-            valuePerConversionsByConversionDate_ = input.readDouble();
-            break;
-          }
-          case 1968: {
-
-            skAdNetworkConversions_ = input.readInt64();
-            break;
-          }
-          case 1977: {
-            bitField2_ |= 0x00004000;
-            optimizationScoreUplift_ = input.readDouble();
-            break;
-          }
-          case 1986: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField2_ |= 0x00008000;
-            optimizationScoreUrl_ = s;
-            break;
-          }
-          case 2033: {
-            bitField0_ |= 0x10000000;
-            biddableAppInstallConversions_ = input.readDouble();
-            break;
-          }
-          case 2041: {
-            bitField0_ |= 0x20000000;
-            biddableAppPostInstallConversions_ = input.readDouble();
-            break;
-          }
-          case 2048: {
-            bitField1_ |= 0x10000000;
-            hotelCommissionRateMicros_ = input.readInt64();
-            break;
-          }
-          case 2057: {
-            bitField1_ |= 0x20000000;
-            hotelExpectedCommissionCost_ = input.readDouble();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField2_ & 0x00000100) != 0)) {
-        interactionEventTypes_ = java.util.Collections.unmodifiableList(interactionEventTypes_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v10.common.MetricsProto.internal_static_google_ads_googleads_v10_common_Metrics_descriptor;
@@ -1914,9 +1219,9 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The last date/time a conversion tag for this conversion action successfully
    * fired and was seen by Google Ads. This firing event may not have been the
-   * result of an attributable conversion (e.g. because the tag was fired from a
-   * browser that did not previously click an ad from an appropriate
-   * advertiser). The date/time is in the customer's time zone.
+   * result of an attributable conversion (for example, because the tag was
+   * fired from a browser that did not previously click an ad from an
+   * appropriate advertiser). The date/time is in the customer's time zone.
    * </pre>
    *
    * <code>optional string conversion_last_received_request_date_time = 161;</code>
@@ -1930,9 +1235,9 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The last date/time a conversion tag for this conversion action successfully
    * fired and was seen by Google Ads. This firing event may not have been the
-   * result of an attributable conversion (e.g. because the tag was fired from a
-   * browser that did not previously click an ad from an appropriate
-   * advertiser). The date/time is in the customer's time zone.
+   * result of an attributable conversion (for example, because the tag was
+   * fired from a browser that did not previously click an ad from an
+   * appropriate advertiser). The date/time is in the customer's time zone.
    * </pre>
    *
    * <code>optional string conversion_last_received_request_date_time = 161;</code>
@@ -1955,9 +1260,9 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The last date/time a conversion tag for this conversion action successfully
    * fired and was seen by Google Ads. This firing event may not have been the
-   * result of an attributable conversion (e.g. because the tag was fired from a
-   * browser that did not previously click an ad from an appropriate
-   * advertiser). The date/time is in the customer's time zone.
+   * result of an attributable conversion (for example, because the tag was
+   * fired from a browser that did not previously click an ad from an
+   * appropriate advertiser). The date/time is in the customer's time zone.
    * </pre>
    *
    * <code>optional string conversion_last_received_request_date_time = 161;</code>
@@ -4607,7 +3912,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The total number of view-through conversions.
    * These happen when a customer sees an image or rich media ad, then later
-   * completes a conversion on your site without interacting with (e.g.,
+   * completes a conversion on your site without interacting with (for example,
    * clicking on) another ad.
    * </pre>
    *
@@ -4622,7 +3927,7 @@ private static final long serialVersionUID = 0L;
    * <pre>
    * The total number of view-through conversions.
    * These happen when a customer sees an image or rich media ad, then later
-   * completes a conversion on your site without interacting with (e.g.,
+   * completes a conversion on your site without interacting with (for example,
    * clicking on) another ad.
    * </pre>
    *
@@ -5043,7 +4348,7 @@ private static final long serialVersionUID = 0L;
     if (((bitField1_ & 0x20000000) != 0)) {
       output.writeDouble(257, hotelExpectedCommissionCost_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -5557,7 +4862,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeDoubleSize(257, hotelExpectedCommissionCost_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -6255,7 +5560,7 @@ private static final long serialVersionUID = 0L;
     }
     if (getSkAdNetworkConversions()
         != other.getSkAdNetworkConversions()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -6868,7 +6173,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + SK_AD_NETWORK_CONVERSIONS_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getSkAdNetworkConversions());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -6989,18 +6294,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v10.common.Metrics.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -8206,7 +7506,7 @@ private static final long serialVersionUID = 0L;
       if (other.getSkAdNetworkConversions() != 0L) {
         setSkAdNetworkConversions(other.getSkAdNetworkConversions());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -8221,17 +7521,667 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.ads.googleads.v10.common.Metrics parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 640: {
+              historicalCreativeQualityScore_ = input.readEnum();
+
+              break;
+            } // case 640
+            case 648: {
+              historicalLandingPageQualityScore_ = input.readEnum();
+
+              break;
+            } // case 648
+            case 664: {
+              historicalSearchPredictedCtr_ = input.readEnum();
+
+              break;
+            } // case 664
+            case 800: {
+              int tmpRaw = input.readEnum();
+              ensureInteractionEventTypesIsMutable();
+              interactionEventTypes_.add(tmpRaw);
+              break;
+            } // case 800
+            case 802: {
+              int length = input.readRawVarint32();
+              int oldLimit = input.pushLimit(length);
+              while(input.getBytesUntilLimit() > 0) {
+                int tmpRaw = input.readEnum();
+                ensureInteractionEventTypesIsMutable();
+                interactionEventTypes_.add(tmpRaw);
+              }
+              input.popLimit(oldLimit);
+              break;
+            } // case 802
+            case 1048: {
+              clicks_ = input.readInt64();
+              bitField1_ |= 0x00000001;
+              break;
+            } // case 1048
+            case 1057: {
+              videoQuartileP100Rate_ = input.readDouble();
+              bitField3_ |= 0x00004000;
+              break;
+            } // case 1057
+            case 1065: {
+              videoQuartileP25Rate_ = input.readDouble();
+              bitField3_ |= 0x00008000;
+              break;
+            } // case 1065
+            case 1073: {
+              videoQuartileP50Rate_ = input.readDouble();
+              bitField3_ |= 0x00010000;
+              break;
+            } // case 1073
+            case 1081: {
+              videoQuartileP75Rate_ = input.readDouble();
+              bitField3_ |= 0x00020000;
+              break;
+            } // case 1081
+            case 1089: {
+              searchAbsoluteTopImpressionShare_ = input.readDouble();
+              bitField2_ |= 0x08000000;
+              break;
+            } // case 1089
+            case 1097: {
+              searchBudgetLostAbsoluteTopImpressionShare_ = input.readDouble();
+              bitField2_ |= 0x10000000;
+              break;
+            } // case 1097
+            case 1105: {
+              searchBudgetLostImpressionShare_ = input.readDouble();
+              bitField2_ |= 0x20000000;
+              break;
+            } // case 1105
+            case 1113: {
+              searchBudgetLostTopImpressionShare_ = input.readDouble();
+              bitField2_ |= 0x40000000;
+              break;
+            } // case 1113
+            case 1121: {
+              searchClickShare_ = input.readDouble();
+              bitField2_ |= 0x80000000;
+              break;
+            } // case 1121
+            case 1129: {
+              searchExactMatchImpressionShare_ = input.readDouble();
+              bitField3_ |= 0x00000001;
+              break;
+            } // case 1129
+            case 1137: {
+              searchImpressionShare_ = input.readDouble();
+              bitField3_ |= 0x00000002;
+              break;
+            } // case 1137
+            case 1145: {
+              searchRankLostAbsoluteTopImpressionShare_ = input.readDouble();
+              bitField3_ |= 0x00000004;
+              break;
+            } // case 1145
+            case 1153: {
+              searchRankLostImpressionShare_ = input.readDouble();
+              bitField3_ |= 0x00000008;
+              break;
+            } // case 1153
+            case 1161: {
+              searchRankLostTopImpressionShare_ = input.readDouble();
+              bitField3_ |= 0x00000010;
+              break;
+            } // case 1161
+            case 1169: {
+              searchTopImpressionShare_ = input.readDouble();
+              bitField3_ |= 0x00000020;
+              break;
+            } // case 1169
+            case 1176: {
+              speedScore_ = input.readInt64();
+              bitField3_ |= 0x00000040;
+              break;
+            } // case 1176
+            case 1185: {
+              topImpressionPercentage_ = input.readDouble();
+              bitField3_ |= 0x00000080;
+              break;
+            } // case 1185
+            case 1193: {
+              validAcceleratedMobilePagesClicksPercentage_ = input.readDouble();
+              bitField3_ |= 0x00000100;
+              break;
+            } // case 1193
+            case 1201: {
+              valuePerAllConversions_ = input.readDouble();
+              bitField3_ |= 0x00000200;
+              break;
+            } // case 1201
+            case 1209: {
+              valuePerConversion_ = input.readDouble();
+              bitField3_ |= 0x00000800;
+              break;
+            } // case 1209
+            case 1217: {
+              valuePerCurrentModelAttributedConversion_ = input.readDouble();
+              bitField3_ |= 0x00002000;
+              break;
+            } // case 1217
+            case 1225: {
+              videoViewRate_ = input.readDouble();
+              bitField3_ |= 0x00040000;
+              break;
+            } // case 1225
+            case 1232: {
+              videoViews_ = input.readInt64();
+              bitField3_ |= 0x00080000;
+              break;
+            } // case 1232
+            case 1240: {
+              viewThroughConversions_ = input.readInt64();
+              bitField3_ |= 0x00100000;
+              break;
+            } // case 1240
+            case 1248: {
+              combinedClicks_ = input.readInt64();
+              bitField1_ |= 0x00000002;
+              break;
+            } // case 1248
+            case 1257: {
+              combinedClicksPerQuery_ = input.readDouble();
+              bitField1_ |= 0x00000004;
+              break;
+            } // case 1257
+            case 1264: {
+              combinedQueries_ = input.readInt64();
+              bitField1_ |= 0x00000008;
+              break;
+            } // case 1264
+            case 1273: {
+              contentBudgetLostImpressionShare_ = input.readDouble();
+              bitField1_ |= 0x00000010;
+              break;
+            } // case 1273
+            case 1281: {
+              contentImpressionShare_ = input.readDouble();
+              bitField1_ |= 0x00000020;
+              break;
+            } // case 1281
+            case 1290: {
+              conversionLastReceivedRequestDateTime_ = input.readStringRequireUtf8();
+              bitField1_ |= 0x00000040;
+              break;
+            } // case 1290
+            case 1298: {
+              conversionLastConversionDate_ = input.readStringRequireUtf8();
+              bitField1_ |= 0x00000080;
+              break;
+            } // case 1298
+            case 1305: {
+              contentRankLostImpressionShare_ = input.readDouble();
+              bitField1_ |= 0x00000100;
+              break;
+            } // case 1305
+            case 1313: {
+              conversionsFromInteractionsRate_ = input.readDouble();
+              bitField1_ |= 0x00000200;
+              break;
+            } // case 1313
+            case 1321: {
+              conversionsValue_ = input.readDouble();
+              bitField1_ |= 0x00000400;
+              break;
+            } // case 1321
+            case 1329: {
+              conversionsValuePerCost_ = input.readDouble();
+              bitField1_ |= 0x00000800;
+              break;
+            } // case 1329
+            case 1337: {
+              conversionsFromInteractionsValuePerInteraction_ = input.readDouble();
+              bitField1_ |= 0x00001000;
+              break;
+            } // case 1337
+            case 1345: {
+              conversions_ = input.readDouble();
+              bitField1_ |= 0x00002000;
+              break;
+            } // case 1345
+            case 1352: {
+              costMicros_ = input.readInt64();
+              bitField1_ |= 0x00004000;
+              break;
+            } // case 1352
+            case 1361: {
+              costPerAllConversions_ = input.readDouble();
+              bitField1_ |= 0x00008000;
+              break;
+            } // case 1361
+            case 1369: {
+              costPerConversion_ = input.readDouble();
+              bitField1_ |= 0x00010000;
+              break;
+            } // case 1369
+            case 1377: {
+              costPerCurrentModelAttributedConversion_ = input.readDouble();
+              bitField1_ |= 0x00020000;
+              break;
+            } // case 1377
+            case 1385: {
+              crossDeviceConversions_ = input.readDouble();
+              bitField1_ |= 0x00040000;
+              break;
+            } // case 1385
+            case 1393: {
+              ctr_ = input.readDouble();
+              bitField1_ |= 0x00080000;
+              break;
+            } // case 1393
+            case 1401: {
+              currentModelAttributedConversions_ = input.readDouble();
+              bitField1_ |= 0x00100000;
+              break;
+            } // case 1401
+            case 1409: {
+              currentModelAttributedConversionsFromInteractionsRate_ = input.readDouble();
+              bitField1_ |= 0x00200000;
+              break;
+            } // case 1409
+            case 1417: {
+              currentModelAttributedConversionsFromInteractionsValuePerInteraction_ = input.readDouble();
+              bitField1_ |= 0x00400000;
+              break;
+            } // case 1417
+            case 1425: {
+              currentModelAttributedConversionsValue_ = input.readDouble();
+              bitField1_ |= 0x00800000;
+              break;
+            } // case 1425
+            case 1433: {
+              currentModelAttributedConversionsValuePerCost_ = input.readDouble();
+              bitField1_ |= 0x01000000;
+              break;
+            } // case 1433
+            case 1441: {
+              engagementRate_ = input.readDouble();
+              bitField1_ |= 0x02000000;
+              break;
+            } // case 1441
+            case 1448: {
+              engagements_ = input.readInt64();
+              bitField1_ |= 0x04000000;
+              break;
+            } // case 1448
+            case 1465: {
+              absoluteTopImpressionPercentage_ = input.readDouble();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 1465
+            case 1473: {
+              activeViewCpm_ = input.readDouble();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 1473
+            case 1481: {
+              activeViewCtr_ = input.readDouble();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 1481
+            case 1488: {
+              activeViewImpressions_ = input.readInt64();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 1488
+            case 1497: {
+              activeViewMeasurability_ = input.readDouble();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 1497
+            case 1504: {
+              activeViewMeasurableCostMicros_ = input.readInt64();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 1504
+            case 1512: {
+              activeViewMeasurableImpressions_ = input.readInt64();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 1512
+            case 1521: {
+              activeViewViewability_ = input.readDouble();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 1521
+            case 1529: {
+              allConversionsFromInteractionsRate_ = input.readDouble();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 1529
+            case 1537: {
+              allConversionsValue_ = input.readDouble();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 1537
+            case 1545: {
+              allConversions_ = input.readDouble();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 1545
+            case 1553: {
+              allConversionsValuePerCost_ = input.readDouble();
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 1553
+            case 1561: {
+              allConversionsFromClickToCall_ = input.readDouble();
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 1561
+            case 1569: {
+              allConversionsFromDirections_ = input.readDouble();
+              bitField0_ |= 0x00002000;
+              break;
+            } // case 1569
+            case 1577: {
+              allConversionsFromInteractionsValuePerInteraction_ = input.readDouble();
+              bitField0_ |= 0x00004000;
+              break;
+            } // case 1577
+            case 1585: {
+              allConversionsFromMenu_ = input.readDouble();
+              bitField0_ |= 0x00008000;
+              break;
+            } // case 1585
+            case 1593: {
+              allConversionsFromOrder_ = input.readDouble();
+              bitField0_ |= 0x00010000;
+              break;
+            } // case 1593
+            case 1601: {
+              allConversionsFromOtherEngagement_ = input.readDouble();
+              bitField0_ |= 0x00020000;
+              break;
+            } // case 1601
+            case 1609: {
+              allConversionsFromStoreVisit_ = input.readDouble();
+              bitField0_ |= 0x00040000;
+              break;
+            } // case 1609
+            case 1617: {
+              allConversionsFromStoreWebsite_ = input.readDouble();
+              bitField0_ |= 0x00080000;
+              break;
+            } // case 1617
+            case 1625: {
+              averageCost_ = input.readDouble();
+              bitField0_ |= 0x00100000;
+              break;
+            } // case 1625
+            case 1633: {
+              averageCpc_ = input.readDouble();
+              bitField0_ |= 0x00200000;
+              break;
+            } // case 1633
+            case 1641: {
+              averageCpe_ = input.readDouble();
+              bitField0_ |= 0x00400000;
+              break;
+            } // case 1641
+            case 1649: {
+              averageCpm_ = input.readDouble();
+              bitField0_ |= 0x00800000;
+              break;
+            } // case 1649
+            case 1657: {
+              averageCpv_ = input.readDouble();
+              bitField0_ |= 0x01000000;
+              break;
+            } // case 1657
+            case 1665: {
+              averagePageViews_ = input.readDouble();
+              bitField0_ |= 0x02000000;
+              break;
+            } // case 1665
+            case 1673: {
+              averageTimeOnSite_ = input.readDouble();
+              bitField0_ |= 0x04000000;
+              break;
+            } // case 1673
+            case 1681: {
+              benchmarkAverageMaxCpc_ = input.readDouble();
+              bitField0_ |= 0x08000000;
+              break;
+            } // case 1681
+            case 1689: {
+              benchmarkCtr_ = input.readDouble();
+              bitField0_ |= 0x40000000;
+              break;
+            } // case 1689
+            case 1697: {
+              bounceRate_ = input.readDouble();
+              bitField0_ |= 0x80000000;
+              break;
+            } // case 1697
+            case 1705: {
+              hotelAverageLeadValueMicros_ = input.readDouble();
+              bitField1_ |= 0x08000000;
+              break;
+            } // case 1705
+            case 1713: {
+              hotelPriceDifferencePercentage_ = input.readDouble();
+              bitField1_ |= 0x40000000;
+              break;
+            } // case 1713
+            case 1720: {
+              hotelEligibleImpressions_ = input.readInt64();
+              bitField1_ |= 0x80000000;
+              break;
+            } // case 1720
+            case 1728: {
+              historicalQualityScore_ = input.readInt64();
+              bitField2_ |= 0x00000001;
+              break;
+            } // case 1728
+            case 1736: {
+              gmailForwards_ = input.readInt64();
+              bitField2_ |= 0x00000002;
+              break;
+            } // case 1736
+            case 1744: {
+              gmailSaves_ = input.readInt64();
+              bitField2_ |= 0x00000004;
+              break;
+            } // case 1744
+            case 1752: {
+              gmailSecondaryClicks_ = input.readInt64();
+              bitField2_ |= 0x00000008;
+              break;
+            } // case 1752
+            case 1760: {
+              impressionsFromStoreReach_ = input.readInt64();
+              bitField2_ |= 0x00000010;
+              break;
+            } // case 1760
+            case 1768: {
+              impressions_ = input.readInt64();
+              bitField2_ |= 0x00000020;
+              break;
+            } // case 1768
+            case 1777: {
+              interactionRate_ = input.readDouble();
+              bitField2_ |= 0x00000040;
+              break;
+            } // case 1777
+            case 1784: {
+              interactions_ = input.readInt64();
+              bitField2_ |= 0x00000080;
+              break;
+            } // case 1784
+            case 1793: {
+              invalidClickRate_ = input.readDouble();
+              bitField2_ |= 0x00000200;
+              break;
+            } // case 1793
+            case 1800: {
+              invalidClicks_ = input.readInt64();
+              bitField2_ |= 0x00000400;
+              break;
+            } // case 1800
+            case 1808: {
+              messageChats_ = input.readInt64();
+              bitField2_ |= 0x00000800;
+              break;
+            } // case 1808
+            case 1816: {
+              messageImpressions_ = input.readInt64();
+              bitField2_ |= 0x00001000;
+              break;
+            } // case 1816
+            case 1825: {
+              messageChatRate_ = input.readDouble();
+              bitField2_ |= 0x00002000;
+              break;
+            } // case 1825
+            case 1833: {
+              mobileFriendlyClicksPercentage_ = input.readDouble();
+              bitField2_ |= 0x00004000;
+              break;
+            } // case 1833
+            case 1840: {
+              organicClicks_ = input.readInt64();
+              bitField2_ |= 0x00020000;
+              break;
+            } // case 1840
+            case 1849: {
+              organicClicksPerQuery_ = input.readDouble();
+              bitField2_ |= 0x00040000;
+              break;
+            } // case 1849
+            case 1856: {
+              organicImpressions_ = input.readInt64();
+              bitField2_ |= 0x00080000;
+              break;
+            } // case 1856
+            case 1865: {
+              organicImpressionsPerQuery_ = input.readDouble();
+              bitField2_ |= 0x00100000;
+              break;
+            } // case 1865
+            case 1872: {
+              organicQueries_ = input.readInt64();
+              bitField2_ |= 0x00200000;
+              break;
+            } // case 1872
+            case 1881: {
+              percentNewVisitors_ = input.readDouble();
+              bitField2_ |= 0x00400000;
+              break;
+            } // case 1881
+            case 1888: {
+              phoneCalls_ = input.readInt64();
+              bitField2_ |= 0x00800000;
+              break;
+            } // case 1888
+            case 1896: {
+              phoneImpressions_ = input.readInt64();
+              bitField2_ |= 0x01000000;
+              break;
+            } // case 1896
+            case 1905: {
+              phoneThroughRate_ = input.readDouble();
+              bitField2_ |= 0x02000000;
+              break;
+            } // case 1905
+            case 1913: {
+              relativeCtr_ = input.readDouble();
+              bitField2_ |= 0x04000000;
+              break;
+            } // case 1913
+            case 1921: {
+              allConversionsValueByConversionDate_ = input.readDouble();
+
+              break;
+            } // case 1921
+            case 1929: {
+              allConversionsByConversionDate_ = input.readDouble();
+
+              break;
+            } // case 1929
+            case 1937: {
+              conversionsValueByConversionDate_ = input.readDouble();
+
+              break;
+            } // case 1937
+            case 1945: {
+              conversionsByConversionDate_ = input.readDouble();
+
+              break;
+            } // case 1945
+            case 1953: {
+              valuePerAllConversionsByConversionDate_ = input.readDouble();
+              bitField3_ |= 0x00000400;
+              break;
+            } // case 1953
+            case 1961: {
+              valuePerConversionsByConversionDate_ = input.readDouble();
+              bitField3_ |= 0x00001000;
+              break;
+            } // case 1961
+            case 1968: {
+              skAdNetworkConversions_ = input.readInt64();
+
+              break;
+            } // case 1968
+            case 1977: {
+              optimizationScoreUplift_ = input.readDouble();
+              bitField2_ |= 0x00008000;
+              break;
+            } // case 1977
+            case 1986: {
+              optimizationScoreUrl_ = input.readStringRequireUtf8();
+              bitField2_ |= 0x00010000;
+              break;
+            } // case 1986
+            case 2033: {
+              biddableAppInstallConversions_ = input.readDouble();
+              bitField0_ |= 0x10000000;
+              break;
+            } // case 2033
+            case 2041: {
+              biddableAppPostInstallConversions_ = input.readDouble();
+              bitField0_ |= 0x20000000;
+              break;
+            } // case 2041
+            case 2048: {
+              hotelCommissionRateMicros_ = input.readInt64();
+              bitField1_ |= 0x10000000;
+              break;
+            } // case 2048
+            case 2057: {
+              hotelExpectedCommissionCost_ = input.readDouble();
+              bitField1_ |= 0x20000000;
+              break;
+            } // case 2057
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v10.common.Metrics) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -10625,9 +10575,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The last date/time a conversion tag for this conversion action successfully
      * fired and was seen by Google Ads. This firing event may not have been the
-     * result of an attributable conversion (e.g. because the tag was fired from a
-     * browser that did not previously click an ad from an appropriate
-     * advertiser). The date/time is in the customer's time zone.
+     * result of an attributable conversion (for example, because the tag was
+     * fired from a browser that did not previously click an ad from an
+     * appropriate advertiser). The date/time is in the customer's time zone.
      * </pre>
      *
      * <code>optional string conversion_last_received_request_date_time = 161;</code>
@@ -10640,9 +10590,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The last date/time a conversion tag for this conversion action successfully
      * fired and was seen by Google Ads. This firing event may not have been the
-     * result of an attributable conversion (e.g. because the tag was fired from a
-     * browser that did not previously click an ad from an appropriate
-     * advertiser). The date/time is in the customer's time zone.
+     * result of an attributable conversion (for example, because the tag was
+     * fired from a browser that did not previously click an ad from an
+     * appropriate advertiser). The date/time is in the customer's time zone.
      * </pre>
      *
      * <code>optional string conversion_last_received_request_date_time = 161;</code>
@@ -10664,9 +10614,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The last date/time a conversion tag for this conversion action successfully
      * fired and was seen by Google Ads. This firing event may not have been the
-     * result of an attributable conversion (e.g. because the tag was fired from a
-     * browser that did not previously click an ad from an appropriate
-     * advertiser). The date/time is in the customer's time zone.
+     * result of an attributable conversion (for example, because the tag was
+     * fired from a browser that did not previously click an ad from an
+     * appropriate advertiser). The date/time is in the customer's time zone.
      * </pre>
      *
      * <code>optional string conversion_last_received_request_date_time = 161;</code>
@@ -10689,9 +10639,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The last date/time a conversion tag for this conversion action successfully
      * fired and was seen by Google Ads. This firing event may not have been the
-     * result of an attributable conversion (e.g. because the tag was fired from a
-     * browser that did not previously click an ad from an appropriate
-     * advertiser). The date/time is in the customer's time zone.
+     * result of an attributable conversion (for example, because the tag was
+     * fired from a browser that did not previously click an ad from an
+     * appropriate advertiser). The date/time is in the customer's time zone.
      * </pre>
      *
      * <code>optional string conversion_last_received_request_date_time = 161;</code>
@@ -10712,9 +10662,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The last date/time a conversion tag for this conversion action successfully
      * fired and was seen by Google Ads. This firing event may not have been the
-     * result of an attributable conversion (e.g. because the tag was fired from a
-     * browser that did not previously click an ad from an appropriate
-     * advertiser). The date/time is in the customer's time zone.
+     * result of an attributable conversion (for example, because the tag was
+     * fired from a browser that did not previously click an ad from an
+     * appropriate advertiser). The date/time is in the customer's time zone.
      * </pre>
      *
      * <code>optional string conversion_last_received_request_date_time = 161;</code>
@@ -10730,9 +10680,9 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The last date/time a conversion tag for this conversion action successfully
      * fired and was seen by Google Ads. This firing event may not have been the
-     * result of an attributable conversion (e.g. because the tag was fired from a
-     * browser that did not previously click an ad from an appropriate
-     * advertiser). The date/time is in the customer's time zone.
+     * result of an attributable conversion (for example, because the tag was
+     * fired from a browser that did not previously click an ad from an
+     * appropriate advertiser). The date/time is in the customer's time zone.
      * </pre>
      *
      * <code>optional string conversion_last_received_request_date_time = 161;</code>
@@ -13375,8 +13325,8 @@ private static final long serialVersionUID = 0L;
      * </pre>
      *
      * <code>repeated .google.ads.googleads.v10.enums.InteractionEventTypeEnum.InteractionEventType interaction_event_types = 100;</code>
-     * @param index The index of the value to return.
-     * @return The enum numeric value on the wire of interactionEventTypes at the given index.
+     * @param index The index to set the value at.
+     * @param value The enum numeric value on the wire for interactionEventTypes to set.
      * @return This builder for chaining.
      */
     public Builder setInteractionEventTypesValue(
@@ -16188,7 +16138,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The total number of view-through conversions.
      * These happen when a customer sees an image or rich media ad, then later
-     * completes a conversion on your site without interacting with (e.g.,
+     * completes a conversion on your site without interacting with (for example,
      * clicking on) another ad.
      * </pre>
      *
@@ -16203,7 +16153,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The total number of view-through conversions.
      * These happen when a customer sees an image or rich media ad, then later
-     * completes a conversion on your site without interacting with (e.g.,
+     * completes a conversion on your site without interacting with (for example,
      * clicking on) another ad.
      * </pre>
      *
@@ -16218,7 +16168,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The total number of view-through conversions.
      * These happen when a customer sees an image or rich media ad, then later
-     * completes a conversion on your site without interacting with (e.g.,
+     * completes a conversion on your site without interacting with (for example,
      * clicking on) another ad.
      * </pre>
      *
@@ -16236,7 +16186,7 @@ private static final long serialVersionUID = 0L;
      * <pre>
      * The total number of view-through conversions.
      * These happen when a customer sees an image or rich media ad, then later
-     * completes a conversion on your site without interacting with (e.g.,
+     * completes a conversion on your site without interacting with (for example,
      * clicking on) another ad.
      * </pre>
      *
@@ -16325,7 +16275,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new Metrics(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

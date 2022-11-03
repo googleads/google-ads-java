@@ -147,8 +147,8 @@ public interface FeedMappingOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. The placeholder type of this mapping (i.e., if the mapping maps feed
-   * attributes to placeholder fields).
+   * Immutable. The placeholder type of this mapping (for example, if the mapping maps
+   * feed attributes to placeholder fields).
    * </pre>
    *
    * <code>.google.ads.googleads.v10.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -157,8 +157,8 @@ public interface FeedMappingOrBuilder extends
   boolean hasPlaceholderType();
   /**
    * <pre>
-   * Immutable. The placeholder type of this mapping (i.e., if the mapping maps feed
-   * attributes to placeholder fields).
+   * Immutable. The placeholder type of this mapping (for example, if the mapping maps
+   * feed attributes to placeholder fields).
    * </pre>
    *
    * <code>.google.ads.googleads.v10.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -167,8 +167,8 @@ public interface FeedMappingOrBuilder extends
   int getPlaceholderTypeValue();
   /**
    * <pre>
-   * Immutable. The placeholder type of this mapping (i.e., if the mapping maps feed
-   * attributes to placeholder fields).
+   * Immutable. The placeholder type of this mapping (for example, if the mapping maps
+   * feed attributes to placeholder fields).
    * </pre>
    *
    * <code>.google.ads.googleads.v10.enums.PlaceholderTypeEnum.PlaceholderType placeholder_type = 3 [(.google.api.field_behavior) = IMMUTABLE];</code>
@@ -178,7 +178,7 @@ public interface FeedMappingOrBuilder extends
 
   /**
    * <pre>
-   * Immutable. The criterion type of this mapping (i.e., if the mapping maps feed
+   * Immutable. The criterion type of this mapping (for example, if the mapping maps feed
    * attributes to criterion fields).
    * </pre>
    *
@@ -188,7 +188,7 @@ public interface FeedMappingOrBuilder extends
   boolean hasCriterionType();
   /**
    * <pre>
-   * Immutable. The criterion type of this mapping (i.e., if the mapping maps feed
+   * Immutable. The criterion type of this mapping (for example, if the mapping maps feed
    * attributes to criterion fields).
    * </pre>
    *
@@ -198,7 +198,7 @@ public interface FeedMappingOrBuilder extends
   int getCriterionTypeValue();
   /**
    * <pre>
-   * Immutable. The criterion type of this mapping (i.e., if the mapping maps feed
+   * Immutable. The criterion type of this mapping (for example, if the mapping maps feed
    * attributes to criterion fields).
    * </pre>
    *

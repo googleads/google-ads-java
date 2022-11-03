@@ -39,9 +39,9 @@ import javax.annotation.Generated;
  * <p>The default instance has everything set to sensible defaults:
  *
  * <ul>
- *   <li> The default service address (googleads.googleapis.com) and default port (443) are used.
- *   <li> Credentials are acquired automatically through Application Default Credentials.
- *   <li> Retries are configured for idempotent methods but not for non-idempotent methods.
+ *   <li>The default service address (googleads.googleapis.com) and default port (443) are used.
+ *   <li>Credentials are acquired automatically through Application Default Credentials.
+ *   <li>Retries are configured for idempotent methods but not for non-idempotent methods.
  * </ul>
  *
  * <p>The builder of this class is recursive, so contained classes are themselves builders. When
@@ -50,17 +50,17 @@ import javax.annotation.Generated;
  * <p>For example, to set the total timeout of mutateCampaigns to 30 seconds:
  *
  * <pre>{@code
- * // This snippet has been automatically generated for illustrative purposes only.
- * // It may require modifications to work in your environment.
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * CampaignServiceSettings.Builder campaignServiceSettingsBuilder =
  *     CampaignServiceSettings.newBuilder();
  * campaignServiceSettingsBuilder
  *     .mutateCampaignsSettings()
  *     .setRetrySettings(
- *         campaignServiceSettingsBuilder
- *             .mutateCampaignsSettings()
- *             .getRetrySettings()
- *             .toBuilder()
+ *         campaignServiceSettingsBuilder.mutateCampaignsSettings().getRetrySettings().toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
  * CampaignServiceSettings campaignServiceSettings = campaignServiceSettingsBuilder.build();

@@ -34,8 +34,11 @@ import javax.annotation.Generated;
  * calls that map to API methods. Sample code to get started:
  *
  * <pre>{@code
- * // This snippet has been automatically generated for illustrative purposes only.
- * // It may require modifications to work in your environment.
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * try (AssetServiceClient assetServiceClient = AssetServiceClient.create()) {
  *   String customerId = "customerId-1581184615";
  *   List<AssetOperation> operations = new ArrayList<>();
@@ -50,13 +53,13 @@ import javax.annotation.Generated;
  * methods:
  *
  * <ol>
- *   <li> A "flattened" method. With this type of method, the fields of the request type have been
+ *   <li>A "flattened" method. With this type of method, the fields of the request type have been
  *       converted into function parameters. It may be the case that not all fields are available as
  *       parameters, and not every API method will have a flattened method entry point.
- *   <li> A "request object" method. This type of method only takes one parameter, a request object,
+ *   <li>A "request object" method. This type of method only takes one parameter, a request object,
  *       which must be constructed before the call. Not every API method will have a request object
  *       method.
- *   <li> A "callable" method. This type of method takes no parameters and returns an immutable API
+ *   <li>A "callable" method. This type of method takes no parameters and returns an immutable API
  *       callable object, which can be used to initiate calls to the service.
  * </ol>
  *
@@ -72,8 +75,11 @@ import javax.annotation.Generated;
  * <p>To customize credentials:
  *
  * <pre>{@code
- * // This snippet has been automatically generated for illustrative purposes only.
- * // It may require modifications to work in your environment.
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * AssetServiceSettings assetServiceSettings =
  *     AssetServiceSettings.newBuilder()
  *         .setCredentialsProvider(FixedCredentialsProvider.create(myCredentials))
@@ -84,8 +90,11 @@ import javax.annotation.Generated;
  * <p>To customize the endpoint:
  *
  * <pre>{@code
- * // This snippet has been automatically generated for illustrative purposes only.
- * // It may require modifications to work in your environment.
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * AssetServiceSettings assetServiceSettings =
  *     AssetServiceSettings.newBuilder().setEndpoint(myEndpoint).build();
  * AssetServiceClient assetServiceClient = AssetServiceClient.create(assetServiceSettings);
@@ -157,8 +166,11 @@ public class AssetServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
-   * // This snippet has been automatically generated for illustrative purposes only.
-   * // It may require modifications to work in your environment.
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (AssetServiceClient assetServiceClient = AssetServiceClient.create()) {
    *   String customerId = "customerId-1581184615";
    *   List<AssetOperation> operations = new ArrayList<>();
@@ -195,8 +207,11 @@ public class AssetServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
-   * // This snippet has been automatically generated for illustrative purposes only.
-   * // It may require modifications to work in your environment.
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (AssetServiceClient assetServiceClient = AssetServiceClient.create()) {
    *   MutateAssetsRequest request =
    *       MutateAssetsRequest.newBuilder()
@@ -231,8 +246,11 @@ public class AssetServiceClient implements BackgroundResource {
    * <p>Sample code:
    *
    * <pre>{@code
-   * // This snippet has been automatically generated for illustrative purposes only.
-   * // It may require modifications to work in your environment.
+   * // This snippet has been automatically generated and should be regarded as a code template only.
+   * // It will require modifications to work:
+   * // - It may require correct/in-range values for request initialization.
+   * // - It may require specifying regional endpoints when creating the service client as shown in
+   * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
    * try (AssetServiceClient assetServiceClient = AssetServiceClient.create()) {
    *   MutateAssetsRequest request =
    *       MutateAssetsRequest.newBuilder()

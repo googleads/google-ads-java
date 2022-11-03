@@ -43,9 +43,9 @@ import javax.annotation.Generated;
  * <p>The default instance has everything set to sensible defaults:
  *
  * <ul>
- *   <li> The default service address (googleads.googleapis.com) and default port (443) are used.
- *   <li> Credentials are acquired automatically through Application Default Credentials.
- *   <li> Retries are configured for idempotent methods but not for non-idempotent methods.
+ *   <li>The default service address (googleads.googleapis.com) and default port (443) are used.
+ *   <li>Credentials are acquired automatically through Application Default Credentials.
+ *   <li>Retries are configured for idempotent methods but not for non-idempotent methods.
  * </ul>
  *
  * <p>The builder of this class is recursive, so contained classes are themselves builders. When
@@ -54,8 +54,11 @@ import javax.annotation.Generated;
  * <p>For example, to set the total timeout of getGoogleAdsField to 30 seconds:
  *
  * <pre>{@code
- * // This snippet has been automatically generated for illustrative purposes only.
- * // It may require modifications to work in your environment.
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * GoogleAdsFieldServiceSettings.Builder googleAdsFieldServiceSettingsBuilder =
  *     GoogleAdsFieldServiceSettings.newBuilder();
  * googleAdsFieldServiceSettingsBuilder
@@ -81,7 +84,8 @@ public class GoogleAdsFieldServiceSettings extends ClientSettings<GoogleAdsField
 
   /** Returns the object with the settings used for calls to searchGoogleAdsFields. */
   public PagedCallSettings<
-          SearchGoogleAdsFieldsRequest, SearchGoogleAdsFieldsResponse,
+          SearchGoogleAdsFieldsRequest,
+          SearchGoogleAdsFieldsResponse,
           SearchGoogleAdsFieldsPagedResponse>
       searchGoogleAdsFieldsSettings() {
     return ((GoogleAdsFieldServiceStubSettings) getStubSettings()).searchGoogleAdsFieldsSettings();
@@ -193,7 +197,8 @@ public class GoogleAdsFieldServiceSettings extends ClientSettings<GoogleAdsField
 
     /** Returns the builder for the settings used for calls to searchGoogleAdsFields. */
     public PagedCallSettings.Builder<
-            SearchGoogleAdsFieldsRequest, SearchGoogleAdsFieldsResponse,
+            SearchGoogleAdsFieldsRequest,
+            SearchGoogleAdsFieldsResponse,
             SearchGoogleAdsFieldsPagedResponse>
         searchGoogleAdsFieldsSettings() {
       return getStubSettingsBuilder().searchGoogleAdsFieldsSettings();

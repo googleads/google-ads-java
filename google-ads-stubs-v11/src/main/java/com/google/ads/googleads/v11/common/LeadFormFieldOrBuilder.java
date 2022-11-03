@@ -9,8 +9,8 @@ public interface LeadFormFieldOrBuilder extends
 
   /**
    * <pre>
-   * Describes the input type, which may be a predefined type such as
-   * "full name" or a pre-vetted question like "Do you own a car?".
+   * Describes the input type, which may be a predefined type such as "full
+   * name" or a pre-vetted question like "What kind of vehicle do you have?".
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType input_type = 1;</code>
@@ -19,8 +19,8 @@ public interface LeadFormFieldOrBuilder extends
   int getInputTypeValue();
   /**
    * <pre>
-   * Describes the input type, which may be a predefined type such as
-   * "full name" or a pre-vetted question like "Do you own a car?".
+   * Describes the input type, which may be a predefined type such as "full
+   * name" or a pre-vetted question like "What kind of vehicle do you have?".
    * </pre>
    *
    * <code>.google.ads.googleads.v11.enums.LeadFormFieldUserInputTypeEnum.LeadFormFieldUserInputType input_type = 1;</code>

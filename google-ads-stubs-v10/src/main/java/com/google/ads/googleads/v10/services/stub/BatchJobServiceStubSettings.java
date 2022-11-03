@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Google LLC
+ * Copyright 2022 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -71,9 +71,9 @@ import org.threeten.bp.Duration;
  * <p>The default instance has everything set to sensible defaults:
  *
  * <ul>
- *   <li> The default service address (googleads.googleapis.com) and default port (443) are used.
- *   <li> Credentials are acquired automatically through Application Default Credentials.
- *   <li> Retries are configured for idempotent methods but not for non-idempotent methods.
+ *   <li>The default service address (googleads.googleapis.com) and default port (443) are used.
+ *   <li>Credentials are acquired automatically through Application Default Credentials.
+ *   <li>Retries are configured for idempotent methods but not for non-idempotent methods.
  * </ul>
  *
  * <p>The builder of this class is recursive, so contained classes are themselves builders. When
@@ -82,15 +82,17 @@ import org.threeten.bp.Duration;
  * <p>For example, to set the total timeout of mutateBatchJob to 30 seconds:
  *
  * <pre>{@code
+ * // This snippet has been automatically generated and should be regarded as a code template only.
+ * // It will require modifications to work:
+ * // - It may require correct/in-range values for request initialization.
+ * // - It may require specifying regional endpoints when creating the service client as shown in
+ * // https://cloud.google.com/java/docs/setup#configure_endpoints_for_the_client_library
  * BatchJobServiceStubSettings.Builder batchJobServiceSettingsBuilder =
  *     BatchJobServiceStubSettings.newBuilder();
  * batchJobServiceSettingsBuilder
  *     .mutateBatchJobSettings()
  *     .setRetrySettings(
- *         batchJobServiceSettingsBuilder
- *             .mutateBatchJobSettings()
- *             .getRetrySettings()
- *             .toBuilder()
+ *         batchJobServiceSettingsBuilder.mutateBatchJobSettings().getRetrySettings().toBuilder()
  *             .setTotalTimeout(Duration.ofSeconds(30))
  *             .build());
  * BatchJobServiceStubSettings batchJobServiceSettings = batchJobServiceSettingsBuilder.build();
@@ -157,7 +159,8 @@ public class BatchJobServiceStubSettings extends StubSettings<BatchJobServiceStu
           ListBatchJobResultsRequest, ListBatchJobResultsResponse, ListBatchJobResultsPagedResponse>
       LIST_BATCH_JOB_RESULTS_PAGE_STR_FACT =
           new PagedListResponseFactory<
-              ListBatchJobResultsRequest, ListBatchJobResultsResponse,
+              ListBatchJobResultsRequest,
+              ListBatchJobResultsResponse,
               ListBatchJobResultsPagedResponse>() {
             @Override
             public ApiFuture<ListBatchJobResultsPagedResponse> getFuturePagedResponse(
@@ -202,7 +205,6 @@ public class BatchJobServiceStubSettings extends StubSettings<BatchJobServiceStu
     return addBatchJobOperationsSettings;
   }
 
-  @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public BatchJobServiceStub createStub() throws IOException {
     if (getTransportChannelProvider()
         .getTransportName()
@@ -291,7 +293,8 @@ public class BatchJobServiceStubSettings extends StubSettings<BatchJobServiceStu
     private final UnaryCallSettings.Builder<MutateBatchJobRequest, MutateBatchJobResponse>
         mutateBatchJobSettings;
     private final PagedCallSettings.Builder<
-            ListBatchJobResultsRequest, ListBatchJobResultsResponse,
+            ListBatchJobResultsRequest,
+            ListBatchJobResultsResponse,
             ListBatchJobResultsPagedResponse>
         listBatchJobResultsSettings;
     private final UnaryCallSettings.Builder<RunBatchJobRequest, Operation> runBatchJobSettings;
@@ -458,7 +461,8 @@ public class BatchJobServiceStubSettings extends StubSettings<BatchJobServiceStu
 
     /** Returns the builder for the settings used for calls to listBatchJobResults. */
     public PagedCallSettings.Builder<
-            ListBatchJobResultsRequest, ListBatchJobResultsResponse,
+            ListBatchJobResultsRequest,
+            ListBatchJobResultsResponse,
             ListBatchJobResultsPagedResponse>
         listBatchJobResultsSettings() {
       return listBatchJobResultsSettings;

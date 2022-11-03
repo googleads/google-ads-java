@@ -47,141 +47,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private DynamicJobsAsset(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            jobId_ = s;
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            locationId_ = s;
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            jobTitle_ = s;
-            break;
-          }
-          case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            jobSubtitle_ = s;
-            break;
-          }
-          case 42: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            description_ = s;
-            break;
-          }
-          case 50: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            imageUrl_ = s;
-            break;
-          }
-          case 58: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            jobCategory_ = s;
-            break;
-          }
-          case 66: {
-            java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-              contextualKeywords_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000001;
-            }
-            contextualKeywords_.add(s);
-            break;
-          }
-          case 74: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            address_ = s;
-            break;
-          }
-          case 82: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            salary_ = s;
-            break;
-          }
-          case 90: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            androidAppLink_ = s;
-            break;
-          }
-          case 98: {
-            java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-              similarJobIds_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000002;
-            }
-            similarJobIds_.add(s);
-            break;
-          }
-          case 106: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            iosAppLink_ = s;
-            break;
-          }
-          case 112: {
-
-            iosAppStoreId_ = input.readInt64();
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        contextualKeywords_ = contextualKeywords_.getUnmodifiableView();
-      }
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
-        similarJobIds_ = similarJobIds_.getUnmodifiableView();
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v11.common.AssetTypesProto.internal_static_google_ads_googleads_v11_common_DynamicJobsAsset_descriptor;
@@ -890,7 +755,7 @@ private static final long serialVersionUID = 0L;
     if (iosAppStoreId_ != 0L) {
       output.writeInt64(14, iosAppStoreId_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -952,7 +817,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt64Size(14, iosAppStoreId_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -995,7 +860,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getIosAppLink())) return false;
     if (getIosAppStoreId()
         != other.getIosAppStoreId()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -1039,7 +904,7 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + IOS_APP_STORE_ID_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
         getIosAppStoreId());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -1160,18 +1025,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v11.common.DynamicJobsAsset.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -1368,7 +1228,7 @@ private static final long serialVersionUID = 0L;
       if (other.getIosAppStoreId() != 0L) {
         setIosAppStoreId(other.getIosAppStoreId());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1383,17 +1243,102 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.ads.googleads.v11.common.DynamicJobsAsset parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              jobId_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 10
+            case 18: {
+              locationId_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 18
+            case 26: {
+              jobTitle_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 26
+            case 34: {
+              jobSubtitle_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 34
+            case 42: {
+              description_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 42
+            case 50: {
+              imageUrl_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 50
+            case 58: {
+              jobCategory_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 58
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureContextualKeywordsIsMutable();
+              contextualKeywords_.add(s);
+              break;
+            } // case 66
+            case 74: {
+              address_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 74
+            case 82: {
+              salary_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 82
+            case 90: {
+              androidAppLink_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 90
+            case 98: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureSimilarJobIdsIsMutable();
+              similarJobIds_.add(s);
+              break;
+            } // case 98
+            case 106: {
+              iosAppLink_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 106
+            case 112: {
+              iosAppStoreId_ = input.readInt64();
+
+              break;
+            } // case 112
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v11.common.DynamicJobsAsset) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -2862,7 +2807,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new DynamicJobsAsset(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

@@ -89,7 +89,7 @@ public interface ConversionAdjustmentResultOrBuilder extends
   /**
    * <pre>
    * The date time at which the adjustment occurred. The format is
-   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
    * </pre>
    *
    * <code>optional string adjustment_date_time = 8;</code>
@@ -99,7 +99,7 @@ public interface ConversionAdjustmentResultOrBuilder extends
   /**
    * <pre>
    * The date time at which the adjustment occurred. The format is
-   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
    * </pre>
    *
    * <code>optional string adjustment_date_time = 8;</code>
@@ -109,7 +109,7 @@ public interface ConversionAdjustmentResultOrBuilder extends
   /**
    * <pre>
    * The date time at which the adjustment occurred. The format is
-   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. "2019-01-01 12:32:45-08:00".
+   * "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
    * </pre>
    *
    * <code>optional string adjustment_date_time = 8;</code>

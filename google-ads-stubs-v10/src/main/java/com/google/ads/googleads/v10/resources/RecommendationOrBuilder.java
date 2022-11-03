@@ -127,9 +127,10 @@ public interface RecommendationOrBuilder extends
    * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
    * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
    * MAXIMIZE_CLICKS_OPT_IN, MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
-   * RESPONSIVE_SEARCH_AD, RESPONSIVE_SEARCH_AD_ASSET, SEARCH_PARTNERS_OPT_IN,
-   * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN,
-   * TEXT_AD
+   * RESPONSIVE_SEARCH_AD,
+   * RESPONSIVE_SEARCH_AD_ASSET,
+   * SEARCH_PARTNERS_OPT_IN, SITELINK_EXTENSION, TARGET_CPA_OPT_IN,
+   * TARGET_ROAS_OPT_IN, TEXT_AD
    * </pre>
    *
    * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -144,9 +145,10 @@ public interface RecommendationOrBuilder extends
    * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
    * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
    * MAXIMIZE_CLICKS_OPT_IN, MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
-   * RESPONSIVE_SEARCH_AD, RESPONSIVE_SEARCH_AD_ASSET, SEARCH_PARTNERS_OPT_IN,
-   * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN,
-   * TEXT_AD
+   * RESPONSIVE_SEARCH_AD,
+   * RESPONSIVE_SEARCH_AD_ASSET,
+   * SEARCH_PARTNERS_OPT_IN, SITELINK_EXTENSION, TARGET_CPA_OPT_IN,
+   * TARGET_ROAS_OPT_IN, TEXT_AD
    * </pre>
    *
    * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -161,9 +163,10 @@ public interface RecommendationOrBuilder extends
    * CALL_EXTENSION, CALLOUT_EXTENSION, ENHANCED_CPC_OPT_IN,
    * USE_BROAD_MATCH_KEYWORD, KEYWORD, KEYWORD_MATCH_TYPE,
    * MAXIMIZE_CLICKS_OPT_IN, MAXIMIZE_CONVERSIONS_OPT_IN, OPTIMIZE_AD_ROTATION,
-   * RESPONSIVE_SEARCH_AD, RESPONSIVE_SEARCH_AD_ASSET, SEARCH_PARTNERS_OPT_IN,
-   * SITELINK_EXTENSION, TARGET_CPA_OPT_IN, TARGET_ROAS_OPT_IN,
-   * TEXT_AD
+   * RESPONSIVE_SEARCH_AD,
+   * RESPONSIVE_SEARCH_AD_ASSET,
+   * SEARCH_PARTNERS_OPT_IN, SITELINK_EXTENSION, TARGET_CPA_OPT_IN,
+   * TARGET_ROAS_OPT_IN, TEXT_AD
    * </pre>
    *
    * <code>optional string campaign = 25 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
@@ -747,7 +750,7 @@ public interface RecommendationOrBuilder extends
 
   /**
    * <pre>
-   * Output only. The add responsive search ad asset recommendation.
+   * Output only. The responsive search ad asset recommendation.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.resources.Recommendation.ResponsiveSearchAdAssetRecommendation responsive_search_ad_asset_recommendation = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -756,7 +759,7 @@ public interface RecommendationOrBuilder extends
   boolean hasResponsiveSearchAdAssetRecommendation();
   /**
    * <pre>
-   * Output only. The add responsive search ad asset recommendation.
+   * Output only. The responsive search ad asset recommendation.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.resources.Recommendation.ResponsiveSearchAdAssetRecommendation responsive_search_ad_asset_recommendation = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -765,7 +768,7 @@ public interface RecommendationOrBuilder extends
   com.google.ads.googleads.v10.resources.Recommendation.ResponsiveSearchAdAssetRecommendation getResponsiveSearchAdAssetRecommendation();
   /**
    * <pre>
-   * Output only. The add responsive search ad asset recommendation.
+   * Output only. The responsive search ad asset recommendation.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.resources.Recommendation.ResponsiveSearchAdAssetRecommendation responsive_search_ad_asset_recommendation = 31 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

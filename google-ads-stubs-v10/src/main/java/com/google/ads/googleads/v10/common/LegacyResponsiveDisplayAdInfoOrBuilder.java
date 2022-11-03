@@ -152,7 +152,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
 
   /**
    * <pre>
-   * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
+   * The accent color of the ad in hexadecimal, for example, #ffffff for white.
    * If one of `main_color` and `accent_color` is set, the other is required as
    * well.
    * </pre>
@@ -163,7 +163,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
   boolean hasAccentColor();
   /**
    * <pre>
-   * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
+   * The accent color of the ad in hexadecimal, for example, #ffffff for white.
    * If one of `main_color` and `accent_color` is set, the other is required as
    * well.
    * </pre>
@@ -174,7 +174,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
   java.lang.String getAccentColor();
   /**
    * <pre>
-   * The accent color of the ad in hexadecimal, e.g. #ffffff for white.
+   * The accent color of the ad in hexadecimal, for example, #ffffff for white.
    * If one of `main_color` and `accent_color` is set, the other is required as
    * well.
    * </pre>
@@ -187,7 +187,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
 
   /**
    * <pre>
-   * The main color of the ad in hexadecimal, e.g. #ffffff for white.
+   * The main color of the ad in hexadecimal, for example, #ffffff for white.
    * If one of `main_color` and `accent_color` is set, the other is required as
    * well.
    * </pre>
@@ -198,7 +198,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
   boolean hasMainColor();
   /**
    * <pre>
-   * The main color of the ad in hexadecimal, e.g. #ffffff for white.
+   * The main color of the ad in hexadecimal, for example, #ffffff for white.
    * If one of `main_color` and `accent_color` is set, the other is required as
    * well.
    * </pre>
@@ -209,7 +209,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
   java.lang.String getMainColor();
   /**
    * <pre>
-   * The main color of the ad in hexadecimal, e.g. #ffffff for white.
+   * The main color of the ad in hexadecimal, for example, #ffffff for white.
    * If one of `main_color` and `accent_color` is set, the other is required as
    * well.
    * </pre>
@@ -386,7 +386,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
 
   /**
    * <pre>
-   * Prefix before price. E.g. 'as low as'.
+   * Prefix before price. For example, 'as low as'.
    * </pre>
    *
    * <code>optional string price_prefix = 28;</code>
@@ -395,7 +395,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
   boolean hasPricePrefix();
   /**
    * <pre>
-   * Prefix before price. E.g. 'as low as'.
+   * Prefix before price. For example, 'as low as'.
    * </pre>
    *
    * <code>optional string price_prefix = 28;</code>
@@ -404,7 +404,7 @@ public interface LegacyResponsiveDisplayAdInfoOrBuilder extends
   java.lang.String getPricePrefix();
   /**
    * <pre>
-   * Prefix before price. E.g. 'as low as'.
+   * Prefix before price. For example, 'as low as'.
    * </pre>
    *
    * <code>optional string price_prefix = 28;</code>

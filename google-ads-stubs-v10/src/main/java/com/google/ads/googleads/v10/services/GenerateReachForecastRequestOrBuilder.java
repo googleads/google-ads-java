@@ -88,13 +88,13 @@ public interface GenerateReachForecastRequestOrBuilder extends
 
   /**
    * <pre>
-   * Desired cookie frequency cap to be applied to each planned product.
+   * Chosen cookie frequency cap to be applied to each planned product.
    * This is equivalent to the frequency cap exposed in Google Ads when creating
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user.
    * If not specified, no cap is applied.
    * This field is deprecated in v4 and will eventually be removed.
-   * Please use cookie_frequency_cap_setting instead.
+   * Use cookie_frequency_cap_setting instead.
    * </pre>
    *
    * <code>optional int32 cookie_frequency_cap = 10;</code>
@@ -103,13 +103,13 @@ public interface GenerateReachForecastRequestOrBuilder extends
   boolean hasCookieFrequencyCap();
   /**
    * <pre>
-   * Desired cookie frequency cap to be applied to each planned product.
+   * Chosen cookie frequency cap to be applied to each planned product.
    * This is equivalent to the frequency cap exposed in Google Ads when creating
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user.
    * If not specified, no cap is applied.
    * This field is deprecated in v4 and will eventually be removed.
-   * Please use cookie_frequency_cap_setting instead.
+   * Use cookie_frequency_cap_setting instead.
    * </pre>
    *
    * <code>optional int32 cookie_frequency_cap = 10;</code>
@@ -119,7 +119,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
 
   /**
    * <pre>
-   * Desired cookie frequency cap to be applied to each planned product.
+   * Chosen cookie frequency cap to be applied to each planned product.
    * This is equivalent to the frequency cap exposed in Google Ads when creating
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user during a specified time interval.
@@ -133,7 +133,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
   boolean hasCookieFrequencyCapSetting();
   /**
    * <pre>
-   * Desired cookie frequency cap to be applied to each planned product.
+   * Chosen cookie frequency cap to be applied to each planned product.
    * This is equivalent to the frequency cap exposed in Google Ads when creating
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user during a specified time interval.
@@ -147,7 +147,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
   com.google.ads.googleads.v10.services.FrequencyCap getCookieFrequencyCapSetting();
   /**
    * <pre>
-   * Desired cookie frequency cap to be applied to each planned product.
+   * Chosen cookie frequency cap to be applied to each planned product.
    * This is equivalent to the frequency cap exposed in Google Ads when creating
    * a campaign, it represents the maximum number of times an ad can be shown to
    * the same user during a specified time interval.
@@ -161,7 +161,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
 
   /**
    * <pre>
-   * Desired minimum effective frequency (the number of times a person was
+   * Chosen minimum effective frequency (the number of times a person was
    * exposed to the ad) for the reported reach metrics [1-10].
    * This won't affect the targeting, but just the reporting.
    * If not specified, a default of 1 is applied.
@@ -174,7 +174,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
   boolean hasMinEffectiveFrequency();
   /**
    * <pre>
-   * Desired minimum effective frequency (the number of times a person was
+   * Chosen minimum effective frequency (the number of times a person was
    * exposed to the ad) for the reported reach metrics [1-10].
    * This won't affect the targeting, but just the reporting.
    * If not specified, a default of 1 is applied.
@@ -238,7 +238,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * <pre>
    * The targeting to be applied to all products selected in the product mix.
    * This is planned targeting: execution details might vary based on the
-   * advertising product, please consult an implementation specialist.
+   * advertising product, consult an implementation specialist.
    * See specific metrics for details on how targeting affects them.
    * </pre>
    *
@@ -250,7 +250,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * <pre>
    * The targeting to be applied to all products selected in the product mix.
    * This is planned targeting: execution details might vary based on the
-   * advertising product, please consult an implementation specialist.
+   * advertising product, consult an implementation specialist.
    * See specific metrics for details on how targeting affects them.
    * </pre>
    *
@@ -262,7 +262,7 @@ public interface GenerateReachForecastRequestOrBuilder extends
    * <pre>
    * The targeting to be applied to all products selected in the product mix.
    * This is planned targeting: execution details might vary based on the
-   * advertising product, please consult an implementation specialist.
+   * advertising product, consult an implementation specialist.
    * See specific metrics for details on how targeting affects them.
    * </pre>
    *

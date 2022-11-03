@@ -34,45 +34,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private ConversionActionTypeEnum(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v10.enums.ConversionActionTypeProto.internal_static_google_ads_googleads_v10_enums_ConversionActionTypeEnum_descriptor;
@@ -204,7 +165,7 @@ private static final long serialVersionUID = 0L;
     STORE_SALES(11),
     /**
      * <pre>
-     * Android app first open conversions tracked via Firebase.
+     * Android app first open conversions tracked through Firebase.
      * </pre>
      *
      * <code>FIREBASE_ANDROID_FIRST_OPEN = 12;</code>
@@ -212,7 +173,7 @@ private static final long serialVersionUID = 0L;
     FIREBASE_ANDROID_FIRST_OPEN(12),
     /**
      * <pre>
-     * Android app in app purchase conversions tracked via Firebase.
+     * Android app in app purchase conversions tracked through Firebase.
      * </pre>
      *
      * <code>FIREBASE_ANDROID_IN_APP_PURCHASE = 13;</code>
@@ -220,7 +181,7 @@ private static final long serialVersionUID = 0L;
     FIREBASE_ANDROID_IN_APP_PURCHASE(13),
     /**
      * <pre>
-     * Android app custom conversions tracked via Firebase.
+     * Android app custom conversions tracked through Firebase.
      * </pre>
      *
      * <code>FIREBASE_ANDROID_CUSTOM = 14;</code>
@@ -228,7 +189,7 @@ private static final long serialVersionUID = 0L;
     FIREBASE_ANDROID_CUSTOM(14),
     /**
      * <pre>
-     * iOS app first open conversions tracked via Firebase.
+     * iOS app first open conversions tracked through Firebase.
      * </pre>
      *
      * <code>FIREBASE_IOS_FIRST_OPEN = 15;</code>
@@ -236,7 +197,7 @@ private static final long serialVersionUID = 0L;
     FIREBASE_IOS_FIRST_OPEN(15),
     /**
      * <pre>
-     * iOS app in app purchase conversions tracked via Firebase.
+     * iOS app in app purchase conversions tracked through Firebase.
      * </pre>
      *
      * <code>FIREBASE_IOS_IN_APP_PURCHASE = 16;</code>
@@ -244,7 +205,7 @@ private static final long serialVersionUID = 0L;
     FIREBASE_IOS_IN_APP_PURCHASE(16),
     /**
      * <pre>
-     * iOS app custom conversions tracked via Firebase.
+     * iOS app custom conversions tracked through Firebase.
      * </pre>
      *
      * <code>FIREBASE_IOS_CUSTOM = 17;</code>
@@ -252,7 +213,8 @@ private static final long serialVersionUID = 0L;
     FIREBASE_IOS_CUSTOM(17),
     /**
      * <pre>
-     * Android app first open conversions tracked via Third Party App Analytics.
+     * Android app first open conversions tracked through Third Party App
+     * Analytics.
      * </pre>
      *
      * <code>THIRD_PARTY_APP_ANALYTICS_ANDROID_FIRST_OPEN = 18;</code>
@@ -260,7 +222,7 @@ private static final long serialVersionUID = 0L;
     THIRD_PARTY_APP_ANALYTICS_ANDROID_FIRST_OPEN(18),
     /**
      * <pre>
-     * Android app in app purchase conversions tracked via Third Party App
+     * Android app in app purchase conversions tracked through Third Party App
      * Analytics.
      * </pre>
      *
@@ -269,7 +231,7 @@ private static final long serialVersionUID = 0L;
     THIRD_PARTY_APP_ANALYTICS_ANDROID_IN_APP_PURCHASE(19),
     /**
      * <pre>
-     * Android app custom conversions tracked via Third Party App Analytics.
+     * Android app custom conversions tracked through Third Party App Analytics.
      * </pre>
      *
      * <code>THIRD_PARTY_APP_ANALYTICS_ANDROID_CUSTOM = 20;</code>
@@ -277,7 +239,7 @@ private static final long serialVersionUID = 0L;
     THIRD_PARTY_APP_ANALYTICS_ANDROID_CUSTOM(20),
     /**
      * <pre>
-     * iOS app first open conversions tracked via Third Party App Analytics.
+     * iOS app first open conversions tracked through Third Party App Analytics.
      * </pre>
      *
      * <code>THIRD_PARTY_APP_ANALYTICS_IOS_FIRST_OPEN = 21;</code>
@@ -285,7 +247,7 @@ private static final long serialVersionUID = 0L;
     THIRD_PARTY_APP_ANALYTICS_IOS_FIRST_OPEN(21),
     /**
      * <pre>
-     * iOS app in app purchase conversions tracked via Third Party App
+     * iOS app in app purchase conversions tracked through Third Party App
      * Analytics.
      * </pre>
      *
@@ -294,7 +256,7 @@ private static final long serialVersionUID = 0L;
     THIRD_PARTY_APP_ANALYTICS_IOS_IN_APP_PURCHASE(22),
     /**
      * <pre>
-     * iOS app custom conversions tracked via Third Party App Analytics.
+     * iOS app custom conversions tracked through Third Party App Analytics.
      * </pre>
      *
      * <code>THIRD_PARTY_APP_ANALYTICS_IOS_CUSTOM = 23;</code>
@@ -528,7 +490,7 @@ private static final long serialVersionUID = 0L;
     public static final int STORE_SALES_VALUE = 11;
     /**
      * <pre>
-     * Android app first open conversions tracked via Firebase.
+     * Android app first open conversions tracked through Firebase.
      * </pre>
      *
      * <code>FIREBASE_ANDROID_FIRST_OPEN = 12;</code>
@@ -536,7 +498,7 @@ private static final long serialVersionUID = 0L;
     public static final int FIREBASE_ANDROID_FIRST_OPEN_VALUE = 12;
     /**
      * <pre>
-     * Android app in app purchase conversions tracked via Firebase.
+     * Android app in app purchase conversions tracked through Firebase.
      * </pre>
      *
      * <code>FIREBASE_ANDROID_IN_APP_PURCHASE = 13;</code>
@@ -544,7 +506,7 @@ private static final long serialVersionUID = 0L;
     public static final int FIREBASE_ANDROID_IN_APP_PURCHASE_VALUE = 13;
     /**
      * <pre>
-     * Android app custom conversions tracked via Firebase.
+     * Android app custom conversions tracked through Firebase.
      * </pre>
      *
      * <code>FIREBASE_ANDROID_CUSTOM = 14;</code>
@@ -552,7 +514,7 @@ private static final long serialVersionUID = 0L;
     public static final int FIREBASE_ANDROID_CUSTOM_VALUE = 14;
     /**
      * <pre>
-     * iOS app first open conversions tracked via Firebase.
+     * iOS app first open conversions tracked through Firebase.
      * </pre>
      *
      * <code>FIREBASE_IOS_FIRST_OPEN = 15;</code>
@@ -560,7 +522,7 @@ private static final long serialVersionUID = 0L;
     public static final int FIREBASE_IOS_FIRST_OPEN_VALUE = 15;
     /**
      * <pre>
-     * iOS app in app purchase conversions tracked via Firebase.
+     * iOS app in app purchase conversions tracked through Firebase.
      * </pre>
      *
      * <code>FIREBASE_IOS_IN_APP_PURCHASE = 16;</code>
@@ -568,7 +530,7 @@ private static final long serialVersionUID = 0L;
     public static final int FIREBASE_IOS_IN_APP_PURCHASE_VALUE = 16;
     /**
      * <pre>
-     * iOS app custom conversions tracked via Firebase.
+     * iOS app custom conversions tracked through Firebase.
      * </pre>
      *
      * <code>FIREBASE_IOS_CUSTOM = 17;</code>
@@ -576,7 +538,8 @@ private static final long serialVersionUID = 0L;
     public static final int FIREBASE_IOS_CUSTOM_VALUE = 17;
     /**
      * <pre>
-     * Android app first open conversions tracked via Third Party App Analytics.
+     * Android app first open conversions tracked through Third Party App
+     * Analytics.
      * </pre>
      *
      * <code>THIRD_PARTY_APP_ANALYTICS_ANDROID_FIRST_OPEN = 18;</code>
@@ -584,7 +547,7 @@ private static final long serialVersionUID = 0L;
     public static final int THIRD_PARTY_APP_ANALYTICS_ANDROID_FIRST_OPEN_VALUE = 18;
     /**
      * <pre>
-     * Android app in app purchase conversions tracked via Third Party App
+     * Android app in app purchase conversions tracked through Third Party App
      * Analytics.
      * </pre>
      *
@@ -593,7 +556,7 @@ private static final long serialVersionUID = 0L;
     public static final int THIRD_PARTY_APP_ANALYTICS_ANDROID_IN_APP_PURCHASE_VALUE = 19;
     /**
      * <pre>
-     * Android app custom conversions tracked via Third Party App Analytics.
+     * Android app custom conversions tracked through Third Party App Analytics.
      * </pre>
      *
      * <code>THIRD_PARTY_APP_ANALYTICS_ANDROID_CUSTOM = 20;</code>
@@ -601,7 +564,7 @@ private static final long serialVersionUID = 0L;
     public static final int THIRD_PARTY_APP_ANALYTICS_ANDROID_CUSTOM_VALUE = 20;
     /**
      * <pre>
-     * iOS app first open conversions tracked via Third Party App Analytics.
+     * iOS app first open conversions tracked through Third Party App Analytics.
      * </pre>
      *
      * <code>THIRD_PARTY_APP_ANALYTICS_IOS_FIRST_OPEN = 21;</code>
@@ -609,7 +572,7 @@ private static final long serialVersionUID = 0L;
     public static final int THIRD_PARTY_APP_ANALYTICS_IOS_FIRST_OPEN_VALUE = 21;
     /**
      * <pre>
-     * iOS app in app purchase conversions tracked via Third Party App
+     * iOS app in app purchase conversions tracked through Third Party App
      * Analytics.
      * </pre>
      *
@@ -618,7 +581,7 @@ private static final long serialVersionUID = 0L;
     public static final int THIRD_PARTY_APP_ANALYTICS_IOS_IN_APP_PURCHASE_VALUE = 22;
     /**
      * <pre>
-     * iOS app custom conversions tracked via Third Party App Analytics.
+     * iOS app custom conversions tracked through Third Party App Analytics.
      * </pre>
      *
      * <code>THIRD_PARTY_APP_ANALYTICS_IOS_CUSTOM = 23;</code>
@@ -873,7 +836,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -882,7 +845,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -897,7 +860,7 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v10.enums.ConversionActionTypeEnum other = (com.google.ads.googleads.v10.enums.ConversionActionTypeEnum) obj;
 
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -908,7 +871,7 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -1029,18 +992,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v10.enums.ConversionActionTypeEnum.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -1119,7 +1077,7 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.google.ads.googleads.v10.enums.ConversionActionTypeEnum other) {
       if (other == com.google.ads.googleads.v10.enums.ConversionActionTypeEnum.getDefaultInstance()) return this;
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1134,17 +1092,30 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.ads.googleads.v10.enums.ConversionActionTypeEnum parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v10.enums.ConversionActionTypeEnum) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     @java.lang.Override
@@ -1180,7 +1151,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new ConversionActionTypeEnum(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

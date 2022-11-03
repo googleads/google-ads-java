@@ -846,7 +846,7 @@ public interface MutateOperationOrBuilder extends
 
   /**
    * <pre>
-   * An campaign customizer mutate operation.
+   * A campaign customizer mutate operation.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.services.CampaignCustomizerOperation campaign_customizer_operation = 76;</code>
@@ -855,7 +855,7 @@ public interface MutateOperationOrBuilder extends
   boolean hasCampaignCustomizerOperation();
   /**
    * <pre>
-   * An campaign customizer mutate operation.
+   * A campaign customizer mutate operation.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.services.CampaignCustomizerOperation campaign_customizer_operation = 76;</code>
@@ -864,7 +864,7 @@ public interface MutateOperationOrBuilder extends
   com.google.ads.googleads.v10.services.CampaignCustomizerOperation getCampaignCustomizerOperation();
   /**
    * <pre>
-   * An campaign customizer mutate operation.
+   * A campaign customizer mutate operation.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.services.CampaignCustomizerOperation campaign_customizer_operation = 76;</code>
@@ -1305,7 +1305,7 @@ public interface MutateOperationOrBuilder extends
 
   /**
    * <pre>
-   * An customer customizer mutate operation.
+   * A customer customizer mutate operation.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.services.CustomerCustomizerOperation customer_customizer_operation = 79;</code>
@@ -1314,7 +1314,7 @@ public interface MutateOperationOrBuilder extends
   boolean hasCustomerCustomizerOperation();
   /**
    * <pre>
-   * An customer customizer mutate operation.
+   * A customer customizer mutate operation.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.services.CustomerCustomizerOperation customer_customizer_operation = 79;</code>
@@ -1323,7 +1323,7 @@ public interface MutateOperationOrBuilder extends
   com.google.ads.googleads.v10.services.CustomerCustomizerOperation getCustomerCustomizerOperation();
   /**
    * <pre>
-   * An customer customizer mutate operation.
+   * A customer customizer mutate operation.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.services.CustomerCustomizerOperation customer_customizer_operation = 79;</code>
@@ -1467,7 +1467,7 @@ public interface MutateOperationOrBuilder extends
 
   /**
    * <pre>
-   * An customizer attribute mutate operation.
+   * A customizer attribute mutate operation.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.services.CustomizerAttributeOperation customizer_attribute_operation = 70;</code>
@@ -1476,7 +1476,7 @@ public interface MutateOperationOrBuilder extends
   boolean hasCustomizerAttributeOperation();
   /**
    * <pre>
-   * An customizer attribute mutate operation.
+   * A customizer attribute mutate operation.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.services.CustomizerAttributeOperation customizer_attribute_operation = 70;</code>
@@ -1485,7 +1485,7 @@ public interface MutateOperationOrBuilder extends
   com.google.ads.googleads.v10.services.CustomizerAttributeOperation getCustomizerAttributeOperation();
   /**
    * <pre>
-   * An customizer attribute mutate operation.
+   * A customizer attribute mutate operation.
    * </pre>
    *
    * <code>.google.ads.googleads.v10.services.CustomizerAttributeOperation customizer_attribute_operation = 70;</code>

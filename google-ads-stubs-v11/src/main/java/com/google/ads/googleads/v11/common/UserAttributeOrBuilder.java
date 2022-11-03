@@ -158,7 +158,7 @@ public interface UserAttributeOrBuilder extends
   /**
    * <pre>
    * Optional. Advertiser defined lifecycle stage for the user. The accepted values are
-   * “Lead”, “Active” and “Churned”.
+   * "Lead", "Active" and "Churned".
    * </pre>
    *
    * <code>string lifecycle_stage = 8 [(.google.api.field_behavior) = OPTIONAL];</code>
@@ -168,7 +168,7 @@ public interface UserAttributeOrBuilder extends
   /**
    * <pre>
    * Optional. Advertiser defined lifecycle stage for the user. The accepted values are
-   * “Lead”, “Active” and “Churned”.
+   * "Lead", "Active" and "Churned".
    * </pre>
    *
    * <code>string lifecycle_stage = 8 [(.google.api.field_behavior) = OPTIONAL];</code>

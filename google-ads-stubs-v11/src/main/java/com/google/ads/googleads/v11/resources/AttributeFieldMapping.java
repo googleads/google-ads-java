@@ -34,188 +34,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private AttributeFieldMapping(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 24: {
-            int rawValue = input.readEnum();
-            fieldCase_ = 3;
-            field_ = rawValue;
-            break;
-          }
-          case 32: {
-            int rawValue = input.readEnum();
-            fieldCase_ = 4;
-            field_ = rawValue;
-            break;
-          }
-          case 40: {
-            int rawValue = input.readEnum();
-            fieldCase_ = 5;
-            field_ = rawValue;
-            break;
-          }
-          case 48: {
-            int rawValue = input.readEnum();
-            fieldCase_ = 6;
-            field_ = rawValue;
-            break;
-          }
-          case 56: {
-            int rawValue = input.readEnum();
-            fieldCase_ = 7;
-            field_ = rawValue;
-            break;
-          }
-          case 64: {
-            int rawValue = input.readEnum();
-            fieldCase_ = 8;
-            field_ = rawValue;
-            break;
-          }
-          case 72: {
-            int rawValue = input.readEnum();
-            fieldCase_ = 9;
-            field_ = rawValue;
-            break;
-          }
-          case 80: {
-            int rawValue = input.readEnum();
-            fieldCase_ = 10;
-            field_ = rawValue;
-            break;
-          }
-          case 88: {
-            int rawValue = input.readEnum();
-            fieldCase_ = 11;
-            field_ = rawValue;
-            break;
-          }
-          case 96: {
-            int rawValue = input.readEnum();
-            fieldCase_ = 12;
-            field_ = rawValue;
-            break;
-          }
-          case 104: {
-            int rawValue = input.readEnum();
-            fieldCase_ = 13;
-            field_ = rawValue;
-            break;
-          }
-          case 112: {
-            int rawValue = input.readEnum();
-            fieldCase_ = 14;
-            field_ = rawValue;
-            break;
-          }
-          case 120: {
-            int rawValue = input.readEnum();
-            fieldCase_ = 15;
-            field_ = rawValue;
-            break;
-          }
-          case 128: {
-            int rawValue = input.readEnum();
-            fieldCase_ = 16;
-            field_ = rawValue;
-            break;
-          }
-          case 136: {
-            int rawValue = input.readEnum();
-            fieldCase_ = 17;
-            field_ = rawValue;
-            break;
-          }
-          case 144: {
-            int rawValue = input.readEnum();
-            fieldCase_ = 18;
-            field_ = rawValue;
-            break;
-          }
-          case 152: {
-            int rawValue = input.readEnum();
-            fieldCase_ = 19;
-            field_ = rawValue;
-            break;
-          }
-          case 160: {
-            int rawValue = input.readEnum();
-            fieldCase_ = 20;
-            field_ = rawValue;
-            break;
-          }
-          case 168: {
-            int rawValue = input.readEnum();
-            fieldCase_ = 21;
-            field_ = rawValue;
-            break;
-          }
-          case 176: {
-            int rawValue = input.readEnum();
-            fieldCase_ = 22;
-            field_ = rawValue;
-            break;
-          }
-          case 184: {
-            int rawValue = input.readEnum();
-            fieldCase_ = 23;
-            field_ = rawValue;
-            break;
-          }
-          case 192: {
-            bitField0_ |= 0x00000001;
-            feedAttributeId_ = input.readInt64();
-            break;
-          }
-          case 200: {
-            bitField0_ |= 0x00000002;
-            fieldId_ = input.readInt64();
-            break;
-          }
-          case 208: {
-            int rawValue = input.readEnum();
-            fieldCase_ = 26;
-            field_ = rawValue;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v11.resources.FeedMappingProto.internal_static_google_ads_googleads_v11_resources_AttributeFieldMapping_descriptor;
@@ -1425,7 +1243,7 @@ private static final long serialVersionUID = 0L;
     if (fieldCase_ == 26) {
       output.writeEnum(26, ((java.lang.Integer) field_));
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -1530,7 +1348,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(26, ((java.lang.Integer) field_));
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -1648,7 +1466,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -1761,7 +1579,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -1882,18 +1700,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v11.resources.AttributeFieldMapping.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -2155,7 +1968,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -2170,17 +1983,172 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.ads.googleads.v11.resources.AttributeFieldMapping parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 24: {
+              int rawValue = input.readEnum();
+              fieldCase_ = 3;
+              field_ = rawValue;
+              break;
+            } // case 24
+            case 32: {
+              int rawValue = input.readEnum();
+              fieldCase_ = 4;
+              field_ = rawValue;
+              break;
+            } // case 32
+            case 40: {
+              int rawValue = input.readEnum();
+              fieldCase_ = 5;
+              field_ = rawValue;
+              break;
+            } // case 40
+            case 48: {
+              int rawValue = input.readEnum();
+              fieldCase_ = 6;
+              field_ = rawValue;
+              break;
+            } // case 48
+            case 56: {
+              int rawValue = input.readEnum();
+              fieldCase_ = 7;
+              field_ = rawValue;
+              break;
+            } // case 56
+            case 64: {
+              int rawValue = input.readEnum();
+              fieldCase_ = 8;
+              field_ = rawValue;
+              break;
+            } // case 64
+            case 72: {
+              int rawValue = input.readEnum();
+              fieldCase_ = 9;
+              field_ = rawValue;
+              break;
+            } // case 72
+            case 80: {
+              int rawValue = input.readEnum();
+              fieldCase_ = 10;
+              field_ = rawValue;
+              break;
+            } // case 80
+            case 88: {
+              int rawValue = input.readEnum();
+              fieldCase_ = 11;
+              field_ = rawValue;
+              break;
+            } // case 88
+            case 96: {
+              int rawValue = input.readEnum();
+              fieldCase_ = 12;
+              field_ = rawValue;
+              break;
+            } // case 96
+            case 104: {
+              int rawValue = input.readEnum();
+              fieldCase_ = 13;
+              field_ = rawValue;
+              break;
+            } // case 104
+            case 112: {
+              int rawValue = input.readEnum();
+              fieldCase_ = 14;
+              field_ = rawValue;
+              break;
+            } // case 112
+            case 120: {
+              int rawValue = input.readEnum();
+              fieldCase_ = 15;
+              field_ = rawValue;
+              break;
+            } // case 120
+            case 128: {
+              int rawValue = input.readEnum();
+              fieldCase_ = 16;
+              field_ = rawValue;
+              break;
+            } // case 128
+            case 136: {
+              int rawValue = input.readEnum();
+              fieldCase_ = 17;
+              field_ = rawValue;
+              break;
+            } // case 136
+            case 144: {
+              int rawValue = input.readEnum();
+              fieldCase_ = 18;
+              field_ = rawValue;
+              break;
+            } // case 144
+            case 152: {
+              int rawValue = input.readEnum();
+              fieldCase_ = 19;
+              field_ = rawValue;
+              break;
+            } // case 152
+            case 160: {
+              int rawValue = input.readEnum();
+              fieldCase_ = 20;
+              field_ = rawValue;
+              break;
+            } // case 160
+            case 168: {
+              int rawValue = input.readEnum();
+              fieldCase_ = 21;
+              field_ = rawValue;
+              break;
+            } // case 168
+            case 176: {
+              int rawValue = input.readEnum();
+              fieldCase_ = 22;
+              field_ = rawValue;
+              break;
+            } // case 176
+            case 184: {
+              int rawValue = input.readEnum();
+              fieldCase_ = 23;
+              field_ = rawValue;
+              break;
+            } // case 184
+            case 192: {
+              feedAttributeId_ = input.readInt64();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 192
+            case 200: {
+              fieldId_ = input.readInt64();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 200
+            case 208: {
+              int rawValue = input.readEnum();
+              fieldCase_ = 26;
+              field_ = rawValue;
+              break;
+            } // case 208
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v11.resources.AttributeFieldMapping) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int fieldCase_ = 0;
@@ -4444,7 +4412,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new AttributeFieldMapping(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

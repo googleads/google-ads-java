@@ -49,194 +49,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private Invoice(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            resourceName_ = s;
-            break;
-          }
-          case 24: {
-            int rawValue = input.readEnum();
-
-            type_ = rawValue;
-            break;
-          }
-          case 74: {
-            com.google.ads.googleads.v10.common.DateRange.Builder subBuilder = null;
-            if (serviceDateRange_ != null) {
-              subBuilder = serviceDateRange_.toBuilder();
-            }
-            serviceDateRange_ = input.readMessage(com.google.ads.googleads.v10.common.DateRange.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(serviceDateRange_);
-              serviceDateRange_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 146: {
-            if (!((mutable_bitField0_ & 0x00002000) != 0)) {
-              accountBudgetSummaries_ = new java.util.ArrayList<com.google.ads.googleads.v10.resources.Invoice.AccountBudgetSummary>();
-              mutable_bitField0_ |= 0x00002000;
-            }
-            accountBudgetSummaries_.add(
-                input.readMessage(com.google.ads.googleads.v10.resources.Invoice.AccountBudgetSummary.parser(), extensionRegistry));
-            break;
-          }
-          case 152: {
-
-            adjustmentsSubtotalAmountMicros_ = input.readInt64();
-            break;
-          }
-          case 160: {
-
-            adjustmentsTaxAmountMicros_ = input.readInt64();
-            break;
-          }
-          case 168: {
-
-            adjustmentsTotalAmountMicros_ = input.readInt64();
-            break;
-          }
-          case 176: {
-
-            regulatoryCostsSubtotalAmountMicros_ = input.readInt64();
-            break;
-          }
-          case 184: {
-
-            regulatoryCostsTaxAmountMicros_ = input.readInt64();
-            break;
-          }
-          case 192: {
-
-            regulatoryCostsTotalAmountMicros_ = input.readInt64();
-            break;
-          }
-          case 202: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000001;
-            id_ = s;
-            break;
-          }
-          case 210: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000002;
-            billingSetup_ = s;
-            break;
-          }
-          case 218: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000004;
-            paymentsAccountId_ = s;
-            break;
-          }
-          case 226: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000008;
-            paymentsProfileId_ = s;
-            break;
-          }
-          case 234: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000010;
-            issueDate_ = s;
-            break;
-          }
-          case 242: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000020;
-            dueDate_ = s;
-            break;
-          }
-          case 250: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000040;
-            currencyCode_ = s;
-            break;
-          }
-          case 264: {
-            bitField0_ |= 0x00000080;
-            subtotalAmountMicros_ = input.readInt64();
-            break;
-          }
-          case 272: {
-            bitField0_ |= 0x00000100;
-            taxAmountMicros_ = input.readInt64();
-            break;
-          }
-          case 280: {
-            bitField0_ |= 0x00000200;
-            totalAmountMicros_ = input.readInt64();
-            break;
-          }
-          case 290: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000400;
-            correctedInvoice_ = s;
-            break;
-          }
-          case 298: {
-            java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000800) != 0)) {
-              replacedInvoices_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000800;
-            }
-            replacedInvoices_.add(s);
-            break;
-          }
-          case 306: {
-            java.lang.String s = input.readStringRequireUtf8();
-            bitField0_ |= 0x00000800;
-            pdfUrl_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00002000) != 0)) {
-        accountBudgetSummaries_ = java.util.Collections.unmodifiableList(accountBudgetSummaries_);
-      }
-      if (((mutable_bitField0_ & 0x00000800) != 0)) {
-        replacedInvoices_ = replacedInvoices_.getUnmodifiableView();
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v10.resources.InvoiceProto.internal_static_google_ads_googleads_v10_resources_Invoice_descriptor;
@@ -562,104 +374,6 @@ private static final long serialVersionUID = 0L;
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private AccountBudgetSummary(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 74: {
-              com.google.ads.googleads.v10.common.DateRange.Builder subBuilder = null;
-              if (billableActivityDateRange_ != null) {
-                subBuilder = billableActivityDateRange_.toBuilder();
-              }
-              billableActivityDateRange_ = input.readMessage(com.google.ads.googleads.v10.common.DateRange.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(billableActivityDateRange_);
-                billableActivityDateRange_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 82: {
-              java.lang.String s = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              customer_ = s;
-              break;
-            }
-            case 90: {
-              java.lang.String s = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              customerDescriptiveName_ = s;
-              break;
-            }
-            case 98: {
-              java.lang.String s = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
-              accountBudget_ = s;
-              break;
-            }
-            case 106: {
-              java.lang.String s = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
-              accountBudgetName_ = s;
-              break;
-            }
-            case 114: {
-              java.lang.String s = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
-              purchaseOrderNumber_ = s;
-              break;
-            }
-            case 120: {
-              bitField0_ |= 0x00000020;
-              subtotalAmountMicros_ = input.readInt64();
-              break;
-            }
-            case 128: {
-              bitField0_ |= 0x00000040;
-              taxAmountMicros_ = input.readInt64();
-              break;
-            }
-            case 136: {
-              bitField0_ |= 0x00000080;
-              totalAmountMicros_ = input.readInt64();
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -1169,7 +883,7 @@ private static final long serialVersionUID = 0L;
       if (((bitField0_ & 0x00000080) != 0)) {
         output.writeInt64(17, totalAmountMicros_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1209,7 +923,7 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeInt64Size(17, totalAmountMicros_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -1269,7 +983,7 @@ private static final long serialVersionUID = 0L;
         if (!getBillableActivityDateRange()
             .equals(other.getBillableActivityDateRange())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1319,7 +1033,7 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + BILLABLE_ACTIVITY_DATE_RANGE_FIELD_NUMBER;
         hash = (53 * hash) + getBillableActivityDateRange().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1440,18 +1154,13 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.google.ads.googleads.v10.resources.Invoice.AccountBudgetSummary.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -1629,7 +1338,7 @@ private static final long serialVersionUID = 0L;
         if (other.hasBillableActivityDateRange()) {
           mergeBillableActivityDateRange(other.getBillableActivityDateRange());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1644,17 +1353,77 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.ads.googleads.v10.resources.Invoice.AccountBudgetSummary parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 74: {
+                input.readMessage(
+                    getBillableActivityDateRangeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 74
+              case 82: {
+                customer_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 82
+              case 90: {
+                customerDescriptiveName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 90
+              case 98: {
+                accountBudget_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 98
+              case 106: {
+                accountBudgetName_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 106
+              case 114: {
+                purchaseOrderNumber_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 114
+              case 120: {
+                subtotalAmountMicros_ = input.readInt64();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 120
+              case 128: {
+                taxAmountMicros_ = input.readInt64();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 128
+              case 136: {
+                totalAmountMicros_ = input.readInt64();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 136
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.google.ads.googleads.v10.resources.Invoice.AccountBudgetSummary) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
@@ -2640,7 +2409,18 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new AccountBudgetSummary(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -2864,8 +2644,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. A 16 digit ID used to identify the payments account associated with the
-   * billing setup, e.g. "1234-5678-9012-3456". It appears on the invoice PDF as
-   * "Billing Account Number".
+   * billing setup, for example, "1234-5678-9012-3456". It appears on the
+   * invoice PDF as "Billing Account Number".
    * </pre>
    *
    * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2878,8 +2658,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. A 16 digit ID used to identify the payments account associated with the
-   * billing setup, e.g. "1234-5678-9012-3456". It appears on the invoice PDF as
-   * "Billing Account Number".
+   * billing setup, for example, "1234-5678-9012-3456". It appears on the
+   * invoice PDF as "Billing Account Number".
    * </pre>
    *
    * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2901,8 +2681,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. A 16 digit ID used to identify the payments account associated with the
-   * billing setup, e.g. "1234-5678-9012-3456". It appears on the invoice PDF as
-   * "Billing Account Number".
+   * billing setup, for example, "1234-5678-9012-3456". It appears on the
+   * invoice PDF as "Billing Account Number".
    * </pre>
    *
    * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2928,8 +2708,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. A 12 digit ID used to identify the payments profile associated with the
-   * billing setup, e.g. "1234-5678-9012". It appears on the invoice PDF as
-   * "Billing ID".
+   * billing setup, for example, "1234-5678-9012". It appears on the invoice PDF
+   * as "Billing ID".
    * </pre>
    *
    * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2942,8 +2722,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. A 12 digit ID used to identify the payments profile associated with the
-   * billing setup, e.g. "1234-5678-9012". It appears on the invoice PDF as
-   * "Billing ID".
+   * billing setup, for example, "1234-5678-9012". It appears on the invoice PDF
+   * as "Billing ID".
    * </pre>
    *
    * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -2965,8 +2745,8 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Output only. A 12 digit ID used to identify the payments profile associated with the
-   * billing setup, e.g. "1234-5678-9012". It appears on the invoice PDF as
-   * "Billing ID".
+   * billing setup, for example, "1234-5678-9012". It appears on the invoice PDF
+   * as "Billing ID".
    * </pre>
    *
    * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -3752,7 +3532,7 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000800) != 0)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 38, pdfUrl_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -3847,7 +3627,7 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000800) != 0)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(38, pdfUrl_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -3946,7 +3726,7 @@ private static final long serialVersionUID = 0L;
     }
     if (!getAccountBudgetSummariesList()
         .equals(other.getAccountBudgetSummariesList())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -4042,7 +3822,7 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + ACCOUNT_BUDGET_SUMMARIES_FIELD_NUMBER;
       hash = (53 * hash) + getAccountBudgetSummariesList().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -4165,19 +3945,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v10.resources.Invoice.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-        getAccountBudgetSummariesFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -4232,10 +4006,11 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00001000);
       if (accountBudgetSummariesBuilder_ == null) {
         accountBudgetSummaries_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00002000);
       } else {
+        accountBudgetSummaries_ = null;
         accountBudgetSummariesBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00002000);
       return this;
     }
 
@@ -4506,7 +4281,7 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -4521,17 +4296,156 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.ads.googleads.v10.resources.Invoice parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              resourceName_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 10
+            case 24: {
+              type_ = input.readEnum();
+
+              break;
+            } // case 24
+            case 74: {
+              input.readMessage(
+                  getServiceDateRangeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 74
+            case 146: {
+              com.google.ads.googleads.v10.resources.Invoice.AccountBudgetSummary m =
+                  input.readMessage(
+                      com.google.ads.googleads.v10.resources.Invoice.AccountBudgetSummary.parser(),
+                      extensionRegistry);
+              if (accountBudgetSummariesBuilder_ == null) {
+                ensureAccountBudgetSummariesIsMutable();
+                accountBudgetSummaries_.add(m);
+              } else {
+                accountBudgetSummariesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 146
+            case 152: {
+              adjustmentsSubtotalAmountMicros_ = input.readInt64();
+
+              break;
+            } // case 152
+            case 160: {
+              adjustmentsTaxAmountMicros_ = input.readInt64();
+
+              break;
+            } // case 160
+            case 168: {
+              adjustmentsTotalAmountMicros_ = input.readInt64();
+
+              break;
+            } // case 168
+            case 176: {
+              regulatoryCostsSubtotalAmountMicros_ = input.readInt64();
+
+              break;
+            } // case 176
+            case 184: {
+              regulatoryCostsTaxAmountMicros_ = input.readInt64();
+
+              break;
+            } // case 184
+            case 192: {
+              regulatoryCostsTotalAmountMicros_ = input.readInt64();
+
+              break;
+            } // case 192
+            case 202: {
+              id_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 202
+            case 210: {
+              billingSetup_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 210
+            case 218: {
+              paymentsAccountId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 218
+            case 226: {
+              paymentsProfileId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 226
+            case 234: {
+              issueDate_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 234
+            case 242: {
+              dueDate_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 242
+            case 250: {
+              currencyCode_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 250
+            case 264: {
+              subtotalAmountMicros_ = input.readInt64();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 264
+            case 272: {
+              taxAmountMicros_ = input.readInt64();
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 272
+            case 280: {
+              totalAmountMicros_ = input.readInt64();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 280
+            case 290: {
+              correctedInvoice_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 290
+            case 298: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureReplacedInvoicesIsMutable();
+              replacedInvoices_.add(s);
+              break;
+            } // case 298
+            case 306: {
+              pdfUrl_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00001000;
+              break;
+            } // case 306
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v10.resources.Invoice) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int bitField0_;
@@ -4945,8 +4859,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. A 16 digit ID used to identify the payments account associated with the
-     * billing setup, e.g. "1234-5678-9012-3456". It appears on the invoice PDF as
-     * "Billing Account Number".
+     * billing setup, for example, "1234-5678-9012-3456". It appears on the
+     * invoice PDF as "Billing Account Number".
      * </pre>
      *
      * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4958,8 +4872,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. A 16 digit ID used to identify the payments account associated with the
-     * billing setup, e.g. "1234-5678-9012-3456". It appears on the invoice PDF as
-     * "Billing Account Number".
+     * billing setup, for example, "1234-5678-9012-3456". It appears on the
+     * invoice PDF as "Billing Account Number".
      * </pre>
      *
      * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -4980,8 +4894,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. A 16 digit ID used to identify the payments account associated with the
-     * billing setup, e.g. "1234-5678-9012-3456". It appears on the invoice PDF as
-     * "Billing Account Number".
+     * billing setup, for example, "1234-5678-9012-3456". It appears on the
+     * invoice PDF as "Billing Account Number".
      * </pre>
      *
      * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5003,8 +4917,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. A 16 digit ID used to identify the payments account associated with the
-     * billing setup, e.g. "1234-5678-9012-3456". It appears on the invoice PDF as
-     * "Billing Account Number".
+     * billing setup, for example, "1234-5678-9012-3456". It appears on the
+     * invoice PDF as "Billing Account Number".
      * </pre>
      *
      * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5024,8 +4938,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. A 16 digit ID used to identify the payments account associated with the
-     * billing setup, e.g. "1234-5678-9012-3456". It appears on the invoice PDF as
-     * "Billing Account Number".
+     * billing setup, for example, "1234-5678-9012-3456". It appears on the
+     * invoice PDF as "Billing Account Number".
      * </pre>
      *
      * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5040,8 +4954,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. A 16 digit ID used to identify the payments account associated with the
-     * billing setup, e.g. "1234-5678-9012-3456". It appears on the invoice PDF as
-     * "Billing Account Number".
+     * billing setup, for example, "1234-5678-9012-3456". It appears on the
+     * invoice PDF as "Billing Account Number".
      * </pre>
      *
      * <code>optional string payments_account_id = 27 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5064,8 +4978,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. A 12 digit ID used to identify the payments profile associated with the
-     * billing setup, e.g. "1234-5678-9012". It appears on the invoice PDF as
-     * "Billing ID".
+     * billing setup, for example, "1234-5678-9012". It appears on the invoice PDF
+     * as "Billing ID".
      * </pre>
      *
      * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5077,8 +4991,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. A 12 digit ID used to identify the payments profile associated with the
-     * billing setup, e.g. "1234-5678-9012". It appears on the invoice PDF as
-     * "Billing ID".
+     * billing setup, for example, "1234-5678-9012". It appears on the invoice PDF
+     * as "Billing ID".
      * </pre>
      *
      * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5099,8 +5013,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. A 12 digit ID used to identify the payments profile associated with the
-     * billing setup, e.g. "1234-5678-9012". It appears on the invoice PDF as
-     * "Billing ID".
+     * billing setup, for example, "1234-5678-9012". It appears on the invoice PDF
+     * as "Billing ID".
      * </pre>
      *
      * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5122,8 +5036,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. A 12 digit ID used to identify the payments profile associated with the
-     * billing setup, e.g. "1234-5678-9012". It appears on the invoice PDF as
-     * "Billing ID".
+     * billing setup, for example, "1234-5678-9012". It appears on the invoice PDF
+     * as "Billing ID".
      * </pre>
      *
      * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5143,8 +5057,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. A 12 digit ID used to identify the payments profile associated with the
-     * billing setup, e.g. "1234-5678-9012". It appears on the invoice PDF as
-     * "Billing ID".
+     * billing setup, for example, "1234-5678-9012". It appears on the invoice PDF
+     * as "Billing ID".
      * </pre>
      *
      * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -5159,8 +5073,8 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Output only. A 12 digit ID used to identify the payments profile associated with the
-     * billing setup, e.g. "1234-5678-9012". It appears on the invoice PDF as
-     * "Billing ID".
+     * billing setup, for example, "1234-5678-9012". It appears on the invoice PDF
+     * as "Billing ID".
      * </pre>
      *
      * <code>optional string payments_profile_id = 28 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -6940,7 +6854,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new Invoice(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

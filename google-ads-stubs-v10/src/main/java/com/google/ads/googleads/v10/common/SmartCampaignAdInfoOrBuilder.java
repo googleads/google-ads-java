@@ -9,8 +9,8 @@ public interface SmartCampaignAdInfoOrBuilder extends
 
   /**
    * <pre>
-   * List of text assets for headlines. When the ad serves the headlines will
-   * be selected from this list. 3 headlines must be specified.
+   * List of text assets, each of which corresponds to a headline when the ad
+   * serves. This list consists of a minimum of 3 and up to 15 text assets.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.AdTextAsset headlines = 1;</code>
@@ -19,8 +19,8 @@ public interface SmartCampaignAdInfoOrBuilder extends
       getHeadlinesList();
   /**
    * <pre>
-   * List of text assets for headlines. When the ad serves the headlines will
-   * be selected from this list. 3 headlines must be specified.
+   * List of text assets, each of which corresponds to a headline when the ad
+   * serves. This list consists of a minimum of 3 and up to 15 text assets.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.AdTextAsset headlines = 1;</code>
@@ -28,8 +28,8 @@ public interface SmartCampaignAdInfoOrBuilder extends
   com.google.ads.googleads.v10.common.AdTextAsset getHeadlines(int index);
   /**
    * <pre>
-   * List of text assets for headlines. When the ad serves the headlines will
-   * be selected from this list. 3 headlines must be specified.
+   * List of text assets, each of which corresponds to a headline when the ad
+   * serves. This list consists of a minimum of 3 and up to 15 text assets.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.AdTextAsset headlines = 1;</code>
@@ -37,8 +37,8 @@ public interface SmartCampaignAdInfoOrBuilder extends
   int getHeadlinesCount();
   /**
    * <pre>
-   * List of text assets for headlines. When the ad serves the headlines will
-   * be selected from this list. 3 headlines must be specified.
+   * List of text assets, each of which corresponds to a headline when the ad
+   * serves. This list consists of a minimum of 3 and up to 15 text assets.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.AdTextAsset headlines = 1;</code>
@@ -47,8 +47,8 @@ public interface SmartCampaignAdInfoOrBuilder extends
       getHeadlinesOrBuilderList();
   /**
    * <pre>
-   * List of text assets for headlines. When the ad serves the headlines will
-   * be selected from this list. 3 headlines must be specified.
+   * List of text assets, each of which corresponds to a headline when the ad
+   * serves. This list consists of a minimum of 3 and up to 15 text assets.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.AdTextAsset headlines = 1;</code>
@@ -58,8 +58,8 @@ public interface SmartCampaignAdInfoOrBuilder extends
 
   /**
    * <pre>
-   * List of text assets for descriptions. When the ad serves the descriptions
-   * will be selected from this list. 2 descriptions must be specified.
+   * List of text assets, each of which corresponds to a description when the ad
+   * serves. This list consists of a minimum of 2 and up to 4 text assets.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.AdTextAsset descriptions = 2;</code>
@@ -68,8 +68,8 @@ public interface SmartCampaignAdInfoOrBuilder extends
       getDescriptionsList();
   /**
    * <pre>
-   * List of text assets for descriptions. When the ad serves the descriptions
-   * will be selected from this list. 2 descriptions must be specified.
+   * List of text assets, each of which corresponds to a description when the ad
+   * serves. This list consists of a minimum of 2 and up to 4 text assets.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.AdTextAsset descriptions = 2;</code>
@@ -77,8 +77,8 @@ public interface SmartCampaignAdInfoOrBuilder extends
   com.google.ads.googleads.v10.common.AdTextAsset getDescriptions(int index);
   /**
    * <pre>
-   * List of text assets for descriptions. When the ad serves the descriptions
-   * will be selected from this list. 2 descriptions must be specified.
+   * List of text assets, each of which corresponds to a description when the ad
+   * serves. This list consists of a minimum of 2 and up to 4 text assets.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.AdTextAsset descriptions = 2;</code>
@@ -86,8 +86,8 @@ public interface SmartCampaignAdInfoOrBuilder extends
   int getDescriptionsCount();
   /**
    * <pre>
-   * List of text assets for descriptions. When the ad serves the descriptions
-   * will be selected from this list. 2 descriptions must be specified.
+   * List of text assets, each of which corresponds to a description when the ad
+   * serves. This list consists of a minimum of 2 and up to 4 text assets.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.AdTextAsset descriptions = 2;</code>
@@ -96,8 +96,8 @@ public interface SmartCampaignAdInfoOrBuilder extends
       getDescriptionsOrBuilderList();
   /**
    * <pre>
-   * List of text assets for descriptions. When the ad serves the descriptions
-   * will be selected from this list. 2 descriptions must be specified.
+   * List of text assets, each of which corresponds to a description when the ad
+   * serves. This list consists of a minimum of 2 and up to 4 text assets.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.AdTextAsset descriptions = 2;</code>

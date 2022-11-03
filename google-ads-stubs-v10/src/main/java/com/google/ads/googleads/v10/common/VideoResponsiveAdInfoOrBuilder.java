@@ -9,8 +9,9 @@ public interface VideoResponsiveAdInfoOrBuilder extends
 
   /**
    * <pre>
-   * List of text assets used for the short headline, e.g. the "Call To Action"
-   * banner. Currently, only a single value for the short headline is supported.
+   * List of text assets used for the short headline, for example, the "Call To
+   * Action" banner. Currently, only a single value for the short headline is
+   * supported.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.AdTextAsset headlines = 1;</code>
@@ -19,8 +20,9 @@ public interface VideoResponsiveAdInfoOrBuilder extends
       getHeadlinesList();
   /**
    * <pre>
-   * List of text assets used for the short headline, e.g. the "Call To Action"
-   * banner. Currently, only a single value for the short headline is supported.
+   * List of text assets used for the short headline, for example, the "Call To
+   * Action" banner. Currently, only a single value for the short headline is
+   * supported.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.AdTextAsset headlines = 1;</code>
@@ -28,8 +30,9 @@ public interface VideoResponsiveAdInfoOrBuilder extends
   com.google.ads.googleads.v10.common.AdTextAsset getHeadlines(int index);
   /**
    * <pre>
-   * List of text assets used for the short headline, e.g. the "Call To Action"
-   * banner. Currently, only a single value for the short headline is supported.
+   * List of text assets used for the short headline, for example, the "Call To
+   * Action" banner. Currently, only a single value for the short headline is
+   * supported.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.AdTextAsset headlines = 1;</code>
@@ -37,8 +40,9 @@ public interface VideoResponsiveAdInfoOrBuilder extends
   int getHeadlinesCount();
   /**
    * <pre>
-   * List of text assets used for the short headline, e.g. the "Call To Action"
-   * banner. Currently, only a single value for the short headline is supported.
+   * List of text assets used for the short headline, for example, the "Call To
+   * Action" banner. Currently, only a single value for the short headline is
+   * supported.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.AdTextAsset headlines = 1;</code>
@@ -47,8 +51,9 @@ public interface VideoResponsiveAdInfoOrBuilder extends
       getHeadlinesOrBuilderList();
   /**
    * <pre>
-   * List of text assets used for the short headline, e.g. the "Call To Action"
-   * banner. Currently, only a single value for the short headline is supported.
+   * List of text assets used for the short headline, for example, the "Call To
+   * Action" banner. Currently, only a single value for the short headline is
+   * supported.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.AdTextAsset headlines = 1;</code>
@@ -156,8 +161,8 @@ public interface VideoResponsiveAdInfoOrBuilder extends
 
   /**
    * <pre>
-   * List of text assets used for the button, e.g. the "Call To Action" button.
-   * Currently, only a single value for the button is supported.
+   * List of text assets used for the button, for example, the "Call To Action"
+   * button. Currently, only a single value for the button is supported.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.AdTextAsset call_to_actions = 4;</code>
@@ -166,8 +171,8 @@ public interface VideoResponsiveAdInfoOrBuilder extends
       getCallToActionsList();
   /**
    * <pre>
-   * List of text assets used for the button, e.g. the "Call To Action" button.
-   * Currently, only a single value for the button is supported.
+   * List of text assets used for the button, for example, the "Call To Action"
+   * button. Currently, only a single value for the button is supported.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.AdTextAsset call_to_actions = 4;</code>
@@ -175,8 +180,8 @@ public interface VideoResponsiveAdInfoOrBuilder extends
   com.google.ads.googleads.v10.common.AdTextAsset getCallToActions(int index);
   /**
    * <pre>
-   * List of text assets used for the button, e.g. the "Call To Action" button.
-   * Currently, only a single value for the button is supported.
+   * List of text assets used for the button, for example, the "Call To Action"
+   * button. Currently, only a single value for the button is supported.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.AdTextAsset call_to_actions = 4;</code>
@@ -184,8 +189,8 @@ public interface VideoResponsiveAdInfoOrBuilder extends
   int getCallToActionsCount();
   /**
    * <pre>
-   * List of text assets used for the button, e.g. the "Call To Action" button.
-   * Currently, only a single value for the button is supported.
+   * List of text assets used for the button, for example, the "Call To Action"
+   * button. Currently, only a single value for the button is supported.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.AdTextAsset call_to_actions = 4;</code>
@@ -194,8 +199,8 @@ public interface VideoResponsiveAdInfoOrBuilder extends
       getCallToActionsOrBuilderList();
   /**
    * <pre>
-   * List of text assets used for the button, e.g. the "Call To Action" button.
-   * Currently, only a single value for the button is supported.
+   * List of text assets used for the button, for example, the "Call To Action"
+   * button. Currently, only a single value for the button is supported.
    * </pre>
    *
    * <code>repeated .google.ads.googleads.v10.common.AdTextAsset call_to_actions = 4;</code>

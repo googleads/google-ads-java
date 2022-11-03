@@ -27,10 +27,11 @@ include ':google-ads-stubs-lib'
 // Enables the examples project only if we're not deploying to Sonatype.
 if (!startParameter.projectProperties.containsKey("release")) {
 	include ':google-ads-examples'
-	include ':google-ads-migration-examples'
 }
 
 // Keep the stubs modules at the end of this file. The stubs generator will
 // append new modules here as required. There should *not* be a newline at EOF.
 include ':google-ads-stubs-v10'
 include ':google-ads-stubs-v11'
+
+include ':google-ads-stubs-v12'

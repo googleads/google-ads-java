@@ -34,45 +34,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private FeedItemValidationErrorEnum(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v10.errors.FeedItemValidationErrorProto.internal_static_google_ads_googleads_v10_errors_FeedItemValidationErrorEnum_descriptor;
@@ -465,8 +426,8 @@ private static final long serialVersionUID = 0L;
      * Advertisers can link a conversion action with a phone number to indicate
      * that sufficiently long calls forwarded to that phone number should be
      * counted as conversions of the specified type.  This is an error message
-     * indicating that the conversion action specified is invalid (e.g., the
-     * conversion action does not exist within the appropriate Google Ads
+     * indicating that the conversion action specified is invalid (for example,
+     * the conversion action does not exist within the appropriate Google Ads
      * account, or it is a type of conversion not appropriate to phone call
      * conversions).
      * </pre>
@@ -784,7 +745,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Consent for call recording, which is required for the use of call
-     * extensions, was not provided by the advertiser. Please see
+     * extensions, was not provided by the advertiser. See
      * https://support.google.com/google-ads/answer/7412639.
      * </pre>
      *
@@ -1342,8 +1303,8 @@ private static final long serialVersionUID = 0L;
      * Advertisers can link a conversion action with a phone number to indicate
      * that sufficiently long calls forwarded to that phone number should be
      * counted as conversions of the specified type.  This is an error message
-     * indicating that the conversion action specified is invalid (e.g., the
-     * conversion action does not exist within the appropriate Google Ads
+     * indicating that the conversion action specified is invalid (for example,
+     * the conversion action does not exist within the appropriate Google Ads
      * account, or it is a type of conversion not appropriate to phone call
      * conversions).
      * </pre>
@@ -1661,7 +1622,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Consent for call recording, which is required for the use of call
-     * extensions, was not provided by the advertiser. Please see
+     * extensions, was not provided by the advertiser. See
      * https://support.google.com/google-ads/answer/7412639.
      * </pre>
      *
@@ -2049,7 +2010,7 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -2058,7 +2019,7 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -2073,7 +2034,7 @@ private static final long serialVersionUID = 0L;
     }
     com.google.ads.googleads.v10.errors.FeedItemValidationErrorEnum other = (com.google.ads.googleads.v10.errors.FeedItemValidationErrorEnum) obj;
 
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -2084,7 +2045,7 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -2205,18 +2166,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v10.errors.FeedItemValidationErrorEnum.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -2295,7 +2251,7 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.google.ads.googleads.v10.errors.FeedItemValidationErrorEnum other) {
       if (other == com.google.ads.googleads.v10.errors.FeedItemValidationErrorEnum.getDefaultInstance()) return this;
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -2310,17 +2266,30 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.ads.googleads.v10.errors.FeedItemValidationErrorEnum parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v10.errors.FeedItemValidationErrorEnum) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     @java.lang.Override
@@ -2356,7 +2325,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new FeedItemValidationErrorEnum(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

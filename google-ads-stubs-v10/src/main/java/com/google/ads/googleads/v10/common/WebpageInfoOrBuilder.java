@@ -52,7 +52,8 @@ public interface WebpageInfoOrBuilder extends
    * <pre>
    * Conditions, or logical expressions, for webpage targeting. The list of
    * webpage targeting conditions are and-ed together when evaluated
-   * for targeting.
+   * for targeting. An empty list of conditions indicates all pages of the
+   * campaign's website are targeted.
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>
@@ -65,7 +66,8 @@ public interface WebpageInfoOrBuilder extends
    * <pre>
    * Conditions, or logical expressions, for webpage targeting. The list of
    * webpage targeting conditions are and-ed together when evaluated
-   * for targeting.
+   * for targeting. An empty list of conditions indicates all pages of the
+   * campaign's website are targeted.
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>
@@ -77,7 +79,8 @@ public interface WebpageInfoOrBuilder extends
    * <pre>
    * Conditions, or logical expressions, for webpage targeting. The list of
    * webpage targeting conditions are and-ed together when evaluated
-   * for targeting.
+   * for targeting. An empty list of conditions indicates all pages of the
+   * campaign's website are targeted.
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>
@@ -89,7 +92,8 @@ public interface WebpageInfoOrBuilder extends
    * <pre>
    * Conditions, or logical expressions, for webpage targeting. The list of
    * webpage targeting conditions are and-ed together when evaluated
-   * for targeting.
+   * for targeting. An empty list of conditions indicates all pages of the
+   * campaign's website are targeted.
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>
@@ -102,7 +106,8 @@ public interface WebpageInfoOrBuilder extends
    * <pre>
    * Conditions, or logical expressions, for webpage targeting. The list of
    * webpage targeting conditions are and-ed together when evaluated
-   * for targeting.
+   * for targeting. An empty list of conditions indicates all pages of the
+   * campaign's website are targeted.
    * This field is required for CREATE operations and is prohibited on UPDATE
    * operations.
    * </pre>

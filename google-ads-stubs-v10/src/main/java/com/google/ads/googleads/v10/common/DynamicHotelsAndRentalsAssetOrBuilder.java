@@ -31,7 +31,7 @@ public interface DynamicHotelsAndRentalsAssetOrBuilder extends
 
   /**
    * <pre>
-   * Required. Property name, e.g. Mountain View Hotel. Required.
+   * Required. Property name, for example, Mountain View Hotel. Required.
    * </pre>
    *
    * <code>string property_name = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -40,7 +40,7 @@ public interface DynamicHotelsAndRentalsAssetOrBuilder extends
   java.lang.String getPropertyName();
   /**
    * <pre>
-   * Required. Property name, e.g. Mountain View Hotel. Required.
+   * Required. Property name, for example, Mountain View Hotel. Required.
    * </pre>
    *
    * <code>string property_name = 2 [(.google.api.field_behavior) = REQUIRED];</code>
@@ -51,8 +51,8 @@ public interface DynamicHotelsAndRentalsAssetOrBuilder extends
 
   /**
    * <pre>
-   * Image URL, e.g. http://www.example.com/image.png. The image will not be
-   * uploaded as image asset.
+   * Image URL, for example, http://www.example.com/image.png. The image will
+   * not be uploaded as image asset.
    * </pre>
    *
    * <code>string image_url = 3;</code>
@@ -61,8 +61,8 @@ public interface DynamicHotelsAndRentalsAssetOrBuilder extends
   java.lang.String getImageUrl();
   /**
    * <pre>
-   * Image URL, e.g. http://www.example.com/image.png. The image will not be
-   * uploaded as image asset.
+   * Image URL, for example, http://www.example.com/image.png. The image will
+   * not be uploaded as image asset.
    * </pre>
    *
    * <code>string image_url = 3;</code>
@@ -73,7 +73,7 @@ public interface DynamicHotelsAndRentalsAssetOrBuilder extends
 
   /**
    * <pre>
-   * Destination name, e.g. Downtown Mountain View.
+   * Destination name, for example, Downtown Mountain View.
    * </pre>
    *
    * <code>string destination_name = 4;</code>
@@ -82,7 +82,7 @@ public interface DynamicHotelsAndRentalsAssetOrBuilder extends
   java.lang.String getDestinationName();
   /**
    * <pre>
-   * Destination name, e.g. Downtown Mountain View.
+   * Destination name, for example, Downtown Mountain View.
    * </pre>
    *
    * <code>string destination_name = 4;</code>
@@ -93,7 +93,7 @@ public interface DynamicHotelsAndRentalsAssetOrBuilder extends
 
   /**
    * <pre>
-   * Description, e.g. Close to SJC Airport.
+   * Description, for example, Close to SJC Airport.
    * </pre>
    *
    * <code>string description = 5;</code>
@@ -102,7 +102,7 @@ public interface DynamicHotelsAndRentalsAssetOrBuilder extends
   java.lang.String getDescription();
   /**
    * <pre>
-   * Description, e.g. Close to SJC Airport.
+   * Description, for example, Close to SJC Airport.
    * </pre>
    *
    * <code>string description = 5;</code>
@@ -114,7 +114,7 @@ public interface DynamicHotelsAndRentalsAssetOrBuilder extends
   /**
    * <pre>
    * Price which can be number followed by the alphabetic currency code,
-   * ISO 4217 standard. Use '.' as the decimal mark, e.g. 100.00 USD.
+   * ISO 4217 standard. Use '.' as the decimal mark, for example, 100.00 USD.
    * </pre>
    *
    * <code>string price = 6;</code>
@@ -124,7 +124,7 @@ public interface DynamicHotelsAndRentalsAssetOrBuilder extends
   /**
    * <pre>
    * Price which can be number followed by the alphabetic currency code,
-   * ISO 4217 standard. Use '.' as the decimal mark, e.g. 100.00 USD.
+   * ISO 4217 standard. Use '.' as the decimal mark, for example, 100.00 USD.
    * </pre>
    *
    * <code>string price = 6;</code>
@@ -135,7 +135,7 @@ public interface DynamicHotelsAndRentalsAssetOrBuilder extends
 
   /**
    * <pre>
-   * ISO 4217 standard. Use '.' as the decimal mark, e.g. 80.00 USD.
+   * ISO 4217 standard. Use '.' as the decimal mark, for example, 80.00 USD.
    * Must be less than the 'price' field.
    * </pre>
    *
@@ -145,7 +145,7 @@ public interface DynamicHotelsAndRentalsAssetOrBuilder extends
   java.lang.String getSalePrice();
   /**
    * <pre>
-   * ISO 4217 standard. Use '.' as the decimal mark, e.g. 80.00 USD.
+   * ISO 4217 standard. Use '.' as the decimal mark, for example, 80.00 USD.
    * Must be less than the 'price' field.
    * </pre>
    *
@@ -157,7 +157,7 @@ public interface DynamicHotelsAndRentalsAssetOrBuilder extends
 
   /**
    * <pre>
-   * Star rating. Must be a number between 1–5, inclusive.
+   * Star rating. Must be a number between 1 to 5, inclusive.
    * </pre>
    *
    * <code>int64 star_rating = 8;</code>
@@ -167,7 +167,7 @@ public interface DynamicHotelsAndRentalsAssetOrBuilder extends
 
   /**
    * <pre>
-   * Category, e.g. Hotel suite.
+   * Category, for example, Hotel suite.
    * </pre>
    *
    * <code>string category = 9;</code>
@@ -176,7 +176,7 @@ public interface DynamicHotelsAndRentalsAssetOrBuilder extends
   java.lang.String getCategory();
   /**
    * <pre>
-   * Category, e.g. Hotel suite.
+   * Category, for example, Hotel suite.
    * </pre>
    *
    * <code>string category = 9;</code>
@@ -187,7 +187,7 @@ public interface DynamicHotelsAndRentalsAssetOrBuilder extends
 
   /**
    * <pre>
-   * Contextual keywords, e.g. Mountain View "Hotels", South Bay hotels.
+   * Contextual keywords, for example, Mountain View "Hotels", South Bay hotels.
    * </pre>
    *
    * <code>repeated string contextual_keywords = 10;</code>
@@ -197,7 +197,7 @@ public interface DynamicHotelsAndRentalsAssetOrBuilder extends
       getContextualKeywordsList();
   /**
    * <pre>
-   * Contextual keywords, e.g. Mountain View "Hotels", South Bay hotels.
+   * Contextual keywords, for example, Mountain View "Hotels", South Bay hotels.
    * </pre>
    *
    * <code>repeated string contextual_keywords = 10;</code>
@@ -206,7 +206,7 @@ public interface DynamicHotelsAndRentalsAssetOrBuilder extends
   int getContextualKeywordsCount();
   /**
    * <pre>
-   * Contextual keywords, e.g. Mountain View "Hotels", South Bay hotels.
+   * Contextual keywords, for example, Mountain View "Hotels", South Bay hotels.
    * </pre>
    *
    * <code>repeated string contextual_keywords = 10;</code>
@@ -216,7 +216,7 @@ public interface DynamicHotelsAndRentalsAssetOrBuilder extends
   java.lang.String getContextualKeywords(int index);
   /**
    * <pre>
-   * Contextual keywords, e.g. Mountain View "Hotels", South Bay hotels.
+   * Contextual keywords, for example, Mountain View "Hotels", South Bay hotels.
    * </pre>
    *
    * <code>repeated string contextual_keywords = 10;</code>
@@ -229,9 +229,9 @@ public interface DynamicHotelsAndRentalsAssetOrBuilder extends
   /**
    * <pre>
    * Address which can be specified in one of the following formats.
-   * (1) City, state, code, country, e.g. Mountain View, CA, USA.
-   * (2) Full address, e.g. 123 Boulevard St, Mountain View, CA 94043.
-   * (3) Latitude-longitude in the DDD format, e.g. 41.40338, 2.17403
+   * (1) City, state, code, country, for example, Mountain View, CA, USA.
+   * (2) Full address, for example, 123 Boulevard St, Mountain View, CA 94043.
+   * (3) Latitude-longitude in the DDD format, for example, 41.40338, 2.17403
    * </pre>
    *
    * <code>string address = 11;</code>
@@ -241,9 +241,9 @@ public interface DynamicHotelsAndRentalsAssetOrBuilder extends
   /**
    * <pre>
    * Address which can be specified in one of the following formats.
-   * (1) City, state, code, country, e.g. Mountain View, CA, USA.
-   * (2) Full address, e.g. 123 Boulevard St, Mountain View, CA 94043.
-   * (3) Latitude-longitude in the DDD format, e.g. 41.40338, 2.17403
+   * (1) City, state, code, country, for example, Mountain View, CA, USA.
+   * (2) Full address, for example, 123 Boulevard St, Mountain View, CA 94043.
+   * (3) Latitude-longitude in the DDD format, for example, 41.40338, 2.17403
    * </pre>
    *
    * <code>string address = 11;</code>
@@ -254,7 +254,7 @@ public interface DynamicHotelsAndRentalsAssetOrBuilder extends
 
   /**
    * <pre>
-   * Android deep link, e.g.
+   * Android deep link, for example,
    * android-app://com.example.android/http/example.com/gizmos?1234.
    * </pre>
    *
@@ -264,7 +264,7 @@ public interface DynamicHotelsAndRentalsAssetOrBuilder extends
   java.lang.String getAndroidAppLink();
   /**
    * <pre>
-   * Android deep link, e.g.
+   * Android deep link, for example,
    * android-app://com.example.android/http/example.com/gizmos?1234.
    * </pre>
    *
@@ -276,7 +276,7 @@ public interface DynamicHotelsAndRentalsAssetOrBuilder extends
 
   /**
    * <pre>
-   * iOS deep link, e.g. exampleApp://content/page.
+   * iOS deep link, for example, exampleApp://content/page.
    * </pre>
    *
    * <code>string ios_app_link = 13;</code>
@@ -285,7 +285,7 @@ public interface DynamicHotelsAndRentalsAssetOrBuilder extends
   java.lang.String getIosAppLink();
   /**
    * <pre>
-   * iOS deep link, e.g. exampleApp://content/page.
+   * iOS deep link, for example, exampleApp://content/page.
    * </pre>
    *
    * <code>string ios_app_link = 13;</code>
@@ -309,7 +309,7 @@ public interface DynamicHotelsAndRentalsAssetOrBuilder extends
   /**
    * <pre>
    * Formatted price which can be any characters. If set, this attribute will be
-   * used instead of 'price', e.g. Starting at $100.00.
+   * used instead of 'price', for example, Starting at $100.00.
    * </pre>
    *
    * <code>string formatted_price = 15;</code>
@@ -319,7 +319,7 @@ public interface DynamicHotelsAndRentalsAssetOrBuilder extends
   /**
    * <pre>
    * Formatted price which can be any characters. If set, this attribute will be
-   * used instead of 'price', e.g. Starting at $100.00.
+   * used instead of 'price', for example, Starting at $100.00.
    * </pre>
    *
    * <code>string formatted_price = 15;</code>
@@ -331,7 +331,7 @@ public interface DynamicHotelsAndRentalsAssetOrBuilder extends
   /**
    * <pre>
    * Formatted sale price which can be any characters. If set, this attribute
-   * will be used instead of 'sale price', e.g. On sale for $80.00.
+   * will be used instead of 'sale price', for example, On sale for $80.00.
    * </pre>
    *
    * <code>string formatted_sale_price = 16;</code>
@@ -341,7 +341,7 @@ public interface DynamicHotelsAndRentalsAssetOrBuilder extends
   /**
    * <pre>
    * Formatted sale price which can be any characters. If set, this attribute
-   * will be used instead of 'sale price', e.g. On sale for $80.00.
+   * will be used instead of 'sale price', for example, On sale for $80.00.
    * </pre>
    *
    * <code>string formatted_sale_price = 16;</code>

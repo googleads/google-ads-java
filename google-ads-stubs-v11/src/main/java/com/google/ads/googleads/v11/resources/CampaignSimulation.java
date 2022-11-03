@@ -8,18 +8,18 @@ package com.google.ads.googleads.v11.resources;
  * A campaign simulation. Supported combinations of advertising
  * channel type, simulation type and simulation modification
  * method is detailed below respectively.
- * SEARCH - CPC_BID - UNIFORM
- * SEARCH - CPC_BID - SCALING
- * SEARCH - TARGET_CPA - UNIFORM
- * SEARCH - TARGET_CPA - SCALING
- * SEARCH - TARGET_ROAS - UNIFORM
- * SEARCH - TARGET_IMPRESSION_SHARE - UNIFORM
- * SEARCH - BUDGET - UNIFORM
- * SHOPPING - BUDGET - UNIFORM
- * SHOPPING - TARGET_ROAS - UNIFORM
- * MULTI_CHANNEL - TARGET_CPA - UNIFORM
- * DISCOVERY - TARGET_CPA - DEFAULT
- * DISPLAY - TARGET_CPA - UNIFORM
+ * * SEARCH - CPC_BID - UNIFORM
+ * * SEARCH - CPC_BID - SCALING
+ * * SEARCH - TARGET_CPA - UNIFORM
+ * * SEARCH - TARGET_CPA - SCALING
+ * * SEARCH - TARGET_ROAS - UNIFORM
+ * * SEARCH - TARGET_IMPRESSION_SHARE - UNIFORM
+ * * SEARCH - BUDGET - UNIFORM
+ * * SHOPPING - BUDGET - UNIFORM
+ * * SHOPPING - TARGET_ROAS - UNIFORM
+ * * MULTI_CHANNEL - TARGET_CPA - UNIFORM
+ * * DISCOVERY - TARGET_CPA - DEFAULT
+ * * DISPLAY - TARGET_CPA - UNIFORM
  * </pre>
  *
  * Protobuf type {@code google.ads.googleads.v11.resources.CampaignSimulation}
@@ -52,150 +52,6 @@ private static final long serialVersionUID = 0L;
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return this.unknownFields;
-  }
-  private CampaignSimulation(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            resourceName_ = s;
-            break;
-          }
-          case 16: {
-
-            campaignId_ = input.readInt64();
-            break;
-          }
-          case 24: {
-            int rawValue = input.readEnum();
-
-            type_ = rawValue;
-            break;
-          }
-          case 32: {
-            int rawValue = input.readEnum();
-
-            modificationMethod_ = rawValue;
-            break;
-          }
-          case 42: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            startDate_ = s;
-            break;
-          }
-          case 50: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            endDate_ = s;
-            break;
-          }
-          case 58: {
-            com.google.ads.googleads.v11.common.CpcBidSimulationPointList.Builder subBuilder = null;
-            if (pointListCase_ == 7) {
-              subBuilder = ((com.google.ads.googleads.v11.common.CpcBidSimulationPointList) pointList_).toBuilder();
-            }
-            pointList_ =
-                input.readMessage(com.google.ads.googleads.v11.common.CpcBidSimulationPointList.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v11.common.CpcBidSimulationPointList) pointList_);
-              pointList_ = subBuilder.buildPartial();
-            }
-            pointListCase_ = 7;
-            break;
-          }
-          case 66: {
-            com.google.ads.googleads.v11.common.TargetCpaSimulationPointList.Builder subBuilder = null;
-            if (pointListCase_ == 8) {
-              subBuilder = ((com.google.ads.googleads.v11.common.TargetCpaSimulationPointList) pointList_).toBuilder();
-            }
-            pointList_ =
-                input.readMessage(com.google.ads.googleads.v11.common.TargetCpaSimulationPointList.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v11.common.TargetCpaSimulationPointList) pointList_);
-              pointList_ = subBuilder.buildPartial();
-            }
-            pointListCase_ = 8;
-            break;
-          }
-          case 74: {
-            com.google.ads.googleads.v11.common.TargetRoasSimulationPointList.Builder subBuilder = null;
-            if (pointListCase_ == 9) {
-              subBuilder = ((com.google.ads.googleads.v11.common.TargetRoasSimulationPointList) pointList_).toBuilder();
-            }
-            pointList_ =
-                input.readMessage(com.google.ads.googleads.v11.common.TargetRoasSimulationPointList.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v11.common.TargetRoasSimulationPointList) pointList_);
-              pointList_ = subBuilder.buildPartial();
-            }
-            pointListCase_ = 9;
-            break;
-          }
-          case 82: {
-            com.google.ads.googleads.v11.common.TargetImpressionShareSimulationPointList.Builder subBuilder = null;
-            if (pointListCase_ == 10) {
-              subBuilder = ((com.google.ads.googleads.v11.common.TargetImpressionShareSimulationPointList) pointList_).toBuilder();
-            }
-            pointList_ =
-                input.readMessage(com.google.ads.googleads.v11.common.TargetImpressionShareSimulationPointList.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v11.common.TargetImpressionShareSimulationPointList) pointList_);
-              pointList_ = subBuilder.buildPartial();
-            }
-            pointListCase_ = 10;
-            break;
-          }
-          case 90: {
-            com.google.ads.googleads.v11.common.BudgetSimulationPointList.Builder subBuilder = null;
-            if (pointListCase_ == 11) {
-              subBuilder = ((com.google.ads.googleads.v11.common.BudgetSimulationPointList) pointList_).toBuilder();
-            }
-            pointList_ =
-                input.readMessage(com.google.ads.googleads.v11.common.BudgetSimulationPointList.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom((com.google.ads.googleads.v11.common.BudgetSimulationPointList) pointList_);
-              pointList_ = subBuilder.buildPartial();
-            }
-            pointListCase_ = 11;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
@@ -730,7 +586,7 @@ private static final long serialVersionUID = 0L;
     if (pointListCase_ == 11) {
       output.writeMessage(11, (com.google.ads.googleads.v11.common.BudgetSimulationPointList) pointList_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -780,7 +636,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, (com.google.ads.googleads.v11.common.BudgetSimulationPointList) pointList_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -830,7 +686,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -878,7 +734,7 @@ private static final long serialVersionUID = 0L;
       case 0:
       default:
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -978,18 +834,18 @@ private static final long serialVersionUID = 0L;
    * A campaign simulation. Supported combinations of advertising
    * channel type, simulation type and simulation modification
    * method is detailed below respectively.
-   * SEARCH - CPC_BID - UNIFORM
-   * SEARCH - CPC_BID - SCALING
-   * SEARCH - TARGET_CPA - UNIFORM
-   * SEARCH - TARGET_CPA - SCALING
-   * SEARCH - TARGET_ROAS - UNIFORM
-   * SEARCH - TARGET_IMPRESSION_SHARE - UNIFORM
-   * SEARCH - BUDGET - UNIFORM
-   * SHOPPING - BUDGET - UNIFORM
-   * SHOPPING - TARGET_ROAS - UNIFORM
-   * MULTI_CHANNEL - TARGET_CPA - UNIFORM
-   * DISCOVERY - TARGET_CPA - DEFAULT
-   * DISPLAY - TARGET_CPA - UNIFORM
+   * * SEARCH - CPC_BID - UNIFORM
+   * * SEARCH - CPC_BID - SCALING
+   * * SEARCH - TARGET_CPA - UNIFORM
+   * * SEARCH - TARGET_CPA - SCALING
+   * * SEARCH - TARGET_ROAS - UNIFORM
+   * * SEARCH - TARGET_IMPRESSION_SHARE - UNIFORM
+   * * SEARCH - BUDGET - UNIFORM
+   * * SHOPPING - BUDGET - UNIFORM
+   * * SHOPPING - TARGET_ROAS - UNIFORM
+   * * MULTI_CHANNEL - TARGET_CPA - UNIFORM
+   * * DISCOVERY - TARGET_CPA - DEFAULT
+   * * DISPLAY - TARGET_CPA - UNIFORM
    * </pre>
    *
    * Protobuf type {@code google.ads.googleads.v11.resources.CampaignSimulation}
@@ -1013,18 +869,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v11.resources.CampaignSimulation.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -1041,6 +892,21 @@ private static final long serialVersionUID = 0L;
 
       endDate_ = "";
 
+      if (cpcBidPointListBuilder_ != null) {
+        cpcBidPointListBuilder_.clear();
+      }
+      if (targetCpaPointListBuilder_ != null) {
+        targetCpaPointListBuilder_.clear();
+      }
+      if (targetRoasPointListBuilder_ != null) {
+        targetRoasPointListBuilder_.clear();
+      }
+      if (targetImpressionSharePointListBuilder_ != null) {
+        targetImpressionSharePointListBuilder_.clear();
+      }
+      if (budgetPointListBuilder_ != null) {
+        budgetPointListBuilder_.clear();
+      }
       pointListCase_ = 0;
       pointList_ = null;
       return this;
@@ -1205,7 +1071,7 @@ private static final long serialVersionUID = 0L;
           break;
         }
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1220,17 +1086,95 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.ads.googleads.v11.resources.CampaignSimulation parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              resourceName_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 10
+            case 16: {
+              campaignId_ = input.readInt64();
+
+              break;
+            } // case 16
+            case 24: {
+              type_ = input.readEnum();
+
+              break;
+            } // case 24
+            case 32: {
+              modificationMethod_ = input.readEnum();
+
+              break;
+            } // case 32
+            case 42: {
+              startDate_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 42
+            case 50: {
+              endDate_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 50
+            case 58: {
+              input.readMessage(
+                  getCpcBidPointListFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              pointListCase_ = 7;
+              break;
+            } // case 58
+            case 66: {
+              input.readMessage(
+                  getTargetCpaPointListFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              pointListCase_ = 8;
+              break;
+            } // case 66
+            case 74: {
+              input.readMessage(
+                  getTargetRoasPointListFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              pointListCase_ = 9;
+              break;
+            } // case 74
+            case 82: {
+              input.readMessage(
+                  getTargetImpressionSharePointListFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              pointListCase_ = 10;
+              break;
+            } // case 82
+            case 90: {
+              input.readMessage(
+                  getBudgetPointListFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              pointListCase_ = 11;
+              break;
+            } // case 90
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v11.resources.CampaignSimulation) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
     private int pointListCase_ = 0;
@@ -2660,7 +2604,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new CampaignSimulation(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

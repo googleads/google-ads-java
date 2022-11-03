@@ -52,156 +52,6 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private ChangeEvent(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            resourceName_ = s;
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            changeDateTime_ = s;
-            break;
-          }
-          case 24: {
-            int rawValue = input.readEnum();
-
-            changeResourceType_ = rawValue;
-            break;
-          }
-          case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            changeResourceName_ = s;
-            break;
-          }
-          case 40: {
-            int rawValue = input.readEnum();
-
-            clientType_ = rawValue;
-            break;
-          }
-          case 50: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            userEmail_ = s;
-            break;
-          }
-          case 58: {
-            com.google.ads.googleads.v10.resources.ChangeEvent.ChangedResource.Builder subBuilder = null;
-            if (oldResource_ != null) {
-              subBuilder = oldResource_.toBuilder();
-            }
-            oldResource_ = input.readMessage(com.google.ads.googleads.v10.resources.ChangeEvent.ChangedResource.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(oldResource_);
-              oldResource_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 66: {
-            com.google.ads.googleads.v10.resources.ChangeEvent.ChangedResource.Builder subBuilder = null;
-            if (newResource_ != null) {
-              subBuilder = newResource_.toBuilder();
-            }
-            newResource_ = input.readMessage(com.google.ads.googleads.v10.resources.ChangeEvent.ChangedResource.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(newResource_);
-              newResource_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 72: {
-            int rawValue = input.readEnum();
-
-            resourceChangeOperation_ = rawValue;
-            break;
-          }
-          case 82: {
-            com.google.protobuf.FieldMask.Builder subBuilder = null;
-            if (changedFields_ != null) {
-              subBuilder = changedFields_.toBuilder();
-            }
-            changedFields_ = input.readMessage(com.google.protobuf.FieldMask.parser(), extensionRegistry);
-            if (subBuilder != null) {
-              subBuilder.mergeFrom(changedFields_);
-              changedFields_ = subBuilder.buildPartial();
-            }
-
-            break;
-          }
-          case 90: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            campaign_ = s;
-            break;
-          }
-          case 98: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            adGroup_ = s;
-            break;
-          }
-          case 106: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            feed_ = s;
-            break;
-          }
-          case 114: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            feedItem_ = s;
-            break;
-          }
-          case 162: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            asset_ = s;
-            break;
-          }
-          default: {
-            if (!parseUnknownField(
-                input, unknownFields, extensionRegistry, tag)) {
-              done = true;
-            }
-            break;
-          }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(
-          e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return com.google.ads.googleads.v10.resources.ChangeEventProto.internal_static_google_ads_googleads_v10_resources_ChangeEvent_descriptor;
@@ -763,292 +613,6 @@ private static final long serialVersionUID = 0L;
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
-    }
-    private ChangedResource(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              com.google.ads.googleads.v10.resources.Ad.Builder subBuilder = null;
-              if (ad_ != null) {
-                subBuilder = ad_.toBuilder();
-              }
-              ad_ = input.readMessage(com.google.ads.googleads.v10.resources.Ad.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(ad_);
-                ad_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 18: {
-              com.google.ads.googleads.v10.resources.AdGroup.Builder subBuilder = null;
-              if (adGroup_ != null) {
-                subBuilder = adGroup_.toBuilder();
-              }
-              adGroup_ = input.readMessage(com.google.ads.googleads.v10.resources.AdGroup.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(adGroup_);
-                adGroup_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 26: {
-              com.google.ads.googleads.v10.resources.AdGroupCriterion.Builder subBuilder = null;
-              if (adGroupCriterion_ != null) {
-                subBuilder = adGroupCriterion_.toBuilder();
-              }
-              adGroupCriterion_ = input.readMessage(com.google.ads.googleads.v10.resources.AdGroupCriterion.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(adGroupCriterion_);
-                adGroupCriterion_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 34: {
-              com.google.ads.googleads.v10.resources.Campaign.Builder subBuilder = null;
-              if (campaign_ != null) {
-                subBuilder = campaign_.toBuilder();
-              }
-              campaign_ = input.readMessage(com.google.ads.googleads.v10.resources.Campaign.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(campaign_);
-                campaign_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 42: {
-              com.google.ads.googleads.v10.resources.CampaignBudget.Builder subBuilder = null;
-              if (campaignBudget_ != null) {
-                subBuilder = campaignBudget_.toBuilder();
-              }
-              campaignBudget_ = input.readMessage(com.google.ads.googleads.v10.resources.CampaignBudget.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(campaignBudget_);
-                campaignBudget_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 50: {
-              com.google.ads.googleads.v10.resources.AdGroupBidModifier.Builder subBuilder = null;
-              if (adGroupBidModifier_ != null) {
-                subBuilder = adGroupBidModifier_.toBuilder();
-              }
-              adGroupBidModifier_ = input.readMessage(com.google.ads.googleads.v10.resources.AdGroupBidModifier.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(adGroupBidModifier_);
-                adGroupBidModifier_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 58: {
-              com.google.ads.googleads.v10.resources.CampaignCriterion.Builder subBuilder = null;
-              if (campaignCriterion_ != null) {
-                subBuilder = campaignCriterion_.toBuilder();
-              }
-              campaignCriterion_ = input.readMessage(com.google.ads.googleads.v10.resources.CampaignCriterion.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(campaignCriterion_);
-                campaignCriterion_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 66: {
-              com.google.ads.googleads.v10.resources.Feed.Builder subBuilder = null;
-              if (feed_ != null) {
-                subBuilder = feed_.toBuilder();
-              }
-              feed_ = input.readMessage(com.google.ads.googleads.v10.resources.Feed.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(feed_);
-                feed_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 74: {
-              com.google.ads.googleads.v10.resources.FeedItem.Builder subBuilder = null;
-              if (feedItem_ != null) {
-                subBuilder = feedItem_.toBuilder();
-              }
-              feedItem_ = input.readMessage(com.google.ads.googleads.v10.resources.FeedItem.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(feedItem_);
-                feedItem_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 82: {
-              com.google.ads.googleads.v10.resources.CampaignFeed.Builder subBuilder = null;
-              if (campaignFeed_ != null) {
-                subBuilder = campaignFeed_.toBuilder();
-              }
-              campaignFeed_ = input.readMessage(com.google.ads.googleads.v10.resources.CampaignFeed.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(campaignFeed_);
-                campaignFeed_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 90: {
-              com.google.ads.googleads.v10.resources.AdGroupFeed.Builder subBuilder = null;
-              if (adGroupFeed_ != null) {
-                subBuilder = adGroupFeed_.toBuilder();
-              }
-              adGroupFeed_ = input.readMessage(com.google.ads.googleads.v10.resources.AdGroupFeed.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(adGroupFeed_);
-                adGroupFeed_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 98: {
-              com.google.ads.googleads.v10.resources.AdGroupAd.Builder subBuilder = null;
-              if (adGroupAd_ != null) {
-                subBuilder = adGroupAd_.toBuilder();
-              }
-              adGroupAd_ = input.readMessage(com.google.ads.googleads.v10.resources.AdGroupAd.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(adGroupAd_);
-                adGroupAd_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 106: {
-              com.google.ads.googleads.v10.resources.Asset.Builder subBuilder = null;
-              if (asset_ != null) {
-                subBuilder = asset_.toBuilder();
-              }
-              asset_ = input.readMessage(com.google.ads.googleads.v10.resources.Asset.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(asset_);
-                asset_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 114: {
-              com.google.ads.googleads.v10.resources.CustomerAsset.Builder subBuilder = null;
-              if (customerAsset_ != null) {
-                subBuilder = customerAsset_.toBuilder();
-              }
-              customerAsset_ = input.readMessage(com.google.ads.googleads.v10.resources.CustomerAsset.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(customerAsset_);
-                customerAsset_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 122: {
-              com.google.ads.googleads.v10.resources.CampaignAsset.Builder subBuilder = null;
-              if (campaignAsset_ != null) {
-                subBuilder = campaignAsset_.toBuilder();
-              }
-              campaignAsset_ = input.readMessage(com.google.ads.googleads.v10.resources.CampaignAsset.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(campaignAsset_);
-                campaignAsset_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 130: {
-              com.google.ads.googleads.v10.resources.AdGroupAsset.Builder subBuilder = null;
-              if (adGroupAsset_ != null) {
-                subBuilder = adGroupAsset_.toBuilder();
-              }
-              adGroupAsset_ = input.readMessage(com.google.ads.googleads.v10.resources.AdGroupAsset.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(adGroupAsset_);
-                adGroupAsset_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 138: {
-              com.google.ads.googleads.v10.resources.AssetSet.Builder subBuilder = null;
-              if (assetSet_ != null) {
-                subBuilder = assetSet_.toBuilder();
-              }
-              assetSet_ = input.readMessage(com.google.ads.googleads.v10.resources.AssetSet.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(assetSet_);
-                assetSet_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 146: {
-              com.google.ads.googleads.v10.resources.AssetSetAsset.Builder subBuilder = null;
-              if (assetSetAsset_ != null) {
-                subBuilder = assetSetAsset_.toBuilder();
-              }
-              assetSetAsset_ = input.readMessage(com.google.ads.googleads.v10.resources.AssetSetAsset.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(assetSetAsset_);
-                assetSetAsset_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            case 154: {
-              com.google.ads.googleads.v10.resources.CampaignAssetSet.Builder subBuilder = null;
-              if (campaignAssetSet_ != null) {
-                subBuilder = campaignAssetSet_.toBuilder();
-              }
-              campaignAssetSet_ = input.readMessage(com.google.ads.googleads.v10.resources.CampaignAssetSet.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(campaignAssetSet_);
-                campaignAssetSet_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (com.google.protobuf.UninitializedMessageException e) {
-        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
@@ -1856,7 +1420,7 @@ private static final long serialVersionUID = 0L;
       if (campaignAssetSet_ != null) {
         output.writeMessage(19, getCampaignAssetSet());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -1941,7 +1505,7 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(19, getCampaignAssetSet());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -2051,7 +1615,7 @@ private static final long serialVersionUID = 0L;
         if (!getCampaignAssetSet()
             .equals(other.getCampaignAssetSet())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -2138,7 +1702,7 @@ private static final long serialVersionUID = 0L;
         hash = (37 * hash) + CAMPAIGN_ASSET_SET_FIELD_NUMBER;
         hash = (53 * hash) + getCampaignAssetSet().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -2260,18 +1824,13 @@ private static final long serialVersionUID = 0L;
 
       // Construct using com.google.ads.googleads.v10.resources.ChangeEvent.ChangedResource.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
+
       }
       @java.lang.Override
       public Builder clear() {
@@ -2616,7 +2175,7 @@ private static final long serialVersionUID = 0L;
         if (other.hasCampaignAssetSet()) {
           mergeCampaignAssetSet(other.getCampaignAssetSet());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -2631,17 +2190,163 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.ads.googleads.v10.resources.ChangeEvent.ChangedResource parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getAdFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getAdGroupFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getAdGroupCriterionFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getCampaignFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getCampaignBudgetFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 42
+              case 50: {
+                input.readMessage(
+                    getAdGroupBidModifierFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 50
+              case 58: {
+                input.readMessage(
+                    getCampaignCriterionFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 58
+              case 66: {
+                input.readMessage(
+                    getFeedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 66
+              case 74: {
+                input.readMessage(
+                    getFeedItemFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 74
+              case 82: {
+                input.readMessage(
+                    getCampaignFeedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 82
+              case 90: {
+                input.readMessage(
+                    getAdGroupFeedFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 90
+              case 98: {
+                input.readMessage(
+                    getAdGroupAdFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 98
+              case 106: {
+                input.readMessage(
+                    getAssetFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 106
+              case 114: {
+                input.readMessage(
+                    getCustomerAssetFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 114
+              case 122: {
+                input.readMessage(
+                    getCampaignAssetFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 122
+              case 130: {
+                input.readMessage(
+                    getAdGroupAssetFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 130
+              case 138: {
+                input.readMessage(
+                    getAssetSetFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 138
+              case 146: {
+                input.readMessage(
+                    getAssetSetAssetFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 146
+              case 154: {
+                input.readMessage(
+                    getCampaignAssetSetFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 154
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.google.ads.googleads.v10.resources.ChangeEvent.ChangedResource) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -5622,7 +5327,18 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new ChangedResource(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -6316,7 +6032,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(asset_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 20, asset_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -6376,7 +6092,7 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(asset_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(20, asset_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -6427,7 +6143,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getFeedItem())) return false;
     if (!getAsset()
         .equals(other.getAsset())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -6474,7 +6190,7 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getFeedItem().hashCode();
     hash = (37 * hash) + ASSET_FIELD_NUMBER;
     hash = (53 * hash) + getAsset().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -6601,18 +6317,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using com.google.ads.googleads.v10.resources.ChangeEvent.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -6814,7 +6525,7 @@ private static final long serialVersionUID = 0L;
         asset_ = other.asset_;
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -6829,17 +6540,111 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.ads.googleads.v10.resources.ChangeEvent parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              resourceName_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 10
+            case 18: {
+              changeDateTime_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 18
+            case 24: {
+              changeResourceType_ = input.readEnum();
+
+              break;
+            } // case 24
+            case 34: {
+              changeResourceName_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 34
+            case 40: {
+              clientType_ = input.readEnum();
+
+              break;
+            } // case 40
+            case 50: {
+              userEmail_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 50
+            case 58: {
+              input.readMessage(
+                  getOldResourceFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 58
+            case 66: {
+              input.readMessage(
+                  getNewResourceFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 66
+            case 72: {
+              resourceChangeOperation_ = input.readEnum();
+
+              break;
+            } // case 72
+            case 82: {
+              input.readMessage(
+                  getChangedFieldsFieldBuilder().getBuilder(),
+                  extensionRegistry);
+
+              break;
+            } // case 82
+            case 90: {
+              campaign_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 90
+            case 98: {
+              adGroup_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 98
+            case 106: {
+              feed_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 106
+            case 114: {
+              feedItem_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 114
+            case 162: {
+              asset_ = input.readStringRequireUtf8();
+
+              break;
+            } // case 162
+            default: {
+              if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                done = true; // was an endgroup tag
+              }
+              break;
+            } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.ads.googleads.v10.resources.ChangeEvent) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
 
@@ -8441,7 +8246,18 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new ChangeEvent(input, extensionRegistry);
+      Builder builder = newBuilder();
+      try {
+        builder.mergeFrom(input, extensionRegistry);
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(builder.buildPartial());
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(e)
+            .setUnfinishedMessage(builder.buildPartial());
+      }
+      return builder.buildPartial();
     }
   };
 

@@ -9,7 +9,7 @@ public interface YearMonthOrBuilder extends
 
   /**
    * <pre>
-   * The year (e.g. 2020).
+   * The year (for example, 2020).
    * </pre>
    *
    * <code>int64 year = 1;</code>
@@ -19,7 +19,7 @@ public interface YearMonthOrBuilder extends
 
   /**
    * <pre>
-   * The month of the year. (e.g. FEBRUARY).
+   * The month of the year. (for example, FEBRUARY).
    * </pre>
    *
    * <code>.google.ads.googleads.v10.enums.MonthOfYearEnum.MonthOfYear month = 2;</code>
@@ -28,7 +28,7 @@ public interface YearMonthOrBuilder extends
   int getMonthValue();
   /**
    * <pre>
-   * The month of the year. (e.g. FEBRUARY).
+   * The month of the year. (for example, FEBRUARY).
    * </pre>
    *
    * <code>.google.ads.googleads.v10.enums.MonthOfYearEnum.MonthOfYear month = 2;</code>

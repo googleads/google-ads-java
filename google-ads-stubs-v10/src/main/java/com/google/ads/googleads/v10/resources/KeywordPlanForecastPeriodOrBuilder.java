@@ -37,7 +37,8 @@ public interface KeywordPlanForecastPeriodOrBuilder extends
 
   /**
    * <pre>
-   * The custom date range used for forecasting.
+   * The custom date range used for forecasting. It cannot be greater than
+   * a year.
    * The start and end dates must be in the future. Otherwise, an error will
    * be returned when the forecasting action is performed.
    * The start and end dates are inclusive.
@@ -49,7 +50,8 @@ public interface KeywordPlanForecastPeriodOrBuilder extends
   boolean hasDateRange();
   /**
    * <pre>
-   * The custom date range used for forecasting.
+   * The custom date range used for forecasting. It cannot be greater than
+   * a year.
    * The start and end dates must be in the future. Otherwise, an error will
    * be returned when the forecasting action is performed.
    * The start and end dates are inclusive.
@@ -61,7 +63,8 @@ public interface KeywordPlanForecastPeriodOrBuilder extends
   com.google.ads.googleads.v10.common.DateRange getDateRange();
   /**
    * <pre>
-   * The custom date range used for forecasting.
+   * The custom date range used for forecasting. It cannot be greater than
+   * a year.
    * The start and end dates must be in the future. Otherwise, an error will
    * be returned when the forecasting action is performed.
    * The start and end dates are inclusive.

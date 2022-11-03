@@ -9,7 +9,8 @@ public interface LeadFormCustomQuestionFieldOrBuilder extends
 
   /**
    * <pre>
-   * The exact custom question field text (e.g. "Do you own a car?").
+   * The exact custom question field text (for example, "What kind of vehicle
+   * do you have?").
    * </pre>
    *
    * <code>string custom_question_text = 1;</code>
@@ -18,7 +19,8 @@ public interface LeadFormCustomQuestionFieldOrBuilder extends
   java.lang.String getCustomQuestionText();
   /**
    * <pre>
-   * The exact custom question field text (e.g. "Do you own a car?").
+   * The exact custom question field text (for example, "What kind of vehicle
+   * do you have?").
    * </pre>
    *
    * <code>string custom_question_text = 1;</code>
