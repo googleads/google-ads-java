@@ -62,7 +62,10 @@ jar {
 }
 
 javadoc {
-  options.addStringOption('Xdoclint:none', '-quiet')
+  options.addStringOption('Xdoclint:none')
+  // See https://stackoverflow.com/questions/25912190/how-to-set-an-encoding-for-the-javadoc-in-gradle
+  // TODO: Is this necessary?
+  options.encoding = 'UTF-8'
 }
 
 components.java.withVariantsFromConfiguration(configurations.testFixturesApiElements) { skip() }
