@@ -62,9 +62,14 @@ jar {
 }
 
 javadoc {
-  options.addStringOption('Xdoclint:none')
-  // See https://stackoverflow.com/questions/25912190/how-to-set-an-encoding-for-the-javadoc-in-gradle
-  // TODO: Is this necessary?
+  options.addStringOption('Xdoclint:none', '-quiet')
+  // Sets the input (source) file encoding to UTF-8. The javadoc tool will also
+  // use this for the output (HTML) file encoding. Without this option, the
+  // javadoc tool will use the default encoding for the platform.
+  options.encoding = 'UTF-8'
+}
+
+tasks.withType(JavaCompile) {
   options.encoding = 'UTF-8'
 }
 
@@ -136,10 +141,6 @@ if (project.properties.containsKey("release")) {
   signing {
     sign publishing.publications
   }
-}
-
-tasks.withType(JavaCompile) {
-  options.encoding = 'UTF-8'
 }
 
 dependencies {
