@@ -176,17 +176,16 @@ class SonatypeClient {
      * based on the sonatype server load.
      */
     def discoverSonatypeRepositoryUrl() {
-        // Ensures that we don't create spurious repositories unless we:
+        // Ensures that we only attempt to create a Sonatype repository when we:
         // 1. have set the 'release' property; and
-        // 2. are running tasks that include publishing to Sonatype
-        // There are instances where we do #1 in order to test the release process or prepare for
-        // a release, but we don't do #2.
+        // 2. have set the Sonatype user and password properties
+        // There are instances where we do #1 but not #2 in order to test the release process or
+        // prepare for a release.
         if (!(project.properties.containsKey("release") &&
-                project.tasks.stream()
-                        .anyMatch { it.name.matches("publish.+ToSonatypeRepository") })) {
-            logger.debug(
-                    "Release not enabled or does not include Sonatype publishing tasks. " +
-                            "Defaulting to auto-staging.")
+                project.properties.containsKey("sonatypeUser") &&
+                project.properties.containsKey("sonatypePassword"))) {
+            logger.info("Release not enabled or Sonatype credentials not set. " +
+                    "Defaulting to auto-staging.")
             return AUTO_STAGING_URL
         }
         try {
